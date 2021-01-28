@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "CortexIntelligentAutomation.github.io/docs/"
 title = "Goldydocs"
 
 enableRobotsTXT = true
@@ -8,6 +8,9 @@ theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
+
+# Publish location
+publishDir = "docs"
 
 # Language settings
 contentDir = "content/en"
