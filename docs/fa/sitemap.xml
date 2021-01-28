@@ -3,37 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/fa/about/</loc>
+    <loc>/docs/fa/about/</loc>
     <lastmod>2020-11-26T18:39:05+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/about/"
+                href="/docs/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/fa/about/"
+                href="/docs/fa/about/"
                 />
   </url>
   
   <url>
-    <loc>/fa/blog/news/</loc>
+    <loc>/docs/fa/blog/news/</loc>
     <lastmod>2020-11-26T18:39:05+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/news/"
+                href="/docs/blog/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/fa/blog/news/"
+                href="/docs/fa/blog/news/"
                 />
   </url>
   
   <url>
-    <loc>/fa/docs/</loc>
+    <loc>/docs/fa/docs/</loc>
+    <lastmod>2020-11-26T18:39:05+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/docs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="no"
+                href="/docs/no/docs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/docs/fa/docs/"
+                />
+  </url>
+  
+  <url>
+    <loc>/docs/fa/blog/releases/</loc>
+    <lastmod>2020-11-26T18:39:05+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/blog/releases/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/docs/fa/blog/releases/"
+                />
+  </url>
+  
+  <url>
+    <loc>/docs/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/</loc>
+    <lastmod>2020-11-26T18:39:05+03:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/docs/blog/2018/10/06/easy-documentation-with-docsy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/docs/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/"
+                />
+  </url>
+  
+  <url>
+    <loc>/docs/fa/</loc>
     <lastmod>2020-11-26T18:39:05+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -43,112 +93,62 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
-                href="/no/docs/"
+                href="/docs/no/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/fa/docs/"
+                href="/docs/fa/"
                 />
   </url>
   
   <url>
-    <loc>/fa/blog/releases/</loc>
+    <loc>/docs/fa/community/</loc>
     <lastmod>2020-11-26T18:39:05+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/releases/"
+                href="/docs/community/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/fa/blog/releases/"
+                href="/docs/fa/community/"
                 />
   </url>
   
   <url>
-    <loc>/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/</loc>
+    <loc>/docs/fa/blog/</loc>
     <lastmod>2020-11-26T18:39:05+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/blog/2018/10/06/easy-documentation-with-docsy/"
+                href="/docs/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/"
+                href="/docs/fa/blog/"
                 />
   </url>
   
   <url>
-    <loc>/fa/</loc>
+    <loc>/docs/fa/search/</loc>
     <lastmod>2020-11-26T18:39:05+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="/docs/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
-                href="/no/"
+                href="/docs/no/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/fa/"
-                />
-  </url>
-  
-  <url>
-    <loc>/fa/community/</loc>
-    <lastmod>2020-11-26T18:39:05+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/community/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/fa/community/"
-                />
-  </url>
-  
-  <url>
-    <loc>/fa/blog/</loc>
-    <lastmod>2020-11-26T18:39:05+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/fa/blog/"
-                />
-  </url>
-  
-  <url>
-    <loc>/fa/search/</loc>
-    <lastmod>2020-11-26T18:39:05+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="no"
-                href="/no/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/fa/search/"
+                href="/docs/fa/search/"
                 />
   </url>
   
