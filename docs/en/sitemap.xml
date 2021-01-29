@@ -3,227 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/docs/docs/overview/</loc>
+    <loc>/docs/overview/</loc>
     <lastmod>2020-09-21T15:03:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tasks/beds/</loc>
+    <loc>/docs/tasks/beds/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tasks/ponycopters/configuring-ponycopters/</loc>
+    <loc>/docs/tasks/ponycopters/configuring-ponycopters/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/getting-started/</loc>
+    <loc>/docs/getting-started/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/examples/</loc>
+    <loc>/docs/examples/</loc>
     <lastmod>2019-04-15T16:07:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tasks/ponycopters/launching-ponycopters/</loc>
+    <loc>/docs/tasks/ponycopters/launching-ponycopters/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tutorials/multi-bear/</loc>
+    <loc>/docs/tutorials/multi-bear/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tasks/porridge/</loc>
+    <loc>/docs/tasks/porridge/</loc>
     <lastmod>2020-04-14T23:10:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/concepts/</loc>
+    <loc>/docs/concepts/</loc>
     <lastmod>2019-04-15T16:07:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tasks/task/</loc>
+    <loc>/docs/tasks/task/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tutorials/tutorial2/</loc>
+    <loc>/docs/tutorials/tutorial2/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tasks/</loc>
+    <loc>/docs/tasks/</loc>
     <lastmod>2019-04-15T16:07:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/tutorials/</loc>
+    <loc>/docs/tutorials/</loc>
     <lastmod>2019-04-15T16:07:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/reference/</loc>
+    <loc>/docs/reference/</loc>
     <lastmod>2019-11-27T14:31:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/contribution-guidelines/</loc>
+    <loc>/docs/contribution-guidelines/</loc>
     <lastmod>2020-09-21T15:03:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/docs/</loc>
+    <loc>/docs/</loc>
     <lastmod>2019-07-03T16:05:26+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
-                href="/docs/no/docs/"
+                href="/no/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/docs/fa/docs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/docs/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/blog/news/</loc>
-    <lastmod>2018-10-05T12:27:38-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/blog/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/blog/news/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/blog/releases/</loc>
-    <lastmod>2018-09-04T11:36:40+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/blog/releases/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/blog/releases/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/blog/2018/10/06/easy-documentation-with-docsy/</loc>
-    <lastmod>2018-10-05T12:27:38-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/blog/2018/10/06/easy-documentation-with-docsy/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/blog/2018/10/06/the-second-blog-post/</loc>
-    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/blog/2018/01/04/another-great-release/</loc>
-    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/docs/getting-started/example-page/</loc>
-    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/docs/reference/parameter-reference/</loc>
-    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/docs/tasks/ponycopters/</loc>
-    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/about/</loc>
-    <lastmod>2019-04-15T16:07:08+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/blog/</loc>
-    <lastmod>2018-10-05T12:27:38-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/blog/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/community/</loc>
-    <lastmod>2018-10-05T14:41:45+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/community/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/community/"
-                />
-  </url>
-  
-  <url>
-    <loc>/docs/</loc>
-    <lastmod>2020-04-26T10:19:01+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="no"
-                href="/docs/no/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="/docs/fa/"
+                href="/fa/docs/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -233,22 +98,157 @@
   </url>
   
   <url>
-    <loc>/docs/search/</loc>
-    <lastmod>2018-09-04T11:36:40+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="no"
-                href="/docs/no/search/"
-                />
+    <loc>/blog/news/</loc>
+    <lastmod>2018-10-05T12:27:38-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="/docs/fa/search/"
+                href="/fa/blog/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/search/"
+                href="/blog/news/"
+                />
+  </url>
+  
+  <url>
+    <loc>/blog/releases/</loc>
+    <lastmod>2018-09-04T11:36:40+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/blog/releases/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/releases/"
+                />
+  </url>
+  
+  <url>
+    <loc>/blog/2018/10/06/easy-documentation-with-docsy/</loc>
+    <lastmod>2018-10-05T12:27:38-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/2018/10/06/easy-documentation-with-docsy/"
+                />
+  </url>
+  
+  <url>
+    <loc>/blog/2018/10/06/the-second-blog-post/</loc>
+    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2018/01/04/another-great-release/</loc>
+    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/getting-started/example-page/</loc>
+    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/parameter-reference/</loc>
+    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/tasks/ponycopters/</loc>
+    <lastmod>2020-07-14T11:38:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2019-04-15T16:07:08+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2018-10-05T12:27:38-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>/community/</loc>
+    <lastmod>2018-10-05T14:41:45+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/community/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/community/"
+                />
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-04-26T10:19:01+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="no"
+                href="/no/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url>
+  
+  <url>
+    <loc>/search/</loc>
+    <lastmod>2018-09-04T11:36:40+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="no"
+                href="/no/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="/fa/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/search/"
                 />
   </url>
   

@@ -1,4 +1,4 @@
-baseURL = "/docs/"
+baseURL = "/"
 title = "Goldydocs"
 
 enableRobotsTXT = true
