@@ -4,3 +4,20 @@ Add styles or override variables from the theme here.
 
 */
 
+.td-content {
+    h1 {
+        font-weight: bold;
+        font-size: 22pt;
+        margin-bottom: 1rem;
+      }
+    p.namespace {
+        font-size: 10pt;
+        margin-top: -14px;
+      }
+    img:first-of-type {
+      float: left;
+      display: inline;
+      margin-right: 10px;
+      vertical-align: bottom;
+    }
+}

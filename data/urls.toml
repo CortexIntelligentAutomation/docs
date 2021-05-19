@@ -1,0 +1,11 @@
+CurerentVersion = "dotnet6.0"
+[MSDocs]
+    [MSDocs.System]
+        String = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
+        Object = "https://docs.microsoft.com/en-us/dotnet/api/system.object"
+        [MSDocs.System.Collections.Generic]
+            IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
+            List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
+[Cortex]
+    [Cortex.Reference]
+        Generics = "Concepts/Generics.en.md"
