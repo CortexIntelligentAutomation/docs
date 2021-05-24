@@ -1,4 +1,3 @@
-CurerentVersion = "dotnet6.0"
 [MSDocs]
     [MSDocs.System]
         String = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
@@ -8,4 +7,28 @@ CurerentVersion = "dotnet6.0"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
 [Cortex]
     [Cortex.Reference]
-        Generics = "Concepts/Generics.en.md"
+        [Cortex.Reference.Concepts]
+            [Cortex.Reference.Concepts.Generics]
+                MainDoc = "/docs/reference/concepts/generics/"
+            [Cortex.Reference.Concepts.PropertyType]
+                MainDoc = "/docs/reference/concepts/propertytype/"
+                Input = "/docs/reference/concepts/propertytype/#input"
+                InputOutput = "/docs/reference/concepts/propertytype/#inputoutput"
+            [Cortex.Reference.Concepts.LiteralVariablesExpressions]
+                MainDoc = "/docs/reference/concepts/literalvariablesexpressions/"
+                ExplicitlyCastAVariable = "/docs/reference/concepts/literalvariablesexpressions/#explicitly-cast-a-variable"
+                AListLiteral = "/docs/reference/concepts/literalvariablesexpressions/#a-list-literal"
+            [Cortex.Reference.Exceptions]
+                MainDoc = "/docs/reference/exceptions/"
+                [Cortex.Reference.Exceptions.Common]
+                    MainDoc = "/docs/reference/exceptions/common"
+                    [Cortex.Reference.Exceptions.Common.Property]
+                        MainDoc = "/docs/reference/exceptions/common/property"
+                        [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
+                            MainDoc = "/docs/reference/exceptions/common/property/propertynullexception"
+                        [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
+                            MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception"
+                    [Cortex.Reference.Exceptions.Lists]
+                        MainDoc = "/docs/reference/exceptions/lists"
+                            [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
+                                MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception"

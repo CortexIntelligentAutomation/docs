@@ -1,9 +1,8 @@
 ---
 title: "InvalidPropertyValueException"
 linkTitle: "InvalidPropertyValueException"
-author: Cortex Development
+description: "The exception thrown when a property is provided with an invalid value."
 date: 2020-05-13
-description: The exception thrown when a property is provided with an invalid value.
 ---
 
 # InvalidPropertyValueException

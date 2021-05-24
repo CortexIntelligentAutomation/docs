@@ -1,9 +1,8 @@
 ---
 title: "PropertyNullException"
 linkTitle: "PropertyNullException"
-author: Cortex Development
+description: "The exception thrown when a property is provided with a `null` value, but a value is required."
 date: 2020-05-13
-description: The exception thrown when a property is provided with a `null` value, but a value is required.
 ---
 
 # PropertyNullException

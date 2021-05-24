@@ -1,15 +1,13 @@
 ---
 title: "Add Item At Beginning"
 linkTitle: "Add Item At Beginning"
-author: Cortex Development
+description: "Adds an Item at the beginning of an IList&lt;TItem&gt;, where TItem represents the type of Items that can be added to the List."
 date: 2021-04-30
-description: Adds an Item at the beginning of an IList&lt;TItem&gt;, where TItem represents the type of Items that can be added to the List.
-copy: .Copyright
 ---
 
 ![Icon](/blocks/ListsAddBlockIcon.png)
 
-# Add Item At Beginning
+# {{< param title >}}
 
 <p class="namespace">(Cortex.Blocks.Lists.Add.AddItemAtBeginningBlock`2)</p>
 
@@ -118,14 +116,14 @@ To add to an [IList][]&lt;[Object][]&gt; using a variable, e.g. `($)StringVar`, 
 [Item Property]: {{< ref "#item" >}}
 [Adding an Item at the beginning of a List that contains multiple types]: {{< ref "#adding-an-item-at-the-beginning-of-a-list-that-contains-multiple-types" >}}
 
-[Input]: {{< ref "../../../Concepts/PropertyType.en.md#input" >}}
-[InputOutput]: {{< ref "../../../Concepts/PropertyType.en.md#inputoutput" >}}
-[explicitly cast]: {{< ref "../../../Concepts/LiteralVariablesExpressions.en.md#explicitly-cast-a-variable" >}}
-[List Literal]: {{< ref "../../../Concepts/LiteralVariablesExpressions.en.md#a-list-literal" >}}
-[TItem]: {{< ref "../../../Concepts/Generics.en.md" >}}
-[CannotModifyReadOnlyListException]: {{< ref "../../../Exceptions/Lists/CannotModifyReadOnlyListException.en.md" >}}
-[PropertyNullException]: {{< ref "../../../Exceptions/Common/Property/PropertyNullException.en.md" >}}
-[InvalidPropertyValueException]: {{< ref "../../../Exceptions/Common/Property/InvalidPropertyValueException.en.md" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[explicitly cast]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ExplicitlyCastAVariable" >}}
+[List Literal]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.AListLiteral" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
+[PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
 [IList]: {{< url MSDocs.System.Collections.Generic.IList >}}
 [Object]: {{< url "MSDocs.System.Object" >}}

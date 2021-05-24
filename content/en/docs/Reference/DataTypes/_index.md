@@ -1,7 +1,7 @@
 ---
 title: "Data Types"
 linkTitle: "Data Types"
-description: Data Types help
+description: "Data Types help"
 weight: 20
 ---
 

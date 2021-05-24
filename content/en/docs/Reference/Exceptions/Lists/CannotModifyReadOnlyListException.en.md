@@ -1,9 +1,8 @@
 ---
 title: "CannotModifyReadOnlyListException"
 linkTitle: "CannotModifyReadOnlyListException"
-author: Cortex Development
+description: "The exception thrown when trying to modify a read-only list."
 date: 2020-05-13
-description: The exception thrown when trying to modify a read-only list.
 ---
 
 

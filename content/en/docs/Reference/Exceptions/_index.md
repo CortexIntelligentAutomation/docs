@@ -1,7 +1,7 @@
 ---
 title: "Exceptions"
 linkTitle: "Exceptions"
-description: Exceptions help
+description: "Exceptions help"
 weight: 30
 ---
 

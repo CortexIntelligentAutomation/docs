@@ -1,9 +1,8 @@
 ---
 title: "Generics"
 linkTitle: "Generics"
-author: Cortex Development
+description: "This page describes the concepts of Generics."
 date: 2020-05-13
-description: This page describes the concepts of Generics.
 ---
 
 # Generics

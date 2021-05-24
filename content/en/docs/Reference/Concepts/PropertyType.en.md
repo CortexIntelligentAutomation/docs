@@ -1,9 +1,8 @@
 ---
 title: "Property Type"
 linkTitle: "Property Type"
-author: Cortex Development
+description: "This page describes the concepts of Input, Output and InputOutput properties."
 date: 2020-05-13
-description: This page describes the concepts of Input, Output and InputOutput properties.
 ---
 
 # Input, Output & InputOutput properties

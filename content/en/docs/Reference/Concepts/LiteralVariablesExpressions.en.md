@@ -1,9 +1,8 @@
 ---
 title: "Literals, Variables and Expressions"
 linkTitle: "Literals, Variables and Expressions"
-author: Cortex Development
+description: "This page describes the different formats that can be used when entering values for block properties."
 date: 2020-05-13
-description: This page describes the different formats that can be used when entering values for block properties.
 ---
 
 # Literals, Variables and Expressions
