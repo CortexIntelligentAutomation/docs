@@ -5,7 +5,7 @@ description: "The exception thrown when a property is provided with a `null` val
 date: 2020-05-13
 ---
 
-# PropertyNullException
+# {{< param title >}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyNullException)</p>
 

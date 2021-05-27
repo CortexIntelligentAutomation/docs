@@ -6,7 +6,7 @@ date: 2020-05-13
 ---
 
 
-# CannotModifyReadOnlyListException
+# {{< param title >}}
 
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
 

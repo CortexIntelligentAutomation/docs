@@ -5,7 +5,7 @@ description: "The exception thrown when a property is provided with an invalid v
 date: 2020-05-13
 ---
 
-# InvalidPropertyValueException
+# {{< param title >}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.InvalidPropertyValueException)</p>
 
