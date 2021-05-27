@@ -18,15 +18,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Lists | Goldydocs</title><meta property="og:title" content="Lists" />
+<title>List | Goldydocs</title><meta property="og:title" content="List" />
 <meta property="og:description" content="Exceptions related to Lists" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/reference/exceptions/lists/" />
 <meta property="og:updated_time" content="2020-05-13T00:00:00+00:00" /><meta property="og:site_name" content="Goldydocs" />
-<meta itemprop="name" content="Lists">
+<meta itemprop="name" content="List">
 <meta itemprop="description" content="Exceptions related to Lists">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Lists"/>
+<meta name="twitter:title" content="List"/>
 <meta name="twitter:description" content="Exceptions related to Lists"/>
 
 
@@ -113,7 +113,7 @@ This the multi-page printable view of this section.
 
 
 
-<h1 class="title">Lists</h1>
+<h1 class="title">List</h1>
 <div class="lead">Exceptions related to Lists</div>
 
 
@@ -130,7 +130,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-015bbeb9d298da26fecb35b320375754">CannotModifyReadOnlyListException</a></li>
+<li>1: <a href="#pg-94a9a55704c7d69ed157764b84e3a434">CannotModifyReadOnlyListException</a></li>
 
 
     
@@ -162,7 +162,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-015bbeb9d298da26fecb35b320375754">1 - CannotModifyReadOnlyListException</h1>
+	<h1 id="pg-94a9a55704c7d69ed157764b84e3a434">1 - CannotModifyReadOnlyListException</h1>
     <div class="lead">The exception thrown when trying to modify a read-only list.</div>
 	<h1 id="cannotmodifyreadonlylistexception">CannotModifyReadOnlyListException</h1>
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
 </span><span style="color:#4e9a06">This is because the value of &#39;&lt;property-display-name&gt;&#39; is read-only.
 </span><span style="color:#4e9a06">See the CannotModifyReadOnlyListException help page for more information on how to fix this.&#34;</span>
 </code></pre></div><h2 id="how-to-fix">How to fix</h2>
-<p>If the list was written directly into the block property using an <a href="/docs/reference/concepts/literalvariablesexpressions/#expressions">expression</a>, use a list type that is not read-only, such as <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a href="/docs/reference/concepts/generics/">T</a>&gt;.</p>
+<p>If the list was written directly into the block property using an <a href="/docs/reference/concepts/literal-variables-expressions/#expressions">expression</a>, use a list type that is not read-only, such as <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a href="/docs/reference/concepts/generics/">T</a>&gt;.</p>
 <p>When using a variable, convert the list to a list that can be written to by using the <code>.ToList()</code> expression like follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSharp" data-lang="CSharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">List</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ToList</span><span style="color:#000;font-weight:bold">()</span>
 </code></pre></div>
@@ -255,7 +255,7 @@ This the multi-page printable view of this section.
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 The Docsy Authors All Rights Reserved</small>
+        <small class="text-white">&copy; 2021 Cortex Limited All Rights Reserved</small>
         <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></small>
 	
 		<p class="mt-2"><a href="/about/">About</a></p>

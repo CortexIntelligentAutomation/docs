@@ -5,7 +5,7 @@ description: "This page describes the concepts of Input, Output and InputOutput 
 date: 2020-05-13
 ---
 
-# Input, Output & InputOutput properties
+# {{< param title >}}
 
 This page describes the concept of Input, Output and InputOutput properties.
 
@@ -27,5 +27,5 @@ The InputOutput property is used to supply the value which will be used during b
 It can be only a [variable reference][]
 >Existing value of the supplied variable will get modified
 
-[literal]: {{< ref "LiteralVariablesExpressions.en.md#literal" >}}
-[variable reference]: {{< ref "LiteralVariablesExpressions.en.md#variable-reference" >}}
+[literal]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Literal" >}}
+[variable reference]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}

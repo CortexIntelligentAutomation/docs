@@ -4,7 +4,7 @@
   
   <url>
     <loc>/docs/</loc>
-    <lastmod>2019-07-03T16:05:26+01:00</lastmod>
+    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +19,11 @@
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2019-04-15T16:07:08+01:00</lastmod>
+    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/datatypes/</loc>
+    <loc>/docs/reference/data-types/</loc>
   </url>
   
   <url>
@@ -52,7 +52,7 @@
   </url>
   
   <url>
-    <loc>/docs/reference/blocks/lists/add/additematbeginningblock-2/</loc>
+    <loc>/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
     <lastmod>2021-04-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -87,7 +87,7 @@
   </url>
   
   <url>
-    <loc>/docs/reference/concepts/literalvariablesexpressions/</loc>
+    <loc>/docs/reference/concepts/literal-variables-expressions/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -97,7 +97,7 @@
   </url>
   
   <url>
-    <loc>/docs/reference/concepts/propertytype/</loc>
+    <loc>/docs/reference/concepts/property-type/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -127,7 +127,7 @@
   </url>
   
   <url>
-    <loc>/docs/reference/datatypes/common/</loc>
+    <loc>/docs/reference/data-types/common/</loc>
   </url>
   
   <url>
@@ -137,7 +137,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-04-26T10:19:01+02:00</lastmod>
+    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url>
   
   <url>

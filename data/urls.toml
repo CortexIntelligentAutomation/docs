@@ -11,13 +11,16 @@
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.PropertyType]
-                MainDoc = "/docs/reference/concepts/propertytype/"
-                Input = "/docs/reference/concepts/propertytype/#input"
-                InputOutput = "/docs/reference/concepts/propertytype/#inputoutput"
+                MainDoc = "/docs/reference/concepts/property-type/"
+                Input = "/docs/reference/concepts/property-type/#input"
+                InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
-                MainDoc = "/docs/reference/concepts/literalvariablesexpressions/"
-                ExplicitlyCastAVariable = "/docs/reference/concepts/literalvariablesexpressions/#explicitly-cast-a-variable"
-                AListLiteral = "/docs/reference/concepts/literalvariablesexpressions/#a-list-literal"
+                MainDoc = "/docs/reference/concepts/literal-variables-expressions/"
+                AListLiteral = "/docs/reference/concepts/literal-variables-expressions/#a-list-literal"
+                Expressions = "/docs/reference/concepts/literal-variables-expressions/#expressions"
+                ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
+                Literal = "/docs/reference/concepts/literal-variables-expressions/#literal"
+                VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
             [Cortex.Reference.Exceptions]
                 MainDoc = "/docs/reference/exceptions/"
                 [Cortex.Reference.Exceptions.Common]

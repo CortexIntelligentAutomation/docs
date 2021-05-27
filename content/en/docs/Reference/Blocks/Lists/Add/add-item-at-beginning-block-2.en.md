@@ -97,7 +97,7 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-## Adding an Item at the beginning of a List that contains multiple types
+### Adding an Item at the beginning of a List that contains multiple types
 
 By default, all [Item][Item Property]s in an [IList][]&lt;[TItem][]&gt; are of a specific type, e.g. In an [IList][]&lt;[String][]&gt;, all [Item][Item Property]s are of type [String][].  
   

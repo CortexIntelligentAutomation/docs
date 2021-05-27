@@ -5,7 +5,7 @@ description: "This page describes the different formats that can be used when en
 date: 2020-05-13
 ---
 
-# Literals, Variables and Expressions
+# {{< param title >}}
 
 This page describes the different formats that can be used when entering values for block properties.
 

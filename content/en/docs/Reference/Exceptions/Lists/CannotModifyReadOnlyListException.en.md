@@ -32,7 +32,7 @@ When using a variable, convert the list to a list that can be written to by usin
 ($)List.ToList()
 ```
 
-[T]: {{< ref "../../Concepts/Generics.en.md" >}}
-[expression]: {{< ref "../../Concepts/LiteralVariablesExpressions.en.md#expressions" >}}
+[T]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
 [List]: {{< url MSDocs.System.Collections.Generic.List >}}
 [IList]: {{< url MSDocs.System.Collections.Generic.IList >}}
