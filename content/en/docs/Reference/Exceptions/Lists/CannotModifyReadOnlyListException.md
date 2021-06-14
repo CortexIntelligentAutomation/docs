@@ -2,7 +2,6 @@
 title: "CannotModifyReadOnlyListException"
 linkTitle: "CannotModifyReadOnlyListException"
 description: "The exception thrown when trying to modify a read-only list."
-date: 2020-05-13
 ---
 
 

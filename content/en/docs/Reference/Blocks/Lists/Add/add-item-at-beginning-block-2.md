@@ -2,7 +2,6 @@
 title: "Add Item At Beginning"
 linkTitle: "Add Item At Beginning"
 description: "Adds an Item at the beginning of an IList&lt;TItem&gt;, where TItem represents the type of Items that can be added to the List."
-date: 2021-04-30
 ---
 
 ![Icon](/blocks/ListsAddBlockIcon.png)

@@ -2,7 +2,6 @@
 title: "Property Type"
 linkTitle: "Property Type"
 description: "This page describes the concepts of Input, Output and InputOutput properties."
-date: 2020-05-13
 ---
 
 # {{< param title >}}

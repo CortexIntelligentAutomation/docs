@@ -2,7 +2,6 @@
 title: "InvalidPropertyValueException"
 linkTitle: "InvalidPropertyValueException"
 description: "The exception thrown when a property is provided with an invalid value."
-date: 2020-05-13
 ---
 
 # {{< param title >}}

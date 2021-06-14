@@ -2,7 +2,6 @@
 title: "Literals, Variables and Expressions"
 linkTitle: "Literals, Variables and Expressions"
 description: "This page describes the different formats that can be used when entering values for block properties."
-date: 2020-05-13
 ---
 
 # {{< param title >}}

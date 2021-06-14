@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Goldydocs"
+title = "Cortex Evolution"
 
 enableRobotsTXT = true
 
@@ -59,7 +59,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Goldydocs"
+title = "Cortex Evolution"
 description = "A Docsy example site"
 languageName ="English"
 # Weight used for sorting.

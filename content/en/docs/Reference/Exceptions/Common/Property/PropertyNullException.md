@@ -2,7 +2,6 @@
 title: "PropertyNullException"
 linkTitle: "PropertyNullException"
 description: "The exception thrown when a property is provided with a `null` value, but a value is required."
-date: 2020-05-13
 ---
 
 # {{< param title >}}
