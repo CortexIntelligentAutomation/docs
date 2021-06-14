@@ -39,14 +39,16 @@
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/add/</loc>
-    <lastmod>2021-05-24T14:27:58+01:00</lastmod>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/blog/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
   </url><url>
     <loc>/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/common/</loc>
     <lastmod>2021-05-27T11:14:52+01:00</lastmod>
@@ -58,23 +60,31 @@
     <lastmod>2018-10-05T14:41:45+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/contains/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/dictionaries/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/files-and-folders/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/generics/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/get-count/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/get-index/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/get/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/exceptions/common/property/invalidpropertyvalueexception/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/</loc>
     <lastmod>2021-05-24T14:27:58+01:00</lastmod>
@@ -83,21 +93,30 @@
     <lastmod>2021-05-27T11:14:52+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/literal-variables-expressions/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/blocks/powershell/</loc>
+    <lastmod>2021-06-14T14:23:29+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/exceptions/common/property/</loc>
     <lastmod>2021-05-24T14:27:58+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/property-type/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/exceptions/common/property/propertynullexception/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/remove/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/search/</loc>
     <lastmod>2018-09-04T11:36:40+02:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/set/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/text/</loc>
+    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
   </url>
 </urlset>
