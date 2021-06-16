@@ -16,14 +16,14 @@ Adds an [Item][Item Property] at the beginning of an [IList][]&lt;[TItem][]&gt;,
 
 ### Add an Item at the beginning of an empty List
 
-**Inputs**
+#### Inputs
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[]` | `($)List` is a variable of type [IList][]&lt;[String][]&gt; |
 | [Item][Item Property] | `($)Item`, with value `"New Item"` | `($)Item` is a variable of type [String][] |
 
-**Outputs**
+#### Outputs
 
 The variable `($)List` will be updated to the following:
 
@@ -37,14 +37,14 @@ The variable `($)List` will be updated to the following:
 
 ### Add an Item at the beginning of a List containing items of different types
 
-**Inputs**
+#### Inputs
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[ "Some Text", 1 ]`[<sup>1<sup/>][List Literal] | `($)List` is a variable of type [IList][]&lt;[Object][]&gt; |
 | [Item][Item Property] | `(object)($)Item`, with value `"New Item"` | `($)Item` is a variable of type [String][] |
 
-**Outputs**
+#### Outputs
 
 The variable `($)List` will be updated to the following:
 
