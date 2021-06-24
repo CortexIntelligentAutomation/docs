@@ -126,6 +126,22 @@ This the multi-page printable view of this section.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-48171b7049a76fcf8d5863fe4f9f0990">Add Text At Beginning</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-c7702aba3695a70992e0b27286c947e1">Add Text At End</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -144,6 +160,324 @@ This the multi-page printable view of this section.
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-48171b7049a76fcf8d5863fe4f9f0990">1 - Add Text At Beginning</h1>
+    <div class="lead">Adds text at the beginning of another text.</div>
+	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Add Text At Beginning</h1>
+<p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtBeginningBlock)</p>
+<p>Adds <a href="#texttoadd">TextToAdd</a> at the beginning of another <a href="#text">Text</a>.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="add-texttoadd-at-the-beginning-of-another-text">Add TextToAdd at the beginning of another Text</h3>
+<h4 id="inputs">Inputs</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td><a href="#texttoadd">TextToAdd</a></td>
+<td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
+<td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs">Outputs</h4>
+<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
+</code></pre></div><hr>
+<h3 id="add-texttoadd-at-the-beginning-of-a-null-or-empty-text">Add TextToAdd at the beginning of a null or empty Text</h3>
+<h4 id="inputs-1">Inputs</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>null</code> or <code>&quot;&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td><a href="#texttoadd">TextToAdd</a></td>
+<td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
+<td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-1">Outputs</h4>
+<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
+</code></pre></div><hr>
+<h3 id="add-null-or-empty-texttoadd-at-the-beginning-of-another-text">Add null or empty TextToAdd at the beginning of another Text</h3>
+<h4 id="inputs-2">Inputs</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td><a href="#texttoadd">TextToAdd</a></td>
+<td><code>($)TextToAdd</code>, with value <code>null</code> or <code>&quot;&quot;</code></td>
+<td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-2">Outputs</h4>
+<p>The variable <code>($)Text</code> will remain the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
+</code></pre></div><hr>
+<h2 id="input-properties">Input Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> where the <a href="#texttoadd">TextToAdd</a> is added.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/property-type/#inputoutput">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="texttoadd">TextToAdd</h3>
+<p>The <a href="#texttoadd">TextToAdd</a> at the beginning of the <a href="#text">Text</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/property-type/#input">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)TextToAdd</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>No exceptions are thrown.</p>
+<h2 id="remarks">Remarks</h2>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#texttoadd">TextToAdd</a>. See <a href="#add-texttoadd-at-the-beginning-of-a-null-or-empty-text">Example</a> above.</p>
+<h3 id="null-or-empty-texttoadd">Null or empty TextToAdd</h3>
+<p>If <a href="#texttoadd">TextToAdd</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-texttoadd-at-the-beginning-of-another-text">Example</a> above.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c7702aba3695a70992e0b27286c947e1">2 - Add Text At End</h1>
+    <div class="lead">Adds text at the end of another text.</div>
+	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Add Text At End</h1>
+<p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtEndBlock)</p>
+<p>Adds <a href="#texttoadd">TextToAdd</a> at the end of another <a href="#text">Text</a>.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="add-texttoadd-at-the-end-of-another-text">Add TextToAdd at the end of another Text</h3>
+<h4 id="inputs">Inputs</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td><a href="#texttoadd">TextToAdd</a></td>
+<td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
+<td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs">Outputs</h4>
+<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ|&#34;</span>
+</code></pre></div><hr>
+<h3 id="add-texttoadd-at-the-end-of-a-null-or-empty-text">Add TextToAdd at the end of a null or empty Text</h3>
+<h4 id="inputs-1">Inputs</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>null</code> or <code>&quot;&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td><a href="#texttoadd">TextToAdd</a></td>
+<td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
+<td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-1">Outputs</h4>
+<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
+</code></pre></div><hr>
+<h3 id="add-null-or-empty-texttoadd-at-the-end-of-another-text">Add null or empty TextToAdd at the end of another Text</h3>
+<h4 id="inputs-2">Inputs</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td><a href="#texttoadd">TextToAdd</a></td>
+<td><code>($)TextToAdd</code>, with value <code>null</code> or <code>&quot;&quot;</code></td>
+<td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="outputs-2">Outputs</h4>
+<p>The variable <code>($)Text</code> will remain the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
+</code></pre></div><hr>
+<h2 id="input-properties">Input Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> where the <a href="#texttoadd">TextToAdd</a> is added.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/property-type/#inputoutput">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="texttoadd">TextToAdd</h3>
+<p>The <a href="#texttoadd">TextToAdd</a> at the end of the <a href="#text">Text</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/property-type/#input">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)TextToAdd</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>No exceptions are thrown.</p>
+<h2 id="remarks">Remarks</h2>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#texttoadd">TextToAdd</a>. See <a href="#add-texttoadd-at-the-end-of-a-null-or-empty-text">Example</a> above.</p>
+<h3 id="null-or-empty-texttoadd">Null or empty TextToAdd</h3>
+<p>If <a href="#texttoadd">TextToAdd</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-texttoadd-at-the-end-of-another-text">Example</a> above.</p>
+
+</div>
+
+
+
+    
+	
   
 
 

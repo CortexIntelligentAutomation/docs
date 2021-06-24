@@ -4,7 +4,7 @@ linkTitle: "Add Item At Beginning"
 description: "Adds an Item at the beginning of an IList&lt;TItem&gt;, where TItem represents the type of Items that can be added to the List."
 ---
 
-![Icon](/blocks/ListsAddBlockIcon.png)
+![Icon](/blocks/lists-add-block-icon.png)
 
 # {{< param title >}}
 
@@ -71,7 +71,7 @@ When adding an [Item][Item Property] to an [IList][]&lt;[Object][]&gt;, please b
 | | |
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
-| Type | [InputOutput][] |
+| Property Type | [InputOutput][] |
 | Default Value | `($)List` |
 
 ### Item
@@ -81,7 +81,7 @@ The [Item][Item Property] to be added at the beginning of the [List][List Proper
 | | |
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
-| Type | [Input][] |
+| Property Type | [Input][] |
 | Default Value | `($)Item` |
 
 ## Exceptions
@@ -124,6 +124,6 @@ To add to an [IList][]&lt;[Object][]&gt; using a variable, e.g. `($)StringVar`, 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
-[IList]: {{< url MSDocs.System.Collections.Generic.IList >}}
-[Object]: {{< url "MSDocs.System.Object" >}}
-[String]: {{< url "MSDocs.System.String" >}}
+[IList]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.IList >}}
+[Object]: {{< url "MSDocs.DotNet.Api.System.Object" >}}
+[String]: {{< url "MSDocs.DotNet.Api.System.String" >}}

@@ -4,7 +4,7 @@ linkTitle: "Add Text At Beginning"
 description: "Adds text at the beginning of another text."
 ---
 
-![Icon](/blocks/TextAddBlockIcon.png)
+![Icon](/blocks/text-add-block-icon.png)
 
 # {{< param title >}}
 
@@ -80,7 +80,7 @@ The [Text][Text Property] where the [TextToAdd][TextToAdd Property] is added.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Type | [InputOutput][] |
+| Property Type | [InputOutput][] |
 | Default Value | `($)Text` with value `""` |
 
 ### TextToAdd
@@ -90,7 +90,7 @@ The [TextToAdd][TextToAdd Property] at the beginning of the [Text][Text Property
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Type | [Input][] |
+| Property Type | [Input][] |
 | Default Value | `($)TextToAdd` with value `""` |
 
 ## Exceptions
@@ -116,4 +116,4 @@ If [TextToAdd][TextToAdd Property] is `null` or empty (i.e. `""`) nothing is add
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 
-[String]: {{< url "MSDocs.System.String" >}}
+[String]: {{< url "MSDocs.DotNet.Api.System.String" >}}

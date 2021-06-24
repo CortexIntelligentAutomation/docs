@@ -33,5 +33,5 @@ When using a variable, convert the list to a list that can be written to by usin
 
 [T]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
-[List]: {{< url MSDocs.System.Collections.Generic.List >}}
-[IList]: {{< url MSDocs.System.Collections.Generic.IList >}}
+[List]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.List >}}
+[IList]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.IList >}}
