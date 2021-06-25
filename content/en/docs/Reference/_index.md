@@ -1,6 +1,6 @@
 ---
 title: "Reference"
 linkTitle: "Reference"
-description: "This section includes the reference documentation for the Cortex Evolution platform's functional blocks."
-weight: 10
+description: "This section includes all reference documentation for the Cortex Evolution platform."
+weight: 100
 ---

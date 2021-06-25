@@ -173,9 +173,9 @@ This the multi-page printable view of this section.
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtBeginningBlock)</p>
-<p>Adds <a href="#texttoadd">TextToAdd</a> at the beginning of another <a href="#text">Text</a>.</p>
+<p>Adds <a href="#text-to-add">Text To Add</a> at the beginning of another <a href="#text">Text</a>.</p>
 <h2 id="examples">Examples</h2>
-<h3 id="add-texttoadd-at-the-beginning-of-another-text">Add TextToAdd at the beginning of another Text</h3>
+<h3 id="add-text-to-add-at-the-beginning-of-another-text">Add Text To Add at the beginning of another Text</h3>
 <h4 id="inputs">Inputs</h4>
 <table>
 <thead>
@@ -192,7 +192,7 @@ This the multi-page printable view of this section.
 <td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
 <tr>
-<td><a href="#texttoadd">TextToAdd</a></td>
+<td><a href="#text-to-add">Text To Add</a></td>
 <td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
 <td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
@@ -202,7 +202,7 @@ This the multi-page printable view of this section.
 <p>The variable <code>($)Text</code> will be updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
-<h3 id="add-texttoadd-at-the-beginning-of-a-null-or-empty-text">Add TextToAdd at the beginning of a null or empty Text</h3>
+<h3 id="add-text-to-add-at-the-beginning-of-a-null-or-empty-text">Add Text To Add at the beginning of a null or empty Text</h3>
 <h4 id="inputs-1">Inputs</h4>
 <table>
 <thead>
@@ -219,7 +219,7 @@ This the multi-page printable view of this section.
 <td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
 <tr>
-<td><a href="#texttoadd">TextToAdd</a></td>
+<td><a href="#text-to-add">Text To Add</a></td>
 <td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
 <td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
@@ -229,7 +229,7 @@ This the multi-page printable view of this section.
 <p>The variable <code>($)Text</code> will be updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
 </code></pre></div><hr>
-<h3 id="add-null-or-empty-texttoadd-at-the-beginning-of-another-text">Add null or empty TextToAdd at the beginning of another Text</h3>
+<h3 id="add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Add null or empty Text To Add at the beginning of another Text</h3>
 <h4 id="inputs-2">Inputs</h4>
 <table>
 <thead>
@@ -246,7 +246,7 @@ This the multi-page printable view of this section.
 <td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
 <tr>
-<td><a href="#texttoadd">TextToAdd</a></td>
+<td><a href="#text-to-add">Text To Add</a></td>
 <td><code>($)TextToAdd</code>, with value <code>null</code> or <code>&quot;&quot;</code></td>
 <td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
@@ -258,7 +258,7 @@ This the multi-page printable view of this section.
 </code></pre></div><hr>
 <h2 id="input-properties">Input Properties</h2>
 <h3 id="text">Text</h3>
-<p>The <a href="#text">Text</a> where the <a href="#texttoadd">TextToAdd</a> is added.</p>
+<p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
 <thead>
 <tr>
@@ -281,8 +281,8 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<h3 id="texttoadd">TextToAdd</h3>
-<p>The <a href="#texttoadd">TextToAdd</a> at the beginning of the <a href="#text">Text</a>.</p>
+<h3 id="text-to-add">Text To Add</h3>
+<p>The <a href="#text-to-add">Text To Add</a> at the beginning of the <a href="#text">Text</a>.</p>
 <table>
 <thead>
 <tr>
@@ -309,9 +309,9 @@ This the multi-page printable view of this section.
 <p>No exceptions are thrown.</p>
 <h2 id="remarks">Remarks</h2>
 <h3 id="null-or-empty-text">Null or empty Text</h3>
-<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#texttoadd">TextToAdd</a>. See <a href="#add-texttoadd-at-the-beginning-of-a-null-or-empty-text">Example</a> above.</p>
-<h3 id="null-or-empty-texttoadd">Null or empty TextToAdd</h3>
-<p>If <a href="#texttoadd">TextToAdd</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-texttoadd-at-the-beginning-of-another-text">Example</a> above.</p>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#text-to-add">Text To Add</a>. See <a href="#add-text-to-add-at-the-beginning-of-a-null-or-empty-text">Example</a> above.</p>
+<h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
+<p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Example</a> above.</p>
 
 </div>
 
@@ -332,9 +332,9 @@ This the multi-page printable view of this section.
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text At End</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtEndBlock)</p>
-<p>Adds <a href="#texttoadd">TextToAdd</a> at the end of another <a href="#text">Text</a>.</p>
+<p>Adds <a href="#text-to-add">Text To Add</a> at the end of another <a href="#text">Text</a>.</p>
 <h2 id="examples">Examples</h2>
-<h3 id="add-texttoadd-at-the-end-of-another-text">Add TextToAdd at the end of another Text</h3>
+<h3 id="add-text-to-add-at-the-end-of-another-text">Add Text To Add at the end of another Text</h3>
 <h4 id="inputs">Inputs</h4>
 <table>
 <thead>
@@ -351,7 +351,7 @@ This the multi-page printable view of this section.
 <td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
 <tr>
-<td><a href="#texttoadd">TextToAdd</a></td>
+<td><a href="#text-to-add">Text To Add</a></td>
 <td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
 <td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
@@ -361,7 +361,7 @@ This the multi-page printable view of this section.
 <p>The variable <code>($)Text</code> will be updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ|&#34;</span>
 </code></pre></div><hr>
-<h3 id="add-texttoadd-at-the-end-of-a-null-or-empty-text">Add TextToAdd at the end of a null or empty Text</h3>
+<h3 id="add-text-to-add-at-the-end-of-a-null-or-empty-text">Add Text To Add at the end of a null or empty Text</h3>
 <h4 id="inputs-1">Inputs</h4>
 <table>
 <thead>
@@ -378,7 +378,7 @@ This the multi-page printable view of this section.
 <td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
 <tr>
-<td><a href="#texttoadd">TextToAdd</a></td>
+<td><a href="#text-to-add">Text To Add</a></td>
 <td><code>($)TextToAdd</code>, with value <code>&quot;|&quot;</code></td>
 <td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
@@ -388,7 +388,7 @@ This the multi-page printable view of this section.
 <p>The variable <code>($)Text</code> will be updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
 </code></pre></div><hr>
-<h3 id="add-null-or-empty-texttoadd-at-the-end-of-another-text">Add null or empty TextToAdd at the end of another Text</h3>
+<h3 id="add-null-or-empty-text-to-add-at-the-end-of-another-text">Add null or empty Text To Add at the end of another Text</h3>
 <h4 id="inputs-2">Inputs</h4>
 <table>
 <thead>
@@ -405,7 +405,7 @@ This the multi-page printable view of this section.
 <td><code>($)Text</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
 <tr>
-<td><a href="#texttoadd">TextToAdd</a></td>
+<td><a href="#text-to-add">Text To Add</a></td>
 <td><code>($)TextToAdd</code>, with value <code>null</code> or <code>&quot;&quot;</code></td>
 <td><code>($)TextToAdd</code> is a variable of type <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></td>
 </tr>
@@ -417,7 +417,7 @@ This the multi-page printable view of this section.
 </code></pre></div><hr>
 <h2 id="input-properties">Input Properties</h2>
 <h3 id="text">Text</h3>
-<p>The <a href="#text">Text</a> where the <a href="#texttoadd">TextToAdd</a> is added.</p>
+<p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
 <thead>
 <tr>
@@ -440,8 +440,8 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<h3 id="texttoadd">TextToAdd</h3>
-<p>The <a href="#texttoadd">TextToAdd</a> at the end of the <a href="#text">Text</a>.</p>
+<h3 id="text-to-add">Text To Add</h3>
+<p>The <a href="#text-to-add">Text To Add</a> at the end of the <a href="#text">Text</a>.</p>
 <table>
 <thead>
 <tr>
@@ -468,9 +468,9 @@ This the multi-page printable view of this section.
 <p>No exceptions are thrown.</p>
 <h2 id="remarks">Remarks</h2>
 <h3 id="null-or-empty-text">Null or empty Text</h3>
-<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#texttoadd">TextToAdd</a>. See <a href="#add-texttoadd-at-the-end-of-a-null-or-empty-text">Example</a> above.</p>
-<h3 id="null-or-empty-texttoadd">Null or empty TextToAdd</h3>
-<p>If <a href="#texttoadd">TextToAdd</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-texttoadd-at-the-end-of-another-text">Example</a> above.</p>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#text-to-add">Text To Add</a>. See <a href="#add-text-to-add-at-the-end-of-a-null-or-empty-text">Example</a> above.</p>
+<h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
+<p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-at-the-end-of-another-text">Example</a> above.</p>
 
 </div>
 

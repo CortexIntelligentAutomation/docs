@@ -19,8 +19,11 @@ PascalCase is often used as a naming convention in programming languages such as
 
 See also [camelCase].
 
-
 ### Platform
+
+TODO
+
+### Portal
 
 TODO
 
@@ -42,6 +45,12 @@ TODO
 
 ### Property
 
+#### Block (property)
+
+TODO
+
+#### C# (property)
+
 TODO
 
 ### Property Type
@@ -59,6 +68,10 @@ TODO
 ### Remarks
 
 TODO
+
+### Request
+
+TODO - any type of trigger that is received
 
 ## S
 
@@ -85,6 +98,10 @@ TODO
 TODO
 
 ### Title Case
+
+TODO
+
+### Trigger
 
 TODO
 

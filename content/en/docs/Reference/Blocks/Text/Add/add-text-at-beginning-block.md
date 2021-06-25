@@ -10,18 +10,18 @@ description: "Adds text at the beginning of another text."
 
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtBeginningBlock)</p>
 
-Adds [TextToAdd][TextToAdd Property] at the beginning of another [Text][Text Property].
+Adds [Text To Add][TextToAdd Property] at the beginning of another [Text][Text Property].
 
 ## Examples
 
-### Add TextToAdd at the beginning of another Text
+### Add Text To Add at the beginning of another Text
 
 #### Inputs
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"` | `($)Text` is a variable of type [String][] |
-| [TextToAdd][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
+| [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
 
 #### Outputs
 
@@ -33,14 +33,14 @@ The variable `($)Text` will be updated to the following:
 
 ***
 
-### Add TextToAdd at the beginning of a null or empty Text
+### Add Text To Add at the beginning of a null or empty Text
 
 #### Inputs
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `null` or `""` | `($)Text` is a variable of type [String][] |
-| [TextToAdd][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
+| [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
 
 #### Outputs
 
@@ -52,14 +52,14 @@ The variable `($)Text` will be updated to the following:
 
 ***
 
-### Add null or empty TextToAdd at the beginning of another Text
+### Add null or empty Text To Add at the beginning of another Text
 
 #### Inputs
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"` | `($)Text` is a variable of type [String][] |
-| [TextToAdd][TextToAdd Property] | `($)TextToAdd`, with value `null` or `""` | `($)TextToAdd` is a variable of type [String][] |
+| [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `null` or `""` | `($)TextToAdd` is a variable of type [String][] |
 
 #### Outputs
 
@@ -75,7 +75,7 @@ The variable `($)Text` will remain the following:
 
 ### Text
 
-The [Text][Text Property] where the [TextToAdd][TextToAdd Property] is added.  
+The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.  
   
 | | |
 |--------------------|---------------------------|
@@ -83,9 +83,9 @@ The [Text][Text Property] where the [TextToAdd][TextToAdd Property] is added.
 | Property Type | [InputOutput][] |
 | Default Value | `($)Text` with value `""` |
 
-### TextToAdd
+### Text To Add
 
-The [TextToAdd][TextToAdd Property] at the beginning of the [Text][Text Property].
+The [Text To Add][TextToAdd Property] at the beginning of the [Text][Text Property].
 
 | | |
 |--------------------|---------------------------|
@@ -101,17 +101,17 @@ No exceptions are thrown.
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`) it is replaced with the [TextToAdd][TextToAdd Property]. See [Example][NullOrEmptyText Example] above.
+If [Text][Text Property] is `null` or empty (i.e. `""`) it is replaced with the [Text To Add][TextToAdd Property]. See [Example][NullOrEmptyText Example] above.
 
-### Null or empty TextToAdd
+### Null or empty Text To Add
 
-If [TextToAdd][TextToAdd Property] is `null` or empty (i.e. `""`) nothing is added to [Text][Text Property]. See [Example][NullOrEmptyTextToAdd Example] above.
+If [Text To Add][TextToAdd Property] is `null` or empty (i.e. `""`) nothing is added to [Text][Text Property]. See [Example][NullOrEmptyTextToAdd Example] above.
 
 [Text Property]: {{< ref "#text" >}}
-[TextToAdd Property]: {{< ref "#texttoadd" >}}
+[TextToAdd Property]: {{< ref "#text-to-add" >}}
 
-[NullOrEmptyText Example]: {{< ref "#add-texttoadd-at-the-beginning-of-a-null-or-empty-text" >}}
-[NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-texttoadd-at-the-beginning-of-another-text" >}}
+[NullOrEmptyText Example]: {{< ref "#add-text-to-add-at-the-beginning-of-a-null-or-empty-text" >}}
+[NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-at-the-beginning-of-another-text" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}

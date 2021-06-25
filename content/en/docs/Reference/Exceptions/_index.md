@@ -1,8 +1,6 @@
 ---
 title: "Exceptions"
 linkTitle: "Exceptions"
-description: "Exceptions help"
-weight: 30
+description: "This section includes all reference documentation for exceptions."
+weight: 10
 ---
-
-This is the help for available exceptions on Cortex Evolution.

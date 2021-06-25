@@ -17,13 +17,25 @@ Terms, words and phrases beginning with the letters K through O.
 
 TODO
 
+### Literal
+
+TODO
+
 ### lowercase
 
 TODO
 
 ## M
 
+### Method
+
+TODO
+
 ## N
+
+### Non-Null
+
+TODO
 
 ### Null
 
@@ -36,6 +48,14 @@ TODO
 TODO
 
 ### Occurrence
+
+TODO
+
+### Operand
+
+TODO
+
+### Operator
 
 TODO
 

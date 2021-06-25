@@ -5,21 +5,39 @@
     <loc>//localhost:1313/docs/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/docs/whats-new/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/overview/</loc>
+    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/docs/getting-started/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/reference/glossary/a-e/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/about/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/docs/reference/blocks/</loc>
-    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
+    <loc>//localhost:1313/docs/reference/apis/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/reference/</loc>
+    <loc>//localhost:1313/docs/reference/blocks/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/data-types/</loc>
     <lastmod>2021-05-27T11:14:52+01:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/docs/reference/exceptions/</loc>
+    <lastmod>2021-05-24T14:27:58+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/docs/guides/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/tutorials/installation/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/tutorials/</loc>
+    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/docs/reference/glossary/f-j/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/news/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
@@ -27,21 +45,34 @@
     <loc>//localhost:1313/blog/releases/</loc>
     <lastmod>2018-09-04T11:36:40+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/docs/reference/exceptions/</loc>
-    <lastmod>2021-05-24T14:27:58+01:00</lastmod>
+    <loc>//localhost:1313/docs/tutorials/setup/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/tutorials/development/</loc>
   </url><url>
     <loc>//localhost:1313/docs/reference/glossary/k-o/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/docs/tutorials/administration/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/reference/glossary/p-t/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/docs/reference/glossary/u-z/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/docs/reference/glossary/0-9/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/concepts/</loc>
     <lastmod>2021-05-24T14:27:58+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/docs/reference/glossary/p-t/</loc>
+    <loc>//localhost:1313/docs/reference/</loc>
+    <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/glossary/</loc>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/docs/reference/glossary/u-z/</loc>
-  </url><url>
-    <loc>//localhost:1313/docs/reference/glossary/0-9/</loc>
+    <loc>//localhost:1313/docs/faqs/</loc>
   </url><url>
     <loc>//localhost:1313/blog/2018/10/06/easy-documentation-with-docsy/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
@@ -53,7 +84,7 @@
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
-    <lastmod>2021-06-16T16:14:26+01:00</lastmod>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/blocks/lists/add/</loc>
     <lastmod>2021-06-16T16:14:26+01:00</lastmod>
@@ -62,16 +93,16 @@
     <lastmod>2021-06-16T16:14:26+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/blocks/text/add/add-text-at-beginning-block/</loc>
-    <lastmod>2021-06-21T13:51:25+01:00</lastmod>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/blocks/text/add/add-text-at-end-block/</loc>
-    <lastmod>2021-06-21T13:51:25+01:00</lastmod>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/</loc>
-    <lastmod>2021-06-14T13:47:28+01:00</lastmod>
+    <lastmod>2021-06-24T13:56:32+01:00</lastmod>
   </url><url>
     <loc>//localhost:1313/docs/reference/data-types/common/</loc>
     <lastmod>2021-05-27T11:14:52+01:00</lastmod>
@@ -94,8 +125,14 @@
     <loc>//localhost:1313/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/docs/guides/cortex-gateway/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/guides/cortex-studio/</loc>
+  </url><url>
     <loc>//localhost:1313/docs/reference/blocks/dictionaries/</loc>
     <lastmod>2021-06-14T13:47:28+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/docs/reference/blocks/exceptions/</loc>
   </url><url>
     <loc>//localhost:1313/docs/reference/blocks/files-and-folders/</loc>
     <lastmod>2021-06-14T13:47:28+01:00</lastmod>

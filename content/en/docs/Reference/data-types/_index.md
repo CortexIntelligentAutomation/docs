@@ -1,8 +1,6 @@
 ---
 title: "Data Types"
 linkTitle: "Data Types"
-description: "Data Types help"
-weight: 20
+description: "This section includes all reference documentation for data types."
+weight: 10
 ---
-
-Help for available data types.

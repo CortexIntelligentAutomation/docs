@@ -3,10 +3,12 @@
     [Cortex.Reference]
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.Exceptions]
+                MainDoc = "/docs/reference/blocks/exceptions/"
             [Cortex.Reference.Blocks.Text]
-                MainDoc = "/docs/reference/blocks/text"
+                MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
-                MainDoc = "/docs/reference/blocks/text/add"
+                MainDoc = "/docs/reference/blocks/text/add/"
                     [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
                     MainDoc = "/docs/reference/blocks/text/add/add-text-at-beginning-block/"
                     Examples = "/docs/reference/blocks/text/add/add-text-at-beginning-block/#examples"
@@ -29,25 +31,25 @@
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
-                MainDoc = "/docs/reference/exceptions/common"
+                MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
-                    MainDoc = "/docs/reference/exceptions/common/property"
+                    MainDoc = "/docs/reference/exceptions/common/property/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertynullexception"
+                        MainDoc = "/docs/reference/exceptions/common/property/propertynullexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
-                        MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception"
+                        MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
                 [Cortex.Reference.Exceptions.Lists]
-                    MainDoc = "/docs/reference/exceptions/lists"
+                    MainDoc = "/docs/reference/exceptions/lists/"
                         [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
-                            MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception"
+                            MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
-                MainDoc = "/docs/reference/glossary/a-e"
+                MainDoc = "/docs/reference/glossary/a-e/"
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
             [Cortex.Reference.Glossary.F-J]
-                MainDoc = "/docs/reference/glossary/f-j"
+                MainDoc = "/docs/reference/glossary/f-j/"
                 Flow = "/docs/reference/glossary/f-j/#flow"
                 FlowDeveloper = "/docs/reference/glossary/f-j/#flow-developer"
                 FunctionalBlock = "/docs/reference/glossary/f-j/#functional-block"
@@ -57,24 +59,34 @@
                 Int32 = "/docs/reference/glossary/f-j/#int32"
                 IDE = "/docs/reference/glossary/f-j/#ide"
             [Cortex.Reference.Glossary.K-O]
-                MainDoc = "/docs/reference/glossary/k-o"
+                MainDoc = "/docs/reference/glossary/k-o/"
+                Literal = "/docs/reference/glossary/k-o/#literal"
                 LowerCase = "/docs/reference/glossary/k-o/#lowercase"
+                Method = "/docs/reference/glossary/k-o/#method"
+                NonNull = "/docs/reference/glossary/k-o/#non-null"
                 Null = "/docs/reference/glossary/k-o/#null"
+                Operand = "/docs/reference/glossary/k-o/#operand"
+                Operator = "/docs/reference/glossary/k-o/#operator"
             [Cortex.Reference.Glossary.P-T]
-                MainDoc = "/docs/reference/glossary/p-t"
+                MainDoc = "/docs/reference/glossary/p-t/"
                 PascalCase = "/docs/reference/glossary/p-t/#pascalcase"
                 Platform = "/docs/reference/glossary/p-t/#platform"
+                Portal = "/docs/reference/glossary/p-t/#portal"
                 Process = "/docs/reference/glossary/p-t/#process"
                 ProgrammingLanguage = "/docs/reference/glossary/p-t/#programming-language"
-                Property = "/docs/reference/glossary/p-t/#property"
+                PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
+                PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
+                Request = "/docs/reference/glossary/p-t/#request"
                 Task = "/docs/reference/glossary/p-t/#task"
                 Text = "/docs/reference/glossary/p-t/#text"
+                Trigger = "/docs/reference/glossary/p-t/#trigger"
                 Type = "/docs/reference/glossary/p-t/#type"
             [Cortex.Reference.Glossary.U-Z]
-                MainDoc = "/docs/reference/glossary/u-z"
+                MainDoc = "/docs/reference/glossary/u-z/"
                 UpperCase = "/docs/reference/glossary/u-z/#uppercase"
+                Variable = "/docs/reference/glossary/u-z/#variable"
             [Cortex.Reference.Glossary.0-9]
-                MainDoc = "/docs/reference/glossary/0-9"
+                MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
 
@@ -90,5 +102,11 @@
         [MSDocs.DotNet.Api.System.Collections.Generic]
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
+[MSGitHub]
+    [MSGitHub.MonacoEditor]
+        MainDoc = "https://microsoft.github.io/monaco-editor/"
+[VisualStudio]
+    [VisualStudio.Code]
+        MainDoc = "https://code.visualstudio.com/"
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
