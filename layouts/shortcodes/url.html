@@ -1,1 +1,7 @@
-{{ index .Site.Data.urls (split (.Get 0) ".")}}
+{{ $link := (index .Site.Data.urls (split (.Get 0) ".")) }}
+{{ if hasPrefix $link "https://docs.microsoft.com/en-us/dotnet/api/" }}
+{{ $link }}?view={{.Site.Params.dotNetVersion}}
+{{ else }}
+{{ $link }}
+{{ end }}
+
