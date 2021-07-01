@@ -1,7 +1,11 @@
-{{ $link := (index .Site.Data.urls (split (.Get 0) ".")) }}
-{{ if hasPrefix $link "https://docs.microsoft.com/en-us/dotnet/api/" }}
-{{ $link }}?view={{.Site.Params.dotNetVersion}}
-{{ else }}
-{{ $link }}
+{{ $url := urls.Parse (index .Site.Data.urls (split (.Get 0) ".")) }}
+{{ $link := (printf "%s://%s%s" $url.Scheme $url.Host $url.Path) }}
+{{ if hasPrefix $url "https://docs.microsoft.com/en-us/dotnet/api/" }}
+{{ $link = (printf "%s?view=%s" $link .Site.Params.dotNetVersion)}}
+{{ if ne $url.Fragment ""}}
+{{ $link = (printf "%s#%s" $link $url.Fragment)}}
 {{ end }}
-
+{{ $link}}
+{{ else }}
+{{ $url }}
+{{ end }}

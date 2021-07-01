@@ -1598,14 +1598,14 @@
 <blockquote>
 <p>Lists deriving from <a href="
 
+
+
+
 https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1?view=netcore-3.1
-
-
 ">IList</a>&lt;<a href="
 
+
 /docs/reference/concepts/generics/
-
-
 ">T</a>&gt; have the option to be read-only.</p>
 </blockquote>
 <p>The format of the exception message is as follows:</p>
@@ -1615,19 +1615,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1?v
 </code></pre></div><h2 id="how-to-fix">How to fix</h2>
 <p>If the list was written directly into the block property using an <a href="
 
+
 /docs/reference/concepts/literal-variables-expressions/#expressions
-
-
 ">expression</a>, use a list type that is not read-only, such as <a href="
 
+
+
+
 https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1
-
-
 ">List</a>&lt;<a href="
 
+
 /docs/reference/concepts/generics/
-
-
 ">T</a>&gt;.</p>
 <p>When using a variable, convert the list to a list that can be written to by using the <code>.ToList()</code> expression like follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSharp" data-lang="CSharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">List</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ToList</span><span style="color:#000;font-weight:bold">()</span>
