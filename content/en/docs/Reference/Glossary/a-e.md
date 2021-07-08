@@ -37,7 +37,7 @@ For a complete list of available blocks deployed with the platform, see [Referen
 
 ### Block Property
 
-[Blocks][Block] have block properties (or [properties]) that allow the [flow developers] to configure how the block should behave. E.g. which server to execute a function on.
+[Blocks][Block] have block properties (or [properties]) that allow the [flow developers] to configure how the block should behave; e.g. a block to send emails would have properties for specifying things like the sender, recipients, summary, body, attachments etc.
 
 For more detailed information about configuring blocks using block properties, see [Guides->Cortex Studio->Blocks->Configuring Blocks][TODO].
 

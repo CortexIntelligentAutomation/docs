@@ -1,5 +1,8 @@
 # Internal links
 [Cortex]
+    [Cortex.Guides]
+        [Cortex.Guides.Studio]
+            MainDoc = "/docs/guides/cortex-studio/"
     [Cortex.Reference]
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
