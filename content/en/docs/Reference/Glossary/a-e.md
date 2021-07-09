@@ -11,6 +11,18 @@ Terms, words and phrases beginning with the letters A through E.
 
 ## A
 
+### Acceleration Programme
+
+TODO
+
+### Agility
+
+TODO
+
+### API
+
+TODO
+
 ### Automate
 
 The application of [automation].
@@ -18,6 +30,10 @@ The application of [automation].
 ### Automation
 
 Automation is a term for techniques, methods, systems or technologies that reduce human intervention in [tasks] and [processes].
+
+### Automation Lifecyle
+
+TODO
 
 ## B
 
@@ -61,6 +77,10 @@ camelCase is often used as a naming convention in programming languages such as 
 
 See also [PascalCase].
 
+### Capacity
+
+TODO
+
 ### Cast
 
 The process of explicitly converting one [data type] to another.
@@ -68,6 +88,10 @@ The process of explicitly converting one [data type] to another.
 See [Casting and type conversions (C# Programming Guide)] for a detailed technical explanation of casting in [C#], the [programming language] natively supported by the [Cortex Evolution] [platform] for writing simple [expressions][expression] and more complex [code].
 
 Also see [Explicit Cast] for more information.
+
+### Cloud
+
+TODO
 
 ### Code
 
@@ -113,11 +137,31 @@ For more detailed information about debugging in Cortex Studio, see [Guides->Cor
 
 The default that is assigned as the value of a [block property] when a new [block] is added to a [flow].
 
+### Deploy
+
+TODO
+
+### Deployment
+
+TODO
+
+### Design Sprint
+
+TODO
+
+### Diagnostics
+
+TODO
+
 ### Dictionary
 
 A [data type] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and it's associated item. Dictionaries are optimised for fast lookup of items using their key.
 
 For more detailed information about dictionaries, see [Reference->Data Types->Dictionaries][TODO].
+
+### Digital Transformation
+
+TODO
 
 ### Dynamic
 
@@ -127,11 +171,19 @@ For more detailed information about the dynamic data type, see [Reference->Data 
 
 ## E
 
+### Efficiency
+
+TODO
+
 ### Empty
 
 Empty indicates that a [data type] has been [initialised] and has a [non-null] value, but the value does not contain any data. E.g. a [string] that contains no characters `""`, or a [list] that contains no items `[]`.
 
 Empty is not the same as [null].
+
+### Enterprise-grade
+
+TODO
 
 ### Error
 

@@ -15,6 +15,10 @@ Terms, words and phrases beginning with the letters U through Z.
 
 TODO
 
+### Use Case
+
+TODO
+
 ## V
 
 ### Value
@@ -25,6 +29,10 @@ TODO
 
 TODO
 
+### Velocity
+
+TODO
+
 ## W
 
 ### Whitespace
@@ -32,6 +40,10 @@ TODO
 TODO
 
 ### Windows PowerShell
+
+TODO
+
+### Workflow
 
 TODO
 

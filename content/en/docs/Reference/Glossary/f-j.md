@@ -61,6 +61,10 @@ TODO
 
 TODO
 
+### Industry
+
+TODO
+
 ### Initialised
 
 TODO
@@ -74,6 +78,10 @@ TODO
 TODO
 
 ### Integer
+
+TODO
+
+### Interactive
 
 TODO
 
@@ -98,6 +106,10 @@ TODO
 TODO
 
 ### IList&lt;TItem&gt;
+
+TODO
+
+### IT
 
 TODO
 

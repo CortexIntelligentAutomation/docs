@@ -1,5 +1,10 @@
 # Internal links
 [Cortex]
+    [Cortex.GettingStarted]
+        MainDoc = "/docs/getting-started/"
+        [Cortex.GettingStarted.OnPremise]
+            [Cortex.GettingStarted.OnPremise.MultipleServerWithHA]
+                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha/"
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"

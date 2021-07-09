@@ -19,6 +19,10 @@ PascalCase is often used as a naming convention in programming languages such as
 
 See also [camelCase].
 
+### Patching
+
+TODO
+
 ### Platform
 
 TODO
@@ -57,7 +61,15 @@ TODO
 
 TODO
 
+### Provisioning
+
+TODO
+
 ## Q
+
+### Quality
+
+TODO
 
 ## R
 
@@ -75,7 +87,15 @@ TODO - any type of trigger that is received
 
 ## S
 
+### Sector
+
+TODO
+
 ### Separator
+
+TODO
+
+### Software Development
 
 TODO
 
@@ -84,6 +104,10 @@ TODO
 TODO
 
 ### Structure
+
+TODO
+
+### Swivel Chair
 
 TODO
 
@@ -98,6 +122,10 @@ TODO
 TODO
 
 ### Title Case
+
+TODO
+
+### Transformation
 
 TODO
 

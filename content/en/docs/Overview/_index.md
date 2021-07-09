@@ -9,33 +9,33 @@ weight: 2
 
 ### Low-code automation
 
-Cortex Evolution is a [**low-code**][Studio], **automation and orchestration** [**platform**](../TODO-platformarchitecture), that enables organisations to graphically **capture** and **automate** anything from simple **tasks**, to interactive **workflows**, to complex IT and business **processes** that span the entire organisation.
+Cortex Evolution is a **[low-code][Studio]**, **automation and orchestration [platform](../TODO-platformarchitecture)**, that enables organisations to graphically **capture** and **automate** anything from simple **tasks**, to interactive **workflows**, to complex IT and business **processes** that span the entire organisation.
 
 ### Enterprise-grade
 
-Evolved from process and control engineering for mission-critical environments, Cortex Evolution provides **enterprise-grade** functionality to cover the **full automation lifecycle**; enabling **rapid delivery** of automation [**on-premise**](../getting-started/on-premise/) or in the [**cloud**](../getting-started/deployment-options/cloud), from inception to production, **without** the need for **software development experience**.
+Evolved from process and control engineering for mission-critical environments, Cortex Evolution provides **enterprise-grade** functionality to cover the **full automation lifecycle**; enabling **rapid delivery** of automation **[on-premise][]** or in the **[cloud](../TODO-deploycloud)**, from inception to production, **without** the need for **software development experience**.
 
 ### Built for everyone
 
-Our vision is [**a world where everyone can automate**](../TODO-vision), and Cortex Evolution is being **built for everyone**, not just software developers, with the goal of **removing barriers** to entry and putting your people at the heart of your automation.
+Our vision is **a world where everyone can automate**, and Cortex Evolution is being **built for everyone**, not just software developers, with the goal of **removing barriers** to entry and putting your people at the heart of your automation.
 
 ### Comprehensive functionality
 
-With a [**comprehensive set of functionality**](../reference/blocks) and interfaces with [**3rd party systems**](../TODO-3rdpartysystems) available **out-of-the-box**, it's [**quick and easy to get started**](../getting-started) on your automation journey.
+With a **[comprehensive set of functionality][Blocks]** and interfaces with **[3rd party systems](../TODO-3rdpartysystems)** available **out-of-the-box**, it's **[quick and easy to get started][Getting Started]** on your automation journey.
 
 ## What can it do?
 
 ### Deliver quickly
 
-Using Cortex Evolution, [**global organisations**](../TODO-customers) have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
+Using Cortex Evolution, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
 
 ### Across multiple sectors, industries and markets
 
-Cortex Evolution has been deployed in **small**, **medium** and **large enterprises** from different [**sectors, industries and markets**](../TODO-sectors-industries-and-markets), including:
+Cortex Evolution has been deployed in **small**, **medium** and **large enterprises** from different **[sectors, industries and markets][Sectors]**, including:
 
 * Telecommunication services
 * IT services
-* Insurance
+* Banking, Financial Services and Insurance
 * Chemicals
 * Paper and Forest products
 * Food products
@@ -44,7 +44,7 @@ Cortex Evolution has been deployed in **small**, **medium** and **large enterpri
 
 ### For diverse sets of use cases
 
-Cortex Evolution has been deployed for a diverse set of [**use cases**](../TODO-usecases), including:
+Cortex Evolution has been deployed for a diverse set of **[use cases][UseCases]**, including:
 
 * Lights out **monitoring** and **management** of fixed-line telephony networks
 * Data center **provisioning**
@@ -56,7 +56,7 @@ Cortex Evolution has been deployed for a diverse set of [**use cases**](../TODO-
 
 ### Resulting in successful outcomes
 
-Cortex Evolution has resulted in many successful [**outcomes**](../TODO-outcomes), including:
+Cortex Evolution has resulted in many successful **[outcomes][]**, including:
 
 * Increased **revenue**
 * Increased **profit**
@@ -70,20 +70,29 @@ Wherever you are on your automation journey and whatever you are trying to achie
 
 ## How do I get started?
 
-* [Getting Started](../getting-started/): download Cortex Evolution and start your automation journey today
-* TODO: Kickstarter, Design Sprint, Launch Programme, Acceleration Programme
-* TODO: Demo
-* TODO: Webinars
-* TODO: Tutorials
+|||
+|-----------|-------------|
+|**[Getting&nbsp;Started][Getting Started]**|Install Cortex Evolution and start your automation journey today.|
+|**[Guides](TODO)**|Learn how to use the various components that make up the Cortex Evolution platform.|
+|**[Tutorials](TODO)**|Explore all of the tutorials for the Cortex Evolution platform.|
+|**[Reference](TODO)**|Browse through the reference documentation, including details about APIs, blocks, data types, exceptions.|
+|**[FAQs](TODO)**|Find the answers to your questions.|
+|**[Videos](TODO)**|View a range of videos about the Cortex Evolution platform, automation, strategies and methodologies, as well as industry specific content.|
+|**[Webinars](TODO)**|Watch a selection of automation related webinars.|
+|**[Engage&nbsp;With&nbsp;Us](TODO)**|Let us help you to get started by participating in one of our enablement pathway programs:
+||1. [Kickstarter](TODO) - Free two/three day workshop that enables the rapid configuration of a cloud-based Cortex Evolution platform to prototype, and demonstrate automation in context.|
+||2. [Design Sprint](TODO) - A two week formalised approach to automation based on our 300+ man years of knowledge and experience. Facilitated by Cortex, the Automation Design Sprint works through the required stages of automation, from vision and objectives to prototype and feedback.|
+||3. [Launch Program](TODO) - A twelve week program which takes your team through the phases of mobilisation, design of automation, trial testing and sign-off to production.|
+||4. [Acceleration Program](TODO) - A three, six or nine month program that delivers the framework for organisations to effectively and efficiently accelerate their team in the design, development, and delivery of automation using the Cortex Evolution platform.|
+
 * TODO: Training
-* TODO: Videos
-* TODO: User guides
-* TODO: Reference material
 * TODO: Pricing
 * TODO: Pre-packaged solutions
 * TODO: Community content
-* TODO: Engage with us
 
 TODO: Include embedded video to what cortex evolution is and what it can do
 
+[Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+[Getting Started]: {{< url "Cortex.GettingStarted.MainDoc" >}}
+[On-Premise]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.MainDoc" >}}
 [Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
