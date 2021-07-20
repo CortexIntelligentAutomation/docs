@@ -53,6 +53,10 @@ TODO
 
 TODO
 
+### Immutable
+
+Unable to be changed.
+
 ### Implicitly Cast
 
 TODO

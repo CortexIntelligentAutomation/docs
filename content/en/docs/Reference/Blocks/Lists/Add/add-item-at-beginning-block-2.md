@@ -1,6 +1,6 @@
 ---
 title: "Add Item At Beginning"
-linkTitle: "Add Item At Beginning"
+linkTitle: "At Beginning"
 description: "Adds an Item at the beginning of an IList&lt;TItem&gt;, where TItem represents the type of Items that can be added to the List."
 ---
 

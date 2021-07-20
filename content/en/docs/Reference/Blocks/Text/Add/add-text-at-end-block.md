@@ -1,6 +1,6 @@
 ---
 title: "Add Text At End"
-linkTitle: "Add Text At End"
+linkTitle: "At End"
 description: "Adds text at the end of another text."
 ---
 

@@ -1,328 +1,185 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/docs/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-07-09T15:58:02+01:00</lastmod>
+  </url><url>
     <loc>/docs/whats-new/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/overview/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/getting-started/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-07-08T13:37:13+01:00</lastmod>
+  </url><url>
     <loc>/docs/reference/glossary/a-e/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/apis/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/data-types/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/exceptions/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/guides/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/tutorials/installation/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/tutorials/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/glossary/f-j/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/news/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/releases/</loc>
     <lastmod>2018-09-04T11:36:40+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/tutorials/setup/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/tutorials/development/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/glossary/k-o/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/tutorials/administration/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/glossary/p-t/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/glossary/u-z/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/glossary/0-9/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/concepts/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/glossary/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/faqs/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/2018/10/06/easy-documentation-with-docsy/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/2018/10/06/the-second-blog-post/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/2018/01/04/another-great-release/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/add/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/add/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/reference/blocks/text/add/add-text-after-index-block/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
+  </url><url>
     <loc>/docs/reference/blocks/text/add/add-text-at-beginning-block/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/add/add-text-at-end-block/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/reference/blocks/text/add/add-text-before-index-block/</loc>
+  </url><url>
     <loc>/blog/</loc>
     <lastmod>2018-10-05T12:27:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/data-types/common/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/exceptions/common/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/community/</loc>
     <lastmod>2018-10-05T14:41:45+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/contains/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/contains/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/convert-to/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/guides/cortex-gateway/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/reference/apis/cortex-gateway/</loc>
+  </url><url>
     <loc>/docs/guides/cortex-studio/</loc>
-    <lastmod>2021-06-25T18:21:14+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/reference/apis/cortex-studio/</loc>
+  </url><url>
     <loc>/docs/reference/blocks/dictionaries/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/exceptions/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/files-and-folders/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/find-and-remove/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/find-and-replace/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/format/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/concepts/generics/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/get-count/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/get-index/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/get-index/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/get/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/get-length/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/get/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/reference/concepts/indexes/</loc>
+  </url><url>
+    <loc>/docs/getting-started/on-premise/</loc>
+    <lastmod>2021-07-08T13:37:13+01:00</lastmod>
+  </url><url>
     <loc>/docs/reference/exceptions/common/property/invalidpropertyvalueexception/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/is/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/join/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/exceptions/lists/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/concepts/literal-variables-expressions/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/getting-started/on-premise/multiple-server-with-ha/</loc>
+    <lastmod>2021-07-08T13:37:13+01:00</lastmod>
+  </url><url>
     <loc>/docs/reference/blocks/powershell/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/exceptions/common/property/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/concepts/property-type/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/exceptions/common/property/propertynullexception/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/</loc>
+  </url><url>
     <loc>/docs/reference/blocks/lists/remove/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/remove/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/search/</loc>
     <lastmod>2018-09-04T11:36:40+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/lists/set/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/split/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/docs/reference/blocks/text/</loc>
   </url>
-  
 </urlset>

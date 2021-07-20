@@ -23,6 +23,8 @@
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
+            [Cortex.Reference.Concepts.Indexes]
+                MainDoc = "/docs/reference/concepts/indexes/"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
                 MainDoc = "/docs/reference/concepts/literal-variables-expressions/"
                 AListLiteral = "/docs/reference/concepts/literal-variables-expressions/#a-list-literal"
@@ -44,6 +46,8 @@
                     MainDoc = "/docs/reference/exceptions/common/property/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertynullexception/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException]
+                        MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
                 [Cortex.Reference.Exceptions.Lists]
@@ -105,8 +109,9 @@
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
     [MSDocs.DotNet.Api.System]
-        String = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
+        Int32 = "https://docs.microsoft.com/en-us/dotnet/api/system.int32"
         Object = "https://docs.microsoft.com/en-us/dotnet/api/system.object"
+        String = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
         [MSDocs.DotNet.Api.System.Collections.Generic]
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"

@@ -1,6 +1,6 @@
 ---
 title: "Add Text At Beginning"
-linkTitle: "Add Text At Beginning"
+linkTitle: "At Beginning"
 description: "Adds text at the beginning of another text."
 ---
 
