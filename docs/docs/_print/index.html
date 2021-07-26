@@ -766,6 +766,30 @@ This the multi-page printable view of this section.
   
 
   
+    
+    
+	
+<li>6.2.6.2.1: <a href="#pg-78fdc586d9ce4c98f0018f696a3acc50">Contains All Text</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2.6.2.2: <a href="#pg-bee8c1b65023c54b83fdd3101b9d6b19">Contains Any Text</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2.6.2.3: <a href="#pg-2cd63755181f2d35d1aa9b32c9322655">Contains Text</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -1005,7 +1029,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.3.1: <a href="#pg-5aa1d35df84bf4ef888522bc0f830654">Common</a></li>
+<li>6.3.1: <a href="#pg-a8d765b2e55e8a0eec2122666f4bca93">Most Common Data Types</a></li>
 
 
     
@@ -1176,6 +1200,14 @@ This the multi-page printable view of this section.
     
 	
 <li>6.5.4: <a href="#pg-6a73af7268c07cfd299b458847821229">Property Type</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.5.5: <a href="#pg-ce234f285536bbfac901f48ddebc0d79">Text Equality</a></li>
 
 
     
@@ -3997,6 +4029,1006 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
   
 
   
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-78fdc586d9ce4c98f0018f696a3acc50">6.2.6.2.1 - Contains All Text</h1>
+    <div class="lead">Checks if text contains all of the texts in a given set of texts.</div>
+	<p><img src="/blocks/text-contains-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Contains All Text</h1>
+<p class="namespace">(Cortex.Blocks.Text.Contains.ContainsAllTextBlock)</p>
+<h2 id="description">Description</h2>
+<p>Checks if <a href="#text">Text</a> contains all of the texts in a given set of <a href="#texts-to-find">Texts To Find</a>.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-contains-all-of-the-texts-in-texts-to-find">Text contains all of the texts in Texts To Find</h3>
+<p>This example will check that <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains all of the texts in <code>[&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;]</code>.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/concepts/text-equality/#ordinal
+">case-sensitive, culture-insensitive</a> comparison of text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#texts-to-find">Texts To Find</a></td>
+<td><code>($)TextsToFind</code>, with value <code>[&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;]</code></td>
+<td><code>($)TextsToFind</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#ienumerablelttgt
+">IEnumerable</a>&lt;<a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#comparison-type">Comparison Type</a></td>
+<td><code>($)ComparisonType</code>, with value <code>StringComparison.Ordinal</code></td>
+<td><code>($)ComparisonType</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td><a href="#contains-all-text">Contains All Text</a></td>
+<td><code>($)ContainsAllText</code>, with no value</td>
+<td><code>($)ContainsAllText</code> is a variable that will be set to a <a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a> value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains all of the texts in <code>[&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;]</code>. Therefore, the variable <code>($)ContainsAllText</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">true</span>
+</code></pre></div><hr>
+<h3 id="text-does-not-contain-all-of-the-texts-in-texts-to-find">Text does not contain all of the texts in Texts To Find</h3>
+<p>This example will check that <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain all of the texts in <code>[&quot;the&quot;, &quot;slow&quot;, &quot;brown&quot;, &quot;fox&quot;]</code>.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/concepts/text-equality/#ordinal
+">case-sensitive, culture-insensitive</a> comparison of text.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#texts-to-find">Texts To Find</a></td>
+<td><code>($)TextsToFind</code>, with value <code>[&quot;the&quot;, &quot;slow&quot;, &quot;brown&quot;, &quot;fox&quot;]</code></td>
+<td><code>($)TextsToFind</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#ienumerablelttgt
+">IEnumerable</a>&lt;<a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#comparison-type">Comparison Type</a></td>
+<td><code>($)ComparisonType</code>, with value <code>StringComparison.Ordinal</code></td>
+<td><code>($)ComparisonType</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td><a href="#contains-all-text">Contains All Text</a></td>
+<td><code>($)ContainsAllText</code>, with no value</td>
+<td><code>($)ContainsAllText</code> is a variable that will be set to a <a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a> value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain all of the texts in <code>[&quot;the&quot;, &quot;slow&quot;, &quot;brown&quot;, &quot;fox&quot;]</code>; <code>&quot;slow&quot;</code> is missing, and <code>&quot;the&quot;</code> does not match <code>&quot;The&quot;</code> as the specified <a href="#comparison-type">Comparison Type</a> uses case-sensitive matching. Therefore, the variable <code>($)ContainsAllText</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">false</span>
+</code></pre></div><hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to check whether it contains all of the texts in the given set of <a href="#texts-to-find">Texts To Find</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="texts-to-find">Texts To Find</h3>
+<p>The set of <a href="#texts-to-find">Texts To Find</a> to check are all contained in <a href="#text">Text</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#ienumerablelttgt
+">IEnumerable</a>&lt;<a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a>&gt;</td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)TextsToFind</code> with value <code>[]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparison-type">Comparison Type</h3>
+<p>The <a href="#comparison-type">Comparison Type</a> specifying the rules used to determine whether each text in <a href="#texts-to-find">Texts To Find</a> is contained in <a href="#text">Text</a></p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-equality/#comparison-types
+">supported values</a> for the <a href="#comparison-type">Comparison Type</a> property and examples of how it is determined whether two pieces of text match, please see <a href="
+
+
+/docs/reference/concepts/text-equality/
+">Text Equality</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)ComparisonType</code> with value <code>StringComparison.Ordinal</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="contains-all-text">Contains All Text</h3>
+<p>The result of the contains all text check.</p>
+<p>If all of the texts in <a href="#texts-to-find">Texts To Find</a> are contained in <a href="#text">Text</a>, the specified variable will be set to <code>true</code>, otherwise it will be set to <code>false</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+
+">Output</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)ContainsAllText</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+
+
+https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a></td>
+<td>Thrown when the <a href="#comparison-type">Comparison Type</a> property is not one of the specified <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a> types.</td>
+</tr>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/propertynullexception/
+">PropertyNullException</a></td>
+<td>Thrown when <a href="#texts-to-find">Texts To Find</a> property is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="comparison-types">Comparison Types</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-equality/#comparison-types
+">supported values</a> for the <a href="#comparison-type">Comparison Type</a> property and examples of how it is determined whether two pieces of text match, please see <a href="
+
+
+/docs/reference/concepts/text-equality/
+">Text Equality</a>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), the variable specified in the  <a href="#contains-all-text">Contains All Text</a> property is set to <code>false</code>.</p>
+<h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
+<p>If <a href="#texts-to-find">Texts To Find</a> is empty or contains any <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) text, the variable specified in the <a href="#contains-all-text">Contains All Text</a> property is set to <code>false</code>.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-bee8c1b65023c54b83fdd3101b9d6b19">6.2.6.2.2 - Contains Any Text</h1>
+    <div class="lead">Checks if text contains any of the texts in a given set of texts.</div>
+	<p><img src="/blocks/text-contains-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Contains Any Text</h1>
+<p class="namespace">(Cortex.Blocks.Text.Contains.ContainsAnyTextBlock)</p>
+<h2 id="description">Description</h2>
+<p>Checks if <a href="#text">Text</a> contains any of the texts in a given set of <a href="#texts-to-find">Texts To Find</a>.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-contains-any-of-the-texts-in-texts-to-find">Text contains any of the texts in Texts To Find</h3>
+<p>This example will check that <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains at least one of the texts in <code>[&quot;The&quot;, &quot;fast&quot;, &quot;red&quot;, &quot;fox&quot;]</code>.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/concepts/text-equality/#ordinal
+">case-sensitive, culture-insensitive</a> comparison of text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#texts-to-find">Texts To Find</a></td>
+<td><code>($)TextsToFind</code>, with value <code>[&quot;The&quot;, &quot;fast&quot;, &quot;red&quot;, &quot;fox&quot;]</code></td>
+<td><code>($)TextsToFind</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#ienumerablelttgt
+">IEnumerable</a>&lt;<a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#comparison-type">Comparison Type</a></td>
+<td><code>($)ComparisonType</code>, with value <code>StringComparison.Ordinal</code></td>
+<td><code>($)ComparisonType</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td><a href="#contains-any-text">Contains Any Text</a></td>
+<td><code>($)ContainsAnyText</code>, with no value</td>
+<td><code>($)ContainsAnyText</code> is a variable that will be set to a <a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a> value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains the text <code>&quot;The&quot;</code> and <code>&quot;fox&quot;</code> in <code>[&quot;The&quot;, &quot;fast&quot;, &quot;red&quot;, &quot;fox&quot;]</code>. Therefore, the variable <code>($)ContainsAnyText</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">true</span>
+</code></pre></div><hr>
+<h3 id="text-does-not-contain-any-of-the-texts-in-texts-to-find">Text does not contain any of the texts in Texts To Find</h3>
+<p>This example will check that <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain any of the texts in <code>[&quot;the&quot;, &quot;slow&quot;, &quot;red&quot;, &quot;Fox&quot;]</code>.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/concepts/text-equality/#ordinal
+">case-sensitive, culture-insensitive</a> comparison of text.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#texts-to-find">Texts To Find</a></td>
+<td><code>($)TextsToFind</code>, with value <code>[&quot;the&quot;, &quot;slow&quot;, &quot;red&quot;, &quot;Fox&quot;]</code></td>
+<td><code>($)TextsToFind</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#ienumerablelttgt
+">IEnumerable</a>&lt;<a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#comparison-type">Comparison Type</a></td>
+<td><code>($)ComparisonType</code>, with value <code>StringComparison.Ordinal</code></td>
+<td><code>($)ComparisonType</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td><a href="#contains-any-text">Contains Any Text</a></td>
+<td><code>($)ContainsAnyText</code>, with no value</td>
+<td><code>($)ContainsAnyText</code> is a variable that will be set to a <a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a> value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain any of the texts in <code>[&quot;the&quot;, &quot;slow&quot;, &quot;red&quot;, &quot;Flow&quot;]</code>; <code>&quot;slow&quot;</code> and <code>&quot;red&quot;</code> are both missing, and <code>&quot;the&quot;</code> and <code>&quot;Fox&quot;</code> do not match <code>&quot;The&quot;</code> and <code>&quot;fox&quot;</code> respectively as the specified <a href="#comparison-type">Comparison Type</a> uses case-sensitive matching. Therefore, the variable <code>($)ContainsAnyText</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">false</span>
+</code></pre></div><hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to check whether it contains any of the texts in the given set of <a href="#texts-to-find">Texts To Find</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="texts-to-find">Texts To Find</h3>
+<p>The set of <a href="#texts-to-find">Texts To Find</a> to check any are contained in <a href="#text">Text</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#ienumerablelttgt
+">IEnumerable</a>&lt;<a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a>&gt;</td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)TextsToFind</code> with value <code>[]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparison-type">Comparison Type</h3>
+<p>The <a href="#comparison-type">Comparison Type</a> specifying the rules used to determine whether each text in <a href="#texts-to-find">Texts To Find</a> is contained in <a href="#text">Text</a></p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-equality/#comparison-types
+">supported values</a> for the <a href="#comparison-type">Comparison Type</a> property and examples of how it is determined whether two pieces of text match, please see <a href="
+
+
+/docs/reference/concepts/text-equality/
+">Text Equality</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)ComparisonType</code> with value <code>StringComparison.Ordinal</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="contains-any-text">Contains Any Text</h3>
+<p>The result of the contains any text check.</p>
+<p>If any of the texts in <a href="#texts-to-find">Texts To Find</a> is contained in <a href="#text">Text</a>, the specified variable will be set to <code>true</code>, otherwise it will be set to <code>false</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+
+">Output</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)ContainsAnyText</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+
+
+https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a></td>
+<td>Thrown when the <a href="#comparison-type">Comparison Type</a> property is not one of the specified <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a> types.</td>
+</tr>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/propertynullexception/
+">PropertyNullException</a></td>
+<td>Thrown when <a href="#texts-to-find">Texts To Find</a> property is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="comparison-types">Comparison Types</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-equality/#comparison-types
+">supported values</a> for the <a href="#comparison-type">Comparison Type</a> property and examples of how it is determined whether two pieces of text match, please see <a href="
+
+
+/docs/reference/concepts/text-equality/
+">Text Equality</a>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), the variable specified in the  <a href="#contains-any-text">Contains Any Text</a> property is set to <code>false</code>.</p>
+<h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
+<p>If <a href="#texts-to-find">Texts To Find</a> is empty or only contains <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) text, the variable specified in the <a href="#contains-any-text">Contains Any Text</a> property is set to <code>false</code>.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-2cd63755181f2d35d1aa9b32c9322655">6.2.6.2.3 - Contains Text</h1>
+    <div class="lead">Checks if text contains another text.</div>
+	<p><img src="/blocks/text-contains-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Contains Text</h1>
+<p class="namespace">(Cortex.Blocks.Text.Contains.ContainsTextBlock)</p>
+<h2 id="description">Description</h2>
+<p>Checks if <a href="#text">Text</a> contains <a href="#text-to-find">Text To Find</a>.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-contains-text-to-find">Text contains Text To Find</h3>
+<p>This example will check that <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains the text <code>&quot;quick brown fox&quot;</code>.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/concepts/text-equality/#ordinal
+">case-sensitive, culture-insensitive</a> comparison of text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#text-to-find">Text To Find</a></td>
+<td><code>($)TextToFind</code>, with value <code>&quot;quick brown fox&quot;</code></td>
+<td><code>($)TextToFind</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#comparison-type">Comparison Type</a></td>
+<td><code>($)ComparisonType</code>, with value <code>StringComparison.Ordinal</code></td>
+<td><code>($)ComparisonType</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td><a href="#contains-text">Contains Text</a></td>
+<td><code>($)ContainsText</code>, with no value</td>
+<td><code>($)ContainsText</code> is a variable that will be set to a <a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a> value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains the text <code>&quot;quick brown fox&quot;</code>. Therefore, the variable <code>($)ContainsText</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">true</span>
+</code></pre></div><hr>
+<h3 id="text-does-not-contain-text-to-find">Text does not contain Text To Find</h3>
+<p>This example will check that <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain <code>&quot;quick red fox&quot;</code>.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/concepts/text-equality/#ordinal
+">case-sensitive, culture-insensitive</a> comparison of text.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#text-to-find">Text To Find</a></td>
+<td><code>($)TextToFind</code>, with value <code>&quot;quick red fox&quot;</code></td>
+<td><code>($)TextToFind</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#comparison-type">Comparison Type</a></td>
+<td><code>($)ComparisonType</code>, with value <code>StringComparison.Ordinal</code></td>
+<td><code>($)ComparisonType</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td><a href="#contains-text">Contains Text</a></td>
+<td><code>($)ContainsText</code>, with no value</td>
+<td><code>($)ContainsText</code> is a variable that will be set to a <a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a> value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain <code>&quot;quick red fox&quot;</code>. Therefore, the variable <code>($)ContainsText</code> will be updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">false</span>
+</code></pre></div><hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to check whether it contains <a href="#text-to-find">Text To Find</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="text-to-find">Text To Find</h3>
+<p>The <a href="#text-to-find">Text To Find</a> in <a href="#text">Text</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)TextToFind</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparison-type">Comparison Type</h3>
+<p>The <a href="#comparison-type">Comparison Type</a> specifying the rules used to determine whether <a href="#text-to-find">Text To Find</a> is contained in <a href="#text">Text</a></p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-equality/#comparison-types
+">supported values</a> for the <a href="#comparison-type">Comparison Type</a> property and examples of how it is determined whether two pieces of text match, please see <a href="
+
+
+/docs/reference/concepts/text-equality/
+">Text Equality</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)ComparisonType</code> with value <code>StringComparison.Ordinal</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="contains-text">Contains Text</h3>
+<p>The result of the contains text check.</p>
+<p>If <a href="#text-to-find">Text To Find</a> is contained in <a href="#text">Text</a>, the specified variable will be set to <code>true</code>, otherwise it will be set to <code>false</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#boolean
+">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+
+">Output</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)ContainsText</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+
+
+https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a></td>
+<td>Thrown when the <a href="#comparison-type">Comparison Type</a> property is not one of the specified <a href="
+
+
+/docs/reference/data-types/most-common/#stringcomparison
+">StringComparison</a> types.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="comparison-types">Comparison Types</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-equality/#comparison-types
+">supported values</a> for the <a href="#comparison-type">Comparison Type</a> property and examples of how it is determined whether two pieces of text match, please see <a href="
+
+
+/docs/reference/concepts/text-equality/
+">Text Equality</a>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), the variable specified in the  <a href="#contains-text">Contains Text</a> property is set to <code>false</code>.</p>
+<h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
+<p>If <a href="#text-to-find">Text To Find</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), the variable specified in the <a href="#contains-text">Contains Text</a> property is set to <code>false</code>.</p>
+
+</div>
+
+
+
+    
+	
+  
 
     
 	
@@ -4360,10 +5392,191 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 
 <div class="td-content" style="">
     
-	<h1 id="pg-5aa1d35df84bf4ef888522bc0f830654">6.3.1 - Common</h1>
-    <div class="lead">Data types related to Common</div>
-	<p>Help for Common data types specific to Cortex.</br>
-This section is in preparation.</p>
+	<h1 id="pg-a8d765b2e55e8a0eec2122666f4bca93">6.3.1 - Most Common Data Types</h1>
+    <div class="lead">Describes the most commonly used data types.</div>
+	<h2 id="data-types">Data Types</h2>
+<p>A data type specifies the type and size of variable values.</p>
+<p>The most commonly used data types are categorised and listed below:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Data Type</th>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>Object</td>
+<td>Varies</td>
+<td>Any data type can be used where an Object data type is required. Once a variable contains an object data type, if it needs to be used as it&rsquo;s original data type it must be cast back to that data type (e.g. <code>(Int32)ObjectVariableContainingAnInteger</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Dynamic</td>
+<td>Varies</td>
+<td>Any data type can be used where a Dynamic data type is required. Dynamic is similar to object, except no cast is needed to use the variable as it&rsquo;s original data type.</td>
+</tr>
+<tr>
+<td>Collections</td>
+<td>IEnumerable&lt;T&gt;</td>
+<td>Varies depending on the number of items it contains</td>
+<td>Any data type representing a collection of items that can iterated or looped over. T indicates the data type of the items contained in the collection. List&lt;T&gt; is the most common example.</td>
+</tr>
+<tr>
+<td></td>
+<td>IList&lt;T&gt;</td>
+<td>Varies depending on the number of items it contains</td>
+<td>Any data type representing a list of items where each item can be individually accessed by it&rsquo;s index in the list. T indicates the data type of the items contained in the list. List&lt;T&gt; is the most common example.</td>
+</tr>
+<tr>
+<td></td>
+<td>List&lt;T&gt;</td>
+<td>Varies depending on the number of items it contains</td>
+<td>A list of items. T indicates the data type of the items contained in the list.</td>
+</tr>
+<tr>
+<td></td>
+<td>IDictionary&lt;K, V&gt;</td>
+<td>Varies depending on the number of items it contains</td>
+<td>Any data type representing a dictionary containing items which can be accessed by a key. K indicates the data type of the key used to access the items contained in the dictionary, and V indicates the data type of the item&rsquo;s value.</td>
+</tr>
+<tr>
+<td></td>
+<td>Dictionary&lt;K, V&gt;</td>
+<td>Varies depending on the number of items it contains</td>
+<td>A dictionary of items. K indicates the data type of the key used to access the items contained in the dictionary, and V indicates the data type of the item&rsquo;s value.</td>
+</tr>
+<tr>
+<td></td>
+<td>Structure</td>
+<td>Varies depending on the number of items it contains</td>
+<td>TODO</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>Boolean</td>
+<td>1 bit</td>
+<td>A logical value of <code>true</code> or <code>false</code></td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>DataTable</td>
+<td>Varies depending on number of items it contains</td>
+<td>TODO</td>
+</tr>
+<tr>
+<td>Dates &amp; Time</td>
+<td>DateTime</td>
+<td>8 bytes</td>
+<td>A value representing a date and time between <code>00:00:00.0000000 UTC, January 1, 0001</code> and <code>23:59:59.9999999 UTC, December 31, 9999</code>, in the Gregorian calendar</td>
+</tr>
+<tr>
+<td></td>
+<td>TimeSpan</td>
+<td>8 bytes</td>
+<td>A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of days, hours, minutes, seconds, and fractions of a second.</td>
+</tr>
+<tr>
+<td>Numbers</td>
+<td>Int16</td>
+<td>2 bytes</td>
+<td>A whole number from <code>-32768</code> through <code>32767</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Int32</td>
+<td>4 bytes</td>
+<td>A whole number from <code>-2,147,483,648</code> through <code>2,147,483,647</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Int64</td>
+<td>8 bytes</td>
+<td>A whole number from <code>-9,223,372,036,854,775</code> through <code>9,223,372,036,854,775,807</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Single</td>
+<td>4 bytes</td>
+<td>A fractional, or very large or small number from <code>-3.402823e38</code> to <code>3.402823e38</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Double</td>
+<td>8 bytes</td>
+<td>A fractional, or very large or small number from <code>-1.79769313486232e308</code> to <code>1.79769313486232e308</code></td>
+</tr>
+<tr>
+<td>Text</td>
+<td>String</td>
+<td>Varies depending on the number of characters it contains</td>
+<td>A sequence of characters, surrounded by double quotes (e.g. <code>&quot;This is a string&quot;</code>)</td>
+</tr>
+<tr>
+<td></td>
+<td>Char</td>
+<td>2 bytes</td>
+<td>A character or letter surrounded by single quotes (e.g. <code>'a'</code> or <code>'!'</code>)</td>
+</tr>
+<tr>
+<td></td>
+<td>StringComparison</td>
+<td>4 bytes</td>
+<td>TODO</td>
+</tr>
+</tbody>
+</table>
+<h3 id="all">All</h3>
+<h4 id="object">Object</h4>
+<p>TODO</p>
+<h4 id="dynamic">Dynamic</h4>
+<p>TODO</p>
+<h3 id="collections">Collections</h3>
+<h4 id="ienumerablelttgt">IEnumerable&lt;T&gt;</h4>
+<p>TODO</p>
+<h4 id="ilistlttgt">IList&lt;T&gt;</h4>
+<p>TODO</p>
+<h4 id="listlttgt">List&lt;T&gt;</h4>
+<p>TODO</p>
+<h4 id="idictionaryltknbspvgt">IDictionary&lt;K, V&gt;</h4>
+<p>TODO</p>
+<h4 id="dictionaryltknbspvgt">Dictionary&lt;K, V&gt;</h4>
+<p>TODO</p>
+<h4 id="structure">Structure</h4>
+<p>TODO</p>
+<h3 id="conditional-logic">Conditional Logic</h3>
+<h4 id="boolean">Boolean</h4>
+<p>TODO</p>
+<h3 id="databases">Databases</h3>
+<h4 id="datatable">DataTable</h4>
+<p>TODO</p>
+<h3 id="dates--times">Dates &amp; Times</h3>
+<h4 id="datetime">DateTime</h4>
+<p>TODO</p>
+<h4 id="timespan">TimeSpan</h4>
+<p>TODO</p>
+<h3 id="numbers">Numbers</h3>
+<h4 id="int16">Int16</h4>
+<p>TODO</p>
+<h4 id="int32">Int32</h4>
+<p>TODO</p>
+<h4 id="int64">Int64</h4>
+<p>TODO</p>
+<h4 id="single">Single</h4>
+<p>TODO</p>
+<h4 id="double">Double</h4>
+<p>TODO</p>
+<h3 id="text">Text</h3>
+<h4 id="string">String</h4>
+<p>TODO</p>
+<h4 id="char">Char</h4>
+<p>TODO</p>
+<h4 id="stringcomparison">StringComparison</h4>
+<p>TODO</p>
+<p>TODO: variable link, on page links, glossary, concept links etc.</p>
 
 </div>
 
@@ -4912,6 +6125,90 @@ It can be only a <a href="
     
 	
   
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ce234f285536bbfac901f48ddebc0d79">6.5.5 - Text Equality</h1>
+    <div class="lead">This page describes the concept of Text Equality.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Text Equality</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="comparison-types">Comparison Types</h2>
+<p>Comparison Types specify the rules used to determine whether two pieces of text match.</p>
+<p>The table below lists the supported comparison types:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Text Value</th>
+<th>Numeric Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current Culture</td>
+<td>StringComparison.CurrentCulture</td>
+<td>0</td>
+<td>Used to compare text using culture-sensitive sort rules and the <a href="#current-culture">current culture</a>. Case of the texts is considered when comparing.</td>
+</tr>
+<tr>
+<td>Current Culture Ignore Case</td>
+<td>StringComparison.CurrentCultureIgnoreCase</td>
+<td>1</td>
+<td>Used to compare text using culture-sensitive sort rules and the <a href="#current-culture">current culture</a>. Case of the texts is ignored when comparing.</td>
+</tr>
+<tr>
+<td>Invariant Culture</td>
+<td>StringComparison.InvariantCulture</td>
+<td>2</td>
+<td>Used to compare text using culture-sensitive sort rules and the <a href="#invariant-culture">invariant culture</a>. Case of the texts is considered when comparing.</td>
+</tr>
+<tr>
+<td>Invariant Culture Ignore Case</td>
+<td>StringComparison.InvariantCultureIgnoreCase</td>
+<td>3</td>
+<td>Used to compare text using culture-sensitive sort rules and the <a href="#invariant-culture">invariant culture</a>. Case of the texts is ignored when comparing.</td>
+</tr>
+<tr>
+<td>Ordinal</td>
+<td>StringComparison.Ordinal</td>
+<td>4</td>
+<td>Used to compare text using <a href="#ordinal">ordinal</a> sort rules. Case of the texts is considered when comparing.</td>
+</tr>
+<tr>
+<td>Ordinal Ignore Case</td>
+<td>StringComparison.OrdinalIgnoreCase</td>
+<td>5</td>
+<td>Used to compare text using <a href="#ordinal">ordinal</a> sort rules. Case of the texts is ignored when comparing.</td>
+</tr>
+</tbody>
+</table>
+<p>For more information about comparison types, please see <a href="
+
+
+
+
+https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore-3.1
+">StringComparison</a>.</p>
+<h3 id="current-culture">Current Culture</h3>
+<p>TODO: notes about current culture and a worked through example</p>
+<h3 id="invariant-culture">Invariant Culture</h3>
+<p>TODO: notes about invariant culture and a worked through example</p>
+<h3 id="ordinal">Ordinal</h3>
+<p>TODO: notes about ordinal and a worked through example</p>
+
+</div>
+
+
+
+    
+	
+  
 
     
 	
@@ -5056,6 +6353,10 @@ https://docs.microsoft.com/en-us/dotnet/csharp/
 ">PascalCase</a>.</p>
 <h3 id="capacity">Capacity</h3>
 <p>TODO</p>
+<h3 id="case-insensitive">Case-insensitive</h3>
+<p>If something is case-insensitive, it means it ignores differences in case (i.e. <code>CASE</code> is considered equal to <code>case</code>).</p>
+<h3 id="case-sensitive">Case-sensitive</h3>
+<p>If something is case-sensitive, it means it considers differences in case (i.e. <code>CASE</code> is considered not equal to <code>case</code>).</p>
 <h3 id="cast">Cast</h3>
 <p>The process of explicitly converting one <a href="#data-type">data type</a> to another.</p>
 <p>See <a href="
@@ -5127,6 +6428,16 @@ https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-a
 /docs/reference/glossary/p-t/#process
 ">process</a>.</p>
 <p>For more detailed information about Cortex Studio, see [Guides-&gt;Cortex Studio][TODO].</p>
+<h3 id="culture">Culture</h3>
+<p>Describes a set of rules for data that differs between different cultures; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and text comparisons.</p>
+<p>TODO: In .Net details about culture are represented by the cultureinfo data type&hellip;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0</a></p>
+<h3 id="culture-insensitive">Culture-insensitive</h3>
+<p>If something is culture-insensitive, it means that it does not get affected by culture related changes to the operating system, such as language and regional settings.</p>
+<h3 id="culture-sensitive">Culture-sensitive</h3>
+<p>If something is culture-sensitive, it means that it does get affected by culture related changes to the operating system, such as language and regional settings.</p>
+<h3 id="current-culture">Current Culture</h3>
+<p>The current culture used by the executing thread; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and string comparisons.</p>
+<p>TODO: In .Net details about the current culture are represented by the cultureinfo data type&hellip;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture?view=net-5.0</a></p>
 <h2 id="d">D</h2>
 <h3 id="data-type">Data Type</h3>
 <p>A data type (or <a href="
@@ -5424,6 +6735,10 @@ https://code.visualstudio.com/
 <p>TODO</p>
 <h3 id="invalid">Invalid</h3>
 <p>TODO</p>
+<h3 id="invariant-culture">Invariant Culture</h3>
+<p>A culture associated with the English language, but not with any country or region; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and string comparisons.</p>
+<p>It has a stable and unchanging set of rules that cannot be customized and is unaffected by culture related changes to the operating system.</p>
+<p>TODO: In .Net details about invariant culture are represented by the cultureinfo data type&hellip;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture?view=net-5.0</a></p>
 <h3 id="item">Item</h3>
 <p>TODO</p>
 <h3 id="ilistlttitemgt">IList&lt;TItem&gt;</h3>

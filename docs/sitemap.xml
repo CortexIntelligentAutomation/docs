@@ -70,13 +70,13 @@
     <loc>/blog/2018/01/04/another-great-release/</loc>
     <lastmod>2020-07-14T11:38:09+02:00</lastmod>
   </url><url>
+    <loc>/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
+  </url><url>
     <loc>/docs/reference/blocks/lists/add/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/add/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/add/add-text-after-index-block/</loc>
-  </url><url>
-    <loc>/docs/reference/blocks/lists/add/add-item-at-beginning-block-2/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/add/add-text-at-beginning-block/</loc>
   </url><url>
@@ -89,16 +89,20 @@
   </url><url>
     <loc>/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/</loc>
   </url><url>
-    <loc>/docs/reference/data-types/common/</loc>
-  </url><url>
     <loc>/docs/reference/exceptions/common/</loc>
   </url><url>
     <loc>/community/</loc>
     <lastmod>2018-10-05T14:41:45+01:00</lastmod>
   </url><url>
+    <loc>/docs/reference/blocks/text/contains/contains-all-text-block/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/text/contains/contains-any-text-block/</loc>
+  </url><url>
     <loc>/docs/reference/blocks/lists/contains/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/contains/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/text/contains/contains-text-block/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/convert-to/</loc>
   </url><url>
@@ -156,6 +160,8 @@
   </url><url>
     <loc>/docs/reference/concepts/literal-variables-expressions/</loc>
   </url><url>
+    <loc>/docs/reference/data-types/most-common/</loc>
+  </url><url>
     <loc>/docs/getting-started/on-premise/multiple-server-with-ha/</loc>
     <lastmod>2021-07-08T13:37:13+01:00</lastmod>
   </url><url>
@@ -181,5 +187,7 @@
     <loc>/docs/reference/blocks/text/split/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/</loc>
+  </url><url>
+    <loc>/docs/reference/concepts/text-equality/</loc>
   </url>
 </urlset>
