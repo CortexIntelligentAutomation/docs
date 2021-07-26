@@ -36,8 +36,22 @@
                 MainDoc = "/docs/reference/concepts/property-type/"
                 Input = "/docs/reference/concepts/property-type/#input"
                 InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
+            [Cortex.Reference.Concepts.TextEquality]
+                MainDoc = "/docs/reference/concepts/text-equality/"
+                [Cortex.Reference.Concepts.TextEquality.ComparisonTypes]
+                    MainDoc = "/docs/reference/concepts/text-equality/#comparison-types"
+                    CurrentCulture = "/docs/reference/concepts/text-equality/#current-culture"
+                    InvariantCulture = "/docs/reference/concepts/text-equality/#invariant-culture"
+                    Ordinal = "/docs/reference/concepts/text-equality/#ordinal"
+
         [Cortex.Reference.DataTypes]
                 MainDoc = "/docs/reference/data-types/"
+                [Cortex.Reference.DataTypes.MostCommon]
+                    MainDoc = "/docs/reference/data-types/most-common/"
+                    Boolean = "/docs/reference/data-types/most-common/#boolean"
+                    IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
+                    String = "/docs/reference/data-types/most-common/#string"
+                    StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
@@ -109,10 +123,14 @@
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
     [MSDocs.DotNet.Api.System]
+        ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
+        Boolean = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
         Int32 = "https://docs.microsoft.com/en-us/dotnet/api/system.int32"
         Object = "https://docs.microsoft.com/en-us/dotnet/api/system.object"
         String = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
+        StringComparison = "https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         [MSDocs.DotNet.Api.System.Collections.Generic]
+            IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
 [MSGitHub]

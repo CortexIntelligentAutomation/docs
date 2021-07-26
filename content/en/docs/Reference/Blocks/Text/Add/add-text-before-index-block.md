@@ -1,6 +1,6 @@
 ---
 title: "Add Text Before Index"
-linkTitle: "Before Index"
+linkTitle: "Add Text Before Index"
 description: "Adds text to another text before a specified index."
 ---
 
@@ -109,15 +109,17 @@ The [String] data type used to represent [Text][Text Property] is immutable, whi
 
 To overcome this, this block creates a new [String] which has the [Text To Add][TextToAdd Property] added in the correct place and re-assigns it to the variable specified in the [Text][Text Property] property.  
 
-[Index Property]: {{< ref "#index" >}}
 [Text Property]: {{< ref "#text" >}}
 [TextToAdd Property]: {{< ref "#text-to-add" >}}
+[Index Property]: {{< ref "#index" >}}
 
 [NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-to-another-text-before-the-given-index" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+
+[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
 [Int32]: {{< url "MSDocs.DotNet.Api.System.Int32" >}}

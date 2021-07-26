@@ -1,6 +1,6 @@
 ---
 title: "Add Text After Index"
-linkTitle: "After Index"
+linkTitle: "Add Text After Index"
 description: "Adds text to another text after a given index."
 ---
 
@@ -109,9 +109,9 @@ The [String] data type used to represent [Text][Text Property] is immutable, whi
 
 To overcome this, this block creates a new [String] which has the [Text To Add][TextToAdd Property] added in the correct place and re-assigns it to the variable specified in the [Text][Text Property] property.  
 
-[Index Property]: {{< ref "#index" >}}
 [Text Property]: {{< ref "#text" >}}
 [TextToAdd Property]: {{< ref "#text-to-add" >}}
+[Index Property]: {{< ref "#index" >}}
 
 [NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-to-another-text-after-the-given-index" >}}
 

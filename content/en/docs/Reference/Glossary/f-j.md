@@ -105,6 +105,14 @@ TODO
 
 TODO
 
+### Invariant Culture
+
+A culture associated with the English language, but not with any country or region; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and string comparisons.
+
+It has a stable and unchanging set of rules that cannot be customized and is unaffected by culture related changes to the operating system.
+
+TODO: In .Net details about invariant culture are represented by the cultureinfo data type...https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture?view=net-5.0
+
 ### Item
 
 TODO
