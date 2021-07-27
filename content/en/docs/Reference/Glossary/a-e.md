@@ -81,6 +81,14 @@ See also [PascalCase].
 
 TODO
 
+### Case-insensitive
+
+If something is case-insensitive, it means it ignores differences in case (i.e. `CASE` is considered equal to `case`).
+
+### Case-sensitive
+
+If something is case-sensitive, it means it considers differences in case (i.e. `CASE` is considered not equal to `case`).
+
 ### Cast
 
 The process of explicitly converting one [data type] to another.
@@ -118,6 +126,26 @@ The centralised web-based [portal] for accessing all user applications and tooli
 The web-based integrated development environment ([IDE]) for creating, editing, [debugging], testing and managing [flows][flow] that define the logic and actions required to capture and automate a [task][Tasks] or [process][Processes].
 
 For more detailed information about Cortex Studio, see [Guides->Cortex Studio][TODO].
+
+### Culture
+
+Describes a set of rules for data that differs between different cultures; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and text comparisons.
+
+TODO: In .Net details about culture are represented by the cultureinfo data type...https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0
+
+### Culture-insensitive
+
+If something is culture-insensitive, it means that it does not get affected by culture related changes to the operating system, such as language and regional settings.
+
+### Culture-sensitive
+
+If something is culture-sensitive, it means that it does get affected by culture related changes to the operating system, such as language and regional settings.
+
+### Current Culture
+
+The current culture used by the executing thread; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and string comparisons.
+
+TODO: In .Net details about the current culture are represented by the cultureinfo data type...https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture?view=net-5.0
 
 ## D
 
