@@ -6,6 +6,21 @@ Add styles or override variables from the theme here.
 $cortex-green: #a0c326 !default;
 $cortex-blue: #398FCD !default;
 
+.td-main {
+  .breadcrumb {
+    padding-top: 0.8rem;
+    margin-bottom: 0rem;
+
+    .breadcrumb-item {
+        padding-left: 0.3rem;
+
+      + .breadcrumb-item::before {
+        padding-right: 0.3rem;
+      }
+    }
+  }
+}
+
 .td-content {
     h1 {
         font-weight: bold;
@@ -22,9 +37,6 @@ $cortex-blue: #398FCD !default;
       margin-right: 10px;
       vertical-align: bottom;
     }
-}
-.td-main{
-  padding-top: 1rem;
 }
 
 body {
@@ -47,6 +59,6 @@ footer {
   }
   a:hover {
     color: $cortex-green !important;
-}
+  }
 }
   
