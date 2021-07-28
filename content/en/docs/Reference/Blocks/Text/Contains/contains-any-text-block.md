@@ -114,6 +114,8 @@ If any of the texts in [Texts To Find][TextsToFind Property] is contained in [Te
 
 ## Exceptions
 
+The exceptions thrown by the block can be found below:
+
 | Name     | Description |
 |----------|----------|
 | [ArgumentException][] | Thrown when the [Comparison Type][ComparisonType Property] property is not one of the specified [StringComparison] types. |
