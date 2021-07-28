@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Add Text At Beginning">
 <meta itemprop="description" content="Adds text at the beginning of another text.">
 
-<meta itemprop="wordCount" content="279">
+<meta itemprop="wordCount" content="402">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Add Text At Beginning"/>
 <meta name="twitter:description" content="Adds text at the beginning of another text."/>
@@ -1673,6 +1673,7 @@
 
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#description">Description</a></li>
     <li><a href="#examples">Examples</a>
       <ul>
         <li><a href="#add-text-to-add-at-the-beginning-of-another-text">Add Text To Add at the beginning of another Text</a></li>
@@ -1680,7 +1681,7 @@
         <li><a href="#add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Add null or empty Text To Add at the beginning of another Text</a></li>
       </ul>
     </li>
-    <li><a href="#input-properties">Input Properties</a>
+    <li><a href="#properties-3">Properties</a>
       <ul>
         <li><a href="#text">Text</a></li>
         <li><a href="#text-to-add">Text To Add</a></li>
@@ -1691,6 +1692,7 @@
       <ul>
         <li><a href="#null-or-empty-text">Null or empty Text</a></li>
         <li><a href="#null-or-empty-text-to-add">Null or empty Text To Add</a></li>
+        <li><a href="#immutable-string-data-type">Immutable String data type</a></li>
       </ul>
     </li>
   </ul>
@@ -1775,10 +1777,12 @@
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtBeginningBlock)</p>
+<h2 id="description">Description</h2>
 <p>Adds <a href="#text-to-add">Text To Add</a> at the beginning of another <a href="#text">Text</a>.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="add-text-to-add-at-the-beginning-of-another-text">Add Text To Add at the beginning of another Text</h3>
-<h4 id="inputs">Inputs</h4>
+<p>This example will add <code>&quot;|&quot;</code> at the beginning of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -1794,9 +1798,7 @@
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -1805,19 +1807,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result">Result</h4>
+<p>Adding <code>&quot;|&quot;</code> at the beginning of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-text-to-add-at-the-beginning-of-a-null-or-empty-text">Add Text To Add at the beginning of a null or empty Text</h3>
-<h4 id="inputs-1">Inputs</h4>
+<p>This example will try to add <code>&quot;|&quot;</code> at the beginning of <code>null</code> or <code>&quot;&quot;</code>.</p>
+<h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -1833,9 +1834,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -1844,19 +1843,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-1">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result-1">Result</h4>
+<p>Adding <code>&quot;|&quot;</code> to <code>null</code> or <code>&quot;&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Add null or empty Text To Add at the beginning of another Text</h3>
-<h4 id="inputs-2">Inputs</h4>
+<p>This example will try to add <code>null</code> or <code>&quot;&quot;</code> at the beginnning of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties-2">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -1872,9 +1870,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -1883,18 +1879,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-2">Outputs</h4>
-<p>The variable <code>($)Text</code> will remain the following:</p>
+<h4 id="result-2">Result</h4>
+<p>Adding <code>null</code> or <code>&quot;&quot;</code> performs no operation as there is nothing to add, so the variable <code>($)Text</code> will remain as follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
-<h2 id="input-properties">Input Properties</h2>
+<h2 id="properties-3">Properties</h2>
 <h3 id="text">Text</h3>
 <p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
@@ -1910,9 +1904,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -1944,9 +1936,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -1970,6 +1960,17 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#text-to-add">Text To Add</a>. See <a href="#add-text-to-add-at-the-beginning-of-a-null-or-empty-text">Example</a> above.</p>
 <h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
 <p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Example</a> above.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text-to-add">Text To Add</a> added in the correct place and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
 
 	
 	
