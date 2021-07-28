@@ -5,7 +5,6 @@
     padding-right: 0.5rem;
     margin-right: -15px;
     margin-left: -15px;
-
     @include media-breakpoint-up(md) {
         @supports (position: sticky) {
             max-height: calc(100vh - 10rem);
@@ -48,13 +47,13 @@
         }
 
         a {
-            color: $gray-900;
+            color: $ctx-text-black !important;
         }
     }
 
     .td-sidebar-link {
         display: block;
-        padding-bottom: 0.375rem;
+        padding-bottom: 0.1rem;
 
         &__page {
             color: $gray-700;

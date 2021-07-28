@@ -26,14 +26,14 @@
                 margin: 0px !important;
         
                 :hover {
-                    background-color: $cortex-blue;
+                    background-color: $ctx-blue;
                     color: white;
                 }
         
                 .nav-link {
                     text-transform: none;
                     font-weight: $font-weight-light;
-                    color: rgba(0, 0, 0, 0.7) !important;
+                    color: $ctx-black !important;
                 }
             }
         }
@@ -60,14 +60,6 @@
             display: inline-block;
             margin: 0 10px;
             height: 60px;
-        }
-    }
-
-    .td-search-input {
-        border: none;
-
-        @include placeholder {
-            color: $navbar-dark-color;
         }
     }
 

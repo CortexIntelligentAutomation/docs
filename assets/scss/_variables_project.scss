@@ -3,8 +3,10 @@
 Add styles or override variables from the theme here.
 
 */
-$cortex-green: #a0c326 !default;
-$cortex-blue: #398FCD !default;
+$ctx-green: #a0c326;
+$ctx-blue: #398FCD;
+$ctx-black: rgba(0, 0, 0, 0.7);
+$ctx-text-black: #495057;
 
 .td-main {
   .breadcrumb {
@@ -58,7 +60,7 @@ footer {
     color: #676767;
   }
   a:hover {
-    color: $cortex-green !important;
+    color: $ctx-green !important;
   }
 }
   
