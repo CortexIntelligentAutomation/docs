@@ -19,7 +19,8 @@
     a {
         display: block;
         font-weight: $font-weight-light;
-        padding-bottom: .25rem;
+        padding-bottom: .1rem;
+        color: $ctx-blue;
     }
 
     li {
@@ -42,10 +43,10 @@
         > ul > li > ul > li > a {}
 
         a {
-            color: $gray-600;
+            color: $ctx-text-black;
 
             &:hover {
-                color: $blue;
+                color: $ctx-blue;
                 text-decoration: none;
             }
         }
