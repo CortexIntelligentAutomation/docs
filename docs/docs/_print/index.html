@@ -3038,10 +3038,12 @@ https://docs.microsoft.com/en-us/dotnet/api/system.object?view=netcore-3.1
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text After Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAfterIndexBlock)</p>
+<h2 id="description">Description</h2>
 <p>Adds <a href="#text-to-add">Text To Add</a> to another <a href="#text">Text</a> after the given <a href="#index">Index</a>.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="add-text-to-add-to-another-text-after-the-given-index">Add Text To Add to another Text after the given Index</h3>
-<h4 id="inputs">Inputs</h4>
+<p>This example will add <code>&quot;|&quot;</code> after <code>&quot;A&quot;</code> (which is at index <code>0</code>) in <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3057,9 +3059,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.object?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3068,9 +3068,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3079,19 +3077,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Index</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
+/docs/reference/data-types/most-common/#int32
 ">Int32</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result">Result</h4>
+<p><code>&quot;A&quot;</code> is at index <code>0</code> in <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>. Therefore, adding <code>&quot;|&quot;</code> after index <code>0</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;A|BCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-null-or-empty-text-to-add-to-another-text-after-the-given-index">Add null or empty Text To Add to another Text after the given Index</h3>
-<h4 id="inputs-1">Inputs</h4>
+<p>This example will try to add <code>null</code> or <code>&quot;&quot;</code> after <code>&quot;A&quot;</code> (which is at index <code>0</code>) in <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3107,9 +3104,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3118,9 +3113,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3129,18 +3122,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Index</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
+/docs/reference/data-types/most-common/#int32
 ">Int32</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-1">Outputs</h4>
-<p>The variable <code>($)Text</code> will remain the following:</p>
+<h4 id="result-1">Result</h4>
+<p>Adding <code>null</code> or <code>&quot;&quot;</code> performs no operation as there is nothing to add, so the variable <code>($)Text</code> will remain as follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
-<h2 id="input-properties">Input Properties</h2>
+<h2 id="properties-2">Properties</h2>
 <h3 id="text">Text</h3>
 <p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
@@ -3156,9 +3147,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3190,9 +3179,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3211,7 +3198,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 </table>
 <h3 id="index">Index</h3>
 <p>The <a href="#index">Index</a> to add the <a href="#text-to-add">Text To Add</a> after.</p>
-<p>For more information about what an index is, please see <a href="
+<p>For information about what an index is, please see <a href="
 
 
 /docs/reference/concepts/indexes/
@@ -3229,9 +3216,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
+/docs/reference/data-types/most-common/#int32
 ">Int32</a></td>
 </tr>
 <tr>
@@ -3275,20 +3260,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
 <h2 id="remarks">Remarks</h2>
 <h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
 <p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-to-another-text-after-the-given-index">Example</a> above.</p>
-<h3 id="immutable-string-data-type">Immutable String Data Type</h3>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
 <p>The <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
 <p>To overcome this, this block creates a new <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a> which has the <a href="#text-to-add">Text To Add</a> added in the correct place and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
 
 </div>
@@ -3310,10 +3291,12 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtBeginningBlock)</p>
+<h2 id="description">Description</h2>
 <p>Adds <a href="#text-to-add">Text To Add</a> at the beginning of another <a href="#text">Text</a>.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="add-text-to-add-at-the-beginning-of-another-text">Add Text To Add at the beginning of another Text</h3>
-<h4 id="inputs">Inputs</h4>
+<p>This example will add <code>&quot;|&quot;</code> at the beginning of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3329,9 +3312,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3340,19 +3321,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result">Result</h4>
+<p>Adding <code>&quot;|&quot;</code> at the beginning of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-text-to-add-at-the-beginning-of-a-null-or-empty-text">Add Text To Add at the beginning of a null or empty Text</h3>
-<h4 id="inputs-1">Inputs</h4>
+<p>This example will try to add <code>&quot;|&quot;</code> at the beginning of <code>null</code> or <code>&quot;&quot;</code>.</p>
+<h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3368,9 +3348,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3379,19 +3357,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-1">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result-1">Result</h4>
+<p>Adding <code>&quot;|&quot;</code> to <code>null</code> or <code>&quot;&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Add null or empty Text To Add at the beginning of another Text</h3>
-<h4 id="inputs-2">Inputs</h4>
+<p>This example will try to add <code>null</code> or <code>&quot;&quot;</code> at the beginnning of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties-2">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3407,9 +3384,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3418,18 +3393,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-2">Outputs</h4>
-<p>The variable <code>($)Text</code> will remain the following:</p>
+<h4 id="result-2">Result</h4>
+<p>Adding <code>null</code> or <code>&quot;&quot;</code> performs no operation as there is nothing to add, so the variable <code>($)Text</code> will remain as follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
-<h2 id="input-properties">Input Properties</h2>
+<h2 id="properties-3">Properties</h2>
 <h3 id="text">Text</h3>
 <p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
@@ -3445,9 +3418,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3479,9 +3450,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3505,6 +3474,17 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#text-to-add">Text To Add</a>. See <a href="#add-text-to-add-at-the-beginning-of-a-null-or-empty-text">Example</a> above.</p>
 <h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
 <p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-at-the-beginning-of-another-text">Example</a> above.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text-to-add">Text To Add</a> added in the correct place and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
 
 </div>
 
@@ -3525,10 +3505,12 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text At End</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtEndBlock)</p>
+<h2 id="description">Description</h2>
 <p>Adds <a href="#text-to-add">Text To Add</a> at the end of another <a href="#text">Text</a>.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="add-text-to-add-at-the-end-of-another-text">Add Text To Add at the end of another Text</h3>
-<h4 id="inputs">Inputs</h4>
+<p>This example will add <code>&quot;|&quot;</code> at the end of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3544,9 +3526,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3555,19 +3535,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result">Result</h4>
+<p>Adding <code>&quot;|&quot;</code> at the end of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ|&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-text-to-add-at-the-end-of-a-null-or-empty-text">Add Text To Add at the end of a null or empty Text</h3>
-<h4 id="inputs-1">Inputs</h4>
+<p>This example will try to add <code>&quot;|&quot;</code> at the end of <code>null</code> or <code>&quot;&quot;</code>.</p>
+<h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3583,9 +3562,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3594,19 +3571,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-1">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result-1">Result</h4>
+<p>Adding <code>&quot;|&quot;</code> to <code>null</code> or <code>&quot;&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-null-or-empty-text-to-add-at-the-end-of-another-text">Add null or empty Text To Add at the end of another Text</h3>
-<h4 id="inputs-2">Inputs</h4>
+<p>This example will try to add <code>null</code> or <code>&quot;&quot;</code> at the end of <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties-2">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3622,9 +3598,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3633,18 +3607,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-2">Outputs</h4>
-<p>The variable <code>($)Text</code> will remain the following:</p>
+<h4 id="result-2">Result</h4>
+<p>Adding <code>null</code> or <code>&quot;&quot;</code> performs no operation as there is nothing to add, so the variable <code>($)Text</code> will remain as follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
-<h2 id="input-properties">Input Properties</h2>
+<h2 id="properties-3">Properties</h2>
 <h3 id="text">Text</h3>
 <p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
@@ -3660,9 +3632,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3694,9 +3664,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3720,6 +3688,17 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) it is replaced with the <a href="#text-to-add">Text To Add</a>. See <a href="#add-text-to-add-at-the-end-of-a-null-or-empty-text">Example</a> above.</p>
 <h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
 <p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-at-the-end-of-another-text">Example</a> above.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text-to-add">Text To Add</a> added in the correct place and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
 
 </div>
 
@@ -3740,10 +3719,12 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 	<p><img src="/blocks/text-add-block-icon.png" alt="Icon"></p>
 <h1 id="hahahugoshortcode-s0-hbhb">Add Text Before Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextBeforeIndexBlock)</p>
+<h2 id="description">Description</h2>
 <p>Adds <a href="#text-to-add">Text To Add</a> to another <a href="#text">Text</a> before the given <a href="#index">Index</a>.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="add-text-to-add-to-another-text-before-the-given-index">Add Text To Add to another Text before the given Index</h3>
-<h4 id="inputs">Inputs</h4>
+<p>This example will add <code>&quot;|&quot;</code> before <code>&quot;A&quot;</code> (which is at index <code>0</code>) in <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3759,9 +3740,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3770,9 +3749,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3781,19 +3758,18 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Index</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
+/docs/reference/data-types/most-common/#int32
 ">Int32</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs">Outputs</h4>
-<p>The variable <code>($)Text</code> will be updated to the following:</p>
+<h4 id="result">Result</h4>
+<p><code>&quot;A&quot;</code> is at index <code>0</code> in <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>. Therefore, adding <code>&quot;|&quot;</code> before index <code>0</code> results in the variable <code>($)Text</code> being updated to the following:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;|ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
 <h3 id="add-null-or-empty-text-to-add-to-another-text-before-the-given-index">Add null or empty Text To Add to another Text before the given Index</h3>
-<h4 id="inputs-1">Inputs</h4>
+<p>This example will try to add <code>null</code> or <code>&quot;&quot;</code> before <code>&quot;A&quot;</code> (which is at index <code>0</code>) in <code>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>.</p>
+<h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -3809,9 +3785,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
 <td><code>($)Text</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3820,9 +3794,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)TextToAdd</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3831,18 +3803,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><code>($)Index</code> is a variable of type <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
+/docs/reference/data-types/most-common/#int32
 ">Int32</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="outputs-1">Outputs</h4>
-<p>The variable <code>($)Text</code> will remain the following:</p>
+<h4 id="result-1">Result</h4>
+<p>Adding <code>null</code> or <code>&quot;&quot;</code> performs no operation as there is nothing to add, so the variable <code>($)Text</code> will remain as follows:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>
 </code></pre></div><hr>
-<h2 id="input-properties">Input Properties</h2>
+<h2 id="properties-2">Properties</h2>
 <h3 id="text">Text</h3>
 <p>The <a href="#text">Text</a> where the <a href="#text-to-add">Text To Add</a> is added.</p>
 <table>
@@ -3858,9 +3828,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3892,9 +3860,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a></td>
 </tr>
 <tr>
@@ -3913,7 +3879,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 </table>
 <h3 id="index">Index</h3>
 <p>The <a href="#index">Index</a> to add the <a href="#text-to-add">Text To Add</a> before.</p>
-<p>For more information about what an index is, please see <a href="
+<p>For information about what an index is, please see <a href="
 
 
 /docs/reference/concepts/indexes/
@@ -3931,9 +3897,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 <td><a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
+/docs/reference/data-types/most-common/#int32
 ">Int32</a></td>
 </tr>
 <tr>
@@ -3977,20 +3941,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netcore-3.1
 <h2 id="remarks">Remarks</h2>
 <h3 id="null-or-empty-text-to-add">Null or empty Text To Add</h3>
 <p>If <a href="#text-to-add">Text To Add</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) nothing is added to <a href="#text">Text</a>. See <a href="#add-null-or-empty-text-to-add-to-another-text-before-the-given-index">Example</a> above.</p>
-<h3 id="immutable-string-data-type">Immutable String Data Type</h3>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
 <p>The <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
 <p>To overcome this, this block creates a new <a href="
 
 
-
-
-https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
+/docs/reference/data-types/most-common/#string
 ">String</a> which has the <a href="#text-to-add">Text To Add</a> added in the correct place and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
 
 </div>
@@ -4314,6 +4274,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-3.1
 </tbody>
 </table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
 <table>
 <thead>
 <tr>
@@ -4654,6 +4615,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 </tbody>
 </table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
 <table>
 <thead>
 <tr>
@@ -4982,6 +4944,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 </tbody>
 </table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
 <table>
 <thead>
 <tr>

@@ -10,13 +10,17 @@ description: "Adds text to another text after a given index."
 
 <p class="namespace">(Cortex.Blocks.Text.Add.AddTextAfterIndexBlock)</p>
 
+## Description
+
 Adds [Text To Add][TextToAdd Property] to another [Text][Text Property] after the given [Index][Index Property].
 
 ## Examples
 
 ### Add Text To Add to another Text after the given Index
 
-#### Inputs
+This example will add `"|"` after `"A"` (which is at index `0`) in `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
+
+#### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
@@ -24,9 +28,9 @@ Adds [Text To Add][TextToAdd Property] to another [Text][Text Property] after th
 | [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
 | [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
-#### Outputs
+#### Result
 
-The variable `($)Text` will be updated to the following:
+`"A"` is at index `0` in `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`. Therefore, adding `"|"` after index `0` results in the variable `($)Text` being updated to the following:
 
 ```json
 "A|BCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -36,7 +40,9 @@ The variable `($)Text` will be updated to the following:
 
 ### Add null or empty Text To Add to another Text after the given Index
 
-#### Inputs
+This example will try to add `null` or `""` after `"A"` (which is at index `0`) in `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
+
+#### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
@@ -44,9 +50,9 @@ The variable `($)Text` will be updated to the following:
 | [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `null` or `""` | `($)TextToAdd` is a variable of type [String][] |
 | [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
-#### Outputs
+#### Result
 
-The variable `($)Text` will remain the following:
+Adding `null` or `""` performs no operation as there is nothing to add, so the variable `($)Text` will remain as follows:
 
 ```json
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -54,7 +60,7 @@ The variable `($)Text` will remain the following:
 
 ***
 
-## Input Properties
+## Properties
 
 ### Text
 
@@ -80,7 +86,7 @@ The [Text To Add][TextToAdd Property] to the [Text][Text Property] after the giv
 
 The [Index][Index Property] to add the [Text To Add][TextToAdd Property] after.  
 
-For more information about what an index is, please see [Indexes].  
+For information about what an index is, please see [Indexes].  
 
 | | |
 |--------------------|---------------------------|
@@ -103,7 +109,7 @@ The exceptions thrown by the block can be found below:
 
 If [Text To Add][TextToAdd Property] is `null` or empty (i.e. `""`) nothing is added to [Text][Text Property]. See [Example][NullOrEmptyTextToAdd Example] above.
 
-### Immutable String Data Type
+### Immutable String data type
 
 The [String] data type used to represent [Text][Text Property] is immutable, which means it is read-only and cannot be changed once created.
 
@@ -120,5 +126,5 @@ To overcome this, this block creates a new [String] which has the [Text To Add][
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[Int32]: {{< url "MSDocs.DotNet.Api.System.Int32" >}}
-[String]: {{< url "MSDocs.DotNet.Api.System.String" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}

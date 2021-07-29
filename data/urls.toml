@@ -50,6 +50,7 @@
                     MainDoc = "/docs/reference/data-types/most-common/"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
+                    Int32 = "/docs/reference/data-types/most-common/#int32"
                     String = "/docs/reference/data-types/most-common/#string"
                     StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
         [Cortex.Reference.Exceptions]
