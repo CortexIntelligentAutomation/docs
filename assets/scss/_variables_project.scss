@@ -92,8 +92,14 @@ $h6-font-size: $font-size-base !default;
   
   table {
     display: table !important;
-    tr:first-child td:first-child {
-      border-top: none;
+    
+    th {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    tbody tr {
+      background-color: transparent !important;
     }
   }
   

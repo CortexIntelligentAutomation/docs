@@ -25,22 +25,23 @@
             .nav-item {
                 margin: 0px !important;
         
-                :hover {
-                    background-color: $ctx-blue;
-                    color: white;
-                }
         
                 .nav-link {
                     text-transform: none;
                     font-weight: $font-weight-light;
                     color: $ctx-black !important;
-                    padding: 100%;
+                    padding: 0;
+                    
+                    :hover {
+                        background-color: $ctx-blue;
+                        color: white !important;
+                    }
+
+                    span {
+                        padding: 0.5rem !important;
+                    }
                 }
             }
-        }
-
-        .nav-link {
-            padding: 0.5rem !important;
         }
     }
 

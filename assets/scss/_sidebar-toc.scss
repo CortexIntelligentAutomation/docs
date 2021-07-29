@@ -23,6 +23,10 @@
         color: $ctx-blue;
     }
 
+    a:hover {
+        color: $link-hover-color !important;
+    }
+
     li {
         list-style: none;
         display: block;
@@ -46,7 +50,7 @@
             color: $ctx-text-black;
 
             &:hover {
-                color: $ctx-blue;
+                color: $ctx-blue !important;
                 text-decoration: none;
             }
         }
