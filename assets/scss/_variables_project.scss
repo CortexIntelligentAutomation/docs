@@ -135,10 +135,12 @@ main {
 }
 
 footer {
-  min-height: 165px !important;
   font-size: 0.8rem !important;
-  
+  padding-top: 1rem !important;
+
+
   div.copyright-container {
+    padding: 1rem;
     border-top: solid 1px #676767;
     color: #676767;
   }

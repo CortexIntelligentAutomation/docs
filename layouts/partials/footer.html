@@ -1,23 +1,25 @@
 {{ $links := .Site.Params.links }}
 {{ $companyInfo := .Site.Params.company.info }}
-<footer class="bg-dark py-3 row d-print-none">
+<footer class="bg-dark row d-print-none">
   <div class="container-fluid mx-sm-5">
     <div class="row">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-1">
-        {{ with $links }}
-        {{ with index . "legal"}}
-        {{ template "footer-links-block"  . }}
-        {{ end }}
-        {{ end }}
-      </div>
-      <div class="col-6 col-sm-4 text-center order-sm-2 py-3">
+      <div class="col-12 col-sm-12 text-center py-3">
         {{ with $links }}
         {{ with index . "social"}}
         {{ template "footer-links-social"  . }}
         {{ end }}
         {{ end }}
       </div>
-      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3"> 
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-6 text-xs-center order-sm-1">
+        {{ with $links }}
+        {{ with index . "legal"}}
+        {{ template "footer-links-block"  . }}
+        {{ end }}
+        {{ end }}
+      </div>
+      <div class="col-6 col-sm-6 text-right text-xs-center order-sm-2"> 
         <ul class="list-unstyled">
           {{ with $companyInfo }}
             {{ template "footer-company-info" (printf "%s %s" (index . "building") (index . "road")) }}
@@ -30,7 +32,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-sm-12 text-center py-2 order-sm-1 copyright-container">
+      <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
         {{ with .Site.Params.copyright }}Copyright &copy; {{ now.Year}} {{ .}}. {{ T "footer_all_rights_reserved" }}{{ end }}
 	{{ if not .Site.Params.ui.footer_about_disable }}
 		{{ with .Site.GetPage "about" }}<p class="mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
