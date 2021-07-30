@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cortex Evolution – Cortex</title>
+    <title> – Cortex</title>
     <link>/</link>
-    <description>Recent content in Cortex on Cortex Evolution</description>
+    <description>Recent content in Cortex on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
