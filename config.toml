@@ -162,7 +162,7 @@ enable = true
 # Social media relevant links. These will show up in the center of footer.
 [[params.links.social]]
 	name ="Twitter"
-	url = "https://example.org/twitter"
+	url = "https://twitter.com/cortex_software"
 	icon = "fab fa-twitter"
 [[params.links.social]]
 	name ="Facebook"

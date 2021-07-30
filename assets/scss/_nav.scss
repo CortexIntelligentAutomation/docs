@@ -19,6 +19,7 @@
         margin-top: unset !important; // temp
 
         .navbar-nav {
+            padding-bottom: .25rem;
             margin-left: auto;
             margin-top: unset !important; // temp
 
@@ -86,8 +87,7 @@
             }
 
             .navbar-nav {
-                padding-bottom: 2rem;
-                overflow-x: auto;
+                padding-top: 0.5rem !important;
                 white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
             }
