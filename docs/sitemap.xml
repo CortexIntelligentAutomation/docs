@@ -106,6 +106,16 @@
   </url><url>
     <loc>/docs/reference/blocks/text/convert-to/</loc>
   </url><url>
+    <loc>/docs/reference/blocks/text/convert-to/convert-to-camel-case/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/text/convert-to/convert-to-lower-case/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/text/convert-to/convert-to-pascal-case/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/text/convert-to/convert-to-title-case/</loc>
+  </url><url>
+    <loc>/docs/reference/blocks/text/convert-to/convert-to-upper-case/</loc>
+  </url><url>
     <loc>/</loc>
     <lastmod>2021-05-19T15:55:54+01:00</lastmod>
   </url><url>
@@ -187,6 +197,8 @@
     <loc>/docs/reference/blocks/text/split/</loc>
   </url><url>
     <loc>/docs/reference/blocks/text/</loc>
+  </url><url>
+    <loc>/docs/reference/concepts/text-casing/</loc>
   </url><url>
     <loc>/docs/reference/concepts/text-equality/</loc>
   </url>

@@ -43,13 +43,20 @@
                     CurrentCulture = "/docs/reference/concepts/text-equality/#current-culture"
                     InvariantCulture = "/docs/reference/concepts/text-equality/#invariant-culture"
                     Ordinal = "/docs/reference/concepts/text-equality/#ordinal"
-
+            [Cortex.Reference.Concepts.TextCasing]
+                MainDoc = "/docs/reference/concepts/text-casing/"
+                [Cortex.Reference.Concepts.TextCasing.CultureInfo]
+                    MainDoc = "/docs/reference/concepts/text-casing/#culture-info"
+                    CurrentCulture = "/docs/reference/concepts/text-casing/#current-culture"
+                    InvariantCulture = "/docs/reference/concepts/text-casing/#invariant-culture"
         [Cortex.Reference.DataTypes]
                 MainDoc = "/docs/reference/data-types/"
                 [Cortex.Reference.DataTypes.MostCommon]
                     MainDoc = "/docs/reference/data-types/most-common/"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
+                    CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
+                    InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                     Int32 = "/docs/reference/data-types/most-common/#int32"
                     String = "/docs/reference/data-types/most-common/#string"
                     StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
@@ -134,6 +141,8 @@
             IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
+        [MSDocs.DotNet.Api.System.Globalization]
+            CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"

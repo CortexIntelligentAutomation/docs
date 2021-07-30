@@ -86,7 +86,7 @@ The [Text To Add][TextToAdd Property] to the [Text][Text Property] after the giv
 
 The [Index][Index Property] to add the [Text To Add][TextToAdd Property] after.  
 
-For information about what an index is, please see [Indexes].  
+For information about what an index is, please see [Indexes][].  
 
 | | |
 |--------------------|---------------------------|
@@ -111,9 +111,9 @@ If [Text To Add][TextToAdd Property] is `null` or empty (i.e. `""`) nothing is a
 
 ### Immutable String data type
 
-The [String] data type used to represent [Text][Text Property] is immutable, which means it is read-only and cannot be changed once created.
+The [String][] data type used to represent [Text][Text Property] is immutable, which means it is read-only and cannot be changed once created.
 
-To overcome this, this block creates a new [String] which has the [Text To Add][TextToAdd Property] added in the correct place and re-assigns it to the variable specified in the [Text][Text Property] property.  
+To overcome this, this block creates a new [String][] which has the [Text To Add][TextToAdd Property] added in the correct place and re-assigns it to the variable specified in the [Text][Text Property] property.  
 
 [Text Property]: {{< ref "#text" >}}
 [TextToAdd Property]: {{< ref "#text-to-add" >}}

@@ -25,7 +25,7 @@ The table below lists the supported comparison types:
 | Ordinal | StringComparison.Ordinal | 4 | Used to compare text using [ordinal][] sort rules. Case of the texts is considered when comparing. |
 | Ordinal Ignore Case | StringComparison.OrdinalIgnoreCase | 5 | Used to compare text using [ordinal][] sort rules. Case of the texts is ignored when comparing. |
 
-For more information about comparison types, please see [StringComparison].
+For more information about comparison types, please see [StringComparison][].
 
 ### Current Culture
 

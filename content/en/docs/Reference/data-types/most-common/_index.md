@@ -1,6 +1,6 @@
 ---
-title: "Most Common Data Types"
-linkTitle: "Most Common Data Types"
+title: "Most Commonly Used"
+linkTitle: "Most Commonly Used"
 description: "Describes the most commonly used data types."
 ---
 
@@ -32,6 +32,7 @@ The most commonly used data types are categorised and listed below:
 | Text | String | Varies depending on the number of characters it contains | A sequence of characters, surrounded by double quotes (e.g. `"This is a string"`) |
 | | Char | 2 bytes | A character or letter surrounded by single quotes (e.g. `'a'` or `'!'`) |
 | | StringComparison | 4 bytes | TODO |
+| | CultureInfo | Varies | TODO |
 
 ### All
 
@@ -124,6 +125,14 @@ TODO
 TODO
 
 #### StringComparison
+
+TODO
+
+#### CultureInfo
+
+TODO
+
+##### InvariantCulture
 
 TODO
 

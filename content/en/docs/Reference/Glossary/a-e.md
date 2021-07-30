@@ -133,6 +133,12 @@ Describes a set of rules for data that differs between different cultures; it de
 
 TODO: In .Net details about culture are represented by the cultureinfo data type...https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0
 
+### Culture identifier
+
+A culture identifier is a standard international numeric abbreviation and has the components necessary to uniquely identify one of the operating system's installed cultures.
+
+TODO: For more information about culture identifiers see...https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0#culture-names-and-identifiers
+
 ### Culture-insensitive
 
 If something is culture-insensitive, it means that it does not get affected by culture related changes to the operating system, such as language and regional settings.

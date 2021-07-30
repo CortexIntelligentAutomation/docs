@@ -809,6 +809,46 @@ This the multi-page printable view of this section.
   
 
   
+    
+    
+	
+<li>6.2.6.3.1: <a href="#pg-7e8c697bcea1ea86d61dbd5078e07b63">Convert To Camel Case</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2.6.3.2: <a href="#pg-a6f94b0b3962cf5ae750e8903fb2f930">Convert To Lower Case</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2.6.3.3: <a href="#pg-97cacd2bcc7719f23f6751377460e9ad">Convert To Pascal Case</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2.6.3.4: <a href="#pg-0595a219d213eed53b74c416586523b5">Convert To Title Case</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2.6.3.5: <a href="#pg-0a9d68399cc499bbba7c3a847e1d17c7">Convert To Upper Case</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -1029,7 +1069,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.3.1: <a href="#pg-a8d765b2e55e8a0eec2122666f4bca93">Most Common Data Types</a></li>
+<li>6.3.1: <a href="#pg-a8d765b2e55e8a0eec2122666f4bca93">Most Commonly Used</a></li>
 
 
     
@@ -1207,7 +1247,15 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.5.5: <a href="#pg-ce234f285536bbfac901f48ddebc0d79">Text Equality</a></li>
+<li>6.5.5: <a href="#pg-6e9504034abd335d33d88b35d1eb9bd0">Text Casing</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.5.6: <a href="#pg-ce234f285536bbfac901f48ddebc0d79">Text Equality</a></li>
 
 
     
@@ -4295,7 +4343,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 
 
 /docs/reference/data-types/most-common/#stringcomparison
-">StringComparison</a> types.</td>
+">StringComparison</a> types (e.g. <code>(StringComparison)10</code>).</td>
 </tr>
 <tr>
 <td><a href="
@@ -4636,7 +4684,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 
 
 /docs/reference/data-types/most-common/#stringcomparison
-">StringComparison</a> types.</td>
+">StringComparison</a> types (e.g. <code>(StringComparison)10</code>).</td>
 </tr>
 <tr>
 <td><a href="
@@ -4965,7 +5013,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 
 
 /docs/reference/data-types/most-common/#stringcomparison
-">StringComparison</a> types.</td>
+">StringComparison</a> types (e.g. <code>(StringComparison)10</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -5020,6 +5068,931 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-7e8c697bcea1ea86d61dbd5078e07b63">6.2.6.3.1 - Convert To Camel Case</h1>
+    <div class="lead">Converts text to camel case (e.g. camelCase).</div>
+	<p><img src="/blocks/text-convert-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Convert To Camel Case</h1>
+<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToCamelCaseBlock)</p>
+<h2 id="description">Description</h2>
+<p>Converts <a href="#text">Text</a> to camel case.</p>
+<p>Converting to camel case will result in all words (except the first) having their first letter capitalized, all other letters lower cased, and all spaces and punctuation being removed (e.g. <code>&quot;TEXT to convert to camel-case!&quot;</code> will be converted to <code>&quot;textToConvertToCamelCase&quot;</code>).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-converted-to-camel-case">Text converted to camel case</h3>
+<p>This example will convert <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to camel case.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/data-types/most-common/#invariantculture
+">culture-insensitive</a> conversion of the text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#culture-info">Culture Info</a></td>
+<td><code>($)CultureInfo</code>, with value <code>CultureInfo.InvariantCulture</code></td>
+<td><code>($)CultureInfo</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Converting <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to camel case will result in the variable <code>($)Text</code> being updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">`</span><span style="color:#4e9a06">&#34;theQuickBrownFoxJumpsOverTheLazyDog&#34;</span><span style="color:#a40000">`</span>
+</code></pre></div><hr>
+<h2 id="properties-1">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to convert to camel case.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#inputoutput
+">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="culture-info">Culture Info</h3>
+<p>The <a href="#culture-info">Culture Info</a> used to perform the conversion of the <a href="#text">Text</a>.</p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">Culture Info</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)CultureInfo</code> with value <code>CultureInfo.InvariantCulture</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/invalidpropertyvalueexception/
+">InvalidPropertyValueException</a></td>
+<td>Thrown when the culture identifier of the <a href="#culture-info">Culture Info</a> is invalid (e.g <code>new CultureInfo(&quot;InvalidCultureIdentifier&quot;)</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="culture-info-1">Culture Info</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">CultureInfo</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<h3 id="null-culture-info">Null Culture Info</h3>
+<p>If <a href="#culture-info">Culture Info</a> is <code>null</code>, it will be set to <code>CultureInfo.InvariantCulture</code>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), no operation is performed.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text">Text</a> converted to camel case and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a6f94b0b3962cf5ae750e8903fb2f930">6.2.6.3.2 - Convert To Lower Case</h1>
+    <div class="lead">Converts text to lower case (e.g. lowercase).</div>
+	<p><img src="/blocks/text-convert-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Convert To Lower Case</h1>
+<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToLowerCaseBlock)</p>
+<h2 id="description">Description</h2>
+<p>Converts <a href="#text">Text</a> to lower case.</p>
+<p>Converting to lower case will result in all letters being lower cased; spaces and punctuation will be preserved (e.g. <code>&quot;TEXT to convert to lower-case!&quot;</code> will be converted to <code>&quot;text to convert to lower-case!&quot;</code>).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-converted-to-lower-case">Text converted to lower case</h3>
+<p>This example will convert <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to lower case.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/data-types/most-common/#invariantculture
+">culture-insensitive</a> conversion of the text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#culture-info">Culture Info</a></td>
+<td><code>($)CultureInfo</code>, with value <code>CultureInfo.InvariantCulture</code></td>
+<td><code>($)CultureInfo</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Converting <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to lower case will result in the variable <code>($)Text</code> being updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">`</span><span style="color:#4e9a06">&#34;the quick brown fox jumps over the lazy dog&#34;</span><span style="color:#a40000">`</span>
+</code></pre></div><hr>
+<h2 id="properties-1">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to convert to lower case.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#inputoutput
+">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="culture-info">Culture Info</h3>
+<p>The <a href="#culture-info">Culture Info</a> used to perform the conversion of the <a href="#text">Text</a>.</p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">Culture Info</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)CultureInfo</code> with value <code>CultureInfo.InvariantCulture</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/invalidpropertyvalueexception/
+">InvalidPropertyValueException</a></td>
+<td>Thrown when the culture identifier of the <a href="#culture-info">Culture Info</a> is invalid (e.g <code>new CultureInfo(&quot;InvalidCultureIdentifier&quot;)</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="culture-info-1">Culture Info</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">CultureInfo</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<h3 id="null-culture-info">Null Culture Info</h3>
+<p>If <a href="#culture-info">Culture Info</a> is <code>null</code>, it will be set to <code>CultureInfo.InvariantCulture</code>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), no operation is performed.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text">Text</a> converted to lower case and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-97cacd2bcc7719f23f6751377460e9ad">6.2.6.3.3 - Convert To Pascal Case</h1>
+    <div class="lead">Converts text to pascal case (e.g. PascalCase).</div>
+	<p><img src="/blocks/text-convert-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Convert To Pascal Case</h1>
+<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToPascalCaseBlock)</p>
+<h2 id="description">Description</h2>
+<p>Converts <a href="#text">Text</a> to pascal case.</p>
+<p>Converting to pascal case will result in all words having their first letter capitalized, all other letters lower cased, and all spaces and punctuation being removed (e.g. <code>&quot;TEXT to convert to pascal-case!&quot;</code> will be converted to <code>&quot;TextToConvertToPascalCase&quot;</code>).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-converted-to-pascal-case">Text converted to pascal case</h3>
+<p>This example will convert <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to pascal case.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/data-types/most-common/#invariantculture
+">culture-insensitive</a> conversion of the text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#culture-info">Culture Info</a></td>
+<td><code>($)CultureInfo</code>, with value <code>CultureInfo.InvariantCulture</code></td>
+<td><code>($)CultureInfo</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Converting <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to pascal case will result in the variable <code>($)Text</code> being updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">`</span><span style="color:#4e9a06">&#34;TheQuickBrownFoxJumpsOverTheLazyDog&#34;</span><span style="color:#a40000">`</span>
+</code></pre></div><hr>
+<h2 id="properties-1">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to convert to pascal case.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#inputoutput
+">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="culture-info">Culture Info</h3>
+<p>The <a href="#culture-info">Culture Info</a> used to perform the conversion of the <a href="#text">Text</a>.</p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">Culture Info</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)CultureInfo</code> with value <code>CultureInfo.InvariantCulture</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/invalidpropertyvalueexception/
+">InvalidPropertyValueException</a></td>
+<td>Thrown when the culture identifier of the <a href="#culture-info">Culture Info</a> is invalid (e.g <code>new CultureInfo(&quot;InvalidCultureIdentifier&quot;)</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="culture-info-1">Culture Info</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">CultureInfo</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<h3 id="null-culture-info">Null Culture Info</h3>
+<p>If <a href="#culture-info">Culture Info</a> is <code>null</code>, it will be set to <code>CultureInfo.InvariantCulture</code>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), no operation is performed.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text">Text</a> converted to pascal case and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0595a219d213eed53b74c416586523b5">6.2.6.3.4 - Convert To Title Case</h1>
+    <div class="lead">Converts text to title case (e.g. Title Case).</div>
+	<p><img src="/blocks/text-convert-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Convert To Title Case</h1>
+<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToTitleCaseBlock)</p>
+<h2 id="description">Description</h2>
+<p>Converts <a href="#text">Text</a> to title case.</p>
+<p>Converting to title case will result in all words having their first letter capitalized and all other letters lower cased; except for words that are entirely upper cased, such as acronyms, which remain upper cased; spaces and punctuation will be preserved (e.g. <code>&quot;TEXT to convert to title-case!&quot;</code> will be converted to <code>&quot;TEXT To Convert To Title-Case!&quot;</code>).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-converted-to-title-case">Text converted to title case</h3>
+<p>This example will convert <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to title case.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/data-types/most-common/#invariantculture
+">culture-insensitive</a> conversion of the text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#culture-info">Culture Info</a></td>
+<td><code>($)CultureInfo</code>, with value <code>CultureInfo.InvariantCulture</code></td>
+<td><code>($)CultureInfo</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Converting <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to title case will result in the variable <code>($)Text</code> being updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">`</span><span style="color:#4e9a06">&#34;The Quick Brown Fox Jumps Over The Lazy Dog&#34;</span><span style="color:#a40000">`</span>
+</code></pre></div><hr>
+<h2 id="properties-1">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to convert to title case.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#inputoutput
+">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="culture-info">Culture Info</h3>
+<p>The <a href="#culture-info">Culture Info</a> used to perform the conversion of the <a href="#text">Text</a>.</p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">Culture Info</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)CultureInfo</code> with value <code>CultureInfo.InvariantCulture</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/invalidpropertyvalueexception/
+">InvalidPropertyValueException</a></td>
+<td>Thrown when the culture identifier of the <a href="#culture-info">Culture Info</a> is invalid (e.g <code>new CultureInfo(&quot;InvalidCultureIdentifier&quot;)</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="culture-info-1">Culture Info</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">CultureInfo</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<h3 id="null-culture-info">Null Culture Info</h3>
+<p>If <a href="#culture-info">Culture Info</a> is <code>null</code>, it will be set to <code>CultureInfo.InvariantCulture</code>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), no operation is performed.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text">Text</a> converted to title case and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0a9d68399cc499bbba7c3a847e1d17c7">6.2.6.3.5 - Convert To Upper Case</h1>
+    <div class="lead">Converts text to upper case (e.g. UPPERCASE).</div>
+	<p><img src="/blocks/text-convert-block-icon.png" alt="Icon"></p>
+<h1 id="hahahugoshortcode-s0-hbhb">Convert To Upper Case</h1>
+<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToUpperCaseBlock)</p>
+<h2 id="description">Description</h2>
+<p>Converts <a href="#text">Text</a> to upper case.</p>
+<p>Converting to upper case will result in all letters being upper cased; spaces and punctuation will be preserved (e.g. <code>&quot;TEXT to convert to upper-case!&quot;</code> will be converted to <code>&quot;TEXT TO CONVERT TO UPPER-CASE!&quot;</code>).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="text-converted-to-upper-case">Text converted to upper case</h3>
+<p>This example will convert <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to upper case.</p>
+<p>It performs a <a href="
+
+
+/docs/reference/data-types/most-common/#invariantculture
+">culture-insensitive</a> conversion of the text.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#text">Text</a></td>
+<td><code>($)Text</code>, with value <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code></td>
+<td><code>($)Text</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td><a href="#culture-info">Culture Info</a></td>
+<td><code>($)CultureInfo</code>, with value <code>CultureInfo.InvariantCulture</code></td>
+<td><code>($)CultureInfo</code> is a variable of type <a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Converting <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> to upper case will result in the variable <code>($)Text</code> being updated to the following:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">`</span><span style="color:#4e9a06">&#34;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&#34;</span><span style="color:#a40000">`</span>
+</code></pre></div><hr>
+<h2 id="properties-1">Properties</h2>
+<h3 id="text">Text</h3>
+<p>The <a href="#text">Text</a> to convert to upper case.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#inputoutput
+">InputOutput</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Text</code> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="culture-info">Culture Info</h3>
+<p>The <a href="#culture-info">Culture Info</a> used to perform the conversion of the <a href="#text">Text</a>.</p>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">Culture Info</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="
+
+
+/docs/reference/data-types/most-common/#cultureinfo
+">CultureInfo</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="
+
+
+/docs/reference/concepts/property-type/#input
+">Input</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)CultureInfo</code> with value <code>CultureInfo.InvariantCulture</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+
+
+/docs/reference/exceptions/common/property/invalidpropertyvalueexception/
+">InvalidPropertyValueException</a></td>
+<td>Thrown when the culture identifier of the <a href="#culture-info">Culture Info</a> is invalid (e.g <code>new CultureInfo(&quot;InvalidCultureIdentifier&quot;)</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="culture-info-1">Culture Info</h3>
+<p>For information about the <a href="
+
+
+/docs/reference/concepts/text-casing/#culture-info
+">supported values</a> for the <a href="#culture-info">CultureInfo</a> property and examples of how it affects casing rules, please see <a href="
+
+
+/docs/reference/concepts/text-casing/
+">Text Casing</a>.</p>
+<h3 id="null-culture-info">Null Culture Info</h3>
+<p>If <a href="#culture-info">Culture Info</a> is <code>null</code>, it will be set to <code>CultureInfo.InvariantCulture</code>.</p>
+<h3 id="null-or-empty-text">Null or empty Text</h3>
+<p>If <a href="#text">Text</a> is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>), no operation is performed.</p>
+<h3 id="immutable-string-data-type">Immutable String data type</h3>
+<p>The <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> data type used to represent <a href="#text">Text</a> is immutable, which means it is read-only and cannot be changed once created.</p>
+<p>To overcome this, this block creates a new <a href="
+
+
+/docs/reference/data-types/most-common/#string
+">String</a> which has the <a href="#text">Text</a> converted to upper case and re-assigns it to the variable specified in the <a href="#text">Text</a> property.</p>
+
+</div>
+
+
+
+    
+	
   
 
     
@@ -5355,7 +6328,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 
 <div class="td-content" style="">
     
-	<h1 id="pg-a8d765b2e55e8a0eec2122666f4bca93">6.3.1 - Most Common Data Types</h1>
+	<h1 id="pg-a8d765b2e55e8a0eec2122666f4bca93">6.3.1 - Most Commonly Used</h1>
     <div class="lead">Describes the most commonly used data types.</div>
 	<h2 id="data-types">Data Types</h2>
 <p>A data type specifies the type and size of variable values.</p>
@@ -5490,6 +6463,12 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 <td>4 bytes</td>
 <td>TODO</td>
 </tr>
+<tr>
+<td></td>
+<td>CultureInfo</td>
+<td>Varies</td>
+<td>TODO</td>
+</tr>
 </tbody>
 </table>
 <h3 id="all">All</h3>
@@ -5538,6 +6517,10 @@ https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcor
 <h4 id="char">Char</h4>
 <p>TODO</p>
 <h4 id="stringcomparison">StringComparison</h4>
+<p>TODO</p>
+<h4 id="cultureinfo">CultureInfo</h4>
+<p>TODO</p>
+<h5 id="invariantculture">InvariantCulture</h5>
 <p>TODO</p>
 <p>TODO: variable link, on page links, glossary, concept links etc.</p>
 
@@ -6095,7 +7078,63 @@ It can be only a <a href="
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ce234f285536bbfac901f48ddebc0d79">6.5.5 - Text Equality</h1>
+	<h1 id="pg-6e9504034abd335d33d88b35d1eb9bd0">6.5.5 - Text Casing</h1>
+    <div class="lead">This page describes the concept of Text Casing.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Text Casing</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="culture-info">Culture Info</h2>
+<p>Culture Info specifies the culture-specific casing rules used to determine how the case of text is changed.</p>
+<p>The table below lists the supported culture info:</p>
+<p>TODO: Full list</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Text Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current Culture</td>
+<td>CultureInfo.CurrentCulture</td>
+<td>Used to compare text using culture-sensitive sort rules and the <a href="#current-culture">current culture</a>. Case of the texts is considered when comparing.</td>
+</tr>
+<tr>
+<td>Invariant Culture</td>
+<td>CultureInfo.InvariantCulture</td>
+<td>Used to compare text using culture-sensitive sort rules and the <a href="#invariant-culture">invariant culture</a>. Case of the texts is considered when comparing.</td>
+</tr>
+</tbody>
+</table>
+<p>For more information about culture info, please see <a href="
+
+
+
+
+https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=netcore-3.1
+">CultureInfo</a>.</p>
+<h3 id="current-culture">Current Culture</h3>
+<p>TODO: notes about current culture and a worked through example</p>
+<h3 id="invariant-culture">Invariant Culture</h3>
+<p>TODO: notes about invariant culture and a worked through example</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ce234f285536bbfac901f48ddebc0d79">6.5.6 - Text Equality</h1>
     <div class="lead">This page describes the concept of Text Equality.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Text Equality</h1>
 <h2 id="overview">Overview</h2>
@@ -6394,6 +7433,9 @@ https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-a
 <h3 id="culture">Culture</h3>
 <p>Describes a set of rules for data that differs between different cultures; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and text comparisons.</p>
 <p>TODO: In .Net details about culture are represented by the cultureinfo data type&hellip;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0</a></p>
+<h3 id="culture-identifier">Culture identifier</h3>
+<p>A culture identifier is a standard international numeric abbreviation and has the components necessary to uniquely identify one of the operating system&rsquo;s installed cultures.</p>
+<p>TODO: For more information about culture identifiers see&hellip;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0#culture-names-and-identifiers">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0#culture-names-and-identifiers</a></p>
 <h3 id="culture-insensitive">Culture-insensitive</h3>
 <p>If something is culture-insensitive, it means that it does not get affected by culture related changes to the operating system, such as language and regional settings.</p>
 <h3 id="culture-sensitive">Culture-sensitive</h3>
