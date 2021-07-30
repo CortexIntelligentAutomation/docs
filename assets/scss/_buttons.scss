@@ -1,0 +1,17 @@
+// Buttons
+
+@if $enable-rounded {
+    .btn {
+        border-radius: 0rem;
+        margin-right: 0rem !important;
+        margin-bottom: 0rem !important;
+
+        &-lg {
+            border-radius: 0rem;
+        }
+
+        &-sm {
+            border-radius: 0rem;
+        }
+    }
+}
