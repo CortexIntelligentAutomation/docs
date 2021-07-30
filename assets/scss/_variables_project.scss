@@ -61,13 +61,14 @@ $h6-font-size: $font-size-base !default;
  
   h3 {
     font-size: $h3-font-size;
-    font-weight:600 !important;
+    font-weight:400 !important;
     margin: 1rem 0rem 0rem 0rem !important;
+    padding-bottom: 0.5rem;
   }
  
   h4 {
     font-size: $h4-font-size;
-    font-weight:600 !important;
+    font-weight:400 !important;
     margin: 1rem 0rem 0.5rem 0rem !important;
   }
   
