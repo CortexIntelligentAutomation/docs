@@ -77,13 +77,6 @@ $h6-font-size: $font-size-base !default;
       margin-top: -14px;
     }
   
-    img:first-of-type {
-    float: left;
-    display: inline;
-    margin-right: 10px;
-    vertical-align: bottom;
-  }
-  
   th {
     color: $ctx-text-black;
   }
@@ -111,7 +104,14 @@ $h6-font-size: $font-size-base !default;
     max-width: 100% !important;
   }
 }
-
+.td-docs {
+  img:first-of-type {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
