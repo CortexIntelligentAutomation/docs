@@ -243,3 +243,12 @@ enable = true
 	url = "https://example.org/mail"
 	icon = "fa fa-envelope"
         desc = "Discussion and help from your fellow users"
+
+# Additional menu links
+[menu]
+[[menu.main]]
+identifier = 'documentation'
+name = 'Documentation'
+pre = "<i class='fa fa-heart'></i>"
+url = '/docs/'
+weight = 10
