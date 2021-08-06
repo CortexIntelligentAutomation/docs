@@ -43,11 +43,19 @@ $h6-font-size: $font-size-base !default;
   .breadcrumb > .breadcrumb-item ~ .breadcrumb-item{
     padding-left: 3px;
   }
+
+  .slogan {
+    font-size: 2rem;
+  }
 }
 
 .td-content {
+  ::before{
+    display: block !important;
+  }
+  
   color: $ctx-text-black;
-    
+  
   h1 {
     font-size: $h1-font-size;
   }
@@ -55,10 +63,11 @@ $h6-font-size: $font-size-base !default;
   h2 {
     font-size: $h2-font-size;
     font-weight:600 !important;
-    margin: 2rem 0rem 0rem 0rem !important;
+    margin: 2rem 0rem 0.5rem 0rem !important;
     max-width: 100% !important;
+    
   }
- 
+
   h3 {
     font-size: $h3-font-size;
     font-weight:400 !important;
