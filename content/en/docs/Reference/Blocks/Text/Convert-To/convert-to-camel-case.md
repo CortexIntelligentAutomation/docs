@@ -1,7 +1,7 @@
 ---
 title: "Convert To Camel Case"
 linkTitle: "Convert To Camel Case"
-description: "Converts text to camel case (e.g. camelCase)."
+description: "Converts text to camel case (e.g. `\"camelCase\"`)."
 ---
 
 ![Icon](/blocks/text-convert-block-icon.png)

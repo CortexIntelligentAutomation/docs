@@ -1,7 +1,7 @@
 ---
 title: "Convert To Title Case"
 linkTitle: "Convert To Title Case"
-description: "Converts text to title case (e.g. Title Case)."
+description: "Converts text to title case (e.g. `\"Title Case\"`)."
 ---
 
 ![Icon](/blocks/text-convert-block-icon.png)

@@ -1,7 +1,7 @@
 ---
 title: "Convert To Pascal Case"
 linkTitle: "Convert To Pascal Case"
-description: "Converts text to pascal case (e.g. PascalCase)."
+description: "Converts text to pascal case (e.g. `\"PascalCase\"`)."
 ---
 
 ![Icon](/blocks/text-convert-block-icon.png)

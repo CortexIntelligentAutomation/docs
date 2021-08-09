@@ -1,7 +1,7 @@
 ---
 title: "Convert To Lower Case"
 linkTitle: "Convert To Lower Case"
-description: "Converts text to lower case (e.g. lowercase)."
+description: "Converts text to lower case (e.g. `\"lowercase\"`)."
 ---
 
 ![Icon](/blocks/text-convert-block-icon.png)

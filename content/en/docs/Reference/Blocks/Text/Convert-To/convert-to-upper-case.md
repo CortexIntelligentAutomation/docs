@@ -1,7 +1,7 @@
 ---
 title: "Convert To Upper Case"
 linkTitle: "Convert To Upper Case"
-description: "Converts text to upper case (e.g. UPPERCASE)."
+description: "Converts text to upper case (e.g. `\"UPPERCASE\"`)."
 ---
 
 ![Icon](/blocks/text-convert-block-icon.png)
