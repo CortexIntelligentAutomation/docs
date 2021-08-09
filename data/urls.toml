@@ -36,6 +36,7 @@
                 MainDoc = "/docs/reference/concepts/property-type/"
                 Input = "/docs/reference/concepts/property-type/#input"
                 InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
+                Output = "/docs/reference/concepts/property-type/#output"
             [Cortex.Reference.Concepts.TextEquality]
                 MainDoc = "/docs/reference/concepts/text-equality/"
                 [Cortex.Reference.Concepts.TextEquality.ComparisonTypes]
