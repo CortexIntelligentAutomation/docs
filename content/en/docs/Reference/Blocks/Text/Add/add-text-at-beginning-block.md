@@ -103,7 +103,7 @@ The [Text To Add][TextToAdd Property] at the beginning of the [Text][Text Proper
 
 ## Exceptions
 
-No exceptions are thrown.
+No exceptions are thrown by the block.
 
 ## Remarks
 
