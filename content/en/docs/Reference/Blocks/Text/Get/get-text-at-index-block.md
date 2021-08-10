@@ -90,22 +90,22 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [PropertyValueOutOfRangeException][] | Thrown when the [Text][Text Property] property is `null` or empty (i.e. `""`). |
-| | Thrown when the [Index][Index Property] property is less than zero or greater than the length of [Text][Text Property] - 1. |
-| | Thrown when the [Index][Index Property] property + a positive [Length][Length Property] property is greater than the length of [Text][Text Property] - 1. |
+| | Thrown when the [Index][Index Property] property is less than zero or greater than the length of [Text][Text Property] - `1`. |
+| | Thrown when the [Index][Index Property] property + a positive [Length][Length Property] property is greater than the length of [Text][Text Property] - `1`. |
 
 ## Remarks
 
-### Get all text after Index
+### Negative Length
 
 A negative [Length][Length Property] can be used to get all text at and after the [Index][Index Property] of [Text][Text Property].
-
-### Index is inclusive
-
-The [Index][Index Property] property is an inclusive [index][Indexes], which means the character at the index will be included in the retrieved [text][TextAtIndex Property].
 
 ### Zero Length
 
 If [Length][Length Property] is `0`, the variable specified in the [Text At Index][TextAtIndex Property] property will be set to empty (i.e. `""`).
+
+### Index is inclusive
+
+The [Index][Index Property] property is an inclusive [index][Indexes], which means the character at the index will be included in the retrieved [text][TextAtIndex Property].
 
 [Text Property]: {{< ref "#text" >}}
 [Index Property]: {{< ref "#index" >}}
