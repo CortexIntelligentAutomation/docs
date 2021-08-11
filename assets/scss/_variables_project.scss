@@ -6,6 +6,7 @@ Add styles or override variables from the theme here.
 $ctx-green: #a0c326;
 $ctx-blue: #398FCD;
 $ctx-black: rgba(0, 0, 0, 0.7);
+$ctx-orange: #ff6600;
 $ctx-text-black: #495057;
 
 $primary: #398FCD !default;
@@ -53,7 +54,7 @@ $h6-font-size: $font-size-base !default;
   ::before{
     display: block !important;
   }
-  
+
   color: $ctx-text-black;
   
   h1 {
@@ -145,10 +146,52 @@ main {
   }
 }
 
+.cards {
+  .card-container {
+    text-align: left;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 1rem 1rem 1rem 1rem;
+    min-height: 15rem;
+    background-color: $ctx-orange;
+    border-radius: 25px;
+    opacity: 75%;
+    border: 2px solid $ctx-text-black;
+
+    .card-icon {
+      margin: 0rem 0rem 0rem 0rem;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+    
+    .title {
+      font-size: 1.75rem;
+      font-weight: 500;
+      margin: .5rem 0rem 0.25rem 0rem;
+    }
+    
+    .description {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 0px;
+    }
+  }
+  
+  .card-container:hover{
+    transform: scale(1.01);
+  }
+  
+  a {
+    color: white;
+  }
+  
+  a:hover {
+    color: white;
+  }
+}
+
 footer {
   font-size: 0.8rem !important;
   padding-top: 1rem !important;
-
 
   div.copyright-container {
     padding: 1rem;
