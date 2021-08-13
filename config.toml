@@ -220,7 +220,7 @@ enable = true
 	url = "https://www.cortex-ia.com/terms-conditions/"
 [[params.links.legal]]
 	name = "Disclaimer"
-	url = "https://www.tax.service.gov.uk/check-vat-number/enter-vat-details"
+	url = "https://www.cortex-ia.com/disclaimer/"
 [[params.links.legal]]
 	name = "Registration Number: 05023238"
 	url = "https://find-and-update.company-information.service.gov.uk/company/05023238"
