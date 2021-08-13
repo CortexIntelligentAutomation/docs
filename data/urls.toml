@@ -32,6 +32,8 @@
                 ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
                 Literal = "/docs/reference/concepts/literal-variables-expressions/#literal"
                 VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
+            [Cortex.Reference.Concepts.Occurrences]
+                MainDoc = "/docs/reference/concepts/occurrences/"
             [Cortex.Reference.Concepts.PropertyType]
                 MainDoc = "/docs/reference/concepts/property-type/"
                 Input = "/docs/reference/concepts/property-type/#input"
@@ -44,6 +46,7 @@
                     CurrentCulture = "/docs/reference/concepts/text-equality/#current-culture"
                     InvariantCulture = "/docs/reference/concepts/text-equality/#invariant-culture"
                     Ordinal = "/docs/reference/concepts/text-equality/#ordinal"
+                    OrdinalIgnoreCase = "/docs/reference/concepts/text-equality/#ordinal-ignore-case"
             [Cortex.Reference.Concepts.TextCasing]
                 MainDoc = "/docs/reference/concepts/text-casing/"
                 [Cortex.Reference.Concepts.TextCasing.CultureInfo]

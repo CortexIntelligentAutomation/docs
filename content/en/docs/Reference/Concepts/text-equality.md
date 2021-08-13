@@ -38,6 +38,7 @@ TODO: notes about invariant culture and a worked through example
 ### Ordinal
 
 TODO: notes about ordinal and a worked through example
+#### Ordinal Ignore Case
 
 [Current Culture]: {{< ref "#current-culture" >}}
 [Invariant Culture]: {{< ref "#invariant-culture" >}}
