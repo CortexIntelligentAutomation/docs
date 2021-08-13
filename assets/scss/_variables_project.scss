@@ -6,6 +6,7 @@ Add styles or override variables from the theme here.
 $ctx-green: #a0c326;
 $ctx-blue: #398FCD;
 $ctx-black: rgba(0, 0, 0, 0.7);
+$ctx-orange: #ff6600;
 $ctx-text-black: #495057;
 
 $primary: #398FCD !default;
@@ -43,11 +44,19 @@ $h6-font-size: $font-size-base !default;
   .breadcrumb > .breadcrumb-item ~ .breadcrumb-item{
     padding-left: 3px;
   }
+
+  .slogan {
+    font-size: 2rem;
+  }
 }
 
 .td-content {
+  ::before{
+    display: block !important;
+  }
+
   color: $ctx-text-black;
-    
+  
   h1 {
     font-size: $h1-font-size;
   }
@@ -55,10 +64,11 @@ $h6-font-size: $font-size-base !default;
   h2 {
     font-size: $h2-font-size;
     font-weight:600 !important;
-    margin: 2rem 0rem 0rem 0rem !important;
+    margin: 2rem 0rem 0.5rem 0rem !important;
     max-width: 100% !important;
+    
   }
- 
+
   h3 {
     font-size: $h3-font-size;
     font-weight:400 !important;
@@ -76,13 +86,6 @@ $h6-font-size: $font-size-base !default;
       font-size: 10pt;
       margin-top: -14px;
     }
-  
-    img:first-of-type {
-    float: left;
-    display: inline;
-    margin-right: 10px;
-    vertical-align: bottom;
-  }
   
   th {
     color: $ctx-text-black;
@@ -111,7 +114,14 @@ $h6-font-size: $font-size-base !default;
     max-width: 100% !important;
   }
 }
-
+.td-docs {
+  img:first-of-type {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -136,10 +146,52 @@ main {
   }
 }
 
+.cards {
+  .card-container {
+    text-align: left;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 1rem 1rem 1rem 1rem;
+    min-height: 15rem;
+    background-color: white;
+
+    .card-icon {
+      color: $ctx-blue;
+      margin: 0rem 0rem 0rem 0rem;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+    
+    .title {
+      color: $ctx-text-black;
+      font-size: 1.75rem;
+      font-weight: 500;
+      margin: .5rem 0rem 0.25rem 0rem;
+    }
+    
+    .description {
+      color: $ctx-text-black;
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 0px;
+    }
+  }
+  
+  .card-container:hover{
+    transform: scale(1.01);
+  }
+  
+  a {
+    color: white;
+  }
+  
+  a:hover {
+    color: white;
+  }
+}
+
 footer {
   font-size: 0.8rem !important;
   padding-top: 1rem !important;
-
 
   div.copyright-container {
     padding: 1rem;
