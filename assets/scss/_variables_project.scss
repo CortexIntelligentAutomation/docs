@@ -152,24 +152,24 @@ main {
     margin: 1rem 0rem 1rem 0rem;
     padding: 1rem 1rem 1rem 1rem;
     min-height: 15rem;
-    background-color: $ctx-orange;
-    border-radius: 25px;
-    opacity: 85%;
-    border: 2px solid $ctx-text-black;
+    background-color: white;
 
     .card-icon {
+      color: $ctx-blue;
       margin: 0rem 0rem 0rem 0rem;
       font-size: 4rem;
       line-height: 5rem;
     }
     
     .title {
+      color: $ctx-text-black;
       font-size: 1.75rem;
       font-weight: 500;
       margin: .5rem 0rem 0.25rem 0rem;
     }
     
     .description {
+      color: $ctx-text-black;
       font-size: 1rem;
       font-weight: normal;
       margin-bottom: 0px;
