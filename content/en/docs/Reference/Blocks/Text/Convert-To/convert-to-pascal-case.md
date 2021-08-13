@@ -36,7 +36,7 @@ It performs a [culture-insensitive][InvariantCulture] conversion of the text.
 Converting `"The quick brown fox jumps over the lazy dog"` to pascal case will result in the variable `($)Text` being updated to the following:
 
 ```json
-`"TheQuickBrownFoxJumpsOverTheLazyDog"`
+"TheQuickBrownFoxJumpsOverTheLazyDog"
 ```
 
 ***
