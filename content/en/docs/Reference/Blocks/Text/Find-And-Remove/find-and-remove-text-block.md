@@ -144,7 +144,7 @@ If [Text To Remove][TextToRemove Property] is `null` or empty (i.e. `""`) there 
 
 ### Text To Remove or Occurrence is not present
 
-If [Text To Remove][TextToRemove Property], or the specified [Occurrence][Occurrence Property] is not present, there is nothing to remove, so no operation is performed.
+If [Text To Remove][TextToRemove Property] or the specified [Occurrence][Occurrence Property] is not present, there is nothing to remove, so no operation is performed.
 
 ### Immutable String data type
 
