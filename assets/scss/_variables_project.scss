@@ -29,17 +29,22 @@ body {
   font-size: 0.9rem !important;
   font-weight: 400;
   line-height: 1.5 !important;
-  color: #212529;
+  color: $ctx-text-black;
   text-align: left;
   background-color: #fff;
 
+  .popover-body {
+    font-size: .9rem;
+    padding: 0.5rem 0.75rem;
+    color: $ctx-text-black;
+  }
+  
   .popover.offline-search-result {
     max-width: 460px;
     p {
-      font-size: .9rem;
-      color: $ctx-text-black;
       margin-right: 12px;
     }
+    
     .mt-4 {
       margin-top: 0px !important;
     }
