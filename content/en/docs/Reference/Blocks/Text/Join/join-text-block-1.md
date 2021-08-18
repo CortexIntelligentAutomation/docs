@@ -116,11 +116,11 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Null Or Empty Separator
+### Null or empty Separator
 
 If [Separator][Separator Property] is `null` or empty (i.e. `""`), an empty text (i.e. `""`) will be used as the separator.
 
-### Null Or Empty Value in Values
+### Null or empty Value in Values
 
 If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an empty text (i.e. `""`) will be used as the value.
 

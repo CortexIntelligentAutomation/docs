@@ -65,7 +65,7 @@ No exceptions are thrown by the block.
 
 ## Remarks
 
-### Null or Empty Text
+### Null or empty Text
 
 If [Text][Text Property] is `null` or empty (i.e. `""`) the variable specified in the [Length][Length Property] property will be set to `0`.
 

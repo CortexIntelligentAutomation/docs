@@ -148,15 +148,15 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Null Or Empty Text
+### Null or empty Text
 
 If [Text][Text Property] is `null` or empty (i.e. `""`), then `null` or empty (i.e. `""`) respectively is added as the only entry to [Values][Values Property].
 
-### Null Or Empty Separator
+### Null or empty Separator
 
 If [Separator][Separator Property] is `null` or empty (i.e. `""`), the value of the variable specified for the [Text][Text Property] property is added as the only entry to [Values][Values Property].
 
-### Separator Not Found
+### Separator not found
 
 If the [Separator][Separator Property] is not found in [Text][Text Property], the value of the variable specified for the [Text][Text Property] property is added as the only entry to [Values][Values Property].
 
