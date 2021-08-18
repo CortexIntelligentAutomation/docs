@@ -60,6 +60,7 @@
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
+                    IList = "/docs/reference/data-types/most-common/#ilistlttgt"
                     InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                     Int32 = "/docs/reference/data-types/most-common/#int32"
                     String = "/docs/reference/data-types/most-common/#string"
@@ -138,9 +139,13 @@
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         Boolean = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
         Int32 = "https://docs.microsoft.com/en-us/dotnet/api/system.int32"
-        Object = "https://docs.microsoft.com/en-us/dotnet/api/system.object"
+        OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         String = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
         StringComparison = "https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison"
+        StringSplitOptions = "https://docs.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
+        [MSDocs.DotNet.Api.System.Object]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.object"
+            ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring"
         [MSDocs.DotNet.Api.System.Collections.Generic]
             IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"

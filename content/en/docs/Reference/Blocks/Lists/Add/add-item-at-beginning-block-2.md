@@ -125,5 +125,5 @@ To add to an [IList][]&lt;[Object][]&gt; using a variable, e.g. `($)StringVar`, 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
 [IList]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.IList >}}
-[Object]: {{< url "MSDocs.DotNet.Api.System.Object" >}}
+[Object]: {{< url "MSDocs.DotNet.Api.System.Object.MainDoc" >}}
 [String]: {{< url "MSDocs.DotNet.Api.System.String" >}}
