@@ -50,6 +50,8 @@ TODO
 
 TODO
 
+### Lists
+
 #### IList&lt;T&gt;
 
 TODO
@@ -57,6 +59,23 @@ TODO
 #### List&lt;T&gt;
 
 TODO
+
+##### IList&lt;T&gt; vs IList&lt;dynamic&gt; vs IList&lt;Object&gt;
+
+TODO 
+
+All items in an [IList][]&lt;[TItem][]&gt; are of a specific type (e.g. An [IList][]&lt;[String][]&gt; can only contain [String][] items, and an [IList][]&lt;[Int32][]&gt; can only contain [Int32][] items).
+  
+There are 2 commonly used List data types that can be created to hold multiple types of item:
+
+* [List][]&lt;[dynamic][]&gt; - can be created using the literal syntax `[]`, or using the expression syntax `new List<dynamic>()`
+* [List][]&lt;[Object][]&gt; - can be created using the expression syntax `new List<Object>()`
+
+An item can be added to an both using a literal (e.g. `2`), a variable (e.g. `($)Int32Var` where its value is `2`), or an expression (e.g. `1+1`).
+
+However, when an item is retrieved from an [IList][]&lt;[Object][]&gt;, an expression must be used to [explicitly cast][] the item to it's correct type when using it. (e.g. `(Int32)($)ListOfObjects[($)Index])`, or `(Int32)($)RetrievedIntFromListOfObjects`). This is not needed if the item is retrieved from an an [IList][]&lt;[dynamic][]&gt;.
+
+### Dictionaries
 
 #### IDictionary&lt;K,&nbsp;V&gt;
 
@@ -66,7 +85,7 @@ TODO
 
 TODO
 
-#### Structure
+### Structure
 
 TODO
 
@@ -137,3 +156,5 @@ TODO
 TODO
 
 TODO: variable link, on page links, glossary, concept links etc.
+
+[explicitly cast]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ExplicitlyCastAVariable" >}}

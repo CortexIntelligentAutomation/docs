@@ -1,24 +1,18 @@
 ---
 title: "Literals, Variables and Expressions"
 linkTitle: "Literals, Variables and Expressions"
-description: "This page describes the different formats that can be used when entering values for block properties."
+description: "This page describes the different syntax that can be used when entering values for block properties."
 ---
 
 # {{< param title >}}
 
-This page describes the different formats that can be used when entering values for block properties.
+This page describes the different syntax that can be used when entering values for block properties.
 
-## Literal
+## Literals
 
-A literal is a value that does not need to be calculated during the execution of the flow. A literal can be of any type and includes JSON Structure and List.
+A literal is a value that does not need to be calculated during the execution of the flow. A literal can be of any [data type][Data Types].
 
-### An integer literal
-
-```json
-291
-```
-
-### A string literal
+### String literals
 
 Note that a string requires double quotes to indicate that it is a string literal.
 
@@ -26,29 +20,64 @@ Note that a string requires double quotes to indicate that it is a string litera
 "Example String"
 ```
 
-### An object literal
+TODO: Chars
 
-Note that because the value of an object property in JSON is already contained within double quotes, a string will need some escaped double quotes (\") to indicate that it is a string literal, as per the example.
+### Integer literals
+
+```json
+1
+```
+
+TODO: Talk about integer sizing
+TODO: floating points
+
+### Boolean literals
+
+```json
+true or false
+```
+
+### Object literals
 
 ```JSON
 {
-  "StringProperty": "\"String Value\"",
-  "IntegerProperty": 6
+  "StringProperty": "Example String",
+  "IntegerProperty": 1,
+  "BooleanProperty": true,
+  "EmptyListProperty": [],
+  "EmptyObjectProperty": {},
+  "NullProperty": null
 }
 ```
 
-### A list literal
+If the [Cortex Flow Engine][TODO Link] can determine that a literal object matches a known [data type][Data Types], then the engine will convert the literal object to that data type, otherwise it will convert it to a [structure][TODO Link].
 
-Note that because the value in a List in JSON is already contained within double quotes, a string will need some escaped double quotes (\") to indicate that it is a string literal, as per the example.
+TODO: talk about $type
+TODO: talk about using the data type of properties
+TODO: talk about dictionaries
+TODO: talk about structures
+TODO: Datetime/timespan
+TODO: Enums
+
+### List literals
 
 ```json
 [
-  "\"String Value\"",
-  6
+  "Example String",
+  1,
+  true,
+  {},
+  [],
+  null
 ]
 ```
 
+TODO: talk about [] and dynamic vs object
+TODO: talk about typed lists
+
 ## Variable Reference
+
+TODO: Review
 
 A variable reference is a value that has been stored within a variable. The value that the variable evaluates to will not be constant, it will depend on what value was assigned to it.
 
@@ -80,6 +109,8 @@ Note that you can index into a list using an int variable as well as with an int
 
 ## Expressions
 
+TODO: Review
+
 An expression is a value that will be calculated when the execution reaches the block. Cortex expressions use C# syntax so anything that is a valid C# expression will be valid. Full namespaces or keywords for built-in C# types will need to be used to reference a .NET data type.
 
 ### Arithmetic expressions
@@ -101,6 +132,12 @@ An expression is a value that will be calculated when the execution reaches the 
 | `$"{($)stringVar1} {($)stringVar2}"`  | `"hello world"`              | using .NET string interpolation    |
 | `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | using .NET verbatim string literal |
 | `$@"c:\programs\{($)stringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | using .NET string interpolation and verbatim string literal |
+
+TODO: Other data type expressions like above with literals
+
+### List expressions
+
+TODO
 
 ### Creating a new object
 
@@ -125,3 +162,5 @@ An expression is a value that will be calculated when the execution reaches the 
 |----------------------------|--------|-----------|
 | `(int)($)longVar`          | `1`    | as an int |
 | `(System.Int32)($)longVar` | `1`    | as an int |
+
+[Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}

@@ -1,24 +1,24 @@
 ---
-title: "Add Item At Beginning"
-linkTitle: "Add Item At Beginning"
-description: "Adds an Item at the beginning of a List."
+title: "Add Item At End"
+linkTitle: "Add Item At End"
+description: "Adds an Item at the end of a List."
 ---
 
 ![Icon](/blocks/lists-add-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Add.AddItemAtBeginningBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.Add.AddItemAtEndBlock`2)</p>
 
 ## Description
 
-Adds an [Item][Item Property] at the beginning of a [List][List Property].
+Adds an [Item][Item Property] at the end of a [List][List Property].
 
 ## Examples
 
-### Add an Item at the beginning of an empty List
+### Add an Item at the end of an empty List
 
-This example will add `"New Item"` at the beginning of `[]`.
+This example will add `"New Item"` at the end of `[]`.
 
 #### Properties
 
@@ -29,7 +29,7 @@ This example will add `"New Item"` at the beginning of `[]`.
 
 #### Result
 
-Adding `"New Item"` at the beginning of `[]` results in the variable `($)List` being updated to the following:
+Adding `"New Item"` at the end of `[]` results in the variable `($)List` being updated to the following:
 
 ```json
 ["New Item"]
@@ -37,9 +37,9 @@ Adding `"New Item"` at the beginning of `[]` results in the variable `($)List` b
 
 ***
 
-### Add an Item at the beginning of a List containing items of different types
+### Add an Item at the end of a List containing items of different types
 
-This example will add `"New Item"` at the beginning of `["Some Text", 1]`.
+This example will add `"New Item"` at the end of `["Some Text", 1]`.
 
 #### Properties
 
@@ -50,10 +50,10 @@ This example will add `"New Item"` at the beginning of `["Some Text", 1]`.
 
 #### Result
 
-Adding `"New Item"` at the beginning of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
+Adding `"New Item"` at the end of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-["New Item", "Some Text", 1]
+["Some Text", 1, "New Item"]
 ```
 
 ***
@@ -74,7 +74,7 @@ The [List][List Property] where the [Item][Item Property] is added.
 
 ### Item
 
-The [Item][Item Property] to be added at the beginning of the [List][List Property].
+The [Item][Item Property] to be added at the end of the [List][List Property].
 
 | | |
 |--------------------|---------------------------|

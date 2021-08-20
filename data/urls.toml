@@ -27,10 +27,11 @@
                 MainDoc = "/docs/reference/concepts/indexes/"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
                 MainDoc = "/docs/reference/concepts/literal-variables-expressions/"
-                AListLiteral = "/docs/reference/concepts/literal-variables-expressions/#a-list-literal"
+                Literal = "/docs/reference/concepts/literal-variables-expressions/#literals"
+                ListLiterals = "/docs/reference/concepts/literal-variables-expressions/#list-literals"
                 Expressions = "/docs/reference/concepts/literal-variables-expressions/#expressions"
+                ListExpressions = "/docs/reference/concepts/literal-variables-expressions/#list-expressions"
                 ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
-                Literal = "/docs/reference/concepts/literal-variables-expressions/#literal"
                 VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
             [Cortex.Reference.Concepts.Occurrences]
                 MainDoc = "/docs/reference/concepts/occurrences/"
@@ -59,8 +60,10 @@
                     MainDoc = "/docs/reference/data-types/most-common/"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
+                    Dynamic = "/docs/reference/data-types/most-common/#dynamic"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
                     IList = "/docs/reference/data-types/most-common/#ilistlttgt"
+                    Lists = "/docs/reference/data-types/most-common/#lists"
                     InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                     Int32 = "/docs/reference/data-types/most-common/#int32"
                     String = "/docs/reference/data-types/most-common/#string"
@@ -135,6 +138,7 @@
         MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/"
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
+        Dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         Boolean = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
