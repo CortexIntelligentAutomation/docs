@@ -1,7 +1,7 @@
 ---
 title: "Get Index Of Text"
 linkTitle: "Get Index Of Text"
-description: "Gets the index of the nth occurrence of a text in another text."
+description: "Gets the index of the specified occurrence of a text in another text."
 ---
 
 ![Icon](/blocks/text-get-index-block-icon.png)
@@ -12,7 +12,7 @@ description: "Gets the index of the nth occurrence of a text in another text."
 
 ## Description
 
-Gets the [Index][Index Property] of the nth [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property].
+Gets the [Index][Index Property] of the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property].
 
 ## Examples
 
@@ -108,7 +108,7 @@ where `-1` indicates that there are no matching occurrences.
 
 ### Text
 
-The [Text][Text Property] to get the [Index][Index Property] of the nth [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] from.
+The [Text][Text Property] to get the [Index][Index Property] of the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] from.
 
 | | |
 |--------------------|---------------------------|
@@ -118,7 +118,7 @@ The [Text][Text Property] to get the [Index][Index Property] of the nth [Occurre
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] the [Index][Index Property] of the nth [Occurrence][Occurrence Property] of, in [Text][Text Property].
+The [Text To Find][TextToFind Property] the [Index][Index Property] of the specified [Occurrence][Occurrence Property] of, in [Text][Text Property].
 
 | | |
 |--------------------|---------------------------|
@@ -128,7 +128,7 @@ The [Text To Find][TextToFind Property] the [Index][Index Property] of the nth [
 
 ### Occurrence
 
-The nth [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property].
+The specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property].
 
 For information about [supported values][Occurrences] for the [Occurrence][Occurrence Property] property and examples of how it can be used, please see [Occurrences][].
 
@@ -152,9 +152,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Index
 
-[Int32][] indicating the [Index][Index Property] of the first character of the nth [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property].
+[Int32][] indicating the [Index][Index Property] of the first character of the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property].
 
-If there is no nth [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property], the specified variable will be set to `-1`.
+If there is no specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in [Text][Text Property], the specified variable will be set to `-1`.
 
 For information about what an index is, please see [Indexes][].
 
@@ -170,7 +170,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [ArgumentException][] | Thrown when the [Comparison Type][ComparisonType Property] property is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
+| [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
 
 ## Remarks
 
@@ -192,7 +192,7 @@ If the [Occurrence][Occurrence Property] is set to `0`, the variable specified i
 
 ### Occurrence of Text To Find not found
 
-If the nth [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] is not found in [Text][Text Property], the variable specified in the [Index][Index Property] property is set to `-1`.
+If the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] is not found in [Text][Text Property], the variable specified in the [Index][Index Property] property is set to `-1`.
 
 [Text Property]: {{< ref "#text" >}}
 [TextToFind Property]: {{< ref "#text-to-find" >}}

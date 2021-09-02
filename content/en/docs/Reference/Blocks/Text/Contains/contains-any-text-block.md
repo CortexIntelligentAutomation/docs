@@ -118,8 +118,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [ArgumentException][] | Thrown when the [Comparison Type][ComparisonType Property] property is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
-| [PropertyNullException][] | Thrown when [Texts To Find][TextsToFind Property] property is `null`. |
+| [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
+| [PropertyNullException][] | Thrown when [Texts To Find][TextsToFind Property] is `null`. |
 
 ## Remarks
 

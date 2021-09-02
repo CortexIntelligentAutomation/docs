@@ -118,8 +118,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [ArgumentException][] | Thrown when the [Comparison Type][ComparisonType Property] property is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
-| [PropertyNullException][] | Thrown when [Texts To Find][TextsToFind Property] property is `null`. |
+| [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
+| [PropertyNullException][] | Thrown when [Texts To Find][TextsToFind Property] is `null`. |
 
 ## Remarks
 
@@ -129,7 +129,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the  [Contains All Text][ContainsAllText Property] property is set to `false`.
+If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
 ### Null or empty Text To Add
 

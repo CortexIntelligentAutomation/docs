@@ -108,8 +108,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyValueOutOfRangeException][] | Thrown when the [Text][Text Property] property is `null` or empty (i.e. `""`). |
-| | Thrown when the [Start Index][StartIndex Property] property or the [End Index][EndIndex Property] property is less than zero or greater than the length of [Text][Text Property] - `1`. |
+| [PropertyValueOutOfRangeException][] | Thrown when [Text][Text Property] is `null` or empty (i.e. `""`). |
+| | Thrown when [Start Index][StartIndex Property] or [End Index][EndIndex Property] is less than zero or greater than the length of [Text][Text Property] - `1`. |
 
 ## Remarks
 

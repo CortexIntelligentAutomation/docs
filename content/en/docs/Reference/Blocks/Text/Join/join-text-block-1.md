@@ -8,7 +8,7 @@ description: "Joins a set of values together as text, using the given separator 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Join.JoinTextBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.Join.JoinTextBlock`1)</p>
 
 ## Description
 
@@ -41,7 +41,6 @@ Joining `["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sat
 ### Join a set of Int32 Values together with a comma Separator
 
 This example will join the set of [Int32][] values, `[1, 2, 3]`, together with a comma separator (i.e. `","`).
-
 
 #### Properties
 
@@ -111,8 +110,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyNullException][] | Thrown when the [Values][Values Property] property is `null`. |
-| [OutOfMemoryException][] | Thrown when the length of the resultant [Text][Text Property] property is longer than the maximum allowed length (`2,147,483,647`). |
+| [PropertyNullException][] | Thrown when [Values][Values Property] is `null`. |
+| [OutOfMemoryException][] | Thrown when the length of the resultant [Text][Text Property] is longer than the maximum allowed length (`2,147,483,647`). |
 
 ## Remarks
 

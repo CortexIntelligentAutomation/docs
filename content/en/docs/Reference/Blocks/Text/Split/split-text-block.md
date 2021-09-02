@@ -144,7 +144,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [ArgumentException][] | Thrown when the [Split Options][SplitOptions Property] property is not one of the specified [StringSplitOptions][] types (e.g. `(StringSplitOptions)10`). |
+| [ArgumentException][] | Thrown when [Split Options][SplitOptions Property] is not one of the specified [StringSplitOptions][] types (e.g. `(StringSplitOptions)10`). |
 
 ## Remarks
 
