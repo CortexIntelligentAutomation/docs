@@ -33,6 +33,14 @@
                 ListExpressions = "/docs/reference/concepts/literal-variables-expressions/#list-expressions"
                 ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
                 VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
+            [Cortex.Reference.Concepts.ObjectEquality]
+                MainDoc = "/docs/reference/concepts/object-equality/"
+                [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]
+                    MainDoc = "/docs/reference/concepts/object-equality/#value-type-vs-reference-type-equality"
+                    ValueTypeEquality = "/docs/reference/concepts/object-equality/#value-type-equality"
+                    ReferenceTypeEquality = "/docs/reference/concepts/object-equality/#reference-type-equality"
+                [Cortex.Reference.Concepts.ObjectEquality.HowCortexComparesObjectsForEquality]
+                    MainDoc = "/docs/reference/concepts/object-equality/#how-cortex-compares-objects-for-equality"
             [Cortex.Reference.Concepts.Occurrences]
                 MainDoc = "/docs/reference/concepts/occurrences/"
             [Cortex.Reference.Concepts.PropertyType]
@@ -84,6 +92,8 @@
                     MainDoc = "/docs/reference/exceptions/lists/"
                         [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
                             MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
+                        [Cortex.Reference.Exceptions.Lists.DuplicateValueException]
+                            MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"                      
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
