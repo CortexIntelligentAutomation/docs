@@ -37,7 +37,7 @@ Adding `"New Item"` at the end of `[]` results in the variable `($)List` being u
 
 ***
 
-### Add an Item at the end of a List containing items of different types
+### Add an Item at the end of a List
 
 This example will add `"New Item"` at the end of `["Some Text", 1]`.
 
@@ -89,8 +89,8 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] property is `null` and [List][List Property] property only accepts non-nullable value types. |
-| [PropertyNullException][] | Thrown when [List][List Property] property is `null`. |
+| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] is `null` and [List][List Property] only accepts non-nullable value types. |
+| [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
 
 ## Remarks
 

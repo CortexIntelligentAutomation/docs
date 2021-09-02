@@ -37,7 +37,7 @@ Adding `["New Item 1", "New Item 2"]` at the beginning of `[]` results in the va
 
 ***
 
-### Add Items at the beginning of a List containing items of different types
+### Add Items at the beginning of a List
 
 This example will add `["New Item 1", "New Item 2"]` at the beginning of `["Some Text", 1]`.
 
@@ -89,7 +89,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [PropertyNullException][] | Thrown when [List][List Property] property or [Items][Items Property] property is `null`. |
+| [PropertyNullException][] | Thrown when [List][List Property] or [Items][Items Property] is `null`. |
 
 ## Remarks
 

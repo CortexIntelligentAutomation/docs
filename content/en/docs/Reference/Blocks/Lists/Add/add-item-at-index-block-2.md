@@ -38,7 +38,7 @@ Adding `"New Item"` at index `0` of `[]` results in the variable `($)List` being
 
 ***
 
-### Add an Item at the first Index (i.e. `0`) of a non-empty List
+### Add an Item at the first Index (i.e. `0`) of a List
 
 This example will add `"New Item"` at index `0` of `["Some Text", 1]`.
 
@@ -60,7 +60,7 @@ Adding `"New Item"` at index `0` of `["Some Text", 1]` results in the variable `
 
 ***
 
-### Add an Item at the end of of a non-empty List (i.e. Index equals count of items)
+### Add an Item at the end (i.e. Index equals count of items) of a List
 
 This example will add `"New Item"` at index `2` of `["Some Text", 1]`.
 
@@ -127,9 +127,9 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] property is `null` and [List][List Property] property only accepts non-nullable value types. |
-| [PropertyNullException][] | Thrown when [List][List Property] property is `null`. |
-| [PropertyValueOutOfRangeException][] | Thrown when the [Index][Index Property] is out of the range of the list indexes. Valid indexes are between and including `0` and the count of items in the [List][List Property]. |
+| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] is `null` and [List][List Property] only accepts non-nullable value types. |
+| [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
+| [PropertyValueOutOfRangeException][] | Thrown when [Index][Index Property] is out of the range of the list indexes. Valid indexes are between and including `0` and the count of items in the [List][List Property]. |
 
 ## Remarks
 

@@ -38,7 +38,7 @@ Adding `["New Item 1", "New Item 2"]` at index `0` of `[]` results in the variab
 
 ***
 
-### Add Items at the first Index (i.e. `0`) of a non-empty List
+### Add Items at the first Index (i.e. `0`) of a List
 
 This example will add `["New Item 1", "New Item 2"]` at index `0` of `["Some Text", 1]`.
 
@@ -60,7 +60,7 @@ Adding `["New Item 1", "New Item 2"]` at index `0` of `["Some Text", 1]` results
 
 ***
 
-### Add Items at the end of (i.e. Index equals count of items) of a non-empty List
+### Add Items at the end (i.e. Index equals count of items) of a List
 
 This example will add `["New Item 1", "New Item 2"]` at index `2` of `["Some Text", 1]`.
 
@@ -127,8 +127,8 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [PropertyNullException][] | Thrown when [List][List Property] property or [Items][Items Property] property is `null`. |
-| [PropertyValueOutOfRangeException][] | Thrown when the [Index][Index Property] is out of the range of the list indexes. Valid indexes are between and including `0` and the count of items in the [List][List Property]. |
+| [PropertyNullException][] | Thrown when [List][List Property] or [Items][Items Property] is `null`. |
+| [PropertyValueOutOfRangeException][] | Thrown when [Index][Index Property] is out of the range of the list indexes. Valid indexes are between and including `0` and the count of items in the [List][List Property]. |
 
 ## Remarks
 
