@@ -58,7 +58,7 @@ Removing the item at index `0` of `["Some Text", 1]` results in the variable `($
 
 ***
 
-### Remove the Item at the last Index (i.e. Index equals count of items - 1) of a List
+### Remove the Item at the last Index (i.e. Index equals count of items - `1`) of a List
 
 This example will remove the item at index `1` of `["Some Text", 1]`.
 
