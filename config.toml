@@ -102,15 +102,6 @@ archived_version = false
 # current doc set.
 version = "v2021"
 
-# Releases menu
-[[params.versions]]
-  version = "v2021 (latest)"
-  url = "http://v2021.docs.cortex-ia.com/"
-  
-[[params.versions]]
-  version = "v7.2"
-  url = "https://community.cortex.co.uk/"
-
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
 url_latest_version = "https://latest.docs.cortex-ia.com"
@@ -267,3 +258,12 @@ name = 'Documentation'
 pre = "<i class='fa fa-heart'></i>"
 url = '/docs/'
 weight = 10
+
+# Releases menu
+[[params.versions]]
+  version = "v2021 (latest)"
+  url = "http://v2021.docs.cortex-ia.com/"
+
+[[params.versions]]
+  version = "v7.2"
+  url = "https://community.cortex.co.uk/"
