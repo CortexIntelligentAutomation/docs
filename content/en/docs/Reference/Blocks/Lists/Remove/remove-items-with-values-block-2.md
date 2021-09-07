@@ -82,9 +82,9 @@ For information and examples of how it is determined whether an item matches a s
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [TItem][] |
+| Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Default Value | `($)Values` with value `[]` |
 
 ## Exceptions
 
