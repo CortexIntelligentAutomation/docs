@@ -82,6 +82,8 @@
                 MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
                     MainDoc = "/docs/reference/exceptions/common/property/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException]
+                        MainDoc = "/docs/reference/exceptions/common/property/propertyitemcountexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyemptyexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
