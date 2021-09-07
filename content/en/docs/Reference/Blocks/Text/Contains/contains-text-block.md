@@ -18,7 +18,7 @@ Checks if [Text][Text Property] contains [Text To Find][TextToFind Property].
 
 ### Text contains Text To Find
 
-This example will check that `"The quick brown fox jumps over the lazy dog"` contains the text `"quick brown fox"`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains the text `"quick brown fox"`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -43,7 +43,7 @@ true
 
 ### Text does not contain Text To Find
 
-This example will check that `"The quick brown fox jumps over the lazy dog"` does not contain `"quick red fox"`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains the text `"quick red fox"`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -130,7 +130,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the  [Contains Text][ContainsText Property] property is set to `false`.
 
-### Null or empty Text To Add
+### Null or empty Text To Find
 
 If [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), the variable specified in the [Contains Text][ContainsText Property] property is set to `false`.
 

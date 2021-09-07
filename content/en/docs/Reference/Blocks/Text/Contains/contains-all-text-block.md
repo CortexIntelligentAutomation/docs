@@ -18,7 +18,7 @@ Checks if [Text][Text Property] contains all of the texts in a given set of [Tex
 
 ### Text contains all of the texts in Texts To Find
 
-This example will check that `"The quick brown fox jumps over the lazy dog"` contains all of the texts in `["The", "quick", "brown", "fox"]`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains all of the texts in `["The", "quick", "brown", "fox"]`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -43,7 +43,7 @@ true
 
 ### Text does not contain all of the texts in Texts To Find
 
-This example will check that `"The quick brown fox jumps over the lazy dog"` does not contain all of the texts in `["the", "slow", "brown", "fox"]`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains all of the texts in `["the", "slow", "brown", "fox"]`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -131,7 +131,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
-### Null or empty Text To Add
+### Null or empty Texts To Find
 
 If [Texts To Find][TextsToFind Property] is empty or contains any `null` or empty (i.e. `""`) text, the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
