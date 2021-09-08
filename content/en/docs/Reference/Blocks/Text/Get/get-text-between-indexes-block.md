@@ -1,7 +1,7 @@
 ---
 title: "Get Text Between Indexes"
 linkTitle: "Get Text Between Indexes"
-description: "Gets text between a specified start index and end index of a given text."
+description: "Gets text between the specified start index and end index of a given text."
 ---
 
 ![Icon](/blocks/text-get-block-icon.png)
@@ -12,11 +12,11 @@ description: "Gets text between a specified start index and end index of a given
 
 ## Description
 
-Gets [text][TextBetweenIndexes Property] between a specified [Start Index][StartIndex Property] and [End Index][EndIndex Property] of a given [Text][Text Property].
+Gets [text][TextBetweenIndexes Property] between the specified [Start Index][StartIndex Property] and [End Index][EndIndex Property] of a given [Text][Text Property].
 
 ## Examples
 
-### Get text between a specified Start Index and End Index of a given Text
+### Get text between the specified Start Index and End Index of a given Text
 
 This example will get all characters between start index `0` and end index `3` of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 

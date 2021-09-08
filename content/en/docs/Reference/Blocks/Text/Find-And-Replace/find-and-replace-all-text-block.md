@@ -12,7 +12,7 @@ description: "Finds and replaces all occurrences of text in a given text."
 
 ## Description
 
-Finds and replaces all occurrences of [Text To Replace][TextToReplace Property] with a specified [Replacement Text][ReplacementText Property] in a given [Text][Text Property].
+Finds and replaces all occurrences of [Text To Replace][TextToReplace Property] with the specified [Replacement Text][ReplacementText Property] in a given [Text][Text Property].
 
 ## Examples
 

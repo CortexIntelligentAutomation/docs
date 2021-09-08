@@ -1,7 +1,7 @@
 ---
 title: "Get Text Before Index"
 linkTitle: "Get Text Before Index"
-description: "Gets a length of text before a specified index of a given text."
+description: "Gets a length of text before the specified index of a given text."
 ---
 
 ![Icon](/blocks/text-get-block-icon.png)
@@ -12,11 +12,11 @@ description: "Gets a length of text before a specified index of a given text."
 
 ## Description
 
-Gets a [Length][Length Property] of [text][TextBeforeIndex Property] before a specified [Index][Index Property] of a given [Text][Text Property].
+Gets a [Length][Length Property] of [text][TextBeforeIndex Property] before the specified [Index][Index Property] of a given [Text][Text Property].
 
 ## Examples
 
-### Get a Length of text before a specified Index of a given Text
+### Get a Length of text before the specified Index of a given Text
 
 This example will get `3` characters before index `3` of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 

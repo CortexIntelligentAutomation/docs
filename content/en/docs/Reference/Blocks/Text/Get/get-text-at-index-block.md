@@ -1,7 +1,7 @@
 ---
 title: "Get Text At Index"
 linkTitle: "Get Text At Index"
-description: "Gets a length of text at a specified index of a given text."
+description: "Gets a length of text at the specified index of a given text."
 ---
 
 ![Icon](/blocks/text-get-block-icon.png)
@@ -12,11 +12,11 @@ description: "Gets a length of text at a specified index of a given text."
 
 ## Description
 
-Gets a [Length][Length Property] of [text][TextAtIndex Property] at a specified [Index][Index Property] of a given [Text][Text Property].
+Gets a [Length][Length Property] of [text][TextAtIndex Property] at the specified [Index][Index Property] of a given [Text][Text Property].
 
 ## Examples
 
-### Get a Length of text at a specified Index of a given Text
+### Get a Length of text at the specified Index of a given Text
 
 This example will get `3` characters at index `3` of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 

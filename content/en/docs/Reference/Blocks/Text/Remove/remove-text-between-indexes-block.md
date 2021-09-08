@@ -1,7 +1,7 @@
 ---
 title: "Remove Text Between Indexes"
 linkTitle: "Remove Text Between Indexes"
-description: "Removes text between a specified start index and end index of a given text."
+description: "Removes text between the specified start index and end index of a given text."
 ---
 
 ![Icon](/blocks/text-remove-block-icon.png)
@@ -12,11 +12,11 @@ description: "Removes text between a specified start index and end index of a gi
 
 ## Description
 
-Removes text between a specified [Start Index][StartIndex Property] and [End Index][EndIndex Property] of a given [Text][Text Property].
+Removes text between the specified [Start Index][StartIndex Property] and [End Index][EndIndex Property] of a given [Text][Text Property].
 
 ## Examples
 
-### Remove text between a specified Start Index and End Index of a given Text
+### Remove text between the specified Start Index and End Index of a given Text
 
 This example will remove all characters between start index `0` and end index `3` of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 

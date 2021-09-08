@@ -12,7 +12,7 @@ description: "Sets the specified occurrence of an item matching a value in a Lis
 
 ## Description
 
-Sets a specified [Occurrence][Occurrence Property] of an item matching a [Value][Value Property] in a [List][List Property] to a [New Value][NewValue Property].
+Sets the specified [Occurrence][Occurrence Property] of an item matching a [Value][Value Property] in a [List][List Property] to a [New Value][NewValue Property].
 
 ## Examples
 

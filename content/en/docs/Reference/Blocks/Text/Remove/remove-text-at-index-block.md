@@ -1,7 +1,7 @@
 ---
 title: "Remove Text At Index"
 linkTitle: "Remove Text At Index"
-description: "Removes a length of text at a specified index of a given text."
+description: "Removes a length of text at the specified index of a given text."
 ---
 
 ![Icon](/blocks/text-remove-block-icon.png)
@@ -12,11 +12,11 @@ description: "Removes a length of text at a specified index of a given text."
 
 ## Description
 
-Removes a [Length][Length Property] of text at a specified [Index][Index Property] of a given [Text][Text Property].
+Removes a [Length][Length Property] of text at the specified [Index][Index Property] of a given [Text][Text Property].
 
 ## Examples
 
-### Remove a Length of text at a specified Index of a given Text
+### Remove a Length of text at the specified Index of a given Text
 
 This example will remove `3` characters at index `3` of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 

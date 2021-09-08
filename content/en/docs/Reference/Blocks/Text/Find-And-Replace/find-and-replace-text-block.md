@@ -1,7 +1,7 @@
 ---
 title: "Find And Replace Text"
 linkTitle: "Find And Replace Text"
-description: "Finds and replaces a specified occurrence of text in a given text."
+description: "Finds and replaces the specified occurrence of text in a given text."
 ---
 
 ![Icon](/blocks/text-find-and-replace-block-icon.png)
@@ -12,7 +12,7 @@ description: "Finds and replaces a specified occurrence of text in a given text.
 
 ## Description
 
-Finds and replaces a specified [Occurrence][Occurrence Property] of [Text To Replace][TextToReplace Property] with a specified [Replacement Text][ReplacementText Property] in a given [Text][Text Property].
+Finds and replaces the specified [Occurrence][Occurrence Property] of [Text To Replace][TextToReplace Property] with the specified [Replacement Text][ReplacementText Property] in a given [Text][Text Property].
 
 ## Examples
 

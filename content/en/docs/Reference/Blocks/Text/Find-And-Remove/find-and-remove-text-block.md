@@ -1,7 +1,7 @@
 ---
 title: "Find And Remove Text"
 linkTitle: "Find And Remove Text"
-description: "Finds and removes a specified occurrence of text from a given text."
+description: "Finds and removes the specified occurrence of text from a given text."
 ---
 
 ![Icon](/blocks/text-find-and-remove-block-icon.png)
@@ -12,7 +12,7 @@ description: "Finds and removes a specified occurrence of text from a given text
 
 ## Description
 
-Finds and removes a specified [Occurrence][Occurrence Property] of [Text To Remove][TextToRemove Property] from a given [Text][Text Property].
+Finds and removes the specified [Occurrence][Occurrence Property] of [Text To Remove][TextToRemove Property] from a given [Text][Text Property].
 
 ## Examples
 

@@ -12,7 +12,7 @@ description: "Removes the specified occurrence of an item matching a value from 
 
 ## Description
 
-Removes a specified [Occurrence][Occurrence Property] of an item matching a [Value][Value Property] from a [List][List Property].
+Removes the specified [Occurrence][Occurrence Property] of an item matching a [Value][Value Property] from a [List][List Property].
 
 ## Examples
 

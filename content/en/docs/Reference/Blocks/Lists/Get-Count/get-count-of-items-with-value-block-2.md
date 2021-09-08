@@ -1,7 +1,7 @@
 ---
 title: "Get Count Of Items With Value"
 linkTitle: "Get Count Of Items With Value"
-description: "Gets the count of items in a List with a specified value."
+description: "Gets the count of items in a List with the specified value."
 ---
 
 ![Icon](/blocks/lists-get-count-block-icon.png)
@@ -12,7 +12,7 @@ description: "Gets the count of items in a List with a specified value."
 
 ## Description
 
-Gets the [Count][Count Property] of items in a [List][List Property] with a specified [Value][Value Property].
+Gets the [Count][Count Property] of items in a [List][List Property] with the specified [Value][Value Property].
 
 ## Examples
 

@@ -1,7 +1,7 @@
 ---
 title: "Remove Text Before Index"
 linkTitle: "Remove Text Before Index"
-description: "Removes a length of text before a specified index of a given text."
+description: "Removes a length of text before the specified index of a given text."
 ---
 
 ![Icon](/blocks/text-remove-block-icon.png)
@@ -12,11 +12,11 @@ description: "Removes a length of text before a specified index of a given text.
 
 ## Description
 
-Removes a [Length][Length Property] of text before a specified [Index][Index Property] of a given [Text][Text Property].
+Removes a [Length][Length Property] of text before the specified [Index][Index Property] of a given [Text][Text Property].
 
 ## Examples
 
-### Remove a Length of text before a specified Index of a given Text
+### Remove a Length of text before the specified Index of a given Text
 
 This example will remove `3` characters before index `3` of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 

@@ -1,7 +1,7 @@
 ---
 title: "Add Text Before Index"
 linkTitle: "Add Text Before Index"
-description: "Adds text to another text before a specified index."
+description: "Adds text to another text before the specified index."
 ---
 
 ![Icon](/blocks/text-add-block-icon.png)
@@ -12,7 +12,7 @@ description: "Adds text to another text before a specified index."
 
 ## Description
 
-Adds [Text To Add][TextToAdd Property] to another [Text][Text Property] before the given [Index][Index Property].
+Adds [Text To Add][TextToAdd Property] to another [Text][Text Property] before the specified [Index][Index Property].
 
 ## Examples
 
