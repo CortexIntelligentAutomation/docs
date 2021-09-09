@@ -1,7 +1,7 @@
 ---
 title: "Get Indexes Of Items With Value"
 linkTitle: "Get Indexes Of Items With Value"
-description: "Gets the indexes of all occurrences of items in a List matching a value."
+description: "Gets the indexes of all items in a List matching a value."
 ---
 
 ![Icon](/blocks/lists-get-index-block-icon.png)
@@ -12,13 +12,13 @@ description: "Gets the indexes of all occurrences of items in a List matching a 
 
 ## Description
 
-Gets the [Indexes][Indexes Property] of all occurrences of items in a [List][List Property] matching a [Value][Value Property].
+Gets the [Indexes][Indexes Property] of all items in a [List][List Property] matching a [Value][Value Property].
 
 ## Examples
 
-### Get the Indexes of all occurrences of items in a List matching a Value
+### Get the Indexes of all items in a List matching a Value
 
-This example will attempt to get the indexes of all occurrences of items matching the value `1` from `[1, 2, 3, 3, 2, 1]`.
+This example will attempt to get the indexes of all items matching the value `1` from `[1, 2, 3, 3, 2, 1]`.
 
 #### Properties
 
@@ -30,7 +30,7 @@ This example will attempt to get the indexes of all occurrences of items matchin
 
 #### Result
 
-Attempting to get the indexes of all occurrences of items matching the value `1` from `[1, 2, 3, 3, 2, 1]` results in the variable `($)Indexes` being updated to the following:
+Attempting to get the indexes of all items matching the value `1` from `[1, 2, 3, 3, 2, 1]` results in the variable `($)Indexes` being updated to the following:
 
 ```json
 [0, 5]

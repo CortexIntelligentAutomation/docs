@@ -1,7 +1,7 @@
 ---
 title: "Set Items With Value"
 linkTitle: "Set Items With Value"
-description: "Sets all occurrences of items matching a value in a List to a new value."
+description: "Sets all items matching a value in a List to a new value."
 ---
 
 ![Icon](/blocks/lists-set-block-icon.png)
@@ -12,13 +12,13 @@ description: "Sets all occurrences of items matching a value in a List to a new 
 
 ## Description
 
-Sets all occurrences of items matching a [Value][Value Property] in a [List][List Property] to a [New Value][NewValue Property].
+Sets all items matching a [Value][Value Property] in a [List][List Property] to a [New Value][NewValue Property].
 
 ## Examples
 
-### Set all occurrences of items matching a Value in a List to a New Value
+### Set all items matching a Value in a List to a New Value
 
-This example will attempt to set all occurrences of items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10`.
+This example will attempt to set all items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10`.
 
 #### Properties
 
@@ -30,7 +30,7 @@ This example will attempt to set all occurrences of items matching the value `1`
 
 #### Result
 
-Attempting to set all occurrences of items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10` results in the variable `($)List` being updated to the following:
+Attempting to set all items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10` results in the variable `($)List` being updated to the following:
 
 ```json
 [10, 2, 3, 3, 2, 10]
@@ -42,7 +42,7 @@ Attempting to set all occurrences of items matching the value `1` in `[1, 2, 3, 
 
 ### List
 
-The [List][List Property] to set all occurrences of matching items in.
+The [List][List Property] to set all matching items in.
 
 Items are considered matching if they have the specified [Value][Value Property].
 
@@ -68,7 +68,7 @@ For information and examples of how it is determined whether an item matches a s
 
 ### New Value
 
-The [New Value][NewValue Property] to set all occurrences of matching items in [List][List Property] to.
+The [New Value][NewValue Property] to set all matching items in [List][List Property] to.
 
 | | |
 |--------------------|---------------------------|

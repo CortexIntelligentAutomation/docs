@@ -1,7 +1,7 @@
 ---
 title: "Set Items With Values"
 linkTitle: "Set Items With Values"
-description: "Sets all occurrences of items matching one of the specified values in a List to new values."
+description: "Sets all items matching one of the specified values in a List to new values."
 ---
 
 ![Icon](/blocks/lists-set-block-icon.png)
@@ -12,13 +12,13 @@ description: "Sets all occurrences of items matching one of the specified values
 
 ## Description
 
-Set all occurrences of items matching one of the specified [Values][Values Property] in a [List][List Property] to [New Values][NewValues Property].
+Set all items matching one of the specified [Values][Values Property] in a [List][List Property] to [New Values][NewValues Property].
 
 ## Examples
 
-### Set all occurrences of items matching one of the specified Values in a List to New Values
+### Set all items matching one of the specified Values in a List to New Values
 
-This example will attempt to set all occurrences of items matching one of the values `[1, 2]` in `[1, 2, 3, 3, 2, 1]` to `[10, 20]` respectively.
+This example will attempt to set all items matching one of the values `[1, 2]` in `[1, 2, 3, 3, 2, 1]` to `[10, 20]` respectively.
 
 #### Properties
 
@@ -30,7 +30,7 @@ This example will attempt to set all occurrences of items matching one of the va
 
 #### Result
 
-Attempting to set all occurrences of items matching one of the values `[1, 2]` in `[1, 2, 3, 3, 2, 1]` to `[10, 20]` respectively,  results in the variable `($)List` being updated to the following:
+Attempting to set all items matching one of the values `[1, 2]` in `[1, 2, 3, 3, 2, 1]` to `[10, 20]` respectively,  results in the variable `($)List` being updated to the following:
 
 ```json
 [10, 20, 3, 3, 20, 10]
@@ -42,7 +42,7 @@ Attempting to set all occurrences of items matching one of the values `[1, 2]` i
 
 ### List
 
-The [List][List Property] to set all occurrences of matching items in.
+The [List][List Property] to set all matching items in.
 
 Items are considered matching if they have one of the specified [Values][Values Property].
 

@@ -1,7 +1,7 @@
 ---
 title: "Remove Items With Values"
 linkTitle: "Remove Items With Values"
-description: "Removes all occurrences of items matching one of the specified values from a List."
+description: "Removes all items matching one of the specified values from a List."
 ---
 
 ![Icon](/blocks/lists-remove-block-icon.png)
@@ -12,13 +12,13 @@ description: "Removes all occurrences of items matching one of the specified val
 
 ## Description
 
-Removes all occurrences of items matching one of the specified [Values][Values Property] from a [List][List Property].
+Removes all items matching one of the specified [Values][Values Property] from a [List][List Property].
 
 ## Examples
 
-### Remove all occurrences of items matching one of the specified Values from an empty List
+### Remove all items matching one of the specified Values from an empty List
 
-This example will attempt to remove all occurrences of items matching one of the values `[1, 2]` from `[]`.
+This example will attempt to remove all items matching one of the values `[1, 2]` from `[]`.
 
 #### Properties
 
@@ -29,7 +29,7 @@ This example will attempt to remove all occurrences of items matching one of the
 
 #### Result
 
-Attempting to remove all occurrences of items matching one of the values `[1, 2]` from `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
+Attempting to remove all items matching one of the values `[1, 2]` from `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
 
 ```json
 []
@@ -37,9 +37,9 @@ Attempting to remove all occurrences of items matching one of the values `[1, 2]
 
 ***
 
-### Remove all occurrences of items matching one of the specified Values from a List
+### Remove all items matching one of the specified Values from a List
 
-This example will attempt to remove all occurrences of items matching one of the values `[1, 2]` from `[1, 2, 3, 3, 2, 1]`.
+This example will attempt to remove all items matching one of the values `[1, 2]` from `[1, 2, 3, 3, 2, 1]`.
 
 #### Properties
 
@@ -50,7 +50,7 @@ This example will attempt to remove all occurrences of items matching one of the
 
 #### Result
 
-Attempting to remove all occurrences of items matching one of the values `[1, 2]` from `[1, 2, 3, 3, 2, 1]` results in the variable `($)List` being updated to the following:
+Attempting to remove all items matching one of the values `[1, 2]` from `[1, 2, 3, 3, 2, 1]` results in the variable `($)List` being updated to the following:
 
 ```json
 [3, 3]
@@ -62,7 +62,7 @@ Attempting to remove all occurrences of items matching one of the values `[1, 2]
 
 ### List
 
-The [List][List Property] to remove all occurrences of matching items from.
+The [List][List Property] to remove all matching items from.
 
 Items are considered matching if they have one of the specified [Values][Values Property].
 
