@@ -25,11 +25,15 @@
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.Indexes]
                 MainDoc = "/docs/reference/concepts/indexes/"
+            [Cortex.Reference.Concepts.Keys]
+                MainDoc = "/docs/reference/concepts/keys/"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
                 MainDoc = "/docs/reference/concepts/literal-variables-expressions/"
                 Literal = "/docs/reference/concepts/literal-variables-expressions/#literals"
+                DictionaryLiterals = "/docs/reference/concepts/literal-variables-expressions/#dictionary-literals"
                 ListLiterals = "/docs/reference/concepts/literal-variables-expressions/#list-literals"
                 Expressions = "/docs/reference/concepts/literal-variables-expressions/#expressions"
+                DictionaryExpressions = "/docs/reference/concepts/literal-variables-expressions/#dictionary-expressions"
                 ListExpressions = "/docs/reference/concepts/literal-variables-expressions/#list-expressions"
                 ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
                 VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
@@ -68,7 +72,9 @@
                     MainDoc = "/docs/reference/data-types/most-common/"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
+                    Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                     Dynamic = "/docs/reference/data-types/most-common/#dynamic"
+                    IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
                     IList = "/docs/reference/data-types/most-common/#ilistlttgt"
                     Lists = "/docs/reference/data-types/most-common/#lists"
@@ -92,6 +98,12 @@
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
+                [Cortex.Reference.Exceptions.Dictionaries]
+                    MainDoc = "/docs/reference/exceptions/dictionaries/"
+                        [Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException]
+                            MainDoc = "/docs/reference/exceptions/dictionaries/cannotmodifyreadonlydictionaryexception/"
+                        [Cortex.Reference.Exceptions.Dictionaries.KeyPresentException]
+                            MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
                 [Cortex.Reference.Exceptions.Lists]
                     MainDoc = "/docs/reference/exceptions/lists/"
                         [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]

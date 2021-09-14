@@ -44,8 +44,10 @@ true or false
   "StringProperty": "Example String",
   "IntegerProperty": 1,
   "BooleanProperty": true,
+  "EmptyDictionaryProperty": {},
   "EmptyListProperty": [],
   "EmptyObjectProperty": {},
+  "EmptyStructureProperty": {},
   "NullProperty": null
 }
 ```
@@ -58,6 +60,25 @@ TODO: talk about dictionaries
 TODO: talk about structures
 TODO: Datetime/timespan
 TODO: Enums
+
+### Dictionary literals
+
+```json
+{
+  "Key 1" : "",
+  "Key 2" : 1,
+  "Key 3" : true,
+  "Key 4" : {},
+  "Key 5" : [],
+  "Key 6" : null
+}
+```
+
+TODO: Talk about heterogenous vs homogenous dictionaries.
+TODO: talk about keys and uniqueness
+TODO: talk about complex keys
+TODO: talk about {} and dynamic vs object
+TODO: talk about typed dictionaries
 
 ### List literals
 
@@ -74,6 +95,7 @@ TODO: Enums
 
 TODO: talk about [] and dynamic vs object
 TODO: talk about typed lists
+TODO: Talk about heterogenous vs homogenous lists.
 
 ## Variable Reference
 
@@ -134,6 +156,10 @@ An expression is a value that will be calculated when the execution reaches the 
 | `$@"c:\programs\{($)stringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | using .NET string interpolation and verbatim string literal |
 
 TODO: Other data type expressions like above with literals
+
+### Dictionary expressions
+
+TODO
 
 ### List expressions
 
