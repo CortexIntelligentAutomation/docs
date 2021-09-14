@@ -22,6 +22,8 @@ It can be only a [variable reference][]
 
 ## InputOutput
 
+TODO: used during block? What did Louis mean.
+
 The InputOutput property is used to supply the value which will be used during block. It is also used to save the result of block execution.
 It can be only a [variable reference][]
 >Existing value of the supplied variable will get modified

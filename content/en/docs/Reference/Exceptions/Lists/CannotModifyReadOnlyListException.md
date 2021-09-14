@@ -4,7 +4,6 @@ linkTitle: "CannotModifyReadOnlyListException"
 description: "The exception thrown when trying to modify a read-only list."
 ---
 
-
 # {{< param title >}}
 
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
@@ -30,6 +29,8 @@ When using a variable, convert the list to a list that can be written to by usin
 ```CSharp
 ($)List.ToList()
 ```
+
+TODO: Confirm if this is all correct - look at cannotmodifyreadonlydictionaryexception for consistency
 
 [T]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
