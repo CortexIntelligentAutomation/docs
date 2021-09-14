@@ -77,7 +77,7 @@ This example will add `["New Item 1", "New Item 2"]` at index `2` of `["Some Tex
 Adding `["New Item 1", "New Item 2"]` at index `2` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-`["Some Text", 1, "New Item 1", "New Item 2"]`
+["Some Text", 1, "New Item 1", "New Item 2"]
 ```
 
 ***

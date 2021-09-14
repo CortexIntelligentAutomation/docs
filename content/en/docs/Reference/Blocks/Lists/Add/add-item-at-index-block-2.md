@@ -55,7 +55,7 @@ This example will add `"New Item"` at index `0` of `["Some Text", 1]`.
 Adding `"New Item"` at index `0` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-`["New Item", "Some Text", 1]`
+["New Item", "Some Text", 1]
 ```
 
 ***
@@ -77,7 +77,7 @@ This example will add `"New Item"` at index `2` of `["Some Text", 1]`.
 Adding `"New Item"` at index `2` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-`["Some Text", 1, "New Item"]`
+["Some Text", 1, "New Item"]
 ```
 
 ***

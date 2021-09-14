@@ -53,7 +53,7 @@ This example will remove the item at index `0` of `["Some Text", 1]`.
 Removing the item at index `0` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-`[1]`
+[1]
 ```
 
 ***
@@ -74,7 +74,7 @@ This example will remove the item at index `1` of `["Some Text", 1]`.
 Remove the item at index `1` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-`["Some Text"]`
+["Some Text"]
 ```
 
 ***
