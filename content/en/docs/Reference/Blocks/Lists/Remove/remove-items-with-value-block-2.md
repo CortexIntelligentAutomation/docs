@@ -98,7 +98,7 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Object Equality
+### Item Equality
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 

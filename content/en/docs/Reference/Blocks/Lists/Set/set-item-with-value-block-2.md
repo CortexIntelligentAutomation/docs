@@ -16,7 +16,7 @@ Sets the specified [Occurrence][Occurrence Property] of an item matching a [Valu
 
 ## Examples
 
-### Sets the first Occurrence of an item matching a Value in a List to a New Value
+### Set the first Occurrence of an item matching a Value in a List to a New Value
 
 This example will attempt to set the first occurrence of an item matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10`.
 
@@ -125,12 +125,12 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [List][List Property] only accepts non-nullable value types. |
+| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] or [New Value][NewValue Property] are `null` and [List][List Property] only accepts non-nullable value types. |
 | [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
 
 ## Remarks
 
-### Object Equality
+### Item Equality
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 

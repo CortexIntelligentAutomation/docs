@@ -30,7 +30,7 @@ This example will attempt to set all items matching one of the values `[1, 2]` i
 
 #### Result
 
-Attempting to set all items matching one of the values `[1, 2]` in `[1, 2, 3, 3, 2, 1]` to `[10, 20]` respectively,  results in the variable `($)List` being updated to the following:
+Attempting to set all items matching one of the values `[1, 2]` in `[1, 2, 3, 3, 2, 1]` to `[10, 20]` respectively, results in the variable `($)List` being updated to the following:
 
 ```json
 [10, 20, 3, 3, 20, 10]
@@ -89,11 +89,11 @@ The exceptions thrown by the block can be found below:
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
 | [DuplicateValueException][] | Thrown when [Values][Values Property] contains duplicate values. |
 | [PropertyItemCountException][] | Thrown when the count of items in [Values][Values Property] and the count of items in [New Values][NewValues Property] are not the same, or neither contain any items. |
-| [PropertyNullException][] | Thrown when [List][List Property] or [Values][Values Property] or [New Values][NewValues Property] is `null`. |
+| [PropertyNullException][] | Thrown when [List][List Property] or [Values][Values Property] or [New Values][NewValues Property] are `null`. |
 
 ## Remarks
 
-### Object Equality
+### Item Equality
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
