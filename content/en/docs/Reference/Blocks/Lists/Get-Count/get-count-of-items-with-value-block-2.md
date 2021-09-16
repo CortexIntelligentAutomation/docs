@@ -42,7 +42,7 @@ Getting the count of items in `["Some Text", 1]` with the value `1` results in t
 
 ### List
 
-The [List][List Property] to get the count of items with the specified [Value][Value Property] for.  
+The [List][List Property] to get the [Count][Count Property] of items with the specified [Value][Value Property] for.  
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items in the [List][List Property].
   
@@ -92,6 +92,10 @@ For information and examples of how it is determined whether an item matches a s
 ### Empty List
 
 If [List][List Property] is empty (i.e. `[]`), the variable specified in the [Count][Count Property] property is set to `0`.
+
+### No items matching Value
+
+If [List][List Property] does not contain items matching the specified [Value][Value Property], the variable specified in the [Count][Count Property] property is set to `0`.
 
 ### Defining lists using literal syntax
 

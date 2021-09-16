@@ -41,7 +41,7 @@ Getting the count of all items in `["Some Text", 1]` results in the variable `($
 
 ### List
 
-The [List][List Property] to get the count of all items for.  
+The [List][List Property] to get the [Count][Count Property] of all items for.  
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items in the [List][List Property].
   

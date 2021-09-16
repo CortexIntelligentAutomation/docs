@@ -44,7 +44,7 @@ The counts of items matching each value are added to `($)Counts` at the same [in
 
 ### List
 
-The [List][List Property] to get the counts of items matching each of the specified [Values][Values Property] for.  
+The [List][List Property] to get the [Counts][Counts Property] of items matching each of the specified [Values][Values Property] for.  
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items in the [List][List Property].
   
