@@ -104,6 +104,8 @@
                             MainDoc = "/docs/reference/exceptions/dictionaries/cannotmodifyreadonlydictionaryexception/"
                         [Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException]
                             MainDoc = "/docs/reference/exceptions/dictionaries/keynotpresentexception/"
+                        [Cortex.Reference.Exceptions.Dictionaries.KeysNotPresentException]
+                            MainDoc = "/docs/reference/exceptions/dictionaries/keysnotpresentexception/"
                         [Cortex.Reference.Exceptions.Dictionaries.KeyPresentException]
                             MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
                         [Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException]
@@ -171,6 +173,7 @@
         Dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
+        ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
         Boolean = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
         Int32 = "https://docs.microsoft.com/en-us/dotnet/api/system.int32"
         OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"

@@ -92,7 +92,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [ArgumentException][] | Thrown when any key in [Keys][Keys Property] is `null`|
+| [ArgumentNullException][] | Thrown when any key in [Keys][Keys Property] is `null`|
 | [CannotModifyReadOnlyDictionaryException][] | Thrown when [Dictionary][Dictionary Property] is read-only. |
 | [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] or [Keys][Keys Property] are `null`. |
 
@@ -146,7 +146,7 @@ For information about the different types of dictionaries, including those that 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
-[ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
+[ArgumentNullException]: {{< url "MSDocs.DotNet.Api.System.ArgumentNullException" >}}
 [CannotModifyReadOnlyDictionaryException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
