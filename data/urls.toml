@@ -102,8 +102,12 @@
                     MainDoc = "/docs/reference/exceptions/dictionaries/"
                         [Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException]
                             MainDoc = "/docs/reference/exceptions/dictionaries/cannotmodifyreadonlydictionaryexception/"
+                        [Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException]
+                            MainDoc = "/docs/reference/exceptions/dictionaries/keynotpresentexception/"
                         [Cortex.Reference.Exceptions.Dictionaries.KeyPresentException]
                             MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
+                        [Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException]
+                            MainDoc = "/docs/reference/exceptions/dictionaries/occurrencenotpresentexception/"
                 [Cortex.Reference.Exceptions.Lists]
                     MainDoc = "/docs/reference/exceptions/lists/"
                         [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]

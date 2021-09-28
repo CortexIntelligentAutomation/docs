@@ -90,7 +90,7 @@ For information about what an index is, please see [Indexes][].
 
 ### Item
 
-The [Item][Item Property] at the end of [List][List Property].  
+The [Item][Item Property] at the specified [Index][Index Property] of [List][List Property].  
   
 | | |
 |--------------------|---------------------------|
