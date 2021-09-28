@@ -84,7 +84,7 @@ For information about what a key is, please see [Keys][].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [TItem][] |
+| Data Type | [TKey][] |
 | Property Type | [Input][] |
 | Default Value | `($)Key` with value `null` |
 
