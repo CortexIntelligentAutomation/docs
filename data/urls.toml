@@ -75,6 +75,7 @@
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                     Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
+                    Double = "/docs/reference/data-types/most-common/#double"
                     Dynamic = "/docs/reference/data-types/most-common/#dynamic"
                     IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
