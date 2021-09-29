@@ -37,6 +37,8 @@
                 ListExpressions = "/docs/reference/concepts/literal-variables-expressions/#list-expressions"
                 ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
                 VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
+            [Cortex.Reference.Concepts.NullAndNullableTypes]
+                MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectEquality]
                 MainDoc = "/docs/reference/concepts/object-equality/"
                 [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]
@@ -98,6 +100,10 @@
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
+                [Cortex.Reference.Exceptions.Decisions]
+                    MainDoc = "/docs/reference/exceptions/decisions/"
+                        [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
+                            MainDoc = "/docs/reference/exceptions/decisions/propertynotnullableexception/"
                 [Cortex.Reference.Exceptions.Dictionaries]
                     MainDoc = "/docs/reference/exceptions/dictionaries/"
                         [Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException]
