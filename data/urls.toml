@@ -13,6 +13,26 @@
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
+                [Cortex.Reference.Blocks.Exceptions.HandleBlock]
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-block"
+                    [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-block"
+                    [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessage]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-message-block"
+                    [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessages]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-messages-block"
+                    [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeName]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-type-name-block"
+                    [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-type-names-block"
+                [Cortex.Reference.Blocks.Exceptions.HandleFlow]
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-flow"
+                    [Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-flow/handle-flow-exception-block"
+                [Cortex.Reference.Blocks.Exceptions.HandleWorkspace]
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-workspace"
+                    [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-workspace/handle-workspace-exception-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
@@ -21,6 +41,8 @@
                     MainDoc = "/docs/reference/blocks/text/add/add-text-at-beginning-block/"
                     Examples = "/docs/reference/blocks/text/add/add-text-at-beginning-block/#examples"
         [Cortex.Reference.Concepts]
+            [Cortex.Reference.Concepts.ExceptionHandling]
+                MainDoc = "/docs/reference/concepts/exception-handling/"
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.Indexes]
@@ -39,6 +61,8 @@
                 VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
             [Cortex.Reference.Concepts.NullAndNullableTypes]
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
+            [Cortex.Reference.Concepts.ObjectCasting]
+                MainDoc = "/docs/reference/concepts/object-casting/"
             [Cortex.Reference.Concepts.ObjectEquality]
                 MainDoc = "/docs/reference/concepts/object-equality/"
                 [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]
@@ -54,6 +78,7 @@
                 Input = "/docs/reference/concepts/property-type/#input"
                 InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
                 Output = "/docs/reference/concepts/property-type/#output"
+                DiscardingOutput = "/docs/reference/concepts/property-type/#discarding-output"
             [Cortex.Reference.Concepts.TextEquality]
                 MainDoc = "/docs/reference/concepts/text-equality/"
                 [Cortex.Reference.Concepts.TextEquality.ComparisonTypes]
@@ -77,12 +102,15 @@
                     Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                     Double = "/docs/reference/data-types/most-common/#double"
                     Dynamic = "/docs/reference/data-types/most-common/#dynamic"
+                    Exceptions = "/docs/reference/data-types/most-common/#exceptions"
+                    Exception = "/docs/reference/data-types/most-common/#exception"
                     IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
                     IList = "/docs/reference/data-types/most-common/#ilistlttgt"
                     Lists = "/docs/reference/data-types/most-common/#lists"
                     InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                     Int32 = "/docs/reference/data-types/most-common/#int32"
+                    Object = "/docs/reference/data-types/most-common/#object"
                     String = "/docs/reference/data-types/most-common/#string"
                     StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
         [Cortex.Reference.Exceptions]
@@ -91,38 +119,42 @@
                 MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
                     MainDoc = "/docs/reference/exceptions/common/property/"
-                    [Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertyitemcountexception/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
+                        MainDoc = "/docs/reference/exceptions/common/property/propertycontainsnulloremptyitemexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyemptyexception/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException]
+                        MainDoc = "/docs/reference/exceptions/common/property/propertyitemcountexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertynullexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
-                [Cortex.Reference.Exceptions.Decisions]
-                    MainDoc = "/docs/reference/exceptions/decisions/"
-                        [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
-                            MainDoc = "/docs/reference/exceptions/decisions/propertynotnullableexception/"
-                [Cortex.Reference.Exceptions.Dictionaries]
-                    MainDoc = "/docs/reference/exceptions/dictionaries/"
-                        [Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException]
-                            MainDoc = "/docs/reference/exceptions/dictionaries/cannotmodifyreadonlydictionaryexception/"
-                        [Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException]
-                            MainDoc = "/docs/reference/exceptions/dictionaries/keynotpresentexception/"
-                        [Cortex.Reference.Exceptions.Dictionaries.KeysNotPresentException]
-                            MainDoc = "/docs/reference/exceptions/dictionaries/keysnotpresentexception/"
-                        [Cortex.Reference.Exceptions.Dictionaries.KeyPresentException]
-                            MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
-                        [Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException]
-                            MainDoc = "/docs/reference/exceptions/dictionaries/occurrencenotpresentexception/"
-                [Cortex.Reference.Exceptions.Lists]
-                    MainDoc = "/docs/reference/exceptions/lists/"
-                        [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
-                            MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
-                        [Cortex.Reference.Exceptions.Lists.DuplicateValueException]
-                            MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"                      
+            [Cortex.Reference.Exceptions.Decisions]
+                MainDoc = "/docs/reference/exceptions/decisions/"
+                    [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
+                        MainDoc = "/docs/reference/exceptions/decisions/propertynotnullableexception/"
+            [Cortex.Reference.Exceptions.Dictionaries]
+                MainDoc = "/docs/reference/exceptions/dictionaries/"
+                    [Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException]
+                        MainDoc = "/docs/reference/exceptions/dictionaries/cannotmodifyreadonlydictionaryexception/"
+                    [Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException]
+                        MainDoc = "/docs/reference/exceptions/dictionaries/keynotpresentexception/"
+                    [Cortex.Reference.Exceptions.Dictionaries.KeysNotPresentException]
+                        MainDoc = "/docs/reference/exceptions/dictionaries/keysnotpresentexception/"
+                    [Cortex.Reference.Exceptions.Dictionaries.KeyPresentException]
+                        MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
+                    [Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException]
+                        MainDoc = "/docs/reference/exceptions/dictionaries/occurrencenotpresentexception/"
+            [Cortex.Reference.Exceptions.FlowException]
+                MainDoc = "/docs/reference/exceptions/flowexception/"
+            [Cortex.Reference.Exceptions.Lists]
+                MainDoc = "/docs/reference/exceptions/lists/"
+                    [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
+                        MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
+                    [Cortex.Reference.Exceptions.Lists.DuplicateValueException]
+                        MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"                      
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]

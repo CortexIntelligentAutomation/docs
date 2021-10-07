@@ -6,6 +6,8 @@ description: "This page describes the concepts of Input, Output and InputOutput 
 
 # {{< param title >}}
 
+TODO: Verify all of this as was written by Louis ages ago.
+
 This page describes the concept of Input, Output and InputOutput properties.
 
 ## Input
@@ -19,6 +21,10 @@ It can be a [variable reference][] or a [literal][]
 The Output property is used to save the result of block execution.
 It can be only a [variable reference][]
 >Existing value of the supplied variable will get modified
+
+### Discarding Output
+
+TODO:
 
 ## InputOutput
 
