@@ -33,6 +33,14 @@
                     MainDoc = "/docs/reference/blocks/exceptions/handle-workspace"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-workspace/handle-workspace-exception-block"
+            [Cortex.Reference.Blocks.FilesAndFolders]
+                MainDoc = "/docs/reference/blocks/files-and-folders/"
+                [Cortex.Reference.Blocks.FilesAndFolders.Check]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/check"
+                    [Cortex.Reference.Blocks.FilesAndFolders.Check.CheckFileExists]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/check/check-file-exists-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.Check.CheckFolderExists]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/check/check-folder-exists-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
@@ -43,6 +51,8 @@
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.ExceptionHandling]
                 MainDoc = "/docs/reference/concepts/exception-handling/"
+            [Cortex.Reference.Concepts.FileAndFolderPaths]
+                MainDoc = "/docs/reference/concepts/file-and-folder-paths/"
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.Indexes]
