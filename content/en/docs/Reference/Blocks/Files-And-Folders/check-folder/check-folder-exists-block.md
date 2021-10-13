@@ -8,7 +8,7 @@ description: "Checks if a folder exists at the specified folder path."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.FilesAndFolders.Check.CheckFolderExistsBlock)</p>
+<p class="namespace">(Cortex.Blocks.FilesAndFolders.CheckFolder.CheckFolderExistsBlock)</p>
 
 ## Description
 
@@ -66,7 +66,7 @@ The [Folder Path][FolderPath Property] to check a folder exists at.
 
 The [Folder Path][FolderPath Property] is case-insensitive, any trailing spaces will be automatically removed, and can end with or without a trailing `\` (e.g. `@"C:\Windows\System32"` or `@"C:\Windows\System32\"`).
 
-For information about the supported folder path formats (i.e. absolute, relative, UNC etc.) and examples of using them, please see [File & Folder Paths][].
+For information about the supported folder path formats (i.e. absolute, relative, UNC etc.) and examples of each, please see [File & Folder Paths][].
 
 | | |
 |--------------------|---------------------------|
@@ -94,7 +94,7 @@ No exceptions are thrown by the block.
 
 ### Folder Paths
 
-For information about the supported folder path formats (i.e. absolute, relative, UNC etc.) and examples of using them, please see [File & Folder Paths][].
+For information about the supported folder path formats (i.e. absolute, relative, UNC etc.) and examples of each, please see [File & Folder Paths][].
 
 ### Folder Path needs escaping
 
@@ -143,7 +143,7 @@ If the user the flow is executing as does not have permissions to check if a fol
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[Check File Exists block]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.Check.CheckFileExists.MainDoc" >}}
+[Check File Exists block]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.CheckFile.CheckFileExists.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}

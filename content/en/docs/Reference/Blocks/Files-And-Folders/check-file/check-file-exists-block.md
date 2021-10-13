@@ -8,7 +8,7 @@ description: "Checks if a file exists at the specified file path."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.FilesAndFolders.Check.CheckFileExistsBlock)</p>
+<p class="namespace">(Cortex.Blocks.FilesAndFolders.CheckFile.CheckFileExistsBlock)</p>
 
 ## Description
 
@@ -66,7 +66,7 @@ The [File Path][FilePath Property] to check a file exists at.
 
 The [File Path][FilePath Property] is case-insensitive, and any trailing spaces will be automatically removed.
 
-For information about the supported file path formats (i.e. absolute, relative, UNC etc.) and examples of using them, please see [File & Folder Paths][].
+For information about the supported file path formats (i.e. absolute, relative, UNC etc.) and examples of each, please see [File & Folder Paths][].
 
 | | |
 |--------------------|---------------------------|
@@ -94,7 +94,7 @@ No exceptions are thrown by the block.
 
 ### File Paths
 
-For information about the supported file path formats (i.e. absolute, relative, UNC etc.) and examples of using them, please see [File & Folder Paths][].
+For information about the supported file path formats (i.e. absolute, relative, UNC etc.) and examples of each, please see [File & Folder Paths][].
 
 ### File Path needs escaping
 
@@ -143,7 +143,7 @@ If the user the flow is executing as does not have permissions to check if a fil
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[Check Folder Exists block]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.Check.CheckFolderExists.MainDoc" >}}
+[Check Folder Exists block]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.CheckFolder.CheckFolderExists.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}

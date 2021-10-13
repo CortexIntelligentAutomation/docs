@@ -35,12 +35,14 @@
                         MainDoc = "/docs/reference/blocks/exceptions/handle-workspace/handle-workspace-exception-block"
             [Cortex.Reference.Blocks.FilesAndFolders]
                 MainDoc = "/docs/reference/blocks/files-and-folders/"
-                [Cortex.Reference.Blocks.FilesAndFolders.Check]
-                    MainDoc = "/docs/reference/blocks/files-and-folders/check"
-                    [Cortex.Reference.Blocks.FilesAndFolders.Check.CheckFileExists]
-                        MainDoc = "/docs/reference/blocks/files-and-folders/check/check-file-exists-block"
-                    [Cortex.Reference.Blocks.FilesAndFolders.Check.CheckFolderExists]
-                        MainDoc = "/docs/reference/blocks/files-and-folders/check/check-folder-exists-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CheckFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/check-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CheckFile.CheckFileExists]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/check-file/check-file-exists-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CheckFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/check-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CheckFolder.CheckFolderExists]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/check-folder/check-folder-exists-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
@@ -51,6 +53,8 @@
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.ExceptionHandling]
                 MainDoc = "/docs/reference/concepts/exception-handling/"
+            [Cortex.Reference.Concepts.FileAndFolderAttributes]
+                MainDoc = "/docs/reference/concepts/file-and-folder-attributes/"
             [Cortex.Reference.Concepts.FileAndFolderPaths]
                 MainDoc = "/docs/reference/concepts/file-and-folder-paths/"
             [Cortex.Reference.Concepts.Generics]
@@ -157,6 +161,15 @@
                         MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
                     [Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException]
                         MainDoc = "/docs/reference/exceptions/dictionaries/occurrencenotpresentexception/"
+            [Cortex.Reference.Exceptions.FilesAndFolders]
+                MainDoc = "/docs/reference/exceptions/files-and-folders/"
+                [Cortex.Reference.Exceptions.FilesAndFolders.InvalidPathException]
+                    MainDoc = "/docs/reference/exceptions/files-and-folders/invalidpathexception"
+                [Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException]
+                    MainDoc = "/docs/reference/exceptions/files-and-folders/operationfailedexception"
+                    PathExceptions = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#path-exceptions"
+                    IndexesOfDuplicatePaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-duplicate-paths"
+                    IndexesOfNullOrEmptyPaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-null-or-empty-paths"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
             [Cortex.Reference.Exceptions.Lists]
