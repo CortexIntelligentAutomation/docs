@@ -8,7 +8,7 @@ description: "Copies files at the specified file paths to the given destination 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.FilesAndFolders.Copy.CopyFilesBlock)</p>
+<p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFile.CopyFilesBlock)</p>
 
 ## Description
 
@@ -20,7 +20,7 @@ Copies files at the specified [File Paths][FilePaths Property] to the given [Des
 
 This example will copy `["C:\Source\OriginalFile1.txt", "C:\Source\OriginalFile2.txt"]` to `"C:\Destination"`, with the same file names of `"OriginalFile1.txt"` and `"OriginalFile2.txt"`.
 
-In this example assume `"C:\Destination"` does not already contain a file named `"OriginalFile1.txt"` or a file named `"OriginalFile2.txt"`, so overwrite can be set to either true or false and it will still work.
+In this example assume `"C:\Destination"` does not already contain a file named `"OriginalFile1.txt"` or a file named `"OriginalFile2.txt"`, so overwrite can be set to either `true` or `false` and it will still work.
 
 #### Properties
 
@@ -36,16 +36,16 @@ Copying `["C:\Source\OriginalFile1.txt", "C:\Source\OriginalFile2.txt"]` to `"C:
 
 * Create a new file at `"C:\Destination\OriginalFile1.txt"` with:
   * The content copied from `"C:\Source\OriginalFile1.txt"`.
-  * The `Date Created` set to the time the copy occurred.
+  * The `Date Created` copied from `"C:\Source\OriginalFile1.txt"`.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\OriginalFile1.txt"`.
+  * The [File Attributes][] copied from `"C:\Source\OriginalFile1.txt"`.
 * Create a new file at `"C:\Destination\OriginalFile2.txt"` with:
   * The content copied from `"C:\Source\OriginalFile2.txt"`.
-  * The `Date Created` set to the time the copy occurred.
+  * The `Date Created` copied from `"C:\Source\OriginalFile2.txt"`.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\OriginalFile2.txt"`.
+  * The [File Attributes][] copied from `"C:\Source\OriginalFile2.txt"`.
 
 ***
 
@@ -69,16 +69,16 @@ Copying `["C:\Source\FileAlreadyExists1.txt", "C:\Source\FileAlreadyExists2.txt"
 
 * Overwrite the existing file at `"C:\Destination\FileAlreadyExists1.txt"` with:
   * The content copied from `"C:\Source\FileAlreadyExists1.txt"`.
+  * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\FileAlreadyExists1.txt"`.
-  * The `Date Created` left unchanged.
+  * The [File Attributes][] copied from `"C:\Source\FileAlreadyExists1.txt"`.
 * Overwrite the existing file at `"C:\Destination\FileAlreadyExists2.txt"` with:
   * The content copied from `"C:\Source\FileAlreadyExists2.txt"`.
+  * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\FileAlreadyExists2.txt"`.
-  * The `Date Created` left unchanged.
+  * The [File Attributes][] copied from `"C:\Source\FileAlreadyExists2.txt"`.
 
 ***
 
@@ -148,9 +148,9 @@ The exceptions thrown by the block can be found below:
 |                              | Any file path in [File Paths][FilePaths Property] contains only whitespace, or the NUL character (i.e. `\0`), or contains one or more invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`) in any file or folder names. |
 |                              | Any file path in [File Paths][FilePaths Property] exceeds the system-defined maximum length (typically 32,767 characters). |
 |                              | Any file path in [File Paths][FilePaths Property] or [Destination Path][DestinationPath Property] is invalid (for example, it is on an unmapped drive). |
-|                              | Any file path in [File Paths][FilePaths Property] exists in the specified [Destination Path][DestinationPath Property] and overwrite is false. |
-|                              | Any file path in [File Paths][FilePaths Property] exists in the specified [Destination Path][DestinationPath Property] with the same name, is read-only and overwrite is true. |
-|                              | Any file path in [File Paths][FilePaths Property] exists in the specified [Destination Path][DestinationPath Property] with the same name, is hidden and overwrite is true, but the file in the specified [File Paths][FilePaths Property] is not hidden.|
+|                              | Any file path in [File Paths][FilePaths Property] exists in the specified [Destination Path][DestinationPath Property] and overwrite is `false`. |
+|                              | Any file path in [File Paths][FilePaths Property] exists in the specified [Destination Path][DestinationPath Property] with the same name, is read-only and overwrite is `true`. |
+|                              | Any file path in [File Paths][FilePaths Property] exists in the specified [Destination Path][DestinationPath Property] with the same name, is hidden and overwrite is `true`, but the file in the specified [File Paths][FilePaths Property] is not hidden.|
 |                              | The user the flow is executing as does not have the required permissions to copy any file (e.g. not having read access to a file path in [File Paths][FilePaths Property] or write access to the [Destination Path][DestinationPath Property]). |
 |                              | An unexpected error occurs when copying a file. |
 | [PropertyEmptyException][]   | Thrown when [File Paths][FilePaths Property] does not contain any items, or [Destination Path][DestinationPath Property] is empty (i.e. `""`). |
@@ -162,14 +162,15 @@ The exceptions thrown by the block can be found below:
 
 For information about the supported file and folder path formats (i.e. absolute, relative, UNC etc.) and examples of each, including how it is determined if a path points to a folder or a file, please see [File & Folder Paths][].
 
-### File Paths needs escaping
+### File Paths and Destination Path need escaping
 
-Each file path in [File Paths][FilePaths Property] requires `\` characters to be escaped, otherwise each unescaped `\` will be reported as an `Invalid property value` message when trying to debug the flow.
+Each file path in [File Paths][FilePaths Property] and [Destination Path][DestinationPath Property] require `\` characters to be escaped, otherwise each unescaped `\` will be reported as an `Invalid property value` message when trying to debug the flow.
 
 Escaping can be done in two ways:
 
 * Escaping the `\` character with another `\` character (e.g. `"C:\\Source\\OriginalFile.txt"`), or
-* Prepending an `@` character before the start of the file paths (e.g. `@"C:\Source\OriginalFile.txt"`)
+* Prepending an `@` character before the start of the
+file path (e.g. `@"C:\Source\OriginalFile.txt"`) and [Destination Path][DestinationPath Property] (e.g. `@"C:\Destination"`).
 
 ### File Attributes
 

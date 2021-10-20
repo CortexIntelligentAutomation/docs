@@ -8,7 +8,7 @@ description: "Copies a file at the specified file path to the given destination 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.FilesAndFolders.Copy.CopyFileBlock)</p>
+<p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFile.CopyFileBlock)</p>
 
 ## Description
 
@@ -20,7 +20,7 @@ Copies a file at the specified [File Path][FilePath Property] to the given [Dest
 
 This example will copy `"C:\Source\OriginalFile.txt"` to `"C:\Destination"`, with the same file name of `"OriginalFile.txt"`.
 
-In this example assume `"C:\Destination"` does not already contain a file named `"OriginalFile.txt"`, so overwrite can be set to either true or false and it will still work.
+In this example assume `"C:\Destination"` does not already contain a file named `"OriginalFile.txt"`, so overwrite can be set to either `true` or `false` and it will still work.
 
 #### Properties
 
@@ -36,10 +36,10 @@ Copying `"C:\Source\OriginalFile.txt"` to `"C:\Destination"` that does not alrea
 
 * Create a new file at `"C:\Destination\OriginalFile.txt"` with:
   * The content copied from `"C:\Source\OriginalFile.txt"`.
-  * The `Date Created` set to the time the copy occurred.
+  * The `Date Created` copied from `"C:\Source\OriginalFile.txt"`.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\OriginalFile.txt"`.
+  * The [File Attributes][] copied from `"C:\Source\OriginalFile.txt"`.
 
 ***
 
@@ -49,7 +49,7 @@ This example will copy `"C:\Source\OriginalFile.txt"` to `"C:\Destination"`, wit
 
 To rename the file when it is being copied, please note that the [Destination Path][DestinationPath Property] must be a file path, rather than a folder path (e.g. `"C:\Destination\NewFile.txt"` rather than `"C:\Destination"`).
 
-In this example assume `"C:\Destination"` does not already contain a file named `"NewFile.txt"`, so overwrite can be set to either true or false and it will still work.
+In this example assume `"C:\Destination"` does not already contain a file named `"NewFile.txt"`, so overwrite can be set to either `true` or `false` and it will still work.
 
 #### Properties
 
@@ -65,10 +65,10 @@ Copying `"C:\Source\OriginalFile.txt"` to the path `"C:\Destination\NewFile.txt"
 
 * Create a new file at `"C:\Destination\NewFile.txt"` with:
   * The content copied from `"C:\Source\OriginalFile.txt"`.
-  * The `Date Created` set to the time the copy occurred.
+  * The `Date Created` copied from `"C:\Source\OriginalFile.txt"`.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\OriginalFile.txt"`.
+  * The [File Attributes][] copied from `"C:\Source\OriginalFile.txt"`.
 
 ***
 
@@ -92,10 +92,10 @@ Copying `"C:\Source\FileAlreadyExists.txt"` to `"C:\Destination"` and overwritin
 
 * Overwrite the existing file at `"C:\Destination\FileAlreadyExists.txt"` with:
   * The content copied from `"C:\Source\FileAlreadyExists.txt"`.
+  * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
-  * The [File attributes][] copied from `"C:\Source\FileAlreadyExists.txt"`.
-  * The `Date Created` left unchanged.
+  * The [File Attributes][] copied from `"C:\Source\FileAlreadyExists.txt"`.
 
 ***
 
@@ -163,9 +163,9 @@ The exceptions thrown by the block can be found below:
 |                              | The [File Path][FilePath Property] contains only whitespace, or the NUL character (i.e. `\0`), or contains one or more invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`) in any file or folder names. |
 |                              | The [File Path][FilePath Property] exceeds the system-defined maximum length (typically 32,767 characters). |
 |                              | The [File Path][FilePath Property] or [Destination Path][DestinationPath Property] is invalid (for example, it is on an unmapped drive). |
-|                              | The file in the specified [Destination Path][DestinationPath Property] exists and overwrite is false. |
-|                              | The file in the specified [Destination Path][DestinationPath Property] exists, is read-only and overwrite is true. |
-|                              | The file in the specified [Destination Path][DestinationPath Property] exists, is hidden and overwrite is true, but the file in the specified [File Path][FilePath Property] is not hidden.|
+|                              | The file in the specified [Destination Path][DestinationPath Property] exists and overwrite is `false`. |
+|                              | The file in the specified [Destination Path][DestinationPath Property] exists, is read-only and overwrite is `true`. |
+|                              | The file in the specified [Destination Path][DestinationPath Property] exists, is hidden and overwrite is `true`, but the file in the specified [File Path][FilePath Property] is not hidden.|
 |                              | The user the flow is executing as does not have the required permissions to copy the file (e.g. not having read access to the [File Path][FilePath Property] or write access to the [Destination Path][DestinationPath Property]). |
 |                              | An unexpected error occurs when copying the file. |
 | [PropertyEmptyException][]   | Thrown when [File Path][FilePath Property] or [Destination Path][DestinationPath Property] are empty (i.e. `""`). |
@@ -177,14 +177,14 @@ The exceptions thrown by the block can be found below:
 
 For information about the supported file and folder path formats (i.e. absolute, relative, UNC etc.) and examples of each, including how it is determined if a path points to a folder or a file, please see [File & Folder Paths][].
 
-### File Path needs escaping
+### File Path and Destination Path need escaping
 
-[File Path][FilePath Property] requires `\` characters to be escaped, otherwise each unescaped `\` will be reported as an `Invalid property value` message when trying to debug the flow.
+[File Path][FilePath Property] and [Destination Path][DestinationPath Property] require `\` characters to be escaped, otherwise each unescaped `\` will be reported as an `Invalid property value` message when trying to debug the flow.
 
 Escaping can be done in two ways:
 
 * Escaping the `\` character with another `\` character (e.g. `"C:\\Source\\OriginalFile.txt"`), or
-* Prepending an `@` character before the start of the [File Path][FilePath Property] (e.g. `@"C:\Source\OriginalFile.txt"`)
+* Prepending an `@` character before the start of the [File Path][FilePath Property] (e.g. `@"C:\Source\OriginalFile.txt"`) and [Destination Path][DestinationPath Property] (e.g. `@"C:\Destination"`).
 
 ### File Attributes
 

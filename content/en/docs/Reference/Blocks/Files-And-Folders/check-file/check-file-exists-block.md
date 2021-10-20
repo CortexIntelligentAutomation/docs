@@ -107,19 +107,19 @@ Escaping can be done in two ways:
 
 ### Null File Path
 
-If [File Path][FilePath Property] is `null` the variable specified in the [File Exists][FileExists Property] property will be set to false.
+If [File Path][FilePath Property] is `null` the variable specified in the [File Exists][FileExists Property] property will be set to `false`.
 
 ### Empty File Path
 
-If [File Path][FilePath Property] is empty (i.e. `""`) the variable specified in the [File Exists][FileExists Property] property will be set to false.
+If [File Path][FilePath Property] is empty (i.e. `""`) the variable specified in the [File Exists][FileExists Property] property will be set to `false`.
 
 ### Invalid File Path
 
-If [File Path][FilePath Property] is invalid (i.e. contains any of the following characters: `"`, `*`, `?`, `|`, `<`, `>`, `:`, `\`, `/`) the variable specified in the [File Exists][FileExists Property] property will be set to false.
+If [File Path][FilePath Property] is invalid (i.e. contains any of the following characters: `"`, `*`, `?`, `|`, `<`, `>`, `:`, `\`, `/`) the variable specified in the [File Exists][FileExists Property] property will be set to `false`.
 
 ### File Path points to a folder
 
-If [File Path][FilePath Property] points to a folder, the variable specified in the [File Exists][FileExists Property] property will be set to false.
+If [File Path][FilePath Property] points to a folder, the variable specified in the [File Exists][FileExists Property] property will be set to `false`.
 
 To check if a folder exists, use the [Check Folder Exists block][].
 
@@ -129,11 +129,11 @@ If [File Path][FilePath Property] contains leading spaces they are not removed; 
 
 ### Error occurs whilst checking if the file exists
 
-If any error occurs whilst checking if a file exists at the specified [File Path][FilePath Property], the variable specified in the [File Exists][FileExists Property] property will be set to false.
+If any error occurs whilst checking if a file exists at the specified [File Path][FilePath Property], the variable specified in the [File Exists][FileExists Property] property will be set to `false`.
 
 ### User does not have necessary permissions to check if the file exists
 
-If the user the flow is executing as does not have permissions to check if a file exists at the specified [File Path][FilePath Property], the variable specified in the [File Exists][FileExists Property] property will be set to false.
+If the user the flow is executing as does not have permissions to check if a file exists at the specified [File Path][FilePath Property], the variable specified in the [File Exists][FileExists Property] property will be set to `false`.
 
 [FilePath Property]: {{< ref "#file-path" >}}
 [FileExists Property]: {{< ref "#file-exists" >}}

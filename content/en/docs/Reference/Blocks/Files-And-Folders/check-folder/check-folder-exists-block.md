@@ -107,19 +107,19 @@ Escaping can be done in two ways:
 
 ### Null Folder Path
 
-If [Folder Path][FolderPath Property] is `null` the variable specified in the [Folder Exists][FolderExists Property] property will be set to false.
+If [Folder Path][FolderPath Property] is `null` the variable specified in the [Folder Exists][FolderExists Property] property will be set to `false`.
 
 ### Empty Folder Path
 
-If [Folder Path][FolderPath Property] is empty (i.e. `""`) the variable specified in the [Folder Exists][FolderExists Property] property will be set to false.
+If [Folder Path][FolderPath Property] is empty (i.e. `""`) the variable specified in the [Folder Exists][FolderExists Property] property will be set to `false`.
 
 ### Invalid Folder Path
 
-If [Folder Path][FolderPath Property] is invalid (i.e. contains any of the following characters: `"`, `*`, `?`, `|`, `<`, `>`, `:`, `\`, `/`) the variable specified in the [Folder Exists][FolderExists Property] property will be set to false.
+If [Folder Path][FolderPath Property] is invalid (i.e. contains any of the following characters: `"`, `*`, `?`, `|`, `<`, `>`, `:`, `\`, `/`) the variable specified in the [Folder Exists][FolderExists Property] property will be set to `false`.
 
 ### Folder Path points to a file
 
-If [Folder Path][FolderPath Property] points to a file, the variable specified in the [Folder Exists][FolderExists Property] property will be set to false.
+If [Folder Path][FolderPath Property] points to a file, the variable specified in the [Folder Exists][FolderExists Property] property will be set to `false`.
 
 To check if a file exists, use the [Check File Exists block][].
 
@@ -129,11 +129,11 @@ If [Folder Path][FolderPath Property] contains leading spaces they are not remov
 
 ### Error occurs whilst checking if the folder exists
 
-If any error occurs whilst checking if a folder exists at the specified [Folder Path][FolderPath Property], the variable specified in the [Folder Exists][FolderExists Property] property will be set to false.
+If any error occurs whilst checking if a folder exists at the specified [Folder Path][FolderPath Property], the variable specified in the [Folder Exists][FolderExists Property] property will be set to `false`.
 
 ### User does not have necessary permissions to check if the folder exists
 
-If the user the flow is executing as does not have permissions to check if a folder exists at the specified [Folder Path][FolderPath Property], the variable specified in the [Folder Exists][FolderExists Property] property will be set to false.
+If the user the flow is executing as does not have permissions to check if a folder exists at the specified [Folder Path][FolderPath Property], the variable specified in the [Folder Exists][FolderExists Property] property will be set to `false`.
 
 [FolderPath Property]: {{< ref "#folder-path" >}}
 [FolderExists Property]: {{< ref "#folder-exists" >}}
