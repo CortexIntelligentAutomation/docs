@@ -82,6 +82,8 @@ For information about the supported folder path formats (i.e. absolute, relative
 
 The [New Name][NewName Property] to use for the copy of the folder.
 
+The [New Name][NewName Property] is case-insensitive and any trailing spaces will be automatically removed.
+
 The [New Name][NewName Property] must be a valid folder name, otherwise an [InvalidFolderNameException][] will be thrown.
 
 All child folders and files copied will have the same names as the folders and files copied.
