@@ -53,7 +53,13 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/duplicate-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.DuplicateFolder.DuplicateFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/duplicate-folder/duplicate-folder-block"
-                [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
+                [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/move-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/move-folder/move-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolders]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/move-folder/move-folders-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
