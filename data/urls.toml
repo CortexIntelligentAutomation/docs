@@ -43,6 +43,20 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/check-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.CheckFolder.CheckFolderExists]
                         MainDoc = "/docs/reference/blocks/files-and-folders/check-folder/check-folder-exists-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/copy-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolders]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/copy-folders-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.DuplicateFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/duplicate-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DuplicateFolder.DuplicateFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/duplicate-folder/duplicate-folder-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
@@ -163,6 +177,8 @@
                         MainDoc = "/docs/reference/exceptions/dictionaries/occurrencenotpresentexception/"
             [Cortex.Reference.Exceptions.FilesAndFolders]
                 MainDoc = "/docs/reference/exceptions/files-and-folders/"
+                [Cortex.Reference.Exceptions.FilesAndFolders.InvalidFolderNameException]
+                    MainDoc = "/docs/reference/exceptions/files-and-folders/invalidfoldernameexception"
                 [Cortex.Reference.Exceptions.FilesAndFolders.InvalidPathException]
                     MainDoc = "/docs/reference/exceptions/files-and-folders/invalidpathexception"
                 [Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException]
