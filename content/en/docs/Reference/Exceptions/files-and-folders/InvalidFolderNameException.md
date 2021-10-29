@@ -1,7 +1,7 @@
 ---
 title: "InvalidFolderNameException"
 linkTitle: "InvalidFolderNameException"
-description: "The exception thrown when folder name is invalid."
+description: "The exception thrown when a folder name is invalid."
 ---
 
 # {{< param title >}}
