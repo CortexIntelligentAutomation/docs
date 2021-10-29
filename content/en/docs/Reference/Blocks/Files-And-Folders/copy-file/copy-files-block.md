@@ -36,15 +36,15 @@ Copying `["C:\Source\OriginalFile1.txt", "C:\Source\OriginalFile2.txt"]` to `"C:
 
 * Create a new file at `"C:\Destination\OriginalFile1.txt"` with:
   * The content copied from `"C:\Source\OriginalFile1.txt"`.
-  * The `Date Created` copied from `"C:\Source\OriginalFile1.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\OriginalFile1.txt"`.
   * The [File Attributes][] copied from `"C:\Source\OriginalFile1.txt"`.
 * Create a new file at `"C:\Destination\OriginalFile2.txt"` with:
   * The content copied from `"C:\Source\OriginalFile2.txt"`.
-  * The `Date Created` copied from `"C:\Source\OriginalFile2.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\OriginalFile2.txt"`.
   * The [File Attributes][] copied from `"C:\Source\OriginalFile2.txt"`.
 
 ***
@@ -71,13 +71,13 @@ Copying `["C:\Source\FileAlreadyExists1.txt", "C:\Source\FileAlreadyExists2.txt"
   * The content copied from `"C:\Source\FileAlreadyExists1.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\FileAlreadyExists1.txt"`.
   * The [File Attributes][] copied from `"C:\Source\FileAlreadyExists1.txt"`.
 * Overwrite the existing file at `"C:\Destination\FileAlreadyExists2.txt"` with:
   * The content copied from `"C:\Source\FileAlreadyExists2.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\FileAlreadyExists2.txt"`.
   * The [File Attributes][] copied from `"C:\Source\FileAlreadyExists2.txt"`.
 
 ***

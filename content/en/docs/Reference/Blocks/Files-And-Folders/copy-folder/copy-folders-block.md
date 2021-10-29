@@ -46,36 +46,36 @@ In this example assume:
 Copying `["C:\Source\Folder1", "C:\Source\Folder2"]` and their content to `"C:\Destination"` that does not already contain folders named `"Folder1"` and `"Folder2"` will:
 
 * Create a new folder at `"C:\Destination\Folder1"` with:
-  * The `Date Created` copied from `"C:\Source\Folder1"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder1"`.
 * Create a new folder at `"C:\Destination\Folder1\SubFolder1"` with:
-  * The `Date Created` copied from `"C:\Source\Folder1\SubFolder1"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder1\SubFolder1"`.
 * Create a new file at `"C:\Destination\Folder1\File1.txt"` with:
   * The content copied from `"C:\Source\Folder1\File1.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder1\File1.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder1\File1.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder1\File1.txt"`.
 * Create a new folder at `"C:\Destination\Folder2"` with:
-  * The `Date Created` copied from `"C:\Source\Folder2"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder2"`.
-* Create a new folder at `"C:\Destination\Folder2\SubFolder"` with:
-  * The `Date Created` copied from `"C:\Source\Folder2\SubFolder2"`.
+* Create a new folder at `"C:\Destination\Folder2\SubFolder2"` with:
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder2\SubFolder2"`.
 * Create a new file at `"C:\Destination\Folder2\File2.txt"` with:
   * The content copied from `"C:\Source\Folder2\File2.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder2\File2.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder2\File2.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder2\File2.txt"`.
 
 ***
@@ -121,59 +121,59 @@ Copying `["C:\Source\Folder1", "C:\Source\Folder2"]` and their content to `"C:\D
 
 * Overwrite the existing folder at `"C:\Destination\Folder1"` with:
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * Create a new empty folder at `"C:\Destination\Folder1\SubFolder1"` with:
-  * The `Date Created` copied from `"C:\Source\Folder1\SubFolder1"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder1\SubFolder1"`.
 * Overwrite the existing folder at `"C:\Destination\Folder1\SubFolderAlreadyExists1"` with:
   * The content left unchanged.
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * Create a new file at `"C:\Destination\Folder1\File1.txt"` with:
   * The content copied from `"C:\Source\Folder1\File1.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder1\File1.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder1\File1.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder1\File1.txt"`.
 * Overwrite the existing file at `"C:\Destination\Folder1\FileAlreadyExists1.txt"` with:
   * The content copied from `"C:\Source\Folder1\FileAlreadyExists1.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder1\FileAlreadyExists1.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder1\FileAlreadyExists1.txt"`.
 * Overwrite the existing folder at `"C:\Destination\Folder2"` with:
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * Create a new empty folder at `"C:\Destination\Folder2\SubFolder2"` with:
-  * The `Date Created` copied from `"C:\Source\Folder2\SubFolder2"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder2\SubFolder2"`.
 * Overwrite the existing folder at `"C:\Destination\Folder2\SubFolderAlreadyExists2"` with:
   * The content left unchanged.
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * Create a new file at `"C:\Destination\Folder2\File2.txt"` with:
   * The content copied from `"C:\Source\Folder2\File2.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder2\File2.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder2\File2.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder2\File2.txt"`.
 * Overwrite the existing file at `"C:\Destination\Folder2\FileAlreadyExists2.txt"` with:
   * The content copied from `"C:\Source\Folder2\FileAlreadyExists2.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder2\FileAlreadyExists2.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder2\FileAlreadyExists2.txt"`.
 
 ***
@@ -206,26 +206,26 @@ In this example assume:
 Copying `["C:\Source\Folder1", "C:\Source\Folder2"]` content only to `"C:\Destination"` that does not already contain a folder named `"SubFolder1"` or `"SubFolder2"` or a file named `"File1.txt"` or `"File2.txt"` will:
 
 * Create a new folder at `"C:\Destination\SubFolder1"` with:
-  * The `Date Created` copied from `"C:\Source\Folder1\SubFolder1"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder1\SubFolder1"`.
 * Create a new file at `"C:\Destination\File1.txt"` with:
   * The content copied from `"C:\Source\Folder1\File1.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder1\File1.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder1\File1.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder1\File1.txt"`.
 * Create a new folder at `"C:\Destination\SubFolder2"` with:
-  * The `Date Created` copied from `"C:\Source\Folder2\SubFolder2"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder2\SubFolder2"`.
 * Create a new file at `"C:\Destination\File2.txt"` with:
   * The content copied from `"C:\Source\Folder2\File2.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder2\File2.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder2\File2.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder2\File2.txt"`.
 
 ***
@@ -268,50 +268,50 @@ Therefore, overwrite must be set to `true` to ensure the existing folders and fi
 Copying `["C:\Source\Folder1", "C:\Source\Folder2"]` content only to `"C:\Destination"` with the [Overwrite][Overwrite Property] option set to `true`, and where `"C:\Destination\SubFolderAlreadyExists1"`, `"C:\Destination\SubFolderAlreadyExists2"`,  `"C:\Destination\FileAlreadyExists1.txt"` and `"C:\Destination\FileAlreadyExists2.txt"` already exist will:
 
 * Create a new empty folder at `"C:\Destination\SubFolder1"` with:
-  * The `Date Created` copied from `"C:\Source\Folder1\SubFolder1"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder1\SubFolder1"`.
 * Overwrite the existing folder at `"C:\Destination\SubFolderAlreadyExists1"` with:
   * The content left unchanged.
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * Create a new file at `"C:\Destination\File1.txt"` with:
   * The content copied from `"C:\Source\Folder1\File1.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder1\File1.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder1\File1.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder1\File1.txt"`.
 * Overwrite the existing file at `"C:\Destination\FileAlreadyExists1.txt"` with:
   * The content copied from `"C:\Source\Folder1\FileAlreadyExists1.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder1\FileAlreadyExists1.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder1\FileAlreadyExists1.txt"`.
 * Create a new empty folder at `"C:\Destination\SubFolder2"` with:
-  * The `Date Created` copied from `"C:\Source\Folder2\SubFolder2"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder2\SubFolder2"`.
 * Overwrite the existing folder at `"C:\Destination\SubFolderAlreadyExists2"` with:
   * The content left unchanged.
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * Create a new file at `"C:\Destination\File2.txt"` with:
   * The content copied from `"C:\Source\Folder2\File2.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder2\File2.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder2\File2.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder2\File2.txt"`.
 * Overwrite the existing file at `"C:\Destination\FileAlreadyExists2.txt"` with:
   * The content copied from `"C:\Source\Folder2\FileAlreadyExists2.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder2\FileAlreadyExists2.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder2\FileAlreadyExists2.txt"`.
 
 ***
@@ -405,7 +405,7 @@ The exceptions thrown by the block can be found below:
 |                              | Any folder path in [Folder Paths][FolderPaths Property] contains leading spaces. |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] contains only whitespace, or the NUL character (i.e. `\0`), or contains one or more invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`) in any folder names. |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] exceeds the system-defined maximum length (typically 32,767 characters). |
-|                              | Any folder path in [Folder Paths][FolderPaths Property] is a win32 device path (i.e starts with a `"\\.\"`). |
+|                              | Any folder path in [Folder Paths][FolderPaths Property] or [Destination Path][DestinationPath Property] is a win32 device path (i.e starts with a `"\\.\"`). |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] or [Destination Path][DestinationPath Property] is invalid (for example, it is on an unmapped drive). |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] and [Destination Path][DestinationPath Property] point to the same folder and [Content Only][ContentOnly Property] is `true`. |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] is a child folder in the [Destination Path][DestinationPath Property] and [Content Only][ContentOnly Property] is `false`. |
@@ -454,7 +454,7 @@ If two or more paths in the specified [Folder Paths][FolderPaths Property] conta
 
 ### Handling of Exceptions
 
-If an exception occurs when trying to copy any folder or file under any of the [Folder Paths][FolderPaths Property], it will be recorded and the block will continue processing the remaining folders and files. Once all folders and files are processed, recorded exceptions will be thrown within an [OperationFailedException][].
+If an exception occurs when trying to copy a folder in [Folder Paths][FolderPaths Property], it will be recorded and the block will continue processing the remaining folders. Once all folders are processed, recorded exceptions will be thrown within an [OperationFailedException][].
 
 [FolderPaths Property]: {{< ref "#folder-paths" >}}
 [DestinationPath Property]: {{< ref "#destination-path" >}}

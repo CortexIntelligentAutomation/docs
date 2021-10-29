@@ -39,8 +39,8 @@ Renaming `"C:\Source\Folder"` to `"RenamedFolder"` will:
 
 * Rename the existing folder at `"C:\Source\Folder"` to `"C:\Source\RenamedFolder"` with:
   * The `Date Created` left unchanged.
-  * The `Date Accessed` set to the time the rename occurred.
-  * The `Date Modified` set to the time the rename occurred.
+  * The `Date Accessed` left unchanged.
+  * The `Date Modified` left unchanged.
   * The [Folder attributes][] left unchanged.
 * `"SubFolder"` and `"File.txt"` will be located under `"C:\Source\RenamedFolder"` and their names, dates, attributes and content will be left unchanged.
 

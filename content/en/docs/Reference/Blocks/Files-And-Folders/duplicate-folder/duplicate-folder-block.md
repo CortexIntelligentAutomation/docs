@@ -38,20 +38,20 @@ In this example assume:
 Making a copy of `"C:\Source\Folder"` with a new name of `"CopyOfFolder"` will:
 
 * Create a new folder at `"C:\Source\CopyOfFolder"` with:
-  * The `Date Created` copied from `"C:\Source\Folder"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder"`.
 * Create a new folder at `"C:\Source\CopyOfFolder\SubFolder"` with:
-  * The `Date Created` copied from `"C:\Source\Folder\SubFolder"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
   * The `Date Modified` set to the time the copy occurred.
   * The [Folder attributes][] copied from `"C:\Source\Folder\SubFolder"`.
 * Create a new file at `"C:\Source\CopyOfFolder\File.txt"` with:
   * The content copied from `"C:\Source\Folder\File.txt"`.
-  * The `Date Created` copied from `"C:\Source\Folder\File.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\Folder\File.txt"`.
   * The [File attributes][] copied from `"C:\Source\Folder\File.txt"`.
 
 ***
@@ -146,7 +146,7 @@ For information about the file attributes (i.e. ReadOnly, Hidden, Archive etc.),
 
 ### Handling of Exceptions
 
-If an exception occurs when trying to copy any folder or file under [Folder Path][FolderPath Property], it will be recorded and the block will continue processing the remaining folders and files. Once all folders and files are processed, recorded exceptions will be thrown within an [OperationFailedException][].
+If an exception occurs when trying to copy [Folder Path][FolderPath Property], an [OperationFailedException][] will be thrown.
 
 [FolderPath Property]: {{< ref "#folder-path" >}}
 [NewName Property]: {{< ref "#new-name" >}}

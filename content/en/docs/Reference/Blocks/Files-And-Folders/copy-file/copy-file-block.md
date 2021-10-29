@@ -36,9 +36,9 @@ Copying `"C:\Source\OriginalFile.txt"` to `"C:\Destination"` that does not alrea
 
 * Create a new file at `"C:\Destination\OriginalFile.txt"` with:
   * The content copied from `"C:\Source\OriginalFile.txt"`.
-  * The `Date Created` copied from `"C:\Source\OriginalFile.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\OriginalFile.txt"`.
   * The [File Attributes][] copied from `"C:\Source\OriginalFile.txt"`.
 
 ***
@@ -65,9 +65,9 @@ Copying `"C:\Source\OriginalFile.txt"` to the path `"C:\Destination\NewFile.txt"
 
 * Create a new file at `"C:\Destination\NewFile.txt"` with:
   * The content copied from `"C:\Source\OriginalFile.txt"`.
-  * The `Date Created` copied from `"C:\Source\OriginalFile.txt"`.
+  * The `Date Created` set to the time the copy occurred.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\OriginalFile.txt"`.
   * The [File Attributes][] copied from `"C:\Source\OriginalFile.txt"`.
 
 ***
@@ -94,7 +94,7 @@ Copying `"C:\Source\FileAlreadyExists.txt"` to `"C:\Destination"` and overwritin
   * The content copied from `"C:\Source\FileAlreadyExists.txt"`.
   * The `Date Created` left unchanged.
   * The `Date Accessed` set to the time the copy occurred.
-  * The `Date Modified` set to the time the copy occurred.
+  * The `Date Modified` copied from `"C:\Source\FileAlreadyExists.txt"`.
   * The [File Attributes][] copied from `"C:\Source\FileAlreadyExists.txt"`.
 
 ***
