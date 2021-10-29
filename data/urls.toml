@@ -127,6 +127,8 @@
                     MainDoc = "/docs/reference/concepts/text-casing/#culture-info"
                     CurrentCulture = "/docs/reference/concepts/text-casing/#current-culture"
                     InvariantCulture = "/docs/reference/concepts/text-casing/#invariant-culture"
+            [Cortex.Reference.Concepts.EmptyTextAndWhitespace]
+                MainDoc = "/docs/reference/concepts/empty-text-and-whitespace/"
         [Cortex.Reference.DataTypes]
                 MainDoc = "/docs/reference/data-types/"
                 [Cortex.Reference.DataTypes.MostCommon]
