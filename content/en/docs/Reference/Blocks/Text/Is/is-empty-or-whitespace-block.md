@@ -39,27 +39,6 @@ true
 
 ***
 
-### Text is not empty or whitespace
-
-This example will check if `"The quick brown fox jumps over the lazy dog"` is empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters).
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text Is Empty Or Whitespace][TextIsEmptyOrWhitespace Property] | `($)TextIsEmptyOrWhitespace`, with no value | `($)TextIsEmptyOrWhitespace` is a variable that will be set to a [Boolean][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` is not empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters), resulting in the variable `($)TextIsEmptyOrWhitespace` being updated to the following:
-
-```json
-false
-```
-
-***
-
 ### Text is whitespace
 
 This example will check if `"     "` is empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters).
@@ -81,27 +60,6 @@ true
 
 ***
 
-### Text is not whitespace
-
-This example will check if `"The quick brown fox jumps over the lazy dog"` is empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters).
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text Is Empty Or Whitespace][TextIsEmptyOrWhitespace Property] | `($)TextIsEmptyOrWhitespace`, with no value | `($)TextIsEmptyOrWhitespace` is a variable that will be set to a [Boolean][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` is not empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters), resulting in the variable `($)TextIsEmptyOrWhitespace` being updated to the following:
-
-```json
-false
-```
-
-***
-
 ### Text is null
 
 This example will check if `null` is empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters).
@@ -116,6 +74,27 @@ This example will check if `null` is empty (i.e. `""`) or whitespace (i.e. `spac
 #### Result
 
 `null` is not empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters), resulting in the variable `($)TextIsEmptyOrWhitespace` being updated to the following:
+
+```json
+false
+```
+
+***
+
+### Text is not empty or whitespace
+
+This example will check if `"The quick brown fox jumps over the lazy dog"` is empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters).
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
+| [Text Is Empty Or Whitespace][TextIsEmptyOrWhitespace Property] | `($)TextIsEmptyOrWhitespace`, with no value | `($)TextIsEmptyOrWhitespace` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog"` is not empty (i.e. `""`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters), resulting in the variable `($)TextIsEmptyOrWhitespace` being updated to the following:
 
 ```json
 false

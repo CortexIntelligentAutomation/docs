@@ -62,27 +62,6 @@ true
 
 ***
 
-### Text is not null or empty
-
-This example will check if `"The quick brown fox jumps over the lazy dog"` is `null` or empty (i.e. `""`).
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text Is Null Or Empty][TextIsNullOrEmpty Property] | `($)TextIsNullOrEmpty`, with no value | `($)TextIsNullOrEmpty` is a variable that will be set to a [Boolean][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` is not `null` or empty (i.e. `""`), resulting in the variable `($)TextIsNullOrEmpty` being updated to the following:
-
-```json
-false
-```
-
-***
-
 ### Text is whitespace
 
 This example will check if `"     "` is `null` or empty (i.e. `""`).
@@ -97,6 +76,27 @@ This example will check if `"     "` is `null` or empty (i.e. `""`).
 #### Result
 
 `"     "` is not `null` or empty (i.e. `""`), resulting in the variable `($)TextIsNullOrEmpty` being updated to the following:
+
+```json
+false
+```
+
+***
+
+### Text is not null or empty
+
+This example will check if `"The quick brown fox jumps over the lazy dog"` is `null` or empty (i.e. `""`).
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
+| [Text Is Null Or Empty][TextIsNullOrEmpty Property] | `($)TextIsNullOrEmpty`, with no value | `($)TextIsNullOrEmpty` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog"` is not `null` or empty (i.e. `""`), resulting in the variable `($)TextIsNullOrEmpty` being updated to the following:
 
 ```json
 false

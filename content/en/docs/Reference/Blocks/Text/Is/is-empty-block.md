@@ -39,27 +39,6 @@ true
 
 ***
 
-### Text is not empty
-
-This example will check if `"The quick brown fox jumps over the lazy dog"` is empty (i.e. `""`).
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text Is Empty][TextIsEmpty Property] | `($)TextIsEmpty`, with no value | `($)TextIsEmpty` is a variable that will be set to a [Boolean][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` is not empty (i.e. `""`), resulting in the variable `($)TextIsEmpty` being updated to the following:
-
-```json
-false
-```
-
-***
-
 ### Text is null
 
 This example will check if `null` is empty (i.e. `""`).
@@ -95,6 +74,27 @@ This example will check if `"     "` is empty (i.e. `""`).
 #### Result
 
 `"     "` is not empty (i.e. `""`), resulting in the variable `($)TextIsEmpty` being updated to the following:
+
+```json
+false
+```
+
+***
+
+### Text is not empty
+
+This example will check if `"The quick brown fox jumps over the lazy dog"` is empty (i.e. `""`).
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
+| [Text Is Empty][TextIsEmpty Property] | `($)TextIsEmpty`, with no value | `($)TextIsEmpty` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog"` is not empty (i.e. `""`), resulting in the variable `($)TextIsEmpty` being updated to the following:
 
 ```json
 false
