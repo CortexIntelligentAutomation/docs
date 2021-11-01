@@ -34,6 +34,7 @@ The most commonly used data types are categorised and listed below:
 | | Char | 2 bytes | A character or letter surrounded by single quotes (e.g. `'a'` or `'!'`) |
 | | StringComparison | 4 bytes | TODO |
 | | CultureInfo | Varies | TODO |
+| | Encoding | Varies | TODO |
 
 ### All
 
@@ -167,3 +168,7 @@ TODO
 TODO: variable link, on page links, glossary, concept links etc.
 
 [explicitly cast]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ExplicitlyCastAVariable" >}}
+
+#### Encoding
+
+TODO

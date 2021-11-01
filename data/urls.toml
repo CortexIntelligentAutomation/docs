@@ -127,6 +127,8 @@
                     MainDoc = "/docs/reference/concepts/text-casing/#culture-info"
                     CurrentCulture = "/docs/reference/concepts/text-casing/#current-culture"
                     InvariantCulture = "/docs/reference/concepts/text-casing/#invariant-culture"
+            [Cortex.Reference.Concepts.TextEncoding]
+                MainDoc = "/docs/reference/concepts/text-encoding/"
             [Cortex.Reference.Concepts.EmptyTextAndWhitespace]
                 MainDoc = "/docs/reference/concepts/empty-text-and-whitespace/"
         [Cortex.Reference.DataTypes]
@@ -138,6 +140,7 @@
                     Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                     Double = "/docs/reference/data-types/most-common/#double"
                     Dynamic = "/docs/reference/data-types/most-common/#dynamic"
+                    Encoding = "/docs/reference/data-types/most-common/#encoding"
                     Exceptions = "/docs/reference/data-types/most-common/#exceptions"
                     Exception = "/docs/reference/data-types/most-common/#exception"
                     IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
