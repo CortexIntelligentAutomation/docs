@@ -30,7 +30,7 @@ This example will illustrate this, by attempting to get all items with the key `
 |--------------------|---------------------------|------------------------------------------|
 | [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{[1] : 1, [2] : 2, [3] : 3, [3] : 3, [2] : 2, [1] : 10}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[IList][]&lt;[Int32][]&gt;, [Int32][]&gt; |
 | [Key][Key Property] | `($)Key`, with value `[1]` | `($)Key` is a variable of type [IList][]&lt;[Int32][]&gt; |
-| [Items][Items Property] | `($)Items`, with no value | `($)Items` is a variable that will be set to an [IList][]&lt;[TItem][]&gt; |(i.e. [IList][]&lt;[Int32][]&gt; |
+| [Items][Items Property] | `($)Items`, with no value | `($)Items` is a variable that will be set to an [IList][]&lt;[Int32][]&gt; |
 
 #### Result
 
