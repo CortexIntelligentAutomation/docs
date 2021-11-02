@@ -25,6 +25,8 @@ The most commonly used data types are categorised and listed below:
 |Dates&nbsp;&&nbsp;Time | DateTime | 8 bytes | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar |
 | | TimeSpan | 8 bytes | A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of days, hours, minutes, seconds, and fractions of a second. |
 | Exceptions | Exception | Varies | The data type that all other exceptions inherit from TODO: Link to inheritence |
+| Files & Folders | FileInformation | Varies | TODO |
+| | FolderInformation | Varies | TODO |
 | Numbers | Int16 | 2 bytes | A whole number from `-32768` through `32767` |
 | | Int32 | 4 bytes | A whole number from `-2,147,483,648` through `2,147,483,647` |
 | | Int64 | 8 bytes | A whole number from `-9,223,372,036,854,775` through `9,223,372,036,854,775,807` |
@@ -120,6 +122,16 @@ TODO
 TODO
 
 TODO Link to exceptions reference
+
+### Files & Folders
+
+#### FileInformation
+
+TODO
+
+#### FolderInformation
+
+TODO
 
 ### Numbers
 

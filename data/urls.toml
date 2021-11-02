@@ -143,6 +143,8 @@
                     Encoding = "/docs/reference/data-types/most-common/#encoding"
                     Exceptions = "/docs/reference/data-types/most-common/#exceptions"
                     Exception = "/docs/reference/data-types/most-common/#exception"
+                    FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
+                    FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                     IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
                     IList = "/docs/reference/data-types/most-common/#ilistlttgt"
