@@ -366,7 +366,7 @@ If an exception occurs when trying to copy [Folder Path][FolderPath Property], a
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
 [Rename Folder]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder.MainDoc" >}}
-[Duplicate Folder]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.DuplicateFolder.DuplicateFolder.MainDoc" >}}
+[Duplicate Folder]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.DuplicateFolder.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}

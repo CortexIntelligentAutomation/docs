@@ -8,7 +8,7 @@ description: "Copies a folder at the specified folder path to the same location 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.FilesAndFolders.DuplicateFolder.DuplicateFolderBlock)</p>
+<p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFolder.DuplicateFolderBlock)</p>
 
 ## Description
 
