@@ -49,10 +49,8 @@
                         MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/copy-folder-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolders]
                         MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/copy-folders-block"
-                [Cortex.Reference.Blocks.FilesAndFolders.DuplicateFolder]
-                    MainDoc = "/docs/reference/blocks/files-and-folders/duplicate-folder"
-                    [Cortex.Reference.Blocks.FilesAndFolders.DuplicateFolder.DuplicateFolder]
-                        MainDoc = "/docs/reference/blocks/files-and-folders/duplicate-folder/duplicate-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.DuplicateFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/duplicate-folder-block"
                 [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/move-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolder]
@@ -121,6 +119,10 @@
                     InvariantCulture = "/docs/reference/concepts/text-equality/#invariant-culture"
                     Ordinal = "/docs/reference/concepts/text-equality/#ordinal"
                     OrdinalIgnoreCase = "/docs/reference/concepts/text-equality/#ordinal-ignore-case"
+            [Cortex.Reference.Concepts.PatternMatchingSyntax]
+                MainDoc = "/docs/reference/concepts/pattern-matching-syntax/"
+            [Cortex.Reference.Concepts.RegexSyntax]
+                MainDoc = "/docs/reference/concepts/regex-syntax/"
             [Cortex.Reference.Concepts.TextCasing]
                 MainDoc = "/docs/reference/concepts/text-casing/"
                 [Cortex.Reference.Concepts.TextCasing.CultureInfo]
@@ -136,6 +138,7 @@
                 [Cortex.Reference.DataTypes.MostCommon]
                     MainDoc = "/docs/reference/data-types/most-common/"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
+                    ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                     Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                     Double = "/docs/reference/data-types/most-common/#double"
@@ -152,6 +155,7 @@
                     InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                     Int32 = "/docs/reference/data-types/most-common/#int32"
                     Object = "/docs/reference/data-types/most-common/#object"
+                    SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
                     String = "/docs/reference/data-types/most-common/#string"
                     StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
         [Cortex.Reference.Exceptions]
@@ -280,6 +284,9 @@
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
+        [MSDocs.DotNet.Api.System.Text.RegularExpressions]
+            RegexMatchTimeoutException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
+            RegexParseException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexparseexception"
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
