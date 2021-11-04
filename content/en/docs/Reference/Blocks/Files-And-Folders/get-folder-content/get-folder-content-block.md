@@ -220,8 +220,8 @@ A [Search Pattern][SearchPattern Property] of `null` or empty (i.e. `""`) means 
 
 * `SearchOptions.ContainsText` matches text exactly; as long as the file or folder name contains the text specified in [Search Pattern][SearchPattern Property] it will be considered a match.
 * `SearchOptions.PatternMatching` allows wildcard text matching using [Pattern Matching Syntax][]:
-  * `*` wildcard character can be used to match 0 or more characters.
-  * `?` wildcard character can be used to match 0 or 1 character.
+  * `*` wildcard character can be used to match `0` or more characters.
+  * `?` wildcard character can be used to match `0` or `1` character.
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
@@ -298,8 +298,8 @@ The exceptions thrown by the block can be found below:
 |                              | An unexpected error occurs when getting the paths of files or folders in the [Folder Path][FolderPath Property], or any of its subfolders if [Recursive][Recursive Property] is `true`. |
 | [PropertyEmptyException][]   | Thrown when [Folder Path][FolderPath Property] is empty (i.e. `""`). |
 | [PropertyNullException][]    | Thrown when [Folder Path][FolderPath Property] is `null`. |
-| [RegexMatchTimeoutException][]    | Thrown when using [Search Options][SearchOptions Property] is either `SearchOptions.Regex` or `SearchOptions.PatternMatching` and the the execution time of search exceeds `30` seconds. |
-| [RegexParseException][]      | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and the [Search Pattern][SearchPattern Property] is not a valid regex (e.g. `(`). |
+| [RegexMatchTimeoutException][] | Thrown when using [Search Options][SearchOptions Property] is either `SearchOptions.Regex` or `SearchOptions.PatternMatching` and the execution time of the search exceeds `30` seconds. |
+| [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and the [Search Pattern][SearchPattern Property] is not a valid regex (e.g. `(`). |
 
 ## Remarks
 
@@ -316,7 +316,7 @@ Escaping can be done in two ways:
 * Escaping the `\` character with another `\` character (e.g. `"C:\\Source\\"`), or
 * Prepending an `@` character before the start of the [Folder Path][FolderPath Property] (e.g. `@"C:\Source"`).
 
-### Null or Empty Search Pattern
+### Null or empty Search Pattern
 
 A `null` or empty (i.e. `""`) [Search Pattern][SearchPattern Property] means match any name; all additional block options such as [Content Options][ContentOptions Property] etc. still take effect.
 
@@ -328,7 +328,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If an exception occurs when trying to match a file or folder name, it will be recorded and the block will continue processing the remaining files or folders. Once all files or folders are processed, recorded exceptions will be thrown within an [OperationFailedException][].
 
-### Known Limitations
+### Known limitations
 
 If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
 
@@ -353,7 +353,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [RegexMatchTimeoutException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
-[RegexParseException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexParseException" >}}
+[RegexParsingFailedException]: {{< url "Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 [Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}

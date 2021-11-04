@@ -1,7 +1,5 @@
 ---
 title: "Common"
 linkTitle: "Common"
-description: "Exceptions related to Common"
+description: "Exceptions related to commonly occurring errors"
 ---
-
-Help for Common exceptions.

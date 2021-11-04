@@ -1,7 +1,5 @@
 ---
 title: "Property"
 linkTitle: "Property"
-description: "Exceptions related to Property"
+description: "Exceptions related to issues with Block Properties"
 ---
-
-Help for Property exceptions.

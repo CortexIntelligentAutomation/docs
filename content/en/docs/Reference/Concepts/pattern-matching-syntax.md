@@ -9,3 +9,7 @@ description: "This page describes Pattern Matching Syntax."
 ## Overview
 
 TODO: Overview/summary
+
+`*` is 0 or more
+`?` is 0 or 1
+to use these as literals use `\\*` `\\?`

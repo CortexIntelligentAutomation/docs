@@ -147,6 +147,7 @@
                     Exceptions = "/docs/reference/data-types/most-common/#exceptions"
                     Exception = "/docs/reference/data-types/most-common/#exception"
                     FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
+                    FileMatch = "/docs/reference/data-types/most-common/#filematch"
                     FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                     IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
@@ -210,7 +211,11 @@
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
                         MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
                     [Cortex.Reference.Exceptions.Lists.DuplicateValueException]
-                        MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"                      
+                        MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"
+            [Cortex.Reference.Exceptions.Text.Regex]
+                MainDoc = "/docs/reference/exceptions/text/regex/"
+                    [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
+                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"            
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
@@ -286,7 +291,6 @@
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
             RegexMatchTimeoutException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
-            RegexParseException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexparseexception"
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
