@@ -12,7 +12,7 @@ description: "Gets the paths of files or folders under the specified folder path
 
 ## Description
 
-Gets the [Paths][Paths Property] of files or folders under the specified [Folder Path][FolderPath Property] whose name matches a given [Search Pattern][SearchPattern Property].
+Gets the [Paths][Paths Property] of files or folders under the specified [Folder Path][FolderPath Property] whose name matches the given [Search Pattern][SearchPattern Property].
 
 The returned [Paths][Paths Property] can then be used in other file and folder blocks that require paths.
 
@@ -21,6 +21,7 @@ Additional options can be specified:
 * [Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search.
 * [Content Options][ContentOptions Property] can be specified to choose whether to search for files or folders.
 * A [Recursive][Recursive Property] option can specified to choose whether to search only in the specified [Folder Path][FolderPath Property], or include all subfolders.
+* A [Comparison Type][ComparisonType Property] option can specified to choose how it is determined whether the file or folder name matches the [Search Pattern][SearchPattern Property] (e.g. whether the search is case-sensitive or case-insensitive).
 
 ## Examples
 
