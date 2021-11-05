@@ -79,6 +79,10 @@
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.Indexes]
                 MainDoc = "/docs/reference/concepts/indexes/"
+            [Cortex.Reference.Concepts.ISO8601Standard]
+                MainDoc = "/docs/reference/concepts/iso-8601-standard/"
+            [Cortex.Reference.Concepts.WorkingWithDatesAndTime]
+                MainDoc = "/docs/reference/concepts/working-with-dates-and-time/"
             [Cortex.Reference.Concepts.Keys]
                 MainDoc = "/docs/reference/concepts/keys/"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
@@ -140,6 +144,7 @@
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
+                    DateTimeOffset = "/docs/reference/data-types/most-common/#datetimeoffset"
                     Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                     Double = "/docs/reference/data-types/most-common/#double"
                     Dynamic = "/docs/reference/data-types/most-common/#dynamic"

@@ -22,7 +22,8 @@ The most commonly used data types are categorised and listed below:
 | | Structure | Varies depending on the number of items it contains | TODO |
 | Conditional&nbsp;Logic | Boolean | 1 bit | A logical value of `true` or `false` |
 | Databases | DataTable | Varies depending on number of items it contains | TODO |
-|Dates&nbsp;&&nbsp;Time | DateTime | 8 bytes | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar |
+|Dates&nbsp;&&nbsp;Time | DateTimeOffset (typically 12 to 16 bytes) | Varies | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar, along with a UTC time offset |
+| | DateTime | Varies (typically 8 bytes) | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar |
 | | TimeSpan | 8 bytes | A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of days, hours, minutes, seconds, and fractions of a second. |
 | Exceptions | Exception | Varies | The data type that all other exceptions inherit from TODO: Link to inheritence |
 | Files & Folders | FileInformation | Varies | TODO |
@@ -109,6 +110,10 @@ TODO
 TODO
 
 ### Dates & Times
+
+#### DateTimeOffset
+
+TODO
 
 #### DateTime
 

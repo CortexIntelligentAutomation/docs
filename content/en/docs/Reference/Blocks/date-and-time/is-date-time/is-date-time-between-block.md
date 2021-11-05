@@ -1,0 +1,147 @@
+---
+title: "Is Date Time Between"
+linkTitle: "Is Date Time Between"
+description: "Checks if a Date Time is between two Date Times."
+---
+
+![Icon](/blocks/date-and-time-is-block-icon.png)
+
+# {{< param title >}}
+
+<p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeBetweenBlock)</p>
+
+## Description
+
+Checks if a [Date Time][DateTime Property] is between the specified [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Property].
+
+## Examples
+
+### Date Time is between Start Date Time and End Date Time
+
+This example will check if `2021-06-01T00:00:00+00:00` is between `2021-01-01T00:00:00+00:00` and `2022-01-01T00:00:00+00:00`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Date Time][DateTime Property] | `($)DateTime`, with value of [DateTimeOffset][] that has a text representation of `2021-06-01T00:00:00+00:00` | `($)DateTime` is a variable of type [DateTimeOffset][] |
+| [Start Date Time][StartDateTime Property] | `($)StartDateTime`, with value of [DateTimeOffset][] that has a text representation of `2021-01-01T00:00:00+00:00` | `($)StartDateTime` is a variable of type [DateTimeOffset][] |
+| [End Date Time][EndDateTime Property] | `($)EndDateTime`, with value of [DateTimeOffset][] that has a text representation of `2022-01-01T00:00:00+00:00` | `($)EndDateTime` is a variable of type [DateTimeOffset][] |
+| [Date Time Is Between][DateTimeIsBetween Property] | `($)DateTimeIsBetween`, with no value | `($)DateTime` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+Checking if `2021-06-01T00:00:00+00:00` is between `2021-01-01T00:00:00+00:00` and `2022-01-01T00:00:00+00:00` will result in the variable `($)DateTimeIsBetween` being updated to the following:
+
+```json
+true
+```
+
+***
+
+### Date Time is not between Start Date Time and End Date Time
+
+This example will check if `2020-01-01T00:00:00+00:00` is between `2021-01-01T00:00:00+00:00` and `2022-01-01T00:00:00+00:00`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Date Time][DateTime Property] | `($)DateTime`, with value of [DateTimeOffset][] that has a text representation of `2020-01-01T00:00:00+00:00` | `($)DateTime` is a variable of type [DateTimeOffset][] |
+| [Start Date Time][StartDateTime Property] | `($)StartDateTime`, with value of [DateTimeOffset][] that has a text representation of `2021-01-01T00:00:00+00:00` | `($)StartDateTime` is a variable of type [DateTimeOffset][] |
+| [End Date Time][EndDateTime Property] | `($)EndDateTime`, with value of [DateTimeOffset][] that has a text representation of `2022-01-01T00:00:00+00:00` | `($)EndDateTime` is a variable of type [DateTimeOffset][] |
+| [Date Time Is Between][DateTimeIsBetween Property] | `($)DateTimeIsBetween`, with no value | `($)DateTime` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+Checking if `2020-01-01T00:00:00+00:00` is between `2021-01-01T00:00:00+00:00` and `2022-01-01T00:00:00+00:00` will result in the variable `($)DateTimeIsBetween` being updated to the following:
+
+```json
+false
+```
+
+***
+
+## Properties
+
+### Date Time
+
+The [Date Time][DateTime Property] to check is between [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Property].
+
+For more information about Date and Time, please see [Working with Dates and Time][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [DateTimeOffset][] |
+| Property Type | [Input][] |
+| Default Value | `($)DateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+
+### Start Date Time
+
+The [Start Date Time][StartDateTime Property] to check against. This is inclusive, which means if [Date Time][DateTime Property] is equal to it, it will be considered between.
+
+For more information about Date and Time, please see [Working with Dates and Time][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [DateTimeOffset][] |
+| Property Type | [Input][] |
+| Default Value | `($)StartDateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+
+### End Date Time
+
+The [End Date Time][EndDateTime Property] to check against. This is inclusive, which means if [Date Time][DateTime Property] is equal to it, it will be considered between.
+
+For more information about Date and Time, please see [Working with Dates and Time][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [DateTimeOffset][] |
+| Property Type | [Input][] |
+| Default Value | `($)EndDateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+
+### Date Time Is Between
+
+The result of the is between check.
+
+If [Date Time][DateTime Property] is between (and including) the [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [Boolean][] |
+| Property Type | [Output][] |
+| Default Value | `($)DateTimeIsBetween` with no value |
+
+## Exceptions
+
+No exceptions are thrown by the block.
+
+## Remarks
+
+### Dates and Time
+
+The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
+
+For more information, please see [Working with Dates and Time][].
+
+### Start Date Time and End Date Time are inclusive
+
+The [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Property] properties are both inclusive, which means if [Date Time][DateTime Property] is equal to either of them, it will be considered between.
+
+### Start Date Time greater than End Date Time
+
+[Start Date Time][StartDateTime Property] can be greater than [End Date Time][EndDateTime Property]; as long as [Date Time][DateTime Property] is between or equal to either of them the variable specified for [Date Time Is Between][DateTimeIsBetween Property] will be set to `true`, otherwise it will be set to `false`.
+
+[DateTime Property]: {{< ref "#date-time" >}}
+[StartDateTime Property]: {{< ref "#start-date-time" >}}
+[EndDateTime Property]: {{< ref "#end-date-time" >}}
+[DateTimeIsBetween Property]: {{< ref "#date-time-is-between" >}}
+
+[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
+[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
