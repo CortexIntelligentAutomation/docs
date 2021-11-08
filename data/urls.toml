@@ -164,6 +164,7 @@
                     SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
                     String = "/docs/reference/data-types/most-common/#string"
                     StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
+                    TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]

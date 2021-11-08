@@ -58,7 +58,7 @@ TODO: talk about $type
 TODO: talk about using the data type of properties
 TODO: talk about dictionaries
 TODO: talk about structures
-TODO: Datetime/timespan
+TODO: Datetimeoffset/timeperiod
 TODO: Enums
 
 ### Dictionary literals
