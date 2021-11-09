@@ -147,7 +147,10 @@
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
+                    DateTime = "/docs/reference/data-types/most-common/#datetime"
+                    DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                     DateTimeOffset = "/docs/reference/data-types/most-common/#datetimeoffset"
+                    DayOfWeek = "/docs/reference/data-types/most-common/#dayofweek"
                     Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                     Double = "/docs/reference/data-types/most-common/#double"
                     Dynamic = "/docs/reference/data-types/most-common/#dynamic"
@@ -169,6 +172,7 @@
                     String = "/docs/reference/data-types/most-common/#string"
                     StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
                     TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
+                    TimeSpan = "/docs/reference/data-types/most-common/#timespan"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]

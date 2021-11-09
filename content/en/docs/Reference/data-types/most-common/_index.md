@@ -23,8 +23,11 @@ The most commonly used data types are categorised and listed below:
 | Conditional&nbsp;Logic | Boolean | 1 bit | A logical value of `true` or `false` |
 | Databases | DataTable | Varies depending on number of items it contains | TODO |
 |Dates&nbsp;&&nbsp;Time | DateTimeOffset | Varies (typically 12 to 16 bytes) | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar, along with a UTC time offset |
-| | DateTime | Varies (typically 8 bytes) | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar |
+| | DateTime | Varies (typically 8 bytes) | A value representing a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar. It can be used wherever a DateTimeOffset is expected, and wll be converted to a DateTimeOffset automatically. |
 | | TimePeriod | | A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of years, months, days, hours, minutes, seconds, and milliseconds. |
+| | TimeSpan | | A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of days, hours, minutes, seconds, and milliseconds. It can be used wherever a TimePeriod is expected, and wll be converted to a TimePeriod automatically. |
+| | DateTimeComponentType | | A value representing a component of a DateTimeOffset (e.g. Year, Month, Day). |
+| | DayOfWeek | | A value representing the day of the week. (e.g. DayOfWeek.Monday, DayOfWeek.Tuesday etc.). From DayOfWeek you can get the name of the day, or an Int32 value representing the day, where Sunday equals `0`, and Saturday equals `6`.  |
 | Exceptions | Exception | Varies | The data type that all other exceptions inherit from TODO: Link to inheritence |
 | Files & Folders | FileInformation | Varies | TODO |
 | | FolderInformation | Varies | TODO |
@@ -121,6 +124,30 @@ TODO
 TODO
 
 #### TimePeriod
+
+TODO
+
+#### TimeSpan
+
+TODO
+
+#### DateTimeComponentType
+
+TODO
+
+Can have the following values:
+
+| Value                                        | Data Type                 | Notes              |
+|----------------------------------------------|---------------------------|--------------------|
+| DateTimeComponentType.LocalDateTime          | [DateTime][]              | 
+| DateTimeComponentType.UtcDateTime            | [DateTime][]              |
+| DateTimeComponentType.DateTime               | [DateTime][]              |
+| DateTimeComponentType.Time                   | [TimePeriod][]            |
+
+Time (TimePeriod), Year (int), Month (int),
+            /// Day (int), Hour (int), Minute (int), Second (int), Millisecond (int), Offset (TimeSpan), DayOfYear (int), DayOfWeek (DayOfWeek).
+
+#### DayOfWeek
 
 TODO
 
