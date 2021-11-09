@@ -34,7 +34,7 @@ This example will subtract `1 year` from `2022-01-01T00:00:00+00:00`.
 Subtracting `1 year` from `2022-01-01T00:00:00+00:00` will result in the variable `($)DateTime` being updated. Its text representation will be in the [ISO 8601 Standard][], which can be seen below:
 
 ```json
-2021-01-01T00:00:00+00:00
+"2021-01-01T00:00:00+00:00"
 ```
 
 ***
@@ -55,7 +55,7 @@ This example will subtract `-1 year` from `2021-01-01T00:00:00+00:00`.
 Subtracting `-1 year` from `2021-01-01T00:00:00+00:00` will result in `1 year` being added and the variable `($)DateTime` being updated. Its text representation will be in the [ISO 8601 Standard][], which can be seen below:
 
 ```json
-2022-01-01T00:00:00+00:00
+"2022-01-01T00:00:00+00:00"
 ```
 
 ***
