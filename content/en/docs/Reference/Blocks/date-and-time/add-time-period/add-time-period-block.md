@@ -34,7 +34,7 @@ This example will add `1 year`, `1 month`, `1 day`, `1 hour` and `30 minutes` to
 Adding `1 year`, `1 month`, `1 day`, `1 hour` and `30 minutes` to `2021-01-01T00:00:00+00:00` will result in the variable `($)DateTime` being updated. Its text representation will be in the [ISO 8601 Standard][], which can be seen below:
 
 ```json
-2022-02-02T01:30:00+00:00
+"2022-02-02T01:30:00+00:00"
 ```
 
 ***
@@ -55,7 +55,7 @@ This example will add `-1 year` to `2021-01-01T00:00:00+00:00`.
 Adding `-1 year` from `2021-01-01T00:00:00+00:00` will result in `1 year` being subtracted and the variable `($)DateTime` being updated. Its text representation will be in the [ISO 8601 Standard][], which can be seen below:
 
 ```json
-2020-01-01T00:00:00+00:00
+"2020-01-01T00:00:00+00:00"
 ```
 
 ***

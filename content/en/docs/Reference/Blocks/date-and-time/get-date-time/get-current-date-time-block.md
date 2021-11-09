@@ -31,7 +31,7 @@ This example will get the current Date Time.
 Getting the current Date Time will result in the variable `($)DateTime` being set to a [DateTimeOffset][] representing the current Date Time (including a UTC time offset). Its text representation will be in the [ISO 8601 Standard][], which can be seen below:
 
 ```json
-2021-11-05T08:48:08.0307614+00:00
+"2021-11-05T08:48:08.0307614+00:00"
 ```
 
 ***
