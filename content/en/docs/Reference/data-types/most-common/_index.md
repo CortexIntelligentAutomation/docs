@@ -39,6 +39,7 @@ The most commonly used data types are categorised and listed below:
 | | Char | 2 bytes | A character or letter surrounded by single quotes (e.g. `'a'` or `'!'`) |
 | | StringComparison | 4 bytes | TODO |
 | | SearchOptions | 4 bytes | TODO |
+| | IFormatProvider | Varies | TODO |
 | | CultureInfo | Varies | TODO |
 | | Encoding | Varies | TODO |
 
@@ -185,9 +186,23 @@ TODO
 
 TODO
 
+#### IFormatProvider
+
+TODO
+
 #### CultureInfo
 
 TODO
+
+            /// [Block Help Only] If the culture identifier is empty e.g (new CultureInfo("")), cultureInfo is set to InvariantCulture.
+            
+            /// [Block Help Only] If the culture does not exist, the operating system will create a custom culture using the culture identifier.
+            
+            /// [Block Help Only] As well as the default InvariantCulture you can also use the culture of the system (CultureInfo.CurrentCulture) or provide a new culture info (new CultureInfo("en-GB")).
+
+            // Note about formatProvider and CultureInfo: If an invalid CultureInfo is provided (e.g. new CultureInfo("enaa")), a CultureNotFoundException will be thrown.
+
+##### CurrentCulture
 
 ##### InvariantCulture
 
