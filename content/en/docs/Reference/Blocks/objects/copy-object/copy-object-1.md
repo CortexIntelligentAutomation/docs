@@ -1,7 +1,7 @@
 ---
 title: "Copy Object"
 linkTitle: "Copy Object"
-description: "Makes a copy of an Object."
+description: "Copies an Object."
 ---
 
 ![Icon](/blocks/objects-copy-block-icon.png)
