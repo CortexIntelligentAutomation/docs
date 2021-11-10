@@ -33,6 +33,7 @@ The most commonly used data types are categorised and listed below:
 | | FolderInformation | Varies | TODO |
 | | ContentOptions | 4 bytes | TODO |
 | | FileMatch | Varies | TODO |
+| Json | JsonSerializerSettings |  | Settings used to control how to convert objects to Json and vice versa |
 | Numbers | Int16 | 2 bytes | A whole number from `-32768` through `32767` |
 | | Int32 | 4 bytes | A whole number from `-2,147,483,648` through `2,147,483,647` |
 | | Int64 | 8 bytes | A whole number from `-9,223,372,036,854,775` through `9,223,372,036,854,775,807` |
@@ -174,6 +175,12 @@ TODO
 TODO
 
 #### FileMatch
+
+TODO
+
+### Json
+
+#### JsonSerializerSettings
 
 TODO
 
