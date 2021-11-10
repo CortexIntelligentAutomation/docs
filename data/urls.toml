@@ -164,6 +164,7 @@
                     IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
                     IFormatProvider = "/docs/reference/data-types/most-common/#iformatprovider"
                     IList = "/docs/reference/data-types/most-common/#ilistlttgt"
+                    List = "/docs/reference/data-types/most-common/#listlttgt"
                     Lists = "/docs/reference/data-types/most-common/#lists"
                     InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                     Int32 = "/docs/reference/data-types/most-common/#int32"
