@@ -39,7 +39,7 @@ true or false
 
 ### Object literals
 
-```JSON
+```json
 {
   "StringProperty": "Example String",
   "IntegerProperty": 1,
