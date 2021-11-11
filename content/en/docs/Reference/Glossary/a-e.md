@@ -11,7 +11,7 @@ Terms, words and phrases beginning with the letters A through E.
 
 ## A
 
-### Acceleration Programme
+### Acceleration Program
 
 TODO
 
