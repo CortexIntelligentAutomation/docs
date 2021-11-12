@@ -1,14 +1,14 @@
 ---
 title: "PropertyValueOutOfRangeException"
 linkTitle: "PropertyValueOutOfRangeException"
-description: "The exception thrown when a property is provided with a value that falls outside it's accepted range."
+description: "The exception thrown when a property is provided with a value that falls outside its accepted range."
 ---
 
 # {{< param title >}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyValueOutOfRangeException)</p>
 
-The exception thrown when a property is provided with a value that falls outside it's accepted range.
+The exception thrown when a property is provided with a value that falls outside its accepted range.
 
 TODO - I AM UPTO HERE - NEED TO TALK WITH TYLER ABOUT ALL THE VARIOUS FORMATS - The format of the exception message is as follows:  
 

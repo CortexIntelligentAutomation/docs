@@ -54,7 +54,7 @@ This example will check whether `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3
 
 #### Result
 
-`{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains one item with the key `"Key1"`, but it's value is not `10`. Therefore, the variable `($)ContainsItem` will be updated to the following:
+`{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains one item with the key `"Key1"`, but its value is not `10`. Therefore, the variable `($)ContainsItem` will be updated to the following:
 
 ```json
 false

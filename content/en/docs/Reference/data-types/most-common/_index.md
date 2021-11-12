@@ -12,10 +12,10 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| All | Object | Varies | Any data type can be used where an Object data type is required. Once a variable contains an object data type, if it needs to be used as it's original data type it must be cast back to that data type (e.g. `(Int32)ObjectVariableContainingAnInteger`). |
-| | Dynamic | Varies | Any data type can be used where a Dynamic data type is required. Dynamic is similar to object, except no cast is needed to use the variable as it's original data type. |
+| All | Object | Varies | Any data type can be used where an Object data type is required. Once a variable contains an object data type, if it needs to be used as its original data type it must be cast back to that data type (e.g. `(Int32)ObjectVariableContainingAnInteger`). |
+| | Dynamic | Varies | Any data type can be used where a Dynamic data type is required. Dynamic is similar to object, except no cast is needed to use the variable as its original data type. |
 | Collections | IEnumerable&lt;T&gt; | Varies depending on the number of items it contains | Any data type representing a collection of items that can iterated or looped over. T indicates the data type of the items contained in the collection. List&lt;T&gt; is the most common example. |
-| | IList&lt;T&gt; | Varies depending on the number of items it contains | Any data type representing a list of items where each item can be individually accessed by it's index in the list. T indicates the data type of the items contained in the list. List&lt;T&gt; is the most common example. |
+| | IList&lt;T&gt; | Varies depending on the number of items it contains | Any data type representing a list of items where each item can be individually accessed by its index in the list. T indicates the data type of the items contained in the list. List&lt;T&gt; is the most common example. |
 | | List&lt;T&gt; | Varies depending on the number of items it contains | A list of items. T indicates the data type of the items contained in the list. |
 | | IDictionary&lt;K,&nbsp;V&gt; | Varies depending on the number of items it contains | Any data type representing a dictionary containing items which can be accessed by a key. K indicates the data type of the key used to access the items contained in the dictionary, and V indicates the data type of the item's value. |
 | | Dictionary&lt;K,&nbsp;V&gt; | Varies depending on the number of items it contains | A dictionary of items. K indicates the data type of the key used to access the items contained in the dictionary, and V indicates the data type of the item's value. |
@@ -86,7 +86,7 @@ There are 2 commonly used List data types that can be created to hold multiple t
 
 An item can be added to an both using a literal (e.g. `2`), a variable (e.g. `($)Int32Var` where its value is `2`), or an expression (e.g. `1+1`).
 
-However, when an item is retrieved from an [IList][]&lt;[Object][]&gt;, an expression must be used to [explicitly cast][] the item to it's correct type when using it. (e.g. `(Int32)($)ListOfObjects[($)Index])`, or `(Int32)($)RetrievedIntFromListOfObjects`). This is not needed if the item is retrieved from an an [IList][]&lt;[dynamic][]&gt;.
+However, when an item is retrieved from an [IList][]&lt;[Object][]&gt;, an expression must be used to [explicitly cast][] the item to its correct type when using it. (e.g. `(Int32)($)ListOfObjects[($)Index])`, or `(Int32)($)RetrievedIntFromListOfObjects`). This is not needed if the item is retrieved from an an [IList][]&lt;[dynamic][]&gt;.
 
 ### Dictionaries
 

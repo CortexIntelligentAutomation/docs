@@ -189,7 +189,7 @@ TODO
 
 ### Dictionary
 
-A [data type] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and it's associated item. Dictionaries are optimised for fast lookup of items using their key.
+A [data type] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and its associated item. Dictionaries are optimised for fast lookup of items using their key.
 
 For more detailed information about dictionaries, see [Reference->Data Types->Dictionaries][TODO].
 
