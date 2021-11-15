@@ -8,7 +8,7 @@ description: "Removes all items from a Dictionary."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Remove.RemoveAllItemsBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveAllItemsBlock`3)</p>
 
 ## Description
 
