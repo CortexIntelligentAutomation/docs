@@ -1,24 +1,24 @@
 ---
-title: "Contains Item With Key"
-linkTitle: "Contains Item With Key"
-description: "Checks if a Dictionary contains at least one item with the specified key."
+title: "Contains Item With Key And Value"
+linkTitle: "Contains Item With Key And Value"
+description: "Checks if a Dictionary contains at least one item with the specified key and matching the specified value."
 ---
 
 ![Icon](/blocks/dictionaries-contains-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Contains.ContainsItemWithKeyBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemWithKeyAndValueBlock`3)</p>
 
 ## Description
 
-Checks if [Dictionary][Dictionary Property] contains at least one item with the specified [Key][Key Property].
+Checks if [Dictionary][Dictionary Property] contains at least one item with the specified [Key][Key Property] and matching the specified [Value][Value Property].
 
 ## Examples
 
-### Dictionary contains item with Key
+### Dictionary contains item with Key and Value
 
-This example will check whether `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains at least one item with the key `"Key1"`.
+This example will check whether `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains at least one item with the key `"Key1"` and value `1`.
 
 #### Properties
 
@@ -26,11 +26,12 @@ This example will check whether `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3
 |--------------------|---------------------------|------------------------------------------|
 | [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[String][], [Int32][]&gt; |
 | [Key][Key Property] | `($)Key`, with value `"Key1"` | `($)Key` is a variable of type [String][] |
+| [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
 | [Contains Item][ContainsItem Property] | `($)ContainsItem`, with no value | `($)ContainsItem` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains one item with the key `Key1`. Therefore, the variable `($)ContainsItem` will be updated to the following:
+`{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains one item with the key `Key1` and value `1`. Therefore, the variable `($)ContainsItem` will be updated to the following:
 
 ```json
 true
@@ -38,21 +39,22 @@ true
 
 ***
 
-### Dictionary does not contain item with Key
+### Dictionary does not contain item with Key and Value
 
-This example will check whether `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains at least one item with the key `"Key10"`.
+This example will check whether `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains at least one item with the key `"Key1"` and value `10`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[String][], [Int32][]&gt; |
-| [Key][Key Property] | `($)Key`, with value `"Key10"` | `($)Key` is a variable of type [String][] |
+| [Key][Key Property] | `($)Key`, with value `"Key1"` | `($)Key` is a variable of type [String][] |
+| [Value][Value Property] | `($)Value`, with value `10` | `($)Value` is a variable of type [Int32][] |
 | [Contains Item][ContainsItem Property] | `($)ContainsItem`, with no value | `($)ContainsItem` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` does not contain any items with the key `"Key10"`. Therefore, the variable `($)ContainsItem` will be updated to the following:
+`{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` contains one item with the key `"Key1"`, but its value is not `10`. Therefore, the variable `($)ContainsItem` will be updated to the following:
 
 ```json
 false
@@ -64,7 +66,7 @@ false
 
 ### Dictionary
 
-The [Dictionary][Dictionary Property] to check whether it contains at least one item with the specified [Key][Key Property].
+The [Dictionary][Dictionary Property] to check whether it contains at least one item with the specified [Key][Key Property] and matching [Value][Value Property].
 
 [Dictionary][Dictionary Property] can be any [IDictionary][]&lt;[TKey][], [TItem][]&gt;, where [TKey][] represents the type of keys used to lookup items in the [Dictionary][Dictionary Property], and [TItem][] represents the type of items in the [Dictionary][Dictionary Property].
   
@@ -88,11 +90,23 @@ For information about what a key is, please see [Keys][].
 | Property Type | [Input][] |
 | Default Value | `($)Key` with value `null` |
 
+### Value
+
+The [Value][Value Property] to check for matching items.
+
+For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [TItem][] |
+| Property Type | [Input][] |
+| Default Value | `($)Value` with value `null` |
+
 ### Contains Item
 
 The result of the contains item check.
 
-If [Dictionary][Dictionary Property] contains at least one item with the specified [Key][Key Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
+If [Dictionary][Dictionary Property] contains at least one item with the specified [Key][Key Property] and matching [Value][Value Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
 
 | | |
 |--------------------|---------------------------|
@@ -106,6 +120,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
+| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. |
 | [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] or [Key][Key Property] are `null`. |
 
 ## Remarks
@@ -113,6 +128,10 @@ The exceptions thrown by the block can be found below:
 ### Key Equality
 
 For information and examples of how it is determined whether an item has a specified key, please see [Object Equality][].
+
+### Item Equality
+
+For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
 ### Empty Dictionary
 
@@ -132,6 +151,7 @@ For information about the different types of dictionaries, including those that 
 
 [Dictionary Property]: {{< ref "#dictionary" >}}
 [Key Property]: {{< ref "#key" >}}
+[Value Property]: {{< ref "#value" >}}
 [ContainsItem Property]: {{< ref "#contains-item" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
@@ -148,6 +168,7 @@ For information about the different types of dictionaries, including those that 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
