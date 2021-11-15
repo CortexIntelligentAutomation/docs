@@ -8,7 +8,7 @@ description: "Gets all items from a Dictionary."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Get.GetAllItemsBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetAllItemsBlock`3)</p>
 
 ## Description
 

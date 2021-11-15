@@ -8,7 +8,7 @@ description: "Gets the counts of items in a Dictionary matching each of the spec
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Get.GetCountsOfItemsWithValuesBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.GetCount.GetCountsOfItemsWithValuesBlock`3)</p>
 
 ## Description
 

@@ -8,7 +8,7 @@ description: "Gets the specified occurrence of an item with the given key from a
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Get.GetItemWithKeyBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetItemWithKeyBlock`3)</p>
 
 ## Description
 

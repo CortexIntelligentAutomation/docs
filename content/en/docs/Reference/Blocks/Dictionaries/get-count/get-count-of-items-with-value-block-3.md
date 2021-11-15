@@ -8,7 +8,7 @@ description: "Gets the count of items in a Dictionary with the specified value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Get.GetCountOfItemsWithValueBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.GetCount.GetCountOfItemsWithValueBlock`3)</p>
 
 ## Description
 
