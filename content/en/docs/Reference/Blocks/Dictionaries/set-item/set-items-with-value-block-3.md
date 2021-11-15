@@ -1,39 +1,39 @@
 ---
-title: "Set Items With Values"
-linkTitle: "Set Items With Values"
-description: "Sets all items matching one of the specified values in a Dictionary to new values."
+title: "Set Items With Value"
+linkTitle: "Set Items With Value"
+description: "Sets all items matching a value in a Dictionary to a new value."
 ---
 
 ![Icon](/blocks/dictionaries-set-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Set.SetItemsWithValuesBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithValueBlock`3)</p>
 
 ## Description
 
-Set all items matching one of the specified [Values][Values Property] in a [Dictionary][Dictionary Property] to [New Values][NewValues Property].
+Sets all items matching a [Value][Value Property] in a [Dictionary][Dictionary Property] to a [New Value][NewValue Property].
 
 ## Examples
 
-### Set all items matching one of the specified Values in a Dictionary to New Values
+### Set all items matching a Value in a Dictionary to a New Value
 
-This example will attempt to set all items matching one of the values `[1, 2]` in `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` to `[10, 20]` respectively.
+This example will attempt to set all items matching the value `1` in `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` to `10`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[String][], [Int32][]&gt; |
-| [Values][Values Property] | `($)Values`, with value `[1, 2]` | `($)Values` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; | |
-| [NewValues][NewValues Property] | `($)NewValues`, with value `[10, 20]` | `($)NewValues` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; | |
+| [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
+| [New Value][NewValue Property] | `($)NewValue`, with value `10` | `($)NewValue` is a variable of type [Int32][] |
 
 #### Result
 
-Attempting to set all items matching one of the values `[1, 2]` in `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` to `[10, 20]` respectively, results in the variable `($)Dictionary` being updated to the following:
+Attempting to set all items matching the value `1` in `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` to `10` results in the variable `($)Dictionary` being updated to the following:
 
 ```json
-{"Key1" : 10, "Key2" : 20, "Key3" : 3, "Key4" : 3, "Key5" : 20, "Key6" : 10}
+{"Key1" : 10, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 10}
 ```
 
 ***
@@ -44,7 +44,7 @@ Attempting to set all items matching one of the values `[1, 2]` in `{"Key1" : 1,
 
 The [Dictionary][Dictionary Property] to set all matching items in.
 
-Items are considered matching if they have one of the specified [Values][Values Property].
+Items are considered matching if they have the specified [Value][Value Property].
 
 [Dictionary][Dictionary Property] can be any [IDictionary][]&lt;[TKey][], [TItem][]&gt;, where [TKey][] represents the type of keys used to lookup items in the [Dictionary][Dictionary Property], and [TItem][] represents the type of items in the [Dictionary][Dictionary Property].
   
@@ -54,31 +54,27 @@ Items are considered matching if they have one of the specified [Values][Values 
 | Property Type | [InputOutput][] |
 | Default Value | `($)Dictionary` with value `{}` |
 
-### Values
+### Value
 
-The [Values][Values Property] the items to set must match one of.
+The [Value][Value Property] the items to set must match.
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
+| Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Default Value | `($)Value` with value `null` |
 
-### New Values
+### New Value
 
-The [New Values][NewValues Property] to set the items matching the corresponding [Values][Values Property] in [Dictionary][Dictionary Property] to.  
-
-The number of items in [New Values][NewValues Property] must match the number of items in [Values][Values Property].
-
-[Dictionary][Dictionary Property] items matching the first value in [Values][Values Property] will be set to the first value in [New Values][NewValues Property]; [Dictionary][Dictionary Property] items matching the second value in [Values][Values Property] will be set to the second value in [New Values][NewValues Property] etc.
-
+The [New Value][NewValue Property] to set all matching items in [Dictionary][Dictionary Property] to.
+  
 | | |
 |--------------------|---------------------------|
-| Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
+| Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)NewValues` with value `[]` |
+| Default Value | `($)NewValue` with value `null` |
 
 ## Exceptions
 
@@ -87,9 +83,8 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyDictionaryException][] | Thrown when [Dictionary][Dictionary Property] is read-only. |
-| [DuplicateValueException][] | Thrown when [Values][Values Property] contains duplicate values. |
-| [PropertyItemCountException][] | Thrown when the count of items in [Values][Values Property] and the count of items in [New Values][NewValues Property] are not the same, or neither contain any items. |
-| [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] or [Values][Values Property] or [New Values][NewValues Property] are `null`. |
+| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] or [New Value][NewValue Property] are `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. |
+| [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] is `null`. |
 
 ## Remarks
 
@@ -101,13 +96,9 @@ For information and examples of how it is determined whether an item matches a s
 
 If [Dictionary][Dictionary Property] is empty (i.e. `{}`) there is nothing to set, so no operation is performed.
 
-### No items matching a specified value in Values
+### No items matching Value
 
-If [Dictionary][Dictionary Property] does not contain items matching one of the specified [Values][Values Property], there is nothing to set for that value.
-
-### No items matching Values
-
-If [Dictionary][Dictionary Property] does not contain items matching any of the specified [Values][Values Property], there is nothing to set, so no operation is performed.
+If [Dictionary][Dictionary Property] does not contain items matching the specified [Value][Value Property], there is nothing to set, so no operation is performed.
 
 ### Defining dictionaries using literal syntax
 
@@ -122,8 +113,8 @@ For information about how to define dictionaries using expression syntax, see [D
 For information about the different types of dictionaries, including those that can contain only the same type of item, and those that can contain different types of item, see [Dictionaries][].
 
 [Dictionary Property]: {{< ref "#dictionary" >}}
-[Values Property]: {{< ref "#values" >}}
-[NewValues Property]: {{< ref "#new-values" >}}
+[Value Property]: {{< ref "#value" >}}
+[NewValue Property]: {{< ref "#new-value" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
@@ -138,11 +129,10 @@ For information about the different types of dictionaries, including those that 
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [CannotModifyReadOnlyDictionaryException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}
-[DuplicateValueException]: {{< url "Cortex.Reference.Exceptions.Lists.DuplicateValueException.MainDoc" >}}
-[PropertyItemCountException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
+[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
