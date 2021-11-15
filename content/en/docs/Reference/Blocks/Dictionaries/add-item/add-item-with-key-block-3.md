@@ -8,7 +8,7 @@ description: "Adds an item to a Dictionary with the specified key."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.Add.AddItemWithKeyBlock`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.AddItem.AddItemWithKeyBlock`3)</p>
 
 ## Description
 
