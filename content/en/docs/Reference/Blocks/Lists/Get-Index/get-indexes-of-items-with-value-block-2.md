@@ -8,7 +8,7 @@ description: "Gets the indexes of all items in a List matching a value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetIndexesOfItemsWithValueBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValueBlock`2)</p>
 
 ## Description
 

@@ -8,7 +8,7 @@ description: "Gets the index of the specified occurrence of an item in a List ma
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetIndexOfItemWithValueBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexOfItemWithValueBlock`2)</p>
 
 ## Description
 
