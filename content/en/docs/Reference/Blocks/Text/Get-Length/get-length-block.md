@@ -8,7 +8,7 @@ description: "Gets the length of a given text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Get.GetLengthBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.GetLength.GetLengthBlock)</p>
 
 ## Description
 
