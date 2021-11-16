@@ -8,7 +8,7 @@ description: "Sets the items at the beginning of a List to new values."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Set.SetItemsAtBeginningBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtBeginningBlock`2)</p>
 
 ## Description
 

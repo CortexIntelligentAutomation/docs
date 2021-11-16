@@ -8,7 +8,7 @@ description: "Sets the items at each of the specified indexes of a List to new v
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Set.SetItemsAtIndexesBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtIndexesBlock`2)</p>
 
 ## Description
 

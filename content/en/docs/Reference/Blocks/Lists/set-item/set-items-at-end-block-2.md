@@ -1,38 +1,38 @@
 ---
-title: "Set Item At Beginning"
-linkTitle: "Set Item At Beginning"
-description: "Sets the item at the beginning of a List to a new value."
+title: "Set Items At End"
+linkTitle: "Set Items At End"
+description: "Sets the items at the end of a List to new values."
 ---
 
 ![Icon](/blocks/lists-set-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Set.SetItemAtBeginningBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtEndBlock`2)</p>
 
 ## Description
 
-Sets the item at the beginning of a [List][List Property] to a [New Value][NewValue Property].
+Sets the items at the end of a [List][List Property] to [New Values][NewValues Property].
 
 ## Examples
 
-### Set the item at the beginning of a List to a New Value
+### Set the items at the end of a List to New Values
 
-This example will set the item at the beginning of `["Some Text", 1]` to `"Some Modified Text"`.
+This example will set the second last and last items at the end of `["Some Text", 1, "Some More Text", 2]` to `["Some Modified Text", 10]` respectively.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [List][List Property] | `($)List`, with value `["Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-| [New Value][NewValue Property] | `($)NewValue`, with value `"Some Modified Text"` | `($)NewValue` is a variable of type [String] |
+| [List][List Property] | `($)List`, with value `["Some Text", 1, "Some More Text", 2]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
+| [New Values][NewValues Property] | `($)NewValues`, with value `["Some Modified Text", 10]` | `($)NewValues` is a variable of type [IEnumerable][]&lt;[dynamic][]&gt; |
 
 #### Result
 
-Setting the item at the beginning of `["Some Text", 1]` to `"Some Modified Text"` results in the variable `($)List` being updated to the following:
+Setting the second last and last items at the end of `["Some Text", 1, "Some More Text", 2]` to `["Some Modified Text", 10]` respectively, results in the variable `($)List` being updated to the following:
 
 ```json
-["Some Modified Text", 1]
+["Some Text", 1, "Some Modified Text", 10]
 ```
 
 ***
@@ -41,7 +41,7 @@ Setting the item at the beginning of `["Some Text", 1]` to `"Some Modified Text"
 
 ### List
 
-The [List][List Property] to set the item in.  
+The [List][List Property] to set the items in.  
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items in the [List][List Property].
   
@@ -51,15 +51,19 @@ The [List][List Property] to set the item in.
 | Property Type | [InputOutput][] |
 | Default Value | `($)List` with value `[]` |
 
-### New Value
+### New Values
 
-The [New Value][NewValue Property] to set the item at the beginning of [List][List Property] to.  
-  
+The [New Values][NewValues Property] to set the items at the end of [List][List Property] to.  
+
+The number of items in [New Values][NewValues Property] determines the number of items that will be set at the end of [List][List Property]. One item means only the last item is set, two items means the second last and last items are set etc.
+
+The last item in [List][List Property] will be set to the last value in [New Values][NewValues Property]; the second last item in [List][List Property] will be set to the second last value in [New Values][NewValues Property] etc.
+
 | | |
 |--------------------|---------------------------|
-| Data Type | [TItem][] |
+| Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)NewValue` with value `null` |
+| Default Value | `($)NewValues` with value `[]` |
 
 ## Exceptions
 
@@ -68,11 +72,14 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|-------------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [New Value][NewValue Property] is `null` and [List][List Property] only accepts non-nullable value types. |
 | [PropertyEmptyException][] | Thrown when [List][List Property] contains no items. |
-| [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
+| [PropertyNullException][] | Thrown when [List][List Property] or [New Values][NewValues Property] is `null`. |
 
 ## Remarks
+
+### Empty New Values
+
+If [New Values][NewValues Property] is empty (i.e. `[]`) there is nothing to set, so no operation is performed.
 
 ### Defining lists using literal syntax
 
@@ -87,7 +94,7 @@ For information about how to define lists using expression syntax, see [List Exp
 For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
 
 [List Property]: {{< ref "#list" >}}
-[NewValue Property]: {{< ref "#new-value" >}}
+[NewValues Property]: {{< ref "#new-values" >}}
 
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
@@ -99,10 +106,9 @@ For information about the different types of lists, including those that can con
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}

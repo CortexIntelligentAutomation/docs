@@ -8,7 +8,7 @@ description: "Sets all items matching one of the specified values in a List to n
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Set.SetItemsWithValuesBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsWithValuesBlock`2)</p>
 
 ## Description
 

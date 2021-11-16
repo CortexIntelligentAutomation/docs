@@ -1,24 +1,24 @@
 ---
-title: "Set Items With Value"
-linkTitle: "Set Items With Value"
-description: "Sets all items matching a value in a List to a new value."
+title: "Set Item With Value"
+linkTitle: "Set Item With Value"
+description: "Sets the specified occurrence of an item matching a value in a List to a new value."
 ---
 
 ![Icon](/blocks/lists-set-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Set.SetItemsWithValueBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemWithValueBlock`2)</p>
 
 ## Description
 
-Sets all items matching a [Value][Value Property] in a [List][List Property] to a [New Value][NewValue Property].
+Sets the specified [Occurrence][Occurrence Property] of an item matching a [Value][Value Property] in a [List][List Property] to a [New Value][NewValue Property].
 
 ## Examples
 
-### Set all items matching a Value in a List to a New Value
+### Set the first Occurrence of an item matching a Value in a List to a New Value
 
-This example will attempt to set all items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10`.
+This example will attempt to set the first occurrence of an item matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10`.
 
 #### Properties
 
@@ -27,13 +27,41 @@ This example will attempt to set all items matching the value `1` in `[1, 2, 3, 
 | [List][List Property] | `($)List`, with value `[1, 2, 3, 3, 2, 1]` | `($)List` is a variable of type [IList][]&lt;[Int32][]&gt; |
 | [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
 | [New Value][NewValue Property] | `($)NewValue`, with value `10` | `($)NewValue` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 
 #### Result
 
-Attempting to set all items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10` results in the variable `($)List` being updated to the following:
+An [Occurrence][Occurrence Property] of `1` means set the first occurrence; `2` means second etc.
+
+Attempting to set the first occurrence of an item matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10` results in the variable `($)List` being updated to the following:
 
 ```json
-[10, 2, 3, 3, 2, 10]
+[10, 2, 3, 3, 2, 1]
+```
+
+***
+
+### Set the last Occurrence of an item matching a Value in a List to a New Value
+
+This example will attempt to set the last occurrence of an item matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [List][List Property] | `($)List`, with value `[1, 2, 3, 3, 2, 1]` | `($)List` is a variable of type [IList][]&lt;[Int32][]&gt; |
+| [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
+| [New Value][NewValue Property] | `($)NewValue`, with value `10` | `($)NewValue` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `-1` | `($)Occurrence` is a variable of type [Int32][] |
+
+#### Result
+
+An [Occurrence][Occurrence Property] of `-1`, means set the last occurrence; `-2` means second last etc.
+
+Attempting to set the last occurrence of an item matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `10` results in the variable `($)List` being updated to the following:
+
+```json
+[1, 2, 3, 3, 2, 10]
 ```
 
 ***
@@ -42,7 +70,7 @@ Attempting to set all items matching the value `1` in `[1, 2, 3, 3, 2, 1]` to `1
 
 ### List
 
-The [List][List Property] to set all matching items in.
+The [List][List Property] to set the specified [Occurrence][Occurrence Property] of matching item in.
 
 Items are considered matching if they have the specified [Value][Value Property].
 
@@ -56,7 +84,7 @@ Items are considered matching if they have the specified [Value][Value Property]
 
 ### Value
 
-The [Value][Value Property] the items to set must match.
+The [Value][Value Property] the item to set must match.
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
@@ -68,13 +96,27 @@ For information and examples of how it is determined whether an item matches a s
 
 ### New Value
 
-The [New Value][NewValue Property] to set all matching items in [List][List Property] to.
-
+The [New Value][NewValue Property] to set the specified [Occurrence][Occurrence Property] of matching item in [List][List Property] to.  
+  
 | | |
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
 | Default Value | `($)NewValue` with value `null` |
+
+### Occurrence
+
+The [Occurrence][Occurrence Property] of matching item to set in the [List][List Property].
+
+Items are considered matching if they have the specified [Value][Value Property].
+
+For information about [supported values][Occurrences] for the [Occurrence][Occurrence Property] property and examples of how it can be used, please see [Occurrences][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [Int32][] |
+| Property Type | [Input][] |
+| Default Value | `($)Occurrence` with value `1` |
 
 ## Exceptions
 
@@ -92,13 +134,17 @@ The exceptions thrown by the block can be found below:
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
+### Occurrences
+
+For information about [supported values][Occurrences] for the [Occurrence][Occurrence Property] property and examples of how it can be used, please see [Occurrences][].
+
 ### Empty List
 
 If [List][List Property] is empty (i.e. `[]`) there is nothing to set, so no operation is performed.
 
-### No items matching Value
+### No items matching Value, or Occurrence is not present
 
-If [List][List Property] does not contain items matching the specified [Value][Value Property], there is nothing to set, so no operation is performed.
+If [List][List Property] does not contain items matching the specified [Value][Value Property] or the specified [Occurrence][Occurrence Property] is not present, there is nothing to set, so no operation is performed.
 
 ### Defining lists using literal syntax
 
@@ -115,9 +161,12 @@ For information about the different types of lists, including those that can con
 [List Property]: {{< ref "#list" >}}
 [Value Property]: {{< ref "#value" >}}
 [NewValue Property]: {{< ref "#new-value" >}}
+[Occurrence Property]: {{< ref "#occurrence" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+
+[Occurrences]: {{< url "Cortex.Reference.Concepts.Occurrences.MainDoc" >}}
 
 [List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
 [List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}

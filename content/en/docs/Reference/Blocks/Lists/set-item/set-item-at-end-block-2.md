@@ -8,7 +8,7 @@ description: "Sets the item at the end of a List to a new value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Set.SetItemAtEndBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemAtEndBlock`2)</p>
 
 ## Description
 
