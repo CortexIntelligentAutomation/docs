@@ -8,7 +8,7 @@ description: "Finds and replaces all occurrences of text in a given text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Find.FindAndReplaceAllTextBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock)</p>
 
 ## Description
 
