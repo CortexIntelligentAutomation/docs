@@ -1,24 +1,24 @@
 ---
-title: "Add Items At Index"
-linkTitle: "Add Items At Index"
-description: "Adds Items at the specified Index of a List."
+title: "Add Items At Beginning"
+linkTitle: "Add Items At Beginning"
+description: "Adds Items at the beginning of a List."
 ---
 
 ![Icon](/blocks/lists-add-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Add.AddItemsAtIndexBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemsAtBeginningBlock`2)</p>
 
 ## Description
 
-Adds [Items][Items Property] at the specified [Index][Index Property] of a [List][List Property].
+Adds [Items][Items Property] at the beginning of a [List][List Property].
 
 ## Examples
 
-### Add Items at the first index (i.e. `0`) of an empty List
+### Add Items at the beginning of an empty List
 
-This example will add `["New Item 1", "New Item 2"]` at index `0` of `[]`.
+This example will add `["New Item 1", "New Item 2"]` at the beginning of `[]`.
 
 #### Properties
 
@@ -26,11 +26,10 @@ This example will add `["New Item 1", "New Item 2"]` at index `0` of `[]`.
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
 | [Items][Items Property] | `($)Items`, with value `["New Item 1", "New Item 2"]` | `($)Items` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
-| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
 #### Result
 
-Adding `["New Item 1", "New Item 2"]` at index `0` of `[]` results in the variable `($)List` being updated to the following:
+Adding `["New Item 1", "New Item 2"]` at the beginning of `[]` results in the variable `($)List` being updated to the following:
 
 ```json
 ["New Item 1", "New Item 2"]
@@ -38,9 +37,9 @@ Adding `["New Item 1", "New Item 2"]` at index `0` of `[]` results in the variab
 
 ***
 
-### Add Items at the first Index (i.e. `0`) of a List
+### Add Items at the beginning of a List
 
-This example will add `["New Item 1", "New Item 2"]` at index `0` of `["Some Text", 1]`.
+This example will add `["New Item 1", "New Item 2"]` at the beginning of `["Some Text", 1]`.
 
 #### Properties
 
@@ -48,36 +47,13 @@ This example will add `["New Item 1", "New Item 2"]` at index `0` of `["Some Tex
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `["Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
 | [Items][Items Property] | `($)Items`, with value `["New Item 1", "New Item 2"]` | `($)Items` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
-| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
 #### Result
 
-Adding `["New Item 1", "New Item 2"]` at index `0` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
+Adding `["New Item 1", "New Item 2"]` at the beginning of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
 ["New Item 1", "New Item 2", "Some Text", 1]
-```
-
-***
-
-### Add Items at the end (i.e. Index equals count of items) of a List
-
-This example will add `["New Item 1", "New Item 2"]` at index `2` of `["Some Text", 1]`.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [List][List Property] | `($)List`, with value `["Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-| [Items][Items Property] | `($)Items`, with value `["New Item 1", "New Item 2"]` | `($)Items` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
-| [Index][Index Property] | `($)Index`, with value `2` | `($)Index` is a variable of type [Int32][] |
-
-#### Result
-
-Adding `["New Item 1", "New Item 2"]` at index `2` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
-
-```json
-["Some Text", 1, "New Item 1", "New Item 2"]
 ```
 
 ***
@@ -98,27 +74,13 @@ The [List][List Property] where the [Items][Items Property] are added.
 
 ### Items
 
-The [Items][Items Property] to be added at the specified [Index][Index Property] of the [List][List Property].
+The [Items][Items Property] to be added at the beginning of the [List][List Property].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
 | Default Value | `($)Items` with value `[]` |
-
-### Index
-
-The [Index][Index Property] to add the [Items][Items Property] at.  
-
-Valid values are between and including `0` and the total count of items in the [List][List Property].
-
-For information about what an index is, please see [Indexes][].  
-
-| | |
-|--------------------|---------------------------|
-| Data Type | [Int32][] |
-| Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
 
 ## Exceptions
 
@@ -128,7 +90,6 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
 | [PropertyNullException][] | Thrown when [List][List Property] or [Items][Items Property] is `null`. |
-| [PropertyValueOutOfRangeException][] | Thrown when [Index][Index Property] is out of the range of the list indexes. Valid indexes are between and including `0` and the count of items in the [List][List Property]. |
 
 ## Remarks
 
@@ -150,9 +111,6 @@ For information about the different types of lists, including those that can con
 
 [List Property]: {{< ref "#list" >}}
 [Items Property]: {{< ref "#items" >}}
-[Index Property]: {{< ref "#index" >}}
-
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
@@ -165,10 +123,8 @@ For information about the different types of lists, including those that can con
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
