@@ -8,7 +8,7 @@ description: "Gets text between the specified start index and end index of a giv
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Get.GetTextBetweenIndexesBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.GetText.GetTextBetweenIndexesBlock)</p>
 
 ## Description
 

@@ -8,7 +8,7 @@ description: "Gets a length of text before the specified index of a given text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Get.GetTextBeforeIndexBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.GetText.GetTextBeforeIndexBlock)</p>
 
 ## Description
 

@@ -8,7 +8,7 @@ description: "Gets a length of text at the specified index of a given text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Get.GetTextAtIndexBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.GetText.GetTextAtIndexBlock)</p>
 
 ## Description
 
