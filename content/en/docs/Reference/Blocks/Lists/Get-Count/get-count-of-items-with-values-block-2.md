@@ -8,7 +8,7 @@ description: "Gets the counts of items in a List matching each of the specified 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetCountsOfItemsWithValuesBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountsOfItemsWithValuesBlock`2)</p>
 
 ## Description
 

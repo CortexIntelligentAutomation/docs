@@ -8,7 +8,7 @@ description: "Gets the count of all items in a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetCountOfAllItemsBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountOfAllItemsBlock`2)</p>
 
 ## Description
 

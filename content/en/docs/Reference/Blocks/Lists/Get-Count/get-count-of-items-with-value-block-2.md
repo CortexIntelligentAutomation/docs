@@ -8,7 +8,7 @@ description: "Gets the count of items in a List with the specified value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetCountOfItemsWithValueBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountOfItemsWithValueBlock`2)</p>
 
 ## Description
 
