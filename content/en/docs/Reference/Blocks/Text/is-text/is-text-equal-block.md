@@ -1,6 +1,6 @@
 ---
-title: "Is Equal"
-linkTitle: "Is Equal"
+title: "Is Text Equal"
+linkTitle: "Is Text Equal"
 description: "Checks if a text is equal to another text."
 ---
 
@@ -8,7 +8,7 @@ description: "Checks if a text is equal to another text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Is.IsEqualBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEqualBlock)</p>
 
 ## Description
 

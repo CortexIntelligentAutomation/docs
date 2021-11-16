@@ -1,6 +1,6 @@
 ---
-title: "Is Null Or Empty"
-linkTitle: "Is Null Or Empty"
+title: "Is Text Null Or Empty"
+linkTitle: "Is Text Null Or Empty"
 description: "Checks if text is `null` or empty (i.e. `\"\"`)."
 ---
 
@@ -8,7 +8,7 @@ description: "Checks if text is `null` or empty (i.e. `\"\"`)."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Is.IsNullOrEmptyBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.IsText.IsTextNullOrEmptyBlock)</p>
 
 ## Description
 

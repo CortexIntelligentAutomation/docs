@@ -1,6 +1,6 @@
 ---
-title: "Is Empty Or Whitespace"
-linkTitle: "Is Empty Or Whitespace"
+title: "Is Text Empty Or Whitespace"
+linkTitle: "Is Text Empty Or Whitespace"
 description: "Checks if text is empty (i.e. `\"\"`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters)."
 ---
 
@@ -8,7 +8,7 @@ description: "Checks if text is empty (i.e. `\"\"`) or whitespace (i.e. `space`,
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Is.IsEmptyOrWhitespaceBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEmptyOrWhitespaceBlock)</p>
 
 ## Description
 
