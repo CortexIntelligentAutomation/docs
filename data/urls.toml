@@ -14,25 +14,25 @@
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
-                    MainDoc = "/docs/reference/blocks/exceptions/handle-block"
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-block"
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessage]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-message-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-message-block"
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessages]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-messages-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-messages-block"
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeName]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-type-name-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-name-block"
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block/handle-block-exception-matching-type-names-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-names-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleFlow]
-                    MainDoc = "/docs/reference/blocks/exceptions/handle-flow"
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-flow/handle-flow-exception-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-flow-exception-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleWorkspace]
-                    MainDoc = "/docs/reference/blocks/exceptions/handle-workspace"
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-workspace/handle-workspace-exception-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block"
             [Cortex.Reference.Blocks.FilesAndFolders]
                 MainDoc = "/docs/reference/blocks/files-and-folders/"
                 [Cortex.Reference.Blocks.FilesAndFolders.CheckFile]

@@ -1,18 +1,18 @@
 ---
-title: "Handle Flow Exception"
-linkTitle: "Handle Flow Exception"
-description: "Handles any unhandled exception within the Flow."
+title: "Handle Workspace Exception"
+linkTitle: "Handle Workspace Exception"
+description: "Handles any unhandled exception within its workspace."
 ---
 
-![Icon](/blocks/exceptions-handle-flow-block-icon.png)
+![Icon](/blocks/exceptions-handle-workspace-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Exceptions.HandleFlow.HandleFlowExceptionContainerBlock)</p>
+<p class="namespace">(Cortex.Blocks.Exceptions.HandleWorkspaceException.HandleWorkspaceExceptionBlock)</p>
 
 ## Description
 
-Handles any unhandled [Exception][Exception Property] within the Flow.
+Handles any unhandled [Exception][Exception Property] within its workspace.
 
 For more information, please see [Unhandled Exceptions][].
 
@@ -20,7 +20,7 @@ For more information, please see [Unhandled Exceptions][].
 
 ### Handle and save the Exception
 
-This example will handle any unhandled exception within the Flow; saving the exception to a variable, so the flow execution can use it to make decisions or take further action.
+This example will handle any unhandled exception within the block's workspace; saving the exception to a variable, so the flow execution can use it to make decisions or take further action.
 
 #### Properties
 
@@ -30,13 +30,13 @@ This example will handle any unhandled exception within the Flow; saving the exc
 
 #### Result
 
-The block will handle any unhandled exception within the Flow and save the exception to the `($)Exception` variable for use later in the flow execution.
+The block will handle any unhandled exception within the block's workspace and save the exception to the `($)Exception` variable for use later in the flow execution.
 
 ***
 
 ### Handle and discard the Exception
 
-This example will handle any unhandled exception within the Flow; not saving the exception to a variable, as the flow execution does not need it to make decisions or take further action.
+This example will handle any unhandled exception within the block's workspace; not saving the exception to a variable, as the flow execution does not need it to make decisions or take further action.
 
 #### Properties
 
@@ -46,7 +46,7 @@ This example will handle any unhandled exception within the Flow; not saving the
 
 #### Result
 
-The block will handle any unhandled exception within the Flow, but will not save the exception as the `($)_` variable indicates it is not needed and can be discarded.
+The block will handle any unhandled exception within the block's workspace, but will not save the exception as the `($)_` variable indicates it is not needed and can be discarded.
 
 For more infomation about using the built-in `($)_` variable, please see [Discarding Output Properties][].
 
@@ -60,7 +60,7 @@ The [Exception][Exception Property] that is handled.
 
 [Exception][Exception Property] can be any [Exception data type][Exception].
 
-By default, this property is assigned the built-in `($)_` variable, so the exception will be discarded. If the flow execution does need the exception, a variable can be assigned to save it in.
+If the flow execution does not need the exception, it can be discarded by assigning the built-in `($)_` variable.
 
 For more infomation about using the built-in `($)_` variable, please see [Discarding Output Properties][].
 
@@ -68,7 +68,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 |--------------------|---------------------------|
 | Data Type | [Dynamic][] |
 | Property Type | [Output][] |
-| Default Value | `($)_` meaning the exception will be discarded |
+| Default Value | `($)Exception` with no value |
 
 ## Exceptions
 
@@ -80,10 +80,8 @@ No exceptions are thrown by the block.
 
 The following restrictions apply to this block:
 
-* A flow cannot contain more than one [Handle Flow Exception][] block.
-* The [Handle Flow Exception][] block is not available on any palette.
-* The [Handle Flow Exception][] block cannot be copied.
-* The [Handle Flow Exception][] block cannot be deleted.
+* A workspace cannot contain more than one [Handle Workspace Exception][] block. If more than one is added to a workspace, it will be reported as a message when trying to debug the flow.
+* The [Handle Workspace Exception][] block will only handle the first unhandled exception within its workspace. This is to prevent infinite recursion within the flow. Subsequent unhandled exceptions are passed to the next relevant exception handling block. For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
 
 ### Unhandled Exceptions
 

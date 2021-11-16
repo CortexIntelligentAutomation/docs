@@ -8,7 +8,7 @@ description: "Handles any exception thrown by the block it is connected to that 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNamesBlock)</p>
+<p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingTypeNamesBlock)</p>
 
 ## Description
 

@@ -1,116 +1,116 @@
 ---
-title: "Handle Block Exception Matching Type Name"
-linkTitle: "Handle Block Exception Matching Type Name"
-description: "Handles any exception thrown by the block it is connected to that matches a specified type name."
+title: "Handle Block Exception Matching Message"
+linkTitle: "Handle Block Exception Matching Message"
+description: "Handles any exception thrown by the block it is connected to that matches a specified message."
 ---
 
 ![Icon](/blocks/exceptions-handle-block-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNameBlock)</p>
+<p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingMessageBlock)</p>
 
 ## Description
 
-Handles any [Exception][Exception Property] thrown by the block it is connected to that matches a specified [Type Name][TypeName Property].
+Handles any [Exception][Exception Property] thrown by the block it is connected to that matches a specified [Message][Message Property].
 
 ## Examples
 
-### Handle Exception matching Type Name and save the Exception
+### Handle Exception containing Message and save the Exception
 
-This example will handle any exception thrown by the block it is connected to that contains `"PropertyNull"` in its fully qualified `TypeName`; saving the exception to a variable, so the flow execution can use it to make decisions or take further action.
+This example will handle any exception thrown by the block it is connected to that contains `"'List' is null"` in its `Message` property; saving the exception to a variable, so the flow execution can use it to make decisions or take further action.
 
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of type names.
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of messages.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Type Name][TypeName Property] | `($)TypeName`, with value `"PropertyNull"` | `($)TypeName` is a variable of type [String][] |
+| [Message][Message Property] | `($)Message`, with value `"'List' is null"` | `($)Message` is a variable of type [String][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [Dynamic][] value |
 
 #### Result
 
-The block will handle any exception containing `"PropertyNull"` in its fully qualified `TypeName` and save the exception to the `($)Exception` variable for use later in the flow execution.
+The block will handle any exception containing `"'List' is null"` in its `Message` property and save the exception to the `($)Exception` variable for use later in the flow execution.
 
 E.g.
 
 If the List property of the Add Item At Beginning list block was set to null, it would throw a [PropertyNullException][] when executed.
 
-This exception's fully qualified `TypeName` is `"Cortex.Exceptions.Common.Property.PropertyNullException"`; therefore as we are checking for exceptions containing `"PropertyNull"` in their `TypeName`, this exception would be handled and saved to the `($)Exception` variable.
+This exception's `Message` property would be `"'List' is null; it must be provided with a non-null value.\r\nPlease click the HelpLink for more information on how to fix this."`; therefore as we are checking for exceptions containing `"'List' is null"` in their `Message`, this exception would be handled and saved to the `($)Exception` variable.
 
 ***
 
-### Handle Exception matching Type Name and discard the Exception
+### Handle Exception containing Message and discard the Exception
 
 This example is the same as the example above, except it does not save the exception to a variable, as the flow execution does not need it to make decisions or take further action.
 
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of type names.
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of messages.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Type Name][TypeName Property] | `($)TypeName`, with value `"PropertyNull"` | `($)TypeName` is a variable of type [String][] |
+| [Message][Message Property] | `($)Message`, with value `"'List' is null"` | `($)Message` is a variable of type [String][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Exception][Exception Property] | `($)_`, with no value | `($)_` is a built-in variable that indicates the flow execution does not need to save the exception, so it can be discarded |
 
 #### Result
 
-The block will handle any exception containing `"PropertyNull"` in its fully qualified `TypeName`, but will not save the exception as the `($)_` variable indicates it is not needed and can be discarded.
+The block will handle any exception containing `"'List' is null"` in its `Message` property, but will not save the exception as the `($)_` variable indicates it is not needed and can be discarded.
 
 E.g.
 
 If the List property of the Add Item At Beginning list block was set to null, it would throw a [PropertyNullException][] when executed.
 
-This exception's fully qualified `TypeName` is `"Cortex.Exceptions.Common.Property.PropertyNullException"`; therefore as we are checking for exceptions containing `"PropertyNull"` in their `TypeName`, this exception would be handled, but because the `($)_` variable is used it will not be saved to the `($)Exception` variable.
+This exception's `Message` property would be `"'List' is null; it must be provided with a non-null value.\r\nPlease click the HelpLink for more information on how to fix this."`; therefore as we are checking for exceptions containing `"'List' is null"` in their `Message`, this exception would be handled, but because the `($)_` variable is used it will not be saved to the `($)Exception` variable.
 
 For more infomation about using the built-in `($)_` variable, please see [Discarding Output Properties][].
 
 ***
 
-### Exception does not match Type Name
+### Exception does not contain Message
 
-This example will not handle an exception thrown by the block it is connected to that does not contain `"PropertyNull"` in its fully qualified `TypeName`; the exception will be passed to the next exception handling block.
+This example will not handle an exception thrown by the block it is connected to that does not contain `"'List' is null"` in its `Message` property; the exception will be passed to the next exception handling block.
 
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of type names.
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of messages.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Type Name][TypeName Property] | `($)TypeName`, with value `"PropertyNull"` | `($)TypeName` is a variable of type [String][] |
+| [Message][Message Property] | `($)Message`, with value `"'List' is null"` | `($)Message` is a variable of type [String][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that won't be set |
 
 #### Result
 
-The block will not handle any exception that does not contain `"PropertyNull"` in its fully qualified `TypeName`; instead the exception will be passed to the next exception handling block.
+The block will not handle any exception that does not contain `"'List' is null"` in its `Message` property; instead the exception will be passed to the next exception handling block.
 
 E.g.
 
 If the List property of the Add Item At Beginning list block was set to a read-only List, it would throw a [CannotModifyReadOnlyListException][] when executed.
 
-This exception's fully qualified `TypeName` is `"Cortex.Exceptions.Lists.CannotModifyReadOnlyListException"`; therefore as we are checking for exceptions containing `"PropertyNull"` in their `TypeName`, this exception would not be handled.
+This exception's `Message` property would be `"'List' cannot be modified because it's read-only.\r\nPlease click the HelpLink for more information on how to fix this."`; therefore as we are checking for exceptions containing `"'List' is null"` in their `Message`, this exception would not be handled.
 
 ***
 
 ## Properties
 
-### Type Name
+### Message
 
-The [Type Name][TypeName Property] the [Exception's][Exception Property] fully qualified `TypeName` must contain for this block to handle the [Exception][Exception Property].
+The [Message][Message Property] the [Exception's][Exception Property] `Message` property must contain for this block to handle the [Exception][Exception Property].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TypeName` with value `""` |
+| Default Value | `($)Message` with value `""` |
 
 ### Comparison Type
 
-The [Comparison Type][ComparisonType Property] specifying the rules used to determine whether [Type Name][TypeName Property] is contained in the [Exception's][Exception Property] fully qualified `TypeName`.
+The [Comparison Type][ComparisonType Property] specifying the rules used to determine whether [Message][Message Property] is contained in the [Exception's][Exception Property] `Message` property.
 
 For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
 
@@ -143,14 +143,16 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
-| [PropertyEmptyException][] | Thrown when [Type Name][TypeName Property] is empty (i.e. `""`). |
-| [PropertyNullException][] | Thrown when [Type Name][TypeName Property] is `null`. |
 
 ## Remarks
 
 ### Comparison Types
 
 For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+
+### Null or empty Message
+
+If [Message][Message Property] is `null` or empty (i.e. `""`), and the thrown exception's `Message` property is also `null` or empty (i.e. `""`), the exception will be handled and saved to the variable specified in the [Exception][Exception Property] property.
 
 ### Chaining Exception handling blocks
 
@@ -184,7 +186,7 @@ Sometimes when an exception occurs the flow execution wants to use the exception
 
 For more infomation about using the built-in `($)_` variable, please see [Discarding Output Properties][].
 
-[TypeName Property]: {{< ref "#type-name" >}}
+[Message Property]: {{< ref "#message" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Exception Property]: {{< ref "#exception" >}}
 
@@ -206,7 +208,6 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
-[PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}

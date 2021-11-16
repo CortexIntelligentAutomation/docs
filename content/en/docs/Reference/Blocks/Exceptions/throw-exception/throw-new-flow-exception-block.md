@@ -8,7 +8,7 @@ description: "Throws a new FlowException with the specified message, category, e
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Exceptions.Throw.ThrowNewFlowExceptionBlock)</p>
+<p class="namespace">(Cortex.Blocks.Exceptions.ThrowException.ThrowNewFlowExceptionBlock)</p>
 
 ## Description
 
