@@ -8,7 +8,7 @@ description: "Converts text to pascal case (e.g. `\"PascalCase\"`)."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToPascalCaseBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToPascalCaseBlock)</p>
 
 ## Description
 

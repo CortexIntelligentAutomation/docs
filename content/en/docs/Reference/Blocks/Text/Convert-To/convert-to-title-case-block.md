@@ -8,7 +8,7 @@ description: "Converts text to title case (e.g. `\"Title Case\"`)."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToTitleCaseBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToTitleCaseBlock)</p>
 
 ## Description
 

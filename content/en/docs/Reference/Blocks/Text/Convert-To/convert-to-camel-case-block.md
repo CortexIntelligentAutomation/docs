@@ -8,7 +8,7 @@ description: "Converts text to camel case (e.g. `\"camelCase\"`)."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToCamelCaseBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToCamelCaseBlock)</p>
 
 ## Description
 

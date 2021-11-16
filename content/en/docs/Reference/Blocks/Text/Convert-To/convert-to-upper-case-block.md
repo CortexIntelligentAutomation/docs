@@ -8,7 +8,7 @@ description: "Converts text to upper case (e.g. `\"UPPERCASE\"`)."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToUpperCaseBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToUpperCaseBlock)</p>
 
 ## Description
 

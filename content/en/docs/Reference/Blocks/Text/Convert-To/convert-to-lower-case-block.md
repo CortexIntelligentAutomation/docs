@@ -8,7 +8,7 @@ description: "Converts text to lower case (e.g. `\"lowercase\"`)."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Convert.ConvertToLowerCaseBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToLowerCaseBlock)</p>
 
 ## Description
 
