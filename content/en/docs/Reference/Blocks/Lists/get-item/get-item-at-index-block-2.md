@@ -8,7 +8,7 @@ description: "Gets the item at the specified index of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemAtIndexBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtIndexBlock`2)</p>
 
 ## Description
 

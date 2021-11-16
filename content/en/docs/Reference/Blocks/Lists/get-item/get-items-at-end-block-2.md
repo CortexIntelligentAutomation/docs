@@ -8,7 +8,7 @@ description: "Gets a count of items at the end of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemsAtEndBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtEndBlock`2)</p>
 
 ## Description
 

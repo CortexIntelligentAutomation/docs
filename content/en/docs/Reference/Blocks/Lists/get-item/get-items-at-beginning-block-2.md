@@ -8,7 +8,7 @@ description: "Gets a count of items at the beginning of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemsAtBeginningBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtBeginningBlock`2)</p>
 
 ## Description
 

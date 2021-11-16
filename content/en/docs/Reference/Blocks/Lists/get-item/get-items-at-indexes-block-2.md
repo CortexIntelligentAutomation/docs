@@ -8,7 +8,7 @@ description: "Gets the items at each of the specified indexes of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemsAtIndexesBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtIndexesBlock`2)</p>
 
 ## Description
 

@@ -8,7 +8,7 @@ description: "Gets the item at the beginning of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemAtBeginningBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtBeginningBlock`2)</p>
 
 ## Description
 

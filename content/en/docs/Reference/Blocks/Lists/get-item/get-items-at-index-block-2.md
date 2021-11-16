@@ -8,7 +8,7 @@ description: "Gets a count of items starting at the specified index of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemsAtIndexBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtIndexBlock`2)</p>
 
 ## Description
 

@@ -8,7 +8,7 @@ description: "Gets the item at the end of a List."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Get.GetItemAtEndBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtEndBlock`2)</p>
 
 ## Description
 
