@@ -1,35 +1,35 @@
 ---
-title: "Remove Items With Value"
-linkTitle: "Remove Items With Value"
-description: "Removes all items matching a value from a List."
+title: "Remove Items With Values"
+linkTitle: "Remove Items With Values"
+description: "Removes all items matching one of the specified values from a List."
 ---
 
 ![Icon](/blocks/lists-remove-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Remove.RemoveItemsWithValueBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsWithValuesBlock`2)</p>
 
 ## Description
 
-Removes all items matching a [Value][Value Property] from a [List][List Property].
+Removes all items matching one of the specified [Values][Values Property] from a [List][List Property].
 
 ## Examples
 
-### Remove all items matching a Value from an empty List
+### Remove all items matching one of the specified Values from an empty List
 
-This example will attempt to remove all items matching the value `1` from `[]`.
+This example will attempt to remove all items matching one of the values `[1, 2]` from `[]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-| [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
+| [Values][Values Property] | `($)Values`, with value `[1, 2]` | `($)Values` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; |
 
 #### Result
 
-Attempting to remove all items matching the value `1` from `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
+Attempting to remove all items matching one of the values `[1, 2]` from `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
 
 ```json
 []
@@ -37,23 +37,23 @@ Attempting to remove all items matching the value `1` from `[]` results in no op
 
 ***
 
-### Remove all items matching a Value from a List
+### Remove all items matching one of the specified Values from a List
 
-This example will attempt to remove all items matching the value `1` from `[1, 2, 3, 3, 2, 1]`.
+This example will attempt to remove all items matching one of the values `[1, 2]` from `[1, 2, 3, 3, 2, 1]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[1, 2, 3, 3, 2, 1]` | `($)List` is a variable of type [IList][]&lt;[Int32][]&gt; |
-| [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
+| [Values][Values Property] | `($)Values`, with value `[1, 2]` | `($)Values` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; | |
 
 #### Result
 
-Attempting to remove all items matching the value `1` from `[1, 2, 3, 3, 2, 1]` results in the variable `($)List` being updated to the following:
+Attempting to remove all items matching one of the values `[1, 2]` from `[1, 2, 3, 3, 2, 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-[2, 3, 3, 2]
+[3, 3]
 ```
 
 ***
@@ -64,7 +64,7 @@ Attempting to remove all items matching the value `1` from `[1, 2, 3, 3, 2, 1]` 
 
 The [List][List Property] to remove all matching items from.
 
-Items are considered matching if they have the specified [Value][Value Property].
+Items are considered matching if they have one of the specified [Values][Values Property].
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items that can be removed from the [List][List Property].
   
@@ -74,17 +74,17 @@ Items are considered matching if they have the specified [Value][Value Property]
 | Property Type | [InputOutput][] |
 | Default Value | `($)List` with value `[]` |
 
-### Value
+### Values
 
-The [Value][Value Property] the items to remove must match.
+The [Values][Values Property] the items to remove must match one of.
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [TItem][] |
+| Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Default Value | `($)Values` with value `[]` |
 
 ## Exceptions
 
@@ -93,8 +93,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [List][List Property] only accepts non-nullable value types. |
-| [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
+| [PropertyNullException][] | Thrown when [List][List Property] or [Values][Values Property] is `null`. |
 
 ## Remarks
 
@@ -106,9 +105,17 @@ For information and examples of how it is determined whether an item matches a s
 
 If [List][List Property] is empty (i.e. `[]`) there is nothing to remove, so no operation is performed.
 
-### No items matching Value
+### Empty Values
 
-If [List][List Property] does not contain items matching the specified [Value][Value Property], there is nothing to remove, so no operation is performed.
+If [Values][Values Property] is empty (i.e. `[]`) there are no values to match, therefore nothing can be removed and no operation is performed.
+
+### No items matching a specified value in Values
+
+If [List][List Property] does not contain items matching one of the specified [Values][Values Property], there is nothing to remove for that value.
+
+### No items matching Values
+
+If [List][List Property] does not contain items matching any of the specified [Values][Values Property], there is nothing to remove, so no operation is performed.
 
 ### Defining lists using literal syntax
 
@@ -123,7 +130,7 @@ For information about how to define lists using expression syntax, see [List Exp
 For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
 
 [List Property]: {{< ref "#list" >}}
-[Value Property]: {{< ref "#value" >}}
+[Values Property]: {{< ref "#values" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
@@ -138,8 +145,8 @@ For information about the different types of lists, including those that can con
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
 [Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}

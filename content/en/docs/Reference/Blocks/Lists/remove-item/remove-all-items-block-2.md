@@ -1,24 +1,24 @@
 ---
-title: "Remove Item At End"
-linkTitle: "Remove Item At End"
-description: "Removes the item at the end of a List."
+title: "Remove All Items"
+linkTitle: "Remove All Items"
+description: "Removes all items from a List."
 ---
 
 ![Icon](/blocks/lists-remove-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Remove.RemoveItemAtEndBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveAllItemsBlock`2)</p>
 
 ## Description
 
-Removes the item at the end of a [List][List Property].
+Removes all items from a [List][List Property].
 
 ## Examples
 
-### Remove the Item at the end of an empty List
+### Remove all items from an empty List
 
-This example will attempt to remove the item at the end of `[]`.
+This example will attempt to remove all items from `[]`.
 
 #### Properties
 
@@ -28,7 +28,7 @@ This example will attempt to remove the item at the end of `[]`.
 
 #### Result
 
-Attempting to remove the item at the end of `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
+Attempting to remove all items from `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
 
 ```json
 []
@@ -36,9 +36,9 @@ Attempting to remove the item at the end of `[]` results in no operation, as the
 
 ***
 
-### Remove the Item at the end of a List
+### Remove all items from a List
 
-This example will remove the item at the end of `["Some Text", 1]`.
+This example will remove all items from `["Some Text", 1]`.
 
 #### Properties
 
@@ -48,10 +48,10 @@ This example will remove the item at the end of `["Some Text", 1]`.
 
 #### Result
 
-Removing the item at the end of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
+Removing all items from `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-["Some Text"]
+[]
 ```
 
 ***
@@ -60,7 +60,7 @@ Removing the item at the end of `["Some Text", 1]` results in the variable `($)L
 
 ### List
 
-The [List][List Property] where the item is removed from.  
+The [List][List Property] where all items are removed from.  
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items that can be removed from the [List][List Property].
   

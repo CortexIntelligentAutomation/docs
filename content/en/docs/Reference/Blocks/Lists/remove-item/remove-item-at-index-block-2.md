@@ -1,34 +1,35 @@
 ---
-title: "Remove Item At Beginning"
-linkTitle: "Remove Item At Beginning"
-description: "Removes the item at the beginning of a List."
+title: "Remove Item At Index"
+linkTitle: "Remove Item At Index"
+description: "Removes the item at the specified index of a List."
 ---
 
 ![Icon](/blocks/lists-remove-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Remove.RemoveItemAtBeginningBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemAtIndexBlock`2)</p>
 
 ## Description
 
-Removes the item at the beginning of a [List][List Property].
+Removes the item at the specified [Index][Index Property] of a [List][List Property].
 
 ## Examples
 
-### Remove the Item at the beginning of an empty List
+### Remove the Item at the first Index (i.e. `0`) of an empty List
 
-This example will attempt to remove the item at the beginning of `[]`.
+This example will attempt to remove the item at index `0` of `[]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
+| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
 #### Result
 
-Attempting to remove the item at the beginning of `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
+Attempting to remove the item at index `0` of `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
 
 ```json
 []
@@ -36,22 +37,44 @@ Attempting to remove the item at the beginning of `[]` results in no operation, 
 
 ***
 
-### Remove the Item at the beginning of a List
+### Remove the Item at the first Index (i.e. `0`) of a List
 
-This example will remove the item at the beginning of `["Some Text", 1]`.
+This example will remove the item at index `0` of `["Some Text", 1]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `["Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
+| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
 #### Result
 
-Removing the item at the beginning of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
+Removing the item at index `0` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
 [1]
+```
+
+***
+
+### Remove the Item at the last Index (i.e. Index equals count of items - `1`) of a List
+
+This example will remove the item at index `1` of `["Some Text", 1]`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [List][List Property] | `($)List`, with value `["Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
+| [Index][Index Property] | `($)Index`, with value `1` | `($)Index` is a variable of type [Int32][] |
+
+#### Result
+
+Remove the item at index `1` of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
+
+```json
+["Some Text"]
 ```
 
 ***
@@ -70,6 +93,20 @@ The [List][List Property] where the item is removed from.
 | Property Type | [InputOutput][] |
 | Default Value | `($)List` with value `[]` |
 
+### Index
+
+The [Index][Index Property] to remove the item at.
+
+Valid values are between and including `0` and the total count of items in the [List][List Property] - `1`.
+
+For information about what an index is, please see [Indexes][].  
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [Int32][] |
+| Property Type | [Input][] |
+| Default Value | `($)Index` with value `0` |
+
 ## Exceptions
 
 The exceptions thrown by the block can be found below:
@@ -78,12 +115,9 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
 | [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
+| [PropertyValueOutOfRangeException][] | Thrown when [Index][Index Property] is out of the range of the list indexes. Valid indexes are between and including `0` and the count of items in the [List][List Property] - `1`. |
 
 ## Remarks
-
-### Empty List
-
-If [List][List Property] is empty (i.e. `[]`) there is nothing to remove, so no operation is performed.
 
 ### Defining lists using literal syntax
 
@@ -98,7 +132,11 @@ For information about how to define lists using expression syntax, see [List Exp
 For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
 
 [List Property]: {{< ref "#list" >}}
+[Index Property]: {{< ref "#index" >}}
 
+[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+
+[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 
 [List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
@@ -109,6 +147,8 @@ For information about the different types of lists, including those that can con
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
 [Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}

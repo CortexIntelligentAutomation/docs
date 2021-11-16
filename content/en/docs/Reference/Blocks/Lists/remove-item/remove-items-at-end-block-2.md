@@ -1,39 +1,38 @@
 ---
-title: "Remove Items At Index"
-linkTitle: "Remove Items At Index"
-description: "Removes a count of items starting at the specified index of a List."
+title: "Remove Items At End"
+linkTitle: "Remove Items At End"
+description: "Removes a count of items from the end of a List."
 ---
 
 ![Icon](/blocks/lists-remove-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Remove.RemoveItemsAtIndexBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtEndBlock`2)</p>
 
 ## Description
 
-Removes the specified [Count][Count Property] of items starting at the given [Index][Index Property] of a [List][List Property].
+Removes the specified [Count][Count Property] of items from the end of a [List][List Property].
 
 ## Examples
 
-### Remove Count of items at the first Index (i.e. `0`) of a List
+### Remove Count of items from the end of a List
 
-This example will remove `2` items at index `0` of `["Some Text", 1, "Some More Text", 2]`.
+This example will remove `2` items from the end of `["Some Text", 1, "Some More Text", 2]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `["Some Text", 1, "Some More Text", 2]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 | [Count][Count Property] | `($)Count`, with value `2` | `($)Count` is a variable of type [Int32][] |
 
 #### Result
 
-Removing `2` items at index `0` of `["Some Text", 1, "Some More Text", 2]` results in the variable `($)List` being updated to the following:
+Removing `2` items from the end of `["Some Text", 1, "Some More Text", 2]` results in the variable `($)List` being updated to the following:
 
 ```json
-["Some More Text", 2]
+["Some Text", 1]
 ```
 
 ***
@@ -51,20 +50,6 @@ The [List][List Property] where the items are removed from.
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
 | Default Value | `($)List` with value `[]` |
-
-### Index
-
-The [Index][Index Property] to remove the [Count][Count Property] of items at.  This is an inclusive index, which means the item at the specified index will be included.
-
-Valid values are between and including `0` and the total count of items in the [List][List Property] - `1`.
-
-For information about what an index is, please see [Indexes][].  
-
-| | |
-|--------------------|---------------------------|
-| Data Type | [Int32][] |
-| Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
 
 ### Count
 
@@ -84,18 +69,13 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
 | [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
-| [PropertyValueOutOfRangeException][] | Thrown when [Index][Index Property] is less than `0` or greater than the count of items in [List][List Property] - `1`. |
-| | Thrown when [Index][Index Property] + [Count][Count Property] is greater than the count of items in the [List][List Property] - `1`. |
+| [PropertyValueOutOfRangeException][] | Thrown when [Count][Count Property] is greater than the count of items in the [List][List Property] - `1`. |
 
 ## Remarks
 
-### Index is inclusive
-
-The [Index][Index Property] is an inclusive [index][Indexes], which means the item at the index will be included in the removed items.
-
 ### Negative Count
 
-If [Count][Count Property] is negative all items after and including the specified [Index][Index property] in the [List][List Property] are removed.
+If [Count][Count Property] is negative all items in the [List][List Property] are removed.
 
 ### Zero Count
 
@@ -114,10 +94,7 @@ For information about how to define lists using expression syntax, see [List Exp
 For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
 
 [List Property]: {{< ref "#list" >}}
-[Index Property]: {{< ref "#index" >}}
 [Count Property]: {{< ref "#count" >}}
-
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
 
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}

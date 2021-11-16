@@ -1,24 +1,24 @@
 ---
-title: "Remove Duplicate Items"
-linkTitle: "Remove Duplicate Items"
-description: "Removes duplicate items from a List."
+title: "Remove Item At Beginning"
+linkTitle: "Remove Item At Beginning"
+description: "Removes the item at the beginning of a List."
 ---
 
 ![Icon](/blocks/lists-remove-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Remove.RemoveDuplicateItemsBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemAtBeginningBlock`2)</p>
 
 ## Description
 
-Removes duplicate items from a [List][List Property].
+Removes the item at the beginning of a [List][List Property].
 
 ## Examples
 
-### Remove duplicate items from an empty List
+### Remove the Item at the beginning of an empty List
 
-This example will attempt to remove duplicate items from `[]`.
+This example will attempt to remove the item at the beginning of `[]`.
 
 #### Properties
 
@@ -28,7 +28,7 @@ This example will attempt to remove duplicate items from `[]`.
 
 #### Result
 
-Attempting to remove duplicate items from `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
+Attempting to remove the item at the beginning of `[]` results in no operation, as there is nothing to remove. Therefore, the variable `($)List` remains:
 
 ```json
 []
@@ -36,9 +36,9 @@ Attempting to remove duplicate items from `[]` results in no operation, as there
 
 ***
 
-### Remove duplicate items from a List without duplicates
+### Remove the Item at the beginning of a List
 
-This example will attempt to remove duplicate items from `["Some Text", 1]`.
+This example will remove the item at the beginning of `["Some Text", 1]`.
 
 #### Properties
 
@@ -48,30 +48,10 @@ This example will attempt to remove duplicate items from `["Some Text", 1]`.
 
 #### Result
 
-Attempting to remove duplicate items from `["Some Text", 1]` results in no operation, as there are no duplicates to remove. Therefore, the variable `($)List` remains:
+Removing the item at the beginning of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
 
 ```json
-["Some Text", 1]
-```
-
-***
-
-### Remove duplicate items from a List containing duplicates
-
-This example will remove duplicate items from `["Some Text", 1, "Some Text", 1]`.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [List][List Property] | `($)List`, with value `["Some Text", 1, "Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-
-#### Result
-
-Removing duplicate items from `["Some Text", 1, "Some Text", 1]` results in the second occurrences of `"Some Text"` and `1` being removed; with the variable `($)List` being updated to the following:
-
-```json
-["Some Text", 1]
+[1]
 ```
 
 ***
@@ -80,11 +60,9 @@ Removing duplicate items from `["Some Text", 1, "Some Text", 1]` results in the 
 
 ### List
 
-The [List][List Property] where duplicate items are removed from.  
+The [List][List Property] where the item is removed from.  
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items that can be removed from the [List][List Property].
-
-For information and examples of how it is determined whether two items are considered the same, please see [Object Equality][].
   
 | | |
 |--------------------|---------------------------|
@@ -107,14 +85,6 @@ The exceptions thrown by the block can be found below:
 
 If [List][List Property] is empty (i.e. `[]`) there is nothing to remove, so no operation is performed.
 
-### List with no duplicates
-
-If [List][List Property] does not contain duplicates there is nothing to remove, so no operation is performed.
-
-### Which duplicates are removed?
-
-If [List][List Property] contains duplicates, the first occurrences of the duplicated items are kept; all other occurrences are removed.
-
 ### Defining lists using literal syntax
 
 For information about how to define lists using literal syntax, see [List Literals][].
@@ -130,8 +100,6 @@ For information about the different types of lists, including those that can con
 [List Property]: {{< ref "#list" >}}
 
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-
-[Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
 [List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
 [List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
