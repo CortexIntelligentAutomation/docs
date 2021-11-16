@@ -8,7 +8,7 @@ description: "Splits text into a list of String values, using the given separato
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Split.SplitTextBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.SplitText.SplitTextBlock)</p>
 
 ## Description
 
