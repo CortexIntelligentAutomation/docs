@@ -8,7 +8,7 @@ description: "Removes text between the specified start index and end index of a 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Remove.RemoveTextBetweenIndexesBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextBetweenIndexesBlock)</p>
 
 ## Description
 

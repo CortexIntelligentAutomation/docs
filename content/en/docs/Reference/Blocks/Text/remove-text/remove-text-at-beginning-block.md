@@ -8,7 +8,7 @@ description: "Removes a length of text from the beginning of a given text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Remove.RemoveTextAtBeginningBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtBeginningBlock)</p>
 
 ## Description
 

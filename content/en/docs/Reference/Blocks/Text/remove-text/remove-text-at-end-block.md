@@ -8,7 +8,7 @@ description: "Removes a length of text from the end of a given text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Remove.RemoveTextAtEndBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtEndBlock)</p>
 
 ## Description
 
