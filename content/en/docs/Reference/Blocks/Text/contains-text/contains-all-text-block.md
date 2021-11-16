@@ -1,24 +1,24 @@
 ---
-title: "Contains Text"
-linkTitle: "Contains Text"
-description: "Checks if text contains another text."
+title: "Contains All Text"
+linkTitle: "Contains All Text"
+description: "Checks if text contains all of the texts in a given set of texts."
 ---
 
 ![Icon](/blocks/text-contains-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Contains.ContainsTextBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.ContainsText.ContainsAllTextBlock)</p>
 
 ## Description
 
-Checks if [Text][Text Property] contains [Text To Find][TextToFind Property].
+Checks if [Text][Text Property] contains all of the texts in a given set of [Texts To Find][TextsToFind Property].
 
 ## Examples
 
-### Text contains Text To Find
+### Text contains all of the texts in Texts To Find
 
-This example will check whether `"The quick brown fox jumps over the lazy dog"` contains the text `"quick brown fox"`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains all of the texts in `["The", "quick", "brown", "fox"]`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -27,13 +27,13 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `"quick brown fox"` | `($)TextToFind` is a variable of type [String][] |
+| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["The", "quick", "brown", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Contains Text][ContainsText Property] | `($)ContainsText`, with no value | `($)ContainsText` is a variable that will be set to a [Boolean][] value |
+| [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog"` contains the text `"quick brown fox"`. Therefore, the variable `($)ContainsText` will be updated to the following:
+`"The quick brown fox jumps over the lazy dog"` contains all of the texts in `["The", "quick", "brown", "fox"]`. Therefore, the variable `($)ContainsAllText` will be updated to the following:
 
 ```json
 true
@@ -41,9 +41,9 @@ true
 
 ***
 
-### Text does not contain Text To Find
+### Text does not contain all of the texts in Texts To Find
 
-This example will check whether `"The quick brown fox jumps over the lazy dog"` contains the text `"quick red fox"`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains all of the texts in `["the", "slow", "brown", "fox"]`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -52,13 +52,13 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `"quick red fox"` | `($)TextToFind` is a variable of type [String][] |
+| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["the", "slow", "brown", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Contains Text][ContainsText Property] | `($)ContainsText`, with no value | `($)ContainsText` is a variable that will be set to a [Boolean][] value |
+| [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog"` does not contain `"quick red fox"`. Therefore, the variable `($)ContainsText` will be updated to the following:
+`"The quick brown fox jumps over the lazy dog"` does not contain all of the texts in `["the", "slow", "brown", "fox"]`; `"slow"` is missing, and `"the"` does not match `"The"` as the specified [Comparison Type][ComparisonType Property] uses case-sensitive matching. Therefore, the variable `($)ContainsAllText` will be updated to the following:
 
 ```json
 false
@@ -70,7 +70,7 @@ false
 
 ### Text
 
-The [Text][Text Property] to check whether it contains [Text To Find][TextToFind Property].
+The [Text][Text Property] to check whether it contains all of the texts in the given set of [Texts To Find][TextsToFind Property].
 
 | | |
 |--------------------|---------------------------|
@@ -78,19 +78,19 @@ The [Text][Text Property] to check whether it contains [Text To Find][TextToFind
 | Property Type | [Input][] |
 | Default Value | `($)Text` with value `""` |
 
-### Text To Find
+### Texts To Find
 
-The [Text To Find][TextToFind Property] in [Text][Text Property].
+The set of [Texts To Find][TextsToFind Property] to check are all contained in [Text][Text Property].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [IEnumerable][]&lt;[String][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)TextToFind` with value `""` |
+| Default Value | `($)TextsToFind` with value `[]` |
 
 ### Comparison Type
 
-The [Comparison Type][ComparisonType Property] specifying the rules used to determine whether [Text To Find][TextToFind Property] is contained in [Text][Text Property]
+The [Comparison Type][ComparisonType Property] specifying the rules used to determine whether each text in [Texts To Find][TextsToFind Property] is contained in [Text][Text Property]
 
 For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
 
@@ -100,17 +100,17 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Property Type | [Input][] |
 | Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
 
-### Contains Text
+### Contains All Text
 
-The result of the contains text check.
+The result of the contains all text check.
 
-If [Text To Find][TextToFind Property] is contained in [Text][Text Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
+If all of the texts in [Texts To Find][TextsToFind Property] are contained in [Text][Text Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
-| Default Value | `($)ContainsText` with no value |
+| Default Value | `($)ContainsAllText` with no value |
 
 ## Exceptions
 
@@ -119,6 +119,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
+| [PropertyNullException][] | Thrown when [Texts To Find][TextsToFind Property] is `null`. |
 
 ## Remarks
 
@@ -128,16 +129,16 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the  [Contains Text][ContainsText Property] property is set to `false`.
+If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
-### Null or empty Text To Find
+### Null or empty Texts To Find
 
-If [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), the variable specified in the [Contains Text][ContainsText Property] property is set to `false`.
+If [Texts To Find][TextsToFind Property] is empty or contains any `null` or empty (i.e. `""`) text, the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
 [Text Property]: {{< ref "#text" >}}
-[TextToFind Property]: {{< ref "#text-to-find" >}}
+[TextsToFind Property]: {{< ref "#texts-to-find" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
-[ContainsText Property]: {{< ref "#contains-text" >}}
+[ContainsAllText Property]: {{< ref "#contains-all-text" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
@@ -147,7 +148,10 @@ If [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), the varia
 [Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
 
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+
+[PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
