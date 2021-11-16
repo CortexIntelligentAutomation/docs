@@ -8,7 +8,7 @@ description: "Adds text at the end of another text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Add.AddTextAtEndBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAtEndBlock)</p>
 
 ## Description
 

@@ -1,24 +1,24 @@
 ---
-title: "Add Text Before Index"
-linkTitle: "Add Text Before Index"
-description: "Adds text to another text before the specified index."
+title: "Add Text At Beginning"
+linkTitle: "Add Text At Beginning"
+description: "Adds text at the beginning of another text."
 ---
 
 ![Icon](/blocks/text-add-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Add.AddTextBeforeIndexBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAtBeginningBlock)</p>
 
 ## Description
 
-Adds [Text To Add][TextToAdd Property] to another [Text][Text Property] before the specified [Index][Index Property].
+Adds [Text To Add][TextToAdd Property] at the beginning of another [Text][Text Property].
 
 ## Examples
 
-### Add Text To Add to another Text before the given Index
+### Add Text To Add at the beginning of another Text
 
-This example will add `"|"` before `"A"` (which is at index `0`) in `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
+This example will add `"|"` at the beginning of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 
 #### Properties
 
@@ -26,11 +26,10 @@ This example will add `"|"` before `"A"` (which is at index `0`) in `"ABCDEFGHIJ
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"` | `($)Text` is a variable of type [String][] |
 | [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
-| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
 #### Result
 
-`"A"` is at index `0` in `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`. Therefore, adding `"|"` before index `0` results in the variable `($)Text` being updated to the following:
+Adding `"|"` at the beginning of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"` results in the variable `($)Text` being updated to the following:
 
 ```json
 "|ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -38,9 +37,30 @@ This example will add `"|"` before `"A"` (which is at index `0`) in `"ABCDEFGHIJ
 
 ***
 
-### Add null or empty Text To Add to another Text before the given Index
+### Add Text To Add at the beginning of a null or empty Text
 
-This example will try to add `null` or `""` before `"A"` (which is at index `0`) in `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
+This example will try to add `"|"` at the beginning of `null` or `""`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `null` or `""` | `($)Text` is a variable of type [String][] |
+| [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `"\|"` | `($)TextToAdd` is a variable of type [String][] |
+
+#### Result
+
+Adding `"|"` to `null` or `""` results in the variable `($)Text` being updated to the following:
+
+```json
+"|"
+```
+
+***
+
+### Add null or empty Text To Add at the beginning of another Text
+
+This example will try to add `null` or `""` at the beginnning of `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`.
 
 #### Properties
 
@@ -48,7 +68,6 @@ This example will try to add `null` or `""` before `"A"` (which is at index `0`)
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"` | `($)Text` is a variable of type [String][] |
 | [Text To Add][TextToAdd Property] | `($)TextToAdd`, with value `null` or `""` | `($)TextToAdd` is a variable of type [String][] |
-| [Index][Index Property] | `($)Index`, with value `0` | `($)Index` is a variable of type [Int32][] |
 
 #### Result
 
@@ -64,8 +83,8 @@ Adding `null` or `""` performs no operation as there is nothing to add, so the v
 
 ### Text
 
-The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.
-
+The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.  
+  
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
@@ -74,7 +93,7 @@ The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.
 
 ### Text To Add
 
-The [Text To Add][TextToAdd Property] to the [Text][Text Property] before the given [Index][Index Property].
+The [Text To Add][TextToAdd Property] at the beginning of the [Text][Text Property].
 
 | | |
 |--------------------|---------------------------|
@@ -82,28 +101,15 @@ The [Text To Add][TextToAdd Property] to the [Text][Text Property] before the gi
 | Property Type | [Input][] |
 | Default Value | `($)TextToAdd` with value `""` |
 
-### Index
-
-The [Index][Index Property] to add the [Text To Add][TextToAdd Property] before.  
-
-For information about what an index is, please see [Indexes].  
-
-| | |
-|--------------------|---------------------------|
-| Data Type | [Int32][] |
-| Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
-
 ## Exceptions
 
-The exceptions thrown by the block can be found below:
-
-| Name     | Description |
-|----------|----------|
-| [PropertyValueOutOfRangeException][] | Thrown when [Text][Text Property] is `null` or empty (i.e. `""`). |
-| | Thrown when [Index][Index Property] is less than zero or greater than the length of [Text][Text Property] - `1`. |
+No exceptions are thrown by the block.
 
 ## Remarks
+
+### Null or empty Text
+
+If [Text][Text Property] is `null` or empty (i.e. `""`) it is replaced with the [Text To Add][TextToAdd Property]. See [Example][NullOrEmptyText Example] above.
 
 ### Null or empty Text To Add
 
@@ -117,16 +123,11 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 
 [Text Property]: {{< ref "#text" >}}
 [TextToAdd Property]: {{< ref "#text-to-add" >}}
-[Index Property]: {{< ref "#index" >}}
 
-[NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-to-another-text-before-the-given-index" >}}
+[NullOrEmptyText Example]: {{< ref "#add-text-to-add-at-the-beginning-of-a-null-or-empty-text" >}}
+[NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-at-the-beginning-of-another-text" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
-
-[PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
-
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}

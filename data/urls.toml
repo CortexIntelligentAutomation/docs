@@ -72,10 +72,10 @@
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
-                MainDoc = "/docs/reference/blocks/text/add/"
+                MainDoc = "/docs/reference/blocks/text/add-text/"
                     [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
-                    MainDoc = "/docs/reference/blocks/text/add/add-text-at-beginning-block/"
-                    Examples = "/docs/reference/blocks/text/add/add-text-at-beginning-block/#examples"
+                    MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
+                    Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.DateAndTimeFormats]
                 MainDoc = "/docs/reference/concepts/date-and-time-formats/"

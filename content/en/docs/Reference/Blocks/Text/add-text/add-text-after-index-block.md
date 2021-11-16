@@ -8,7 +8,7 @@ description: "Adds text to another text after a given index."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Add.AddTextAfterIndexBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAfterIndexBlock)</p>
 
 ## Description
 
