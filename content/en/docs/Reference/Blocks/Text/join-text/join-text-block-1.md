@@ -8,7 +8,7 @@ description: "Joins a set of values together as text, using the given separator 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Join.JoinTextBlock`1)</p>
+<p class="namespace">(Cortex.Blocks.Text.JoinText.JoinTextBlock`1)</p>
 
 ## Description
 
