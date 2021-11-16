@@ -1,36 +1,36 @@
 ---
-title: "Contains Item With Value"
-linkTitle: "Contains Item With Value"
-description: "Checks if a List contains at least one item matching the specified value."
+title: "Contains Items With Values"
+linkTitle: "Contains Items With Values"
+description: "Checks if a List contains at least one item matching each of the specified values."
 ---
 
 ![Icon](/blocks/lists-contains-block-icon.png)
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.Contains.ContainsItemWithValueBlock`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.ContainsItem.ContainsItemsWithValuesBlock`2)</p>
 
 ## Description
 
-Checks if [List][List Property] contains at least one item matching [Value][Value Property].
+Checks if [List][List Property] contains at least one item matching each of the specified [Values][Values Property].
 
 ## Examples
 
-### List contains item with Value
+### List contains items with Values
 
-This example will check whether `[1, 2, 3, 3, 2, 1]` contains the value `1`.
+This example will check whether `[1, 2, 3, 3, 2, 1]` contains at least one item matching each of the values in `[1, 2, 3]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[1, 2, 3, 3, 2, 1]` | `($)List` is a variable of type [IList][]&lt;[Int32][]&gt; |
-| [Value][Value Property] | `($)Value`, with value `1` | `($)Value` is a variable of type [Int32][] |
-| [Contains Item][ContainsItem Property] | `($)ContainsItem`, with no value | `($)ContainsItem` is a variable that will be set to a [Boolean][] value |
+| [Values][Values Property] | `($)Values`, with value `[1, 2, 3]` | `($)Values` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; |
+| [Contains Items][ContainsItems Property] | `($)ContainsItems`, with no value | `($)ContainsItems` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`[1, 2, 3, 3, 2, 1]` contains two items with the value `1`. Therefore, the variable `($)ContainsItem` will be updated to the following:
+`[1, 2, 3, 3, 2, 1]` contains at least one item matching each of the values in `[1, 2, 3]`; it contains two items with the value `1`, two items with the value `2` and two items with the value `3`. Therefore, the variable `($)ContainsItems` will be updated to the following:
 
 ```json
 true
@@ -38,21 +38,21 @@ true
 
 ***
 
-### List does not contain item with Value
+### List does not contain items with Values
 
-This example will check whether `[1, 2, 3, 3, 2, 1]` contains the value `10`.
+This example will check whether `[1, 2, 3, 3, 2, 1]` contains at least one item matching each of the values in `[1, 2, 3, 10]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [List][List Property] | `($)List`, with value `[1, 2, 3, 3, 2, 1]` | `($)List` is a variable of type [IList][]&lt;[Int32][]&gt; |
-| [Value][Value Property] | `($)Value`, with value `10` | `($)Value` is a variable of type [Int32][] |
-| [Contains Item][ContainsItem Property] | `($)ContainsItem`, with no value | `($)ContainsItem` is a variable that will be set to a [Boolean][] value |
+| [Values][Values Property] | `($)Values`, with value `[1, 2, 3, 10]` | `($)Values` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; |
+| [Contains Items][ContainsItems Property] | `($)ContainsItems`, with no value | `($)ContainsItems` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`[1, 2, 3, 3, 2, 1]` does not contain any items with the value `10`. Therefore, the variable `($)ContainsItem` will be updated to the following:
+`[1, 2, 3, 3, 2, 1]` does not contain at least one item matching each of the values in `[1, 2, 3, 10]`; it contains two items with the value `1`, two items with the value `2` and two items with the value `3`, but no items with the value `10`. Therefore, the variable `($)ContainsItems` will be updated to the following:
 
 ```json
 false
@@ -64,9 +64,9 @@ false
 
 ### List
 
-The [List][List Property] to check whether it contains at least one item matching the specified [Value][Value Property].
+The [List][List Property] to check whether it contains at least one item matching each of the specified [Values][Values Property].
 
-Items are considered matching if they have the specified [Value][Value Property].
+Items are considered matching if they have a value matching one of the specified [Values][Values Property].
 
 [List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items in the [List][List Property].
   
@@ -76,29 +76,29 @@ Items are considered matching if they have the specified [Value][Value Property]
 | Property Type | [Input][] |
 | Default Value | `($)List` with value `[]` |
 
-### Value
+### Values
 
-The [Value][Value Property] to check for matching items.
+The [Values][Values Property] to check for matching items.
 
 For information and examples of how it is determined whether an item matches a specified value, please see [Object Equality][].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [TItem][] |
+| Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Default Value | `($)Values` with value `[]` |
 
-### Contains Item
+### Contains Items
 
-The result of the contains item check.
+The result of the contains items check.
 
-If [List][List Property] contains at least one item matching the specified [Value][Value Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
+If [List][List Property] contains at least one item matching each of the specified [Values][Values Property], the specified variable will be set to `true`, otherwise it will be set to `false`.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
-| Default Value | `($)ContainsItem` with no value |
+| Default Value | `($)ContainsItems` with no value |
 
 ## Exceptions
 
@@ -106,8 +106,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [List][List Property] only accepts non-nullable value types. |
-| [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
+| [PropertyNullException][] | Thrown when [List][List Property] or [Values][Values Property] are `null`. |
 
 ## Remarks
 
@@ -117,7 +116,11 @@ For information and examples of how it is determined whether an item matches a s
 
 ### Empty List
 
-If [List][List Property] is empty (i.e. `[]`), the variable specified in the [Contains Item][ContainsItem Property] property is set to `false`.
+If [List][List Property] is empty (i.e. `[]`), the variable specified in the [Contains Items][ContainsItems Property] property is set to `false`.
+
+### Empty Values
+
+If [Values][Values Property] is empty (i.e. `[]`), the variable specified in the [Contains Items][ContainsItems Property] property is set to `false`.
 
 ### Defining lists using literal syntax
 
@@ -132,8 +135,8 @@ For information about how to define lists using expression syntax, see [List Exp
 For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
 
 [List Property]: {{< ref "#list" >}}
-[Value Property]: {{< ref "#value" >}}
-[ContainsItem Property]: {{< ref "#contains-item" >}}
+[Values Property]: {{< ref "#values" >}}
+[ContainsItems Property]: {{< ref "#contains-items" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
@@ -147,8 +150,8 @@ For information about the different types of lists, including those that can con
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
