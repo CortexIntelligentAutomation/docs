@@ -8,7 +8,7 @@ description: "Finds and removes the specified occurrence of text from a given te
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Find.FindAndRemoveTextBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock)</p>
 
 ## Description
 
