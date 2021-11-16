@@ -8,7 +8,7 @@ description: "Gets the indexes of all occurrences of a text in another text."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Text.Get.GetIndexesOfTextBlock)</p>
+<p class="namespace">(Cortex.Blocks.Text.GetIndex.GetIndexesOfTextBlock)</p>
 
 ## Description
 
