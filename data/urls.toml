@@ -77,6 +77,26 @@
                     MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
                     Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
         [Cortex.Reference.Concepts]
+            [Cortex.Reference.Concepts.Fundamentals]
+                MainDoc = "/docs/reference/concepts/fundamentals/"
+                [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
+                    MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
+                [Cortex.Reference.Concepts.Fundamentals.Culture]
+                    MainDoc = "/docs/reference/concepts/fundamentals/culture/"
+                    InvariantCulture = "/docs/reference/concepts/fundamentals/culture/#invariant-culture"
+            [Cortex.Reference.Concepts.WorkingWithCollections]
+                MainDoc = "/docs/reference/concepts/collections/"
+            [Cortex.Reference.Concepts.WorkingWithDateAndTime]
+                MainDoc = "/docs/reference/concepts/date-and-time/"
+            [Cortex.Reference.Concepts.WorkingWithExceptions]
+                MainDoc = "/docs/reference/concepts/exceptions/"
+            [Cortex.Reference.Concepts.WorkingWithFilesAndFolders]
+                MainDoc = "/docs/reference/concepts/files-and-folders/"
+            [Cortex.Reference.Concepts.WorkingWithText]
+                MainDoc = "/docs/reference/concepts/text/"
+                [Cortex.Reference.Concepts.WorkingWithText.Formatting]
+                    MainDoc = "/docs/reference/concepts/text/formatting/"
+                    FormatParameters = "/docs/reference/concepts/text/formatting/#format-parameters"
             [Cortex.Reference.Concepts.DateAndTimeFormats]
                 MainDoc = "/docs/reference/concepts/date-and-time-formats/"
                 InvariantCulture = "/docs/reference/concepts/date-and-time-formats/#invariant-culture"
@@ -329,3 +349,4 @@
         MainDoc = "https://code.visualstudio.com/"
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
+    Byte = "https://en.wikipedia.org/wiki/Byte"
