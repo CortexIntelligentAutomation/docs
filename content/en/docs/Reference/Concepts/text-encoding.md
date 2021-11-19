@@ -18,3 +18,8 @@ TODO: How to define them/use them
             //      - Encoding encoding = new ASCIIEncoding();
             //      - Encoding encoding = Encoding.ASCII;
             
+TODO: https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction
+
+## Blocks that use Encoding
+
+TODO:

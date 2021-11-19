@@ -45,3 +45,10 @@ TODO: notes about ordinal and a worked through example
 [Ordinal]: {{< ref "#ordinal" >}}
 
 [StringComparison]: {{< url "MSDocs.DotNet.Api.System.StringComparison" >}}
+
+
+TODO: https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings 
+
+## Blocks that use Comparison Types
+
+TODO:

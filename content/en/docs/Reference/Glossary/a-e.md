@@ -13,15 +13,17 @@ Terms, words and phrases beginning with the letters A through E.
 
 ### Acceleration Program
 
-TODO
+TODO add link to urls.toml
+
+See https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program
 
 ### Agility
 
-TODO
+TODO: Probably remove
 
 ### API
 
-TODO
+An API (Application Programming Interface) is a set of functions that allows applications to access data from and interact with external systems, services or applications.
 
 ### Automate
 
@@ -33,7 +35,7 @@ Automation is a term for techniques, methods, systems or technologies that reduc
 
 ### Automation Lifecyle
 
-TODO
+TODO: Probably remove
 
 ## B
 
@@ -57,6 +59,12 @@ For a complete list of available blocks deployed with the platform, see [Referen
 
 For more detailed information about configuring blocks using block properties, see [Guides->Cortex Studio->Blocks->Configuring Blocks][TODO].
 
+### Byte
+
+A byte is a unit of information in computing that most commonly consists of eight [bits][Bit].
+
+See [Wikipedia][Byte (Wikipedia)] for more information.
+
 ## C
 
 ### C\#
@@ -77,10 +85,6 @@ camelCase is often used as a naming convention in programming languages such as 
 
 See also [PascalCase].
 
-### Capacity
-
-TODO
-
 ### Case-insensitive
 
 If something is case-insensitive, it means it ignores differences in case (i.e. `CASE` is considered equal to `case`).
@@ -99,7 +103,13 @@ Also see [Explicit Cast] for more information.
 
 ### Cloud
 
-TODO
+A global network of servers which are linked together and operate as a single ecosystem.
+
+Examples of publically available Cloud providers include:
+
+* Amazon AWS
+* Google Cloud Platform
+* Microsoft Azure
 
 ### Code
 
@@ -165,7 +175,7 @@ For more detailed information about data types, see [Reference->Data Types].
 
 The ability for [flow developers] to execute and interact with a [flow] step-by-step from within [Cortex Studio], so that they are able to identify and remove [errors] in the [flow's][flow] logic and actions.
 
-For more detailed information about debugging in Cortex Studio, see [Guides->Cortex Studio->Debugging][TODO].  
+For more detailed information about debugging in Cortex Studio, see [Guides->Cortex Studio->Debugging][TODO].
 
 ### Default Value
 
@@ -181,11 +191,13 @@ TODO
 
 ### Design Sprint
 
-TODO
+TODO add link to urls.toml
+
+See https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint
 
 ### Diagnostics
 
-TODO
+TODO Probably remove
 
 ### Dictionary
 
@@ -207,7 +219,7 @@ For more detailed information about the dynamic data type, see [Reference->Data 
 
 ### Efficiency
 
-TODO
+TODO Probably remove
 
 ### Empty
 
@@ -227,14 +239,6 @@ Something which is inaccurate or incorrect; a mistake.
 
 An example is intended to show [flow developers] how something works. Examples can be found near the top of every [block's][block] help page. See [examples] for the [Add Text At Beginning] block.
 
-### Execution
-
-When a [request] to start a [flow] is received by the [Cortex Evolution] [platform], an execution is created that represents that instance of the executing flow.
-
-There can be multiple executions of a flow running [concurrently][concurrent].
-
-For more detailed information about executions, see [Guides->Cortex Studio->Debugging->Executions][TODO].
-
 ### Exception
 
 An exception represents [errors] that occur during the [execution] of a [flow].
@@ -244,6 +248,14 @@ Exceptions are [data types][Data Type] that can be reasoned with during the exec
 For a complete list of available [blocks][block] that can be used to handle exceptions, see [Exception Blocks].
 
 For more detailed information about exceptions, see [Reference->Exceptions].
+
+### Execution
+
+When a [request] to start a [flow] is received by the [Cortex Evolution] [platform], an execution is created that represents that instance of the executing flow.
+
+There can be multiple executions of a flow running [concurrently][concurrent].
+
+For more detailed information about executions, see [Guides->Cortex Studio->Debugging->Executions][TODO].
 
 ### Explicit Cast
 
@@ -270,7 +282,7 @@ For more detailed information about expressions, see [Guides->Cortex Studio->Exp
 
 ### Expression Editor
 
-The Expression Editor is a web-based text editor that allows [flow developers] to use either  simple [expression] or more complex [code] as the value of a [block property].
+The Expression Editor is a web-based text editor that allows [flow developers] to use either simple [expression] or more complex [code] as the value of a [block property].
 
 It is based on the [Monaco Editor] used by [VS Code], and includes a rich set of features including:
 
@@ -282,6 +294,7 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 
 [Automate]: {{< ref "#automate" >}}
 [Automation]: {{< ref "#automation" >}}
+[Bit]: {{< ref "#bit" >}}
 [Block]: {{< ref "#block" >}}
 [Block Property]: {{< ref "#block-property" >}}
 [C#]: {{< ref "#c-1" >}}
@@ -349,3 +362,4 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [VS Code]: {{< url "VisualStudio.Code.MainDoc" >}}
 
 [Bit (Wikipedia)]: {{< url "Wikipedia.Bit" >}}
+[Byte (Wikipedia)]: {{< url "Wikipedia.Byte" >}}

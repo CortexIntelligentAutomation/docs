@@ -37,3 +37,17 @@ TODO: notes about invariant culture and a worked through example
 [Invariant Culture]: {{< ref "#invariant-culture" >}}
 
 [CultureInfo]: {{< url "MSDocs.DotNet.Api.System.Globalization.CultureInfo" >}}
+
+
+TODO: Working with Text - https://docs.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations    
+
+TODO: Working with Numbers - https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric
+
+TODO: WOrking with Files and Folders:
+
+* https://docs.microsoft.com/en-us/dotnet/standard/io/
+* https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats
+* https://docs.microsoft.com/en-us/dotnet/standard/io/handling-io-errors
+* https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks
+
+TODO: Security https://docs.microsoft.com/en-us/dotnet/standard/security/

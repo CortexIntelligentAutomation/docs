@@ -8,4 +8,4 @@ description: "This page gives information about the ISO 8601 Standard."
 
 ## Overview
 
-TODO: Overview/summary
+TODO Should this disappear and move to date time formats? If so, need to rework links

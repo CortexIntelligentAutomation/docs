@@ -25,3 +25,5 @@ https://docs.microsoft.com/en-us/dotnet/standard/io/
 https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0
 
 TODO: Valid folder names
+
+## Blocks which use File and Folder Paths

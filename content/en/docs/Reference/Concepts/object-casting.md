@@ -10,4 +10,8 @@ description: "This page describes the concept of Object Casting."
 
 TODO: Overview/summary
 
-TODO:
+## Implicit Cast
+
+## Explicit Cast
+
+## Object vs Dynamic

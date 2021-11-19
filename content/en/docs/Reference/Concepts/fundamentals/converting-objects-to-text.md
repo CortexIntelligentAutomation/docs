@@ -20,10 +20,15 @@ TODO: Xml Serialize
 
 TODO: Convert.ToString()
 
+TODO: String interpolation
+
+TODO: String.Format
+
 ## Blocks that automatically convert Objects to Text
 
 TODO
 * Format Text With Value
 * Format Text With Values
 * Split text?
+* Convert Object To Text - need to make it clear how this works - does tostring and if tostring returns class name does json serialisation
 * Others?

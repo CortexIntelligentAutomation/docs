@@ -6,4 +6,12 @@ description: "This page describes the concept of Null and Nullable Types."
 
 # {{< param title >}}
 
-TODO: This section is in preparation.
+## Overview
+
+TODO: Overview/summary
+
+## Null
+
+## Nullable Types
+
+## Blocks that use Nullable Types

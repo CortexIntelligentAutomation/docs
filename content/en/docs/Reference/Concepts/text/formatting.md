@@ -47,3 +47,9 @@ TODO: Anything else relevant on formatting links above
 ## Blocks that use Formatting
 
 TODO:
+
+## String Interpolation
+
+TODO:
+mention that convert object to text is close to behaviour of string interpolation, but not everything is covered - e.g. no expression support or indexing - recommendation is to use string.interpolation inline as more powerful and saves block licensing
+ 

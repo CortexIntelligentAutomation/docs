@@ -54,4 +54,22 @@ TODO: Include information about any builtin snippets for each regex
 ### Blocks that use Regex
 
 TODO: List blocks which support using regex
+
 TODO: All blocks which support regex should link back here from the properties that support it
+
+TODO: https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions
+
+TODO: https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
+
+TODO: Options https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options and https://docs.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions
+
+TODO: Common useful regexes
+
+* https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs
+* and subsequent links
+
+TODO: State that we specify a timeout to prevent dos attacks
+
+TO CONSIDER: https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices
+
+TODO: Talk about no current support for old g2 syntax - may add in future
