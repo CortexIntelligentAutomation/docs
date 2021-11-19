@@ -1,7 +1,7 @@
 ---
 title: "Format Text With Values"
 linkTitle: "Format Text With Values"
-description: "Formats Text by replacing all format parameters (e.g. `{0}` or `{1}` or `{2}`) with specified Values."
+description: "Formats text by replacing all format parameters (e.g. `{0}` or `{1}` or `{2}`) in a specified format template with given values."
 ---
 
 ![Icon](/blocks/text-format-block-icon.png)
@@ -43,25 +43,25 @@ Formatting `"Hello {0} {1}"` with `["Mr", "Smith"]` results in the variable `($)
 
 ### Multiple non-text values using American English ("en-US")
 
-This example will format `"Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C0} outstanding."` with `[99.99, 0.8, 40]`.
+This example will format `"Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C2} outstanding."` with `[99.99, 0.8, 40]`.
 
-The format parameter `{0:C2}` will display the `99.99` as U.S currency to two decimal places.
+The format parameter `{0:C2}` will display the `99.99` as U.S currency to two decimal places (i.e. `$99.99`):
 
 * `0` - is replaced by the double value `99.99`.
-* `C` - indicates to include the currency symbol for the American English culture (i.e. `$`).
+* `C` - indicates to include the currency symbol for the specified culture (i.e. `$`).
 * `2` - indicates to format the double value to two decimal places.
 
-The format parameter `{1:P0}` will display the `0.4` as a percentage to zero decimal places.
+The format parameter `{1:P0}` will display the `0.8` as a percentage to zero decimal places (i.e. `80 %`):
 
-* `1` - is replaced by the double value `0.4` multiplied by `100` due to the `P`.
+* `1` - is replaced by the double value `0.8`.
 * `P` - indicates the value should be formatted as a percentage.
 * `0` - indicates to format the percentage value to zero decimal places.
 
-The format parameter `{2:C0}` will display the `80` as U.S currency to zero decimal places.
+The format parameter `{2:C2}` will display the `40` as U.S currency to two decimal places (i.e. `$40.00`):
 
-* `2` - is replaced by the double value `80`.
-* `C` - indicates to include the currency symbol for the American English culture (i.e. `$`).
-* `2` - indicates to format the double value to zero decimal places.
+* `2` - is replaced by the double value `40`.
+* `C` - indicates to include the currency symbol for the specified culture (i.e. `$`).
+* `2` - indicates to format the double value to two decimal places.
 
 For information about format templates and parameters, please see [Text Formatting][].
 
@@ -69,17 +69,17 @@ For information about format templates and parameters, please see [Text Formatti
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Format Template][FormatTemplate Property] | `($)FormatTemplate`, with value `"Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C0} outstanding."` | `($)FormatTemplate` is a variable of type [String][] |
+| [Format Template][FormatTemplate Property] | `($)FormatTemplate`, with value `"Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C2} outstanding."` | `($)FormatTemplate` is a variable of type [String][] |
 | [Values][Values Property] | `($)Values`, with value `[99.99, 0.8, 40]` | `($)Values` is a variable of type [IEnumerable][]&lt;[Double][]&gt; |
 | [Format Provider][FormatProvider Property] | `($)FormatProvider`, with value `new CultureInfo("en-US")` | `($)FormatProvider` is a variable of type [IFormatProvider][] |
 | [Text][Text Property] | `($)Text`, with no value | `($)Text` is a variable that will be set to a [String][] value |
 
 #### Result
 
-`"Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C0} outstanding."` with `[99.99, 0.8, 40]` results in the variable `($)Text` being updated to the following:
+`"Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C2} outstanding."` with `[99.99, 0.8, 40]` results in the variable `($)Text` being updated to the following:
 
 ```json
-"Your latest payment of $99.99 has been received. You have paid 80 % of your total and have $40 outstanding."
+"Your latest payment of $99.99 has been received. You have paid 80 % of your total and have $40.00 outstanding."
 ```
 
 ***

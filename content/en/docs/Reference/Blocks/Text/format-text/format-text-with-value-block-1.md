@@ -1,7 +1,7 @@
 ---
 title: "Format Text With Value"
 linkTitle: "Format Text With Value"
-description: "Formats Text by replacing all `{0}` format parameters with a specified Value."
+description: "Formats text by replacing all `{0}` format parameters in a specified format template with a given value."
 ---
 
 ![Icon](/blocks/text-format-block-icon.png)
@@ -12,7 +12,7 @@ description: "Formats Text by replacing all `{0}` format parameters with a speci
 
 ## Description
 
-Replaces all `{0}` format parameters in the given [Format Template][FormatTemplate Property] with the specified [Value][Value Property], saving the result as [Text][Text Property].
+Replaces all `{0}` format parameters in the specified [Format Template][FormatTemplate Property] with the given [Value][Value Property], saving the result as [Text][Text Property].
 
 An additional [Format Provider][FormatProvider Property] option can be specified to define the cultural rules used to control the formatting (e.g. `new CultureInfo("en-US")` will apply American English rules to the formatting).
 
@@ -45,10 +45,10 @@ Formatting `"Hello {0}"` with `"world!"` results in the variable `($)Text` being
 
 This example will format `"Your final bill is {0:C2}"` with `99.99`.
 
-The format parameter `{0:C2}` will display the double value as U.S currency to two decimal places.
+The format parameter `{0:C2}` will display the double value as U.S currency to two decimal places (i.e. `$99.99`):
 
 * `0` - is replaced by the double value.
-* `C` - indicates to include the currency symbol for the American English culture (i.e. `$`).
+* `C` - indicates to include the currency symbol for the specified culture (i.e. `$`).
 * `2` - indicates the number of decimal places to format the double value to.
 
 For information about format templates and parameters, please see [Text Formatting][].
