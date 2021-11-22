@@ -1,5 +1,5 @@
 ---
 title: "If Else"
 linkTitle: "If Else"
-description: "Blocks related to if-else like conditional decision making"
+description: "Perform if-else like conditional decision making"
 ---
