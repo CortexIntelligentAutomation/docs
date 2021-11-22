@@ -1,5 +1,5 @@
 ---
 title: "Get Date Time"
 linkTitle: "Get Date Time"
-description: "Get the current Date Time or parts of a Date Time (i.e. Year, Month, Day)."
+description: "Get the current date time or parts of a date time (i.e. Year, Month, Day)."
 ---
