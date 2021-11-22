@@ -1,5 +1,5 @@
 ---
 title: "Copy Object"
 linkTitle: "Copy Object"
-description: "Copy an object."
+description: "Copy an object"
 ---
