@@ -1,5 +1,5 @@
 ---
 title: "Convert Json"
 linkTitle: "Convert Json"
-description: "Convert Json to and from other data types"
+description: "Convert json to and from other data types."
 ---
