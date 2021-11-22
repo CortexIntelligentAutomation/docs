@@ -1,5 +1,5 @@
 ---
 title: "Throw Exception"
 linkTitle: "Throw Exception"
-description: "Throw an exception"
+description: "Throw an exception."
 ---
