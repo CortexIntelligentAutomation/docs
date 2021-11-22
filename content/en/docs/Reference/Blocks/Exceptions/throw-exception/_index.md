@@ -1,5 +1,5 @@
 ---
-title: "Throw Exception(s)"
-linkTitle: "Throw Exception(s)"
-description: "Blocks related to throwing exceptions"
+title: "Throw Exception"
+linkTitle: "Throw Exception"
+description: "Throw an exception"
 ---
