@@ -1,5 +1,5 @@
 ---
 title: "PowerShell"
 linkTitle: "PowerShell"
-description: "Blocks related to working with Windows PowerShell and PowerShell Core"
+description: "Blocks related to working with Windows PowerShell and PowerShell Core."
 ---
