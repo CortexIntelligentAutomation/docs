@@ -1,5 +1,5 @@
 ---
 title: "Copy Folder(s)"
 linkTitle: "Copy Folder(s)"
-description: "Blocks related to copying folders"
+description: "Copy a folder or multiple folders"
 ---

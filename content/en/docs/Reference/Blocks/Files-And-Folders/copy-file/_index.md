@@ -1,5 +1,5 @@
 ---
 title: "Copy File(s)"
 linkTitle: "Copy File(s)"
-description: "Blocks related to copying files"
+description: "Copy a file or multiple files"
 ---

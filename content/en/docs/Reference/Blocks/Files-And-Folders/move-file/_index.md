@@ -1,5 +1,5 @@
 ---
 title: "Move File(s)"
 linkTitle: "Move File(s)"
-description: "Blocks related to moving files"
+description: "Move a file or multiple files"
 ---

@@ -1,5 +1,5 @@
 ---
 title: "Write File(s)"
 linkTitle: "Write File(s)"
-description: "Blocks related to writing files"
+description: "Write the content of a file or multiple files"
 ---
