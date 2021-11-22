@@ -1,5 +1,5 @@
 ---
-title: "Check File(s) Exist"
-linkTitle: "Check File(s) Exist"
-description: "Checking if a file or multiple files exist"
+title: "Check File Exists"
+linkTitle: "Check File Exists"
+description: "Check if a file exists."
 ---

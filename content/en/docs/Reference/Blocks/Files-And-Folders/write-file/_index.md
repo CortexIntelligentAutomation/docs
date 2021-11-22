@@ -1,5 +1,5 @@
 ---
-title: "Write File(s)"
-linkTitle: "Write File(s)"
-description: "Write the content of a file or multiple files"
+title: "Write File"
+linkTitle: "Write File"
+description: "Write the content of a file."
 ---

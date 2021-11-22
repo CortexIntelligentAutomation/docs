@@ -1,5 +1,5 @@
 ---
-title: "Check Folder(s) Exist"
-linkTitle: "Check Folder(s) Exist"
-description: "Check if a folder or multiple folders exist"
+title: "Check Folder Exists"
+linkTitle: "Check Folder Exists"
+description: "Check if a folder exists."
 ---

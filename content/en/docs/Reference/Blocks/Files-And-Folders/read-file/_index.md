@@ -1,5 +1,5 @@
 ---
-title: "Read File(s)"
-linkTitle: "Read File(s)"
-description: "Read the content of a file or multiple files"
+title: "Read File"
+linkTitle: "Read File"
+description: "Read the content of a file."
 ---
