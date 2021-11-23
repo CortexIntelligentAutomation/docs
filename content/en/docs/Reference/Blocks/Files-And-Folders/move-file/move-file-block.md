@@ -165,7 +165,6 @@ The exceptions thrown by the block can be found below:
 |                              | The [File Path][FilePath Property] or [Destination Path][DestinationPath Property] is invalid (for example, it is on an unmapped drive). |
 |                              | The file in the specified [Destination Path][DestinationPath Property] exists and overwrite is `false`. |
 |                              | The file in the specified [Destination Path][DestinationPath Property] exists, is read-only and overwrite is `true`. |
-*|                              | The file in the specified [Destination Path][DestinationPath Property] exists, is hidden and overwrite is `true`, but the file in the specified [File Path][FilePath Property] is not hidden.|
 |                              | The user the flow is executing as does not have the required permissions to move the file (e.g. not having read access to the [File Path][FilePath Property] or write access to the [Destination Path][DestinationPath Property]). |
 |                              | An unexpected error occurs when copying the file. |
 | [PropertyEmptyException][]   | Thrown when [File Path][FilePath Property] or [Destination Path][DestinationPath Property] are empty (i.e. `""`). |
