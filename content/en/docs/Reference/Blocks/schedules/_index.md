@@ -1,5 +1,5 @@
 ---
 title: "Schedules"
 linkTitle: "Schedules"
-description: "Blocks related to scheduling"
+description: "Blocks related to working with Schedules."
 ---
