@@ -101,7 +101,7 @@ The exceptions thrown by the block can be found below:
 |                              | The [Folder Path][FolderPath Property] is a win32 device path (i.e starts with a `"\\.\"`). |
 |                              | The [Folder Path][FolderPath Property] is invalid (for example, it is on an unmapped drive). |
 |                              | The user the flow is executing as does not have the required permissions to rename the folder or any of its content (e.g. not having read access to the [Folder Path][FolderPath Property] or its content, or write access to the parent of [Folder Path][FolderPath Property]. |
-|                              | An unexpected error occurs when copying the folder or any of its content. |
+|                              | An unexpected error occurs when renaming the folder. |
 | [PropertyEmptyException][]   | Thrown when [Folder Path][FolderPath Property] or [New Name][NewName Property] are empty (i.e. `""`). |
 | [PropertyNullException][]    | Thrown when [Folder Path][FolderPath Property] or [New Name][NewName Property] are `null`. |
 
