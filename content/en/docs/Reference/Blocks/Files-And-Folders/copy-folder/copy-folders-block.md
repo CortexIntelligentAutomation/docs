@@ -411,7 +411,7 @@ The exceptions thrown by the block can be found below:
 |                              | Any folder path in [Folder Paths][FolderPaths Property] is a child folder in the [Destination Path][DestinationPath Property] and [Content Only][ContentOnly Property] is `false`. |
 |                              | Any file being copied already exists in the specified [Destination Path][DestinationPath Property] and overwrite is `false`. |
 |                              | Any file being copied already exists in the specified [Destination Path][DestinationPath Property], is read-only and overwrite is `true`. |
-|                              | Any file being copied already exists in the specified [Destination Path][DestinationPath Property], is hidden and overwrite is `true`, but the file under any of the the specified [Folder Paths][FolderPaths Property] is not hidden.|
+|                              | Any file being copied already exists in the specified [Destination Path][DestinationPath Property], is hidden and overwrite is `true`, but the file under any of the specified [Folder Paths][FolderPaths Property] is not hidden.|
 |                              | The user the flow is executing as does not have the required permissions to copy the folder or any of its content (e.g. not having read access to any of the folders in [Folder Paths][FolderPaths Property] or its content, or write access to the [Destination Path][DestinationPath Property]). |
 |                                  | The operation is cyclic (e.g. copying a folder into one of its sub-folders). |
 |                              | An unexpected error occurs when copying a folder or any of its content. |
