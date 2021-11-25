@@ -259,6 +259,10 @@
                         MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
                     [Cortex.Reference.Exceptions.Lists.DuplicateValueException]
                         MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"
+            [Cortex.Reference.Exceptions.Loops]
+                MainDoc = "/docs/reference/exceptions/loops/"
+                    [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
+                        MainDoc = "/docs/reference/exceptions/loops/infiniteloopexception/"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
