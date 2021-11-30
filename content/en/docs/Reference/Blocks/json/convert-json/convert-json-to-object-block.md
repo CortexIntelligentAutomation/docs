@@ -142,7 +142,7 @@ As the Json does include type information, `($)Object` will be a [List][]&lt;[Li
 
 The [Json][Json Property] to convert into an [Object][Object Property].
 
-During the conversion it will be attempted to convert the [Json][Json Property] to the correct data type where possible. If the correct data type cannot be determined, then collection data types will be converted to a [List][]&lt;[dynamic][]&gt;, and other objects will be converted to a [Structure][]&lt;[String][], [dynamic][]&gt;.
+During the conversion it will be attempted to convert the [Json][Json Property] to the correct data type where possible. If the correct data type cannot be determined, then collection data types will be converted to a [List][]&lt;[dynamic][]&gt;, and other objects will be converted to a [Structure][].
 
 | | |
 |--------------------|---------------------------|

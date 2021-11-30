@@ -67,7 +67,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyNullException][] | Thrown when [Dictionary][List Property] is `null`. |
+| [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] is `null`. |
 
 ## Remarks
 

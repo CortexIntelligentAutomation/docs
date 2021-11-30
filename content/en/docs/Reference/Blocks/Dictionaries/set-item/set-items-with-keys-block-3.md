@@ -25,8 +25,8 @@ This example will attempt to set all items with any of the keys `["Key1", "Key2"
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[String][], [Int32][]&gt; |
-| [Keys][Keys Property] | `($)Keys`, with value `["Key1", "Key2"]` | `($)Keys` is a variable of type [IEnumerable][]&lt;[String][]&gt; | |
-| [NewValues][NewValues Property] | `($)NewValues`, with value `[10, 20]` | `($)NewValues` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; | |
+| [Keys][Keys Property] | `($)Keys`, with value `["Key1", "Key2"]` | `($)Keys` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [NewValues][NewValues Property] | `($)NewValues`, with value `[10, 20]` | `($)NewValues` is a variable of type [IEnumerable][]&lt;[Int32][]&gt; |
 
 #### Result
 

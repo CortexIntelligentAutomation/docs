@@ -25,7 +25,7 @@ This example will get all keys in `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" :
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[String][], [Int32][]&gt; |
-| [Keys][Keys Property] | `($)Keys`, with no value | `($)Keys` is a variable that will be set to an [IList][]&lt;[String][]&gt; | |
+| [Keys][Keys Property] | `($)Keys`, with no value | `($)Keys` is a variable that will be set to an [IList][]&lt;[String][]&gt; |
 
 #### Result
 
