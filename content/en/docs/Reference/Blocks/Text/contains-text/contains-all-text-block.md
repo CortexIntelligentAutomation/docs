@@ -14,6 +14,8 @@ description: "Checks if text contains all of the texts in a given set of texts."
 
 Checks if [Text][Text Property] contains all of the texts in a given set of [Texts To Find][TextsToFind Property].
 
+[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to perform the check.
+
 ## Examples
 
 ### Text contains all of the texts in Texts To Find
@@ -28,6 +30,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["The", "quick", "brown", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
 
@@ -53,6 +56,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["the", "slow", "brown", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
 
@@ -62,6 +66,58 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ```json
 false
+```
+
+***
+
+### Text contains text that matches all of the patterns in Texts To Find
+
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains text that matches all of the patterns in `["*he", "?uick", "*?own", "fox"]`.
+
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
+| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["*he", "?uick", "*?own", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.PatternMatching` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog"` contains text that matches all of the patterns in `["*he", "?uick", "*?own", "fox"]`. Therefore, the variable `($)ContainsAllText` will be updated to the following:
+
+```json
+true
+```
+
+***
+
+### Text contains text that matches all of the regexes in Texts To Find
+
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains text that matches all of the regexes in `["^The", "(quick|fast)", "b.* ", "(fox|Fox)"]`.
+
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
+| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["^The", "(quick|fast)", "b.* ", "(fox|Fox)"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.Regex` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog"` contains text that matches all of the regexes in `["^The", "(quick|fast)", "b.* ", "(fox|Fox)"]`. Therefore, the variable `($)ContainsAllText` will be updated to the following:
+
+```json
+true
 ```
 
 ***
@@ -87,6 +143,25 @@ The set of [Texts To Find][TextsToFind Property] to check are all contained in [
 | Data Type | [IEnumerable][]&lt;[String][]&gt; |
 | Property Type | [Input][] |
 | Default Value | `($)TextsToFind` with value `[]` |
+
+### Search Options
+
+[Search Options][SearchOptions Property] can be specified to choose whether items in [Texts To Find][TextsToFind Property] should be interpreted as a ContainsText, PatternMatching or Regex search:
+
+* `SearchOptions.ContainsText` matches text exactly; as long as the [Text][Text Property] contains the text specified in [Texts To Find][TextsToFind Property] it will be considered a match.
+* `SearchOptions.PatternMatching` allows wildcard text matching using [Pattern Matching Syntax][]:
+  * `*` wildcard character can be used to match `0` or more characters.
+  * `?` wildcard character can be used to match `0` or `1` character.
+  * All other characters are treated as a literal character.
+* `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
+
+Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [SearchOptions][] |
+| Property Type | [Input][] |
+| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
 
 ### Comparison Type
 
@@ -119,7 +194,10 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
+| | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
 | [PropertyNullException][] | Thrown when [Texts To Find][TextsToFind Property] is `null`. |
+| [RegexMatchTimeoutException][] | Thrown when [Search Options][SearchOptions Property] is either `SearchOptions.Regex` or `SearchOptions.PatternMatching` and the execution time of the search exceeds `30` seconds. |
+| [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and one or more items in [Texts To Find][TextsToFind Property] are not a valid regex (e.g. `(`). |
 
 ## Remarks
 
@@ -135,8 +213,13 @@ If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified 
 
 If [Texts To Find][TextsToFind Property] is empty or contains any `null` or empty (i.e. `""`) text, the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
+### Known limitations
+
+If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+
 [Text Property]: {{< ref "#text" >}}
 [TextsToFind Property]: {{< ref "#texts-to-find" >}}
+[SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [ContainsAllText Property]: {{< ref "#contains-all-text" >}}
 
@@ -146,12 +229,17 @@ If [Texts To Find][TextsToFind Property] is empty or contains any `null` or empt
 [Text Equality]: {{< url "Cortex.Reference.Concepts.TextEquality.MainDoc" >}}
 [ComparisonTypes]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.MainDoc" >}}
 [Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
+[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
+[Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
+
+[PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[RegexParsingFailedException]: {{< url "Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
+
+[ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
+[RegexMatchTimeoutException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-
-[PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-
-[ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
