@@ -225,6 +225,8 @@ A [Search Pattern][SearchPattern Property] of `null` or empty (i.e. `""`) means 
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
+Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
