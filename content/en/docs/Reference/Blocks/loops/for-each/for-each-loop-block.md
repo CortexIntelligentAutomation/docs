@@ -14,6 +14,8 @@ description: "Loops through all items in the specified collection (i.e. Lists, D
 
 Loops through all items in the specified [Collection][Collection Property] (i.e. Lists, Dictionaries and Structures).
 
+The `"Index"` and `"Value"` of the current item are returned as properties of a [Structure][], which is saved to the [Current Iteration][CurrentIteration Property].
+
 ## Examples
 
 ### Loop through all items in a list
