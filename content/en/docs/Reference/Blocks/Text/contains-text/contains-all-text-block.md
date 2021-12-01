@@ -107,7 +107,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["^The", "(quick|fast)", "b.* ", "(fox|Fox)"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["^The", "(quick\|fast)", "b.* ", "(fox\|Fox)"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.Regex` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
