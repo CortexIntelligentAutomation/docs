@@ -72,7 +72,7 @@ false
 
 ### Text contains text that matches all of the patterns in Texts To Find
 
-This example will check whether `"The quick brown fox jumps over the lazy dog"` contains text that matches all of the patterns in `["*he", "?uick", "*?own", "fox"]`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains text that matches all of the patterns in `["?he", "?uick", "*?own", "fox"]`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -81,14 +81,14 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["*he", "?uick", "*?own", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
+| [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["?he", "?uick", "*?own", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.PatternMatching` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains All Text][ContainsAllText Property] | `($)ContainsAllText`, with no value | `($)ContainsAllText` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog"` contains text that matches all of the patterns in `["*he", "?uick", "*?own", "fox"]`. Therefore, the variable `($)ContainsAllText` will be updated to the following:
+`"The quick brown fox jumps over the lazy dog"` contains text that matches all of the patterns in `["?he", "?uick", "*?own", "fox"]`. Therefore, the variable `($)ContainsAllText` will be updated to the following:
 
 ```json
 true

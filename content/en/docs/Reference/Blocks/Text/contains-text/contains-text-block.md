@@ -72,7 +72,7 @@ false
 
 ### Text contains text that matches the pattern in Text To Find
 
-This example will check whether `"The quick brown fox jumps over the lazy dog"` contains text that matches the pattern `"*he"`.
+This example will check whether `"The quick brown fox jumps over the lazy dog"` contains text that matches the pattern `"*?he"`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -81,14 +81,14 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `"*he"` | `($)TextToFind` is a variable of type [String][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `"?he"` | `($)TextToFind` is a variable of type [String][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.PatternMatching` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains Text][ContainsText Property] | `($)ContainsText`, with no value | `($)ContainsText` is a variable that will be set to a [Boolean][] value |
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog"` contains `"The"` and `"the"` that matches the pattern `"*he"`. Therefore, the variable `($)ContainsText` will be updated to the following:
+`"The quick brown fox jumps over the lazy dog"` contains `"The"` and `"the"` that matches the pattern `"?he"`. Therefore, the variable `($)ContainsText` will be updated to the following:
 
 ```json
 true
