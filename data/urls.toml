@@ -316,6 +316,10 @@
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
 
 # External links
+[ElasticSearch]
+    MainDoc = "https://www.elastic.co/"
+[Grafana]
+    MainDoc = "https://grafana.com/"
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
@@ -350,6 +354,8 @@
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
+[Splunk]
+    MainDoc = "https://www.splunk.com/"
 [VisualStudio]
     [VisualStudio.Code]
         MainDoc = "https://code.visualstudio.com/"
