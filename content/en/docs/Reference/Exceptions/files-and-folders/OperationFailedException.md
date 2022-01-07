@@ -10,6 +10,10 @@ description: "The exception thrown when a file or folder operation failed for on
 
 The exception thrown when a file or folder operation failed for one or more paths.
 
+## Path Exceptions
+
+### PathDoesNotExist
+
 The format of the exception message is as follows:
 
 ```json
@@ -17,7 +21,30 @@ The format of the exception message is as follows:
 Please click the HelpLink for more information on how to fix this."
 ```
 
-## Path Exceptions
+#### How to fix
+
+TODO:
+
+#### Blocks that can throw this exception
+
+TODO:
+
+### PathTooLong
+
+The format of the exception message is as follows:
+
+```json
+"TODO.
+Please click the HelpLink for more information on how to fix this."
+```
+
+#### How to fix
+
+TODO:
+
+#### Blocks that can throw this exception
+
+TODO:
 
 ## Indexes Of Duplicate Paths
 

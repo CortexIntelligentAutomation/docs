@@ -1,7 +1,7 @@
 ---
 title: "Culture"
 linkTitle: "Culture"
-description: "This page describes the concept of Culture."
+description: "This page describes the concept of culture."
 ---
 
 # {{< param title >}}
