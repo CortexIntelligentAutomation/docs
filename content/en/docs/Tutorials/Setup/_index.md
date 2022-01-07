@@ -5,4 +5,4 @@ description: "This section includes tutorials about post-installation setup of t
 weight: 20
 ---
 
-TODO
+<img src="/images/work-in-progress.jpg">

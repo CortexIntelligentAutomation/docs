@@ -5,4 +5,4 @@ description: "Discover what's new in the Cortex Evolution platform."
 weight: 1
 ---
 
-TODO
+<img src="/images/work-in-progress.jpg">

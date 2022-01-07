@@ -5,4 +5,4 @@ description: "This section includes tutorials about administering the Cortex Evo
 weight: 40
 ---
 
-TODO
+<img src="/images/work-in-progress.jpg">

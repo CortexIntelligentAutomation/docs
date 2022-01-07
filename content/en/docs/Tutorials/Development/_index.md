@@ -5,4 +5,4 @@ description: "This section includes tutorials about developing automation using 
 weight: 30
 ---
 
-TODO
+<img src="/images/work-in-progress.jpg">
