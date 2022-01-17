@@ -36,7 +36,7 @@ The most commonly used data types are categorised and listed below:
 | Json | JsonSerializerSettings |  | Settings used to control how to convert objects to Json and vice versa |
 | Numbers | Int16 | 2 bytes | A whole number from `-32768` through `32767` |
 | | Int32 | 4 bytes | A whole number from `-2,147,483,648` through `2,147,483,647` |
-| | Int64 | 8 bytes | A whole number from `-9,223,372,036,854,775` through `9,223,372,036,854,775,807` |
+| | Int64 | 8 bytes | A whole number from `-9,223,372,036,854,775,808` through `9,223,372,036,854,775,807` |
 | | Single | 4 bytes | A fractional, or very large or small number from `-3.402823e38` to `3.402823e38` |
 | | Double | 8 bytes | A fractional, or very large or small number from `-1.79769313486232e308` to `1.79769313486232e308` |
 | Text | String | Varies depending on the number of characters it contains | A sequence of characters, surrounded by double quotes (e.g. `"This is a string"`) |
