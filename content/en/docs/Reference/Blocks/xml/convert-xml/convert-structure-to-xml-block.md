@@ -12,50 +12,136 @@ description: "Converts a Structure To Xml."
 
 ## Description
 
-Converts a [Structure][Structure Property] to [Xml][Json Property].
+Converts a [Structure][Structure Property] to [Xml][Xml Property].
+
+This block will convert a [Structure][Structure Property] into [Xml][Xml Property], with each Key Value Pair being converted into a node with the node name being the Key and the data within the node being the Value.
+
+If a Key Value Pair contains a Structure as its value, a node will be added to the value for each Key Value Pair with the inner node name being the Key and the data within the inner node being the Value.
 
 ## Examples
 
 ### Convert a Structure to Xml
 
-This example will convert `TODO` to its Xml representation.
+This example will convert the [Structure][Structure Property] below to its [Xml][Xml Property] representation.
+
+``` json
+{
+    "topLevelNode": {
+        "@attr" : "exampleAttribute",
+        "id" : [
+            "1",
+            "2",
+            "3"
+        ],
+        "action" : "exampleAction",
+        "#text" : "text without a node"
+    }
+}
+```
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Structure][Structure Property] | `($)Structure`, with value `{TODO}` | `($)Structure` is a variable of type [Structure][] |
+| [Structure][Structure Property] | `($)Structure`, with value `{"topLevelNode": {"@attr" : "exampleAttribute", "id" : ["1","2","3"], "action" : "exampleAction", "#text" : "text without a node"}}` | `($)Structure` is a variable of type [Structure][] |
 | [Xml][Xml Property] | `($)Xml`, with no value | `($)Xml` is a variable that will be set to a [String][] value. |
 
 #### Result
 
-Converting `{TODO}` to Xml results in the variable `($)Xml` being updated to the following:
+Converting `{"topLevelNode": {"@attr" : "exampleAttribute", "id" : ["1","2","3"], "action" : "exampleAction", "#text" : "text without a node"}}` to Xml results in the variable `($)Xml` being updated to the following:
 
-```json
-"TODO"
+``` xml
+@"<topLevelNode attr="exampleAttribute">
+    <id>1</id>
+    <id>2</id>
+    <id>3</id>
+    <action>exampleAction</action
+    >text without a node
+</topLevelNode>"
 ```
-
-Explain how conversion works?
 
 ***
 
-### TODO Different examples
+### Convert Nested Structure to Xml
 
-TODO
+This example will convert the [Structure][Structure Property] below to its [Xml][Xml Property] representation.
+
+``` json
+{
+    "topLevelNode": {
+        "@attr" : "exampleAttribute",
+        "id" : [
+            "1",
+            "2",
+            "3"
+        ],
+        "action" : "exampleAction",
+        "#text" : "text without a node"
+    }
+}
+```
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Structure][Structure Property] | `($)Structure`, with value `{TODO}` | `($)Structure` is a variable of type [Structure][] |
+| [Structure][Structure Property] | `($)Structure`, with value `{ "topLevelNode": {"@attr" : "exampleAttribute", "id" : ["1", "2", "3"], "action" : "exampleAction", "#text" : "text without a node"}}` | `($)Structure` is a variable of type [Structure][] |
 | [Xml][Xml Property] | `($)Xml`, with no value | `($)Xml` is a variable that will be set to a [String][] value. |
 
 #### Result
 
-TODO
+``` xml
+@"<topLevelNode attr="exampleAttribute">
+    <id>1</id>
+    <id>2</id>
+    <id>3</id>
+    <action>exampleAction</action>
+    <innerNode>
+        <nestedNode>nested node text</nestedNode>
+        inner node text
+    </innerNode>
+    text without a node
+</topLevelNode>"
+```
 
-```json
-TODO
+***
+
+### Structure Node Example
+
+This example will convert the [Structure][Structure Property] below to its [Xml][Xml Property] representation.
+
+``` json
+{
+    {
+        "node1" : "1"
+    },
+    {
+        "node2" : "2"
+    },
+    {
+        "node3" : "3"
+    }
+}
+```
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Structure][Structure Property] | `($)Structure`, with value 
+`{{ "node1" : "1"}, {"node2" : "2"}, {"node3" : "3"}}` | `($)Structure` is a variable of type [Structure][] |
+| [Xml][Xml Property] | `($)Xml`, with no value | `($)Xml` is a variable that will be set to a [String][] value. |
+
+#### Result
+
+Converting `{{ "node1" : "1"}, {"node2" : "2"}, {"node3" : "3"}}` to [Xml][Xml Property] results in the variable `($)Xml` being updated to the following:
+
+``` xml
+@"<Cortex_DataTypes_Dictionaries_Structure>
+    <node1>1</node1>
+    <node2>2</node2>
+    <node3>3</node3>
+</Cortex_DataTypes_Dictionaries_Structure>"
 ```
 
 ***
@@ -66,8 +152,6 @@ TODO
 
 The [Structure][Structure Property] to convert to [Xml][Xml Property].
 
-TODO
-
 | | |
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
@@ -77,8 +161,6 @@ TODO
 ### Xml
 
 The [Xml][Xml Property] that has been converted from the [Structure][Structure Property].
-
-TODO
   
 | | |
 |--------------------|---------------------------|
@@ -92,15 +174,146 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyEmptyException][] | Thrown when [Structure][Structure Property] does not contain any items. |
 | [PropertyNullException][] | Thrown when [Structure][Structure Property] is `null`. |
+| [PropertyEmptyException][] | Thrown when [Structure][Structure Property] does not contain any items. |
 | [XmlSerializationException][] | Thrown when [Structure][Structure Property] has a key that is an empty string. |
+|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. ?xml) or a document type definition key (e.g. !DOCTYPE) that has an invalid attribute key. (e.g. Key: "@test", Value: "testValue"). |
+|| Thrown when the [Structure][Structure Property] includes an attribute key with a [Complex Type][] as a value. (e.g. Key: "@name", Value: new UserCredentials{...}). |
+|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. ?xml) with an attribute that has an invalid primitive value. (e.g. Key: "@version", Value: false). |
+|| Thrown when the [Structure][Structure Property] includes a document type definition key (e.g. !DOCTYPE) that has an attribute with an invalid primitive value. (e.g. Key: "@name", Value: 22). |
 
 ## Remarks
 
 ### Round-tripping
 
 It should be possible to pass the Xml created by this block to the [Convert Xml To Structure][] block, and then pass the [Structure][Structure Property] created by the [Convert Xml To Structure][] block back to this block; this is called round-tripping.
+
+### Attributes
+
+If a node requires an attribute, the attribute is defined to a [Key Value Pair][] where the key is the attribute name with an `"@"` before it and the value is the attribute data, for example:
+
+``` json
+{
+    "node": {
+        "@attribute": "Attribute Value",
+        "innernode": "Inner Node Value"
+    }
+}
+```
+
+The [Xml][Xml Property] example above would be converted to the following [Structure][Structure Property] be converted to
+
+``` xml
+@"<node attribute="Attribute Value">
+    <innerNode>Inner Node Value</innerNode>
+</node>"
+```
+
+### Primitive Values Within Attribute Keys
+
+Attribute keys may only have [Primitive Values][], an [XmlSerializationException][] will be thrown if a [Complex Value][] is used as an attribute key.
+
+### Key Restrictions
+
+If provided, the xml declaration key (e.g. ?xml) can only accept following attributes: @version, @encoding and @standalone.
+
+If provided, the document type definition key (e.g. !DOCTYPE) can only accept following attributes: @name, @public, @system and @internalSubset.
+
+The keys `"$id"`, `"$ref"`, `"$type"` and `"$value"` are reserved words within the XMLConverter. Using them can cause odd behaviour as they are treated like attributes within the conversion.
+
+The key `"values"` is also reserved, however it is treated as its own node within the conversion.
+
+### Data Not Within a Node
+
+If any data does not have any nodes and is within the same element as other data with nodes, the data is converted to a [Key Value Pair][] where the key is "#text" and the value is the node-less data.
+
+If data does not require a node and is withiin the same element as other data with nodes, the nodeless data requires a [Key Value Pair][] where the 
+
+``` json
+{
+    "node": {
+        "innerNode": "Inner Node Value",
+        "#text": "Node Value"
+    }
+}
+```
+
+The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
+
+``` xml
+@"<node>
+    <innerNode>
+        Inner Node Value
+    </innerNode>
+    Node Value
+</node>"
+```
+
+### Duplicate Nodes At The Same Level
+
+If an  multiple duplicate nodes are required at the same level, they are defined using a [Key Value Pair][] where the key is the duplicated node and the value is a list of each duplicate nodes data in order, for example:
+
+``` json
+{
+    "node": {
+        "duplicateNode": ["First Duplicate Node", "Second Duplicate Node"],
+        "distinctNode": "Distinct Node"
+    }
+}
+```
+
+The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
+
+``` xml
+@"<node>
+    <duplicateNode>
+        First Duplicate Node
+    </duplicateNode>
+    
+    <duplicateNode>
+        Second Duplicate Node
+    </duplicateNode>
+
+    <distinctNode>
+        Distinct Node
+    </distinctNode>
+</node>"
+```
+
+### Using Non-Alphanumeric Symbols Within Node Names
+
+Any non-alphanumeric symbol (i.e. symbols that are not 0 to 9 or a to Z) will be converted to their respective Unicode values when used within a node name. For example, `"!"` and `"&"` are both non-alphanumeric symbols and would be converted to `"x0021"` and `"x0026"` respectively.
+
+For more information on characters and their Unicode values please see [Character Sets][]
+
+### Structure Node
+
+If a root node is not defined, then the root node `""Cortex_DataTypes_Dictionaries_Structure""` will be added during the conversion to ensure that the resulting [Xml][Xml Property] is valid.
+
+``` json
+{
+    {
+        "node1" : "1"
+    },
+    {
+        "node2" : "2"
+    },
+    {
+        "node3" : "3"
+    }
+}
+```
+
+The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
+
+``` xml
+@"<Cortex_DataTypes_Dictionaries_Structure>
+    <node1>1</node1>
+    <node2>2</node2>
+    <node3>3</node3>
+</Cortex_DataTypes_Dictionaries_Structure>"
+```
+
 
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}
@@ -112,57 +325,10 @@ It should be possible to pass the Xml created by this block to the [Convert Xml 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [XmlSerializationException]: {{< url "JsonDotNet.XmlSerializationException" >}}
 
-
-
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 
-            
-            /// If there are multiple items in the specified structure, a root node is automatically added to make it valid xml (added root node: "Cortex_FlowEngine_Core_Types_Structure")
-            
-            /// If a node requires an attribute, use a key value pair where the key is the attribute name with an "@" before it and the value is the attribute data.
-            
-            /// If data does not require nodes and is within the same element as data that does require nodes, use a key value pair where the key is "#text" and the value is the node-less data.
-            
-            /// If multiple of the same nodes are required are within the same element, use a key value pair where the key is the node and the value is a list with the nodes data.
-            
-            /// If the specified structure includes an ampersand symbol in a node's name, the xml will return with "_x0026_" in place of the ampersand symbol.
-            
-            /// If the specified structure includes an ampersand symbol in a node's data, the xml will return with "&amp;" in place of the ampersand symbol.
-            
-            
-            /// </remarks>
-            
-            /// <example>
-            /// structure:  {
-            ///                 "msg&amp;": {
-            ///                     "@attr" : "exampleAttribute"
-            ///                     "id" :
-            ///                     [
-            ///                         "1",
-            ///                         "2",
-            ///                         "3"
-            ///                     ],
-            ///                     "action" : "stop&amp;"
-            ///                     "#text" : "hello"
-            ///                 }
-            ///             }
-            ///
-            /// xml:        "<msg_x0026_ attr="exampleAttribute"><id>1</id><id>2</id><id>3</id><action>stop&amp;</action>hello</msg_x0026_>"
-            /// </example>
-            /// <example>
-            /// structure:  {
-            ///                 {
-            ///                     "id" : "1"
-            ///                 },
-            ///                 {
-            ///                     "id2" : "2"
-            ///                 },
-            ///                 {
-            ///                     "id3" : "3"
-            ///                 }
-            ///             }
-            ///
-            /// xml:        "<Cortex_FlowEngine_Core_Types_Structure><id>1</id><id2>2</id2><id3>3</id3></Cortex_FlowEngine_Core_Types_Structure>"
-            /// </example>
-            void ConvertStructureToXml(Structure structure, out string xml);
+[Character Sets]: {{< url "W3.CharacterSets" >}}
+[Complex Type]: {{}}
+[Primitive Type]: {{}}
+[Key Value Pair]: {{}}
