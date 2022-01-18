@@ -76,6 +76,14 @@
                     [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
                     MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
                     Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
+            [Cortex.Reference.Blocks.Xml]
+                MainDoc = "/docs/reference/blocks/xml/"
+                [Cortex.Reference.Blocks.Xml.ConvertXml]
+                MainDoc = "/docs/reference/blocks/xml/convert-xml/"
+                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock]
+                    MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
+                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock]
+                    MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.Fundamentals]
                 MainDoc = "/docs/reference/concepts/fundamentals/"
@@ -84,8 +92,14 @@
                 [Cortex.Reference.Concepts.Fundamentals.Culture]
                     MainDoc = "/docs/reference/concepts/fundamentals/culture/"
                     InvariantCulture = "/docs/reference/concepts/fundamentals/culture/#invariant-culture"
+                [Cortex.Reference.Concepts.Fundamentals.ComplexTypes]
+                    MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
+                [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
+                    MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
+                Structures = "/docs/reference/concepts/collections/#structures"
+                KeyValuePairs = "/docs/reference/concepts/collections/#key-value-pairs"
             [Cortex.Reference.Concepts.WorkingWithDateAndTime]
                 MainDoc = "/docs/reference/concepts/date-and-time/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
