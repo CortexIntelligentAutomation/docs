@@ -111,21 +111,31 @@ $@"<topLevelNode topLevelAttribute=""exampleAttribute"">
 
 ***
 
-### Convert Roundtripped Xml to a Structure
+### Convert Round-tripped Xml to a Structure
 
-This example will convert the [Xml][Xml Property] below to its [Structure][Structure Property] representation. 
-This example will only occur when a [Structure][Structure Property] is Converted to [Xml][Xml Property] and is then converted again using this block. This is called [Round Tripping][].
+This example will convert the [Xml][Xml Property] below to its [Structure][Structure Property] representation.
+This example will only occur when a [Structure][Structure Property] is Converted to [Xml][Xml Property] using the [Convert Structure To Xml][] block and is then converted again using this block. This is called [Round-Tripping][].
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Xml][Xml Property] | `($)Xml`, with value `"<Cortex_DataTypes_Dictionaries_Structure><id>1</id><id2>2</id2><id3>3</id3></Cortex_DataTypes_Dictionaries_Structure>"`  | `($)Xml` is a variable of type [String][] |
+| [Xml][Xml Property] | `($)Xml`, with value `"<Cortex_DataTypes_Dictionaries_Structure><node1>1</node1><node2>2</node2><node3>3</node3></Cortex_DataTypes_Dictionaries_Structure>"`  | `($)Xml` is a variable of type [String][] |
 | [Structure][Structure Property] | `($)Structure`, with no value | `($)Structure` is a variable that will be set to a [Structure][] value |
 
 #### Result
 
-Converting `"<Cortex_DataTypes_Dictionaries_Structure><node1>1</node1><node2>2</node2><node3>3</node3></Cortex_DataTypes_Dictionaries_Structure>"` to a [Structure][Structure Property] results in the variable `($)Structure` being updated to the following:
+Converting:
+
+``` xml
+$@"<Cortex_DataTypes_Dictionaries_Structure>
+    <node1>1</node1>
+    <node2>2</node2>
+    <node3>3</node3>
+</Cortex_DataTypes_Dictionaries_Structure>"
+```
+
+to a [Structure][Structure Property] results in the variable `($)Structure` being updated to the following:
 
 ``` json
 {
@@ -136,9 +146,9 @@ Converting `"<Cortex_DataTypes_Dictionaries_Structure><node1>1</node1><node2>2</
 ```
 
 * The `"Cortex_DataTypes_Dictionaries_Structure"` root node is removed and the child nodes are all at the root level.
-* The "`node1`" [Node][Xml Nodes] is converted into a [Key][Keys] of with its corresponding value as the [Item][Items].
-* The "`node2`" [Node][Xml Nodes] is converted into a [Key][Keys] of with its corresponding value as the [Item][Items].
-* The "`node3`" [Node][Xml Nodes] is converted into a [Key][Keys] of with its corresponding value as the [Item][Items].
+* The `"node1"` [Node][Xml Nodes] is converted into a [Key][Keys] of `"node1"` with its corresponding value as the [Item][Items].
+* The `"node2"` [Node][Xml Nodes] is converted into a [Key][Keys] of `"node2"` with its corresponding value as the [Item][Items].
+* The `"node3"` [Node][Xml Nodes] is converted into a [Key][Keys] of `"node3"` with its corresponding value as the [Item][Items].
 
 ***
 
@@ -183,7 +193,7 @@ The exceptions thrown by the block can be found below:
 If a [Node][Xml Nodes] has an attribute, the attribute is converted to a [Key][Keys] where the key is the attribute name with an `"@"` before it and the value is the attribute data, for example:
 
 ``` xml
-@"<node attribute="Attribute Value">
+$@"<node attribute="Attribute Value">
     <innerNode>Inner Node Value</innerNode>
 </node>"
 ```
@@ -204,7 +214,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 If a node contains a value and inner nodes, the inner nodes are converted into [Keys][] with their corresponding values as the [Items][]. The value of the node is converted into the `"#text"` key with its value as the item.
 
 ``` xml
-@"<node>
+$@"<node>
     <innerNode>
         Inner Node Value
     </innerNode>
@@ -223,20 +233,18 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 }
 ```
 
-### Duplicate Nodes At The Same Level
+### Duplicate Nodes at the Same Level
 
-If an element contains multiple duplicate nodes at the same level, they are converted into a [Key][Keys] where the key is the duplicated node name and the [Item][Items] is a list of each of the corresponding duplicate node's data, for example:, for example:
+If a node contains duplicate nodes at the same level, they are converted into a [Key][Keys] where the key is the duplicated node name and the [Item][Items] is a list of each of the corresponding duplicate node's values, for example:
 
 ``` xml
-@"<node>
+$@"<node>
     <duplicateNode>
         First Duplicate Node
     </duplicateNode>
-    
     <duplicateNode>
         Second Duplicate Node
     </duplicateNode>
-
     <distinctNode>
         Distinct Node
     </distinctNode>
@@ -254,9 +262,9 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 }
 ```
 
-### Using Non-Alphanumeric Symbols Within Node Names
+### Using Non-Alphanumeric Symbols within Node Names
 
-Any non-alphanumeric symbol (i.e. symbols that are not 0 to 9 or a to Z) will be converted to their respective Unicode values when used within a node name. For example, `"!"` and `"&"` are both non-alphanumeric symbols and would be converted to `"x0021"` and `"x0026"` respectively.
+Any non-alphanumeric symbol (i.e. symbols that are not `"0"` to `"9"`, `"a"` to `"z"`, or `"A"` to `"Z"`) will be converted to their respective Unicode values when used within a node name. For example, `"!"` and `"&"` are both non-alphanumeric symbols and would be converted to `"x0021"` and `"x0026"` respectively.
 
 For more information on characters and their Unicode values please see [Character Sets][]
 
@@ -271,7 +279,7 @@ The [Convert Structure To Xml][] adds `"<Cortex_DataTypes_Dictionaries_Structure
 When the `"<Cortex_DataTypes_Dictionaries_Structure>"` root node is converted from [Xml][Xml Property] to a [Structure][Structure Property] the root node is removed and any inner nodes become the top level keys.
 
 ``` xml
-@"<Cortex_DataTypes_Dictionaries_Structure>
+$@"<Cortex_DataTypes_Dictionaries_Structure>
     <node1>1</node1>
     <node2>2</node2>
     <node3>3</node3>
@@ -288,14 +296,14 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 }
 ```
 
-This example will only occur when a [Structure][Structure Property] is Converted to [Xml][Xml Property] and is then converted again using this block. This is called [Round Tripping][].
+This example will only occur when a [Structure][Structure Property] is Converted to [Xml][Xml Property] and is then converted again using this block. This is called [Round-Tripping][].
 
 [Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock.MainDoc" >}}
 
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}
 [Convert Xml To Structure Example]: {{< ref "#convert-xml-to-structure" >}}
-[Round Tripping]: {{< ref "#round-tripping" >}}
+[Round-Tripping]: {{< ref "#round-tripping" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
