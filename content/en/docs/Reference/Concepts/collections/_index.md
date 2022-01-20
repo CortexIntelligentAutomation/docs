@@ -6,4 +6,6 @@ description: "Information related to working with collections such as Lists, Dic
 
 ### Structures
 
-### Key Value Pairs
+### Keys
+
+### Items

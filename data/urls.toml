@@ -99,7 +99,8 @@
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
                 Structures = "/docs/reference/concepts/collections/#structures"
-                KeyValuePairs = "/docs/reference/concepts/collections/#key-value-pairs"
+                Keys = "/docs/reference/concepts/collections/#keys"
+                Items = "/docs/reference/concepts/collections/#items"
             [Cortex.Reference.Concepts.WorkingWithDateAndTime]
                 MainDoc = "/docs/reference/concepts/date-and-time/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
@@ -377,4 +378,5 @@
     Bit = "https://en.wikipedia.org/wiki/Bit"
     Byte = "https://en.wikipedia.org/wiki/Byte"
 [W3]
+    XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
