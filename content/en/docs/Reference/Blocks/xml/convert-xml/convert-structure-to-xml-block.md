@@ -198,7 +198,7 @@ The exceptions thrown by the block can be found below:
 | [PropertyNullException][] | Thrown when [Structure][Structure Property] is `null`. |
 | [PropertyEmptyException][] | Thrown when [Structure][Structure Property] does not contain any items. |
 | [XmlSerializationException][] | Thrown when [Structure][Structure Property] has a key that is an empty string. |
-|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"`) or a document type definition key (e.g. `"!DOCTYPE"`) that has an invalid attribute key. (e.g. `Key: "@invalidAttribute"`). |
+|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"` can only accept the following attributes: `"@version"`, `"@encoding"` and `"@standalone"`.) or a document type definition key (e.g. `"!DOCTYPE"` can only accept the following attributes: `"@name"`, `"@public"`, `"@system"` and `"@internalSubset"`). |
 || Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"`) with an attribute that has an invalid [Primitive Value][Primitive Values]. (e.g. `Key: "@version", Value: false`, where `"@version"` must be a numeric value). |
 || Thrown when the [Structure][Structure Property] includes a document type definition key (e.g. `"!DOCTYPE"`) that has an attribute with an invalid [Primitive Value][Primitive Values]. (e.g. `Key: "@name", Value: 22`, where `"@name"` must be a text value). |
 || Thrown when the [Structure][Structure Property] includes an attribute key with a [Complex Type][] as a value. (e.g. `Key: "@name", Value: new UserCredentials{...}`). |
@@ -243,7 +243,7 @@ Attribute keys may only have [Primitive Values][] as shown in the example below.
 
 An Xml declaration key (e.g. `"?xml"`) can only accept the following attributes: `"@version"`, `"@encoding"` and `"@standalone"`.
 
-A document type definition key (e.g. !DOCTYPE) can only accept the following attributes: `"@name"`, `"@public"`, `"@system"` and `"@internalSubset"`.
+A document type definition key (e.g. `"!DOCTYPE"`) can only accept the following attributes: `"@name"`, `"@public"`, `"@system"` and `"@internalSubset"`.
 
 `"$id"`, `"$ref"`, `"$type"`, `"$value"` and `"values"` are reserved words and should not be used as keys.
 
@@ -344,7 +344,7 @@ $@"<Cortex_DataTypes_Dictionaries_Structure>
 
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[XmlSerializationException]: {{< url "JsonDotNet.XmlSerializationException" >}}
+[XmlSerializationException]: {{< url "Cortex.Reference.Exceptions.Xml.XmlSerializationException" >}}
 
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}

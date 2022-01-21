@@ -310,7 +310,7 @@ This example will only occur when a [Structure][Structure Property] is Converted
 
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[XmlSerializationException]: {{< url "JsonDotNet.XmlSerializationException" >}}
+[XmlSerializationException]: {{< url "Cortex.Reference.Exceptions.Xml.XmlSerializationException" >}}
 
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}

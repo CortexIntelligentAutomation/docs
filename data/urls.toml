@@ -281,7 +281,10 @@
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
-                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"            
+                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"         
+            [Cortex.Reference.Exceptions.Xml]
+                MainDoc = "/docs/reference/exceptions/xml/"
+                XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
