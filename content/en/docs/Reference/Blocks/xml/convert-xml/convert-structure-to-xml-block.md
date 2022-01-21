@@ -84,9 +84,9 @@ $@"<Cortex_DataTypes_Dictionaries_Structure>
 ```
 
 * The `"Cortex_DataTypes_Dictionaries_Structure"` root node is added as there is no single top level key.
-* The "`node1`" [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
-* The "`node2`" [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
-* The "`node3`" [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
+* The `"node1"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
+* The `"node2"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
+* The `"node3"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
 
 ***
 
