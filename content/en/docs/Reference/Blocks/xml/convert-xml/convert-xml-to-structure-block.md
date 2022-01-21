@@ -211,11 +211,11 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 
 ### Text Nodes
 
-If a node contains a value and inner nodes, the inner nodes are converted into [Keys][] with their corresponding values as the [Items][]. The value of the node is converted into the `"#text"` key with its value as the item.
+If a node contains a value and inner nodes or attributes, the inner nodes and attributes are converted into [Keys][] with their corresponding values as the [Items][]. The value of the node is converted into the `"#text"` key with its value as the item.
 
 ``` xml
 $@"<node>
-    <innerNode>
+    <innerNode attribute="attributeValue">
         Inner Node Value
     </innerNode>
     Node Value
@@ -227,7 +227,10 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 ``` json
 {
     "node": {
-        "innerNode": "Inner Node Value",
+        "innerNode": {
+            "@attrubute": "attributeValue",
+            "#text": "Inner Node Value"
+        },
         "#text": "Node Value"
     }
 }

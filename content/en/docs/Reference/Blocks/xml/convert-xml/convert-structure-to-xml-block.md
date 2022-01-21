@@ -254,7 +254,10 @@ If a key contains a structure as its item, the inner keys are converted into [No
 ``` json
 {
     "node": {
-        "innerNode": "Inner Node Value",
+        "innerNode": {
+            "@attrubute": "attributeValue",
+            "#text": "Inner Node Value"
+        },
         "#text": "Node Value"
     }
 }
@@ -264,7 +267,7 @@ The [Structure][Structure Property] example above would be converted to the foll
 
 ``` xml
 $@"<node>
-    <innerNode>
+    <innerNode attribute="attributeValue">
         Inner Node Value
     </innerNode>
     Node Value
