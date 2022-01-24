@@ -9,7 +9,7 @@ TODO:
 
 * Blocks
   * Action Blocks
-  * Container Blocks
+  * Workspace Blocks
   * Decision Blocks
   * Exception Blocks
   * Looping Blocks
