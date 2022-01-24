@@ -76,7 +76,7 @@ Converting:
 to [Xml][Xml Property] results in the variable `($)Xml` being updated to the following:
 
 ``` xml
-$@"<Cortex_DataTypes_Dictionaries_Structure>
+@"<Cortex_DataTypes_Dictionaries_Structure>
     <node1>1</node1>
     <node2>2</node2>
     <node3>3</node3>
@@ -144,7 +144,7 @@ Converting:
 to [Xml][Xml Property] results in the variable `($)Xml` being updated to the following:
 
 ``` xml
-$@"<topLevelKey topLevelAttribute=""exampleAttribute"">
+@"<topLevelKey topLevelAttribute=""exampleAttribute"">
     <innerKey innerNodeAttribute=""exampleInnerNodeAttribute"">
         <nestedKey>nested key text</nestedKey>
         inner key text
@@ -221,7 +221,7 @@ If a [Node][Xml Nodes] requires an attribute, the attribute is defined by a [Key
 The [Xml][Xml Property] example above would be converted to the following [Structure][Structure Property]
 
 ``` xml
-$@"<node attribute="Attribute Value">
+@"<node attribute="Attribute Value">
     <innerNode>Inner Node Value</innerNode>
 </node>"
 ```
@@ -266,7 +266,7 @@ If a key contains a structure as its item, the inner keys are converted into [No
 The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
 
 ``` xml
-$@"<node>
+@"<node>
     <innerNode attribute="attributeValue">
         Inner Node Value
     </innerNode>
@@ -290,7 +290,7 @@ If there are multiple duplicate nodes at the same level, they are defined using 
 The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
 
 ``` xml
-$@"<node>
+@"<node>
     <duplicateNode>
         First Duplicate Node
     </duplicateNode>
@@ -328,7 +328,7 @@ It should be possible to pass the [Xml][Xml Property]  created by this block to 
 The [Xml][Xml Property] example above would be converted to the following [Structure][Structure Property].
 
 ``` xml
-$@"<Cortex_DataTypes_Dictionaries_Structure>
+@"<Cortex_DataTypes_Dictionaries_Structure>
     <node1>1</node1>
     <node2>2</node2>
     <node3>3</node3>

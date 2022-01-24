@@ -47,7 +47,7 @@ will be converted into:
 This example will convert the [Xml][Xml Property] below to its [Structure][Structure Property] representation.
 
 ``` xml
-$@"<topLevelNode topLevelAttribute=""exampleAttribute"">
+@"<topLevelNode topLevelAttribute=""exampleAttribute"">
     <innerNode innerNodeAttribute=""exampleInnerNodeAttribute"">
         <nestedNode>nested node text</nestedNode>
         inner node text
@@ -70,7 +70,7 @@ $@"<topLevelNode topLevelAttribute=""exampleAttribute"">
 Converting:
 
 ``` xml
-$@"<topLevelNode topLevelAttribute=""exampleAttribute"">
+@"<topLevelNode topLevelAttribute=""exampleAttribute"">
     <innerNode innerNodeAttribute=""exampleInnerNodeAttribute"">
         <nestedNode>nested node text</nestedNode>
         inner node text
@@ -128,7 +128,7 @@ This example will only occur when a [Structure][Structure Property] is Converted
 Converting:
 
 ``` xml
-$@"<Cortex_DataTypes_Dictionaries_Structure>
+@"<Cortex_DataTypes_Dictionaries_Structure>
     <node1>1</node1>
     <node2>2</node2>
     <node3>3</node3>
@@ -193,7 +193,7 @@ The exceptions thrown by the block can be found below:
 If a [Node][Xml Nodes] has an attribute, the attribute is converted to a [Key][Keys] where the key is the attribute name with an `"@"` before it and the value is the attribute data, for example:
 
 ``` xml
-$@"<node attribute="Attribute Value">
+@"<node attribute="Attribute Value">
     <innerNode>Inner Node Value</innerNode>
 </node>"
 ```
@@ -214,7 +214,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 If a node contains a value and inner nodes or attributes, the inner nodes and attributes are converted into [Keys][] with their corresponding values as the [Items][]. The value of the node is converted into the `"#text"` key with its value as the item.
 
 ``` xml
-$@"<node>
+@"<node>
     <innerNode attribute="attributeValue">
         Inner Node Value
     </innerNode>
@@ -241,7 +241,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 If a node contains duplicate nodes at the same level, they are converted into a [Key][Keys] where the key is the duplicated node name and the [Item][Items] is a list of each of the corresponding duplicate node's values, for example:
 
 ``` xml
-$@"<node>
+@"<node>
     <duplicateNode>
         First Duplicate Node
     </duplicateNode>
@@ -282,7 +282,7 @@ The [Convert Structure To Xml][] adds `"<Cortex_DataTypes_Dictionaries_Structure
 When the `"<Cortex_DataTypes_Dictionaries_Structure>"` root node is converted from [Xml][Xml Property] to a [Structure][Structure Property] the root node is removed and any inner nodes become the top level keys.
 
 ``` xml
-$@"<Cortex_DataTypes_Dictionaries_Structure>
+@"<Cortex_DataTypes_Dictionaries_Structure>
     <node1>1</node1>
     <node2>2</node2>
     <node3>3</node3>
