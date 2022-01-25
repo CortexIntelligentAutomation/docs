@@ -87,7 +87,7 @@ The following restrictions apply to this block:
 
 If an exception thrown by a block is not handled by any connected [Handle Block Exception blocks][], it will be passed to the [Handle Workspace Exception][] block on the same workspace.
 
-If the workspace does not contain a [Handle Workspace Exception][] block it will be rethrown by the Container block the workspace belongs to.
+If the workspace does not contain a [Handle Workspace Exception][] block it will be rethrown by the [Workspace][] block the workspace belongs to.
 
 This process repeats until:
 
@@ -125,6 +125,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
+[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
 
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
