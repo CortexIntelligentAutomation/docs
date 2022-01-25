@@ -76,6 +76,20 @@
                     [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
                     MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
                     Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
+            [Cortex.Reference.Blocks.Workspaces]
+                MainDoc = "/docs/reference/blocks/workspaces/"
+                [Cortex.Reference.Blocks.Workspaces.StartWorkspace]
+                MainDoc = "/docs/reference/blocks/workspaces/start-workspace"
+                    [Cortex.Reference.Blocks.Workspaces.Workspace.StartWorkspaceBlock]
+                    MainDoc = "/docs/reference/blocks/workspaces/start-workspace/start-workspace-block"
+                [Cortex.Reference.Blocks.Workspaces.EndWorkspace]
+                MainDoc = "/docs/reference/blocks/workspaces/end-workspace"
+                    [Cortex.Reference.Blocks.Workspaces.Workspace.EndWorkspaceBlock]
+                    MainDoc = "/docs/reference/blocks/workspaces/end-workspace/end-workspace-block"
+                [Cortex.Reference.Blocks.Workspaces.Workspace]
+                MainDoc = "/docs/reference/blocks/workspaces/workspace"
+                    [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
+                    MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
             [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
@@ -181,6 +195,8 @@
                     MainDoc = "/docs/reference/concepts/text-casing/#culture-info"
                     CurrentCulture = "/docs/reference/concepts/text-casing/#current-culture"
                     InvariantCulture = "/docs/reference/concepts/text-casing/#invariant-culture"
+            [Cortex.Reference.Concepts.TranslationErrors]
+                MainDoc = "/docs/reference/concepts/translation-errors/"
             [Cortex.Reference.Concepts.TextEncoding]
                 MainDoc = "/docs/reference/concepts/text-encoding/"
             [Cortex.Reference.Concepts.EmptyTextAndWhitespace]
