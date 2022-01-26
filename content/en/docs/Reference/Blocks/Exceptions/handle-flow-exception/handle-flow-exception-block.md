@@ -8,7 +8,7 @@ description: "Handles any unhandled exception within the Flow."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Exceptions.HandleFlowException.HandleFlowExceptionContainerBlock)</p>
+<p class="namespace">(Cortex.Blocks.Exceptions.HandleFlowException.HandleFlowExceptionWorkspaceBlock)</p>
 
 ## Description
 
@@ -89,7 +89,7 @@ The following restrictions apply to this block:
 
 If an exception thrown by a block is not handled by any connected [Handle Block Exception blocks][], it will be passed to the [Handle Workspace Exception][] block on the same workspace.
 
-If the workspace does not contain a [Handle Workspace Exception][] block it will be rethrown by the Container block the workspace belongs to.
+If the workspace does not contain a [Handle Workspace Exception][] block it will be rethrown by the Workspace block the workspace belongs to.
 
 This process repeats until:
 
