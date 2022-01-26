@@ -1,5 +1,5 @@
 ---
 title: "Workspace"
 linkTitle: "Workspace"
-description: "Blocks that indicate a new workspace."
+description: "Blocks that represent a new workspace."
 ---

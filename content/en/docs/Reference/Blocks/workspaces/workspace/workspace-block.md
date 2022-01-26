@@ -1,7 +1,7 @@
 ---
 title: "Workspace"
 linkTitle: "Workspace"
-description: "Indicates a new workspace."
+description: "Represents a new workspace."
 ---
 
 ![Icon](/blocks/workspaces-workspace-block-icon.png)
@@ -12,13 +12,13 @@ description: "Indicates a new workspace."
 
 ## Description
 
-This block indicates a new workspace; when a flow execution reaches this block it will move to the block's inner workspace, each workspace has its own [scope][WorkspaceScope].
+This block represents a new workspace; when a flow execution reaches this block it will move to the [Start Workspace][] block within this block's workspace; each workspace has its own [scope][WorkspaceScope].
 
-The [Workspace][] block can be used to orginise block logic into smaller steps with a distinct functions. When a new [Workspace][] Block is placed on a flow, it will contain a [Start Workspace][] and [End Workspace][] within its inner workspace.
+The [Workspace][] block can be used to orginise block logic into smaller steps with distinct functions. When a new [Workspace][] block is placed on a flow, it will contain a [Start Workspace][] and [End Workspace][] block within its workspace.
 
-If a [Workspace][] block is copied and pasted its inner workspace is also copied, along with any data within the workspace and all [scoped][WorkspaceScope] variables.
+If a [Workspace][] block is copied and pasted its workspace is also copied, along with all blocks and variables within its [scope][WorkspaceScope].
 
-The block has no block specific properties, but it does have the `Description` property that is common to all blocks. This allows users to give each block a description; typically this will be left blank for this block.
+The block has no block specific properties, but it does have the `Description` property that is common to all blocks. This allows users to give each block a description; typically this will be left blank for this block. Any description given will become the name for this block's [scope][WorkspaceScope]
 
 A breakpoint can be added to this block when debugging.
 
@@ -38,7 +38,9 @@ No exceptions are thrown by the block.
 
 ### Block Restrictions
 
-A workspace can contain any number of blocks. The only restrictions within a workspace are that there can only be one [Start Workspace][] block and one [Handle Workspace Exception][] block wthin a workspace, starting a flow that contains more than one of these blocks within a workspace will cause a [Translation Error][Translation Errors] to occur.
+A workspace can contain any number of blocks. The only restrictions within a workspace are that there can only be one [Start Workspace][] block and one [Handle Workspace Exception][] block within a workspace.
+
+Starting a flow that contains more than one of the restricted blocks within a workspace will cause a [Translation Error][Translation Errors] to occur.
 
 ### Unhandled Exceptions
 
