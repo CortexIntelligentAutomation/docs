@@ -1,7 +1,7 @@
 ---
 title: "Set Variable"
 linkTitle: "Set Variable"
-description: "Sets a variable to a given value."
+description: "Sets a Variable to a given Value."
 ---
 
 ![Icon](/blocks/variables-set-variable-block-icon.png)
@@ -118,8 +118,6 @@ Note that `($)Variable.Item` is overwritten, any data previously stored within t
 The [Value][Value Property] to set the [Variable][Variable Property] to.
 
 A [Variable][Variable Property] can be set to any type of object, including Lists, Dictionaries, Structures etc.
-
-If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] then they will have the same reference, for more information see [Working with Reference Types][].
   
 | | |
 |--------------------|---------------------------|
@@ -130,6 +128,8 @@ If a [Variable][Variable Property] is set to the [Value][Value Property] of anot
 ### Variable
 
 The [Variable][Variable Property] that will be set to the [Value][Value Property].  
+
+If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] then they will have the same reference, for more information see [Working with References][].
   
 | | |
 |--------------------|---------------------------|
