@@ -54,41 +54,42 @@ Setting `($)Variable` to `[[1, 2, 3], [4, 5, 6]]` results in the variable `($)Va
 
 ### Overwriting a Variable
 
-This example will overwrite a [Variable][Variable Property] to a list of `[[1, 2, 3], [4, 5, 6]]`.
+This example will overwrite an exisiting [Variable][Variable Property] that has the text value `"A text value"`, to a list value of `[1, 2, 3]`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Value][Value Property] | [Value][Value Property], with value `[[1, 2, 3], [4, 5, 6]]` | The [Value][Value Property] is of type [List][]&lt;[List][]&lt;[Int32][]&gt;&gt; |
-| [Variable][Variable Property] | `($)Variable`, with value `"A text value"` | `($)Variable` is a variable that will be set to the type of the value (i.e. [List][]&lt;[List][]&lt;[Int32][]&gt;&gt;) |
+| [Value][Value Property] | [Value][Value Property], with value `[1, 2, 3]` | The [Value][Value Property] is of type [List][]&lt;[Int32]&gt; |
+| [Variable][Variable Property] | `($)Variable`, with value `"A text value"` | `($)Variable` is a variable that will be set to the type of the value (i.e. [List][]&lt;[Int32][]&gt;) |
 
 #### Result
 
-Setting `($)Variable` to `[[1, 2, 3], [4, 5, 6]]` results in the variable `($)Variable` being updated to the following:
+Setting `($)Variable` to `[1, 2, 3]` results in the variable `($)Variable` being updated to the following:
 
 ```json
 [
-    [
-        1, 
-        2, 
-        3
-    ], 
-    [
-        4, 
-        5, 
-        6
-    ]
+    1, 
+    2, 
+    3
 ]
 ```
 
 ***
 
-Note that `($)Variable` is overwritten, any data previously stored within the variable will be deleted.
+Note that `($)Variable` is overwritten, any data previously stored within the variable will be lost.
 
-### Updating a Variable Property
+### Overwriting a Variable Property
 
-This example will update a property within a [Variable][Variable Property] to a list of `[1, 2, 3]`. `($)Variable.Items`, has the value `{{"Items": "A text value"}}`
+This example will update the `Items` property within an existing [Variable][Variable Property] that has the text value `"A text value"`, to a list of `[1, 2, 3]`.
+
+`($)Variable` has an initial value of:
+
+```json
+{
+    "Items": "A text value",
+}
+```
 
 #### Properties
 
@@ -99,15 +100,19 @@ This example will update a property within a [Variable][Variable Property] to a 
 
 #### Result
 
-Setting the `($)Variable.Items` property to `[1, 2, 3]` results in the `Item` property within `($)Variable` being updated to the following:
+Setting the `($)Variable.Items` property to `[1, 2, 3]` results in the `($)Variable` being updated to the following:
 
 ```json
 {
-    "Items": [ 1, 2, 3 ],
+    "Items": [ 
+        1,
+        2, 
+        3 
+    ]
 }
 ```
 
-Note that `($)Variable.Items` is overwritten, any data previously stored within the property will be deleted.
+Note that `($)Variable.Items` is overwritten, any data previously stored within the property will be lost.
 
 ***
 
@@ -151,7 +156,7 @@ If the Set Variable block is used to set a [Variable][Variable Property] that is
 
 If the Set Variable block is used to set a [Variable][Variable Property] that is already initialised and has a [Value][Value Property], the [Variable][Variable Property] will be overwritten with the new [Value][Value Property] when the block is run.
 
-A property of a [Variable][Variable Property] can also be overwritten, instead of the whole object. This is shown in the example above, [Updating a Variable Property][]
+A property of a [Variable][Variable Property] can also be overwritten, instead of the whole object. This is shown in the example above, [Overwriting a Variable Property][]
 
 ### Variable Scope
 
@@ -161,9 +166,13 @@ The Set Variable block can only set a [Variable][Variable Property] that is acce
 
 For information about variables and scope, please see [Working with Variables][].
 
+### Null Value
+
+If [Value][Value Property] is not provided or is set to null, [Variable][Variable Property] will be set to null.
+
 [Variable Property]: {{< ref "#variable" >}}
 [Value Property]: {{< ref "#value" >}}
-[Updating a Variable Property]: {{< ref "#updating-a-variable-property" >}}
+[Overwriting a Variable Property]: {{< ref "#overwriting-a-variable-property" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
