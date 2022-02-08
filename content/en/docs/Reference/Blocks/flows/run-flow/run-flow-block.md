@@ -12,7 +12,7 @@ description: "Runs a chosen Flow, returning any output variables."
 
 ## Description
 
-Runs a chosen [Flow][Flow Property] to another [Text][Text Property] after the given [Index][Index Property].
+Runs a chosen [Flow][Flow Property] using [Inputs][Inputs Property] provided, returning any [Output Variables][Output Variable] from the [Flow][Flow Property] in the [Outputs][Outputs Property] variable.
 
 ## Examples
 
@@ -134,14 +134,14 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyValueOutOfRangeException][] | Thrown when [Text][Text Property] is `null` or empty (i.e. `""`). |
-| | Thrown when [Index][Index Property] is less than zero or greater than the length of [Text][Text Property] - `1`. |
+| [InvalidInputVariablesException][] | Thrown when [Inputs][Inputs Property] is missing any [Input Variables][Input Variable] from the chosen [Flow][Flow Property]. |
+| | Thrown when [Inputs][Inputs Property] has any extra [Input Variables][Input Variable] that are not in the chosen [Flow][Flow Property]. |
 
 ## Remarks
 
 ### Exceptions Thrown by a Child Flow
 
-The Run Flow block does not throw any exceptions, however if the [Flow][Flow Property] run by this block throws an exception that is unhandled then it is rethrown by the Run Flow block. This can then be handled by any connected [Handle Block Exception blocks][].
+If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then it is rethrown by the Run Flow block. This can then be handled by any connected [Handle Block Exception blocks][].
 
 If an exception thrown by a block is not handled by any connected [Handle Block Exception blocks][], it will be passed to the [Handle Workspace Exception][] block on the same workspace.
 
@@ -165,6 +165,7 @@ This process repeats until:
 [Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Structures" >}}
 [Input Variable]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
 [Output Variable]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+[InvalidInputVariablesException]: {{< url "Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MainDoc" >}}
 
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
