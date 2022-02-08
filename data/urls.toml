@@ -237,6 +237,8 @@
                     Structure = "/docs/reference/data-types/most-common/#structure"
                     TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
                     TimeSpan = "/docs/reference/data-types/most-common/#timespan"
+                    FlowReference = "/docs/reference/data-types/most-common/#flowreference"
+                    InputVariables = "/docs/reference/data-types/most-common/#inputvariables"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]

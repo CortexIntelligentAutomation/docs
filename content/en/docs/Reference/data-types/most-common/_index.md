@@ -253,3 +253,11 @@ TODO
 #### Encoding
 
 TODO
+
+#### FlowReference
+
+TODO
+
+#### InputVariables
+
+TODO
