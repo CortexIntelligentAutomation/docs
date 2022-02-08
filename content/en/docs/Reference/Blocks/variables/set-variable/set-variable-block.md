@@ -16,7 +16,7 @@ Sets a [Variable][Variable Property] to a given [Value][Value Property].
 
 Any type of [Value][Value Property] can be set, including Lists, Dictionaries, Structures etc.
 
-If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] then they will have the same reference. This means that if either [Variable][Variable Property] has new items added to it, items updated in it, or items removed from it, the both will be affected, please see [Working with References][] for more information.
+If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] then they will have the same reference. This means that if either [Variable][Variable Property] has new items added to it, items updated in it, or items removed from it, then both will be affected, please see [Working with References][] for more information.
 
 ## Examples
 
@@ -88,18 +88,18 @@ Note that `($)Variable` is overwritten, any data previously stored within the va
 
 ### Updating a Variable Property
 
-This example will update a property within a [Variable][Variable Property] to a list of `[[1, 2, 3], [4, 5, 6]]`.
+This example will update a property within a [Variable][Variable Property] to a list of `[1, 2, 3]`. `($)Variable.Items`, has the value `{{"Items": "A text value"}}`
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Value][Value Property] | [Value][Value Property], with value `[1, 2, 3]` | The [Value][Value Property] is of type [List][]&lt;[Int32][]&gt; |
-| [Variable][Variable Property] | `($)Variable.Items`, with value `{{"Items": "A text value"}}` | `($)Variable.Items` is a property within variable that will be set to the type of the value (i.e. [List][]&lt;[Int32][]&gt;) |
+| [Variable][Variable Property] | `($)Variable.Items`, with value `"A text value"` | `($)Variable.Items` is a property within variable that will be set to the type of the value (i.e. [List][]&lt;[Int32][]&gt;) |
 
 #### Result
 
-Setting the `($)Variable.Item` property to `[1, 2, 3]` results in the `Item` property within `($)Variable` being updated to the following:
+Setting the `($)Variable.Items` property to `[1, 2, 3]` results in the `Item` property within `($)Variable` being updated to the following:
 
 ```json
 {
@@ -107,7 +107,7 @@ Setting the `($)Variable.Item` property to `[1, 2, 3]` results in the `Item` pro
 }
 ```
 
-Note that `($)Variable.Item` is overwritten, any data previously stored within the property will be deleted.
+Note that `($)Variable.Items` is overwritten, any data previously stored within the property will be deleted.
 
 ***
 
@@ -157,7 +157,7 @@ A property of a [Variable][Variable Property] can also be overwritten, instead o
 
 Each workspace has its own scope; as a result, variables can be defined that only exist and are accessible in this workspace and any of its sub-workspaces. On exiting a workspace any variables defined for the workspace's scope are deleted.
 
-The Set Variable block can only set a [Variable][Variable Property] that is on its scope.
+The Set Variable block can only set a [Variable][Variable Property] that is accessible from its scope.
 
 For information about variables and scope, please see [Working with Variables][].
 
