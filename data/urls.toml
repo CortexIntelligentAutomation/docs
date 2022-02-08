@@ -286,6 +286,12 @@
                     IndexesOfNullOrEmptyPaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-null-or-empty-paths"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
+            [Cortex.Reference.Exceptions.Flows]
+                MainDoc = "/docs/reference/exceptions/flows/"
+                [Cortex.Reference.Exceptions.Flows.Execution]
+                    MainDoc = "/docs/reference/exceptions/flows/execution/"
+                    [Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException]
+                        MainDoc = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/"
             [Cortex.Reference.Exceptions.Lists]
                 MainDoc = "/docs/reference/exceptions/lists/"
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
