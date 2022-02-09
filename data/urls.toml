@@ -128,6 +128,8 @@
                     FormatParameters = "/docs/reference/concepts/text/formatting/#format-parameters"
             [Cortex.Reference.Concepts.WorkingWithVariables]
                 MainDoc = "/docs/reference/concepts/variables/"
+            [Cortex.Reference.Concepts.WorkingWithReferences]
+                MainDoc = "/docs/reference/concepts/references/"
             [Cortex.Reference.Concepts.DateAndTimeFormats]
                 MainDoc = "/docs/reference/concepts/date-and-time-formats/"
                 InvariantCulture = "/docs/reference/concepts/date-and-time-formats/#invariant-culture"
