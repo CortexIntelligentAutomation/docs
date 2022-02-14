@@ -150,6 +150,14 @@ This process repeats until:
 - The exception is handled, or
 - The exception reaches the flow's top-level workspace, is not handled by any [Handle Block Exception blocks][] and the top-level workspace does not contain a [Handle Workspace Exception][] block. At this stage, the exception is handled by the flow's [Handle Flow Exception][] block.
 
+### Flow Contract Changes
+
+### Flow Name Changes
+
+### Editor Restrictions
+- Flow Property is literal only
+- Inputs might also have restriction
+
 [Flow Property]: {{< ref "#flow" >}}
 [Inputs Property]: {{< ref "#inputs" >}}
 [Outputs Property]: {{< ref "#outputs" >}}
