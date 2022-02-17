@@ -145,6 +145,8 @@
                 MainDoc = "/docs/reference/concepts/indexes/"
             [Cortex.Reference.Concepts.ISO8601Standard]
                 MainDoc = "/docs/reference/concepts/iso-8601-standard/"
+            [Cortex.Reference.Concepts.WorkingWithDataSources]
+                MainDoc = "/docs/reference/concepts/working-with-data-sources/"
             [Cortex.Reference.Concepts.WorkingWithDatesAndTime]
                 MainDoc = "/docs/reference/concepts/working-with-dates-and-time/"
             [Cortex.Reference.Concepts.Keys]
@@ -257,6 +259,12 @@
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
+            [Cortex.Reference.Exceptions.Data]
+                MainDoc = "/docs/reference/exceptions/data/"
+                    [Cortex.Reference.Exceptions.Data.CommandException]
+                        MainDoc = "/docs/reference/exceptions/data/commandexception/"
+                    [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
+                        MainDoc = "/docs/reference/exceptions/data/invalidconnectionstringexception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
@@ -352,6 +360,8 @@
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
 
 # External links
+[ConnectionStrings]
+    MainDoc = "https://www.connectionstrings.com/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
 [Grafana]
@@ -366,6 +376,8 @@
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
         Dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
+    [MSDocs.SqlServer]
+        ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"

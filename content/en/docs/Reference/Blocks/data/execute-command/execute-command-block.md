@@ -40,7 +40,7 @@ The data source contains a `Table` with the following rows and columns before th
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT * FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommand][] |
-| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": null}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
+| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
 
@@ -92,7 +92,7 @@ The data source contains a `Table` with the following rows and columns before th
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "INSERT INTO Table  (FirstColumn, SecondColumn) VALUES ("FirstColumn4", "SecondColumn4");", "Parameters": null}` | `($)Command` is a variable of type [NonQueryCommand][] |
-| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": null}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
+| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
 
@@ -134,7 +134,7 @@ The data source contains a `Table` with the following rows and columns before th
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "Insert Into Table ("FirstColumn4", "SecondColumn4");; SELECT * FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommands][] |
-| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": null}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
+| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
 
@@ -202,7 +202,7 @@ The data source contains a `Table` with the following rows and columns before th
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@Prop1, @Prop2);", "Parameters": [ {Prop1 = "FirstColumn4", Prop2 = "SecondColumn4"}, {Prop1 = "FirstColumn5", Prop2 = "SecondColumn5"}, {Prop1 = "FirstColumn6", Prop2 = "SecondColumn6"} ]}` | `($)Command` is a variable of type [NonQueryCommand][] |
-| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": null}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
+| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
 
@@ -248,7 +248,7 @@ The data source contains a `Table` with the following rows and columns before th
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommand][] |
-| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": null}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
+| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
 
@@ -286,7 +286,7 @@ The data source contains a `Table` with the following rows and columns before th
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) AS MaxId, Min(ID) AS MinId FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommand][] |
-| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": null}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
+| [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
 
@@ -306,7 +306,12 @@ Selecting the Maximum Id value as MaxId and the Minimum Id value as MinId from `
 
 ### Command
 
-The [Command][Command Property] executed on the connected data source. 
+The [Command][Command Property] executed on the connected data source. There are multiple [Command Types][] that can be used, each with a different functionality:
+
+- [AnyCommand][Command Types AnyCommand]: Parses a single statement provided in the commandText, determining how the statement should be executed against the data source. returning the rows retrieved from the data source
+- [AnyCommands][Command Types AnyCommands] Parses a single or multiple statements provided in the commandText, determining how each statement should be executed against the data source, returning a list of responses for each statement in order.
+- [QueryCommand][Command Types QueryCommand]: Executes the given commandText as a [Query Statement][Statement Types], returning the rows retrieved from the data source.
+- [NonQueryCommand][Command Types NonQueryCommand]: Executes the given commandText as a [Non Query Statement][Statement Types], returning the number of rows affected from the data source.
 
 | | |
 |--------------------|---------------------------|
@@ -317,6 +322,10 @@ The [Command][Command Property] executed on the connected data source.
 ### Connection Details
 
 The [Connection Details][Connection Details Property] object that includes all of the information required to connect to a data source.
+
+The [Connection Type][] shows a selection of supported data sources to pick from, please see [Working with Data Sources][] for more information.
+
+A Connection String must be provided in order to connect to a data source. The Connection String is formatted differently depending on the type of data source, please see [Working with Data Sources][].
 
 | | |
 |--------------------|---------------------------|
@@ -379,11 +388,13 @@ The exceptions thrown by the block can be found below:
 
 ### Command Types
 
-The following Command Types can be provided:
+All Command Types are derived [ICommand][], the following can be provided each providing a slightly different functionality when used:
 
 #### AnyCommand
 
-A command with a single statement will be executed. The [Result][] is of type [dynamic][], returning the result of the statement, any errors will not be picked up at compile time.
+Derived from [ICommand][] an [AnyCommand][] is a command with a single statement that will be executed. The [Result][Result Property] is of type [Dynamic][], returning the result of the statement, any errors will not be picked up at compile time.
+
+The [AnyCommand][] will parse the statement provided, determining if it is a [Query][Statement Types] or [Non Query][Statement Types] Statement and executing the statement against the data source appropriately. It is more efficient to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] as they do not have to parse the command text provided.
 
 Each type of statement returns the following:
 
@@ -405,7 +416,9 @@ The result from a Non Query Statement can be cast to a int (Any other Statement 
 
 #### AnyCommands
 
-A command with a single, or multiple statements that will be executed in order. The [Result][] is of type [List][]&lt;[dynamic][]&gt;, with the result of each statement being added to the list in order, any errors will not be picked up at compile time.
+Derived from [ICommand][] an [AnyCommands][] is a command with a single, or multiple statements that will be executed in order. The [Result][Result Property] is of type [List][]&lt;[Dynamic][]&gt;, with the result of each statement being added to the list in order, any errors will not be picked up at compile time.
+
+The [AnyCommands][] will parse each statement provided, determining if it is a [Query][Statement Types] or [Non Query][Statement Types] Statement and executing the statement against the data source appropriately, adding their result to the List in order. It is more efficient to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] as they do not have to parse the command text provided.
 
 Each type of statement returns the following:
 
@@ -423,7 +436,7 @@ Each type of statement returns the following:
 
 #### QueryCommand
 
-A command with a single, or multiple statements that will be run as a whole. The [Result][] is of type [List][]&lt;[Structure][]&gt;. If the command contains multiple statements, only the results of the first select statement will be returned.
+Derived from [ICommand][] a NonQueryCommand is a command with a single, or multiple statements [Query Statements][Statement Types] that will be run as a whole. The [Result][Result Property] is of type [List][]&lt;[Structure][]&gt;. If the command contains multiple statements, only the results of the first select statement will be returned.
 
 Each type of statement returns the following:
 
@@ -438,7 +451,8 @@ Each type of statement returns the following:
 | null | Non Query Statements do not return data when used in a [QueryCommand][] |
 
 #### NonQueryCommand
-A command with a single, or multiple statements that will be run as a whole. The [Result][] is of type [Int32][]. If the command contains multiple statements, each statement's result will be aggregated into a single value.
+
+Derived from [ICommand][] a NonQueryCommand is a command with a single, or multiple [Non Query Statements][Statement Types] that will be run as a whole. The [Result][Result Property] is of type [Int32][]. If the command contains multiple statements, each statement's result will be aggregated into a single value.
 
 Each type of statement returns the following:
 
@@ -452,21 +466,43 @@ Each type of statement returns the following:
 | n | Many rows affected by the [NonQueryCommand][] |
 | 0 | No rows affected by the [NonQueryCommand][] |
 
+### Statement Types
+
+There are two categories of statements Query and Non Query.
+
+Query Statements are used to retrieve data from a data source, for example selecting all rows from a table in a database, Query Statements return the data selected by the Statement as a [List][]&lt;[Structure][]&gt; when used in an [AnyCommand][Command Types AnyCommand], an [AnyCommands][Command Types AnyCommands], or a [QueryCommand][Command Types NonQueryCommand].
+
+Non Query Statements are used to manipulate the data within a data source, for example deleting all rows from a table in a database, Non Query Statements return the number of rows affected by the Statement as an [Int32][] when used in an [AnyCommand][Command Types AnyCommand], an [AnyCommands][Command Types AnyCommands], or a [NonQueryCommand][Command Types NonQueryCommand].
+
+### Connection Strings
+
+A Connection String must be provided in order to connect to a data source. The Connection String is formatted differently depending on the type of data source, please see [Working with Data Sources][] for more information.
+
+Please see [Working with Data Sources][] for a list of supported data sources.
+
+### SqlException Error Codes
+
+If there is an issue with the [Command][Command Property] or [Connection Details][Connection Details Property] that cannot be picked up before a connection is established an SqlException can occur, a list of all error codes can be found here: [SqlException Error Codes][].
+
+Any SqlException thrown by the block will be wrapped in a [CommandException][].
+
+### Parameterised Commands
+
+The parameter object is optional and only required for parameterised commands, e.g. "select * from Table where Name = @Param". Please see the example above, [Executing a Parameterised Command][]. Parameterised Commands help mitigate a data source connection from being susceptible to Sql Injection attacks, due the the parameters being added to the statement and sanitised by the data source before it is Executed, for this reason it is advised to use Parameterised Commands to pass variables into your statements.
+
+[Query Statements][Statement Types] (e.g. Select and Execute) do not allow lists as a parameter. It does allow [Structures][Structure] and [Dictionaries][], which can have multiple parameters in them.
+
+[Non Query Statements][Statement Types] (e.g. Insert, Update, Delete, etc) allow lists as a parameter, each item in the list will be executed as the parameter for the statement aggregating their results into a single value.
+
+For both [Query][Statement Types] and [Non Query][Statement Types] Statements, an SqlException is thrown if a parameter is missing from the given object.
+
+Currently there is a limitation with the Execute Command block, output parameters cannot be written back to when used in a stored procedures.
+
 ### Scalar Commands
 
 Scalar values are returned as Structures with an empty key, and value equal to the result of the scalar query. Please see the example above, [Executing a Scalar Command][].
 
-Multiple Scalar values can be returned by the same statement if the as keyword is used to define each scalar result (e.g. "select Max(Age) as Age, select Min(Height) as Height from Table"), each scalar has the defined name as the key and its result as the value. Please see the example above, [Executing Multiple Scalar Commands][].
-
-### Parameterised Commands
-
-The parameter object is optional and only required for parameterised commands, e.g. "select * from Table where Name = @Param". Please see the example above, [Executing a Parameterised Command][].
-
-Currently there is a limitation with the Execute Command block, output parameters cannot be written back to when used in a stored procedures.
-
-### SqlException Error Codes
-
-[List of all SqlException Error Codes](https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15)
+Multiple Scalar values can be returned by the same statement if the as keyword is used to define each scalar result (e.g. `"select Max(Age) as Age, select Min(Height) as Height from Table"`), each scalar has the defined name as the key and its result as the value. Please see the example above, [Executing Multiple Scalar Commands][].
 
 [Command Property]: {{< ref "#command" >}}
 [Connection Details Property]: {{< ref "#connection-details" >}}
@@ -483,12 +519,33 @@ Currently there is a limitation with the Execute Command block, output parameter
 [Command Types QueryCommand]: {{< ref "#querycommand">}}
 [Command Types NonQueryCommand]: {{< ref "#nonquerycommand">}}
 
+[Statement Types]: {{< ref "#statement-types">}}
+
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
+[PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
+[ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
+[InvalidConnectionStringException]: {{< url "Cortex.Reference.Exceptions.Data.InvalidConnectionStringException.MainDoc" >}}
+[CommandException]: {{< url "Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
 
-[ICommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[ICommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+
+[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Connection Type]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+
+[AnyCommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[AnyCommands]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[QueryCommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+
+[Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
+[Connection String Formats]: {{< url "ConnectionStrings.MainDoc" >}}
+[SqlException Error Codes]: {{< url "MSDocs.SqlServer.ErrorCodes" >}}
