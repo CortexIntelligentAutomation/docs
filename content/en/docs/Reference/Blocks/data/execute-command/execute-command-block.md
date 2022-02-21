@@ -22,7 +22,7 @@ The [Connection Details][Connection Details Property] defines what data source t
 
 This example will select all rows and columns from a connected SQLServer data source, saving the rows to the [Result][Result Property].
 
-An [QueryCommand][Command Types AnyCommand] is used throughout this example to select data from the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
+A [QueryCommand][Command Types AnyCommand] is used throughout this example to select data from the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -172,7 +172,7 @@ The data source contains a `Table` with which will be updated to the following w
 
 ### Executing a Parameterised Command
 
-This example will insert a number of new rows using a parameterised statement into a connected SQLServer data source, saving the number of rows affected to the [Result][Result Property].
+This example will insert a new row, using a parameterised statement, into a connected SQLServer data source, saving the number of rows affected to the [Result][Result Property].
 
 A [NonQueryCommand][Command Types NonQueryCommand] is used throughout this example to insert data into the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
@@ -288,8 +288,8 @@ The [Command][Command Property] executed on the connected data source. There are
 
 - [AnyCommand][Command Types AnyCommand]: Parses a single statement provided in the commandText, determining how the statement should be executed against the data source. returning the rows retrieved from the data source
 - [AnyCommands][Command Types AnyCommands] Parses a single or multiple statements provided in the commandText, determining how each statement should be executed against the data source, returning a list of responses for each statement in order.
-- [QueryCommand][Command Types QueryCommand]: Executes the given commandText as a [Query Statement][Statement Types], returning the rows retrieved from the data source.
-- [NonQueryCommand][Command Types NonQueryCommand]: Executes the given commandText as a [Non Query Statement][Statement Types], returning the number of rows affected from the data source.
+- [QueryCommand][Command Types QueryCommand]: Executes the given commandText as a [Query Statement][Query Statements], returning the rows retrieved from the data source.
+- [NonQueryCommand][Command Types NonQueryCommand]: Executes the given commandText as a [Non Query Statement][Non Query Statements], returning the number of rows affected from the data source.
 
 | | |
 |--------------------|---------------------------|
@@ -370,9 +370,9 @@ All Command Types are derived [ICommand][], the following can be provided each p
 
 #### AnyCommand
 
-Derived from [ICommand][] an [AnyCommand][] is a command with a single statement that will be executed. The [Result][Result Property] is of type [Dynamic][], returning the result of the statement, any errors will not be picked up at compile time.
+Derived from [ICommand][] an [AnyCommand][] is a command with a single statement that will be executed. The [Result][Result Property] is of type [Dynamic][], returning the result of the statement, any errors when using the result will not be picked up at compile time.
 
-The [AnyCommand][] will parse the statement provided, determining if it is a [Query][Statement Types] or [Non Query][Statement Types] Statement and executing the statement against the data source appropriately. It is more efficient to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] as they do not have to parse the command text provided.
+The [AnyCommand][] will parse the statement provided, determining if it is a [Query Statement][Query Statements] or [Non Query Statement][Non Query Statements] and executing the statement against the data source appropriately. It is more efficient to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] as they do not have to parse the command text provided.
 
 Each type of statement returns the following:
 
@@ -392,11 +392,13 @@ The result from a Query Statement can be cast to a List&lt;Structure&gt;
 
 The result from a Non Query Statement can be cast to a int (Any other Statement Type)
 
+Note that the [AnyCommand][] should not be used for complex statements such as Cursor Statements, as the parsing performed by the blocks will cause each section of a complex statement to be treated as individual statements instead of running the complex statement as a whole. For complex statements use either the [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand], depending on whether the complex statement returns data from the data source or the number of rows affected.
+
 #### AnyCommands
 
 Derived from [ICommand][] an [AnyCommands][] is a command with a single, or multiple statements that will be executed in order. The [Result][Result Property] is of type [List][]&lt;[Dynamic][]&gt;, with the result of each statement being added to the list in order, any errors will not be picked up at compile time.
 
-The [AnyCommands][] will parse each statement provided, determining if it is a [Query][Statement Types] or [Non Query][Statement Types] Statement and executing the statement against the data source appropriately, adding their result to the List in order. It is more efficient to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] as they do not have to parse the command text provided.
+The [AnyCommands][] will parse each statement provided, determining if it is a [Query Statement][Query Statements] or [Non Query Statement][Non Query Statements] and executing the statement against the data source appropriately, adding their result to the List in order. It is more efficient to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] as they do not have to parse the command text provided.
 
 Each type of statement returns the following:
 
@@ -412,9 +414,11 @@ Each type of statement returns the following:
 | n | Many rows affected by the [AnyCommands][] |
 | 0 | No rows affected by the [AnyCommands][] |
 
+Note that the [AnyCommands][] should not be used for complex statements such as Cursor Statements, as the parsing performed by the blocks will cause each section of a complex statement to be treated as individual statements instead of running the complex statement as a whole. For complex statements use either the [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand], depending on whether the complex statement returns data from the data source or the number of rows affected.
+
 #### QueryCommand
 
-Derived from [ICommand][] a NonQueryCommand is a command with a single, or multiple statements [Query Statements][Statement Types] that will be run as a whole. The [Result][Result Property] is of type [List][]&lt;[Structure][]&gt;. If the command contains multiple statements, only the results of the first select statement will be returned.
+Derived from [ICommand][] a NonQueryCommand is a command with a single, or multiple statements [Query Statements][] that will be run as a whole. The [Result][Result Property] is of type [List][]&lt;[Structure][]&gt;. If the command contains multiple statements, only the results of the first select statement will be returned.
 
 Each type of statement returns the following:
 
@@ -428,9 +432,11 @@ Each type of statement returns the following:
 |-|-|
 | null | Non Query Statements do not return data when used in a [QueryCommand][] |
 
+Note for complex statements that return data from the data source use the [QueryCommand][], as the [QueryCommand][] will not parse the complex statement and will execute it as a whole against the data source.
+
 #### NonQueryCommand
 
-Derived from [ICommand][] a NonQueryCommand is a command with a single, or multiple [Non Query Statements][Statement Types] that will be run as a whole. The [Result][Result Property] is of type [Int32][]. If the command contains multiple statements, each statement's result will be aggregated into a single value.
+Derived from [ICommand][] a NonQueryCommand is a command with a single, or multiple [Non Query Statements][] that will be run as a whole. The [Result][Result Property] is of type [Int32][]. If the command contains multiple statements, each statement's result will be aggregated into a single value.
 
 Each type of statement returns the following:
 
@@ -444,13 +450,23 @@ Each type of statement returns the following:
 | n | Many rows affected by the [NonQueryCommand][] |
 | 0 | No rows affected by the [NonQueryCommand][] |
 
+Note for complex statements that return the number of rows affected on data source use the [NonQueryCommand][], as the [NonQueryCommand][] will not parse the complex statement and will execute it as a whole against the data source.
+
 ### Statement Types
 
 There are two categories of statements Query and Non Query.
 
+#### Query Statements
+
 Query Statements are used to retrieve data from a data source, for example selecting all rows from a table in a database, Query Statements return the data selected by the Statement as a [List][]&lt;[Structure][]&gt; when used in an [AnyCommand][Command Types AnyCommand], an [AnyCommands][Command Types AnyCommands], or a [QueryCommand][Command Types NonQueryCommand].
 
+A Query Statements can use any object as a parameter, except for objects that derive from [List][], using a list will cause the block to throw a [CommandException][].
+
+#### Non Query Statements
+
 Non Query Statements are used to manipulate the data within a data source, for example deleting all rows from a table in a database, Non Query Statements return the number of rows affected by the Statement as an [Int32][] when used in an [AnyCommand][Command Types AnyCommand], an [AnyCommands][Command Types AnyCommands], or a [NonQueryCommand][Command Types NonQueryCommand].
+
+A Non Query Statement can use any object as a parameter. If a type that derives from [List][] is used, the Non Query Statement will be executed for each item in the [List][] with the total number of rows affected by all of the Non Query Statements being returned.
 
 ### Connection Strings
 
@@ -468,11 +484,11 @@ Any SqlException thrown by the block will be wrapped in a [CommandException][].
 
 The parameter object is optional and only required for parameterised commands, e.g. "select * from Table where Name = @Param". Please see the example above, [Executing a Parameterised Command][]. Parameterised Commands help mitigate a data source connection from being susceptible to Sql Injection attacks, due the the parameters being added to the statement and sanitised by the data source before it is Executed, for this reason it is advised to use Parameterised Commands to pass variables into your statements.
 
-[Query Statements][Statement Types] (e.g. Select and Execute) do not allow lists as a parameter. It does allow [Structures][Structure] and [Dictionaries][], which can have multiple parameters in them.
+[Query Statements][] (e.g. Select and Execute) do not allow lists as a parameter. It does allow [Structures][Structure] and [Dictionaries][], which can have multiple parameters in them.
 
-[Non Query Statements][Statement Types] (e.g. Insert, Update, Delete, etc) allow lists as a parameter, each item in the list will be executed as the parameter for the statement aggregating their results into a single value.
+[Non Query Statements][] (e.g. Insert, Update, Delete, etc) allow lists as a parameter, each item in the list will be executed as the parameter for the statement aggregating their results into a single value.
 
-For both [Query][Statement Types] and [Non Query][Statement Types] Statements, an SqlException is thrown if a parameter is missing from the given object.
+For both [Query Statements][] and [Non Query Statements][], an SqlException is thrown if a parameter is missing from the given object.
 
 Currently there is a limitation with the Execute Command block, output parameters cannot be written back to when used in a stored procedures.
 
@@ -481,6 +497,10 @@ Currently there is a limitation with the Execute Command block, output parameter
 Scalar values are returned as Structures with an empty key, and value equal to the result of the scalar query. Please see the example above, [Executing a Scalar Command][].
 
 Multiple Scalar values can be returned by the same statement if the as keyword is used to define each scalar result (e.g. `"select Max(Age) as Age, select Min(Height) as Height from Table"`), each scalar has the defined name as the key and its result as the value. Please see the example above, [Executing Multiple Scalar Commands][].
+
+### Complex Commands
+
+Note that the [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] should not be used for complex statements such as Cursor Statements, as the parsing performed by the blocks will cause each section of a complex statement to be treated as individual statements instead of running the complex statement as a whole. For complex statements use either the [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand], depending on whether the complex statement returns data from the data source or the number of rows affected.
 
 [Command Property]: {{< ref "#command" >}}
 [Connection Details Property]: {{< ref "#connection-details" >}}
@@ -499,7 +519,8 @@ Multiple Scalar values can be returned by the same statement if the as keyword i
 
 [Parameterised Commands]: {{< ref "#parameterised-commands">}}
 
-[Statement Types]: {{< ref "#statement-types">}}
+[Query Statements]: {{< ref "#query-statements">}}
+[Non Query Statements]: {{< ref "#non-query-statements">}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
