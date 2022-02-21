@@ -187,7 +187,7 @@ The data source contains a `Table` with the following rows and columns before th
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Command][Command Property] | `($)Command`, with value `{"CommandText": "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@Prop1, @Prop2);", "Parameters": [ {Prop1 = "FirstColumn4", Prop2 = "SecondColumn4"}, {Prop1 = "FirstColumn5", Prop2 = "SecondColumn5"}, {Prop1 = "FirstColumn6", Prop2 = "SecondColumn6"} ]}` | `($)Command` is a variable of type [NonQueryCommand][] |
+| [Command][Command Property] | `($)Command`, with value `{"CommandText": "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@Prop1, @Prop2);", "Parameters": { Prop1 = "FirstColumn4", Prop2 = "SecondColumn4" }` | `($)Command` is a variable of type [NonQueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
@@ -197,7 +197,7 @@ The data source contains a `Table` with the following rows and columns before th
 Inserting a new row into `Table` using a Parameterised NonQueryCommand results in the variable `($)Result` being updated to the following:
 
 ```json
-3
+1
 ```
 
 The data source contains a `Table` with which will be updated to the following when the command is executed:
@@ -207,8 +207,8 @@ The data source contains a `Table` with which will be updated to the following w
 | 2 | FirstColumn2 | SecondColumn2 |
 | 3 | FirstColumn3 | SecondColumn3 |
 | 4 | FirstColumn4 | SecondColumn4 |
-| 5 | FirstColumn5 | SecondColumn5 |
-| 6 | FirstColumn6 | SecondColumn6 |
+
+Note that using a Paramaterised Command helps prevent against Sql Injection, for more information please see [Parameterised Commands][].
 
 ***
 
@@ -280,7 +280,7 @@ Selecting the Maximum Id value as MaxId and the Minimum Id value as MinId from `
 
 ***
 
-## Properties   
+## Properties
 
 ### Command
 
@@ -496,6 +496,8 @@ Multiple Scalar values can be returned by the same statement if the as keyword i
 [Command Types AnyCommands]: {{< ref "#anycommands">}}
 [Command Types QueryCommand]: {{< ref "#querycommand">}}
 [Command Types NonQueryCommand]: {{< ref "#nonquerycommand">}}
+
+[Parameterised Commands]: {{< ref "#parameterised-commands">}}
 
 [Statement Types]: {{< ref "#statement-types">}}
 
