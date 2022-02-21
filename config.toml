@@ -107,7 +107,7 @@ version = "v2021"
 url_latest_version = "https://latest.docs.cortex-ia.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/CortexIntelligentAutomation/docs_v2022"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
 github_project_repo = "https://github.com/google/docsy"
 
