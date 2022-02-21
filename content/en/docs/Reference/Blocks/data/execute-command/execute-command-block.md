@@ -22,11 +22,7 @@ The [Connection Details][Connection Details Property] defines what data source t
 
 This example will select all rows and columns from a connected SQLServer data source, saving the rows to the [Result][Result Property].
 
-The following [Command Types][] can be used:
-
-- [AnyCommand][Command Types AnyCommand]
-- [AnyCommands][Command Types AnyCommands]
-- [QueryCommand][Command Types QueryCommand]
+An [QueryCommand][Command Types AnyCommand] is used throughout this example to select data from the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -39,7 +35,7 @@ The data source contains a `Table` with the following rows and columns before th
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT * FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommand][] |
+| [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT * FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [QueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
@@ -74,11 +70,7 @@ Selecting all rows and columns from `Table` using an AnyCommand results in the v
 
 This example will insert a new row into a connected SQLServer data source, saving the number of rows affected to the [Result][Result Property].
 
-The following [Command Types][] can be used:
-
-- [AnyCommand][Command Types AnyCommand]
-- [AnyCommands][Command Types AnyCommands]
-- [NonQueryCommand][Command Types NonQueryCommand]
+A [NonQueryCommand][Command Types NonQueryCommand] is used throughout this example to insert data into the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -118,9 +110,7 @@ The data source contains a `Table` with which will be updated to the following w
 
 This example will insert a new row into a connected SQLServer data source and the retrieve all rows and columns from the data source, saving the number of rows affected and the rows returned to the [Result][Result Property].
 
-The following [Command Types][] can be used:
-
-- [AnyCommands][Command Types AnyCommands]
+An [AnyCommands][Command Types AnyCommands] is used throughout this example to both insert into and select data from the data source.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -133,7 +123,7 @@ The data source contains a `Table` with the following rows and columns before th
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Command][Command Property] | `($)Command`, with value `{"CommandText": "Insert Into Table ("FirstColumn4", "SecondColumn4");; SELECT * FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommands][] |
+| [Command][Command Property] | `($)Command`, with value `{"CommandText": "Insert Into Table ("FirstColumn4", "SecondColumn4"); SELECT * FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommands][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
@@ -182,13 +172,9 @@ The data source contains a `Table` with which will be updated to the following w
 
 ### Executing a Parameterised Command
 
-This example will insert a new row into a connected SQLServer data source and the retrieve all rows and columns from the data source, saving the number of rows affected and the rows returned to the [Result][Result Property].
+This example will insert a number of new rows using a parameterised statement into a connected SQLServer data source, saving the number of rows affected to the [Result][Result Property].
 
-The following [Command Types][] can be used:
-
-- [AnyCommand][Command Types AnyCommand]
-- [AnyCommands][Command Types AnyCommands]
-- [NonQueryCommand][Command Types NonQueryCommand]
+A [NonQueryCommand][Command Types NonQueryCommand] is used throughout this example to insert data into the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -230,11 +216,7 @@ The data source contains a `Table` with which will be updated to the following w
 
 This example will select the Maximum Id value from a connected SQLServer data source, saving the rows to the [Result][Result Property].
 
-The following [Command Types][] can be used:
-
-- [AnyCommand][Command Types AnyCommand]
-- [AnyCommands][Command Types AnyCommands]
-- [QueryCommand][Command Types QueryCommand]
+A [QueryCommand][Command Types QueryCommand] is used throughout this example to select the Maximum Id value from the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -247,7 +229,7 @@ The data source contains a `Table` with the following rows and columns before th
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommand][] |
+| [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [QueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
@@ -268,11 +250,7 @@ Selecting the Maximum Id value from `Table` using an AnyCommand results in the v
 
 This example will select the Maximum Id value as MaxId and the Minimum Id value as MinId from a connected SQLServer data source, saving the rows to the [Result][Result Property].
 
-The following [Command Types][] can be used:
-
-- [AnyCommand][Command Types AnyCommand]
-- [AnyCommands][Command Types AnyCommands]
-- [QueryCommand][Command Types QueryCommand]
+A [QueryCommand][Command Types QueryCommand] is used throughout this example to select the Maximum Id value as MaxId and the Minimum Id value as MinId from the data source, however both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -285,7 +263,7 @@ The data source contains a `Table` with the following rows and columns before th
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) AS MaxId, Min(ID) AS MinId FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [AnyCommand][] |
+| [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) AS MaxId, Min(ID) AS MinId FROM Table;", "Parameters": null}` | `($)Command` is a variable of type [QueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)Close Connection`, with value `true` | `($)Close Connection` is a variable of type [Boolean][] |
 | [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
@@ -302,7 +280,7 @@ Selecting the Maximum Id value as MaxId and the Minimum Id value as MinId from `
 
 ***
 
-## Properties
+## Properties   
 
 ### Command
 
