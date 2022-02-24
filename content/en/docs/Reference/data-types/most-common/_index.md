@@ -59,6 +59,8 @@ TODO
 
 ### Collections
 
+#### Array
+
 #### IEnumerable&lt;T&gt;
 
 TODO
