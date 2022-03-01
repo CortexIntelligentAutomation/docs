@@ -130,9 +130,7 @@ body {
     color: $ctx-text-black;
   }
   
-  table {
-    display: table !important;
-    
+  table {  
     th {
       border-top: none !important;
       border-bottom: none !important;
@@ -149,6 +147,7 @@ body {
     max-width: 100% !important;
   }
 }
+
 .td-docs {
   img:first-of-type {
     float: left;
@@ -156,6 +155,10 @@ body {
     margin-right: 10px;
     vertical-align: bottom;
   }
+}
+
+figure.no-float > img {
+  float: none !important;
 }
 
 main {

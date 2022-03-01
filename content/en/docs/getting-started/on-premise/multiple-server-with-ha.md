@@ -40,7 +40,7 @@ Multiple server installations with HA are recommended for the following scenario
     
 ### Recommended architecture
 
-{{< figure src="/images/HA-architecture.jpg" title="Architecture Diagram" >}}
+{{< figure class="no-float" src="/images/HA-architecture.jpg" title="Architecture Diagram" >}}
 
 ### Alternative architectures
 {{< alert color="warning" title="TODO Diagram" >}}{{< /alert >}}
@@ -221,11 +221,8 @@ in the description of each port. The Application ports must not lie in the ephem
 
 |Name of Service | Description | Default Port(s) | Protocol(s) | Direction | Program|
 |----------------|-------------|-----------------|-------------|-----------|--------|
-| API Gateway | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex EDA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
-| Flow Publisher | The ports providing communication between other services and the stateful Cortex Flow Publisher service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
-| Snmp G2 Forwarder | The port providing communication between other services and the Cortex SNMP G2 Forwarder service. | 10003 | TCP, UDP | Inbound, Outbound | Any |
-| Snmp Parser | The port providing communication between other services and the Cortex SNMP Parser service. | 10002 | TCP, UDP | Inbound, Outbound | Any |
-| Snmp Receiver | The port providing communication between other services and the Cortex SNMP Receiver service and used as the healthcheck endpoint for the loadbalancer. **If this is changed and the bundled load balancer is being used then it is also necessary to update the "applicationport" value of the "loadbalancer" section of the Cortex.EDA.Install.Config.json configuration file to match; or, if using an alternative load balancer, the configuration for that should be updated to reflect the new port.** | 10001 | TCP, UDP | Inbound, Outbound | Any |
+| API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex EDA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
+| Flow Execution | The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
 
 #### TLS Requirements
 
@@ -270,32 +267,18 @@ Windows 10? We dev on this so do we support it? Windows Server 16, 19
 
 ## Installation
 
-### Application Node
-
 ### HA Nodes
 
-### Gateway
-  + Install as usual using install guide, including SQL Server/Express, web deploy. Can use the same user for this as installing debugger app pool later.
-  + Change web.config or parameters.xml to configure where debugger is, where service fabric is, whether service fabric is self-signed, feature flag
-  + Reinstall it if parameters.xml were changed, otherwise iisreset
-### Blocks - Extract them to the right place - can they go in a share? What permissions do they need?
-### Debugger (including .NET hosting bundle, app pool initialisation and blocks)
-  + Put it on server
-  + Ensure appsettings points to blocks
-  + Run script to install hosting bundle, app pool and debugger. TODO: Will need to bundle hosting bundle for offline mode.
+#### Install Cortex HA Infrastructure and Services
 
-# Install Cortex HA Infrastructure and Services
-
-1. Choose one of the HA node machines and copy the following artefacts to a folder on it (the version numbers may differ):
+1. Choose one of the HA node machines and copy the following artefacts to a folder on it (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
    * Cortex Evolution - Innovation 2022-RC.2022.1.4 - HA Services.zip
    * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip
 
-1. Extract "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip"
+1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
 1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.Config.json" and open it with a text editor.
 1. Change the configuration file according to your cluster, referring to the following example and details:
-
-    TODO: Do we want to add a link to a config for each scenario rather than saying "skip if not using load balancer". Scenarios are with and without loadbalancer, with and without proper certificates???
 
     {{< highlight json "linenos=table,hl_lines=4 17 20 22 26-27 30-31 34-35 41 43 45 47 49 51 72-75 79-82,linenostart=1" >}}
     {
@@ -397,12 +380,12 @@ Windows 10? We dev on this so do we support it? Windows Server 16, 19
     |43, 47, 51 | The name of a certificate entry in the serverCertificates section. This should be the same for all HA servers. If these lines are removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.|
     |72-74 | Skip configuring these lines if self-signed certificates are being used. |
     |79-81 | Skip configuring these lines if self-signed certificates are being used or if the bundled load balancer is not being used. |
-    |73|This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |74|The password used to secure the .PFX file.|
-    |75|This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
-    |80|This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |81|The password used to secure the .PFX file.|
-    |82|This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
+    |73    |This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
+    |74    |The password used to secure the .PFX file.|
+    |75    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
+    |80    |This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
+    |81    |The password used to secure the .PFX file.|
+    |82    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.
 1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.ps1" and open it with a text editor.
@@ -417,7 +400,7 @@ Windows 10? We dev on this so do we support it? Windows Server 16, 19
 
 1. Save and close the PowerShell file.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. cd to inside the Installation Scripts folder, e.g.:
+1. Navigate PowerShell to inside the Installation Scripts folder using the following command, modifying the path as necessary:
 
     ```powershell
     cd "C:\Install\Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts"
@@ -447,64 +430,82 @@ Windows 10? We dev on this so do we support it? Windows Server 16, 19
     .\Cortex.Innovation.Uninstall.ps1
     ```
 
-1. If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
+If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
 
-Current Debugger script:
+### Application Node
 
-This script installs the debugger and any pre-requisites, such as the Microsoft Net Core Hosting package and the Net Core app pool.
-Before running this script, ensure the Debugger installation files are located at C:\Install\Debugger (or change the reference to this below for
-their location). Also ensure that the app pool user and password is as required.
+#### Install Gateway
 
-  ```powershell
-Import-module WebAdministration
-iisreset /stop
+1. Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
+    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
+1. Use the "Cortex Installation Guide" to install Cortex Gateway, ensuring to follow any pre-requisites relevant to Cortex Gateway, including a SQL Express or SQL Server instance. Use the following points as they will differ from a Cortex Integrity installation:
+    * Ignore the section about "Required Components" for Cortex Innovation; only SQL Server and Cortex Gateway are needed, along with the other components detailed in this guide.
+    * Wherever "Cortex Gateway.zip" is mentioned, use the "Cortex Evolution - Innovation * - Block Packages.zip" file that was copied in the previous step.
+    * When configuring the "parameters.xml" file, some additional values need to be updated:
 
-[string]$AppPoolUser = 'CTX_gateway'
-[string]$AppPoolPwd = 'G&t3Wa7'
+    ```xml
+    <setParameter name="Feature Flags" value="&lt;value&gt;InnovationId&lt;/value&gt;" />
+    <setParameter name="Service Fabric Api Gateway Endpoint" value="&lt;value&gt;https://ha-server1.domain.com:8722/&lt;/value&gt;" />
+    <setParameter name="Service Fabric Using Self Signed Certificates" value="&lt;value&gt;False&lt;/value&gt;" />
+    <setParameter name="Service Fabric ApiGateway Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
+    <setParameter name="Service Fabric ApiGateway Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
+    <setParameter name="Dot NET flow debugger Endpoint" value="&lt;value&gt;https://app-server.domain.com/debugger/api/&lt;/value&gt;" />
+    ```
 
-$vm_dotnet_core_hosting_module = Get-WebGlobalModule | where-object { $_.name.ToLower() -eq "aspnetcoremodulev2" }
-if (!$vm_dotnet_core_hosting_module)
-{
-    $FilePath = "C:\temp\NetCoreHostingBundle.exe"
-    Invoke-WebRequest -Uri "https://download.visualstudio.microsoft.com/download/pr/beca42b0-54a8-4364-86b8-a3d88003fbb7/592e0eec1e5e53f78d9647f7112cc743/dotnet-hosting-3.1.9-win.exe" -OutFile $FilePath
+    | Name                                         | Description |
+    |----------------------------------------------|-------------|
+    |Feature Flags                                 | Configure as above, replacing "InnovationId" with the Cortex Innovation feature identifier. This should be retrieved from Cortex. |
+    |Service Fabric Api Gateway Endpoint           | Configure as above, replacing "ha-server1.domain.com" with the fully qualified domain name of one of the HA nodes. The port should be 8722. |
+    |Service Fabric Using Self Signed Certificates | Configure the value as "False" if you are using valid CA certificates, "True" if using self-signed certificates |
+    |Service Fabric Self Signed Certificate Subject| This should not be changed. |
+    |Service Fabric ApiGateway Basic Auth Username | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthUsername when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. |
+    |Service Fabric ApiGateway Basic Auth Password | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
+    |Dot NET flow debugger Endpoint                | Configure as above, replacing "app-server.domain.com" with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
+
+#### Install Flow Debugger Service
+
+1. We recommend that the Cortex Flow Debugger Service is installed on the same machine as Cortex Gateway. Copy the following artefacts to a folder on the machine (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
+   * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
+   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - HA Services.zip
+   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip
+
+1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
+1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.FlowDebuggerService.ps1" and open it with a text editor.
+1. Change the paths in the following script to point to the location of the Block Packages and Flow Debugger Service zip files on your machine. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number.
+
+    ```powershell
+    .\Cortex.Install.FlowDebuggerService.ps1 `
+    -DebuggerPackageZipPath "C:\Install\Cortex Evolution - Innovation * - Flow Debugger Service.zip" `
+    -BlockPackagePath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
+    -Credential $c
+    ```
+
+1. Save and close the PowerShell file.
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the Installation Scripts folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts"
+    ```
+
+1. Install Cortex HA Services and infrastructure by running the following command (Tee-Object will write output to both the PowerShell console and a log file, the path can be changed if required.):
   
-    $Args = New-Object -TypeName System.Collections.Generic.List[System.String]
-    $Args.Add("/quiet")
-    $Args.Add("/install")
-    $Args.Add("/norestart")
-    $Output = Start-Process -FilePath $FilePath -ArgumentList $Args -NoNewWindow -Wait -PassThru
-    If($Output.Exitcode -Eq 0)
-    {
-        net stop was /y
-        net start w3svc
-    }
-    else {
-        Write-HError "`t`t Something went wrong with the installation. Errorlevel: ${Output.ExitCode}"
-        Exit 1
-    }
-}
-else {
-    Write-Output ".NET core hosting module is already installed."
-}
+    ```powershell
+    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object C:\Temp\cortex-flow-debugger-service-install-log.txt
+    ```
 
-$CreatingAppPool = $false
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (HA and load balancer) and press OK.
+1. Wait for the script to finish running. This should take approximately 2 minutes.
+1. An error may have appeared saying:
 
-if(-not (Test-Path IIS:\AppPools\Debugger)) {
-    $appPool = New-WebAppPool Debugger
-    $appPool.ManagedRuntimeVersion = ''
-    $appPool | Set-Item
-    $CreatingAppPool = $true
-}
+    ```powershell
+    The Windows Process Activation Service service is not started.
+    ```
 
-C:\Install\Debugger\Cortex.Flows.Debugger.Api.deploy.cmd /Y
+    This can be ignored.
+1. Check that there have been no other errors in the script; these would appear in red in the console. If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
 
-if($CreatingAppPool) {
-    Set-ItemProperty 'IIS:\Sites\Cortex\Debugger' applicationPool Debugger -Force
-    Set-ItemProperty IIS:\AppPools\Debugger -name processModel -value @{userName=$AppPoolUser;password=$AppPoolPwd;identitytype=3}
-}
-
-iisreset /start
-```
+    If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
 
 ## Next Steps?
 1. [Setup](../../setup) the platform
