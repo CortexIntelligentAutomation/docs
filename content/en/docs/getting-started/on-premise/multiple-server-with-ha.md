@@ -24,10 +24,10 @@ Multiple server installations with HA are recommended for the following scenario
 |-----------|---------|----------|------------|
 | [Cortex&nbsp;Gateway](/docs/concepts/todo-cortex-gateway) | Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
 | [Cortex&nbsp;Studio](/docs/concepts/todo-cortex-studio) | Application hosted in Cortex Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions. | Required | Web&nbsp;Application&nbsp;Server |
-| ~~[Cortex&nbsp;LiveView](/docs/concepts/todo-cortex-liveview)~~ | Application hosted in Cortex Gateway that provides real-time monitoring of what's happening in production environments, as well as analytics and reporting on automation solutions. | Optional | Web&nbsp;Application&nbsp;Server |
-| ~~[Cortex&nbsp;LivePortal](/docs/concepts/todo-cortex-liveportal)~~ | Web portal that allows users to manually trigger automation or interact with automation that requires human-in-the-loop decisions, approval or intervention. | Optional | Web&nbsp;Application&nbsp;Server |
-| [Cortex&nbsp;API&nbsp;Gateway&nbsp;Service](/docs/concepts/todo-cortex-api-gateway-service) | Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
-| [Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service](/docs/concepts/todo-cortex-flow-execution-service) | Service that executes automation flows. | Required | Application&nbsp;Server |
+| [Cortex&nbsp;Flow&nbsp;Debugger&nbsp;Service](/docs/concepts/todo-cortex-flow-debugger-service) | Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
+| [Cortex&nbsp;API&nbsp;Gateway&nbsp;Service](/docs/concepts/todo-cortex-api-gateway-service) | HA Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
+| [Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service](/docs/concepts/todo-cortex-flow-execution-service) | HA Service that executes automation flows. | Required | Application&nbsp;Server |
+| [Cortex&nbsp;Block&nbsp;Packages](/docs/concepts/todo-cortex-block-packages) | A set of .nupkg files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric](https://azure.microsoft.com/en-us/services/service-fabric/) | Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster) | Web portal for monitoring and managing the HA clusters that automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Particular&nbsp;NServiceBus](https://particular.net/nservicebus) | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
@@ -36,14 +36,25 @@ Multiple server installations with HA are recommended for the following scenario
 | TODO (SSDB, SSIS, SSAS, SSRS) | Hopefully, we can remove the need for SQL Server database components in next generation, by using a combination of git for configuration, and log ingestion tools like Humio or Loki, Grafana, Prometheus combination to replace dashboarding and analytics. | End-of-life | Database&nbsp;Server |
 | [NSSM](https://nssm.cc/) | Windows Service Manager that hosts the gobetween load balancer application as a Windows Service. | Required | Load&nbsp;Balancer |
 | [gobetween](http://gobetween.io/) | L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services. | Required | Load&nbsp;Balancer |
-    
-    
+
 ### Recommended architecture
 
-{{< figure class="no-float" src="/images/HA-architecture.jpg" title="Architecture Diagram" >}}
+The following architecture requires 5 servers - a web application server which contains Gateway, Flow Debugger Service and Databases plus a load balancer server and 3 application servers. This will be suitable for most installations, however if Cortex Gateway is expected to have high load it would be advisable to install Cortex Gateway, Flow Debugger Service and Databases onto different machines (7 server architecture).
+
+{{< figure class="no-float" src="/images/Cortex Innovation Overview.png" title="5 Server Architecture Diagram" >}}
 
 ### Alternative architectures
-{{< alert color="warning" title="TODO Diagram" >}}{{< /alert >}}
+
+If Cortex Gateway is expected to have high load it would be advisable to install Cortex Gateway, Flow Debugger Service and Databases onto different machines (7 server architecture) as shown below:
+
+{{< figure class="no-float" src="/images/Cortex Innovation Overview 7 servers.png" title="7 Server Architecture Diagram" >}}
+
+It is also possible to minimise the number of servers used by installing SQL Express/SQL Server, Cortex Gateway and the Flow Debugger Service on either the load balancer machine or one of the application servers (4 server architecture), as shown below. A 3 node architecture is not possible as the load balancer cannot route requests to itself.
+
+{{< figure class="no-float" src="/images/Cortex Innovation Overview 4a servers.png" title="4 Server Architecture Diagram - Web Applications on Load Balancer Server" >}}
+{{< figure class="no-float" src="/images/Cortex Innovation Overview 4b servers.png" title="4 Server Architecture Diagram - Web Applications on Application Server" >}}
+
+A number of other configurations are also possible, where any combination of the load balancer, Cortex Gateway, Flow Debugger Service and Databases can be on any combination of servers. This can be particularly relevant for adding Cortex Innovation to an existing Gateway installation.
 
 ## Prerequisites
 
@@ -51,7 +62,7 @@ Multiple server installations with HA are recommended for the following scenario
 
 {{% alert title="Note" %}}The minimum number of servers required to run Cortex with HA is 4. This setup requires multiple server roles to be installed on the same server.
 
-The minimum recommended number of servers is 7, and allows each server role instance to be installed on its own server.{{% /alert %}}
+The recommended number of servers is 7, and allows each server role instance to be installed on its own server.{{% /alert %}}
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
@@ -61,11 +72,12 @@ The minimum recommended number of servers is 7, and allows each server role inst
 | Load&nbsp;Balancer | 1[^5] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 100+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
 
 TODO: This is where sf cluster is https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-standalone-deployment-preparation
+TODO: "Application Server" or "HA node server"? Need to chose and update diagrams as necessary.
 
 [^1]: If both Gateway and LivePortal web applications are being installed, it is recommended that they are each installed on a separate Web Application Server. Neither Gateway or LivePortal currently offer HA support.
-[^2]: If only Gateway is being installed, only 1 server is needed. If both Gateway and LivePortal web applications are being installed, they can be installed on the same Web Application Server, but it is not recommended. 
+[^2]: If only Gateway is being installed, only 1 server is needed. If both Gateway and LivePortal web applications are being installed, they can be installed on the same Web Application Server, but it is not recommended.
 [^3]: Application servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum.
-[^4]: Database server doesn't currently offer HA support. 
+[^4]: Database server doesn't currently offer HA support.
 [^5]: A software-based load balancer called [gobetween](http://gobetween.io/) is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast](https://en.wikipedia.org/wiki/Anycast); however, this has not been verified yet. It is possible to use an [alternative load balancer](#alternative-load-balancer-requirements) to the one provided.
 
 #### Alternative Load Balancer Requirements
@@ -73,7 +85,7 @@ TODO: This is where sf cluster is https://docs.microsoft.com/en-us/azure/service
 Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
 
 * Must be able to health check each node by running a batch script (that runs a PowerShell script which makes an HTTP request) that returns 1 for healthy and 0 for unhealthy.
-* Must be able to access each of the HA node machines.
+* Must be able to access each of the Application Servers.
 * Ideally it should be highly available to avoid a single point of failure in the system.
 
 ### Software Requirements
@@ -84,7 +96,7 @@ Must support a round robin (or similar) method of load balancing to specified po
 | Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
 | Database&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-sql-server-2019?filetype=EXE)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-sql-server-2016?filetype=EXE) | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
 | Load&nbsp;Balancer | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
-    
+
 [^6]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^7]: SQL Server Standard and Enterprise editions are supported. Only SQL Server is supported; other databases, including SQL Server Express are not supported.
 [^8]: Only IIS is supported; other web servers, including IIS Express are not supported.
@@ -93,11 +105,17 @@ Must support a round robin (or similar) method of load balancing to specified po
 
 ### Security Requirements
 
+#### Remote Registry Service
+
 All HA node servers must have the Remote Registry service running.
 
-A domain user which is a member of the local Administrators group on all servers (load balancer and HA) must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex EDA is built upon.
+#### Installation User
 
-It is advised (by Microsoft Service Fabric) that certain antivirus exclusions are created on each HA node server to reduce anti-virus processing on Service Fabric artefacts. The process exclusions should be done before installation occurs, as the processes will be used during installation of the application and anti-virus software can cause the installation to fail or timeout. Some antivirus software will only allow folder exclusions to be applied if they already exist, so these may be added after installation occurs. The following exclusions should be applied for any anti-virus software running on any of the nodes:
+A domain user which is a member of the local Administrators group on all servers (load balancer and HA) must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.
+
+#### Antivirus Exclusions
+
+It is advised (by Microsoft Service Fabric) that certain antivirus exclusions are created on each Application server to reduce anti-virus processing on Service Fabric artefacts. The process exclusions should be done before installation occurs, as the processes will be used during installation of the application and anti-virus software can cause the installation to fail or timeout. Some antivirus software will only allow folder exclusions to be applied if they already exist, so these may be added after installation occurs. The following exclusions should be applied for any anti-virus software running on any of the nodes:
 
 #### Antivirus Excluded Folders
 
@@ -157,11 +175,19 @@ Only Windows domains with an Active Directory domain controller running Active D
 
 Supported versions of Active Directory are listed below:
 
-| Version                    | Supported From | Supported Until  |  
-|----------------------------|----------------|------------------|
-| TODO                       | Cortex V6.4    | To be confirmed  |
+| Version                    | Verified?      | Supported From | Supported Until  |  
+|----------------------------|----------------|----------------|------------------|
+| Windows Server 2003        |      ✓       | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2003 R2     |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2008        |      ✓       | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2008 R2     |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2012        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2012 R2     |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2016        |      ✓       | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2019        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2022        |                | Cortex v2022.5 | To be evaluated  |
 
-All servers (load balancer and HA nodes) must be on the same domain and cannot be domain controllers.
+All servers (load balancer and application servers) must be on the same domain and cannot be domain controllers.
 
 #### Port Requirements
 
@@ -183,10 +209,10 @@ is not possible.
 | Cortex.RabbitMqManagementApiPort | The port used by the RabbitMQ management plugin. **This cannot currently be changed.** | 15671 | TCP | Inbound |
 | Cortex.WindowsSmbRemoteRegistry | The ports used by Windows SMB and Remote Registry service. | 135, 137, 138, 139, 445 | TCP | Inbound |
 | Cortex.ServiceFabric.Customer1.ClusterConnectionEndpointPort | The port used by the client to connect to the cluster when client APIs are used. | 9000 | TCP | Inbound |
-| Cortex.ServiceFabric.Customer1.ClientConnectionEndpointPort | The port where the HA nodes communicate with each other. | 9001 | TCP | Inbound |
+| Cortex.ServiceFabric.Customer1.ClientConnectionEndpointPort | The port where the nodes communicate with each other. | 9001 | TCP | Inbound |
 | Cortex.ServiceFabric.Customer1.ServiceConnectionEndpointPort | The port used by the applications and services deployed on a node to communicate with the Service Fabric client on that particular node. | 9003 | TCP | Inbound |
 
-##### Microsoft Service Fabric Firewall Rules (present on all HA Nodes, with Domain, Public and Private Profiles)
+##### Microsoft Service Fabric Firewall Rules (present on all Application Servers, with Domain, Public and Private Profiles)
 
 These rules will all appear in Windows Firewall with names starting with ‘{CustomerName}.{NodeName} WindowsFabric’.
 
@@ -214,14 +240,11 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 
 ##### Cortex HA Service Rules
 
-Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the 
-ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by 
-any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described 
-in the description of each port. The Application ports must not lie in the ephemeralPorts range.
+Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the ephemeralPorts range.
 
 |Name of Service | Description | Default Port(s) | Protocol(s) | Direction | Program|
 |----------------|-------------|-----------------|-------------|-----------|--------|
-| API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex EDA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
+| API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex HA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
 | Flow Execution | The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
 
 #### TLS Requirements
@@ -234,21 +257,16 @@ TODO include protocols, ciphers, hashes etc.
 
 An X.509 SSL wildcard certificate with the following requirements should be obtained from a Certificate Authority, such as Let’s Encrypt (https://letsencrypt.org/), to be used for inter-node communication:
 
-* Subject field should be in a wildcard format, pertaining to the domain of the HA nodes (e.g. CN=*.<domain>.com).
+* Subject field should be in a wildcard format, pertaining to the domain of the HA nodes (e.g. CN=*.domain.com).
 * Certificate file should be in a .PFX file format, with a known password. It should contain the full chain of certificates.
 * Certificate file should include the private key.
-This file should be placed in a known location on the server that the installation 
-scripts will be run on. The location will be used in the configuration file later to 
-enable the certificate to be installed by the installer.
-This will be used as the server certificate for inter-node communication and 
-identification to clients. It ensures that unauthorised nodes cannot join the cluster.
-It can also be used to connect to Service Fabric Explorer from each of the nodes. 
-Note: This can be omitted, and the installation will create and use self-signed 
-certificates, but this is not recommended for production systems.
+This file should be placed in a known location on the server that the installation scripts will be run on. The location will be used in the configuration file later to enable the certificate to be installed by the installer.
+This will be used as the server certificate for inter-node communication and identification to clients. It ensures that unauthorised nodes cannot join the cluster.
+It can also be used to connect to Service Fabric Explorer from each of the nodes. Note: This can be omitted, and the installation will create and use self-signed certificates, but this is not recommended for production systems.
 
 An X.509 SSL certificate with the following requirements should also be obtained to be used by the load balancer to communicate with the HA nodes:
 
-* Subject field should be in a wildcard format, pertaining to the domain of the load balancer (e.g. CN=*.<domain>.com) or which is the FQDN of the load balancer (e.g. CN=<machine-name>.<domain>.com).
+* Subject field should be in a wildcard format, pertaining to the domain of the load balancer (e.g. CN=*.domain.com) or which is the FQDN of the load balancer (e.g. CN=machine-name.domain.com).
 * Certificate file should be in a .PFX file format, with a known password. It should contain the full chain of certificates.
 * Certificate file should include the private key.
 This file should be placed in a known location on the server that the installation scripts will be run on. The location will be used in the configuration file later to enable the certificate to be installed by the installer.
@@ -257,19 +275,19 @@ Note: This can be omitted, and the installation will create and use self-signed 
 
 #### Kerberos Requirements
 
-TODO - Lexi doesn't know about this... is it winrm?
+TODO - Kerberos and winrm
 
 ### Client Requirements
 
-TODO browsers, os etc.
-Gateway - Chrome, Firefox or Edge
-Windows 10? We dev on this so do we support it? Windows Server 16, 19
+We support the latest versions of the following browsers:
 
-## Installation
+* Chrome
+* Edge
+* Firefox
 
-### HA Nodes
+## Install Application Servers and Load Balancer Server
 
-#### Install Cortex HA Infrastructure and Services
+### Install Cortex HA Infrastructure and Services
 
 1. Choose one of the HA node machines and copy the following artefacts to a folder on it (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
@@ -389,14 +407,25 @@ Windows 10? We dev on this so do we support it? Windows Server 16, 19
 
 1. Save and close the config file.
 1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.ps1" and open it with a text editor.
-1. Change the paths in the following script to point to the location of the Block Packages and HA Services zip files on your machine. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number.
+1. Configure the script according to the details given below:
 
     ```powershell
     .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -ApplicationPackageZipPath "C:\Install\Cortex Evolution - Innovation * - HA Services.zip" `
-    -BlockPackagePath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
+    -HaServicesPath "C:\Install\Cortex Evolution - Innovation * - HA Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
+    -ApiGatewayBasicAuthUser "BasicAuthUser" `
+    -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -Credential $c
     ```
+
+    | Name                                         | Description |
+    |----------------------------------------------|-------------|
+    |HaServicesPath                                | Configure this value with the location of the HA Services zip file on the installation node. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
+    |BlockPackagesPath                             | Configure this value with the location of the Block Packages zip file on the installation node. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
+    |ApiGatewayBasicAuthUser                       | Configure this value with the username that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.).|
+    |ApiGatewayBasicAuthPwd                       |  Configure this value with the password that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.). This should be Cortex Encrypted. |
+
+    The ApiGatewayBasicAuthUser and ApiGatewayBasicAuthPwd will be needed later, when installing Cortex Gateway.
 
 1. Save and close the PowerShell file.
 1. Open a Windows PowerShell (x64) window as administrator.
@@ -432,14 +461,18 @@ Windows 10? We dev on this so do we support it? Windows Server 16, 19
 
 If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
 
-### Application Node
+## Install Web Application Server
 
-#### Install Gateway
+### Install Gateway
 
+1. Use one of the following installation guides to install SQL Server or SQL Server Express:
+    * SQL Server 2019 Installation Guide for Cortex
+    * SQL Server 2016 Installation Guide for Cortex
+    * SQL Server 2016 Express Installation Guide for Cortex
 1. Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
-    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
-1. Use the "Cortex Installation Guide" to install Cortex Gateway, ensuring to follow any pre-requisites relevant to Cortex Gateway, including a SQL Express or SQL Server instance. Use the following points as they will differ from a Cortex Integrity installation:
-    * Ignore the section about "Required Components" for Cortex Innovation; only SQL Server and Cortex Gateway are needed, along with the other components detailed in this guide.
+    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Gateway.zip
+1. Use the "Cortex Installation Guide" to install Cortex Gateway, beginning at the section "Cortex Gateway Installation". Ensure that you refer to and follow the instructions for installing prerequisites in the "Note" sections. Use the following points as they will differ from a Cortex Integrity installation:
+    * In the "Required Components", ensure that the prerequisites in the "Note" sections are followed ("System requirements" and "Install Internet Information Services") but do not install the additional Cortex components mentioed. For Cortex Innovation; only SQL Server and Cortex Gateway are needed, along with the other components detailed in this guide.
     * Wherever "Cortex Gateway.zip" is mentioned, use the "Cortex Evolution - Innovation * - Block Packages.zip" file that was copied in the previous step.
     * When configuring the "parameters.xml" file, some additional values need to be updated:
 
@@ -462,23 +495,27 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
     |Service Fabric ApiGateway Basic Auth Password | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
     |Dot NET flow debugger Endpoint                | Configure as above, replacing "app-server.domain.com" with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
 
-#### Install Flow Debugger Service
+### Install Flow Debugger Service
 
 1. We recommend that the Cortex Flow Debugger Service is installed on the same machine as Cortex Gateway. Copy the following artefacts to a folder on the machine (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
-   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - HA Services.zip
-   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip
+   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Flow Debugger Service.zip
 
 1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
 1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.FlowDebuggerService.ps1" and open it with a text editor.
-1. Change the paths in the following script to point to the location of the Block Packages and Flow Debugger Service zip files on your machine. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number.
+1. Configure the script according to the details given below:
 
     ```powershell
     .\Cortex.Install.FlowDebuggerService.ps1 `
-    -DebuggerPackageZipPath "C:\Install\Cortex Evolution - Innovation * - Flow Debugger Service.zip" `
-    -BlockPackagePath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
+    -FlowDebuggerServicePath "C:\Install\Cortex Evolution - Innovation * - Flow Debugger Service.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
     -Credential $c
     ```
+
+    | Name                                         | Description |
+    |----------------------------------------------|-------------|
+    |FlowDebuggerServicePath                       | Configure this value with the location of the Flow Debugger Service zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
+    |BlockPackagesPath                             | Configure this value with the location of the Block Packages zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
 
 1. Save and close the PowerShell file.
 1. Open a Windows PowerShell (x64) window as administrator.
