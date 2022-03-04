@@ -177,13 +177,13 @@ Supported versions of Active Directory are listed below:
 
 | Version                    | Verified?      | Supported From | Supported Until  |  
 |----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓       | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2003        |      ✓        | Cortex v2022.5 | To be evaluated  |
 | Windows Server 2003 R2     |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2008        |      ✓       | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2008 R2     |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2008        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
 | Windows Server 2012        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2012 R2     |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2016        |      ✓       | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2016        |      ✓        | Cortex v2022.5 | To be evaluated  |
 | Windows Server 2019        |                | Cortex v2022.5 | To be evaluated  |
 | Windows Server 2022        |                | Cortex v2022.5 | To be evaluated  |
 
