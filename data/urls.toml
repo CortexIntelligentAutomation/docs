@@ -103,6 +103,7 @@
                 MainDoc = "/docs/reference/concepts/fundamentals/"
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
                     MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
+                    StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
                 [Cortex.Reference.Concepts.Fundamentals.Culture]
                     MainDoc = "/docs/reference/concepts/fundamentals/culture/"
                     InvariantCulture = "/docs/reference/concepts/fundamentals/culture/#invariant-culture"
@@ -209,6 +210,7 @@
                 MainDoc = "/docs/reference/data-types/"
                 [Cortex.Reference.DataTypes.MostCommon]
                     MainDoc = "/docs/reference/data-types/most-common/"
+                    Array = "/docs/reference/data-types/most-common/#array"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
@@ -378,6 +380,7 @@
         Dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
+        SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
@@ -413,3 +416,4 @@
 [W3]
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
+    SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"

@@ -12,3 +12,5 @@ TODO: Overview/summary
 
 - Supported Data Sources
 - Connection Strings
+
+Currently SQL Server is the only supported data source.

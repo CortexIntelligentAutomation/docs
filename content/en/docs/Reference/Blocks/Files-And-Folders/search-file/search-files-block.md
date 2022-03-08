@@ -459,7 +459,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If an exception occurs when trying to search a file in the [File Paths][FilePaths Property], it will be recorded and the block will continue processing the remaining files. Once all files are processed, recorded exceptions will be thrown within an [OperationFailedException][].
 
-### Known limitations
+### Known Limitations
 
 * The text in the files at the specified [File Paths][FilePaths Property] is searched line-by-line. As a result, when using `SearchOptions.Regex` the in-line `s` regex character is not supported.
 * If the text in the files at the specified [File Paths][FilePaths Property] ends with a blank line (`0` length) that line will not be read and therefore not matched against.

@@ -340,7 +340,7 @@ For information about encoding of text, examples of available encodings and usin
 
 For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
 
-### Known limitations
+### Known Limitations
 
 * The text in the file at the specified [File Path][FilePath Property] is searched line-by-line. As a result, when using `SearchOptions.Regex` the in-line `s` regex character is not supported.
 * If the text in the file at the specified [File Path][FilePath Property] ends with a blank line (`0` length) that line will not be read and therefore not matched against.

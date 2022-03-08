@@ -254,7 +254,7 @@ If [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), the varia
 
 If [Text To Find][TextToFind Property] is not found in [Text][Text Property], the variable specified in the [Indexes][Indexes Property] property is set to `[-1]`.
 
-### Known limitations
+### Known Limitations
 
 If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
 

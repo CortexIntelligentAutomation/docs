@@ -206,7 +206,7 @@ The [String][] data type used to represent [Text][Text Property] is immutable, w
 
 To overcome this, this block creates a new [String][] with all occurrences of [Text To Remove][TextToRemove Property] removed and re-assigns it to the variable specified in the [Text][Text Property] property.
 
-### Known limitations
+### Known Limitations
 
 If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
 

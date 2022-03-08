@@ -330,7 +330,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If an exception occurs when trying to match a file or folder name, it will be recorded and the block will continue processing the remaining files or folders. Once all files or folders are processed, recorded exceptions will be thrown within an [OperationFailedException][].
 
-### Known limitations
+### Known Limitations
 
 If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
 
