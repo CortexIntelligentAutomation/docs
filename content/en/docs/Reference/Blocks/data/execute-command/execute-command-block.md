@@ -22,7 +22,7 @@ Connects to a data source (e.g. SQL Server) using the specified [Connection Deta
 
 This example will select all rows and columns from a connected SQL Server data source, saving the rows to the [Result][Result Property].
 
-A [QueryCommand][Command Types AnyCommand] is used throughout this example to select data from the data source, however, both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
+A [QueryCommand][Command Types QueryCommand] is used throughout this example to select data from the data source, however, both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
 The data source contains a `Table` with the following rows and columns before the command is executed:
 | Id | FirstColumn | SecondColumn |
@@ -705,7 +705,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Executing Multiple Commands (Safe)]: {{< ref "#executing-multiple-commands-safe">}}
 [Executing Multiple Commands (Unsafe)]: {{< ref "#executing-multiple-commands-unsafe">}}
 [Using Functions]: {{< ref "#using-functions">}}
-[Using Multiple Functions]: {{< ref "#executing-multiple-functions">}}
+[Using Multiple Functions]: {{< ref "#using-multiple-functions">}}
 [Executing a Parameterised Command]: {{< ref "#executing-a-parameterised-command">}}
 
 [Command Types]: {{< ref "#command-types">}}
@@ -732,9 +732,9 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [InvalidConnectionStringException]: {{< url "Cortex.Reference.Exceptions.Data.InvalidConnectionStringException.MainDoc" >}}
 [CommandException]: {{< url "Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
 
-[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
@@ -758,7 +758,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
 [NonQueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 
-[Connection Type]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[Connection Type]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionType.MainDoc" >}}
 
 [Expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
