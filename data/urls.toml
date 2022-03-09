@@ -260,6 +260,10 @@
                     [Cortex.Reference.DataTypes.Data.NonQueryCommand]
                         MainDoc = "/docs/reference/data-types/data/nonquerycommand"
                         CommandText = "/docs/reference/data-types/data/nonquerycommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.ConnectionDetails]
+                        MainDoc = "/docs/reference/data-types/data/connectiondetails"
+                    [Cortex.Reference.DataTypes.Data.ConnectionType]
+                        MainDoc = "/docs/reference/data-types/data/connectiontype"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
