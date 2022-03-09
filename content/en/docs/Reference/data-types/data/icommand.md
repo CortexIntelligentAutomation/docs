@@ -24,8 +24,12 @@ None
 
 TODO:
 
-- Interfaces
-- AnyCommand
-- AnyCommands
-- QueryCommand
-- NonQueryCommand
+- [AnyCommand][]
+- [AnyCommands][]
+- [QueryCommand][]
+- [NonQueryCommand][]
+
+[AnyCommand]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommand.MainDoc" >}}
+[AnyCommands]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommands.MainDoc" >}}
+[QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
+[NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}

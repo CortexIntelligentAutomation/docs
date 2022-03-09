@@ -23,3 +23,13 @@ None
 ## See also
 
 TODO:
+
+- [ICommand][]
+- [AnyCommand][]
+- [AnyCommands][]
+- [QueryCommand][]
+
+[ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
+[AnyCommand]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommand.MainDoc" >}}
+[AnyCommands]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommands.MainDoc" >}}
+[QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
