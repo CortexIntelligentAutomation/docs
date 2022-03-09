@@ -4,7 +4,7 @@ linkTitle: "Convert Xml To Structure"
 description: "Converts Xml to a Structure."
 ---
 
-![Icon](/blocks/xml-convert-to-structure-block-icon.png)
+{{< figure src="/blocks/xml-convert-to-structure-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

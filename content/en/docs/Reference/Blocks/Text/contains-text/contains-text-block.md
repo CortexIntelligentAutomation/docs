@@ -4,7 +4,7 @@ linkTitle: "Contains Text"
 description: "Checks if text contains another text."
 ---
 
-![Icon](/blocks/text-contains-block-icon.png)
+{{< figure src="/blocks/text-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Remove Text At End"
 description: "Removes a length of text from the end of a given text."
 ---
 
-![Icon](/blocks/text-remove-block-icon.png)
+{{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

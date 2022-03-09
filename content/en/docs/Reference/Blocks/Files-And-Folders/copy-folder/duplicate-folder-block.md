@@ -4,7 +4,7 @@ linkTitle: "Duplicate Folder"
 description: "Copies a folder at the specified folder path to the same location but with a new name."
 ---
 
-![Icon](/blocks/folders-copy-block-icon.png)
+{{< figure src="/blocks/folders-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

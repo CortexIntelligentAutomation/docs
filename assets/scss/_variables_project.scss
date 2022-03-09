@@ -148,17 +148,13 @@ body {
   }
 }
 
-.td-docs {
-  img:first-of-type {
+figure.block-icon {
+  img {
     float: left;
     display: inline;
     margin-right: 10px;
     vertical-align: bottom;
   }
-}
-
-figure.no-float > img {
-  float: none !important;
 }
 
 main {

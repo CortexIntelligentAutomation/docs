@@ -4,7 +4,7 @@ linkTitle: "Is Text Null Or Empty"
 description: "Checks if text is `null` or empty (i.e. `\"\"`)."
 ---
 
-![Icon](/blocks/text-is-block-icon.png)
+{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Remove Text Before Index"
 description: "Removes a length of text before the specified index of a given text."
 ---
 
-![Icon](/blocks/text-remove-block-icon.png)
+{{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Add Item With Key"
 description: "Adds an item to a Dictionary with the specified key."
 ---
 
-![Icon](/blocks/dictionaries-add-block-icon.png)
+{{< figure src="/blocks/dictionaries-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

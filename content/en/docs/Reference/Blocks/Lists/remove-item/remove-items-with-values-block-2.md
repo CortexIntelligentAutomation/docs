@@ -4,7 +4,7 @@ linkTitle: "Remove Items With Values"
 description: "Removes all items matching one of the specified values from a List."
 ---
 
-![Icon](/blocks/lists-remove-block-icon.png)
+{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

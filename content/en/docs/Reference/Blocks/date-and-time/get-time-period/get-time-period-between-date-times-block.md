@@ -4,7 +4,7 @@ linkTitle: "Get Time Period Between Date Times"
 description: "Gets the Time Period between two Date Times."
 ---
 
-![Icon](/blocks/date-and-time-get-block-icon.png)
+{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

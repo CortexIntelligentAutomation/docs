@@ -4,7 +4,7 @@ linkTitle: "Get Item At Index"
 description: "Gets the item at the specified index of a List."
 ---
 
-![Icon](/blocks/lists-get-block-icon.png)
+{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

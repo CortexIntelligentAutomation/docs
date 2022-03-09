@@ -4,7 +4,7 @@ linkTitle: "Copy File"
 description: "Copies a file at the specified file path to the given destination path."
 ---
 
-![Icon](/blocks/files-copy-block-icon.png)
+{{< figure src="/blocks/files-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

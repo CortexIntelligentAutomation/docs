@@ -4,7 +4,7 @@ linkTitle: "Write All Text"
 description: "Writes all specified text to a file at the given file path."
 ---
 
-![Icon](/blocks/files-write-block-icon.png)
+{{< figure src="/blocks/files-write-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

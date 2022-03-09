@@ -4,7 +4,7 @@ linkTitle: "Find And Replace All Text"
 description: "Finds and replaces all occurrences of text in a given text."
 ---
 
-![Icon](/blocks/text-find-and-replace-block-icon.png)
+{{< figure src="/blocks/text-find-and-replace-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

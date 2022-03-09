@@ -4,7 +4,7 @@ linkTitle: "Get Item At Beginning"
 description: "Gets the item at the beginning of a List."
 ---
 
-![Icon](/blocks/lists-get-block-icon.png)
+{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

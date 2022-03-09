@@ -4,7 +4,7 @@ linkTitle: "Split Text"
 description: "Splits text into a list of String values, using the given separator to determine where to split."
 ---
 
-![Icon](/blocks/text-split-block-icon.png)
+{{< figure src="/blocks/text-split-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

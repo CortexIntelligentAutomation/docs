@@ -4,7 +4,7 @@ linkTitle: "Remove Items At Beginning"
 description: "Removes a count of items from the beginning of a List."
 ---
 
-![Icon](/blocks/lists-remove-block-icon.png)
+{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

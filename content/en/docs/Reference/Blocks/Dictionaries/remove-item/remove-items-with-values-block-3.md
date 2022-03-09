@@ -4,7 +4,7 @@ linkTitle: "Remove Items With Values"
 description: "Removes all items matching one of the specified values from a Dictionary."
 ---
 
-![Icon](/blocks/dictionaries-remove-block-icon.png)
+{{< figure src="/blocks/dictionaries-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

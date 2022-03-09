@@ -4,7 +4,7 @@ linkTitle: "Get Length"
 description: "Gets the length of a given text."
 ---
 
-![Icon](/blocks/text-get-length-block-icon.png)
+{{< figure src="/blocks/text-get-length-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
