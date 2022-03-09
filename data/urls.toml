@@ -243,6 +243,23 @@
                     Structure = "/docs/reference/data-types/most-common/#structure"
                     TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
                     TimeSpan = "/docs/reference/data-types/most-common/#timespan"
+                [Cortex.Reference.DataTypes.Data]
+                    MainDoc = "/docs/reference/data-types/data/"
+                    [Cortex.Reference.DataTypes.Data.ICommand]
+                        MainDoc = "/docs/reference/data-types/data/icommand/"
+                        CommandText = "/docs/reference/data-types/data/icommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.AnyCommand]
+                        MainDoc = "/docs/reference/data-types/data/anycommand/"
+                        CommandText = "/docs/reference/data-types/data/anycommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.AnyCommands]
+                        MainDoc = "/docs/reference/data-types/data/anycommands"
+                        CommandText = "/docs/reference/data-types/data/anycommands/#command-text"
+                    [Cortex.Reference.DataTypes.Data.QueryCommand]
+                        MainDoc = "/docs/reference/data-types/data/querycommand"
+                        CommandText = "/docs/reference/data-types/data/querycommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.NonQueryCommand]
+                        MainDoc = "/docs/reference/data-types/data/nonquerycommand"
+                        CommandText = "/docs/reference/data-types/data/nonquerycommand/#command-text"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]

@@ -539,7 +539,7 @@ If performance is a key consideration it is recommended to use a [QueryCommand][
 
 #### AnyCommands
 
-An [AnyCommands][] parses single or multiple statements provided in the [commandText][AnyCommand.CommandText], determining how each statement should be executed against the data source. If a [Query Statement][Query Statements] is executed rows retrieved from the data source are added as an entry of the result, If a [Non Query Statement][Non Query Statements] is executed the number of rows affected is added as an entry of the result.
+An [AnyCommands][] parses single or multiple statements provided in the [commandText][AnyCommands.CommandText], determining how each statement should be executed against the data source. If a [Query Statement][Query Statements] is executed rows retrieved from the data source are added as an entry of the result, If a [Non Query Statement][Non Query Statements] is executed the number of rows affected is added as an entry of the result.
 
 For each [Query Statement][Query Statements] (e.g. select and execute):
 
@@ -557,13 +557,13 @@ For each [Non Query Statement][Non Query Statements] (e.g. insert, update, delet
 | [Int32][] with a value greater than `1` | Many rows are affected |
 | [Int32][] with a value of `0` | No rows are affected |
 
-If performance is a key consideration it is recommended to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] instead of [AnyCommands][] as they do not parse the [commandText][AnyCommand.CommandText].
+If performance is a key consideration it is recommended to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] instead of [AnyCommands][] as they do not parse the [commandText][AnyCommands.CommandText].
 
 Note that the [AnyCommands][] should not be used for commands that have dependency between their statements (e.g. Cursors and Variables). Please see [Complex Commands][] for more information on how to deal with these.
 
 #### QueryCommand
 
-A [QueryCommand][] executes the given [commandText][AnyCommand.CommandText] as a [Query Statement][Query Statements], returning the rows retrieved from the data source. If the [commandText][AnyCommand.CommandText] contains multiple select statements, only the results of the first [Query Statement][Query Statements] will be returned.
+A [QueryCommand][] executes the given [commandText][QueryCommand.CommandText] as a [Query Statement][Query Statements], returning the rows retrieved from the data source. If the [commandText][QueryCommand.CommandText] contains multiple select statements, only the results of the first [Query Statement][Query Statements] will be returned.
 
 For a [Query Statement][Query Statements] (e.g. select):
 
@@ -583,7 +583,7 @@ Note use a [QueryCommand][] for commands that have dependency between their stat
 
 #### NonQueryCommand
 
-A [NonQueryCommand][] executes the given [commandText][AnyCommand.CommandText] as a [Non Query Statement][Non Query Statements], returning the number of rows affected from the data source. If the command contains multiple statements, the sum of all the results will be returned.
+A [NonQueryCommand][] executes the given [commandText][NonQueryCommand.CommandText] as a [Non Query Statement][Non Query Statements], returning the number of rows affected from the data source. If the command contains multiple statements, the sum of all the results will be returned.
 
 For a [Query Statement][Query Statements] (e.g. select):
 
@@ -736,27 +736,27 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
 [Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
 
-[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
-[Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 [Array]: {{< url "Cortex.Reference.DataTypes.MostCommon.Array" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 
-[ICommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
-[ICommand.CommandText]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
+[ICommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.CommandText" >}}
 
-[AnyCommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[AnyCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[AnyCommand]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommand.MainDoc" >}}
+[AnyCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommand.CommandText" >}}
 
-[AnyCommands]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[AnyCommands.CommandText]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[AnyCommands]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommands.MainDoc" >}}
+[AnyCommands.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommands.CommandText" >}}
 
-[QueryCommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[QueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
+[QueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.CommandText" >}}
 
-[NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[NonQueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+[NonQueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 
 [Connection Type]: {{< url "Cortex.Reference.DataTypes.MostCommon.MainDoc" >}}
 
