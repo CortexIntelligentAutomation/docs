@@ -6,7 +6,7 @@ description: "Holds the information for running a Non Query command on a data so
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.DataTypes.Data.ICommand)</p>
+<p class="namespace">(Cortex.DataTypes.Data.NonQueryCommand)</p>
 
 ## Summary
 

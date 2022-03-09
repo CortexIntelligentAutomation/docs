@@ -6,7 +6,7 @@ description: "Holds the information for parsing a command, running a single quer
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.DataTypes.Data.ICommand)</p>
+<p class="namespace">(Cortex.DataTypes.Data.AnyCommand)</p>
 
 ## Summary
 
