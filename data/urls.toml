@@ -103,6 +103,7 @@
                 MainDoc = "/docs/reference/concepts/fundamentals/"
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
                     MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
+                    StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
                 [Cortex.Reference.Concepts.Fundamentals.Culture]
                     MainDoc = "/docs/reference/concepts/fundamentals/culture/"
                     InvariantCulture = "/docs/reference/concepts/fundamentals/culture/#invariant-culture"
@@ -145,6 +146,8 @@
                 MainDoc = "/docs/reference/concepts/indexes/"
             [Cortex.Reference.Concepts.ISO8601Standard]
                 MainDoc = "/docs/reference/concepts/iso-8601-standard/"
+            [Cortex.Reference.Concepts.WorkingWithDataSources]
+                MainDoc = "/docs/reference/concepts/working-with-data-sources/"
             [Cortex.Reference.Concepts.WorkingWithDatesAndTime]
                 MainDoc = "/docs/reference/concepts/working-with-dates-and-time/"
             [Cortex.Reference.Concepts.Keys]
@@ -207,6 +210,7 @@
                 MainDoc = "/docs/reference/data-types/"
                 [Cortex.Reference.DataTypes.MostCommon]
                     MainDoc = "/docs/reference/data-types/most-common/"
+                    Array = "/docs/reference/data-types/most-common/#array"
                     Boolean = "/docs/reference/data-types/most-common/#boolean"
                     ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                     CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
@@ -239,6 +243,27 @@
                     Structure = "/docs/reference/data-types/most-common/#structure"
                     TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
                     TimeSpan = "/docs/reference/data-types/most-common/#timespan"
+                [Cortex.Reference.DataTypes.Data]
+                    MainDoc = "/docs/reference/data-types/data/"
+                    [Cortex.Reference.DataTypes.Data.ICommand]
+                        MainDoc = "/docs/reference/data-types/data/icommand/"
+                        CommandText = "/docs/reference/data-types/data/icommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.AnyCommand]
+                        MainDoc = "/docs/reference/data-types/data/anycommand/"
+                        CommandText = "/docs/reference/data-types/data/anycommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.AnyCommands]
+                        MainDoc = "/docs/reference/data-types/data/anycommands"
+                        CommandText = "/docs/reference/data-types/data/anycommands/#command-text"
+                    [Cortex.Reference.DataTypes.Data.QueryCommand]
+                        MainDoc = "/docs/reference/data-types/data/querycommand"
+                        CommandText = "/docs/reference/data-types/data/querycommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.NonQueryCommand]
+                        MainDoc = "/docs/reference/data-types/data/nonquerycommand"
+                        CommandText = "/docs/reference/data-types/data/nonquerycommand/#command-text"
+                    [Cortex.Reference.DataTypes.Data.ConnectionDetails]
+                        MainDoc = "/docs/reference/data-types/data/connectiondetails"
+                    [Cortex.Reference.DataTypes.Data.ConnectionType]
+                        MainDoc = "/docs/reference/data-types/data/connectiontype"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
@@ -257,6 +282,12 @@
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
                     [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
+            [Cortex.Reference.Exceptions.Data]
+                MainDoc = "/docs/reference/exceptions/data/"
+                    [Cortex.Reference.Exceptions.Data.CommandException]
+                        MainDoc = "/docs/reference/exceptions/data/commandexception/"
+                    [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
+                        MainDoc = "/docs/reference/exceptions/data/invalidconnectionstringexception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
@@ -352,6 +383,8 @@
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
 
 # External links
+[ConnectionStrings]
+    MainDoc = "https://www.connectionstrings.com/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
 [Grafana]
@@ -366,6 +399,9 @@
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
         Dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
+    [MSDocs.SqlServer]
+        ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
+        SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
@@ -401,3 +437,4 @@
 [W3]
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
+    SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"

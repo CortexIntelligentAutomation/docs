@@ -214,7 +214,7 @@ The [Start Index][StartIndex Property] and [End Index][EndIndex Property] proper
 
 [Start Index][StartIndex Property] can be greater than [End Index][EndIndex Property]. If this is the case, [Increment][Increment Property] must be a negative value. See [Example][StartIndexGreaterThanEndIndex Example] above.
 
-### Known limitations
+### Known Limitations
 
 The variable used for [Current Index][CurrentIndex Property] must have an [Int32][] value assigned to it before the block executes. If it does not then an [InvalidPropertyValueException][] will be thrown the first time a flow execution executes this block.
 

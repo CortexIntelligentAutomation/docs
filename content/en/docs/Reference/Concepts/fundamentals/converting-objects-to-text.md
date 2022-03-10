@@ -20,7 +20,11 @@ TODO: Xml Serialize
 
 TODO: Convert.ToString()
 
-TODO: String interpolation
+### String interpolation
+
+This is referenced by these pages (not exclusive)
+
+- Execute Command Block
 
 TODO: String.Format
 

@@ -283,7 +283,7 @@ If the [Occurrence][Occurrence Property] is set to `0`, the variable specified i
 
 If the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] is not found in [Text][Text Property], the variable specified in the [Index][Index Property] property is set to `-1`.
 
-### Known limitations
+### Known Limitations
 
 If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
 

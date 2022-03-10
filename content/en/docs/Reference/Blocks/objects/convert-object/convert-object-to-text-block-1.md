@@ -204,7 +204,7 @@ that nested property values such as PaidOff.Total can be accessed. This is done 
 "{PaidOff.Total}"
 ```
 
-### Known limitations
+### Known Limitations
 
 Currently the block does not support indexing into properties (i.e. `ListProperty[0]` or `DictionaryProperty["key"]`).
 
