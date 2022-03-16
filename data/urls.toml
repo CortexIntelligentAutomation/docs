@@ -4,7 +4,11 @@
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
             [Cortex.GettingStarted.OnPremise.MultipleServerWithHA]
-                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha/"
+                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha"
+                [Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced]
+                    Ports = "/docs/getting-started/on-premise/advanced/ports"
+                    AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
+                    AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"

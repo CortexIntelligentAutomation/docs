@@ -19,7 +19,6 @@ Multiple server installations with HA are recommended for the following scenario
 
 ### Components
 
-
 | Component | Purpose | Required/Optional |Server Role |
 |-----------|---------|----------|------------|
 | [Cortex&nbsp;Gateway](/docs/concepts/todo-cortex-gateway) | Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
@@ -43,18 +42,7 @@ The following architecture requires 5 servers - a web application server which c
 
 {{< figure class="no-float" src="/images/Cortex Innovation Overview.png" title="5 Server Architecture Diagram" >}}
 
-### Alternative architectures
-
-If Cortex Gateway is expected to have high load it would be advisable to install Cortex Gateway, Flow Debugger Service and Databases onto different machines (7 server architecture) as shown below:
-
-{{< figure class="no-float" src="/images/Cortex Innovation Overview 7 servers.png" title="7 Server Architecture Diagram" >}}
-
-It is also possible to minimise the number of servers used by installing SQL Express/SQL Server, Cortex Gateway and the Flow Debugger Service on either the load balancer machine or one of the application servers (4 server architecture), as shown below. A 3 node architecture is not possible as the load balancer cannot route requests to itself.
-
-{{< figure class="no-float" src="/images/Cortex Innovation Overview 4a servers.png" title="4 Server Architecture Diagram - Web Applications on Load Balancer Server" >}}
-{{< figure class="no-float" src="/images/Cortex Innovation Overview 4b servers.png" title="4 Server Architecture Diagram - Web Applications on Application Server" >}}
-
-A number of other configurations are also possible, where any combination of the load balancer, Cortex Gateway, Flow Debugger Service and Databases can be on any combination of servers. This can be particularly relevant for adding Cortex Innovation to an existing Gateway installation.
+For information about alternative architectures, see [Alternative Architectures][].
 
 ## Prerequisites
 
@@ -141,33 +129,7 @@ It is advised (by Microsoft Service Fabric) that certain antivirus exclusions ar
 These are described in the ‘Set appropriate Service Fabric antivirus exclusions’ section of the following article:
 https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-standalone-deployment-preparation#environment-setup
 
-If Windows Defender is the only antivirus running, the exclusions can be added by running the following PowerShell script as administrator:
-
-```powershell
-$Folders = @(
-    "%ProgramFiles%\Microsoft Service Fabric",
-    "%ProgramData%\SF",
-    "%ProgramData%\SF\Logs"
-)
-
-$Programs = @(
-    "Fabric.exe",
-    "FabricHost.exe",
-    "FabricInstallerService.exe",
-    "FabricSetup.exe",
-    "FabricDeployer.exe",
-    "ImageBuilder.exe",
-    "FabricGateway.exe",
-    "FabricDCA.exe",
-    "FabricFAS.exe",
-    "FabricUOS.exe",
-    "FabricRM.exe",
-    "FileStoreService.exe"
-)
-
-Add-MpPreference -ExclusionPath $Folders
-Add-MpPreference -ExclusionProcess $Programs
-```
+A script is provided during installation to add these exclusions for Windows Defender. If any other antivirus software is running, these will need to be added manually.
 
 #### Domain Requirements
 
@@ -191,61 +153,10 @@ All servers (load balancer and application servers) must be on the same domain a
 
 #### Port Requirements
 
-Cortex Evolution and Microsoft Service Fabric open a range of firewall ports between the servers 
-and specific services. Some of them are opened during installation, others are opened 
-dynamically as needed. These are opened on Windows Firewall. If any other firewall exists 
-between the servers, it may be necessary to configure this selection of rules on it. Most
-ports may be altered if another program overlaps with them, the description will say if this 
-is not possible.
+Cortex Evolution and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it may be necessary to configure this selection of rules on it. Most
+ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
-##### Cortex Evolution Ports
-
-| Name | Description | Default Port(s) | Protocol | Direction |
-|------|-------------|-----------------|----------|-----------|
-| Cortex.RabbitMqAmqpPorts | The port used by AMQP 0-9-1 and 1.0 clients with TLS. **This cannot currently be changed.** | 5671 | TCP | Inbound |
-| Cortex.RabbitMqEpmdPorts | The port used by epmd, a peer discovery service used by RabbitMQ nodes and CLI tools. **This cannot currently be changed.** | 4369 | TCP | Inbound |
-| Cortex.RabbitMqErlangDistributionClientPorts | The ports used by CLI tools (Erlang distribution client ports) for communication with nodes and is allocated from a dynamic range (computed as Erlang dist port + 10000 through dist port + 10010). **This cannot currently be changed.** | 35672-35682 | TCP | Inbound |
-| Cortex.RabbitMqErlangDistributionServerPort | The port used for RabbitMQ inter-node and CLI tools communication (Erlang distribution server port) and is allocated from a dynamic range (limited to a single port by default, computed as AMQP port + 20000). **This cannot currently be changed.** | 25672 | TCP | Inbound |
-| Cortex.RabbitMqManagementApiPort | The port used by the RabbitMQ management plugin. **This cannot currently be changed.** | 15671 | TCP | Inbound |
-| Cortex.WindowsSmbRemoteRegistry | The ports used by Windows SMB and Remote Registry service. | 135, 137, 138, 139, 445 | TCP | Inbound |
-| Cortex.ServiceFabric.Customer1.ClusterConnectionEndpointPort | The port used by the client to connect to the cluster when client APIs are used. | 9000 | TCP | Inbound |
-| Cortex.ServiceFabric.Customer1.ClientConnectionEndpointPort | The port where the nodes communicate with each other. | 9001 | TCP | Inbound |
-| Cortex.ServiceFabric.Customer1.ServiceConnectionEndpointPort | The port used by the applications and services deployed on a node to communicate with the Service Fabric client on that particular node. | 9003 | TCP | Inbound |
-
-##### Microsoft Service Fabric Firewall Rules (present on all Application Servers, with Domain, Public and Private Profiles)
-
-These rules will all appear in Windows Firewall with names starting with ‘{CustomerName}.{NodeName} WindowsFabric’.
-
-|Name in Rule | Name in Config | Description | Default Port(s) | Protocol(s) | Direction | Program|
-|-------------|----------------|-------------|-----------------|-------------|-----------|--------|
-| Application Processes | applicationPorts | The ports that are used by the Service Fabric applications. Service Fabric uses these ports whenever new dynamic ports are required. **The application port range should be large enough to cater for the dynamic port allocation of the application. Currently at least 400 is recommended. This may change if new services are added. This range should not overlap the Dynamic Ports (ephemeralPorts) range as set in the configuration.** | 10010-10500 | TCP, UDP | Inbound, Outbound | Any |
-| BackupRestoreService Process | N/A | The port used by the Service Fabric process which manages the backup and restore of HA nodes. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_<AppID>\\BRS.Code.Current\\FabricBRS.exe |
-| CentralSecretService Process | N/A | The port used by the Service Fabric process which manages secrets. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_<AppID>\\BRS.Code.Current\\FabricCSS.exe |
-| DCA Process | N/A | The port used by the Service Fabric Diagnostics Collection Agent, which manages Diagnostic data. | Any | TCP | Outbound | %ProgramFiles%\\Microsoft Service Fabric\\bin\\Fabric\\DCA.Code\\FabricDCA.exe |
-| Dynamic Ports | ephemeralPorts | Override the [**dynamic ports used by the OS**](https://support.microsoft.com/kb/929851). Service Fabric uses a part of these ports as application ports, and the remaining are available for the OS. It also maps this range to the existing range present in the OS, so for all purposes, you can use the ranges given in the sample JSON files. **Make sure that the difference between the start and the end ports is at least 255**. You might run into conflicts if this difference is too low, because this range is shared with the OS. To see the configured dynamic port range, run netsh int ipv4 show dynamicport tcp. | 10501-20000 | TCP, UDP | Inbound, Outbound | Any |
-| EventStoreService Process | N/A | The port used by the Service Fabric EventStore, which maintains events about the state of the HA nodes. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\ES.Code.Current\\EventStore.Service.exe |
-| Fabric Gateway Process | N/A | The port used by the Service Fabric Gateway, which allows REST and management functions to access the HA nodes. | Any | TCP | Inbound, Outbound | %ProgramFiles%\\Microsoft Service Fabric\\bin\\Fabric\\Fabric.Code\\FabricGateway.exe |
-| Fabric Process | N/A | The port used by the main Service Fabric service. | Any | TCP | Inbound, Outbound | %ProgramFiles%\\Microsoft Service Fabric\\bin\\Fabric\\Fabric.Code\\Fabric.exe |
-| FabricUpgradeService Process | N/A | The port used by the Service Fabric Upgrade service. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\US.Code.Current\\FabricUS.exe |
-| FaultAnalysisService Process | N/A | The port used by the Service Fabric Fault Analysis service. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\FAS.Code.Current\\FabricFAS.exe |
-| FileStoreService Process | N/A | The port used by the Service Fabric File Store service, which manages the application file store and image store. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\FileStoreService.Code.Current\\FileStoreService.exe |
-| GatewayResourceManager Process | N/A | The port used by the Service Fabric Gateway Resource Manager, which provides APIs to manage the HA nodes and other resources. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\GRM.Code.Current\\FabricGRM.exe |
-| HTTP App Gateway | reverseProxyEndpointPort | **This port cannot be changed at the current time. If it is already in use, please contact Cortex for assistance.** The reverse proxy endpoint. For more information, see [**Service Fabric reverse proxy**](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy). | 9081 | TCP | Inbound, Outbound | Any |
-| Http Gateway | httpGatewayEndpointPort | The port used by Service Fabric Explorer to connect to the cluster. **This changes the port used to connect to the Service Fabric management portal as part of the post-install checks.** | 9080 | TCP | Inbound, Outbound | Any |
-| InfrastructureService Process | N/A | The port used by the Service Fabric Infrastructure Service. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\IS.Code.Current\\FabricIS.exe |
-| Lease Driver | leaseDriverEndpointPort | The port used by the cluster lease driver to find out if the nodes are still active. | 9002 | TCP | Inbound, Outbound | Any |
-| ManagedIdentityTokenService Process | N/A | The port used by the Service Fabric Managed Identity Token Service. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\MITS.Code.Current\\ManagedIdentityTokenService.exe |
-| RepairManagerService Process | N/A | The port used by the Service Fabric Repair Manager Service. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\RM.Code.Current\\FabricRM.exe |
-| UpgradeOrchestrationService Process | N/A | The port used by the Service Fabric Upgrade Orchestration service. | Any | TCP | Inbound, Outbound | %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\\_\_FabricSystem\_App4294967295\\UOS.Code.Current\\FabricUOS.exe |
-
-##### Cortex HA Service Rules
-
-Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the ephemeralPorts range.
-
-|Name of Service | Description | Default Port(s) | Protocol(s) | Direction | Program|
-|----------------|-------------|-----------------|-------------|-----------|--------|
-| API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex HA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
-| Flow Execution | The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
+See [Port Requirements][] for more information about the ports that get opened.
 
 #### TLS Requirements
 
@@ -289,123 +200,17 @@ We support the latest versions of the following browsers:
 
 ### Install Cortex HA Infrastructure and Services
 
-1. Choose one of the HA node machines and copy the following artefacts to a folder on it (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
+1. Choose one of the Application servers, to be used for installation, and copy the following artifacts to a folder on it (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
    * Cortex Evolution - Innovation 2022-RC.2022.1.4 - HA Services.zip
    * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip
 
 1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
-1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.Config.json" and open it with a text editor.
-1. Change the configuration file according to your cluster, referring to the following example and details:
-
-    {{< highlight json "linenos=table,hl_lines=4 17 20 22 26-27 30-31 34-35 41 43 45 47 49 51 72-75 79-82,linenostart=1" >}}
-    {
-      "customers": [
-        {
-          "name": "Customer1",
-          "isPrimary": true,
-          "rules": {
-            "clientConnectionEndpointPort": "8001",
-            "clusterConnectionEndpointPort": "8002",
-            "leaseDriverEndpointPort": "8003",
-            "serviceConnectionEndpointPort": "8004",
-            "httpGatewayEndpointPort": "9080",
-            "reverseProxyEndpointPort": "9081",
-            "applicationPorts": "10010-10500",
-            "ephemeralPorts": "10501-20000"
-          },
-          "loadBalancer": {
-            "installDirectory": "c:\\ProgramData\\loadbalancer",
-            "protocol": "udp",
-            "balance": "roundrobin",
-            "host": "lb-server:162",
-            "applicationPort": "10001",
-            "adminCertificate": "loadBalancerCert"
-          },
-          "servers": [
-            {
-              "serverName": "ha-server1",
-              "iPAddress": "192.168.1.1"
-            },
-            {
-              "serverName": "ha-server2",
-              "iPAddress": "192.168.1.2"
-            },
-            {
-              "serverName": "ha-server3",
-              "iPAddress": "192.168.1.3"
-            }
-          ]
-        }
-      ],
-      "servers": {
-        "ha-server1": {
-          "faultDomain": "fd:/fd1",
-          "serverCertificate": "serverCert"
-        },
-        "ha-server2": {
-          "faultDomain": "fd:/fd2",
-          "serverCertificate": "serverCert"
-        },
-        "ha-server3": {
-          "faultDomain": "fd:/fd3",
-          "serverCertificate": "serverCert"
-        }
-      },
-      "rules": {
-        "windowsSmbRemoteRegistry": [
-          "135",
-          "137",
-          "138",
-          "139",
-          "445"
-        ],
-        "rabbitMqAmqpPorts": [
-          "5671"
-        ],
-        "rabbitMqEpmdPort": "4369",
-        "rabbitMqErlangDistributionClientPorts": "35672-35682",
-        "rabbitMqErlangDistributionServerPort": "25672",
-        "rabbitMqManagementApiPort": "15671"
-      },
-      "serverCertificates": {
-        "serverCert": {
-          "pfxCertificatePath": "C:\\Certificates\\wildCardCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
-          "pemRootCertificatePath": ""
-        }
-      },
-      "adminCertificates": {
-        "loadBalancerCert": {
-          "pfxCertificatePath": "C:\\Certificates\\lbCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
-          "pemRootCertificatePath": ""
-        }
-      }
-    }
-    {{< / highlight >}}
-
-    | Line | Description |
-    |------|-------------|
-    |4     | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
-    |16-23 | If the bundled load balancer is not being used, delete these lines TODO: this will cause the line numbers to be wrong!!! |
-    |17    | A local empty or non-existent directory on the load balancer server that the load balancer can be installed in. The directory path will be created if it does not exist. The installation user must have permissions to create and write to directories here. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |20    | The computer name and port of the server that the load balancer should run on. This cannot be an IP address. The port must not be used by anything else. |
-    |22    | The name of a certificate entry in the adminCertificates section. If this line is removed, an auto-generated self-signed certificate will be used. |
-    |26, 30, 24 | The short computer names of the HA nodes. These must not contain the domain. The installation will be run on the first of these nodes. |
-    |27, 31, 35 | The respective IPv4 addresses of the HA nodes. |
-    |41, 45, 49 | These keys should be changed to the computer names of the HA nodes to match those on lines 26, 30 and 24 |
-    |43, 47, 51 | The name of a certificate entry in the serverCertificates section. This should be the same for all HA servers. If these lines are removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.|
-    |72-74 | Skip configuring these lines if self-signed certificates are being used. |
-    |79-81 | Skip configuring these lines if self-signed certificates are being used or if the bundled load balancer is not being used. |
-    |73    |This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |74    |The password used to secure the .PFX file.|
-    |75    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
-    |80    |This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |81    |The password used to secure the .PFX file.|
-    |82    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
-
-1. Save and close the config file.
+1. If Windows Defender is running on the application servers follow these steps, otherwise ensure that the Service Fabric exclusions have been added to any antivirus software running on the application servers and continue to the next step.
+    1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Add.WindowsDefenderExclusions.ps1" and open it with a text editor.
+    1. Configure the ApplicationServers variable to contain the computer names or IP addresses of the application servers.
+    1. Save and close the PowerShell file.
+    1. Run the "Cortex.Add.WindowsDefenderExclusions.ps1" file as administrator using PowerShell.
 1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.ps1" and open it with a text editor.
 1. Configure the script according to the details given below:
 
@@ -415,6 +220,13 @@ We support the latest versions of the following browsers:
     -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
     -ApiGatewayBasicAuthUser "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -CustomerName "Customer1" `
+    -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
+    -LoadBalancerServerIPv4Address "192.168.1.4" `
+    -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
+    -ServerCertificatePwd "myPassword" `
+    -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
+    -ClientCertificatePwd "myPassword" `
     -Credential $c
     ```
 
@@ -423,9 +235,20 @@ We support the latest versions of the following browsers:
     |HaServicesPath                                | Configure this value with the location of the HA Services zip file on the installation node. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
     |BlockPackagesPath                             | Configure this value with the location of the Block Packages zip file on the installation node. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
     |ApiGatewayBasicAuthUser                       | Configure this value with the username that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.).|
-    |ApiGatewayBasicAuthPwd                       |  Configure this value with the password that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.). This should be Cortex Encrypted. |
+    |ApiGatewayBasicAuthPwd                        | Configure this value with the password that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.). This should be Cortex Encrypted. |
+    |CustomerName                                  | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
+    |ApplicationServerIPv4Addresses                | The IPv4 addresses of the application servers. The first of these should be the server used for installation. |
+    |LoadBalancerServerIPv4Address                 | The IPv4 address of the load balancer server.  |
+    |ServerCertificatePath                         | The local path of a .PFX certificate file on the first application server in the ApplicationServerIPv4Addresses addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for communication between the HA nodes on the Application Servers. |
+    |ServerCertificatePwd                          | The password for the .PFX certificate file specified in ServerCertificatePath. |
+    |ClientCertificatePath                         | The local path of a .PFX certificate file on the first application server in the ApplicationServerIPv4Addresses addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for external communication to the HA nodes on the Application Servers, e.g. through the load balancer and Service Fabric Explorer. This can be the same certificate as the ServerCertificatePath. |
+    |ClientCertificatePwd                          | The password for the .PFX certificate file specified in ClientCertificatePath.  |
 
     The ApiGatewayBasicAuthUser and ApiGatewayBasicAuthPwd will be needed later, when installing Cortex Gateway.
+
+    {{% alert title="Note" %}}
+More advanced configuration (such as changing ports) can be undertaken by modifying the "Cortex.Innovation.Install.Config.json" file but this shouldn't be required for most installations. More information about this can be found at TODO: ADD LINK TO CONFIGURATION PAGE.
+    {{% /alert %}}
 
 1. Save and close the PowerShell file.
 1. Open a Windows PowerShell (x64) window as administrator.
@@ -469,12 +292,19 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
     * SQL Server 2019 Installation Guide for Cortex
     * SQL Server 2016 Installation Guide for Cortex
     * SQL Server 2016 Express Installation Guide for Cortex
-1. Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
+1. Copy the following artifact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
     * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Gateway.zip
-1. Use the "Cortex Installation Guide" to install Cortex Gateway, beginning at the section "Cortex Gateway Installation". Ensure that you refer to and follow the instructions for installing prerequisites in the "Note" sections. Use the following points as they will differ from a Cortex Integrity installation:
-    * In the "Required Components", ensure that the prerequisites in the "Note" sections are followed ("System requirements" and "Install Internet Information Services") but do not install the additional Cortex components mentioed. For Cortex Innovation; only SQL Server and Cortex Gateway are needed, along with the other components detailed in this guide.
-    * Wherever "Cortex Gateway.zip" is mentioned, use the "Cortex Evolution - Innovation * - Block Packages.zip" file that was copied in the previous step.
-    * When configuring the "parameters.xml" file, some additional values need to be updated:
+1. Use the "Cortex Installation Guide" to install Cortex Gateway. The following sections will need to be followed as prerequisites to following the "Cortex Gateway Installation" section:
+    * 3.1 - System Requirements
+    * 3.2 - Additional Components Required for Cortex Gateway Installation
+    * 3.3 - Additional pre-requisites
+    * 4.3.1 - Install Internet Information Services (IIS)
+    * 4.3.2 - Register and Allow .NET CLR v4.0.30319 with IIS
+    * Appendix 6 - Actions to Install URL Rewrite Module
+1. Follow section "9 - Cortex Gateway Installation" in the same guide. Use the following points as they will differ from a Cortex Integrity installation:
+    * Ignore section "9.1 - Required Components"; no other Cortex Components are required for Cortex Innovation, only those referred to in this guide.
+    * In section "9.2.7 - Configure Cortex Gateway installation", whenever "Cortex Gateway.zip" is mentioned, use the "Cortex Evolution - Innovation * - Gateway.zip" file that was copied in the previous step.
+    * When configuring the "parameters.xml" file in section "9.2.7 - Configure Cortex Gateway installation", some additional values need to be updated:
 
     ```xml
     <setParameter name="Feature Flags" value="&lt;value&gt;InnovationId&lt;/value&gt;" />
@@ -495,9 +325,14 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
     |Service Fabric ApiGateway Basic Auth Password | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
     |Dot NET flow debugger Endpoint                | Configure as above, replacing "app-server.domain.com" with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
 
+    * Ignore the "Configuring prerequisites for capability discovery" section - this is not yet supported in Cortex Innovation.
+    * Ignore the "Configuring Connectivity to Cortex Server" section - this is only necessary for Cortex Integrity.
+    * Ignore the "Testing a clean system" section - this will be covered later in this guide.
+    * Ignore the "Verify LiveView Dashboards on Cortex Gateway" - this is not supported in Cortex Innovation.
+
 ### Install Flow Debugger Service
 
-1. We recommend that the Cortex Flow Debugger Service is installed on the same machine as Cortex Gateway. Copy the following artefacts to a folder on the machine (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
+1. We recommend that the Cortex Flow Debugger Service is installed on the same machine as Cortex Gateway. Copy the following artifacts to a folder on the machine (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
    * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Flow Debugger Service.zip
 
@@ -531,7 +366,7 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
     .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object C:\Temp\cortex-flow-debugger-service-install-log.txt
     ```
 
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (HA and load balancer) and press OK.
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and load balancer) and press OK.
 1. Wait for the script to finish running. This should take approximately 2 minutes.
 1. An error may have appeared saying:
 
@@ -542,7 +377,7 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
     This can be ignored.
 1. Check that there have been no other errors in the script; these would appear in red in the console. If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
 
-    If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
+    If the errors do not give any instructions on how to rectify, see [Troubleshooting][Troubleshooting Root Certificate Error] for further information; if this does not help then please contact Cortex for assistance.
 
 ## Next Steps?
 1. [Setup](../../setup) the platform
@@ -550,16 +385,85 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
 
 ### Try it out
 
-TODO: Move this.
+#### Finish Gateway configuration
 
-1. Check Service Fabric Explorer
-1. Create a new flow (preferably with output variables, maybe input variables)
-1. Run the flow
-1. Go to Packages and make one
-1. Publish the package
-1. Use Postman to run a published flow (Might need to ignore validation if using self-signed certificates.)
+1. Log in to Cortex Gateway as your "administrator" user.
+1. In the Cortex Gateway UI go to Settings → LDAP Authorisation and configure security roles for LDAP groups to your requirements. You can refer to "Section 2.2 Configuring Authorisation Rights" of the Cortex Studio Admin Guide for more details on this.
+1. Log out and Login as a user with Studio permissions.
+
+#### Test Debugging
+
+1. Use the following steps to test the system be creating a new flow (alternatively, if you already have Cortex Innovation flows which are compatible with this version, feel free to import them, configure Studio Authorisation for them and check that they can be debugged, published and executed).
+1. Click on the Flows charm, then the + button and click "Group" to open a dialog.
+1. Enter a name for the group, configure the Permission Groups and click OK to create the group.
+1. Click on the group to open it (refresh the page if it does not appear).
+1. Inside the group, click the + button again and click on "Flow (Innovation)" to open a dialog. If the menu item is not present, it means that the "FeatureFlags" in the "parameters.xml" file was not set properly when installing Cortex Gateway. See [Troubleshooting][Troubleshooting No Innovation] for more information.
+1. Enter a name for the flow, configure the Permission Groups and click OK to create the flow.
+1. The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
+    {{< figure class="no-float" src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
+    If the blocks in the flow do not display or the palettes are not visible, see [Troubleshooting][Troubleshooting No Blocks] for more information.
+1. Add a "Set Variable" block and connect it between the start and end blocks.
+1. Click the "Set Variable" block to open the Property Editor. Set the "Value" property to `DateTime.Now`. Type `Output` into the "Variable" property and click "Create Variable".
+1. In the Variable Editor, set "Is Output Variable?" to `true` for the new "Output" variable.
+1. Set a breakpoint on the end block and start the flow. An execution token should appear, the Output variable should show the current time. If the token does not appear, try refreshing the page.
+1. Continue or stop the execution.
+1. Commit the flow.
+
+#### Test Publishing and Executing production flows
+
+1. Log into Cortex Gateway with a user that has the "Administrator" role.
+1. Click on the "Settings" charm, then "Packages".
+1. Click "Add Package Definition". Enter a package name and select the new flow to add to the package. Click "Save" to add the new package.
+1. Click "Publish". A success message should appear. If it doesn't it means that either one or more of the "Service Fabric x" values in the "parameters.xml" file was not set properly when installing Cortex Gateway, or the HA Services aren't healthy. See [Troubleshooting][Troubleshooting No Publish] for more information.
+1. Open an HTTP client, such as Postman. Make a request with the following format:
+    | Property      | Value                                                                               |
+    |---------------|-------------------------------------------------------------------------------------|
+    | Action        | POST                                                                                |
+    | URL           | https://{FQDN of Application Server}:8722/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://ha-server1.domain.com:8722/default/default/flows/NewFlow/executions?packageName=NewPackage|
+    | Content Type  | application/json                                                                    |
+    | Body          | {}                                                                                  |
+    | Authentication| Basic                                                                               |
+    | Username      | The value used for ApiGatewayBasicAuthUser when installing HA Services              |
+    | Password      | The value used for ApiGatewayBasicAuthPwd when installing HA Services (Unencrypted) |
+
+    {{% alert title="Note" %}} If you used self-signed certificates when installing HA Services and infrastructure you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
+
+1. The request should return a json object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
+1. Cortex Innovation has now been verified and is ready to use.
 
 ### Troubleshooting
+
+#### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
+
+Check that the "Feature Flags" Guid in the "parameters.xml" file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
+
+#### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
+
+Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be "https". If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website.
+
+Ensure that the flow debugger service is running. Open IIS, click on "Application Pools" and ensure there is a "debugger" app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
+
+If everything is correct, please contact Cortex Support for assistance.
+
+#### Cannot publish a package {#ts-no-publish}
+
+Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
+
+Ensure that the HA Services are healthy by following these steps:
+
+1. Log on to one of the Application servers and open a web browser.
+1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
+
+    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
+
+    The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
+
+    {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
+
+    If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
+    If no useful message can be seen here, the service log files may contain more information.
+
+If no solution can be found, please contact Cortex Support for assistance.
 
 #### Root certificate verification failed as no root certificate has been specified
 
@@ -655,4 +559,9 @@ If the installation fails with “Root certificate verification failed as no roo
 1. Run the installation script again.
 
 [Troubleshooting]: {{< ref "#troubleshooting" >}}
+[Troubleshooting No Innovation]: {{< ref "#ts-no-innovation" >}}
+[Troubleshooting No Blocks]: {{< ref "#ts-no-blocks" >}}
+[Troubleshooting No Publish]: {{< ref "#ts-no-publish" >}}
 [Troubleshooting Root Certificate Error]: {{< ref "#root-certificate-verification-failed-as-no-root-certificate-has-been-specified" >}}
+[Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.Ports" >}}
+[Alternative Architectures]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AlternativeArchitectures" >}}

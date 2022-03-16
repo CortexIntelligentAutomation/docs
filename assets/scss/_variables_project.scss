@@ -146,14 +146,23 @@ body {
     padding: 0;
     max-width: 100% !important;
   }
-}
 
-figure.block-icon {
-  img {
-    float: left;
-    display: inline;
-    margin-right: 10px;
-    vertical-align: bottom;
+  figure.block-icon {
+    img {
+      float: left;
+      display: inline;
+      margin-right: 10px;
+      vertical-align: bottom;
+    }
+  }
+  
+  figcaption {
+    h4 {
+      text-align: center;
+      font-size: inherit !important;
+      margin: 0 !important;
+      font-style: italic;
+    }
   }
 }
 
