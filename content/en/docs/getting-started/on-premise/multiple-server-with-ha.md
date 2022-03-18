@@ -2,7 +2,7 @@
 title: "Multiple server - with HA (recommended)"
 linkTitle: "Multiple server - with HA (recommended)"
 description: >
-    Information on installing Cortex across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, pre-requisites and installation instructions.
+    Information on installing Cortex Innovation across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, pre-requisites and installation instructions.
 ---
 
 # {{< param title >}}
@@ -26,7 +26,7 @@ Multiple server installations with HA are recommended for the following scenario
 | [Cortex&nbsp;Flow&nbsp;Debugger&nbsp;Service](/docs/concepts/todo-cortex-flow-debugger-service) | Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
 | [Cortex&nbsp;API&nbsp;Gateway&nbsp;Service](/docs/concepts/todo-cortex-api-gateway-service) | HA Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
 | [Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service](/docs/concepts/todo-cortex-flow-execution-service) | HA Service that executes automation flows. | Required | Application&nbsp;Server |
-| [Cortex&nbsp;Block&nbsp;Packages](/docs/concepts/todo-cortex-block-packages) | A set of .nupkg files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
+| [Cortex&nbsp;Block&nbsp;Packages](/docs/concepts/todo-cortex-block-packages) | A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric](https://azure.microsoft.com/en-us/services/service-fabric/) | Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster) | Web portal for monitoring and managing the HA clusters that automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Particular&nbsp;NServiceBus](https://particular.net/nservicebus) | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
@@ -38,35 +38,33 @@ Multiple server installations with HA are recommended for the following scenario
 
 ### Recommended architecture
 
-The following architecture requires 5 servers - a web application server which contains Gateway, Flow Debugger Service and Databases plus a load balancer server and 3 application servers. This will be suitable for most installations, however if Cortex Gateway is expected to have high load it would be advisable to install Cortex Gateway, Flow Debugger Service and Databases onto different machines (7 server architecture).
+The following architecture requires 5 servers:
+
+  * 1x Web Application server which contains Gateway, Flow Debugger Service and Databases
+  * 1x Load Balancer server
+  * 3x Application servers
 
 {{< figure class="no-float" src="/images/Cortex Innovation Overview.png" title="5 Server Architecture Diagram" >}}
 
-For information about alternative architectures, see [Alternative Architectures][].
+This will be suitable for most HA installations, however, it is possible to reduce the required servers by one; for more information, see [Alternative Architectures][].
 
 ## Prerequisites
 
 ### Hardware Requirements
 
-{{% alert title="Note" %}}The minimum number of servers required to run Cortex with HA is 4. This setup requires multiple server roles to be installed on the same server.
+{{% alert title="Note" %}}The recommended number of servers is 5, and allows each server role instance to be installed on its own server.
 
-The recommended number of servers is 7, and allows each server role instance to be installed on its own server.{{% /alert %}}
+The minimum number of servers required to run Cortex with HA is 4. This setup requires multiple server roles to be installed on the same server; for more information, see [Alternative Architectures](/docs/getting-started/on-premise/advanced/alternative-architectures).{{% /alert %}}
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| Web&nbsp;Application&nbsp;Server | 2[^1]&nbsp;*Recommended*<br>1[^2]&nbsp;*Minimum* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 100+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>TODO&nbsp;free&nbsp;on&nbsp;TODO&nbsp;drive |
-| Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^3]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 100+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
-| Database&nbsp;Server | 1[^4] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 100+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-| Load&nbsp;Balancer | 1[^5] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 100+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| Web&nbsp;Application&nbsp;Server | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>TODO&nbsp;free&nbsp;on&nbsp;TODO&nbsp;drive |
+| Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
+| Load&nbsp;Balancer | 1[^3] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
 
-TODO: This is where sf cluster is https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-standalone-deployment-preparation
-TODO: "Application Server" or "HA node server"? Need to chose and update diagrams as necessary.
-
-[^1]: If both Gateway and LivePortal web applications are being installed, it is recommended that they are each installed on a separate Web Application Server. Neither Gateway or LivePortal currently offer HA support.
-[^2]: If only Gateway is being installed, only 1 server is needed. If both Gateway and LivePortal web applications are being installed, they can be installed on the same Web Application Server, but it is not recommended.
-[^3]: Application servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum.
-[^4]: Database server doesn't currently offer HA support.
-[^5]: A software-based load balancer called [gobetween](http://gobetween.io/) is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast](https://en.wikipedia.org/wiki/Anycast); however, this has not been verified yet. It is possible to use an [alternative load balancer](#alternative-load-balancer-requirements) to the one provided.
+[^1]: It is possible to install the Web Application Server components on one of the Application Servers or the Load Balancer server. Neither Gateway, Databases, nor the Flow Debugger Service currently offer HA support.
+[^2]: Application servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
+[^3]: A software-based load balancer called [gobetween](http://gobetween.io/) is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast](https://en.wikipedia.org/wiki/Anycast); however, this has not been verified yet. It is possible to use an [alternative load balancer](#alternative-load-balancer-requirements) to the one provided.
 
 #### Alternative Load Balancer Requirements
 
@@ -82,7 +80,6 @@ Must support a round robin (or similar) method of load balancing to specified po
 |------------------|-------------------------|---------------------|------|------------|---------|
 | Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | 10.0.17763[^9]<br>10.0.14393[^10]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1](https://www.iis.net/downloads/microsoft/url-rewrite) |
 | Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
-| Database&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-sql-server-2019?filetype=EXE)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-sql-server-2016?filetype=EXE) | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
 | Load&nbsp;Balancer | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
 
 [^6]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
@@ -91,27 +88,35 @@ Must support a round robin (or similar) method of load balancing to specified po
 [^9]: Ships as a windows role within Windows Server 2019.
 [^10]: Ships as a windows role within Windows Server 2016.
 
+#### Service Requirements
+
+The following Windows Services must be running on all Application Servers:
+
+* Remote Registry
+* Windows Event Log
+* Performance Logs & Alerts
+
+#### Filesystem Requirements
+
+All Application Servers must use an NTFS filesystem.
+
 ### Security Requirements
-
-#### Remote Registry Service
-
-All HA node servers must have the Remote Registry service running.
 
 #### Installation User
 
-A domain user which is a member of the local Administrators group on all servers (load balancer and HA) must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.
+A domain user which is a member of the local Administrators group on all servers must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.
 
 #### Antivirus Exclusions
 
-It is advised (by Microsoft Service Fabric) that certain antivirus exclusions are created on each Application server to reduce anti-virus processing on Service Fabric artefacts. The process exclusions should be done before installation occurs, as the processes will be used during installation of the application and anti-virus software can cause the installation to fail or timeout. Some antivirus software will only allow folder exclusions to be applied if they already exist, so these may be added after installation occurs. The following exclusions should be applied for any anti-virus software running on any of the nodes:
+It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on each Application Server to reduce antivirus processing on Service Fabric artefacts:
 
-#### Antivirus Excluded Folders
+Folder Exclusions:
 
 * %ProgramFiles%\Microsoft Service Fabric
 * %ProgramData%\SF
 * %ProgramData%\SF\Logs
 
-#### Antivirus Excluded Processes
+Process Exclusions:
 
 * Fabric.exe
 * FabricHost.exe
@@ -126,10 +131,9 @@ It is advised (by Microsoft Service Fabric) that certain antivirus exclusions ar
 * FabricRM.exe
 * FileStoreService.exe
 
-These are described in the ‘Set appropriate Service Fabric antivirus exclusions’ section of the following article:
-https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-standalone-deployment-preparation#environment-setup
-
 A script is provided during installation to add these exclusions for Windows Defender. If any other antivirus software is running, these will need to be added manually.
+
+If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
 
 #### Domain Requirements
 
@@ -149,14 +153,15 @@ Supported versions of Active Directory are listed below:
 | Windows Server 2019        |                | Cortex v2022.5 | To be evaluated  |
 | Windows Server 2022        |                | Cortex v2022.5 | To be evaluated  |
 
-All servers (load balancer and application servers) must be on the same domain and cannot be domain controllers.
+All servers must be on the same domain and cannot be domain controllers.
 
 #### Port Requirements
 
-Cortex Evolution and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it may be necessary to configure this selection of rules on it. Most
-ports may be altered if another program overlaps with them, the description will say if this is not possible.
+Cortex Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
 
-See [Port Requirements][] for more information about the ports that get opened.
+If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
+
+The "Cortex.Innovation.Test.PortUsage.ps1" script is provided during installation to test the ports on each Application Server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
 #### TLS Requirements
 
@@ -207,10 +212,16 @@ We support the latest versions of the following browsers:
 
 1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
 1. If Windows Defender is running on the application servers follow these steps, otherwise ensure that the Service Fabric exclusions have been added to any antivirus software running on the application servers and continue to the next step.
-    1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Add.WindowsDefenderExclusions.ps1" and open it with a text editor.
+    1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Add.WindowsDefenderExclusions.ps1" and open it with a text editor.
     1. Configure the ApplicationServers variable to contain the computer names or IP addresses of the application servers.
     1. Save and close the PowerShell file.
-    1. Run the "Cortex.Add.WindowsDefenderExclusions.ps1" file as administrator using PowerShell.
+    1. Run the "Cortex.Innovation.Add.WindowsDefenderExclusions.ps1" file as administrator using PowerShell.
+1. To check all necessary ports are free, follow these steps.
+    1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Test.PortUsage.ps1" and open it with a text editor.
+    1. Configure the ApplicationServers variable to contain the computer names or IP addresses of the application servers.
+    1. Save and close the PowerShell file.
+    1. Run the "Cortex.Innovation.Test.PortUsage.ps1" file as administrator using PowerShell.
+    1. If all ports are free, the script will report "All ports required by Cortex Innovation are free" for each application server. If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, [Advanced Configuration][] and [Port Requirements][] to change the necessary configuration to use different ports.
 1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.ps1" and open it with a text editor.
 1. Configure the script according to the details given below:
 
@@ -247,7 +258,7 @@ We support the latest versions of the following browsers:
     The ApiGatewayBasicAuthUser and ApiGatewayBasicAuthPwd will be needed later, when installing Cortex Gateway.
 
     {{% alert title="Note" %}}
-More advanced configuration (such as changing ports) can be undertaken by modifying the "Cortex.Innovation.Install.Config.json" file but this shouldn't be required for most installations. More information about this can be found at TODO: ADD LINK TO CONFIGURATION PAGE.
+More advanced configuration (such as changing ports) can be undertaken by modifying the "Cortex.Innovation.Install.Config.json" file but this shouldn't be required for most installations. More information about this can be found at [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes).
     {{% /alert %}}
 
 1. Save and close the PowerShell file.
@@ -264,13 +275,15 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     .\Cortex.Innovation.Install.ps1 -WhatIf
     ```
 
+    The -WhatIf command will run the script without making any changes to the system. It will also create a temporary version of the config file showing what changes will be made when the script runs. The name is appended with -WhatIf (e.g. Cortex.Innovation.Install.Config-WhatIf.json). This file can be verified using [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes) before running the installation script if you so wish.
+
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (HA and load balancer) and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ (used by the HA cluster for orchestrating messages). This should be entered carefully and remembered as it may be needed if seeking support from Cortex. Press OK.
 1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working. Check that there have been no errors in the script; these would appear in red in the console. If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them. If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. If this does not work, please contact Cortex for further assistance.
 1. Install Cortex HA Services and infrastructure by running the following command (Tee-Object will write output to both the PowerShell console and a log file, the path can be changed if required.):
   
     ```powershell
-    .\Cortex.Innovation.Install.ps1 | Tee-Object C:\Temp\cortex-ha-install-log.txt
+    .\Cortex.Innovation.Install.ps1 | Tee-Object cortex-ha-install-log.txt
     ```
 
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (HA and load balancer) and press OK.
@@ -282,7 +295,19 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     .\Cortex.Innovation.Uninstall.ps1
     ```
 
-If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
+    If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
+1. Ensure that the HA Services are healthy by following these steps:
+    1. Log on to one of the Application servers and open a web browser.
+    1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
+
+        If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
+
+        The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
+
+        {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
+
+        If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
+        If no useful message can be seen here, the service log files may contain more information.
 
 ## Install Web Application Server
 
@@ -379,17 +404,17 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting][Troubleshooting Root Certificate Error] for further information; if this does not help then please contact Cortex for assistance.
 
-## Next Steps?
-1. [Setup](../../setup) the platform
-2. [Try it out](../../tryitout)
-
-### Try it out
-
 #### Finish Gateway configuration
 
 1. Log in to Cortex Gateway as your "administrator" user.
 1. In the Cortex Gateway UI go to Settings → LDAP Authorisation and configure security roles for LDAP groups to your requirements. You can refer to "Section 2.2 Configuring Authorisation Rights" of the Cortex Studio Admin Guide for more details on this.
 1. Log out and Login as a user with Studio permissions.
+
+## Next Steps?
+1. [Setup](../../setup) the platform
+2. [Try it out](../../tryitout)
+
+### Try it out
 
 #### Test Debugging
 
@@ -419,7 +444,7 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
     | Property      | Value                                                                               |
     |---------------|-------------------------------------------------------------------------------------|
     | Action        | POST                                                                                |
-    | URL           | https://{FQDN of Application Server}:8722/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://ha-server1.domain.com:8722/default/default/flows/NewFlow/executions?packageName=NewPackage|
+    | URL           | https://{FQDN of Application Server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://ha-server1.domain.com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
@@ -431,137 +456,11 @@ If the errors do not give any instructions on how to rectify, see [Troubleshooti
 1. The request should return a json object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
 1. Cortex Innovation has now been verified and is ready to use.
 
-### Troubleshooting
-
-#### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
-
-Check that the "Feature Flags" Guid in the "parameters.xml" file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
-
-#### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
-
-Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be "https". If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website.
-
-Ensure that the flow debugger service is running. Open IIS, click on "Application Pools" and ensure there is a "debugger" app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
-
-If everything is correct, please contact Cortex Support for assistance.
-
-#### Cannot publish a package {#ts-no-publish}
-
-Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
-
-Ensure that the HA Services are healthy by following these steps:
-
-1. Log on to one of the Application servers and open a web browser.
-1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
-
-    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
-
-    The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
-
-    {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
-
-    If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
-    If no useful message can be seen here, the service log files may contain more information.
-
-If no solution can be found, please contact Cortex Support for assistance.
-
-#### Root certificate verification failed as no root certificate has been specified
-
-If the installation fails with “Root certificate verification failed as no root certificate has been specified.” it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the “pemRootCertificatePath” property for each certificate in the “serverCertificates” and “adminCertificates” section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
-
-1. In order to find out the issuer of the certificate, if not already known, the following script can be used, replacing the password for the pfx file and certificate path as necessary:
-
-    ```powershell
-    $p = ConvertTo-SecureString -String "pfxPassword" -AsPlainText -Force
-    $c = Get-PfxData -Password $p -FilePath "C:\Certificates\serverCert.pfx"
-    $c | Format-List
-    ```
-
-1. This will give a list of “Other Certificates” and “End Certificates” contained in the .pfx file. The issuer can be found in the “Issuer” property of one of the “Other Certificates”. If there are more than one, it will be the one that does not appear as a “Subject” in any of the other items.
-1. E.g. For a “Let’s Encrypt” certificate this will give the following results:
-
-    ```powershell
-    OtherCertificates     : {[Subject]
-                              CN=Let's Encrypt Authority X3, O=Let's Encrypt, C=US
-                            [Issuer]
-                              CN=DST Root CA X3, O=Digital Signature Trust Co.
-                            [Serial Number]
-                              0A0141420000015385736A0B85ECA708
-                            [Not Before]
-                              17/03/2016 16:40:46
-                            [Not After]
-                              17/03/2021 16:40:46
-                            [Thumbprint]
-                              E6A3B45B062D509B3382282D196EFE97D5956CCB
-                            }
-    EndEntityCertificates : {[Subject]
-                              CN=*.domain.com
-                            [Issuer]
-                              CN=Let's Encrypt Authority X3, O=Let's Encrypt, C=US
-                            [Serial Number]
-                              03D3B2E5E7D75175C25B250305650ABE849A
-                            [Not Before]
-                              20/12/2019 16:27:36
-                            [Not After]
-                              19/03/2020 16:27:36
-                            [Thumbprint]
-                              D61356405B8D4AA11C29AF3D20F2D834C1A3039F
-                            }
-    ```
-
-1. In this case, the root certificate is “DST Root CA X3”.
-1. In a search engine, search for the CN of the issuer and one of the results should lead to a download of a .pem file or to a page with the certificate on it, which can then be copied and saved into a file with a .pem extension. Often, searching the issuer of the EndEntityCertificate, in the above case “Let’s Encrypt”, will also work.
-1. E.g. for “Let’s Encrypt”, the results of the search for “DST Root CA X3” leads to “https://www.identrust.com/dst-root-ca-x3” which provides the following text to be saved as a .pem file:
-
-    ```markdown
-    -----BEGIN CERTIFICATE-----
-    MIIDSjCCAjKgAwIBAgIQRK+wgNajJ7qJMDmGLvhAazANBgkqhkiG9w0BAQUFADA/
-    MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT
-    DkRTVCBSb290IENBIFgzMB4XDTAwMDkzMDIxMTIxOVoXDTIxMDkzMDE0MDExNVow
-    PzEkMCIGA1UEChMbRGlnaXRhbCBTaWduYXR1cmUgVHJ1c3QgQ28uMRcwFQYDVQQD
-    Ew5EU1QgUm9vdCBDQSBYMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
-    AN+v6ZdQCINXtMxiZfaQguzH0yxrMMpb7NnDfcdAwRgUi+DoM3ZJKuM/IUmTrE4O
-    rz5Iy2Xu/NMhD2XSKtkyj4zl93ewEnu1lcCJo6m67XMuegwGMoOifooUMM0RoOEq
-    OLl5CjH9UL2AZd+3UWODyOKIYepLYYHsUmu5ouJLGiifSKOeDNoJjj4XLh7dIN9b
-    xiqKqy69cK3FCxolkHRyxXtqqzTWMIn/5WgTe1QLyNau7Fqckh49ZLOMxt+/yUFw
-    7BZy1SbsOFU5Q9D8/RhcQPGX69Wam40dutolucbY38EVAjqr2m7xPi71XAicPNaD
-    aeQQmxkqtilX4+U9m5/wAl0CAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNV
-    HQ8BAf8EBAMCAQYwHQYDVR0OBBYEFMSnsaR7LHH62+FLkHX/xBVghYkQMA0GCSqG
-    SIb3DQEBBQUAA4IBAQCjGiybFwBcqR7uKGY3Or+Dxz9LwwmglSBd49lZRNI+DT69
-    ikugdB/OEIKcdBodfpga3csTS7MgROSR6cz8faXbauX+5v3gTt23ADq1cEmv8uXr
-    AvHRAosZy5Q6XkjEGB5YGV8eAlrwDPGxrancWYaLbumR9YbK+rlmM6pZW87ipxZz
-    R8srzJmwN0jP41ZL9c8PDHIyh8bwRLtTcm1D9SZImlJnt1ir/md2cXjbDaJWFBM5
-    JDGFoqgCWjBH4d1QB7wCCZAA62RjYJsWvIjJEubSfZGL+T0yjWW06XyxV3bqxbYo
-    Ob8VZRzI9neWagqNdwvYkQsEjgfbKbYK7p2CNTUQ
-    -----END CERTIFICATE-----
-    ```
-
-1. After saving the .pem file, transfer it to the same directory as other installation certificates.
-1. Modify the following, highlighted sections of the installation configuration file like so:
-
-    ```json
-      "serverCertificates": {
-        "serverCert": {
-          "pfxCertificatePath": "C:\\Certificates\\wildCardCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
-          "pemRootCertificatePath": "C:\\Certificates\\rootCert.pem"
-        }
-      },
-      "adminCertificates": {
-        "loadBalancerCert": {
-          "pfxCertificatePath": "C:\\Certificates\\lbCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
-          "pemRootCertificatePath": "C:\\Certificates\\lbRootCert.pem"
-        }
-      }
-    ```
-
-1. Run the installation script again.
-
-[Troubleshooting]: {{< ref "#troubleshooting" >}}
-[Troubleshooting No Innovation]: {{< ref "#ts-no-innovation" >}}
-[Troubleshooting No Blocks]: {{< ref "#ts-no-blocks" >}}
-[Troubleshooting No Publish]: {{< ref "#ts-no-publish" >}}
-[Troubleshooting Root Certificate Error]: {{< ref "#root-certificate-verification-failed-as-no-root-certificate-has-been-specified" >}}
+[Troubleshooting]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.Troubleshooting" >}}
+[Troubleshooting No Innovation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoInnovation" >}}
+[Troubleshooting No Blocks]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoBlocks" >}}
+[Troubleshooting No Publish]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoPublish" >}}
+[Troubleshooting Root Certificate Error]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoRootCertificate" >}}
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.Ports" >}}
 [Alternative Architectures]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AlternativeArchitectures" >}}
+[Advanced Configuration]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AdvancedConfig" >}}

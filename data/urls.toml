@@ -9,6 +9,11 @@
                     Ports = "/docs/getting-started/on-premise/advanced/ports"
                     AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
                     AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
+                    Troubleshooting = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting"
+                    TroubleshootingNoInnovation = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-innovation"
+                    TroubleshootingNoBlocks = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-blocks"
+                    TroubleshootingNoPublish = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-publish"
+                    TroubleshootingNoRootCertificate= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-root-certificate"
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"

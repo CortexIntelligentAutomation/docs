@@ -5,7 +5,7 @@ description: >
     Information on installing Cortex on alternative architectures.
 ---
 
-# Alternative architectures
+## Alternative architectures
 
 If Cortex Gateway is expected to have high load it would be advisable to install Cortex Gateway, Flow Debugger Service and Databases onto different machines (7 server architecture) as shown below:
 
