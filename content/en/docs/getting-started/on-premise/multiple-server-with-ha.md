@@ -32,7 +32,7 @@ Multiple server installations with HA are recommended for the following scenario
 | [Particular&nbsp;NServiceBus](https://particular.net/nservicebus) | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
 | [Pivotal&nbsp;RabbitMQ](https://www.rabbitmq.com/) | Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex services using publish/subscribe mechanism. | Required | Application&nbsp;Server |
 | [Erlang&nbsp;OTP](https://github.com/erlang/otp) | Erlang run-time required by the RabbitMQ message broker. | Required | Application&nbsp;Server |
-| TODO (SSDB, SSIS, SSAS, SSRS) | Hopefully, we can remove the need for SQL Server database components in next generation, by using a combination of git for configuration, and log ingestion tools like Humio or Loki, Grafana, Prometheus combination to replace dashboarding and analytics. | End-of-life | Database&nbsp;Server |
+| [SQL&nbsp;Server&nbsp;Express]() | Free edition of SQL Server, required by Cortex Gateway for storing data related to user roles, flows, etc. Hopefully, we can remove the need for SQL Server Express in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
 | [NSSM](https://nssm.cc/) | Windows Service Manager that hosts the gobetween load balancer application as a Windows Service. | Required | Load&nbsp;Balancer |
 | [gobetween](http://gobetween.io/) | L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services. | Required | Load&nbsp;Balancer |
 
@@ -40,9 +40,9 @@ Multiple server installations with HA are recommended for the following scenario
 
 The following architecture requires 5 servers:
 
-  * 1x Web Application server which contains Gateway, Flow Debugger Service and Databases
-  * 1x Load Balancer server
-  * 3x Application servers
+* 1x Web Application server which contains Gateway, Flow Debugger Service and Databases
+* 1x Load Balancer server
+* 3x Application servers
 
 {{< figure class="no-float" src="/images/Cortex Innovation Overview.png" title="5 Server Architecture Diagram" >}}
 
@@ -171,23 +171,29 @@ TODO include protocols, ciphers, hashes etc.
 
 #### Certificate Requirements
 
-An X.509 SSL wildcard certificate with the following requirements should be obtained from a Certificate Authority, such as Let’s Encrypt (https://letsencrypt.org/), to be used for inter-node communication:
+{{% alert title="Note" %}}
+For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+{{% / alert %}}
 
-* Subject field should be in a wildcard format, pertaining to the domain of the HA nodes (e.g. CN=*.domain.com).
-* Certificate file should be in a .PFX file format, with a known password. It should contain the full chain of certificates.
-* Certificate file should include the private key.
-This file should be placed in a known location on the server that the installation scripts will be run on. The location will be used in the configuration file later to enable the certificate to be installed by the installer.
-This will be used as the server certificate for inter-node communication and identification to clients. It ensures that unauthorised nodes cannot join the cluster.
-It can also be used to connect to Service Fabric Explorer from each of the nodes. Note: This can be omitted, and the installation will create and use self-signed certificates, but this is not recommended for production systems.
+An X.509 SSL wildcard certificate should be used to:
 
-An X.509 SSL certificate with the following requirements should also be obtained to be used by the load balancer to communicate with the HA nodes:
+* Secure communication between the load balancer and the HA nodes on the Application Servers.
+* Secure communication between the HA nodes.
+* Allow HA Services to identify themselves to clients such as Gateway.
+* Prevent unauthorised HA nodes from joining the HA cluster.
+* Connect to Service Fabric Explorer from each of the Application Servers.
 
-* Subject field should be in a wildcard format, pertaining to the domain of the load balancer (e.g. CN=*.domain.com) or which is the FQDN of the load balancer (e.g. CN=machine-name.domain.com).
-* Certificate file should be in a .PFX file format, with a known password. It should contain the full chain of certificates.
-* Certificate file should include the private key.
-This file should be placed in a known location on the server that the installation scripts will be run on. The location will be used in the configuration file later to enable the certificate to be installed by the installer.
-This will be used as the admin certificate to allow the load balancer to make REST requests to the HA nodes, enabling it to perform health-checks on them.
-Note: This can be omitted, and the installation will create and use self-signed certificates, but this is not recommended for production systems
+The certificate can be obtained from a Certificate Authority, such as Let’s Encrypt (https://letsencrypt.org/), and must meet the following requirements:
+
+* Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Certificate file must be in a .PFX file format, with a known password.
+* Certificate file must contain the full chain of certificates.
+* Certificate file must include the private key.
+
+This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.
+
+If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the HA nodes. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
 #### Kerberos Requirements
 
@@ -203,26 +209,28 @@ We support the latest versions of the following browsers:
 
 ## Install Application Servers and Load Balancer Server
 
-### Install Cortex HA Infrastructure and Services
+1. Choose one of the Application servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):
+   * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
+   * Cortex Evolution - Innovation 2022.5 - HA Services.zip
+   * Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip
 
-1. Choose one of the Application servers, to be used for installation, and copy the following artifacts to a folder on it (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
-   * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
-   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - HA Services.zip
-   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip
-
-1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
-1. If Windows Defender is running on the application servers follow these steps, otherwise ensure that the Service Fabric exclusions have been added to any antivirus software running on the application servers and continue to the next step.
-    1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Add.WindowsDefenderExclusions.ps1" and open it with a text editor.
-    1. Configure the ApplicationServers variable to contain the computer names or IP addresses of the application servers.
+1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` file to a folder with the same name.
+1. If Windows Defender is running on the Application Servers follow these steps, otherwise ensure that the Service Fabric exclusions have been added to any antivirus software running on the Application Servers and continue to the next step.
+    1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` and open it with a text editor.
+    1. Configure the `ApplicationServers` variable to contain the computer names or IP addresses of the application servers.
     1. Save and close the PowerShell file.
-    1. Run the "Cortex.Innovation.Add.WindowsDefenderExclusions.ps1" file as administrator using PowerShell.
+    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` file as administrator using PowerShell.
 1. To check all necessary ports are free, follow these steps.
-    1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Test.PortUsage.ps1" and open it with a text editor.
-    1. Configure the ApplicationServers variable to contain the computer names or IP addresses of the application servers.
+    1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Test.PortUsage.ps1` and open it with a text editor.
+    1. Configure the `ApplicationServers` variable to contain the computer names or IP addresses of the application servers.
     1. Save and close the PowerShell file.
-    1. Run the "Cortex.Innovation.Test.PortUsage.ps1" file as administrator using PowerShell.
-    1. If all ports are free, the script will report "All ports required by Cortex Innovation are free" for each application server. If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, [Advanced Configuration][] and [Port Requirements][] to change the necessary configuration to use different ports.
-1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.ps1" and open it with a text editor.
+    1. Run the `Cortex.Innovation.Test.PortUsage.ps1` file as administrator using PowerShell.
+    1. If all ports are free, the script will report the following for each Application Server:
+
+        `All ports required by Cortex Innovation are free`
+
+        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, [Advanced Configuration][] and [Port Requirements][] to change the necessary configuration to use different ports.
+1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.ps1` and open it with a text editor.
 1. Configure the script according to the details given below:
 
     ```powershell
@@ -243,50 +251,55 @@ We support the latest versions of the following browsers:
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |HaServicesPath                                | Configure this value with the location of the HA Services zip file on the installation node. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
-    |BlockPackagesPath                             | Configure this value with the location of the Block Packages zip file on the installation node. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
-    |ApiGatewayBasicAuthUser                       | Configure this value with the username that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.).|
-    |ApiGatewayBasicAuthPwd                        | Configure this value with the password that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows.). This should be Cortex Encrypted. |
-    |CustomerName                                  | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
-    |ApplicationServerIPv4Addresses                | The IPv4 addresses of the application servers. The first of these should be the server used for installation. |
-    |LoadBalancerServerIPv4Address                 | The IPv4 address of the load balancer server.  |
-    |ServerCertificatePath                         | The local path of a .PFX certificate file on the first application server in the ApplicationServerIPv4Addresses addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for communication between the HA nodes on the Application Servers. |
-    |ServerCertificatePwd                          | The password for the .PFX certificate file specified in ServerCertificatePath. |
-    |ClientCertificatePath                         | The local path of a .PFX certificate file on the first application server in the ApplicationServerIPv4Addresses addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for external communication to the HA nodes on the Application Servers, e.g. through the load balancer and Service Fabric Explorer. This can be the same certificate as the ServerCertificatePath. |
-    |ClientCertificatePwd                          | The password for the .PFX certificate file specified in ClientCertificatePath.  |
+    |`HaServicesPath`                              | Configure this value with the location of the HA Services zip file on the installation node. The wildcard `*` can stay in place, this means that the script will find the first zip with any version number. |
+    |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the installation node. The wildcard `*` can stay in place, this means that the script will find the first zip with any version number. |
+    |`ApiGatewayBasicAuthUser`                     | Configure this value with the username that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows).|
+    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows). This should be Cortex Encrypted. |
+    |`CustomerName`                                | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
+    |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the application servers. The first of these should be the server used for installation. |
+    |`LoadBalancerServerIPv4Address`               | The IPv4 address of the load balancer server.  |
+    |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the first application server in the `ApplicationServerIPv4Addresses` addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for communication between the HA nodes on the Application Servers. |
+    |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. |
+    |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for external communication to the HA nodes on the Application Servers, e.g. through the load balancer and Service Fabric Explorer. This can be the same certificate as the `ServerCertificatePath`. |
+    |`ClientCertificatePwd`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`.  |
 
-    The ApiGatewayBasicAuthUser and ApiGatewayBasicAuthPwd will be needed later, when installing Cortex Gateway.
+    The `ApiGatewayBasicAuthUser` and `ApiGatewayBasicAuthPwd` will be needed later, when installing Cortex Gateway.
 
     {{% alert title="Note" %}}
-More advanced configuration (such as changing ports) can be undertaken by modifying the "Cortex.Innovation.Install.Config.json" file but this shouldn't be required for most installations. More information about this can be found at [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes).
+More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes).
     {{% /alert %}}
 
 1. Save and close the PowerShell file.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the Installation Scripts folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts"
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
     ```
 
-1. Test Cortex.Innovation.Install.ps1 by running the following command:
+1. Test `Cortex.Innovation.Install.ps1` by running the following command:
 
     ```powershell
     .\Cortex.Innovation.Install.ps1 -WhatIf
     ```
 
-    The -WhatIf command will run the script without making any changes to the system. It will also create a temporary version of the config file showing what changes will be made when the script runs. The name is appended with -WhatIf (e.g. Cortex.Innovation.Install.Config-WhatIf.json). This file can be verified using [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes) before running the installation script if you so wish.
+    The `-WhatIf` command will run the script without making any changes to the system. It will also create a temporary version of the config file showing what changes will be made when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be verified using [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes) before running the installation script if you so wish.
 
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (HA and load balancer) and press OK.
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ (used by the HA cluster for orchestrating messages). This should be entered carefully and remembered as it may be needed if seeking support from Cortex. Press OK.
-1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working. Check that there have been no errors in the script; these would appear in red in the console. If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them. If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. If this does not work, please contact Cortex for further assistance.
-1. Install Cortex HA Services and infrastructure by running the following command (Tee-Object will write output to both the PowerShell console and a log file, the path can be changed if required.):
+1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working.
+1. Check that there have been no errors in the script; these would appear in red in the console.
+
+    If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
+
+    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. If this does not work, please contact Cortex for further assistance.
+1. Install Cortex HA Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
   
     ```powershell
-    .\Cortex.Innovation.Install.ps1 | Tee-Object cortex-ha-install-log.txt
+    .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
     ```
 
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (HA and load balancer) and press OK.
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ (used by the HA cluster for orchestrating messages). This should be entered carefully and remembered as it may be needed if seeking support from Cortex. Press OK.
 1. Wait for the script to finish running. This should take approximately 10 minutes.
 1. Check that there have been no errors in the script; these would appear in red in the console. If there are any errors, then please follow any instructions given within them to rectify the situation, check your configuration files, and retry the installation. In some circumstances, retrying may error due to components being installed already. In this case please run the following command, followed by the original installation command:
@@ -297,12 +310,12 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
 1. Ensure that the HA Services are healthy by following these steps:
-    1. Log on to one of the Application servers and open a web browser.
-    1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
+    1. Log on to one of the Application Servers and open a web browser.
+    1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of any server within the HA cluster. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
-        If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
+        If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the `Current User` store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
 
-        The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
+        The screen should resemble that in the following figure, all services should have `Health State = OK` and `Status = Active`. All instances below the service should have `Health State = OK` and `Status = Ready`.
 
         {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
 
@@ -317,19 +330,19 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     * SQL Server 2019 Installation Guide for Cortex
     * SQL Server 2016 Installation Guide for Cortex
     * SQL Server 2016 Express Installation Guide for Cortex
-1. Copy the following artifact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
+1. Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
     * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Gateway.zip
-1. Use the "Cortex Installation Guide" to install Cortex Gateway. The following sections will need to be followed as prerequisites to following the "Cortex Gateway Installation" section:
+1. Use the `Cortex Installation Guide` to install Cortex Gateway. The following sections will need to be followed as prerequisites to following the `Cortex Gateway Installation` section:
     * 3.1 - System Requirements
     * 3.2 - Additional Components Required for Cortex Gateway Installation
     * 3.3 - Additional pre-requisites
     * 4.3.1 - Install Internet Information Services (IIS)
     * 4.3.2 - Register and Allow .NET CLR v4.0.30319 with IIS
     * Appendix 6 - Actions to Install URL Rewrite Module
-1. Follow section "9 - Cortex Gateway Installation" in the same guide. Use the following points as they will differ from a Cortex Integrity installation:
-    * Ignore section "9.1 - Required Components"; no other Cortex Components are required for Cortex Innovation, only those referred to in this guide.
-    * In section "9.2.7 - Configure Cortex Gateway installation", whenever "Cortex Gateway.zip" is mentioned, use the "Cortex Evolution - Innovation * - Gateway.zip" file that was copied in the previous step.
-    * When configuring the "parameters.xml" file in section "9.2.7 - Configure Cortex Gateway installation", some additional values need to be updated:
+1. Follow section `9 - Cortex Gateway Installation` in the same guide. Use the following points as they will differ from a Cortex Integrity installation:
+    * Ignore section `9.1 - Required Components`; no other Cortex Components are required for Cortex Innovation, only those referred to in this guide.
+    * In section `9.2.7 - Configure Cortex Gateway installation`, whenever `Cortex Gateway.zip` is mentioned, use the `Cortex Evolution - Innovation * - Gateway.zip` file that was copied in the previous step.
+    * When configuring the `parameters.xml` file in section `9.2.7 - Configure Cortex Gateway installation`, some additional values need to be updated:
 
     ```xml
     <setParameter name="Feature Flags" value="&lt;value&gt;InnovationId&lt;/value&gt;" />
@@ -340,29 +353,29 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     <setParameter name="Dot NET flow debugger Endpoint" value="&lt;value&gt;https://app-server.domain.com/debugger/api/&lt;/value&gt;" />
     ```
 
-    | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |Feature Flags                                 | Configure as above, replacing "InnovationId" with the Cortex Innovation feature identifier. This should be retrieved from Cortex. |
-    |Service Fabric Api Gateway Endpoint           | Configure as above, replacing "ha-server1.domain.com" with the fully qualified domain name of one of the HA nodes. The port should be 8722. |
-    |Service Fabric Using Self Signed Certificates | Configure the value as "False" if you are using valid CA certificates, "True" if using self-signed certificates |
-    |Service Fabric Self Signed Certificate Subject| This should not be changed. |
-    |Service Fabric ApiGateway Basic Auth Username | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthUsername when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. |
-    |Service Fabric ApiGateway Basic Auth Password | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
-    |Dot NET flow debugger Endpoint                | Configure as above, replacing "app-server.domain.com" with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
+    | Name                                           | Description |
+    |------------------------------------------------|-------------|
+    |`Feature Flags`                                 | Configure as above, replacing "InnovationId" with the Cortex Innovation feature identifier. This should be retrieved from Cortex. |
+    |`Service Fabric Api Gateway Endpoint`           | Configure as above, replacing "ha-server1.domain.com" with the fully qualified domain name of one of the HA nodes. The port should be 8722. |
+    |`Service Fabric Using Self Signed Certificates` | Configure the value as "False" if you are using valid CA certificates, "True" if using self-signed certificates |
+    |`Service Fabric Self Signed Certificate Subject`| This should not be changed. |
+    |`Service Fabric ApiGateway Basic Auth Username` | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthUsername when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. |
+    |`Service Fabric ApiGateway Basic Auth Password` | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
+    |`Dot NET flow debugger Endpoint`                | Configure as above, replacing "app-server.domain.com" with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
 
-    * Ignore the "Configuring prerequisites for capability discovery" section - this is not yet supported in Cortex Innovation.
-    * Ignore the "Configuring Connectivity to Cortex Server" section - this is only necessary for Cortex Integrity.
-    * Ignore the "Testing a clean system" section - this will be covered later in this guide.
-    * Ignore the "Verify LiveView Dashboards on Cortex Gateway" - this is not supported in Cortex Innovation.
+    * Ignore the `Configuring prerequisites for capability discovery` section - this is not yet supported in Cortex Innovation.
+    * Ignore the `Configuring Connectivity to Cortex Server` section - this is only necessary for Cortex Integrity.
+    * Ignore the `Testing a clean system` section - this will be covered later in this guide.
+    * Ignore the `Verify LiveView Dashboards on Cortex Gateway` - this is not supported in Cortex Innovation.
 
 ### Install Flow Debugger Service
 
-1. We recommend that the Cortex Flow Debugger Service is installed on the same machine as Cortex Gateway. Copy the following artifacts to a folder on the machine (the version numbers may differ). By default the scripts use C:\Install as the location, so use this if you want to minimise changes:
+1. We recommend that the Cortex Flow Debugger Service is installed on the same machine as Cortex Gateway. Copy the following artefacts to a folder on the machine (the version numbers may differ):
    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Block Packages.zip
-   * Cortex Evolution - Innovation 2022-RC.2022.1.4 - Flow Debugger Service.zip
+   * Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip
 
-1. Extract the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts.zip" zip file to a folder with the same name.
-1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.FlowDebuggerService.ps1" and open it with a text editor.
+1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` zip file to a folder with the same name.
+1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.FlowDebuggerService.ps1` and open it with a text editor.
 1. Configure the script according to the details given below:
 
     ```powershell
@@ -374,24 +387,24 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |FlowDebuggerServicePath                       | Configure this value with the location of the Flow Debugger Service zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
-    |BlockPackagesPath                             | Configure this value with the location of the Block Packages zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
+    |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
+    |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
 
 1. Save and close the PowerShell file.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the Installation Scripts folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts"
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
     ```
 
-1. Install Cortex HA Services and infrastructure by running the following command (Tee-Object will write output to both the PowerShell console and a log file, the path can be changed if required.):
+1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required.):
   
     ```powershell
-    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object C:\Temp\cortex-flow-debugger-service-install-log.txt
+    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
     ```
 
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and load balancer) and press OK.
+1. A credentials prompt will appear. Enter the credentials of the user that should run the Flow Debugger Application Pool (this can be the same user as the one used to run the Cortex Gateway application pool).
 1. Wait for the script to finish running. This should take approximately 2 minutes.
 1. An error may have appeared saying:
 
@@ -407,7 +420,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 #### Finish Gateway configuration
 
 1. Log in to Cortex Gateway as your "administrator" user.
-1. In the Cortex Gateway UI go to Settings → LDAP Authorisation and configure security roles for LDAP groups to your requirements. You can refer to "Section 2.2 Configuring Authorisation Rights" of the Cortex Studio Admin Guide for more details on this.
+1. In the Cortex Gateway UI go to `Settings` → `LDAP Authorisation` and configure security roles for LDAP groups to your requirements. You can refer to `Section 2.2 Configuring Authorisation Rights` of the `Cortex Studio Admin Guide` for more details on this.
 1. Log out and Login as a user with Studio permissions.
 
 ## Next Steps?
@@ -419,27 +432,27 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 #### Test Debugging
 
 1. Use the following steps to test the system be creating a new flow (alternatively, if you already have Cortex Innovation flows which are compatible with this version, feel free to import them, configure Studio Authorisation for them and check that they can be debugged, published and executed).
-1. Click on the Flows charm, then the + button and click "Group" to open a dialog.
-1. Enter a name for the group, configure the Permission Groups and click OK to create the group.
+1. Click on the `Flows` charm, then the `+` button and click `Group` to open a dialog.
+1. Enter a name for the group, configure the `Permission Groups` and click `OK` to create the group.
 1. Click on the group to open it (refresh the page if it does not appear).
-1. Inside the group, click the + button again and click on "Flow (Innovation)" to open a dialog. If the menu item is not present, it means that the "FeatureFlags" in the "parameters.xml" file was not set properly when installing Cortex Gateway. See [Troubleshooting][Troubleshooting No Innovation] for more information.
-1. Enter a name for the flow, configure the Permission Groups and click OK to create the flow.
+1. Inside the group, click the `+` button again and click on `Flow (Innovation)` to open a dialog. If the menu item is not present, it means that the `FeatureFlags` in the "parameters.xml" file was not set properly when installing Gateway. See [Troubleshooting][Troubleshooting No Innovation] for more information.
+1. Enter a name for the flow, configure the `Permission Groups` and click `OK` to create the flow.
 1. The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
     {{< figure class="no-float" src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
     If the blocks in the flow do not display or the palettes are not visible, see [Troubleshooting][Troubleshooting No Blocks] for more information.
-1. Add a "Set Variable" block and connect it between the start and end blocks.
-1. Click the "Set Variable" block to open the Property Editor. Set the "Value" property to `DateTime.Now`. Type `Output` into the "Variable" property and click "Create Variable".
-1. In the Variable Editor, set "Is Output Variable?" to `true` for the new "Output" variable.
-1. Set a breakpoint on the end block and start the flow. An execution token should appear, the Output variable should show the current time. If the token does not appear, try refreshing the page.
+1. Add a `Set Variable` block and connect it between the start and end blocks.
+1. Click the `Set Variable` block to open the Property Editor. Set the `Value` property to `DateTime.Now`. Type `Output` into the `Variable` property and click `Create Variable`.
+1. In the Variable Editor, set `Is Output Variable?` to `true` for the new "Output" variable.
+1. Set a breakpoint on the end block and start the flow. An execution token should appear, the `Output` variable should show the current time. If the token does not appear, try refreshing the page.
 1. Continue or stop the execution.
 1. Commit the flow.
 
 #### Test Publishing and Executing production flows
 
-1. Log into Cortex Gateway with a user that has the "Administrator" role.
-1. Click on the "Settings" charm, then "Packages".
-1. Click "Add Package Definition". Enter a package name and select the new flow to add to the package. Click "Save" to add the new package.
-1. Click "Publish". A success message should appear. If it doesn't it means that either one or more of the "Service Fabric x" values in the "parameters.xml" file was not set properly when installing Cortex Gateway, or the HA Services aren't healthy. See [Troubleshooting][Troubleshooting No Publish] for more information.
+1. Log into Cortex Gateway with a user that has the `Administrator` role.
+1. Click on the `Settings` charm, then `Packages`.
+1. Click `Add Package Definition`. Enter a package name and select the new flow to add to the package. Click `Save` to add the new package.
+1. Click "Publish". A success message should appear. If it doesn't it means that either one or more of the `Service Fabric x` values in the `parameters.xml` file was not set properly when installing Cortex Gateway, or the HA Services aren't healthy. See [Troubleshooting][Troubleshooting No Publish] for more information.
 1. Open an HTTP client, such as Postman. Make a request with the following format:
     | Property      | Value                                                                               |
     |---------------|-------------------------------------------------------------------------------------|
