@@ -130,7 +130,9 @@ body {
     color: $ctx-text-black;
   }
   
-  table {  
+  table {
+    display: inline-block !important;
+
     th {
       border-top: none !important;
       border-bottom: none !important;

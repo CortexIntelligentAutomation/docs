@@ -23,16 +23,16 @@ Multiple server installations with HA are recommended for the following scenario
 |-----------|---------|----------|------------|
 | [Cortex&nbsp;Gateway](/docs/concepts/todo-cortex-gateway) | Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
 | [Cortex&nbsp;Studio](/docs/concepts/todo-cortex-studio) | Application hosted in Cortex Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions. | Required | Web&nbsp;Application&nbsp;Server |
-| [Cortex&nbsp;Flow&nbsp;Debugger&nbsp;Service](/docs/concepts/todo-cortex-flow-debugger-service) | Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
-| [Cortex&nbsp;API&nbsp;Gateway&nbsp;Service](/docs/concepts/todo-cortex-api-gateway-service) | HA Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
-| [Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service](/docs/concepts/todo-cortex-flow-execution-service) | HA Service that executes automation flows. | Required | Application&nbsp;Server |
-| [Cortex&nbsp;Block&nbsp;Packages](/docs/concepts/todo-cortex-block-packages) | A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
+| Cortex&nbsp;Flow&nbsp;Debugger&nbsp;Service | Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
+| Cortex&nbsp;API&nbsp;Gateway&nbsp;Service | HA Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
+| Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service | HA Service that executes automation flows. | Required | Application&nbsp;Server |
+| Cortex&nbsp;Block&nbsp;Packages | A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric](https://azure.microsoft.com/en-us/services/service-fabric/) | Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster) | Web portal for monitoring and managing the HA clusters that automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Particular&nbsp;NServiceBus](https://particular.net/nservicebus) | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
 | [Pivotal&nbsp;RabbitMQ](https://www.rabbitmq.com/) | Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex services using publish/subscribe mechanism. | Required | Application&nbsp;Server |
 | [Erlang&nbsp;OTP](https://github.com/erlang/otp) | Erlang run-time required by the RabbitMQ message broker. | Required | Application&nbsp;Server |
-| [SQL&nbsp;Server&nbsp;Express]() | Free edition of SQL Server, required by Cortex Gateway for storing data related to user roles, flows, etc. Hopefully, we can remove the need for SQL Server Express in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
+| [SQL&nbsp;Server&nbsp;Express](https://www.microsoft.com/en-gb/sql-server/sql-server-downloads) | Free edition of SQL Server, required by Cortex Gateway for storing data related to user roles, flows, etc. Hopefully, we can remove the need for SQL Server Express in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
 | [NSSM](https://nssm.cc/) | Windows Service Manager that hosts the gobetween load balancer application as a Windows Service. | Required | Load&nbsp;Balancer |
 | [gobetween](http://gobetween.io/) | L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services. | Required | Load&nbsp;Balancer |
 
@@ -78,12 +78,12 @@ Must support a round robin (or similar) method of load balancing to specified po
 
 | Server&nbsp;Role | Windows&nbsp;Server[^6] | SQL&nbsp;Server[^7] | .Net | PowerShell | IIS[^8] |
 |------------------|-------------------------|---------------------|------|------------|---------|
-| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | 10.0.17763[^9]<br>10.0.14393[^10]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1](https://www.iis.net/downloads/microsoft/url-rewrite) |
+| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | [2019](https://www.microsoft.com/en-us/sql-server/sql-server-2019)<br />[2016](https://www.microsoft.com/en-us/sql-server/sql-server-2016)<br />[2016&nbsp;Express](https://go.microsoft.com/fwlink/?LinkID=799012) | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | 10.0.17763[^9]<br>10.0.14393[^10]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1](https://www.iis.net/downloads/microsoft/url-rewrite) |
 | Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
 | Load&nbsp;Balancer | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://www.microsoft.com/en-US/download/details.aspx?id=56116) | 5.1 | |
 
 [^6]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^7]: SQL Server Standard and Enterprise editions are supported. Only SQL Server is supported; other databases, including SQL Server Express are not supported.
+[^7]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported.
 [^8]: Only IIS is supported; other web servers, including IIS Express are not supported.
 [^9]: Ships as a windows role within Windows Server 2019.
 [^10]: Ships as a windows role within Windows Server 2016.
@@ -215,61 +215,124 @@ We support the latest versions of the following browsers:
    * Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip
 
 1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` file to a folder with the same name.
-1. If Windows Defender is running on the Application Servers follow these steps, otherwise ensure that the Service Fabric exclusions have been added to any antivirus software running on the Application Servers and continue to the next step.
-    1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` and open it with a text editor.
-    1. Configure the `ApplicationServers` variable to contain the computer names or IP addresses of the application servers.
-    1. Save and close the PowerShell file.
-    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` file as administrator using PowerShell.
+1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next step, otherwise follow these steps:
+    1. Open a Windows PowerShell (x64) window as administrator.
+    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+
+        ```powershell
+        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+        ```
+
+    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+
+        ```powershell
+        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3")
+        ```
+
 1. To check all necessary ports are free, follow these steps.
-    1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Test.PortUsage.ps1` and open it with a text editor.
-    1. Configure the `ApplicationServers` variable to contain the computer names or IP addresses of the application servers.
-    1. Save and close the PowerShell file.
-    1. Run the `Cortex.Innovation.Test.PortUsage.ps1` file as administrator using PowerShell.
+    1. Open a Windows PowerShell (x64) window as administrator.
+    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+
+        ```powershell
+        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+        ```
+
+    1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+
+        ```powershell
+        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3")
+        ```
+
     1. If all ports are free, the script will report the following for each Application Server:
 
         `All ports required by Cortex Innovation are free`
 
-        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, [Advanced Configuration][] and [Port Requirements][] to change the necessary configuration to use different ports.
-1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.ps1` and open it with a text editor.
-1. Configure the script according to the details given below:
+        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, to use different ports. This will be used later during installation.
 
-    ```powershell
-    .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Evolution - Innovation * - HA Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
+        The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
+1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
+1. Choose the tab that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
+
+    {{< tabpane lang="powershell" >}}
+      {{< tab header="CA Certs, Built-in Load Balancer">}}
+.\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
+  -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
+  -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+  -ApiGatewayBasicAuthUser "BasicAuthUser" `
+  -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+  -CustomerName "Customer1" `
+  -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
+  -LoadBalancerServerIPv4Address "192.168.1.4" `
+  -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
+  -ServerCertificatePwd "myPassword" `
+  -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
+  -ClientCertificatePwd "myPassword" `
+  -Credential $c
+      {{< /tab >}}
+      {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
+  .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
+    -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
     -ApiGatewayBasicAuthUser "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
-    -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePwd "myPassword" `
-    -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePwd "myPassword" `
+    -UseSelfSignedCertificates `
     -Credential $c
-    ```
+      {{< /tab >}}
+      {{< tab header="CA Certs, Alternative Load Balancer" >}}
+.\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
+  -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
+  -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+  -ApiGatewayBasicAuthUser "BasicAuthUser" `
+  -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+  -CustomerName "Customer1" `
+  -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
+  -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
+  -ServerCertificatePwd "myPassword" `
+  -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
+  -ClientCertificatePwd "myPassword" `
+  -SkipLoadBalancer `
+  -Credential $c
+      {{< /tab >}}
+      {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
+.\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
+  -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
+  -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+  -ApiGatewayBasicAuthUser "BasicAuthUser" `
+  -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+  -CustomerName "Customer1" `
+  -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
+  -UseSelfSignedCertificates `
+  -SkipLoadBalancer `
+  -Credential $c
+      {{< /tab >}}
+    {{< /tabpane >}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |`HaServicesPath`                              | Configure this value with the location of the HA Services zip file on the installation node. The wildcard `*` can stay in place, this means that the script will find the first zip with any version number. |
-    |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the installation node. The wildcard `*` can stay in place, this means that the script will find the first zip with any version number. |
-    |`ApiGatewayBasicAuthUser`                     | Configure this value with the username that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows).|
-    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that should be used for Basic authentication when making HTTP requests to the ApiGateway service (e.g. starting production flows). This should be Cortex Encrypted. |
-    |`CustomerName`                                | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
-    |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the application servers. The first of these should be the server used for installation. |
-    |`LoadBalancerServerIPv4Address`               | The IPv4 address of the load balancer server.  |
-    |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the first application server in the `ApplicationServerIPv4Addresses` addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for communication between the HA nodes on the Application Servers. |
-    |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. |
-    |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` addresses list. This should be a full chain certificate with private key. Environment variables cannot be used. This will be used for external communication to the HA nodes on the Application Servers, e.g. through the load balancer and Service Fabric Explorer. This can be the same certificate as the `ServerCertificatePath`. |
-    |`ClientCertificatePwd`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`.  |
+    |`HaServicesPath`                              | Configure this value with the location of the HA Services zip file on the Application Server used for installation. |
+    |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
+    |`ApiGatewayBasicAuthUser`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
+    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be Cortex Encrypted. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
+    |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
+    |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
+    |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. |
+    |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
+    |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. This can be the same certificate as the `ServerCertificatePath`. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the [Certificate Requirements][].|
+    |`ClientCertificatePwd`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. |
+    |`UseSelfSignedCertificates`                    | Installs HA Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
+    |`SkipLoadBalancer`                             | Installs HA Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer. |
 
-    The `ApiGatewayBasicAuthUser` and `ApiGatewayBasicAuthPwd` will be needed later, when installing Cortex Gateway.
+    The `ApiGatewayBasicAuthUser` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
 More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes).
     {{% /alert %}}
 
-1. Save and close the PowerShell file.
+1. Save and close `Cortex.Innovation.Install.ps1`.
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
 
@@ -283,24 +346,22 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     .\Cortex.Innovation.Install.ps1 -WhatIf
     ```
 
-    The `-WhatIf` command will run the script without making any changes to the system. It will also create a temporary version of the config file showing what changes will be made when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be verified using [Advanced Configuration](/docs/getting-started/on-premise/advanced/advanced-config-changes) before running the installation script if you so wish.
-
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
-1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ (used by the HA cluster for orchestrating messages). This should be entered carefully and remembered as it may be needed if seeking support from Cortex. Press OK.
+1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ.
 1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
     If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
 
-    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. If this does not work, please contact Cortex for further assistance.
-1. Install Cortex HA Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
+    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for further assistance. The `WhatIf` script will have created a temporary version of the config file showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
+1. Install HA Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
   
     ```powershell
     .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
     ```
 
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
-1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ (used by the HA cluster for orchestrating messages). This should be entered carefully and remembered as it may be needed if seeking support from Cortex. Press OK.
+1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ. This should be entered carefully and recorded as it may be needed if seeking support from [Cortex Service Desk](https://support.cortex.co.uk/). Press OK.
 1. Wait for the script to finish running. This should take approximately 10 minutes.
 1. Check that there have been no errors in the script; these would appear in red in the console. If there are any errors, then please follow any instructions given within them to rectify the situation, check your configuration files, and retry the installation. In some circumstances, retrying may error due to components being installed already. In this case please run the following command, followed by the original installation command:
 
@@ -308,7 +369,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     .\Cortex.Innovation.Uninstall.ps1
     ```
 
-    If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact Cortex for assistance.
+    If the errors do not give any instructions on how to rectify, see [Troubleshooting][] for further information; if this does not help then please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
 1. Ensure that the HA Services are healthy by following these steps:
     1. Log on to one of the Application Servers and open a web browser.
     1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of any server within the HA cluster. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
@@ -331,7 +392,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     * SQL Server 2016 Installation Guide for Cortex
     * SQL Server 2016 Express Installation Guide for Cortex
 1. Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
-    * Cortex Evolution - Innovation 2022-RC.2022.1.2 - Gateway.zip
+    * Cortex Evolution - Innovation 2022.5 - Gateway.zip
 1. Use the `Cortex Installation Guide` to install Cortex Gateway. The following sections will need to be followed as prerequisites to following the `Cortex Gateway Installation` section:
     * 3.1 - System Requirements
     * 3.2 - Additional Components Required for Cortex Gateway Installation
@@ -380,14 +441,14 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     ```powershell
     .\Cortex.Install.FlowDebuggerService.ps1 `
-    -FlowDebuggerServicePath "C:\Install\Cortex Evolution - Innovation * - Flow Debugger Service.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation * - Block Packages.zip" `
+    -FlowDebuggerServicePath "C:\Install\Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
     -Credential $c
     ```
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
+    |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the application server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the application server. The wildcard (*) can stay in place, this means that the script will find the first zip with any version number. |
 
 1. Save and close the PowerShell file.
@@ -477,3 +538,6 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.Ports" >}}
 [Alternative Architectures]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AlternativeArchitectures" >}}
 [Advanced Configuration]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AdvancedConfig" >}}
+[Antivirus Exclusions]: {{< ref "#antivirus-exclusions" >}}
+[Certificate Requirements]: {{< ref "#certificate-requirements" >}}
+[Install Gateway]: {{< ref "#install-gateway" >}}
