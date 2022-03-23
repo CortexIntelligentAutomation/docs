@@ -10,6 +10,8 @@
                     AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
                     AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
                     Troubleshooting = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting"
+                    TroubleShootingDuringInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-during-installation"
+                    TroubleShootingAfterInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-after-installation"
                     TroubleshootingNoInnovation = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-innovation"
                     TroubleshootingNoBlocks = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-blocks"
                     TroubleshootingNoPublish = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-publish"

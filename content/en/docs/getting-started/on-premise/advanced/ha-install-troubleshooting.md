@@ -7,39 +7,9 @@ description: >
 
 ## Troubleshooting
 
-### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
+### Troubleshooting issues during installation {#ts-during-installation}
 
-Check that the "Feature Flags" Guid in the "parameters.xml" file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
-
-### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
-
-Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be "https". If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website.
-
-Ensure that the flow debugger service is running. Open IIS, click on "Application Pools" and ensure there is a "debugger" app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
-
-If everything is correct, please contact Cortex Support for assistance.
-
-### Cannot publish a package {#ts-no-publish}
-
-Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
-
-Ensure that the HA Services are healthy by following these steps:
-
-1. Log on to one of the Application servers and open a web browser.
-1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
-
-    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
-
-    The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
-
-    {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
-
-    If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
-    If no useful message can be seen here, the service log files may contain more information.
-
-If no solution can be found, please contact Cortex Support for assistance.
-
-### Root certificate verification failed as no root certificate has been specified {#ts-no-root-certificate}
+#### Root certificate verification failed as no root certificate has been specified {#ts-no-root-certificate}
 
 If the installation fails with “Root certificate verification failed as no root certificate has been specified.” it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the “pemRootCertificatePath” property for each certificate in the “serverCertificates” and “adminCertificates” section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
 
@@ -131,3 +101,49 @@ If the installation fails with “Root certificate verification failed as no roo
     ```
 
 1. Run the installation script again.
+
+### Troubleshooting issues after installation {#ts-after-installation}
+
+#### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
+
+Check that the "Feature Flags" Guid in the "parameters.xml" file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
+
+#### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
+
+Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be "https". If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website.
+
+Ensure that the flow debugger service is running. Open IIS, click on "Application Pools" and ensure there is a "debugger" app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
+
+If everything is correct, please contact Cortex Support for assistance.
+
+#### Cannot publish a package {#ts-no-publish}
+
+Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
+
+Ensure that the HA Services are healthy by following these steps:
+
+1. Log on to one of the Application servers and open a web browser.
+1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
+
+    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
+
+    The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
+
+    {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
+
+    If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
+    If no useful message can be seen here, the service log files may contain more information.
+
+If no solution can be found, please contact Cortex Support for assistance.
+
+#### Managing RabbitMQ
+
+There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send the messages between services.
+To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://ha-server1.domain.com:15671`, `replacing ha-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
+
+{{< figure class="no-float" src="/images/RabbitMQ Status.png" title="Healthy RabbitMQ status." >}}
+
+{{% alert title="Note" %}} The username and password are not secure, but the RabbitMQ manager will only allow you to connect from localhost so it is not accessible to anyone who does not have remote desktop access. {{% /alert %}}
+
+If there are any unhealthy nodes (red) you may need to restart the RabbitMQ Windows service on each of the nodes that is erroring. These can be restarted in any order, but they
+must be restarted one at a time; wait for the node in the RabbitMQ explorer to be green before restarting the next one (you may need to refresh the browser).
