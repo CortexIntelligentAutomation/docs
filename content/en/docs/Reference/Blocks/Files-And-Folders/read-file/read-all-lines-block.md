@@ -4,7 +4,7 @@ linkTitle: "Read All Lines"
 description: "Reads all lines from a file at the specified file path."
 ---
 
-![Icon](/blocks/files-read-block-icon.png)
+{{< figure src="/blocks/files-read-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

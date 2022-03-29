@@ -4,7 +4,7 @@ linkTitle: "Start Flow"
 description: "Indicates the start of a flow."
 ---
 
-![Icon](/blocks/flows-start-flow-block-icon.png)
+{{< figure src="/blocks/flows-start-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Find And Remove All Text"
 description: "Finds and removes all occurrences of text from a given text."
 ---
 
-![Icon](/blocks/text-find-and-remove-block-icon.png)
+{{< figure src="/blocks/text-find-and-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Add Item At Index"
 description: "Adds an Item at the specified Index of a List."
 ---
 
-![Icon](/blocks/lists-add-block-icon.png)
+{{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

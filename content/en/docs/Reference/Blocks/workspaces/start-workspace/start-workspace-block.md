@@ -4,7 +4,7 @@ linkTitle: "Start Workspace"
 description: "Indicates the start of a workspace."
 ---
 
-![Icon](/blocks/workspaces-start-workspace-block-icon.png)
+{{< figure src="/blocks/workspaces-start-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

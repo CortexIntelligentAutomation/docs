@@ -4,7 +4,7 @@ linkTitle: "Handle Block Exception"
 description: "Handles any exception thrown by the block it is connected to."
 ---
 
-![Icon](/blocks/exceptions-handle-block-block-icon.png)
+{{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

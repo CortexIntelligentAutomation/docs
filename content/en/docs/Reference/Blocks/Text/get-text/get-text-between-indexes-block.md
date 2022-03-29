@@ -4,7 +4,7 @@ linkTitle: "Get Text Between Indexes"
 description: "Gets text between the specified start index and end index of a given text."
 ---
 
-![Icon](/blocks/text-get-block-icon.png)
+{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

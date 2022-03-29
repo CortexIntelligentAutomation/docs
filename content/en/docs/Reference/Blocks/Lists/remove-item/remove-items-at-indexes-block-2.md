@@ -4,7 +4,7 @@ linkTitle: "Remove Items At Indexes"
 description: "Removes the items at each of the specified indexes of a List."
 ---
 
-![Icon](/blocks/lists-remove-block-icon.png)
+{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

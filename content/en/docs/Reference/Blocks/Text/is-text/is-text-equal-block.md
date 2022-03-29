@@ -4,7 +4,7 @@ linkTitle: "Is Text Equal"
 description: "Checks if a text is equal to another text."
 ---
 
-![Icon](/blocks/text-is-block-icon.png)
+{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

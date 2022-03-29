@@ -4,7 +4,7 @@ linkTitle: "Get Items At Beginning"
 description: "Gets a count of items at the beginning of a List."
 ---
 
-![Icon](/blocks/lists-get-block-icon.png)
+{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

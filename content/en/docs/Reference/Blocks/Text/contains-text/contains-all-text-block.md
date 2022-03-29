@@ -4,7 +4,7 @@ linkTitle: "Contains All Text"
 description: "Checks if text contains all of the texts in a given set of texts."
 ---
 
-![Icon](/blocks/text-contains-block-icon.png)
+{{< figure src="/blocks/text-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Remove Duplicate Items"
 description: "Removes duplicate items from a List."
 ---
 
-![Icon](/blocks/lists-remove-block-icon.png)
+{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

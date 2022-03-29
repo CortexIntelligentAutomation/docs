@@ -131,8 +131,8 @@ body {
   }
   
   table {
-    display: table !important;
-    
+    display: inline-block !important;
+
     th {
       border-top: none !important;
       border-bottom: none !important;
@@ -148,13 +148,23 @@ body {
     padding: 0;
     max-width: 100% !important;
   }
-}
-.td-docs {
-  img:first-of-type {
-    float: left;
-    display: inline;
-    margin-right: 10px;
-    vertical-align: bottom;
+
+  figure.block-icon {
+    img {
+      float: left;
+      display: inline;
+      margin-right: 10px;
+      vertical-align: bottom;
+    }
+  }
+  
+  figcaption {
+    h4 {
+      text-align: center;
+      font-size: inherit !important;
+      margin: 0 !important;
+      font-style: italic;
+    }
   }
 }
 

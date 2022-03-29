@@ -4,7 +4,7 @@ linkTitle: "Convert To Title Case"
 description: "Converts text to title case (e.g. `\"Title Case\"`)."
 ---
 
-![Icon](/blocks/text-convert-block-icon.png)
+{{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

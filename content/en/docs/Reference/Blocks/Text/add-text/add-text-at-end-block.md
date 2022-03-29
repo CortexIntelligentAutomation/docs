@@ -4,7 +4,7 @@ linkTitle: "Add Text At End"
 description: "Adds text at the end of another text."
 ---
 
-![Icon](/blocks/text-add-block-icon.png)
+{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

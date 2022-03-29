@@ -4,7 +4,7 @@ linkTitle: "End Workspace"
 description: "Indicates the end of a workspace."
 ---
 
-![Icon](/blocks/workspaces-end-workspace-block-icon.png)
+{{< figure src="/blocks/workspaces-end-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

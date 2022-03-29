@@ -4,7 +4,7 @@ linkTitle: "Set Items With Values"
 description: "Sets all items matching one of the specified values in a List to new values."
 ---
 
-![Icon](/blocks/lists-set-block-icon.png)
+{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

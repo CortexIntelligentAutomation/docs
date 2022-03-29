@@ -4,7 +4,7 @@ linkTitle: "Convert To Pascal Case"
 description: "Converts text to pascal case (e.g. `\"PascalCase\"`)."
 ---
 
-![Icon](/blocks/text-convert-block-icon.png)
+{{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

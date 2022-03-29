@@ -4,7 +4,7 @@ linkTitle: "Remove Items At Index"
 description: "Removes a count of items starting at the specified index of a List."
 ---
 
-![Icon](/blocks/lists-remove-block-icon.png)
+{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

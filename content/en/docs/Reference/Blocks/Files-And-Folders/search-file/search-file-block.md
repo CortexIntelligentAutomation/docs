@@ -4,7 +4,7 @@ linkTitle: "Search File"
 description: "Searches a file at a specified file path for a matching search pattern."
 ---
 
-![Icon](/blocks/files-search-block-icon.png)
+{{< figure src="/blocks/files-search-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
