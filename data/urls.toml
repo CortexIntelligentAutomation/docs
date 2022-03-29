@@ -10,8 +10,8 @@
                     AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
                     AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
                     Troubleshooting = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting"
-                    TroubleShootingDuringInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-during-installation"
-                    TroubleShootingAfterInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-after-installation"
+                    TroubleshootingDuringInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-during-installation"
+                    TroubleshootingAfterInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-after-installation"
                     TroubleshootingNoInnovation = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-innovation"
                     TroubleshootingNoBlocks = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-blocks"
                     TroubleshootingNoPublish = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-publish"
@@ -19,6 +19,8 @@
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
+        [Cortex.Guides.Gateway]
+            MainDoc = "/docs/guides/cortex-gateway/"
     [Cortex.Reference]
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"

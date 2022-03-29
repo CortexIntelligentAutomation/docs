@@ -114,7 +114,11 @@ Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file
 
 Ensure that the flow debugger service is running. Open IIS, click on "Application Pools" and ensure there is a "debugger" app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
 
-If everything is correct, please contact Cortex Support for assistance.
+If no misconfiguration can be found, the service log files may contain more information. These can be found on the Web Application Server at:
+
+* %ProgramData%/Cortex/Cortex Flow Debugger
+
+If the issues cannot be resolved, please contact Cortex Support for assistance.
 
 #### Cannot publish a package {#ts-no-publish}
 
