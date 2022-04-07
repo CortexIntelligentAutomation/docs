@@ -4,7 +4,7 @@ linkTitle: "Get All Items"
 description: "Gets all items from a Dictionary."
 ---
 
-![Icon](/blocks/dictionaries-get-all-items-block-icon.png)
+{{< figure src="/blocks/dictionaries-get-all-items-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

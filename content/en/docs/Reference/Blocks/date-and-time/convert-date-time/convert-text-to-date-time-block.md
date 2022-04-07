@@ -4,7 +4,7 @@ linkTitle: "Convert Text To Date Time"
 description: "Converts Text to a Date Time."
 ---
 
-![Icon](/blocks/date-and-time-convert-to-datetime-block-icon.png)
+{{< figure src="/blocks/date-and-time-convert-to-datetime-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

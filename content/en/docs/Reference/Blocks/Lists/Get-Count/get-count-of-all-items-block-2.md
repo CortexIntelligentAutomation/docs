@@ -4,7 +4,7 @@ linkTitle: "Get Count Of All Items"
 description: "Gets the count of all items in a List."
 ---
 
-![Icon](/blocks/lists-get-count-block-icon.png)
+{{< figure src="/blocks/lists-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

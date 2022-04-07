@@ -4,7 +4,7 @@ linkTitle: "Get Count Of All Items"
 description: "Gets the count of all items in a Dictionary."
 ---
 
-![Icon](/blocks/dictionaries-get-count-block-icon.png)
+{{< figure src="/blocks/dictionaries-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

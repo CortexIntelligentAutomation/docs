@@ -4,7 +4,7 @@ linkTitle: "Remove Text Between Indexes"
 description: "Removes text between the specified start index and end index of a given text."
 ---
 
-![Icon](/blocks/text-remove-block-icon.png)
+{{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

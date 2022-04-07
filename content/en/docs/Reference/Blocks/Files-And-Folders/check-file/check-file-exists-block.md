@@ -4,7 +4,7 @@ linkTitle: "Check File Exists"
 description: "Checks if a file exists at the specified file path."
 ---
 
-![Icon](/blocks/files-check-block-icon.png)
+{{< figure src="/blocks/files-check-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

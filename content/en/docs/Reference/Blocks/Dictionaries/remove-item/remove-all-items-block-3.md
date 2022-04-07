@@ -4,7 +4,7 @@ linkTitle: "Remove All Items"
 description: "Removes all items from a Dictionary."
 ---
 
-![Icon](/blocks/dictionaries-remove-block-icon.png)
+{{< figure src="/blocks/dictionaries-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

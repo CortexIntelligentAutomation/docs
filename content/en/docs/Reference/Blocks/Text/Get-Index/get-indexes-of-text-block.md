@@ -4,7 +4,7 @@ linkTitle: "Get Indexes Of Text"
 description: "Gets the indexes of all occurrences of a text in another text."
 ---
 
-![Icon](/blocks/text-get-index-block-icon.png)
+{{< figure src="/blocks/text-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

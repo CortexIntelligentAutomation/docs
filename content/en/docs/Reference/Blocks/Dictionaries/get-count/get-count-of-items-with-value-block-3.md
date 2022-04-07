@@ -4,7 +4,7 @@ linkTitle: "Get Count Of Items With Value"
 description: "Gets the count of items in a Dictionary with the specified value."
 ---
 
-![Icon](/blocks/dictionaries-get-count-block-icon.png)
+{{< figure src="/blocks/dictionaries-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Wait For Duration"
 description: "Waits for a specified time period (Years, Months, Days, Hours, Minutes, Seconds and Milliseconds)."
 ---
 
-![Icon](/blocks/schedules-wait-for-block-icon.png)
+{{< figure src="/blocks/schedules-wait-for-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

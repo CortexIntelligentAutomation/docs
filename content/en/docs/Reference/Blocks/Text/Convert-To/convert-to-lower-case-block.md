@@ -4,7 +4,7 @@ linkTitle: "Convert To Lower Case"
 description: "Converts text to lower case (e.g. `\"lowercase\"`)."
 ---
 
-![Icon](/blocks/text-convert-block-icon.png)
+{{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

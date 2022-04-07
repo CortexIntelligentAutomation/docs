@@ -4,7 +4,7 @@ linkTitle: "Create Folders"
 description: "Create folders at the specified folder paths."
 ---
 
-![Icon](/blocks/folders-create-block-icon.png)
+{{< figure src="/blocks/folders-create-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

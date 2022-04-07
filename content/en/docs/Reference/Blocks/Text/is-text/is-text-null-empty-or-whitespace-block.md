@@ -4,7 +4,7 @@ linkTitle: "Is Text Null, Empty Or Whitespace"
 description: "Checks if text is `null`, empty (i.e. `\"\"`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters)."
 ---
 
-![Icon](/blocks/text-is-block-icon.png)
+{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

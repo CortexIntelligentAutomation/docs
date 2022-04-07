@@ -4,7 +4,7 @@ linkTitle: "Set Items With Keys"
 description: "Sets all items with any of the given keys in a Dictionary to new values."
 ---
 
-![Icon](/blocks/dictionaries-set-block-icon.png)
+{{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

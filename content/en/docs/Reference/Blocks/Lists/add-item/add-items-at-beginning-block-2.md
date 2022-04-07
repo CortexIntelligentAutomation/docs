@@ -4,7 +4,7 @@ linkTitle: "Add Items At Beginning"
 description: "Adds Items at the beginning of a List."
 ---
 
-![Icon](/blocks/lists-add-block-icon.png)
+{{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

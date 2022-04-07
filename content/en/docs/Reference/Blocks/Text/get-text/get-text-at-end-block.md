@@ -4,7 +4,7 @@ linkTitle: "Get Text At End"
 description: "Gets a length of text from the end of a given text."
 ---
 
-![Icon](/blocks/text-get-block-icon.png)
+{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

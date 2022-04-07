@@ -4,7 +4,7 @@ linkTitle: "Is Date Time Before"
 description: "Checks if a Date Time is before another Date Time."
 ---
 
-![Icon](/blocks/date-and-time-is-block-icon.png)
+{{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

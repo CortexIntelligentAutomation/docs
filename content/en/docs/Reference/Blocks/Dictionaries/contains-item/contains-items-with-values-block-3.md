@@ -4,7 +4,7 @@ linkTitle: "Contains Items With Values"
 description: "Checks if a Dictionary contains at least one item matching each of the specified values."
 ---
 
-![Icon](/blocks/dictionaries-contains-block-icon.png)
+{{< figure src="/blocks/dictionaries-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

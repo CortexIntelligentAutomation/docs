@@ -4,7 +4,7 @@ linkTitle: "Contains Item With Value"
 description: "Checks if a List contains at least one item matching the specified value."
 ---
 
-![Icon](/blocks/lists-contains-block-icon.png)
+{{< figure src="/blocks/lists-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

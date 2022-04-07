@@ -4,7 +4,7 @@ linkTitle: "Get Item With Key"
 description: "Gets the specified occurrence of an item with the given key from a Dictionary."
 ---
 
-![Icon](/blocks/dictionaries-get-block-icon.png)
+{{< figure src="/blocks/dictionaries-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

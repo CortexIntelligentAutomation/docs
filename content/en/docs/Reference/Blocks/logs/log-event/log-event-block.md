@@ -4,7 +4,7 @@ linkTitle: "Log Event"
 description: "Logs an event to the filesystem."
 ---
 
-![Icon](/blocks/logs-log-event-block-icon.png)
+{{< figure src="/blocks/logs-log-event-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

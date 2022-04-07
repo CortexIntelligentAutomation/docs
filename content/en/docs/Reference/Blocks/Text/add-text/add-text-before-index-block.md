@@ -4,7 +4,7 @@ linkTitle: "Add Text Before Index"
 description: "Adds text to another text before the specified index."
 ---
 
-![Icon](/blocks/text-add-block-icon.png)
+{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Handle Workspace Exception"
 description: "Handles any unhandled exception within its workspace."
 ---
 
-![Icon](/blocks/exceptions-handle-workspace-block-icon.png)
+{{< figure src="/blocks/exceptions-handle-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

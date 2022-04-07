@@ -4,7 +4,7 @@ linkTitle: "Set Items At End"
 description: "Sets the items at the end of a List to new values."
 ---
 
-![Icon](/blocks/lists-set-block-icon.png)
+{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Get Index Of Item With Value"
 description: "Gets the index of the specified occurrence of an item in a List matching a value."
 ---
 
-![Icon](/blocks/lists-get-index-block-icon.png)
+{{< figure src="/blocks/lists-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Set Variable"
 description: "Sets a Variable to a given Value."
 ---
 
-![Icon](/blocks/variables-set-variable-block-icon.png)
+{{< figure src="/blocks/variables-set-variable-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

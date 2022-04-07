@@ -4,7 +4,7 @@ linkTitle: "Convert Json To Object"
 description: "Converts Json to an Object."
 ---
 
-![Icon](/blocks/json-convert-to-object-block-icon.png)
+{{< figure src="/blocks/json-convert-to-object-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

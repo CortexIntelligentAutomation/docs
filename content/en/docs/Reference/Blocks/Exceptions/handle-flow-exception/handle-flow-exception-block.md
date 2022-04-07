@@ -4,7 +4,7 @@ linkTitle: "Handle Flow Exception"
 description: "Handles any unhandled exception within the Flow."
 ---
 
-![Icon](/blocks/exceptions-handle-flow-block-icon.png)
+{{< figure src="/blocks/exceptions-handle-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

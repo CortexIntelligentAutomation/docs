@@ -4,7 +4,7 @@ linkTitle: "Add Items At End"
 description: "Adds Items at the end of a List."
 ---
 
-![Icon](/blocks/lists-add-block-icon.png)
+{{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

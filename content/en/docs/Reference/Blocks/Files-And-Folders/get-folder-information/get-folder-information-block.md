@@ -4,7 +4,7 @@ linkTitle: "Get Folder Information"
 description: "Gets information about a folder (e.g. folder attributes, created, accessed, modified dates etc.) at the specified folder path."
 ---
 
-![Icon](/blocks/folders-get-information-block-icon.png)
+{{< figure src="/blocks/folders-get-information-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

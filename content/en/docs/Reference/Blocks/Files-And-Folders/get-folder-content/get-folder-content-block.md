@@ -4,7 +4,7 @@ linkTitle: "Get Folder Content"
 description: "Gets the paths of files or folders under the specified folder path."
 ---
 
-![Icon](/blocks/folders-get-content-block-icon.png)
+{{< figure src="/blocks/folders-get-content-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

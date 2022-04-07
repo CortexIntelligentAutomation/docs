@@ -4,7 +4,7 @@ linkTitle: "Get Text At Beginning"
 description: "Gets a length of text from the beginning of a given text."
 ---
 
-![Icon](/blocks/text-get-block-icon.png)
+{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

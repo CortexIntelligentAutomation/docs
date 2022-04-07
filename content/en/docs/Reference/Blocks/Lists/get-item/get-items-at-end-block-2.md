@@ -4,7 +4,7 @@ linkTitle: "Get Items At End"
 description: "Gets a count of items at the end of a List."
 ---
 
-![Icon](/blocks/lists-get-block-icon.png)
+{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 

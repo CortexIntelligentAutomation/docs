@@ -4,7 +4,7 @@ linkTitle: "Copy Object"
 description: "Copies an Object."
 ---
 
-![Icon](/blocks/objects-copy-block-icon.png)
+{{< figure src="/blocks/objects-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
