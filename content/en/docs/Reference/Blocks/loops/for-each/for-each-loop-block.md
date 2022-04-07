@@ -172,5 +172,5 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}

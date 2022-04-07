@@ -160,5 +160,5 @@ For information about encoding of text, examples of available encodings and usin
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}

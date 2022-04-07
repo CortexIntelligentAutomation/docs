@@ -136,7 +136,7 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [OutOfMemoryException]: {{< url "MSDocs.DotNet.Api.System.OutOfMemoryException" >}}
 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [ToString]: {{< url "MSDocs.DotNet.Api.System.Object.ToString" >}}

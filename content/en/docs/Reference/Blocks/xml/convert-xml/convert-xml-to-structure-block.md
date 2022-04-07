@@ -316,7 +316,7 @@ This example will only occur when a [Structure][Structure Property] is Converted
 [XmlSerializationException]: {{< url "Cortex.Reference.Exceptions.Xml.XmlSerializationException" >}}
 
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
 [Items]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}

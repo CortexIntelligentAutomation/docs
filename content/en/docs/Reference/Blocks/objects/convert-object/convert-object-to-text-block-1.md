@@ -225,6 +225,6 @@ Currently the block does not support indexing into properties (i.e. `ListPropert
 [Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.FormatParameters" >}}
 
 [TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [IFormatProvider]: {{< url "Cortex.Reference.DataTypes.MostCommon.IFormatProvider" >}}

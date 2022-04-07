@@ -498,10 +498,10 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 [Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
 [Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDocComparison" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}

@@ -226,7 +226,7 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}

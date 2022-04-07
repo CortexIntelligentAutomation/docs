@@ -159,7 +159,7 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}

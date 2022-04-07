@@ -102,7 +102,7 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 [Text Casing]: {{< url "Cortex.Reference.Concepts.TextCasing.MainDoc" >}}
 [CultureInfos]: {{< url "Cortex.Reference.Concepts.TextCasing.CultureInfo.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [CultureInfo]: {{< url "Cortex.Reference.DataTypes.MostCommon.CultureInfo" >}}
 [InvariantCulture]: {{< url "Cortex.Reference.DataTypes.MostCommon.InvariantCulture" >}}
 

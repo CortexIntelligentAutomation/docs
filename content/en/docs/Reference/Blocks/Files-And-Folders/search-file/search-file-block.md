@@ -377,9 +377,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
 [Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDocComparison" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
 [FileMatch]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileMatch" >}}

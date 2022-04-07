@@ -374,7 +374,7 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
 [Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
 [EventSeverity]: {{< url "Cortex.Reference.DataTypes.MostCommon.EventSeverity" >}}

@@ -171,6 +171,6 @@ If the [Separator][Separator Property] is not found in [Text][Text Property], th
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [StringSplitOptions]: {{< url "MSDocs.DotNet.Api.System.StringSplitOptions" >}}
