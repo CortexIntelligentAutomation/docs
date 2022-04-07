@@ -46,7 +46,7 @@ This example will throw a new [FlowException][] with all properties configured.
 
 Throwing a new [FlowException][] with properties configured as above will result in the following exception:
 
-![Icon](/images/flow-exception-full-configuration.png)<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+![Icon](/images/flow-exception-full-configuration.png)
 
 ***
 
@@ -62,7 +62,7 @@ No properties are configured for this example.
 
 Throwing a new [FlowException][] without configuring any of the block's properties will result in the following exception:
 
-![Icon](/images/flow-exception-no-configuration.png)<br/><br/><br/><br/><br/><br/>
+![Icon](/images/flow-exception-no-configuration.png)
 
 ***
 

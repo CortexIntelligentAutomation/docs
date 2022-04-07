@@ -162,7 +162,7 @@ Blocks that handle block exceptions can be chained together so different excepti
 * [Handle Block Exception Matching Type Names][]
 * [Handle Block Exception][]
 
-![Icon](/images/chaining-handle-block-exception-blocks.png)<br/><br/><br/>
+![Icon](/images/chaining-handle-block-exception-blocks.png)
 
 Each block has an input port on its left-hand side and, with the exception of the [Handle Block Exception][] block, also have an output port on their right-hand side; this is so they can pass any exception they do not handle to the next block.
 

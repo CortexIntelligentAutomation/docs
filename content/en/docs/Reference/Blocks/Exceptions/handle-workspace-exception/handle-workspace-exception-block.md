@@ -96,7 +96,7 @@ This process repeats until:
 
 If an exception occurs within the workspace of the [Handle Flow Exception][] block and is not handled, the flow will end with a status of Error.
 
-![Icon](/images/flow-error-status.png)<br/><br/><br/>
+![Icon](/images/flow-error-status.png)
 
 For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
 
