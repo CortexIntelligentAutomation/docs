@@ -168,7 +168,7 @@ If [Text][Text Property] is `null` and [Text To Compare][TextToCompare Property]
 [Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
 [OrdinalIgnoreCase]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.OrdinalIgnoreCase" >}}
 
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
 

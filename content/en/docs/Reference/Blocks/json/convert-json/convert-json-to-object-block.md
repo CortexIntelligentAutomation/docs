@@ -36,7 +36,7 @@ This example will convert `"[[1, 2, 3], [4, 5, 6]]"` into a [List][]&lt;[Object]
 |--------------------|---------------------------|------------------------------------------|
 | [Json][Json Property] | `($)Json`, with value `"[[1, 2, 3], [4, 5, 6]]"` | `($)Json` is a variable of type [String][] |
 | [Settings][Settings Property] | `($)Settings`, with value `null` | `($)Settings` is a variable of type [JsonSerializerSettings][] |
-| [Object][Object Property] | `($)Object`, with no value | `($)Object` is a variable that will be set to a [Dynamic][] value (i.e. in this example to a [List][]&lt;[Object][]&gt;). |
+| [Object][Object Property] | `($)Object`, with no value | `($)Object` is a variable that will be set to a [dynamic][] value (i.e. in this example to a [List][]&lt;[Object][]&gt;). |
 
 #### Result
 
@@ -93,7 +93,7 @@ Realistically, this example is only useful if you have already produced Json inc
 |--------------------|---------------------------|------------------------------------------|
 | [Json][Json Property] | `($)Json`, with complex value as shown above | `($)Json` is a variable of type [String][] |
 | [Settings][Settings Property] | `($)Settings`, with value `new JsonSerializerSettings{TypeNameHandling = TypeNameHandling.All}` | `($)Settings` is a variable of type [JsonSerializerSettings][] |
-| [Object][Object Property] | `($)Object`, with no value | `($)Object` is a variable that will be set to a [Dynamic][] value (i.e. in this example to a [List][]&lt;[List][]&lt;[Int32][]&gt;&gt;). |
+| [Object][Object Property] | `($)Object`, with no value | `($)Object` is a variable that will be set to a [dynamic][] value (i.e. in this example to a [List][]&lt;[List][]&lt;[Int32][]&gt;&gt;). |
 
 #### Result
 
@@ -173,7 +173,7 @@ The [Object][Object Property] that has been converted from [Json][Json Property]
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Default Value | `($)Object` with no value |
 
@@ -227,10 +227,10 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [HttpRequestHeaders]: {{< url "Cortex.Reference.DataTypes.MostCommon.HttpRequestHeaders" >}}
 [JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.MostCommon.JsonSerializerSettings" >}}

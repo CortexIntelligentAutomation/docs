@@ -76,4 +76,4 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) the variable specified i
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

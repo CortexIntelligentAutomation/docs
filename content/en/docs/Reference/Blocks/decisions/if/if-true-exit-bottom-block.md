@@ -72,4 +72,4 @@ No remarks for the block.
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

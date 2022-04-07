@@ -32,7 +32,7 @@ TODO:
 * Expressions
 
 * Object
-* Dynamic
+* dynamic
 * Generics
 
 * Reference Types

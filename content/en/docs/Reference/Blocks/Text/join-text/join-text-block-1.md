@@ -137,6 +137,6 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [ToString]: {{< url "MSDocs.DotNet.Api.System.Object.ToString" >}}

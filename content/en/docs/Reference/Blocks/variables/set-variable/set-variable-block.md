@@ -181,7 +181,7 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Working with References]: {{< url "Cortex.Reference.Concepts.WorkingWithReferences.MainDoc" >}}
 [Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}

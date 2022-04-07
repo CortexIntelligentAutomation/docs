@@ -28,7 +28,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of messa
 |--------------------|---------------------------|------------------------------------------|
 | [Message][Message Property] | `($)Message`, with value `"'List' is null"` | `($)Message` is a variable of type [String][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [Dynamic][] value |
+| [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [dynamic][] value |
 
 #### Result
 
@@ -132,7 +132,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Default Value | `($)Exception` with no value |
 
@@ -172,9 +172,9 @@ As the [Handle Block Exception][] block handles any exception, it does not requi
 
 For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
 
-### Why does the Exception property return a Dynamic data type?
+### Why does the Exception property return a dynamic data type?
 
-The decision for the [Exception][Exception Property] to return a [Dynamic data type][Dynamic] rather than an [Exception data type][Exception], was to avoid users having to [cast][Object Casting] the exception to its correct type to be able to use all of its properties.
+The decision for the [Exception][Exception Property] to return a [dynamic data type][dynamic] rather than an [Exception data type][Exception], was to avoid users having to [cast][Object Casting] the exception to its correct type to be able to use all of its properties.
 
 As a result, any issues with using the [Exception data type][Exception] (i.e. trying to access a property it does not have) will not be reported as messages when trying to debug the flow; they will only be discovered when the flow execution reaches the part of the flow with the issue.
 
@@ -210,7 +210,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}

@@ -209,11 +209,11 @@ For more detailed information about dictionaries, see [Reference->Data Types->Di
 
 TODO
 
-### Dynamic
+### dynamic
 
 A [data type] that indicates that any data type can be used.
 
-For more detailed information about the dynamic data type, see [Reference->Data Types->Dynamic][TODO].
+For more detailed information about the dynamic data type, see [Reference->Data Types->dynamic][TODO].
 
 ## E
 
@@ -355,7 +355,7 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [Cast expression (C# Reference)]: {{< url "MSDocs.CSharp.CastExpression" >}}
 [C# documentation]: {{< url "MSDocs.CSharp.MainDoc" >}}
 [List]: {{< url "MSDocs.DotNet.Api.System.Collections.Generic.List" >}}
-[String]: {{< url "MSDocs.DotNet.Api.System.String" >}}
+[String]: {{< url "MSDocs.DotNet.Api.System.String.MainDoc" >}}
 
 [Monaco Editor]: {{< url "MSGitHub.MonacoEditor.MainDoc" >}}
 

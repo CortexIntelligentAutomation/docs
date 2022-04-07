@@ -118,7 +118,7 @@ The [Event Details][EventDetails Property] to log.
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Input][] |
 | Default Value | `($)EventDetails` with value `null` |
 
@@ -372,7 +372,7 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [ElasticSearch]: {{< url "ElasticSearch.MainDoc" >}}
 [Splunk]: {{< url "Splunk.MainDoc" >}}
 
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}

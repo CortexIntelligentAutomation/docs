@@ -1,6 +1,5 @@
 ---
 title: "Data"
 linkTitle: "Data"
-description: "This section includes all reference documentation for data types."
-weight: 10
+description: "Data types used for working with data stores such as SQL Server."
 ---

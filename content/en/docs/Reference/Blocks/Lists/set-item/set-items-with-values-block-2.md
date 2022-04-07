@@ -143,4 +143,4 @@ For information about the different types of lists, including those that can con
 
 [IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

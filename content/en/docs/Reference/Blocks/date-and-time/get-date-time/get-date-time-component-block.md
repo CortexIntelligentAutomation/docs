@@ -388,9 +388,9 @@ The default text representation of Date and Time will be in the [ISO 8601 Standa
 
 For more information, please see [Working with Dates and Time][].
 
-### Why does the Component property return a Dynamic data type?
+### Why does the Component property return a dynamic data type?
 
-The decision for [Component][Component Property] to return a [Dynamic data type][Dynamic] rather than an [Object][], was to avoid users having to [cast][Object Casting] the component to its correct type to be able to use all of its properties.
+The decision for [Component][Component Property] to return a [dynamic data type][dynamic] rather than an [Object][], was to avoid users having to [cast][Object Casting] the component to its correct type to be able to use all of its properties.
 
 As a result, any issues with using the [Component][Component Property] (i.e. trying to access a property it does not have) will not be reported as messages when trying to debug the flow; they will only be discovered when the flow execution reaches the part of the flow with the issue.
 
@@ -410,12 +410,12 @@ If it is desirable to have any issues reported as messages when trying to debug 
 [Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
 
-[Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
 [DateTime]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTime" >}}
 [DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeComponentType" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimePeriod" >}}
 [TimeSpan]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimeSpan" >}}
 [DayOfWeek]: {{< url "Cortex.Reference.DataTypes.MostCommon.DayOfWeek" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

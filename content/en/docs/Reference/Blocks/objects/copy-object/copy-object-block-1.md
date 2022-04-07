@@ -99,4 +99,4 @@ If [Object][Object Property] is not provided or is set to `null`, [Copy][Copy Pr
 [TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

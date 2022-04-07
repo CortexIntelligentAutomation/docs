@@ -147,4 +147,4 @@ If [Text][Text Property] is `null` the variable specified in the [Text Is Empty 
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

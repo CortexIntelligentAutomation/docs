@@ -1,7 +1,8 @@
 ---
-title: "Most Commonly Used"
-linkTitle: "Most Commonly Used"
-description: "Describes the most commonly used data types."
+title: "Most Common"
+linkTitle: "Most Common"
+description: "Data types that are most commonly used."
+weight: 10
 ---
 
 ## Data Types
@@ -13,7 +14,7 @@ The most commonly used data types are categorised and listed below:
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
 | All | Object | Varies | Any data type can be used where an Object data type is required. Once a variable contains an object data type, if it needs to be used as its original data type it must be cast back to that data type (e.g. `(Int32)ObjectVariableContainingAnInteger`). |
-| | Dynamic | Varies | Any data type can be used where a Dynamic data type is required. Dynamic is similar to object, except no cast is needed to use the variable as its original data type. |
+| | dynamic | Varies | Any data type can be used where a dynamic data type is required. dynamic is similar to object, except no cast is needed to use the variable as its original data type. |
 | Collections | IEnumerable&lt;T&gt; | Varies depending on the number of items it contains | Any data type representing a collection of items that can iterated or looped over. T indicates the data type of the items contained in the collection. List&lt;T&gt; is the most common example. |
 | | IList&lt;T&gt; | Varies depending on the number of items it contains | Any data type representing a list of items where each item can be individually accessed by its index in the list. T indicates the data type of the items contained in the list. List&lt;T&gt; is the most common example. |
 | | List&lt;T&gt; | Varies depending on the number of items it contains | A list of items. T indicates the data type of the items contained in the list. |
@@ -53,7 +54,7 @@ The most commonly used data types are categorised and listed below:
 
 TODO
 
-#### Dynamic
+#### dynamic
 
 TODO
 

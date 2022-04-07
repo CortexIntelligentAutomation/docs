@@ -12,7 +12,7 @@ description: "Connects to a specific data source and executes a Command, returni
 
 ## Description
 
-Connects to a data source (e.g. SQL Server) using the specified [Connection Details][Connection Details Property], and executes a [Command][Command Property] (e.g `SELECT * FROM Table`), returning the [Result][Result Property].
+Connects to a data source (e.g. SQL Server) using the specified [Connection Details][Connection Details Property], and executes a [Command][Command Property] (e.g. `SELECT * FROM Table`), returning the [Result][Result Property].
 
 [Close Connection][Close Connection Property] can be specified to choose whether the connection to the data source is closed or is kept open for use on subsequent Execute Command blocks.
 
@@ -20,7 +20,7 @@ Connects to a data source (e.g. SQL Server) using the specified [Connection Deta
 
 ### Selecting Rows
 
-This example will select all rows and columns from a connected SQL Server data source, saving the rows to the [Result][Result Property].
+This example will select all rows and columns from a connected SQL Server data source which have an Id less than 3, saving the rows to the [Result][Result Property].
 
 A [QueryCommand][Command Types QueryCommand] is used throughout this example to select data from the data source, however, both an [AnyCommand][Command Types AnyCommand] or [AnyCommands][Command Types AnyCommands] could also be used to the same effect.
 
@@ -38,7 +38,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT * FROM Table WHERE Id < @SelectParameter", "Parameters": {"SelectParameter": 3}}`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new QueryCommand("SELECT * FROM Table WHERE Id < @SelectParameter", new {SelectParameter = 3})` | `($)Command` is a variable of type [QueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -83,7 +83,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)", "Parameters": { "InsertParameter1": \"FirstColumn4\", "InsertParameter2": \"SecondColumn4\" } }`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new NonQueryCommand("INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)", new { InsertParameter1 = "FirstColumn4", InsertParameter2 = "SecondColumn4" })` | `($)Command` is a variable of type [NonQueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -126,7 +126,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "UPDATE Table SET FirstColumn = \"Updated\" WHERE Id < @UpdateParameter", "Parameters": { "UpdateParameter": 3 } }`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new NonQueryCommand("UPDATE Table SET FirstColumn = \"Updated\" WHERE Id < @UpdateParameter", new {UpdateParameter = 3})` | `($)Command` is a variable of type [NonQueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -168,7 +168,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "DELETE FROM Table WHERE Id < @DeleteParameter", "Parameters": { "DeleteParameter": 3 } }`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new NonQueryCommand("DELETE FROM Table WHERE Id < @DeleteParameter", new {DeleteParameter = 3})` | `($)Command` is a variable of type [NonQueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -209,7 +209,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) FROM Table", "Parameters": null}`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new QueryCommand("SELECT Max(Id) FROM Table", null)` | `($)Command` is a variable of type [QueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -248,7 +248,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT Max(Id) AS MaxId, Min(Id) AS MinId FROM Table", "Parameters": null}`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new QueryCommand("SELECT Max(Id) AS MaxId, Min(Id) AS MinId FROM Table", null)` | `($)Command` is a variable of type [QueryCommand][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -285,7 +285,7 @@ The data source contains a `Table` with the following rows and columns before th
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT * FROM Table WHERE Id < @SelectParameter; INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2); UPDATE Table SET FirstColumn = \"Updated\" WHERE Id < @UpdateParameter; DELETE FROM Table WHERE Id < @DeleteParameter; SELECT * FROM Table", "Parameters": { "SelectParameter": 3, InsertParameter1 = \"FirstColumn4\", InsertParameter2 = \"SecondColumn4\", "UpdateParameter": 3, "DeleteParameter": 3 }}`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new AnyCommands("SELECT * FROM Table WHERE Id < @SelectParameter; INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2); UPDATE Table SET FirstColumn = \"Updated\" WHERE Id < @UpdateParameter; DELETE FROM Table WHERE Id < @DeleteParameter; SELECT * FROM Table", new {SelectParameter = 3, InsertParameter1 = "FirstColumn4", InsertParameter2 = "SecondColumn4", UpdateParameter = 3, DeleteParameter = 3})` | `($)Command` is a variable of type [AnyCommands][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -374,7 +374,7 @@ In this example assume the following variables have been set before the command 
 | [Command][Command Property] | `($)Command`, with value `{"CommandText": "SELECT * FROM Table WHERE Id < 3; INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"FirstColumn1\", \"SecondColumn2\"); UPDATE Table SET FirstColumn = \"Updated\" WHERE Id < 3; DELETE FROM Table WHERE Id < 3; SELECT * FROM Table", "Parameters": null}`<br><br>In this example `($)Command` has been set using the following [Expression][]:<br><br> `new AnyCommands($"SELECT * FROM Table WHERE Id < {($)SelectParameter}; INSERT INTO Table (FirstColumn, SecondColumn) VALUES ({($)InsertParameter1}, {($)InsertParameter2}); UPDATE Table SET FirstColumn = \"Updated\" WHERE Id < {($)UpdateParameter}; DELETE FROM Table WHERE Id < {($)DeleteParameter}; SELECT * FROM Table", null)` | `($)Command` is a variable of type [AnyCommands][] |
 | [Connection Details][Connection Details Property] | `($)ConnectionDetails`, with value `{"ConnectionType": ConnectionType.SQLServer, "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | `($)ConnectionDetails` is a variable of type [ConnectionDetails][] |
 | [Close Connection][Close Connection Property] | `($)CloseConnection`, with value `true` | `($)CloseConnection` is a variable of type [Boolean][] |
-| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [Dynamic][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` will be set to the type [dynamic][] |
 
 #### Result
 
@@ -479,7 +479,7 @@ Depending on the type of [Command][Command Property], the data returned within t
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Default Value | `($)Result` with no value |
 
@@ -681,9 +681,9 @@ If a [Literal][] or an [Expression][] is used to create the [Connection Details]
 
 For information on how to open a connection, please see [Opening Connections][].
 
-### Why does the Result property return a Dynamic data type?
+### Why does the Result property return a dynamic data type?
 
-The decision for the [Result][Result Property] to return a [Dynamic data type][Dynamic] rather than a specific type, was to avoid users having to [cast][Object Casting] the [Result][Result Property] to its correct type to be able to use all of its properties.
+The decision for the [Result][Result Property] to return a [dynamic data type][dynamic] rather than a specific type, was to avoid users having to [cast][Object Casting] the [Result][Result Property] to its correct type to be able to use all of its properties.
 
 As a result, any issues with using the [Result][Result Property] (i.e. trying to access a property it does not have) will not be reported as messages when trying to debug the flow; they will only be discovered when the flow execution reaches the part of the flow with the issue.
 
@@ -733,12 +733,12 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [CommandException]: {{< url "Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
 
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 [Array]: {{< url "Cortex.Reference.DataTypes.MostCommon.Array" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
