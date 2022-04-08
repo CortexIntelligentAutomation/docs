@@ -126,7 +126,7 @@ A [Variable][Variable Property] can be set to any type of object, including List
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [T][] |
+| Data Type | [TValue][] |
 | Property Type | [Input][] |
 | Default Value | `($)Value` with value `null` |
 
@@ -138,7 +138,7 @@ If a [Variable][Variable Property] is set to the [Value][Value Property] of anot
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [T][] |
+| Data Type | [TValue][] |
 | Property Type | [Output][] |
 | Default Value | `($)Variable` with no value |
 
@@ -150,7 +150,7 @@ No exceptions are thrown by the block.
 
 ### Initialising Variables
 
-If the Set Variable block is used to set a [Variable][Variable Property] that is not initialised, the [Variable][Variable Property] it will be initialised with the given [Value][Value Property] when the block is run.
+If the Set Variable block is used to set a [Variable][Variable Property] that is not initialised, the [Variable][Variable Property] will be initialised with the given [Value][Value Property] when the block is run.
 
 ### Overwriting Variables
 
@@ -177,7 +177,7 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[T]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
