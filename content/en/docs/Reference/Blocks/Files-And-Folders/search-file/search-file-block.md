@@ -344,7 +344,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 * The text in the file at the specified [File Path][FilePath Property] is searched line-by-line. As a result, when using `SearchOptions.Regex` the in-line `s` regex character is not supported.
 * If the text in the file at the specified [File Path][FilePath Property] ends with a blank line (`0` length) that line will not be read and therefore not matched against.
-* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [FilePath Property]: {{< ref "#file-path" >}}
 [SearchPattern Property]: {{< ref "#search-pattern" >}}

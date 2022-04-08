@@ -463,7 +463,7 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 
 * The text in the files at the specified [File Paths][FilePaths Property] is searched line-by-line. As a result, when using `SearchOptions.Regex` the in-line `s` regex character is not supported.
 * If the text in the files at the specified [File Paths][FilePaths Property] ends with a blank line (`0` length) that line will not be read and therefore not matched against.
-* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [FilePaths Property]: {{< ref "#file-paths" >}}
 [SearchPattern Property]: {{< ref "#search-pattern" >}}
