@@ -92,7 +92,6 @@ Logging the event results in the following log being written:
             },
             "Service":{
                 "Type":null,
-                "Name":null,
                 "IpAddressOrFqdn":null,
                 "$type":"ServiceDetails"
             },
@@ -298,7 +297,6 @@ An example log can be found below:
         },
         "Service":{
             "Type":null,
-            "Name":null,
             "IpAddressOrFqdn":null,
             "$type":"ServiceDetails"
         },
@@ -323,15 +321,14 @@ A list of each of the log's properties and an accompanying description can be fo
 | `Event.Duration.InMs`             | The duration of the event in milliseconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
 | `Event.Duration.$type`            | The .Net data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.Details`                   | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
-| `Event.Correlation`               | For future use. Will contain details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple Cortex Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Correlation.TraceId`       | For future use. ID common to all related logs, so in future they can be easily correlated together. Currently not populated and set to `null`. |
-| `Event.Correlation.SpanId`        | For future use. Unique ID for each log, so in future tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. Currently not populated and set to `null`. |
-| `Event.Correlation.ParentSpanId`  | For future use. The ID of the step that called this step of processing, so in future tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. Currently not populated and set to `null`. |
+| `Event.Correlation`               | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple Cortex Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Correlation.TraceId`       | ID common to all related logs, so they can be easily correlated together. |
+| `Event.Correlation.SpanId`        | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
+| `Event.Correlation.ParentSpanId`  | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
 | `Event.Correlation.$type`  | The .Net data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Service`            | For future use. Will contain details of the Cortex Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Service.Type`       | For future use. The type of the Cortex Service that logged this event. |
-| `Event.Service.Name`       | For future use. The name of the Cortex Service that logged this event. |
-| `Event.Service.IpAddressOrFqdn`   | For future use. The IP address or fully qualified domain name of the Cortex Service that logged this event. |
+| `Event.Service`            | Contains details of the Cortex Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Service.Type`       | The type of the Cortex Service that logged this event. |
+| `Event.Service.IpAddressOrFqdn`   | The IP address or fully qualified domain name of the Cortex Service that logged this event. |
 | `Event.Service.$type`      | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.$type`              | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
 
