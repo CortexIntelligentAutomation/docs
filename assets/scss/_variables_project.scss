@@ -157,6 +157,14 @@ body {
       vertical-align: bottom;
     }
   }
+
+  figure.centre {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   
   figcaption {
     h4 {

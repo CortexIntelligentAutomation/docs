@@ -44,7 +44,7 @@ The following architecture requires 5 servers:
 * 1x Load Balancer Server
 * 3x Application Servers
 
-{{< figure class="no-float" src="/images/Cortex Innovation Overview.png" title="5 Server Architecture Diagram" >}}
+{{< figure src="/images/Cortex Innovation Overview.png" title="5 Server Architecture Diagram" >}}
 
 This will be suitable for most HA installations, however, it is possible to reduce the required servers by one; for more information, see [Alternative Architectures][].
 
@@ -403,21 +403,21 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of any Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
     The screen should resemble that in the following figure:
-    {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer Cluster" >}}
+    {{< figure src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer Cluster" >}}
 
     The status circles should be entirely green - this indicates that all nodes, services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on. The next few digrams show the status pages for a healthy system.
 
     After expanding the application, clicking on any of the services should display a green circle and `Status = Active`:
 
-    {{< figure class="no-float" src="/images/Service Fabric Explorer - Service.png" title="Healthy Service Fabric Explorer Service" >}}
+    {{< figure src="/images/Service Fabric Explorer - Service.png" title="Healthy Service Fabric Explorer Service" >}}
 
     After expanding either of the services, clicking on any of the instances/partitions should display a green circle and `Status = Ready`:
 
-    {{< figure class="no-float" src="/images/Service Fabric Explorer - Instance.png" title="Healthy Service Fabric Explorer Instance" >}}
+    {{< figure src="/images/Service Fabric Explorer - Instance.png" title="Healthy Service Fabric Explorer Instance" >}}
 
     Clicking on any of the nodes at the bottom of the leftmost pane should display a green circle and `Status = Up`:
 
-    {{< figure class="no-float" src="/images/Service Fabric Explorer - Node.png" title="Healthy Service Fabric Explorer Node" >}}
+    {{< figure src="/images/Service Fabric Explorer - Node.png" title="Healthy Service Fabric Explorer Node" >}}
 
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, go to the next section.
 
@@ -558,7 +558,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Inside the group, click the `+` button again and click on `Flow (Innovation)` to open a dialog. If the menu item is not present, it means that the `FeatureFlags` in the "parameters.xml" file was not set properly when installing Gateway. See [Troubleshooting][Troubleshooting No Innovation] for more information.
 1. Enter a name for the flow, configure the `Permission Groups` and click `OK` to create the flow.
 1. The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
-    {{< figure class="no-float" src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
+    {{< figure src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
     If the blocks in the flow do not display or the palettes are not visible, see [Troubleshooting][Troubleshooting No Blocks] for more information.
 1. Add a `Set Variable` block and connect it between the start and end blocks.
 1. Click the `Set Variable` block to open the Property Editor. Set the `Value` property to `DateTime.Now`. Type `Output` into the `Variable` property and click `Create Variable`.

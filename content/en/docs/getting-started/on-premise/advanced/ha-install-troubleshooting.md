@@ -133,7 +133,7 @@ Ensure that the HA Services are healthy by following these steps:
 
     The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
 
-    {{< figure class="no-float" src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
+    {{< figure src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
 
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
     If no useful message can be seen here, the service log files may contain more information.
@@ -145,7 +145,7 @@ If no solution can be found, please contact Cortex Support for assistance.
 There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send the messages between services.
 To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://ha-server1.domain.com:15671`, `replacing ha-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
 
-{{< figure class="no-float" src="/images/RabbitMQ Status.png" title="Healthy RabbitMQ status." >}}
+{{< figure src="/images/RabbitMQ Status.png" title="Healthy RabbitMQ status." >}}
 
 {{% alert title="Note" %}} The username and password are not secure, but the RabbitMQ manager will only allow you to connect from localhost so it is not accessible to anyone who does not have remote desktop access. {{% /alert %}}
 
