@@ -1,11 +1,11 @@
 ---
-title: "Advanced Configuration Changes"
-linkTitle: "Advanced Configuration Changes"
+title: "Advanced HA Infrastructure and Load Balancer Configuration Changes"
+linkTitle: "Advanced HA Infrastructure and Load Balancer Configuration Changes"
 description: >
     Information on installing Cortex across multiple on-premise servers with high availability (HA), with non-default installation values.
 ---
 
-## Advanced configuration changes
+## Advanced HA Infrastructure and Load Balancer Configuration Changes
 
 Advanced configuration (such as port changes) can be undertaken by taking the following steps before running the PowerShell script. Some values will be modified by the script and they will take precedence, but those parameters can be removed from the script and this file used entirely if required.
 
