@@ -82,55 +82,18 @@ Installed the required features by following these instructions:
     Web-Mgmt-Service is installed
     ```
 
-Alternatively, perform the steps below (Beware the steps might differ depending on operating system and Windows updates):
-
-1. Navigate to Start > Administrative Tools > Server Manager.
-2. From the Manage menu, select `Add Roles and Features`.
-3. In the Add Roles and Features Wizard, ensure that the Installation Type is set to Role-based or feature-based installation, then click on the `Next >` button.
-4. Select the server on which the IIS role is to be setup, then click on the `Next >` button.
-5. From the Server Roles list, tick the Role called Web Server (IIS) and click the `Add Features` button in the pop-up dialog; then click on the `Next >` button.
-6. From the Features list, ensure that `.NET Framework 4.5` and `ASP.NET 4.5` features are ticked, then click on the `Next >` button.
-7. Click `Next >` again to move from the Web Server Role (IIS) introduction to the Roles Services selection page.
-8. Select the following role services to install for Web Server (IIS):
-    * Under Common HTTP Features, tick:
-        * Default Document
-        * Directory Browsing
-        * HTTP Errors
-        * Static Content
-        * HTTP Redirection
-    * Under Health and Diagnostics, tick:
-        * HTTP Logging
-        * Request Monitor
-    * Under Performance, tick:
-        * Static Content Compression
-        * Dynamic Content Compression
-    * Under Security, tick:
-        * Request Filtering
-        * Windows Authentication
-    * Under Application Development, tick:
-        * .NET Extensibility 4.6
-        * ASP.NET 4.6
-        * ISAPI Extensions
-        * ISAPI Filters
-        * WebSocket Protocol (required by Cortex Gateway.
-    * Under Management Tools, tick:
-        * IIS Management Console
-9. Click the Next > button, check that all the required role services are listed in the text box, and then click on the Install button.
-10. Once the installer confirms that the installation succeeded, click the Close button.
-
 #### Register and Allow .NET CLR v4.0.30319 with IIS
 
 {{% alert title="Note" %}}Unless .NET CLR v4.0.30319 is registered and allowed with IIS, the Cortex web sites and web services will not work.{{% /alert %}}
 
-1. From the desktop, click Start then type cmd.
-2. Right click on the Command Prompt program then select `Run as administrator`.
-3. Enter the following:
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Enter the following:
 
     ```powershell
     Dism /online /enable-feature /featurename:IIS-ASPNET45 /all
     ```
 
-4. Once the command prompt confirms that it has finished installing .NET CLR v4.0.30319, close the command prompt program
+1. Once the command prompt confirms that it has finished installing .NET CLR v4.0.30319, close PowerShell.
 
 ### Install URL Rewrite Module
 
@@ -163,48 +126,13 @@ Applying these measures may impact other applications running on your server. Th
 
 A collection of registry settings need to be applied to guarantee your server is only using the recommended encryption algorithms and TLS protocols. These settings will apply the changes listed below:
 
-| Type                  |   Name                               |   Enabled   |
-| --------------------- | ------------------------------------ | ----------- |
-| Ciphers               | AES 128/128                          | ✓           |
-|                       | AES 256/256                          | ✓           |
-|                       | Triple DES 168                       | ✓           |
-|                       | DES 56/56                            | ✕           |
-|                       | NULL                                 | ✕           |
-|                       | RC2 128/128                          | ✕           |
-|                       | RC2 40/128                           | ✕           |
-|                       | RC2 56/128                           | ✕           |
-|                       | RC4 128/128                          | ✕           |
-|                       | RC4 40/128                           | ✕           |
-|                       | RC4 56/128                           | ✕           |
-|                       | RC4 64/128                           | ✕           |
-|                       |                                      |             |
-| Hashes                | MD5                                  | ✕           |
-|                       | SHA                                  | ✓           |
-|                       | SHA256                               | ✓           |
-|                       | SHA384                               | ✓           |
-|                       | SHA512                               | ✓           |
-|                       |                                      |             |
-| KeyExchangeAlgorithms | Diffie-Hellman                       | ✓           |
-|                       | ECDH                                 | ✓           |
-|                       | PKCS                                 | ✓           |
-|                       |                                      |             |
-| Protocols             | Multi-Protocol Unified Hello\\Client | ✕           |
-|                       | Multi-Protocol Unified Hello\\Server | ✕           |
-|                       | PCT 1.0\\Client                      | ✕           |
-|                       | PCT 1.0\\Server                      | ✕           |
-|                       | SSL 2.0\\Client                      | ✕           |
-|                       | SSL 2.0\\Server                      | ✕           |
-|                       | SSL 3.0\\Client                      | ✕           |
-|                       | SSL 3.0\\Server                      | ✕           |
-|                       | TLS 1.0\\Client                      | ✕           |
-|                       | TLS 1.1\\Client\ [^1]                 | ✕           |
-|                       | TLS 1.1\\Server\ [^1]                 | ✕           |
-|                       | TLS 1.2\\Client                      | ✓           |
-|                       | TLS 1.2\\Server                      | ✓           |
+{{< figure class="centre" src="/images/IISCrypto SChannel.png" title="Applied Security Settings" >}}
 
-[^1]: Only disabled on Windows Server 2016. Earlier versions will still have them enabled.
+{{< figure class="centre" src="/images/IISCrypto Cipher Suites.png" title="Allowed Cipher Suites" >}}
 
-{{% alert type="warning" title="Warning" %}}Successfully disabling TLS 1.0 and TLS 1.1 on all operating systems will have an impact on some Cortex Services. The list of affected services and the impact on them can be found in TODO Appendix 9 - Cortex SSL Support.{{% /alert %}}
+{{% alert title="Note" %}}These are the settings applied for Windows Server 2016 and later. Earlier versions will allow some further settings. {{% /alert %}}
+
+{{% alert type="warning" title="Warning" %}}Disabling specific TLS versions or specific Cipher Suites can have impact on Cortex components themselves as well as their communication capabilities with third party systems and services, e.g. Debugger executing flows with blocks which communicate with 3rd parties via PowerShell or REST. All parties communicating together must support a shared protocol version and cipher suite, otherwise they will not be able to establish a secure communication link between each other.{{% /alert %}}
 
 Apply these security measures by following these instructions:
 
@@ -269,11 +197,7 @@ The web site which the Cortex Gateway application is installed on requires addit
 
 ### Configure Web Site Bindings
 
-Cortex Gateway can be configured to use HTTPS or HTTP. TODO: Do we still want to support both?
-
-#### Configure Web Site to use HTTPS
-
-The steps to configure Cortex Gateway to use HTTPS are:
+Cortex Gateway should be configured to use HTTPS:
 
 1. Ensure an appropriate SSL certificate is installed on the server hosting Gateway. For SSL certificate requirements, including details of how to generate 
 and import the certificate, please see section 3.4 SSL Requirements. TODO link
@@ -287,20 +211,7 @@ and import the certificate, please see section 3.4 SSL Requirements. TODO link
 7. Set the appropriate Port number (typically 443).
 8. Select the SSL certificate to use.
 9. Click OK. If an existing site is already using the specified SSL port, a warning will be displayed. Either click `No` and change the Port in the Add Site Binding dialog, or click `Yes` and stop the other website.
-10. Optionally it is recommended to remove the http site binding.
-11. Continue to section 9.2.5 Create new web application. TODO link
-
-#### Configure Web Site to use HTTP
-
-{{% alert title="Note" %}}HTTP is not recommended to be used other than for testing purposes.{{% /alert %}}
-
-1. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
-2. Expand the `Sites` node under the server.
-3. Right-click the web site where Gateway should be installed and select `Edit Bindings…`
-    {{< figure class="centre" src="/images/IIS Bindings.png" title="Bindings Dialog" >}}
-4. Select `http` and click `Edit…`
-5. Set the appropriate Port number (the default should be set to Port 80; however, it may be set to any free port number).
-6. Click `OK`.
+10. It is recommended to remove the http site binding.
 
 ### Create New Web Application
 
@@ -334,9 +245,7 @@ If the site hosting the gateway web application is a newly created Cortex site o
 1. In the `Cortex Evolution - Innovation 2022.5 - Gateway.zip` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
 1. Edit the file, changing the parameters according to the details given below:
 
-    TODO: What do we want to do here? Should I just include the basics and put advanced config in another file? Should that include LiveView settings and stuff that i've currently omitted?
-
-    ```xml
+    {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-22 27-29,linenostart=1" >}}
     <?xml version="1.0" encoding="utf-8"?>
     <parameters>
         <setParameter name="IIS Web Application Name" value="Cortex/gateway" />
@@ -365,14 +274,12 @@ If the site hosting the gateway web application is a newly created Cortex site o
         <setParameter name="Garbage collection lock timeout" value="&lt;value&gt;02:00:00&lt;/value&gt;" />
         <setParameter name="ModelDBContext-Web.config Connection String" value="Data Source=.\SQLEXPRESS;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True" />
         <setParameter name="AuthContext-Web.config Connection String" value="Data Source=.\SQLEXPRESS;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True" />
-        <setParameter name="SignalRContext-Web.config Connection String" value="Data Source=.\SQLEXPRESS;Initial 
-        Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True" />
+        <setParameter name="SignalRContext-Web.config Connection String" value="Data Source=.\SQLEXPRESS;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True" />
         <setParameter name="ReactorEntities-Web.config Connection String" value="metadata=res://*/Models.ReactorEnities.csdl|res://*/Models.ReactorEnities.ssdl|res://*/Models.ReactorEnities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\SQLEXPRESS;initial catalog=Reactor;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
-        <setParameter name="CortexDWEntities-Web.config Connection String" value="metadata=res://*/Models.CortexDataWarehouseEntities.csdl|res://*/Models.CortexDataWarehouseEntities.ssdl|res://*/Models.CortexDataWarehouseEntities.msl;provider=System.Data.SqlClient;provider connection 
-        string=&quot;data source=.\SQLEXPRESS;initial catalog=CortexDW;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+        <setParameter name="CortexDWEntities-Web.config Connection String" value="metadata=res://*/Models.CortexDataWarehouseEntities.csdl|res://*/Models.CortexDataWarehouseEntities.ssdl|res://*/Models.CortexDataWarehouseEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\SQLEXPRESS;initial catalog=CortexDW;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
         <setParameter name="CortexRepositories-Web.config Connection String" value="c:\\CortexWeb\\Repo\" />
     </parameters>
-    ```
+    {{</ highlight>}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
@@ -388,14 +295,7 @@ If the site hosting the gateway web application is a newly created Cortex site o
     |`ModelDBContext-Web.config Connection String`   | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
     |`AuthContext-Web.config Connection String`      | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
     |`SignalRContext-Web.config Connection String`   | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
-    |`ReactorEntities-Web.config Connection String`  | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
-    |`CortexDWEntities-Web.config Connection String` | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
     |`CortexRepositories-Web.config Connection String` | Change this to the location where the Flow repositories are to be stored. The default location is `c:\CortexWeb\Repo`. |
-
-    * Ignore the `Configuring prerequisites for capability discovery` section - this is not yet supported in Cortex Innovation.
-    * Ignore the `Configuring Connectivity to Cortex Server` section - this is only necessary for Cortex Integrity.
-    * Ignore the `Testing a clean system` section - this will be covered later in this guide.
-    * Ignore the `Verify LiveView Dashboards on Cortex Gateway` section - this is not supported in Cortex Innovation.
 
 ### Test Installation Script
 
@@ -726,20 +626,3 @@ DNS.3 = localhost
 IP.1 = IP ADDRESS
 IP.2 = 127.0.0.1
 ```
-
-### Cortex SSL Support
-
-To ensure that Cortex is correctly configured to support SSL, the following configuration steps must be followed:
-
-1. Cortex Gateway setup must be configured according to:
-    * 9.2.4.1.1 Configure web site to use HTTPS TODO: make right
-
-#### General Impact of Disabling specific TLS versions and Cipher Suites
-
-Disabling specific TLS versions or specific Cipher Suites can have impact on Cortex components themselves as well as their communication capabilities with third party systems and services. All parties communicating together must support a shared protocol version and cipher suite, otherwise they will not be able to establish a secure communication link between each other.
-
-#### Impact of Disabling TLS 1.1
-The following table describes the known impact to Cortex components when disabling TLS TLS 1.1 and using only the recommended strong Cipher Suites:
-| Windows OS Version     | SQL Server Version     | Impacted Components        | Impact    |
-| ---------------------- | ---------------------- | ---------------------------|-----------|
-| All                    | All                    | Browsers:<br />- IE 11 / Win 7<br />- IE 11 / Win 8.1<br />- IE 11 / Win Phone 8.1<br />- IE 11 / Win Phone 8.1 Update<br /><br />Other clients:<br />- Android 2.3.7<br />- Android 4.0.4<br />- Android 4.1.1<br />- Android 4.2.2<br />- Android 4.3<br />- Baidu Jan 2015<br />- IE 6 / XP<br />- IE 7 / Vista<br />- IE 8 / XP<br />- IE 8-10 / Win 7<br />- Java 6u45<br />- Java 7u25<br />- OpenSSL 0.9.8y<br />- Safari 5.1.9 / OS X 10.6.8<br />- Safari 6 / iOS 6.0.1<br />- Safari 6.0.4 / OS X 10.8.4<br />- Safari 7 / iOS 7.1<br />- Safari 7 / OS X 10.9<br />- Safari 8 / iOS 8.4<br />- Safari 8 / OS X 10.10 | Clients are unable to establish secure connections with some of the Cortex components, including Gateway. |
