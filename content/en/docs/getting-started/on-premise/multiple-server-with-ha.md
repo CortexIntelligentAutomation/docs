@@ -436,108 +436,9 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ### Install Gateway
 
-1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-    * SQL Server 2019 Installation Guide for Cortex
-    * SQL Server 2016 Installation Guide for Cortex
-    * SQL Server 2016 Express Installation Guide for Cortex
-1. Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:
-    * Cortex Evolution - Innovation 2022.5 - Gateway.zip
-1. Use the `Cortex Installation Guide` to install Cortex Gateway. The following sections will need to be followed as prerequisites to following the `Cortex Gateway Installation` section:
-    * 3.1 - System Requirements
-    * 3.2 - Additional Components Required for Cortex Gateway Installation
-    * 3.3 - Additional pre-requisites
-    * 4.3.1 - Install Internet Information Services (IIS)
-    * 4.3.2 - Register and Allow .NET CLR v4.0.30319 with IIS
-    * Appendix 6 - Actions to Install URL Rewrite Module
-1. Follow section `9 - Cortex Gateway Installation` in the same guide. Use the following points as they will differ from a Cortex Integrity installation:
-    * Ignore section `9.1 - Required Components`; no other Cortex Components are required for Cortex Innovation, only those referred to in this guide.
-    * In section `9.2.7 - Configure Cortex Gateway installation`, whenever `Cortex Gateway.zip` is mentioned, use the `Cortex Evolution - Innovation * - Gateway.zip` file that was copied in the previous step.
-    * When configuring the `parameters.xml` file in section `9.2.7 - Configure Cortex Gateway installation`, some additional values need to be updated:
+TODO: Link to gateway
 
-    ```xml
-    <setParameter name="Feature Flags" value="&lt;value&gt;InnovationId&lt;/value&gt;" />
-    <setParameter name="Service Fabric Api Gateway Endpoint" value="&lt;value&gt;https://ha-server1.domain.com:8722/&lt;/value&gt;" />
-    <setParameter name="Service Fabric Using Self Signed Certificates" value="&lt;value&gt;False&lt;/value&gt;" />
-    <setParameter name="Service Fabric ApiGateway Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
-    <setParameter name="Service Fabric ApiGateway Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
-    <setParameter name="Dot NET flow debugger Endpoint" value="&lt;value&gt;https://app-server.domain.com/debugger/api/&lt;/value&gt;" />
-    ```
 
-    | Name                                           | Description |
-    |------------------------------------------------|-------------|
-    |`Feature Flags`                                 | Configure as above, replacing "InnovationId" with the Cortex Innovation feature identifier. This should be retrieved from Cortex. |
-    |`Service Fabric Api Gateway Endpoint`           | Configure as above, replacing "ha-server1.domain.com" with the fully qualified domain name of one of the HA nodes. The port should be 8722. |
-    |`Service Fabric Using Self Signed Certificates` | Configure the value as "False" if you are using valid CA certificates, "True" if using self-signed certificates |
-    |`Service Fabric Self Signed Certificate Subject`| This should not be changed. |
-    |`Service Fabric ApiGateway Basic Auth Username` | This only needs to be changed if you provided a non-default `ApiGatewayBasicAuthUserName` when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. |
-    |`Service Fabric ApiGateway Basic Auth Password` | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
-    |`Dot NET flow debugger Endpoint`                | Configure as above, replacing "app-server.domain.com" with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
-
-    * Ignore the `Configuring prerequisites for capability discovery` section - this is not yet supported in Cortex Innovation.
-    * Ignore the `Configuring Connectivity to Cortex Server` section - this is only necessary for Cortex Integrity.
-    * Ignore the `Testing a clean system` section - this will be covered later in this guide.
-    * Ignore the `Verify LiveView Dashboards on Cortex Gateway` section - this is not supported in Cortex Innovation.
-
-### Install Flow Debugger Service
-
-#### Extract Installation Artefacts
-
-1. We recommend that the Flow Debugger Service is installed on the Web Application Server, with Gateway. Copy the following artefacts to a folder on the machine (the version numbers may differ):
-   * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
-   * Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip
-   * Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip
-
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` zip file to a folder with the same name.
-
-#### Configure Installation Script
-
-1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
-1. Configure the script according to the details given below:
-
-    ```powershell
-    .\Cortex.Install.FlowDebuggerService.ps1 `
-    -FlowDebuggerServicePath "C:\Install\Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
-    -Credential $AppPoolIdentity
-    ```
-
-    | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server. |
-    |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
-    |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
-
-1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
-
-#### Run Installation Script
-
-1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
-
-    ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
-    ```
-
-1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
-  
-    ```powershell
-    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
-    ```
-
-1. A credentials prompt will appear. Enter the credentials of the user that should run the `Debugger` application pool in IIS (this can be the same user as the one used to run the Cortex Gateway application pool).
-1. Wait for the script to finish running. This should take approximately 2 minutes.
-1. An error may have appeared saying:
-
-    ```
-    The Windows Process Activation Service service is not started.
-    ```
-
-    This can be ignored.
-1. Check that there have been no other errors in the script; these would appear in red in the console.
-
-    If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
-
-    If the errors do not give any instructions on how to rectify, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for further assistance.
 
 #### Finish Gateway configuration
 
@@ -546,7 +447,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Log out and Login as a user with Studio permissions.
 
 ## Next Steps?
-1. [Setup](../../setup) the platform
+1. [Setup](gateway-setup) the platform
 2. [Try it out](../../tryitout)
 
 ### Try it out
@@ -593,11 +494,11 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 [Gateway Guide]: {{< url "Cortex.Guides.Gateway.MainDoc" >}}
 [Studio Guide]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
-[Troubleshooting During Installation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingDuringInstallation" >}}
-[Troubleshooting No Innovation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoInnovation" >}}
-[Troubleshooting No Blocks]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoBlocks" >}}
-[Troubleshooting No Publish]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoPublish" >}}
-[Troubleshooting Root Certificate Error]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoRootCertificate" >}}
+[Troubleshooting During Installation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TroubleshootingDuringInstallation" >}}
+[Troubleshooting No Innovation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TroubleshootingNoInnovation" >}}
+[Troubleshooting No Blocks]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TroubleshootingNoBlocks" >}}
+[Troubleshooting No Publish]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TroubleshootingNoPublish" >}}
+[Troubleshooting Root Certificate Error]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TroubleshootingNoRootCertificate" >}}
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.Ports" >}}
 [Alternative Architectures]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AlternativeArchitectures" >}}
 [Advanced Configuration]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.AdvancedConfig" >}}

@@ -1,9 +1,19 @@
 ---
-title: "Install Cortex Gateway on the Web Application Server"
-linkTitle: "Install Cortex Gateway"
+title: "Install the Web Application Server"
+linkTitle: "Install Web Application Server"
 description: >
-    Information on installing Cortex Gateway.
+    Information on installing a Web Application Server.
 ---
+
+## Extract Installation Artefacts
+
+1. We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):
+   * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
+   * Cortex Evolution - Innovation 2022.5 - Gateway.zip
+   * Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip
+   * Cortex Evolution - Innovation 2022.5 - Web Application Installation Scripts.zip
+
+1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
@@ -39,7 +49,7 @@ We recommend that you source a signed certificate from your security team. The c
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
-Cortex can also work with wildcard certificates and with self-signed certificates. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found in TODO 14.4 Appendix 4 - Create a self-signed certificate.
+Cortex can also work with wildcard certificates and with self-signed certificates. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
 
 You can import the certificate by right clicking the certificate file, selecting Install Certificate and following the wizard. When prompted, ensure you import it into the Local Machine store and not Current User.
 To verify the certificate is imported:
@@ -55,9 +65,19 @@ To verify the certificate is imported:
 
 Installed the required features by following these instructions:
 
-1. On the Web Application Server open Windows Powershell ISE with local administrator rights.
-1. Load the script from the installation media called TODO CortexWindowsFeatures.ps1.
-1. Run the script.
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    ```
+
+1. Run the `Cortex.Innovation.Install.WindowsFeatures.ps1` script using the following command:
+
+    ```powershell
+    .\Cortex.Innovation.Install.WindowsFeatures.ps1
+    ```
+
 1. Check the output is as follows:
 
     ```powershell
@@ -136,13 +156,23 @@ A collection of registry settings need to be applied to guarantee your server is
 
 Apply these security measures by following these instructions:
 
-1. On the Web Application Server open Windows Powershell ISE with local administrator rights.
-2. Load the script from the installation media called TODO CortexSSLBestPractices.ps1
-3. Run the script.
-4. To use all the recommended settings click `Apply all` to the first prompt.
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    ```
+
+1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
+
+    ```powershell
+    .\Cortex.Innovation.Install.SSLBestPractises.ps1
+    ```
+
+1. To use all the recommended settings click `Apply all` to the first prompt.
 
     To selectively apply each setting select `Choose which to apply`. Each change will then be prompted with a Yes/No confirmation before applying.
-5. Restart the machine when the script asks.
+1. Restart the machine when the script asks.
 
 ### Add Firewall Rule
 
@@ -164,7 +194,7 @@ This user must be given `Log on as a service` and `Log on as a batch job` permis
 
 ## Create Application Pool
 
-1. Open Internet Information Services (IIS) Manager from Start > Administrative Tools 
+1. Open Internet Information Services (IIS) Manager from Start > Administrative Tools.
 2. Select and right click Application Pools node under the server and select `Add Application Pool…`
 3. Set Name to `Cortex Gateway`.
 4. Ensure that the .NET CLR version is set to .NET CLR Version v4.0.30319 (This may be configured by default).
@@ -209,6 +239,7 @@ and import the certificate, please see section 3.4 SSL Requirements. TODO link
 5. Click `Add…`
 6. Set Type to `https`.
 7. Set the appropriate Port number (typically 443).
+    {{% alert title="Note" %}}Configuring your system to use a port other than the HTTPS default of 443 is not compatible with HSTS. If your configuration requires HTTPS to run on a port other than 443, the HSTS configuration must be turned off. This can be achieved by configuring the `Add Strict-Transport-Security when HTTPS` rewrite rule `enabled` setting to `false` in web.config after installation.{{% /alert %}}
 8. Select the SSL certificate to use.
 9. Click OK. If an existing site is already using the specified SSL port, a warning will be displayed. Either click `No` and change the Port in the Add Site Binding dialog, or click `Yes` and stop the other website.
 10. It is recommended to remove the http site binding.
@@ -232,13 +263,59 @@ If the site hosting the gateway web application is a newly created Cortex site o
 5. In the `Redirect Behaviour` section, Click `Only redirect requests to content in this directory (not subdirectories)`.
 6. In `Actions` click the `Apply` button.
 
+## Install Flow Debugger Service
+
+### Configure Installation Script
+
+1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
+1. Configure the script according to the details given below:
+
+    ```powershell
+    .\Cortex.Install.FlowDebuggerService.ps1 `
+    -FlowDebuggerServicePath "C:\Install\Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+    -Credential $AppPoolIdentity
+    ```
+
+    | Name                                         | Description |
+    |----------------------------------------------|-------------|
+    |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server. |
+    |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
+    |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
+
+1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
+
+### Run Installation Script
+
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    ```
+
+1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
+  
+    ```powershell
+    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
+    ```
+
+1. A credentials prompt will appear. Enter the credentials of the user that should run the `Debugger` application pool in IIS (this can be the same user as the one used to run the Cortex Gateway application pool).
+1. Wait for the script to finish running. This should take approximately 2 minutes.
+1. An error may have appeared saying:
+
+    ```
+    The Windows Process Activation Service service is not started.
+    ```
+
+    This can be ignored.
+1. Check that there have been no other errors in the script; these would appear in red in the console.
+
+    If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
+
+    If the errors do not give any instructions on how to rectify, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for further assistance.
+
 ## Install Cortex Gateway
-
-### Extract Installation Artefacts
-
-1. Copy the following artefact (the version number may differ) to the Web Application Server:
-    * Cortex Evolution - Innovation 2022.5 - Gateway.zip
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Gateway.zip` file to a folder with the same name.
 
 ### Configure Installation Parameters
 
@@ -291,7 +368,6 @@ If the site hosting the gateway web application is a newly created Cortex site o
     |`Service Fabric ApiGateway Basic Auth Username` | This only needs to be changed if you provided a non-default `ApiGatewayBasicAuthUserName` when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. |
     |`Service Fabric ApiGateway Basic Auth Password` | This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.|
     |`Dot NET flow debugger Endpoint`                | Configure as above, replacing `app-server.domain.com` with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway). |
-    |`HSTS Enabled`                                  | Change to `false` if you have configured Gateway to use HTTP, or you have configured it to use HTTPS but require the HSTS header to be disabled. |
     |`ModelDBContext-Web.config Connection String`   | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
     |`AuthContext-Web.config Connection String`      | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
     |`SignalRContext-Web.config Connection String`   | Change the `data source` to point to the instance for the SQL database e.g. localhost. If the database is hosted on a different server, use the syntax machineName\instanceName. |
@@ -332,11 +408,6 @@ If the site hosting the gateway web application is a newly created Cortex site o
 
     In the event of an error, there will be an error message displayed at the end of the output with a line confirming the Error Count.
 
-1. TODO INCLUDE THIS? Once the installation has completed, if SQL Server Reporting Services has been installed using SSL, then open the Web.config file and amend it as follows:
-    1. Open the Web.config file in notepad located in `C:\inetpub\wwwroot\Cortex\Gateway`
-    1. Locate the section `<binding name="ReportingService2010Soap">`
-    1. Change the `<security mode="TransportCredentialOnly">` to `<security mode="Transport">`
-    1. Save and close the file.
 1. Start the Cortex application pool:
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
@@ -346,74 +417,6 @@ If the site hosting the gateway web application is a newly created Cortex site o
     {{% alert title="Note" %}} If the Application Pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
     If an error message is displayed wait a few minutes and refresh the page as it is possible that the website was still starting.
 
-## Information about HSTS TODO - its already configured above. Should this be somewhere else?
-Cortex Gateway installations using HTTPS implement HTTP Strict Transport Security (HSTS). HSTS is a header attached to HTTPS responses that indicate to the browser that it should redirect any subsequent HTTP requests to an HTTPS host.
+TODO: Link to setup
 
-HSTS will redirect HTTP requests to the HTTPS host, providing that:
-
-* The outbound rewrite rule “Add Strict-Transport-Security when HTTPS” is enabled
-in web.config for this site. This can be done by:
-
-  * Opening the C:\inetpub\wwwroot\Cortex\Gateway\web.config for the Gateway application.
-  * Search for “Add Strict-Transport-Security when HTTPS”
-  * Set it’s “enabled” value to true.
-
-* The browser has received a response from the HTTPS host, and the time since that response has not expired the max-age value for the rule (this is defaulted to one year).
-{{% alert title="Note" %}}For sites using self-signed SSL certificates, the HTTPS URL redirection will only work in Google Chrome browsers. For all other supported browsers, an SSL certificate signed by a Certificate Authority must be used to enable HTTPS URL redirection.{{% /alert %}}
-{{% alert title="Note" %}}Configuring your system to use a port other than the HTTPS default of 443 is not compatible with HSTS. If your configuration requires HTTPS to run on a port other than 443, the HSTS configuration must be turned off. This can be achieved by configuring the “Add Strict-Transport-Security when HTTPS” rewrite rule “enabled” setting to false.{{% /alert %}}
-{{% alert title="Note" %}}If your system has been configured to use a port other than the HTTPS default of 443, it is not compatible with HSTS. If your configuration requires HTTPS to run on a port other than 443, the HSTS configuration must be turned off. This can be achieved by configuring the “Add Strict-Transport-Security when HTTPS” rewrite rule “enabled” setting to false for Cortex Gateway.{{% /alert %}}
-
-### Cortex Gateway Initial Setup
-
-Log on to Cortex Gateway and run through the setup wizard
-
-1. Navigate to `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
-2. Log on using the default credentials that the solution deploys with:
-    Username: `administrator`
-    Password: `Adm1n1strat0r`
-3. On a newly installed system, you will be presented with a Setup Wizard at this point, see Figure 146, which will guide you through some basic configuration steps:
-    * Account details
-    * LDAP Connection
-    * LDAP Authorization
-4. Follow the steps in the setup wizard to configure the relevant areas – for more detail refer to "Section 2.1 Initial Configuration" in the Cortex Integrity - Studio Admin Guide which can be found on the Cortex Application server in the C:\Cortex\Help\PDF - TODO: Sort this out
-    1. Click `Next Step`:
-    {{< figure class="centre" src="/images/Gateway Setup1.png" title="Initial Setup Screen" >}}
-    2. Enter an email address for the Administrator:
-    {{< figure class="centre" src="/images/Gateway Setup2.png" title="Administrator Details Screen" >}}
-    3. Change the Administrator password to a unique, secret password:
-    {{< figure class="centre" src="/images/Gateway Setup3.png" title="Change Password Screen" >}}
-    4. Enter the details of your LDAP server and provide a Username and Password for a user with read access to the LDAP server:
-    {{< figure class="centre" src="/images/Gateway Setup4.png" title="LDAP Connection Scree" >}}
-    5. Click `Next Step`. If this fails first time round, just click `Retry`.
-    6. Assign Studio access permissions to LDAP users (or groups):
-    {{< figure class="centre" src="/images/Gateway Setup5.png" title="LDAP Authorisation Screen" >}}
-
-## Configure the Cortex Databases to use Transparent Data Encryption
-
-Once Cortex Gateway has been configured, if you wish to encrypt the databases using TDE for improved security, this should now be performed.
-
-Enabling TDE on the databases ensures that the data is encrypted on disk. The process to do this requires that you:
-
-* Create a master key in the master database with a strong password. This password must be remembered and/or saved in a secure location to enable decryption of the database later.
-* Create a certificate within SQL Server.
-* Backup the certificate and store it in a secure location. If a database needed to be restored elsewhere for any reason the certificate will need to be imported to the new server.
-* Create a database encryption key in each user database to be encrypted.
-* Enable encryption on the database.
-
-To enable TDE on the suite of Cortex Databases you should complete the following steps:
-
-1. Open SQL Server Management Studio
-2. Open the Encrypt Databases using TDE.sql script included within the Supporting Scripts bundle. TODO: Where will we provide this?
-{{% alert title="Note" %}}This script will attempt to encrypt all Cortex Databases that exist on the system. Any that do not exist will be skipped. If you do not wish to encrypt all existing Cortex Databases then you should contact Cortex Support for assistance with script modification.{{% /alert %}}
-3. Set the `@sPassword` parameter value to a password that you wish to use. {{% alert title="Note" %}} This password must be set to a value that is not a blank or empty string, it cannot be `null` and the script will not execute if it is not changed from the pre-populated value of `StrongPassword`. The password must also meet your system’s minimum security requirements.{{% /alert %}}
-4. You can change the names of the certificate and the name of the master key by changing the `@sCertName` and `@sKeyName` parameters if you so wish.
-5. You can change the location that the certificate and key are backed up to by changing the value of the `@sBackupLocation` parameter.
-
-    The location must already exist, and there must not be any files within the specified location with the same name as the certificate or master key names that have been specified.
-
-    The user that this script will be executed as must also have write permissions to this location.
-6. Once the parameters have been set appropriately you should now save the script.
-
-    We recommended that the modified script is saved out to file (taking care to observe your own organisation's security policies for password management), before it is executed. This may help facilitate the support process if anything goes wrong.
-7. Click Execute to run the script. It may take several minutes to execute depending on the size of the databases.
-8. Once the script has completed successfully, you should move the backed-up certificate and master key to a secure location and the password specified should also be stored securely.
+[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}

@@ -1,18 +1,14 @@
 ---
-title: "Creating Self-Signed Certificates"
-linkTitle: "Creating Self-Signed Certificates"
+title: "Create Self-Signed Certificates"
+linkTitle: "Create Self-Signed Certificates"
 description: >
     Information about creating and installing self-signed certificates.
 ---
 
-## Creating Self-Signed Certificates
+## Create Self-Signed Certificates
 
-Self-signed certificates should be generated using OpenSSL:
+Self-signed certificates should be generated using OpenSSL which is bundled in the Cortex Installation Scripts:
 
-1. Install `Win32OpenSSL`
-    1. Navigate to https://slproweb.com/products/Win32OpenSSL.html
-    1. Download the `v1.1.1m Light Win32` version of the software
-    1. Run the downloaded installer
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Make a directory in which to store the certificates by running the following command, changing the path as required:
 
@@ -26,19 +22,22 @@ Self-signed certificates should be generated using OpenSSL:
     cd "C:\Certificates"
     ```
 
+1. Temporarily add OpenSSL to the Path environment variable of your system by running the following command, modifying the path according to the location of `openssl.exe` in the installation scripts on the machine:
+
+    ```powershell
+    $env:PATH += ";C:\Cortex Evolution - Innovation 2022.5 - Installation Scripts\OpenSSL"
+    ```
+
 1. Create the Root CA private key by running the following command:
 
     ```powershell
     openssl genrsa -out cortexCA.key 4096
     ```
 
-    {{% alert title="Note" %}}If `‘openssl’ is not recognised` is displayed in your command prompt, you need to temporarily add OpenSSL to the Path environment variable of your system by running the command  `$env:PATH += ";C:\OpenSSL-Win32\bin"`, modifying the path according to the location of OpenSSL.exe on the machine.
-    {{% /alert %}}
-
 1. Generate the Root CA certificate signed with the private key:
     1. Copy the following text into a text editor:
 
-        ```text
+        ```shell
         RANDFILE		= .rnd
         [ ca ]
         default_ca	= CA_default	# The default ca section
@@ -127,7 +126,7 @@ Self-signed certificates should be generated using OpenSSL:
 1. Generate the SSL certificate request:
     1. Copy the following text into a text editor:
 
-        ```text
+        ```shell
         RANDFILE		= .rnd
         [ ca ]
         default_ca	= CA_default	# The default ca section
