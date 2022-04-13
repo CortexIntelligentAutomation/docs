@@ -55,8 +55,18 @@ Log on to Cortex Gateway and run through the setup wizard
 
     {{< figure class="centre" src="/images/Gateway Setup5.png" title="LDAP Authorisation Screen" >}}
 
+## Finish Gateway configuration
+
+1. Log in to Cortex Gateway as your "administrator" user.
+1. In the Cortex Gateway UI go to `Settings` → `LDAP Authorisation` and configure security roles for LDAP groups to your requirements. You can refer to `Section 2.2 Configuring Authorisation Rights` of the `Cortex Studio Admin Guide` for more details on this.
+1. Log out and Login as a user with Studio permissions.
+
 ## Configure the Cortex Databases to use Transparent Data Encryption
 
 Once Cortex Gateway has been configured, if you wish to encrypt the databases using TDE for improved security, this should now be performed by following the steps in [Configuring TDE][].
 
+## Next Steps?
+1. [Try it out][]
+
 [Configuring TDE]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.ApplyTDE" >}}
+[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TryItOut" >}}

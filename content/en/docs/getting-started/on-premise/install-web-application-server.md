@@ -176,9 +176,7 @@ Apply these security measures by following these instructions:
 
 ### Add Firewall Rule
 
-If a firewall is running on the Web Application Server, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443).
-TODO: Appendix 12 gives instructions for adding to windows firewall - include these?
-
+If a firewall is running on the Web Application Server, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443). See [Configure Firewalls][] for information about adding rules to Windows Firewall.
 
 ### Get Application Pool User
 
@@ -194,7 +192,7 @@ This user must be given `Log on as a service` and `Log on as a batch job` permis
 
 ## Create Application Pool
 
-1. Open Internet Information Services (IIS) Manager from Start > Administrative Tools.
+1. Open Internet Information Services (IIS) Manager from `Start` → `Administrative Tools`.
 2. Select and right click Application Pools node under the server and select `Add Application Pool…`
 3. Set Name to `Cortex Gateway`.
 4. Ensure that the .NET CLR version is set to .NET CLR Version v4.0.30319 (This may be configured by default).
@@ -209,7 +207,7 @@ This user must be given `Log on as a service` and `Log on as a batch job` permis
 ## Create Web Site
 
 Cortex Gateway can either be installed to an existing web site or can create a new web site.
-If you are installing into an existing web site skip to section 9.2.4 Configure web site. TODO link
+If you are installing into an existing web site skip to [Configure Web Site][].
 
 The steps to create a new web site are:
 
@@ -256,7 +254,7 @@ and import the certificate, please see section 3.4 SSL Requirements. TODO link
 
 If the site hosting the gateway web application is a newly created Cortex site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the `gateway` web application URL, e.g. `https://FullyQualifiedDomainName` to `https://FullyQualifiedDomainName/gateway`.
 
-1. Open Internet Information Services (IIS) Manager from Start > Administrative Tools.
+1. Open Internet Information Services (IIS) Manager from `Start` → `Administrative Tools`.
 2. Select the site hosting the `gateway` web application and from IIS settings double click the `HTTP Redirect` icon.
 3. Click the check box `Redirect requests to this destination`.
 4. Enter `https://FullyQualifiedDomainName/gateway`, replacing `FullyQualifiedDomainName` with the FQDN of the server.
@@ -339,7 +337,7 @@ If the site hosting the gateway web application is a newly created Cortex site o
         <setParameter name="Break On Exception" value="&lt;value&gt;true&lt;/value&gt;" />
         <setParameter name="ShowVariablesPalette" value="&lt;value&gt;false&lt;/value&gt;" />
         <setParameter name="Feature Flags" value="&lt;value&gt;InnovationId&lt;/value&gt;" />
-        <setParameter name="Service Fabric Api Gateway Endpoint" value="&lt;value&gt;https://ha-server1.domain.com:8722/&lt;/value&gt;" />
+        <setParameter name="Service Fabric Api Gateway Endpoint" value="&lt;value&gt;https://load-balancer.domain.com/&lt;/value&gt;" />
         <setParameter name="Service Fabric Using Self Signed Certificates" value="&lt;value&gt;False&lt;/value&gt;" />
         <setParameter name="Service Fabric Self Signed Certificate Subject" value="&lt;value&gt;CN=CortexServerCertificate&lt;/value&gt;" />
         <setParameter name="Service Fabric ApiGateway Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
@@ -360,9 +358,9 @@ If the site hosting the gateway web application is a newly created Cortex site o
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
-    |`IIS Web Application Name`                      | Change to the `Site Name/Application` if it was modified from the defaults in section TODO link |
-    |`Feature Flags`                                 | Configure as above, replacing "InnovationId" with the Cortex Innovation feature identifier. This should be retrieved from Cortex. |
-    |`Service Fabric Api Gateway Endpoint`           | Configure as above, replacing "ha-server1.domain.com" with the fully qualified domain name of one of the HA nodes. The port should be 8722. |
+    |`IIS Web Application Name`                      | Change to the correct `Site Name/Application` if either was modified from the defaults when creating the [website][Create Web Site] or [application][Create Application].  |
+    |`Feature Flags`                                 | Configure as above, replacing `InnovationId` with the Cortex Innovation feature identifier. This should be retrieved from Cortex. |
+    |`Service Fabric Api Gateway Endpoint`           | Configure as above, replacing `load-balancer.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443). |
     |`Service Fabric Using Self Signed Certificates` | Configure the value as "False" if you are using valid CA certificates, "True" if using self-signed certificates |
     |`Service Fabric Self Signed Certificate Subject`| This should not be changed. |
     |`Service Fabric ApiGateway Basic Auth Username` | This only needs to be changed if you provided a non-default `ApiGatewayBasicAuthUserName` when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. |
@@ -388,7 +386,7 @@ If the site hosting the gateway web application is a newly created Cortex site o
     CortexGateway.deploy.cmd /T
     ```
 
-    In the event of an error, there will be an error message displayed at the end of the output with a line confirming the Error Count. TODO: what should they do?
+    In the event of an error, there will be an error message displayed at the end of the output with a line confirming the Error Count.
 
 ### Run Installation Script
 
@@ -417,7 +415,14 @@ If the site hosting the gateway web application is a newly created Cortex site o
     {{% alert title="Note" %}} If the Application Pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
     If an error message is displayed wait a few minutes and refresh the page as it is possible that the website was still starting.
 
-TODO: Link to setup
+## Next Steps?
+1. [Setup][Setup Gateway] the platform
+2. [Try it out][]
 
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
 [Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.SetupGateway" >}}
+[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TryItOut" >}}
+[Configure Firewalls]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.ConfigureFirewalls" >}}
+[Configure Web Site]: {{< ref "#configure-web-site" >}}
+[Create Web Site]: {{< ref "#create-web-site" >}}
+[Create Application]: {{< ref "#create-new-web-application" >}}

@@ -14,10 +14,12 @@
                 TroubleshootingNoBlocks = "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-blocks"
                 TroubleshootingNoPublish = "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-publish"
                 TroubleshootingNoRootCertificate= "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-root-certificate"
+                TryItOut= "/docs/getting-started/on-premise/try-it-out"
                 [Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced]
                     AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
                     AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
                     ApplyTDE = "/docs/getting-started/on-premise/advanced/tde"
+                    ConfigureFirewalls = "/docs/getting-started/on-premise/advanced/firewalls"
                     CreateSelfSignedCertificates = "/docs/getting-started/on-premise/advanced/self-signed-certificates"
                     Ports = "/docs/getting-started/on-premise/advanced/ports"
     [Cortex.Guides]
