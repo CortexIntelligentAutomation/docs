@@ -11,9 +11,9 @@ description: >
    * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
    * Cortex Evolution - Innovation 2022.5 - Gateway.zip
    * Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip
-   * Cortex Evolution - Innovation 2022.5 - Web Application Installation Scripts.zip
+   * Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts.zip
 
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
@@ -66,10 +66,10 @@ To verify the certificate is imported:
 Installed the required features by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.WindowsFeatures.ps1` script using the following command:
@@ -157,10 +157,10 @@ A collection of registry settings need to be applied to guarantee your server is
 Apply these security measures by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
@@ -267,7 +267,7 @@ If the site hosting the gateway web application is a newly created Cortex site o
 
 ### Configure Installation Script
 
-1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
+1. In the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
 
     ```powershell
@@ -288,10 +288,10 @@ If the site hosting the gateway web application is a newly created Cortex site o
 ### Run Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts"
     ```
 
 1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
@@ -420,3 +420,4 @@ If the site hosting the gateway web application is a newly created Cortex site o
 TODO: Link to setup
 
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
+[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.SetupGateway" >}}

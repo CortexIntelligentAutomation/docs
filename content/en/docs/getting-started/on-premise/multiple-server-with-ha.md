@@ -217,18 +217,18 @@ We support the latest versions of the following browsers:
 1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):
    * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
    * Cortex Evolution - Innovation 2022.5 - HA Services.zip
-   * Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip
+   * Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts.zip
 
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip` file to a folder with the same name.
+1. Extract the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts.zip` file to a folder with the same name.
 
 ### Add Antivirus Exclusions
 
 1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next step, otherwise follow these steps:
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
         ```
 
     1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
@@ -241,10 +241,10 @@ We support the latest versions of the following browsers:
 
 1. To check all necessary ports are free, follow these steps.
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
         ```
 
     1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
@@ -257,13 +257,13 @@ We support the latest versions of the following browsers:
 
         `All ports required by Cortex Innovation are free`
 
-        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, to use different ports. This will be used later during installation.
+        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder, to use different ports. This will be used later during installation.
 
         The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
 ### Configure Installation Script
 
-1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
+1. In the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
 
     {{< tabpane lang="powershell" >}}
@@ -351,10 +351,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 ### Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts"
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
     ```
 
 1. Test `Cortex.Innovation.Install.ps1` by running the following command:
