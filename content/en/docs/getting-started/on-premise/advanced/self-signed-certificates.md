@@ -5,7 +5,9 @@ description: >
     Information about creating and installing self-signed certificates.
 ---
 
-## Create Self-Signed Certificates
+# {{< param title >}}
+
+{{< param description >}}
 
 Self-signed certificates should be generated using OpenSSL which is bundled in the Cortex Installation Scripts:
 

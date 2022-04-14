@@ -5,9 +5,11 @@ description: >
     Information about trying out Cortex for the first time.
 ---
 
-## Try it out
+# {{< param title >}}
 
-### Test Debugging
+{{< param description >}}
+
+## Test Debugging
 
 1. Use the following steps to test the system be creating a new flow (alternatively, if you already have Cortex Innovation flows which are compatible with this version, feel free to import them, configure Studio Authorisation for them and check that they can be debugged, published and executed).
 1. Click on the `Flows` charm, then the `+` button and click `Group` to open a dialog.
@@ -25,7 +27,7 @@ description: >
 1. Continue or stop the execution.
 1. Commit the flow.
 
-### Test Publishing and Executing production flows
+## Test Publishing and Executing production flows
 
 1. Log into Cortex Gateway with a user that has the `Administrator` role.
 1. Click on the `Settings` charm, then `Packages`.

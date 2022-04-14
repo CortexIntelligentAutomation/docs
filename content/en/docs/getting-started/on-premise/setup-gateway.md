@@ -5,6 +5,10 @@ description: >
     Information on setting up Cortex Gateway for first-time use.
 ---
 
+# {{< param title >}}
+
+{{< param description >}}
+
 ## Cortex Gateway Initial Setup
 
 Log on to Cortex Gateway and run through the setup wizard

@@ -5,7 +5,9 @@ description: >
     Information on installing Cortex on alternative architectures.
 ---
 
-## Alternative architectures
+# {{< param title >}}
+
+{{< param description >}}
 
 It is possible to minimise the number of servers used by installing SQL Express/SQL Server, Cortex Gateway and the Flow Debugger Service on either the load balancer machine or one of the application servers (4 server architecture), as shown below. A 3 node architecture is not possible as the load balancer cannot route requests to itself.
 

@@ -5,7 +5,9 @@ description: >
     Information on configuring Cortex Databases to use Transparent Data Encryption.
 ---
 
-## Configure the Cortex Databases to use Transparent Data Encryption
+# {{< param title >}}
+
+{{< param description >}} <br />
 
 Once the [Gateway Setup][] steps have been completed , if you wish to encrypt the databases using TDE for improved security, this should now be performed.
 

@@ -5,11 +5,13 @@ description: >
     Information on troubleshooting Cortex Innovation installations.
 ---
 
-## Troubleshooting
+# {{< param title >}}
 
-### Troubleshooting issues during installation {#ts-during-installation}
+{{< param description >}}
 
-#### Root certificate verification failed as no root certificate has been specified {#ts-no-root-certificate}
+## Troubleshooting issues during installation {#ts-during-installation}
+
+### Root certificate verification failed as no root certificate has been specified {#ts-no-root-certificate}
 
 If the installation fails with “Root certificate verification failed as no root certificate has been specified.” it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the “pemRootCertificatePath” property for each certificate in the “serverCertificates” and “adminCertificates” section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
 
@@ -102,13 +104,13 @@ If the installation fails with “Root certificate verification failed as no roo
 
 1. Run the installation script again.
 
-### Troubleshooting issues after installation {#ts-after-installation}
+## Troubleshooting issues after installation {#ts-after-installation}
 
-#### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
+### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
 
 Check that the "Feature Flags" Guid in the "parameters.xml" file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
 
-#### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
+### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
 
 Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be "https". If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website.
 
@@ -120,7 +122,7 @@ If no misconfiguration can be found, the service log files may contain more info
 
 If the issues cannot be resolved, please contact Cortex Support for assistance.
 
-#### Cannot publish a package {#ts-no-publish}
+### Cannot publish a package {#ts-no-publish}
 
 Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
 
@@ -140,7 +142,7 @@ Ensure that the HA Services are healthy by following these steps:
 
 If no solution can be found, please contact Cortex Support for assistance.
 
-#### Managing RabbitMQ
+### Managing RabbitMQ
 
 There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send the messages between services.
 To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://ha-server1.domain.com:15671`, `replacing ha-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
