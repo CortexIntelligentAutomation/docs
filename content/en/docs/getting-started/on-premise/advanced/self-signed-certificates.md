@@ -7,9 +7,9 @@ description: >
 
 # {{< param title >}}
 
-{{< param description >}}
+Self-signed certificates should be generated using OpenSSL which is bundled in the Cortex Web Application Server Installation Scripts:
 
-Self-signed certificates should be generated using OpenSSL which is bundled in the Cortex Installation Scripts:
+## Setup OpenSSL in PowerShell
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Make a directory in which to store the certificates by running the following command, changing the path as required:
@@ -29,6 +29,8 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
     ```powershell
     $env:PATH += ";C:\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts\OpenSSL"
     ```
+
+## Generate the Root CA Certificate
 
 1. Create the Root CA private key by running the following command:
 
@@ -119,6 +121,8 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
     1. Select `Trusted Root Certification Authorities`, click `OK` then click `Next`.
     1. Click `Finish`.
 
+## Generate the Certificate
+
 1. Create a private key for the SSL cert by running the following command:
 
     ```powershell
@@ -188,14 +192,14 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         IP.2 = 127.0.0.1 
         ```
 
-    1. Modify the section [alt_names] to include all the required DNS names and IP addresses that clients can use to access the secured resource.
+    1. Modify the section `[alt_names]` to include all the required DNS names and IP addresses that clients can use to access the secured resource.
     Each DNS name or IP address entry must be suffixed with `.N` where `N` is the unique index of the DNS name or IP address entry; see below for examples:
     | Resource URL                          | Configuration to add              |
     |---------------------------------------|-----------------------------------|
-    | https://cortex.co.uk/gateway          | DNS.1 = cortex.co.uk              |
-    | https://internal.cortex.co.uk/gateway | DNS.2 = internal.cortex.co.uk     |
-    | https://10.0.0.0/gateway              | IP.1 = 10.0.0.0                   |
-    | https://192.168.1.100/gateway         | IP.2 = 192.168.1.100              |
+    | `https://cortex.co.uk/gateway`        | `DNS.1 = cortex.co.uk`              |
+    | `https://internal.cortex.co.uk/gateway` | `DNS.2 = internal.cortex.co.uk`     |
+    | `https://10.0.0.0/gateway`              | `IP.1 = 10.0.0.0`                   |
+    | `https://192.168.1.100/gateway`         | `IP.2 = 192.168.1.100`              |
 
     1. Save the file as `san.cnf` in the directory created for the certificates above.
     1. In the PowerShell window, run the following command:
@@ -219,11 +223,13 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
 
     1. Enter a memorable string as the Export Password when asked, this will be needed when adding the certificate to certmgr.
 
-    1. Double click on the `cortex.pfx` file in the certificates folder to get the certificate imported to the Windows Certificate Store. Perform the following steps:
-        1. Select `Local Machine` then click `Next`.
-        1. Click `Next`.
-        1. Enter the Export Password which the certificate was generated with then click `Next`.
-        1. Select `Place all certificates in the following store`.
-        1. Click `Browse…`.
-        1. Select `Personal`, click `OK` then click `Next`.
-        1. Click `Finish`.
+## Import the Certificate
+
+1. Double click on the `cortex.pfx` file in the certificates folder to get the certificate imported to the Windows Certificate Store. Perform the following steps:
+    1. Select `Local Machine` then click `Next`.
+    1. Click `Next`.
+    1. Enter the Export Password which the certificate was generated with then click `Next`.
+    1. Select `Place all certificates in the following store`.
+    1. Click `Browse…`.
+    1. Select `Personal`, click `OK` then click `Next`.
+    1. Click `Finish`.

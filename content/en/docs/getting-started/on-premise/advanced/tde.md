@@ -1,15 +1,13 @@
 ---
-title: "Configure the Databases to use Transparent Data Encryption"
+title: "Configure the Gateway Databases to use Transparent Data Encryption"
 linkTitle: "Configure TDE"
 description: >
-    Information on configuring Cortex Databases to use Transparent Data Encryption.
+    Information on configuring Gateway Databases to use Transparent Data Encryption.
 ---
 
 # {{< param title >}}
 
-{{< param description >}} <br />
-
-Once the [Gateway Setup][] steps have been completed , if you wish to encrypt the databases using TDE for improved security, this should now be performed.
+Once the [Gateway Setup][] steps have been completed, if you wish to encrypt the databases using [Transparent Data Encryption](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15) (TDE) for improved security, this should now be performed.
 
 Enabling TDE on the databases ensures that the data is encrypted on disk. The process to do this requires that you:
 
@@ -19,11 +17,11 @@ Enabling TDE on the databases ensures that the data is encrypted on disk. The pr
 * Create a database encryption key in each user database to be encrypted.
 * Enable encryption on the database.
 
-To enable TDE on the suite of Cortex Databases you should complete the following steps:
+To enable TDE on the suite of Gateway Databases you should complete the following steps:
 
-1. Open SQL Server Management Studio
+1. Open SQL Server Management Studio.
 2. Open the `Cortex.Install.TDE.sql` script included within the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder.
-{{% alert title="Note" %}}This script will attempt to encrypt all Cortex Databases that exist on the system. Any that do not exist will be skipped. If you do not wish to encrypt all existing Cortex Databases then you should contact Cortex Support for assistance with script modification.{{% /alert %}}
+{{% alert title="Note" %}}This script will attempt to encrypt all Cortex Databases that exist on the system. Any that do not exist will be skipped. If you do not wish to encrypt all existing Cortex Databases then you should contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance with script modification.{{% /alert %}}
 3. Set the `@sPassword` parameter value to a password that you wish to use. {{% alert title="Note" %}} This password must be set to a value that is not a blank or empty string, it cannot be `null` and the script will not execute if it is not changed from the pre-populated value of `StrongPassword`. The password must also meet your system’s minimum security requirements.{{% /alert %}}
 4. You can change the names of the certificate and the name of the master key by changing the `@sCertName` and `@sKeyName` parameters if you so wish.
 5. You can change the location that the certificate and key are backed up to by changing the value of the `@sBackupLocation` parameter.

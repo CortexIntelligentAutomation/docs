@@ -27,7 +27,8 @@ Multiple server installations with HA are recommended for the following scenario
 | Cortex&nbsp;API&nbsp;Gateway&nbsp;Service | HA Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
 | Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service | HA Service that executes automation flows. | Required | Application&nbsp;Server |
 | Cortex&nbsp;Block&nbsp;Packages | A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
-| [SQL&nbsp;Server&nbsp;Express](https://go.microsoft.com/fwlink/?LinkID=799012) | Free edition of SQL Server, required by Cortex Gateway for storing data related to user roles, flows, etc. Hopefully, we can remove the need for SQL Server Express in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
+| Cortex&nbsp;Gateway&nbsp;Databases | A set of databases created automatically by Gateway which are used for storing storing data related to user roles, flows, etc. Hopefully, we can remove the need for Gateway Databases in the next release.  | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
+| [SQL&nbsp;Server&nbsp;Express](https://go.microsoft.com/fwlink/?LinkID=799012) | Free edition of SQL Server, required by Cortex Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server Express in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric](https://azure.microsoft.com/en-us/services/service-fabric/) | Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster) | Web portal for monitoring and managing the HA clusters that automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Particular&nbsp;NServiceBus](https://particular.net/nservicebus) | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
@@ -107,7 +108,7 @@ All Application Servers must use an NTFS filesystem.
 
 A domain user which is a member of the local Administrators group on all Application Servers and Load Balancer Server must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.
 
-A local or domain user which is a member of the local Administrators group on the Web Application Server must be available to run the Application Pools for Gateway and Debugger. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run.
+Local or domain users must be available to run the Application Pools for Gateway and Debugger. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run.
 
 #### Antivirus Exclusions
 
@@ -220,6 +221,24 @@ We support the latest versions of the following browsers:
    * Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts.zip
 
 1. Extract the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts.zip` file to a folder with the same name.
+
+### Install Microsoft .NET Framework 4.7.1
+
+Microsoft Service Fabric requires a minimum of Microsoft .NET Framework 4.7.1 to be installed on each Application Server.
+
+To find the version of the framework that is installed:
+
+1. On the Start menu, choose Run.
+2. In the Open box, enter `regedit.exe`. You must have administrative credentials to run regedit.exe.
+3. In the Registry Editor, open the subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.
+4. If the `Full` subkey is not present, then you do not have the .NET Framework 4.5 or later installed.
+5. Check for a `DWORD` value named `Release`. The existence of the Release DWORD indicates the .NET Framework 4.5 or newer has been installed on that computer. If the value is `461308` or over then at least .NET Framework 4.7.1 is installed and no further steps need to be taken. If it is not installed, continue with the following steps to install it.
+
+To install .NET Framework 4.7.1:
+
+1. Download the .NET Framework 4.7.1 installer from https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer`.
+2. Double-click on the installed file to run it.
+3. Follow the wizard to complete the installation.
 
 ### Add Antivirus Exclusions
 

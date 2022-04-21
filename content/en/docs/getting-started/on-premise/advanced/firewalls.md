@@ -7,8 +7,6 @@ description: >
 
 # {{< param title >}}
 
-{{< param description >}}
-
 ## Add Inbound Rules to Windows Firewall
 
 To set up inbound rules for Windows Firewall take the following steps for each rule that you want to add:

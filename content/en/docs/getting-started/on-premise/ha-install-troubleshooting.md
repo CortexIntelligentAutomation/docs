@@ -108,19 +108,19 @@ If the installation fails with “Root certificate verification failed as no roo
 
 ### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
 
-Check that the "Feature Flags" Guid in the "parameters.xml" file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
+Check that the `Feature Flags` Guid in the `parameters.xml` file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
 
 ### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
 
-Check that the "Dot NET flow debugger Endpoint" URL in the "parameters.xml" file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be "https". If it is not, update it and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website.
+Check that the `Dot NET flow debugger Endpoint` URL in the `parameters.xml` file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website.
 
-Ensure that the flow debugger service is running. Open IIS, click on "Application Pools" and ensure there is a "debugger" app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
+Ensure that the flow debugger service is running. Open IIS, click on `Application Pools`and ensure there is a `debugger` application pool which is showing that it is associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
 
 If no misconfiguration can be found, the service log files may contain more information. These can be found on the Web Application Server at:
 
 * %ProgramData%/Cortex/Cortex Flow Debugger
 
-If the issues cannot be resolved, please contact Cortex Support for assistance.
+If the issues cannot be resolved, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
 
 ### Cannot publish a package {#ts-no-publish}
 

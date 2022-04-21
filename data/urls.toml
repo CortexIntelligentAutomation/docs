@@ -4,7 +4,9 @@
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
             [Cortex.GettingStarted.OnPremise.MultipleServerWithHA]
-                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha"
+                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha"       
+                ConfigureInstallationScript = "/docs/getting-started/on-premise/multiple-server-with-ha#configure-installation-script"
+                ClientRequirements = "/docs/getting-started/on-premise/multiple-server-with-ha#client-requirements"
                 InstallWebApplicationServer = "/docs/getting-started/on-premise/install-web-application-server"
                 SetupGateway = "/docs/getting-started/on-premise/setup-gateway"
                 Troubleshooting = "/docs/getting-started/on-premise/ha-install-troubleshooting"
