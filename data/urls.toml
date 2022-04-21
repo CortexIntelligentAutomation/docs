@@ -272,6 +272,26 @@
                     MainDoc = "/docs/reference/data-types/all/dynamic"
             [Cortex.Reference.DataTypes.Collections]
                 MainDoc = "/docs/reference/data-types/collections"
+                [Cortex.Reference.DataTypes.Collections.IDictionary]
+                    MainDoc = "/docs/reference/data-types/collections/idictionary-2"
+                [Cortex.Reference.DataTypes.Collections.Dictionary]
+                    MainDoc = "/docs/reference/data-types/collections/dictionary-2"
+                    CreateNew = "/docs/reference/data-types/collections/dictionary-2#create-a-dictionarylttkey-titemgt"
+                    ConvertToText = "/docs/reference/data-types/collections/dictionary-2#convert-dictionarylttkey-titemgt-to-text"
+                [Cortex.Reference.DataTypes.Collections.IEnumerable]
+                    MainDoc = "/docs/reference/data-types/collections/ienumerable"
+                [Cortex.Reference.DataTypes.Collections.IEnumerable_TItem]
+                    MainDoc = "/docs/reference/data-types/collections/ienumerable-1"
+                [Cortex.Reference.DataTypes.Collections.IList]
+                    MainDoc = "/docs/reference/data-types/collections/ilist-1"
+                [Cortex.Reference.DataTypes.Collections.List]
+                    MainDoc = "/docs/reference/data-types/collections/list-1"
+                    CreateNew = "/docs/reference/data-types/collections/list-1#create-a-listlttitemgt"
+                    ConvertToText = "/docs/reference/data-types/collections/list-1#convert-listlttitemgt-to-text"
+                [Cortex.Reference.DataTypes.Collections.Structure]
+                    MainDoc = "/docs/reference/data-types/collections/structure"
+                    CreateNew = "/docs/reference/data-types/collections/structure#create-a-structure"
+                    ConvertToText = "/docs/reference/data-types/collections/structure#convert-structure-to-text"
             [Cortex.Reference.DataTypes.ConditionalLogic]
                 MainDoc = "/docs/reference/data-types/conditional-logic/"
                 [Cortex.Reference.DataTypes.ConditionalLogic.Boolean]
@@ -313,6 +333,7 @@
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
+                    CreateNew = "/docs/reference/data-types/text/string#create-a-string"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
@@ -458,8 +479,12 @@
         OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         StringComparison = "https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://docs.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
+        [MSDocs.DotNet.Api.System.Collections]
+            IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable"
         [MSDocs.DotNet.Api.System.Collections.Generic]
-            IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
+            IDictionary = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2"
+            Dictionary = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2"
+            IEnumerable_TItem = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
         [MSDocs.DotNet.Api.System.Convert]
