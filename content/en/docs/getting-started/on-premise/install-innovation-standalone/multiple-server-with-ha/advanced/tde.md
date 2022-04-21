@@ -1,8 +1,7 @@
 ---
 title: "Configure the Gateway Databases to use Transparent Data Encryption"
 linkTitle: "Configure TDE"
-description: >
-    Information on configuring Gateway Databases to use Transparent Data Encryption.
+description: "Information on configuring Gateway Databases to use Transparent Data Encryption."
 ---
 
 # {{< param title >}}
@@ -35,4 +34,4 @@ To enable TDE on the suite of Gateway Databases you should complete the followin
 7. Click `Execute` to run the script. It may take several minutes to execute depending on the size of the databases.
 8. Once the script has completed successfully, you should move the backed-up certificate and master key to a secure location and the password specified should also be stored securely.
 
-[Gateway Setup]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.SetupGateway" >}}
+[Gateway Setup]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.SetupGateway" >}}

@@ -1,8 +1,7 @@
 ---
 title: "Configure Firewalls"
 linkTitle: "Configure Firewalls"
-description: >
-    Information on configuring Firewalls, e.g. adding rules.
+description: "Information on configuring Firewalls, e.g. adding rules."
 ---
 
 # {{< param title >}}

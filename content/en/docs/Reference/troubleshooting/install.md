@@ -1,19 +1,17 @@
 ---
-title: "Troubleshooting"
-linkTitle: "Troubleshooting"
+title: "Install"
+linkTitle: "Install"
 description: >
     Information on troubleshooting Cortex Innovation installations.
 ---
 
 # {{< param title >}}
 
-{{< param description >}}
-
 ## Troubleshooting issues during installation {#ts-during-installation}
 
 ### Root certificate verification failed as no root certificate has been specified {#ts-no-root-certificate}
 
-If the installation fails with “Root certificate verification failed as no root certificate has been specified.” it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the “pemRootCertificatePath” property for each certificate in the “serverCertificates” and “adminCertificates” section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
+If the installation fails with `Root certificate verification failed as no root certificate has been specified.` it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the `pemRootCertificatePath` property for each certificate in the `serverCertificates` and `adminCertificates` section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
 
 1. In order to find out the issuer of the certificate, if not already known, the following script can be used, replacing the password for the pfx file and certificate path as necessary:
 
@@ -23,7 +21,7 @@ If the installation fails with “Root certificate verification failed as no roo
     $c | Format-List
     ```
 
-1. This will give a list of “Other Certificates” and “End Certificates” contained in the .pfx file. The issuer can be found in the “Issuer” property of one of the “Other Certificates”. If there are more than one, it will be the one that does not appear as a “Subject” in any of the other items.
+1. This will give a list of `Other Certificates` and `End Certificates` contained in the .pfx file. The issuer can be found in the `Issuer` property of one of the `Other Certificates`. If there are more than one, it will be the one that does not appear as a `Subject` in any of the other items.
 1. E.g. For a "Let's Encrypt" certificate this will give the following results:
 
     ```powershell
@@ -55,9 +53,9 @@ If the installation fails with “Root certificate verification failed as no roo
                             }
     ```
 
-1. In this case, the root certificate is “DST Root CA X3”.
-1. In a search engine, search for the CN of the issuer and one of the results should lead to a download of a .pem file or to a page with the certificate on it, which can then be copied and saved into a file with a .pem extension. Often, searching the issuer of the EndEntityCertificate, in the above case “Let’s Encrypt”, will also work.
-1. E.g. for “Let’s Encrypt”, the results of the search for “DST Root CA X3” leads to “https://www.identrust.com/dst-root-ca-x3” which provides the following text to be saved as a .pem file:
+1. In this case, the root certificate is `DST Root CA X3`.
+1. In a search engine, search for the CN of the issuer and one of the results should lead to a download of a .pem file or to a page with the certificate on it, which can then be copied and saved into a file with a .pem extension. Often, searching the issuer of the EndEntityCertificate, in the above case `Let’s Encrypt`, will also work.
+1. E.g. for `Let’s Encrypt`, the results of the search for `DST Root CA X3` leads to `https://www.identrust.com/dst-root-ca-x3` which provides the following text to be saved as a .pem file:
 
     ```markdown
     -----BEGIN CERTIFICATE-----
@@ -129,9 +127,9 @@ Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self
 Ensure that the HA Services are healthy by following these steps:
 
 1. Log on to one of the Application servers and open a web browser.
-1. Navigate to https://ha-server.domain.com:9080/Explorer, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
+1. Navigate to https://ha-server.domain.com:9080/Explorer, where `ha-server.domain.com` is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
 
-    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
+    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
 
     The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
 

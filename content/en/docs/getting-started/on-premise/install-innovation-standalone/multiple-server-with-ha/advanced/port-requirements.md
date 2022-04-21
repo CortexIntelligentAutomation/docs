@@ -1,8 +1,7 @@
 ---
-title: "Port Requirements"
-linkTitle: "Port Requirements"
-description: >
-    Information on the ports opened when installing Cortex Innovation.
+title: "Port Requirements for Application Servers and Load Balancer"
+linkTitle: "Port Requirements for Application Servers and Load Balancer"
+description: "Information on the ports opened when installing Cortex Innovation."
 ---
 
 # {{< param title >}}

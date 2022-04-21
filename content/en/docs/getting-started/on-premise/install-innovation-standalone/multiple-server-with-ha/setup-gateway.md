@@ -1,8 +1,8 @@
 ---
 title: "Setup Gateway"
 linkTitle: "Setup Gateway"
-description: >
-    Information on setting up Cortex Gateway for first-time use.
+description: "Information on setting up Cortex Gateway for first-time use."
+weight: 50
 ---
 
 # {{< param title >}}
@@ -75,11 +75,12 @@ Log on to Gateway and run through the setup wizard:
 Once Gateway has been configured, if you wish to encrypt the databases using [Transparent Data Encryption](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15) for improved security, this should now be performed by following the steps in [Configuring TDE][].
 
 ## Next Steps?
+1. [Configure TDE][Configuring TDE]
 1. [Try it out][]
 
-[Configuring TDE]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.ApplyTDE" >}}
-[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TryItOut" >}}
-[supported web browser]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.ClientRequirements" >}}
+[Configuring TDE]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.ApplyTDE" >}}
+[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.TryItOut" >}}
+[supported web browser]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.ClientRequirements" >}}
 [Account Details]: {{< ref "#account-details" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}

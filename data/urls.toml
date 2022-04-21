@@ -3,27 +3,26 @@
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
-            [Cortex.GettingStarted.OnPremise.MultipleServerWithHA]
-                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha"       
-                ConfigureInstallationScript = "/docs/getting-started/on-premise/multiple-server-with-ha#configure-installation-script"
-                ClientRequirements = "/docs/getting-started/on-premise/multiple-server-with-ha#client-requirements"
-                InstallWebApplicationServer = "/docs/getting-started/on-premise/install-web-application-server"
-                SetupGateway = "/docs/getting-started/on-premise/setup-gateway"
-                Troubleshooting = "/docs/getting-started/on-premise/ha-install-troubleshooting"
-                TroubleshootingDuringInstallation= "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-during-installation"
-                TroubleshootingAfterInstallation= "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-after-installation"
-                TroubleshootingNoInnovation = "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-innovation"
-                TroubleshootingNoBlocks = "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-blocks"
-                TroubleshootingNoPublish = "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-publish"
-                TroubleshootingNoRootCertificate= "/docs/getting-started/on-premise/ha-install-troubleshooting#ts-no-root-certificate"
-                TryItOut= "/docs/getting-started/on-premise/try-it-out"
-                [Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced]
-                    AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
-                    AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
-                    ApplyTDE = "/docs/getting-started/on-premise/advanced/tde"
-                    ConfigureFirewalls = "/docs/getting-started/on-premise/advanced/firewalls"
-                    CreateSelfSignedCertificates = "/docs/getting-started/on-premise/advanced/self-signed-certificates"
-                    Ports = "/docs/getting-started/on-premise/advanced/ports"
+            [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone]
+                MainDoc = "/docs/getting-started/on-premise/install-innovation-standalone/"
+                [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA]
+                    MainDoc = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/"       
+                    InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-application-and-loadbalancer-servers"
+                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-web-application-server"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-web-application-server#install-gateway"
+                    Prerequisites = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/prerequisites"
+                    CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/prerequisites#certificate-requirements"
+                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/prerequisites#client-requirements"
+                    SetupGateway = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/setup-gateway"
+                    TryItOut= "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/try-it-out"
+                    [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced]
+                        AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/advanced-config-changes"
+                        AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/alternative-architectures"
+                        ApplyTDE = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/tde"
+                        ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/configure-firewalls"
+                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/self-signed-certificates"
+                        PortRequirements = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/port-requirements"
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
@@ -391,6 +390,15 @@
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
+        [Cortex.Reference.Troubleshooting]
+            MainDoc = "/docs/reference/troubleshooting/"
+            [Cortex.Reference.Troubleshooting.Install]
+                TroubleshootingDuringInstallation= "/docs/reference/troubleshooting/install#ts-during-installation"
+                TroubleshootingNoInnovation = "/docs/reference/troubleshooting/install#ts-no-innovation"
+                TroubleshootingAfterInstallation= "/docs/reference/troubleshooting/install#ts-after-installation"
+                TroubleshootingNoBlocks = "/docs/reference/troubleshooting/install#ts-no-blocks"
+                TroubleshootingNoPublish = "/docs/reference/troubleshooting/install#ts-no-publish"
+                TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/install#ts-no-root-certificate"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]

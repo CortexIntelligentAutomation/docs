@@ -1,8 +1,7 @@
 ---
 title: "Create Self-Signed Certificates"
 linkTitle: "Create Self-Signed Certificates"
-description: >
-    Information about creating and installing self-signed certificates.
+description: "Information about creating and installing self-signed certificates."
 ---
 
 # {{< param title >}}

@@ -1,13 +1,11 @@
 ---
 title: "Install the Web Application Server"
 linkTitle: "Install Web Application Server"
-description: >
-    Information on installing a Web Application Server.
+description: "Information on installing a Web Application Server."
+weight: 40
 ---
 
 # {{< param title >}}
-
-{{< param description >}}
 
 ## Extract Installation Artefacts
 
@@ -43,7 +41,7 @@ To find the version of the framework that is installed:
 
 To install .NET Framework 4.7.1:
 
-1. Download the .NET Framework 4.7.1 installer from https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer`.
+1. Download the .NET Framework 4.7.1 installer from <https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer>.
 2. Double-click on the installed file to run it.
 3. Follow the wizard to complete the installation.
 
@@ -557,14 +555,14 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     {{% alert title="Note" %}} If the application pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
 
 ## Next Steps?
-1. [Setup][Setup Gateway] the platform
-2. [Try it out][]
 
-[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
-[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.SetupGateway" >}}
-[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.TryItOut" >}}
-[Configure Firewalls]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.ConfigureFirewalls" >}}
-[Configure Installation Script]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.ConfigureInstallationScript" >}}
+1. [Setup Gateway][]
+
+[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
+[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.SetupGateway" >}}
+[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.TryItOut" >}}
+[Configure Firewalls]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.ConfigureFirewalls" >}}
+[Configure Installation Script]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [Configure Web Site]: {{< ref "#configure-web-site" >}}
 [Create Web Site]: {{< ref "#create-web-site" >}}
 [Create Application]: {{< ref "#create-new-web-application" >}}
