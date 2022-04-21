@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/reference/concepts/">
+<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/concepts/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -18,10 +18,10 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Concepts | </title><meta property="og:title" content="Concepts" />
+<title>Concepts | Cortex Evolution</title><meta property="og:title" content="Concepts" />
 <meta property="og:description" content="Various concepts of the engine." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/reference/concepts/" />
+<meta property="og:url" content="/docs/reference/concepts/" /><meta property="og:site_name" content="Cortex Evolution" />
 
 <meta itemprop="name" content="Concepts">
 <meta itemprop="description" content="Various concepts of the engine."><meta name="twitter:card" content="summary"/>
@@ -32,13 +32,18 @@
 
 
 
-<link rel="preload" href="/scss/main.min.72e51d1403352dedf326fd16085dbb46613b6d67105ffb7145db57a9d961d9e4.css" as="style">
-<link href="/scss/main.min.72e51d1403352dedf326fd16085dbb46613b6d67105ffb7145db57a9d961d9e4.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.343503cce7ea059b1d977e3d6056bcba7e9d58a10efd33abea6ae50d0fb97a1d.css" as="style">
+<link href="/scss/main.min.343503cce7ea059b1d977e3d6056bcba7e9d58a10efd33abea6ae50d0fb97a1d.css" rel="stylesheet" integrity="">
 
 
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
 
@@ -50,11 +55,19 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="/">
-		<span class="navbar-logo"><svg id="Layer_4_copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1388 475.1" style="enable-background:new 0 0 1388 475.1"><style>.st0{fill:#3b8fce}.st1{fill:#262056}.st2{fill:#a1c429}.st3{fill:#fff}.st4{fill:url(#SVGID_1_)}.st5{opacity:.6;fill:url(#SVGID_2_)}.st6{filter:url(#Adobe_OpacityMaskFilter)}.st7{fill:url(#SVGID_4_)}.st8{mask:url(#SVGID_3_);fill:#fff}.st9{fill:#3f3f3e}</style><path class="st0" d="M122.1 231.7c0-15.7 3.6-30.5 9.9-43.8l-81.1-46.8c-22.9 43.5-28.5 93.3-15.7 141 13.5 50.3 45.7 92.3 90.8 118.3 29 16.7 56.9 24.9 89.6 26v-93.7c-52.3-4-93.5-47.6-93.5-101z"/><path class="st1" d="M223.5 130.3c34.7.0 65.3 17.5 83.6 44.1l81.1-46.8c-35.6-56.2-98-90.8-164.9-90.8-34 0-67.6 9-97.3 26.1-29 16.7-50 36.8-67.3 64.6l81.1 46.8c18.4-26.5 49-44 83.7-44z"/><path class="st2" d="M396.1 141.1 315 188c6.3 13.2 9.9 28.1 9.9 43.7.0 53.3-41.2 97-93.5 101v93.7c103.8-4.1 187-89.9 187-194.7C418.4 198.2 411.5 170 396.1 141.1z"/><g><path class="st3" d="M223.5 231.7l-65.8-38c-21 36.4-8.5 82.9 27.8 103.9 12.1 7 24 10.2 38 10.2V231.7z"/></g><g><path class="st3" d="M223.5 231.7l65.8-38c-21-36.4-67.5-48.8-103.9-27.8-12.1 7-20.8 15.7-27.8 27.8l65.9 38z"/></g><g><path class="st3" d="M223.5 231.7v76c42 0 76-34 76-76 0-14-3.2-25.9-10.2-38l-65.8 38z"/></g><g><radialGradient id="SVGID_1_" cx="223.5157" cy="231.6926" r="76.1085" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#969695"/><stop offset="1" style="stop-color:#3F3F3E"/></radialGradient><path class="st4" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="223.5157" y1="155.5859" x2="223.5157" y2="307.7993"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#3F3F3E"/></linearGradient><path class="st5" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><defs><filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/></filter></defs><mask maskUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5" id="SVGID_3_"><g class="st6"><linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="220.0409" y1="123.6788" x2="220.0409" y2="238.3832"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#000000"/></linearGradient><rect x="158.4" y="123.7" class="st7" width="123.3" height="114.7"/></g></mask><path class="st8" d="M177.2 201.9c0-16.5 20.7-29.8 46.3-29.8s46.3 13.3 46.3 29.8c0 16.4-20.7 29.8-46.3 29.8s-46.3-13.3-46.3-29.8z"/></g><g><path class="st9" d="M549.7 146c42.6.0 62.7 24.3 62.7 24.3l-17.9 27.8s-17-17.6-42.6-17.6c-30.1.0-49.6 22.7-49.6 50.6.0 27.5 19.8 51.2 50.9 51.2 27.5.0 48-20.8 48-20.8l15.7 28.8s-23.4 26.5-67.2 26.5c-54.1.0-88.6-38.1-88.6-85.4.0-46.4 34.5-85.4 88.6-85.4z"/><path class="st9" d="M697.7 146c49.9.0 89.9 35.5 89.9 85.4.0 50.2-40 85.4-89.6 85.4-49.9.0-89.9-35.2-89.9-85.4.0-49.9 40-85.4 89.6-85.4zM698 282.3c26.3.0 48.3-20.5 48.3-50.9.0-30.1-22.1-50.9-48.3-50.9-26.6.0-48.6 20.8-48.6 50.9.0 30.4 22.1 50.9 48.6 50.9z"/><path class="st9" d="M796.6 149.8h39V178c0 6.1-.6 11.5-.6 11.5h.6c7.4-23.4 26.9-41.9 51.9-41.9 3.8.0 7.3.6 7.3.6v40s-4.2-.6-9.6-.6c-17.3.0-36.8 9.9-44.5 34.2-2.6 8-3.5 16.9-3.5 26.6V313h-40.6V149.8z"/><path class="st9" d="M904.2 105.4h40.7v47H982v32.3h-37.1v63.4c0 26.9 21.1 30.7 32.3 30.7 4.5.0 7.4-.6 7.4-.6v35.5s-4.8 1-12.5 1c-22.7.0-67.9-6.7-67.9-61.4V105.4z"/><path class="st9" d="M1065.5 146c47 0 72.3 34.2 72.3 77.4.0 4.8-1 15.7-1 15.7h-112.6c2.6 28.5 24.6 43.2 49 43.2 26.2.0 47.1-17.9 47.1-17.9l15.7 29.1s-25 23.4-65.6 23.4c-54.1.0-87.7-39-87.7-85.4C982.6 181.2 1016.9 146 1065.5 146zM1096.9 211.3c-.6-22.1-14.4-33.9-32.3-33.9-20.8.0-35.2 12.8-39 33.9h71.3z"/><path class="st9" d="M1236 230.5l52.5-80.6h-46.1l-25.3 44.5c-2.6 4.2-5.4 10.2-5.4 10.2h-.6s-2.9-6.1-5.4-10.2l-25.3-44.5h-46.1l52.5 80.6L1133 313h45.1l28.5-47.4c2.3-3.5 4.5-8.6 4.5-8.6h.6s2.3 5.1 4.5 8.6l28.5 47.4h45.1L1236 230.5z"/><g><path class="st9" d="M1313.8 149.8c9.5.0 17.2 7.7 17.2 17.4.0 9.8-7.6 17.5-17.2 17.5-9.4.0-16.9-7.7-16.9-17.5C1296.8 157.6 1304.4 149.8 1313.8 149.8zm0 32.3c8.2.0 14.4-6.5 14.4-14.9.0-8.3-6.2-14.8-14.4-14.8-8 0-14.1 6.5-14.1 14.8C1299.6 175.6 1305.8 182.1 1313.8 182.1zM1308.1 157.9h6.7c3.3.0 5.6 2.2 5.6 5.6.0 2.8-1.8 4.5-3.5 4.9v.1s.2.2.6 1.1l3.6 7.1h-3l-3.7-7.6h-3.6v7.6h-2.7V157.9zM1314.3 166.9c2 0 3.3-1.3 3.3-3.5.0-2.1-1.3-3.3-3.3-3.3h-3.5v6.8h3.5z"/></g></g></svg></span><span class="text-uppercase font-weight-bold"></span>
+		<span class="navbar-logo"><svg id="Layer_4_copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1388 475.1" style="enable-background:new 0 0 1388 475.1"><style>.st0{fill:#3b8fce}.st1{fill:#262056}.st2{fill:#a1c429}.st3{fill:#fff}.st4{fill:url(#SVGID_1_)}.st5{opacity:.6;fill:url(#SVGID_2_)}.st6{filter:url(#Adobe_OpacityMaskFilter)}.st7{fill:url(#SVGID_4_)}.st8{mask:url(#SVGID_3_);fill:#fff}.st9{fill:#3f3f3e}</style><path class="st0" d="M122.1 231.7c0-15.7 3.6-30.5 9.9-43.8l-81.1-46.8c-22.9 43.5-28.5 93.3-15.7 141 13.5 50.3 45.7 92.3 90.8 118.3 29 16.7 56.9 24.9 89.6 26v-93.7c-52.3-4-93.5-47.6-93.5-101z"/><path class="st1" d="M223.5 130.3c34.7.0 65.3 17.5 83.6 44.1l81.1-46.8c-35.6-56.2-98-90.8-164.9-90.8-34 0-67.6 9-97.3 26.1-29 16.7-50 36.8-67.3 64.6l81.1 46.8c18.4-26.5 49-44 83.7-44z"/><path class="st2" d="M396.1 141.1 315 188c6.3 13.2 9.9 28.1 9.9 43.7.0 53.3-41.2 97-93.5 101v93.7c103.8-4.1 187-89.9 187-194.7C418.4 198.2 411.5 170 396.1 141.1z"/><g><path class="st3" d="M223.5 231.7l-65.8-38c-21 36.4-8.5 82.9 27.8 103.9 12.1 7 24 10.2 38 10.2V231.7z"/></g><g><path class="st3" d="M223.5 231.7l65.8-38c-21-36.4-67.5-48.8-103.9-27.8-12.1 7-20.8 15.7-27.8 27.8l65.9 38z"/></g><g><path class="st3" d="M223.5 231.7v76c42 0 76-34 76-76 0-14-3.2-25.9-10.2-38l-65.8 38z"/></g><g><radialGradient id="SVGID_1_" cx="223.5157" cy="231.6926" r="76.1085" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#969695"/><stop offset="1" style="stop-color:#3F3F3E"/></radialGradient><path class="st4" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="223.5157" y1="155.5859" x2="223.5157" y2="307.7993"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#3F3F3E"/></linearGradient><path class="st5" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><defs><filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/></filter></defs><mask maskUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5" id="SVGID_3_"><g class="st6"><linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="220.0409" y1="123.6788" x2="220.0409" y2="238.3832"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#000000"/></linearGradient><rect x="158.4" y="123.7" class="st7" width="123.3" height="114.7"/></g></mask><path class="st8" d="M177.2 201.9c0-16.5 20.7-29.8 46.3-29.8s46.3 13.3 46.3 29.8c0 16.4-20.7 29.8-46.3 29.8s-46.3-13.3-46.3-29.8z"/></g><g><path class="st9" d="M549.7 146c42.6.0 62.7 24.3 62.7 24.3l-17.9 27.8s-17-17.6-42.6-17.6c-30.1.0-49.6 22.7-49.6 50.6.0 27.5 19.8 51.2 50.9 51.2 27.5.0 48-20.8 48-20.8l15.7 28.8s-23.4 26.5-67.2 26.5c-54.1.0-88.6-38.1-88.6-85.4.0-46.4 34.5-85.4 88.6-85.4z"/><path class="st9" d="M697.7 146c49.9.0 89.9 35.5 89.9 85.4.0 50.2-40 85.4-89.6 85.4-49.9.0-89.9-35.2-89.9-85.4.0-49.9 40-85.4 89.6-85.4zM698 282.3c26.3.0 48.3-20.5 48.3-50.9.0-30.1-22.1-50.9-48.3-50.9-26.6.0-48.6 20.8-48.6 50.9.0 30.4 22.1 50.9 48.6 50.9z"/><path class="st9" d="M796.6 149.8h39V178c0 6.1-.6 11.5-.6 11.5h.6c7.4-23.4 26.9-41.9 51.9-41.9 3.8.0 7.3.6 7.3.6v40s-4.2-.6-9.6-.6c-17.3.0-36.8 9.9-44.5 34.2-2.6 8-3.5 16.9-3.5 26.6V313h-40.6V149.8z"/><path class="st9" d="M904.2 105.4h40.7v47H982v32.3h-37.1v63.4c0 26.9 21.1 30.7 32.3 30.7 4.5.0 7.4-.6 7.4-.6v35.5s-4.8 1-12.5 1c-22.7.0-67.9-6.7-67.9-61.4V105.4z"/><path class="st9" d="M1065.5 146c47 0 72.3 34.2 72.3 77.4.0 4.8-1 15.7-1 15.7h-112.6c2.6 28.5 24.6 43.2 49 43.2 26.2.0 47.1-17.9 47.1-17.9l15.7 29.1s-25 23.4-65.6 23.4c-54.1.0-87.7-39-87.7-85.4C982.6 181.2 1016.9 146 1065.5 146zM1096.9 211.3c-.6-22.1-14.4-33.9-32.3-33.9-20.8.0-35.2 12.8-39 33.9h71.3z"/><path class="st9" d="M1236 230.5l52.5-80.6h-46.1l-25.3 44.5c-2.6 4.2-5.4 10.2-5.4 10.2h-.6s-2.9-6.1-5.4-10.2l-25.3-44.5h-46.1l52.5 80.6L1133 313h45.1l28.5-47.4c2.3-3.5 4.5-8.6 4.5-8.6h.6s2.3 5.1 4.5 8.6l28.5 47.4h45.1L1236 230.5z"/><g><path class="st9" d="M1313.8 149.8c9.5.0 17.2 7.7 17.2 17.4.0 9.8-7.6 17.5-17.2 17.5-9.4.0-16.9-7.7-16.9-17.5C1296.8 157.6 1304.4 149.8 1313.8 149.8zm0 32.3c8.2.0 14.4-6.5 14.4-14.9.0-8.3-6.2-14.8-14.4-14.8-8 0-14.1 6.5-14.1 14.8C1299.6 175.6 1305.8 182.1 1313.8 182.1zM1308.1 157.9h6.7c3.3.0 5.6 2.2 5.6 5.6.0 2.8-1.8 4.5-3.5 4.9v.1s.2.2.6 1.1l3.6 7.1h-3l-3.7-7.6h-3.6v7.6h-2.7V157.9zM1314.3 166.9c2 0 3.3-1.3 3.3-3.5.0-2.1-1.3-3.3-3.3-3.3h-3.5v6.8h3.5z"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Cortex Evolution</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
 			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				<a id="documentation" class="nav-link" href="/docs/" ><span>Documentation</span></a>
+			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
 				
@@ -77,11 +90,38 @@
 			</li>
 			
 			
+			<li class="nav-item dropdown d-block pl-2">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Releases
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="http://v2022.docs.cortex-ia.com/">v2022 (latest)</a>
+	
+	<a class="dropdown-item" href="https://community.cortex.co.uk/">v7.2</a>
+	
+</div>
+
+			</li>
+			
 			
 		</ul>
 	</div>
 	<div class="navbar-nav d-none d-lg-block">
-<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.f63277a47600743f9d7a4c438461f95a.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="50"
+>
 
 </div>
 </nav>
@@ -129,7 +169,37 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-4e860c3dc4913c06834e13c67b94e71b">Generics</a></li>
+<li>1: <a href="#pg-20289208f53d09a472c148fbc711745a">Fundamental Concepts</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-9cd8ca151c4921872e2aa2994ceb308b">Working with Exceptions</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1.1: <a href="#pg-01b4dd6a2052c67ec225ee1591b472aa">What is an Exception?</a></li>
 
 
     
@@ -137,7 +207,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-c93b9298f933a6654abfbcb98f0bec72">Indexes</a></li>
+<li>1.1.2: <a href="#pg-26efc1c1ac9b3588ddbbe5b618effa06">Handling Exceptions</a></li>
 
 
     
@@ -145,7 +215,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>3: <a href="#pg-b02dc8a2fd862cd14b9b13b3b34b2d8b">Literals, Variables and Expressions</a></li>
+<li>1.1.3: <a href="#pg-dfb49c47a80d61aad82c0f7d042d11ea">Throwing Exceptions</a></li>
 
 
     
@@ -153,7 +223,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>4: <a href="#pg-6a73af7268c07cfd299b458847821229">Property Type</a></li>
+<li>1.1.4: <a href="#pg-a710a52861f273c68eeeea9f7c598ef0">Discarding Exceptions</a></li>
 
 
     
@@ -161,7 +231,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>5: <a href="#pg-6e9504034abd335d33d88b35d1eb9bd0">Text Casing</a></li>
+<li>1.1.5: <a href="#pg-83757af2ef6f619364dd0013a02acf59">Related Blocks</a></li>
 
 
     
@@ -169,9 +239,471 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6: <a href="#pg-ce234f285536bbfac901f48ddebc0d79">Text Equality</a></li>
+<li>1.1.6: <a href="#pg-0592ecc2a4ec1d797a635543a3b8b660">Related Data Types</a></li>
 
 
+    
+  
+    
+    
+	
+<li>1.1.7: <a href="#pg-e8219754a9b57d2bb1bbde44bfd91160">Help Links</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.1.8: <a href="#pg-91aabbbcd0c26d4f994fb43c94928047">Known Limitations</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-10508d3625cc7b55c22a9bd6c3497d20">Complex Types</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3: <a href="#pg-223c8fd2497450ace6eaef4efeeb0e87">Converting Objects To Text</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4: <a href="#pg-6249ec62c6d5782b615a3fe9cca35e96">Culture</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.5: <a href="#pg-c80902f0dd318c7e80951cda2d47c679">Primitive Types</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.6: <a href="#pg-c29acf9434cd95cd7c81e7f1982e7a97">Working with Variables</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.6.1: <a href="#pg-9549542fefc2f645fbda9b0e90146212">What is a Variable?</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.6.2: <a href="#pg-cfe32a7ea1e5b684e7ed62c10f21ea37">Referencing Variables</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.6.2.1: <a href="#pg-43d56d772379bb608ada023e15601812">Expression Editor</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>1.6.3: <a href="#pg-585f391cadc9c4db9f90425a47415fb1">Variable Scopes</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-ae494ee6211de334462e75e80348a97f">.Net Regex Syntax</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-15823cf47e6efeb62beaeda0b0bdca35">Date and Time Formats</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-3ea418a8af2301a4bff4f94a4aab8caf">Empty Text and Whitespace</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-a767a29a2ddb380ba426f6034faa4a7d">Exception Handling</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-958e3e94039adaed569b60f48e1c8089">File &amp; Folder Attributes</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-710eb3fc187685a7c0afb06851de0b2e">File &amp; Folder Paths</a></li>
+
+
+    
+  
+    
+    
+	
+<li>8: <a href="#pg-41061d45bddef0e43fe46befd87d467c">Generics</a></li>
+
+
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-280ed2ed7f2edeec23376a5f108fd038">Indexes</a></li>
+
+
+    
+  
+    
+    
+	
+<li>10: <a href="#pg-3368f5dc5d5521ab2562eb7a27515ba9">ISO 8601 Standard</a></li>
+
+
+    
+  
+    
+    
+	
+<li>11: <a href="#pg-a5483dd1ed6750b24f48989ed305bc5d">Keys</a></li>
+
+
+    
+  
+    
+    
+	
+<li>12: <a href="#pg-97aa52883eb2355e9707d2d5e05258f9">Literals, Variables and Expressions</a></li>
+
+
+    
+  
+    
+    
+	
+<li>13: <a href="#pg-5c5549cf4f4c31c1850481acbd71e62a">Null and Nullable Types</a></li>
+
+
+    
+  
+    
+    
+	
+<li>14: <a href="#pg-6c73c58705a1f6a734b558627a05aacd">Object Casting</a></li>
+
+
+    
+  
+    
+    
+	
+<li>15: <a href="#pg-65acf41ec3c9f50eb9f8c3e5ace3402c">Object Equality</a></li>
+
+
+    
+  
+    
+    
+	
+<li>16: <a href="#pg-6a5564760a803fc81cc652f6b195660a">Occurrences</a></li>
+
+
+    
+  
+    
+    
+	
+<li>17: <a href="#pg-b540c21fec02b81a13d8291d935ebfd5">Pattern Matching Syntax</a></li>
+
+
+    
+  
+    
+    
+	
+<li>18: <a href="#pg-d358cac8821e9a5d3b13749900d8146f">Property Type</a></li>
+
+
+    
+  
+    
+    
+	
+<li>19: <a href="#pg-d6c4f8ba6bed1de5133487518f5335b0">Text Casing</a></li>
+
+
+    
+  
+    
+    
+	
+<li>20: <a href="#pg-a4466754690ba5475048535f0039f680">Text Encoding</a></li>
+
+
+    
+  
+    
+    
+	
+<li>21: <a href="#pg-8e39bb21807d287d6e05206d9925b077">Text Equality</a></li>
+
+
+    
+  
+    
+    
+	
+<li>22: <a href="#pg-c9c3fdbe69f86f3f25e6d34734588645">Translation Errors</a></li>
+
+
+    
+  
+    
+    
+	
+<li>23: <a href="#pg-638c702d5a06a42751c22ee0fe77e61c">Working with Collections</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>24: <a href="#pg-7bf444ad120dd4751001a119f769b751">Working with Data Sources</a></li>
+
+
+    
+  
+    
+    
+	
+<li>25: <a href="#pg-4a42273c24ee7e1cc48cf93f55c9e499">Working with Date and Time</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>26: <a href="#pg-dd5debd5c5285f619c408c25a0e53ec5">Working with Dates and Time</a></li>
+
+
+    
+  
+    
+    
+	
+<li>27: <a href="#pg-791bdb21ec3a840fa21d0b9d0a250fe8">Working with Exceptions</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>28: <a href="#pg-cac9417b8dfa0e3f75419a3ad8b55aaa">Working with Files and Folders</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>29: <a href="#pg-d30cf9f17582ee47d486be1fd31107ba">Working with Numbers</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>30: <a href="#pg-df66b2d061b95f988e08edf3800c46c5">Working with References</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>31: <a href="#pg-faaf6a962dc0fc3691b742b87d0a4d8c">Working with Text</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>31.1: <a href="#pg-dfebd08065bb57bcb5352be8de260702">Text Formatting</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>32: <a href="#pg-e5d7fef004dd535be657aeaff36f34b1">Working with Variables</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
     
   
 
@@ -179,7 +711,8 @@ This the multi-page printable view of this section.
 
 
 <div class="content">
-      
+      <p>TODO: Null, reference types, value types, nullable value types - also search for &ldquo;non-nullable value types&rdquo; and add links</p>
+
 </div>
 </div>
 
@@ -200,10 +733,742 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-4e860c3dc4913c06834e13c67b94e71b">1 - Generics</h1>
+	<h1 id="pg-20289208f53d09a472c148fbc711745a">1 - Fundamental Concepts</h1>
+    <div class="lead">Fundamental concepts when working with Cortex Evolution.</div>
+	<p>TODO:</p>
+<ul>
+<li>
+<p>Blocks</p>
+<ul>
+<li>Action Blocks</li>
+<li>Workspace Blocks</li>
+<li>Decision Blocks</li>
+<li>Exception Blocks</li>
+<li>Looping Blocks</li>
+<li>Termination Blocks</li>
+<li>Trigger Blocks</li>
+</ul>
+</li>
+<li>
+<p>Block Properties</p>
+<ul>
+<li>Input Property</li>
+<li>InputOutput Property</li>
+<li>Output Property</li>
+</ul>
+</li>
+<li>
+<p>Data Types</p>
+</li>
+<li>
+<p>Objects</p>
+</li>
+<li>
+<p>Equality</p>
+</li>
+<li>
+<p>Casting</p>
+</li>
+<li>
+<p>Literals</p>
+</li>
+<li>
+<p>Variables</p>
+<ul>
+<li>Discard Variable</li>
+</ul>
+</li>
+<li>
+<p>Expressions</p>
+</li>
+<li>
+<p>Object</p>
+</li>
+<li>
+<p>dynamic</p>
+</li>
+<li>
+<p>Generics</p>
+</li>
+<li>
+<p>Reference Types</p>
+<ul>
+<li>Null</li>
+</ul>
+</li>
+<li>
+<p>Value Types</p>
+<ul>
+<li>Nullable Value Types</li>
+</ul>
+</li>
+<li>
+<p>Converting Objects To Text</p>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-9cd8ca151c4921872e2aa2994ceb308b">1.1 - Working with Exceptions</h1>
+    <div class="lead">Information related to working with Exceptions.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-01b4dd6a2052c67ec225ee1591b472aa">1.1.1 - What is an Exception?</h1>
+    <div class="lead">This page describes the concept of an Exception</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-26efc1c1ac9b3588ddbbe5b618effa06">1.1.2 - Handling Exceptions</h1>
+    <div class="lead">This page provides guidance and best practices around handling block and flow exceptions.</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-dfb49c47a80d61aad82c0f7d042d11ea">1.1.3 - Throwing Exceptions</h1>
+    <div class="lead">This page provides guidance on how to throw custom exceptions</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a710a52861f273c68eeeea9f7c598ef0">1.1.4 - Discarding Exceptions</h1>
+    <div class="lead">This page provides guidance on how to discard exceptions</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-83757af2ef6f619364dd0013a02acf59">1.1.5 - Related Blocks</h1>
+    <div class="lead">This page looks at the related blocks used for exception handling</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0592ecc2a4ec1d797a635543a3b8b660">1.1.6 - Related Data Types</h1>
+    <div class="lead">This page looks at the related data types used in exception handling</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e8219754a9b57d2bb1bbde44bfd91160">1.1.7 - Help Links</h1>
+    <div class="lead">This page looks at help links within exception messages</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-91aabbbcd0c26d4f994fb43c94928047">1.1.8 - Known Limitations</h1>
+    <div class="lead">This page describes the currently known limitations of Exception Handling</div>
+	
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-10508d3625cc7b55c22a9bd6c3497d20">1.2 - Complex Types</h1>
+    <div class="lead">This page describes the concept of Primitive Types.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Complex Types</h1>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-223c8fd2497450ace6eaef4efeeb0e87">1.3 - Converting Objects To Text</h1>
+    <div class="lead">This page describes how to convert objects to their text representation.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Converting Objects To Text</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p>TODO: .ToString() - talk about that some objects will just return their name, text formatting format providers etc.</p>
+<p>TODO: {{}} - synonomous with .ToString()</p>
+<p>TODO: Json Serialize</p>
+<p>TODO: Xml Serialize</p>
+<p>TODO: Convert.ToString()</p>
+<h3 id="string-interpolation">String interpolation</h3>
+<p>This is referenced by these pages (not exclusive)</p>
+<ul>
+<li>Execute Command Block</li>
+</ul>
+<p>TODO: String.Format</p>
+<h2 id="blocks-that-automatically-convert-objects-to-text">Blocks that automatically convert Objects to Text</h2>
+<p>TODO</p>
+<ul>
+<li>Format Text With Value</li>
+<li>Format Text With Values</li>
+<li>Split text?</li>
+<li>Convert Object To Text - need to make it clear how this works - does tostring and if tostring returns class name does json serialisation</li>
+<li>Others?</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6249ec62c6d5782b615a3fe9cca35e96">1.4 - Culture</h1>
+    <div class="lead">This page describes the concept of culture.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Culture</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="invariant-culture">Invariant Culture</h2>
+<p>TODO: Invariant</p>
+<p>TODO: Current</p>
+<p>TODO: Other builtin?</p>
+<p>TODO: Custom/supported</p>
+<h2 id="blocks-that-use-culture">Blocks that use Culture</h2>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c80902f0dd318c7e80951cda2d47c679">1.5 - Primitive Types</h1>
+    <div class="lead">This page describes the concept of Primitive Types.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Primitive Types</h1>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c29acf9434cd95cd7c81e7f1982e7a97">1.6 - Working with Variables</h1>
+    <div class="lead">Information related to working with Variables.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-9549542fefc2f645fbda9b0e90146212">1.6.1 - What is a Variable?</h1>
+    <div class="lead">This page describes the concept of a Variable</div>
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cfe32a7ea1e5b684e7ed62c10f21ea37">1.6.2 - Referencing Variables</h1>
+    <div class="lead">Guides on Referencing Variables.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-43d56d772379bb608ada023e15601812">1.6.2.1 - Expression Editor</h1>
+    <div class="lead">Guide on referencing variables in the Expression Editor.</div>
+	
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-585f391cadc9c4db9f90425a47415fb1">1.6.3 - Variable Scopes</h1>
+    <div class="lead">The page provides guidance on creating and working with variables in different scopes</div>
+	<h1 id="variable-scopes">Variable Scopes</h1>
+<h2 id="what-is-a-scope">What is a Scope?</h2>
+<h2 id="create-a-variable-in-a-certain-scope">Create a Variable in a certain Scope</h2>
+<h2 id="change-the-scope-of-a-variable">Change the scope of a variable</h2>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ae494ee6211de334462e75e80348a97f">2 - .Net Regex Syntax</h1>
+    <div class="lead">This page describes the .Net Regex Syntax.</div>
+	<p>TODO: frontmatter description</p>
+<h1 id="hahahugoshortcode-s0-hbhb">.Net Regex Syntax</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary of regex and following sections</p>
+<h3 id="character-classes">Character Classes</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="character-escapes">Character Escapes</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="quantifiers">Quantifiers</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="anchors">Anchors</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="grouping-constructs">Grouping Constructs</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="back-reference-constructs">Back-reference Constructs</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="alternation-constructs">Alternation Constructs</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="substitutions">Substitutions</h3>
+<p>TODO: Take content from current gateway/help-preview/#Static%20Content/ReGexReference.html
+TODO: Include information about any builtin snippets for each regex</p>
+<h3 id="blocks-that-use-regex">Blocks that use Regex</h3>
+<p>TODO: List blocks which support using regex</p>
+<p>TODO: All blocks which support regex should link back here from the properties that support it</p>
+<p>TODO: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions</a></p>
+<p>TODO: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference</a></p>
+<p>TODO: Options <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options</a> and <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions">https://docs.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions</a></p>
+<p>TODO: Common useful regexes</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs</a></li>
+<li>and subsequent links</li>
+</ul>
+<p>TODO: State that we specify a timeout to prevent dos attacks</p>
+<p>TO CONSIDER: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices</a></p>
+<p>TODO: Talk about no current support for old g2 syntax - may add in future</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-15823cf47e6efeb62beaeda0b0bdca35">3 - Date and Time Formats</h1>
+    <div class="lead">This page gives information about Date and Time Formats.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Date and Time Formats</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p>TODO: Common formats ISO8601, Invariant Culture</p>
+<h2 id="format-providers">Format providers</h2>
+<p>TODO: what are they
+TODO: ways of creating</p>
+<ul>
+<li>CultureInfo.InvariantCulture</li>
+<li>CultureInfo.CurrentCulture</li>
+<li>new CultureInfo(&quot;&quot;)</li>
+<li>new CultureInfo(&ldquo;en-GB&rdquo;)</li>
+</ul>
+<p>or</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties</a></p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0</a></p>
+<h3 id="invariant-culture">Invariant Culture</h3>
+<p>TODO default format <code>&quot;MM/dd/yyyy HH:mm:ss zzz&quot;</code></p>
+<p>TODO rules <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0</a></p>
+<h3 id="current-culture">Current Culture</h3>
+<p>TODO</p>
+<h2 id="format-templates">Format Templates</h2>
+<p>TODO: What are they
+TODO: What are the 2 flavours: standard and custom
+TODO: How do they relate to format providers</p>
+<h3 id="standard-format-templates">Standard Format Templates</h3>
+<p>TODO: What are they - single character format specifier
+TODO: Table of them
+TODO: Invariant format templates -</p>
+<p>In some cases, the standard format string serves as a convenient abbreviation for a longer custom format string that is invariant. Four standard format strings fall into this category: &ldquo;O&rdquo; (or &ldquo;o&rdquo;), &ldquo;R&rdquo; (or &ldquo;r&rdquo;), &ldquo;s&rdquo;, and &ldquo;u&rdquo;. These strings correspond to custom format strings defined by the invariant culture. They produce string representations of date and time values that are intended to be identical across cultures. The following table provides information on these four standard date and time format strings.</p>
+<p>TABLE 2
+Standard format string	Defined by DateTimeFormatInfo.InvariantInfo property	Custom format string
+&ldquo;O&rdquo; or &ldquo;o&rdquo;	None	yyyy'-&lsquo;MM&rsquo;-&lsquo;dd&rsquo;T&rsquo;HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss&rsquo;.&lsquo;fffffffK
+&ldquo;R&rdquo; or &ldquo;r&rdquo;	RFC1123Pattern	ddd, dd MMM yyyy HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss &lsquo;GMT&rsquo;
+&ldquo;s&rdquo;	SortableDateTimePattern	yyyy&rsquo;-&lsquo;MM&rsquo;-&lsquo;dd&rsquo;T&rsquo;HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss
+&ldquo;u&rdquo;	UniversalSortableDateTimePattern	yyyy&rsquo;-&lsquo;MM&rsquo;-&lsquo;dd HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss&rsquo;Z&rsquo;</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</a></p>
+<h3 id="custom-format-templates">Custom Format Templates</h3>
+<p>TODO: What are they - multiple character format specifiers
+TODO: Some examples</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings</a></p>
+<h2 id="format-specifiers">Format specifiers</h2>
+<p>TODO: what are they
+TODO: Table of them</p>
+<p>Some of the commonly used format specifiers are:</p>
+<ul>
+<li>dd: The day of the month, from 01 through 31</li>
+<li>MM: The month, from 01 through 12</li>
+<li>yyyy: The year as a four-digit number</li>
+<li>HH: The hour, using a 24-hour clock from 00 to 23</li>
+<li>hh: The hour, using a 12-hour clock from 01 to 12</li>
+<li>mm: The minute, from 00 through 59</li>
+<li>ss: The second, from 00 through 59</li>
+<li>fff: The number of milliseconds</li>
+<li>tttt: The AM/PM designator</li>
+</ul>
+<p>The full set of allowed format specifiers are as per standard Microsoft .NET Custom Date and Time Format Strings.</p>
+<h2 id="operating-system-settings">Operating System Settings</h2>
+<p>TODO: How can these affect datetime formats etc.</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings</a></p>
+<p>TODO Add concepts page for string/object formatting that links to:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting">https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data</a></li>
+</ul>
+<p>TODO Add concepts page for formatting numbers that links to:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings</a></li>
+</ul>
+<p>TODO: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime">https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime</a></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3ea418a8af2301a4bff4f94a4aab8caf">4 - Empty Text and Whitespace</h1>
+    <div class="lead">This page describes the concept of empty text and whitespace.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Empty Text and Whitespace</h1>
+<p>TODO: This section is in preparation.</p>
+<h2 id="empty-text">Empty Text</h2>
+<p><code>&quot;&quot;</code> or <code>String.Empty</code></p>
+<h2 id="whitespace">Whitespace</h2>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char">https://docs.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char</a>_ and textual represnetation \t \r \n etc.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a767a29a2ddb380ba426f6034faa4a7d">5 - Exception Handling</h1>
+    <div class="lead">This page describes the concept of Exception Handling.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Exception Handling</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-958e3e94039adaed569b60f48e1c8089">6 - File &amp; Folder Attributes</h1>
+    <div class="lead">This page describes the concept of file and folder attributes.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">File &amp; Folder Attributes</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p>TODO: Supported file and folder attributes and examples of using them</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-5.0</a>
+Other?</p>
+<h2 id="blocks-which-use-file-and-folder-attributes">Blocks which use File and Folder Attributes</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-710eb3fc187685a7c0afb06851de0b2e">7 - File &amp; Folder Paths</h1>
+    <div class="lead">This page describes the concept of file and folder paths.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">File &amp; Folder Paths</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p>TODO: Supported file and folder path formats and examples of using them
+TODO: How we determine is a path is a folder or a file
+path\ = folder (path with terminating \ or /)
+path = folder (path not ending in extension)
+path.extension = file (path ending in extension)
+path.anotherpartofpath\ = folder (as it ends in a \ or /)
+<a href="http://vd-tfs1.pivetal.com:8080/tfs/Product%20Development/Cortex/Team%201/_git/Cortex.Blocks?path=%2FCortex.Blocks%2FAcceptanceCriteria%2FFilesAndFolders.cs&amp;version=GBrefactor%2F51984-missing-file-ac-unit-tests">http://vd-tfs1.pivetal.com:8080/tfs/Product%20Development/Cortex/Team%201/_git/Cortex.Blocks?path=%2FCortex.Blocks%2FAcceptanceCriteria%2FFilesAndFolders.cs&amp;version=GBrefactor%2F51984-missing-file-ac-unit-tests</a></p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats">https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats</a>
+<a href="https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file">https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file</a>
+<a href="https://docs.microsoft.com/en-us/windows/wsl/filesystems">https://docs.microsoft.com/en-us/windows/wsl/filesystems</a>
+<a href="https://docs.microsoft.com/en-us/dotnet/standard/io/">https://docs.microsoft.com/en-us/dotnet/standard/io/</a>
+<a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0</a></p>
+<p>TODO: Valid folder names</p>
+<h2 id="blocks-which-use-file-and-folder-paths">Blocks which use File and Folder Paths</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-41061d45bddef0e43fe46befd87d467c">8 - Generics</h1>
     <div class="lead">This page describes the concept of Generics.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Generics</h1>
-<p>TODO: This section is in preparation.</p>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="blocks-which-use-generics">Blocks which use Generics</h2>
 
 </div>
 
@@ -219,10 +1484,12 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-c93b9298f933a6654abfbcb98f0bec72">2 - Indexes</h1>
+	<h1 id="pg-280ed2ed7f2edeec23376a5f108fd038">9 - Indexes</h1>
     <div class="lead">This page describes the concept of Indexes.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Indexes</h1>
-<p>TODO: This section is in preparation.</p>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="blocks-which-use-indexes">Blocks which use Indexes</h2>
 
 </div>
 
@@ -238,41 +1505,129 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b02dc8a2fd862cd14b9b13b3b34b2d8b">3 - Literals, Variables and Expressions</h1>
-    <div class="lead">This page describes the different formats that can be used when entering values for block properties.</div>
+	<h1 id="pg-3368f5dc5d5521ab2562eb7a27515ba9">10 - ISO 8601 Standard</h1>
+    <div class="lead">This page gives information about the ISO 8601 Standard.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">ISO 8601 Standard</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO Should this disappear and move to date time formats? If so, need to rework links</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a5483dd1ed6750b24f48989ed305bc5d">11 - Keys</h1>
+    <div class="lead">This page describes the concept of Keys.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Keys</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="blocks-which-use-keys">Blocks which use Keys</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-97aa52883eb2355e9707d2d5e05258f9">12 - Literals, Variables and Expressions</h1>
+    <div class="lead">This page describes the different syntax that can be used when entering values for block properties.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Literals, Variables and Expressions</h1>
-<p>This page describes the different formats that can be used when entering values for block properties.</p>
-<h2 id="literal">Literal</h2>
-<p>A literal is a value that does not need to be calculated during the execution of the flow. A literal can be of any type and includes JSON Structure and List.</p>
-<h3 id="an-integer-literal">An integer literal</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">291</span>
-</code></pre></div><h3 id="a-string-literal">A string literal</h3>
+<p>This page describes the different syntax that can be used when entering values for block properties.</p>
+<h2 id="literals">Literals</h2>
+<p>A literal is a value that does not need to be calculated during the execution of the flow. A literal can be of any <a href="
+
+
+/docs/reference/data-types/
+">data type</a>.</p>
+<h3 id="string-literals">String literals</h3>
 <p>Note that a string requires double quotes to indicate that it is a string literal.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Example String&#34;</span>
-</code></pre></div><h3 id="an-object-literal">An object literal</h3>
-<p>Note that because the value of an object property in JSON is already contained within double quotes, a string will need some escaped double quotes (&quot;) to indicate that it is a string literal, as per the example.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;StringProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;\&#34;String Value\&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;IntegerProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">6</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Example String&#34;</span>
+</code></pre></div><p>TODO: Chars</p>
+<h3 id="integer-literals">Integer literals</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">1</span>
+</code></pre></div><p>TODO: Talk about integer sizing
+TODO: floating points</p>
+<h3 id="boolean-literals">Boolean literals</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#204a87;font-weight:bold">true</span> <span style="color:#a40000">or</span> <span style="color:#204a87;font-weight:bold">false</span>
+</code></pre></div><h3 id="object-literals">Object literals</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;StringProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Example String&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;IntegerProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;BooleanProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;EmptyDictionaryProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;EmptyListProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+  <span style="color:#204a87;font-weight:bold">&#34;EmptyObjectProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;EmptyStructureProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;NullProperty&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h3 id="a-list-literal">A list literal</h3>
-<p>Note that because the value in a List in JSON is already contained within double quotes, a string will need some escaped double quotes (&quot;) to indicate that it is a string literal, as per the example.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#4e9a06">&#34;\&#34;String Value\&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#0000cf;font-weight:bold">6</span>
+</code></pre></div><p>If the [Cortex Flow Engine][TODO Link] can determine that a literal object matches a known <a href="
+
+
+/docs/reference/data-types/
+">data type</a>, then the engine will convert the literal object to that data type, otherwise it will convert it to a [structure][TODO Link].</p>
+<p>TODO: talk about $type
+TODO: talk about using the data type of properties
+TODO: talk about dictionaries
+TODO: talk about structures
+TODO: Datetimeoffset/timeperiod
+TODO: Enums</p>
+<h3 id="dictionary-literals">Dictionary literals</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;Key 1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;Key 2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;Key 3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;Key 4&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;Key 5&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+  <span style="color:#204a87;font-weight:bold">&#34;Key 6&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>TODO: Talk about heterogenous vs homogenous dictionaries.
+TODO: talk about keys and uniqueness
+TODO: talk about complex keys
+TODO: talk about {} and dynamic vs object
+TODO: talk about typed dictionaries</p>
+<h3 id="list-literals">List literals</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
+  <span style="color:#4e9a06">&#34;Example String&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000;font-weight:bold">{},</span>
+  <span style="color:#000;font-weight:bold">[],</span>
+  <span style="color:#204a87;font-weight:bold">null</span>
 <span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><h2 id="variable-reference">Variable Reference</h2>
+</code></pre></div><p>TODO: talk about [] and dynamic vs object
+TODO: talk about typed lists
+TODO: Talk about heterogenous vs homogenous lists.</p>
+<h2 id="variable-reference">Variable Reference</h2>
+<p>TODO: Review</p>
 <p>A variable reference is a value that has been stored within a variable. The value that the variable evaluates to will not be constant, it will depend on what value was assigned to it.</p>
 <p>When the variable contains a Structure or a List, you can index into the variable to access values within the Structure/List.</p>
 <h3 id="a-variable-reference">A variable reference</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span>
 </code></pre></div><h3 id="a-structure-property">A structure property</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PropertyName</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PropertyName</span>
 </code></pre></div><h3 id="a-list-value">A list value</h3>
 <p>Note that you can index into a list using an int variable as well as with an int literal.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span><span style="color:#000;font-weight:bold">[(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">indexVariable</span><span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">variableName</span><span style="color:#000;font-weight:bold">[(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">indexVariable</span><span style="color:#000;font-weight:bold">]</span>
 </code></pre></div><h2 id="expressions">Expressions</h2>
+<p>TODO: Review</p>
 <p>An expression is a value that will be calculated when the execution reaches the block. Cortex expressions use C# syntax so anything that is a valid C# expression will be valid. Full namespaces or keywords for built-in C# types will need to be used to reference a .NET data type.</p>
 <h3 id="arithmetic-expressions">Arithmetic expressions</h3>
 <p><code>($)intVar1</code> equals <code>6</code> and <code>($)intVar2</code> equals <code>3</code></p>
@@ -327,6 +1682,11 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
+<p>TODO: Other data type expressions like above with literals</p>
+<h3 id="dictionary-expressions">Dictionary expressions</h3>
+<p>TODO</p>
+<h3 id="list-expressions">List expressions</h3>
+<p>TODO</p>
 <h3 id="creating-a-new-object">Creating a new object</h3>
 <table>
 <thead>
@@ -400,9 +1760,136 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6a73af7268c07cfd299b458847821229">4 - Property Type</h1>
+	<h1 id="pg-5c5549cf4f4c31c1850481acbd71e62a">13 - Null and Nullable Types</h1>
+    <div class="lead">This page describes the concept of Null and Nullable Types.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Null and Nullable Types</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="null">Null</h2>
+<h2 id="nullable-types">Nullable Types</h2>
+<h2 id="blocks-that-use-nullable-types">Blocks that use Nullable Types</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6c73c58705a1f6a734b558627a05aacd">14 - Object Casting</h1>
+    <div class="lead">This page describes the concept of Object Casting.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Object Casting</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="implicit-cast">Implicit Cast</h2>
+<h2 id="explicit-cast">Explicit Cast</h2>
+<h2 id="object-vs-dynamic">Object vs dynamic</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-65acf41ec3c9f50eb9f8c3e5ace3402c">15 - Object Equality</h1>
+    <div class="lead">This page describes the concept of Object Equality.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Object Equality</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="value-type-vs-reference-type-equality">Value Type vs Reference Type Equality</h2>
+<p>TODO:</p>
+<h3 id="value-type-equality">Value Type Equality</h3>
+<p>TODO: notes about value equality and a worked through example</p>
+<h3 id="reference-type-equality">Reference Type Equality</h3>
+<p>TODO: notes about reference equality and a worked through example</p>
+<h2 id="how-cortex-compares-objects-for-equality">How Cortex compares objects for equality</h2>
+<p>TODO: notes about how cortex compares and a worked through example</p>
+<p>Notes:List and Dictionary equality is slightly different to normal equality as it will compare first based on reference and then fall back to value - compared to == .Equals .ReferenceEquals - blocks affected</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6a5564760a803fc81cc652f6b195660a">16 - Occurrences</h1>
+    <div class="lead">This page describes the concept of Occurrences.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Occurrences</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="positive-occurrences">Positive Occurrences</h2>
+<p>TODO:</p>
+<h2 id="negative-occurrences">Negative Occurrences</h2>
+<p>TODO:</p>
+<h2 id="blocks-that-use-occurrences">Blocks that use Occurrences</h2>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b540c21fec02b81a13d8291d935ebfd5">17 - Pattern Matching Syntax</h1>
+    <div class="lead">This page describes Pattern Matching Syntax.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Pattern Matching Syntax</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p><code>*</code> is 0 or more
+<code>?</code> is 0 or 1
+to use these as literals use <code>\\*</code> <code>\\?</code></p>
+<h2 id="blocks-that-use-pattern-matching">Blocks that use Pattern Matching</h2>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d358cac8821e9a5d3b13749900d8146f">18 - Property Type</h1>
     <div class="lead">This page describes the concepts of Input, Output and InputOutput properties.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Property Type</h1>
+<p>TODO: Verify all of this as was written by Louis ages ago.</p>
 <p>This page describes the concept of Input, Output and InputOutput properties.</p>
 <h2 id="input">Input</h2>
 <p>The input property is used to supply the value which will be used by the block.
@@ -413,7 +1900,7 @@ It can be a <a href="
 ">variable reference</a> or a <a href="
 
 
-/docs/reference/concepts/literal-variables-expressions/#literal
+/docs/reference/concepts/literal-variables-expressions/#literals
 ">literal</a></p>
 <blockquote>
 <p>Existing value of the input property will not get modified during block execution</p>
@@ -428,7 +1915,10 @@ It can be only a <a href="
 <blockquote>
 <p>Existing value of the supplied variable will get modified</p>
 </blockquote>
+<h3 id="discarding-output">Discarding Output</h3>
+<p>TODO:</p>
 <h2 id="inputoutput">InputOutput</h2>
+<p>TODO: used during block? What did Louis mean.</p>
 <p>The InputOutput property is used to supply the value which will be used during block. It is also used to save the result of block execution.
 It can be only a <a href="
 
@@ -453,15 +1943,51 @@ It can be only a <a href="
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6e9504034abd335d33d88b35d1eb9bd0">5 - Text Casing</h1>
+	<h1 id="pg-d6c4f8ba6bed1de5133487518f5335b0">19 - Text Casing</h1>
     <div class="lead">This page describes the concept of Text Casing.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Text Casing</h1>
-<h2 id="overview">Overview</h2>
-<p>TODO: Overview/summary</p>
+<h2 id="common-types-of-text-casing">Common types of text casing</h2>
+<p>There are many different types of text casing.</p>
+<p>The table below lists some of the most common types of text casing:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lowercase</td>
+<td><code>&quot;this is lowercase&quot;</code></td>
+<td>All letters in all words are lower cased.</td>
+</tr>
+<tr>
+<td>UPPERCASE</td>
+<td><code>&quot;THIS IS UPPERCASE&quot;</code></td>
+<td>All letters in all words are capitalized.</td>
+</tr>
+<tr>
+<td>Title Case</td>
+<td><code>&quot;This Is Title Case&quot;</code></td>
+<td>First letter in all words is capitalized, all other letters are lower cased; except for words that are entirely upper cased, such as acronyms, which remain upper cased; spaces and punctuation are preserved.</td>
+</tr>
+<tr>
+<td>camelCase</td>
+<td><code>&quot;thisIsCamelCase&quot;</code></td>
+<td>First letter in all words (except the first) is capitalized, all other letters are lower cased, and all spaces and punctuation are removed.</td>
+</tr>
+<tr>
+<td>PascalCase</td>
+<td><code>&quot;ThisIsCamelCase&quot;</code></td>
+<td>First letter in all words is capitalized, all other letters are lower cased, and all spaces and punctuation are removed.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="culture-info">Culture Info</h2>
 <p>Culture Info specifies the culture-specific casing rules used to determine how the case of text is changed.</p>
-<p>The table below lists the supported culture info:</p>
-<p>TODO: Full list</p>
+<p>The table below lists the most common supported culture info:</p>
 <table>
 <thead>
 <tr>
@@ -483,6 +2009,7 @@ It can be only a <a href="
 </tr>
 </tbody>
 </table>
+<p>TODO: See XYZ for a full list - link to microsoft full list</p>
 <p>For more information about culture info, please see <a href="
 
 
@@ -490,10 +2017,18 @@ It can be only a <a href="
 
 https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=netcore-3.1
 ">CultureInfo</a>.</p>
+<p>TODO: Probably should link to fundamentals-&gt;culture</p>
+<p>TODO: When to use? If not sure what to choose?</p>
 <h3 id="current-culture">Current Culture</h3>
+<p>For Current Culture, the casing rules used to determine how the case of text is changed are culture-sensitive and based on the culture that the flow execution is currently running as. The Current Culture will be the culture of the operating system the flow execution is running on.</p>
+<p>TODO: Best practices - all OSes in cluster should be installed with same OS culture and settings etc. - should also be time sync&rsquo;d</p>
 <p>TODO: notes about current culture and a worked through example</p>
 <h3 id="invariant-culture">Invariant Culture</h3>
+<p>For Invariant Culture, the casing rules used to determine how the case of text is changed are not culture-sensitive.</p>
 <p>TODO: notes about invariant culture and a worked through example</p>
+<p>TODO: From <a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0</a></p>
+<p>If a security decision depends on a string comparison or a case-change operation, the application should use the InvariantCulture to ensure that the behavior is consistent regardless of the culture settings of the system. However, the invariant culture must be used only by processes that require culture-independent results, such as system services. Otherwise, it produces results that might be linguistically incorrect or culturally inappropriate.</p>
+<p>For more information on cultures, see CultureInfo.</p>
 
 </div>
 
@@ -509,7 +2044,36 @@ https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?vie
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ce234f285536bbfac901f48ddebc0d79">6 - Text Equality</h1>
+	<h1 id="pg-a4466754690ba5475048535f0039f680">20 - Text Encoding</h1>
+    <div class="lead">This page describes the concept of Text Encoding.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Text Encoding</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<p>TODO: Available encodings</p>
+<p>TODO: How to define them/use them
+// Different ways to specify encoding:
+//      - Encoding encoding = Encoding.GetEncoding(20127);
+//      - Encoding encoding = new ASCIIEncoding();
+//      - Encoding encoding = Encoding.ASCII;</p>
+<p>TODO: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction">https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction</a></p>
+<h2 id="blocks-that-use-encoding">Blocks that use Encoding</h2>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8e39bb21807d287d6e05206d9925b077">21 - Text Equality</h1>
     <div class="lead">This page describes the concept of Text Equality.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Text Equality</h1>
 <h2 id="overview">Overview</h2>
@@ -578,10 +2142,394 @@ https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore
 <p>TODO: notes about invariant culture and a worked through example</p>
 <h3 id="ordinal">Ordinal</h3>
 <p>TODO: notes about ordinal and a worked through example</p>
+<h4 id="ordinal-ignore-case">Ordinal Ignore Case</h4>
+<p>TODO: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings</a></p>
+<h2 id="blocks-that-use-comparison-types">Blocks that use Comparison Types</h2>
+<p>TODO:</p>
 
 </div>
 
 
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c9c3fdbe69f86f3f25e6d34734588645">22 - Translation Errors</h1>
+    <div class="lead">This page describes the concept of Translation Errors.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Translation Errors</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-638c702d5a06a42751c22ee0fe77e61c">23 - Working with Collections</h1>
+    <div class="lead">Information related to working with collections such as Lists, Dictionaries and Structures.</div>
+	<h3 id="structures">Structures</h3>
+<h3 id="keys">Keys</h3>
+<h3 id="items">Items</h3>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7bf444ad120dd4751001a119f769b751">24 - Working with Data Sources</h1>
+    <div class="lead">This page gives information about working with Data Sources.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Working with Data Sources</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<ul>
+<li>Supported Data Sources</li>
+<li>Connection Strings</li>
+</ul>
+<p>Currently SQL Server is the only supported data source.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4a42273c24ee7e1cc48cf93f55c9e499">25 - Working with Date and Time</h1>
+    <div class="lead">Information related to working with Date and Time.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-dd5debd5c5285f619c408c25a0e53ec5">26 - Working with Dates and Time</h1>
+    <div class="lead">This page gives information about working with Dates and Time.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Working with Dates and Time</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-791bdb21ec3a840fa21d0b9d0a250fe8">27 - Working with Exceptions</h1>
+    <div class="lead">Information related to working with Exceptions.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cac9417b8dfa0e3f75419a3ad8b55aaa">28 - Working with Files and Folders</h1>
+    <div class="lead">Information related to working with Files and Folders.</div>
+	<p>TODO: WOrking with Files and Folders:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/">https://docs.microsoft.com/en-us/dotnet/standard/io/</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats">https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/handling-io-errors">https://docs.microsoft.com/en-us/dotnet/standard/io/handling-io-errors</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks">https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks</a></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d30cf9f17582ee47d486be1fd31107ba">29 - Working with Numbers</h1>
+    <div class="lead">Information related to working with Numbers.</div>
+	<p>TODO: Working with Numbers - <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric">https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric</a></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-df66b2d061b95f988e08edf3800c46c5">30 - Working with References</h1>
+    <div class="lead">Information related to working with References.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-faaf6a962dc0fc3691b742b87d0a4d8c">31 - Working with Text</h1>
+    <div class="lead">Information related to working with Text.</div>
+	<p>TODO: Working with Text - <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations">https://docs.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations</a></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-dfebd08065bb57bcb5352be8de260702">31.1 - Text Formatting</h1>
+    <div class="lead">This page describes the concept of Text Formatting.</div>
+	<h1 id="hahahugoshortcode-s0-hbhb">Text Formatting</h1>
+<h2 id="overview">Overview</h2>
+<p>TODO: Overview/summary</p>
+<h2 id="format-templates">Format Templates</h2>
+<p>TODO:</p>
+<h2 id="format-parameters">Format Parameters</h2>
+<p>TODO:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting</a></li>
+</ul>
+<p>TODO: Control formatting</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting</a></li>
+</ul>
+<p>TODO: Control spacing</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing</a></li>
+</ul>
+<p>TODO: Control alignment</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment</a></li>
+</ul>
+<p>TODO: Composite formatting</p>
+<ul>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief</a></p>
+</li>
+</ul>
+<p>TODO: Format Item</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item</a></li>
+</ul>
+<p>TODO: Anything else relevant on formatting links above</p>
+<h2 id="blocks-that-use-formatting">Blocks that use Formatting</h2>
+<p>TODO:</p>
+<h2 id="string-interpolation">String Interpolation</h2>
+<p>TODO:
+mention that convert object to text is close to behaviour of string interpolation, but not everything is covered - e.g. no expression support or indexing - recommendation is to use string.interpolation inline as more powerful and saves block licensing</p>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e5d7fef004dd535be657aeaff36f34b1">32 - Working with Variables</h1>
+    <div class="lead">Information related to working with Variables.</div>
+	<p>TODO:</p>
+<ul>
+<li>Variables
+<ul>
+<li>Inferred</li>
+<li>Scope</li>
+<li>Defaut Value</li>
+<li>Is Input Variable?</li>
+<li>Is Output Variable?
+etc.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
 
     
 	
@@ -627,6 +2575,12 @@ https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore
     </a>
   </li>
   
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="YouTube" aria-label="YouTube">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
 </ul>
 
         
@@ -653,7 +2607,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore
   </li>
   
   <li data-toggle="tooltip" data-placement="top" aria-label="Disclaimer">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.tax.service.gov.uk/check-vat-number/enter-vat-details">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.cortex-ia.com/disclaimer/">
       Disclaimer
     </a>
   </li>
@@ -709,7 +2663,7 @@ https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2021 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>
@@ -736,7 +2690,9 @@ https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore
 
 
 
-<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
+
+
+<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
 
 
 

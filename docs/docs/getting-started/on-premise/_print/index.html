@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.83.1" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/">
+<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -18,10 +18,10 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Install On-Premise | </title><meta property="og:title" content="Install On-Premise" />
+<title>Install On-Premise | Cortex Evolution</title><meta property="og:title" content="Install On-Premise" />
 <meta property="og:description" content="Information on installing Cortex Evolution to virtual machines or physical servers on-premise." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/getting-started/on-premise/" />
+<meta property="og:url" content="/docs/getting-started/on-premise/" /><meta property="og:site_name" content="Cortex Evolution" />
 
 <meta itemprop="name" content="Install On-Premise">
 <meta itemprop="description" content="Information on installing Cortex Evolution to virtual machines or physical servers on-premise."><meta name="twitter:card" content="summary"/>
@@ -32,13 +32,18 @@
 
 
 
-<link rel="preload" href="/scss/main.min.72e51d1403352dedf326fd16085dbb46613b6d67105ffb7145db57a9d961d9e4.css" as="style">
-<link href="/scss/main.min.72e51d1403352dedf326fd16085dbb46613b6d67105ffb7145db57a9d961d9e4.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.343503cce7ea059b1d977e3d6056bcba7e9d58a10efd33abea6ae50d0fb97a1d.css" as="style">
+<link href="/scss/main.min.343503cce7ea059b1d977e3d6056bcba7e9d58a10efd33abea6ae50d0fb97a1d.css" rel="stylesheet" integrity="">
 
 
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
 
@@ -50,11 +55,19 @@
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="/">
-		<span class="navbar-logo"><svg id="Layer_4_copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1388 475.1" style="enable-background:new 0 0 1388 475.1"><style>.st0{fill:#3b8fce}.st1{fill:#262056}.st2{fill:#a1c429}.st3{fill:#fff}.st4{fill:url(#SVGID_1_)}.st5{opacity:.6;fill:url(#SVGID_2_)}.st6{filter:url(#Adobe_OpacityMaskFilter)}.st7{fill:url(#SVGID_4_)}.st8{mask:url(#SVGID_3_);fill:#fff}.st9{fill:#3f3f3e}</style><path class="st0" d="M122.1 231.7c0-15.7 3.6-30.5 9.9-43.8l-81.1-46.8c-22.9 43.5-28.5 93.3-15.7 141 13.5 50.3 45.7 92.3 90.8 118.3 29 16.7 56.9 24.9 89.6 26v-93.7c-52.3-4-93.5-47.6-93.5-101z"/><path class="st1" d="M223.5 130.3c34.7.0 65.3 17.5 83.6 44.1l81.1-46.8c-35.6-56.2-98-90.8-164.9-90.8-34 0-67.6 9-97.3 26.1-29 16.7-50 36.8-67.3 64.6l81.1 46.8c18.4-26.5 49-44 83.7-44z"/><path class="st2" d="M396.1 141.1 315 188c6.3 13.2 9.9 28.1 9.9 43.7.0 53.3-41.2 97-93.5 101v93.7c103.8-4.1 187-89.9 187-194.7C418.4 198.2 411.5 170 396.1 141.1z"/><g><path class="st3" d="M223.5 231.7l-65.8-38c-21 36.4-8.5 82.9 27.8 103.9 12.1 7 24 10.2 38 10.2V231.7z"/></g><g><path class="st3" d="M223.5 231.7l65.8-38c-21-36.4-67.5-48.8-103.9-27.8-12.1 7-20.8 15.7-27.8 27.8l65.9 38z"/></g><g><path class="st3" d="M223.5 231.7v76c42 0 76-34 76-76 0-14-3.2-25.9-10.2-38l-65.8 38z"/></g><g><radialGradient id="SVGID_1_" cx="223.5157" cy="231.6926" r="76.1085" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#969695"/><stop offset="1" style="stop-color:#3F3F3E"/></radialGradient><path class="st4" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="223.5157" y1="155.5859" x2="223.5157" y2="307.7993"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#3F3F3E"/></linearGradient><path class="st5" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><defs><filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/></filter></defs><mask maskUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5" id="SVGID_3_"><g class="st6"><linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="220.0409" y1="123.6788" x2="220.0409" y2="238.3832"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#000000"/></linearGradient><rect x="158.4" y="123.7" class="st7" width="123.3" height="114.7"/></g></mask><path class="st8" d="M177.2 201.9c0-16.5 20.7-29.8 46.3-29.8s46.3 13.3 46.3 29.8c0 16.4-20.7 29.8-46.3 29.8s-46.3-13.3-46.3-29.8z"/></g><g><path class="st9" d="M549.7 146c42.6.0 62.7 24.3 62.7 24.3l-17.9 27.8s-17-17.6-42.6-17.6c-30.1.0-49.6 22.7-49.6 50.6.0 27.5 19.8 51.2 50.9 51.2 27.5.0 48-20.8 48-20.8l15.7 28.8s-23.4 26.5-67.2 26.5c-54.1.0-88.6-38.1-88.6-85.4.0-46.4 34.5-85.4 88.6-85.4z"/><path class="st9" d="M697.7 146c49.9.0 89.9 35.5 89.9 85.4.0 50.2-40 85.4-89.6 85.4-49.9.0-89.9-35.2-89.9-85.4.0-49.9 40-85.4 89.6-85.4zM698 282.3c26.3.0 48.3-20.5 48.3-50.9.0-30.1-22.1-50.9-48.3-50.9-26.6.0-48.6 20.8-48.6 50.9.0 30.4 22.1 50.9 48.6 50.9z"/><path class="st9" d="M796.6 149.8h39V178c0 6.1-.6 11.5-.6 11.5h.6c7.4-23.4 26.9-41.9 51.9-41.9 3.8.0 7.3.6 7.3.6v40s-4.2-.6-9.6-.6c-17.3.0-36.8 9.9-44.5 34.2-2.6 8-3.5 16.9-3.5 26.6V313h-40.6V149.8z"/><path class="st9" d="M904.2 105.4h40.7v47H982v32.3h-37.1v63.4c0 26.9 21.1 30.7 32.3 30.7 4.5.0 7.4-.6 7.4-.6v35.5s-4.8 1-12.5 1c-22.7.0-67.9-6.7-67.9-61.4V105.4z"/><path class="st9" d="M1065.5 146c47 0 72.3 34.2 72.3 77.4.0 4.8-1 15.7-1 15.7h-112.6c2.6 28.5 24.6 43.2 49 43.2 26.2.0 47.1-17.9 47.1-17.9l15.7 29.1s-25 23.4-65.6 23.4c-54.1.0-87.7-39-87.7-85.4C982.6 181.2 1016.9 146 1065.5 146zM1096.9 211.3c-.6-22.1-14.4-33.9-32.3-33.9-20.8.0-35.2 12.8-39 33.9h71.3z"/><path class="st9" d="M1236 230.5l52.5-80.6h-46.1l-25.3 44.5c-2.6 4.2-5.4 10.2-5.4 10.2h-.6s-2.9-6.1-5.4-10.2l-25.3-44.5h-46.1l52.5 80.6L1133 313h45.1l28.5-47.4c2.3-3.5 4.5-8.6 4.5-8.6h.6s2.3 5.1 4.5 8.6l28.5 47.4h45.1L1236 230.5z"/><g><path class="st9" d="M1313.8 149.8c9.5.0 17.2 7.7 17.2 17.4.0 9.8-7.6 17.5-17.2 17.5-9.4.0-16.9-7.7-16.9-17.5C1296.8 157.6 1304.4 149.8 1313.8 149.8zm0 32.3c8.2.0 14.4-6.5 14.4-14.9.0-8.3-6.2-14.8-14.4-14.8-8 0-14.1 6.5-14.1 14.8C1299.6 175.6 1305.8 182.1 1313.8 182.1zM1308.1 157.9h6.7c3.3.0 5.6 2.2 5.6 5.6.0 2.8-1.8 4.5-3.5 4.9v.1s.2.2.6 1.1l3.6 7.1h-3l-3.7-7.6h-3.6v7.6h-2.7V157.9zM1314.3 166.9c2 0 3.3-1.3 3.3-3.5.0-2.1-1.3-3.3-3.3-3.3h-3.5v6.8h3.5z"/></g></g></svg></span><span class="text-uppercase font-weight-bold"></span>
+		<span class="navbar-logo"><svg id="Layer_4_copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1388 475.1" style="enable-background:new 0 0 1388 475.1"><style>.st0{fill:#3b8fce}.st1{fill:#262056}.st2{fill:#a1c429}.st3{fill:#fff}.st4{fill:url(#SVGID_1_)}.st5{opacity:.6;fill:url(#SVGID_2_)}.st6{filter:url(#Adobe_OpacityMaskFilter)}.st7{fill:url(#SVGID_4_)}.st8{mask:url(#SVGID_3_);fill:#fff}.st9{fill:#3f3f3e}</style><path class="st0" d="M122.1 231.7c0-15.7 3.6-30.5 9.9-43.8l-81.1-46.8c-22.9 43.5-28.5 93.3-15.7 141 13.5 50.3 45.7 92.3 90.8 118.3 29 16.7 56.9 24.9 89.6 26v-93.7c-52.3-4-93.5-47.6-93.5-101z"/><path class="st1" d="M223.5 130.3c34.7.0 65.3 17.5 83.6 44.1l81.1-46.8c-35.6-56.2-98-90.8-164.9-90.8-34 0-67.6 9-97.3 26.1-29 16.7-50 36.8-67.3 64.6l81.1 46.8c18.4-26.5 49-44 83.7-44z"/><path class="st2" d="M396.1 141.1 315 188c6.3 13.2 9.9 28.1 9.9 43.7.0 53.3-41.2 97-93.5 101v93.7c103.8-4.1 187-89.9 187-194.7C418.4 198.2 411.5 170 396.1 141.1z"/><g><path class="st3" d="M223.5 231.7l-65.8-38c-21 36.4-8.5 82.9 27.8 103.9 12.1 7 24 10.2 38 10.2V231.7z"/></g><g><path class="st3" d="M223.5 231.7l65.8-38c-21-36.4-67.5-48.8-103.9-27.8-12.1 7-20.8 15.7-27.8 27.8l65.9 38z"/></g><g><path class="st3" d="M223.5 231.7v76c42 0 76-34 76-76 0-14-3.2-25.9-10.2-38l-65.8 38z"/></g><g><radialGradient id="SVGID_1_" cx="223.5157" cy="231.6926" r="76.1085" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#969695"/><stop offset="1" style="stop-color:#3F3F3E"/></radialGradient><path class="st4" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="223.5157" y1="155.5859" x2="223.5157" y2="307.7993"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#3F3F3E"/></linearGradient><path class="st5" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><defs><filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/></filter></defs><mask maskUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5" id="SVGID_3_"><g class="st6"><linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="220.0409" y1="123.6788" x2="220.0409" y2="238.3832"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#000000"/></linearGradient><rect x="158.4" y="123.7" class="st7" width="123.3" height="114.7"/></g></mask><path class="st8" d="M177.2 201.9c0-16.5 20.7-29.8 46.3-29.8s46.3 13.3 46.3 29.8c0 16.4-20.7 29.8-46.3 29.8s-46.3-13.3-46.3-29.8z"/></g><g><path class="st9" d="M549.7 146c42.6.0 62.7 24.3 62.7 24.3l-17.9 27.8s-17-17.6-42.6-17.6c-30.1.0-49.6 22.7-49.6 50.6.0 27.5 19.8 51.2 50.9 51.2 27.5.0 48-20.8 48-20.8l15.7 28.8s-23.4 26.5-67.2 26.5c-54.1.0-88.6-38.1-88.6-85.4.0-46.4 34.5-85.4 88.6-85.4z"/><path class="st9" d="M697.7 146c49.9.0 89.9 35.5 89.9 85.4.0 50.2-40 85.4-89.6 85.4-49.9.0-89.9-35.2-89.9-85.4.0-49.9 40-85.4 89.6-85.4zM698 282.3c26.3.0 48.3-20.5 48.3-50.9.0-30.1-22.1-50.9-48.3-50.9-26.6.0-48.6 20.8-48.6 50.9.0 30.4 22.1 50.9 48.6 50.9z"/><path class="st9" d="M796.6 149.8h39V178c0 6.1-.6 11.5-.6 11.5h.6c7.4-23.4 26.9-41.9 51.9-41.9 3.8.0 7.3.6 7.3.6v40s-4.2-.6-9.6-.6c-17.3.0-36.8 9.9-44.5 34.2-2.6 8-3.5 16.9-3.5 26.6V313h-40.6V149.8z"/><path class="st9" d="M904.2 105.4h40.7v47H982v32.3h-37.1v63.4c0 26.9 21.1 30.7 32.3 30.7 4.5.0 7.4-.6 7.4-.6v35.5s-4.8 1-12.5 1c-22.7.0-67.9-6.7-67.9-61.4V105.4z"/><path class="st9" d="M1065.5 146c47 0 72.3 34.2 72.3 77.4.0 4.8-1 15.7-1 15.7h-112.6c2.6 28.5 24.6 43.2 49 43.2 26.2.0 47.1-17.9 47.1-17.9l15.7 29.1s-25 23.4-65.6 23.4c-54.1.0-87.7-39-87.7-85.4C982.6 181.2 1016.9 146 1065.5 146zM1096.9 211.3c-.6-22.1-14.4-33.9-32.3-33.9-20.8.0-35.2 12.8-39 33.9h71.3z"/><path class="st9" d="M1236 230.5l52.5-80.6h-46.1l-25.3 44.5c-2.6 4.2-5.4 10.2-5.4 10.2h-.6s-2.9-6.1-5.4-10.2l-25.3-44.5h-46.1l52.5 80.6L1133 313h45.1l28.5-47.4c2.3-3.5 4.5-8.6 4.5-8.6h.6s2.3 5.1 4.5 8.6l28.5 47.4h45.1L1236 230.5z"/><g><path class="st9" d="M1313.8 149.8c9.5.0 17.2 7.7 17.2 17.4.0 9.8-7.6 17.5-17.2 17.5-9.4.0-16.9-7.7-16.9-17.5C1296.8 157.6 1304.4 149.8 1313.8 149.8zm0 32.3c8.2.0 14.4-6.5 14.4-14.9.0-8.3-6.2-14.8-14.4-14.8-8 0-14.1 6.5-14.1 14.8C1299.6 175.6 1305.8 182.1 1313.8 182.1zM1308.1 157.9h6.7c3.3.0 5.6 2.2 5.6 5.6.0 2.8-1.8 4.5-3.5 4.9v.1s.2.2.6 1.1l3.6 7.1h-3l-3.7-7.6h-3.6v7.6h-2.7V157.9zM1314.3 166.9c2 0 3.3-1.3 3.3-3.5.0-2.1-1.3-3.3-3.3-3.3h-3.5v6.8h3.5z"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Cortex Evolution</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
 			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				<a id="documentation" class="nav-link" href="/docs/" ><span>Documentation</span></a>
+			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
 				
@@ -77,11 +90,38 @@
 			</li>
 			
 			
+			<li class="nav-item dropdown d-block pl-2">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Releases
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="http://v2022.docs.cortex-ia.com/">v2022 (latest)</a>
+	
+	<a class="dropdown-item" href="https://community.cortex.co.uk/">v7.2</a>
+	
+</div>
+
+			</li>
+			
 			
 		</ul>
 	</div>
 	<div class="navbar-nav d-none d-lg-block">
-<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.f63277a47600743f9d7a4c438461f95a.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="50"
+>
 
 </div>
 </nav>
@@ -134,6 +174,57 @@ This the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>2: <a href="#pg-612f7a651ca6aeab337ef46934e5e009">Multiple server - with HA - Further Information</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.1: <a href="#pg-0142f7076c57d5926440eb007e251725">Advanced Configuration Changes</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.2: <a href="#pg-29dfe4168aa7a755a4aa92fd27618d01">Alternative Architectures</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.3: <a href="#pg-45bb903791d0b535df73f0d8452b3f5b">Port Requirements</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.4: <a href="#pg-5bb69998d6b3126bc4fd7dc6555ecf34">Troubleshooting</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -168,9 +259,9 @@ This the multi-page printable view of this section.
 <div class="td-content" style="">
     
 	<h1 id="pg-67cc4bed0788ddb8eb1f9a3164288051">1 - Multiple server - with HA (recommended)</h1>
-    <div class="lead">Information on installing Cortex across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, pre-requisites and installation instructions.</div>
+    <div class="lead">Information on installing Cortex Innovation across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, pre-requisites and installation instructions.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Multiple server - with HA (recommended)</h1>
-Information on installing Cortex across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, pre-requisites and installation instructions.
+Information on installing Cortex Innovation across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, pre-requisites and installation instructions.
 
 
 
@@ -195,40 +286,54 @@ Information on installing Cortex across multiple on-premise servers with high av
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/concepts/todo-cortex-gateway">Cortex Gateway</a></td>
+<td><a href="
+
+
+/docs/guides/cortex-gateway/
+">Cortex Gateway</a></td>
 <td>Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life.</td>
 <td>Required</td>
 <td>Web Application Server</td>
 </tr>
 <tr>
-<td><a href="/docs/concepts/todo-cortex-studio">Cortex Studio</a></td>
+<td><a href="
+
+
+/docs/guides/cortex-studio/
+">Cortex Studio</a></td>
 <td>Application hosted in Cortex Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions.</td>
 <td>Required</td>
 <td>Web Application Server</td>
 </tr>
 <tr>
-<td><a href="/docs/concepts/todo-cortex-liveview">Cortex LiveView</a></td>
-<td>Application hosted in Cortex Gateway that provides real-time monitoring of what&rsquo;s happening in production environments, as well as analytics and reporting on automation solutions.</td>
-<td>Optional</td>
+<td>Cortex Flow Debugger Service</td>
+<td>Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information.</td>
+<td>Required</td>
 <td>Web Application Server</td>
 </tr>
 <tr>
-<td><a href="/docs/concepts/todo-cortex-liveportal">Cortex LivePortal</a></td>
-<td>Web portal that allows users to manually trigger automation or interact with automation that requires human-in-the-loop decisions, approval or intervention.</td>
-<td>Optional</td>
-<td>Web Application Server</td>
-</tr>
-<tr>
-<td><a href="/docs/concepts/todo-cortex-api-gateway-service">Cortex API Gateway Service</a></td>
-<td>Service that routes client requests to the correct distributed Cortex services.</td>
+<td>Cortex API Gateway Service</td>
+<td>HA Service that routes client requests to the correct distributed Cortex services.</td>
 <td>Required</td>
 <td>Application Server</td>
 </tr>
 <tr>
-<td><a href="/docs/concepts/todo-cortex-flow-execution-service">Cortex Flow Execution Service</a></td>
-<td>Service that executes automation flows.</td>
+<td>Cortex Flow Execution Service</td>
+<td>HA Service that executes automation flows.</td>
 <td>Required</td>
 <td>Application Server</td>
+</tr>
+<tr>
+<td>Cortex Block Packages</td>
+<td>A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service.</td>
+<td>Required</td>
+<td>Web Application Server, Application Server</td>
+</tr>
+<tr>
+<td><a href="https://go.microsoft.com/fwlink/?LinkID=799012">SQL Server Express</a></td>
+<td>Free edition of SQL Server, required by Cortex Gateway for storing data related to user roles, flows, etc. Hopefully, we can remove the need for SQL Server Express in the next release.</td>
+<td>Required<br />(End of life)</td>
+<td>Web Application Server</td>
 </tr>
 <tr>
 <td><a href="https://azure.microsoft.com/en-us/services/service-fabric/">Microsoft Service Fabric</a></td>
@@ -261,10 +366,10 @@ Information on installing Cortex across multiple on-premise servers with high av
 <td>Application Server</td>
 </tr>
 <tr>
-<td>TODO (SSDB, SSIS, SSAS, SSRS)</td>
-<td>Hopefully, we can remove the need for SQL Server database components in next generation, by using a combination of git for configuration, and log ingestion tools like Humio or Loki, Grafana, Prometheus combination to replace dashboarding and analytics.</td>
-<td>End-of-life</td>
-<td>Database Server</td>
+<td><a href="http://gobetween.io/">gobetween</a></td>
+<td>L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services.</td>
+<td>Required</td>
+<td>Load Balancer</td>
 </tr>
 <tr>
 <td><a href="https://nssm.cc/">NSSM</a></td>
@@ -272,34 +377,27 @@ Information on installing Cortex across multiple on-premise servers with high av
 <td>Required</td>
 <td>Load Balancer</td>
 </tr>
-<tr>
-<td><a href="http://gobetween.io/">gobetween</a></td>
-<td>L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services.</td>
-<td>Required</td>
-<td>Load Balancer</td>
-</tr>
 </tbody>
 </table>
-<h3 id="recommended-architecture">Recommended architecture</h3>
+<h3 id="recommended-architecture">Recommended Architecture</h3>
+<p>The following architecture requires 5 servers:</p>
+<ul>
+<li>1x Web Application Server which contains Gateway, Flow Debugger Service and Databases</li>
+<li>1x Load Balancer Server</li>
+<li>3x Application Servers</li>
+</ul>
+
+<figure class="no-float">
+    <img src=" /images/Cortex%20Innovation%20Overview.png "/> <figcaption>
+            <h4>5 Server Architecture Diagram</h4>
+        </figcaption>
+</figure>
+
+<p>This will be suitable for most HA installations, however, it is possible to reduce the required servers by one; for more information, see <a href="
 
 
-<div class="alert alert-warning" role="alert">
-<h4 class="alert-heading">TODO Diagram</h4>
-
-    
-
-</div>
-
-<h3 id="alternative-architectures">Alternative architectures</h3>
-
-
-<div class="alert alert-warning" role="alert">
-<h4 class="alert-heading">TODO Diagram</h4>
-
-    
-
-</div>
-
+/docs/getting-started/on-premise/advanced/alternative-architectures
+">Alternative Architectures</a>.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <h3 id="hardware-requirements">Hardware Requirements</h3>
 
@@ -307,8 +405,8 @@ Information on installing Cortex across multiple on-premise servers with high av
 <div class="alert alert-primary" role="alert">
 <h4 class="alert-heading">Note</h4>
 
-    <p>The minimum number of servers required to run Cortex with HA is 4. This setup requires multiple server roles to be installed on the same server.</p>
-<p>The minimum recommended number of servers is 7, and allows each server role instance to be installed on its own server.</p>
+    <p>The recommended number of servers is 5, and allows each server role instance to be installed on its own server.</p>
+<p>The minimum number of servers required to run Cortex with HA is 4. This setup requires multiple server roles to be installed on the same server; for more information, see <a href="/docs/getting-started/on-premise/advanced/alternative-architectures">Alternative Architectures</a>.</p>
 
 
 </div>
@@ -326,73 +424,60 @@ Information on installing Cortex across multiple on-premise servers with high av
 <tbody>
 <tr>
 <td>Web Application Server</td>
-<td>2<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <em>Recommended</em><br>1<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <em>Minimum</em></td>
+<td>1<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></td>
 <td>4+ <em>Recommended</em><br>2 <em>Minimum</em></td>
 <td>8+ <em>Recommended</em><br>4 <em>Minimum</em></td>
-<td>100+ <em>Recommended</em><br>50 <em>Minimum</em><br>TODO free on TODO drive</td>
+<td>75+ <em>Recommended</em><br>50 <em>Minimum</em><br>30+ free on installation drive</td>
 </tr>
 <tr>
 <td>Application Server</td>
-<td>3 <em>Bronze availability</em><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup><br>5 <em>Silver availability</em><br>7 <em>Gold availability</em><br>9 <em>Platinum availability</em></td>
+<td>3 <em>Bronze availability</em><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><br>5 <em>Silver availability</em><br>7 <em>Gold availability</em><br>9 <em>Platinum availability</em></td>
 <td>4+ <em>Recommended</em><br>2 <em>Minimum</em></td>
-<td>8+ <em>Recommended</em><br>4 <em>Minimum</em></td>
-<td>100+ <em>Recommended</em><br>50 <em>Minimum</em><br>40+ free on %ProgramData% drive</td>
-</tr>
-<tr>
-<td>Database Server</td>
-<td>1<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></td>
-<td>4+ <em>Recommended</em><br>2 <em>Minimum</em></td>
-<td>8+ <em>Recommended</em><br>4 <em>Minimum</em></td>
-<td>100+ <em>Recommended</em><br>50 <em>Minimum</em><br>5+ free on installation drive</td>
+<td>16+ <em>Recommended</em><br>8 <em>Minimum</em></td>
+<td>75+ <em>Recommended</em><br>60 <em>Minimum</em><br>40+ free on %ProgramData% drive</td>
 </tr>
 <tr>
 <td>Load Balancer</td>
-<td>1<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></td>
+<td>1<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></td>
 <td>4+ <em>Recommended</em><br>2 <em>Minimum</em></td>
-<td>8+ <em>Recommended</em><br>4 <em>Minimum</em></td>
-<td>100+ <em>Recommended</em><br>50 <em>Minimum</em><br>5+ free on installation drive</td>
+<td>4+ <em>Recommended</em><br>2 <em>Minimum</em></td>
+<td>50+ <em>Recommended</em><br>30 <em>Minimum</em><br>5+ free on installation drive</td>
 </tr>
 </tbody>
 </table>
 <h4 id="alternative-load-balancer-requirements">Alternative Load Balancer Requirements</h4>
+<p>Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.</p>
 <ul>
-<li>The load balancer must support a health check which can run a batch file that returns 1 for healthy and 0 for unhealthy.</li>
+<li>Must be able to health check each node by running a batch script (that runs a PowerShell script which makes an HTTP request) that returns 1 for healthy and 0 for unhealthy.</li>
+<li>Must be able to access each of the Application Servers.</li>
+<li>Ideally it should be highly available to avoid a single point of failure in the system.</li>
 </ul>
-<p>TODO</p>
 <h3 id="software-requirements">Software Requirements</h3>
 <table>
 <thead>
 <tr>
 <th>Server Role</th>
-<th>Windows Server<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></th>
-<th>SQL Server<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></th>
+<th>Windows Server<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></th>
+<th>SQL Server<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></th>
 <th>.Net</th>
-<th>PowerShell</th>
-<th>IIS<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup></th>
+<th>PowerShell<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></th>
+<th>IIS<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Web Application Server</td>
 <td><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO">2019 (x64)</a> <em>Recommended</em><br><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO">2016 (x64)</a></td>
-<td></td>
-<td><a href="https://www.microsoft.com/en-US/download/details.aspx?id=56116">Framework 4.7.1</a></td>
+<td><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe">2019</a><br /><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016?filetype=exe">2016</a><br /><a href="https://go.microsoft.com/fwlink/?LinkID=799012">2016 Express</a></td>
+<td><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer">Framework 4.7.1</a></td>
 <td>5.1</td>
-<td>10.0.17763<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup><br>10.0.14393<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup><br><a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite Module 2.1</a></td>
+<td>10.0.17763<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup><br>10.0.14393<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup><br><a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite Module 2.1</a></td>
 </tr>
 <tr>
 <td>Application Server</td>
 <td><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO">2019 (x64)</a> <em>Recommended</em><br><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO">2016 (x64)</a></td>
 <td></td>
-<td><a href="https://www.microsoft.com/en-US/download/details.aspx?id=56116">Framework 4.7.1</a></td>
-<td>5.1</td>
-<td></td>
-</tr>
-<tr>
-<td>Database Server</td>
-<td><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO">2019 (x64)</a> <em>Recommended</em><br><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO">2016 (x64)</a></td>
-<td><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-sql-server-2019?filetype=EXE">2019 (x64)</a> <em>Recommended</em><br><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-sql-server-2016?filetype=EXE">2016 (x64)</a></td>
-<td><a href="https://www.microsoft.com/en-US/download/details.aspx?id=56116">Framework 4.7.1</a></td>
+<td><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer">Framework 4.7.1</a></td>
 <td>5.1</td>
 <td></td>
 </tr>
@@ -400,13 +485,49 @@ Information on installing Cortex across multiple on-premise servers with high av
 <td>Load Balancer</td>
 <td><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO">2019 (x64)</a> <em>Recommended</em><br><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO">2016 (x64)</a></td>
 <td></td>
-<td><a href="https://www.microsoft.com/en-US/download/details.aspx?id=56116">Framework 4.7.1</a></td>
+<td><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer">Framework 4.7.1</a></td>
 <td>5.1</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<h4 id="service-requirements">Service Requirements</h4>
+<p>The following Windows Services must be running on all Application Servers:</p>
+<ul>
+<li>Remote Registry</li>
+<li>Windows Event Log</li>
+<li>Performance Logs &amp; Alerts</li>
+</ul>
+<h4 id="filesystem-requirements">Filesystem Requirements</h4>
+<p>All Application Servers must use an NTFS filesystem.</p>
 <h3 id="security-requirements">Security Requirements</h3>
+<h4 id="installation-user">Installation User</h4>
+<p>A domain user which is a member of the local Administrators group on all servers must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.</p>
+<h4 id="antivirus-exclusions">Antivirus Exclusions</h4>
+<p>It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on each Application Server to reduce antivirus processing on Service Fabric artefacts:</p>
+<p>Folder Exclusions:</p>
+<ul>
+<li>%ProgramFiles%\Microsoft Service Fabric</li>
+<li>%ProgramData%\SF</li>
+<li>%ProgramData%\SF\Logs</li>
+</ul>
+<p>Process Exclusions:</p>
+<ul>
+<li>Fabric.exe</li>
+<li>FabricHost.exe</li>
+<li>FabricInstallerService.exe</li>
+<li>FabricSetup.exe</li>
+<li>FabricDeployer.exe</li>
+<li>ImageBuilder.exe</li>
+<li>FabricGateway.exe</li>
+<li>FabricDCA.exe</li>
+<li>FabricFAS.exe</li>
+<li>FabricUOS.exe</li>
+<li>FabricRM.exe</li>
+<li>FileStoreService.exe</li>
+</ul>
+<p>A script is provided during installation to add these exclusions for Windows Defender. If any other antivirus software is running, these will need to be added manually.</p>
+<p>If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.</p>
 <h4 id="domain-requirements">Domain Requirements</h4>
 <p>Only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.</p>
 <p>Supported versions of Active Directory are listed below:</p>
@@ -414,67 +535,846 @@ Information on installing Cortex across multiple on-premise servers with high av
 <thead>
 <tr>
 <th>Version</th>
+<th>Verified?</th>
 <th>Supported From</th>
 <th>Supported Until</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>TODO</td>
-<td>Cortex V6.4</td>
-<td>To be confirmed</td>
+<td>Windows Server 2003</td>
+<td>✓</td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2003 R2</td>
+<td></td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2008</td>
+<td></td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2008 R2</td>
+<td>✓</td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2012</td>
+<td></td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2</td>
+<td>✓</td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2016</td>
+<td>✓</td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2019</td>
+<td></td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
+</tr>
+<tr>
+<td>Windows Server 2022</td>
+<td></td>
+<td>Cortex v2022.5</td>
+<td>To be evaluated</td>
 </tr>
 </tbody>
 </table>
+<p>All servers must be on the same domain and cannot be domain controllers.</p>
 <h4 id="port-requirements">Port Requirements</h4>
-<p>TODO</p>
+<p>Cortex Innovation and Microsoft Service Fabric require a range of <a href="
+
+
+/docs/getting-started/on-premise/advanced/ports
+">firewall ports to be opened</a> between the servers and specific services.</p>
+<p>If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in <a href="
+
+
+/docs/getting-started/on-premise/advanced/ports
+">Port Requirements</a> to open the correct ports.</p>
+<p>The <code>Cortex.Innovation.Test.PortUsage.ps1</code> script is provided during installation to test the ports on each Application Server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.</p>
 <h4 id="tls-requirements">TLS Requirements</h4>
+<ul>
+<li>TLS 1.2 must be enabled.</li>
+</ul>
 <p>TODO include protocols, ciphers, hashes etc.</p>
 <h4 id="certificate-requirements">Certificate Requirements</h4>
-<p>TODO</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+
+</div>
+
+<p>An X.509 SSL wildcard certificate should be used to:</p>
+<ul>
+<li>Secure communication between the load balancer and the HA nodes on the Application Servers.</li>
+<li>Secure communication between the HA nodes.</li>
+<li>Allow HA Services to identify themselves to clients such as Gateway.</li>
+<li>Prevent unauthorised HA nodes from joining the HA cluster.</li>
+<li>Connect to Service Fabric Explorer from each of the Application Servers.</li>
+</ul>
+<p>The certificate can be obtained from a Certificate Authority, such as Let’s Encrypt (<a href="https://letsencrypt.org/)">https://letsencrypt.org/)</a>, and must meet the following requirements:</p>
+<ul>
+<li>Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. <code>CN=*.domain.com</code>).</li>
+<li>Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.</li>
+<li>Certificate file must be in a .PFX file format, with a known password.</li>
+<li>Certificate file must contain the full chain of certificates.</li>
+<li>Certificate file must include the private key.</li>
+</ul>
+<p>This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.</p>
+<p>If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the HA nodes. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. <code>CN=machine-name.domain.com</code>).</p>
 <h4 id="kerberos-requirements">Kerberos Requirements</h4>
-<p>TODO</p>
+<p>TODO - Kerberos and winrm</p>
 <h3 id="client-requirements">Client Requirements</h3>
-<p>TODO browsers, os etc.</p>
-<h2 id="installation">Installation</h2>
-<p>TODO</p>
+<p>We support the latest versions of the following browsers:</p>
+<ul>
+<li>Chrome</li>
+<li>Edge</li>
+<li>Firefox</li>
+</ul>
+<h2 id="install-application-servers-and-load-balancer-server">Install Application Servers and Load Balancer Server</h2>
+<h3 id="extract-installation-artefacts">Extract Installation Artefacts</h3>
+<ol>
+<li>
+<p>Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):</p>
+<ul>
+<li>Cortex Evolution - Innovation 2022.5 - Block Packages.zip</li>
+<li>Cortex Evolution - Innovation 2022.5 - HA Services.zip</li>
+<li>Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip</li>
+</ul>
+</li>
+<li>
+<p>Extract the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip</code> file to a folder with the same name.</p>
+</li>
+</ol>
+<h3 id="add-antivirus-exclusions">Add Antivirus Exclusions</h3>
+<ol>
+<li>If Windows Defender is not running on the Application Servers, ensure that the <a href="#antivirus-exclusions">Antivirus Exclusions</a> have been added to the running antivirus software on each of the Application Servers and continue to the next step, otherwise follow these steps:
+<ol>
+<li>
+<p>Open a Windows PowerShell (x64) window as administrator.</p>
+</li>
+<li>
+<p>Navigate PowerShell to inside the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Run the <code>Cortex.Innovation.Add.WindowsDefenderExclusions.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS names or fully qualified domain names of the Application Servers:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WindowsDefenderExclusions</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;ha-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;ha-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;ha-server3&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div></li>
+</ol>
+</li>
+</ol>
+<h3 id="check-port-usage">Check Port Usage</h3>
+<ol>
+<li>To check all necessary ports are free, follow these steps.
+<ol>
+<li>
+<p>Open a Windows PowerShell (x64) window as administrator.</p>
+</li>
+<li>
+<p>Navigate PowerShell to inside the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Run the <code>Cortex.Innovation.Test.PortUsage.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS names or fully qualified domain names of the Application Servers:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Test</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PortUsage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;ha-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;ha-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;ha-server3&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div></li>
+<li>
+<p>If all ports are free, the script will report the following for each Application Server:</p>
+<p><code>All ports required by Cortex Innovation are free</code></p>
+<p>If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the <code>Cortex.Innovation.Install.Config.json</code> configuration file, in the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder, to use different ports. This will be used later during installation.</p>
+<p>The <code>Cortex.Innovation.Test.PortUsage.ps1</code> script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="configure-installation-script">Configure Installation Script</h3>
+<ol>
+<li>
+<p>In the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder, locate the <code>Cortex.Innovation.Install.ps1</code> script and open it with a text editor.</p>
+</li>
+<li>
+<p>Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:</p>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="nav nav-tabs" id="tabs-6" role="tablist"><li class="nav-item">
+      <a class="nav-link active"
+        id="tabs-6-0-tab" data-toggle="tab" href="#tabs-6-0" role="tab"
+        aria-controls="tabs-6-0" aria-selected="true">
+        CA Certs, Built-in Load Balancer
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link"
+        id="tabs-6-1-tab" data-toggle="tab" href="#tabs-6-1" role="tab"
+        aria-controls="tabs-6-1" aria-selected="false">
+        Self-Signed Certs, Built-in Load Balancer
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link"
+        id="tabs-6-2-tab" data-toggle="tab" href="#tabs-6-2" role="tab"
+        aria-controls="tabs-6-2" aria-selected="false">
+        CA Certs, Alternative Load Balancer
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link"
+        id="tabs-6-3-tab" data-toggle="tab" href="#tabs-6-3" role="tab"
+        aria-controls="tabs-6-3" aria-selected="false">
+        Self-Signed Certs, Alternative Load Balancer
+      </a>
+    </li></ul>
+
+
+<div class="tab-content" id="tabs-6-content"><div class="tab-pane fade show active"
+        id="tabs-6-0" role="tabpanel" aria-labelled-by="tabs-6-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-HaServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-LoadBalancerServerIPv4Address</span> <span style="color:#4e9a06">&#34;192.168.1.4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ClientCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ClientCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
+        </code></pre></div></div>
+  <div class="tab-pane fade"
+        id="tabs-6-1" role="tabpanel" aria-labelled-by="tabs-6-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+    <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-HaServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-LoadBalancerServerIPv4Address</span> <span style="color:#4e9a06">&#34;192.168.1.4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
+        </code></pre></div></div>
+  <div class="tab-pane fade"
+        id="tabs-6-2" role="tabpanel" aria-labelled-by="tabs-6-2-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-HaServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ClientCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ClientCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-SkipLoadBalancer</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
+        </code></pre></div></div>
+  <div class="tab-pane fade"
+        id="tabs-6-3" role="tabpanel" aria-labelled-by="tabs-6-3-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-HaServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-SkipLoadBalancer</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
+        </code></pre></div></div>
+  
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HaServicesPath</code></td>
+<td>Configure this value with the location of the HA Services zip file on the Application Server used for installation.</td>
+</tr>
+<tr>
+<td><code>BlockPackagesPath</code></td>
+<td>Configure this value with the location of the Block Packages zip file on the Application Server used for installation.</td>
+</tr>
+<tr>
+<td><code>ApiGatewayBasicAuthUserName</code></td>
+<td>Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed <a href="#install-gateway">later, when installing Gateway</a>.</td>
+</tr>
+<tr>
+<td><code>ApiGatewayBasicAuthPwd</code></td>
+<td>Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be Cortex Encrypted. <br /><br />This value will be needed <a href="#install-gateway">later, when installing Gateway</a>.</td>
+</tr>
+<tr>
+<td><code>CustomerName</code></td>
+<td>A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer.</td>
+</tr>
+<tr>
+<td><code>ApplicationServerIPv4Addresses</code></td>
+<td>The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation.</td>
+</tr>
+<tr>
+<td><code>LoadBalancerServerIPv4Address</code></td>
+<td>The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer.</td>
+</tr>
+<tr>
+<td><code>ServerCertificatePath</code></td>
+<td>The local path of a .PFX certificate file on the first Application Server in the <code>ApplicationServerIPv4Addresses</code> list. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the <a href="#certificate-requirements">Certificate Requirements</a>.</td>
+</tr>
+<tr>
+<td><code>ServerCertificatePwd</code></td>
+<td>The password for the .PFX certificate file specified in <code>ServerCertificatePath</code>. <br /><br /> This is only needed if installing with CA Certificates (Recommended).</td>
+</tr>
+<tr>
+<td><code>ClientCertificatePath</code></td>
+<td>The local path of a .PFX certificate file on the first Application Server in the <code>ApplicationServerIPv4Addresses</code> list. This can be the same certificate as the <code>ServerCertificatePath</code>. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the <a href="#certificate-requirements">Certificate Requirements</a>.</td>
+</tr>
+<tr>
+<td><code>ClientCertificatePwd</code></td>
+<td>The password for the .PFX certificate file specified in <code>ClientCertificatePath</code>. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer.</td>
+</tr>
+<tr>
+<td><code>UseSelfSignedCertificates</code></td>
+<td>Installs HA Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.</td>
+</tr>
+<tr>
+<td><code>SkipLoadBalancer</code></td>
+<td>Installs HA Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer.</td>
+</tr>
+<tr>
+<td><code>Credential</code></td>
+<td>The credentials of the user which will be used to perform remote operations on the Application Servers. It must be a domain user that is a member of the local Administrators group on all servers. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>ApiGatewayBasicAuthUserName</code> and <code>ApiGatewayBasicAuthPwd</code> will be needed <a href="#install-gateway">later, when installing Gateway</a>.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    More advanced configuration (such as changing ports) can be undertaken by modifying the <code>Cortex.Innovation.Install.Config.json</code> file but this shouldn&rsquo;t be required for most installations. More information about this can be found at <a href="/docs/getting-started/on-premise/advanced/advanced-config-changes">Advanced Configuration</a>.
+
+</div>
+
+</li>
+<li>
+<p>Save and close <code>Cortex.Innovation.Install.ps1</code>.</p>
+</li>
+</ol>
+<h3 id="test-installation-script">Test Installation Script</h3>
+<ol>
+<li>
+<p>Open a Windows PowerShell (x64) window as administrator.</p>
+</li>
+<li>
+<p>Navigate PowerShell to inside the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Test <code>Cortex.Innovation.Install.ps1</code> by running the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-WhatIf</span>
+</code></pre></div></li>
+<li>
+<p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.</p>
+</li>
+<li>
+<p>A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ.</p>
+</li>
+<li>
+<p>Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working.</p>
+</li>
+<li>
+<p>Check that there have been no errors in the script; these would appear in red in the console.</p>
+<p>If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them.</p>
+<p>If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact <a href="https://support.cortex.co.uk/">Cortex Service Desk</a> for further assistance. The <code>WhatIf</code> script will have created a temporary version of the config file showing what changes would be made to it when the script runs. The name is appended with <code>-WhatIf</code> (e.g. <code>Cortex.Innovation.Install.Config-WhatIf.json</code>). This file can be provided when obtaining support.</p>
+</li>
+</ol>
+<h3 id="run-installation-script">Run Installation Script</h3>
+<ol>
+<li>
+<p>Install HA Services and the required infrastructure by running the following command (<code>Tee-Object</code> will write output to both the PowerShell console and a log file, the <code>FilePath</code> value can be changed if required):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
+</code></pre></div></li>
+<li>
+<p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.</p>
+</li>
+<li>
+<p>A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ. This should be entered carefully and recorded as it may be needed if seeking support from <a href="https://support.cortex.co.uk/">Cortex Service Desk</a>. Press OK.</p>
+</li>
+<li>
+<p>Wait for the script to finish running. This should take approximately 10 minutes.</p>
+</li>
+<li>
+<p>Check that there have been no errors in the script; these would appear in red in the console.</p>
+<p>If there are any errors, then please follow any instructions given within them to rectify the situation, check your configuration files, and retry the installation.</p>
+<p>In some circumstances, retrying may error due to components being installed already. In this case please run the following command, followed by the original installation command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Uninstall</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
+</code></pre></div><p>If the errors do not give any instructions on how to rectify, see <a href="
+
+
+/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-during-installation
+">Troubleshooting During Installation</a> for further information; if this does not help then please contact <a href="https://support.cortex.co.uk/">Cortex Service Desk</a> for assistance.</p>
+</li>
+</ol>
+<h3 id="check-ha-services">Check HA Services</h3>
+<ol>
+<li>
+<p>Log on to one of the Application Servers.</p>
+</li>
+<li>
+<p>Import the client certificate, used in the <code>ClientCertificatePath</code> parameter of the <a href="#configure-installation-script">Configure Installation Script</a> section, to your Current User certificate store. This can be achieved by double clicking on the client certificate .PFX file and following the wizard.</p>
+<p>If using self-signed certificates, the certificate can be retrieved by using the <code>Manage Computer Certificates</code> tool in Windows to export the <code>CortexServerCertificate</code> from the <code>Personal</code> store and then importing it to the <code>Current User</code> store by double-clicking on it and following the wizard.</p>
+</li>
+<li>
+<p>Open a web browser.</p>
+</li>
+<li>
+<p>Navigate to <code>https://ha-server.domain.com:9080/Explorer</code>, where <code>ha-server.domain.com</code> is the fully qualified domain name of any Application Server. Replace <code>9080</code> with new <code>httpGatewayEndpointPort</code> value if it was changed during configuration.</p>
+<p>The screen should resemble that in the following figure:
+
+<figure class="no-float">
+    <img src=" /images/Service%20Fabric%20Explorer.png "/> <figcaption>
+            <h4>Healthy Service Fabric Explorer Cluster</h4>
+        </figcaption>
+</figure>
+</p>
+<p>The status circles should be entirely green - this indicates that all nodes, services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on. The next few digrams show the status pages for a healthy system.</p>
+<p>After expanding the application, clicking on any of the services should display a green circle and <code>Status = Active</code>:</p>
+
+<figure class="no-float">
+    <img src=" /images/Service%20Fabric%20Explorer%20-%20Service.png "/> <figcaption>
+            <h4>Healthy Service Fabric Explorer Service</h4>
+        </figcaption>
+</figure>
+
+<p>After expanding either of the services, clicking on any of the instances/partitions should display a green circle and <code>Status = Ready</code>:</p>
+
+<figure class="no-float">
+    <img src=" /images/Service%20Fabric%20Explorer%20-%20Instance.png "/> <figcaption>
+            <h4>Healthy Service Fabric Explorer Instance</h4>
+        </figcaption>
+</figure>
+
+<p>Clicking on any of the nodes at the bottom of the leftmost pane should display a green circle and <code>Status = Up</code>:</p>
+
+<figure class="no-float">
+    <img src=" /images/Service%20Fabric%20Explorer%20-%20Node.png "/> <figcaption>
+            <h4>Healthy Service Fabric Explorer Node</h4>
+        </figcaption>
+</figure>
+
+<p>If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, go to the next section.</p>
+<p>If the warnings persist or anything on the screen goes red, expand the items to find the individual services and instances which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase. Error and warning messages should be displayed on the status screens and should indicate what is wrong.</p>
+<p>If no useful message can be seen here, the service log files may contain more information. These can be found on each Application Server at:</p>
+<ul>
+<li>%ProgramData%/Cortex/Cortex API Gateway Service</li>
+<li>%ProgramData%/Cortex/Cortex Flow Service</li>
+</ul>
+<p>If no solution can be found, please contact <a href="https://support.cortex.co.uk/">Cortex Service Desk</a> for further assistance.</p>
+</li>
+</ol>
+<h2 id="install-web-application-server">Install Web Application Server</h2>
+<h3 id="install-gateway">Install Gateway</h3>
+<ol>
+<li>
+<p>Use one of the following installation guides to install SQL Server or SQL Server Express:</p>
+<ul>
+<li>SQL Server 2019 Installation Guide for Cortex</li>
+<li>SQL Server 2016 Installation Guide for Cortex</li>
+<li>SQL Server 2016 Express Installation Guide for Cortex</li>
+</ul>
+</li>
+<li>
+<p>Copy the following artefact (the version number may differ) to the machine that you will be installing Cortex Gateway on:</p>
+<ul>
+<li>Cortex Evolution - Innovation 2022.5 - Gateway.zip</li>
+</ul>
+</li>
+<li>
+<p>Use the <code>Cortex Installation Guide</code> to install Cortex Gateway. The following sections will need to be followed as prerequisites to following the <code>Cortex Gateway Installation</code> section:</p>
+<ul>
+<li>3.1 - System Requirements</li>
+<li>3.2 - Additional Components Required for Cortex Gateway Installation</li>
+<li>3.3 - Additional pre-requisites</li>
+<li>4.3.1 - Install Internet Information Services (IIS)</li>
+<li>4.3.2 - Register and Allow .NET CLR v4.0.30319 with IIS</li>
+<li>Appendix 6 - Actions to Install URL Rewrite Module</li>
+</ul>
+</li>
+<li>
+<p>Follow section <code>9 - Cortex Gateway Installation</code> in the same guide. Use the following points as they will differ from a Cortex Integrity installation:</p>
+<ul>
+<li>Ignore section <code>9.1 - Required Components</code>; no other Cortex Components are required for Cortex Innovation, only those referred to in this guide.</li>
+<li>In section <code>9.2.7 - Configure Cortex Gateway installation</code>, whenever <code>Cortex Gateway.zip</code> is mentioned, use the <code>Cortex Evolution - Innovation * - Gateway.zip</code> file that was copied in the previous step.</li>
+<li>When configuring the <code>parameters.xml</code> file in section <code>9.2.7 - Configure Cortex Gateway installation</code>, some additional values need to be updated:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;setParameter</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;Feature Flags&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&amp;lt;value&amp;gt;InnovationId&amp;lt;/value&amp;gt;&#34;</span> <span style="color:#204a87;font-weight:bold">/&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;setParameter</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;Service Fabric Api Gateway Endpoint&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&amp;lt;value&amp;gt;https://ha-server1.domain.com:8722/&amp;lt;/value&amp;gt;&#34;</span> <span style="color:#204a87;font-weight:bold">/&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;setParameter</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;Service Fabric Using Self Signed Certificates&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&amp;lt;value&amp;gt;False&amp;lt;/value&amp;gt;&#34;</span> <span style="color:#204a87;font-weight:bold">/&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;setParameter</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;Service Fabric ApiGateway Basic Auth Username&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&amp;lt;value&amp;gt;BasicAuthUser&amp;lt;/value&amp;gt;&#34;</span> <span style="color:#204a87;font-weight:bold">/&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;setParameter</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;Service Fabric ApiGateway Basic Auth Password&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&amp;lt;value&amp;gt;ADA9883B11BD4CDC908B8131B57944A4&amp;lt;/value&amp;gt;&#34;</span> <span style="color:#204a87;font-weight:bold">/&gt;</span>
+<span style="color:#204a87;font-weight:bold">&lt;setParameter</span> <span style="color:#c4a000">name=</span><span style="color:#4e9a06">&#34;Dot NET flow debugger Endpoint&#34;</span> <span style="color:#c4a000">value=</span><span style="color:#4e9a06">&#34;&amp;lt;value&amp;gt;https://app-server.domain.com/debugger/api/&amp;lt;/value&amp;gt;&#34;</span> <span style="color:#204a87;font-weight:bold">/&gt;</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Feature Flags</code></td>
+<td>Configure as above, replacing &ldquo;InnovationId&rdquo; with the Cortex Innovation feature identifier. This should be retrieved from Cortex.</td>
+</tr>
+<tr>
+<td><code>Service Fabric Api Gateway Endpoint</code></td>
+<td>Configure as above, replacing &ldquo;ha-server1.domain.com&rdquo; with the fully qualified domain name of one of the HA nodes. The port should be 8722.</td>
+</tr>
+<tr>
+<td><code>Service Fabric Using Self Signed Certificates</code></td>
+<td>Configure the value as &ldquo;False&rdquo; if you are using valid CA certificates, &ldquo;True&rdquo; if using self-signed certificates</td>
+</tr>
+<tr>
+<td><code>Service Fabric Self Signed Certificate Subject</code></td>
+<td>This should not be changed.</td>
+</tr>
+<tr>
+<td><code>Service Fabric ApiGateway Basic Auth Username</code></td>
+<td>This only needs to be changed if you provided a non-default <code>ApiGatewayBasicAuthUserName</code> when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided.</td>
+</tr>
+<tr>
+<td><code>Service Fabric ApiGateway Basic Auth Password</code></td>
+<td>This only needs to be changed if you provided a non-default ApiGatewayBasicAuthPassword when installing the Cortex HA Infrastructure and Services; if so, this value should be configured to the one provided. It can be Cortex Encrypted.</td>
+</tr>
+<tr>
+<td><code>Dot NET flow debugger Endpoint</code></td>
+<td>Configure as above, replacing &ldquo;app-server.domain.com&rdquo; with the fully qualified domain name of the server that the Cortex Flow Debugger Service will be installed on (usually the same one as Gateway).</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ignore the <code>Configuring prerequisites for capability discovery</code> section - this is not yet supported in Cortex Innovation.</li>
+<li>Ignore the <code>Configuring Connectivity to Cortex Server</code> section - this is only necessary for Cortex Integrity.</li>
+<li>Ignore the <code>Testing a clean system</code> section - this will be covered later in this guide.</li>
+<li>Ignore the <code>Verify LiveView Dashboards on Cortex Gateway</code> section - this is not supported in Cortex Innovation.</li>
+</ul>
+</li>
+</ol>
+<h3 id="install-flow-debugger-service">Install Flow Debugger Service</h3>
+<h4 id="extract-installation-artefacts-1">Extract Installation Artefacts</h4>
+<ol>
+<li>
+<p>We recommend that the Flow Debugger Service is installed on the Web Application Server, with Gateway. Copy the following artefacts to a folder on the machine (the version numbers may differ):</p>
+<ul>
+<li>Cortex Evolution - Innovation 2022.5 - Block Packages.zip</li>
+<li>Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip</li>
+<li>Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip</li>
+</ul>
+</li>
+<li>
+<p>Extract the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts.zip</code> zip file to a folder with the same name.</p>
+</li>
+</ol>
+<h4 id="configure-installation-script-1">Configure Installation Script</h4>
+<ol>
+<li>
+<p>In the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder, locate the <code>Cortex.Innovation.Install.FlowDebuggerService.ps1</code> script and open it with a text editor.</p>
+</li>
+<li>
+<p>Configure the script according to the details given below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FlowDebuggerServicePath</code></td>
+<td>Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server.</td>
+</tr>
+<tr>
+<td><code>BlockPackagesPath</code></td>
+<td>Configure this value with the location of the Block Packages zip file on the Web Application Server.</td>
+</tr>
+<tr>
+<td><code>Credential</code></td>
+<td>The credentials of the user that will be used to run the <code>Debugger</code> application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Save and close <code>Cortex.Innovation.Install.FlowDebuggerService.ps1</code>.</p>
+</li>
+</ol>
+<h4 id="run-installation-script-1">Run Installation Script</h4>
+<ol>
+<li>
+<p>Open a Windows PowerShell (x64) window as administrator.</p>
+</li>
+<li>
+<p>Navigate PowerShell to inside the <code>Cortex Evolution - Innovation 2022.5 - Installation Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Evolution - Innovation 2022.5 - Installation Scripts&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Install the Flow Debugger Service by running the following command (<code>Tee-Object</code> will write output to both the PowerShell console and a log file, <code>FilePath</code> can be changed if required):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
+</code></pre></div></li>
+<li>
+<p>A credentials prompt will appear. Enter the credentials of the user that should run the <code>Debugger</code> application pool in IIS (this can be the same user as the one used to run the Cortex Gateway application pool).</p>
+</li>
+<li>
+<p>Wait for the script to finish running. This should take approximately 2 minutes.</p>
+</li>
+<li>
+<p>An error may have appeared saying:</p>
+<pre tabindex="0"><code>The Windows Process Activation Service service is not started.
+</code></pre><p>This can be ignored.</p>
+</li>
+<li>
+<p>Check that there have been no other errors in the script; these would appear in red in the console.</p>
+<p>If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.</p>
+<p>If the errors do not give any instructions on how to rectify, please contact <a href="https://support.cortex.co.uk/">Cortex Service Desk</a> for further assistance.</p>
+</li>
+</ol>
+<h4 id="finish-gateway-configuration">Finish Gateway configuration</h4>
+<ol>
+<li>Log in to Cortex Gateway as your &ldquo;administrator&rdquo; user.</li>
+<li>In the Cortex Gateway UI go to <code>Settings</code> → <code>LDAP Authorisation</code> and configure security roles for LDAP groups to your requirements. You can refer to <code>Section 2.2 Configuring Authorisation Rights</code> of the <code>Cortex Studio Admin Guide</code> for more details on this.</li>
+<li>Log out and Login as a user with Studio permissions.</li>
+</ol>
 <h2 id="next-steps">Next Steps?</h2>
 <ol>
 <li><a href="../../setup">Setup</a> the platform</li>
 <li><a href="../../tryitout">Try it out</a></li>
 </ol>
+<h3 id="try-it-out">Try it out</h3>
+<h4 id="test-debugging">Test Debugging</h4>
+<ol>
+<li>Use the following steps to test the system be creating a new flow (alternatively, if you already have Cortex Innovation flows which are compatible with this version, feel free to import them, configure Studio Authorisation for them and check that they can be debugged, published and executed).</li>
+<li>Click on the <code>Flows</code> charm, then the <code>+</code> button and click <code>Group</code> to open a dialog.</li>
+<li>Enter a name for the group, configure the <code>Permission Groups</code> and click <code>OK</code> to create the group.</li>
+<li>Click on the group to open it (refresh the page if it does not appear).</li>
+<li>Inside the group, click the <code>+</code> button again and click on <code>Flow (Innovation)</code> to open a dialog. If the menu item is not present, it means that the <code>FeatureFlags</code> in the &ldquo;parameters.xml&rdquo; file was not set properly when installing Gateway. See <a href="
+
+
+/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-innovation
+">Troubleshooting</a> for more information.</li>
+<li>Enter a name for the flow, configure the <code>Permission Groups</code> and click <code>OK</code> to create the flow.</li>
+<li>The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
+
+<figure class="no-float">
+    <img src=" /images/New%20Innovation%20Flow%20View.PNG "/> <figcaption>
+            <h4>New Flow - Number of palettes may differ</h4>
+        </figcaption>
+</figure>
+
+If the blocks in the flow do not display or the palettes are not visible, see <a href="
+
+
+/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-blocks
+">Troubleshooting</a> for more information.</li>
+<li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
+<li>Click the <code>Set Variable</code> block to open the Property Editor. Set the <code>Value</code> property to <code>DateTime.Now</code>. Type <code>Output</code> into the <code>Variable</code> property and click <code>Create Variable</code>.</li>
+<li>In the Variable Editor, set <code>Is Output Variable?</code> to <code>true</code> for the new &ldquo;Output&rdquo; variable.</li>
+<li>Set a breakpoint on the end block and start the flow. An execution token should appear, the <code>Output</code> variable should show the current time. If the token does not appear, try refreshing the page.</li>
+<li>Continue or stop the execution.</li>
+<li>Commit the flow.</li>
+</ol>
+<h4 id="test-publishing-and-executing-production-flows">Test Publishing and Executing production flows</h4>
+<ol>
+<li>
+<p>Log into Cortex Gateway with a user that has the <code>Administrator</code> role.</p>
+</li>
+<li>
+<p>Click on the <code>Settings</code> charm, then <code>Packages</code>.</p>
+</li>
+<li>
+<p>Click <code>Add Package Definition</code>. Enter a package name and select the new flow to add to the package. Click <code>Save</code> to add the new package.</p>
+</li>
+<li>
+<p>Click &ldquo;Publish&rdquo;. A success message should appear. If it doesn&rsquo;t it means that either one or more of the <code>Service Fabric x</code> values in the <code>parameters.xml</code> file was not set properly when installing Cortex Gateway, or the HA Services aren&rsquo;t healthy. See <a href="
+
+
+/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-publish
+">Troubleshooting</a> for more information.</p>
+</li>
+<li>
+<p>Open an HTTP client, such as Postman. Make a request with the following format:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>https://{FQDN of Application Server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. <a href="https://ha-server1.domain.com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage">https://ha-server1.domain.com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage</a></td>
+</tr>
+<tr>
+<td>Content Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>Basic</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>The value used for ApiGatewayBasicAuthUserName when installing HA Services</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>The value used for ApiGatewayBasicAuthPwd when installing HA Services (Unencrypted)</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    If you used self-signed certificates when installing HA Services and infrastructure you will need to disable SSL certificate validation in your HTTP client.
+
+</div>
+
+</li>
+<li>
+<p>The request should return a json object with the output variables of the flow e.g. <code>{ &quot;Output&quot;: &quot;2022-03-09T07:35:16+0000&quot; }</code>.</p>
+</li>
+<li>
+<p>Cortex Innovation has now been verified and is ready to use.</p>
+</li>
+</ol>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>If both Gateway and LivePortal web applications are being installed, it is recommended that they are each installed on a separate Web Application Server. Neither Gateway or LivePortal currently offer HA support.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>It is possible to install the Web Application Server components on one of the Application Servers or the Load Balancer Server. Neither Gateway, Databases, nor the Flow Debugger Service currently offer HA support.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>If only Gateway is being installed, only 1 server is needed. If both Gateway and LivePortal web applications are being installed, they can be installed on the same Web Application Server, but it is not recommended.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>Application servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>A software-based load balancer called <a href="http://gobetween.io/">gobetween</a> is provided with the platform. This must be installed on its own server as it doesn&rsquo;t support routing traffic to itself. It also doesn&rsquo;t currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in <a href="https://en.wikipedia.org/wiki/Anycast">https://en.wikipedia.org/wiki/Anycast</a>; however, this has not been verified yet. It is possible to use an <a href="#alternative-load-balancer-requirements">alternative load balancer</a> to the one provided.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p>Database server doesn&rsquo;t currently offer HA support.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Windows Server Standard and Datacenter editions are supported. Filesystem <strong>must be NTFS</strong> and networking <strong>must use IPv4</strong>. Linux is not supported, but may be in the future.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p>A software-based load balancer called <a href="http://gobetween.io/">gobetween</a> is provided with the platform. This must be installed on it&rsquo;s own server as it doesn&rsquo;t support routing traffic to itself. It also doesn&rsquo;t currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in <a href="https://en.wikipedia.org/wiki/Anycast">https://en.wikipedia.org/wiki/Anycast</a>; however, this has not been verified yet. It is possible to use an <a href="#alternative-load-balancer-requirements">alternative load balancer</a> to the one provided.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>SQL Server Express, Standard and Enterprise are supported. Other databases are not supported.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p>Windows Server Standard and Datacenter editions are supported. Filesystem <strong>must be NTFS</strong> and networking <strong>must use IPv4</strong>. Linux is not supported, but may be in the future.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>PowerShell 5.1 ships with Windows Server 2016 and 2019.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7" role="doc-endnote">
-<p>SQL Server Standard and Enterprise editions are supported. Only SQL Server is supported; other databases, including SQL Server Express are not supported.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>IIS is supported; other web servers, including IIS Express are not supported.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:8" role="doc-endnote">
-<p>Only IIS is supported; other web servers, including IIS Express are not supported.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Ships as a windows role within Windows Server 2019.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:9" role="doc-endnote">
-<p>Ships as a windows role within Windows Server 2019.&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:10" role="doc-endnote">
-<p>Ships as a windows role within Windows Server 2016.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Ships as a windows role within Windows Server 2016.&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -482,6 +1382,817 @@ Information on installing Cortex across multiple on-premise servers with high av
 </div>
 
 
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-612f7a651ca6aeab337ef46934e5e009">2 - Multiple server - with HA - Further Information</h1>
+    <div class="lead">More information on installing Cortex Evolution to virtual machines or physical servers on-premise.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-0142f7076c57d5926440eb007e251725">2.1 - Advanced Configuration Changes</h1>
+    <div class="lead">Information on installing Cortex across multiple on-premise servers with high availability (HA), with non-default installation values.</div>
+	<h2 id="advanced-configuration-changes">Advanced configuration changes</h2>
+<p>Advanced configuration (such as port changes) can be undertaken by taking the following steps before running the PowerShell script. Some values will be modified by the script and they will take precedence, but those parameters can be removed from the script and this file used entirely if required.</p>
+<ol>
+<li>
+<p>In the &ldquo;Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts&rdquo; folder, locate the file &ldquo;Cortex.Innovation.Install.Config.json&rdquo; and open it with a text editor.</p>
+</li>
+<li>
+<p>Change the configuration file according to your cluster, referring to the following example and details:</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
+</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">&#34;customers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span>          <span style="color:#204a87;font-weight:bold">&#34;isPrimary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+          <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">&#34;clientConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8001&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;clusterConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8002&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;leaseDriverEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8003&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;serviceConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8004&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;httpGatewayEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9080&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;reverseProxyEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9081&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;applicationPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10010-10500&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;ephemeralPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10501-20000&#34;</span>
+          <span style="color:#000;font-weight:bold">},</span>
+          <span style="color:#204a87;font-weight:bold">&#34;loadBalancer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;installDirectory&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;c:\\ProgramData\\loadbalancer&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span>            <span style="color:#204a87;font-weight:bold">&#34;protocol&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;udp&#34;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#204a87;font-weight:bold">&#34;balance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;roundrobin&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;host&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;lb-server:162&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span>            <span style="color:#204a87;font-weight:bold">&#34;applicationPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10001&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;adminCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;loadBalancerCert&#34;</span>
+</span>          <span style="color:#000;font-weight:bold">},</span>
+          <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+            <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ha-server1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.1&#34;</span>
+</span>            <span style="color:#000;font-weight:bold">},</span>
+            <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ha-server2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span>
+</span>            <span style="color:#000;font-weight:bold">},</span>
+            <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ha-server3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span>
+</span>            <span style="color:#000;font-weight:bold">}</span>
+          <span style="color:#000;font-weight:bold">]</span>
+        <span style="color:#000;font-weight:bold">}</span>
+      <span style="color:#000;font-weight:bold">],</span>
+      <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;ha-server1&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span>        <span style="color:#000;font-weight:bold">},</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;ha-server2&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span>        <span style="color:#000;font-weight:bold">},</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;ha-server3&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span>        <span style="color:#000;font-weight:bold">}</span>
+      <span style="color:#000;font-weight:bold">},</span>
+      <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;windowsSmbRemoteRegistry&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+          <span style="color:#4e9a06">&#34;135&#34;</span><span style="color:#000;font-weight:bold">,</span>
+          <span style="color:#4e9a06">&#34;137&#34;</span><span style="color:#000;font-weight:bold">,</span>
+          <span style="color:#4e9a06">&#34;138&#34;</span><span style="color:#000;font-weight:bold">,</span>
+          <span style="color:#4e9a06">&#34;139&#34;</span><span style="color:#000;font-weight:bold">,</span>
+          <span style="color:#4e9a06">&#34;445&#34;</span>
+        <span style="color:#000;font-weight:bold">],</span>
+        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqAmqpPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+          <span style="color:#4e9a06">&#34;5671&#34;</span>
+        <span style="color:#000;font-weight:bold">],</span>
+        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqEpmdPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4369&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionClientPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;35672-35682&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionServerPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25672&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqManagementApiPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;15671&#34;</span>
+      <span style="color:#000;font-weight:bold">},</span>
+      <span style="color:#204a87;font-weight:bold">&#34;serverCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;serverCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\wildCardCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#000;font-weight:bold">}</span>
+</span>      <span style="color:#000;font-weight:bold">},</span>
+      <span style="color:#204a87;font-weight:bold">&#34;adminCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;loadBalancerCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\lbCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span><span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#000;font-weight:bold">}</span>
+</span>      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+    </code></pre></td></tr></table>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool.</td>
+</tr>
+<tr>
+<td>16-23</td>
+<td>If the bundled load balancer is not being used, delete these lines TODO: this will cause the line numbers to be wrong!!!</td>
+</tr>
+<tr>
+<td>17</td>
+<td>A local empty or non-existent directory on the load balancer server that the load balancer can be installed in. The directory path will be created if it does not exist. The installation user must have permissions to create and write to directories here. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used.</td>
+</tr>
+<tr>
+<td>20</td>
+<td>The computer name and port of the server that the load balancer should run on. This cannot be an IP address. The port must not be used by anything else.</td>
+</tr>
+<tr>
+<td>22</td>
+<td>The name of a certificate entry in the adminCertificates section. If this line is removed, an auto-generated self-signed certificate will be used.</td>
+</tr>
+<tr>
+<td>26, 30, 24</td>
+<td>The short computer names of the HA nodes. These must not contain the domain. The installation will be run on the first of these nodes.</td>
+</tr>
+<tr>
+<td>27, 31, 35</td>
+<td>The respective IPv4 addresses of the HA nodes.</td>
+</tr>
+<tr>
+<td>41, 45, 49</td>
+<td>These keys should be changed to the computer names of the HA nodes to match those on lines 26, 30 and 24</td>
+</tr>
+<tr>
+<td>43, 47, 51</td>
+<td>The name of a certificate entry in the serverCertificates section. This should be the same for all HA servers. If these lines are removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.</td>
+</tr>
+<tr>
+<td>72-74</td>
+<td>Skip configuring these lines if self-signed certificates are being used.</td>
+</tr>
+<tr>
+<td>79-81</td>
+<td>Skip configuring these lines if self-signed certificates are being used or if the bundled load balancer is not being used.</td>
+</tr>
+<tr>
+<td>73</td>
+<td>This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used.</td>
+</tr>
+<tr>
+<td>74</td>
+<td>The password used to secure the .PFX file.</td>
+</tr>
+<tr>
+<td>75</td>
+<td>This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.</td>
+</tr>
+<tr>
+<td>80</td>
+<td>This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used.</td>
+</tr>
+<tr>
+<td>81</td>
+<td>The password used to secure the .PFX file.</td>
+</tr>
+<tr>
+<td>82</td>
+<td>This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Save and close the config file.</p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-29dfe4168aa7a755a4aa92fd27618d01">2.2 - Alternative Architectures</h1>
+    <div class="lead">Information on installing Cortex on alternative architectures.</div>
+	<h2 id="alternative-architectures">Alternative architectures</h2>
+<p>It is possible to minimise the number of servers used by installing SQL Express/SQL Server, Cortex Gateway and the Flow Debugger Service on either the load balancer machine or one of the application servers (4 server architecture), as shown below. A 3 node architecture is not possible as the load balancer cannot route requests to itself.</p>
+<p>
+<figure class="no-float">
+    <img src=" /images/Cortex%20Innovation%20Overview%204a%20servers.png "/> <figcaption>
+            <h4>4 Server Architecture Diagram - Web Applications on Load Balancer Server</h4>
+        </figcaption>
+</figure>
+
+
+<figure class="no-float">
+    <img src=" /images/Cortex%20Innovation%20Overview%204b%20servers.png "/> <figcaption>
+            <h4>4 Server Architecture Diagram - Web Applications on Application Server</h4>
+        </figcaption>
+</figure>
+</p>
+<p>A number of other configurations are also possible, where any combination of the load balancer, Cortex Gateway, Flow Debugger Service and Databases can be on any combination of servers. This can be particularly relevant for adding Cortex Innovation to an existing Gateway installation.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-45bb903791d0b535df73f0d8452b3f5b">2.3 - Port Requirements</h1>
+    <div class="lead">Information on the ports opened when installing Cortex Innovation.</div>
+	<h2 id="port-requirements">Port Requirements</h2>
+<p>Cortex Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.</p>
+<h3 id="cortex-innovation-ports">Cortex Innovation Ports</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Default Port(s)</th>
+<th>Protocol</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cortex.RabbitMqAmqpPorts</td>
+<td>The port used by AMQP 0-9-1 and 1.0 clients with TLS. <strong>This cannot currently be changed.</strong></td>
+<td>5671</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.RabbitMqEpmdPorts</td>
+<td>The port used by epmd, a peer discovery service used by RabbitMQ nodes and CLI tools. <strong>This cannot currently be changed.</strong></td>
+<td>4369</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.RabbitMqErlangDistribut ionClientPorts</td>
+<td>The ports used by CLI tools (Erlang distribution client ports) for communication with nodes and is allocated from a dynamic range (computed as Erlang dist port + 10000 through dist port + 10010). <strong>This cannot currently be changed.</strong></td>
+<td>35672-35682</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.RabbitMqErlangDistribut ionServerPort</td>
+<td>The port used for RabbitMQ inter-node and CLI tools communication (Erlang distribution server port) and is allocated from a dynamic range (limited to a single port by default, computed as AMQP port + 20000). <strong>This cannot currently be changed.</strong></td>
+<td>25672</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.RabbitMqManagement ApiPort</td>
+<td>The port used by the RabbitMQ management plugin. <strong>This cannot currently be changed.</strong></td>
+<td>15671</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.WindowsSmbRemote Registry</td>
+<td>The ports used by Windows SMB and Remote Registry service.</td>
+<td>135, 137, 138, 139, 445</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.ServiceFabric.Customer1. ClusterConnectionEndpointPort</td>
+<td>The port used by the client to connect to the cluster when client APIs are used.</td>
+<td>8001</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.ServiceFabric.Customer1. ClientConnectionEndpointPort</td>
+<td>The port where the nodes communicate with each other.</td>
+<td>8002</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+<tr>
+<td>Cortex.ServiceFabric.Customer1. ServiceConnectionEndpointPort</td>
+<td>The port used by the applications and services deployed on a node to communicate with the Service Fabric client on that particular node.</td>
+<td>8004</td>
+<td>TCP</td>
+<td>Inbound</td>
+</tr>
+</tbody>
+</table>
+<h3 id="microsoft-service-fabric-firewall-rules-present-on-all-application-servers-with-domain-public-and-private-profiles">Microsoft Service Fabric Firewall Rules (present on all Application Servers, with Domain, Public and Private Profiles)</h3>
+<p>These rules will all appear in Windows Firewall with names starting with ‘{CustomerName}.{NodeName} WindowsFabric’.</p>
+<table>
+<thead>
+<tr>
+<th>Name in Rule</th>
+<th>Name in Config</th>
+<th>Description</th>
+<th>Default Port(s)</th>
+<th>Protocol(s)</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application Processes</td>
+<td>application Ports</td>
+<td>The ports that are used by the Service Fabric applications. Service Fabric uses these ports whenever new dynamic ports are required. <strong>The application port range should be large enough to cater for the dynamic port allocation of the application. Currently at least 400 is recommended. This may change if new services are added. This range should not overlap the Dynamic Ports (ephemeralPorts) range as set in the configuration.</strong> <br /><br /> <strong>Program</strong>: Any</td>
+<td>10010-10500</td>
+<td>TCP, UDP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>BackupRestore Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric process which manages the backup and restore of HA nodes. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_<AppID>\BRS.Code.Current\FabricBRS.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>CentralSecret Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric process which manages secrets. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_<AppID>\BRS.Code.Current\FabricCSS.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>DCA Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Diagnostics Collection Agent, which manages Diagnostic data. <br /> <br /> <strong>Program:</strong> %ProgramFiles%\Microsoft Service Fabric\bin\ Fabric\DCA.Code\FabricDCA.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Outbound</td>
+</tr>
+<tr>
+<td>Dynamic Ports</td>
+<td>ephemeral Ports</td>
+<td>Override the <a href="https://support.microsoft.com/kb/929851"><strong>dynamic ports used by the OS</strong></a>. Service Fabric uses a part of these ports as application ports, and the remaining are available for the OS. It also maps this range to the existing range present in the OS, so for all purposes, you can use the ranges given in the sample JSON files. <strong>Make sure that the difference between the start and the end ports is at least 255</strong>. You might run into conflicts if this difference is too low, because this range is shared with the OS. To see the configured dynamic port range, run netsh int ipv4 show dynamicport tcp. <br /> <br /> <strong>Program:</strong> Any</td>
+<td>10501-20000</td>
+<td>TCP, UDP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>EventStore Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric EventStore, which maintains events about the state of the HA nodes. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\ES.Code.Current\ EventStore.Service.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>Fabric Gateway Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Gateway, which allows REST and management functions to access the HA nodes. <br /> <br /> <strong>Program:</strong> %ProgramFiles%\Microsoft Service Fabric\bin\Fabric\ Fabric.Code\FabricGateway.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>Fabric Process</td>
+<td>N/A</td>
+<td>The port used by the main Service Fabric service. <br /> <br /> <strong>Program:</strong> %ProgramFiles%\Microsoft Service Fabric\bin\Fabric\ Fabric.Code\Fabric.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>FabricUpgrade Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Upgrade service. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\US.Code.Current\FabricUS.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>FaultAnalysis Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Fault Analysis service. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\FAS.Code.Current\FabricFAS.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>FileStore Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric File Store service, which manages the application file store and image store. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\FileStoreService.Code.Current\ FileStoreService.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>GatewayResource Manager Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Gateway Resource Manager, which provides APIs to manage the HA nodes and other resources. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\GRM.Code.Current\FabricGRM.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>HTTP App Gateway</td>
+<td>reverse Proxy Endpoint Port</td>
+<td><strong>This port cannot be changed at the current time. If it is already in use, please contact Cortex for assistance.</strong> The reverse proxy endpoint. For more information, see <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"><strong>Service Fabric reverse proxy</strong></a>. <br /> <br /> <strong>Program:</strong> Any</td>
+<td>9081</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>Http Gateway</td>
+<td>http Gateway Endpoint Port</td>
+<td>The port used by Service Fabric Explorer to connect to the cluster. <strong>This changes the port used to connect to the Service Fabric management portal as part of the post-install checks.</strong> <br /> <br /> <strong>Program:</strong> Any</td>
+<td>9080</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>Infrastructure Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Infrastructure Service. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\IS.Code.Current\FabricIS.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>Lease Driver</td>
+<td>lease Driver Endpoint Port</td>
+<td>The port used by the cluster lease driver to find out if the nodes are still active. <br /> <br /> <strong>Program:</strong> Any</td>
+<td>9002</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>ManagedIdentity TokenService Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Managed Identity Token Service. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\MITS.Code.Current\ ManagedIdentityTokenService.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>RepairManager Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Repair Manager Service. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\RM.Code.Current\FabricRM.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+<tr>
+<td>Upgrade Orchestration Service Process</td>
+<td>N/A</td>
+<td>The port used by the Service Fabric Upgrade Orchestration service. <br /> <br /> <strong>Program:</strong> %ProgramData%\SF\<CustomerName>.<Node Name>\Fabric\work\Applications\ __FabricSystem_App*\UOS.Code.Current\FabricUOS.exe</td>
+<td>Any</td>
+<td>TCP</td>
+<td>Inbound, Outbound</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cortex-ha-service-rules">Cortex HA Service Rules</h2>
+<p>Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the ephemeralPorts range.</p>
+<table>
+<thead>
+<tr>
+<th>Name of Service</th>
+<th>Description</th>
+<th>Default Port(s)</th>
+<th>Protocol(s)</th>
+<th>Direction</th>
+<th>Program</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API Gateway</td>
+<td>The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex HA infrastructure. <strong>If this is changed then it will be necessary to use the updated value in the</strong> <strong>&quot;<strong><strong>Service Fabric Api Gateway Endpoint</strong></strong>&quot; parameter of SetParameters.xml when configuring Cortex Gateway later in this document.</strong></td>
+<td>8722</td>
+<td>TCP, UDP</td>
+<td>Inbound, Outbound</td>
+<td>Any</td>
+</tr>
+<tr>
+<td>Flow Execution</td>
+<td>The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric.</td>
+<td>Dynamic – Uses the application ports</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5bb69998d6b3126bc4fd7dc6555ecf34">2.4 - Troubleshooting</h1>
+    <div class="lead">Information on troubleshooting Cortex Innovation installations.</div>
+	<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="ts-during-installation">Troubleshooting issues during installation</h3>
+<h4 id="ts-no-root-certificate">Root certificate verification failed as no root certificate has been specified</h4>
+<p>If the installation fails with “Root certificate verification failed as no root certificate has been specified.” it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the “pemRootCertificatePath” property for each certificate in the “serverCertificates” and “adminCertificates” section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):</p>
+<ol>
+<li>
+<p>In order to find out the issuer of the certificate, if not already known, the following script can be used, replacing the password for the pfx file and certificate path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">$p</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87">ConvertTo-SecureString</span> <span style="color:#000">-String</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span> <span style="color:#000">-AsPlainText</span> <span style="color:#000">-Force</span>
+<span style="color:#000">$c</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87">Get-PfxData</span> <span style="color:#000">-Password</span> <span style="color:#000">$p</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;C:\Certificates\serverCert.pfx&#34;</span>
+<span style="color:#000">$c</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Format-List</span>
+</code></pre></div></li>
+<li>
+<p>This will give a list of “Other Certificates” and “End Certificates” contained in the .pfx file. The issuer can be found in the “Issuer” property of one of the “Other Certificates”. If there are more than one, it will be the one that does not appear as a “Subject” in any of the other items.</p>
+</li>
+<li>
+<p>E.g. For a &ldquo;Let&rsquo;s Encrypt&rdquo; certificate this will give the following results:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">OtherCertificates</span>     <span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">[Subject]</span>
+                          <span style="color:#000">CN</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">Let</span><span style="color:#4e9a06">&#39;s Encrypt Authority X3, O=Let&#39;</span><span style="color:#000">s</span> <span style="color:#000">Encrypt</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">C</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">US</span>
+                        <span style="color:#000">[Issuer]</span>
+                          <span style="color:#000">CN</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">DST</span> <span style="color:#000">Root</span> <span style="color:#000">CA</span> <span style="color:#000">X3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">O</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">Digital</span> <span style="color:#000">Signature</span> <span style="color:#000">Trust</span> <span style="color:#000">Co</span><span style="color:#000;font-weight:bold">.</span>
+                        <span style="color:#000">[Serial Number]</span>
+                          <span style="color:#000">0A0141420000015385736A0B85ECA708</span>
+                        <span style="color:#000">[Not Before]</span>
+                          <span style="color:#000">17</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">03</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">2016</span> <span style="color:#000">16</span><span style="color:#a40000">:</span><span style="color:#000">40</span><span style="color:#a40000">:</span><span style="color:#000">46</span>
+                        <span style="color:#000">[Not After]</span>
+                          <span style="color:#000">17</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">03</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">2021</span> <span style="color:#000">16</span><span style="color:#a40000">:</span><span style="color:#000">40</span><span style="color:#a40000">:</span><span style="color:#000">46</span>
+                        <span style="color:#000">[Thumbprint]</span>
+                          <span style="color:#000">E6A3B45B062D509B3382282D196EFE97D5956CCB</span>
+                        <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">EndEntityCertificates</span> <span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">[Subject]</span>
+                          <span style="color:#000">CN</span><span style="color:#000;font-weight:bold">=*.</span><span style="color:#000">domain</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">com</span>
+                        <span style="color:#000">[Issuer]</span>
+                          <span style="color:#000">CN</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">Let</span><span style="color:#4e9a06">&#39;s Encrypt Authority X3, O=Let&#39;</span><span style="color:#000">s</span> <span style="color:#000">Encrypt</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">C</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000">US</span>
+                        <span style="color:#000">[Serial Number]</span>
+                          <span style="color:#000">03D3B2E5E7D75175C25B250305650ABE849A</span>
+                        <span style="color:#000">[Not Before]</span>
+                          <span style="color:#000">20</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">12</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">2019</span> <span style="color:#000">16</span><span style="color:#a40000">:</span><span style="color:#000">27</span><span style="color:#a40000">:</span><span style="color:#000">36</span>
+                        <span style="color:#000">[Not After]</span>
+                          <span style="color:#000">19</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">03</span><span style="color:#000;font-weight:bold">/</span><span style="color:#000">2020</span> <span style="color:#000">16</span><span style="color:#a40000">:</span><span style="color:#000">27</span><span style="color:#a40000">:</span><span style="color:#000">36</span>
+                        <span style="color:#000">[Thumbprint]</span>
+                          <span style="color:#000">D61356405B8D4AA11C29AF3D20F2D834C1A3039F</span>
+                        <span style="color:#000;font-weight:bold">}</span>
+</code></pre></div></li>
+<li>
+<p>In this case, the root certificate is “DST Root CA X3”.</p>
+</li>
+<li>
+<p>In a search engine, search for the CN of the issuer and one of the results should lead to a download of a .pem file or to a page with the certificate on it, which can then be copied and saved into a file with a .pem extension. Often, searching the issuer of the EndEntityCertificate, in the above case “Let’s Encrypt”, will also work.</p>
+</li>
+<li>
+<p>E.g. for “Let’s Encrypt”, the results of the search for “DST Root CA X3” leads to “https://www.identrust.com/dst-root-ca-x3” which provides the following text to be saved as a .pem file:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">-----BEGIN CERTIFICATE-----
+MIIDSjCCAjKgAwIBAgIQRK+wgNajJ7qJMDmGLvhAazANBgkqhkiG9w0BAQUFADA/
+MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT
+DkRTVCBSb290IENBIFgzMB4XDTAwMDkzMDIxMTIxOVoXDTIxMDkzMDE0MDExNVow
+PzEkMCIGA1UEChMbRGlnaXRhbCBTaWduYXR1cmUgVHJ1c3QgQ28uMRcwFQYDVQQD
+Ew5EU1QgUm9vdCBDQSBYMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AN+v6ZdQCINXtMxiZfaQguzH0yxrMMpb7NnDfcdAwRgUi+DoM3ZJKuM/IUmTrE4O
+rz5Iy2Xu/NMhD2XSKtkyj4zl93ewEnu1lcCJo6m67XMuegwGMoOifooUMM0RoOEq
+OLl5CjH9UL2AZd+3UWODyOKIYepLYYHsUmu5ouJLGiifSKOeDNoJjj4XLh7dIN9b
+xiqKqy69cK3FCxolkHRyxXtqqzTWMIn/5WgTe1QLyNau7Fqckh49ZLOMxt+/yUFw
+7BZy1SbsOFU5Q9D8/RhcQPGX69Wam40dutolucbY38EVAjqr2m7xPi71XAicPNaD
+aeQQmxkqtilX4+U9m5/wAl0CAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNV
+HQ8BAf8EBAMCAQYwHQYDVR0OBBYEFMSnsaR7LHH62+FLkHX/xBVghYkQMA0GCSqG
+SIb3DQEBBQUAA4IBAQCjGiybFwBcqR7uKGY3Or+Dxz9LwwmglSBd49lZRNI+DT69
+ikugdB/OEIKcdBodfpga3csTS7MgROSR6cz8faXbauX+5v3gTt23ADq1cEmv8uXr
+AvHRAosZy5Q6XkjEGB5YGV8eAlrwDPGxrancWYaLbumR9YbK+rlmM6pZW87ipxZz
+R8srzJmwN0jP41ZL9c8PDHIyh8bwRLtTcm1D9SZImlJnt1ir/md2cXjbDaJWFBM5
+JDGFoqgCWjBH4d1QB7wCCZAA62RjYJsWvIjJEubSfZGL+T0yjWW06XyxV3bqxbYo
+Ob8VZRzI9neWagqNdwvYkQsEjgfbKbYK7p2CNTUQ
+-----END CERTIFICATE-----
+</code></pre></div></li>
+<li>
+<p>After saving the .pem file, transfer it to the same directory as other installation certificates.</p>
+</li>
+<li>
+<p>Modify the following, highlighted sections of the installation configuration file like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  <span style="color:#4e9a06">&#34;serverCertificates&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;serverCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\wildCardCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\rootCert.pem&#34;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">,</span>
+  <span style="color:#4e9a06">&#34;adminCertificates&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;loadBalancerCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\lbCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\lbRootCert.pem&#34;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span>
+</code></pre></div></li>
+<li>
+<p>Run the installation script again.</p>
+</li>
+</ol>
+<h3 id="ts-after-installation">Troubleshooting issues after installation</h3>
+<h4 id="ts-no-innovation">Cortex Innovation features not visible in Cortex Gateway</h4>
+<p>Check that the &ldquo;Feature Flags&rdquo; Guid in the &ldquo;parameters.xml&rdquo; file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the &ldquo;web.config&rdquo; file and restart the website. If the value is correct, please contact Cortex Support for assistance.</p>
+<h4 id="ts-no-blocks">Cortex Innovation blocks not visible in Cortex Studio</h4>
+<p>Check that the &ldquo;Dot NET flow debugger Endpoint&rdquo; URL in the &ldquo;parameters.xml&rdquo; file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be &ldquo;https&rdquo;. If it is not, update it and reinstall Cortex Gateway or update the value in the &ldquo;web.config&rdquo; file and restart the website.</p>
+<p>Ensure that the flow debugger service is running. Open IIS, click on &ldquo;Application Pools&rdquo; and ensure there is a &ldquo;debugger&rdquo; app pool which is showing that it associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.</p>
+<p>If no misconfiguration can be found, the service log files may contain more information. These can be found on the Web Application Server at:</p>
+<ul>
+<li>%ProgramData%/Cortex/Cortex Flow Debugger</li>
+</ul>
+<p>If the issues cannot be resolved, please contact Cortex Support for assistance.</p>
+<h4 id="ts-no-publish">Cannot publish a package</h4>
+<p>Check that the &ldquo;Service Fabric Api Gateway Endpoint&rdquo;, &ldquo;Service Fabric Using Self Signed Certificates&rdquo;, &ldquo;Service Fabric ApiGateway Basic Auth Username&rdquo; and &ldquo;Service Fabric ApiGateway Basic Auth Password&rdquo; in the &ldquo;parameters.xml&rdquo; file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the &ldquo;web.config&rdquo; file and restart the website. If the value is correct, please contact Cortex Support for assistance.</p>
+<p>Ensure that the HA Services are healthy by following these steps:</p>
+<ol>
+<li>
+<p>Log on to one of the Application servers and open a web browser.</p>
+</li>
+<li>
+<p>Navigate to <a href="https://ha-server.domain.com:9080/Explorer">https://ha-server.domain.com:9080/Explorer</a>, where “ha-server.domain.com” is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.</p>
+<p>If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the “Manage Computer Certificates” tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed</p>
+<p>The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.</p>
+
+<figure class="no-float">
+    <img src=" /images/Service%20Fabric%20Explorer.png "/> <figcaption>
+            <h4>Healthy Service Fabric Explorer</h4>
+        </figcaption>
+</figure>
+
+<p>If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
+If no useful message can be seen here, the service log files may contain more information.</p>
+</li>
+</ol>
+<p>If no solution can be found, please contact Cortex Support for assistance.</p>
+<h4 id="managing-rabbitmq">Managing RabbitMQ</h4>
+<p>There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send the messages between services.
+To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to <code>https://ha-server1.domain.com:15671</code>, <code>replacing ha-server1.domain.com</code> with the FQDN of one of the Application Servers. Sign in with username &lsquo;administrator&rsquo; and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:</p>
+
+<figure class="no-float">
+    <img src=" /images/RabbitMQ%20Status.png "/> <figcaption>
+            <h4>Healthy RabbitMQ status.</h4>
+        </figcaption>
+</figure>
+
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    The username and password are not secure, but the RabbitMQ manager will only allow you to connect from localhost so it is not accessible to anyone who does not have remote desktop access.
+
+</div>
+
+<p>If there are any unhealthy nodes (red) you may need to restart the RabbitMQ Windows service on each of the nodes that is erroring. These can be restarted in any order, but they
+must be restarted one at a time; wait for the node in the RabbitMQ explorer to be green before restarting the next one (you may need to refresh the browser).</p>
+
+</div>
+
+
+
+    
+	
+  
 
     
 	
@@ -527,6 +2238,12 @@ Information on installing Cortex across multiple on-premise servers with high av
     </a>
   </li>
   
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="YouTube" aria-label="YouTube">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
 </ul>
 
         
@@ -553,7 +2270,7 @@ Information on installing Cortex across multiple on-premise servers with high av
   </li>
   
   <li data-toggle="tooltip" data-placement="top" aria-label="Disclaimer">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.tax.service.gov.uk/check-vat-number/enter-vat-details">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.cortex-ia.com/disclaimer/">
       Disclaimer
     </a>
   </li>
@@ -609,7 +2326,7 @@ Information on installing Cortex across multiple on-premise servers with high av
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2021 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>
@@ -636,7 +2353,9 @@ Information on installing Cortex across multiple on-premise servers with high av
 
 
 
-<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
+
+
+<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
 
 
 
