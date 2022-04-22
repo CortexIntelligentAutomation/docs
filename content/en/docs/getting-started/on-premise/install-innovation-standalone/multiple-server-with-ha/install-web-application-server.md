@@ -7,6 +7,8 @@ weight: 40
 
 # {{< param title >}}
 
+This guide describes how to install the Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation.
+
 ## Extract Installation Artefacts
 
 1. We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):
@@ -568,3 +570,4 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 [Create Application]: {{< ref "#create-new-web-application" >}}
 [Get Application Pool User]: {{< ref "#get-application-pool-user" >}}
 [Install Certificate]: {{< ref "#install-certificate" >}}
+[Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}

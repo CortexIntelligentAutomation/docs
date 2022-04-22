@@ -7,6 +7,8 @@ weight: 50
 
 # {{< param title >}}
 
+This guide describes how to setup Gateway. Please ensure that [Install Web Application Server][] has been completed before starting this installation.
+
 ## Gateway Initial Setup
 
 Log on to Gateway and run through the setup wizard:
@@ -84,3 +86,4 @@ Once Gateway has been configured, if you wish to encrypt the databases using [Tr
 [Account Details]: {{< ref "#account-details" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
+[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.InstallWebApplicationServer" >}}

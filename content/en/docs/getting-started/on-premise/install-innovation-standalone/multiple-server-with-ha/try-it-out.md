@@ -1,11 +1,13 @@
 ---
 title: "Try it out"
 linkTitle: "Try it out"
-description: "Information about trying out Cortex for the first time."
+description: "Information about trying out Cortex Innovation for the first time."
 weight: 60
 ---
 
 # {{< param title >}}
+
+This guide describes how to try out a new Innovation installation to make sure it is working. Please ensure that [Setup Gateway][] has been completed before starting this installation.
 
 ## Test Debugging Flows
 
@@ -56,3 +58,4 @@ Test the platform by creating a new flow and executing it using the following st
 [Troubleshooting No Blocks]: {{< url "Cortex.Reference.Troubleshooting.Install.TroubleshootingNoBlocks" >}}
 [Troubleshooting No Publish]: {{< url "Cortex.Reference.Troubleshooting.Install.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url "Cortex.Reference.Troubleshooting.Install.TroubleshootingNoRootCertificate" >}}
+[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.SetupGateway" >}}

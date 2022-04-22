@@ -1,11 +1,13 @@
 ---
 title: "Prerequisites"
 linkTitle: "Prerequisites"
-description: ""
+description: "Information about the prerequisites required on each server type for installation."
 weight: 20
 ---
 
 # {{< param title >}}
+
+The prerequisites required for each server type (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 
 ## Hardware Requirements
 
@@ -20,14 +22,6 @@ weight: 20
 [^1]: It is possible to install the Web Application Server components on one of the Application Servers or the Load Balancer Server. Neither Gateway, Databases, nor the Flow Debugger Service currently offer HA support.
 [^2]: Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
 [^3]: A software-based load balancer called [gobetween](https://github.com/yyyar/gobetween) is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast](https://en.wikipedia.org/wiki/Anycast); however, this has not been verified yet. It is possible to use an [alternative load balancer](#alternative-load-balancer-requirements) to the one provided.
-
-### Alternative Load Balancer Requirements
-
-Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
-
-* Must be able to health check each node by running a batch script (that runs a PowerShell script which makes an HTTP request) that returns 1 for healthy and 0 for unhealthy.
-* Must be able to access each of the Application Servers.
-* Ideally it should be highly available to avoid a single point of failure in the system.
 
 ## Software Requirements
 
@@ -44,6 +38,22 @@ Must support a round robin (or similar) method of load balancing to specified po
 [^10]: Ships as a windows role within Windows Server 2019.
 [^11]: Ships as a windows role within Windows Server 2016.
 
+## Additional Load Balancer Server Requirements
+
+### Alternative Load Balancer Requirements
+
+Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
+
+* Must be able to health check each node by running a batch script (that runs a PowerShell script which makes an HTTP request) that returns 1 for healthy and 0 for unhealthy.
+* Must be able to access each of the Application Servers.
+* Ideally it should be highly available to avoid a single point of failure in the system.
+
+## Additional Application Server Requirements
+
+### Domain Requirements
+
+All servers must be on the same domain and cannot be domain controllers.
+
 ### Service Requirements
 
 The following Windows Services must be running on all Application Servers:
@@ -56,15 +66,13 @@ The following Windows Services must be running on all Application Servers:
 
 All Application Servers must use an NTFS filesystem.
 
-## Security Requirements
+### Security Requirements
 
-### Installation User
+#### Installation User
 
 A domain user which is a member of the local Administrators group on all Application Servers and Load Balancer Server must be available to run the installation scripts. This is a pre-requisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.
 
-Local or domain users must be available to run the Application Pools for Gateway and Debugger. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run.
-
-### Antivirus Exclusions
+#### Antivirus Exclusions
 
 It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on each Application Server to reduce antivirus processing on Service Fabric artefacts:
 
@@ -93,27 +101,7 @@ A script is provided during installation to add these exclusions for Windows Def
 
 If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
 
-### Domain Requirements
-
-Only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
-
-Supported versions of Active Directory are listed below:
-
-| Version                    | Verified?      | Supported From | Supported Until  |  
-|----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2003 R2     |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2008        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2012        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2016        |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2019        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2022        |                | Cortex v2022.5 | To be evaluated  |
-
-All servers must be on the same domain and cannot be domain controllers.
-
-### Port Requirements
+#### Port Requirements
 
 Cortex Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
 
@@ -121,13 +109,13 @@ If you are using Windows Firewall, some ports are opened during installation and
 
 The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on each Application Server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
-### TLS Requirements
+#### TLS Requirements
 
 * TLS 1.2 must be enabled.
 
 TODO include protocols, ciphers, hashes etc.
 
-### Certificate Requirements
+#### Certificate Requirements
 
 {{% alert title="Note" %}}
 For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
@@ -153,11 +141,59 @@ This file should be placed in a known location on the Application Server where t
 
 If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the HA nodes. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
-### Kerberos Requirements
+#### Kerberos Requirements
 
 TODO - Kerberos and winrm
 
-## Client Requirements
+#### TLS Requirements
+
+There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:
+
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+
+The `Cortex.Innovation.Install.SSLBestPractises.ps1` script is provided during installation to apply these security changes to the Web Application Server.
+
+## Additional Web Application Server Requirements
+
+### Security Requirements
+
+#### Installation User
+
+Local or domain users must be available to run the Application Pools for Gateway and Debugger. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run.
+
+#### Certificate Requirements
+
+Both Gateway and the Flow Debugger Service require an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
+
+* Enhanced Key Usage: `Server Authentication` and `Client Authentication`
+* Subject Alternative Names (SAN): At minimum the FQDN of the Server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1
+
+If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
+
+Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
+
+More information about importing the certificate is given during installation.
+
+### Domain Requirements
+
+For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
+
+Supported versions of Active Directory are listed below:
+
+| Version                    | Verified?      | Supported From | Supported Until  |  
+|----------------------------|----------------|----------------|------------------|
+| Windows Server 2003        |      ✓        | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2003 R2     |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2008        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2012        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2016        |      ✓        | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2019        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2022        |                | Cortex v2022.5 | To be evaluated  |
+
+### Client Requirements
 
 We support the latest versions of the following browsers:
 
@@ -171,3 +207,5 @@ We support the latest versions of the following browsers:
 
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.PortRequirements" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Architecture]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Architecture" >}}
+[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}

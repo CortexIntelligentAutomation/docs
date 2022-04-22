@@ -7,6 +7,7 @@
                 MainDoc = "/docs/getting-started/on-premise/install-innovation-standalone/"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/"       
+                    Architecture = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/architecture"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-web-application-server"

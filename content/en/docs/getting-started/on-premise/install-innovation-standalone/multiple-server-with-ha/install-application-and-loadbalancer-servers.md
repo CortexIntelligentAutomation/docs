@@ -1,11 +1,13 @@
 ---
 title: "Install Application Servers and Load Balancer"
 linkTitle: "Install Application Servers and Load Balancer"
-description: ""
+description: "Information on installing the Application Servers and Load Balancer Server."
 weight: 30
 ---
 
 # {{< param title >}}
+
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Prerequisites][] have been read before starting this installation.
 
 ## Extract Installation Artefacts
 
@@ -256,3 +258,4 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Install.TroubleshootingDuringInstallation" >}}
 [Antivirus Exclusions]: {{< ref "#add-antivirus-exclusions" >}}
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
+[Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Prerequisites" >}}
