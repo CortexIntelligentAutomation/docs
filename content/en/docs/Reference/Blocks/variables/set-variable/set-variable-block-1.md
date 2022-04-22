@@ -179,8 +179,8 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 
 [TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
-[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Working with References]: {{< url "Cortex.Reference.Concepts.WorkingWithReferences.MainDoc" >}}

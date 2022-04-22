@@ -370,7 +370,7 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [Splunk]: {{< url "Splunk.MainDoc" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
 [Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
