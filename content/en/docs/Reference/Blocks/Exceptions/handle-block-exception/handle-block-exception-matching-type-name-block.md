@@ -211,5 +211,5 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDocComparison" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}

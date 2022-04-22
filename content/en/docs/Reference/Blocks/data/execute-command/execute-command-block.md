@@ -736,12 +736,11 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
-[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 [Array]: {{< url "Cortex.Reference.DataTypes.MostCommon.Array" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 
 [ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
 [ICommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.CommandText" >}}
