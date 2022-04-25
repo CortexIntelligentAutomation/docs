@@ -1,7 +1,7 @@
 ---
-title: "Install Innovation Standalone"
-linkTitle: "Install Innovation Standalone"
-description: "Information on installing a Cortex Innovation platform."
+title: "Install Innovation Only"
+linkTitle: "Install Innovation Only"
+description: "Information about installing a Cortex Innovation platform."
 weight: 10
 ---
 

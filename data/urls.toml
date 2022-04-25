@@ -3,27 +3,27 @@
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
-            [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone]
-                MainDoc = "/docs/getting-started/on-premise/install-innovation-standalone/"
-                [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA]
-                    MainDoc = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/"       
-                    Architecture = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/architecture"
-                    InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-application-and-loadbalancer-servers"
-                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
-                    InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/install-web-application-server#install-gateway"
-                    Prerequisites = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/prerequisites"
-                    CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/prerequisites#certificate-requirements"
-                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/prerequisites#client-requirements"
-                    SetupGateway = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/setup-gateway"
-                    TryItOut= "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/try-it-out"
-                    [Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced]
-                        AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/advanced-config-changes"
-                        AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/alternative-architectures"
-                        ApplyTDE = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/tde"
-                        ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/configure-firewalls"
-                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/self-signed-certificates"
-                        PortRequirements = "/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/port-requirements"
+            [Cortex.GettingStarted.OnPremise.InstallInnovationOnly]
+                MainDoc = "/docs/getting-started/on-premise/install-innovation-only/"
+                [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
+                    MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
+                    Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
+                    InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
+                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server#install-gateway"
+                    Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
+                    CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
+                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#client-requirements"
+                    SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
+                    TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
+                    [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
+                        AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes"
+                        AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/alternative-architectures"
+                        ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
+                        ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
+                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
+                        PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
@@ -393,13 +393,13 @@
                 XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
         [Cortex.Reference.Troubleshooting]
             MainDoc = "/docs/reference/troubleshooting/"
-            [Cortex.Reference.Troubleshooting.Install]
-                TroubleshootingDuringInstallation= "/docs/reference/troubleshooting/install#ts-during-installation"
-                TroubleshootingNoInnovation = "/docs/reference/troubleshooting/install#ts-no-innovation"
-                TroubleshootingAfterInstallation= "/docs/reference/troubleshooting/install#ts-after-installation"
-                TroubleshootingNoBlocks = "/docs/reference/troubleshooting/install#ts-no-blocks"
-                TroubleshootingNoPublish = "/docs/reference/troubleshooting/install#ts-no-publish"
-                TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/install#ts-no-root-certificate"
+            [Cortex.Reference.Troubleshooting.Installation]
+                TroubleshootingDuringInstallation= "/docs/reference/troubleshooting/installation#ts-during-installation"
+                TroubleshootingNoInnovation = "/docs/reference/troubleshooting/installation#ts-no-innovation"
+                TroubleshootingAfterInstallation= "/docs/reference/troubleshooting/installation#ts-after-installation"
+                TroubleshootingNoBlocks = "/docs/reference/troubleshooting/installation#ts-no-blocks"
+                TroubleshootingNoPublish = "/docs/reference/troubleshooting/installation#ts-no-publish"
+                TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/installation#ts-no-root-certificate"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
@@ -447,7 +447,6 @@
                 MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
-
 # External links
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"

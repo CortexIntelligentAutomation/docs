@@ -1,6 +1,6 @@
 ---
-title: "Install"
-linkTitle: "Install"
+title: "Installation"
+linkTitle: "Installation"
 description: >
     Information on troubleshooting Cortex Innovation installations.
 ---
@@ -122,7 +122,7 @@ If the issues cannot be resolved, please contact [Cortex Service Desk](https://s
 
 ### Cannot publish a package {#ts-no-publish}
 
-Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact Cortex Support for assistance.
+Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
 
 Ensure that the HA Services are healthy by following these steps:
 
@@ -138,12 +138,12 @@ Ensure that the HA Services are healthy by following these steps:
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
     If no useful message can be seen here, the service log files may contain more information.
 
-If no solution can be found, please contact Cortex Support for assistance.
+If no solution can be found, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
 
 ### Managing RabbitMQ
 
 There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send the messages between services.
-To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://ha-server1.domain.com:15671`, `replacing ha-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
+To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://ha-server1.domain.com:15671`, replacing `ha-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
 
 {{< figure src="/images/RabbitMQ Status.png" title="Healthy RabbitMQ status." >}}
 

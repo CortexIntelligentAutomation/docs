@@ -1,7 +1,7 @@
 ---
 title: "Install Application Servers and Load Balancer"
 linkTitle: "Install Application Servers and Load Balancer"
-description: "Information on installing the Application Servers and Load Balancer Server."
+description: "Information about installing the Application Servers and Load Balancer Server."
 weight: 30
 ---
 
@@ -158,7 +158,7 @@ To install .NET Framework 4.7.1:
     The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
-More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at [Advanced Configuration](/docs/getting-started/on-premise/install-innovation-standalone/multiple-server-with-ha/advanced/advanced-config-changes).
+More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at [Advanced Application Server and Load Balancer Configuration Changes](/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes).
     {{% /alert %}}
 
 1. Save and close `Cortex.Innovation.Install.ps1`.
@@ -251,11 +251,11 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 1. [Install Web Application Server][]
 
-[Advanced Configuration]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.AdvancedConfig" >}}
-[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.InstallWebApplicationServer" >}}
-[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.CertificateRequirements" >}}
-[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.InstallGateway" >}}
-[Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Install.TroubleshootingDuringInstallation" >}}
+[Advanced Application Server and Load Balancer Configuration Changes]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.AdvancedConfig" >}}
+[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
+[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
+[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
+[Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Antivirus Exclusions]: {{< ref "#add-antivirus-exclusions" >}}
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
-[Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Prerequisites" >}}
+[Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}

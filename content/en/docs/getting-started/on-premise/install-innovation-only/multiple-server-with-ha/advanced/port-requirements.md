@@ -1,7 +1,7 @@
 ---
 title: "Port Requirements for Application Servers and Load Balancer"
 linkTitle: "Port Requirements for Application Servers and Load Balancer"
-description: "Information on the ports opened when installing Cortex Innovation."
+description: "Information about the ports opened when installing Cortex Innovation."
 ---
 
 # {{< param title >}}
@@ -57,5 +57,11 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 | API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex HA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
 | Flow Execution | The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
 
+## Cortex Load Balancer Rules
 
-TODO: loadbalancer rules
+The load balancer server must be able to retrieve traffic via HTTPS and SNMP. The following firewall ports are opened by the installer (these rules will all appear in Windows Firewall with names starting with `{CustomerName}`):
+
+|Name in Rule        | Name in Config       | Default Port(s) | Protocol(s) | Direction | Program|
+|--------------------|----------------------|-----------------|-------------|-----------|--------|
+| GoBetweenSnmpPort  | loadBalancerSnmpPort | 162             | UDP         | Inbound   | Any    |
+| GoBetweenTlsPort   | loadBalancerTlsPort  | 443             | TCP         | Inbound   | Any    |

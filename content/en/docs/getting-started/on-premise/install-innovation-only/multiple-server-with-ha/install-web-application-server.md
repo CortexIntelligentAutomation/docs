@@ -1,7 +1,7 @@
 ---
 title: "Install the Web Application Server"
 linkTitle: "Install Web Application Server"
-description: "Information on installing a Web Application Server."
+description: "Information about installing a Web Application Server."
 weight: 40
 ---
 
@@ -25,9 +25,9 @@ This guide describes how to install the Web Application Server. Please ensure th
 ### Install SQL Server or SQL Express
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-    * SQL Server 2019 Installation Guide for Cortex
-    * SQL Server 2016 Installation Guide for Cortex
-    * SQL Server 2016 Express Installation Guide for Cortex
+    * <a href="/pdfs/Cortex Integrity - SQL Server 2019 Installation Guide.pdf">Cortex Integrity - SQL Server 2019 Installation Guide</a>
+    * <a href="/pdfs/Cortex Integrity - SQL Server 2016 Installation Guide.pdf">Cortex Integrity - SQL Server 2016 Installation Guide</a>
+    * <a href="/pdfs/Cortex Integrity - SQL Server 2016 Express Installation Guide.pdf">Cortex Integrity - SQL Server 2016 Express Installation Guide</a>
 
 ### Install Microsoft .NET Framework 4.7.1
 
@@ -72,7 +72,7 @@ If the user tries to navigate to an address not in the SAN list, then they will 
 
 Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
 
-You can import the certificate by right clicking the certificate file, selecting Install Certificate and following the wizard. When prompted, ensure you import it into the `Local Machine` store and not `Current User`.
+You can import the certificate by right clicking the certificate file, selecting `Install Certificate` and following the wizard. When prompted, ensure you import it into the `Local Machine` store and not `Current User`.
 
 To verify the certificate is imported:
 
@@ -304,7 +304,7 @@ Both the Gateway and Flow Debugger Service should be configured to use HTTPS:
 
 ### Get Application Pool User
 
-A domain user account is required for the Flow Debugger Service web application pool and must be created prior to performing the installation. In line with best practices, this account should not be used for any purposes other than those specified for the Flow Debugger Service. Alternatively, the `NETWORK SERVICE` user may also be used.
+A domain user account is required for the Flow Debugger Service web application pool and must be created prior to performing the installation. In line with best practices, this account should not be used for any purposes other than those specified for the Flow Debugger Service. Alternatively, the `NT AUTHORITY\NETWORK SERVICE` user may also be used.
 
 This user must currently have access to the default NuGet directory, in order to load block packages correctly. To add permissions for the user take the following steps:
 
@@ -560,14 +560,14 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
 1. [Setup Gateway][]
 
-[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
-[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.SetupGateway" >}}
-[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.TryItOut" >}}
-[Configure Firewalls]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.Advanced.ConfigureFirewalls" >}}
-[Configure Installation Script]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.ConfigureInstallationScript" >}}
+[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
+[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
+[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOut" >}}
+[Configure Firewalls]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.ConfigureFirewalls" >}}
+[Configure Installation Script]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [Configure Web Site]: {{< ref "#configure-web-site" >}}
 [Create Web Site]: {{< ref "#create-web-site" >}}
 [Create Application]: {{< ref "#create-new-web-application" >}}
 [Get Application Pool User]: {{< ref "#get-application-pool-user" >}}
 [Install Certificate]: {{< ref "#install-certificate" >}}
-[Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationStandalone.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
