@@ -1,11 +1,10 @@
 ---
-title: "Port Requirements"
-linkTitle: "Port Requirements"
-description: >
-    Information on the ports opened when installing Cortex Innovation.
+title: "Port Requirements for Application Servers and Load Balancer"
+linkTitle: "Port Requirements for Application Servers and Load Balancer"
+description: "Information about the ports opened when installing Cortex Innovation."
 ---
 
-## Port Requirements
+# {{< param title >}}
 
 Cortex Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
@@ -57,3 +56,12 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 |----------------|-------------|-----------------|-------------|-----------|--------|
 | API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Cortex HA infrastructure. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
 | Flow Execution | The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
+
+## Cortex Load Balancer Rules
+
+The load balancer server must be able to retrieve traffic via HTTPS and SNMP. The following firewall ports are opened by the installer (these rules will all appear in Windows Firewall with names starting with `{CustomerName}`):
+
+|Name in Rule        | Name in Config       | Default Port(s) | Protocol(s) | Direction | Program|
+|--------------------|----------------------|-----------------|-------------|-----------|--------|
+| GoBetweenSnmpPort  | loadBalancerSnmpPort | 162             | UDP         | Inbound   | Any    |
+| GoBetweenTlsPort   | loadBalancerTlsPort  | 443             | TCP         | Inbound   | Any    |
