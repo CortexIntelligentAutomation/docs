@@ -330,12 +330,6 @@ Getting the DayOfWeek component of a Date Time representing 5am on 31st December
 DayOfWeek.Friday
 ```
 
-Its text representation is:
-
- ```json
-"DayOfWeek: Friday"
-```
-
 ***
 
 ## Properties
