@@ -247,7 +247,6 @@
                 DateTime = "/docs/reference/data-types/most-common/#datetime"
                 DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                 DateTimeOffset = "/docs/reference/data-types/most-common/#datetimeoffset"
-                DayOfWeek = "/docs/reference/data-types/most-common/#dayofweek"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
                 Exceptions = "/docs/reference/data-types/most-common/#exceptions"
@@ -316,6 +315,10 @@
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
                 [Cortex.Reference.DataTypes.Data.ConnectionType]
                     MainDoc = "/docs/reference/data-types/data/connectiontype"
+            [Cortex.Reference.DataTypes.DateAndTime]
+                MainDoc = "/docs/reference/data-types/date-and-time/"
+                [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
+                    MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
