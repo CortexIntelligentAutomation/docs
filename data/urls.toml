@@ -32,6 +32,12 @@
     [Cortex.Reference]
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.DateAndTime]
+                MainDoc = "/docs/reference/blocks/date-and-time"
+                [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
+                    MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time"
+                    [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertDateTimeToText]
+                        MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-date-time-to-text-block"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -197,6 +203,8 @@
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]
                 MainDoc = "/docs/reference/concepts/object-casting/"
+                ImplicitCasting = "/docs/reference/concepts/object-casting/#implicit-cast"
+                ExplicitCasting = "/docs/reference/concepts/object-casting/#explicit-cast"
             [Cortex.Reference.Concepts.ObjectEquality]
                 MainDoc = "/docs/reference/concepts/object-equality/"
                 [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]
@@ -319,6 +327,14 @@
                 MainDoc = "/docs/reference/data-types/date-and-time/"
                 [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
                     MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTime]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetime"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetimeoffset"
+                [Cortex.Reference.DataTypes.DateAndTime.TimePeriod]
+                    MainDoc = "/docs/reference/data-types/date-and-time/timeperiod"
+                [Cortex.Reference.DataTypes.DateAndTime.TimeSpan]
+                    MainDoc = "/docs/reference/data-types/date-and-time/timespan"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
@@ -510,6 +526,20 @@
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
             Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.parse"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.tostring"
+        [MSDocs.DotNet.Api.System.DateTime]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime"
+        [MSDocs.DotNet.Api.System.DateTimeOffset]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset"
+            InstantiatingADateTimeOffsetObject = "https://docs.microsoft.com/en-us/dotnet/standard/datetime/instantiating-a-datetimeoffset-object"
+            Ctors = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.-ctor"
+            Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse"
+            Now = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.now"
+            UtcNow = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcnow"
+            DateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.datetime"
+            LocalDateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.localdatetime"
+            UtcDateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcdatetime"
+            MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.minvalue"
+            ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.ToString"
         [MSDocs.DotNet.Api.System.DayOfWeek]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.dayofweek"
         [MSDocs.DotNet.Api.System.Double]
@@ -565,6 +595,8 @@
             Format = "https://docs.microsoft.com/en-us/dotnet/api/system.string.format"
             Insert = "https://docs.microsoft.com/en-us/dotnet/api/system.string.insert"
             Join = "https://docs.microsoft.com/en-us/dotnet/api/system.string.join"
+        [MSDocs.DotNet.Api.System.TimeSpan]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.timespan"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]

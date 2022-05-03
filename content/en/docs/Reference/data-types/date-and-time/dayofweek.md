@@ -12,7 +12,7 @@ description: "Used to represent a day of the week from Sunday (i.e. `DayOfWeek.S
 
 The `DayOfWeek` data type is used to represent a day of the week from Sunday (i.e. `DayOfWeek.Sunday`) through Saturday (i.e. `DayOfWeek.Saturday`).
 
-`DayOfWeek` is an enum data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
+`DayOfWeek` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
 | | |
 |-|-|
@@ -59,13 +59,13 @@ The following table shows some of the ways that a `DayOfWeek` can be created.
 |                                  | `DayOfWeek.Thursday`  | `DayOfWeek.Thursday`  | Expression | Indicates Thursday |
 |                                  | `DayOfWeek.Friday`    | `DayOfWeek.Friday`    | Expression | Indicates Friday |
 |                                  | `DayOfWeek.Saturday`  | `DayOfWeek.Saturday`  | Expression | Indicates Saturday |
-| Use [Casting][Object Casting]    | `(DayOfWeek)0`        | `DayOfWeek.Sunday`    | Expression | [Casts][Object Casting] `0` to `DayOfWeek.Sunday` |
-|                                  | `(DayOfWeek)1`        | `DayOfWeek.Monday`    | Expression | [Casts][Object Casting] `1` to `DayOfWeek.Monday` |
-|                                  | `(DayOfWeek)2`        | `DayOfWeek.Tuesday`   | Expression | [Casts][Object Casting] `2` to `DayOfWeek.Tuesday` |
-|                                  | `(DayOfWeek)3`        | `DayOfWeek.Wednesday` | Expression | [Casts][Object Casting] `3` to `DayOfWeek.Wednesday` |
-|                                  | `(DayOfWeek)4`        | `DayOfWeek.Thursday`  | Expression | [Casts][Object Casting] `4` to `DayOfWeek.Thursday` |
-|                                  | `(DayOfWeek)5`        | `DayOfWeek.Friday`    | Expression | [Casts][Object Casting] `5` to `DayOfWeek.Friday` |
-|                                  | `(DayOfWeek)6`        | `DayOfWeek.Saturday`  | Expression | [Casts][Object Casting] `6` to `DayOfWeek.Saturday` |
+| Use [Explicit Casting][]    | `(DayOfWeek)0`        | `DayOfWeek.Sunday`    | Expression | [Casts][Explicit Casting] `0` to `DayOfWeek.Sunday` |
+|                                  | `(DayOfWeek)1`        | `DayOfWeek.Monday`    | Expression | [Casts][Explicit Casting] `1` to `DayOfWeek.Monday` |
+|                                  | `(DayOfWeek)2`        | `DayOfWeek.Tuesday`   | Expression | [Casts][Explicit Casting] `2` to `DayOfWeek.Tuesday` |
+|                                  | `(DayOfWeek)3`        | `DayOfWeek.Wednesday` | Expression | [Casts][Explicit Casting] `3` to `DayOfWeek.Wednesday` |
+|                                  | `(DayOfWeek)4`        | `DayOfWeek.Thursday`  | Expression | [Casts][Explicit Casting] `4` to `DayOfWeek.Thursday` |
+|                                  | `(DayOfWeek)5`        | `DayOfWeek.Friday`    | Expression | [Casts][Explicit Casting] `5` to `DayOfWeek.Friday` |
+|                                  | `(DayOfWeek)6`        | `DayOfWeek.Saturday`  | Expression | [Casts][Explicit Casting] `6` to `DayOfWeek.Saturday` |
 | Use `Enum.Parse`                 | `(DayOfWeek)Enum.Parse(typeof(DayOfWeek), "Sunday")` | `DayOfWeek.Sunday` | Expression | Parses `"Sunday"` and converts it to `DayOfWeek.Sunday`. See [Enum.Parse][] |
 |                                  | `(DayOfWeek)Enum.Parse(typeof(DayOfWeek), "Monday")` | `DayOfWeek.Monday` | Expression | Parses `"Monday"` and converts it to `DayOfWeek.Monday`. See [Enum.Parse][] |
 |                                  | `(DayOfWeek)Enum.Parse(typeof(DayOfWeek), "Tuesday")` | `DayOfWeek.Tuesday` | Expression | Parses `"Tuesday"` and converts it to `DayOfWeek.Tuesday`. See [Enum.Parse][] |
@@ -126,13 +126,13 @@ The following table shows some of the ways that a `DayOfWeek` can be converted t
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use [Casting][Object Casting]         | `(Int32)DayOfWeek.Sunday`   | `0` | Expression | [Casts][Object Casting] `DayOfWeek.Sunday` to `0` |
-|                                       | `(Int32)DayOfWeek.Monday`   | `1` | Expression | [Casts][Object Casting] `DayOfWeek.Monday` to `1` |
-|                                       | `(Int32)DayOfWeek.Tuesday`  | `2` | Expression | [Casts][Object Casting] `DayOfWeek.Tuesday` to `2` |
-|                                       | `(Int32)DayOfWeek.Wednesday`| `3` | Expression | [Casts][Object Casting] `DayOfWeek.Wednesday` to `3` |
-|                                       | `(Int32)DayOfWeek.Thursday` | `4` | Expression | [Casts][Object Casting] `DayOfWeek.Thursday` to `4` |
-|                                       | `(Int32)DayOfWeek.Friday`   | `5` | Expression | [Casts][Object Casting] `DayOfWeek.Friday` to `5` |
-|                                       | `(Int32)DayOfWeek.Saturday` | `6` | Expression | [Casts][Object Casting] `DayOfWeek.Saturday` to `6` |
+| Use [Explicit Casting][]         | `(Int32)DayOfWeek.Sunday`   | `0` | Expression | [Casts][Explicit Casting] `DayOfWeek.Sunday` to `0` |
+|                                       | `(Int32)DayOfWeek.Monday`   | `1` | Expression | [Casts][Explicit Casting] `DayOfWeek.Monday` to `1` |
+|                                       | `(Int32)DayOfWeek.Tuesday`  | `2` | Expression | [Casts][Explicit Casting] `DayOfWeek.Tuesday` to `2` |
+|                                       | `(Int32)DayOfWeek.Wednesday`| `3` | Expression | [Casts][Explicit Casting] `DayOfWeek.Wednesday` to `3` |
+|                                       | `(Int32)DayOfWeek.Thursday` | `4` | Expression | [Casts][Explicit Casting] `DayOfWeek.Thursday` to `4` |
+|                                       | `(Int32)DayOfWeek.Friday`   | `5` | Expression | [Casts][Explicit Casting] `DayOfWeek.Friday` to `5` |
+|                                       | `(Int32)DayOfWeek.Saturday` | `6` | Expression | [Casts][Explicit Casting] `DayOfWeek.Saturday` to `6` |
 | Use `Convert.ToInt32`                 | `Convert.ToInt32(DayOfWeek.Sunday)`   | `0` | Expression | Converts `DayOfWeek.Sunday` to `0`. See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(DayOfWeek.Monday)`   | `1` | Expression | Converts `DayOfWeek.Monday` to `1`.  See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(DayOfWeek.Tuesday)`  | `2` | Expression | Converts `DayOfWeek.Tuesday` to `2`. See [Convert.ToInt32][] |
@@ -162,7 +162,7 @@ None
 ### Related Concepts
 
 * [Working with Enums][]
-* [Object Casting][]
+* [Explicit Casting][]
 
 ### External Documentation
 
@@ -191,4 +191,4 @@ None
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Working with Enums]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[Explicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCasting" >}}
