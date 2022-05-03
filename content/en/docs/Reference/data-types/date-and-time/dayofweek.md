@@ -1,7 +1,7 @@
 ---
 title: "DayOfWeek"
 linkTitle: "DayOfWeek"
-description: "Used to represent a day of the week from Sunday through Saturday."
+description: "Used to represent a day of the week from Sunday (i.e. `DayOfWeek.Sunday`) through Saturday (i.e. `DayOfWeek.Saturday`)."
 ---
 
 # {{< param title >}}
@@ -16,7 +16,7 @@ The `DayOfWeek` data type is used to represent a day of the week from Sunday (i.
 
 | | |
 |-|-|
-| **Category:**          | Dates & Time                                                  |
+| **Category:**          | Date & Time                                                  |
 | **Name:**              | `DayOfWeek`                                                   |
 | **Full Name:**         | `System.DayOfWeek`                                            |
 | **Alias:**             | N/A                                                           |
