@@ -1,7 +1,7 @@
 ---
-title: "Working with Exceptions"
-linkTitle: "Working with Exceptions"
-description: "Information related to working with Exceptions."
+title: "Exceptions"
+linkTitle: "Exceptions"
+description: "Information related to Exceptions."
 weight: 3
 ---
 
