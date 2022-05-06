@@ -38,6 +38,8 @@
                     MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time"
                     [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertDateTimeToText]
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-date-time-to-text-block"
+                    [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime]
+                        MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-text-to-date-time-block"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -149,8 +151,22 @@
                 Structures = "/docs/reference/concepts/collections/#structures"
                 Keys = "/docs/reference/concepts/collections/#keys"
                 Items = "/docs/reference/concepts/collections/#items"
+            [Cortex.Reference.Concepts.WorkingWithCulture]
+                MainDoc = "/docs/reference/concepts/culture/"
+                [Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture]
+                    MainDoc = "/docs/reference/concepts/culture/current-culture"
             [Cortex.Reference.Concepts.WorkingWithDateAndTime]
                 MainDoc = "/docs/reference/concepts/date-and-time/"
+                [Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting]
+                    MainDoc = "/docs/reference/concepts/date-and-time/date-and-time-formatting/"
+                    FormatProviders = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-providers"
+                    InvariantCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#invariant-culture"
+                    CurrentCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#current-culture"
+                    FormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-templates"
+                    StandardFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#standard-format-templates"
+                    ISO8601Standard = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#iso-8601-standard"
+                    CustomFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#custom-format-templates"
+                    FormatSpecifiers = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-specifiers"
             [Cortex.Reference.Concepts.WorkingWithEnums]
                 MainDoc = "/docs/reference/concepts/enums/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
@@ -168,9 +184,6 @@
                 MainDoc = "/docs/reference/concepts/variables/"
             [Cortex.Reference.Concepts.WorkingWithReferences]
                 MainDoc = "/docs/reference/concepts/references/"
-            [Cortex.Reference.Concepts.DateAndTimeFormats]
-                MainDoc = "/docs/reference/concepts/date-and-time-formats/"
-                InvariantCulture = "/docs/reference/concepts/date-and-time-formats/#invariant-culture"
             [Cortex.Reference.Concepts.ExceptionHandling]
                 MainDoc = "/docs/reference/concepts/exception-handling/"
             [Cortex.Reference.Concepts.FileAndFolderAttributes]
@@ -181,12 +194,8 @@
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.Indexes]
                 MainDoc = "/docs/reference/concepts/indexes/"
-            [Cortex.Reference.Concepts.ISO8601Standard]
-                MainDoc = "/docs/reference/concepts/iso-8601-standard/"
             [Cortex.Reference.Concepts.WorkingWithDataSources]
                 MainDoc = "/docs/reference/concepts/working-with-data-sources/"
-            [Cortex.Reference.Concepts.WorkingWithDatesAndTime]
-                MainDoc = "/docs/reference/concepts/working-with-dates-and-time/"
             [Cortex.Reference.Concepts.Keys]
                 MainDoc = "/docs/reference/concepts/keys/"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
@@ -254,7 +263,6 @@
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 DateTime = "/docs/reference/data-types/most-common/#datetime"
                 DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
-                DateTimeOffset = "/docs/reference/data-types/most-common/#datetimeoffset"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
                 Exceptions = "/docs/reference/data-types/most-common/#exceptions"
@@ -528,6 +536,13 @@
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.tostring"
         [MSDocs.DotNet.Api.System.DateTime]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime"
+            InitializingADateTimeObject = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime?#initializing-a-datetime-object"
+            Ctors = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.-ctor"
+            Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parse"
+            Now = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.now"
+            UtcNow = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.utcnow"
+            MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.minvalue"
+            ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.ToString"
         [MSDocs.DotNet.Api.System.DateTimeOffset]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset"
             InstantiatingADateTimeOffsetObject = "https://docs.microsoft.com/en-us/dotnet/standard/datetime/instantiating-a-datetimeoffset-object"
@@ -540,6 +555,21 @@
             UtcDateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcdatetime"
             MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.minvalue"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.ToString"
+            ShortDateFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortDate"
+            ShortTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortTime"
+            LongDateFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongDate"
+            LongTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongTime"
+            FullDateShortTime = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateShortTime"
+            FullDateLongTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateLongTime"
+            GeneralDateShortTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateShortTime"
+            GeneralDateLongTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateLongTime"
+            RoundTripFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip"
+            RFC1123Format = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#RFC1123"
+            SortableFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Sortable"
+            UniversalSortableFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#UniversalSortable"
+            UniversalFullFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#UniversalFull"
+            MonthDayFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#MonthDay"
+            YearMonthFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#YearMonth"
         [MSDocs.DotNet.Api.System.DayOfWeek]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.dayofweek"
         [MSDocs.DotNet.Api.System.Double]
@@ -597,6 +627,7 @@
             Join = "https://docs.microsoft.com/en-us/dotnet/api/system.string.join"
         [MSDocs.DotNet.Api.System.TimeSpan]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.timespan"
+            MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.timespan.minvalue"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
