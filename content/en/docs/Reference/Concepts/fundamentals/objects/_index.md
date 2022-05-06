@@ -1,6 +1,6 @@
 ---
-title: "Working with Objects"
-linkTitle: "Working with Objects"
-description: "Information on working with objects in Cortex"
+title: "Objects"
+linkTitle: "Objects"
+description: "Information on objects in Cortex"
 weight: 2
 ---
