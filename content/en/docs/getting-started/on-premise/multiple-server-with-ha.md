@@ -590,7 +590,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Cortex Innovation has now been verified and is ready to use.
 
 [Gateway Guide]: {{< url "Cortex.Guides.Gateway.MainDoc" >}}
-[Studio Guide]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
+[Studio Guide]: {{< url "Cortex.Guides.Gateway.Studio.MainDoc" >}}
 [Troubleshooting During Installation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingDuringInstallation" >}}
 [Troubleshooting No Innovation]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoInnovation" >}}
 [Troubleshooting No Blocks]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced.TroubleshootingNoBlocks" >}}
