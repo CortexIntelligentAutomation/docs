@@ -16,11 +16,39 @@
                     TroubleshootingNoBlocks = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-blocks"
                     TroubleshootingNoPublish = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-publish"
                     TroubleshootingNoRootCertificate= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-root-certificate"
-    [Cortex.Guides]
-        [Cortex.Guides.Studio]
-            MainDoc = "/docs/guides/cortex-studio/"
+    [Cortex.Guides]        
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
+            [Cortex.Guides.Gateway.Studio]
+                MainDoc = "/docs/guides/cortex-gateway/cortex-studio/"
+                [Cortex.Guides.Gateway.Studio.EastPanel]
+                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/east-panel/"
+                    PropertyViewer = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#property-viewer"
+                    ExecutionViewer = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#execution-viewer"
+                    VariablePanel = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#variable-panel"                    
+                    VariableDetail = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#variable-detail"
+                    Exceptions = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#exceptions"
+                [Cortex.Guides.Gateway.Studio.MainDisplayArea]
+                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/main-display-area/"
+                [Cortex.Guides.Gateway.Studio.Navigation]
+                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/navigation/"                    
+                [Cortex.Guides.Gateway.Studio.Palettes]
+                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/palettes/"
+                [Cortex.Guides.Gateway.Studio.SouthPanel]
+                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/south-panel/"
+                    ExecutionViewer = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#execution-viewer"
+                    MessagePanel = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#message-panel"
+                    VariableGrid = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#variable-grid" 
+                    CreatingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#creating-variables"
+                    ViewingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#viewing-variables" 
+                    ModifyingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#modifying-variables" 
+                    DeletingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#deleting-variables"                    
+            [Cortex.Guides.Gateway.LiveView]
+                MainDoc = "/docs/guides/cortex-gateway/cortex-liveview/"
+            [Cortex.Guides.Gateway.Reporting]
+                MainDoc = "/docs/guides/cortex-gateway/cortex-reporting/"
+            [Cortex.Guides.Gateway.Settings]
+                MainDoc = "/docs/guides/cortex-gateway/settings/"
     [Cortex.Reference]
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
@@ -109,6 +137,12 @@
                 MainDoc = "/docs/reference/blocks/workspaces/workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
                     MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
+            [Cortex.Reference.Blocks.Variables]
+                MainDoc = "/docs/reference/blocks/variables/"
+                [Cortex.Reference.Blocks.Variables.SetVariable]
+                MainDoc = "/docs/reference/blocks/variables/set-variable/"
+                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
+                    MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
             [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
@@ -118,8 +152,43 @@
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock]
                     MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
         [Cortex.Reference.Concepts]
+            MainDoc = "/docs/reference/concepts/"
             [Cortex.Reference.Concepts.Fundamentals]
                 MainDoc = "/docs/reference/concepts/fundamentals/"
+                [Cortex.Reference.Concepts.Fundamentals.DataTypes]
+                    MainDoc = "/docs/reference/concepts/fundamentals/datatypes/"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes]
+                        MainDoc = "/docs/reference/concepts/fundamentals/datatypes/primitive-types/"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes]
+                        MainDoc = "/docs/reference/concepts/fundamentals/datatypes/complex-types/"
+                [Cortex.Reference.Concepts.Fundamentals.Developing-Flows]
+                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/"
+                    [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces]
+                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces"
+                [Cortex.Reference.Concepts.Fundamentals.Exceptions]
+                    MainDoc = "/docs/reference/concepts/fundamentals/exceptions/"
+                    [Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions]
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions"
+                    [Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions]
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/Throwing-exceptions"
+                    [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception"
+                [Cortex.Reference.Concepts.Fundamentals.Objects]
+                        MainDoc = "/docs/reference/concepts/fundamentals/objects/"
+                        [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnObject]
+                            MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-object"    
+                [Cortex.Reference.Concepts.Fundamentals.Variables]
+                    MainDoc = "/docs/reference/concepts/fundamentals/variables/"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/referencing-variables/"
+                        [Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor]
+                            MainDoc = "/docs/reference/concepts/fundamentals/variables/referencing-variables/using-expression-editor/"
+                        [Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor]
+                            MainDoc = "/docs/reference/concepts/fundamentals/variables/referencing-variables/using-variable-editor/"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.WahtIsAVariable]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"        
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
                     MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
                     StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
@@ -428,6 +497,7 @@
                 PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
                 PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
                 Request = "/docs/reference/glossary/p-t/#request"
+                Snippets = "/docs/reference/glossary/p-t/#snippets"
                 Task = "/docs/reference/glossary/p-t/#task"
                 Text = "/docs/reference/glossary/p-t/#text"
                 Trigger = "/docs/reference/glossary/p-t/#trigger"
