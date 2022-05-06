@@ -70,7 +70,7 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 * [IEnumerable][]
 * [IEnumerable&lt;TItem&gt;][]
