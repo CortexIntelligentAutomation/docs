@@ -95,4 +95,4 @@ TODO: Include embedded video to what cortex evolution is and what it can do
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Getting Started]: {{< url "Cortex.GettingStarted.MainDoc" >}}
 [On-Premise]: {{< url "Cortex.GettingStarted.OnPremise.MultipleServerWithHA.MainDoc" >}}
-[Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
+[Studio]: {{< url "Cortex.Guides.Gateway.Studio.MainDoc" >}}
