@@ -36,6 +36,43 @@ To install .NET Framework 4.7.1:
 2. Double-click on the installed file to run it.
 3. Follow the wizard to complete the installation.
 
+## Apply Recommended Security Measures
+
+These are non-compulsory security measures, recommended to be applied to Application Servers and the Load Balancer Server, in order to prevent potential attacks that exploit known industry security vulnerabilities.
+
+Applying these measures may impact other applications running on your servers. Therefore, it is your responsibility to ensure that other applications and their clients will not be affected by the changes.
+
+### Only Use Recommended Encryption Algorithms and TLS Protocols
+
+A collection of registry settings need to be applied to guarantee your server is only using the recommended encryption algorithms and TLS protocols. Information about these settings can be found at [SSL Best Practices][].
+
+{{% alert type="warning" title="Warning" %}}Disabling specific TLS versions or specific Cipher Suites can have impact on Cortex components themselves as well as their communication capabilities with third party systems and services, e.g. Flow Debugger Service executing flows with blocks which communicate with 3rd parties via PowerShell or REST. All parties communicating together must support a shared protocol version and cipher suite, otherwise they will not be able to establish a secure communication link between each other.{{% /alert %}}
+
+The settings can be applied by running a script. Be aware that each server will be restarted when the script is run. Apply the settings by following these instructions:
+
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
+    ```
+
+1. Run the `Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
+
+    ```powershell
+    .\Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3") -LoadBalancerServer "lb-server"
+    ```
+
+    {{% alert title="Note" %}}
+To avoid answering all of the prompts `-Override 0` can be added to the end of the script. This will automatically apply all settings and forcibly restart the servers.
+    {{% /alert %}}
+
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press `OK`.
+1. To use all the recommended settings click `Apply all` to the each `Apply Cortex recommended security best practices` prompt.
+
+    To selectively apply each setting select `Choose which to apply`. Each change will then be prompted with a Yes/No confirmation before applying. This will need to be done for each server.
+1. Restart each machine when the script asks. The current machine will be restarted last, the PowerShell script will close at this time.
+
 ## Add Antivirus Exclusions
 
 1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next step, otherwise follow these steps:
@@ -52,6 +89,8 @@ To install .NET Framework 4.7.1:
         .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3")
         ```
 
+    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+
 ## Check Port Usage
 
 1. To check all necessary ports are free, follow these steps.
@@ -67,6 +106,8 @@ To install .NET Framework 4.7.1:
         ```powershell
         .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3")
         ```
+
+    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
 
     1. If all ports are free, the script will report the following for each Application Server:
 
@@ -259,3 +300,5 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [Antivirus Exclusions]: {{< ref "#add-antivirus-exclusions" >}}
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
 [Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
+[alternative load balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancer" >}}
+[SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.SSLBestPractices" >}}
