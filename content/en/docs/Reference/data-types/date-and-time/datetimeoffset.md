@@ -39,7 +39,7 @@ All examples are for a system configured with British [culture][] (i.e. `en-GB`)
 | [Implicit Casting][] of [DateTime][] | `DateTime.UtcNow` | `2022-07-01T13:00:00.0000000+00:00` | Expression | The result shown is an example result. The actual result will show the current Coordinated Universal Time (UTC) date and time and whose offset is Zero. |
 | Use `DateTimeOffset.Parse`| `DateTimeOffset.Parse("1/7/2022 2:00:00 PM +1:00")` | `2022-07-01T14:00:00+01:00` | Expression | Parses a date string and converts it to a `DateTimeOffset` using the [current culture][] of the system. In this example it parses `"1/7/2022 2:00:00 PM +1:00"` using `en-GB` [culture][] and converts it to `2022-07-01T14:00:00+01:00`. See [DateTimeOffset.Parse][] |
 | Use a `DateTimeOffset` constructor | `new DateTimeOffset(2022, 7, 1, 14, 0, 0, 0, new TimeSpan(1, 0, 0))`    | `2022-07-01T14:00:00+01:00` | Expression | `2PM 1st July 2022` with `1` hour UTC offset, honouring British Summer Time (BST). See [DateTimeOffset Constructors][]. |
-| Use `Convert Text To DateTime` block | where `Text` property has a value of `"1/7/2022 2:00:00 PM +1:00"` | `"2022-07-01T14:00:00+01:00"` | Expression | Parses a date string and converts it to a `DateTimeOffset`. See [Convert Text To DateTime][] |
+| Use `Convert Text To DateTime` block | where `Text` property has a value of `"1/7/2022 2:00:00 PM +1:00"` | `2022-07-01T14:00:00+01:00` | Expression | Parses a date string and converts it to a `DateTimeOffset`. See [Convert Text To DateTime][] |
 
 Please see [Instantiating a DateTimeOffset object][] for further information.
 
