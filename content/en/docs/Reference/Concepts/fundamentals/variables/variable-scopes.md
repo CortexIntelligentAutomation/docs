@@ -7,15 +7,21 @@ description: "The page provides guidance on creating and working with variables 
 
 ## What is a Scope?
 
-Each workspace in a flow has a Variable Scope. Variables defined in a workspace can only be used in the workspace they are defined in, and any subordinate workspaces. If a variable is not in scope of a block, the variable will not be available in the [Variable Editor][] or the [Expression Editor][] using [Snippets][].
+Each [workspace][Workspaces] in a flow has a Scope. A Scope is where [Variables][] are defined and controls where they can be used.
+
+Variables can only be used in the workspace of the scope they are defined in, and any subordinate workspaces.
+
+Only variables in scope will be available in the [Variable Editor][] or the [Expression Editor][] using [Snippets][].
+
+REVIEW PAUSED HERE
 
 | Workspace Name | Parent Workspace | Defined Variables | Available Variables |
 |----------------|------------------|-------------------|---------------------|
 | Top-Level Workspace | n/a | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> |
-| Workspace1 | Top-Level Workspace | <ul><li>WSVar1</li><li>WSVar2</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>WSVar1</li><li>WSVar2</li></ul> |
-| Workspace2 | Top-Level Workspace | <ul><li>WSVar3</li><li>WSVar4</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>WSVar3</li><li>WSVar4</li></ul> |
-| Workspace3 | Workspace1 | <ul><li>WSVar5</li><li>WSVar6</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>WSVar1</li><li>WSVar2</li><li>WSVar5</li><li>WSVar6</li></ul> |
-| Workspace4 | Workspace2 | <ul><li>WSVar7</li><li>WSVar8</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>WSVar3</li><li>WSVar4</li><li>WSVar7</li><li>WSVar8</li></ul> |
+| ChildWorkspace1 | Top-Level Workspace | <ul><li>ChildVarA</li><li>ChildVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarA</li><li>ChildVarB</li></ul> |
+| ChildWorkspace2 | Top-Level Workspace | <ul><li>ChildVarC</li><li>ChildVarD</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarC</li><li>ChildVarD</li></ul> |
+| GrandChildWorkspace1 | ChildWorkspace1 | <ul><li>GrandChildVarA</li><li>GrandChildVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarA</li><li>ChildVarB</li><li>GrandChildVarA</li><li>GrandChildVarB</li></ul> |
+| GrandChildWorkspace2 | ChildWorkspace2 | <ul><li>GrandChildVarC</li><li>GrandChildVarD</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarC</li><li>ChildVarD</li><li>GrandChildVarC</li><li>GrandChildVarD</li></ul> |
 
 ## Create a Variable in a certain Scope
 
@@ -49,15 +55,11 @@ When executing a block in **Workspace1** that uses `loop-var`, the variable that
 
 ### Related Concepts
 
-#### Workspaces
-
-See [Workspaces][] for more information.
+- [Workspaces][]
 
 ### Related Blocks
 
-#### Workspace Block
-
-- [Workspaces][Workspace-block]
+- [Workspace Block][Workspace-block]
 
 [Variable Grid]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.VariableGridInnovation" >}}
 [Property Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.PropertyViewer" >}}
@@ -66,3 +68,4 @@ See [Workspaces][] for more information.
 [Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}
 [Workspace-block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
