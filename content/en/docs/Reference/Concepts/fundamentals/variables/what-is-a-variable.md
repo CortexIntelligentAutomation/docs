@@ -9,7 +9,7 @@ weight: 1
 
 ## Summary
 
-A variable is a named container for storing data that can then be referenced in [Blocks][TODO].
+A variable is a named container for storing data that can then be referenced in [Blocks][BlocksConcepts].
 
 Data in a variable can be read, updated, or removed by different blocks. Examples of these include:
 
@@ -157,11 +157,9 @@ Variables do not have a type. The values stored in variables have [data types][D
 
 The [data types][DataTypesConcepts] are inferred where possible, checking all references of that variable are valid and will warn as appropriate in the [Message Panel][] for invalid references.
 
-Certain [data types][DataTypesConcepts] can be [implicitly cast][TODO] to work with another (e.g. [Int16][] can be used in properties expecting [Int32][]), but others must be [explicitly cast][TODO] or converted. (e.g. [String][] cannot be directly used in properties expecting [Int32][]. Instead, it must be converted using `Convert.ToInt32(($)String)`).
+Certain [data types][DataTypesConcepts] can be [implicitly cast][] to work with another (e.g. [Int16][] can be used in properties expecting [Int32][]), but others must be [explicitly cast][] or converted. (e.g. [String][] cannot be directly used in properties expecting [Int32][]. Instead, it must be converted using `Convert.ToInt32(($)String)`).
 
 For more information on specific data type conversions, see the relevant data type in [Data Types][].
-
-REVIEW PAUSED HERE
 
 ## Remarks
 
@@ -169,7 +167,7 @@ REVIEW PAUSED HERE
 
 #### Default Value can not reference other Variables
 
-Currently, the Default Value cannot accept references to other variables. However, this may change in future releases of Cortex.
+Currently, the Default Value cannot accept references to other variables. However, this may change in future releases.
 
 See [Default Value Example](#default-value-example) for examples of valid and invalid Default Values.
 
@@ -177,20 +175,22 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 
 ### Related Concepts
 
-#### Data Types
-See [Data Types][DataTypesConcepts] for more information on the differences between [Basic][BasicDataType] and [Complex][ComplexDataType] Data Types.
+- [Fundamental Concepts - Data Types][DataTypesConcepts]
+- [Basic Data Types][BasicDataType]
+- [Complex Data Types][ComplexDataType]
 
 ### Related Data Types
 
-See [Data Types][] for more information on the different Data Types that can be stored in variables and how they work.
+- [All Data Types][Data Types]
 
 ### Related Blocks
 
-#### Set Variable
-
-All blocks use variables at some point, but the standard block that can set any variable is the [Set Variable][] block.
+- [Set Variable][]
+- [All Blocks][Blocks]
 
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
+[Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+[BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
 [Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [DataTypesConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 [BasicDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
@@ -219,4 +219,6 @@ All blocks use variables at some point, but the standard block that can set any 
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
 [Workspace Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [ObjectCasting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
+[Explicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}
 [Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}
