@@ -102,6 +102,8 @@ TODO:
 TODO:
 
 * round-trip "O", "o" and sortable "s" complies with ISO
+* `yyyy-MM-ddTHH:mm:ss.fffffffK` for `DateTime`
+* `yyyy-MM-ddTHH:mm:ss.fffffffzzz` for `DateTimeOffset`
 
 ### Custom Format Templates
 
