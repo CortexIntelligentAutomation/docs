@@ -3,22 +3,7 @@
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
-<<<<<<< HEAD
-            [Cortex.GettingStarted.OnPremise.MultipleServerWithHA]
-                MainDoc = "/docs/getting-started/on-premise/multiple-server-with-ha"
-                [Cortex.GettingStarted.OnPremise.MultipleServerWithHA.Advanced]
-                    Ports = "/docs/getting-started/on-premise/advanced/ports"
-                    AdvancedConfig = "/docs/getting-started/on-premise/advanced/advanced-config-changes"
-                    AlternativeArchitectures = "/docs/getting-started/on-premise/advanced/alternative-architectures"
-                    Troubleshooting = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting"
-                    TroubleshootingDuringInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-during-installation"
-                    TroubleshootingAfterInstallation= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-after-installation"
-                    TroubleshootingNoInnovation = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-innovation"
-                    TroubleshootingNoBlocks = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-blocks"
-                    TroubleshootingNoPublish = "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-publish"
-                    TroubleshootingNoRootCertificate= "/docs/getting-started/on-premise/advanced/ha-install-troubleshooting#ts-no-root-certificate"
-    [Cortex.Guides]        
-=======
+            MainDoc = "/docs/getting-started/on-premise/"
             [Cortex.GettingStarted.OnPremise.InstallInnovationOnly]
                 MainDoc = "/docs/getting-started/on-premise/install-innovation-only/"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
@@ -45,7 +30,6 @@
     [Cortex.Guides]
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
->>>>>>> upstream/feature/initial-structure
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Studio]
