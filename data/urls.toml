@@ -100,6 +100,12 @@
                         MainDoc = "/docs/reference/blocks/json/convert-json/convert-json-to-object-block"
                     [Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson]
                         MainDoc = "/docs/reference/blocks/json/convert-json/convert-object-to-json-block"
+            [Cortex.Reference.Blocks.Loops]
+                MainDoc = "/docs/reference/blocks/loops"
+                [Cortex.Reference.Blocks.Loops.For]
+                    MainDoc = "/docs/reference/blocks/loops/for"
+                    [Cortex.Reference.Blocks.Loops.For.ForLoop]
+                        MainDoc = "/docs/reference/blocks/loops/for/for-loop-block"
             [Cortex.Reference.Blocks.Objects]
                 MainDoc = "/docs/reference/blocks/objects/"
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
@@ -176,6 +182,8 @@
                 MainDoc = "/docs/reference/concepts/exceptions/"
             [Cortex.Reference.Concepts.WorkingWithFilesAndFolders]
                 MainDoc = "/docs/reference/concepts/files-and-folders/"
+            [Cortex.Reference.Concepts.WorkingWithLoops]
+                MainDoc = "/docs/reference/concepts/loops/"
             [Cortex.Reference.Concepts.WorkingWithNumbers]
                 MainDoc = "/docs/reference/concepts/numbers/"
             [Cortex.Reference.Concepts.WorkingWithText]
@@ -276,6 +284,7 @@
                 JsonSerializerSettings = "/docs/reference/data-types/most-common/#jsonserializersettings"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
+                Nullable = "/docs/reference/data-types/most-common/#nullable"
                 SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
                 StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
                 TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
@@ -424,7 +433,10 @@
             [Cortex.Reference.Exceptions.Loops]
                 MainDoc = "/docs/reference/exceptions/loops/"
                     [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
-                        MainDoc = "/docs/reference/exceptions/loops/infiniteloopexception/"
+                        MainDoc = "/docs/reference/exceptions/loops/infinite-loop-exception/"
+                        IncrementIsZero = "/docs/reference/exceptions/loops/infinite-loop-exception/#100"
+                        IncrementIsNegative = "/docs/reference/exceptions/loops/infinite-loop-exception/#101"
+                        IncrementIsPositive = "/docs/reference/exceptions/loops/infinite-loop-exception/#102"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
