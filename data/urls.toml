@@ -169,6 +169,7 @@
                     ISO8601Standard = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#iso-8601-standard"
                     CustomFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#custom-format-templates"
                     FormatSpecifiers = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-specifiers"
+                    OperatingSystemSettings = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#operating-system-settings"
             [Cortex.Reference.Concepts.WorkingWithEnums]
                 MainDoc = "/docs/reference/concepts/enums/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
@@ -263,7 +264,6 @@
                 Array = "/docs/reference/data-types/most-common/#array"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
-                DateTime = "/docs/reference/data-types/most-common/#datetime"
                 DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
