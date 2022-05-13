@@ -1,5 +1,5 @@
 ---
-title: "Data"
-linkTitle: "Data"
+title: "Decisions"
+linkTitle: "Decisions"
 description: "Exceptions related to Decisions"
 ---
