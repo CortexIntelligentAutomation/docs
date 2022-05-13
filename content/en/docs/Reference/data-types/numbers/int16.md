@@ -67,7 +67,7 @@ None
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 * [Int32][]
 * [Int64][]

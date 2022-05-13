@@ -66,7 +66,7 @@ None
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 * [IEnumerable][]
 * [IEnumerable&lt;TItem&gt;][]
