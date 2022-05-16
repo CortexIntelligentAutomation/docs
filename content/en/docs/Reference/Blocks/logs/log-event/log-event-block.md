@@ -164,7 +164,7 @@ Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T0
 
 If [Started At][StartedAt Property] is left blank or set to `null`, a value of `null`   will be logged.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -180,7 +180,7 @@ Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T0
 
 If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null` will be logged.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -362,8 +362,8 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
 [Grafana]: {{< url "Grafana.MainDoc" >}}
 [ElasticSearch]: {{< url "ElasticSearch.MainDoc" >}}
@@ -372,6 +372,6 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [EventSeverity]: {{< url "Cortex.Reference.DataTypes.MostCommon.EventSeverity" >}}

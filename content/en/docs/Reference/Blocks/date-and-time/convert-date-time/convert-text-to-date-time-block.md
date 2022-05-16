@@ -164,7 +164,7 @@ If [Format Template][FormatTemplate Property] is not specified, `null` or empty 
 
 If the [ISO 8601 Standard][] format fails, then the default template of the specified [Format Provider][FormatProvider Property] will be used; if there is no specified [Format Provider][FormatProvider Property], then [Invariant Culture rules][] will be used instead.
 
-For information about format templates and specifiers, please see [Date and Time Formats][].
+For information about format templates and specifiers, please see [Date and Time Formatting][].
 
 | | |
 |--------------------|---------------------------|
@@ -190,7 +190,7 @@ The [Date Time][DateTime Property] that has been converted from [Text][Text Prop
 
 Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -216,13 +216,13 @@ The exceptions thrown by the block can be found below:
 
 The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information, please see [Working with Dates and Time][].
+For more information, please see [Working with Date and Time][].
 
 ### Format Template and Specifiers
 
 Please note that changes to operating system date and time formats, could result in some of the examples above displaying different results.
 
-For information about format templates and specifiers, please see [Date and Time Formats][].
+For information about format templates and specifiers, please see [Date and Time Formatting][].
 
 ### Null or Empty Format Template
 
@@ -246,11 +246,11 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[Date and Time Formats]: {{< url "Cortex.Reference.Concepts.DateAndTimeFormats.MainDoc" >}}
-[Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.DateAndTimeFormats.InvariantCulture" >}}
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[Date and Time Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.MainDoc" >}}
+[Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.InvariantCulture" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [IFormatProvider]: {{< url "Cortex.Reference.DataTypes.MostCommon.IFormatProvider" >}}

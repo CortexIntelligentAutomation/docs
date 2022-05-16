@@ -53,7 +53,7 @@ None
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 None
 

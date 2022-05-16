@@ -67,7 +67,7 @@ The following table shows some of the ways that a `Dictionary<TKey, TItem>` can 
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 * [IEnumerable][]
 * [IEnumerable&lt;TItem&gt;][]

@@ -179,7 +179,7 @@ As a result, any issues with using the [Exception data type][Exception] (i.e. tr
 
 If it is desirable to have any issues reported as messages when trying to debug the flow, the user can [cast][Object Casting] the exception to its correct type.
 
-### Using the built-in ($)_ variable to discard the Exception
+### Using the built-in ($)_ variable to discard the Exception from being saved
 
 Sometimes when an exception occurs the flow execution wants to use the exception to make decisions or take further action. However, there are occasions when the exception is not needed, and being forced to create another variable to save the exception is extra work for no benefit. In these circumstances it is possible to use the built-in `($)_` variable to indicate the exception does not need to be saved.
 

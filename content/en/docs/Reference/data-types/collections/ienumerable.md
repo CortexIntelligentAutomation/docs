@@ -70,7 +70,7 @@ None
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 * [IEnumerable&lt;TItem&gt;][]
 * [IList&lt;TItem&gt;][]

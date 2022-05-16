@@ -1,15 +1,14 @@
 ---
-title: "Advanced Configuration Changes"
-linkTitle: "Advanced Configuration Changes"
-description: >
-    Information on installing Cortex across multiple on-premise servers with high availability (HA), with non-default installation values.
+title: "Advanced Application Server and Load Balancer Configuration Changes"
+linkTitle: "Advanced Application Server and Load Balancer Configuration Changes"
+description: "Information about installing Cortex across multiple on-premise servers with high availability (HA), with non-default installation values."
 ---
 
-## Advanced configuration changes
+# {{< param title >}}
 
 Advanced configuration (such as port changes) can be undertaken by taking the following steps before running the PowerShell script. Some values will be modified by the script and they will take precedence, but those parameters can be removed from the script and this file used entirely if required.
 
-1. In the "Cortex Evolution - Innovation 2022-RC.2022.1.4 - Installation Scripts" folder, locate the file "Cortex.Innovation.Install.Config.json" and open it with a text editor.
+1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
 1. Change the configuration file according to your cluster, referring to the following example and details:
 
     {{< highlight json "linenos=table,hl_lines=4 17 20 22 26-27 30-31 34-35 41 43 45 47 49 51 72-75 79-82,linenostart=1" >}}
@@ -102,7 +101,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     | Line | Description |
     |------|-------------|
     |4     | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
-    |16-23 | If the bundled load balancer is not being used, delete these lines TODO: this will cause the line numbers to be wrong!!! |
+    |16-23 | If the bundled load balancer is not being used, delete these lines |
     |17    | A local empty or non-existent directory on the load balancer server that the load balancer can be installed in. The directory path will be created if it does not exist. The installation user must have permissions to create and write to directories here. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
     |20    | The computer name and port of the server that the load balancer should run on. This cannot be an IP address. The port must not be used by anything else. |
     |22    | The name of a certificate entry in the adminCertificates section. If this line is removed, an auto-generated self-signed certificate will be used. |
@@ -120,3 +119,5 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |82    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.
+
+[Troubleshooting Root Certificate Error]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
