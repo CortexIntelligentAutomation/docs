@@ -193,7 +193,7 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/calling-other-flows"
                         [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.Flow-Exception-Handling]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/flow-exception-handling"
-                        [Cortex.Reference.Concepts.Fundamentals.Delevoping-Flows.Flows.What-Is-A-Flow]
+                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.What-Is-A-Flow]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/what-is-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces]
                         MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces"
@@ -209,7 +209,7 @@
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions]
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions]
-                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/Throwing-exceptions"
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/throwing-exceptions"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception"
                 [Cortex.Reference.Concepts.Fundamentals.Objects]

@@ -56,6 +56,8 @@ When referencing items of a [Complex data type][ComplexDataType] in a variable (
 
 - [Blocks][BlocksConcepts]
 
+- [Variables][]
+
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
@@ -64,3 +66,4 @@ When referencing items of a [Complex data type][ComplexDataType] in a variable (
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
 [Property Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.PropertyViewer" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
