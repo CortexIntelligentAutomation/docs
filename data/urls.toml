@@ -63,6 +63,10 @@
             [Cortex.Guides.Gateway.Settings]
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
     [Cortex.Reference]
+        [Cortex.Reference.API]
+            MainDoc = "/docs/reference/APIs/"
+            [Cortex.Reference.API.APIGateway]
+                MainDoc = "/docs/reference/APIs/api-gateway/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.DateAndTime]
@@ -185,19 +189,20 @@
                 [Cortex.Reference.Concepts.Fundamentals.Developing-Flows]
                     MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/"
                     [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks]
-                    [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Exception-Handling]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-exception-handling"
-                    [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties"
-                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables"
-                            Expressions = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#expressions"
-                            Literals = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#literals"
-                            Object-Literal = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#object-literal"
-                            String-Literal = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#string-literal"
-                            Variables = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#variables"
-                    [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/what-is-a-block"
+                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/"
+                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Exception-Handling]
+                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-exception-handling"
+                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties"
+                            [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables]
+                                MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables"
+                                Expressions = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#expressions"
+                                Literals = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#literals"
+                                Object-Literal = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#object-literal"
+                                String-Literal = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#string-literal"
+                                Variables = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/literals-expressions-variables/#variables"
+                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block]
+                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/what-is-a-block"
                     [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions]
                         MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/"
                         [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution]
@@ -233,6 +238,10 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/throwing-exceptions"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception"
+                [Cortex.Reference.Concepts.Fundamentals.Messages]
+                    MainDoc = "/docs/reference/concepts/fundamentals/messages/"
+                    [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
+                        MainDoc = "/docs/reference/concepts/fundamentals/messages/what-is-a-message/"
                 [Cortex.Reference.Concepts.Fundamentals.Objects]
                         MainDoc = "/docs/reference/concepts/fundamentals/objects/"
                         [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnObject]

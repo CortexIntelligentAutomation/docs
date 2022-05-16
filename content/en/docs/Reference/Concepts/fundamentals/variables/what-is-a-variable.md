@@ -71,11 +71,11 @@ See [Variable Grid][] for more information on how to use it.
 
 ### Initialising Variables
 
-Variables must be initialised with data before they can be used in a block. If a block [references a variable][ReferenceVariable] that has not been initialised in an [Input][InputPropertyType] or [InputOutput][InputOutputPropertyType] block property, a [Message][TranslationErrorTODO] will be returned stating `Variable is not initialised`.
+Variables must be initialised with data before they can be used in a block. If a block [references a variable][ReferenceVariable] that has not been initialised in an [Input][InputPropertyType] or [InputOutput][InputOutputPropertyType] block property, a [Message][Messages] will be returned stating `Variable is not initialised`.
 
-If [debugging a flow][TODO] in [Cortex Studio][TODO], this [Message][TranslationErrorTODO] will be displayed in the [Message Panel][].
+If [debugging a flow][DebuggingExecutions] in [Cortex Studio][], this [Message][Messages] will be displayed in the [Message Panel][].
 
-If triggered via the [APIGateway][TODO], this thing will happen: TODO.
+If triggered via the [APIGateway][], any [messages][Messages] will be returned as exceptions to the caller.
 
 Variables can be initialised in one of three different ways:
 
@@ -87,7 +87,7 @@ Variables can be initialised in one of three different ways:
 
 If a variable is marked as an Input Variable, and no Default Value has been set, then a value must be passed into the variable when the flow is triggered. When the execution starts, the variable is initialised with the value passed in.
 
-See [Triggering Flow Executions][TODO] for more information.
+See [Triggering Flow Executions][Executions] for more information.
 
 #### Default Value
 
@@ -132,7 +132,7 @@ This is an example of data in a [Command][TODO] variable.
 
 TODO: ^^ Update Screenshot
 
-This is an example of data in a [FlowException][TODO] variable.
+This is an example of data in a [FlowException][] variable.
 
 ![exception panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-exception-panel.png)
 
@@ -189,6 +189,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 - [All Blocks][Blocks]
 
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
+[APIGateway]: {{< url "Cortex.Reference.API.APIGateway.MainDoc" >}}
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
 [Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
@@ -196,6 +197,10 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [BasicDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
+[Cortex Studio]: {{< url "Cortex.Guides.Gateway.Studio.MainDoc" >}}
+[DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.Internal" >}}
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.MainDoc" >}}
+[FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
@@ -214,6 +219,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [Execution Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.ExecutionViewer" >}}
 [Variable Panel]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.VariablePanel" >}}
 [Variable Detail]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.VariableDetail" >}}
+[Messages]: {{ < url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
 [Message Panel]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.MessagePanel" >}}
 [Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
