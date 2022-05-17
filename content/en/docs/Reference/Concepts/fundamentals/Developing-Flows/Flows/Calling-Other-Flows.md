@@ -1,0 +1,55 @@
+---
+title: "Calling Other Flows"
+linkTitle: "Calling Other Flows"
+description: "Initiating, and passing data to, another flow."
+weight: 20
+---
+
+# {{< param title >}}
+
+## Summary
+
+Logic in one [executing flow][What-Is-Execution] may trigger the execution of another [flow][What-Is-Flow].
+
+### Asynchronous vs Synchronous
+
+An [executing flow][What-Is-Execution] may trigger the execution of other [flows][What-Is-Flow], either asynchronously (future) or synchronously.
+
+When triggering a synchronous [flow execution][What-Is-Execution], the calling [flow][What-Is-Flow] will pause until the called [flow][What-Is-Flow] has completed its [execution][What-Is-Execution].
+
+Triggering an asynchronous [flow execution][What-Is-Execution] will cause the called [flow][What-Is-Flow] to execute independently of the calling [flow][What-Is-Flow], which will continue its [execution][What-Is-Execution] simultaneously.
+
+## Calling another flow
+
+A [flow][What-Is-Flow] may trigger an [execution][What-Is-Execution] of another [flow][What-Is-Flow] directly, using the [Run Flow][Block-Run-Flow] [block][What-Is-Block]. Alternatively, a [flow execution][What-Is-Execution] may be triggered by making the appropriate HTTP request, targeting the API Gateway service, using an [Execute HTTP Request][Block-Execute-Http-Request] [block][What-Is-Block].
+
+## Exchanging Data
+
+For both asynchronous and synchronous triggered [flows][What-Is-Flow], initialisation values can be passed from the calling [flow][What-Is-Flow] to [input variables][Input-Output] in the called [flow][What-Is-Flow].
+
+In the case of a synchronous [flow execution][What-Is-Execution], values can be passed from [output variables][Input-Output] in the called [flow][What-Is-Flow] when it terminates, back to the calling [flow][What-Is-Flow].
+
+Values from an asynchronous [flow execution][What-Is-Execution] cannot be passed back directly to the calling [flow][What-Is-Flow].
+
+## Known Limitations
+
+- Asynchronous flow execution is a future feature. This affects:
+  - [Run Flow][Block-Run-Flow] block
+  - [Execute HTTP Request][Block-Execute-Http-Request] block
+  - API Gateway service
+
+## Related Concepts
+
+- [Flows][What-Is-Flow]
+- [Flow Executions][Execution]
+- [Blocks][Block]
+- [Input/Output Variables][Input-Output]
+
+[Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
+[Block-Run-Flow]: {{< url "Cortex.Reference.Blocks.Flows.Run-Flow.MainDoc" >}}
+[Block-Execute-Http-Request]: {{< url "Cortex.Reference.Blocks.Http.Execute-Http-Request.MainDoc" >}}
+[Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.MainDoc" >}}
+[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.Execution-Variables.Input-Output" >}}
+[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.What-Is-An-Execution.MainDoc" >}}
+[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.What-Is-A-Flow.MainDoc" >}}
