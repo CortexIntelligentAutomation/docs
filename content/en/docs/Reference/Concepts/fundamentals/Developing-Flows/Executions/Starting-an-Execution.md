@@ -81,7 +81,7 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 ## Related Blocks
 
 * [Run Flow][Block-Run-Flow]
-* [Execute HTTP Request][Block-HTTP-Request]
+* [Execute HTTP Request][TODO]
 
 [EDA]: {{< ref "#eda" >}}
 [External]: {{< ref "#external" >}}
@@ -90,7 +90,6 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.MainDoc" >}}
 [Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.Calling-Other-Flows.MainDoc" >}}
-[Block-HTTP-Request]: {{< url "Cortex.Reference.Blocks.Http.Execute-Http-Request.MainDoc" >}}
 [Block-Run-Flow]: {{< url "Cortex.Reference.Blocks.Flows.Run-Flow.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.MainDoc" >}}
 [Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.Execution-Variables.Input-Output" >}}

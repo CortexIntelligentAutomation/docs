@@ -44,7 +44,7 @@ For a session that has been established using a connection string variable, the 
 
 * [Execute Command block][Block-Execute-Command]
 
-[Block-Execute-Command]: {{< url "Cortex.Reference.Blocks.Data.Execute-Command.MainDoc" >}}
+[Block-Execute-Command]: {{< url "Cortex.Reference.Blocks.Data.ExecuteCommand.ExecuteCommand.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.MainDoc" >}}
 [Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}

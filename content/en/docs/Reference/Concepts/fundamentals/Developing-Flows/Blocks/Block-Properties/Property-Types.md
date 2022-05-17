@@ -66,6 +66,5 @@ The icons used for inputoutputs are displayed in a light blue to distinguish the
 [Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables.Literals" >}}
 [Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables.Expressions" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables.Variables" >}}
-[Block-Execute-Command]: {{< url "Cortex.Reference.Blocks.Data.Execute-Command.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.What-Is-An-Execution.MainDoc" >}}

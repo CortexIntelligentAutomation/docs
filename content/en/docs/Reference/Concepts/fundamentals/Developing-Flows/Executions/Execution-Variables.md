@@ -15,7 +15,7 @@ The global variables used to receive the data passed in must have their `Is Inpu
 
 #### Using the Run Flow block
 
-If a [flow's][What-Is-Flow] logic uses the [Run Flow][Block-Run-Flow] [block][What-Is-Block] to trigger the execution of another [flow][What-Is-Flow], the [block's][What-Is-Block] `Inputs` will automatically display the called [flow's][What-Is-Flow] input variables.
+If a [flow's][What-Is-Flow] logic uses the [Run Flow][TODO] [block][What-Is-Block] to trigger the execution of another [flow][What-Is-Flow], the [block's][What-Is-Block] `Inputs` will automatically display the called [flow's][What-Is-Flow] input variables.
 
 The [block's][What-Is-Block] `Outputs` [property][Block-Properties] would reference a variable that would be assigned a [structure][Structure] value during the [execution][What-Is-Execution]. The [structure][Structure] would contain values of the triggered [flow's][What-Is-Flow] output variables, where the keys are the names of the output variables and the values are the values assigned to the output variables. For example:
 
@@ -67,11 +67,9 @@ Any data returned from the [flow][What-Is-Flow] will be contained in the HTTP RE
 
 ## Related Blocks
 
-- [Run Flow][Block-Run-Flow]
-- [Execute HTTP Request][Block-HTTP-Request]
+- [Run Flow][TODO]
+- [Execute HTTP Request][TODO]
 
-[Block-HTTP-Request]: {{< url "Cortex.Reference.Blocks.Http.Execute-Http-Request.MainDoc" >}}
-[Block-Run-Flow]: {{< url "Cortex.Reference.Blocks.Flows.Run-Flow.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}

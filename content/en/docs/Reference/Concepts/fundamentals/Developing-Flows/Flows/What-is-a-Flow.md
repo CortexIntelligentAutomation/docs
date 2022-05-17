@@ -84,10 +84,10 @@ Exceptions can be handled:
 * [Handle Flow Exception][Block-Handle-Flow-Exception]
 
 [Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
-[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.End-Flow.End-Flow-Block.MainDoc" >}}
+[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [Block-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Exception-Handling.MainDoc" >}}
 [Block-Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
-[Block-Start-Flow]: {{< url "Cortex.Reference.Blocks.Flows.Start-Flow.Start-Flow-Block.MainDoc" >}}
+[Block-Start-Flow]: {{< url "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Exceptions.MainDoc" >}}
 [Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.MainDoc" >}}
 [Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.Flow-Exception-Handling.MainDoc" >}}

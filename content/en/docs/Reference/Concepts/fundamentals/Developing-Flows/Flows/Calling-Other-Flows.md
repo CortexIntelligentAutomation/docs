@@ -21,7 +21,7 @@ Triggering an asynchronous [flow execution][What-Is-Execution] will cause the ca
 
 ## Calling another flow
 
-A [flow][What-Is-Flow] may trigger an [execution][What-Is-Execution] of another [flow][What-Is-Flow] directly, using the [Run Flow][Block-Run-Flow] [block][What-Is-Block]. Alternatively, a [flow execution][What-Is-Execution] may be triggered by making the appropriate HTTP request, targeting the API Gateway service, using an [Execute HTTP Request][Block-Execute-Http-Request] [block][What-Is-Block].
+A [flow][What-Is-Flow] may trigger an [execution][What-Is-Execution] of another [flow][What-Is-Flow] directly, using the [Run Flow][Block-Run-Flow] [block][What-Is-Block]. Alternatively, a [flow execution][What-Is-Execution] may be triggered by making the appropriate HTTP request, targeting the API Gateway service, using an [Execute HTTP Request][TODO] [block][What-Is-Block].
 
 ## Exchanging Data
 
@@ -35,7 +35,7 @@ Values from an asynchronous [flow execution][What-Is-Execution] cannot be passed
 
 - Asynchronous flow execution is a future feature. This affects:
   - [Run Flow][Block-Run-Flow] block
-  - [Execute HTTP Request][Block-Execute-Http-Request] block
+  - [Execute HTTP Request][TODO] block
   - API Gateway service
 
 ## Related Concepts
@@ -47,7 +47,6 @@ Values from an asynchronous [flow execution][What-Is-Execution] cannot be passed
 
 [Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
 [Block-Run-Flow]: {{< url "Cortex.Reference.Blocks.Flows.Run-Flow.MainDoc" >}}
-[Block-Execute-Http-Request]: {{< url "Cortex.Reference.Blocks.Http.Execute-Http-Request.MainDoc" >}}
 [Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.MainDoc" >}}
 [Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.Execution-Variables.Input-Output" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}

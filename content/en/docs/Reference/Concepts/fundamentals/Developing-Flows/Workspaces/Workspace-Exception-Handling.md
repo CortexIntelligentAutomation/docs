@@ -38,7 +38,7 @@ For detailed information about Workspace Exception Handling, see [Handling Excep
 [Block-Handle-Block-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
 [Block-Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Block-Handle-Workspace-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
-[Block-Throw-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.Throw-Exception.Throw-New-Flow-Exception-Block.MainDoc" >}}
+[Block-Throw-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}
 [Block-Workspace-Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.MainDoc" >}}
 [Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.Flow-Exception-Handling.MainDoc" >}}

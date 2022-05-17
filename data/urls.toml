@@ -65,6 +65,12 @@
     [Cortex.Reference]
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.Data]
+                MainDoc = "/docs/reference/blocks/data/execute-command/"
+                [Cortex.Reference.Blocks.Data.ExecuteCommand]
+                    MainDoc = "/docs/reference/blocks/data/execute-command"
+                    [Cortex.Reference.Blocks.Data.ExecuteCommand.ExecuteCommand]
+                        MainDoc = "/docs/reference/blocks/data/execute-command/execute-command-block/"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
@@ -95,6 +101,10 @@
                     MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block"
+                [Cortex.Reference.Blocks.Exceptions.ThrowException]
+                    MainDoc = "/docs/reference/blocks/exceptions/throw-exception/
+                    [Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException]
+                        MainDoc = "/docs/reference/blocks/exceptions/throw-exception/throw-new-flow-exception-block"
             [Cortex.Reference.Blocks.FilesAndFolders]
                 MainDoc = "/docs/reference/blocks/files-and-folders/"
                 [Cortex.Reference.Blocks.FilesAndFolders.CheckFile]
@@ -123,6 +133,16 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
+            [Cortex.Reference.Blocks.Flows]
+                MainDoc = "/docs/reference/blocks/flows"
+                [Cortex.Reference.Blocks.Flows.EndFlow]
+                    MainDoc = "/docs/reference/blocks/flows/end-flow"
+                    [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
+                        MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
+                [Cortex.Reference.Blocks.Flows.StartFlow]
+                    MainDoc = "/docs/reference/blocks/start-flow"
+                    [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
+                        MainDoc = "/docs/reference/blocks/start-flow/start-flow-block"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -587,9 +607,14 @@
 [MSDocs]
     [MSDocs.CSharp]
         MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/"
+        BooleanLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals"
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
+        CharLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals"
         dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
+        IntegerLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals"
+        RealLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals"
+        StringLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals"
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"

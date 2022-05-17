@@ -157,12 +157,12 @@ For more details of throwing exceptions, refer to the [Throw-Exception][Block-Th
 [workspace-level]: {{< ref "#handling-exceptions-at-the-workspace-level" >}}
 [flow-level]: {{< ref "#handling-exceptions-at-the-flow-level" >}}
 
-[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.End-Flow.MainDoc" >}}
+[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [Block-Handle-Block-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
 [Block-Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Block-Handle-Workspace-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.MainDoc" >}}
-[Block-Throw-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.Throw-Exception.Throw-New-Flow-Exception-Block.MainDoc" >}}
+[Block-Throw-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}
 [Block-Workspace-Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
 [Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces.MainDoc" >}}

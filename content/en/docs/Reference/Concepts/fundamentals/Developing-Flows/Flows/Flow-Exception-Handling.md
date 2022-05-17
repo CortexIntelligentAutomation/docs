@@ -32,7 +32,7 @@ The logic contained within the [Handle Flow Exception][Block-Handle-Flow-Excepti
 * [Executions][Execution]
 * [Execution Exceptions][Exceptions]
 
-[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.End-Flow.MainDoc" >}}
+[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [Block-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Exception-Handling.MainDoc" >}}
 
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Exceptions.MainDoc" >}}
