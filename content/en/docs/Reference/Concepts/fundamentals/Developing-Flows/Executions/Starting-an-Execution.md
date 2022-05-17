@@ -32,13 +32,13 @@ The values of the [flow's][What-Is-Flow] [output variables][Input-Output] may be
 
 ## Execution From Another Flow
 
-An existing, executing [flow][What-Is-Flow] may [call another flow][Calling-Other-Flows] to start its execution. The child [flow][What-Is-Flow] may be executed asynchronously (future) or synchronously by placing the appropriate [Run Flow][Block-Run-Flow] [block][What-Is-Block] as part of the parent [flow's][What-Is-Flow] logic.
+An existing, executing [flow][What-Is-Flow] may [call another flow][Calling-Other-Flows] to start its execution. The child [flow][What-Is-Flow] may be executed asynchronously (future) or synchronously by placing the appropriate [Run Flow][TODO] [block][What-Is-Block] as part of the parent [flow's][What-Is-Flow] logic.
 
-When the [flow execution][What-Is-Execution] enters the [Run Flow][Block-Run-Flow] [block][What-Is-Block], the child [flow execution][What-Is-Execution] is triggered.
+When the [flow execution][What-Is-Execution] enters the [Run Flow][TODO] [block][What-Is-Block], the child [flow execution][What-Is-Execution] is triggered.
 
 ### Execution From Another Flow - Input Variables
 
-The child [flow's][What-Is-Flow] [input variables][Input-Output], for both asynchronous (future) and synchronous executions, can be [set][Run-Flow-Block] by specifying their values in [properties][Block-Properties] in the [Run Flow][Block-Run-Flow] [block][What-Is-Block].
+The child [flow's][What-Is-Flow] [input variables][Input-Output], for both asynchronous (future) and synchronous executions, can be [set][Run-Flow-Block] by specifying their values in [properties][Block-Properties] in the [Run Flow][TODO] [block][What-Is-Block].
 
 ### Execution From Another Flow - Output Variables
 
@@ -46,12 +46,11 @@ For synchronous executions only, the child [flow's][What-Is-Flow] [output variab
 
 ## External Execution
 
-Any [flow][What-Is-Flow] may be started by a HTTP request using REST, targeted at the API Gateway. Authentication ensures only those processes presenting the correct authentication credentials can trigger a [flow execution][What-Is-Execution] in this way. 
+Any [flow][What-Is-Flow] may be started by a HTTP request using REST, targeted at the API Gateway. Authentication ensures only those processes presenting the correct authentication credentials can trigger a [flow execution][What-Is-Execution] in this way.
 
 ### External Execution - Input Variables
 
 Initialisation values may be [passed][REST-Request] to the triggered [flow's][What-Is-Flow] [input variables][Input-Output] with the HTTP REST request.
-
 
 ### External Execution - Output Variables
 
@@ -80,7 +79,7 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 
 ## Related Blocks
 
-* [Run Flow][Block-Run-Flow]
+* [Run Flow][TODO]
 * [Execute HTTP Request][TODO]
 
 [EDA]: {{< ref "#eda" >}}
@@ -90,7 +89,6 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.MainDoc" >}}
 [Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Flows.Calling-Other-Flows.MainDoc" >}}
-[Block-Run-Flow]: {{< url "Cortex.Reference.Blocks.Flows.Run-Flow.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.MainDoc" >}}
 [Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.Execution-Variables.Input-Output" >}}
 [Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables.Literals" >}}
