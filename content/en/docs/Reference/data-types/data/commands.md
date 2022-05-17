@@ -16,18 +16,44 @@ description: "Holds the information for parsing a command, running multiple quer
 
 ### Parameters
 
+## Remarks
+
+### Create a Command
+
+### Convert ICommand to Text
+
+### Property Editor Support
+
+* The Expression Editor is available for [Input][] properties where the data type is `Commands`.
+* The Literal Editor is not available for [Input][] properties where the data type is `Commands`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Commands`.
+
 ## Known limitations
 
 None
 
-## See also
+## See Also
 
-TODO:
+### Related Data Types
 
-- [ICommand][]
-- [Command][]
-- [QueryCommand][]
-- [NonQueryCommand][]
+* [ICommand][]
+* [Command][]
+* [QueryCommand][]
+* [NonQueryCommand][]
+
+### Related Concepts
+
+* [Working with Data Sources][]
+
+### External Documentation
+
+None
+
+[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+
+[Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
 [ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}

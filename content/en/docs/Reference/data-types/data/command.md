@@ -22,6 +22,12 @@ description: "Holds the information for parsing a command, running a single quer
 | **Can be used as:**    | `ICommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
+## Properties
+
+### Command Text
+
+### Parameters
+
 ## Remarks
 
 ### Create a Command

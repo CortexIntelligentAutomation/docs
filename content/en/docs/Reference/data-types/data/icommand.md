@@ -22,6 +22,12 @@ description: "The interface defining data source commands."
 | **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
+## Properties
+
+### Command Text
+
+### Parameters
+
 ## Remarks
 
 ### Most Common ICommand Data Types
