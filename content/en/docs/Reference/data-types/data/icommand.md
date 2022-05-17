@@ -19,7 +19,7 @@ description: "The interface defining data source commands."
 | **Description:**       | The interface defining data source commands. |
 | **Size:**              | Varies |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `TConnectionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Remarks
