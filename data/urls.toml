@@ -346,8 +346,6 @@
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
-                [Cortex.Reference.DataTypes.Data.ConnectionType]
-                    MainDoc = "/docs/reference/data-types/data/connectiontype"
             [Cortex.Reference.DataTypes.DateAndTime]
                 MainDoc = "/docs/reference/data-types/date-and-time/"
                 [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]

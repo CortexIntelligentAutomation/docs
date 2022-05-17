@@ -760,8 +760,6 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
 [NonQueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 
-[Connection Type]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionType.MainDoc" >}}
-
 [Expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
 [Literal]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Literal" >}}
