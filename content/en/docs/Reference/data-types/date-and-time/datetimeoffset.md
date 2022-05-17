@@ -70,7 +70,7 @@ All examples are for a system configured with British [culture][] (i.e. `en-GB`)
 | Use `Convert Object To Text` block | where `Object` property has a value of `DateTimeOffset.UtcNow` | `"1/7/2022 1:00:00 PM +00:00"` | Expression | The result shown is an example result. The actual result will show the current Coordinated Universal Time (UTC) date and time and whose offset is Zero converted to text. Both the example and actual result will use the [short date pattern][StandardFormatTemplates] for the [current culture][], the [long time pattern][StandardFormatTemplates] for the [current culture][], and the `zzz` [custom format string][CustomFormatTemplates], with each element separated from the previous element by a space. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block    | where `Object` property has a value of `DateTimeOffset.UtcNow` | `"\"2022-07-01T13:00:00.0000000+00:00\""` | Expression | The result shown is an example result. The actual result will show the current Coordinated Universal Time (UTC) date and time and whose offset is Zero converted to text. Both the example and actual result will use  [ISO 8601 Standard][] format for `DateTimeOffset` (i.e. `yyyy-MM-ddTHH:mm:ss.fffffffzzz`). See [Convert Object To Json][] |
 
-Please see [Date and Time Formatting][] for further information on formatting `DateTimeOffset`.
+Please see [Date and Time Formatting][] for further information on formatting `DateTimeOffset` values, including how [Operating System Settings][] can affect the [current culture][].
 
 ### Convert DateTimeOffset to a DateTime
 
@@ -100,13 +100,13 @@ None
 ### Related Data Types
 
 * [DateTime][]
-* [String][]
 * [TimeSpan][]
 
 ### Related Concepts
 
 * [Working with Date and Time][]
 * [Implicit Casting][]
+* [Culture][]
 
 ### External Documentation
 
@@ -141,11 +141,11 @@ None
 [StandardFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.StandardFormatTemplates" >}}
 [CustomFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.CustomFormatTemplates" >}}
 [ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Operating System Settings]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.OperatingSystemSettings" >}}
 
 [DateTime]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc" >}}
 [TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 

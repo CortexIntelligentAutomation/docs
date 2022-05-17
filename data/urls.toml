@@ -131,6 +131,12 @@
                         MainDoc = "/docs/reference/blocks/json/convert-json/convert-json-to-object-block"
                     [Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson]
                         MainDoc = "/docs/reference/blocks/json/convert-json/convert-object-to-json-block"
+            [Cortex.Reference.Blocks.Loops]
+                MainDoc = "/docs/reference/blocks/loops"
+                [Cortex.Reference.Blocks.Loops.For]
+                    MainDoc = "/docs/reference/blocks/loops/for"
+                    [Cortex.Reference.Blocks.Loops.For.ForLoop]
+                        MainDoc = "/docs/reference/blocks/loops/for/for-loop-block"
             [Cortex.Reference.Blocks.Objects]
                 MainDoc = "/docs/reference/blocks/objects/"
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
@@ -241,12 +247,15 @@
                     ISO8601Standard = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#iso-8601-standard"
                     CustomFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#custom-format-templates"
                     FormatSpecifiers = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-specifiers"
+                    OperatingSystemSettings = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#operating-system-settings"
             [Cortex.Reference.Concepts.WorkingWithEnums]
                 MainDoc = "/docs/reference/concepts/enums/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
                 MainDoc = "/docs/reference/concepts/exceptions/"
             [Cortex.Reference.Concepts.WorkingWithFilesAndFolders]
                 MainDoc = "/docs/reference/concepts/files-and-folders/"
+            [Cortex.Reference.Concepts.WorkingWithLoops]
+                MainDoc = "/docs/reference/concepts/loops/"
             [Cortex.Reference.Concepts.WorkingWithNumbers]
                 MainDoc = "/docs/reference/concepts/numbers/"
             [Cortex.Reference.Concepts.WorkingWithText]
@@ -335,7 +344,6 @@
                 Array = "/docs/reference/data-types/most-common/#array"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
-                DateTime = "/docs/reference/data-types/most-common/#datetime"
                 DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
@@ -348,6 +356,7 @@
                 JsonSerializerSettings = "/docs/reference/data-types/most-common/#jsonserializersettings"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
+                Nullable = "/docs/reference/data-types/most-common/#nullable"
                 SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
                 StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
                 TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
@@ -496,7 +505,10 @@
             [Cortex.Reference.Exceptions.Loops]
                 MainDoc = "/docs/reference/exceptions/loops/"
                     [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
-                        MainDoc = "/docs/reference/exceptions/loops/infiniteloopexception/"
+                        MainDoc = "/docs/reference/exceptions/loops/infinite-loop-exception/"
+                        IncrementIsZero = "/docs/reference/exceptions/loops/infinite-loop-exception/#100"
+                        IncrementIsNegative = "/docs/reference/exceptions/loops/infinite-loop-exception/#101"
+                        IncrementIsPositive = "/docs/reference/exceptions/loops/infinite-loop-exception/#102"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]

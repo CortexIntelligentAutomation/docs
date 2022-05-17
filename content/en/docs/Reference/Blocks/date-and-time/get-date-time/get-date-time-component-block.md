@@ -407,7 +407,7 @@ If it is desirable to have any issues reported as messages when trying to debug 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
-[DateTime]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTime" >}}
+[DateTime]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc" >}}
 [DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeComponentType" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimePeriod" >}}
 [TimeSpan]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimeSpan" >}}
