@@ -199,9 +199,9 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InfiniteLoopException][] | Thrown when [Increment][Increment Property] is `0`. |
-| | Thrown when [Increment][Increment Property] has a positive value and [Start Index][StartIndex Property] is greater than [End Index][EndIndex Property]. |
-| | Thrown when [Increment][Increment Property] has a negative value and [Start Index][StartIndex Property] is less than [End Index][EndIndex Property]. |
+| [InfiniteLoopException][] | Thrown when [Increment][Increment Property] is `0`. See [Increment Is Zero][]. |
+| | Thrown when [Increment][Increment Property] has a positive value and [Start Index][StartIndex Property] is greater than [End Index][EndIndex Property].  See [Increment Is Positive][]. |
+| | Thrown when [Increment][Increment Property] has a negative value and [Start Index][StartIndex Property] is less than [End Index][EndIndex Property].  See [Increment Is Negative][]. |
 | [InvalidPropertyValueException][] | Thrown when [Current Index][CurrentIndex Property] does not have an [Int32][] value assigned to it before the block executes. |
 
 ## Remarks
@@ -230,6 +230,10 @@ The variable used for [Current Index][CurrentIndex Property] must have an [Int32
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 
 [InfiniteLoopException]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.MainDoc" >}}
+[Increment Is Zero]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsZero" >}}
+[Increment Is Negative]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsNegative" >}}
+[Increment Is Positive]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsPositive" >}}
+
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
