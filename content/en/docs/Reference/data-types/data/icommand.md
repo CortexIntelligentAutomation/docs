@@ -12,7 +12,7 @@ description: "The interface defining data source commands."
 
 | | |
 |-|-|
-| **Category:**          | Collections |
+| **Category:**          | Data |
 | **Name:**              | `ICommand` |
 | **Full Name:**         | `System.Collections.Generic.ICommand` |
 | **Alias:**             | N/A |
