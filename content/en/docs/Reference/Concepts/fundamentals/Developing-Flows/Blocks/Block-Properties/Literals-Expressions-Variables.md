@@ -366,9 +366,9 @@ An element of a [list][Lists] may be referenced using an index, where the index 
 [String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
 [Structures]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 
-[Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Property-Types.MainDoc" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.What-Is-An-Execution.MainDoc" >}}
+[Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
+[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}
 
 [Boolean-Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char-Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}

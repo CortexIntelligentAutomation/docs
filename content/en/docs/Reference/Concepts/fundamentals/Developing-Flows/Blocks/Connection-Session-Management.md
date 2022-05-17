@@ -17,7 +17,7 @@ As establishing a session with third party equipment typically takes a significa
 
 ### Literal Connection Details
 
-Connection details expressed in a [literal object][Object-Literal] will allow the session to be established for one transaction; the session will be closed when the OCI [block][What-Is-Block] completes the transaction.
+Connection details expressed in a [literal object][] will allow the session to be established for one transaction; the session will be closed when the OCI [block][What-Is-Block] completes the transaction.
 
 ### Connection Details Stored in a Variable
 
@@ -45,9 +45,9 @@ For a session that has been established using a connection string variable, the 
 * [Execute Command block][Block-Execute-Command]
 
 [Block-Execute-Command]: {{< url "Cortex.Reference.Blocks.Data.ExecuteCommand.ExecuteCommand.MainDoc" >}}
-[Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.MainDoc" >}}
+[Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.MainDoc" >}}
 [Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.What-Is-A-Block.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.What-Is-An-Execution.MainDoc" >}}
-[Local-Scope-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces.Scope.Local-Scope-Variables" >}}
-[Object-Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.Block-Properties.Literals-Expressions-Variables.Object-Literal" >}}
+[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}
+[Local-Scope-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope.Local-Scope-Variables" >}}
+[literal object]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.LiteralsExpressionsVariables.ObjectLiteral" >}}
