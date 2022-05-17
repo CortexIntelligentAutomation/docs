@@ -25,11 +25,11 @@ None
 TODO:
 
 - [ICommand][]
-- [AnyCommand][]
-- [AnyCommands][]
+- [Command][]
+- [Commands][]
 - [QueryCommand][]
 
 [ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
-[AnyCommand]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommand.MainDoc" >}}
-[AnyCommands]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommands.MainDoc" >}}
+[Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
+[Commands]: {{< url "Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}

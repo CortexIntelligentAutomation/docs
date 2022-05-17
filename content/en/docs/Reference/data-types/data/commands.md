@@ -1,12 +1,12 @@
 ---
-title: "AnyCommands"
-linkTitle: "AnyCommands"
+title: "Commands"
+linkTitle: "Commands"
 description: "Holds the information for parsing a command, running multiple query and non query commands on a data source."
 ---
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.DataTypes.Data.AnyCommands)</p>
+<p class="namespace">(Cortex.DataTypes.Data.Commands)</p>
 
 ## Summary
 
@@ -25,11 +25,11 @@ None
 TODO:
 
 - [ICommand][]
-- [AnyCommand][]
+- [Command][]
 - [QueryCommand][]
 - [NonQueryCommand][]
 
 [ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
-[AnyCommand]: {{< url "Cortex.Reference.DataTypes.Data.AnyCommand.MainDoc" >}}
+[Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
