@@ -38,7 +38,7 @@ The following table shows some of the ways that a `OdbcConnectionDetails` can be
 
 * The Expression Editor is available for [Input][] properties where the data type is `OdbcConnectionDetails`.
 * The Literal Editor is not available for [Input][] properties where the data type is `OdbcConnectionDetails`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `OdbcConnectionDetails`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `OdbcConnectionDetails`.
 
 ## Known limitations
 
