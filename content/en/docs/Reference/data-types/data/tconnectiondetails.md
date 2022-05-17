@@ -1,6 +1,6 @@
 ---
-title: "ConnectionDetails"
-linkTitle: "ConnectionDetails"
+title: "TConnectionDetails"
+linkTitle: "TConnectionDetails"
 description: "Holds the information used to establish and maintain a connection to a data source."
 ---
 
