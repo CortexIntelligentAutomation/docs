@@ -107,7 +107,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyDictionaryException][] | Thrown when [Dictionary][Dictionary Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] is `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. |
+| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] is `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. See [Value Is Invalid][]. |
 | [KeyPresentException][] | Thrown when an item with the specified [Key][Key Property] is already present. |
 | [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] or [Key][Key Property] are `null`. |
 
@@ -148,7 +148,10 @@ For information about the different types of dictionaries, including those that 
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [CannotModifyReadOnlyDictionaryException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [KeyPresentException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.KeyPresentException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 

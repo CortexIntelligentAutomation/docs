@@ -47,6 +47,7 @@ The most commonly used data types are categorised and listed below:
 | | IFormatProvider | Varies | TODO |
 | | CultureInfo | Varies | TODO |
 | | Encoding | Varies | TODO |
+| | Guid | 16 bytes | TODO |
 
 ### All
 
@@ -260,5 +261,9 @@ TODO: variable link, on page links, glossary, concept links etc.
 TODO
 
 #### Encoding
+
+TODO
+
+#### Guid
 
 TODO
