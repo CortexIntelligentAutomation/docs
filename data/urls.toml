@@ -58,13 +58,13 @@
                     MainDoc = "/docs/reference/blocks/dictionaries/get-count/"
                     [Cortex.Reference.Blocks.Dictionaries.GetCount.GetCountOfItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/get-count/get-count-of-items-with-value-block-3"
-            [Cortex.Reference.Blocks.Dictionaries.RemoveItem]
+                [Cortex.Reference.Blocks.Dictionaries.RemoveItem]
                     MainDoc = "/docs/reference/blocks/dictionaries/remove-item/"
                     [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-item-with-value-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-items-with-value-block-3"
-            [Cortex.Reference.Blocks.Dictionaries.SetItem]
+                [Cortex.Reference.Blocks.Dictionaries.SetItem]
                     MainDoc = "/docs/reference/blocks/dictionaries/set-item/"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetAllItems]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-all-items-block-3"
@@ -144,6 +144,16 @@
                         MainDoc = "/docs/reference/blocks/files-and-folders/write-file/write-all-lines-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.WriteFile.WriteAllText]
                         MainDoc = "/docs/reference/blocks/files-and-folders/write-file/write-all-text-block"
+            [Cortex.Reference.Blocks.Flows]
+                MainDoc = "/docs/reference/blocks/flows"
+                [Cortex.Reference.Blocks.Flows.EndFlow]
+                    MainDoc = "/docs/reference/blocks/flows/end-flow"
+                    [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
+                        MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
+                [Cortex.Reference.Blocks.Flows.StartFlow]
+                    MainDoc = "/docs/reference/blocks/flows/start-flow"
+                    [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
+                        MainDoc = "/docs/reference/blocks/flows//start-flow/start-flow-block"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -227,6 +237,12 @@
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-title-case-block/"
                     [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase]
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-upper-case-block/"
+            [Cortex.Reference.Blocks.Variables]
+                MainDoc = "/docs/reference/blocks/variables/"
+                [Cortex.Reference.Blocks.Variables.SetVariable]
+                    MainDoc = "/docs/reference/blocks/variables/set-variable/"
+                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
+                       MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
             [Cortex.Reference.Blocks.Workspaces]
                 MainDoc = "/docs/reference/blocks/workspaces/"
                 [Cortex.Reference.Blocks.Workspaces.StartWorkspace]
@@ -241,7 +257,7 @@
                     MainDoc = "/docs/reference/blocks/workspaces/workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
                         MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
-            [Cortex.Reference.Blocks.Xml]
+                [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
                     MainDoc = "/docs/reference/blocks/xml/convert-xml/"
