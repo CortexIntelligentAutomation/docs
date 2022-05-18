@@ -88,7 +88,7 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 [Internal]: {{< ref "#internal" >}}
 
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.MainDoc" >}}
-[Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Calling-Other-Flows.MainDoc" >}}
+[Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.CallingOtherFlows.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.MainDoc" >}}
 [Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.InputOutput" >}}
 [Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.LiteralsExpressionsVariables.Literals" >}}
@@ -97,4 +97,4 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 [Structures]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
-[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.What-Is-A-Flow.MainDoc" >}}
+[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.WhatIsAFlow.MainDoc" >}}

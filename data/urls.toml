@@ -288,11 +288,11 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/what-is-an-execution"
                     [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows]
                         MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Calling-Other-Flows]
+                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.CallingOtherFlows]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/calling-other-flows"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Flow-Exception-Handling]
+                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.FlowExceptionHandling]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/flow-exception-handling"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.What-Is-A-Flow]
+                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.WhatIsAFlow]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/what-is-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces]
                         MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces"
