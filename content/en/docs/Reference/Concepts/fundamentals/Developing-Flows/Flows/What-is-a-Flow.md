@@ -16,9 +16,9 @@ A flow is a self-contained Cortex object that contains the logic necessary to im
 A [flow execution][What-Is-Execution] may be [started][Start-Execution] by:
 
 * Scheduling it to execute at predetermined times
-* Triggering it by a predefined series of events (Event Driven Automation) (future)
+* Triggering it by a predefined series of events (future)
 * Triggering it as part of the logic of other flows
-* Remotely triggering it by a HTTP request
+* Remotely triggering it by an HTTP request
 
 For further information on starting a flow, see [Starting an Execution][Start-Execution].
 
@@ -92,9 +92,9 @@ Exceptions can be handled:
 [Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.MainDoc" >}}
 [Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Flow-Exception-Handling.MainDoc" >}}
 [flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.FlowLevel" >}}
-[Start-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.MainDoc" >}}
+[Start-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
 [What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.What-Is-A-Workspace.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.MainDoc" >}}
 [Workspace-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Workspace-Exception-Handling.MainDoc" >}}

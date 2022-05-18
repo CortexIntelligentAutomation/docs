@@ -47,7 +47,7 @@ Values from an asynchronous [flow execution][What-Is-Execution] cannot be passed
 
 [Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}
 [Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.MainDoc" >}}
-[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.Execution-Variables.Input-Output" >}}
+[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.InputOutput" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
 [What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.What-Is-A-Flow.MainDoc" >}}
