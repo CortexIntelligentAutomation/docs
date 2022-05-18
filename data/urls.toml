@@ -298,10 +298,10 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces"
                         [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope"
-                            Local-Scope-Variables = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope/#Local-Scope-Variables"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.What-Is-A-Workspace]
+                            LocalScopeVariables = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope/#local-scope-variables"
+                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WhatIsAWorkspace]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/what-is-a-workspace"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Workspace-Exception-Handling]
+                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WorkspaceExceptionHandling]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/workspace-exception-handling"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"

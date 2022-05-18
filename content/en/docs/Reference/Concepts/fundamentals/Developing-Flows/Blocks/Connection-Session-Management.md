@@ -49,5 +49,5 @@ For a session that has been established using a connection string variable, the 
 [Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
-[Local-Scope-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope.Local-Scope-Variables" >}}
+[Local-Scope-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope.LocalScopeVariables" >}}
 [literal object]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.LiteralsExpressionsVariables.ObjectLiteral" >}}
