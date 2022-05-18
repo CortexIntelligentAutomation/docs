@@ -13,7 +13,7 @@ A workspace is a container for the [flow's][What-Is-Flow] logic. [Blocks][What-I
 
 The top-level workspace is automatically created when a [flow][What-Is-Flow] is created and contains:
 
-* The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] for handling [exceptions at the flow level][flow-level]
+* The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] for handling [exceptions at the flow level][flow level]
 * A [Start Flow][Block-Start-Flow] [block][What-Is-Block] to identify where the [flow execution][What-Is-Execution] begins
 * An [End Flow][Block-End-Flow] [block][What-Is-Block] to end the [flow execution][What-Is-Execution] after the [flow][What-Is-Flow] logic has been executed
 
@@ -63,7 +63,7 @@ For more details, see [Workspace Exception Handling][Workspace-Exception-Handlin
 [Block-Start-Flow]: {{< url "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [Block-Workspace-Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.MainDoc" >}}
-[flow-level]: {{< ref "#handling-exceptions-at-the-flow-level" >}}
+[flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.FlowLevel" >}}
 
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.What-Is-A-Flow.MainDoc" >}}

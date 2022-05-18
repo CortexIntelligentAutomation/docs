@@ -46,7 +46,7 @@ For further information on starting a flow, see [Starting an Execution][Start-Ex
   * Ends the [flow execution][What-Is-Execution]
   * Automatically created when the flow is created
 * **[Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block]**
-  * Handles [flow level][Flow-Level] exceptions, thrown during the [flow execution][What-Is-Execution]
+  * Handles [flow level][] exceptions, thrown during the [flow execution][What-Is-Execution]
   * Automatically created when the flow is created
   * The turndown on the top-right of the icon indicates that it contains a [workspace][What-Is-Workspace] canvas, which may be opened by double-clicking the icon
 * **Global Variable Store**
@@ -91,7 +91,7 @@ Exceptions can be handled:
 [Exception]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.MainDoc" >}}
 [Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.MainDoc" >}}
 [Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Flow-Exception-Handling.MainDoc" >}}
-[Flow-Level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.Flow-Level" >}}
+[flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.FlowLevel" >}}
 [Start-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}

@@ -11,15 +11,15 @@ weight: 30
 
 Flows can provide for a range of exception handling techniques:
 
-* Exceptions can be handled at the [block level][Block-Level] (Highest Priority)
-* Exceptions can be handled at the [workspace level][Workspace-Level]
-* Exceptions can be handled at the [flow level][Flow-Level] (Lowest Priority)
+* Exceptions can be handled at the [block level][] (Highest Priority)
+* Exceptions can be handled at the [workspace level][]
+* Exceptions can be handled at the [flow level][] (Lowest Priority)
 
-A single [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block] may be placed on a [workspace][What-Is-Workspace], handling exceptions at the [workspace level][Workspace-Level].
+A single [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block] may be placed on a [workspace][What-Is-Workspace], handling exceptions at the [workspace level][].
 
 It acts as a common point for handling exceptions on the workspace that are not caught by the higher priority [Handle Block Exception][Block-Handle-Block-Exception] [blocks][What-Is-Block].
 
-For detailed information about Workspace Exception Handling, see [Handling Exceptions at the Workspace Level][Workspace-Level].
+For detailed information about Workspace Exception Handling, see [Handling Exceptions at the Workspace Level][workspace level].
 
 ## Related Concepts
 
@@ -49,6 +49,6 @@ For detailed information about Workspace Exception Handling, see [Handling Excep
 [What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.What-Is-A-Workspace.MainDoc" >}}
 
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.MainDoc" >}}
-[Block-Level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.Block-Level" >}}
-[Flow-Level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.Flow-Level" >}}
-[Workspace-Level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.Workspace-Level" >}}
+[block level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.BlockLevel" >}}
+[flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.FlowLevel" >}}
+[workspace level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.WorkspaceLevel" >}}

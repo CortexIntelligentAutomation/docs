@@ -13,9 +13,9 @@ All exceptions should be handled during [flow execution][What-Is-Execution], oth
 
 Cortex [flows][Flow] provides a range of exception handling techniques, organised hierarchically:
 
-* Exceptions may be handled at the [block level][block-level].
-* Exceptions can be handled at the [workspace level][workspace-level].
-* Exceptions can be handled at the [flow level][flow-level].
+* Exceptions may be handled at the [block level][].
+* Exceptions can be handled at the [workspace level][workspace level].
+* Exceptions can be handled at the [flow level][flow level].
 
 ## Handling Exceptions at the Block level
 
@@ -153,9 +153,9 @@ For more details of throwing exceptions, refer to the [Throw-Exception][Block-Th
 * [Throw Exception][Block-Throw-Exception]
 * [End Flow][Block-End-Flow]
 
-[block-level]: {{< ref "#handling-exceptions-at-the-block-level" >}}
-[workspace-level]: {{< ref "#handling-exceptions-at-the-workspace-level" >}}
-[flow-level]: {{< ref "#handling-exceptions-at-the-flow-level" >}}
+[block level]: {{< ref "#handling-exceptions-at-the-block-level" >}}
+[workspace level]: {{< ref "#handling-exceptions-at-the-workspace-level" >}}
+[flow level]: {{< ref "#handling-exceptions-at-the-flow-level" >}}
 
 [Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [Block-Handle-Block-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
@@ -167,7 +167,6 @@ For more details of throwing exceptions, refer to the [Throw-Exception][Block-Th
 [Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.MainDoc" >}}
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.MainDoc" >}}
-[Block-Level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.Block-Level" >}}
 [Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Flow-Exception-Handling.MainDoc" >}}
 [Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}

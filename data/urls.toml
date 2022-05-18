@@ -267,12 +267,12 @@
                         [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/what-is-a-block/"
                     [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/"
+                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/"
                         [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/"
-                            Block-Level = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/#handling-exceptions-at-the-block-level"
-                            Workspace-Level = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/#handling-exceptions-at-the-workspace-level"
-                            Flow-Level = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/#handling-exceptions-at-the-flow-level"
+                            BlockLevel = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/#handling-exceptions-at-the-block-level"
+                            WorkspaceLevel = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/#handling-exceptions-at-the-workspace-level"
+                            FlowLevel = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/#handling-exceptions-at-the-flow-level"
                         [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.Execution-Variables]
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/execution-variables"
                             Input-Output = "/docs/reference/concepts/fundamentals/developing-flows/executions/execution-variables/#inputoutput-variables"
