@@ -167,18 +167,6 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
-<<<<<<< HEAD
-            [Cortex.Reference.Blocks.Flows]
-                MainDoc = "/docs/reference/blocks/flows"
-                [Cortex.Reference.Blocks.Flows.EndFlow]
-                    MainDoc = "/docs/reference/blocks/flows/end-flow"
-                    [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
-                        MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
-                [Cortex.Reference.Blocks.Flows.StartFlow]
-                    MainDoc = "/docs/reference/blocks/flows/start-flow"
-                    [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
-                        MainDoc = "/docs/reference/blocks/flows//start-flow/start-flow-block"
-=======
                 [Cortex.Reference.Blocks.FilesAndFolders.ReadFile]
                     MainDoc = "/docs/reference/blocks/files-and-folders/read-file"
                     [Cortex.Reference.Blocks.FilesAndFolders.ReadFile.ReadAllLines]
@@ -197,7 +185,6 @@
                         MainDoc = "/docs/reference/blocks/files-and-folders/write-file/write-all-lines-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.WriteFile.WriteAllText]
                         MainDoc = "/docs/reference/blocks/files-and-folders/write-file/write-all-text-block"
->>>>>>> origin/feature/initial-structure
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -294,17 +281,7 @@
                 [Cortex.Reference.Blocks.Workspaces.Workspace]
                     MainDoc = "/docs/reference/blocks/workspaces/workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
-<<<<<<< HEAD
-                    MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
-            [Cortex.Reference.Blocks.Variables]
-                MainDoc = "/docs/reference/blocks/variables/"
-                [Cortex.Reference.Blocks.Variables.SetVariable]
-                MainDoc = "/docs/reference/blocks/variables/set-variable/"
-                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
-                    MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
-=======
                         MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
->>>>>>> origin/feature/initial-structure
             [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
