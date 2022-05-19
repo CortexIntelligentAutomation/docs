@@ -99,7 +99,7 @@ For further information, [Char Literals][Char-Literals]
 1234
 ```
 
-By default, Integer literals are assumed to be of type [Int32][Int32], if the literal value can be accommodated in an [Int32][Int32]. If the Integer literal is larger than [Int32.MaxValue][TODO], then it will automatically be taken as type [Int64][Int64]. 
+By default, Integer literals are assumed to be of type [Int32][Int32], if the literal value can be accommodated in an [Int32][Int32]. If the Integer literal is larger than [Int32.MaxValue][TODO], then it will automatically be taken as type [Int64][Int64].
 
 If it is necessary to create an integer of type [Int64][Int64] with a value less than or equal to [Int32.MaxValue][TODO], then the numeric literal should be suffixed by the character `L`. For example:
 
@@ -138,45 +138,15 @@ For further information, see [Boolean Literals][Boolean-Literals].
 
 ### Object literal
 
-An [Object][Object] may consist of a number of elements, which in turn may contains values or sub-elements. Examples of objects include datatypes such as [Lists][Lists] (arrays), [Dictionaries][Dictionaries], [Structures][Structures] (a special type of [Dictionary][Dictionaries]), etc.
-
-```json
-{
-  "StringProperty": "Example String",
-  "IntegerProperty": 1,
-  "BooleanProperty": true,
-  "EmptyDictionaryProperty": {},
-  "EmptyListProperty": [],
-  "EmptyObjectProperty": {},
-  "EmptyStructureProperty": {},
-  "NullProperty": null
-}
-```
-
-If the execution engine can determine that a literal object matches a known [data type][Data-Types], then the engine will convert the literal object to that data type, otherwise it will convert it to a [structure][Structures].
+Currently, creating an object using literal syntax is not supported.
 
 ### Dictionary literal
 
-[Dictionaries][Dictionaries] are objects that consist of a number of Key/Value pairs; the Value field may be a value or another [object][Object].
-
-```json
-{
-  "Key 1" : "",
-  "Key 2" : 1,
-  "Key 3" : true,
-  "Key 4" : {},
-  "Key 5" : [],
-  "Key 6" : null
-}
-```
-
-[Dictionaries][Dictionaries] may be heterogenious, where the value elements may be of different [data types][Data-Types], or heterogenous, when the value elements are all of the same [data type][Data-Types].
-
-The Keys of [dictionaries][Dictionaries] must be homogenious, i.e., of the same [data type][Data-Types], e.g., [string][String], [integer][Int32] etc. Keys must also be unique but not necessarily ordered.
+Currently, creating a dictionary using literal syntax is not supported; any attempt to make a dictionary using literal syntax will create a [Structure][] instead.
 
 ### Structure literal
 
-[Structures][Structures] are a special type of [Dictionary][Dictionaries] that always have [string][String] type keys.
+[Structures][Structures] are a special type of [Dictionary][Dictionaries] that always have [string][String] keys.
 
 ```json
 {
@@ -189,11 +159,13 @@ The Keys of [dictionaries][Dictionaries] must be homogenious, i.e., of the same 
 }
 ```
 
-They differ from a [Dictionary][Dictionaries] in the syntax used for accessing the values, which uses the dot notation e.g., `myStructure.elementName`.
+They differ from a [Dictionary][Dictionaries] in the syntax used for accessing the items.
+
+Dictionaries can only use [index notation][]  e.g., `myDictionary["Key"]` to access items. Whereas, [Structures][] can use both [dot notation][] e.g., `myStructure.Key` and [index notation][] e.g., `myStructure["Key"]`.
 
 ### List literal
 
-A [List][Lists] is an object that consist of a number of ordered values; the value field may be another [object][Object].
+A [List][Lists] is an object that consists of a number of ordered items; items can be of any [data type][Data-Types].
 
 ```json
 [
@@ -206,27 +178,53 @@ A [List][Lists] is an object that consist of a number of ordered values; the val
 ]
 ```
 
-[Lists][Lists] may be heterogenious, where the values may be of different [data types][Data-Types], or heterogenous, when the values are all of the same [data type][Data-Types].
+[Lists][Lists] may be heterogeneous, where the items may be of different [data types][Data-Types], or homogeneous, when the items are all of the same [data type][Data-Types].
 
 ## Variables
 
-A variable reference identifies a variable object that can contain a value. The value, to which the variable evaluates, may vary depending on the value assigned.
+[Variables][JOSH] are named containers for storing values of any [data type][Data-Types]; a value can be read, updated, replaced, or removed.
 
-When the variable contains a [Structure][Structures], [Dictionary][Dictionaries] or a [List][Lists] [data type][Data-Types], it is possible to access individual values (elements) within that variable.
+### Variable References
 
-### A variable reference
+The value of a variable can be read using variable reference syntax.
 
 ```csharp
 ($)variableName
 ```
 
-### A structure element
+The syntax for reading the properties of a variable differ depending on the value's [data type][Data-Types].
 
-```csharp
-($)variableName.ElementName
+### Accessing an item in a Structure
+
+This example will read an item with the key `"Key1"` from a variable that contains a [Structure][].
+
+Assume the variable `($)Structure` has been set to the following:
+
+```json
+{
+  "Key1" : "Item 1",
+  "Key2" : "Item 2",
+}
 ```
 
-### A list element
+The item `"Item 1"` with the key `"Key1"` can be read from the [Structure][] using the [dot notation][]:
+
+```csharp
+($)Structure.Key1
+```
+
+Or by using the [index notation][]:
+
+```csharp
+($)Structure.["Key1"]
+```
+
+// Up to here.
+- // TODO: Update following examples to the same format as above
+- // TODO: Find property naming rules link
+- // TODO: Order the examples to be the same as literals
+
+### Accessing an item in a List
 
 Note: it is possible to index into a [list][Lists] using an [integer][Int32] variable or an [integer literal][Integer].
 
@@ -238,7 +236,7 @@ Note: it is possible to index into a [list][Lists] using an [integer][Int32] var
 ($)variableName[($)indexVariable]
 ```
 
-### A dictionary element
+### Accessing an item in a Dictionary
 
 Note: it is possible to reference into a [dictionary][Dictionaries] using a variable or a literal of the correct type.
 
@@ -253,6 +251,8 @@ Note: it is possible to reference into a [dictionary][Dictionaries] using a vari
 ```csharp
 ($)variableName[($)stringVariable]
 ```
+
+### Accessing a property in an Object
 
 ## Expressions
 
@@ -337,6 +337,12 @@ An element of a [list][Lists] may be referenced using an index, where the index 
 | `(int)($)longVar`          | `1`    | as an [Int32][Int32] |
 | `(System.Int32)($)longVar` | `1`    | as an [Int32][Int32] |
 
+## Known Limitations
+
+* TODO: Cannot create Objects
+* TODO: Cannot create Dictionaries
+* TODO: Keys within a [Structure][] must follow C# property naming rules to be accessed by [dot notation][], keys that do not follow these rules can still be accessed by [index notation][]
+
 ## Related Concepts
 
 * [Property Types][Property-Types]
@@ -369,6 +375,9 @@ An element of a [list][Lists] may be referenced using an index, where the index 
 [Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
+
+[index notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.IndexNotation" >}}
+[dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}
 
 [Boolean-Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char-Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}

@@ -410,6 +410,8 @@
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
                 Structures = "/docs/reference/concepts/collections/#structures"
+                DotNotation = "/docs/reference/concepts/collections/#dot-notation"
+                IndexNotation = "/docs/reference/concepts/collections/#index-notation"
                 Keys = "/docs/reference/concepts/collections/#keys"
                 Items = "/docs/reference/concepts/collections/#items"
             [Cortex.Reference.Concepts.WorkingWithCulture]
