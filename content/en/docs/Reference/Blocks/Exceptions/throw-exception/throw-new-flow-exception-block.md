@@ -92,7 +92,7 @@ A [Category][Category Property] that can be used to categorise similar types of 
 
 ### Error Code
 
-An [Error Code][ErrorCode Property] that can be used to uniquely identify the type of exception (e.g. There may be multiple exceptions with the same `AuthenticationError` category set, such as `InvalidCredentials`, `TokenExpired`. In this case each exception can be assigned its own unique [Error Code][ErrorCode Property]; `AuthenticationError` = `100` and `InvalidCredentials` = `101`). This can then be used for future decision making in the flow, or to assist in troubleshooting and reporting.
+An [Error Code][ErrorCode Property] that can be used to uniquely identify the type of exception (e.g. There may be multiple exceptions with the same `AuthenticationError` category set, such as `InvalidCredentials`, `TokenExpired`. In this case each exception can be assigned its own unique [Error Code][ErrorCode Property]; `InvalidCredentials` = `100` and `TokenExpired` = `101`). This can then be used for future decision making in the flow, or to assist in troubleshooting and reporting.
 
 If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 
