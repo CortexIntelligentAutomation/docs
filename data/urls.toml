@@ -674,6 +674,7 @@
             ToInt64 = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.toint64"
             ToSingle = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tosingle"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring"
+            ToStringObjectFormatProvider = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring?#system-convert-tostring(system-object-system-iformatprovider)"
         [MSDocs.DotNet.Api.System.Boolean]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
             Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.parse"
