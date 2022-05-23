@@ -89,11 +89,13 @@ TODO
 
 ### Operand
 
-TODO
+Describes a [literal][] or [variable][] that has the capability to be operated on. For example, in the [expression][] `1 + 2` the literal values `1` and `2` are operands, whereas `+` is an [operator][].
 
 ### Operator
 
-TODO
+Operators are used to manipulate and check operands values. For example, in the [expression][] `1 + 2` the operator `+` adds the two [operands][operand] `1` and `2`, resulting in the expression evaluating to `3`.
+
+For more detailed information about operators, see [C# operators and expressions][].
 
 ### Orchestration
 
@@ -114,3 +116,12 @@ TODO
 ### Out-of-the-box (OOB)
 
 TODO
+
+[operand]: {{< ref "#operand" >}}
+[operator]: {{< ref "#operator" >}}
+
+[literal]: {{< url "Cortex.Reference.Glossary.K-O.Literal" >}}
+[expression]: {{< url "Cortex.Reference.Glossary.A-E.Expression" >}}
+[variable]: {{< url "Cortex.Reference.Glossary.U-Z.Variable" >}}
+
+[C# operators and expressions]: {{< url "MSDocs.CSharp.OperatorsAndExpressions" >}}

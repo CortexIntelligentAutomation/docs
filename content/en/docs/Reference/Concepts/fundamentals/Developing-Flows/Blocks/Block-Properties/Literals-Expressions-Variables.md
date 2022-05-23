@@ -146,7 +146,7 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 
 ### Structure literal
 
-[Structures][Structures] are a special type of [Dictionary][Dictionaries] that always have [string][String] keys.
+[Structures][Structure] are a special type of [Dictionary][] that always have [string][String] [keys][key].
 
 ```json
 {
@@ -159,13 +159,13 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 }
 ```
 
-They differ from a [Dictionary][Dictionaries] in the syntax used for accessing the items.
+They differ from a [Dictionary][] in the syntax used for accessing the [item][].
 
-Dictionaries can only use [index notation][]  e.g., `myDictionary["Key"]` to access items. Whereas, [Structures][] can use both [dot notation][] e.g., `myStructure.Key` and [index notation][] e.g., `myStructure["Key"]`.
+Dictionaries can only use [index notation][]  e.g., `myDictionary["Key"]` to access [items][item]. Whereas, [Structures][] can use both [dot notation][] e.g., `myStructure.Key` and [index notation][] e.g., `myStructure["Key"]`.
 
 ### List literal
 
-A [List][Lists] is an object that consists of a number of ordered items; items can be of any [data type][Data-Types].
+A [List][] is an object that consists of a number of ordered [items][item] that can be of any [data type][Data-Types].
 
 ```json
 [
@@ -178,7 +178,7 @@ A [List][Lists] is an object that consists of a number of ordered items; items c
 ]
 ```
 
-[Lists][Lists] may be heterogeneous, where the items may be of different [data types][Data-Types], or homogeneous, when the items are all of the same [data type][Data-Types].
+[Lists][List] may be heterogeneous, where the [items][item] may be of different [data types][Data-Types], or homogeneous, when the [items][item] are all of the same [data type][Data-Types].
 
 ## Variables
 
@@ -194,71 +194,97 @@ The value of a variable can be read using variable reference syntax.
 
 The syntax for reading the properties of a variable differ depending on the value's [data type][Data-Types].
 
+### Accessing a property in an Object
+
+This example will read a property with the name `"Message"` from a variable that contains an [Exception][] object.
+
+Assume the variable `($)Exception` has been set to the following:
+
+```json
+{
+  "ExceptionType" : "Exception",
+  "Message" : "Exception of Type \"System.Exception\" was thrown.",
+  "HelpLink" : ""
+}
+```
+
+The value `"Exception of Type \"System.Exception\" was thrown."` of the property named `"Message"` can be read from the [Exception][] using [dot notation][]:
+
+```csharp
+($)Exception.Message
+```
+
+### Accessing an item in a Dictionary
+
+This example will read an [item][] with the [key][] `"Key1"` from a variable that contains a [Dictionary][].
+
+Assume the variable `($)Dictionary` has been set to the following:
+
+```json
+{
+  "Key1" : "Item 1",
+  "Key2" : "Item 2"
+}
+```
+
+The [item][] `"Item 1"` with the [key][] `"Key1"` can be read from the [Dictionary][] using [index notation][]:
+
+```csharp
+($)Dictionary["Key1"]
+```
+
 ### Accessing an item in a Structure
 
-This example will read an item with the key `"Key1"` from a variable that contains a [Structure][].
+This example will read an [item][] with the [key][] `"Key1"` from a variable that contains a [Structure][].
 
 Assume the variable `($)Structure` has been set to the following:
 
 ```json
 {
   "Key1" : "Item 1",
-  "Key2" : "Item 2",
+  "Key2" : "Item 2"
 }
 ```
 
-The item `"Item 1"` with the key `"Key1"` can be read from the [Structure][] using the [dot notation][]:
+The [item][] `"Item 1"` with the [key][] `"Key1"` can be read from the [Structure][] using [dot notation][]:
 
 ```csharp
 ($)Structure.Key1
 ```
 
-Or by using the [index notation][]:
+Or by using [index notation][]:
 
 ```csharp
-($)Structure.["Key1"]
+($)Structure["Key1"]
 ```
-
-// Up to here.
-- // TODO: Update following examples to the same format as above
-- // TODO: Find property naming rules link
-- // TODO: Order the examples to be the same as literals
 
 ### Accessing an item in a List
 
-Note: it is possible to index into a [list][Lists] using an [integer][Int32] variable or an [integer literal][Integer].
+This example will read an [item][] with the index `0` from a variable that contains a [List][].
 
-```csharp
-($)variableName[5]
+Assume the variable `($)List` has been set to the following:
+
+```json
+[
+  "Item 1",
+  "Item 2"
+]
 ```
 
-```csharp
-($)variableName[($)indexVariable]
-```
-
-### Accessing an item in a Dictionary
-
-Note: it is possible to reference into a [dictionary][Dictionaries] using a variable or a literal of the correct type.
+The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [index notation][]:
 
 ```csharp
-($)variableName["StringKey"]  // String key
+($)List[0]
 ```
-
-```csharp
-($)variableName[123]    // Integer key
-```
-
-```csharp
-($)variableName[($)stringVariable]
-```
-
-### Accessing a property in an Object
 
 ## Expressions
 
-An expression is a value that will be evaluated when the [flow execution][What-Is-Execution] executes the [block][What-Is-Block]. Cortex expressions use C# syntax; anything that is a valid C# expression will be valid in a Cortex expression.
+An expression is a combination of [operands][] (i.e. [variables][Variables], [literals][Literals], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data-Types]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
 
-Full namespaces or keywords for built-in C# types must be used to reference a .NET [data type][Data-Types].
+Expressions use the syntax of the [C#][] [programming language][].
+
+// TODO: We are here
+// TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
 
 ### Arithmetic expressions
 
@@ -299,17 +325,17 @@ If `($)boolVar1` equals `false` and `($)boolVar2` equals `true`
 
 ### Dictionary expressions
 
-To access a single value of a [Dictionary][Dictionaries] variable `($)myDictionary`:
+To access a single value of a [Dictionary][] variable `($)myDictionary`:
 
 `($)myDictionary[key]`
 
-To access a value within a nested [Dictionary][Dictionaries] variable:
+To access a value within a nested [Dictionary][] variable:
 
 `($)myDictionary[outerkey][innerKey]`
 
 ### List expressions
 
-An element of a [list][Lists] may be referenced using an index, where the index is an integer expression and an index of zero indicates the first element:
+An element of a [List][] may be referenced using an index, where the index is an integer expression and an index of zero indicates the first element:
 
 `($)myDictionary[index]`
 
@@ -341,7 +367,7 @@ An element of a [list][Lists] may be referenced using an index, where the index 
 
 * TODO: Cannot create Objects
 * TODO: Cannot create Dictionaries
-* TODO: Keys within a [Structure][] must follow C# property naming rules to be accessed by [dot notation][], keys that do not follow these rules can still be accessed by [index notation][]
+* [Keys][key] within a [Structure][] must follow [C# identifier naming rules][] to be accessed by [dot notation][], keys that do not follow these rules can still be accessed by [index notation][].
 
 ## Related Concepts
 
@@ -353,24 +379,20 @@ An element of a [list][Lists] may be referenced using an index, where the index 
 [Variables]: {{< ref "#variables" >}}
 
 [Data-Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
-[Dictionary]: {{< ref "#dictionary-literal" >}}
-[List]: {{< ref "#list-literal" >}}
 [String-Expressions]: {{< ref "#string-expressions" >}}
-[Structure]: {{< ref "#structure-literal" >}}
-[Integer]: {{< ref "#integer-literal" >}}
 [String-Literal]: {{< ref "#string-literal" >}}
 
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
-[Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
-[Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
-[Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Structures]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
 [Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
@@ -378,9 +400,19 @@ An element of a [list][Lists] may be referenced using an index, where the index 
 
 [index notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.IndexNotation" >}}
 [dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}
+[key]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
+[item]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}
 
 [Boolean-Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char-Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}
 [Integer-Literals]: {{< url "MSDocs.CSharp.IntegerLiterals" >}}
 [Real-Literals]: {{< url "MSDocs.CSharp.RealLiterals" >}}
 [String-Literals]: {{< url "MSDocs.CSharp.StringLiterals" >}}
+[C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
+
+[C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
+[operands]: {{< url "Cortex.Reference.Glossary.K-O.Operand" >}}
+[operators]: {{< url "Cortex.Reference.Glossary.K-O.Operator" >}}
+[PropertiesC#]: {{< url "Cortex.Reference.Glossary.P-T.PropertyCSharp" >}}
+[methods]: {{< url "Cortex.Reference.Glossary.K-O.Method" >}}
+[programming language]: {{< url "Cortex.Reference.Glossary.P-T.ProgrammingLanguage" >}}

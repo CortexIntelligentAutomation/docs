@@ -274,7 +274,7 @@ Also see [Cast] for more information.
 
 ### Expression
 
-An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type] etc.) and [operators] (i.e. =, +, -, *, / etc.) that can be evaluated by the [Cortex Evolution] [platform] to a single value.
+An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators] (i.e. =, +, -, *, /) that can be evaluated by the [Cortex Evolution] [platform] to a single value.
 
 Expressions use the syntax of the [C#] [programming language].
 

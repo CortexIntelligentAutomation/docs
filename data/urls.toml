@@ -720,6 +720,7 @@
                 MainDoc = "/docs/reference/glossary/a-e/"
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
+                Expression = "/docs/reference/glossary/a-e/#expression"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
                 Flow = "/docs/reference/glossary/f-j/#flow"
@@ -784,6 +785,8 @@
         IntegerLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals"
         RealLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals"
         StringLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals"
+        IdentifierNamingRules = "https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names"
+        OperatorsAndExpressions = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/"
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
