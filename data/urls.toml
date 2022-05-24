@@ -525,6 +525,7 @@
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
                 Array = "/docs/reference/data-types/most-common/#array"
+                Char = "/docs/reference/data-types/most-common/#char"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
@@ -718,8 +719,13 @@
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
                 MainDoc = "/docs/reference/glossary/a-e/"
+                Boolean = "/docs/reference/glossary/a-e/#boolean"
+                Char = "/docs/reference/glossary/a-e/#char"
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
+                DataType = "/docs/reference/glossary/a-e/#data-type"
+                Dictionary = "/docs/reference/glossary/a-e/#dictionary"
+                Double = "/docs/reference/glossary/a-e/#double"
                 Expression = "/docs/reference/glossary/a-e/#expression"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
@@ -730,6 +736,7 @@
                 Integer = "/docs/reference/glossary/f-j/#integer"
                 Int16 = "/docs/reference/glossary/f-j/#int16"
                 Int32 = "/docs/reference/glossary/f-j/#int32"
+                Int64 = "/docs/reference/glossary/f-j/#int64"
                 IDE = "/docs/reference/glossary/f-j/#ide"
             [Cortex.Reference.Glossary.K-O]
                 MainDoc = "/docs/reference/glossary/k-o/"
@@ -750,7 +757,10 @@
                 PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
                 PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
                 Request = "/docs/reference/glossary/p-t/#request"
+                Single = "/docs/reference/glossary/p-t/#single"
                 Snippets = "/docs/reference/glossary/p-t/#snippets"
+                String = "/docs/reference/glossary/p-t/#string"
+                Structure = "/docs/reference/glossary/p-t/#structure"
                 Task = "/docs/reference/glossary/p-t/#task"
                 Text = "/docs/reference/glossary/p-t/#text"
                 Trigger = "/docs/reference/glossary/p-t/#trigger"

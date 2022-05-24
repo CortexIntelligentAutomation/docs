@@ -101,6 +101,12 @@ See [Casting and type conversions (C# Programming Guide)] for a detailed technic
 
 Also see [Explicit Cast] for more information.
 
+### Char
+
+A [data type][] that represents a character or letter.
+
+For more detailed information about the Char data type, see [Char][].
+
 ### Cloud
 
 A global network of servers which are linked together and operate as a single ecosystem.
@@ -350,6 +356,9 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [Variables]: {{< url "Cortex.Reference.Glossary.U-Z.Variable" >}}
 [16-bit]: {{< url "Cortex.Reference.Glossary.0-9.16Bit" >}}
 [32-bit]: {{< url "Cortex.Reference.Glossary.0-9.32Bit" >}}
+[data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
+
+[Char]: {{< url "Cortex.Reference.DataTypes.MostCommon.Char" >}}
 
 [Casting and type conversions (C# Programming Guide)]: {{< url "MSDocs.CSharp.Casting" >}}
 [Cast expression (C# Reference)]: {{< url "MSDocs.CSharp.CastExpression" >}}

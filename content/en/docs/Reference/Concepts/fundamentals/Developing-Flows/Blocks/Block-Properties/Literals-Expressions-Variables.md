@@ -9,11 +9,23 @@ weight: 20
 
 ## Summary
 
-An [input property][TODO] that uses an [expression editor][TODO] is the most flexible and can accept [literal values][Literals], [expressions][Expressions], and references to [variables][Variables].
+An [input property][] that uses an [expression editor][TODO] is the most flexible and can accept [literal values][Literals], [expressions][Expressions], and references to [variables][Variables].
 
 ## Literals
 
-A literal is an explicit value that is not calculated during the execution of the flow. A literal can be of any [data type][Data-Types].
+A literal is an explicit value that is not calculated during the execution of the flow. A literal can be any of the following data types:
+
+- [String][String Literal]
+- [Char][Char Literal]
+- [Int32][Int32 Literal]
+- [Int64][Int64 Literal]
+- [Double][Double literal]
+- [Single][Single literal]
+- [Boolean][Boolean literal]
+- [Object][Object literal]
+- [Dictionary][Dictionary literal]
+- [Structure][Structure literal]
+- [List][List literal]
 
 ### String literal
 
@@ -93,34 +105,56 @@ The example above becomes:
 
 For further information, [Char Literals][Char-Literals]
 
-### Integer literal
+### Int32 literal
+
+If an integer literal value is greater than or equal to [Int32.MinValue][] or less than or equal to [Int32.MaxValue][], then it will be of type [Int32][]
 
 ```csharp
 1234
 ```
 
-By default, Integer literals are assumed to be of type [Int32][Int32], if the literal value can be accommodated in an [Int32][Int32]. If the Integer literal is larger than [Int32.MaxValue][TODO], then it will automatically be taken as type [Int64][Int64].
+If an integer literal value is less than [Int32.MinValue][] or greater than [Int32.MaxValue][], then it will be of type [Int64][].
 
-If it is necessary to create an integer of type [Int64][Int64] with a value less than or equal to [Int32.MaxValue][TODO], then the numeric literal should be suffixed by the character `L`. For example:
+For further information, see [Integer Literals][Integer-Literals].
+
+### Int64 Literal
+
+If an integer literal value is less than [Int32.MinValue][] or greater than [Int32.MaxValue][], then it will be of type [Int64][].
 
 ```csharp
+2147483648
+```
+
+```csharp
+1234l
 1234L
 ```
 
 For further information, see [Integer Literals][Integer-Literals].
 
-### Floating Point literal
+### Double Literal
 
-By default, floating point literals are assumed to be of type [Double][Double]; the suffix `D` used to create the floating point literal to type [Double][Double] is optional.
+By default, floating point literals are of type [Double][Double].
 
 ```csharp
 1234.456
+```
+
+The suffix `d` or `D` can used to create a floating point literal of type [Double][Double], but is unnecessary.
+
+```csharp
+1234.456d
 1234.456D
 ```
 
-To create a floating point literal to be of type [Single][Single], the suffix `F` should be used.
+For further information, see [Real Literals][Real-Literals].
+
+### Single literal
+
+If it is necessary to create an floating point literal of type [Single][] with a value greater than or equal to [Single.MinValue][] or less than or equal to [Single.MaxValue][], then the floating point literal must be suffixed by the character `f` or `F`. For example:
 
 ```csharp
+1234.456f
 1234.456F
 ```
 
@@ -161,7 +195,7 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 
 They differ from a [Dictionary][] in the syntax used for accessing the [item][].
 
-Dictionaries can only use [index notation][]  e.g., `myDictionary["Key"]` to access [items][item]. Whereas, [Structures][] can use both [dot notation][] e.g., `myStructure.Key` and [index notation][] e.g., `myStructure["Key"]`.
+Dictionaries can only use [index notation][]  e.g., `myDictionary["Key"]` to access [items][item]. Whereas, [Structures][Structure] can use both [dot notation][] e.g., `myStructure.Key` and [index notation][] e.g., `myStructure["Key"]`.
 
 ### List literal
 
@@ -182,7 +216,7 @@ A [List][] is an object that consists of a number of ordered [items][item] that 
 
 ## Variables
 
-[Variables][JOSH] are named containers for storing values of any [data type][Data-Types]; a value can be read, updated, replaced, or removed.
+[Variables][Variables Concept] are named containers for storing values of any [data type][Data-Types]; a value can be read, updated, replaced, or removed.
 
 ### Variable References
 
@@ -285,6 +319,7 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 // TODO: We are here
 // TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
+// TODO: Up to char from operands -> literals
 
 ### Arithmetic expressions
 
@@ -378,25 +413,45 @@ An element of a [List][] may be referenced using an index, where the index is an
 [Expressions]: {{< ref "#expressions" >}}
 [Variables]: {{< ref "#variables" >}}
 
+[String Literal]: {{< ref "#string-literal" >}}
+[Char Literal]: {{< ref "#char-literal" >}}
+[Int32 Literal]: {{< ref "#int32-literal" >}}
+[Int64 Literal]: {{< ref "#int64-literal" >}}
+[Single literal]: {{< ref "#single-literal" >}}
+[Double literal]: {{< ref "#double-literal" >}}
+[Boolean literal]: {{< ref "#boolean-literal" >}}
+[Object literal]: {{< ref "#object-literal" >}}
+[Dictionary literal]: {{< ref "#dictionary-literal" >}}
+[Structure literal]: {{< ref "#structure-literal" >}}
+[List literal]: {{< ref "#list-literal" >}}
+
 [Data-Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [String-Expressions]: {{< ref "#string-expressions" >}}
 [String-Literal]: {{< ref "#string-literal" >}}
 
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Int32.MaxValue]: {{< url "MSDocs.DotNet.Api.System.Int32.MaxValue" >}}
+[Int32.MinValue]: {{< url "MSDocs.DotNet.Api.System.Int32.MinValue" >}}
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
+[Single.MaxValue]: {{< url "MSDocs.DotNet.Api.System.Single.MaxValue" >}}
+[Single.MinValue]: {{< url "MSDocs.DotNet.Api.System.Single.MinValue" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
 [Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
+[Variables Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+
+[input property]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [index notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.IndexNotation" >}}
 [dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}

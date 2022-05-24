@@ -128,11 +128,16 @@ TODO
 
 ### Int32
 
-TODO
+A [data type][] that represents an integer value.
+
+For more detailed information about the String data type, see [Int32][].
 
 ### Int64
 
-TODO
+
+A [data type][] that represents an integer value.
+
+For more detailed information about the String data type, see [Int64][].
 
 ### Invalid
 
@@ -167,3 +172,8 @@ See [Wikipedia][TODO - https://en.wikipedia.org/wiki/Information_technology] for
 JSON stands for JavaScript Object Notation, and is a format for storing and transporting data between computer applications.
 
 See [What is JSON][TODO - https://www.w3schools.com/whatis/whatis_json.asp] for more information.
+
+[data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
+
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}

@@ -105,7 +105,9 @@ TODO
 
 ### String
 
-TODO
+A [data type][] that represents text.
+
+For more detailed information about the String data type, see [String][].
 
 ### Structure
 
@@ -151,3 +153,6 @@ TODO
 
 [C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
 [camelCase]: {{< url "Cortex.Reference.Glossary.A-E.CamelCase" >}}
+[data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
+
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
