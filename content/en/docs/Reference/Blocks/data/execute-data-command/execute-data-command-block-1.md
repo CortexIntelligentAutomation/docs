@@ -8,7 +8,7 @@ description: "Connects to a specific data source and executes a Command, returni
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Data.ExecuteDataCommand.ExecuteDataCommandBlock)</p>
+<p class="namespace">(Cortex.Blocks.Data.ExecuteDataCommand.ExecuteDataCommandBlock`1)</p>
 
 ## Description
 
