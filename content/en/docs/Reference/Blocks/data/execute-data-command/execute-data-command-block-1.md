@@ -10,6 +10,8 @@ description: "Connects to a specific data source and executes a Command, returni
 
 <p class="namespace">(Cortex.Blocks.Data.ExecuteDataCommand.ExecuteDataCommandBlock`1)</p>
 
+// TODO: Update help links in url toml to remove BLOCK from end of block links
+
 ## Description
 
 Connects to a data source (e.g. SQL Server) using the specified [Connection Details][Connection Details Property], and executes a [Command][Command Property] (e.g. `SELECT * FROM Table`), returning the [Result][Result Property].
