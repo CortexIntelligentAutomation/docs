@@ -444,7 +444,8 @@ The [Command][Command Property] executed on the connected data source. There are
 |--------------------|---------------------------|
 | Data Type | [ICommand][] |
 | Property Type | [Input][] |
-| Default Value | `($)Command` with value `null` |
+| Default Editor | [Literal][TODO] |
+| Default Value | [Command][Command Types Command] with value `{"CommandText": "", "Parameters": null}` |
 
 ### Connection Details
 
@@ -460,7 +461,8 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 |--------------------|---------------------------|
 | Data Type | [TConnectionDetails][] |
 | Property Type | [Input][] |
-| Default Value | `($)ConnectionDetails` with value `null` |
+| Default Editor | [Literal][TODO] |
+| Default Value | [SqlServerConnectionDetails][TODO] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
 
 ### Close Connection
 
@@ -470,7 +472,8 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)CloseConnection` with value `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | [Boolean][] with value `true` |
 
 ### Result
 
@@ -482,6 +485,7 @@ Depending on the type of [Command][Command Property], the data returned within t
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Result` with no value |
 
 ## Exceptions
@@ -709,8 +713,8 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Executing a Parameterised Command]: {{< ref "#executing-a-parameterised-command">}}
 
 [Command Types]: {{< ref "#command-types">}}
-[Command Types Command]: {{< ref "#Command">}}
-[Command Types Commands]: {{< ref "#Commands">}}
+[Command Types Command]: {{< ref "#command-1">}}
+[Command Types Commands]: {{< ref "#commands">}}
 [Command Types QueryCommand]: {{< ref "#querycommand">}}
 [Command Types NonQueryCommand]: {{< ref "#nonquerycommand">}}
 
