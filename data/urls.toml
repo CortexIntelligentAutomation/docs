@@ -10,6 +10,7 @@
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server#install-gateway"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"

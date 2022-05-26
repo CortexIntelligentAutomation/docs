@@ -48,7 +48,7 @@ All servers must be on the same domain and cannot be domain controllers.
 Innovation has a [gobetween](https://github.com/yyyar/gobetween) load balancer included, however it is possible to use an alternative load balancer. The requirements for installing an alternative load balancer are as follows:
 
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
-* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts`) that returns 1 for healthy and 0 for unhealthy.
+* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation 2022.5 - Application Server Installation Scripts`) that returns 1 for healthy and 0 for unhealthy.
 * Must be able to access each of the Application Servers via HTTPS.
 * Ideally it should be highly available to avoid a single point of failure in the system.
 

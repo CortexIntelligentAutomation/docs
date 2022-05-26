@@ -8,7 +8,7 @@ description: "Information about installing Cortex across multiple on-premise ser
 
 Advanced configuration (such as port changes) can be undertaken by taking the following steps before running the PowerShell script. Some values will be modified by the script and they will take precedence, but those parameters can be removed from the script and this file used entirely if required.
 
-1. In the `Cortex Evolution - Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
+1. In the `Cortex Innovation 2022.5 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
 1. Change the configuration file according to your cluster, referring to the following example and details:
 
     {{< highlight json "linenos=table,hl_lines=4 17 20 22 26-27 30-31 34-35 41 43 45 47 49 51 72-75 79-82,linenostart=1" >}}

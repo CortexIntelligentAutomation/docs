@@ -12,13 +12,13 @@ This guide describes how to install the Web Application Server. Please ensure th
 ## Extract Installation Artefacts
 
 1. We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):
-   * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
-   * Cortex Evolution - Innovation 2022.5 - Gateway.zip
-   * Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip
-   * Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts.zip
+   * Cortex Innovation 2022.5 - Block Packages.zip
+   * Cortex Innovation 2022.5 - Gateway.zip
+   * Cortex Innovation 2022.5 - Flow Debugger Service.zip
+   * Cortex Innovation 2022.5 - Web Application Server Installation Scripts.zip
 
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts.zip` zip file to a folder with the same name.
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Gateway.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation 2022.5 - Gateway.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
@@ -88,10 +88,10 @@ To verify the certificate is imported:
 Install the required features by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.5 - Web Application Server Installation Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.WindowsFeatures.ps1` script using the following command, this may take a few minutes:
@@ -172,10 +172,10 @@ A collection of registry settings need to be applied to guarantee your server is
 Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.5 - Web Application Server Installation Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
@@ -260,13 +260,13 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
 ### Configure Installation Script
 
-1. In the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
 
     ```powershell
     .\Cortex.Install.FlowDebuggerService.ps1 `
-    -FlowDebuggerServicePath "C:\Install\Cortex Evolution - Innovation 2022.5 - Flow Debugger Service.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+    -FlowDebuggerServicePath "C:\Install\Cortex Innovation 2022.5 - Flow Debugger Service.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.5 - Block Packages.zip" `
     -Credential $AppPoolIdentity
     ```
 
@@ -281,10 +281,10 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 ### Run Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.5 - Web Application Server Installation Scripts"
     ```
 
 1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
@@ -388,7 +388,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
 ### Configure Installation Parameters
 
-1. In the `Cortex Evolution - Innovation 2022.5 - Gateway` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
+1. In the `Cortex Innovation 2022.5 - Gateway` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
 1. Edit the file, changing the parameters according to the details given below:
 
     {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-21 23 27-29 32,linenostart=1" >}}
@@ -444,10 +444,10 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 ### Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Gateway` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Gateway` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Gateway"
+    cd "C:\Install\Cortex Innovation 2022.5 - Gateway"
     ```
 
 1. Test that everything is configured correctly by running the following command:

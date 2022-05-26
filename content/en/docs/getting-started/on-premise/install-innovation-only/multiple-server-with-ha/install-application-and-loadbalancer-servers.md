@@ -12,11 +12,11 @@ This guide describes how to install the Application Servers and Load Balancer Se
 ## Extract Installation Artefacts
 
 1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):
-   * Cortex Evolution - Innovation 2022.5 - Block Packages.zip
-   * Cortex Evolution - Innovation 2022.5 - HA Services.zip
-   * Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts.zip
+   * Cortex Innovation 2022.5 - Block Packages.zip
+   * Cortex Innovation 2022.5 - HA Services.zip
+   * Cortex Innovation 2022.5 - Application Server Installation Scripts.zip
 
-1. Extract the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts.zip` file to a folder with the same name.
+1. Extract the `Cortex Innovation 2022.5 - Application Server Installation Scripts.zip` file to a folder with the same name.
 
 ## Install Microsoft .NET Framework 4.7.1
 
@@ -51,10 +51,10 @@ A collection of registry settings need to be applied to guarantee your server is
 The settings can be applied by running a script. Be aware that each server will be restarted when the script is run. Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.5 - Application Server Installation Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
@@ -77,10 +77,10 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next step, otherwise follow these steps:
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
+        cd "C:\Install\Cortex Innovation 2022.5 - Application Server Installation Scripts"
         ```
 
     1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
@@ -95,10 +95,10 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 1. To check all necessary ports are free, follow these steps.
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
+        cd "C:\Install\Cortex Innovation 2022.5 - Application Server Installation Scripts"
         ```
 
     1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
@@ -113,20 +113,20 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
         `All ports required by Cortex Innovation are free`
 
-        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder, to use different ports. This will be used later during installation.
+        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation 2022.5 - Application Server Installation Scripts` folder, to use different ports. This will be used later during installation.
 
         The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
 ## Configure Installation Script
 
-1. In the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2022.5 - Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
 
     {{< tabpane lang="powershell" >}}
         {{< tab header="CA Certs, Built-in Load Balancer">}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.5 - HA Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.5 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -140,8 +140,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
     .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.5 - HA Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.5 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -152,8 +152,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="CA Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.5 - HA Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.5 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -167,8 +167,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - HA Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Evolution - Innovation 2022.5 - Block Packages.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.5 - HA Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.5 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -207,10 +207,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 ## Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.5 - Application Server Installation Scripts"
     ```
 
 1. Test `Cortex.Innovation.Install.ps1` by running the following command:
