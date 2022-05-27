@@ -1,7 +1,7 @@
 ---
-title: "Literals, Expressions and Variables"
-linkTitle: "Literals, Expressions and Variables"
-description: "Using literal values, expressions, and references to variables in properties."
+title: "Expression Editor"
+linkTitle: "Expression Editor"
+description: "Using the Expression Editor."
 weight: 20
 ---
 
@@ -9,9 +9,10 @@ weight: 20
 
 ## Summary
 
-An [input property][] that uses an [expression editor][TODO] is the most flexible and can accept [literal values][Literals], [expressions][Expressions], and references to [variables][Variables].
+// TODO: Review this
+An [input property][] that uses an [expression editor][TODO] is the most flexible and can accept [literal values][], [expressions][Expressions], and references to [variables][Variables].
 
-## Literals
+## Literal Values
 
 A literal is an explicit value that is not calculated during the execution of the flow. A literal can be any of the following data types:
 
@@ -214,6 +215,107 @@ A [List][] is an object that consists of a number of ordered [items][item] that 
 
 [Lists][List] may be heterogeneous, where the [items][item] may be of different [data types][Data-Types], or homogeneous, when the [items][item] are all of the same [data type][Data-Types].
 
+## Expressions
+
+An expression is a combination of [operands][] (i.e. [variables][Variables], [literals][literal values], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data-Types]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
+
+Expressions use the syntax of the [C#][] [programming language][].
+
+// TODO: We are here
+// TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
+// TODO: Up to char from operands -> literals
+// TODO: Below is missing Equality and Properties
+// TODO: Remove old literal-variable-expression page, fix url toml and fix references.
+
+Types of expressions:
+
+- Arithmetic
+- String
+- Boolean
+- Equality
+- Constructors
+- Methods
+- Properties
+- Indexes
+- Casting
+
+### Arithmetic expressions
+
+If `($)intVar1` equals `6` and `($)intVar2` equals `3`
+
+| Expression                | Result |
+|---------------------------|--------|
+| `($)intVar1 + ($)intVar2` | `9`    |
+| `($)intVar1 / ($)intVar2` | `2`    |
+
+### String expressions
+
+Variables containing other simple [data types][Data-Types], e.g., numeric values or [Boolean][Boolean] values, will be coerced to [strings][String] when used in a [string][String] expression.
+
+If `($)stringVar1` equals `"hello"`, `($)stringVar2` equals `"world"` and `($)integerVar` equals `1234`
+
+| Expression                            | Result                       | Notes                              |
+|---------------------------------------|------------------------------|------------------------------------|
+| `($)stringVar1 + " " + ($)stringVar2` | `"hello world"`              |                                    |
+| `($)stringVar1 + " " + ($)integerVar` | `"hello 1234"`               | ($)integerVar is coerced to a [string][String] |
+| `$"{($)stringVar1} {($)stringVar2}"`  | `"hello world"`              | using .NET [string][String] interpolation    |
+| `$"{($)stringVar1} {($)integerVar}"`  | `"hello 1234"`              | ($)integerVar is coerced to a [string][String] |
+| `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | using .NET verbatim [string literal][String-Literal] |
+| `$@"c:\programs\{($)stringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | using .NET [string][String] interpolation and verbatim [string literal][String-Literal] |
+
+### Boolean expressions
+
+If `($)boolVar1` equals `false` and `($)boolVar2` equals `true`
+
+| Expression                            | Result                       | Notes                              |
+|---------------------------------------|------------------------------|------------------------------------|
+| `($)boolVar1 & ($)boolVar2`           | `false`                      | logical `AND` evaluating both sides of expression |
+| `($)boolVar1 && ($)boolVar2`          | `false`                       | logical `AND` only requring left hand part to be evaluated |
+| `($)boolVar2 \| ($)boolVar1`           | `true`                      | logical `OR` evaluating both sides of expression |
+| `($)boolVar2 \|\| ($)boolVar1`          | `true`                       | logical `OR` only requring left hand part to be evaluated |
+| `($)boolVar1 ^ ($)boolVar2`           | `true`                      | logical `XOR` |
+| `!($)boolVar1`                        | `true`                      | unary negation of [Boolean][Boolean] value |
+
+### Dictionary expressions
+
+To access a single value of a [Dictionary][] variable `($)myDictionary`:
+
+`($)myDictionary[key]`
+
+To access a value within a nested [Dictionary][] variable:
+
+`($)myDictionary[outerkey][innerKey]`
+
+### List expressions
+
+An element of a [List][] may be referenced using an index, where the index is an integer expression and an index of zero indicates the first element:
+
+`($)myDictionary[index]`
+
+### Creating a new object
+
+| Expression        | Result |
+|-------------------|--------|
+| `new Structure()` | `{}`   |
+
+### Using a method on an object
+
+`($)stringVar1` equals `"hello"` and `($)stringVar2` equals `"123"`
+
+| Expression              | Result    |
+|-------------------------|-----------|
+| `stringVar1.ToUpper()`  | `"HELLO"` |
+| `int.Parse(stringVar2)` | `123`     |
+
+### Explicitly cast a variable
+
+`($)longVar` equals `1` as a long ([Int64][Int64])
+
+| Expression                 | Result | Notes     |
+|----------------------------|--------|-----------|
+| `(int)($)longVar`          | `1`    | as an [Int32][Int32] |
+| `(System.Int32)($)longVar` | `1`    | as an [Int32][Int32] |
+
 ## Variables
 
 [Variables][Variables Concept] are named containers for storing values of any [data type][Data-Types]; a value can be read, updated, replaced, or removed.
@@ -311,106 +413,6 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 ($)List[0]
 ```
 
-## Expressions
-
-An expression is a combination of [operands][] (i.e. [variables][Variables], [literals][Literals], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data-Types]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
-
-Expressions use the syntax of the [C#][] [programming language][].
-
-// TODO: We are here
-// TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
-// TODO: Up to char from operands -> literals
-// TODO: Below is missing Equality and Properties
-
-Types of expressions:
-
-- Arithmetic
-- String
-- Boolean
-- Equality
-- Constructors
-- Methods
-- Properties
-- Indexes
-- Casting
-
-### Arithmetic expressions
-
-If `($)intVar1` equals `6` and `($)intVar2` equals `3`
-
-| Expression                | Result |
-|---------------------------|--------|
-| `($)intVar1 + ($)intVar2` | `9`    |
-| `($)intVar1 / ($)intVar2` | `2`    |
-
-### String expressions
-
-Variables containing other simple [data types][Data-Types], e.g., numeric values or [Boolean][Boolean] values, will be coerced to [strings][String] when used in a [string][String] expression.
-
-If `($)stringVar1` equals `"hello"`, `($)stringVar2` equals `"world"` and `($)integerVar` equals `1234`
-
-| Expression                            | Result                       | Notes                              |
-|---------------------------------------|------------------------------|------------------------------------|
-| `($)stringVar1 + " " + ($)stringVar2` | `"hello world"`              |                                    |
-| `($)stringVar1 + " " + ($)integerVar` | `"hello 1234"`               | ($)integerVar is coerced to a [string][String] |
-| `$"{($)stringVar1} {($)stringVar2}"`  | `"hello world"`              | using .NET [string][String] interpolation    |
-| `$"{($)stringVar1} {($)integerVar}"`  | `"hello 1234"`              | ($)integerVar is coerced to a [string][String] |
-| `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | using .NET verbatim [string literal][String-Literal] |
-| `$@"c:\programs\{($)stringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | using .NET [string][String] interpolation and verbatim [string literal][String-Literal] |
-
-### Boolean expressions
-
-If `($)boolVar1` equals `false` and `($)boolVar2` equals `true`
-
-| Expression                            | Result                       | Notes                              |
-|---------------------------------------|------------------------------|------------------------------------|
-| `($)boolVar1 & ($)boolVar2`           | `false`                      | logical `AND` evaluating both sides of expression |
-| `($)boolVar1 && ($)boolVar2`          | `false`                       | logical `AND` only requring left hand part to be evaluated |
-| `($)boolVar2 \| ($)boolVar1`           | `true`                      | logical `OR` evaluating both sides of expression |
-| `($)boolVar2 \|\| ($)boolVar1`          | `true`                       | logical `OR` only requring left hand part to be evaluated |
-| `($)boolVar1 ^ ($)boolVar2`           | `true`                      | logical `XOR` |
-| `!($)boolVar1`                        | `true`                      | unary negation of [Boolean][Boolean] value |
-
-### Dictionary expressions
-
-To access a single value of a [Dictionary][] variable `($)myDictionary`:
-
-`($)myDictionary[key]`
-
-To access a value within a nested [Dictionary][] variable:
-
-`($)myDictionary[outerkey][innerKey]`
-
-### List expressions
-
-An element of a [List][] may be referenced using an index, where the index is an integer expression and an index of zero indicates the first element:
-
-`($)myDictionary[index]`
-
-### Creating a new object
-
-| Expression        | Result |
-|-------------------|--------|
-| `new Structure()` | `{}`   |
-
-### Using a method on an object
-
-`($)stringVar1` equals `"hello"` and `($)stringVar2` equals `"123"`
-
-| Expression              | Result    |
-|-------------------------|-----------|
-| `stringVar1.ToUpper()`  | `"HELLO"` |
-| `int.Parse(stringVar2)` | `123`     |
-
-### Explicitly cast a variable
-
-`($)longVar` equals `1` as a long ([Int64][Int64])
-
-| Expression                 | Result | Notes     |
-|----------------------------|--------|-----------|
-| `(int)($)longVar`          | `1`    | as an [Int32][Int32] |
-| `(System.Int32)($)longVar` | `1`    | as an [Int32][Int32] |
-
 ## Known Limitations
 
 * TODO: Cannot create Objects
@@ -422,7 +424,7 @@ An element of a [List][] may be referenced using an index, where the index is an
 * [Property Types][Property-Types]
 * [Data Types][Data-Types]
 
-[Literals]: {{< ref "#literals" >}}
+[literal values]: {{< ref "#literal-values" >}}
 [Expressions]: {{< ref "#expressions" >}}
 [Variables]: {{< ref "#variables" >}}
 
