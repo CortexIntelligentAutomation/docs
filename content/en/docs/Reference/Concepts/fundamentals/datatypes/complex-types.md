@@ -10,4 +10,8 @@ description: "This page describes the concept of Complex Data Types."
 
 ### Object
 
+TODO
+
 ### Dynamic
+
+TODO

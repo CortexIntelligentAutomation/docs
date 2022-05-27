@@ -106,7 +106,7 @@
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block"
                 [Cortex.Reference.Blocks.Exceptions.ThrowException]
-                    MainDoc = "/docs/reference/blocks/exceptions/throw-exception/
+                    MainDoc = "/docs/reference/blocks/exceptions/throw-exception/"
                     [Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException]
                         MainDoc = "/docs/reference/blocks/exceptions/throw-exception/throw-new-flow-exception-block"
             [Cortex.Reference.Blocks.FilesAndFolders]
@@ -212,17 +212,6 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/datatypes/primitive-types/"
                     [Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes]
                         MainDoc = "/docs/reference/concepts/fundamentals/datatypes/complex-types/"
-                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows]
-                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/"
-                    [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces"
-                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces.Scope]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope"
-                            Local-Scope-Variables = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope/#Local-Scope-Variables"
-                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces.What-Is-A-Workspace]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/what-is-a-workspace"
-                        [Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Workspaces.Workspace-Exception-Handling]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/workspace-exception-handling"
                 [Cortex.Reference.Concepts.Fundamentals.Exceptions]
                     MainDoc = "/docs/reference/concepts/fundamentals/exceptions/"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions]

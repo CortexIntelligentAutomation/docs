@@ -60,10 +60,7 @@ $@"Server={($)ServerName};Database=myDataBase;User Id=myUsername;Password=myPass
 
 ## Variables at Design Time
 
-The [Variable Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It can be opened in different ways:
-
-- Double click the [Variable Container][TODO] icon
-- Click the [Variables][Variable Grid] tab at the bottom of the screen
+The [Variable Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of the screen.
 
 See [Variable Grid][] for more information on how to use it.
 
@@ -97,7 +94,7 @@ If a variable is marked as an Input Variable and a value has been passed in, tha
 
 #### Block Output Property
 
-Output properties of a block set the referenced variables when the block has been executed. 
+Output properties of a block set the referenced variables when the block has been executed.
 
 If the variable has not already been intialised, it will be initialised with the output value when the block is executed.
 
@@ -107,9 +104,8 @@ If the variable has already been initialised, it will be updated accordingly.
 
 At runtime, initialised variables are displayed in the [Variable Panel][] of the [Execution Viewer][]. This is available when an execution is selected.
 
-![Variable Panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel.png)
+![Variable Panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png)
 
-TODO: ^^Replace Screenshot
 #### Viewing Basic Data Types
 
 When a variable contains a [basic data type][BasicDataType] (e.g. String, Integer, etc), the value will be displayed directly in the [Variable Panel][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
@@ -128,9 +124,7 @@ This is an example of data in a [Dictionary<string, dynamic>][Dictionary] variab
 
 This is an example of data in a [Command][TODO] variable.
 
-![anycommand panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-anycommand-panel.png)
-
-TODO: ^^ Update Screenshot
+![command panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-command-panel.png)
 
 This is an example of data in a [FlowException][] variable.
 
@@ -191,15 +185,15 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
 [APIGateway]: {{< url "Cortex.Reference.API.APIGateway.MainDoc" >}}
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
-[BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Blocks.MainDoc" >}}
+[BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}
 [Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [DataTypesConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 [BasicDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [Cortex Studio]: {{< url "Cortex.Guides.Gateway.Studio.MainDoc" >}}
-[DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.Internal" >}}
-[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Developing-Flows.Executions.Starting-An-Execution.MainDoc" >}}
+[DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.Internal" >}}
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

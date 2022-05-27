@@ -13,8 +13,6 @@ Variables can only be used in the workspace of the scope they are defined in, an
 
 Only variables in scope will be available in the [Variable Editor][] or the [Expression Editor][] using [Snippets][].
 
-REVIEW PAUSED HERE
-
 | Workspace Name | Parent Workspace | Defined Variables | Available Variables |
 |----------------|------------------|-------------------|---------------------|
 | Top-Level Workspace | n/a | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> |
@@ -25,7 +23,7 @@ REVIEW PAUSED HERE
 
 ## Create a Variable in a certain Scope
 
-Variables are created in the scope of the workspace currently in focus. This applies to creating variables using the [Variable Grid][] or using the [Variable Editor][] in the [Property Viewer][]. If the variable was not created in the appropriate scope, see [Change Variable Scope](#change-variable-scope)
+Variables are created in the scope of the workspace currently in focus. This applies to creating variables using the [Variable Grid][] or using the [Variable Editor][] in the [Property Viewer][]. If the variable scope needs to be changed, see [Change Variable Scope](#change-variable-scope)
 
 ## Change Variable Scope
 
@@ -41,15 +39,15 @@ If the variable does not appear in the grid, the most likely reason is the varia
 
 ### Known Limitations
 
-#### Duplicate Variable Names across states
+#### Duplicate Variable names across Workspaces
 
-It is currently possible to create more than one variable of the same name in the [Variable Grid][]. This is because the same variable name can be used in different states.
+It is currently possible to create more than one variable of the same name in the [Variable Grid][]. This is because the same variable name can be used in different [Workspaces][].
 
-When using the same variable name in different states, the variable with the lowest level of scope (or closest scope) will be used. For example:
+When using the same variable name in different [Workspaces][], the variable with the lowest level of scope (or closest scope) will be used. For example:
 
-**Top-Level Workspace** has a variable called `loop-var`. **Workspace1** has a variable called `loop-var` as well.
+**Top-Level Workspace** has the variable `($)loop-var`. **Workspace1** also has the variable `($)loop-var`.
 
-When executing a block in **Workspace1** that uses `loop-var`, the variable that is used is the variable defined in **Workspace1**.
+When executing a block in **Workspace1** that references `($)loop-var`, the variable that is used is the variable defined in **Workspace1**.
 
 ## See Also
 
