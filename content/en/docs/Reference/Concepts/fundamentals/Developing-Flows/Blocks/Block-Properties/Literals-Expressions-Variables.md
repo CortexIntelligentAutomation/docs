@@ -320,6 +320,19 @@ Expressions use the syntax of the [C#][] [programming language][].
 // TODO: We are here
 // TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
 // TODO: Up to char from operands -> literals
+// TODO: Below is missing Equality and Properties
+
+Types of expressions:
+
+- Arithmetic
+- String
+- Boolean
+- Equality
+- Constructors
+- Methods
+- Properties
+- Indexes
+- Casting
 
 ### Arithmetic expressions
 
