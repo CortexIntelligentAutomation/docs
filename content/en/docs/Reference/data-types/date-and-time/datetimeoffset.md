@@ -154,4 +154,4 @@ None
 
 [Implicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
 
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}

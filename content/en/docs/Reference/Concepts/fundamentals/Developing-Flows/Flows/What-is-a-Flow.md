@@ -16,9 +16,9 @@ A flow is a self-contained Cortex object that contains the logic necessary to im
 A [flow execution][What-Is-Execution] may be [started][Start-Execution] by:
 
 * Scheduling it to execute at predetermined times
-* Triggering it by a predefined series of events (Event Driven Automation) (future)
+* Triggering it by a predefined series of events (future)
 * Triggering it as part of the logic of other flows
-* Remotely triggering it by a HTTP request
+* Remotely triggering it by an HTTP request
 
 For further information on starting a flow, see [Starting an Execution][Start-Execution].
 
@@ -46,7 +46,7 @@ For further information on starting a flow, see [Starting an Execution][Start-Ex
   * Ends the [flow execution][What-Is-Execution]
   * Automatically created when the flow is created
 * **[Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block]**
-  * Handles [flow level][Flow-Level] exceptions, thrown during the [flow execution][What-Is-Execution]
+  * Handles [flow level][] exceptions, thrown during the [flow execution][What-Is-Execution]
   * Automatically created when the flow is created
   * The turndown on the top-right of the icon indicates that it contains a [workspace][What-Is-Workspace] canvas, which may be opened by double-clicking the icon
 * **Global Variable Store**
@@ -90,11 +90,11 @@ Exceptions can be handled:
 [Block-Start-Flow]: {{< url "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.MainDoc" >}}
 [Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.MainDoc" >}}
-[Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Flow-Exception-Handling.MainDoc" >}}
-[Flow-Level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.Flow-Level" >}}
-[Start-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.MainDoc" >}}
+[Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.FlowExceptionHandling.MainDoc" >}}
+[flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions.FlowLevel" >}}
+[Start-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}
-[What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.What-Is-A-Workspace.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
+[What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.MainDoc" >}}
-[Workspace-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Workspace-Exception-Handling.MainDoc" >}}
+[Workspace-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}

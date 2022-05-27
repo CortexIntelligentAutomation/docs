@@ -31,7 +31,19 @@ TODO
 
 ### Literal
 
-TODO
+A literal is an explicit value that is not calculated during the execution of the flow. A literal can be any of the following data types:
+
+- [String][]
+- [Char][]
+- [Int32][]
+- [Int64][]
+- [Double][]
+- [Single][]
+- [Boolean][]
+- [Object][]
+- [Dictionary][]
+- [Structure][]
+- [List][]
 
 ### lowercase
 
@@ -89,11 +101,13 @@ TODO
 
 ### Operand
 
-TODO
+Describes a [literal][] or [variable][] that has the capability to be operated on. For example, in the [expression][] `1 + 2` the literal values `1` and `2` are operands, whereas `+` is an [operator][].
 
 ### Operator
 
-TODO
+Operators are used to manipulate and check operands values. For example, in the [expression][] `1 + 2` the operator `+` adds the two [operands][operand] `1` and `2`, resulting in the expression evaluating to `3`.
+
+For more detailed information about operators, see [C# operators and expressions][].
 
 ### Orchestration
 
@@ -114,3 +128,24 @@ TODO
 ### Out-of-the-box (OOB)
 
 TODO
+
+[List]: {{< ref "#list" >}}
+[literal]: {{< ref "#literal" >}}
+[operand]: {{< ref "#operand" >}}
+[operator]: {{< ref "#operator" >}}
+[Object]: {{< ref "#object" >}}
+
+[expression]: {{< url "Cortex.Reference.Glossary.A-E.Expression" >}}
+[variable]: {{< url "Cortex.Reference.Glossary.U-Z.Variable" >}}
+
+[Boolean]: {{< url "Cortex.Reference.Glossary.A-E.Boolean" >}}
+[Char]: {{< url "Cortex.Reference.Glossary.A-E.Char" >}}
+[Dictionary]: {{< url "Cortex.Reference.Glossary.A-E.Dictionary" >}}
+[Double]: {{< url "Cortex.Reference.Glossary.A-E.Double" >}}
+[Int32]: {{< url "Cortex.Reference.Glossary.F-J.Int32" >}}
+[Int64]: {{< url "Cortex.Reference.Glossary.F-J.Int32" >}}
+[Single]: {{< url "Cortex.Reference.Glossary.P-T.Single" >}}
+[String]: {{< url "Cortex.Reference.Glossary.P-T.String" >}}
+[Structure]: {{< url "Cortex.Reference.Glossary.P-T.Structure" >}}
+
+[C# operators and expressions]: {{< url "MSDocs.CSharp.OperatorsAndExpressions" >}}

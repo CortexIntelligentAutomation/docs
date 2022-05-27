@@ -6,6 +6,8 @@ description: "This page describes the different syntax that can be used when ent
 
 # {{< param title >}}
 
+//TODO: Remove this page, fix url toml and fix references.
+
 This page describes the different syntax that can be used when entering values for block properties.
 
 ## Literals

@@ -12,7 +12,7 @@ weight: 20
 A [flow][What-Is-Flow] execution may be started or triggered in a number of ways:
 
 * [Internal][Internal]
-* [From another flow][From-Another-Flow]
+* [From another flow][]
 * [External][External]
 * [EDA][EDA] (future)
 
@@ -84,17 +84,17 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 
 [EDA]: {{< ref "#eda" >}}
 [External]: {{< ref "#external" >}}
-[From-Another-Flow]: {{< ref "#from-another-flow" >}}
+[From another flow]: {{< ref "#from-another-flow" >}}
 [Internal]: {{< ref "#internal" >}}
 
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.MainDoc" >}}
-[Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.Calling-Other-Flows.MainDoc" >}}
+[Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.CallingOtherFlows.MainDoc" >}}
 [Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.MainDoc" >}}
-[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.Execution-Variables.Input-Output" >}}
-[Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.LiteralsExpressionsVariables.Literals" >}}
-[REST-Request]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.Execution-Variables.REST-Request" >}}
-[Run-Flow-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Starting-An-Execution.Execution-Variables.Run-Flow-Block" >}}
+[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.InputOutput" >}}
+[Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Literals" >}}
+[REST-Request]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.REST-Request" >}}
+[Run-Flow-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.RunFlowBlock" >}}
 [Structures]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.What-Is-An-Execution.MainDoc" >}}
-[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.What-Is-A-Flow.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
+[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.WhatIsAFlow.MainDoc" >}}

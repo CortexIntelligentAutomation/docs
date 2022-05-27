@@ -6,6 +6,12 @@ description: "Information related to working with collections such as Lists, Dic
 
 ### Structures
 
+#### Accessing Items
+
+##### Dot Notation
+
+##### Index Notation
+
 ### Keys
 
 ### Items
