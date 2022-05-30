@@ -47,7 +47,7 @@ See [Wikipedia][Bit (Wikipedia)] for more information.
 
 ### Block
 
-Blocks (or [functional blocks]) expose the logic and actions that the [Cortex Evolution] [platform] is able to execute for the [flow developers]; alongside [flows][flow] they are one of the main components used to define how to automate [tasks] and [processes].
+Blocks (or [functional blocks]) expose the logic and actions that the [Cortex] [platform] is able to execute for the [flow developers]; alongside [flows][flow] they are one of the main components used to define how to automate [tasks] and [processes].
 
 For more detailed information about blocks, see [Guides->Cortex Studio->Blocks][TODO].
 
@@ -71,7 +71,7 @@ See [Wikipedia][Byte (Wikipedia)] for more information.
 
 C# (pronounced "see sharp") is a [programming language] developed by Microsoft.
 
-It is natively supported by the [Cortex Evolution] [platform] for using simple [expressions][expression] (i.e. `1 + 1`) and more complex [code] (i.e. `DateTime.Now.AddDays(1)`) within [flows][flow].
+It is natively supported by the [Cortex] [platform] for using simple [expressions][expression] (i.e. `1 + 1`) and more complex [code] (i.e. `DateTime.Now.AddDays(1)`) within [flows][flow].
 
 C# expressions and code can be entered as the values for [block properties][Block Property] using the [Cortex Studio] [expression editor].
 
@@ -97,7 +97,7 @@ If something is case-sensitive, it means it considers differences in case (i.e. 
 
 The process of explicitly converting one [data type] to another.
 
-See [Casting and type conversions (C# Programming Guide)] for a detailed technical explanation of casting in [C#], the [programming language] natively supported by the [Cortex Evolution] [platform] for writing simple [expressions][expression] and more complex [code].
+See [Casting and type conversions (C# Programming Guide)] for a detailed technical explanation of casting in [C#], the [programming language] natively supported by the [Cortex] [platform] for writing simple [expressions][expression] and more complex [code].
 
 Also see [Explicit Cast] for more information.
 
@@ -123,13 +123,13 @@ At the same time.
 
 To change something into a different form. E.g. Change some [text] from [lowercase] to [UPPERCASE].
 
-### Cortex Evolution
+### Cortex
 
 The name of the new and current generation of the Cortex [automation] [platform].
 
 ### Cortex Gateway
 
-The centralised web-based [portal] for accessing all user applications and tooling in the [Cortex Evolution] [platform].
+The centralised web-based [portal] for accessing all user applications and tooling in the [Cortex] [platform].
 
 ### Cortex Studio
 
@@ -251,7 +251,7 @@ For more detailed information about exceptions, see [Reference->Exceptions].
 
 ### Execution
 
-When a [request] to start a [flow] is received by the [Cortex Evolution] [platform], an execution is created that represents that instance of the executing flow.
+When a [request] to start a [flow] is received by the [Cortex] [platform], an execution is created that represents that instance of the executing flow.
 
 There can be multiple executions of a flow running [concurrently][concurrent].
 
@@ -274,7 +274,7 @@ Also see [Cast] for more information.
 
 ### Expression
 
-An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type] etc.) and [operators] (i.e. =, +, -, *, / etc.) that can be evaluated by the [Cortex Evolution] [platform] to a single value.
+An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type] etc.) and [operators] (i.e. =, +, -, *, / etc.) that can be evaluated by the [Cortex] [platform] to a single value.
 
 Expressions use the syntax of the [C#] [programming language].
 
@@ -301,7 +301,7 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [Cast]: {{< ref "#cast" >}}
 [Code]: {{< ref "#code" >}}
 [Concurrent]: {{< ref "#concurrent" >}}
-[Cortex Evolution]: {{< ref "#cortex-evolution" >}}
+[Cortex]: {{< ref "#cortex" >}}
 [Cortex Studio]: {{< ref "#cortex-studio" >}}
 [Data Type]: {{< ref "#data-type" >}}
 [Debugging]: {{< ref "#debug" >}}
