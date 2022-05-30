@@ -1,8 +1,11 @@
 # Internal links
 [Cortex]
+    [Cortex.Faqs]
+        MainDoc = "/docs/faqs/"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
+            MainDoc = "/docs/getting-started/on-premise"
             [Cortex.GettingStarted.OnPremise.InstallInnovationOnly]
                 MainDoc = "/docs/getting-started/on-premise/install-innovation-only/"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
@@ -27,11 +30,13 @@
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
     [Cortex.Guides]
+        MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
     [Cortex.Reference]
+        MainDoc = "/docs/reference/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.DateAndTime]
@@ -630,6 +635,28 @@
                 MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
+    [Cortex.Tutorials]
+        MainDoc = "/docs/tutorials/"
+    [Cortex.Website]
+        [Cortex.Website.Customers]
+            MainDoc = "https://www.cortex-ia.com/customer-success-stories/"
+        [Cortex.Website.EngageWithUs]
+            MainDoc = "https://www.cortex-ia.com/contact-form/"
+            AccelerationProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program"
+            DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
+            Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
+            LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+        [Cortex.Website.Industries]
+            MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
+            Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"
+            It = "https://www.cortex-ia.com/itops-aiops-enterprise-services-automation/"
+            Telco = "https://www.cortex-ia.com/telecommunications-automation/"
+        [Cortex.Website.UseCases]
+            MainDoc = "https://www.cortex-ia.com/download-centre/"
+    [Cortex.YouTube]
+        MainDoc = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
+        [Cortex.YouTube.Webinars]
+            MainDoc = "https://www.youtube.com/playlist?list=PLPBEMXlXxB_oFKNwxwrXtXzU-WBvgAgz7"
 # External links
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
