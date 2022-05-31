@@ -19,7 +19,7 @@ Enabling TDE on the databases ensures that the data is encrypted on disk. The pr
 To enable TDE on the suite of Gateway Databases you should complete the following steps:
 
 1. Open SQL Server Management Studio.
-2. Open the `Cortex.Install.TDE.sql` script included within the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder.
+2. Open the `Cortex.Install.TDE.sql` script included within the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder.
 {{% alert title="Note" %}}This script will attempt to encrypt all Cortex Databases that exist on the system. Any that do not exist will be skipped. If you do not wish to encrypt all existing Cortex Databases then you should contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance with script modification.{{% /alert %}}
 3. Set the `@sPassword` parameter value to a password that you wish to use. {{% alert title="Note" %}} This password must be set to a value that is not a blank or empty string, it cannot be `null` and the script will not execute if it is not changed from the pre-populated value of `StrongPassword`. The password must also meet your system’s minimum security requirements.{{% /alert %}}
 4. You can change the names of the certificate and the name of the master key by changing the `@sCertName` and `@sKeyName` parameters if you so wish.

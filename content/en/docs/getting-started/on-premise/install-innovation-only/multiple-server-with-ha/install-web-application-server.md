@@ -12,15 +12,19 @@ This guide describes how to install the Web Application Server. Please ensure th
 ## Extract Installation Artefacts
 
 1. We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):
-   * Cortex Innovation 2022.5 - Block Packages.zip
-   * Cortex Innovation 2022.5 - Gateway.zip
-   * Cortex Innovation 2022.5 - Flow Debugger Service.zip
-   * Cortex Innovation 2022.5 - Web Application Server Installation Scripts.zip
+   * Cortex Innovation 2022.6 - Block Packages.zip
+   * Cortex Innovation 2022.6 - Gateway.zip
+   * Cortex Innovation 2022.6 - Flow Debugger Service.zip
+   * Cortex Innovation 2022.6 - Web App Server Install Scripts.zip
 
-1. Extract the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts.zip` zip file to a folder with the same name.
-1. Extract the `Cortex Innovation 2022.5 - Gateway.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation 2022.6 - Web App Server Install Scripts.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation 2022.6 - Gateway.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
+
+### Licensing
+
+Ensure that a valid Cortex licence file exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
 ### Install SQL Server or SQL Express
 
@@ -88,10 +92,10 @@ To verify the certificate is imported:
 Install the required features by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.5 - Web Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.WindowsFeatures.ps1` script using the following command, this may take a few minutes:
@@ -172,10 +176,10 @@ A collection of registry settings need to be applied to guarantee your server is
 Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.5 - Web Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
@@ -260,13 +264,15 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
 ### Configure Installation Script
 
-1. In the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
 
     ```powershell
     .\Cortex.Install.FlowDebuggerService.ps1 `
-    -FlowDebuggerServicePath "C:\Install\Cortex Innovation 2022.5 - Flow Debugger Service.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.5 - Block Packages.zip" `
+    -FlowDebuggerServicePath "C:\Install\Cortex Innovation 2022.6 - Flow Debugger Service.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
+    -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
+    -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -Credential $AppPoolIdentity
     ```
 
@@ -274,6 +280,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |----------------------------------------------|-------------|
     |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
+    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
+    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. This should be Cortex Encrypted. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
@@ -281,10 +289,10 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 ### Run Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Web Application Server Installation Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.5 - Web Application Server Installation Scripts"
+    cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
 1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
@@ -388,7 +396,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
 ### Configure Installation Parameters
 
-1. In the `Cortex Innovation 2022.5 - Gateway` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
+1. In the `Cortex Innovation 2022.6 - Gateway` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
 1. Edit the file, changing the parameters according to the details given below:
 
     {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-21 23 27-29 32,linenostart=1" >}}
@@ -444,10 +452,10 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 ### Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.5 - Gateway` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Gateway` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.5 - Gateway"
+    cd "C:\Install\Cortex Innovation 2022.6 - Gateway"
     ```
 
 1. Test that everything is configured correctly by running the following command:
@@ -500,3 +508,5 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 [Get Application Pool User]: {{< ref "#get-application-pool-user" >}}
 [Install Certificate]: {{< ref "#install-certificate" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
+[Licensing Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
