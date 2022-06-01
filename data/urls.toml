@@ -285,6 +285,7 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
+                ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"
                 Structures = "/docs/reference/concepts/collections/#structures"
                 Keys = "/docs/reference/concepts/collections/#keys"
                 Items = "/docs/reference/concepts/collections/#items"
@@ -398,13 +399,11 @@
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
-                Array = "/docs/reference/data-types/most-common/#array"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
-                Exceptions = "/docs/reference/data-types/most-common/#exceptions"
                 Exception = "/docs/reference/data-types/most-common/#exception"
                 FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
                 FileMatch = "/docs/reference/data-types/most-common/#filematch"
@@ -427,6 +426,8 @@
                     MainDoc = "/docs/reference/data-types/all/dynamic"
             [Cortex.Reference.DataTypes.Collections]
                 MainDoc = "/docs/reference/data-types/collections"
+                [Cortex.Reference.DataTypes.Collections.Array]
+                    MainDoc = "/docs/reference/data-types/collections/array"
                 [Cortex.Reference.DataTypes.Collections.IDictionary]
                     MainDoc = "/docs/reference/data-types/collections/idictionary-2"
                 [Cortex.Reference.DataTypes.Collections.Dictionary]
@@ -498,6 +499,8 @@
                     MainDoc = "/docs/reference/data-types/numbers/single"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
+                [Cortex.Reference.DataTypes.Text.Char]
+                    MainDoc = "/docs/reference/data-types/text/char"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
@@ -680,10 +683,13 @@
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
+        Array = "https://docs.microsoft.com/en-us/dotnet/api/system.array"
         FormatException = "https://docs.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         StringComparison = "https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://docs.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
+        [MSDocs.DotNet.Api.System.Char]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.char"
         [MSDocs.DotNet.Api.System.Collections]
             IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable"
         [MSDocs.DotNet.Api.System.Collections.Generic]
