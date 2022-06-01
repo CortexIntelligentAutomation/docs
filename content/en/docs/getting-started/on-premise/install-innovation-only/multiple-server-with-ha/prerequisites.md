@@ -47,7 +47,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid Cortex licence file must have been procured from Cortex. This should contain a fingerprint for the Web Application Server and each Application Server. To get a licence file take the following steps:
+A valid Cortex licence file must be procured from Cortex. This should contain fingerprints for the Web Application Server and each Application Server. To get a licence file take the following steps:
 
 1. Copy the following template to a text file:
 
@@ -88,7 +88,7 @@ A valid Cortex licence file must have been procured from Cortex. This should con
 
     1. Record the fingerprint and the computer name of the server in one of the `Application Server` sections of the text file created in the initial step.
 1. Request a licence by raising a case in the [Cortex Service Portal](https://support.cortex.co.uk/), including the contents of the text file containing all of the fingerprint information in the body of the case.
-1. When the licence has arrived, copy it to a folder located at `%ProgramData%\Cortex\Licences` on the Web Application Server.
+1. When the licence has arrived, copy the file `Licence.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
 
 ## Additional Load Balancer Server Requirements
 
