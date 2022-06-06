@@ -401,7 +401,6 @@
                 MainDoc = "/docs/reference/data-types/most-common/"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
-                DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
                 Exception = "/docs/reference/data-types/most-common/#exception"
@@ -473,12 +472,14 @@
                     MainDoc = "/docs/reference/data-types/data/connectiontype"
             [Cortex.Reference.DataTypes.DateAndTime]
                 MainDoc = "/docs/reference/data-types/date-and-time/"
-                [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
-                    MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
                 [Cortex.Reference.DataTypes.DateAndTime.DateTime]
                     MainDoc = "/docs/reference/data-types/date-and-time/datetime"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTimeComponentType]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetimecomponenttype"
                 [Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset]
                     MainDoc = "/docs/reference/data-types/date-and-time/datetimeoffset"
+                [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
+                    MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
                 [Cortex.Reference.DataTypes.DateAndTime.TimePeriod]
                     MainDoc = "/docs/reference/data-types/date-and-time/timeperiod"
                 [Cortex.Reference.DataTypes.DateAndTime.TimeSpan]

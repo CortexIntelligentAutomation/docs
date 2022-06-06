@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | DateTimeComponentType | | A value representing a component of a DateTimeOffset (e.g. Year, Month, Day). |
 | Exceptions | Exception | Varies | The data type that all other exceptions inherit from TODO: Link to inheritence |
 | Files & Folders | FileInformation | Varies | TODO |
 | | FolderInformation | Varies | TODO |
@@ -32,8 +31,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### DateTimeComponentType
 
 #### Exception
 
