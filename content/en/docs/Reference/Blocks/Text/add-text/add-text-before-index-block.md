@@ -70,6 +70,7 @@ The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
+| Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
 | Default Value | `($)Text` with no value |
 
@@ -81,6 +82,7 @@ The [Text To Add][TextToAdd Property] to the [Text][Text Property] before the gi
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Expression][TODO] |
 | Default Value | `$@""` |
 
@@ -94,6 +96,7 @@ For information about what an index is, please see [Indexes].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
 | Default Value | `0` |
 
