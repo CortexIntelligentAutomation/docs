@@ -177,6 +177,7 @@ For more information about Structures, please see [Working with Structures][].
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
 | Default Value | `($)Structure` with no value |
 
@@ -188,6 +189,7 @@ The [Xml][Xml Property] that has been converted from the [Structure][Structure P
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
 | Default Value | `($)Xml` with no value |
 
