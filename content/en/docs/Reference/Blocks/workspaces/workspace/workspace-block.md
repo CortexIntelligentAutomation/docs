@@ -28,7 +28,7 @@ No examples for the block.
 
 ## Properties
 
-No properties for the block, other than the `Description` property that is common to all blocks.
+No properties for the block, other than the `Description` property that is common to all blocks, and the `Block Timeout` property that is common to most blocks.
 
 ## Exceptions
 
