@@ -128,6 +128,7 @@ A [Variable][Variable Property] can be set to any type of object, including List
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Expression][TODO] |
 | Default Value | No value |
 
@@ -141,6 +142,7 @@ If a [Variable][Variable Property] is set to the [Value][Value Property] of anot
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
 | Default Value | `($)Variable` with no value |
 
