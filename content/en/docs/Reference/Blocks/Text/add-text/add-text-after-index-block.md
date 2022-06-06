@@ -95,7 +95,7 @@ For information about what an index is, please see [Indexes][].
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
 | Default Editor | [Literal][TODO] |
-| Default Value | [Int32][] with value `0` |
+| Default Value | `0` |
 
 ## Exceptions
 
