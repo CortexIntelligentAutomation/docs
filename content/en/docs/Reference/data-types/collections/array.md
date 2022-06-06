@@ -70,9 +70,7 @@ The following table shows some of the ways that an `Array` can be converted to t
 
 ### Property Editor Support
 
-* The Expression Editor is available for [Input][] properties where the data type is `Array`.
-* The Literal Editor is not available for [Input][] properties where the data type is `Array`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Array`.
+Currently no [Input][], [InputOutput][] or [Output] properties require the `Array` data type.
 
 ### Known Limitations
 
