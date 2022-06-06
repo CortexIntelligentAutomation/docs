@@ -416,7 +416,6 @@
                 Nullable = "/docs/reference/data-types/most-common/#nullable"
                 SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
                 StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
-                TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
                 TimeSpan = "/docs/reference/data-types/most-common/#timespan"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"

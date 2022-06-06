@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | TimePeriod | | A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of years, months, days, hours, minutes, seconds, and milliseconds. |
 | | TimeSpan | | A value representing a time interval (duration of time or elapsed time) that is measured as a positive or negative number of days, hours, minutes, seconds, and milliseconds. It can be used wherever a TimePeriod is expected, and wll be converted to a TimePeriod automatically. |
 | | DateTimeComponentType | | A value representing a component of a DateTimeOffset (e.g. Year, Month, Day). |
 | Exceptions | Exception | Varies | The data type that all other exceptions inherit from TODO: Link to inheritence |
@@ -34,8 +33,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### TimePeriod
 
 #### TimeSpan
 
