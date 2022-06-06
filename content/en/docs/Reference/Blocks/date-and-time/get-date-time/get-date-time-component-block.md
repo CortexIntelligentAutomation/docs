@@ -410,6 +410,6 @@ If it is desirable to have any issues reported as messages when trying to debug 
 [DateTime]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc" >}}
 [DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeComponentType" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
-[TimeSpan]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimeSpan" >}}
+[TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
 [DayOfWeek]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DayOfWeek.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
