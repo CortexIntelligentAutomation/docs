@@ -22,7 +22,7 @@ The [String][] data type represents text as a sequence of `Char` values.
 | **Alias:**             | `char`                                                        |
 | **Description:**       | A unicode character, surrounded by single quotes (e.g. `'a'` or `'!'`) |
 | **Size:**              | `2` bytes                                                     |
-| **Default Value:**     | `\0` or `U+0000`                                              |
+| **Default Value:**     | `'\0'` or `'U0000'`                                           |
 | **Can be used as:**    | `Int32`, `Int64`, `Single`, `Double`, `Object`, `dynamic`                                           |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)'a'` or `(System.Int16)'a'` or `(short)'a'`)  |
 
