@@ -54,7 +54,7 @@ Setting `($)Variable` to `[[1, 2, 3], [4, 5, 6]]` results in the variable `($)Va
 
 ### Overwriting a Variable
 
-This example will overwrite an exisiting [Variable][Variable Property] that has the text value `"A text value"`, to a list value of `[1, 2, 3]`.
+This example will overwrite an existing [Variable][Variable Property] that has the text value `"A text value"`, to a list value of `[1, 2, 3]`.
 
 #### Properties
 
