@@ -89,7 +89,8 @@ The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Text` with value `""` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Add
 
@@ -99,7 +100,8 @@ The [Text To Add][TextToAdd Property] at the beginning of the [Text][Text Proper
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToAdd` with value `""` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `$@""` |
 
 ## Exceptions
 
