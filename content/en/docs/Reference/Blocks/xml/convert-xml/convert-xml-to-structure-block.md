@@ -162,6 +162,7 @@ The [Xml][Xml Property] to convert into a [Structure][Structure Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Xml` with no value |
 
 ### Structure
@@ -174,6 +175,7 @@ For more information about Structures, please see [Working with Structures][].
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Structure` with no value |
 
 ## Exceptions
