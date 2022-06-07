@@ -128,7 +128,9 @@ The [Text][Text Property] to find and remove all occurrences of [Text To Remove]
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Remove
 
@@ -138,7 +140,9 @@ The [Text To Remove][TextToRemove Property] all occurrences of, from [Text][Text
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToRemove` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `$@""` |
 
 ### Search Options
 
@@ -157,7 +161,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `ContainsText` |
 
 ### Comparison Type
 
@@ -169,7 +175,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `Ordinal` |
 
 ## Exceptions
 
