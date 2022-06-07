@@ -48,7 +48,9 @@ The [Text][Text Property] to get the [Text At End][TextAtEnd Property] from.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Length
 
@@ -58,7 +60,9 @@ The [Length][Length Property] of text to get.
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Length` with value `-1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `-1` |
 
 ### Text At End
 
@@ -68,6 +72,8 @@ The [Length][Length Property] of text at the end of [Text][Text Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextAtEnd` with no value |
 
 ## Exceptions

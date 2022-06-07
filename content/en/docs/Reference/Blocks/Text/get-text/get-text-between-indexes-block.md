@@ -78,7 +78,9 @@ The [Text][Text Property] to get the [Text Between Indexes][TextBetweenIndexes P
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Start Index
 
@@ -90,7 +92,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)StartIndex` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ### End Index
 
@@ -102,7 +106,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)EndIndex` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ### Text Between Indexes
 
@@ -112,6 +118,8 @@ The text between (and including) the [Start Index][StartIndex Property] and [End
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextBetweenIndexes` with no value |
 
 ## Exceptions
