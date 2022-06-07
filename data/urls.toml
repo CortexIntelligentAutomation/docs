@@ -26,6 +26,7 @@
                         ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
                         ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
                         CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
+                        EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
     [Cortex.Guides]
