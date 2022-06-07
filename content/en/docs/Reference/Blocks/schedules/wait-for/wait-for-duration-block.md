@@ -56,7 +56,9 @@ When adding months, if the current day component is greater than the last day in
 |--------------------|---------------------------|
 | Data Type | [TimePeriod][] |
 | Property Type | [Input][] |
-| Default Value | `($)Duration` with value `{"Years": 0, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | Years: `0` <br /> Months: `0` <br /> Days: `0` <br /> Hours: `0` <br /> Minutes: `0` <br /> Seconds: `0` <br /> Milliseconds: `0`|
 
 ## Exceptions
 
