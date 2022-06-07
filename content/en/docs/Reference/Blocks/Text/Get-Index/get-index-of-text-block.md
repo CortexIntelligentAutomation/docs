@@ -181,7 +181,9 @@ The [Text][Text Property] to get the [Index][Index Property] of the specified [O
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Find
 
@@ -191,7 +193,9 @@ The [Text To Find][TextToFind Property] the [Index][Index Property] of the speci
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToFind` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `$@""` |
 
 ### Occurrence
 
@@ -203,7 +207,9 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Occurrence` with value `1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `1` |
 
 ### Search Options
 
@@ -222,7 +228,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `ContainsText` |
 
 ### Comparison Type
 
@@ -234,7 +242,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `Ordinal` |
 
 ### Index
 
@@ -248,6 +258,8 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Index` with no value |
 
 ## Exceptions
