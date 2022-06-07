@@ -112,7 +112,9 @@ The [Text][Text Property] to check is empty (i.e. `""`) or whitespace (i.e. `spa
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text Is Empty Or Whitespace
 
@@ -124,6 +126,8 @@ If the [Text][Text Property] is empty (i.e. `""`) or whitespace (i.e. `space`, `
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextIsEmptyOrWhitespace` with no value |
 
 ## Exceptions

@@ -114,7 +114,9 @@ The [Text][Text Property] to check is `null`, empty (i.e. `""`) or whitespace (i
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text Is Null Empty Or Whitespace
 
@@ -126,6 +128,8 @@ If the [Text][Text Property] is `null`, empty (i.e. `""`) or whitespace (i.e. `s
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextIsNullEmptyOrWhitespace` with no value |
 
 ## Exceptions

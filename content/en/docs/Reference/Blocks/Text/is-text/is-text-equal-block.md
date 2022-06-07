@@ -101,7 +101,9 @@ The [Text][Text Property] to check is equal to [Text To Compare][TextToCompare P
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Compare
 
@@ -111,7 +113,9 @@ The [Text To Compare][TextToCompare Property] if [Text][Text Property] is equal 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToCompare` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `$@""` |
 
 ### Comparison Type
 
@@ -123,7 +127,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `Ordinal` |
 
 ### Text Is Equal
 
@@ -135,6 +141,8 @@ If they are equal the specified variable will be set to `true`, otherwise it wil
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextIsEqual` with no value |
 
 ## Exceptions

@@ -112,7 +112,9 @@ The [Text][Text Property] to check is `null`.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text Is Null
 
@@ -124,6 +126,8 @@ If the [Text][Text Property] is `null`, the specified variable will be set to `t
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextIsNull` with no value |
 
 ## Exceptions

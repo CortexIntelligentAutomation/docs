@@ -112,7 +112,9 @@ The [Text][Text Property] to check is empty (i.e. `""`).
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Text Is Empty
 
@@ -124,6 +126,8 @@ If the [Text][Text Property] is empty (i.e. `""`), the specified variable will b
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)TextIsEmpty` with no value |
 
 ## Exceptions
