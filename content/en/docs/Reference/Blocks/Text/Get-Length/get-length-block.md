@@ -47,7 +47,9 @@ The [Text][Text Property] to get the [Length][Length Property] of.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Length
 
@@ -57,6 +59,8 @@ The [Length][Length Property] of the [Text][Text Property] (i.e. the number of c
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Length` with no value |
 
 ## Exceptions
