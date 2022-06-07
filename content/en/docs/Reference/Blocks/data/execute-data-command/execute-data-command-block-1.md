@@ -446,6 +446,7 @@ The [Command][Command Property] executed on the connected data source. There are
 |--------------------|---------------------------|
 | Data Type | [ICommand][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
 | Default Value | [Command][Command Types Command] with value `{"CommandText": "", "Parameters": null}` |
 
@@ -463,6 +464,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 |--------------------|---------------------------|
 | Data Type | [TConnectionDetails][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
 | Default Value | [SqlServerConnectionDetails][TODO] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
 
@@ -474,6 +476,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
+| Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
 | Default Value | [Boolean][] with value `true` |
 
@@ -487,6 +490,7 @@ Depending on the type of [Command][Command Property], the data returned within t
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
 | Default Value | `($)Result` with no value |
 
