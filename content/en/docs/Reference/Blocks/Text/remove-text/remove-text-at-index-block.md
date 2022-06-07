@@ -48,7 +48,9 @@ The [Text][Text Property] to remove the [Length][Length Property] of text from.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Index
 
@@ -60,7 +62,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ### Length
 
@@ -70,7 +74,9 @@ The [Length][Length Property] of text to remove.
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Length` with value `-1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `-1` |
 
 ## Exceptions
 
