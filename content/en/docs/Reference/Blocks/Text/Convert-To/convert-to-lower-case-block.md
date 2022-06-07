@@ -51,7 +51,9 @@ The [Text][Text Property] to convert to lower case.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Text` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Culture Info
 
@@ -63,7 +65,9 @@ For information about the [supported values][CultureInfos] for the [Culture Info
 |--------------------|---------------------------|
 | Data Type | [CultureInfo][] |
 | Property Type | [Input][] |
-| Default Value | `($)CultureInfo` with value `CultureInfo.InvariantCulture` |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `CultureInfo.InvariantCulture` |
 
 ## Exceptions
 
