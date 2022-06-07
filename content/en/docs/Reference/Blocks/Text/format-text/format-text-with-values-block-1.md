@@ -104,7 +104,9 @@ For information about format templates and parameters, please see [Text Formatti
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FormatTemplate` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `$@"{0} {1}"` |
 
 ### Values
 
@@ -122,7 +124,9 @@ For information about how types are converted to their text representation pleas
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TValue][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `new List<dynamic>() {0, "1"}` |
 
 ### Format Provider
 
@@ -134,7 +138,9 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 |--------------------|---------------------------|
 | Data Type | [IFormatProvider][] |
 | Property Type | [Input][] |
-| Default Value | `($)FormatProvider` with value `null` |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `CultureInfo.InvariantCulture` |
 
 ### Text
 
@@ -144,6 +150,8 @@ The formatted [Text][Text Property] that results from replacing all format param
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
