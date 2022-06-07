@@ -78,7 +78,9 @@ Each non-text value will be converted to its text representation, by calling its
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TValue][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Values` with no value |
 
 ### Separator
 
@@ -92,7 +94,9 @@ The [Separator][Separator Property] is only included in the resultant [Text][Tex
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Separator` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `,` |
 
 ### Text
 
@@ -102,6 +106,8 @@ The resultant [Text][Text Property] containing the specified [Values][Values Pro
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
