@@ -68,7 +68,9 @@ A deep copy will be performed, which means if the [Object][Object Property] cont
 |--------------------|---------------------------|
 | Data Type | [TObject][] |
 | Property Type | [Input][] |
-| Default Value | `($)Object` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Object` with no value |
 
 ### Copy
 
@@ -78,6 +80,8 @@ The [Copy][Copy Property] of the [Object][Object Property].
 |--------------------|---------------------------|
 | Data Type | [TObject][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Copy` with no value |
 
 ## Exceptions
