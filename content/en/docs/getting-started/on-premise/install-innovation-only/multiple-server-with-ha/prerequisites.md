@@ -53,42 +53,44 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
 
     ```text
     Web Application Server
-    Computer Name: 
+    MachineID: 
     Fingerprint: 
 
     Application Server 1
-    Computer Name: 
+    MachineID: 
     Fingerprint: 
 
     Application Server 2
-    Computer Name: 
+    MachineID: 
     Fingerprint: 
 
     Application Server 3
-    Computer Name: 
+    MachineID: 
     Fingerprint: 
     ```
 
 1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
-1. From that folder, copy `Cortex - Licence Fingerprint Generator.exe` to the Web Application server.
-1. Double-click `Cortex - Licence Fingerprint Generator.exe` to run it. A command line window will appear, containing a fingerprint, e.g:
+1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the Web Application server.
+1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
     ```text
+    MachineID: WEBAPP-SERVER
     Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
     ```
 
-1. Record the fingerprint and the computer name of the server in the `Web Application Server` section of the text file created in the initial step.
+1. Copy the output (machine identifier and fingerprint) to the `Web Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
 1. For each Application Server take the following steps:
-    1. Copy `Cortex - Licence Fingerprint Generator.exe` to the Application server.
-    1. Double-click `Cortex - Licence Fingerprint Generator.exe` to run it. A command line window will appear, containing a fingerprint, e.g:
+    1. Copy `Cortex.Licensing.FingerprintGeneration.exe` to the Application server.
+    1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
         ```text
+        MachineID: HA-SERVER1
         Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
         ```
 
-    1. Record the fingerprint and the computer name of the server in one of the `Application Server` sections of the text file created in the initial step.
-1. Request a licence by raising a case in the [Cortex Service Portal](https://support.cortex.co.uk/), including the contents of the text file containing all of the fingerprint information in the body of the case.
-1. When the licence has arrived, copy the file `Licence.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
+    1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
+1. Request a licence by raising a case in the [Cortex Service Portal](https://support.cortex.co.uk/), including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
 
 ## Additional Load Balancer Server Requirements
 

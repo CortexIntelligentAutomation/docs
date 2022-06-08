@@ -24,7 +24,7 @@ This guide describes how to install the Web Application Server. Please ensure th
 
 ### Licensing
 
-Ensure that a valid Cortex licence file named `Licence.lic` exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
+Ensure that a valid Cortex licence file named `Cortex.lic` exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
 ### Install SQL Server or SQL Express
 
