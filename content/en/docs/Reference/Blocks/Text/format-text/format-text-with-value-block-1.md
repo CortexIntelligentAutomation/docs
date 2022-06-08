@@ -106,7 +106,7 @@ For information about how types are converted to their text representation pleas
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][TODO] |
-| Default Value | No value |
+| Default Value | No value (defaults to `null`) |
 
 ### Format Provider
 

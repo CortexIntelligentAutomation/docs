@@ -135,7 +135,7 @@ The [Event Details][EventDetails Property] to log.
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
-| Default Value | No value |
+| Default Value | No value (defaults to `null`) |
 
 ### Event Severity
 

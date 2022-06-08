@@ -181,7 +181,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Property Type | [Input][] |
 | Is Advanced | `true` |
 | Default Editor | [Literal][TODO] |
-| Default Value | `Ordinal` ||
+| Default Value | `Ordinal` |
 
 ### Contains Text
 

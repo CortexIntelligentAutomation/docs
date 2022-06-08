@@ -130,7 +130,7 @@ A [Variable][Variable Property] can be set to any type of object, including List
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][TODO] |
-| Default Value | No value |
+| Default Value | No value (defaults to `null`) |
 
 ### Variable
 

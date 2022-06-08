@@ -169,7 +169,7 @@ For information about the default [Settings][Settings Property] used if none are
 | Property Type | [Input][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
-| Default Value | No value |
+| Default Value | No value (defaults to `null`) |
 
 ### Object
 
