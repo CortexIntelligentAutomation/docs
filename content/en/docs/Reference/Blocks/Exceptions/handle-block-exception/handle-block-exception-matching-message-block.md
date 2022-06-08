@@ -106,7 +106,9 @@ The [Message][Message Property] the [Exception's][Exception Property] `Message` 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Message` with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `$@""` |
 
 ### Comparison Type
 
@@ -118,7 +120,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `Ordinal` |
 
 ### Exception
 
@@ -134,7 +138,9 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
-| Default Value | `($)Exception` with no value |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)_` to [discard][] |
 
 ## Exceptions
 
@@ -189,6 +195,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [Message Property]: {{< ref "#message" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Exception Property]: {{< ref "#exception" >}}
+[discard]: {{< ref "#using-the-built-in-_-variable-to-discard-the-exception-from-being-saved" >}}
 
 [Handle Block Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
 [Handle Block Exception Matching Message]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessage.MainDoc" >}}

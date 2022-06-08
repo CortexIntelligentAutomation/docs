@@ -68,7 +68,9 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
-| Default Value | `($)_` meaning the exception will be discarded |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)_` to [discard][] |
 
 ## Exceptions
 
@@ -117,6 +119,7 @@ Sometimes when an exception occurs the flow execution wants to use the exception
 For more infomation about using the built-in `($)_` variable, please see [Discarding Output Properties][].
 
 [Exception Property]: {{< ref "#exception" >}}
+[discard]: {{< ref "#using-the-built-in-_-variable-to-discard-the-exception-from-being-saved" >}}
 
 [Unhandled Exceptions]: {{< ref "#unhandled-exceptions" >}}
 
