@@ -127,7 +127,9 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][] |
 | Property Type | [Input][] |
-| Default Value | `($)Collection` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Collection` with no value |
 
 ### Current Iteration
 
@@ -145,6 +147,8 @@ If [Current Iteration][CurrentIteration Property] `"Index"` is modified during a
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)CurrentIteration` with no value |
 
 ## Exceptions

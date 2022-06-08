@@ -139,7 +139,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)StartIndex` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ### End Index
 
@@ -151,7 +153,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)EndIndex` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ### Increment
 
@@ -169,7 +173,9 @@ If any of the above are not `true` or [Increment][Increment Property] is `0` the
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Increment` with value `1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `1` |
 
 ### Current Index
 
@@ -191,7 +197,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)CurrentIndex` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)CurrentIndex` with no value |
 
 ## Exceptions
 
