@@ -127,7 +127,7 @@ The [Event Details][EventDetails Property] to log.
 
 [Event Type][EventType Property] can be specified to define the type of event being logged.
 
-[Event Type][EventType Property] is a free format text property. If left blank or `null` it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
+[Event Type][EventType Property] is a free format text property. If left blank, `null`, or empty (i.e. `""`) it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
 
 | | |
 |--------------------|---------------------------|
@@ -342,9 +342,9 @@ A list of each of the log's properties and an accompanying description can be fo
 | `Event.Service.$type`      | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.$type`              | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
 
-### Null Event Type
+### Null or Empty Event Type
 
-If [Event Type][EventType Property] is left blank or `null` it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
+If [Event Type][EventType Property] is left blank, `null`, or empty (i.e. `""`) it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
 
 ### Null Event Severity
 
