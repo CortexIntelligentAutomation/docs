@@ -98,8 +98,9 @@ The [Object][Object Property] to convert to [Json][Json Property].
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
-| Default Value | `($)Object` with value `null` |
-
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Object` with no value |
 ### Settings
 
 Optional [Settings][Settings Property] that can be specified to control how the conversion should deal with things such as:
@@ -115,7 +116,10 @@ For information about the default [Settings][Settings Property] used if none are
 |--------------------|---------------------------|
 | Data Type | [JsonSerializerSettings][] |
 | Property Type | [Input][] |
-| Default Value | `($)Settings` with value `null` |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value |
+
 
 ### Json
 
@@ -125,6 +129,8 @@ The [Json][Json Property] that has been converted from [Object][Object Property]
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Json` with no value |
 
 ## Exceptions
