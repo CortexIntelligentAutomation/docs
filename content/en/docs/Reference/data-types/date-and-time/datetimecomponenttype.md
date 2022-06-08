@@ -1,7 +1,7 @@
 ---
 title: "DateTimeComponentType"
 linkTitle: "DateTimeComponentType"
-description: "Used to represent a component of a DateTimeOffset (e.g. Year, Month, Day)."
+description: "Used to represent a component of a `DateTimeOffset` (e.g. `Year`, `Month`, `Day`)."
 ---
 
 # {{< param title >}}
