@@ -119,7 +119,9 @@ The [Event Details][EventDetails Property] to log.
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
-| Default Value | `($)EventDetails` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)EventDetails` with no value |
 
 ### Event Type
 
@@ -131,7 +133,9 @@ The [Event Details][EventDetails Property] to log.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)EventType` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value |
 
 ### Event Severity
 
@@ -154,7 +158,9 @@ Logs with an [Event Severity][EventSeverity Property] of `EventSeverity.Informat
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[EventSeverity][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)EventSeverity` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `Information` |
 
 ### Started At
 
@@ -170,7 +176,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[DateTimeOffset][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)StartedAt` with value null |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `DateTimeOffset.UtcNow` |
 
 ### Ended At
 
@@ -186,7 +194,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[DateTimeOffset][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)EndedAt` with value null |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `DateTimeOffset.UtcNow` |
 
 ## Exceptions
 
