@@ -342,7 +342,9 @@ The [Date Time][DateTime Property] to get the specified [Component Type][Compone
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)DateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)DateTime` with no value |
 
 ### Component Type
 
@@ -354,7 +356,9 @@ For more information about values that can be specified for [Component Type][Com
 |--------------------|---------------------------|
 | Data Type | [DateTimeComponentType][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComponentType` with value `DateTimeComponentType.LocalDateTime` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `LocalDateTime` |
 
 ### Component
 
@@ -364,6 +368,8 @@ The [Component][Component Property] from the [Date Time][DateTime Property].
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Component` with no value |
 
 ## Exceptions

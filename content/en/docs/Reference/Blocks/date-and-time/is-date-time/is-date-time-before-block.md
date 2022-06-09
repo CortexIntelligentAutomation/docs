@@ -94,7 +94,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)DateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)DateTime` with no value |
 
 ### Date Time To Compare
 
@@ -106,7 +108,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)DateTimeToCompare` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)DateTimeToCompare` with no value |
 
 ### Date Time Is Before
 
@@ -118,6 +122,8 @@ If [Date Time][DateTime Property] is before [Date Time To Compare][DateTimeToCom
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)DateTimeIsBefore` with no value |
 
 ## Exceptions
