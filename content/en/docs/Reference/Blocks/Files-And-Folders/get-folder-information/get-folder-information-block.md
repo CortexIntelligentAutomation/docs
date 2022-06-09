@@ -83,7 +83,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FolderPath` with no value |
 
 ### Folder Information
 
@@ -97,6 +99,8 @@ For more information see the [example][] above, or the [FolderInformation][] dat
 |--------------------|---------------------------|
 | Data Type | [FolderInformation][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)FolderInformation` with no value |
 
 ## Exceptions

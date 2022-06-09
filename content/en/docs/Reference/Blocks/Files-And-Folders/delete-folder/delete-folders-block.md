@@ -92,7 +92,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPaths` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FolderPaths` with no value |
 
 ### Recursive
 
@@ -106,7 +108,9 @@ By default, this is set to `false` to prevent unintentional and destructive dele
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Recursive` with value `false` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `false` |
 
 ## Exceptions
 

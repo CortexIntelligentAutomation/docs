@@ -66,7 +66,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FolderPath` with no value |
 
 ### New Name
 
@@ -82,7 +84,9 @@ For information about valid folder names, please see [File & Folder Paths][].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)NewName` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value (defaults to `""`) |
 
 ## Exceptions
 

@@ -76,7 +76,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FilePath` with no value |
 
 ### Encoding
 
@@ -90,7 +92,9 @@ For information about encoding, examples of available encodings and using them, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Encoding` with value `null` |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Text
 
@@ -100,6 +104,8 @@ All [Text][Text Property] that was read from the file.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions

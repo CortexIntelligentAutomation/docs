@@ -342,7 +342,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPaths` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FolderPaths` with no value |
 
 ### Destination Path
 
@@ -362,7 +364,9 @@ For information about the supported file and folder path formats (i.e. absolute,
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)DestinationPath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value (defaults to `""`) |
 
 ### Overwrite
 
@@ -374,7 +378,9 @@ If any of the folders and/or contents exists, [Overwrite][Overwrite Property] mu
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Overwrite` with value `false` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `false` |
 
 ### Content Only
 
@@ -386,7 +392,9 @@ To copy the folders and their content, [Content Only][ContentOnly Property] must
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)ContentOnly` with value `false` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `false` |
 
 ## Exceptions
 

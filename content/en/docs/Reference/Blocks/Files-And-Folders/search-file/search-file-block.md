@@ -205,7 +205,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FilePath` with no value |
 
 ### Search Pattern
 
@@ -217,7 +219,9 @@ A `null` or empty (i.e. `""`) [Search Pattern][SearchPattern Property] means mat
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchPattern` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value (defaults to `""`) |
 
 ### Search Options
 
@@ -236,7 +240,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `ContainsText` |
 
 ### Encoding
 
@@ -250,7 +256,9 @@ For information about encoding, examples of available encodings and using them, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Encoding` with value `null` |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Comparison Type
 
@@ -262,7 +270,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is Advanced | `true` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `Ordinal` |
 
 ### Matches
 
@@ -289,6 +299,8 @@ For more information see the [example][] above, or the [FileMatch][] data type.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[FileMatch][]&gt; |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Matches` with no value |
 
 ## Exceptions

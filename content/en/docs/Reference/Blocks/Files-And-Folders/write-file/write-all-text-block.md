@@ -103,7 +103,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FilePath` with no value |
 
 ### Text
 
@@ -120,7 +122,9 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) and [Overwrite][Overwrit
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Text` with no value |
 
 ### Overwrite
 
@@ -132,7 +136,9 @@ By default, this is set to `false` to avoid implicit and accidental overwriting 
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Overwrite` with value `false` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `false` |
 
 ### Encoding
 
@@ -146,7 +152,9 @@ For information about encoding, examples of available encodings and using them, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Encoding` with value `null` |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 

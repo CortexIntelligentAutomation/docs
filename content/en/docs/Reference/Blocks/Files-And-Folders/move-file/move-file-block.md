@@ -113,7 +113,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)FilePath` with no value |
 
 ### Destination Path
 
@@ -134,7 +136,9 @@ For information about the supported file and folder path formats (i.e. absolute,
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)DestinationPath` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value (defaults to `""`) |
 
 ### Overwrite
 
@@ -146,7 +150,9 @@ If the file exists, [Overwrite][Overwrite Property] must be set to `true`, other
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Overwrite` with value `false` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `false` |
 
 ## Exceptions
 
