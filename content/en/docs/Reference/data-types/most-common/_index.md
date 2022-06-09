@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| Exceptions | Exception | Varies | The data type that all other exceptions inherit from TODO: Link to inheritence |
 | Files & Folders | FileInformation | Varies | TODO |
 | | FolderInformation | Varies | TODO |
 | | ContentOptions | 4 bytes | TODO |
@@ -32,8 +31,6 @@ The most commonly used data types are categorised and listed below:
 
 ### Dictionaries
 
-#### Exception
-
 #### FileInformation
 
 #### FolderInformation
@@ -43,6 +40,8 @@ The most commonly used data types are categorised and listed below:
 #### FileMatch
 
 #### JsonSerializerSettings
+
+TODO: Need to have a link to default settings and explain that convert object to json sets formatting.indented
 
 #### StringComparison
 
@@ -71,3 +70,5 @@ TODO: variable link, on page links, glossary, concept links etc.
 #### Encoding
 
 #### Guid
+
+#### EventSeverity

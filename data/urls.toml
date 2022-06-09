@@ -403,7 +403,7 @@
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
-                Exception = "/docs/reference/data-types/most-common/#exception"
+                EventSeverity = "/docs/reference/data-types/most-common/#eventseverity"
                 FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
                 FileMatch = "/docs/reference/data-types/most-common/#filematch"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
@@ -484,6 +484,10 @@
                     MainDoc = "/docs/reference/data-types/date-and-time/timeperiod"
                 [Cortex.Reference.DataTypes.DateAndTime.TimeSpan]
                     MainDoc = "/docs/reference/data-types/date-and-time/timespan"
+            [Cortex.Reference.DataTypes.Exceptions]
+                MainDoc = "/docs/reference/data-types/exceptions/"
+                [Cortex.Reference.DataTypes.Exceptions.Exception]
+                    MainDoc = "/docs/reference/data-types/exceptions/exception"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
