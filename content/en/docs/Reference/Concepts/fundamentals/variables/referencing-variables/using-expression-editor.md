@@ -29,7 +29,7 @@ For examples on referencing variables in different expressions, see [Expressions
 
 ### Case Sensitivity
 
-When referencing variables in the [Expression Editor][Guides->Cortex Studio-> Expression Editor TODO], the names are **Case Insensitive**. For example:
+When referencing variables in the [Expression Editor][], the names are **Case Insensitive**. For example:
 
 `($)var1` is the same as `($)Var1`.
 
@@ -52,10 +52,6 @@ None
 - [Expressions][]
 - [Variable Scopes][scope]
 - [Blocks][BlocksConcepts]
-
-### Related Guides
-
-- [Expression Editor][]
 
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [data type]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}

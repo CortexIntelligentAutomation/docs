@@ -182,6 +182,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 - [Set Variable][]
 - [All Blocks][Blocks]
 
+[Message Panel]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.MessagePanel" >}}
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
 [APIGateway]: {{< url "Cortex.Reference.API.APIGateway.MainDoc" >}}
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
@@ -204,7 +205,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [InputPropertyType]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [OutputPropertyType]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 [InputOutputPropertyType]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Variable Grid]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.VariableGridInnovation" >}}
+[Variable Grid]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.VariableGrid" >}}
 [create]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.CreatingVariables" >}}
 [view]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.ViewingVariables" >}}
 [modify]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.ModifyingVariables" >}}
@@ -213,8 +214,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [Execution Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.ExecutionViewer" >}}
 [Variable Panel]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.VariablePanel" >}}
 [Variable Detail]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.VariableDetail" >}}
-[Messages]: {{ < url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
-[Message Panel]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.MessagePanel" >}}
+[Messages]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
 [Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
 [Workspace Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
