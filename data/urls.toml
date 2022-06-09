@@ -1,5 +1,7 @@
 # Internal links
 [Cortex]
+    [Cortex.Faqs]
+        MainDoc = "/docs/faqs/"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -28,6 +30,7 @@
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
     [Cortex.Guides]
+        MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
         [Cortex.Guides.Gateway]
@@ -63,6 +66,7 @@
             [Cortex.Guides.Gateway.Settings]
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
     [Cortex.Reference]
+        MainDoc = "/docs/reference/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -411,6 +415,7 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/workspace-exception-handling"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
+                ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"
                 Structures = "/docs/reference/concepts/collections/#structures"
                 DotNotation = "/docs/reference/concepts/collections/#dot-notation"
                 IndexNotation = "/docs/reference/concepts/collections/#index-notation"
@@ -530,11 +535,9 @@
                 Char = "/docs/reference/data-types/most-common/#char"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
-                DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
-                Exceptions = "/docs/reference/data-types/most-common/#exceptions"
-                Exception = "/docs/reference/data-types/most-common/#exception"
+                EventSeverity = "/docs/reference/data-types/most-common/#eventseverity"
                 FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
                 FileMatch = "/docs/reference/data-types/most-common/#filematch"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
@@ -546,8 +549,6 @@
                 Nullable = "/docs/reference/data-types/most-common/#nullable"
                 SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
                 StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
-                TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
-                TimeSpan = "/docs/reference/data-types/most-common/#timespan"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -556,6 +557,8 @@
                     MainDoc = "/docs/reference/data-types/all/dynamic"
             [Cortex.Reference.DataTypes.Collections]
                 MainDoc = "/docs/reference/data-types/collections"
+                [Cortex.Reference.DataTypes.Collections.Array]
+                    MainDoc = "/docs/reference/data-types/collections/array"
                 [Cortex.Reference.DataTypes.Collections.IDictionary]
                     MainDoc = "/docs/reference/data-types/collections/idictionary-2"
                 [Cortex.Reference.DataTypes.Collections.Dictionary]
@@ -603,16 +606,22 @@
                     MainDoc = "/docs/reference/data-types/data/connectiontype"
             [Cortex.Reference.DataTypes.DateAndTime]
                 MainDoc = "/docs/reference/data-types/date-and-time/"
-                [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
-                    MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
                 [Cortex.Reference.DataTypes.DateAndTime.DateTime]
                     MainDoc = "/docs/reference/data-types/date-and-time/datetime"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTimeComponentType]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetimecomponenttype"
                 [Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset]
                     MainDoc = "/docs/reference/data-types/date-and-time/datetimeoffset"
+                [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
+                    MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
                 [Cortex.Reference.DataTypes.DateAndTime.TimePeriod]
                     MainDoc = "/docs/reference/data-types/date-and-time/timeperiod"
                 [Cortex.Reference.DataTypes.DateAndTime.TimeSpan]
                     MainDoc = "/docs/reference/data-types/date-and-time/timespan"
+            [Cortex.Reference.DataTypes.Exceptions]
+                MainDoc = "/docs/reference/data-types/exceptions/"
+                [Cortex.Reference.DataTypes.Exceptions.Exception]
+                    MainDoc = "/docs/reference/data-types/exceptions/exception"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
@@ -627,6 +636,8 @@
                     MainDoc = "/docs/reference/data-types/numbers/single"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
+                [Cortex.Reference.DataTypes.Text.Char]
+                    MainDoc = "/docs/reference/data-types/text/char"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
@@ -775,6 +786,28 @@
                 MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
+    [Cortex.Tutorials]
+        MainDoc = "/docs/tutorials/"
+    [Cortex.Website]
+        [Cortex.Website.Customers]
+            MainDoc = "https://www.cortex-ia.com/customer-success-stories/"
+        [Cortex.Website.EngageWithUs]
+            MainDoc = "https://www.cortex-ia.com/contact-form/"
+            AccelerationProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program"
+            DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
+            Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
+            LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+        [Cortex.Website.Industries]
+            MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
+            Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"
+            It = "https://www.cortex-ia.com/itops-aiops-enterprise-services-automation/"
+            Telco = "https://www.cortex-ia.com/telecommunications-automation/"
+        [Cortex.Website.UseCases]
+            MainDoc = "https://www.cortex-ia.com/download-centre/"
+    [Cortex.YouTube]
+        MainDoc = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
+        [Cortex.YouTube.Webinars]
+            MainDoc = "https://www.youtube.com/playlist?list=PLPBEMXlXxB_oFKNwxwrXtXzU-WBvgAgz7"
 # External links
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
@@ -805,10 +838,13 @@
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
+        Array = "https://docs.microsoft.com/en-us/dotnet/api/system.array"
         FormatException = "https://docs.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         StringComparison = "https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://docs.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
+        [MSDocs.DotNet.Api.System.Char]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.char"
         [MSDocs.DotNet.Api.System.Collections]
             IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable"
         [MSDocs.DotNet.Api.System.Collections.Generic]
@@ -826,6 +862,7 @@
             ToInt64 = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.toint64"
             ToSingle = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tosingle"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring"
+            ToStringObjectFormatProvider = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring?#system-convert-tostring(system-object-system-iformatprovider)"
         [MSDocs.DotNet.Api.System.Boolean]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
             Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.parse"

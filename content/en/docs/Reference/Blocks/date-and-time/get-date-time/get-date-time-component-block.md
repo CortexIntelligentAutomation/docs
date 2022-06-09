@@ -408,8 +408,8 @@ If it is desirable to have any issues reported as messages when trying to debug 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [DateTime]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc" >}}
-[DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeComponentType" >}}
-[TimePeriod]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimePeriod" >}}
-[TimeSpan]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimeSpan" >}}
+[DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeComponentType.MainDoc" >}}
+[TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+[TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
 [DayOfWeek]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DayOfWeek.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
