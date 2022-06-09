@@ -177,7 +177,7 @@ For more information about Structures, please see [Working with Structures][].
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Input][] |
-| Default Value | `($)Structure` with value `null` |
+| Default Value | `($)Structure` with no value |
 
 ### Xml
 

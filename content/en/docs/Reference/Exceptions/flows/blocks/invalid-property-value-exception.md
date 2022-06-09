@@ -12,7 +12,7 @@ description: "The exception thrown when a property is provided with an invalid v
 
 The exception thrown when a [property][TODO] is provided with an invalid value.
 
-This exception wraps the actual [InnerException][] that will have occurred when the value provided for the [property][TODO] was attempted to be used.
+This exception wraps the [InnerException][] that occurred when the value provided for the [property][TODO] was used.
 
 ## Reasons
 
@@ -32,7 +32,7 @@ The format of the [Message][] is as follows:
 
 Provide a valid value for the [property][TODO] with the specified [PropertyId][], as instructed by the [Message][].
 
-More information on why the value is invalid, or instruction on how to provide a valid value may be present in the message of the [InnerException][].
+More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message of the [InnerException][].
 
 ## Properties
 
@@ -48,7 +48,7 @@ The type of the exception (i.e. `InvalidPropertyValueException`).
 
 The exception message, providing information about the exception that occurred.
 
-For this exception, the message will always be the same. More information on why the value is invalid, or instruction on how to provide a valid value may be present in the message of the [InnerException][].
+For this exception, the message will always be the same. More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message of the [InnerException][].
 
 | | |
 |--------------------|---------------------------|
@@ -64,9 +64,9 @@ The Id of the [property][TODO] that has been provided an invalid value.
 
 ### InnerException
 
-The exception that occurred when the value provided for the [property][TODO] was attempted to be used.
+The exception that occurred when the value provided for the [property][TODO] was used.
 
-This may contain more information on why the value is invalid, or instruction on how to provide a valid in its message.
+This may contain more information on why the value is invalid, or instruction on how to provide a valid value in its message.
 
 | | |
 |--------------------|---------------------------|
@@ -192,11 +192,7 @@ None
 [Convert To Upper Case]: {{< url "Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [Guid]: {{< url "Cortex.Reference.DataTypes.MostCommon.Guid" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
-
-TODO:
-
-* todos waiting on david/josh

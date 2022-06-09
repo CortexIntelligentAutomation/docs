@@ -11,6 +11,10 @@ Terms, words and phrases beginning with the letters U through Z.
 
 ## U
 
+### Unicode
+
+Unicode is a standard used to ensure consistent encoding, representation, and handling of text.
+
 ### UPPERCASE
 
 TODO
