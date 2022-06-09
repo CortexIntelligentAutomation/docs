@@ -17,9 +17,9 @@ For detailed information on different exception messages, see [Exceptions][]
 
 Cortex [flows][Flow] provide a range of exception handling techniques, organised hierarchically:
 
-* Exceptions may be handled at the [block level][block handling].
-* Exceptions can be handled at the [workspace level][workspace handling].
-* Exceptions can be handled at the [flow level][flow handling].
+* Exceptions may be handled at the [block level][].
+* Exceptions can be handled at the [workspace level][].
+* Exceptions can be handled at the [flow level][].
 
 See [Handling Exceptions][] for more information on how to handle exceptions at different levels.
 
@@ -27,6 +27,7 @@ See [Handling Exceptions][] for more information on how to handle exceptions at 
 
 ### Related Concepts
 
+* [What is an Exception][WhatIsAnException]
 * [Flows][Flow]
 * [Flow Executions][What-Is-Execution]
 
@@ -46,9 +47,9 @@ See [Handling Exceptions][] for more information on how to handle exceptions at 
 
 * [Exceptions][]
 
-[block handling]: {{< ref "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
-[workspace handling]: {{< ref "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
-[flow handling]: {{< ref "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
+[block level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.BlockLevel" >}}
+[workspace level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.WorkspaceLevel" >}}
+[flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 
 [Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [Block-Handle-Block-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}

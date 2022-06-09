@@ -8,7 +8,7 @@ description: "This page provides a guide on referencing variables in the Express
 
 ## Overview
 
-The [Expression Editor][Guides->Cortex Studio-> Expression Editor TODO] is a text editor that allows flow developers to use simple [Expressions][] or complex code as the value of a block property, including referencing variables.
+The [Expression Editor][] is a text editor that allows flow developers to use simple [Expressions][] or complex code as the value of a block property, including referencing variables.
 
 ## Referencing Variables Directly
 
@@ -53,10 +53,14 @@ None
 - [Variable Scopes][scope]
 - [Blocks][BlocksConcepts]
 
+### Related Guides
+
+- [Expression Editor][]
+
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [data type]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}
-[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.LiteralsExpressionsVariables.Expressions" >}}
+[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Collections]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
@@ -65,3 +69,4 @@ None
 [Lists]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structures]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String Concatenation]: {{< url "MSDocs.DotNet.Api.System.String.ConcatOperator" >}}
+[Expression Editor]: {{< url "Cortex.Guides.Studio.Gateway.Studio.ExpressionEditor.MainDoc" >}}

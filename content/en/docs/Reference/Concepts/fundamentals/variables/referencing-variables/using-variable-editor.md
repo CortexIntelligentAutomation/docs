@@ -12,51 +12,52 @@ The Variable Editor enables variables to be created, selected, and updated whils
 
 ## Selecting a Variable
 
-Selecting a property in the Variable Editor mode presents a list of available variables for selection. The available variables depends on the current [scope][].
+The Variable Editor presents a list of available variables. The available variables depends on the current [scope][].
 
 To filter the selection, start typing the name of the variable. Variables matching the partial string will be returned.
 
-### Collection Variable Referencing
+### Referencing Items in Complex Data Types
 
-Variables with a [Collection data type][CollectionDataType] can be referenced in the Variable Editor using the appropriate notation.
+Items in [complex data types][ComplexDataType] can be referenced in the Variable Editor using the appropriate notation:
 
-Examples:
-
-- Referencing the second item in a [List][]: `($)MyList[1]`
-
-- Referencing the item "Brand" in a [Dictionary][]: `($)MyDictionary["Brand"]`
-
-- Referencing the element "name" in a [Structure][]: `($)MyStructure.name`
+- Referencing the second item in a [List][]: `MyList[1]`
+- Referencing the item "Brand" in a [Dictionary][]: `MyDictionary["Brand"]`
+- Referencing the item "name" in a [Structure][]: `MyStructure.name`
+- Referencing the "Message" property of an [Exception][Exceptions]: `Exception.Message`
 
 ## Creating a Variable
 
-The variable editor allows for the creation of variables that do not exist. If entered text does not match an existing variable, the option to create that variable is available at the bottom of the dropdown list.
+Block properties using the Variable Editor that reference non-existent variables are outlined in <span style="color:orange">orange</span>. Clicking **+** at the top of the [Property Viewer][] will create all non-existent variables for that block.
 
-Block properties in the Variable Editor mode that reference non-existent variables are highlighted. Clicking **+** at the top of the [Property Viewer][] will create all non-existent variables for that block.
+Individual variables that do not exist can be created in the Variable Editor. If entered text does not match an existing variable, the option to create that variable is available at the bottom of the dropdown list.
 
 ## Remarks
 
-### Known Limitations
-
-#### Case Sensitivity
+### Case Sensitivity
 
 When referencing variables in the Variable Editor, the names are **Case Insensitive**. For example:
 
 `var1` is the same as `Var1`.
 
-When referencing items of a [Complex data type][ComplexDataType] in a variable (e.g. [Lists][], [Dictionaries][Dictionary], etc.), the names of items are **Case Sensitive**. For example:
+When referencing items of a [complex data type][ComplexDataType] in a variable (e.g. [Lists][list], [Dictionaries][Dictionary], etc.), the names of items are **Case Sensitive**. For example:
 
 `Dictionary1["Item1"]` is not the same as `Dictionary1["item1"]`.
+
+### Known Limitations
+
+None
 
 ## See Also
 
 ### Related Concepts
 
-- [Variables Scopes][scope]
-
 - [Blocks][BlocksConcepts]
-
 - [Variables][]
+- [Variable Scopes][scope]
+
+### Related Guides
+
+- [Variable Editor][]
 
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}
@@ -67,3 +68,5 @@ When referencing items of a [Complex data type][ComplexDataType] in a variable (
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
 [Property Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.PropertyViewer" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
+[Variable Editor]: {{< url "Cortex.Guides.Studio.Gateway.Studio.VariableEditor.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}

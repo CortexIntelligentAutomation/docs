@@ -66,3 +66,4 @@ When executing a block in **Workspace1** that references `($)loop-var`, the vari
 [Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}
 [Workspace-block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}

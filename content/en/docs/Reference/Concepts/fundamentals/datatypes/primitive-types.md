@@ -12,3 +12,13 @@ description: "This page describes the concept of Basic Data Types."
 
 Strings are a basic data type but are also a reference type.
 TODO
+
+## Remarks
+
+### Known Limitations
+
+## See Also
+
+### Related Concepts
+
+### Related Data Types

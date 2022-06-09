@@ -67,10 +67,6 @@ The logic may:
 * Forcibly cause the [flow execution][What-Is-Execution] to jump to a superior [workspace's][What-Is-Workspace] exception handling logic if present, using the [Throw Exception][Block-Throw-Exception] [block][What-Is-Block]
 * Terminate the [flow execution][What-Is-Execution] using an [End Flow][Block-End-Flow] [block][What-Is-Block]
 
-#### Handling Exceptions on the Top-Level Workspace
-
-The top-level [Workspace][Workspace] cannot contain a [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block]; any unhandled exceptions thrown on the top-level [Workspace][Workspace] will be handled by the [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block].
-
 ### Handling Multiple Exceptions
 
 Once the [flow execution][What-Is-Execution] has jumped to the [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block], a second unhandled exception in the same [workspace][What-Is-Workspace] will cause the [flow execution][What-Is-Execution] to jump to the superior [workspace's][What-Is-Workspace] exception handling logic, or to the [Handle Flow Exception][Block-Handle-Flow-Exception] [block's][What-Is-Block] [workspace][What-Is-Workspace] if none is present.
@@ -136,7 +132,25 @@ The [Throw Exception][Block-Throw-Exception] [block][What-Is-Block] will cause t
 
 For more details of throwing exceptions, refer to the [Throw-Exception][Block-Throw-Exception] [block][What-Is-Block] documentation.
 
-## Related Concepts
+## Remarks
+
+### Handling Exceptions from Run Flow block
+
+If a flow called by another flow raises an exception that is not handled, a new exception will be thrown by [Run Flow][TODO Run Flow block] block in the parent flow, which can then be handled by any of the above methods. See [Run Flow Exceptions][TODO Run Flow Exceptions bookmark]
+
+### Known Limitations
+
+#### Handling Exceptions on the Top-Level Workspace
+
+The top-level [Workspace][Workspace] cannot contain a [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block]; any unhandled exceptions thrown on the top-level [Workspace][Workspace] will be handled by the [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block].
+
+### Throwing Exceptions without an Exception
+
+It is possible to throw a custom exception without a block exception being raised first. This may be useful in process exceptions where there was not a technical exception.
+
+## See Also
+
+### Related Concepts
 
 * [Flows][Flow]
 * [Flow Executions][What-Is-Execution]
@@ -144,13 +158,21 @@ For more details of throwing exceptions, refer to the [Throw-Exception][Block-Th
 * [Blocks][Block]
 * [Block Properties][Block-Properties]
 
-## Related Blocks
+### Related Data Types
+
+* [Exception Data Type][]
+
+### Related Blocks
 
 * [Handle Block Exception][Block-Handle-Block-Exception]
 * [Handle Workspace Exception][Block-Handle-Workspace-Exception]
 * [Handle Flow Exception][Block-Handle-Flow-Exception]
 * [Throw Exception][Block-Throw-Exception]
 * [End Flow][Block-End-Flow]
+
+### Related Material
+
+* [Exceptions][]
 
 [block level]: {{< ref "#handling-exceptions-at-the-block-level" >}}
 [workspace level]: {{< ref "#handling-exceptions-at-the-workspace-level" >}}
@@ -173,3 +195,5 @@ For more details of throwing exceptions, refer to the [Throw-Exception][Block-Th
 [What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 [Workspace-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}
 
+[Exceptions]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}
+[Exception Data Type]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exceptions" >}}
