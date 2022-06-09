@@ -58,7 +58,9 @@ The [Value][Value Property] to check evaluates to `true` or `false`.
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `false` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Value` with no value |
 
 ## Exceptions
 

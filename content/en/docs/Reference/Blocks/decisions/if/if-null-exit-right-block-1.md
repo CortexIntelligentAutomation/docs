@@ -62,7 +62,9 @@ For information about `null`, please see [Null and Nullable Types][].
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Value` with no value |
 
 ## Exceptions
 
