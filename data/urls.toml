@@ -488,6 +488,10 @@
                 MainDoc = "/docs/reference/data-types/exceptions/"
                 [Cortex.Reference.DataTypes.Exceptions.Exception]
                     MainDoc = "/docs/reference/data-types/exceptions/exception"
+            [Cortex.Reference.DataTypes.Loops]
+                MainDoc = "/docs/reference/data-types/loops/"
+                [Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode]
+                    MainDoc = "/docs/reference/data-types/loops/infinitelooperrorcode"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
