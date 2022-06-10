@@ -170,7 +170,7 @@ For information about format templates and specifiers, please see [Date and Time
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
-| Default Value | No Value (defaults to `""`) |
+| Default Value | `yyyy-MM-ddTHH:mm:ss.fffffffzzz` |
 
 ### Format Provider
 
@@ -184,7 +184,7 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 | Property Type | [Input][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
-| Default Value | No Value (defaults to `null`) |
+| Default Value | `CultureInfo.InvariantCulture` |
 
 ### Text
 
