@@ -60,7 +60,7 @@ The [Value][Value Property] to check evaluates to `true` or `false`.
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
-| Default Value | `($)Value` with no value |
+| Default Value | No value |
 
 ## Exceptions
 

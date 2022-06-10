@@ -64,7 +64,7 @@ For information about `null`, please see [Null and Nullable Types][].
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Variable][TODO] |
-| Default Value | `($)Value` with no value |
+| Default Value | No value |
 
 ## Exceptions
 
