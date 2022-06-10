@@ -70,5 +70,3 @@ TODO: variable link, on page links, glossary, concept links etc.
 #### Encoding
 
 #### Guid
-
-#### EventSeverity
