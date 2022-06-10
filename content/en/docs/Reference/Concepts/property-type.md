@@ -6,21 +6,19 @@ description: "This page describes the concepts of Input, Output and InputOutput 
 
 # {{< param title >}}
 
-TODO: Verify all of this as was written by Louis ages ago.
-
+TODO: Write intro
 This page describes the concept of Input, Output and InputOutput properties.
 
 ## Input
 
-The input property is used to supply the value which will be used by the block.
-It can be a [variable reference][] or a [literal][]
->Existing value of the input property will not get modified during block execution
+Input properties provide values that are used during the execution of a block. They can use an [expression][], a [literal][] value, or be set to a [variable][].
+
+>The value of an input property will not be modified during the execution of a block.
 
 ## Output
 
-The Output property is used to save the result of block execution.
-It can be only a [variable reference][]
->Existing value of the supplied variable will get modified
+Output properties are used to save values returned from the execution of a block. They can be only be set to a [variable][].
+>The value of the supplied variable will be overwritten during the execution of a block.
 
 ### Discarding Output
 
@@ -28,11 +26,9 @@ TODO:
 
 ## InputOutput
 
-TODO: used during block? What did Louis mean.
+InputOutput properties provide values that are used and updated during the execution of a block. They can be only set to a [variable][].
+>The value of the supplied variable will be overwritten or modified during the execution of a block, depending on its function.
 
-The InputOutput property is used to supply the value which will be used during block. It is also used to save the result of block execution.
-It can be only a [variable reference][]
->Existing value of the supplied variable will get modified
-
+[expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
 [literal]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Literal" >}}
-[variable reference]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
+[variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}

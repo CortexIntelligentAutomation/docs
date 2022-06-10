@@ -1,8 +1,11 @@
 # Internal links
 [Cortex]
+    [Cortex.Faqs]
+        MainDoc = "/docs/faqs/"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
+            MainDoc = "/docs/getting-started/on-premise"
             [Cortex.GettingStarted.OnPremise.InstallInnovationOnly]
                 MainDoc = "/docs/getting-started/on-premise/install-innovation-only/"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
@@ -30,13 +33,57 @@
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
     [Cortex.Guides]
+        MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
     [Cortex.Reference]
+        MainDoc = "/docs/reference/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.DateAndTime]
+                MainDoc = "/docs/reference/blocks/date-and-time"
+                [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
+                    MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time"
+                    [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertDateTimeToText]
+                        MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-date-time-to-text-block"
+                    [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime]
+                        MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-text-to-date-time-block"
+            [Cortex.Reference.Blocks.Dictionaries]
+                MainDoc = "/docs/reference/blocks/dictionaries/"
+                [Cortex.Reference.Blocks.Dictionaries.AddItem]
+                    MainDoc = "/docs/reference/blocks/dictionaries/add-item/"
+                    [Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/add-item/add-item-with-key-block-3"
+                [Cortex.Reference.Blocks.Dictionaries.ContainsItem]
+                    MainDoc = "/docs/reference/blocks/dictionaries/contains-item/"
+                    [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKeyAndValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-item-with-key-and-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-item-with-value-block-3"
+                [Cortex.Reference.Blocks.Dictionaries.GetCount]
+                    MainDoc = "/docs/reference/blocks/dictionaries/get-count/"
+                    [Cortex.Reference.Blocks.Dictionaries.GetCount.GetCountOfItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-count/get-count-of-items-with-value-block-3"
+                [Cortex.Reference.Blocks.Dictionaries.RemoveItem]
+                    MainDoc = "/docs/reference/blocks/dictionaries/remove-item/"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemWithValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-item-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-items-with-value-block-3"
+                [Cortex.Reference.Blocks.Dictionaries.SetItem]
+                    MainDoc = "/docs/reference/blocks/dictionaries/set-item/"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetAllItems]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-all-items-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-item-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemWithValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-item-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-value-block-3"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -87,6 +134,34 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.ReadFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/read-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.ReadFile.ReadAllLines]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/read-file/read-all-lines-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.ReadFile.ReadAllText]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/read-file/read-all-text-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.SearchFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/search-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.SearchFile.SearchFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/search-file/search-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.SearchFile.SearchFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/search-file/search-files-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.WriteFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/write-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.WriteFile.WriteAllLines]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/write-file/write-all-lines-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.WriteFile.WriteAllText]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/write-file/write-all-text-block"
+            [Cortex.Reference.Blocks.Flows]
+                MainDoc = "/docs/reference/blocks/flows"
+                [Cortex.Reference.Blocks.Flows.EndFlow]
+                    MainDoc = "/docs/reference/blocks/flows/end-flow"
+                    [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
+                        MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
+                [Cortex.Reference.Blocks.Flows.StartFlow]
+                    MainDoc = "/docs/reference/blocks/flows/start-flow"
+                    [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
+                        MainDoc = "/docs/reference/blocks/flows//start-flow/start-flow-block"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -95,6 +170,56 @@
                         MainDoc = "/docs/reference/blocks/json/convert-json/convert-json-to-object-block"
                     [Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson]
                         MainDoc = "/docs/reference/blocks/json/convert-json/convert-object-to-json-block"
+            [Cortex.Reference.Blocks.Lists]
+                MainDoc = "/docs/reference/blocks/lists/"
+                [Cortex.Reference.Blocks.Lists.AddItem]
+                    MainDoc = "/docs/reference/blocks/lists/add-item/"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-index-block-2"
+                [Cortex.Reference.Blocks.Lists.ContainsItem]
+                    MainDoc = "/docs/reference/blocks/lists/contains-item/"
+                    [Cortex.Reference.Blocks.Lists.ContainsItem.ContainsItemWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/contains-item/contains-item-with-value-block-2"
+                [Cortex.Reference.Blocks.Lists.GetCount]
+                    MainDoc = "/docs/reference/blocks/lists/get-count/"
+                    [Cortex.Reference.Blocks.Lists.GetCount.GetCountOfItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/get-count/get-count-of-items-with-value-block-2"
+                [Cortex.Reference.Blocks.Lists.GetIndex]
+                    MainDoc = "/docs/reference/blocks/lists/get-index/"
+                    [Cortex.Reference.Blocks.Lists.GetIndex.GetIndexOfItemWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/get-index/get-index-of-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/get-index/get-indexes-of-items-with-value-block-2"
+                [Cortex.Reference.Blocks.Lists.RemoveItem]
+                    MainDoc = "/docs/reference/blocks/lists/remove-item/"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-with-value-block-2"
+                [Cortex.Reference.Blocks.Lists.SetItem]
+                    MainDoc = "/docs/reference/blocks/lists/set-item/"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetAllItems]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-all-items-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-item-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-item-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-item-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValue]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-value-block-2"
+            [Cortex.Reference.Blocks.Loops]
+                MainDoc = "/docs/reference/blocks/loops"
+                [Cortex.Reference.Blocks.Loops.For]
+                    MainDoc = "/docs/reference/blocks/loops/for"
+                    [Cortex.Reference.Blocks.Loops.For.ForLoop]
+                        MainDoc = "/docs/reference/blocks/loops/for/for-loop-block"
             [Cortex.Reference.Blocks.Objects]
                 MainDoc = "/docs/reference/blocks/objects/"
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
@@ -104,32 +229,50 @@
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
-                MainDoc = "/docs/reference/blocks/text/add-text/"
+                    MainDoc = "/docs/reference/blocks/text/add-text/"
                     [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
-                    MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
-                    Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
+                        MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
+                        Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
+                [Cortex.Reference.Blocks.Text.ConvertTo]
+                    MainDoc = "/docs/reference/blocks/text/convert-to/"
+                    [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToCamelCase]
+                        MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-camel-case-block/"
+                    [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToLowerCase]
+                        MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-lower-case-block/"
+                    [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToPascalCase]
+                        MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-pascal-case-block/"
+                    [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToTitleCase]
+                        MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-title-case-block/"
+                    [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase]
+                        MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-upper-case-block/"
+            [Cortex.Reference.Blocks.Variables]
+                MainDoc = "/docs/reference/blocks/variables/"
+                [Cortex.Reference.Blocks.Variables.SetVariable]
+                    MainDoc = "/docs/reference/blocks/variables/set-variable/"
+                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
+                       MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
             [Cortex.Reference.Blocks.Workspaces]
                 MainDoc = "/docs/reference/blocks/workspaces/"
                 [Cortex.Reference.Blocks.Workspaces.StartWorkspace]
-                MainDoc = "/docs/reference/blocks/workspaces/start-workspace"
+                    MainDoc = "/docs/reference/blocks/workspaces/start-workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.StartWorkspaceBlock]
-                    MainDoc = "/docs/reference/blocks/workspaces/start-workspace/start-workspace-block"
+                        MainDoc = "/docs/reference/blocks/workspaces/start-workspace/start-workspace-block"
                 [Cortex.Reference.Blocks.Workspaces.EndWorkspace]
-                MainDoc = "/docs/reference/blocks/workspaces/end-workspace"
+                    MainDoc = "/docs/reference/blocks/workspaces/end-workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.EndWorkspaceBlock]
-                    MainDoc = "/docs/reference/blocks/workspaces/end-workspace/end-workspace-block"
+                        MainDoc = "/docs/reference/blocks/workspaces/end-workspace/end-workspace-block"
                 [Cortex.Reference.Blocks.Workspaces.Workspace]
-                MainDoc = "/docs/reference/blocks/workspaces/workspace"
+                    MainDoc = "/docs/reference/blocks/workspaces/workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
-                    MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
-            [Cortex.Reference.Blocks.Xml]
+                        MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
+                [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
-                MainDoc = "/docs/reference/blocks/xml/convert-xml/"
+                    MainDoc = "/docs/reference/blocks/xml/convert-xml/"
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock]
-                    MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
+                        MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock]
-                    MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
+                        MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.Fundamentals]
                 MainDoc = "/docs/reference/concepts/fundamentals/"
@@ -145,15 +288,35 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
+                ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"
                 Structures = "/docs/reference/concepts/collections/#structures"
                 Keys = "/docs/reference/concepts/collections/#keys"
                 Items = "/docs/reference/concepts/collections/#items"
+            [Cortex.Reference.Concepts.WorkingWithCulture]
+                MainDoc = "/docs/reference/concepts/culture/"
+                [Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture]
+                    MainDoc = "/docs/reference/concepts/culture/current-culture"
             [Cortex.Reference.Concepts.WorkingWithDateAndTime]
                 MainDoc = "/docs/reference/concepts/date-and-time/"
+                [Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting]
+                    MainDoc = "/docs/reference/concepts/date-and-time/date-and-time-formatting/"
+                    FormatProviders = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-providers"
+                    InvariantCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#invariant-culture"
+                    CurrentCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#current-culture"
+                    FormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-templates"
+                    StandardFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#standard-format-templates"
+                    ISO8601Standard = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#iso-8601-standard"
+                    CustomFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#custom-format-templates"
+                    FormatSpecifiers = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-specifiers"
+                    OperatingSystemSettings = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#operating-system-settings"
+            [Cortex.Reference.Concepts.WorkingWithEnums]
+                MainDoc = "/docs/reference/concepts/enums/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
                 MainDoc = "/docs/reference/concepts/exceptions/"
             [Cortex.Reference.Concepts.WorkingWithFilesAndFolders]
                 MainDoc = "/docs/reference/concepts/files-and-folders/"
+            [Cortex.Reference.Concepts.WorkingWithLoops]
+                MainDoc = "/docs/reference/concepts/loops/"
             [Cortex.Reference.Concepts.WorkingWithNumbers]
                 MainDoc = "/docs/reference/concepts/numbers/"
             [Cortex.Reference.Concepts.WorkingWithText]
@@ -165,9 +328,6 @@
                 MainDoc = "/docs/reference/concepts/variables/"
             [Cortex.Reference.Concepts.WorkingWithReferences]
                 MainDoc = "/docs/reference/concepts/references/"
-            [Cortex.Reference.Concepts.DateAndTimeFormats]
-                MainDoc = "/docs/reference/concepts/date-and-time-formats/"
-                InvariantCulture = "/docs/reference/concepts/date-and-time-formats/#invariant-culture"
             [Cortex.Reference.Concepts.ExceptionHandling]
                 MainDoc = "/docs/reference/concepts/exception-handling/"
             [Cortex.Reference.Concepts.FileAndFolderAttributes]
@@ -178,12 +338,8 @@
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.Indexes]
                 MainDoc = "/docs/reference/concepts/indexes/"
-            [Cortex.Reference.Concepts.ISO8601Standard]
-                MainDoc = "/docs/reference/concepts/iso-8601-standard/"
             [Cortex.Reference.Concepts.WorkingWithDataSources]
                 MainDoc = "/docs/reference/concepts/working-with-data-sources/"
-            [Cortex.Reference.Concepts.WorkingWithDatesAndTime]
-                MainDoc = "/docs/reference/concepts/working-with-dates-and-time/"
             [Cortex.Reference.Concepts.Keys]
                 MainDoc = "/docs/reference/concepts/keys/"
             [Cortex.Reference.Concepts.LiteralVariablesExpressions]
@@ -200,6 +356,8 @@
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]
                 MainDoc = "/docs/reference/concepts/object-casting/"
+                ImplicitCasting = "/docs/reference/concepts/object-casting/#implicit-cast"
+                ExplicitCasting = "/docs/reference/concepts/object-casting/#explicit-cast"
             [Cortex.Reference.Concepts.ObjectEquality]
                 MainDoc = "/docs/reference/concepts/object-equality/"
                 [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]
@@ -244,39 +402,22 @@
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
-                Array = "/docs/reference/data-types/most-common/#array"
-                Boolean = "/docs/reference/data-types/most-common/#boolean"
                 ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
-                DateTime = "/docs/reference/data-types/most-common/#datetime"
-                DateTimeComponentType = "/docs/reference/data-types/most-common/#datetimecomponenttype"
-                DateTimeOffset = "/docs/reference/data-types/most-common/#datetimeoffset"
-                DayOfWeek = "/docs/reference/data-types/most-common/#dayofweek"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
-                Double = "/docs/reference/data-types/most-common/#double"
-                dynamic = "/docs/reference/data-types/most-common/#dynamic"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
-                Exceptions = "/docs/reference/data-types/most-common/#exceptions"
-                Exception = "/docs/reference/data-types/most-common/#exception"
+                EventSeverity = "/docs/reference/data-types/most-common/#eventseverity"
                 FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
                 FileMatch = "/docs/reference/data-types/most-common/#filematch"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
-                IDictionary = "/docs/reference/data-types/most-common/#idictionaryltknbspvgt"
-                IEnumerable = "/docs/reference/data-types/most-common/#ienumerablelttgt"
+                Guid = "/docs/reference/data-types/most-common/#guid"
                 IFormatProvider = "/docs/reference/data-types/most-common/#iformatprovider"
-                IList = "/docs/reference/data-types/most-common/#ilistlttgt"
                 JsonSerializerSettings = "/docs/reference/data-types/most-common/#jsonserializersettings"
-                List = "/docs/reference/data-types/most-common/#listlttgt"
-                Lists = "/docs/reference/data-types/most-common/#lists"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
-                Int32 = "/docs/reference/data-types/most-common/#int32"
-                Object = "/docs/reference/data-types/most-common/#object"
+                Lists = "/docs/reference/data-types/most-common/#lists"
+                Nullable = "/docs/reference/data-types/most-common/#nullable"
                 SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
-                String = "/docs/reference/data-types/most-common/#string"
                 StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
-                Structure = "/docs/reference/data-types/most-common/#structure"
-                TimePeriod = "/docs/reference/data-types/most-common/#timeperiod"
-                TimeSpan = "/docs/reference/data-types/most-common/#timespan"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -285,6 +426,28 @@
                     MainDoc = "/docs/reference/data-types/all/dynamic"
             [Cortex.Reference.DataTypes.Collections]
                 MainDoc = "/docs/reference/data-types/collections"
+                [Cortex.Reference.DataTypes.Collections.Array]
+                    MainDoc = "/docs/reference/data-types/collections/array"
+                [Cortex.Reference.DataTypes.Collections.IDictionary]
+                    MainDoc = "/docs/reference/data-types/collections/idictionary-2"
+                [Cortex.Reference.DataTypes.Collections.Dictionary]
+                    MainDoc = "/docs/reference/data-types/collections/dictionary-2"
+                    CreateNew = "/docs/reference/data-types/collections/dictionary-2#create-a-dictionarylttkey-titemgt"
+                    ConvertToText = "/docs/reference/data-types/collections/dictionary-2#convert-dictionarylttkey-titemgt-to-text"
+                [Cortex.Reference.DataTypes.Collections.IEnumerable]
+                    MainDoc = "/docs/reference/data-types/collections/ienumerable"
+                [Cortex.Reference.DataTypes.Collections.IEnumerable_TItem]
+                    MainDoc = "/docs/reference/data-types/collections/ienumerable-1"
+                [Cortex.Reference.DataTypes.Collections.IList]
+                    MainDoc = "/docs/reference/data-types/collections/ilist-1"
+                [Cortex.Reference.DataTypes.Collections.List]
+                    MainDoc = "/docs/reference/data-types/collections/list-1"
+                    CreateNew = "/docs/reference/data-types/collections/list-1#create-a-listlttitemgt"
+                    ConvertToText = "/docs/reference/data-types/collections/list-1#convert-listlttitemgt-to-text"
+                [Cortex.Reference.DataTypes.Collections.Structure]
+                    MainDoc = "/docs/reference/data-types/collections/structure"
+                    CreateNew = "/docs/reference/data-types/collections/structure#create-a-structure"
+                    ConvertToText = "/docs/reference/data-types/collections/structure#convert-structure-to-text"
             [Cortex.Reference.DataTypes.ConditionalLogic]
                 MainDoc = "/docs/reference/data-types/conditional-logic/"
                 [Cortex.Reference.DataTypes.ConditionalLogic.Boolean]
@@ -310,6 +473,24 @@
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
                 [Cortex.Reference.DataTypes.Data.ConnectionType]
                     MainDoc = "/docs/reference/data-types/data/connectiontype"
+            [Cortex.Reference.DataTypes.DateAndTime]
+                MainDoc = "/docs/reference/data-types/date-and-time/"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTime]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetime"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTimeComponentType]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetimecomponenttype"
+                [Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset]
+                    MainDoc = "/docs/reference/data-types/date-and-time/datetimeoffset"
+                [Cortex.Reference.DataTypes.DateAndTime.DayOfWeek]
+                    MainDoc = "/docs/reference/data-types/date-and-time/dayofweek"
+                [Cortex.Reference.DataTypes.DateAndTime.TimePeriod]
+                    MainDoc = "/docs/reference/data-types/date-and-time/timeperiod"
+                [Cortex.Reference.DataTypes.DateAndTime.TimeSpan]
+                    MainDoc = "/docs/reference/data-types/date-and-time/timespan"
+            [Cortex.Reference.DataTypes.Exceptions]
+                MainDoc = "/docs/reference/data-types/exceptions/"
+                [Cortex.Reference.DataTypes.Exceptions.Exception]
+                    MainDoc = "/docs/reference/data-types/exceptions/exception"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
@@ -324,8 +505,11 @@
                     MainDoc = "/docs/reference/data-types/numbers/single"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
+                [Cortex.Reference.DataTypes.Text.Char]
+                    MainDoc = "/docs/reference/data-types/text/char"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
+                    CreateNew = "/docs/reference/data-types/text/string#create-a-string"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
@@ -342,8 +526,6 @@
                         MainDoc = "/docs/reference/exceptions/common/property/propertynullexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
-                    [Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException]
-                        MainDoc = "/docs/reference/exceptions/common/property/invalidpropertyvalueexception/"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
@@ -377,6 +559,13 @@
                     PathExceptions = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#path-exceptions"
                     IndexesOfDuplicatePaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-duplicate-paths"
                     IndexesOfNullOrEmptyPaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-null-or-empty-paths"
+            [Cortex.Reference.Exceptions.Flows]
+                MainDoc = "/docs/reference/exceptions/flows/"
+                [Cortex.Reference.Exceptions.Flows.Blocks]
+                    MainDoc = "/docs/reference/exceptions/flows/blocks/"
+                    [Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException]
+                        MainDoc = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/"
+                        ValueIsInvalid = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/#value-is-invalid"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
             [Cortex.Reference.Exceptions.Lists]
@@ -388,7 +577,10 @@
             [Cortex.Reference.Exceptions.Loops]
                 MainDoc = "/docs/reference/exceptions/loops/"
                     [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
-                        MainDoc = "/docs/reference/exceptions/loops/infiniteloopexception/"
+                        MainDoc = "/docs/reference/exceptions/loops/infinite-loop-exception/"
+                        IncrementIsZero = "/docs/reference/exceptions/loops/infinite-loop-exception/#100"
+                        IncrementIsNegative = "/docs/reference/exceptions/loops/infinite-loop-exception/#101"
+                        IncrementIsPositive = "/docs/reference/exceptions/loops/infinite-loop-exception/#102"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
@@ -452,6 +644,28 @@
                 MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
+    [Cortex.Tutorials]
+        MainDoc = "/docs/tutorials/"
+    [Cortex.Website]
+        [Cortex.Website.Customers]
+            MainDoc = "https://www.cortex-ia.com/customer-success-stories/"
+        [Cortex.Website.EngageWithUs]
+            MainDoc = "https://www.cortex-ia.com/contact-form/"
+            AccelerationProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program"
+            DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
+            Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
+            LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+        [Cortex.Website.Industries]
+            MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
+            Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"
+            It = "https://www.cortex-ia.com/itops-aiops-enterprise-services-automation/"
+            Telco = "https://www.cortex-ia.com/telecommunications-automation/"
+        [Cortex.Website.UseCases]
+            MainDoc = "https://www.cortex-ia.com/download-centre/"
+    [Cortex.YouTube]
+        MainDoc = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
+        [Cortex.YouTube.Webinars]
+            MainDoc = "https://www.youtube.com/playlist?list=PLPBEMXlXxB_oFKNwxwrXtXzU-WBvgAgz7"
 # External links
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
@@ -475,12 +689,19 @@
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
+        Array = "https://docs.microsoft.com/en-us/dotnet/api/system.array"
         FormatException = "https://docs.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         StringComparison = "https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://docs.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
+        [MSDocs.DotNet.Api.System.Char]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.char"
+        [MSDocs.DotNet.Api.System.Collections]
+            IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable"
         [MSDocs.DotNet.Api.System.Collections.Generic]
-            IEnumerable = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
+            IDictionary = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2"
+            Dictionary = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2"
+            IEnumerable_TItem = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
         [MSDocs.DotNet.Api.System.Convert]
@@ -492,10 +713,49 @@
             ToInt64 = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.toint64"
             ToSingle = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tosingle"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring"
+            ToStringObjectFormatProvider = "https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring?#system-convert-tostring(system-object-system-iformatprovider)"
         [MSDocs.DotNet.Api.System.Boolean]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean"
             Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.parse"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.boolean.tostring"
+        [MSDocs.DotNet.Api.System.DateTime]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime"
+            InitializingADateTimeObject = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime?#initializing-a-datetime-object"
+            Ctors = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.-ctor"
+            Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parse"
+            Now = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.now"
+            UtcNow = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.utcnow"
+            MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.minvalue"
+            ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.datetime.ToString"
+        [MSDocs.DotNet.Api.System.DateTimeOffset]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset"
+            InstantiatingADateTimeOffsetObject = "https://docs.microsoft.com/en-us/dotnet/standard/datetime/instantiating-a-datetimeoffset-object"
+            Ctors = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.-ctor"
+            Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse"
+            Now = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.now"
+            UtcNow = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcnow"
+            DateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.datetime"
+            LocalDateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.localdatetime"
+            UtcDateTime = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcdatetime"
+            MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.minvalue"
+            ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.ToString"
+            ShortDateFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortDate"
+            ShortTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortTime"
+            LongDateFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongDate"
+            LongTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongTime"
+            FullDateShortTime = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateShortTime"
+            FullDateLongTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateLongTime"
+            GeneralDateShortTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateShortTime"
+            GeneralDateLongTimeFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateLongTime"
+            RoundTripFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip"
+            RFC1123Format = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#RFC1123"
+            SortableFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Sortable"
+            UniversalSortableFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#UniversalSortable"
+            UniversalFullFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#UniversalFull"
+            MonthDayFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#MonthDay"
+            YearMonthFormat = "https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#YearMonth"
+        [MSDocs.DotNet.Api.System.DayOfWeek]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.dayofweek"
         [MSDocs.DotNet.Api.System.Double]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.double"
             MaxValue = "https://docs.microsoft.com/en-us/dotnet/api/system.double.maxvalue"
@@ -504,6 +764,13 @@
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.double.tostring"
         [MSDocs.DotNet.Api.System.dynamic]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/using-type-dynamic"
+        [MSDocs.DotNet.Api.System.Enum]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.enum"
+            Parse = "https://docs.microsoft.com/en-us/dotnet/api/system.enum.parse"
+            ToObject = "https://docs.microsoft.com/en-us/dotnet/api/system.enum.toobject"
+            ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.enum.tostring"
+            InstantiatingAnEnum = "https://docs.microsoft.com/en-us/dotnet/api/system.enum?#instantiating-an-enumeration-type"
+            FormattingEnumerationValues = "https://docs.microsoft.com/en-us/dotnet/api/system.enum?#formatting-enumeration-values"
         [MSDocs.DotNet.Api.System.Int16]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.int16"
             MaxValue = "https://docs.microsoft.com/en-us/dotnet/api/system.int16.maxvalue"
@@ -542,6 +809,9 @@
             Format = "https://docs.microsoft.com/en-us/dotnet/api/system.string.format"
             Insert = "https://docs.microsoft.com/en-us/dotnet/api/system.string.insert"
             Join = "https://docs.microsoft.com/en-us/dotnet/api/system.string.join"
+        [MSDocs.DotNet.Api.System.TimeSpan]
+            MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.timespan"
+            MinValue = "https://docs.microsoft.com/en-us/dotnet/api/system.timespan.minvalue"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]

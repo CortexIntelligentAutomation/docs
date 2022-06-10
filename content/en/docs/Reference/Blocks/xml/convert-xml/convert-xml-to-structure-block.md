@@ -162,7 +162,7 @@ The [Xml][Xml Property] to convert into a [Structure][Structure Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Xml` with value `""` |
+| Default Value | `($)Xml` with no value |
 
 ### Structure
 
@@ -315,7 +315,7 @@ This example will only occur when a [Structure][Structure Property] is Converted
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [XmlSerializationException]: {{< url "Cortex.Reference.Exceptions.Xml.XmlSerializationException" >}}
 
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}

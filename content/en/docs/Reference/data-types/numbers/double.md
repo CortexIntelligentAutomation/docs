@@ -27,7 +27,6 @@ The `Double` data type is used to represent a fractional, or very large or small
 |                        | `Int64`, as long as value is from `-9,223,372,036,854,775,808` through `9,223,372,036,854,775,807` (e.g. `(Int64)9223372036854775807` or `(System.Int64)9223372036854775807` or `(long)9223372036854775807`) |
 |                        | `Single`, as long as value is from `-3.402823e+38` through `3.402823e+38` (e.g. `(Single)3.402823e+38` or `(System.Single)3.402823e+38` or `(float)3.402823e+38`)  |
 
-
 ## Remarks
 
 ### Create a Double
@@ -74,7 +73,7 @@ None
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
 * [Int16][]
 * [Int32][]

@@ -18,8 +18,8 @@ The `String` data type is used to represent text.
 | **Name:**              | `String`                                                      |
 | **Full Name:**         | `System.String`                                               |
 | **Alias:**             | `string`                                                      |
-| **Description:**       | A sequence of unicode characters, surrounded by double quotes (e.g. `"This is a string"`) |
-| **Size:**              | Varies depending upon the number of characters it contains    |
+| **Description:**       | A sequence of unicode [characters][Char], surrounded by double quotes (e.g. `"This is a string"`) |
+| **Size:**              | Varies depending upon the number of [characters][Char] it contains    |
 | **Default Value:**     | `null`                                                        |
 | **Can be used as:**    | `IEnumerable`, `IEnumerable<Char>`, `Object`, `dynamic`       |
 | **Can be cast to:**    | N/A                                                           |
@@ -53,9 +53,9 @@ None
 
 ## See Also
 
-### Related Types
+### Related Data Types
 
-None
+* [Char][]
 
 ### Related Concepts
 
@@ -68,6 +68,8 @@ None
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+
+[Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 
 [System.String]: {{< url "MSDocs.DotNet.Api.System.String.MainDoc" >}}
 [String.Concat]: {{< url "MSDocs.DotNet.Api.System.String.Concat" >}}
