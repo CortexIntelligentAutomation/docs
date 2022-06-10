@@ -13,12 +13,14 @@
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server#install-gateway"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
                     ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#client-requirements"
+                    LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
                     [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
@@ -27,6 +29,7 @@
                         ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
                         ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
                         CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
+                        EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
     [Cortex.Guides]

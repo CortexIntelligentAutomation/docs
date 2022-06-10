@@ -41,6 +41,57 @@ The prerequisites required for each server role (as described in [Architecture][
 
 All servers must be on the same domain and cannot be domain controllers.
 
+## DNS Requirements
+
+The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured  on the DNS server for all of your servers (Web, Application and Load Balancer).
+
+## Licensing Requirements
+
+A valid Cortex licence file must be procured from Cortex. This should contain fingerprints for the Web Application Server and each Application Server. To get a licence file take the following steps:
+
+1. Copy the following template to a text file:
+
+    ```text
+    Web Application Server
+    MachineID: 
+    Fingerprint: 
+
+    Application Server 1
+    MachineID: 
+    Fingerprint: 
+
+    Application Server 2
+    MachineID: 
+    Fingerprint: 
+
+    Application Server 3
+    MachineID: 
+    Fingerprint: 
+    ```
+
+1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
+1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the Web Application server.
+1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
+
+    ```text
+    MachineID: WEBAPP-SERVER
+    Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
+    ```
+
+1. Copy the output (machine identifier and fingerprint) to the `Web Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
+1. For each Application Server take the following steps:
+    1. Copy `Cortex.Licensing.FingerprintGeneration.exe` to the Application server.
+    1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
+
+        ```text
+        MachineID: HA-SERVER1
+        Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
+        ```
+
+    1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
+1. Request a licence by raising a case in the [Cortex Service Portal](https://support.cortex.co.uk/), including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
+
 ## Additional Load Balancer Server Requirements
 
 ### Alternative Load Balancer Requirements
@@ -48,7 +99,7 @@ All servers must be on the same domain and cannot be domain controllers.
 Innovation has a [gobetween](https://github.com/yyyar/gobetween) load balancer included, however it is possible to use an alternative load balancer. The requirements for installing an alternative load balancer are as follows:
 
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
-* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Evolution - Innovation 2022.5 - Application Server Installation Scripts`) that returns 1 for healthy and 0 for unhealthy.
+* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation 2022.6 - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
 * Must be able to access each of the Application Servers via HTTPS.
 * Ideally it should be highly available to avoid a single point of failure in the system.
 
@@ -162,15 +213,15 @@ Supported versions of Active Directory are listed below:
 
 | Version                    | Verified?      | Supported From | Supported Until  |  
 |----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2003 R2     |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2008        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2012        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2016        |      ✓        | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2019        |                | Cortex v2022.5 | To be evaluated  |
-| Windows Server 2022        |                | Cortex v2022.5 | To be evaluated  |
+| Windows Server 2003        |      ✓        | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2003 R2     |                | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2008        |                | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2012        |                | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2016        |      ✓        | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2019        |                | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2022        |                | Cortex v2022.6 | To be evaluated  |
 
 #### Certificate Requirements
 
