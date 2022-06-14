@@ -366,4 +366,4 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
 [ContentOptions]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.ContentOptions.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}

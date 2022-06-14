@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | StringComparison | 4 bytes | TODO |
 | | SearchOptions | 4 bytes | TODO |
 | | IFormatProvider | Varies | TODO |
 | | CultureInfo | Varies | TODO |
@@ -25,8 +24,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### StringComparison
 
 #### IFormatProvider
 

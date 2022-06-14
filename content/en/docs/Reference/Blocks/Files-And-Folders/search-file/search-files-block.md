@@ -504,7 +504,7 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}

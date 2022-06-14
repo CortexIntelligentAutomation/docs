@@ -412,7 +412,6 @@
                 Lists = "/docs/reference/data-types/most-common/#lists"
                 Nullable = "/docs/reference/data-types/most-common/#nullable"
                 SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
-                StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -527,6 +526,8 @@
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
+                [Cortex.Reference.DataTypes.Text.StringComparison]
+                    MainDoc = "/docs/reference/data-types/text/stringcomparison"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
