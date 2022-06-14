@@ -102,6 +102,49 @@ If the installation fails with `Root certificate verification failed as no root 
 
 1. Run the installation script again.
 
+### RabbitMQ commands not succeeding
+
+When running the installation, if you get errors similar to the following:
+
+``` shell
+Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt 1
+Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt 2
+Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt ...
+Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt 20
+```
+
+It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [Cortex Service Desk](https://support.cortex.co.uk/).
+
+To work around this error, either uninstall the platform and reinstall it using a different certificate, otherwise disable peer-to-peer verification in RabbitMQ by carrying out the following steps:
+
+1. Uninstall the platform by taking the following steps:
+    1. Open a Windows PowerShell (x64) window as administrator.
+    1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+
+        ```powershell
+        cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
+        ```
+
+    1. Uninstall the platform by running the following command:
+
+        ```powershell
+        .\Cortex.Innovation.Uninstall.ps1
+        ```
+
+    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
+    1. Wait for the command to finish.
+1. In the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, navigate to `Resources`.
+1. Backup the file `RabbitMqInterNodePublicTemplate.config` and then open it with a text editor.
+1. Replace both instances of the text `verify_peer` with the text `verify_none`.
+1. Change the value of both occurrences of `fail_if_no_peer_cert` to `false` so that they resemble the following:
+
+    ```shell
+    {fail_if_no_peer_cert, false},
+    ```
+
+1. Save and close `RabbitMqInterNodePublicTemplate.config`.
+1. Re-run the installation script.
+
 ## Troubleshooting issues after installation {#ts-after-installation}
 
 ### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
@@ -127,11 +170,11 @@ Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self
 Ensure that the HA Services are healthy by following these steps:
 
 1. Log on to one of the Application servers and open a web browser.
-1. Navigate to https://ha-server.domain.com:9080/Explorer, where `ha-server.domain.com` is the fully qualified domain name of any server within the HA cluster. Replace 9080 with new httpGatewayEndpointPort value if it was changed during configuration.
+1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of any server within the HA cluster. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
-    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the CortexServerCertificate from the Personal store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
+    If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the CortexServerCertificate from the `Personal` store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
 
-    The screen should resemble that in the following figure, all services should have Health State = OK and Status = Active. All instances below the service should have Health State = OK and Status = Ready.
+    The screen should resemble that in the following figure, all services should have `Health State = OK` and `Status = Active`. All instances below the service should have Health State = OK and Status = Ready.
 
     {{< figure src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer" >}}
 
