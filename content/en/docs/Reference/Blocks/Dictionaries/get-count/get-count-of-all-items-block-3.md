@@ -49,7 +49,9 @@ The [Dictionary][Dictionary Property] to get the [Count][Count Property] of all 
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Count
 
@@ -59,6 +61,8 @@ The [Count][Count Property] of all items in [Dictionary][Dictionary Property].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Count` with no value |
 
 ## Exceptions

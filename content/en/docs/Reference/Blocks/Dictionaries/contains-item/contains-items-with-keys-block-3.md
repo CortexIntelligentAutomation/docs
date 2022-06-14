@@ -72,7 +72,9 @@ The [Dictionary][Dictionary Property] to check whether it contains at least one 
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Keys
 
@@ -86,7 +88,9 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TKey][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Keys` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Contains Items
 
@@ -98,6 +102,8 @@ If [Dictionary][Dictionary Property] contains at least one item with each of the
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)ContainsItems` with no value |
 
 ## Exceptions

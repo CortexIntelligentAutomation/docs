@@ -68,7 +68,9 @@ The [Dictionary][Dictionary Property] where all items are removed from.
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ## Exceptions
 

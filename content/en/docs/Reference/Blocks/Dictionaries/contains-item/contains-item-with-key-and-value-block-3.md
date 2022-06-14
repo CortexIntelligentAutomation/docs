@@ -74,7 +74,9 @@ The [Dictionary][Dictionary Property] to check whether it contains at least one 
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Key
 
@@ -88,7 +90,9 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [TKey][] |
 | Property Type | [Input][] |
-| Default Value | `($)Key` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Value
 
@@ -100,7 +104,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Contains Item
 
@@ -112,6 +118,8 @@ If [Dictionary][Dictionary Property] contains at least one item with the specifi
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)ContainsItem` with no value |
 
 ## Exceptions

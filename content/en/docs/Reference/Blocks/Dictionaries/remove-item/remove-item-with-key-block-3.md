@@ -102,7 +102,9 @@ The [Dictionary][Dictionary Property] to remove the specified [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Key
 
@@ -116,7 +118,9 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [TKey][] |
 | Property Type | [Input][] |
-| Default Value | `($)Key` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Occurrence
 
@@ -132,7 +136,9 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Occurrence` with value `1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `1` |
 
 ## Exceptions
 

@@ -52,8 +52,9 @@ Items are considered matching if they have any of the specified [Keys][Keys Prop
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Dictionary` with value `{}` |
-
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 ### Keys
 
 The [Keys][Keys Property] the items to set must have one of.
@@ -64,7 +65,9 @@ For information and examples of how it is determined whether an item has a speci
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TKey][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Keys` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### New Values
 
@@ -78,7 +81,9 @@ The number of items in [New Values][NewValues Property] must match the number of
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)NewValues` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 

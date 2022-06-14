@@ -82,7 +82,9 @@ The [Dictionary][Dictionary Property] to get the specified [Occurrence][Occurren
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Key
 
@@ -96,7 +98,9 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [TKey][] |
 | Property Type | [Input][] |
-| Default Value | `($)Key` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Occurrence
 
@@ -112,7 +116,9 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Occurrence` with value `1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `1` |
 
 ### Item
 
@@ -122,6 +128,8 @@ The specified [Occurrence][Occurrence Property] of [Item][Item Property] with th
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Item` with no value |
 
 ## Exceptions

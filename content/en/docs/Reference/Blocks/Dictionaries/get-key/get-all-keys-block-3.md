@@ -49,7 +49,9 @@ The [Dictionary][Dictionary Property] to get all [Keys][Keys Property] from.
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Keys
 
@@ -59,6 +61,8 @@ The [Keys][Keys Property] in the [Dictionary][Dictionary Property].
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TKey][]&gt; |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Keys` with no value |
 
 ## Exceptions
