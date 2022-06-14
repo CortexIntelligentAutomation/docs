@@ -493,6 +493,8 @@
                 MainDoc = "/docs/reference/data-types/files-and-folders/"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
             [Cortex.Reference.DataTypes.Logs]
                 MainDoc = "/docs/reference/data-types/logs/"
                 [Cortex.Reference.DataTypes.Logs.EventSeverity]
