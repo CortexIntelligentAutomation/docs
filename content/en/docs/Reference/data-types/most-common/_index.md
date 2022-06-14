@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| Json | JsonSerializerSettings |  | Settings used to control how to convert objects to Json and vice versa |
 | | StringComparison | 4 bytes | TODO |
 | | SearchOptions | 4 bytes | TODO |
 | | IFormatProvider | Varies | TODO |
@@ -26,10 +25,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### JsonSerializerSettings
-
-TODO: Need to have a link to default settings and explain that convert object to json sets formatting.indented
 
 #### StringComparison
 
