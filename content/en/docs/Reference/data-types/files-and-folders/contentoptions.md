@@ -12,6 +12,12 @@ description: "Used to define whether the Get Folder Content block should get fil
 
 ## Summary
 
+## Values
+
+### Files
+
+### Folders
+
 ## Remarks
 
 ### Create an ContentOptions
