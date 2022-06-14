@@ -528,6 +528,8 @@
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
                 [Cortex.Reference.DataTypes.Text.StringComparison]
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
+                    [Cortex.Reference.DataTypes.Text.StringSplitOptions]
+                    MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
