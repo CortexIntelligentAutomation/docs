@@ -12,6 +12,20 @@ description: "Used to represent the severity of an event when it is logged."
 
 ## Summary
 
+## Values
+
+### Verbose
+
+### Debug
+
+### Information
+
+### Warning
+
+### Error
+
+### Fatal
+
 ## Remarks
 
 ### Create an EventSeverity
