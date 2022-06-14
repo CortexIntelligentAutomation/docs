@@ -402,7 +402,6 @@
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
-                ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
@@ -491,6 +490,8 @@
                     MainDoc = "/docs/reference/data-types/exceptions/exception"
             [Cortex.Reference.DataTypes.FilesAndFolders]
                 MainDoc = "/docs/reference/data-types/files-and-folders/"
+                [Cortex.Reference.DataTypes.FilesAndFolders.ContentOptions]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/contentoptions"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]

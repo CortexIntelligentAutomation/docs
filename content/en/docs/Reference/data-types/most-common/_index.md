@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | ContentOptions | 4 bytes | TODO |
 | | FileMatch | Varies | TODO |
 | Json | JsonSerializerSettings |  | Settings used to control how to convert objects to Json and vice versa |
 | | StringComparison | 4 bytes | TODO |
@@ -28,8 +27,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### ContentOptions
 
 #### FileMatch
 
