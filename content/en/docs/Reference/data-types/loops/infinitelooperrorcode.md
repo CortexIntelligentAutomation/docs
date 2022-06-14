@@ -12,6 +12,14 @@ description: "Used to represent an error code explaining the reason an `Infinite
 
 ## Summary
 
+## Values
+
+### IncrementIsZero
+
+### IncrementIsNegative
+
+### IncrementIsPositive
+
 ## Remarks
 
 ### Create an InfiniteLoopErrorCode
