@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | SearchOptions | 4 bytes | TODO |
 | | IFormatProvider | Varies | TODO |
 | | CultureInfo | Varies | TODO |
 | | Encoding | Varies | TODO |
@@ -44,8 +43,6 @@ The most commonly used data types are categorised and listed below:
 TODO: variable link, on page links, glossary, concept links etc.
 
 [explicitly cast]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ExplicitlyCastAVariable" >}}
-
-#### SearchOptions
 
 #### Encoding
 

@@ -411,7 +411,6 @@
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
                 Nullable = "/docs/reference/data-types/most-common/#nullable"
-                SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -523,6 +522,8 @@
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
                     MainDoc = "/docs/reference/data-types/text/char"
+                [Cortex.Reference.DataTypes.Text.SearchOptions]
+                    MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
