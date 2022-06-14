@@ -385,4 +385,4 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
-[FileMatch]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileMatch" >}}
+[FileMatch]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileMatch.MainDoc" >}}

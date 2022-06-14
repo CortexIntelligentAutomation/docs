@@ -405,7 +405,6 @@
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
-                FileMatch = "/docs/reference/data-types/most-common/#filematch"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                 Guid = "/docs/reference/data-types/most-common/#guid"
                 IFormatProvider = "/docs/reference/data-types/most-common/#iformatprovider"
@@ -494,6 +493,8 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/contentoptions"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileMatch]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
             [Cortex.Reference.DataTypes.Logs]

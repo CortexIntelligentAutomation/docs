@@ -508,4 +508,4 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
-[FileMatch]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileMatch" >}}
+[FileMatch]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileMatch.MainDoc" >}}
