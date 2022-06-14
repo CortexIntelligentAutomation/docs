@@ -1,7 +1,7 @@
 ---
 title: "StringComparison"
 linkTitle: "StringComparison"
-description: "Used to represent the severity of an event when it is logged."
+description: "Used to indicate how 2 pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not)."
 ---
 
 # {{< param title >}}
