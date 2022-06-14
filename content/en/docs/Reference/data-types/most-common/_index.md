@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| Files & Folders | FileInformation | Varies | TODO |
 | | FolderInformation | Varies | TODO |
 | | ContentOptions | 4 bytes | TODO |
 | | FileMatch | Varies | TODO |
@@ -30,8 +29,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### FileInformation
 
 #### FolderInformation
 

@@ -403,7 +403,6 @@
                 CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
-                FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
                 FileMatch = "/docs/reference/data-types/most-common/#filematch"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                 Guid = "/docs/reference/data-types/most-common/#guid"
@@ -487,6 +486,10 @@
                 MainDoc = "/docs/reference/data-types/exceptions/"
                 [Cortex.Reference.DataTypes.Exceptions.Exception]
                     MainDoc = "/docs/reference/data-types/exceptions/exception"
+            [Cortex.Reference.DataTypes.FilesAndFolders]
+                MainDoc = "/docs/reference/data-types/files-and-folders/"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
             [Cortex.Reference.DataTypes.Logs]
                 MainDoc = "/docs/reference/data-types/logs/"
                 [Cortex.Reference.DataTypes.Logs.EventSeverity]
