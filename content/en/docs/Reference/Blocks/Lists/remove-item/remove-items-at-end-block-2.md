@@ -49,7 +49,9 @@ The [List][List Property] where the items are removed from.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Count
 
@@ -59,7 +61,9 @@ The [Count][Count Property] of items to remove.
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Count` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ## Exceptions
 

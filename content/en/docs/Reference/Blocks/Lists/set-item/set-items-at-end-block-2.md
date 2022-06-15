@@ -49,7 +49,9 @@ The [List][List Property] to set the items in.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### New Values
 
@@ -63,7 +65,9 @@ The last item in [List][List Property] will be set to the last value in [New Val
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)NewValues` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 

@@ -74,7 +74,9 @@ Items are considered matching if they have a value matching one of the specified
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Values
 
@@ -86,7 +88,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Contains Items
 
@@ -98,6 +102,8 @@ If [List][List Property] contains at least one item matching each of the specifi
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)ContainsItems` with no value |
 
 ## Exceptions

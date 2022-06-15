@@ -49,7 +49,9 @@ The [List][List Property] to get the item from.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Item
 
@@ -59,7 +61,9 @@ The [Item][Item Property] at the end of [List][List Property].
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Output][] |
-| Default Value | `($)Item` with no value |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 

@@ -52,7 +52,9 @@ Items are considered matching if they have the specified [Value][Value Property]
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Value
 
@@ -64,7 +66,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Indexes
 
@@ -78,7 +82,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[Int32][]&gt; |
 | Property Type | [Output][] |
-| Default Value | `($)Index` with no value |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Indexes` with no value |
 
 ## Exceptions
 

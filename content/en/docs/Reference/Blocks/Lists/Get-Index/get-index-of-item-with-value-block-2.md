@@ -80,7 +80,9 @@ Items are considered matching if they have the specified [Value][Value Property]
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Value
 
@@ -92,7 +94,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Occurrence
 
@@ -106,7 +110,9 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Occurrence` with value `1` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `1` |
 
 ### Index
 
@@ -120,6 +126,8 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Index` with no value |
 
 ## Exceptions

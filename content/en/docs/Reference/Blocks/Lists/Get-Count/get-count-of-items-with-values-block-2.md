@@ -52,7 +52,9 @@ The [List][List Property] to get the [Counts][Counts Property] of items matching
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Values
 
@@ -64,7 +66,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Counts
 
@@ -78,6 +82,8 @@ I.e. The count of items matching the first value in [Values][Values Property] wi
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[Int32][]&gt; |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Counts` with no value |
 
 ## Exceptions

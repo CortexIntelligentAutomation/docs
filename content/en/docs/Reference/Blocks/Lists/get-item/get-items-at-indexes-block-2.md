@@ -50,7 +50,9 @@ The [List][List Property] to get the [Items][Items Property] from.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Indexes
 
@@ -64,7 +66,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[Int32][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Indexes` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `new List<int>() {}` |
 
 ### Items
 
@@ -76,6 +80,8 @@ The [Items][Items Property] at the specified [Indexes][Indexes Property] of [Lis
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Items` with no value |
 
 ## Exceptions

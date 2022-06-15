@@ -49,7 +49,9 @@ The [List][List Property] where the items are removed from.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Indexes
 
@@ -63,7 +65,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[Int32][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Indexes` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | `new List<int>() {}` |
 
 ## Exceptions
 

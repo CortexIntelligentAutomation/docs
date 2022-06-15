@@ -49,7 +49,9 @@ The [List][List Property] to get the [Count][Count Property] of all items for.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Count
 
@@ -59,6 +61,8 @@ The [Count][Count Property] of all items in [List][List Property].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Count` with no value |
 
 ## Exceptions

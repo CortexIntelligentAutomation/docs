@@ -50,7 +50,9 @@ The [List][List Property] to get the [Items][Items Property] from.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### Count
 
@@ -60,7 +62,9 @@ The [Count][Count Property] of [Items][Items Property] to get.
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Count` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `-1` |
 
 ### Items
 
@@ -72,6 +76,8 @@ The [Items][Items Property] at the end of [List][List Property].
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Output][] |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
 | Default Value | `($)Items` with no value |
 
 ## Exceptions

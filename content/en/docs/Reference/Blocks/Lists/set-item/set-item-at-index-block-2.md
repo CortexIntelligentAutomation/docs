@@ -72,7 +72,9 @@ The [List][List Property] to set the item in.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)List` with no value |
 
 ### New Value
 
@@ -82,7 +84,9 @@ The [New Value][NewValue Property] to set the item at the specified [Index][Inde
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)NewValue` with value `null` |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Index
 
@@ -96,7 +100,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | `0` |
 
 ## Exceptions
 
