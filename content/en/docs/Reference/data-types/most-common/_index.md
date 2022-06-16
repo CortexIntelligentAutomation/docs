@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | Encoding | Varies | TODO |
 | | Guid | 16 bytes | TODO |
 
 #### Nullable
@@ -21,8 +20,5 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-
-#### Encoding
 
 #### Guid

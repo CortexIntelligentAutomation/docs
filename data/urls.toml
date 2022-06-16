@@ -403,7 +403,6 @@
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
-                Encoding = "/docs/reference/data-types/most-common/#encoding"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                 Guid = "/docs/reference/data-types/most-common/#guid"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
@@ -522,6 +521,8 @@
                     MainDoc = "/docs/reference/data-types/text/char"
                 [Cortex.Reference.DataTypes.Text.CultureInfo]
                     MainDoc = "/docs/reference/data-types/text/cultureinfo"
+                [Cortex.Reference.DataTypes.Text.Encoding]
+                    MainDoc = "/docs/reference/data-types/text/encoding"
                 [Cortex.Reference.DataTypes.Text.IFormatProvider]
                     MainDoc = "/docs/reference/data-types/text/iformatprovider"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
