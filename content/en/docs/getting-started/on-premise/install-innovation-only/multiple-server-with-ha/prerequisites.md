@@ -92,6 +92,14 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
 1. Request a licence by raising a case in the [Cortex Service Portal](https://support.cortex.co.uk/), including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
 
+## Web Browser Requirements
+
+Gateway supports the latest versions of the following browsers:
+
+* Chrome
+* Edge
+* Firefox
+
 ## Additional Load Balancer Server Requirements
 
 ### Alternative Load Balancer Requirements
@@ -244,14 +252,6 @@ There is a set of non-compulsory security measures, recommended to be applied to
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
 See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractises.ps1` script is provided during installation to apply these security changes to the Web Application Server.
-
-### Client Requirements
-
-Gateway supports the latest versions of the following browsers:
-
-* Chrome
-* Edge
-* Firefox
 
 ## Next Steps?
 
