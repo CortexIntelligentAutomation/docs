@@ -515,8 +515,12 @@
                     MainDoc = "/docs/reference/data-types/numbers/int64"
                 [Cortex.Reference.DataTypes.Numbers.Single]
                     MainDoc = "/docs/reference/data-types/numbers/single"
-            [Cortex.Reference.DataTypes.Other.Guid]
+            [Cortex.Reference.DataTypes.Other]
+                MainDoc = "/docs/reference/data-types/other/"
+                [Cortex.Reference.DataTypes.Other.Guid]
                     MainDoc = "/docs/reference/data-types/other/guid"
+                [Cortex.Reference.DataTypes.Other.Nullable]
+                    MainDoc = "/docs/reference/data-types/other/nullable-1"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
