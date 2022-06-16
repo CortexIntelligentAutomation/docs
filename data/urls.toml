@@ -523,6 +523,10 @@
                     MainDoc = "/docs/reference/data-types/text/cultureinfo"
                 [Cortex.Reference.DataTypes.Text.Encoding]
                     MainDoc = "/docs/reference/data-types/text/encoding"
+                [Cortex.Reference.DataTypes.Text.EncryptableText]
+                    MainDoc = "/docs/reference/data-types/text/encryptabletext"
+                [Cortex.Reference.DataTypes.Text.EncryptedText]
+                    MainDoc = "/docs/reference/data-types/text/encryptedtext"
                 [Cortex.Reference.DataTypes.Text.IFormatProvider]
                     MainDoc = "/docs/reference/data-types/text/iformatprovider"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
