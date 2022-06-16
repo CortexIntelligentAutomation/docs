@@ -515,6 +515,8 @@
                     MainDoc = "/docs/reference/data-types/numbers/int64"
                 [Cortex.Reference.DataTypes.Numbers.Single]
                     MainDoc = "/docs/reference/data-types/numbers/single"
+            [Cortex.Reference.DataTypes.Other.Guid]
+                    MainDoc = "/docs/reference/data-types/other/guid"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
