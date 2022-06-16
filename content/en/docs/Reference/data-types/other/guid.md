@@ -1,7 +1,7 @@
 ---
 title: "Guid"
 linkTitle: "Guid"
-description: "Used to represent a globally unique identifier (GUID)"
+description: "Used to represent a globally unique identifier (GUID)."
 ---
 
 # {{< param title >}}
