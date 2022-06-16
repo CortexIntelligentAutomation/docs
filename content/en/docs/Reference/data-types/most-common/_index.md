@@ -13,7 +13,6 @@ The most commonly used data types are categorised and listed below:
 
 | Category | Data Type                 | Size                              | Description |
 |----------|---------------------------|-----------------------------------|-------------|
-| | IFormatProvider | Varies | TODO |
 | | CultureInfo | Varies | TODO |
 | | Encoding | Varies | TODO |
 | | Guid | 16 bytes | TODO |
@@ -23,8 +22,6 @@ The most commonly used data types are categorised and listed below:
 ### Lists
 
 ### Dictionaries
-
-#### IFormatProvider
 
 #### CultureInfo
 

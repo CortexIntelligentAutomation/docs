@@ -407,7 +407,6 @@
                 Encoding = "/docs/reference/data-types/most-common/#encoding"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                 Guid = "/docs/reference/data-types/most-common/#guid"
-                IFormatProvider = "/docs/reference/data-types/most-common/#iformatprovider"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
                 Nullable = "/docs/reference/data-types/most-common/#nullable"
@@ -522,6 +521,8 @@
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
                     MainDoc = "/docs/reference/data-types/text/char"
+                [Cortex.Reference.DataTypes.Text.IFormatProvider]
+                    MainDoc = "/docs/reference/data-types/text/iformatprovider"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
