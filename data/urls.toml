@@ -532,8 +532,14 @@
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
                 [Cortex.Reference.DataTypes.Text.StringComparison]
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
-                    [Cortex.Reference.DataTypes.Text.StringSplitOptions]
+                [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.UnicodeEncoding]
+                    MainDoc = "/docs/reference/data-types/text/unicodeencoding"
+                [Cortex.Reference.DataTypes.Text.UTF32Encoding]
+                    MainDoc = "/docs/reference/data-types/text/utf32encoding"
+                [Cortex.Reference.DataTypes.Text.UTF8Encoding]
+                    MainDoc = "/docs/reference/data-types/text/utf8encoding"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
