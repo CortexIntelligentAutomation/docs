@@ -2,7 +2,7 @@
 title: "Most Common"
 linkTitle: "Most Common"
 description: "Data types that are most commonly used."
-weight: 10
+weight: 3
 ---
 
 ## Data Types
