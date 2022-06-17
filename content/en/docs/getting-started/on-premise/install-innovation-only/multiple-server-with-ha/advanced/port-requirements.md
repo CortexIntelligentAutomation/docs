@@ -8,7 +8,7 @@ description: "Information about the ports opened when installing Cortex Innovati
 
 Cortex Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
-### Cortex Innovation Ports
+## Cortex Innovation Ports
 
 | Name | Description | Default Port(s) | Protocol | Direction |
 |------|-------------|-----------------|----------|-----------|
@@ -22,7 +22,7 @@ Cortex Innovation and Microsoft Service Fabric open a range of firewall ports be
 | Cortex.ServiceFabric.Customer1. ClientConnectionEndpointPort | The port where the nodes communicate with each other. | 8002 | TCP | Inbound |
 | Cortex.ServiceFabric.Customer1. ServiceConnectionEndpointPort | The port used by the applications and services deployed on a node to communicate with the Service Fabric client on that particular node. | 8004 | TCP | Inbound |
 
-### Microsoft Service Fabric Firewall Rules (present on all Application Servers, with Domain, Public and Private Profiles)
+## Microsoft Service Fabric Firewall Rules (present on all Application Servers, with Domain, Public and Private Profiles)
 
 These rules will all appear in Windows Firewall with names starting with ‘{CustomerName}.{NodeName} WindowsFabric’.
 
