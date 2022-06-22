@@ -448,9 +448,9 @@
                     MainDoc = "/docs/reference/data-types/conditional-logic/boolean"
             [Cortex.Reference.DataTypes.Data]
                 MainDoc = "/docs/reference/data-types/data/"
-                [Cortex.Reference.DataTypes.Data.ICommand]
-                    MainDoc = "/docs/reference/data-types/data/icommand/"
-                    CommandText = "/docs/reference/data-types/data/icommand/#command-text"
+                [Cortex.Reference.DataTypes.Data.DataCommand]
+                    MainDoc = "/docs/reference/data-types/data/datacommand/"
+                    CommandText = "/docs/reference/data-types/data/datacommand/#command-text"
                 [Cortex.Reference.DataTypes.Data.Command]
                     MainDoc = "/docs/reference/data-types/data/command/"
                     CommandText = "/docs/reference/data-types/data/command/#command-text"
