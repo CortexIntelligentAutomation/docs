@@ -21,7 +21,7 @@ The `SqlServerConnectionDetails` data type is to establish and maintain a connec
 | **Description:**       | Holds the information used to establish and maintain a connection to a SqlServer data source. |
 | **Size:**              | Varies |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `IConnectionDetails`, `TConnectionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `ConnectionDetails`, `TConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |
 
 ## Remarks
@@ -47,7 +47,7 @@ None
 
 ### Related Data Types
 
-* [IConnectionDetails][]
+* [ConnectionDetails][]
 * [TConnectionDetails][]
 
 ### Related Concepts
@@ -62,7 +62,7 @@ None
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[IConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.IConnectionDetails.MainDoc" >}}
+[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [TConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.TConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}

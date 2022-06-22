@@ -21,8 +21,14 @@ The `OdbcConnectionDetails` data type is to establish and maintain a connection 
 | **Description:**       | Holds the information used to establish and maintain a connection to an Odbc data source.  |
 | **Size:**              | Varies |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `IConnectionDetails`, `TConnectionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `ConnectionDetails`, `TConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |
+
+## Properties
+
+### Command Text
+
+### Parameters
 
 ## Remarks
 
@@ -33,6 +39,12 @@ The following table shows some of the ways that a `OdbcConnectionDetails` can be
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use an `OdbcConnectionDetails` expression | `new OdbcConnectionDetails("DSN=LocalHost;Driver={ODBC Driver Version}")` | `{"ConnectionString": "DSN=LocalHost;Driver={ODBC Driver Version}"}` | Expression |  |
+
+A `OdbcConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+
+| Property | Data Type | Notes |
+|-|-|-|
+| `ConnectionString`        | `Int32`   | The command that will be executed or queried against the data source. |
 
 ### Property Editor Support
 
@@ -48,7 +60,7 @@ The following table shows some of the ways that a `OdbcConnectionDetails` can be
 
 ### Related Data Types
 
-* [IConnectionDetails][]
+* [ConnectionDetails][]
 * [TConnectionDetails][]
 
 ### Related Concepts
@@ -63,7 +75,7 @@ None
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[IConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.IConnectionDetails.MainDoc" >}}
+[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [TConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.TConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}

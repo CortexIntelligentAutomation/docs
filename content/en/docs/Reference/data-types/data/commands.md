@@ -10,6 +10,18 @@ description: "Holds the information for parsing a command, running multiple quer
 
 ## Summary
 
+| | |
+|-|-|
+| **Category:**          | Data |
+| **Name:**              | `Commands` |
+| **Full Name:**         | `Cortex.DataTypes.Data.Commands` |
+| **Alias:**             | N/A |
+| **Description:**       | Holds the information for parsing a command, running multiple query and non query commands on a data source. |
+| **Size:**              | Varies |
+| **Default Value:**     | `null` |
+| **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
+| **Can be cast to:**    |  N/A |
+
 ## Properties
 
 ### Command Text
@@ -18,14 +30,33 @@ description: "Holds the information for parsing a command, running multiple quer
 
 ## Remarks
 
-### Create a Command
+### Create a Commands
 
-### Convert ICommand to Text
+The following table shows some of the ways that a `Commands` can be created.
+
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use a `Commands` constructor | `new Commands("select * from Table", null)`    | `{CommandText: "select * from Table", Parameters: null}` | Expression |  |
+
+A `Commands` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+
+| Property | Data Type | Notes |
+|-|-|-|
+| `CommandText`        | `Int32`   | The command that will be executed or queried against the data source. |
+| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][TODO]. |
+
+### Convert Commands to Text
+
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use `ToString` | `($)Commands.ToString()` | `"Cortex.DataTypes.Data.Commands"` | Expression | ToString will return the Full Name of the Command Data Type |
+| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `"1/7/2022 1:00:00 PM +00:00"` | Expression | See [Convert Object To Text][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `""` | Expression | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `Commands`.
-* The Literal Editor is not available for [Input][] properties where the data type is `Commands`.
+* The Literal Editor is available for [Input][] properties where the data type is `Commands`.
 * The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Commands`.
 
 ## Known limitations
@@ -36,7 +67,7 @@ None
 
 ### Related Data Types
 
-* [ICommand][]
+* [DataCommand][]
 * [Command][]
 * [QueryCommand][]
 * [NonQueryCommand][]
@@ -53,9 +84,12 @@ None
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
+[Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
+[Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
-[ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
+[DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
