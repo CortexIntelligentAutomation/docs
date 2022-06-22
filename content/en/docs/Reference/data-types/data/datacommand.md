@@ -1,20 +1,20 @@
 ---
-title: "ICommand"
-linkTitle: "ICommand"
-description: "The interface defining data source commands."
+title: "DataCommand"
+linkTitle: "DataCommand"
+description: "The abstract class defining data source commands."
 ---
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.DataTypes.Data.ICommand)</p>
+<p class="namespace">(Cortex.DataTypes.Data.DataCommand)</p>
 
 ## Summary
 
 | | |
 |-|-|
 | **Category:**          | Data |
-| **Name:**              | `ICommand` |
-| **Full Name:**         | `System.Collections.Generic.ICommand` |
+| **Name:**              | `DataCommand` |
+| **Full Name:**         | `Cortex.DataTypes.Data.DataCommand` |
 | **Alias:**             | N/A |
 | **Description:**       | The interface defining data source commands. |
 | **Size:**              | Varies |
@@ -30,27 +30,27 @@ description: "The interface defining data source commands."
 
 ## Remarks
 
-### Most Common ICommand Data Types
+### Most Common DataCommand Data Types
 
-Any of the following data types can be used where an `ICommand` is required:
-
-* [Command][]
-* [Commands][]
-* [QueryCommand][]
-* [NonQueryCommand][]
-
-### Create an ICommand
-
-For some of the ways that an `ICommand` can be created, please see each of the `ICommand` data types:
+Any of the following data types can be used where an `DataCommand` is required:
 
 * [Command][]
 * [Commands][]
 * [QueryCommand][]
 * [NonQueryCommand][]
 
-### Convert ICommand to Text
+### Create an DataCommand
 
-For some of the ways that an `ICommand` can be converted to text, please see each of the `ICommand` data types:
+For some of the ways that an `DataCommand` can be created, please see each of the `DataCommand` data types:
+
+* [Command][]
+* [Commands][]
+* [QueryCommand][]
+* [NonQueryCommand][]
+
+### Convert DataCommand to Text
+
+For some of the ways that an `DataCommand` can be converted to text, please see each of the `DataCommand` data types:
 
 * [Command][]
 * [Commands][]
@@ -59,9 +59,9 @@ For some of the ways that an `ICommand` can be converted to text, please see eac
 
 ### Property Editor Support
 
-* The Expression Editor is available for [Input][] properties where the data type is `ICommand`.
-* The Literal Editor is not available for [Input][] properties where the data type is `ICommand`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `ICommand`.
+* The Expression Editor is available for [Input][] properties where the data type is `DataCommand`.
+* The Literal Editor is available for [Input][] properties where the data type is `DataCommand`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `DataCommand`.
 
 ## Known limitations
 
