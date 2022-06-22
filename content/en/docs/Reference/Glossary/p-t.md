@@ -95,6 +95,12 @@ TODO
 
 TODO
 
+### Single
+
+A [data type][] that represents a fractional, or very large or small number from `-3.402823e+38` through `3.402823e+38`.
+
+For more detailed information about the Single data type, see [Single][].
+
 ### Snippets
 
 TODO
@@ -111,7 +117,9 @@ For more detailed information about the String data type, see [String][].
 
 ### Structure
 
-TODO
+A [data type][] that represents a collection of key/item pairs, where each pair consists of a unique [String][] key and its associated item.
+
+For more detailed information about the Structure data type, see [Structure][].
 
 ### Swivel Chair
 
@@ -156,3 +164,5 @@ TODO
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}

@@ -27,7 +27,9 @@ TODO
 
 ### List
 
-TODO
+A [data type][] that represents a list of items that can iterated or looped over.
+
+For more detailed information about the List data type, see [List&lt;TItem&gt;][].
 
 ### Literal
 
@@ -89,7 +91,9 @@ TODO
 
 ### Object
 
-TODO
+A [data type][] that indicates that any data type can be used.
+
+For more detailed information about the Object data type, see [Object][].
 
 ### Occurrence
 
@@ -140,6 +144,7 @@ TODO
 
 [Boolean]: {{< url "Cortex.Reference.Glossary.A-E.Boolean" >}}
 [Char]: {{< url "Cortex.Reference.Glossary.A-E.Char" >}}
+[data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
 [Dictionary]: {{< url "Cortex.Reference.Glossary.A-E.Dictionary" >}}
 [Double]: {{< url "Cortex.Reference.Glossary.A-E.Double" >}}
 [Int32]: {{< url "Cortex.Reference.Glossary.F-J.Int32" >}}
@@ -147,5 +152,8 @@ TODO
 [Single]: {{< url "Cortex.Reference.Glossary.P-T.Single" >}}
 [String]: {{< url "Cortex.Reference.Glossary.P-T.String" >}}
 [Structure]: {{< url "Cortex.Reference.Glossary.P-T.Structure" >}}
+
+[List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 
 [C# operators and expressions]: {{< url "MSDocs.CSharp.OperatorsAndExpressions" >}}

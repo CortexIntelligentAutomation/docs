@@ -124,20 +124,21 @@ TODO
 
 ### Int16
 
-TODO
+A [data type][] that represents a whole number from `-32,768` through `32,767`.
+
+For more detailed information about the Int16 data type, see [Int16][].
 
 ### Int32
 
-A [data type][] that represents an integer value.
+A [data type][] that represents a whole number from `-2,147,483,648` through `2,147,483,647`.
 
-For more detailed information about the String data type, see [Int32][].
+For more detailed information about the Int32 data type, see [Int32][].
 
 ### Int64
 
+A [data type][] that represents a whole number from `-9,223,372,036,854,775,808` through `9,223,372,036,854,775,807`.
 
-A [data type][] that represents an integer value.
-
-For more detailed information about the String data type, see [Int64][].
+For more detailed information about the Int64 data type, see [Int64][].
 
 ### Invalid
 
@@ -175,5 +176,6 @@ See [What is JSON][TODO - https://www.w3schools.com/whatis/whatis_json.asp] for 
 
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
 
+[Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
