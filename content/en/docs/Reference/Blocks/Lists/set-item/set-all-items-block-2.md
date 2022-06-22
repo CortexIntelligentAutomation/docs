@@ -8,7 +8,7 @@ description: "Sets all items in a List to a new value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetAllItems`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetAllItemsBlock`2)</p>
 
 ## Description
 

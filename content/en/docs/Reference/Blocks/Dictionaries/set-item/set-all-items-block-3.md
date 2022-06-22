@@ -8,7 +8,7 @@ description: "Sets all items in a Dictionary to a new value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItems`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItemsBlock`3)</p>
 
 ## Description
 

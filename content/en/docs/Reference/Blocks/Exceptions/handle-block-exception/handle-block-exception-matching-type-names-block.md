@@ -143,7 +143,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
-| [PropertyContainsNullOrEmptyItemException][] | Thrown when any Type Name in [Type Names][TypeNames Property] is `null` or empty (i.e. `""`). |
+| [PropertyContainsNullOrEmptyItemException][] | Thrown when any Type Name in [Type Names][TypeNames Property] is `null` or empty (i.e. `""`). See [Value Contains Null Or Empty Item][]. |
 | [PropertyEmptyException][] | Thrown when [Type Names][TypeNames Property] contains no items. |
 | [PropertyNullException][] | Thrown when [Type Names][TypeNames Property] is `null`. |
 
@@ -208,11 +208,13 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyContainsNullOrEmptyItemException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException.MainDoc" >}}
+[Value Contains Null Or Empty Item]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException.ValueContainsNullOrEmptyItem" >}}
+
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

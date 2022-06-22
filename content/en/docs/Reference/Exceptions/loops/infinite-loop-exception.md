@@ -120,7 +120,7 @@ For `InfiniteLoopException` there are three error codes:
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Nullable][]&lt;[Int32][]&gt; |
+| Data Type | [InfiniteLoopErrorCode][] |
 
 ### Help Link
 
@@ -137,7 +137,7 @@ None
 ### Related Data Types
 
 * [String][]
-* [Nullable][]&lt;[Int32][]&gt;
+* [InfiniteLoopErrorCode][]
 
 ### Related Concepts
 
@@ -163,7 +163,7 @@ None
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.Nullable" >}}
+[InfiniteLoopErrorCode]: {{< url "Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode.MainDoc" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
 [Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWithLoops.MainDoc" >}}

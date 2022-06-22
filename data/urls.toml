@@ -13,12 +13,14 @@
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server#install-gateway"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
                     ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#client-requirements"
+                    LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
                     [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
@@ -27,6 +29,7 @@
                         ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
                         ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
                         CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
+                        EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
     [Cortex.Guides]
@@ -545,24 +548,12 @@
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
-                Array = "/docs/reference/data-types/most-common/#array"
-                Char = "/docs/reference/data-types/most-common/#char"
-                ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
-                CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
-                Encoding = "/docs/reference/data-types/most-common/#encoding"
-                EventSeverity = "/docs/reference/data-types/most-common/#eventseverity"
-                FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
-                FileMatch = "/docs/reference/data-types/most-common/#filematch"
                 FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
                 Guid = "/docs/reference/data-types/most-common/#guid"
-                IFormatProvider = "/docs/reference/data-types/most-common/#iformatprovider"
-                JsonSerializerSettings = "/docs/reference/data-types/most-common/#jsonserializersettings"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
                 Nullable = "/docs/reference/data-types/most-common/#nullable"
-                SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
-                StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -636,6 +627,28 @@
                 MainDoc = "/docs/reference/data-types/exceptions/"
                 [Cortex.Reference.DataTypes.Exceptions.Exception]
                     MainDoc = "/docs/reference/data-types/exceptions/exception"
+            [Cortex.Reference.DataTypes.FilesAndFolders]
+                MainDoc = "/docs/reference/data-types/files-and-folders/"
+                [Cortex.Reference.DataTypes.FilesAndFolders.ContentOptions]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/contentoptions"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileMatch]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
+            [Cortex.Reference.DataTypes.Json]
+                MainDoc = "/docs/reference/data-types/json/"
+                [Cortex.Reference.DataTypes.Json.JsonSerializerSettings]
+                    MainDoc = "/docs/reference/data-types/json/jsonserializersettings"
+            [Cortex.Reference.DataTypes.Logs]
+                MainDoc = "/docs/reference/data-types/logs/"
+                [Cortex.Reference.DataTypes.Logs.EventSeverity]
+                    MainDoc = "/docs/reference/data-types/logs/eventseverity"
+            [Cortex.Reference.DataTypes.Loops]
+                MainDoc = "/docs/reference/data-types/loops/"
+                [Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode]
+                    MainDoc = "/docs/reference/data-types/loops/infinitelooperrorcode"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
@@ -648,13 +661,41 @@
                     MainDoc = "/docs/reference/data-types/numbers/int64"
                 [Cortex.Reference.DataTypes.Numbers.Single]
                     MainDoc = "/docs/reference/data-types/numbers/single"
+            [Cortex.Reference.DataTypes.Other]
+                MainDoc = "/docs/reference/data-types/other/"
+                [Cortex.Reference.DataTypes.Other.Guid]
+                    MainDoc = "/docs/reference/data-types/other/guid"
+                [Cortex.Reference.DataTypes.Other.Nullable]
+                    MainDoc = "/docs/reference/data-types/other/nullable-1"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
                     MainDoc = "/docs/reference/data-types/text/char"
+                [Cortex.Reference.DataTypes.Text.CultureInfo]
+                    MainDoc = "/docs/reference/data-types/text/cultureinfo"
+                [Cortex.Reference.DataTypes.Text.Encoding]
+                    MainDoc = "/docs/reference/data-types/text/encoding"
+                [Cortex.Reference.DataTypes.Text.EncryptableText]
+                    MainDoc = "/docs/reference/data-types/text/encryptabletext"
+                [Cortex.Reference.DataTypes.Text.EncryptedText]
+                    MainDoc = "/docs/reference/data-types/text/encryptedtext"
+                [Cortex.Reference.DataTypes.Text.IFormatProvider]
+                    MainDoc = "/docs/reference/data-types/text/iformatprovider"
+                [Cortex.Reference.DataTypes.Text.SearchOptions]
+                    MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
+                [Cortex.Reference.DataTypes.Text.StringComparison]
+                    MainDoc = "/docs/reference/data-types/text/stringcomparison"
+                [Cortex.Reference.DataTypes.Text.StringSplitOptions]
+                    MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.UnicodeEncoding]
+                    MainDoc = "/docs/reference/data-types/text/unicodeencoding"
+                [Cortex.Reference.DataTypes.Text.UTF32Encoding]
+                    MainDoc = "/docs/reference/data-types/text/utf32encoding"
+                [Cortex.Reference.DataTypes.Text.UTF8Encoding]
+                    MainDoc = "/docs/reference/data-types/text/utf8encoding"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
@@ -663,6 +704,7 @@
                     MainDoc = "/docs/reference/exceptions/common/property/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertycontainsnulloremptyitemexception/"
+                        ValueContainsNullOrEmptyItem = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/#value-contains-null-or-empty-item"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyemptyexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException]
