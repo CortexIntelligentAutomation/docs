@@ -182,7 +182,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 - [Set Variable][]
 - [All Blocks][Blocks]
 
-[Message Panel]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.MessagePanel" >}}
+[Message Panel]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagePanel" >}}
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
 [APIGateway]: {{< url "Cortex.Reference.API.APIGateway.MainDoc" >}}
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
@@ -192,7 +192,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [BasicDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
-[Cortex Studio]: {{< url "Cortex.Guides.Gateway.Studio.MainDoc" >}}
+[Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.Internal" >}}
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
@@ -205,15 +205,15 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [InputPropertyType]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [OutputPropertyType]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 [InputOutputPropertyType]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Variable Grid]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.VariableGrid" >}}
-[create]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.CreatingVariables" >}}
-[view]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.ViewingVariables" >}}
-[modify]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.ModifyingVariables" >}}
-[delete]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.DeletingVariables" >}}
-[Property Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.PropertyViewer" >}}
-[Execution Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.ExecutionViewer" >}}
-[Variable Panel]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.VariablePanel" >}}
-[Variable Detail]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.VariableDetail" >}}
+[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[create]: {{< url "Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
+[view]: {{< url "Cortex.Guides.Studio.SouthPanel.ViewingVariables" >}}
+[modify]: {{< url "Cortex.Guides.Studio.SouthPanel.ModifyingVariables" >}}
+[delete]: {{< url "Cortex.Guides.Studio.SouthPanel.DeletingVariables" >}}
+[Property Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyViewer" >}}
+[Execution Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExecutionViewer" >}}
+[Variable Panel]: {{< url "Cortex.Guides.Studio.EastPanel.VariablePanel" >}}
+[Variable Detail]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetail" >}}
 [Messages]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
 [Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}

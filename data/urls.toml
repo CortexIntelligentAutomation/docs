@@ -36,42 +36,36 @@
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
+            [Cortex.Guides.Studio.ExpressionEditor]
+                MainDoc = "/docs/guides/cortex-studio/expression-editor/"
+                Snippets = "/docs/guides/cortex-studio/expression-editor/#snippets"
+                Tools = "/docs/guides/cortex-studio/expression-editor/#tools"
+            [Cortex.Guides.Studio.VariableEditor]
+                MainDoc = "/docs/guides/cortex-studio/variable-editor/"
+            [Cortex.Guides.Studio.EastPanel]
+                MainDoc = "/docs/guides/cortex-studio/east-panel/"
+                PropertyViewer = "/docs/guides/cortex-studio/east-panel/#property-viewer"
+                ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
+                VariablePanel = "/docs/guides/cortex-studio/east-panel/#variable-panel"                    
+                VariableDetail = "/docs/guides/cortex-studio/east-panel/#variable-detail"
+                Exceptions = "/docs/guides/cortex-studio/east-panel/#exceptions"
+            [Cortex.Guides.Studio.MainDisplayArea]
+                MainDoc = "/docs/guides/cortex-studio/main-display-area/"
+            [Cortex.Guides.Studio.Navigation]
+                MainDoc = "/docs/guides/cortex-studio/navigation/"                    
+            [Cortex.Guides.Studio.Palettes]
+                MainDoc = "/docs/guides/cortex-studio/palettes/"
+            [Cortex.Guides.Studio.SouthPanel]
+                MainDoc = "/docs/guides/cortex-studio/south-panel/"
+                ExecutionViewer = "/docs/guides/cortex-studio/south-panel/#execution-viewer"
+                MessagePanel = "/docs/guides/cortex-studio/south-panel/#message-panel"
+                VariableGrid = "/docs/guides/cortex-studio/south-panel/#variable-grid" 
+                CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
+                ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
+                ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
+                DeletingVariables = "/docs/guides/cortex-studio/south-panel/#deleting-variables"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
-            [Cortex.Guides.Gateway.Studio]
-                MainDoc = "/docs/guides/cortex-gateway/cortex-studio/"
-                [Cortex.Guides.Studio.Gateway.Studio.ExpressionEditor]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/expression-editor/"
-                    Snippets = "/docs/guides/cortex-gateway/cortex-studio/expression-editor/#snippets"
-                    Tools = "/docs/guides/cortex-gateway/cortex-studio/expression-editor/#tools"
-                [Cortex.Guides.Studio.Gateway.Studio.VariableEditor]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/variable-editor/"
-                [Cortex.Guides.Gateway.Studio.EastPanel]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/east-panel/"
-                    PropertyViewer = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#property-viewer"
-                    ExecutionViewer = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#execution-viewer"
-                    VariablePanel = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#variable-panel"                    
-                    VariableDetail = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#variable-detail"
-                    Exceptions = "/docs/guides/cortex-gateway/cortex-studio/east-panel/#exceptions"
-                [Cortex.Guides.Gateway.Studio.MainDisplayArea]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/main-display-area/"
-                [Cortex.Guides.Gateway.Studio.Navigation]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/navigation/"                    
-                [Cortex.Guides.Gateway.Studio.Palettes]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/palettes/"
-                [Cortex.Guides.Gateway.Studio.SouthPanel]
-                    MainDoc = "/docs/guides/cortex-gateway/cortex-studio/south-panel/"
-                    ExecutionViewer = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#execution-viewer"
-                    MessagePanel = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#message-panel"
-                    VariableGrid = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#variable-grid" 
-                    CreatingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#creating-variables"
-                    ViewingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#viewing-variables" 
-                    ModifyingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#modifying-variables" 
-                    DeletingVariables = "/docs/guides/cortex-gateway/cortex-studio/south-panel/#deleting-variables"                    
-            [Cortex.Guides.Gateway.LiveView]
-                MainDoc = "/docs/guides/cortex-gateway/cortex-liveview/"
-            [Cortex.Guides.Gateway.Reporting]
-                MainDoc = "/docs/guides/cortex-gateway/cortex-reporting/"
             [Cortex.Guides.Gateway.Settings]
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
     [Cortex.Reference]

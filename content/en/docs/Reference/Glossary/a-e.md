@@ -292,11 +292,11 @@ Also see [Cast] for more information.
 
 ### Expression
 
-An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators] (i.e. =, +, -, *, /) that can be evaluated by the [Cortex Evolution] [platform] to a single value.
+An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators] (i.e. =, +, -, *, /) that can be evaluated by the [Cortex] [platform] to a single value.
 
 Expressions use the syntax of the [C#] [programming language].
 
-For more detailed information about expressions, see [Guides->Cortex Studio->Expressions][TODO].
+For more detailed information about expressions, see [Expressions][].
 
 ### Expression Editor
 
@@ -337,6 +337,7 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 
 [Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
@@ -374,7 +375,7 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [32-bit]: {{< url "Cortex.Reference.Glossary.0-9.32Bit" >}}
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
 
-[Char]: {{< url "Cortex.Reference.DataTypes.MostCommon.Char" >}}
+[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 
 [Casting and type conversions (C# Programming Guide)]: {{< url "MSDocs.CSharp.Casting" >}}
 [Cast expression (C# Reference)]: {{< url "MSDocs.CSharp.CastExpression" >}}

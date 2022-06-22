@@ -62,7 +62,7 @@ None
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
-[Property Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.PropertyViewer" >}}
+[Property Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyViewer" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
-[Variable Editor]: {{< url "Cortex.Guides.Studio.Gateway.Studio.VariableEditor.MainDoc" >}}
+[Variable Editor]: {{< url "Cortex.Guides.Studio.VariableEditor.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

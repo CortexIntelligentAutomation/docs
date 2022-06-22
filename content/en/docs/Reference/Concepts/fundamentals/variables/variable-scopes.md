@@ -59,8 +59,8 @@ When executing a block in **Workspace1** that references `($)loop-var`, the vari
 
 - [Workspace Block][Workspace-block]
 
-[Variable Grid]: {{< url "Cortex.Guides.Gateway.Studio.SouthPanel.VariableGridInnovation" >}}
-[Property Viewer]: {{< url "Cortex.Guides.Gateway.Studio.EastPanel.PropertyViewer" >}}
+[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGridInnovation" >}}
+[Property Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyViewer" >}}
 [Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
 [Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}

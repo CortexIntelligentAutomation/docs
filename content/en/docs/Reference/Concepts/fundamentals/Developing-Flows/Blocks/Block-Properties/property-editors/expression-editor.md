@@ -221,10 +221,8 @@ An expression is a combination of [operands][] (i.e. [variables][Variables], [li
 Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
-- TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
-- TODO: Up to char from operands -> literals
 - TODO: Below is missing Equality and Properties
-- TODO: Remove old literal-variable-expression page, fix url toml and fix references.
+- TODO: Remove old literal-variable-expression page, fix url toml and fix references. [Cortex.Reference.Concepts.LiteralVariablesExpressions]
 
 Types of expressions:
 

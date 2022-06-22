@@ -65,4 +65,4 @@ None
 [Lists]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structures]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String Concatenation]: {{< url "MSDocs.DotNet.Api.System.String.ConcatOperator" >}}
-[Expression Editor]: {{< url "Cortex.Guides.Studio.Gateway.Studio.ExpressionEditor.MainDoc" >}}
+[Expression Editor]: {{< url "Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
