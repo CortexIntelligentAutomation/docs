@@ -106,7 +106,7 @@ For information about format templates and parameters, please see [Text Formatti
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][TODO] |
-| Default Value | `$@"{0} {1}"` |
+| Default Value | `@"{0} {1}"` |
 
 ### Values
 
