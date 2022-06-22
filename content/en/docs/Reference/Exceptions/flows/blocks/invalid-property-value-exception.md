@@ -193,6 +193,6 @@ None
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
-[Guid]: {{< url "Cortex.Reference.DataTypes.MostCommon.Guid" >}}
+[Guid]: {{< url "Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
