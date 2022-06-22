@@ -7,7 +7,7 @@ weight: 40
 
 # {{< param title >}}
 
-This guide describes how to install the Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation.
+This guide describes how to install the Web Applications on the server. Please ensure that [Install Application Server][] has been completed before starting this installation.
 
 ## Extract Installation Artefacts
 
@@ -24,14 +24,14 @@ This guide describes how to install the Web Application Server. Please ensure th
 
 ### Licensing
 
-Ensure that a valid Cortex licence file named `Cortex.lic` exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
+Ensure that a valid Cortex licence file exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
 ### Install SQL Server or SQL Express
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-    * <a href="/pdfs/Cortex Integrity - SQL Server 2019 Installation Guide.pdf">Cortex - SQL Server 2019 Installation Guide</a>
-    * <a href="/pdfs/Cortex Integrity - SQL Server 2016 Installation Guide.pdf">Cortex - SQL Server 2016 Installation Guide</a>
-    * <a href="/pdfs/Cortex Integrity - SQL Server 2016 Express Installation Guide.pdf">Cortex - SQL Server 2016 Express Installation Guide</a>
+    * <a href="/pdfs/Cortex Integrity - SQL Server 2019 Installation Guide.pdf">Cortex Integrity - SQL Server 2019 Installation Guide</a>
+    * <a href="/pdfs/Cortex Integrity - SQL Server 2016 Installation Guide.pdf">Cortex Integrity - SQL Server 2016 Installation Guide</a>
+    * <a href="/pdfs/Cortex Integrity - SQL Server 2016 Express Installation Guide.pdf">Cortex Integrity - SQL Server 2016 Express Installation Guide</a>
 
 ### Install Microsoft .NET Framework 4.7.1
 
@@ -161,38 +161,6 @@ The following steps describe how to configure an application on your server to a
 5. In the open application, use the search bar to search for `URL Rewrite` to find the module, then click `Add` next to it, then `Install`.
 6. After successfully installing, close and reopen `IIS Manager`. The `URL Rewrite` icon should now be visible.
 
-### Apply Recommended Security Measures
-
-These are non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities.
-
-Applying these measures may impact other applications running on your server. Therefore, it is your responsibility to ensure that other applications and their clients will not be affected by the changes.
-
-#### Only Use Recommended Encryption Algorithms and TLS Protocols
-
-A collection of registry settings need to be applied to guarantee your server is only using the recommended encryption algorithms and TLS protocols. Information about these settings can be found at [SSL Best Practices][].
-
-{{% alert type="warning" title="Warning" %}}Disabling specific TLS versions or specific Cipher Suites can have impact on Cortex components themselves as well as their communication capabilities with third party systems and services, e.g. Flow Debugger Service executing flows with blocks which communicate with 3rd parties via PowerShell or REST. All parties communicating together must support a shared protocol version and cipher suite, otherwise they will not be able to establish a secure communication link between each other.{{% /alert %}}
-
-Apply the settings by following these instructions:
-
-1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
-
-    ```powershell
-    cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
-    ```
-
-1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
-
-    ```powershell
-    .\Cortex.Innovation.Install.SSLBestPractises.ps1
-    ```
-
-1. To use all the recommended settings click `Apply all` to the first prompt.
-
-    To selectively apply each setting select `Choose which to apply`. Each change will then be prompted with a Yes/No confirmation before applying.
-1. Restart the machine when the script asks.
-
 ### Add HTTPS Firewall Rule
 
 If any firewall is running on the Web Application Server, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443). See [Configure Firewalls][] for information about adding rules to Windows Firewall.
@@ -280,8 +248,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |----------------------------------------------|-------------|
     |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
-    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
+    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. This must not be left as its default value for security reasons. This should be Cortex Encrypted. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
@@ -399,7 +367,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 1. In the `Cortex Innovation 2022.6 - Gateway` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
 1. Edit the file, changing the parameters according to the details given below:
 
-    {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-21 23-25 29-31 34,linenostart=1" >}}
+    {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-21 23 27-29 32,linenostart=1" >}}
     <?xml version="1.0" encoding="utf-8"?>
     <parameters>
         <setParameter name="IIS Web Application Name" value="Cortex/gateway" />
@@ -416,15 +384,13 @@ If the site hosting the Gateway web application is a newly created Cortex site o
         <setParameter name="Break On Exception" value="&lt;value&gt;true&lt;/value&gt;" />
         <setParameter name="ShowVariablesPalette" value="&lt;value&gt;false&lt;/value&gt;" />
         <setParameter name="Feature Flags" value="&lt;value&gt;InnovationId&lt;/value&gt;" />
-        <setParameter name="Service Fabric Api Gateway Endpoint" value="&lt;value&gt;https://load-balancer.domain.com/&lt;/value&gt;" />
+        <setParameter name="Service Fabric Api Gateway Endpoint" value="&lt;value&gt;https://app-server.domain.com:8722/&lt;/value&gt;" />
         <setParameter name="Service Fabric Using Self Signed Certificates" value="&lt;value&gt;False&lt;/value&gt;" />
         <setParameter name="Service Fabric Self Signed Certificate Subject" value="&lt;value&gt;CN=CortexServerCertificate&lt;/value&gt;" />
         <setParameter name="Service Fabric ApiGateway Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
         <setParameter name="Service Fabric ApiGateway Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
         <setParameter name="HSTS Enabled" value="true" />
         <setParameter name="Dot NET flow debugger Endpoint" value="&lt;value&gt;https://app-server.domain.com/debugger/api/&lt;/value&gt;" />
-        <setParameter name="Dot NET flow debugger Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
-        <setParameter name="Dot NET flow debugger Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
         <setParameter name="Garbage collection schedule" value="&lt;value&gt;0 0 1 ? * SUN&lt;/value&gt;" />
         <setParameter name="Garbage collection arguments" value="&lt;value&gt;--auto&lt;/value&gt;" />
         <setParameter name="Garbage collection lock timeout" value="&lt;value&gt;02:00:00&lt;/value&gt;" />
@@ -441,17 +407,15 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     |------------|------------------------------------------------|-------------|
     | 3          |`IIS Web Application Name`                      | Change to the correct `Site Name/Application` if either was modified from the defaults when creating the [website][Create Web Site] or [application][Create Application].  |
     | 16         |`Feature Flags`                                 | Replace `InnovationId` with the Cortex Innovation feature identifier. This should be retrieved from [Cortex Service Portal][]. |
-    | 17         |`Service Fabric Api Gateway Endpoint`           | Replace `load-balancer.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), e.g. `load-balancer.domain.com:8722`. |
+    | 17         |`Service Fabric Api Gateway Endpoint`           | Replace `app-server.domain.com` with the fully qualified domain name of the server. The port should be specified as 8722, e.g. `app-server.domain.com:8722`. |
     | 18         |`Service Fabric Using Self Signed Certificates` | Configure the value as `False` if you used valid CA certificates when installing the Application Servers, `True` if you used self-signed certificates. |
     | 20         |`Service Fabric ApiGateway Basic Auth Username` | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. |
-    | 21         |`Service Fabric ApiGateway Basic Auth Password` | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
+    | 21         |`Service Fabric ApiGateway Basic Auth Password` | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be Cortex Encrypted.|
     | 23         |`Dot NET flow debugger Endpoint`                | Replace `app-server.domain.com` with the fully qualified domain name of the Web Application Server. |
-    | 24         |`Dot NET flow debugger Basic Auth Username` | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. |
-    | 25         |`Dot NET flow debugger Basic Auth Password` | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
-    | 29         |`ModelDBContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance.|
-    | 30         |`AuthContext-Web.config Connection String`      | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
-    | 31         |`SignalRContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
-    | 34         |`CortexRepositories-Web.config Connection String` | Change this to the location where the Flow repositories are to be stored. The default location is `c:\CortexWeb\Repo`. |
+    | 27         |`ModelDBContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance.|
+    | 28         |`AuthContext-Web.config Connection String`      | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
+    | 29         |`SignalRContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
+    | 32         |`CortexRepositories-Web.config Connection String` | Change this to the location where the Flow repositories are to be stored. The default location is `c:\CortexWeb\Repo`. |
 
 ### Test Installation Script
 
@@ -511,9 +475,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 [Create Application]: {{< ref "#create-new-web-application" >}}
 [Get Application Pool User]: {{< ref "#get-application-pool-user" >}}
 [Install Certificate]: {{< ref "#install-certificate" >}}
-[Configure Debugger Installation Script]: {{< ref "#configure-installation-script" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
 [Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
 [Licensing Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
-[Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}

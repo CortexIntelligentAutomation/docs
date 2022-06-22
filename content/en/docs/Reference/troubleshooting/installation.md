@@ -113,7 +113,7 @@ Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attemp
 Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt 20
 ```
 
-It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [Cortex Service Desk](https://support.cortex.co.uk/).
+It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [Cortex Service Portal][].
 
 To work around this error, either uninstall the platform and reinstall it using a different certificate, otherwise disable peer-to-peer verification in RabbitMQ by carrying out the following steps:
 
@@ -149,7 +149,7 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 ### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
 
-Check that the `Feature Flags` Guid in the `parameters.xml` file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
+Check that the `Feature Flags` Guid in the `parameters.xml` file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [Cortex Service Portal][] for assistance.
 
 ### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
 
@@ -161,11 +161,11 @@ If no misconfiguration can be found, the service log files may contain more info
 
 * %ProgramData%/Cortex/Cortex Flow Debugger
 
-If the issues cannot be resolved, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
+If the issues cannot be resolved, please contact [Cortex Service Portal][] for assistance.
 
 ### Cannot publish a package {#ts-no-publish}
 
-Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
+Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [Cortex Service Portal][] for assistance.
 
 Ensure that the HA Services are healthy by following these steps:
 
@@ -181,7 +181,7 @@ Ensure that the HA Services are healthy by following these steps:
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
     If no useful message can be seen here, the service log files may contain more information.
 
-If no solution can be found, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for assistance.
+If no solution can be found, please contact [Cortex Service Portal][] for assistance.
 
 ### Managing RabbitMQ
 
@@ -194,3 +194,5 @@ To check that RabbitMQ is working as expected, remote desktop to an Application 
 
 If there are any unhealthy nodes (red) you may need to restart the RabbitMQ Windows service on each of the nodes that is erroring. These can be restarted in any order, but they
 must be restarted one at a time; wait for the node in the RabbitMQ explorer to be green before restarting the next one (you may need to refresh the browser).
+
+[Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}

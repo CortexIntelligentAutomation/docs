@@ -8,6 +8,17 @@
             MainDoc = "/docs/getting-started/on-premise"
             [Cortex.GettingStarted.OnPremise.InstallInnovationOnly]
                 MainDoc = "/docs/getting-started/on-premise/install-innovation-only/"
+                [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced]
+                    AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes"
+                    AdvancedConfigSingleServer = "/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes#single-server-without-ha"
+                    AdvancedConfigMultipleServer = "/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes#multiple-server-with-ha"
+                    AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/advanced/alternative-architectures"
+                    ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/advanced/tde"
+                    ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/advanced/configure-firewalls"
+                    CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates"
+                    EncryptText = "/docs/getting-started/on-premise/install-innovation-only/advanced/encrypt-text"
+                    PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/advanced/port-requirements"
+                    SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
@@ -23,15 +34,21 @@
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
-                    [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
-                        AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes"
-                        AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/alternative-architectures"
-                        ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
-                        ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
-                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
-                        EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
-                        PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
-                        SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
+                [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA]
+                    MainDoc = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/"       
+                    Architecture = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture"
+                    InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-and-loadbalancer-servers"
+                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-and-loadbalancer-servers#run-installation-script"
+                    InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server#install-gateway"
+                    Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites"
+                    AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#alternative-load-balancer-requirements"
+                    CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#certificate-requirements"
+                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#client-requirements"
+                    LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#licensing-requirements"
+                    SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
+                    TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -662,6 +679,8 @@
             Telco = "https://www.cortex-ia.com/telecommunications-automation/"
         [Cortex.Website.UseCases]
             MainDoc = "https://www.cortex-ia.com/download-centre/"
+    [Cortex.ServicePortal]
+        MainDoc = "https://support.cortex.co.uk/"
     [Cortex.YouTube]
         MainDoc = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
         [Cortex.YouTube.Webinars]
@@ -671,6 +690,10 @@
     MainDoc = "https://www.connectionstrings.com/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
+[ErlangOTP]
+    MainDoc = "https://github.com/erlang/otp"
+[GoBetween]
+    MainDoc = "https://github.com/yyyar/gobetween"
 [Grafana]
     MainDoc = "https://grafana.com/"
 [JsonDotNet]
@@ -686,6 +709,8 @@
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
+        SqlServerExpress = "https://go.microsoft.com/fwlink/?LinkID=799012"
+        TransparentDataEncryption = "https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
@@ -816,9 +841,25 @@
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
             RegexMatchTimeoutException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
+    [MSDocs.PowerShell]
+        InstallModule = "https://docs.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
+    [MSDocs.ServiceFabric]
+        MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
+        Explorer = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
+        ReverseProxy = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
+[MSSupport]
+    [MSSupport.Troubleshooting]
+        DynamicPorts = "https://support.microsoft.com/kb/929851"
+[NSSM]
+    MainDoc = "https://nssm.cc/"
+[Particular]
+    [Particular.NServiceBus]
+        MainDoc = "https://particular.net/nservicebus"
+[RabbitMQ]
+    MainDoc = "https://www.rabbitmq.com/"
 [Splunk]
     MainDoc = "https://www.splunk.com/"
 [VisualStudio]
