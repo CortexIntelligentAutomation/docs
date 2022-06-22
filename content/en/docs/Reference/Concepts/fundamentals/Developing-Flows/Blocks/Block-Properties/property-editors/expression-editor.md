@@ -9,8 +9,7 @@ weight: 20
 
 ## Summary
 
-// TODO: Review this
-An [input property][] that uses an [expression editor][TODO] is the most flexible and can accept [literal values][], [expressions][Expressions], and references to [variables][Variables].
+The [Expression Editor][TODO] is the most powerful [property editor][] and can accept [literal values][], [expressions][Expressions], and references to [variables][Variables].
 
 ## Literal Values
 
@@ -221,11 +220,11 @@ An expression is a combination of [operands][] (i.e. [variables][Variables], [li
 
 Expressions use the syntax of the [C#][] [programming language][].
 
-// TODO: We are here
-// TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
-// TODO: Up to char from operands -> literals
-// TODO: Below is missing Equality and Properties
-// TODO: Remove old literal-variable-expression page, fix url toml and fix references.
+- TODO: We are here
+- TODO: Follow all links in two paragraphs above, check they go to the correct places and fill in any missing glossary entries recursively.
+- TODO: Up to char from operands -> literals
+- TODO: Below is missing Equality and Properties
+- TODO: Remove old literal-variable-expression page, fix url toml and fix references.
 
 Types of expressions:
 
@@ -444,6 +443,7 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [String-Expressions]: {{< ref "#string-expressions" >}}
 [String-Literal]: {{< ref "#string-literal" >}}
 
+[property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
