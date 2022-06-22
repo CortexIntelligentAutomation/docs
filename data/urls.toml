@@ -558,6 +558,7 @@
                     MainDoc = "/docs/reference/exceptions/common/property/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertycontainsnulloremptyitemexception/"
+                        ValueContainsNullOrEmptyItem = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/#value-contains-null-or-empty-item"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyemptyexception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException]
