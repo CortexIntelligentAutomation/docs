@@ -549,11 +549,9 @@
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
-                FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
-                Guid = "/docs/reference/data-types/most-common/#guid"
+                HttpRequestHeaders = "/docs/reference/data-types/most-common/#httprequestheaders"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
-                Nullable = "/docs/reference/data-types/most-common/#nullable"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
