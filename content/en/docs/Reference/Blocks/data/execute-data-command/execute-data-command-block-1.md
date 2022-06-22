@@ -444,7 +444,7 @@ The [Command][Command Property] executed on the connected data source. There are
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [ICommand][] |
+| Data Type | [DataCommand][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
@@ -456,7 +456,7 @@ The [Connection Details][Connection Details Property] object that includes all o
 
 - [Connection String][Connection Strings] - must be provided in order to connect to a data source. The [Connection String][Connection Strings] is formatted differently depending on the type of data source that is being connected to, please see [Working with Data Sources][] for more information.
 
-For a list of currently supported connection details, please see [IConnectionDetails][]
+For a list of currently supported connection details, please see [ConnectionDetails][]
 
 Note it is recommended to use a [Variable][] for [Connection Details][Connection Details Property] when it will be used across multiple Execute Command blocks, as using a variable will allow for reuse of the same connection. Using a [Literal][] to set the Connection Details will cause the connection to only be used once.
 
@@ -647,17 +647,17 @@ A Non Query Statement can use any object as a parameter. If an object that deriv
 
 It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the [Command][Command Property] is executed.
 
-The `@` symbol denotes a parameter within the [CommandText][ICommand.CommandText] (e.g. `"SELECT * FROM Table WHERE Name = @Parameter"`). An example of using parameters can be found in [Executing Multiple Commands (Safe)][], whereas, an example of inserting variables into a statement without parameters can be found in [Executing Multiple Commands (Unsafe)][]
+The `@` symbol denotes a parameter within the [CommandText][DataCommand.CommandText] (e.g. `"SELECT * FROM Table WHERE Name = @Parameter"`). An example of using parameters can be found in [Executing Multiple Commands (Safe)][], whereas, an example of inserting variables into a statement without parameters can be found in [Executing Multiple Commands (Unsafe)][]
 
 [Query Statements][] can use any object as a parameter. Objects that derive from [Array][] or [IEnumerable][] can only be used for clauses that accept list values (e.g. `IN`, `ANY`, `ALL`), if they are used in other clauses the block will throw a [CommandException][].
 
 [Non Query Statements][] can use any object as a parameter. If an object that derives from [Array][] or [IEnumerable][] is used, the Non Query Statement will be executed for each item in the [Array][] or [IEnumerable][] and the sum of all the results will be returned.
 
-For both [Query Statements][] and [Non Query Statements][], an SqlException is thrown if a parameter is missing from the [Command][Command Property] and the [CommandText][ICommand.CommandText] contains a parameter  (e.g. `{"CommandText": "SELECT * FROM Table WHERE Name = @Parameter", "Parmeters": {"IncorrectParameter": 0}}`).
+For both [Query Statements][] and [Non Query Statements][], an SqlException is thrown if a parameter is missing from the [Command][Command Property] and the [CommandText][DataCommand.CommandText] contains a parameter  (e.g. `{"CommandText": "SELECT * FROM Table WHERE Name = @Parameter", "Parmeters": {"IncorrectParameter": 0}}`).
 
 ### Complex Commands
 
-Complex commands (e.g. Cursors and Variables) that contain dependency between their statements cannot be used with [Commands][Command Types Commands], as the parsing performed by the block will cause each statement of [CommandText][ICommand.CommandText] to be run individually instead of running the [CommandText][ICommand.CommandText] as a whole.
+Complex commands (e.g. Cursors and Variables) that contain dependency between their statements cannot be used with [Commands][Command Types Commands], as the parsing performed by the block will cause each statement of [CommandText][DataCommand.CommandText] to be run individually instead of running the [CommandText][DataCommand.CommandText] as a whole.
 
 For statements with this type of dependency use either [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand], depending on whether data from the data source or the number of rows affected is returned.
 
@@ -743,7 +743,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [CommandException]: {{< url "Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
 
 [TConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.TConnectionDetails.MainDoc" >}}
-[IConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.IConnectionDetails.MainDoc" >}}
+[ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
@@ -755,8 +755,8 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Array]: {{< url "Cortex.Reference.DataTypes.MostCommon.Array" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 
-[ICommand]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.MainDoc" >}}
-[ICommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.ICommand.CommandText" >}}
+[DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
+[DataCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.CommandText" >}}
 
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Command.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.Command.CommandText" >}}
