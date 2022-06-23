@@ -73,7 +73,7 @@ None
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Collection]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
-[Variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
 [System.Object]: {{< url "MSDocs.DotNet.Api.System.Object.MainDoc" >}}
 [Using dynamic]: {{< url "MSDocs.DotNet.Api.System.dynamic.MainDoc" >}}

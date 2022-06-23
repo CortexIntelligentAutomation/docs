@@ -222,7 +222,7 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
 - TODO: Below is missing Equality and Properties
-- TODO: Remove old literal-variable-expression page, fix url toml and fix references. [Cortex.Reference.Concepts.LiteralVariablesExpressions]
+- TODO: Remove old literal-variable-expression page
 
 Types of expressions:
 

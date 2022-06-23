@@ -444,10 +444,15 @@
                                 [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
                                     MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/"
                                     Expressions = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#expressions"
+		                            ExplicitlyCastAVariable = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#explicitly-cast-a-variable"
                                     Literals = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#literals"
+                                    DictionaryLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
+                                    ListLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#list-literal"
                                     ObjectLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#object-literal"
                                     StringLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#string-literal"
                                     Variables = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#variables"
+                                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
+                                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes]
                                 MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-types/"
                         [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock]
@@ -544,16 +549,6 @@
                 MainDoc = "/docs/reference/concepts/working-with-data-sources/"
             [Cortex.Reference.Concepts.Keys]
                 MainDoc = "/docs/reference/concepts/keys/"
-            [Cortex.Reference.Concepts.LiteralVariablesExpressions]
-                MainDoc = "/docs/reference/concepts/literal-variables-expressions/"
-                Literal = "/docs/reference/concepts/literal-variables-expressions/#literals"
-                DictionaryLiterals = "/docs/reference/concepts/literal-variables-expressions/#dictionary-literals"
-                ListLiterals = "/docs/reference/concepts/literal-variables-expressions/#list-literals"
-                Expressions = "/docs/reference/concepts/literal-variables-expressions/#expressions"
-                DictionaryExpressions = "/docs/reference/concepts/literal-variables-expressions/#dictionary-expressions"
-                ListExpressions = "/docs/reference/concepts/literal-variables-expressions/#list-expressions"
-                ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
-                VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
             [Cortex.Reference.Concepts.NullAndNullableTypes]
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]
