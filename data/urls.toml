@@ -937,6 +937,10 @@
         StringLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals"
         IdentifierNamingRules = "https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names"
         OperatorsAndExpressions = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/"
+        ArithmeticOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators"
+        BooleanLogicalOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators"
+        ComparisonOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"
+        EqualityOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators"
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"

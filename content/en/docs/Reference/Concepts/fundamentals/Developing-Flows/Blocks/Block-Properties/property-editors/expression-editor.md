@@ -71,9 +71,9 @@ For interpolated [strings][String], [variables][Variables] or [expressions][Expr
 $"He said \"Come here {($)NameVar}!\""
 ```
 
-For further information on interpolated strings using  [variables][Variables] or [expressions][Expressions] see [String Expressions][String-Expressions]
+For further information on interpolated strings using  [variables][Variables] or [expressions][Expressions] see [String expressions][]
 
-In the case of interpolated verbatim [sting][String] literals, double curly braces are not interpreted literally; they produce a single curly brace character. For example:
+In the case of interpolated verbatim [string][String] literals, double curly braces are not interpreted literally; they produce a single curly brace character. For example:
 
 ```csharp
 $@"This is a single square brace ""["", and this is a single curly brace ""{{"""
@@ -221,57 +221,100 @@ An expression is a combination of [operands][] (i.e. [variables][Variables], [li
 Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
-- TODO: Below is missing Equality and Properties
 - TODO: Remove old literal-variable-expression page
+- TODO: Go through expressions - Up to Equality but have TODOs on String that need completing
+- TODO: Update to format below
+- TODO: Below is missing Equality and Properties
 
 Types of expressions:
 
-- Arithmetic
-- String
-- Boolean
-- Equality
-- Constructors
-- Methods
-- Properties
-- Indexes
-- Casting
+- [Arithmetic][Arithmetic expressions]
+- [String][String expressions]
+- [Boolean][Boolean expressions]
+- [Equality][Equality expressions]
+- [Constructors][Constructor expressions]
+- [Methods][Method expressions]
+- [Properties][Property expressions]
+- [Indexes][Index expressions]
+- [Casting][Casting expressions]
 
 ### Arithmetic expressions
 
-If `($)intVar1` equals `6` and `($)intVar2` equals `3`
+The following [operators][] perform arithmetic operations with [operands][] that have numeric values.
 
-| Expression                | Result |
-|---------------------------|--------|
-| `($)intVar1 + ($)intVar2` | `9`    |
-| `($)intVar1 / ($)intVar2` | `2`    |
+Assume the variable `($)IntVar1` has been set to `6`, and the variable `($)IntVar2` has been set to `3`.
+
+| Expression                | Result | Notes     |
+|---------------------------|--------|-----------|
+| `($)IntVar1 + ($)IntVar2` | `9`    | Add       |
+| `($)IntVar1 - ($)IntVar2` | `3`    | Subtract  |
+| `($)IntVar1 * ($)IntVar2` | `18`   | Multiply  |
+| `($)IntVar1 / ($)IntVar2` | `2`    | Divide    |
+| `($)IntVar1 % ($)IntVar2` | `0`    | Remainder |
+
+For further information, see [Arithmetic Operators][]
 
 ### String expressions
 
-Variables containing other simple [data types][Data-Types], e.g., numeric values or [Boolean][Boolean] values, will be coerced to [strings][String] when used in a [string][String] expression.
+There are three types of string expressions:
 
-If `($)stringVar1` equals `"hello"`, `($)stringVar2` equals `"world"` and `($)integerVar` equals `1234`
+- [Concatenated Strings][]
+- [Interpolated Strings][]
+- [Verbatim Strings][]
+
+If a data type is used in a string expression that is not a [String][], then it will be [implicitly cast][TODO] to a [String][] as part of the expression.
+
+Assume for all the examples below the variable `($)StringVar1` has been set to `"hello"`, `($)StringVar2` has been set to `"world"` and `($)IntegerVar` has been set to `1234`
+
+#### Concatenated Strings
+
+TODO: Talk about concatenation
+ (`+` [operator][operators])
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
-| `($)stringVar1 + " " + ($)stringVar2` | `"hello world"`              |                                    |
-| `($)stringVar1 + " " + ($)integerVar` | `"hello 1234"`               | ($)integerVar is coerced to a [string][String] |
-| `$"{($)stringVar1} {($)stringVar2}"`  | `"hello world"`              | using .NET [string][String] interpolation    |
-| `$"{($)stringVar1} {($)integerVar}"`  | `"hello 1234"`              | ($)integerVar is coerced to a [string][String] |
-| `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | using .NET verbatim [string literal][String-Literal] |
-| `$@"c:\programs\{($)stringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | using .NET [string][String] interpolation and verbatim [string literal][String-Literal] |
+| `($)StringVar1 + " " + ($)StringVar2` | `"hello world"`              | Concatenated String |
+| `($)StringVar1 + " " + ($)IntegerVar` | `"hello 1234"`               | Concatenated String, The variable `($)IntegerVar` is [implicitly cast][TODO] to a [String][String] as part of the expression |
+
+For further information, see [Concatenated Strings][Microsoft]
+
+#### Interpolated Strings
+
+TODO: Talk about interpolation
+
+| Expression                            | Result                       | Notes                              |
+|---------------------------------------|------------------------------|------------------------------------|
+| `$"{($)StringVar1} {($)StringVar2}"`  | `"hello world"`              | Interpolated String |
+| `$"{($)StringVar1} {($)IntegerVar}"`  | `"hello 1234"`               | Interpolated String, The variable `($)IntegerVar` is [implicitly cast][TODO] to a [String][String] as part of the expression |
+| `$@"c:\programs\{($)StringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | Interpolated Verbatim String |
+
+For further information, see [Interpolated Strings][Microsoft]
+
+#### Verbatim Strings
+
+TODO: Talk about verbatim
+
+| Expression                            | Result                       | Notes                              |
+|---------------------------------------|------------------------------|------------------------------------|
+| `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | Verbatim String  |
+| `$@"c:\programs\{($)StringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | Interpolated Verbatim String |
+
+For further information, see [Verbatim Strings][Microsoft]
 
 ### Boolean expressions
 
-If `($)boolVar1` equals `false` and `($)boolVar2` equals `true`
+The following [operators][] perform logical operations with [operands][] that have boolean values.
 
-| Expression                            | Result                       | Notes                              |
-|---------------------------------------|------------------------------|------------------------------------|
-| `($)boolVar1 & ($)boolVar2`           | `false`                      | logical `AND` evaluating both sides of expression |
-| `($)boolVar1 && ($)boolVar2`          | `false`                       | logical `AND` only requring left hand part to be evaluated |
-| `($)boolVar2 \| ($)boolVar1`           | `true`                      | logical `OR` evaluating both sides of expression |
-| `($)boolVar2 \|\| ($)boolVar1`          | `true`                       | logical `OR` only requring left hand part to be evaluated |
-| `($)boolVar1 ^ ($)boolVar2`           | `true`                      | logical `XOR` |
-| `!($)boolVar1`                        | `true`                      | unary negation of [Boolean][Boolean] value |
+Assume the variable `($)BoolVar1` has been set to `false`, and the variable `($)BoolVar2` has been set to `true`.
+
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `($)BoolVar1 && ($)BoolVar2`   | `false` | AND |
+| `($)BoolVar2 \|\| ($)BoolVar1` | `true`  | OR  |
+| `($)BoolVar1 ^ ($)BoolVar2`    | `true`  | XOR |
+| `!($)BoolVar1`                 | `true`  | NOT |
+
+For further information, see [Boolean Logical Operators][]
 
 ### Dictionary expressions
 
@@ -297,12 +340,12 @@ An element of a [List][] may be referenced using an index, where the index is an
 
 ### Using a method on an object
 
-`($)stringVar1` equals `"hello"` and `($)stringVar2` equals `"123"`
+`($)StringVar1` equals `"hello"` and `($)StringVar2` equals `"123"`
 
 | Expression              | Result    |
 |-------------------------|-----------|
-| `stringVar1.ToUpper()`  | `"HELLO"` |
-| `int.Parse(stringVar2)` | `123`     |
+| `StringVar1.ToUpper()`  | `"HELLO"` |
+| `int.Parse(StringVar2)` | `123`     |
 
 ### Explicitly cast a variable
 
@@ -438,7 +481,9 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [List literal]: {{< ref "#list-literal" >}}
 
 [Data-Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
-[String-Expressions]: {{< ref "#string-expressions" >}}
+[Arithmetic expressions]: {{< ref "#arithmetic-expressions" >}}
+[String expressions]: {{< ref "#string-expressions" >}}
+[Boolean expressions]: {{< ref "#boolean-expressions" >}}
 [String-Literal]: {{< ref "#string-literal" >}}
 
 [property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
@@ -476,6 +521,8 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Integer-Literals]: {{< url "MSDocs.CSharp.IntegerLiterals" >}}
 [Real-Literals]: {{< url "MSDocs.CSharp.RealLiterals" >}}
 [String-Literals]: {{< url "MSDocs.CSharp.StringLiterals" >}}
+[Arithmetic Operators]: {{< url "MSDocs.CSharp.ArithmeticOperators" >}}
+[Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
 
 [C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
