@@ -82,8 +82,12 @@
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-item-with-value-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKey]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKeys]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-keys-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-values-block-3"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -266,8 +270,12 @@
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-end-block-2"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndex]
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndexes]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-indexes-block-2"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-values-block-2"
             [Cortex.Reference.Blocks.Loops]
                 MainDoc = "/docs/reference/blocks/loops"
                 [Cortex.Reference.Blocks.Loops.For]
