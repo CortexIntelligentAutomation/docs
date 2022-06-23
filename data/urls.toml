@@ -122,8 +122,12 @@
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-item-with-value-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKey]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKeys]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-keys-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-values-block-3"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -160,6 +164,12 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/check-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.CheckFolder.CheckFolderExists]
                         MainDoc = "/docs/reference/blocks/files-and-folders/check-folder/check-folder-exists-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CopyFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/copy-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFile.CopyFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-file/copy-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFile.CopyFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-file/copy-files-block"
                 [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolder]
@@ -168,13 +178,49 @@
                         MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/copy-folders-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.DuplicateFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/duplicate-folder-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CreateFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/create-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CreateFolder.CreateFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/create-folder/create-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CreateFolder.CreateFolders]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/create-folder/create-folders-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.DeleteFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/delete-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFile.DeleteFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-file/delete-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFile.DeleteFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-file/delete-files-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.DeleteFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/delete-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFolder.DeleteFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-folder/delete-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFolder.DeleteFolders]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-folder/delete-folders-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.GetFileInformation]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/get-file-information"
+                    [Cortex.Reference.Blocks.FilesAndFolders.GetFileInformation.GetFileInformation]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/get-file-information/get-file-information-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.GetFolderContent]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-content"
+                    [Cortex.Reference.Blocks.FilesAndFolders.GetFolderContent.GetFolderContent]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-content/get-folder-content-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.GetFolderInformation]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-information"
+                    [Cortex.Reference.Blocks.FilesAndFolders.GetFolderInformation.GetFolderInformation]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-information/get-folder-information-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.MoveFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/move-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.MoveFile.MoveFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/move-file/move-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.MoveFile.MoveFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/move-file/move-files-block"
                 [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/move-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/move-folder/move-folder-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolders]
                         MainDoc = "/docs/reference/blocks/files-and-folders/move-folder/move-folders-block"
-                    [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
+                [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
@@ -238,6 +284,12 @@
                         MainDoc = "/docs/reference/blocks/lists/get-index/get-index-of-item-with-value-block-2"
                     [Cortex.Reference.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/get-index/get-indexes-of-items-with-value-block-2"
+                [Cortex.Reference.Blocks.Lists.GetItem]
+                    MainDoc = "/docs/reference/blocks/lists/get-item/"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-item-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-item-at-end-block-2"
                 [Cortex.Reference.Blocks.Lists.RemoveItem]
                     MainDoc = "/docs/reference/blocks/lists/remove-item/"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemWithValue]
@@ -256,8 +308,18 @@
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-item-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetItemWithValue]
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndexes]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-indexes-block-2"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-values-block-2"
             [Cortex.Reference.Blocks.Loops]
                 MainDoc = "/docs/reference/blocks/loops"
                 [Cortex.Reference.Blocks.Loops.For]

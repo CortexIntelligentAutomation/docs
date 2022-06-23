@@ -24,14 +24,16 @@ The format of the [Message][] is as follows:
 
 ```json
 
-"'<Property Name>' contains at least one null or empty value; it must only contain values that are not null or empty.\r\nPlease click the HelpLink for more information on how to fix this."
+"'<property-name>' contains at least one null or empty value; it must only contain values that are not null or empty.\r\nPlease click the HelpLink for more information on how to fix this."
 ```
 
-where `<Property Name>` is the name of the property.
+where:
+
+* `<property-name>` is the name of the property.
 
 #### How to fix
 
-Ensure the value provided for the [property][TODO] named `<Property Name>` does not contain items that are either `null` or empty.
+Ensure the value provided for the [property][TODO] named `<property-name>` does not contain items that are either `null` or empty.
 
 ## Properties
 
@@ -47,7 +49,9 @@ The type of the exception (i.e. `PropertyContainsNullOrEmptyItemException`).
 
 The exception message, providing information about the exception that occurred.
 
-For this exception, `<Property Name>` will be replaced with the name of the [property][TODO].
+For this exception:
+
+* `<property-name>` will be replaced with the name of the [property][TODO].
 
 | | |
 |--------------------|---------------------------|
@@ -61,7 +65,7 @@ The URL for the relevant section of this exception's help page.
 
 ### Known Limitations
 
-Currently, only the `<Property Name>` has been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the id, name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
+Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the id, name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
 
 ## See Also
 
