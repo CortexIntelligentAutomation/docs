@@ -941,6 +941,9 @@
         BooleanLogicalOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators"
         ComparisonOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"
         EqualityOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators"
+        Interpolation = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation"
+        Verbatim = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals"
+        InterpolatedVerbatim = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation"
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
@@ -1063,6 +1066,7 @@
         [MSDocs.DotNet.Api.System.String]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
             Concat = "https://docs.microsoft.com/en-us/dotnet/api/system.string.concat"
+            ConcatGuide = "https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings"
             ConcatOperator = "https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
             Format = "https://docs.microsoft.com/en-us/dotnet/api/system.string.format"
             Insert = "https://docs.microsoft.com/en-us/dotnet/api/system.string.insert"

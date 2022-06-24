@@ -222,7 +222,7 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
 - TODO: Remove old literal-variable-expression page
-- TODO: Go through expressions - Up to Equality but have TODOs on String that need completing
+- TODO: Go through expressions - Up to Equality
 - TODO: Update to format below
 - TODO: Below is missing Equality and Properties
 
@@ -262,44 +262,48 @@ There are three types of string expressions:
 - [Interpolated Strings][]
 - [Verbatim Strings][]
 
-If a data type is used in a string expression that is not a [String][], then it will be [implicitly cast][TODO] to a [String][] as part of the expression.
+If a data type is used in a string expression that is not a [String][], then it will be [implicitly cast][] to a [String][] as part of the expression.
 
 Assume for all the examples below the variable `($)StringVar1` has been set to `"hello"`, `($)StringVar2` has been set to `"world"` and `($)IntegerVar` has been set to `1234`
 
 #### Concatenated Strings
 
-TODO: Talk about concatenation
- (`+` [operator][operators])
+Concatenation is the process of appending one [String][] to the end of another [String][]. You concatenate strings by using the `+` [operator][operators].
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
-| `($)StringVar1 + " " + ($)StringVar2` | `"hello world"`              | Concatenated String |
-| `($)StringVar1 + " " + ($)IntegerVar` | `"hello 1234"`               | Concatenated String, The variable `($)IntegerVar` is [implicitly cast][TODO] to a [String][String] as part of the expression |
+| `($)StringVar1 + " " + ($)StringVar2` | `"hello world"`              | |
+| `($)StringVar1 + " " + ($)IntegerVar` | `"hello 1234"`               | The variable `($)IntegerVar` is [implicitly cast][] to a [String][String] as part of the expression |
 
-For further information, see [Concatenated Strings][Microsoft]
+For further information, see [String concatenation][].
 
 #### Interpolated Strings
 
-TODO: Talk about interpolation
+Interpolation is the process of inserting expressions and variable references into a [String][]. An interpolated string is declared by prefixing the string with the `$` character.
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
-| `$"{($)StringVar1} {($)StringVar2}"`  | `"hello world"`              | Interpolated String |
-| `$"{($)StringVar1} {($)IntegerVar}"`  | `"hello 1234"`               | Interpolated String, The variable `($)IntegerVar` is [implicitly cast][TODO] to a [String][String] as part of the expression |
-| `$@"c:\programs\{($)StringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | Interpolated Verbatim String |
+| `$"{($)StringVar1} {($)StringVar2}"`  | `"hello world"`              | |
+| `$"{($)StringVar1} {($)IntegerVar}"`  | `"hello 1234"`               | The variable `($)IntegerVar` is [implicitly cast][] to a [String][String] as part of the expression |
+| `$"{($)StringVar1} {($)IntegerVar + 1}"`  | `"hello 1235"`               | The expression `($)IntegerVar + 1` is evaluated and the result is [implicitly cast][] to a [String][String] as part of the expression |
 
-For further information, see [Interpolated Strings][Microsoft]
+For further information, see [String interpolation][].
 
 #### Verbatim Strings
 
-TODO: Talk about verbatim
+A verbatim string identifies that characters within the string should be processed literally, and do not need to be escaped. However, the following exceptions apply:
+
+- In both Verbatim and Interpolated Verbatim strings the double quote character `"` is escaped by prefixing it with another double quote character
+- In Interpolated Verbatim strings the curly brace characters `{` and `}` are escaped by prefixing them with the same curly brace character
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
-| `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | Verbatim String  |
+| `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | |
+| `@"They said ""Hello!"""`             | `"They said \"Hello!\""`     | The `"` character is escaped|
+| `$@"{{ Some Text }}"`                 | `"{ Some Text }"`            | Interpolated Verbatim String, The curly brace characters are escaped |
 | `$@"c:\programs\{($)StringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | Interpolated Verbatim String |
 
-For further information, see [Verbatim Strings][Microsoft]
+For further information, see [Verbatim string literals][] and [Verbatim String Interpolation][].
 
 ### Boolean expressions
 
@@ -479,6 +483,11 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Dictionary literal]: {{< ref "#dictionary-literal" >}}
 [Structure literal]: {{< ref "#structure-literal" >}}
 [List literal]: {{< ref "#list-literal" >}}
+[Conc]: {{< ref "#list-literal" >}}
+[List literal]: {{< ref "#list-literal" >}}
+[Concatenated Strings]: {{< ref "#concatenated-strings" >}}
+[Interpolated Strings]: {{< ref "#interpolated-strings" >}}
+[Verbatim Strings]: {{< ref "#verbatim-strings" >}}
 
 [Data-Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [Arithmetic expressions]: {{< ref "#arithmetic-expressions" >}}
@@ -516,6 +525,8 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [key]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
 [item]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}
 
+[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
+
 [Boolean-Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char-Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}
 [Integer-Literals]: {{< url "MSDocs.CSharp.IntegerLiterals" >}}
@@ -524,6 +535,10 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Arithmetic Operators]: {{< url "MSDocs.CSharp.ArithmeticOperators" >}}
 [Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
+[String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
+[Verbatim string literals]: {{< url "MSDocs.CSharp.Verbatim" >}}
+[Verbatim String Interpolation]: {{< url "MSDocs.CSharp.InterpolatedVerbatim" >}}
+[String concatenation]: {{< url "MSDocs.DotNet.Api.System.String.ConcatGuide" >}}
 
 [C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
 [operands]: {{< url "Cortex.Reference.Glossary.K-O.Operand" >}}
