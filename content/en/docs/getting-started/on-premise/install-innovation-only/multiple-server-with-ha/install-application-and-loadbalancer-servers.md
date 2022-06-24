@@ -75,7 +75,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 ## Add Antivirus Exclusions
 
-1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next step, otherwise follow these steps:
+1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
     1. Open a Windows PowerShell (x64) window as administrator.
     1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
@@ -113,7 +113,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
         `All ports required by Cortex Innovation are free`
 
-        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
 
         The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
@@ -224,7 +224,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
-    If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
+    If there are no errors, continue to the next section; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
 
     If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Desk](https://support.cortex.co.uk/) for further assistance. The `WhatIf` script will have created a temporary version of the config file showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
 
