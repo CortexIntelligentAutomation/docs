@@ -222,16 +222,15 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
 - TODO: Remove old literal-variable-expression page
-- TODO: Go through expressions - Up to Equality
-- TODO: Update to format below
-- TODO: Below is missing Equality and Properties
+- TODO: Go through expressions - Up to Constructors
+- TODO: Update to format below - Remove extra headings
 
 Types of expressions:
 
 - [Arithmetic][Arithmetic expressions]
 - [String][String expressions]
 - [Boolean][Boolean expressions]
-- [Equality][Equality expressions]
+- [Comparison][Comparison expressions]
 - [Constructors][Constructor expressions]
 - [Methods][Method expressions]
 - [Properties][Property expressions]
@@ -252,7 +251,7 @@ Assume the variable `($)IntVar1` has been set to `6`, and the variable `($)IntVa
 | `($)IntVar1 / ($)IntVar2` | `2`    | Divide    |
 | `($)IntVar1 % ($)IntVar2` | `0`    | Remainder |
 
-For further information, see [Arithmetic Operators][]
+For further information, see [Arithmetic Operators][].
 
 ### String expressions
 
@@ -264,7 +263,7 @@ There are three types of string expressions:
 
 If a data type is used in a string expression that is not a [String][], then it will be [implicitly cast][] to a [String][] as part of the expression.
 
-Assume for all the examples below the variable `($)StringVar1` has been set to `"hello"`, `($)StringVar2` has been set to `"world"` and `($)IntegerVar` has been set to `1234`
+Assume for all the examples below the variable `($)StringVar1` has been set to `"hello"`, `($)StringVar2` has been set to `"world"` and `($)IntegerVar` has been set to `1234`.
 
 #### Concatenated Strings
 
@@ -318,7 +317,34 @@ Assume the variable `($)BoolVar1` has been set to `false`, and the variable `($)
 | `($)BoolVar1 ^ ($)BoolVar2`    | `true`  | XOR |
 | `!($)BoolVar1`                 | `true`  | NOT |
 
-For further information, see [Boolean Logical Operators][]
+For further information, see [Boolean Logical Operators][].
+
+### Comparison expressions
+
+The following [operators][] perform comparison operations with [operands][].
+
+Assume the variable `($)IntVar1` has been set to `1`, and the variable `($)IntVar2` has been set to `2`.
+
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `($)IntVar1 == ($)IntVar2`     | `false` | Equal |
+| `($)IntVar1 != ($)IntVar2`     | `true`  | Not Equal |
+| `($)IntVar1 > ($)IntVar2`      | `false` | Greater Than  |
+| `($)IntVar1 >= ($)IntVar2`     | `false` |  Greater Than or Equal |
+| `($)IntVar1 < ($)IntVar2`      | `true`  | Less Than |
+| `($)IntVar1 <= ($)IntVar2`     | `true`  | Less Than or Equal  |
+
+For further information, see [Equality Operators][], [Comparison Operators][], and [Object Equality][].
+
+### Constructor expressions
+
+### Method expressions
+
+### Property expressions
+
+### Index expressions
+
+### Casting expressions
 
 ### Dictionary expressions
 
@@ -493,7 +519,7 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Arithmetic expressions]: {{< ref "#arithmetic-expressions" >}}
 [String expressions]: {{< ref "#string-expressions" >}}
 [Boolean expressions]: {{< ref "#boolean-expressions" >}}
-[String-Literal]: {{< ref "#string-literal" >}}
+[Comparison expressions]: {{< ref "#comparison-expressions" >}}
 
 [property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
@@ -520,6 +546,8 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 
 [input property]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
+[Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
+
 [index notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.IndexNotation" >}}
 [dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}
 [key]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
@@ -534,6 +562,8 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [String-Literals]: {{< url "MSDocs.CSharp.StringLiterals" >}}
 [Arithmetic Operators]: {{< url "MSDocs.CSharp.ArithmeticOperators" >}}
 [Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
+[Comparison Operators]: {{< url "MSDocs.CSharp.ComparisonOperators" >}}
+[Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
 [String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
 [Verbatim string literals]: {{< url "MSDocs.CSharp.Verbatim" >}}
