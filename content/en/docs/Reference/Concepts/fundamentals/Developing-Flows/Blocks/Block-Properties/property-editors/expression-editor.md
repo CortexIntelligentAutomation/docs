@@ -142,7 +142,7 @@ By default, floating point literals are of type [Double][Double].
 
 The suffix `d` or `D` can used to create a floating point literal of type [Double][Double], but is unnecessary.
 
-```csharp
+```csharp`  
 1234.456d
 1234.456D
 ```
@@ -338,13 +338,43 @@ For further information, see [Equality Operators][], [Comparison Operators][], a
 
 ### Constructor expressions
 
+Explain what constructors are and how to use them
+
+Link to data types area, explain where to find constructor
+
 ### Method expressions
+
+Explain what methods are and how to use them
+
+- ToString() - example as common to all objects
+
+Link to data types area, explain where to find useful methods
 
 ### Property expressions
 
+Enums are properties of the enum type
+
+- DateTimeOffest.UtcNow as an example
+- Structures can use dot notation to access keys like properties
+
+link to dot notation
+
 ### Index expressions
 
+- List
+- String
+- Dictionary
+- Structures
+
+link to index notation
+
 ### Casting expressions
+
+Explicit Casting examples
+
+might have to mention that some things are implicitly cast and others need to be explicitly cast
+
+Link to data types area, explain where to find what a type can be cast to or used as
 
 ### Dictionary expressions
 
@@ -367,6 +397,7 @@ An element of a [List][] may be referenced using an index, where the index is an
 | Expression        | Result |
 |-------------------|--------|
 | `new Structure()` | `{}`   |
+| `new Exception("asda")` | `{}`   |
 
 ### Using a method on an object
 
