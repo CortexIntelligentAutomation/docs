@@ -931,6 +931,7 @@
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
         CharLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals"
+        Constructors = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors"
         dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
         IntegerLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals"
         RealLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals"

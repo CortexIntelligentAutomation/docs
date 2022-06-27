@@ -15,10 +15,10 @@ The [Expression Editor][TODO] is the most powerful [property editor][] and can a
 
 A literal is an explicit value that is not calculated during the execution of the flow. A literal can be any of the following data types:
 
-- [String][String Literal]
-- [Char][Char Literal]
-- [Int32][Int32 Literal]
-- [Int64][Int64 Literal]
+- [String][String literal]
+- [Char][Char literal]
+- [Int32][Int32 literal]
+- [Int64][Int64 literal]
 - [Double][Double literal]
 - [Single][Single literal]
 - [Boolean][Boolean literal]
@@ -117,7 +117,7 @@ If an integer literal value is less than [Int32.MinValue][] or greater than [Int
 
 For further information, see [Integer Literals][Integer-Literals].
 
-### Int64 Literal
+### Int64 literal
 
 If an integer literal value is less than [Int32.MinValue][] or greater than [Int32.MaxValue][], then it will be of type [Int64][].
 
@@ -132,7 +132,7 @@ If an integer literal value is less than [Int32.MinValue][] or greater than [Int
 
 For further information, see [Integer Literals][Integer-Literals].
 
-### Double Literal
+### Double literal
 
 By default, floating point literals are of type [Double][Double].
 
@@ -142,7 +142,7 @@ By default, floating point literals are of type [Double][Double].
 
 The suffix `d` or `D` can used to create a floating point literal of type [Double][Double], but is unnecessary.
 
-```csharp`  
+```csharp
 1234.456d
 1234.456D
 ```
@@ -222,8 +222,9 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
 - TODO: Remove old literal-variable-expression page
-- TODO: Go through expressions - Up to Constructors
+- TODO: Go through expressions - Up to Methods
 - TODO: Update to format below - Remove extra headings
+- TODO: Update Fundamental Concepts index page/link title to Fundamentals
 
 Types of expressions:
 
@@ -330,7 +331,7 @@ Assume the variable `($)IntVar1` has been set to `1`, and the variable `($)IntVa
 | `($)IntVar1 == ($)IntVar2`     | `false` | Equal |
 | `($)IntVar1 != ($)IntVar2`     | `true`  | Not Equal |
 | `($)IntVar1 > ($)IntVar2`      | `false` | Greater Than  |
-| `($)IntVar1 >= ($)IntVar2`     | `false` |  Greater Than or Equal |
+| `($)IntVar1 >= ($)IntVar2`     | `false` | Greater Than or Equal |
 | `($)IntVar1 < ($)IntVar2`      | `true`  | Less Than |
 | `($)IntVar1 <= ($)IntVar2`     | `true`  | Less Than or Equal  |
 
@@ -338,9 +339,28 @@ For further information, see [Equality Operators][], [Comparison Operators][], a
 
 ### Constructor expressions
 
-Explain what constructors are and how to use them
+Constructors can be used to create a new instance of a [Data Type][]. A [Data Type][] can have multiple constructors, each with different parameters that are used to create the new instance.
 
-Link to data types area, explain where to find constructor
+Methods on how to create a new instance of a [Data Type][] can be found in the relevant documentation for that [Data Type][]; information regarding how to create a new [Data Type][] using a constructor can be found in the "Remarks" section under "Create a/an &lt;DataType&gt;" (where &lt;DataType&gt; is replaced by the type's name).
+
+The following examples show two ways a [DateTimeOffset][] can be created using a constructor:
+
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `new DateTimeOffset()` | `0001-01-01T00:00:00+00:00` | `12AM 1st January 0001` with `0` hour UTC offset, the default for a new DateTimeOffset with no parameters |
+| `new DateTimeOffset(2022, 7, 1, 14, 0, 0, 0, new TimeSpan(1, 0, 0))` | `2022-07-01T14:00:00+01:00` | `2PM 1st July 2022` with `1` hour UTC offset |
+
+Note that some [Data Types][Data Type] should be created via [literal values][] instead of their constructors, these include:
+
+- [String][String literal]
+- [Char][Char literal]
+- [Int32][Int32 literal]
+- [Int64][Int64 literal]
+- [Double][Double literal]
+- [Single][Single literal]
+- [Boolean][Boolean literal]
+
+For further information, see [Constructors][].
 
 ### Method expressions
 
@@ -354,7 +374,7 @@ Link to data types area, explain where to find useful methods
 
 Enums are properties of the enum type
 
-- DateTimeOffest.UtcNow as an example
+- DateTimeOffset.UtcNow as an example
 - Structures can use dot notation to access keys like properties
 
 link to dot notation
@@ -523,16 +543,16 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 ## Related Concepts
 
 * [Property Types][Property-Types]
-* [Data Types][Data-Types]
+* [Data Types][Data Type]
 
 [literal values]: {{< ref "#literal-values" >}}
 [Expressions]: {{< ref "#expressions" >}}
 [Variables]: {{< ref "#variables" >}}
 
-[String Literal]: {{< ref "#string-literal" >}}
-[Char Literal]: {{< ref "#char-literal" >}}
-[Int32 Literal]: {{< ref "#int32-literal" >}}
-[Int64 Literal]: {{< ref "#int64-literal" >}}
+[String literal]: {{< ref "#string-literal" >}}
+[Char literal]: {{< ref "#char-literal" >}}
+[Int32 literal]: {{< ref "#int32-literal" >}}
+[Int64 literal]: {{< ref "#int64-literal" >}}
 [Single literal]: {{< ref "#single-literal" >}}
 [Double literal]: {{< ref "#double-literal" >}}
 [Boolean literal]: {{< ref "#boolean-literal" >}}
@@ -546,14 +566,16 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Interpolated Strings]: {{< ref "#interpolated-strings" >}}
 [Verbatim Strings]: {{< ref "#verbatim-strings" >}}
 
-[Data-Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
+[Data Type]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 [Arithmetic expressions]: {{< ref "#arithmetic-expressions" >}}
 [String expressions]: {{< ref "#string-expressions" >}}
 [Boolean expressions]: {{< ref "#boolean-expressions" >}}
 [Comparison expressions]: {{< ref "#comparison-expressions" >}}
+[Constructor expressions]: {{< ref "#constructor-expressions" >}}
 
 [property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
@@ -568,6 +590,7 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Single.MaxValue]: {{< url "MSDocs.DotNet.Api.System.Single.MaxValue" >}}
 [Single.MinValue]: {{< url "MSDocs.DotNet.Api.System.Single.MinValue" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
 [Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
@@ -594,6 +617,7 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Arithmetic Operators]: {{< url "MSDocs.CSharp.ArithmeticOperators" >}}
 [Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
 [Comparison Operators]: {{< url "MSDocs.CSharp.ComparisonOperators" >}}
+[Constructors]: {{< url "MSDocs.CSharp.Constructors" >}}
 [Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
 [String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
