@@ -132,7 +132,7 @@ Currently, only the [PropertyId][] has been included in the exception. In future
   * [Set Item At Index][]
   * [Set Item With Value][List Set Item With Value]
   * [Set Items With Value][List Set Items With Value]
-* Looping
+* Loops
   * [For Loop][]
 * Text
   * [Convert To Camel Case][]
