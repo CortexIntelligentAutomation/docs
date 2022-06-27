@@ -20,7 +20,7 @@ description: "Used to define whether the Get Folder Content block should get fil
 
 ## Remarks
 
-### Create an ContentOptions
+### Create ContentOptions
 
 ### Convert ContentOptions to Text
 

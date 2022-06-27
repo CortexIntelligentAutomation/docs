@@ -22,7 +22,7 @@ description: "Used to define how text searches determine whether text matches th
 
 ## Remarks
 
-### Create an SearchOptions
+### Create SearchOptions
 
 ### Convert SearchOptions to Text
 
