@@ -7,6 +7,8 @@ weight: 2
 
 # {{< param title >}}
 
+TODO: Paul and Tyler review
+
 ## Summary
 
 All exceptions should be handled during [flow execution][What-Is-Execution], otherwise if an unhandled exception occurs, the [flow execution][What-Is-Execution] will stop without warning.
@@ -122,16 +124,6 @@ The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] 
 * There can only be one [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] per [flow][Flow].
 * The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] only exists on the top-level [workspace][What-Is-Workspace], and cannot be deleted.
 
-## Throw Exception
-
-Exceptions may be intentionally generated as part of the [flow's][Flow] logic, using the [Throw Exception][Block-Throw-Exception] [block][What-Is-Block].
-
-It is typically used if an OCI [block][What-Is-Block] receives an error message from a third-party system, and the [flow][Flow] logic determines that this error should be treated as a Cortex exception.
-
-The [Throw Exception][Block-Throw-Exception] [block][What-Is-Block] will cause the [flow execution][What-Is-Execution] to jump to the [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block] if one is present, or, if not, to the [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block].
-
-For more details of throwing exceptions, refer to the [Throw-Exception][Block-Throw-Exception] [block][What-Is-Block] documentation.
-
 ## Remarks
 
 ### Handling Exceptions from Run Flow block
@@ -143,10 +135,6 @@ If a flow called by another flow raises an exception that is not handled, a new 
 #### Handling Exceptions on the Top-Level Workspace
 
 The top-level [Workspace][Workspace] cannot contain a [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block]; any unhandled exceptions thrown on the top-level [Workspace][Workspace] will be handled by the [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block].
-
-### Throwing Exceptions without an Exception
-
-It is possible to throw a custom exception without a block exception being raised first. This may be useful in process exceptions where there was not a technical exception.
 
 ## See Also
 
