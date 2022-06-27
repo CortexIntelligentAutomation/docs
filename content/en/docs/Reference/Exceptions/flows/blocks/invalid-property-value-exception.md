@@ -41,7 +41,7 @@ More information on why the value is invalid, or instruction on how to provide a
 The type of the exception (i.e. `InvalidPropertyValueException`).
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Message
@@ -51,7 +51,7 @@ The exception message, providing information about the exception that occurred.
 For this exception, the message will always be the same. More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message of the [InnerException][].
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### PropertyId
@@ -59,7 +59,7 @@ For this exception, the message will always be the same. More information on why
 The Id of the [property][TODO] that has been provided an invalid value.
 
 | | |
-|--------------------|---------------------------|
+|-----------|----------|
 | Data Type | [Guid][] |
 
 ### InnerException
@@ -69,12 +69,16 @@ The exception that occurred when the value provided for the [property][TODO] was
 This may contain more information on why the value is invalid, or instruction on how to provide a valid value in its message.
 
 | | |
-|--------------------|---------------------------|
+|-----------|---------------|
 | Data Type | [Exception][] |
 
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
 
 ## Remarks
 

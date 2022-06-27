@@ -42,7 +42,7 @@ Ensure the value provided for the [property][TODO] named `<property-name>` does 
 The type of the exception (i.e. `PropertyContainsNullOrEmptyItemException`).
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Message
@@ -54,12 +54,16 @@ For this exception:
 * `<property-name>` will be replaced with the name of the [property][TODO].
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
 
 ## Remarks
 
