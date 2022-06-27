@@ -14,7 +14,7 @@ description: "Used to specify settings for splitting text (i.e. whether to inclu
 
 ## Remarks
 
-### Create an StringSplitOptions
+### Create StringSplitOptions
 
 ### Convert StringSplitOptions to Text
 

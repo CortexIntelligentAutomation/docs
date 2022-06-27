@@ -44,7 +44,7 @@ Ensure that the value provided for each of the two [properties][TODO] contains t
 The type of the exception (i.e. `PropertyItemCountException`).
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Message
@@ -59,12 +59,16 @@ For this exception:
 * `<items-in-second-property>` will be replaced with the count of items in the second property.
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
 
 ## Remarks
 

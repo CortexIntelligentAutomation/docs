@@ -14,7 +14,7 @@ description: "Used to indicate how 2 pieces of text are compared against each ot
 
 ## Remarks
 
-### Create an StringComparison
+### Create a StringComparison
 
 ### Convert StringComparison to Text
 
