@@ -1,7 +1,7 @@
 ---
 title: "Install the Web Application Server"
 linkTitle: "Install Web Application Server"
-description: "Information about installing a Web Application Server."
+description: "Information about installing the Web Application Server."
 weight: 40
 ---
 
@@ -48,7 +48,7 @@ To find the version of the framework that is installed:
 To install .NET Framework 4.7.1:
 
 1. Download the .NET Framework 4.7.1 installer from <https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer>.
-2. Double-click on the installed file to run it.
+2. Double-click on the installer file to run it.
 3. Follow the wizard to complete the installation.
 
 ### Install Microsoft Web Deploy
@@ -182,10 +182,10 @@ Apply the settings by following these instructions:
     cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
-1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
+1. Run the `Cortex.Innovation.Install.SSLBestPractices.ps1` script using the following command:
 
     ```powershell
-    .\Cortex.Innovation.Install.SSLBestPractises.ps1
+    .\Cortex.Innovation.Install.SSLBestPractices.ps1
     ```
 
 1. To use all the recommended settings click `Apply all` to the first prompt.

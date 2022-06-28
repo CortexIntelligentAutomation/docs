@@ -22,7 +22,7 @@ weight: 10
 | [Microsoft&nbsp;Service&nbsp;Fabric][] | Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer][] | Web portal for monitoring and managing the HA clusters that automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Particular&nbsp;NServiceBus][] | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
-| [Pivotal&nbsp;RabbitMQ][]] | Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex services using publish/subscribe mechanism. | Required | Application&nbsp;Server |
+| [Pivotal&nbsp;RabbitMQ][] | Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex services using publish/subscribe mechanism. | Required | Application&nbsp;Server |
 | [Erlang&nbsp;OTP][] | Erlang run-time required by the RabbitMQ message broker. | Required | Application&nbsp;Server |
 | [gobetween][] | L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services. | Required | Load&nbsp;Balancer |
 | [NSSM][] | Windows Service Manager that hosts the gobetween load balancer application as a Windows Service. | Required | Load&nbsp;Balancer |
@@ -43,7 +43,7 @@ The following architecture requires 5 servers:
 
 [Gateway Guide]: {{< url "Cortex.Guides.Gateway.MainDoc" >}}
 [Studio Guide]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
-[SQL&nbsp;Server&nbsp;Express]: {{< url "MSDocs.SqlServer.SqlServerExpress" >}}
+[SQL&nbsp;Server&nbsp;Express]: {{< url "MSGo.SqlServerExpress.2016" >}}
 [Microsoft&nbsp;Service&nbsp;Fabric]: {{< url "MSDocs.ServiceFabric.MainDoc" >}}
 [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer]: {{< url "MSDocs.ServiceFabric.Explorer" >}}
 [Particular&nbsp;NServiceBus]: {{< url "Particular.NServiceBus.MainDoc" >}}

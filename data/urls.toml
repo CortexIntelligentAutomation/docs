@@ -31,24 +31,25 @@
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
                     ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#client-requirements"
+                    AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture"
-                    InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-and-loadbalancer-servers"
-                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-and-loadbalancer-servers#configure-installation-script"
-                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-and-loadbalancer-servers#run-installation-script"
+                    InstallApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server"
+                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server#configure-installation-script"
+                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server#install-gateway"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites"
-                    AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#certificate-requirements"
-                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#client-requirements"
+                    WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
+                    AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#antivirus-exclusions"
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -686,6 +687,8 @@
         [Cortex.YouTube.Webinars]
             MainDoc = "https://www.youtube.com/playlist?list=PLPBEMXlXxB_oFKNwxwrXtXzU-WBvgAgz7"
 # External links
+[Anycast]
+    MainDoc = "https://en.wikipedia.org/wiki/Anycast"
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
 [ElasticSearch]
@@ -696,6 +699,8 @@
     MainDoc = "https://github.com/yyyar/gobetween"
 [Grafana]
     MainDoc = "https://grafana.com/"
+[IIS]
+    UrlRewrite = "https://www.iis.net/downloads/microsoft/url-rewrite"
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
@@ -709,7 +714,6 @@
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
-        SqlServerExpress = "https://go.microsoft.com/fwlink/?LinkID=799012"
         TransparentDataEncryption = "https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
@@ -847,9 +851,26 @@
         MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
         Explorer = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
         ReverseProxy = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
+[MSDotNet]
+    [MSDotNet.Framework471]
+        MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer"
+[MSDownload]
+    WebDeploy = "https://www.microsoft.com/en-gb/download/details.aspx?id=43717"
+    [MSDownload.CPlusPlusRedistributable]
+        2013 = "http://www.microsoft.com/en-us/download/details.aspx?id=40784"
+[MSEval]
+    [MSEval.WindowsServer]
+        2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
+        2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
+    [MSEval.SQLServer]
+        2019 = "https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe"
+        2016 = "https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016?filetype=exe"
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
+[MSGo]
+    [MSGo.SqlServerExpress]
+        2016 = "https://go.microsoft.com/fwlink/?LinkID=799012"
 [MSSupport]
     [MSSupport.Troubleshooting]
         DynamicPorts = "https://support.microsoft.com/kb/929851"

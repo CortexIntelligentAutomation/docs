@@ -11,11 +11,11 @@ The prerequisites required for a single server (as described in [Architecture][]
 
 ## Hardware Requirements
 
-{{% alert title="Note" %}}This configuration is not recommended for production servers as it does not provide high availability or rolling upgrades.{{% /alert %}}
+{{% alert title="Note" %}}This configuration is not recommended for production servers that are required to scale and support HA.{{% /alert %}}
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| Single&nbsp;Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 150+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
+| Single&nbsp;Server<br>*Application Server +<br>Web Application Server* | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 150+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
 
 [^1]: A software-based load balancer called [gobetween](https://github.com/yyyar/gobetween) is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast](https://en.wikipedia.org/wiki/Anycast); however, this has not been verified yet. It is possible to use an [alternative load balancer](#alternative-load-balancer-requirements) to the one provided.
 [^2]: Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
@@ -24,7 +24,7 @@ The prerequisites required for a single server (as described in [Architecture][]
 
 | Server&nbsp;Role | Windows&nbsp;Server[^3] | SQL&nbsp;Server[^4] | .Net | PowerShell[^5] | IIS[^6] | Other Software |
 |------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Single&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | [2019](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe)<br />[2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016?filetype=exe)<br />[2016&nbsp;Express](https://go.microsoft.com/fwlink/?LinkID=799012) | [Framework&nbsp;4.7.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer) | 5.1 | 10.0.17763[^7]<br>10.0.14393[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1](https://www.iis.net/downloads/microsoft/url-rewrite) | [Microsoft Web Deploy 3.0 or later](https://www.microsoft.com/en-gb/download/details.aspx?id=43717)<br>[Visual C++ Redistributable 2013 (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=40784) |
+| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.1][NET Framework 471] | 5.1 | 10.0.17763[^7]<br>10.0.14393[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^4]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported.
@@ -65,6 +65,14 @@ A valid Cortex licence file must be procured from Cortex. This should contain a 
 1. Copy the output (machine identifier and fingerprint) to the `Web Application/Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string.
 1. Request a licence by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the server, creating the `Cortex` and `Licences` folders if they don't exist.
+
+## Web Browser Requirements
+
+Gateway supports the latest versions of the following browsers:
+
+* Chrome
+* Edge
+* Firefox
 
 ## Additional Application Server Requirements
 
@@ -126,10 +134,10 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 #### Certificate Requirements
 
 {{% alert title="Note" %}}
-For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
-An X.509 SSL wildcard certificate should be used to:
+An X.509 SSL certificate (standard or wildcard) should be used to:
 
 * Allow HA Services to identify themselves to clients such as Gateway.
 * Prevent unauthorised HA nodes from joining the HA cluster.
@@ -137,22 +145,24 @@ An X.509 SSL wildcard certificate should be used to:
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
-* Subject field must be in a wildcard format, pertaining to the domain of the server (e.g. `CN=*.domain.com`).
+* Subject field must be in one of the following formats, depending on the certificate type:
+  * Standard certificates must use the standard format (e.g. `CN=host.domain.com`).
+  * Wildcard certificates must use the wildcard format, pertaining to the domain of the server (e.g. `CN=*.domain.com`).
 * Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
 
-This file should be placed in a known location on the server where the installation scripts will be run. This location will be required when running the installation script.
+This file should be placed in a known location on the server. This location will be required when running the installation script.
 
 #### TLS Requirements
 
-There is a set of non-compulsory security measures, recommended to be applied to server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:
+There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
 
 * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1` script is provided during installation to apply these security changes to the server.
+See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
 
 ## Additional Web Application Server Requirements
 
@@ -195,21 +205,22 @@ Wildcard certificates and self-signed certificates can also be used. However, se
 
 More information about importing the certificate is given during installation.
 
-### Client Requirements
-
-Gateway supports the latest versions of the following browsers:
-
-* Chrome
-* Edge
-* Firefox
-
 ## Next Steps?
 
 1. [Install Application][]
 
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Architecture" >}}
-[Install Application]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationAndLoadBalancerServers" >}}
+[Install Application]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplication" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
+[Microsoft Server 2019]: {{< url "MSEval.WindowsServer.2019" >}}
+[Microsoft Server 2016]: {{< url "MSEval.WindowsServer.2016" >}}
+[NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
+[Microsoft SQL Server 2019]: {{< url "MSEval.SQLServer.2019" >}}
+[Microsoft SQL Server 2016]: {{< url "MSEval.SQLServer.2016" >}}
+[Microsoft SQL Express 2016]: {{< url "MSGo.SqlServerExpress.2016" >}}
+[IIS Url Rewrite]: {{< url "IIS.UrlRewrite" >}}
+[Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
+[C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}

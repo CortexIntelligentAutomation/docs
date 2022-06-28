@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to install the Application on the server. Please ensure that the [Prerequisites][] have been read before starting this installation.
+This guide describes how to install the Application Server components on the server. Please ensure that the [Prerequisites][] have been read before starting this installation.
 
 ## Extract Installation Artefacts
 
@@ -20,7 +20,7 @@ This guide describes how to install the Application on the server. Please ensure
 
 ## Install Microsoft .NET Framework 4.7.1
 
-Microsoft Service Fabric requires a minimum of Microsoft .NET Framework 4.7.1 to be installed on the Server.
+Microsoft Service Fabric requires a minimum of Microsoft .NET Framework 4.7.1 to be installed on the server.
 
 To find the version of the framework that is installed:
 
@@ -33,7 +33,7 @@ To find the version of the framework that is installed:
 To install .NET Framework 4.7.1:
 
 1. Download the .NET Framework 4.7.1 installer from <https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer>.
-2. Double-click on the installed file to run it.
+2. Double-click on the installer file to run it.
 3. Follow the wizard to complete the installation.
 
 ## Apply Recommended Security Measures
@@ -48,7 +48,7 @@ A collection of registry settings need to be applied to guarantee your server is
 
 {{% alert type="warning" title="Warning" %}}Disabling specific TLS versions or specific Cipher Suites can have impact on Cortex components themselves as well as their communication capabilities with third party systems and services, e.g. Flow Debugger Service executing flows with blocks which communicate with 3rd parties via PowerShell or REST. All parties communicating together must support a shared protocol version and cipher suite, otherwise they will not be able to establish a secure communication link between each other.{{% /alert %}}
 
-The settings can be applied by running a script. Be aware that each server will be restarted when the script is run. Apply the settings by following these instructions:
+The settings can be applied by running a script. Be aware that the server will be restarted when the script is run. Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
@@ -57,25 +57,20 @@ The settings can be applied by running a script. Be aware that each server will 
     cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
     ```
 
-1. Run the `Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS name or fully qualified domain name of the server:
+1. Run the `Cortex.Innovation.Install.SSLBestPractices.ps1` script using the following command:
 
     ```powershell
-    .\Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1 -ApplicationServers @("ha-server1")
+    .\Cortex.Innovation.Install.SSLBestPractices.ps1
     ```
 
-    {{% alert title="Note" %}}
-To avoid answering all of the prompts `-Override 0` can be added to the end of the script. This will automatically apply all settings and forcibly restart the server.
-    {{% /alert %}}
-
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press `OK`.
-1. To use all the recommended settings click `Apply all` to the each `Apply Cortex recommended security best practices` prompt.
+1. To use all the recommended settings click `Apply all` to the first prompt.
 
     To selectively apply each setting select `Choose which to apply`. Each change will then be prompted with a Yes/No confirmation before applying.
-1. Restart the machine when the script asks. The PowerShell script will close at this time.
+1. Restart the machine when the script asks.
 
 ## Add Antivirus Exclusions
 
-1. If Windows Defender is not running on the server, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on the server and continue to the next step, otherwise follow these steps:
+1. If Windows Defender is not running on the server, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on the server and continue to the next section, otherwise follow these steps:
     1. Open a Windows PowerShell (x64) window as administrator.
     1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
@@ -113,7 +108,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
         `All ports required by Cortex Innovation are free`
 
-        If this is the case, continue to the next step. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
 
         The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
@@ -155,7 +150,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |`HaServicesPath`                              | Configure this value with the location of the HA Services zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
     |`ApiGatewayBasicAuthUserName`                 | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be Cortex Encrypted. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 address of the server.|
     |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the server. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. |
@@ -167,7 +162,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
-More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigMultipleServer" "Advanced Application Server and Load Balancer Configuration Changes" >}}.
+More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigSingleServer" "Advanced Application Server and Load Balancer Configuration Changes" >}}.
     {{% /alert %}}
 
 1. Save and close `Cortex.Innovation.Install.ps1`.
@@ -192,7 +187,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
-    If there are no errors, continue to the next step; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
+    If there are no errors, continue to the next section; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
 
     If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
 
@@ -214,7 +209,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     In some circumstances, retrying may error due to components being installed already. In this case please run the following command, followed by the original installation command:
 
     ```powershell
-    .\Cortex.Innovation.Uninstall.ps1
+    .\Cortex.Innovation.Uninstall.ps1 -SkipLoadBalancer
     ```
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [Cortex Service Portal][] for assistance.
@@ -226,33 +221,33 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the `CortexServerCertificate` from the `Personal` store and then importing it to the `Current User` store by double-clicking on it and following the wizard.
 1. Open a web browser.
-1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of the Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
+1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
     The screen should resemble that in the following figure:
-    {{< figure src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer Cluster" >}}
+    {{< figure src="/images/Service Fabric Explorer - Single.png" title="Healthy Service Fabric Explorer Cluster" >}}
 
-    The status circles should be entirely green - this indicates that all nodes, services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on. The next few digrams show the status pages for a healthy system.
+    The status circles should be entirely green - this indicates that the node and all services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on. The next few diagrams show the status pages for a healthy system.
 
     After expanding the application, clicking on any of the services should display a green circle and `Status = Active`:
 
-    {{< figure src="/images/Service Fabric Explorer - Service.png" title="Healthy Service Fabric Explorer Service" >}}
+    {{< figure src="/images/Service Fabric Explorer - Service - Single.png" title="Healthy Service Fabric Explorer Service" >}}
 
     After expanding either of the services, clicking on any of the instances/partitions should display a green circle and `Status = Ready`:
 
-    {{< figure src="/images/Service Fabric Explorer - Instance.png" title="Healthy Service Fabric Explorer Instance" >}}
+    {{< figure src="/images/Service Fabric Explorer - Instance - Single.png" title="Healthy Service Fabric Explorer Instance" >}}
 
     Clicking on any of the nodes at the bottom of the leftmost pane should display a green circle and `Status = Up`:
 
-    {{< figure src="/images/Service Fabric Explorer - Node.png" title="Healthy Service Fabric Explorer Node" >}}
+    {{< figure src="/images/Service Fabric Explorer - Node - Single.png" title="Healthy Service Fabric Explorer Node" >}}
 
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, go to the next section.
 
     If the warnings persist or anything on the screen goes red, expand the items to find the individual services and instances which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase. Error and warning messages should be displayed on the status screens and should indicate what is wrong.
 
-    If no useful message can be seen here, the service log files may contain more information. These can be found on each Application Server at:
+    If no useful message can be seen here, the service log files may contain more information. These can be found on the server at:
 
     * %ProgramData%/Cortex/Cortex API Gateway Service
-    * %ProgramData%/Cortex/Cortex Flow Service
+    * %ProgramData%/Cortex/Cortex Flow Execution Service
 
     If no solution can be found, please contact [Cortex Service Portal][] for further assistance.
 
@@ -260,14 +255,14 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 1. [Install Web Application Server][]
 
-[Advanced Application Server and Load Balancer Configuration Changes]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigSingleServer" >}}
 [Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
 [Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
 [Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallGateway" >}}
 [Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Antivirus Exclusions]: {{< ref "#add-antivirus-exclusions" >}}
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
 [Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
+[Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusions" >}}
 [alternative load balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancer" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
