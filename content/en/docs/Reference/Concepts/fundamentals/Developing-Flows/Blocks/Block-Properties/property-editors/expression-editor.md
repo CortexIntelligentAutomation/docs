@@ -222,7 +222,7 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
 - TODO: Remove old literal-variable-expression page
-- TODO: Go through expressions - Up to Methods
+- TODO: Go through expressions - Up to Casting
 - TODO: Update to format below - Remove extra headings
 - TODO: Update Fundamental Concepts index page/link title to Fundamentals
 
@@ -235,8 +235,9 @@ Types of expressions:
 - [Constructors][Constructor expressions]
 - [Methods][Method expressions]
 - [Properties][Property expressions]
-- [Indexes][Index expressions]
+- [Enums][Enum expressions]
 - [Casting][Casting expressions]
+- [Indexes][Index expressions]
 
 ### Arithmetic expressions
 
@@ -341,7 +342,7 @@ For further information, see [Equality Operators][], [Comparison Operators][], a
 
 Constructors can be used to create a new instance of a [Data Type][]. A [Data Type][] can have multiple constructors, each with different parameters that are used to create the new instance.
 
-Methods on how to create a new instance of a [Data Type][] can be found in the relevant documentation for that [Data Type][]; information regarding how to create a new [Data Type][] using a constructor can be found in the "Remarks" section under "Create a/an &lt;DataType&gt;" (where &lt;DataType&gt; is replaced by the type's name).
+Methods on how to create a new instance of a [Data Type][] can be found in the relevant documentation for that [Data Type][Reference Data Types]; information regarding how to create a new [Data Type][] using a constructor can be found in the "Remarks" section under "Create a/an &lt;DataType&gt;" (where &lt;DataType&gt; is replaced by the type's name).
 
 The following examples show two ways a [DateTimeOffset][] can be created using a constructor:
 
@@ -364,20 +365,45 @@ For further information, see [Constructors][].
 
 ### Method expressions
 
-Explain what methods are and how to use them
+Methods can be used to execute specific functionality, such as converting a [Data Type][] to its text representation (e.g. `1.ToString()` results in `"1"` being returned). Which methods are accessible is defined by the [Data Type][], and information regarding methods can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
-- ToString() - example as common to all objects
+Methods can have parameters passed into them that are then used to execute the functionality (e.g. `TimePeriod.FromSeconds(60)` results in `{"Years": 0, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 1, "Seconds": 0, "Milliseconds": 0}`), not all methods have parameters.
 
-Link to data types area, explain where to find useful methods
+The same method can be defined multiple times, each with different sets of parameters (e.g. `1.ToString()` results in `"1"` being returned, whereas `1.ToString("P0")` results in  `"100%"` being returned where `1` was converted into a percent with zero decimal places).
+
+For further information, see [Methods][].
 
 ### Property expressions
 
-Enums are properties of the enum type
+Properties can be used to read data from and/or write data to a [Data Type][], such as getting the current Coordinated Universal Time (UTC) date and time (e.g. `DateTimeOffset.UtcNow` results in `2022-07-01T13:00:00.0000000+00:00` being returned). Which properties are accessible is defined by the [Data Type][], and information regarding properties can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
-- DateTimeOffset.UtcNow as an example
-- Structures can use dot notation to access keys like properties
+Properties can be read-write, read-only, or write-only (extremely rare) depending on the access specified by the [Data Type][], for example:
 
-link to dot notation
+- `TimePeriod.Years` is a read-write property
+- `DateTimeOffset.UtcNow` is a read-only property
+
+[Structures][Structure] allow for their keys to be accessed as properties, for example the variable `($)StructureVar` has the value `{"FirstKey": 1, "SecondKey": 2}` the key `"FirstKey"` can be accessed using `($)StructureVar.FirstKey` resulting in `1` being returned.
+
+For further information, see [Properties][].
+
+### Enum expressions
+
+[Enum][] data types have a defined set of values, where each value has an associated [String][] name and [Int32][] value. Information regarding values can be found in the relevant documentation for that [Data Type][Reference Data Types].
+
+Values within an [Enum][] can be accessed in the same way as properties or can they can be [cast][Casting expressions] from an [Int32][] value, for example:
+
+- `DayOfWeek.Sunday` results in `DayOfWeek.Sunday`  being returned, where the name is `"Sunday"` and the value is `0`
+- `(DayOfWeek)0` results in `DayOfWeek.Sunday`  being returned, where the name is `"Sunday"` and the value is `0`
+
+For further information, see [Enumeration types][].
+
+### Casting expressions
+
+Explicit Casting examples
+
+might have to mention that some things are implicitly cast and others need to be explicitly cast
+
+Link to data types area, explain where to find what a type can be cast to or used as
 
 ### Index expressions
 
@@ -387,14 +413,6 @@ link to dot notation
 - Structures
 
 link to index notation
-
-### Casting expressions
-
-Explicit Casting examples
-
-might have to mention that some things are implicitly cast and others need to be explicitly cast
-
-Link to data types area, explain where to find what a type can be cast to or used as
 
 ### Dictionary expressions
 
@@ -572,8 +590,13 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Boolean expressions]: {{< ref "#boolean-expressions" >}}
 [Comparison expressions]: {{< ref "#comparison-expressions" >}}
 [Constructor expressions]: {{< ref "#constructor-expressions" >}}
+[Method expressions]: {{< ref "#method-expressions" >}}
+[Property expressions]: {{< ref "#property-expressions" >}}
+[Enum expressions]: {{< ref "#enum-expressions" >}}
 
 [property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
+
+[Reference Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
@@ -606,6 +629,7 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}
 [key]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
 [item]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}
+[Enum]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
 
 [implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
 
@@ -618,6 +642,9 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
 [Comparison Operators]: {{< url "MSDocs.CSharp.ComparisonOperators" >}}
 [Constructors]: {{< url "MSDocs.CSharp.Constructors" >}}
+[Methods]: {{< url "MSDocs.CSharp.Methods" >}}
+[Properties]: {{< url "MSDocs.CSharp.Properties" >}}
+[Enumeration types]: {{< url "MSDocs.CSharp.EnumerationTypes" >}}
 [Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
 [String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
