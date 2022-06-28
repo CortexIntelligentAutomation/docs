@@ -20,7 +20,7 @@ An option can also be specified to [Overwrite][Overwrite Property] rather than a
 
 ### Write all text, appending to the end of the file
 
-This example will append `"New Line 1\r\n\New Line 2"` to `"C:\Source\File.txt"`, using UTF-8 encoding without a byte order mark.
+This example will append `"New Line 1\r\nNew Line 2"` to `"C:\Source\File.txt"`, using UTF-8 encoding without a byte order mark.
 
 In this example assume `"C:\Source\File.txt"` contains the following text:
 
@@ -34,13 +34,13 @@ Original Line 2
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [File Path][FilePath Property] | `($)FilePath`, with value `@"C:\Source\File.txt"` | `($)FilePath` is a variable of type [String][] |
-| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\n\New Line 2"` | `($)Text` is a variable of type [String][] |
+| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\nNew Line 2"` | `($)Text` is a variable of type [String][] |
 | [Overwrite][Overwrite Property] | `($)Overwrite`, with value `false` | `($)Overwrite` is a variable of type [Boolean][] |
 | [Encoding][Encoding Property] | `($)Encoding`, with value `null` | `($)Encoding` is a variable of type [Encoding][] |
 
 #### Result
 
-Writing `"New Line 1\r\n\New Line 2"` to `"C:\Source\File.txt"` results in the content being updated to the following:
+Writing `"New Line 1\r\nNew Line 2"` to `"C:\Source\File.txt"` results in the content being updated to the following:
 
 ```plaintext
 Original Line 1
@@ -53,7 +53,7 @@ New Line 2
 
 ### Write all text, overwriting the file content
 
-This example will overwrite the content of `"C:\Source\File.txt"` with `"New Line 1\r\n\New Line 2"`, using UTF-8 encoding without a byte order mark.
+This example will overwrite the content of `"C:\Source\File.txt"` with `"New Line 1\r\nNew Line 2"`, using UTF-8 encoding without a byte order mark.
 
 In this example assume `"C:\Source\File.txt"` contains the following text:
 
@@ -67,13 +67,13 @@ Original Line 2
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [File Path][FilePath Property] | `($)FilePath`, with value `@"C:\Source\File.txt"` | `($)FilePath` is a variable of type [String][] |
-| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\n\New Line 2"` | `($)Text` is a variable of type [String][] |
+| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\nNew Line 2"` | `($)Text` is a variable of type [String][] |
 | [Overwrite][Overwrite Property] | `($)Overwrite`, with value `true` | `($)Overwrite` is a variable of type [Boolean][] |
 | [Encoding][Encoding Property] | `($)Encoding`, with value `null` | `($)Encoding` is a variable of type [Encoding][] |
 
 #### Result
 
-Overwriting `"C:\Source\File.txt"` with `"New Line 1\r\n\New Line 2"` results in the content being updated to the following:
+Overwriting `"C:\Source\File.txt"` with `"New Line 1\r\nNew Line 2"` results in the content being updated to the following:
 
 ```plaintext
 New Line 1
