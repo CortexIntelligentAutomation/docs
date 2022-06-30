@@ -222,7 +222,7 @@ Expressions use the syntax of the [C#][] [programming language][].
 
 - TODO: We are here
 - TODO: Remove old literal-variable-expression page
-- TODO: Go through expressions - Up to Casting
+- TODO: Go through expressions - Up to Indexes
 - TODO: Update to format below - Remove extra headings
 - TODO: Update Fundamental Concepts index page/link title to Fundamentals
 
@@ -365,24 +365,33 @@ For further information, see [Constructors][].
 
 ### Method expressions
 
-Methods can be used to execute specific functionality, such as converting a [Data Type][] to its text representation (e.g. `1.ToString()` results in `"1"` being returned). Which methods are accessible is defined by the [Data Type][], and information regarding methods can be found in the relevant documentation for that [Data Type][Reference Data Types].
+Methods can be used to execute specific functionality. Which methods are accessible is defined by the [Data Type][], and information regarding methods can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
-Methods can have parameters passed into them that are then used to execute the functionality (e.g. `TimePeriod.FromSeconds(60)` results in `{"Years": 0, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 1, "Seconds": 0, "Milliseconds": 0}`), not all methods have parameters.
+Methods can have parameters passed into them that are then used to execute the functionality, not all methods have parameters. The same method can be defined multiple times, each with different sets of parameters.
 
-The same method can be defined multiple times, each with different sets of parameters (e.g. `1.ToString()` results in `"1"` being returned, whereas `1.ToString("P0")` results in  `"100%"` being returned where `1` was converted into a percent with zero decimal places).
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `TimePeriod.FromSeconds(60)` | `{"Years": 0, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 1, "Seconds": 0, "Milliseconds": 0}` | Method with parameters |
+| `1.ToString()` | `"1"` | Method without parameters |
+| `1.ToString("P0")` | `"100%"` | The `ToString()` method can take parameters in order to format the result. In this case `1` was converted into a percent with zero decimal places |
 
 For further information, see [Methods][].
 
 ### Property expressions
 
-Properties can be used to read data from and/or write data to a [Data Type][], such as getting the current Coordinated Universal Time (UTC) date and time (e.g. `DateTimeOffset.UtcNow` results in `2022-07-01T13:00:00.0000000+00:00` being returned). Which properties are accessible is defined by the [Data Type][], and information regarding properties can be found in the relevant documentation for that [Data Type][Reference Data Types].
+Properties can be used to read data from and/or write data to a [Data Type][]. Which properties are accessible is defined by the [Data Type][], and information regarding properties can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
-Properties can be read-write, read-only, or write-only (extremely rare) depending on the access specified by the [Data Type][], for example:
+Properties can be read-write, read-only, or write-only (extremely rare) depending on the access specified by the [Data Type][].
 
-- `TimePeriod.Years` is a read-write property
-- `DateTimeOffset.UtcNow` is a read-only property
+[Structures][Structure] allow for their keys to be accessed as properties.
 
-[Structures][Structure] allow for their keys to be accessed as properties, for example the variable `($)StructureVar` has the value `{"FirstKey": 1, "SecondKey": 2}` the key `"FirstKey"` can be accessed using `($)StructureVar.FirstKey` resulting in `1` being returned.
+Assume the variable `($)TimePeriodVar` has been set to `{"Years": 1, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}`, and the variable `($)StructureVar` has been set to `{"FirstKey": 1, "SecondKey": 2}`.
+
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `DateTimeOffset.UtcNow` | `2022-07-01T13:00:00.0000000+00:00` | Read-only property |
+| `($)TimePeriod.Years` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block |
+| `($)StructureVar.FirstKey` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block  |
 
 For further information, see [Properties][].
 
@@ -390,20 +399,29 @@ For further information, see [Properties][].
 
 [Enum][] data types have a defined set of values, where each value has an associated [String][] name and [Int32][] value. Information regarding values can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
-Values within an [Enum][] can be accessed in the same way as properties or can they can be [cast][Casting expressions] from an [Int32][] value, for example:
+Values within an [Enum][] can be accessed in the same way as properties or can they can be [cast][Casting expressions] from an [Int32][] value.
 
-- `DayOfWeek.Sunday` results in `DayOfWeek.Sunday`  being returned, where the name is `"Sunday"` and the value is `0`
-- `(DayOfWeek)0` results in `DayOfWeek.Sunday`  being returned, where the name is `"Sunday"` and the value is `0`
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `DayOfWeek.Sunday` | `DayOfWeek.Sunday` | Where the name is `"Sunday"` and the value is `0` |
+| `(DayOfWeek)6` | `DayOfWeek.Saturday` |  [Int32][] cast to an [Enum][]. Where the name is `"Saturday"` and the value is `6` |
 
 For further information, see [Enumeration types][].
 
 ### Casting expressions
 
-Explicit Casting examples
+[Data Types][Data Type] can be cast to other [Data Types][Data Type] through the use of explicit casting, this can sometimes result in the loss of information when converting to a type that does not store the same amount of information. Information regarding which types a [Data Type][] can cast to can be found in the "Summary" section under "Can be cast to" in the relevant documentation for that [Data Type][Reference Data Types].
 
-might have to mention that some things are implicitly cast and others need to be explicitly cast
+[Data Types][Data Type] can be used as other [Data Types][Data Type] through the use of implicit casting, this is an automatic process that requires no expression syntax. Information regarding which types a [Data Type][] can be used as can be found in the "Summary" section under "Can be used as" in the relevant documentation for that [Data Type][Reference Data Types].
 
-Link to data types area, explain where to find what a type can be cast to or used as
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `(DayOfWeek)6` | `DayOfWeek.Saturday` | [Int32][] cast to an [Enum][]. Where the name is `"Saturday"` and the value is `6` |
+| `(Int16)1` | `1` | An [Int32][] can be cast to an [Int16][] as long as value is from `-32,768` through `32,767` |
+| `(Int32)1.9` | `1` | Casting a [Double][] to an [Int32][] will cause any decimal places to be lost |
+| `1` | `1.0` | When using a block property of type [Double][] an [Int32][] is implicitly cast to [Double][] without any expression syntax |
+
+For further information, see [Explicit Conversions][] and [Implicit Conversions][].
 
 ### Index expressions
 
@@ -429,13 +447,6 @@ To access a value within a nested [Dictionary][] variable:
 An element of a [List][] may be referenced using an index, where the index is an integer expression and an index of zero indicates the first element:
 
 `($)myDictionary[index]`
-
-### Creating a new object
-
-| Expression        | Result |
-|-------------------|--------|
-| `new Structure()` | `{}`   |
-| `new Exception("asda")` | `{}`   |
 
 ### Using a method on an object
 
@@ -593,6 +604,7 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Method expressions]: {{< ref "#method-expressions" >}}
 [Property expressions]: {{< ref "#property-expressions" >}}
 [Enum expressions]: {{< ref "#enum-expressions" >}}
+[Casting expressions]: {{< ref "#casting-expressions" >}}
 
 [property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
 
@@ -645,6 +657,8 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Methods]: {{< url "MSDocs.CSharp.Methods" >}}
 [Properties]: {{< url "MSDocs.CSharp.Properties" >}}
 [Enumeration types]: {{< url "MSDocs.CSharp.EnumerationTypes" >}}
+[Explicit Conversions]: {{< url "MSDocs.CSharp.ExplicitConversions" >}}
+[Implicit Conversions]: {{< url "MSDocs.CSharp.ImplicitConversions" >}}
 [Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
 [String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
