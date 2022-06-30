@@ -220,18 +220,15 @@ An expression is a combination of [operands][] (i.e. [variables][Variables], [li
 
 Expressions use the syntax of the [C#][] [programming language][].
 
-- TODO: We are here
-- TODO: Remove old literal-variable-expression page
-- TODO: Go through expressions - Up to Indexes
-- TODO: Update to format below - Remove extra headings
-- TODO: Update Fundamental Concepts index page/link title to Fundamentals
-
 Types of expressions:
 
 - [Arithmetic][Arithmetic expressions]
-- [String][String expressions]
 - [Boolean][Boolean expressions]
 - [Comparison][Comparison expressions]
+- [String][String expressions]
+- [Dictionary][Dictionary expressions]
+- [Structure][Structure expressions]
+- [List][List expressions]
 - [Constructors][Constructor expressions]
 - [Methods][Method expressions]
 - [Properties][Property expressions]
@@ -254,6 +251,38 @@ Assume the variable `($)IntVar1` has been set to `6`, and the variable `($)IntVa
 | `($)IntVar1 % ($)IntVar2` | `0`    | Remainder |
 
 For further information, see [Arithmetic Operators][].
+
+### Boolean expressions
+
+The following [operators][] perform logical operations with [operands][] that have boolean values.
+
+Assume the variable `($)BoolVar1` has been set to `false`, and the variable `($)BoolVar2` has been set to `true`.
+
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `($)BoolVar1 && ($)BoolVar2`   | `false` | AND |
+| `($)BoolVar2 \|\| ($)BoolVar1` | `true`  | OR  |
+| `($)BoolVar1 ^ ($)BoolVar2`    | `true`  | XOR |
+| `!($)BoolVar1`                 | `true`  | NOT |
+
+For further information, see [Boolean Logical Operators][].
+
+### Comparison expressions
+
+The following [operators][] perform comparison operations with [operands][].
+
+Assume the variable `($)IntVar1` has been set to `1`, and the variable `($)IntVar2` has been set to `2`.
+
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `($)IntVar1 == ($)IntVar2`     | `false` | Equal |
+| `($)IntVar1 != ($)IntVar2`     | `true`  | Not Equal |
+| `($)IntVar1 > ($)IntVar2`      | `false` | Greater Than  |
+| `($)IntVar1 >= ($)IntVar2`     | `false` | Greater Than or Equal |
+| `($)IntVar1 < ($)IntVar2`      | `true`  | Less Than |
+| `($)IntVar1 <= ($)IntVar2`     | `true`  | Less Than or Equal  |
+
+For further information, see [Equality Operators][], [Comparison Operators][], and [Object Equality][].
 
 ### String expressions
 
@@ -306,37 +335,17 @@ A verbatim string identifies that characters within the string should be process
 
 For further information, see [Verbatim string literals][] and [Verbatim String Interpolation][].
 
-### Boolean expressions
+### Dictionary expressions
 
-The following [operators][] perform logical operations with [operands][] that have boolean values.
+[Dictionaries][Dictionary] can be created using [Constructor expressions][] and their items can be accessed using [Index expressions][].
 
-Assume the variable `($)BoolVar1` has been set to `false`, and the variable `($)BoolVar2` has been set to `true`.
+### Structure expressions
 
-| Expression                     | Result  | Notes                              |
-|--------------------------------|---------|------------------------------------|
-| `($)BoolVar1 && ($)BoolVar2`   | `false` | AND |
-| `($)BoolVar2 \|\| ($)BoolVar1` | `true`  | OR  |
-| `($)BoolVar1 ^ ($)BoolVar2`    | `true`  | XOR |
-| `!($)BoolVar1`                 | `true`  | NOT |
+[Structures][Structure] can be created using [Constructor expressions][] and their items can be accessed using [Property expressions][] or [Index expressions][].
 
-For further information, see [Boolean Logical Operators][].
+### List expressions
 
-### Comparison expressions
-
-The following [operators][] perform comparison operations with [operands][].
-
-Assume the variable `($)IntVar1` has been set to `1`, and the variable `($)IntVar2` has been set to `2`.
-
-| Expression                     | Result  | Notes                              |
-|--------------------------------|---------|------------------------------------|
-| `($)IntVar1 == ($)IntVar2`     | `false` | Equal |
-| `($)IntVar1 != ($)IntVar2`     | `true`  | Not Equal |
-| `($)IntVar1 > ($)IntVar2`      | `false` | Greater Than  |
-| `($)IntVar1 >= ($)IntVar2`     | `false` | Greater Than or Equal |
-| `($)IntVar1 < ($)IntVar2`      | `true`  | Less Than |
-| `($)IntVar1 <= ($)IntVar2`     | `true`  | Less Than or Equal  |
-
-For further information, see [Equality Operators][], [Comparison Operators][], and [Object Equality][].
+[Lists][List] can be created using [Constructor expressions][] and their items can be accessed using [Index expressions][].
 
 ### Constructor expressions
 
@@ -425,48 +434,50 @@ For further information, see [Explicit Conversions][] and [Implicit Conversions]
 
 ### Index expressions
 
-- List
-- String
-- Dictionary
-- Structures
+[Data Types][Data Type] that are [Collections][] or [String][] can have their items accessed using index notation:
 
-link to index notation
+- `[0]` gets the first item
+- `[1]` gets the second item
+- `["key"]` gets the item with the key `"key"`.
 
-### Dictionary expressions
+Ranges can also be used within index notation:
 
-To access a single value of a [Dictionary][] variable `($)myDictionary`:
+- `[0..3]` gets three items from the first item (inclusively) (i.e. the first, second, and third item)
+- `[^1]` gets the last item
+- `[^2]` gets the second to last item
+- `[..]` gets all items
+- `[..3]` gets three items from the first item (inclusively) (i.e. the first, second, and third item)
+- `[3..]` gets all items from the fourth item (inclusively) (i.e. the fourth to the last item)
 
-`($)myDictionary[key]`
+For further information on index and range syntax, see [Indices and Ranges][].
 
-To access a value within a nested [Dictionary][] variable:
+In the examples bellow assume:
 
-`($)myDictionary[outerkey][innerKey]`
+- `($)ListVar` has been set to `[1, 2, 3, 4, 5]`
+- `($)DictionaryVar` of type `Dictionary<string, Int32>` has been set to `{"FirstKey": 1, "SecondKey": 2}`
+- `($)StructureVar` has been set to `{"FirstKey": 1, "SecondKey": [1, 2, 3]}`
+- `($)StringVar` has been set to `"Some Text"`.
 
-### List expressions
-
-An element of a [List][] may be referenced using an index, where the index is an integer expression and an index of zero indicates the first element:
-
-`($)myDictionary[index]`
-
-### Using a method on an object
-
-`($)StringVar1` equals `"hello"` and `($)StringVar2` equals `"123"`
-
-| Expression              | Result    |
-|-------------------------|-----------|
-| `StringVar1.ToUpper()`  | `"HELLO"` |
-| `int.Parse(StringVar2)` | `123`     |
-
-### Explicitly cast a variable
-
-`($)longVar` equals `1` as a long ([Int64][Int64])
-
-| Expression                 | Result | Notes     |
-|----------------------------|--------|-----------|
-| `(int)($)longVar`          | `1`    | as an [Int32][Int32] |
-| `(System.Int32)($)longVar` | `1`    | as an [Int32][Int32] |
+| Expression                     | Result  | Notes                              |
+|--------------------------------|---------|------------------------------------|
+| `($)ListVar[2]` | `3` | The third item in the list is returned |
+| `($)ListVar[0..2]` | `[1, 2]` | The first and second item in the list are returned |
+| `($)ListVar[^2]` | `4` | The second to last item in the list is returned |
+| `($)ListVar[^2..^0]` | `[4, 5]` | The second to last and the last item in the list are returned |
+| `($)ListVar[1..^1]` | `[2, 3, 4]` | The second item to the second to last item in the list are returned |
+| `($)ListVar[..]` | `[1, 2, 3, 4, 5]` | All items in the list are returned |
+| `($)ListVar[..2]` | `[1, 2]` | The first item and the second item in the list are returned |
+| `($)ListVar[2..]` | `[3, 4, 5]` | The third item to the last item in the list are returned |
+| `($)DictionaryVar["FirstKey"]` | `1` | The item with the key `"FirstKey"` is returned |
+| `($)StructureVar["SecondKey"]` | `[1, 2, 3]` | The item with the key `"SecondKey"` is returned |
+| `($)StructureVar["SecondKey"][0]` | `1` |  The first item within the item with key `"SecondKey"` is returned |
+| `($)StringVar[0]` | `'S'` | The first character in the string is returned |
 
 ## Variables
+
+- TODO: We are here
+- TODO: Remove old literal-variable-expression page
+- TODO: Update Fundamental Concepts index page/link title to Fundamentals
 
 [Variables][Variables Concept] are named containers for storing values of any [data type][Data-Types]; a value can be read, updated, replaced, or removed.
 
@@ -596,20 +607,26 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Verbatim Strings]: {{< ref "#verbatim-strings" >}}
 
 [Data Type]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
+
 [Arithmetic expressions]: {{< ref "#arithmetic-expressions" >}}
-[String expressions]: {{< ref "#string-expressions" >}}
 [Boolean expressions]: {{< ref "#boolean-expressions" >}}
 [Comparison expressions]: {{< ref "#comparison-expressions" >}}
+[String expressions]: {{< ref "#string-expressions" >}}
+[Dictionary expressions]: {{< ref "#dictionary-expressions" >}}
+[Structure expressions]: {{< ref "#structure-expressions" >}}
+[List expressions]: {{< ref "#list-expressions" >}}
 [Constructor expressions]: {{< ref "#constructor-expressions" >}}
 [Method expressions]: {{< ref "#method-expressions" >}}
 [Property expressions]: {{< ref "#property-expressions" >}}
 [Enum expressions]: {{< ref "#enum-expressions" >}}
 [Casting expressions]: {{< ref "#casting-expressions" >}}
+[Index expressions]: {{< ref "#index-expressions" >}}
 
 [property editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.MainDoc" >}}
 
 [Reference Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
+[Collections]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
@@ -653,13 +670,15 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Arithmetic Operators]: {{< url "MSDocs.CSharp.ArithmeticOperators" >}}
 [Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
 [Comparison Operators]: {{< url "MSDocs.CSharp.ComparisonOperators" >}}
+[Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
 [Constructors]: {{< url "MSDocs.CSharp.Constructors" >}}
 [Methods]: {{< url "MSDocs.CSharp.Methods" >}}
 [Properties]: {{< url "MSDocs.CSharp.Properties" >}}
 [Enumeration types]: {{< url "MSDocs.CSharp.EnumerationTypes" >}}
 [Explicit Conversions]: {{< url "MSDocs.CSharp.ExplicitConversions" >}}
 [Implicit Conversions]: {{< url "MSDocs.CSharp.ImplicitConversions" >}}
-[Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
+[Indices and Ranges]: {{< url "MSDocs.CSharp.IndicesAndRanges" >}}
+[String concatenation]: {{< url "MSDocs.DotNet.Api.System.String.ConcatGuide" >}}
 [C# identifier naming rules]: {{< url "MSDocs.CSharp.IdentifierNamingRules" >}}
 [String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
 [Verbatim string literals]: {{< url "MSDocs.CSharp.Verbatim" >}}
