@@ -11,6 +11,7 @@
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
+                    ExtractInstallationArtefacts = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/#extract-installation-artefacts"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
@@ -32,6 +33,37 @@
                         EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
                         PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
+                [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation]
+                    MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/"
+                [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana]
+                    MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/"
+                    Architecture = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/architecture"
+                    Prerequisites = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites"
+                    SoftwareRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#software-requirements"
+                    AdditionalWebApplicationServerRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#additional-web-application-server-requirements"
+                    SetupGrafana = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/setup-grafana"
+                    TryItOut = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/try-it-out"
+                    WebAppCertificateRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#certificate-requirements"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced]
+                        PortRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/port-requirements"
+                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/self-signed-certificates"
+                        GenerateTheRootCaCertificate = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/self-signed-certificates/#generate-the-root-ca-certificate"
+                        SSLBestPractices = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/ssl-best-practices"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/"
+                        ConfigureGrafana = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/configure-grafana"
+                        ConfigureHTTPS = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/configure-grafana/#configure-https"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/"
+                        AddANewWebsite = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#add-a-new-website"
+                        CreateLokiUser = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#create-loki-user"
+                        ConfigureLoki = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki"
+                        InstallIISBasicAuthentication = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#install-iis-basic-authentication"
+                        InstallCertificate = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#install-certificate"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallPromtail]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/"
+                        ConfigurePromtail = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -866,12 +898,40 @@
     MainDoc = "https://www.connectionstrings.com/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
+[GitHub]
+    [GitHub.Cortex.Observability]
+        GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip"
+        PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Promtail.Install.zip"
+        GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
+    [Grafana.Products.Grafana]
+        MainDoc = "https://grafana.com/grafana/"
+    [Grafana.Products.Loki]
+        MainDoc = "https://grafana.com/oss/loki/"
+        [Grafana.Products.Loki.Promtail]
+            MainDoc = "https://grafana.com/docs/loki/latest/clients/promtail/"
+    [Grafana.SelfManaged.Downloads.GrafanaWebApp]
+        Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
+    [Grafana.SelfManaged.Downloads.GrafanaLoki]
+        GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.Promtail]
+        PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
+[IIS]
+    MainDoc = "https://www.iis.net/overview"
+    [IIS.Downloads]
+        UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"
+    
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
     JsonSerializerSettings = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializerSettings.htm"
+[LetsEncrypt]
+    MainDoc = "https://letsencrypt.org/"
+[Microsoft]
+    [Microsoft.Downloads.Windows]
+        Server2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
+        Server2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
 [MSDocs]
     [MSDocs.CSharp]
         MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/"
@@ -1015,6 +1075,8 @@
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
+[NSSM]
+    MainDoc = "https://nssm.cc/"
 [Splunk]
     MainDoc = "https://www.splunk.com/"
 [VisualStudio]
