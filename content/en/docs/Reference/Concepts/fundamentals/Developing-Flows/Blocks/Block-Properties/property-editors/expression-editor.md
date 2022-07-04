@@ -615,7 +615,7 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
 
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
-[Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
+[Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
 
 [Expression Editor]: {{< url "Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 

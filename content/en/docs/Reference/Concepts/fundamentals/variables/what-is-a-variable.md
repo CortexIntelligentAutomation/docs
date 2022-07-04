@@ -183,7 +183,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 - [All Blocks][Blocks]
 
 [Message Panel]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagePanel" >}}
-[Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
+[Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
 [APIGateway]: {{< url "Cortex.Reference.API.APIGateway.MainDoc" >}}
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}

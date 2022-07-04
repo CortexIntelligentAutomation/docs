@@ -449,7 +449,7 @@
                 MainDoc = "/docs/reference/blocks/variables/"
                 [Cortex.Reference.Blocks.Variables.SetVariable]
                     MainDoc = "/docs/reference/blocks/variables/set-variable/"
-                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
+                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariable]
                        MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
             [Cortex.Reference.Blocks.Workspaces]
                 MainDoc = "/docs/reference/blocks/workspaces/"
