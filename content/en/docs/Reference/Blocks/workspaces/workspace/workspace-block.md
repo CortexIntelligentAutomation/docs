@@ -67,9 +67,9 @@ For information about variables and scope, please see [Working with Variables][]
 
 [WorkspaceScope]: {{< ref "#workspace-scope" >}}
 
-[Start Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.StartWorkspaceBlock.MainDoc" >}}
-[End Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.EndWorkspaceBlock.MainDoc" >}}
-[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
+[Start Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
+[End Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}

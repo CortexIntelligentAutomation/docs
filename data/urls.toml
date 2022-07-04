@@ -175,9 +175,9 @@
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-names-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleFlow]
-                    MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception"
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-flow-exception-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleWorkspace]
                     MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
@@ -455,15 +455,15 @@
                 MainDoc = "/docs/reference/blocks/workspaces/"
                 [Cortex.Reference.Blocks.Workspaces.StartWorkspace]
                     MainDoc = "/docs/reference/blocks/workspaces/start-workspace"
-                    [Cortex.Reference.Blocks.Workspaces.Workspace.StartWorkspaceBlock]
+                    [Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace]
                         MainDoc = "/docs/reference/blocks/workspaces/start-workspace/start-workspace-block"
                 [Cortex.Reference.Blocks.Workspaces.EndWorkspace]
                     MainDoc = "/docs/reference/blocks/workspaces/end-workspace"
-                    [Cortex.Reference.Blocks.Workspaces.Workspace.EndWorkspaceBlock]
+                    [Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace]
                         MainDoc = "/docs/reference/blocks/workspaces/end-workspace/end-workspace-block"
                 [Cortex.Reference.Blocks.Workspaces.Workspace]
                     MainDoc = "/docs/reference/blocks/workspaces/workspace"
-                    [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
+                    [Cortex.Reference.Blocks.Workspaces.Workspace.Workspace]
                         MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
                 [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
