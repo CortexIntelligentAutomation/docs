@@ -477,6 +477,33 @@
             MainDoc = "/docs/reference/concepts/"
             [Cortex.Reference.Concepts.Fundamentals]
                 MainDoc = "/docs/reference/concepts/fundamentals/"
+                [Cortex.Reference.Concepts.Fundamentals.Blocks]
+                    MainDoc = "/docs/reference/concepts/fundamentals/blocks"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-exception-handling/"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.HiddenProperties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/hidden-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
+                            [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
+                                MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/"
+                                Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
+                                Literals = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literals"
+                                DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
+                                ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
+                                ObjectLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#object-literal"
+                                StringLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-literal"
+                                Variables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#variables"
+                            [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
+                                MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
+                            [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
+                                MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/datatypes/"
                     [Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes]
@@ -494,6 +521,31 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/throwing-exceptions"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception"
+                [Cortex.Reference.Concepts.Fundamentals.Executions]
+                    MainDoc = "/docs/reference/concepts/fundamentals/executions/"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.Exceptions]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/exceptions/"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/starting-an-execution"
+                        Internal = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#internal"
+                        FromAnotherFlow = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#from-another-flow"
+                        External = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#external"
+                        EDA = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#eda"
+                        [Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.ExecutionVariables]
+                            MainDoc = "/docs/reference/concepts/fundamentals/executions/execution-variables"
+                            InputOutput = "/docs/reference/concepts/fundamentals/executions/execution-variables/#inputoutput-variables"
+                            RESTRequest = "/docs/reference/concepts/fundamentals/executions/execution-variables/#using-the-run-flow-block"
+                            RunFlowBlock = "/docs/reference/concepts/fundamentals/executions/execution-variables/#using-a-rest-request"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
+                [Cortex.Reference.Concepts.Fundamentals.Flows]
+                    MainDoc = "/docs/reference/concepts/fundamentals/flows"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/calling-other-flows"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.FlowExceptionHandling]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/flow-exception-handling"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow"
                 [Cortex.Reference.Concepts.Fundamentals.Messages]
                     MainDoc = "/docs/reference/concepts/fundamentals/messages/"
                     [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
@@ -513,7 +565,16 @@
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
-                        MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"        
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"    
+                [Cortex.Reference.Concepts.Fundamentals.Workspaces]
+                    MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
+                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.Scope]
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/scope"
+                        LocalScopeVariables = "/docs/reference/concepts/fundamentals/workspaces/scope/#local-scope-variables"
+                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace"
+                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling]
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/workspace-exception-handling"    
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
                     MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
                     StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
@@ -524,68 +585,6 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
                 [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
-                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows]
-                    [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockExceptionHandling]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-exception-handling/"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/"
-                            [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.HiddenProperties]
-                                MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/hidden-properties/"
-                            [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors]
-                                MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/"
-                                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
-                                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/"
-                                    Expressions = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#expressions"
-                                    Literals = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#literals"
-                                    DictionaryLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
-                                    ListLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#list-literal"
-                                    ObjectLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#object-literal"
-                                    StringLiteral = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#string-literal"
-                                    Variables = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#variables"
-                                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
-                                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/literal-editor/"
-                                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.VariableEditor]
-                                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/variable-editor/"
-                            [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes]
-                                MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-types/"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/what-is-a-block/"
-                    [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.Exceptions]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/exceptions/"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/starting-an-execution"
-                            Internal = "/docs/reference/concepts/fundamentals/developing-flows/executions/starting-an-execution/#internal"
-                            FromAnotherFlow = "/docs/reference/concepts/fundamentals/developing-flows/executions/starting-an-execution/#from-another-flow"
-                            External = "/docs/reference/concepts/fundamentals/developing-flows/executions/starting-an-execution/#external"
-                            EDA = "/docs/reference/concepts/fundamentals/developing-flows/executions/starting-an-execution/#eda"
-                            [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables]
-                                MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/execution-variables"
-                                InputOutput = "/docs/reference/concepts/fundamentals/developing-flows/executions/execution-variables/#inputoutput-variables"
-                                RESTRequest = "/docs/reference/concepts/fundamentals/developing-flows/executions/execution-variables/#using-the-run-flow-block"
-                                RunFlowBlock = "/docs/reference/concepts/fundamentals/developing-flows/executions/execution-variables/#using-a-rest-request"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/executions/what-is-an-execution"
-                    [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.CallingOtherFlows]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/calling-other-flows"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.FlowExceptionHandling]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/flow-exception-handling"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.WhatIsAFlow]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/flows/what-is-a-flow"
-                    [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces]
-                        MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope"
-                            LocalScopeVariables = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/scope/#local-scope-variables"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WhatIsAWorkspace]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/what-is-a-workspace"
-                        [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.WorkspaceExceptionHandling]
-                            MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/workspaces/workspace-exception-handling"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
                 ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"

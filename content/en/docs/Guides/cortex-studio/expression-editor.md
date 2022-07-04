@@ -33,5 +33,5 @@ TODO: Variable Reference, Object Construct (Complex/Collection), String Concaten
 - [Referencing Variables][]
 - [Expressions][]
 
-[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
+[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [Referencing Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}

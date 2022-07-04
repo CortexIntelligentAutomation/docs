@@ -66,8 +66,8 @@ The [Exception Viewer][] currently does not support traditional copy functionali
 
 [Exception Blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.MainDoc" >}}
 [Handling Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
-[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.MainDoc" >}}
-[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.WhatIsAFlow.MainDoc" >}}
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
 [Throw New Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}
 [Throwing Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}

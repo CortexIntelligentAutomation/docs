@@ -759,9 +759,9 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 
 [Connection Type]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionType.MainDoc" >}}
 
-[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.MainDoc" >}}
-[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [String Interpolation]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.StringInterpolation" >}}
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 [Connection String Formats]: {{< url "ConnectionStrings.MainDoc" >}}

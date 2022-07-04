@@ -33,6 +33,6 @@ TODO: Confirm if this is all correct
 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
+[expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [Dictionary]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.Dictionary >}}
 [IDictionary]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.IDictionary >}}

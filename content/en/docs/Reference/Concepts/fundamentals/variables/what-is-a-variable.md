@@ -186,15 +186,15 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
 [APIGateway]: {{< url "Cortex.Reference.API.APIGateway.MainDoc" >}}
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
-[BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.MainDoc" >}}
+[BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [DataTypesConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 [BasicDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
-[DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.Internal" >}}
-[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.MainDoc" >}}
+[DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.Internal" >}}
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

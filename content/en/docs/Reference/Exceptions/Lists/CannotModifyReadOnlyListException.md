@@ -33,6 +33,6 @@ When using a variable, convert the list to a list that can be written to by usin
 TODO: Confirm if this is all correct - look at cannotmodifyreadonlydictionaryexception for consistency
 
 [T]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
+[expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [List]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.List >}}
 [IList]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.IList >}}

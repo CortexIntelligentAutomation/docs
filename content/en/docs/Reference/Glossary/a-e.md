@@ -375,7 +375,7 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [32-bit]: {{< url "Cortex.Reference.Glossary.0-9.32Bit" >}}
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
 
-[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
+[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 
 [Casting and type conversions (C# Programming Guide)]: {{< url "MSDocs.CSharp.Casting" >}}
 [Cast expression (C# Reference)]: {{< url "MSDocs.CSharp.CastExpression" >}}

@@ -45,9 +45,9 @@ For a session that has been established using a connection string variable, the 
 * [Execute Command block][Block-Execute-Command]
 
 [Block-Execute-Command]: {{< url "Cortex.Reference.Blocks.Data.ExecuteCommand.ExecuteCommand.MainDoc" >}}
-[Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.MainDoc" >}}
+[Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
-[Local-Scope-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope.LocalScopeVariables" >}}
-[literal object]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.ObjectLiteral" >}}
+[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
+[Local-Scope-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.Scope.LocalScopeVariables" >}}
+[literal object]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.ObjectLiteral" >}}

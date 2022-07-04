@@ -87,14 +87,14 @@ Event Driven Automation (EDA) may be used to trigger [flow execution][What-Is-Ex
 [From another flow]: {{< ref "#from-another-flow" >}}
 [Internal]: {{< ref "#internal" >}}
 
-[Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.MainDoc" >}}
-[Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.CallingOtherFlows.MainDoc" >}}
-[Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.MainDoc" >}}
-[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.InputOutput" >}}
-[Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Literals" >}}
-[REST-Request]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.REST-Request" >}}
-[Run-Flow-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.StartingAnExecution.ExecutionVariables.RunFlowBlock" >}}
+[Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[Calling-Other-Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows.MainDoc" >}}
+[Block-Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.ExecutionVariables.InputOutput" >}}
+[Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Literals" >}}
+[REST-Request]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.ExecutionVariables.REST-Request" >}}
+[Run-Flow-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.ExecutionVariables.RunFlowBlock" >}}
 [Structures]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
-[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Flows.WhatIsAFlow.MainDoc" >}}
+[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
+[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
