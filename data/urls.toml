@@ -546,6 +546,8 @@
                                     Variables = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/expression-editor/#variables"
                                 [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
                                     MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/literal-editor/"
+                                [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyEditors.VariableEditor]
+                                    MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-editors/variable-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes]
                                 MainDoc = "/docs/reference/concepts/fundamentals/developing-flows/blocks/block-properties/property-types/"
                         [Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock]
