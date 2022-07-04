@@ -335,7 +335,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 </Cortex_DataTypes_Dictionaries_Structure>"
 ```
 
-[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock.MainDoc" >}}
+[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}

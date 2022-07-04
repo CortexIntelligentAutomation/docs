@@ -469,9 +469,9 @@
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
                     MainDoc = "/docs/reference/blocks/xml/convert-xml/"
-                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock]
+                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
-                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock]
+                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
         [Cortex.Reference.Concepts]
             MainDoc = "/docs/reference/concepts/"

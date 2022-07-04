@@ -301,7 +301,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 
 This example will only occur when a [Structure][Structure Property] is Converted to [Xml][Xml Property] and is then converted again using this block. This is called [Round-Tripping][].
 
-[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock.MainDoc" >}}
+[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
 
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}

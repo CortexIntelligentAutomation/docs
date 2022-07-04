@@ -330,8 +330,8 @@ None
 [Format Text With Values]: {{< url "Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues.MainDoc" >}}
 [Join Text]: {{< url "Cortex.Reference.Blocks.Text.JoinText.JoinText.MainDoc" >}}
 
-[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock.MainDoc" >}}
-[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock.MainDoc" >}}
+[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
+[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
 

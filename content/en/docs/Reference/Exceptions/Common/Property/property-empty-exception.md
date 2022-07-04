@@ -180,8 +180,8 @@ None
 [Set Items At End]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtEnd.MainDoc" >}}
 [Set Items At Index]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndex.MainDoc" >}}
 
-[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock.MainDoc" >}}
-[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock.MainDoc" >}}
+[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
+[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
 
