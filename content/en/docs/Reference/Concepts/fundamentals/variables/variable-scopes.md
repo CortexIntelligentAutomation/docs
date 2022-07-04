@@ -41,13 +41,13 @@ If the variable does not appear in the grid, the most likely reason is the varia
 
 #### Duplicate Variable names across Workspaces
 
-It is currently possible to create more than one variable of the same name in the [Variable Grid][]. This is because the same variable name can be used in different [Workspaces][].
+It is currently possible to create more than one variable of the same name in the [Variable Grid][]. This is because the same name can be used in different [Workspaces][].
 
-When using the same variable name in different [Workspaces][], the variable with the lowest level of scope (or closest scope) will be used. For example:
+When using the same name in different [Workspaces][], the variable with the lowest level of scope (or closest scope) will be used. For example:
 
-**Top-Level Workspace** has the variable `($)loop-var`. **Workspace1** also has the variable `($)loop-var`.
+`Top-Level` workspace has the variable `($)Variable`. `Child-Level` workspace also has the variable `($)Variable`.
 
-When executing a block in **Workspace1** that references `($)loop-var`, the variable that is used is the variable defined in **Workspace1**.
+When executing a block in `Child-Level` that references `($)Variable`, the variable that is used is the variable defined in `Child-Level`.
 
 ## See Also
 

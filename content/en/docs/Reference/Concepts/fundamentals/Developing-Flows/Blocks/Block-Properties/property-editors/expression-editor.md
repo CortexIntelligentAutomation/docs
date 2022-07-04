@@ -68,7 +68,7 @@ He said "Come here!"
 For interpolated [strings][String], [variables][Variables] or [expressions][Expressions] are surrounded by single curly braces. For example:
 
 ```csharp
-$"He said \"Come here {($)NameVar}!\""
+$"He said \"Come here {($)Name}!\""
 ```
 
 For further information on interpolated strings using  [variables][Variables] or [expressions][Expressions] see [String expressions][]
@@ -180,7 +180,7 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 
 ### Structure literal
 
-[Structures][Structure] are a special type of [Dictionary][] that always have [string][String] [keys][key].
+[Structures][Structure] are a special type of [Dictionary][] that always have [string][String] keys.
 
 ```json
 {
@@ -193,13 +193,14 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 }
 ```
 
-They differ from a [Dictionary][] in the syntax used for accessing the [item][].
+They differ from a [Dictionary][] in the syntax used for accessing the item:
 
-Dictionaries can only use [index notation][]  e.g., `myDictionary["Key"]` to access [items][item]. Whereas, [Structures][Structure] can use both [dot notation][] e.g., `myStructure.Key` and [index notation][] e.g., `myStructure["Key"]`.
+- [Dictionary][] items can be accessed using [Index expressions][]
+- [Structure][] items can be accessed using [Property expressions][] or [Index expressions][]
 
 ### List literal
 
-A [List][] is an object that consists of a number of ordered [items][item] that can be of any [data type][Data-Types].
+A [List][] is an object that consists of a number of ordered items that can be of any [data type][Data Type].
 
 ```json
 [
@@ -212,11 +213,17 @@ A [List][] is an object that consists of a number of ordered [items][item] that 
 ]
 ```
 
-[Lists][List] may be heterogeneous, where the [items][item] may be of different [data types][Data-Types], or homogeneous, when the [items][item] are all of the same [data type][Data-Types].
+[Lists][List] may be heterogeneous, where the items may be of different [data types][Data Type], or homogeneous, when the items are all of the same [data type][Data Type].
+
+## Variable References
+
+[Variables][Variables Concept] are named containers for storing values of any [data type][Data Type]; a [variable's][Variables Concept] value can be read, updated, replaced, or removed using variable reference syntax; where the variable name is prefixed with `($)` (e.g. `($)VariableName`).
+
+Variables references can be used within [expressions][Expressions].
 
 ## Expressions
 
-An expression is a combination of [operands][] (i.e. [variables][Variables], [literals][literal values], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data-Types]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
+An expression is a combination of [operands][] (i.e. [variables][Variables], [literals][literal values], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
 
 Expressions use the syntax of the [C#][] [programming language][].
 
@@ -240,15 +247,15 @@ Types of expressions:
 
 The following [operators][] perform arithmetic operations with [operands][] that have numeric values.
 
-Assume the variable `($)IntVar1` has been set to `6`, and the variable `($)IntVar2` has been set to `3`.
+Assume the variable `($)Int1` has been set to `6`, and the variable `($)Int2` has been set to `3`.
 
 | Expression                | Result | Notes     |
 |---------------------------|--------|-----------|
-| `($)IntVar1 + ($)IntVar2` | `9`    | Add       |
-| `($)IntVar1 - ($)IntVar2` | `3`    | Subtract  |
-| `($)IntVar1 * ($)IntVar2` | `18`   | Multiply  |
-| `($)IntVar1 / ($)IntVar2` | `2`    | Divide    |
-| `($)IntVar1 % ($)IntVar2` | `0`    | Remainder |
+| `($)Int1 + ($)Int2` | `9`    | Add       |
+| `($)Int1 - ($)Int2` | `3`    | Subtract  |
+| `($)Int1 * ($)Int2` | `18`   | Multiply  |
+| `($)Int1 / ($)Int2` | `2`    | Divide    |
+| `($)Int1 % ($)Int2` | `0`    | Remainder |
 
 For further information, see [Arithmetic Operators][].
 
@@ -256,14 +263,14 @@ For further information, see [Arithmetic Operators][].
 
 The following [operators][] perform logical operations with [operands][] that have boolean values.
 
-Assume the variable `($)BoolVar1` has been set to `false`, and the variable `($)BoolVar2` has been set to `true`.
+Assume the variable `($)Bool1` has been set to `false`, and the variable `($)Bool2` has been set to `true`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
-| `($)BoolVar1 && ($)BoolVar2`   | `false` | AND |
-| `($)BoolVar2 \|\| ($)BoolVar1` | `true`  | OR  |
-| `($)BoolVar1 ^ ($)BoolVar2`    | `true`  | XOR |
-| `!($)BoolVar1`                 | `true`  | NOT |
+| `($)Bool1 && ($)Bool2`   | `false` | AND |
+| `($)Bool2 \|\| ($)Bool1` | `true`  | OR  |
+| `($)Bool1 ^ ($)Bool2`    | `true`  | XOR |
+| `!($)Bool1`                 | `true`  | NOT |
 
 For further information, see [Boolean Logical Operators][].
 
@@ -271,16 +278,16 @@ For further information, see [Boolean Logical Operators][].
 
 The following [operators][] perform comparison operations with [operands][].
 
-Assume the variable `($)IntVar1` has been set to `1`, and the variable `($)IntVar2` has been set to `2`.
+Assume the variable `($)Int1` has been set to `1`, and the variable `($)Int2` has been set to `2`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
-| `($)IntVar1 == ($)IntVar2`     | `false` | Equal |
-| `($)IntVar1 != ($)IntVar2`     | `true`  | Not Equal |
-| `($)IntVar1 > ($)IntVar2`      | `false` | Greater Than  |
-| `($)IntVar1 >= ($)IntVar2`     | `false` | Greater Than or Equal |
-| `($)IntVar1 < ($)IntVar2`      | `true`  | Less Than |
-| `($)IntVar1 <= ($)IntVar2`     | `true`  | Less Than or Equal  |
+| `($)Int1 == ($)Int2`     | `false` | Equal |
+| `($)Int1 != ($)Int2`     | `true`  | Not Equal |
+| `($)Int1 > ($)Int2`      | `false` | Greater Than  |
+| `($)Int1 >= ($)Int2`     | `false` | Greater Than or Equal |
+| `($)Int1 < ($)Int2`      | `true`  | Less Than |
+| `($)Int1 <= ($)Int2`     | `true`  | Less Than or Equal  |
 
 For further information, see [Equality Operators][], [Comparison Operators][], and [Object Equality][].
 
@@ -294,7 +301,7 @@ There are three types of string expressions:
 
 If a data type is used in a string expression that is not a [String][], then it will be [implicitly cast][] to a [String][] as part of the expression.
 
-Assume for all the examples below the variable `($)StringVar1` has been set to `"hello"`, `($)StringVar2` has been set to `"world"` and `($)IntegerVar` has been set to `1234`.
+Assume for all the examples below the variable `($)String1` has been set to `"hello"`, `($)String2` has been set to `"world"` and `($)Int` has been set to `1234`.
 
 #### Concatenated Strings
 
@@ -302,8 +309,8 @@ Concatenation is the process of appending one [String][] to the end of another [
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
-| `($)StringVar1 + " " + ($)StringVar2` | `"hello world"`              | |
-| `($)StringVar1 + " " + ($)IntegerVar` | `"hello 1234"`               | The variable `($)IntegerVar` is [implicitly cast][] to a [String][String] as part of the expression |
+| `($)String1 + " " + ($)String2` | `"hello world"`              | |
+| `($)String1 + " " + ($)Int` | `"hello 1234"`               | The variable `($)Int` is [implicitly cast][] to a [String][String] as part of the expression |
 
 For further information, see [String concatenation][].
 
@@ -313,9 +320,9 @@ Interpolation is the process of inserting expressions and variable references in
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
-| `$"{($)StringVar1} {($)StringVar2}"`  | `"hello world"`              | |
-| `$"{($)StringVar1} {($)IntegerVar}"`  | `"hello 1234"`               | The variable `($)IntegerVar` is [implicitly cast][] to a [String][String] as part of the expression |
-| `$"{($)StringVar1} {($)IntegerVar + 1}"`  | `"hello 1235"`               | The expression `($)IntegerVar + 1` is evaluated and the result is [implicitly cast][] to a [String][String] as part of the expression |
+| `$"{($)String1} {($)String2}"`  | `"hello world"`              | |
+| `$"{($)String1} {($)Int}"`  | `"hello 1234"`               | The variable `($)Int` is [implicitly cast][] to a [String][String] as part of the expression |
+| `$"{($)String1} {($)Int + 1}"`  | `"hello 1235"`               | The expression `($)Int + 1` is evaluated and the result is [implicitly cast][] to a [String][String] as part of the expression |
 
 For further information, see [String interpolation][].
 
@@ -331,7 +338,7 @@ A verbatim string identifies that characters within the string should be process
 | `@"c:\programs\file.txt"`             | `"c:\\programs\\file.txt"`   | |
 | `@"They said ""Hello!"""`             | `"They said \"Hello!\""`     | The `"` character is escaped|
 | `$@"{{ Some Text }}"`                 | `"{ Some Text }"`            | Interpolated Verbatim String, The curly brace characters are escaped |
-| `$@"c:\programs\{($)StringVar1}.txt"` | `"c:\\programs\\hello.txt"`  | Interpolated Verbatim String |
+| `$@"c:\programs\{($)String1}.txt"` | `"c:\\programs\\hello.txt"`  | Interpolated Verbatim String |
 
 For further information, see [Verbatim string literals][] and [Verbatim String Interpolation][].
 
@@ -341,7 +348,7 @@ For further information, see [Verbatim string literals][] and [Verbatim String I
 
 ### Structure expressions
 
-[Structures][Structure] can be created using [Constructor expressions][] and their items can be accessed using [Property expressions][] or [Index expressions][].
+[Structures][Structure] can be created using [Constructor expressions][] and their items can be accessed using [Property expressions][] (keys must follow [C# identifier naming rules][]) or [Index expressions][] (keys do not need to follow [C# identifier naming rules][]).
 
 ### List expressions
 
@@ -355,10 +362,12 @@ Methods on how to create a new instance of a [Data Type][] can be found in the r
 
 The following examples show two ways a [DateTimeOffset][] can be created using a constructor:
 
+Assume the variable `($)Year` has been set to `2022`.
+
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
 | `new DateTimeOffset()` | `0001-01-01T00:00:00+00:00` | `12AM 1st January 0001` with `0` hour UTC offset, the default for a new DateTimeOffset with no parameters |
-| `new DateTimeOffset(2022, 7, 1, 14, 0, 0, 0, new TimeSpan(1, 0, 0))` | `2022-07-01T14:00:00+01:00` | `2PM 1st July 2022` with `1` hour UTC offset |
+| `new DateTimeOffset(($)Year, 7, 1, 14, 0, 0, 0, new TimeSpan(1, 0, 0))` | `2022-07-01T14:00:00+01:00` | `2PM 1st July 2022` with `1` hour UTC offset |
 
 Note that some [Data Types][Data Type] should be created via [literal values][] instead of their constructors, these include:
 
@@ -378,11 +387,13 @@ Methods can be used to execute specific functionality. Which methods are accessi
 
 Methods can have parameters passed into them that are then used to execute the functionality, not all methods have parameters. The same method can be defined multiple times, each with different sets of parameters.
 
+Assume the variable `($)Int` has been set to `1`.
+
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
 | `TimePeriod.FromSeconds(60)` | `{"Years": 0, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 1, "Seconds": 0, "Milliseconds": 0}` | Method with parameters |
-| `1.ToString()` | `"1"` | Method without parameters |
-| `1.ToString("P0")` | `"100%"` | The `ToString()` method can take parameters in order to format the result. In this case `1` was converted into a percent with zero decimal places |
+| `($)Int.ToString()` | `"1"` | Method without parameters |
+| `($)Int.ToString("P0")` | `"100%"` | The `ToString()` method can take parameters in order to format the result. In this case `1` was converted into a percent with zero decimal places |
 
 For further information, see [Methods][].
 
@@ -394,13 +405,13 @@ Properties can be read-write, read-only, or write-only (extremely rare) dependin
 
 [Structures][Structure] allow for their keys to be accessed as properties.
 
-Assume the variable `($)TimePeriodVar` has been set to `{"Years": 1, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}`, and the variable `($)StructureVar` has been set to `{"FirstKey": 1, "SecondKey": 2}`.
+Assume the variable `($)TimePeriod` has been set to `{"Years": 1, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}`, and the variable `($)Structure` has been set to `{"FirstKey": 1, "SecondKey": 2}`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
 | `DateTimeOffset.UtcNow` | `2022-07-01T13:00:00.0000000+00:00` | Read-only property |
 | `($)TimePeriod.Years` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block |
-| `($)StructureVar.FirstKey` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block  |
+| `($)Structure.FirstKey` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block  |
 
 For further information, see [Properties][].
 
@@ -410,10 +421,12 @@ For further information, see [Properties][].
 
 Values within an [Enum][] can be accessed in the same way as properties or can they can be [cast][Casting expressions] from an [Int32][] value.
 
+Assume the variable `($)Int` has been set to `6`.
+
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
 | `DayOfWeek.Sunday` | `DayOfWeek.Sunday` | Where the name is `"Sunday"` and the value is `0` |
-| `(DayOfWeek)6` | `DayOfWeek.Saturday` |  [Int32][] cast to an [Enum][]. Where the name is `"Saturday"` and the value is `6` |
+| `(DayOfWeek)($)Int` | `DayOfWeek.Saturday` |  [Int32][] cast to an [Enum][]. Where the name is `"Saturday"` and the value is `6` |
 
 For further information, see [Enumeration types][].
 
@@ -423,12 +436,14 @@ For further information, see [Enumeration types][].
 
 [Data Types][Data Type] can be used as other [Data Types][Data Type] through the use of implicit casting, this is an automatic process that requires no expression syntax. Information regarding which types a [Data Type][] can be used as can be found in the "Summary" section under "Can be used as" in the relevant documentation for that [Data Type][Reference Data Types].
 
+Assume the variable `($)Int` has been set to `6`.
+
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
-| `(DayOfWeek)6` | `DayOfWeek.Saturday` | [Int32][] cast to an [Enum][]. Where the name is `"Saturday"` and the value is `6` |
-| `(Int16)1` | `1` | An [Int32][] can be cast to an [Int16][] as long as value is from `-32,768` through `32,767` |
+| `(DayOfWeek)($)Int` | `DayOfWeek.Saturday` | [Int32][] cast to an [Enum][]. Where the name is `"Saturday"` and the value is `6` |
+| `(Int16)($)Int` | `6` | An [Int32][] can be cast to an [Int16][] as long as value is from `-32,768` through `32,767` |
 | `(Int32)1.9` | `1` | Casting a [Double][] to an [Int32][] will cause any decimal places to be lost |
-| `1` | `1.0` | When using a block property of type [Double][] an [Int32][] is implicitly cast to [Double][] without any expression syntax |
+| `($)Int` | `6.0` | When using a block property of type [Double][] an [Int32][] is implicitly cast to [Double][] without any expression syntax |
 
 For further information, see [Explicit Conversions][] and [Implicit Conversions][].
 
@@ -453,132 +468,55 @@ For further information on index and range syntax, see [Indices and Ranges][].
 
 In the examples bellow assume:
 
-- `($)ListVar` has been set to `[1, 2, 3, 4, 5]`
-- `($)DictionaryVar` of type `Dictionary<string, Int32>` has been set to `{"FirstKey": 1, "SecondKey": 2}`
-- `($)StructureVar` has been set to `{"FirstKey": 1, "SecondKey": [1, 2, 3]}`
-- `($)StringVar` has been set to `"Some Text"`.
+- `($)List` has been set to `[1, 2, 3, 4, 5]`
+- `($)Dictionary` of type `Dictionary<string, Int32>` has been set to `{"FirstKey": 1, "SecondKey": 2}`
+- `($)Structure` has been set to `{"FirstKey": 1, "SecondKey": [1, 2, 3]}`
+- `($)String` has been set to `"Some Text"`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
-| `($)ListVar[2]` | `3` | The third item in the list is returned |
-| `($)ListVar[0..2]` | `[1, 2]` | The first and second item in the list are returned |
-| `($)ListVar[^2]` | `4` | The second to last item in the list is returned |
-| `($)ListVar[^2..^0]` | `[4, 5]` | The second to last and the last item in the list are returned |
-| `($)ListVar[1..^1]` | `[2, 3, 4]` | The second item to the second to last item in the list are returned |
-| `($)ListVar[..]` | `[1, 2, 3, 4, 5]` | All items in the list are returned |
-| `($)ListVar[..2]` | `[1, 2]` | The first item and the second item in the list are returned |
-| `($)ListVar[2..]` | `[3, 4, 5]` | The third item to the last item in the list are returned |
-| `($)DictionaryVar["FirstKey"]` | `1` | The item with the key `"FirstKey"` is returned |
-| `($)StructureVar["SecondKey"]` | `[1, 2, 3]` | The item with the key `"SecondKey"` is returned |
-| `($)StructureVar["SecondKey"][0]` | `1` |  The first item within the item with key `"SecondKey"` is returned |
-| `($)StringVar[0]` | `'S'` | The first character in the string is returned |
+| `($)List[2]` | `3` | The third item in the list is returned |
+| `($)List[0..2]` | `[1, 2]` | The first and second item in the list are returned |
+| `($)List[^2]` | `4` | The second to last item in the list is returned |
+| `($)List[^2..^0]` | `[4, 5]` | The second to last and the last item in the list are returned |
+| `($)List[1..^1]` | `[2, 3, 4]` | The second item to the second to last item in the list are returned |
+| `($)List[..]` | `[1, 2, 3, 4, 5]` | All items in the list are returned |
+| `($)List[..2]` | `[1, 2]` | The first item and the second item in the list are returned |
+| `($)List[2..]` | `[3, 4, 5]` | The third item to the last item in the list are returned |
+| `($)Dictionary["FirstKey"]` | `1` | The item with the key `"FirstKey"` is returned |
+| `($)Structure["SecondKey"]` | `[1, 2, 3]` | The item with the key `"SecondKey"` is returned |
+| `($)Structure["SecondKey"][0]` | `1` |  The first item within the item with key `"SecondKey"` is returned |
+| `($)String[0]` | `'S'` | The first character in the string is returned |
 
-## Variables
+## Remarks
+
+### Known Limitations
 
 - TODO: We are here
 - TODO: Remove old literal-variable-expression page
-- TODO: Update Fundamental Concepts index page/link title to Fundamentals
+- TODO: Remove 'Block' from end of urls.toml (e.g. Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1)
 
-[Variables][Variables Concept] are named containers for storing values of any [data type][Data-Types]; a value can be read, updated, replaced, or removed.
+#### Cannot Create Objects using Literal Syntax
 
-### Variable References
+Currently, creating an object using literal syntax is not supported.
 
-The value of a variable can be read using variable reference syntax.
+Objects can be created using expressions, for more information see [Constructor expressions][].
 
-```csharp
-($)variableName
-```
+#### Cannot Create Dictionaries using Literal Syntax
 
-The syntax for reading the properties of a variable differ depending on the value's [data type][Data-Types].
+Currently, creating a dictionary using literal syntax is not supported; any attempt to make a dictionary using literal syntax will create a [Structure][] instead.
 
-### Accessing a property in an Object
+Dictionaries can be created using expressions, for more information see [Dictionary expressions][].
 
-This example will read a property with the name `"Message"` from a variable that contains an [Exception][] object.
+#### Referencing Variables with the Same Name
 
-Assume the variable `($)Exception` has been set to the following:
+It is currently possible to create more than one variable of the same name. This is because the same name can be used in different [Workspaces][].
 
-```json
-{
-  "ExceptionType" : "Exception",
-  "Message" : "Exception of Type \"System.Exception\" was thrown.",
-  "HelpLink" : ""
-}
-```
+When using the same name in different workspaces, the variable with the lowest level of [scope][Workspace Scope] (or closest scope) will be used. For example:
 
-The value `"Exception of Type \"System.Exception\" was thrown."` of the property named `"Message"` can be read from the [Exception][] using [dot notation][]:
+`Top-Level` workspace has the variable `($)Variable`. `Child-Level` workspace also has the variable `($)Variable`.
 
-```csharp
-($)Exception.Message
-```
-
-### Accessing an item in a Dictionary
-
-This example will read an [item][] with the [key][] `"Key1"` from a variable that contains a [Dictionary][].
-
-Assume the variable `($)Dictionary` has been set to the following:
-
-```json
-{
-  "Key1" : "Item 1",
-  "Key2" : "Item 2"
-}
-```
-
-The [item][] `"Item 1"` with the [key][] `"Key1"` can be read from the [Dictionary][] using [index notation][]:
-
-```csharp
-($)Dictionary["Key1"]
-```
-
-### Accessing an item in a Structure
-
-This example will read an [item][] with the [key][] `"Key1"` from a variable that contains a [Structure][].
-
-Assume the variable `($)Structure` has been set to the following:
-
-```json
-{
-  "Key1" : "Item 1",
-  "Key2" : "Item 2"
-}
-```
-
-The [item][] `"Item 1"` with the [key][] `"Key1"` can be read from the [Structure][] using [dot notation][]:
-
-```csharp
-($)Structure.Key1
-```
-
-Or by using [index notation][]:
-
-```csharp
-($)Structure["Key1"]
-```
-
-### Accessing an item in a List
-
-This example will read an [item][] with the index `0` from a variable that contains a [List][].
-
-Assume the variable `($)List` has been set to the following:
-
-```json
-[
-  "Item 1",
-  "Item 2"
-]
-```
-
-The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [index notation][]:
-
-```csharp
-($)List[0]
-```
-
-## Known Limitations
-
-* TODO: Cannot create Objects
-* TODO: Cannot create Dictionaries
-* [Keys][key] within a [Structure][] must follow [C# identifier naming rules][] to be accessed by [dot notation][], keys that do not follow these rules can still be accessed by [index notation][].
+When executing a block in `Child-Level` that references `($)Variable`, the variable that is used is the variable defined in `Child-Level`.
 
 ## Related Concepts
 
@@ -648,6 +586,8 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 [Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Executions.WhatIsAnExecution.MainDoc" >}}
+[Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.MainDoc" >}}
+[Workspace Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.DevelopingFlows.Workspaces.Scope.MainDoc" >}}
 [Variables Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 
 [input property]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
@@ -656,11 +596,11 @@ The [item][] `"Item 1"` with the index `0` can be read from the [List][] using [
 
 [index notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.IndexNotation" >}}
 [dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}
-[key]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
-[item]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}
 [Enum]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
 
 [implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
+
+[Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1.MainDoc" >}}
 
 [Boolean-Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char-Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}
