@@ -1,6 +1,6 @@
 ---
 title: "Objects"
 linkTitle: "Objects"
-description: "Information on objects in Cortex"
-weight: 2
+description: "Information related to what a object is."
+weight: 800
 ---

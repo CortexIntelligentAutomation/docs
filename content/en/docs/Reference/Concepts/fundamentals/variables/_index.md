@@ -1,6 +1,6 @@
 ---
 title: "Variables"
 linkTitle: "Variables"
-description: "Information related to Variables."
-weight: 1
+description: "Information regarding what a variable is, how to reference a variable, and variable scopes."
+weight: 300
 ---
