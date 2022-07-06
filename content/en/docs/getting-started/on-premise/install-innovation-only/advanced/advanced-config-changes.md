@@ -1,7 +1,7 @@
 ---
 title: "Advanced Application Server and Load Balancer Configuration Changes"
 linkTitle: "Advanced Application Server and Load Balancer Configuration Changes"
-description: "Information about installing Cortex across multiple on-premise servers with high availability (HA), with non-default installation values."
+description: "Information about installing Cortex Innovation with non-default installation values."
 ---
 
 # {{< param title >}}
@@ -40,30 +40,30 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
           },
           "servers": [
             {
-              "serverName": "ha-server1",
+              "serverName": "app-server1",
               "iPAddress": "192.168.1.1"
             },
             {
-              "serverName": "ha-server2",
+              "serverName": "app-server2",
               "iPAddress": "192.168.1.2"
             },
             {
-              "serverName": "ha-server3",
+              "serverName": "app-server3",
               "iPAddress": "192.168.1.3"
             }
           ]
         }
       ],
       "servers": {
-        "ha-server1": {
+        "app-server1": {
           "faultDomain": "fd:/fd1",
           "serverCertificate": "serverCert"
         },
-        "ha-server2": {
+        "app-server2": {
           "faultDomain": "fd:/fd2",
           "serverCertificate": "serverCert"
         },
-        "ha-server3": {
+        "app-server3": {
           "faultDomain": "fd:/fd3",
           "serverCertificate": "serverCert"
         }
@@ -108,18 +108,18 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |17    | A local empty or non-existent directory on the load balancer server that the load balancer can be installed in. The directory path will be created if it does not exist. The installation user must have permissions to create and write to directories here. Ensure that all backslashes are escaped with another backslash. Environment variables may be used. |
     |18    | The IPv4 address of the server that the load balancer should run on. |
     |21    | The port that the HTTPS load balancer server should run on. This port should not be in use by anything else. |
-    |22    | The port that the API Gateway Service is running on the HA nodes. This should be 8722. |
+    |22    | The port that the API Gateway Service is running on the Application Servers. This should be 8722. |
     |23    | The name of a certificate entry in the adminCertificates section. If this line is removed, an auto-generated self-signed certificate will be used. |
-    |27, 31, 35 | The short computer names of the HA nodes. These must not contain the domain. The installation will be run on the first of these nodes. |
-    |28, 32, 36 | The respective IPv4 addresses of the HA nodes. |
-    |42, 46, 50 | These keys should be changed to the computer names of the HA nodes to match those on lines 26, 30 and 24 |
-    |44, 48, 52 | The name of a certificate entry in the serverCertificates section. This should be the same for all HA servers. If these lines are removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.|
+    |27, 31, 35 | The short computer names of the Application Servers. These must not contain the domain. The installation will be run on the first of these nodes. |
+    |28, 32, 36 | The respective IPv4 addresses of the Application Servers. |
+    |42, 46, 50 | These keys should be changed to the computer names of the Application Servers to match those on lines 26, 30 and 24 |
+    |44, 48, 52 | The name of a certificate entry in the serverCertificates section. This should be the same for all Application Servers. If these lines are removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.|
     |73-75 | Skip configuring these lines if self-signed certificates are being used. |
     |80-82 | Skip configuring these lines if self-signed certificates are being used or if the bundled load balancer is not being used. |
-    |74    |This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
+    |74    |This is the local path of a .PFX certificate file on the first Application Server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
     |75    |The password used to secure the .PFX file.|
     |76    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
-    |81    |This is the local path of a .PFX certificate file on the first HA server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
+    |81    |This is the local path of a .PFX certificate file on the first Application Server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
     |82    |The password used to secure the .PFX file.|
     |83    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
@@ -148,14 +148,14 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
           },
           "servers": [
             {
-              "serverName": "ha-server1",
+              "serverName": "app-server1",
               "iPAddress": "192.168.1.1"
             }
           ]
         }
       ],
       "servers": {
-        "ha-server1": {
+        "app-server1": {
           "faultDomain": "fd:/fd1",
           "serverCertificate": "serverCert"
         }

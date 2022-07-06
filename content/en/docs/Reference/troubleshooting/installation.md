@@ -11,7 +11,7 @@ description: >
 
 ### Root certificate verification failed as no root certificate has been specified {#ts-no-root-certificate}
 
-If the installation fails with `Root certificate verification failed as no root certificate has been specified.` it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the `pemRootCertificatePath` property for each certificate in the `serverCertificates` and `adminCertificates` section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
+If the installation fails with `Root certificate verification failed as no root certificate has been specified.` it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the `pemRootCertificatePath` property for each certificate in the `serverCertificates` and/or `adminCertificates` section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
 
 1. In order to find out the issuer of the certificate, if not already known, the following script can be used, replacing the password for the pfx file and certificate path as necessary:
 
@@ -81,7 +81,7 @@ If the installation fails with `Root certificate verification failed as no root 
     ```
 
 1. After saving the .pem file, transfer it to the same directory as other installation certificates.
-1. Modify the following, highlighted sections of the installation configuration file like so:
+1. Modify the installation configuration file to include the .pem file as the `pemRootCertificatePath` in the `serverCertificates` like so:
 
     ```json
       "serverCertificates": {
@@ -90,7 +90,12 @@ If the installation fails with `Root certificate verification failed as no root 
           "pfxCertificatePassword": "pfxPassword",
           "pemRootCertificatePath": "C:\\Certificates\\rootCert.pem"
         }
-      },
+      }
+    ```
+
+1. If a load balancer is being used (not single server), modify the installation configuration file to include the .pem file as the `pemRootCertificatePath` in the `adminCertificates` like so:
+
+    ```json
       "adminCertificates": {
         "loadBalancerCert": {
           "pfxCertificatePath": "C:\\Certificates\\lbCert.pfx",
@@ -125,12 +130,16 @@ To work around this error, either uninstall the platform and reinstall it using 
         cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
         ```
 
-    1. Uninstall the platform by running the following command:
+    1. Uninstall the platform by running the following command for your architecture:
 
-        ```powershell
+    {{< tabpane lang="powershell" >}}
+        {{< tab header="Multiple Servers With HA" >}}
         .\Cortex.Innovation.Uninstall.ps1
-        ```
-
+        {{< /tab >}}
+        {{< tab header="Single Server Without HA" >}}
+        .\Cortex.Innovation.Uninstall.ps1 -SkipLoadBalancer
+        {{< /tab >}}
+    {{< /tabpane >}}
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
     1. Wait for the command to finish.
 1. In the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, navigate to `Resources`.
@@ -149,28 +158,29 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 ### Cortex Innovation features not visible in Cortex Gateway {#ts-no-innovation}
 
-Check that the `Feature Flags` Guid in the `parameters.xml` file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [Cortex Service Portal][] for assistance.
+Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing Cortex Gateway is correct. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [Cortex Service Portal][] for assistance.
 
 ### Cortex Innovation blocks not visible in Cortex Studio {#ts-no-blocks}
 
-Check that the `Dot NET flow debugger Endpoint` URL in the `parameters.xml` file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website.
+Check that the `Dot NET flow debugger Endpoint` URL in the `CortexGateway.SetParameters.xml` file used for installing Cortex Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall Cortex Gateway or update the value in the `web.config` file and restart the website.
 
-Ensure that the flow debugger service is running. Open IIS, click on `Application Pools`and ensure there is a `debugger` application pool which is showing that it is associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
+Ensure that the Flow Debugger Service is running. Open IIS, click on `Application Pools`and ensure there is a `debugger` application pool which is showing that it is associated with 1 application. If not, go back to the Cortex Flow Debugger Service installation steps and ensure that all steps were followed correctly.
 
 If no misconfiguration can be found, the service log files may contain more information. These can be found on the Web Application Server at:
 
-* %ProgramData%/Cortex/Cortex Flow Debugger
+* %ProgramData%\Cortex\Cortex Flow Debugger
+* C:\temp\Cortex.Gateway.log
 
 If the issues cannot be resolved, please contact [Cortex Service Portal][] for assistance.
 
 ### Cannot publish a package {#ts-no-publish}
 
-Check that the "Service Fabric Api Gateway Endpoint", "Service Fabric Using Self Signed Certificates", "Service Fabric ApiGateway Basic Auth Username" and "Service Fabric ApiGateway Basic Auth Password" in the "parameters.xml" file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [Cortex Service Portal][] for assistance.
+Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [Cortex Service Portal][] for assistance.
 
-Ensure that the HA Services are healthy by following these steps:
+Ensure that the Application Services are healthy by following these steps:
 
-1. Log on to one of the Application servers and open a web browser.
-1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of any server within the HA cluster. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
+1. Log on to one of the Application Servers and open a web browser.
+1. Navigate to `https://app-server.domain.com:9080/Explorer`, where `app-server.domain.com` is the fully qualified domain name of any Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
     If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the CortexServerCertificate from the `Personal` store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed
 
@@ -185,14 +195,14 @@ If no solution can be found, please contact [Cortex Service Portal][] for assist
 
 ### Managing RabbitMQ
 
-There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send the messages between services.
-To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://ha-server1.domain.com:15671`, replacing `ha-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
+There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send messages between services.
+
+To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://app-server1.domain.com:15671`, replacing `app-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
 
 {{< figure src="/images/RabbitMQ Status.png" title="Healthy RabbitMQ status." >}}
 
 {{% alert title="Note" %}} The username and password are not secure, but the RabbitMQ manager will only allow you to connect from localhost so it is not accessible to anyone who does not have remote desktop access. {{% /alert %}}
 
-If there are any unhealthy nodes (red) you may need to restart the RabbitMQ Windows service on each of the nodes that is erroring. These can be restarted in any order, but they
-must be restarted one at a time; wait for the node in the RabbitMQ explorer to be green before restarting the next one (you may need to refresh the browser).
+If there are any unhealthy nodes (red) you may need to restart the RabbitMQ Windows service on each of the nodes that is erroring. These can be restarted in any order, but they must be restarted one at a time; wait for the node in the RabbitMQ explorer to be green before restarting the next one (you may need to refresh the browser).
 
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}

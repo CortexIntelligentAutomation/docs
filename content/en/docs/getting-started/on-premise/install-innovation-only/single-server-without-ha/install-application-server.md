@@ -13,7 +13,7 @@ This guide describes how to install the Application Server components on the ser
 
 1. Copy the following artefacts to a folder on the server (the version numbers may differ):
    * Cortex Innovation 2022.6 - Block Packages.zip
-   * Cortex Innovation 2022.6 - HA Services.zip
+   * Cortex Innovation 2022.6 - App Services.zip
    * Cortex Innovation 2022.6 - App Server Install Scripts.zip
 
 1. Extract the `Cortex Innovation 2022.6 - App Server Install Scripts.zip` file to a folder with the same name.
@@ -81,7 +81,7 @@ The settings can be applied by running a script. Be aware that the server will b
     1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS name or fully qualified domain name of the server:
 
         ```powershell
-        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("ha-server1")
+        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1")
         ```
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
@@ -99,7 +99,7 @@ The settings can be applied by running a script. Be aware that the server will b
     1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS name or fully qualified domain name of the server:
 
         ```powershell
-        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("ha-server1")
+        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1")
         ```
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
@@ -120,7 +120,7 @@ The settings can be applied by running a script. Be aware that the server will b
     {{< tabpane lang="powershell" >}}
         {{< tab header="CA Certs" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - HA Services.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -133,7 +133,7 @@ The settings can be applied by running a script. Be aware that the server will b
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - HA Services.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -147,7 +147,7 @@ The settings can be applied by running a script. Be aware that the server will b
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |`HaServicesPath`                              | Configure this value with the location of the HA Services zip file on the server. |
+    |`HaServicesPath`                              | Configure this value with the location of the App Services zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
     |`ApiGatewayBasicAuthUserName`                 | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
     |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
@@ -155,8 +155,8 @@ The settings can be applied by running a script. Be aware that the server will b
     |`ApplicationServerIPv4Addresses`              | The IPv4 address of the server.|
     |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the server. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. |
     |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
-    |`UseSelfSignedCertificates`                    | Installs HA Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
-    |`SkipLoadBalancer`                             | Installs HA Services and required infrastructure without installing a load balancer. |
+    |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
+    |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
     The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
@@ -193,10 +193,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Run Installation Script
 
-1. Install HA Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
+1. Install Application Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
 
     ```powershell
-    .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-app-install-log.txt"
     ```
 
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
@@ -214,7 +214,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [Cortex Service Portal][] for assistance.
 
-## Check HA Services
+## Check Application Services
 
 1. Log on to the server.
 1. Import the certificate, used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your `Current User` certificate store. This can be achieved by double clicking on the certificate .PFX file and following the wizard.

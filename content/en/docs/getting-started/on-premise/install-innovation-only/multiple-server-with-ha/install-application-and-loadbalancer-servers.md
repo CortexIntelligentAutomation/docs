@@ -13,7 +13,7 @@ This guide describes how to install the Application Servers and Load Balancer Se
 
 1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):
    * Cortex Innovation 2022.6 - Block Packages.zip
-   * Cortex Innovation 2022.6 - HA Services.zip
+   * Cortex Innovation 2022.6 - App Services.zip
    * Cortex Innovation 2022.6 - App Server Install Scripts.zip
 
 1. Extract the `Cortex Innovation 2022.6 - App Server Install Scripts.zip` file to a folder with the same name.
@@ -60,7 +60,7 @@ The settings can be applied by running a script. Be aware that each server will 
 1. Run the `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
 
     ```powershell
-    .\Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3") -LoadBalancerServer "lb-server"
+    .\Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
     ```
 
     {{% alert title="Note" %}}
@@ -86,7 +86,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
 
         ```powershell
-        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3")
+        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
         ```
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
@@ -104,7 +104,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
 
         ```powershell
-        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("ha-server1", "ha-server2", "ha-server3")
+        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
         ```
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
@@ -125,7 +125,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     {{< tabpane lang="powershell" >}}
         {{< tab header="CA Certs, Built-in Load Balancer">}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - HA Services.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -140,7 +140,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
     .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - HA Services.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -152,7 +152,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="CA Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - HA Services.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -167,7 +167,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - HA Services.zip" `
+    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -192,8 +192,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
     |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. This can be the same certificate as the `ServerCertificatePath`. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the [Certificate Requirements][].|
     |`ClientCertificatePwd`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. |
-    |`UseSelfSignedCertificates`                    | Installs HA Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
-    |`SkipLoadBalancer`                             | Installs HA Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer. |
+    |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
+    |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the Application Servers. It must be a domain user that is a member of the local Administrators group on all servers. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
     The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
@@ -230,7 +230,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Run Installation Script
 
-1. Install HA Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
+1. Install Application Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
 
     ```powershell
     .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -251,14 +251,14 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [Cortex Service Portal][] for assistance.
 
-## Check HA Services
+## Check Application Services
 
 1. Log on to one of the Application Servers.
 1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. This can be achieved by double clicking on the client certificate .PFX file and following the wizard.
 
     If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the `CortexServerCertificate` from the `Personal` store and then importing it to the `Current User` store by double-clicking on it and following the wizard.
 1. Open a web browser.
-1. Navigate to `https://ha-server.domain.com:9080/Explorer`, where `ha-server.domain.com` is the fully qualified domain name of any Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
+1. Navigate to `https://app-server.domain.com:9080/Explorer`, where `app-server.domain.com` is the fully qualified domain name of any Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
     The screen should resemble that in the following figure:
     {{< figure src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer Cluster" >}}

@@ -84,7 +84,7 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
     1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
         ```text
-        MachineID: HA-SERVER1
+        MachineID: APP-SERVER1
         Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
         ```
 
@@ -168,10 +168,10 @@ For production systems it is recommended that X.509 SSL wildcard certificates ar
 
 An X.509 SSL wildcard certificate should be used to:
 
-* Secure communication between the load balancer and the HA nodes on the Application Servers.
-* Secure communication between the HA nodes.
-* Allow HA Services to identify themselves to clients such as Gateway.
-* Prevent unauthorised HA nodes from joining the HA cluster.
+* Secure communication between the load balancer and the nodes on the Application Servers.
+* Secure communication between the Application Services.
+* Allow Application Services to identify themselves to clients such as Gateway.
+* Prevent unauthorised nodes from joining the HA cluster.
 * Connect to Service Fabric Explorer from each of the Application Servers.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
@@ -181,10 +181,12 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
+* Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
+* Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
 This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.
 
-If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the HA nodes. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
+If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
 #### TLS Requirements
 
@@ -203,7 +205,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 Domain users must be available to run the Application Pools for Gateway and Flow Debugger Service. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
-For Flow Debugger Service, the `NT AUTHORITY\NETWORK SERVICE` user can also be used.
+For Flow Debugger Service, the `NETWORK SERVICE` user can also be used.
 
 #### Domain Requirements
 
@@ -233,6 +235,8 @@ Both Gateway and the Flow Debugger Service require an X.509 SSL certificate to b
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
 Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
+
+The certificate may be the same one used for the Application Server installation.
 
 More information about importing the certificate is given during installation.
 

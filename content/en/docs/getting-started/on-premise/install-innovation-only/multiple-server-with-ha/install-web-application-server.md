@@ -236,7 +236,7 @@ Both the Gateway and Flow Debugger Service should be configured to use HTTPS:
 
 ### Get Application Pool User
 
-A domain user account is required for the Flow Debugger Service web application pool and must be created prior to performing the installation. In line with best practices, this account should not be used for any purposes other than those specified for the Flow Debugger Service. Alternatively, the `NT AUTHORITY\NETWORK SERVICE` user may also be used.
+A domain user account is required for the Flow Debugger Service web application pool and must be created prior to performing the installation. In line with best practices, this account should not be used for any purposes other than those specified for the Flow Debugger Service. Alternatively, the `NETWORK SERVICE` user may also be used.
 
 This user must currently have access to the default NuGet directory, in order to load block packages correctly. To add permissions for the user take the following steps:
 
@@ -265,16 +265,28 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 ### Configure Installation Script
 
 1. In the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.FlowDebuggerService.ps1` script and open it with a text editor.
-1. Configure the script according to the details given below:
 
-    ```powershell
-    .\Cortex.Install.FlowDebuggerService.ps1 `
+1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
+
+    {{< tabpane lang="powershell" >}}
+        {{< tab header="CA Certs">}}
+.\Cortex.Install.FlowDebuggerService.ps1 `
     -FlowDebuggerServicePath "C:\Install\Cortex Innovation 2022.6 - Flow Debugger Service.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
     -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -Credential $AppPoolIdentity
-    ```
+        {{< /tab >}}
+        {{< tab header="Self-Signed Certs" >}}
+.\Cortex.Install.FlowDebuggerService.ps1 `
+    -FlowDebuggerServicePath "C:\Install\Cortex Innovation 2022.6 - Flow Debugger Service.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
+    -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
+    -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -UseSelfSignedCertificates `
+    -Credential $AppPoolIdentity
+        {{< /tab >}}
+    {{< /tabpane >}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
@@ -282,6 +294,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
     |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
     |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
@@ -301,7 +314,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
     ```
 
-1. A credentials prompt will appear. Enter the credentials of the user that should run the `Debugger` application pool in IIS.
+1. A credentials prompt will appear. Enter the credentials of the user that should run the `Debugger` application pool in IIS. If using the `NETWORK SERVICE` user, enter any user as the username and leave the password blank; the `NETWORK SERVICE` user will need to be selected in the final step.
 1. Wait for the script to finish running. This should take approximately 2 minutes.
 1. An error may have appeared saying:
 
@@ -315,6 +328,16 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
 
     If the errors do not give any instructions on how to rectify, please contact [Cortex Service Portal][] for further assistance.
+
+1. If using `NETWORK SERVICE` for the application pool user:
+
+    1. Open Internet Information Services (IIS) Manager.
+    1. On the left, expand the server node.
+    1. Click `Application Pools`.
+    1. Right-click on the `Debugger` application pool and select `Advanced Settings...`.
+    1. In the `Advanced Settings` dialog, click on `Identity` and then click the ellipses (`...`).
+    1. In the `Application Pool Identity` dialog, select `Built-in account`, then select `NetworkService` from the drop-down, then click `OK`.
+    1. Right-click on the `Debugger` application pool and click `Recycle...`.
 
 ## Install Gateway
 
@@ -399,7 +422,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 1. In the `Cortex Innovation 2022.6 - Gateway` folder, locate the `CortexGateway.SetParameters.xml` file and open it with a text editor.
 1. Edit the file, changing the parameters according to the details given below:
 
-    {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-21 23-25 29-31 34,linenostart=1" >}}
+    {{< highlight powershell "linenos=table,hl_lines=3 16-18 20-21 23-26 31-33 36,linenostart=1" >}}
     <?xml version="1.0" encoding="utf-8"?>
     <parameters>
         <setParameter name="IIS Web Application Name" value="Cortex/gateway" />
@@ -422,9 +445,11 @@ If the site hosting the Gateway web application is a newly created Cortex site o
         <setParameter name="Service Fabric ApiGateway Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
         <setParameter name="Service Fabric ApiGateway Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
         <setParameter name="HSTS Enabled" value="true" />
-        <setParameter name="Dot NET flow debugger Endpoint" value="&lt;value&gt;https://app-server.domain.com/debugger/api/&lt;/value&gt;" />
-        <setParameter name="Dot NET flow debugger Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
-        <setParameter name="Dot NET flow debugger Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
+        <setParameter name="Dot NET Flow Debugger Endpoint" value="&lt;value&gt;https://app-server.domain.com/debugger/api/&lt;/value&gt;" />
+        <setParameter name="Dot NET Flow Debugger Basic Auth Username" value="&lt;value&gt;BasicAuthUser&lt;/value&gt;" />
+        <setParameter name="Dot NET Flow Debugger Basic Auth Password" value="&lt;value&gt;ADA9883B11BD4CDC908B8131B57944A4&lt;/value&gt;" />
+        <setParameter name="Dot NET Flow Debugger Using Self Signed Certificates" value="&lt;value&gt;False&lt;/value&gt;" />
+        <setParameter name="Dot NET Flow Debugger Self Signed Certificate Subject" value="&lt;value&gt;CN=CortexServerCertificate&lt;/value&gt;" />
         <setParameter name="Garbage collection schedule" value="&lt;value&gt;0 0 1 ? * SUN&lt;/value&gt;" />
         <setParameter name="Garbage collection arguments" value="&lt;value&gt;--auto&lt;/value&gt;" />
         <setParameter name="Garbage collection lock timeout" value="&lt;value&gt;02:00:00&lt;/value&gt;" />
@@ -441,17 +466,18 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     |------------|------------------------------------------------|-------------|
     | 3          |`IIS Web Application Name`                      | Change to the correct `Site Name/Application` if either was modified from the defaults when creating the [website][Create Web Site] or [application][Create Application].  |
     | 16         |`Feature Flags`                                 | Replace `InnovationId` with the Cortex Innovation feature identifier. This should be retrieved from [Cortex Service Portal][]. |
-    | 17         |`Service Fabric Api Gateway Endpoint`           | Replace `load-balancer.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), e.g. `load-balancer.domain.com:8722`. |
+    | 17         |`Service Fabric Api Gateway Endpoint`           | Replace `load-balancer.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://load-balancer.domain.com/` or `https://load-balancer.domain.com:8722/`. |
     | 18         |`Service Fabric Using Self Signed Certificates` | Configure the value as `False` if you used valid CA certificates when installing the Application Servers, `True` if you used self-signed certificates. |
     | 20         |`Service Fabric ApiGateway Basic Auth Username` | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. |
     | 21         |`Service Fabric ApiGateway Basic Auth Password` | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
-    | 23         |`Dot NET flow debugger Endpoint`                | Replace `app-server.domain.com` with the fully qualified domain name of the Web Application Server. |
-    | 24         |`Dot NET flow debugger Basic Auth Username` | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. |
-    | 25         |`Dot NET flow debugger Basic Auth Password` | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
-    | 29         |`ModelDBContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance.|
-    | 30         |`AuthContext-Web.config Connection String`      | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
-    | 31         |`SignalRContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
-    | 34         |`CortexRepositories-Web.config Connection String` | Change this to the location where the Flow repositories are to be stored. The default location is `c:\CortexWeb\Repo`. |
+    | 23         |`Dot NET Flow Debugger Endpoint`                | Replace `app-server.domain.com` with the fully qualified domain name of the Web Application Server. |
+    | 24         |`Dot NET Flow Debugger Basic Auth Username` | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. |
+    | 25         |`Dot NET Flow Debugger Basic Auth Password` | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
+    | 26         |`Dot NET Flow Debugger Using Self Signed Certificates` | Configure the value as `False` if you are using valid CA certificates to secure the site containing Gateway and Flow Debugger Service, `True` if using self-signed certificates. |
+    | 31         |`ModelDBContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance.|
+    | 32         |`AuthContext-Web.config Connection String`      | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
+    | 33         |`SignalRContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
+    | 36         |`CortexRepositories-Web.config Connection String` | Change this to the location where the Flow repositories are to be stored. The default location is `c:\CortexWeb\Repo`. |
 
 ### Test Installation Script
 

@@ -74,6 +74,44 @@ Gateway supports the latest versions of the following browsers:
 * Edge
 * Firefox
 
+## Certificate Requirements
+
+{{% alert title="Note" %}}
+For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+{{% / alert %}}
+
+An X.509 SSL certificate (standard or wildcard) should be used to:
+
+* Allow Application Services to identify themselves to clients such as Gateway.
+* Prevent unauthorised nodes from joining the single node cluster.
+* Connect to Service Fabric Explorer from the Application Server.
+* Connect to Gateway.
+* Allow Gateway to connect to the Flow Debugger Service.
+
+The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
+
+* Subject field must be in one of the following formats, depending on the certificate type:
+  * Standard certificates must use the standard format (e.g. `CN=host.domain.com`).
+  * Wildcard certificates must use the wildcard format, pertaining to the domain of the server (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Subject Alternative Names (SAN): At minimum the FQDN of the server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1. It must include any additional host names that should be able to be used to access the API Gateway Service.
+* Certificate file must be in a .PFX file format, with a known password.
+* Certificate file must contain the full chain of certificates.
+* Certificate file must include the private key.
+* Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
+* Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
+
+This file should be placed in a known location on the server. This location will be required when running the Application Server installation script.
+
+## TLS Requirements
+
+There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
+
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+
+See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
+
 ## Additional Application Server Requirements
 
 ### Filesystem Requirements
@@ -92,7 +130,7 @@ The following Windows Services must be running on the server:
 
 #### Installation User
 
-A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that Cortex Innovation is built upon.
+A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that Cortex Innovation is built upon.
 
 #### Antivirus Exclusions
 
@@ -131,38 +169,6 @@ If you are using Windows Firewall, some ports are opened during installation and
 
 The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
-#### Certificate Requirements
-
-{{% alert title="Note" %}}
-For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
-{{% / alert %}}
-
-An X.509 SSL certificate (standard or wildcard) should be used to:
-
-* Allow HA Services to identify themselves to clients such as Gateway.
-* Prevent unauthorised HA nodes from joining the HA cluster.
-* Connect to Service Fabric Explorer from each of the servers.
-
-The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
-
-* Subject field must be in one of the following formats, depending on the certificate type:
-  * Standard certificates must use the standard format (e.g. `CN=host.domain.com`).
-  * Wildcard certificates must use the wildcard format, pertaining to the domain of the server (e.g. `CN=*.domain.com`).
-* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
-* Certificate file must be in a .PFX file format, with a known password.
-* Certificate file must contain the full chain of certificates.
-* Certificate file must include the private key.
-
-This file should be placed in a known location on the server. This location will be required when running the installation script.
-
-#### TLS Requirements
-
-There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
-
-* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
 
 ## Additional Web Application Server Requirements
 
@@ -172,7 +178,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 Domain users must be available to run the Application Pools for Gateway and Flow Debugger Service. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
-For Flow Debugger Service, the `NT AUTHORITY\NETWORK SERVICE` user can also be used.
+For Flow Debugger Service, the `NETWORK SERVICE` user can also be used.
 
 #### Domain Requirements
 
@@ -191,19 +197,6 @@ Supported versions of Active Directory are listed below:
 | Windows Server 2016        |      ✓        | Cortex v2022.6 | To be evaluated  |
 | Windows Server 2019        |                | Cortex v2022.6 | To be evaluated  |
 | Windows Server 2022        |                | Cortex v2022.6 | To be evaluated  |
-
-#### Certificate Requirements
-
-Both Gateway and the Flow Debugger Service require an X.509 SSL certificate to be installed on the server. The certificate must have the following properties:
-
-* Enhanced Key Usage: `Server Authentication` and `Client Authentication`
-* Subject Alternative Names (SAN): At minimum the FQDN of the server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1
-
-If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
-
-Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
-
-More information about importing the certificate is given during installation.
 
 ## Next Steps?
 
