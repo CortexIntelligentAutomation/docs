@@ -483,6 +483,8 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-exception-handling/"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.HiddenProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/hidden-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
@@ -490,12 +492,12 @@
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/"
                                 Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
-                                Literals = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literals"
+                                LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
                                 ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
                                 ObjectLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#object-literal"
                                 StringLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-literal"
-                                Variables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#variables"
+                                VariableReferences = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#variables"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]

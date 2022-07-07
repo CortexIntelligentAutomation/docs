@@ -48,7 +48,7 @@ The icons used for inputoutputs are displayed in a light blue to distinguish the
 
 * [Blocks][Block]
 * [Variables][Variables]
-* [Literals-Expressions-Variables][Literal-Expressions-Variables]
+* [Expression Editor][]
 
 ## Related Blocks
 
@@ -62,8 +62,8 @@ The icons used for inputoutputs are displayed in a light blue to distinguish the
 [All-Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
-[Literal-Expressions-Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
-[Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Literals" >}}
+[Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.LiteralValues" >}}
 [Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Variables" >}}
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}

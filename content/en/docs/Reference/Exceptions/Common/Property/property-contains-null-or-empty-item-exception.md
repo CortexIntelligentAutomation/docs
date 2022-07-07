@@ -10,13 +10,13 @@ description: "The exception thrown when a property is provided with a value that
 
 ## Description
 
-The exception thrown when a [property][TODO] is provided with a value that contains at least one item that is either `null` or empty, but the item is required to have a value.
+The exception thrown when a [property][] is provided with a value that contains at least one item that is either `null` or empty, but the item is required to have a value.
 
 ## Reasons
 
 ### Value Contains `null` or empty item
 
-A `null` or empty item is contained in the value that was provided for the [property][TODO].
+A `null` or empty item is contained in the value that was provided for the [property][].
 
 #### Message Format
 
@@ -33,7 +33,7 @@ where:
 
 #### How to fix
 
-Ensure the value provided for the [property][TODO] named `<property-name>` does not contain items that are either `null` or empty.
+Ensure the value provided for the [property][] named `<property-name>` does not contain items that are either `null` or empty.
 
 ## Properties
 
@@ -51,7 +51,7 @@ The exception message, providing information about the exception that occurred.
 
 For this exception:
 
-* `<property-name>` will be replaced with the name of the [property][TODO].
+* `<property-name>` will be replaced with the name of the [property][].
 
 | | |
 |-----------|------------|
@@ -69,7 +69,7 @@ The URL for the relevant section of this exception's help page.
 
 ### Known Limitations
 
-Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the id, name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
+Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][], the id, name and value of the [property][], as well as allowing the exception to contain a link to take you directly to the offending value.
 
 ## See Also
 
@@ -80,8 +80,8 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 ### Related Concepts
 
 * [Working with Exceptions][]
-* [Blocks][TODO]
-* [Block Properties][TODO]
+* [Blocks][block]
+* [Block Properties][property]
 
 ### Related Blocks
 
@@ -97,5 +97,8 @@ None
 [Handle Block Exception Matching Type Names]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
