@@ -1,53 +1,70 @@
 ---
 title: "Calling Other Flows"
 linkTitle: "Calling Other Flows"
-description: "Initiating, and passing data to, another flow."
-weight: 20
+description: "Information regarding calling, and passing data to, other flows."
+weight: 100
 ---
 
 # {{< param title >}}
 
 ## Summary
 
-Logic in one [executing flow][What-Is-Execution] may trigger the execution of another [flow][What-Is-Flow].
-
-### Asynchronous vs Synchronous
-
-An [executing flow][What-Is-Execution] may trigger the execution of other [flows][What-Is-Flow], either asynchronously (future) or synchronously.
-
-When triggering a synchronous [flow execution][What-Is-Execution], the calling [flow][What-Is-Flow] will pause until the called [flow][What-Is-Flow] has completed its [execution][What-Is-Execution].
-
-Triggering an asynchronous [flow execution][What-Is-Execution] will cause the called [flow][What-Is-Flow] to execute independently of the calling [flow][What-Is-Flow], which will continue its [execution][What-Is-Execution] simultaneously.
+A [flow][] may trigger the execution of another [flow][].
 
 ## Calling another flow
 
-A [flow][What-Is-Flow] may trigger an [execution][What-Is-Execution] of another [flow][What-Is-Flow] directly, using the [Run Flow][TODO] [block][What-Is-Block]. Alternatively, a [flow execution][What-Is-Execution] may be triggered by making the appropriate HTTP request, targeting the API Gateway service, using an [Execute HTTP Request][TODO] [block][What-Is-Block].
+A [flow][] can be called from another [flow][] in the following ways:
 
-## Exchanging Data
+- Using the [Run Flow][TODO] block to trigger the execution of another flow directly
+- Using the [Execute HTTP Request][TODO] block to trigger a flow through the API Gateway service (this should only be used to call [flows][flow] published in a separate Cortex platform)
 
-For both asynchronous and synchronous triggered [flows][What-Is-Flow], initialisation values can be passed from the calling [flow][What-Is-Flow] to [input variables][Input-Output] in the called [flow][What-Is-Flow].
+### Input Variables
 
-In the case of a synchronous [flow execution][What-Is-Execution], values can be passed from [output variables][Input-Output] in the called [flow][What-Is-Flow] when it terminates, back to the calling [flow][What-Is-Flow].
+Sometimes [flows][flow] require data to be passed to them through the use of input variables (e.g. a flow used to log errors may require a file path for where the logs are saved).
 
-Values from an asynchronous [flow execution][What-Is-Execution] cannot be passed back directly to the calling [flow][What-Is-Flow].
+Input variables can be passed into flows in the following ways:
 
-## Known Limitations
+- For the [Run Flow][TODO] block, input variables are configured using the Inputs property; for more information see [Run Flow Inputs Example][TODO]
+- For the [Execute HTTP Request][TODO] block, input variables are configured within the body of the HttpRequest; for more information see [Http Request Inputs Example][TODO]
 
-- Asynchronous flow execution is a future feature. This affects:
-  - [Run Flow][TODO] block
-  - [Execute HTTP Request][TODO] block
-  - API Gateway service
+### Output Variables
 
-## Related Concepts
+Sometimes [flows][flow] may return data through the use of output variables (e.g. a flow used to interact with a database may return its results).
 
-- [Flows][What-Is-Flow]
-- [Flow Executions][Execution]
-- [Blocks][Block]
-- [Input/Output Variables][Input-Output]
+Output variables are returned to the calling flow in the following ways:
 
-[Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
-[Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
-[Input-Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.ExecutionVariables.InputOutput" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
-[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+- For the [Run Flow][TODO] block, output variables are saved to the Outputs property; for more information see [Run Flow Outputs Example][TODO]
+- For the [Execute HTTP Request][TODO] block, output variables are returned within the ResponseBody of the HttpResponse property; for more information see [Http Request Outputs Example][TODO]
+
+## Remarks
+
+### Known Limitations
+
+#### Flows can only be called Synchronously
+
+Currently it is only possible to call other [flows][flow] synchronously; this means the calling flow will wait for the called flow to complete its [execution][] before continuing.
+
+In the future it will be possible to call flows asynchronously; this means the calling flow will continue after the called flow starts its [execution][] without waiting for the called flow to complete.
+
+## See Also
+
+### Related Concepts
+
+- [Flows][]
+- [Blocks][]
+- [Executions][]
+
+### Related Blocks
+
+- [Run Flow][TODO]
+- [Execute HTTP Request][TODO]
+
+### External Documentation
+
+None
+
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}

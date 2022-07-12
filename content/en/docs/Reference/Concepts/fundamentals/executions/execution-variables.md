@@ -7,6 +7,20 @@ weight: 30
 
 # {{< param title >}}
 
+TODO: Update summary
+TODO: Add section explaining what happens to variable during an execution (Could link to things like: variable types changing throughout a flow, viewing variables during an execution)
+TODO: Split "Input/Output Variables" into two sections "Input Variables" and "Output Variables"
+
+TODO: Runtime Issues (e.g. dynamic variable is the wrong type for a block property)
+    Provide examples
+    Link to Exceptions
+
+TODO: Compile Time Issues (e.g. input variable has not been passed into the called flow)
+    Provide examples
+    Link to Messages
+
+TODO: Update "Calling other flows" to include references where appropriate
+
 Data maybe optionally passed into an [flow execution][What-Is-Execution], and in the case of a synchronously executed [flow][What-Is-Flow], values passed out using global variables.
 
 #### Input/Output Variables

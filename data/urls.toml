@@ -64,6 +64,8 @@
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
                 ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
                 DeletingVariables = "/docs/guides/cortex-studio/south-panel/#deleting-variables"
+            [Cortex.Guides.Studio.Debugging]
+                MainDoc = "/docs/guides/cortex-studio/debugging/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
@@ -90,6 +92,8 @@
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-date-time-to-text-block"
                     [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime]
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-text-to-date-time-block"
+            [Cortex.Reference.Blocks.Decisions]
+                MainDoc = "/docs/reference/blocks/decisions/"
             [Cortex.Reference.Blocks.Dictionaries]
                 MainDoc = "/docs/reference/blocks/dictionaries/"
                 [Cortex.Reference.Blocks.Dictionaries.AddItem]
@@ -544,8 +548,8 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/flows"
                     [Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows]
                         MainDoc = "/docs/reference/concepts/fundamentals/flows/calling-other-flows"
-                    [Cortex.Reference.Concepts.Fundamentals.Flows.FlowExceptionHandling]
-                        MainDoc = "/docs/reference/concepts/fundamentals/flows/flow-exception-handling"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/handling-exceptions-within-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow]
                         MainDoc = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow"
                 [Cortex.Reference.Concepts.Fundamentals.Messages]

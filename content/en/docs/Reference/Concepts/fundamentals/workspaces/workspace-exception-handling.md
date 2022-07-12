@@ -41,7 +41,7 @@ For detailed information about Workspace Exception Handling, see [Handling Excep
 [Block-Throw-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}
 [Block-Workspace-Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
-[Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.FlowExceptionHandling.MainDoc" >}}
+[Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
