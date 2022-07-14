@@ -5,11 +5,15 @@ description: "The page provides guidance on creating and working with variables 
 ---
 # {{< param title >}}
 
-## What is a Scope?
+TODO: Review and move into page, or delete
+
+When the [flow execution][What-Is-Execution] exits a [workspace][What-Is-Workspace], any local-scope variables that have been declared in that [workspace][What-Is-Workspace] are deleted and their values, if any, are lost.
+
+## Summary
 
 Each [workspace][Workspaces] in a flow has a Scope. A Scope is where [Variables][] are defined and controls where they can be used.
 
-Variables can only be used in the workspace of the scope they are defined in, and any subordinate workspaces.
+Variables can only be used in the workspace of the scope they are defined in, and any descendant workspaces.
 
 Only variables in scope will be available in the [Variable Editor][] or the [Expression Editor][] using [Snippets][].
 

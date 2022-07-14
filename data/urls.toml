@@ -606,9 +606,6 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"    
                 [Cortex.Reference.Concepts.Fundamentals.Workspaces]
                     MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
-                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.Scope]
-                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/scope"
-                        LocalScopeVariables = "/docs/reference/concepts/fundamentals/workspaces/scope/#local-scope-variables"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling]
