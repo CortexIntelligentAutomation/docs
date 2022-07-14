@@ -120,7 +120,7 @@ The settings can be applied by running a script. Be aware that the server will b
     {{< tabpane lang="powershell" >}}
         {{< tab header="CA Certs" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -133,7 +133,7 @@ The settings can be applied by running a script. Be aware that the server will b
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -147,7 +147,7 @@ The settings can be applied by running a script. Be aware that the server will b
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |`HaServicesPath`                              | Configure this value with the location of the App Services zip file on the server. |
+    |`AppServicesPath`                              | Configure this value with the location of the App Services zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
     |`ApiGatewayBasicAuthUserName`                 | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
     |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|

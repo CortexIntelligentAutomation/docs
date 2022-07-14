@@ -125,7 +125,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     {{< tabpane lang="powershell" >}}
         {{< tab header="CA Certs, Built-in Load Balancer">}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -140,7 +140,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
     .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -152,7 +152,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="CA Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -167,7 +167,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -HaServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2022.6 - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -181,7 +181,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
-    |`HaServicesPath`                              | Configure this value with the location of the HA Services zip file on the Application Server used for installation. |
+    |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
     |`ApiGatewayBasicAuthUserName`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
     |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
