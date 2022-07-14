@@ -1,72 +1,180 @@
 ---
-title: "What is a Workspace"
-linkTitle: "What is a Workspace"
-description: "Description and characteristics of a Workspace."
-weight: 10
+title: "What is a Workspace?"
+linkTitle: "What is a Workspace?"
+description: "Information regarding the anatomy of a workspace, nested workspaces, variable scope, and handling exceptions within a workspace."
+weight: 1
 ---
 
 # {{< param title >}}
 
 ## Summary
 
-A workspace is a container for the [flow's][What-Is-Flow] logic. [Blocks][What-Is-Block] are dragged from palettes onto the workspace canvas and connected together to form the necessary logic.
+A workspace is used to group logic and actions within a [flow][], in order to reduce the complexity and make the flow easier to maintain.
 
-The top-level workspace is automatically created when a [flow][What-Is-Flow] is created and contains:
+## Anatomy of a Workspace
 
-* The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] for handling [exceptions at the flow level][flow level]
-* A [Start Flow][Block-Start-Flow] [block][What-Is-Block] to identify where the [flow execution][What-Is-Execution] begins
-* An [End Flow][Block-End-Flow] [block][What-Is-Block] to end the [flow execution][What-Is-Execution] after the [flow][What-Is-Flow] logic has been executed
+### Top-Level Workspace
+
+A flow can only contain one Top-Level Workspace, which acts as the entry point for the [flow execution][].
+
+| ![Example Flow](/images/flow.png) |
+|:--:|
+| ***Example Top-Level Workspace*** |
+
+* Start Flow block
+  * Identifies where the [flow execution][] will start
+  * Automatically created when the flow is created
+  * Cannot be deleted
+  * See [Start Flow][] block
+* Action blocks
+  * Performs a specific action
+  * Icon on block indicates the nature of the action
+  * See [Blocks][Reference Blocks]
+* Decision block
+  * Causes the [flow execution][] to branch, dependent on a condition
+  * Icon on block indicates type of condition causing branching
+  * See [Decision Blocks][Decision Blocks]
+* Workspace blocks
+  * Contains grouped flow logic
+  * The turndown on the top-right of the icon indicates it contains a workspace, which can be opened by double-clicking the icon
+  * See [Workspace][Workspace Block] block
+* End Flow block
+  * Ends the [flow execution][]
+  * Automatically created when the flow is created
+  * See [End Flow][] block
+* Handle Flow Exception block
+  * Handles [flow level exceptions][flow level], thrown during the [flow execution][]
+  * Automatically created when the flow is created
+  * The turndown on the top-right of the icon indicates it contains a workspace, which can be opened by double-clicking the icon
+  * Cannot be deleted
+  * See [Handle Flow Exception][] block
+* Flow Variable Store
+  * This is deprecated in favour of the [Variable Grid][]
+  * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
+  * Cannot be deleted
+* Workspace
+  * The Top-Level Workspace within the flow
+  * Canvas on which blocks are placed and connected to create the flow logic
+
+{{% alert title="Note" %}}
+The flow should be ended with an {{< ahref "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" "End Flow">}} block, but it can also be ended using an {{< ahref "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" "End Workspace">}} block on the [Top-Level Workspace]({{< ref "#top-level-workspace" >}}).
+{{% /alert %}}
+
+### Other Workspaces
+
+A flow can contain any number of other workspaces that are not the Top-Level Workspace, these act as a means to grouping logic and actions to reduce the complexity and make the flow easier to maintain.
+
+| ![Example Flow](/images/nested-workspace.png) |
+|:--:|
+| ***Example Workspace*** |
+
+* Start Workspace block
+  * Identifies where the [flow execution][] will start when the workspace is executed
+  * Automatically created when the workspace is created
+  * Cannot be deleted
+  * See [Start Workspace][] block
+* Action blocks
+  * Performs a specific action
+  * Icon on block indicates the nature of the action
+  * See [Blocks][Reference Blocks]
+* End Workspace block
+  * Ends the execution of the workspace
+  * Automatically created when the workspace is created
+  * See [End Workspace][] block
+* End Flow block
+  * Ends the [flow execution][]
+  * See [End Flow][] block
+* Handle Workspace Exception block
+  * Handles [workspace level exceptions][], thrown during the [flow execution][]
+  * See [Handle Workspace Exception][] block
+* Workspace Variable Store
+  * This is deprecated in favour of the [Variable Grid][]
+  * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
+  * Cannot be deleted
+* Workspace
+  * A nested workspace within the flow
+  * Canvas on which blocks are placed and connected to create the workspace logic
 
 ## Nested Workspaces
 
-Workspaces may be nested, i.e., a workspace can contain one or more other workspaces, which in turn can contain further workspaces. Using this hierarchical workspace structure provides a high-level overview of the [flow's][What-Is-Flow] logic while obfuscating the low-level detailed logic contained in the subordinate workspaces.
+All the logic of a flow can exist on the [Top-Level Workspace][], however, this can quickly become difficult to maintain and understand as the numbers of blocks increase. Blocks can be grouped into workspaces in order to reduce the complexity and make the flow easier to maintain.
 
-Subordinate workspaces may be added by placing [workspace blocks][Block-Workspace-Block] onto a workspace canvas, connected to the [flow's][What-Is-Flow] logic. Double-clicking on a [workspace block][Block-Workspace-Block] will open it to reveal its canvas, which is used to contain the low-level detailed logic.
+A [Workspace][Workspace Block] block can opened by double clicking it, showing its workspace canvas and the logic inside; this could include blocks for executing specific functions or other workspaces to help separate the logic of the flow further.
 
-When a [flow execution][What-Is-Execution] in a workspace encounters an [End Workspace][Block-End-Workspace] [block][What-Is-Block], the [flow execution][What-Is-Execution] returns to the superior workspace. As the top-level workspace does not have a superior workspace, its logic should be ended with an [End Flow][Block-End-Flow] [block][What-Is-Block].
+When an [End Workspace][] block is executed, the [flow execution][] returns to the parent workspace. However, when an [End Flow][] block is executed the [flow execution][] will end.
 
-Note: A [flow execution][What-Is-Execution] may be ended at any point in any workspace using an [End Flow][Block-End-Flow] [block][What-Is-Block].
+A nested workspace has access to any variables defined within its [scope][], or any direct ancestors [scope][].
 
-## Limited Scope Variables
+## Exceptions within a Workspace
 
-Limited scope variables may be declared within a workspace, which are not accessible to higher level workspaces.
+Workspaces support hierarchical exception handling at any level within the workspace.
 
-For more details on variable scope within workspaces, see [Scope][Workspace-Scope].
+Exceptions can be handled:
 
-## Exception Handling
+* At the [block][] level; for further information, see [Block Exception Handling][]
+* At the workspace level; for further information, see [Workspace Exception Handling][]
 
-Each workspace can contain its own exception handling logic, including [Handle Block Exception][Block-Handle-Block-Exception] [blocks][What-Is-Block] and a [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block].
+A [Top-Level Workspace][] can also handle exceptions at the [flow][] level; for further information, see [Flow Exception Handling][]
 
-For more details, see [Workspace Exception Handling][Workspace-Exception-Handling].
+## Remarks
 
-## Related Concepts
+### Known Limitations
 
-* [Flows][Flow]
-* [Blocks][Block]
-* [Workspace Scope][Workspace-Scope]
-* [Workspace Exception Handling][Workspace-Exception-Handling]
+#### Cannot have a Handle Workspace Exception block on the flow's Top-Level Workspace
 
-## Related Blocks
+Currently, it is not possible to have a [Handle Workspace Exception][] block on the [Top-Level Workspace][] of a flow. In future this limitation may be removed.
 
-* [Start Flow][Block-Start-Flow]
-* [End Flow][Block-End-Flow]
-* [Workspace Blocks][Block-Workspace-Block]
-* [Handle Block Exception][Block-Handle-Block-Exception]
-* [Handle Workspace Exception][Block-Handle-Workspace-Exception]
+## See Also
 
-[Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
-[Block-End-Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
-[Block-End-Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
-[Block-Handle-Block-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
-[Block-Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
-[Block-Handle-Workspace-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
-[Block-Start-Flow]: {{< url "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
-[Block-Workspace-Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
-[Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+### Related Concepts
+
+* [Flows][]
+* [Blocks][]
+* [Executions][]
+* [Exceptions][]
+
+### Related Blocks
+
+* [Start Flow][]
+* [End Flow][]
+* [Handle Flow Exception][]
+* [Start Workspace][]
+* [End Workspace][]
+* [Handle Workspace Exception][]
+* [Workspace][Workspace Block]
+
+### External Documentation
+
+None
+
+[Top-Level Workspace]: {{< ref "#top-level-workspace" >}}
+
+[Reference Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+[Decision Blocks]: {{< url "Cortex.Reference.Blocks.Decisions.MainDoc" >}}
+[Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
+[Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
+[Start Flow]: {{< url "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
+[End Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
+[Workspace Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
+[Start Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
+[End Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[Block Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling.MainDoc" >}}
+
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[workspace level exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.WorkspaceLevel" >}}
+
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+[Flow Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
+[flow execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
-[Workspace-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}
-[Workspace-Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.Scope.MainDoc" >}}
+[scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.Scope.MainDoc" >}}
+[Workspace Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}
+
+[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}

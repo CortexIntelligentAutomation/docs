@@ -14,14 +14,14 @@ description: "Converts Xml to a Structure."
 
 Converts [Xml][Xml Property] to a [Structure][Structure Property].
 
-Each top level [Node][Xml Nodes] will be converted using the following rules:
+Each top-level [Node][Xml Nodes] will be converted using the following rules:
 
 * Node names become [Keys][]
 * Node values become [Items][]
 
 Each inner [Node][Xml Nodes] will be converted using the following rules:
 
-* Inner node names become [Keys][] within the top level node's [Item][Items]
+* Inner node names become [Keys][] within the top-level node's [Item][Items]
 * Inner node values become the corresponding [Item][Items] for their [Key][Keys]
 
 For example:
@@ -277,9 +277,9 @@ It should be possible to pass the [Structure][Structure Property] created by thi
 
 ### <Cortex_DataTypes_Dictionaries_Structure> Node
 
-The [Convert Structure To Xml][] adds `"<Cortex_DataTypes_Dictionaries_Structure>"` as a root node when the structure has more than one top level key to ensure that valid [Xml][Xml Property] is produced.
+The [Convert Structure To Xml][] adds `"<Cortex_DataTypes_Dictionaries_Structure>"` as a root node when the structure has more than one top-level key to ensure that valid [Xml][Xml Property] is produced.
 
-When the `"<Cortex_DataTypes_Dictionaries_Structure>"` root node is converted from [Xml][Xml Property] to a [Structure][Structure Property] the root node is removed and any inner nodes become the top level keys.
+When the `"<Cortex_DataTypes_Dictionaries_Structure>"` root node is converted from [Xml][Xml Property] to a [Structure][Structure Property] the root node is removed and any inner nodes become the top-level keys.
 
 ``` xml
 @"<Cortex_DataTypes_Dictionaries_Structure>

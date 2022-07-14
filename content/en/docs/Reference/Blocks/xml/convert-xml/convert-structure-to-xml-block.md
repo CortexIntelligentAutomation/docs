@@ -14,7 +14,7 @@ description: "Converts a Structure To Xml."
 
 Converts a [Structure][Structure Property] to [Xml][Xml Property].
 
-Each top level [Key][Keys] will be converted using the following rules:
+Each top-level [Key][Keys] will be converted using the following rules:
 
 * [Keys][] become [Nodes][Xml Nodes]
 * [Items][] become the values of the corresponding node.
@@ -83,7 +83,7 @@ to [Xml][Xml Property] results in the variable `($)Xml` being updated to the fol
 </Cortex_DataTypes_Dictionaries_Structure>"
 ```
 
-* The `"Cortex_DataTypes_Dictionaries_Structure"` root node is added as there is no single top level key.
+* The `"Cortex_DataTypes_Dictionaries_Structure"` root node is added as there is no single top-level key.
 * The `"node1"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
 * The `"node2"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
 * The `"node3"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
@@ -315,7 +315,7 @@ It should be possible to pass the [Xml][Xml Property]  created by this block to 
 
 ### <Cortex_DataTypes_Dictionaries_Structure> Node
 
-`"<Cortex_DataTypes_Dictionaries_Structure>"` is added as a root node when the [Structure][Structure Property] has more than one top level key to ensure that valid [Xml][Xml Property] is produced.
+`"<Cortex_DataTypes_Dictionaries_Structure>"` is added as a root node when the [Structure][Structure Property] has more than one top-level key to ensure that valid [Xml][Xml Property] is produced.
 
 ``` json
 {

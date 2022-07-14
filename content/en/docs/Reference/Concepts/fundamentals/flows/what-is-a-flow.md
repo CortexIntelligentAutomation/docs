@@ -11,9 +11,9 @@ weight: 1
 
 A flow is an object in [Cortex Studio][] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a Cortex Innovation platform.
 
-## Anatomy of a flow
+## Anatomy of a Flow
 
-| ![Example Flow](/images/Flow.png) |
+| ![Example Flow](/images/flow.png) |
 |:--:|
 | ***Example Flow*** |
 
@@ -22,11 +22,11 @@ A flow is an object in [Cortex Studio][] that contains the logic and actions (in
   * Automatically created when the flow is created
   * Cannot be deleted
   * See [Start Flow][] block
-* Action type blocks
+* Action blocks
   * Performs a specific action
   * Icon on block indicates the nature of the action
   * See [Blocks][Reference Blocks]
-* Decision type block
+* Decision block
   * Causes the [flow execution][] to branch, dependent on a condition
   * Icon on block indicates type of condition causing branching
   * See [Decision Blocks][Decision Blocks]
@@ -44,23 +44,24 @@ A flow is an object in [Cortex Studio][] that contains the logic and actions (in
   * The turndown on the top-right of the icon indicates it contains a [workspace][workspaces], which can be opened by double-clicking the icon
   * Cannot be deleted
   * See [Handle Flow Exception][] block
-* Global Variable Store
+* Flow Variable Store
   * This is deprecated in favour of the [Variable Grid][]
   * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
   * Cannot be deleted
 * Workspace
+  * The [Top-Level Workspace][TODO] within the flow
   * Canvas on which blocks are placed and connected to create the flow logic
   * See [Workspace][workspaces]
 
-## Grouping logic within a flow
+## Grouping Logic within a Flow
 
-All the logic of a flow can exist on the top level workspace, however, this can quickly become difficult to maintain and understand as the numbers of blocks increase. Blocks can be grouped into workspaces in order to reduce the complexity and make the flow it easier to maintain.
+All the logic of a flow can exist on the [Top-Level Workspace][TODO], however, this can quickly become difficult to maintain and understand as the numbers of blocks increase. Blocks can be grouped into workspaces in order to reduce the complexity and make the flow easier to maintain.
 
 A [Workspace][Workspace Block] block can opened by double clicking it, showing its workspace canvas and the logic inside; this could include blocks for executing specific functions or other workspaces to help separate the logic of the flow further.
 
 For further information about [workspaces][workspace], see [Workspaces][workspaces].
 
-## Starting a flow execution
+## Starting a Flow Execution
 
 A [flow execution][flow execution] may be [started][Starting an Execution] by:
 
@@ -72,7 +73,7 @@ A [flow execution][flow execution] may be [started][Starting an Execution] by:
 
 For further information on starting a flow, see [Starting an Execution][].
 
-## Exceptions within a flow
+## Exceptions within a Flow
 
 Flows support hierarchical exception handling at any level within the flow.
 
@@ -86,9 +87,9 @@ Exceptions can be handled:
 
 ### Known Limitations
 
-#### Cannot have a Handle Workspace Exception block on the flow's top level workspace
+#### Cannot have a Handle Workspace Exception block on the flow's Top-Level Workspace
 
-Currently, it is not possible to have a [Handle Workspace Exception][] block on the top level workspace of a flow. In future this limitation may be removed.
+Currently, it is not possible to have a [Handle Workspace Exception][] block on the [Top-Level Workspace][TODO] of a flow. In future this limitation may be removed.
 
 ## See Also
 

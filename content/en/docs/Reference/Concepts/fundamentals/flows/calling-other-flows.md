@@ -11,7 +11,7 @@ weight: 100
 
 A [flow][] may trigger the execution of another [flow][].
 
-## Calling another flow
+## Calling Another Flow
 
 A [flow][] can be called from another [flow][] in the following ways:
 
@@ -40,7 +40,7 @@ Output variables are returned to the calling flow in the following ways:
 
 ### Known Limitations
 
-#### Flows can only be called Synchronously
+#### Flows can only be Called Synchronously
 
 Currently it is only possible to call other [flows][flow] synchronously; this means the calling flow will wait for the called flow to complete its [execution][] before continuing.
 

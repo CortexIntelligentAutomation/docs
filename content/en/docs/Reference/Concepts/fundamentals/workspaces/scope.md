@@ -39,6 +39,10 @@ To make values calculated in subordinate [workspaces][What-Is-Workspace] accessi
 
 * [Flow Exception Handling block][Block-Handle-Flow-Exception]
 
+Variables defined within a workspace are available to the workspace itself and any descendant workspaces.
+
+For more details on variable scope within workspaces, see [Scope][Workspace-Scope].
+
 [Block-Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Block-Workspace-Block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
 [Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
