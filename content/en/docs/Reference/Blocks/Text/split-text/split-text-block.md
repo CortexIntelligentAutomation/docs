@@ -173,4 +173,4 @@ If the [Separator][Separator Property] is not found in [Text][Text Property], th
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[StringSplitOptions]: {{< url "MSDocs.DotNet.Api.System.StringSplitOptions" >}}
+[StringSplitOptions]: {{< url "Cortex.Reference.DataTypes.Text.StringSplitOptions.MainDoc" >}}

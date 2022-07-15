@@ -2,7 +2,7 @@
 title: "Add Innovation to a 7.2 Installation"
 linkTitle: "Add Innovation to a 7.2 Installation"
 description: "Information about adding Cortex Innovation to an existing Cortex 7.2 platform."
-weight: 10000
+weight: 20
 ---
 
 {{% pageinfo %}}

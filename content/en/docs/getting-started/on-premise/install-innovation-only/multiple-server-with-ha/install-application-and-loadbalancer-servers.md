@@ -284,7 +284,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     If no useful message can be seen here, the service log files may contain more information. These can be found on each Application Server at:
 
     * %ProgramData%/Cortex/Cortex API Gateway Service
-    * %ProgramData%/Cortex/Cortex Flow Service
+    * %ProgramData%/Cortex/Cortex Flow Execution Service
 
     If no solution can be found, please contact [Cortex Service Portal][] for further assistance.
 

@@ -22,6 +22,7 @@
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
+                    ExtractInstallationArtefacts = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/#extract-installation-artefacts"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
@@ -50,6 +51,46 @@
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
                     AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#antivirus-exclusions"
+                    [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
+                        AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes"
+                        AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/alternative-architectures"
+                        ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
+                        ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
+                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
+                        EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
+                        PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
+                        SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
+                [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation]
+                    MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/"
+                [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana]
+                    MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/"
+                    Architecture = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/architecture"
+                    Prerequisites = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites"
+                    SoftwareRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#software-requirements"
+                    AdditionalWebApplicationServerRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#additional-web-application-server-requirements"
+                    SetupGrafana = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/setup-grafana"
+                    TryItOut = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/try-it-out"
+                    WebAppCertificateRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#certificate-requirements"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced]
+                        PortRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/port-requirements"
+                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/self-signed-certificates"
+                        GenerateTheRootCaCertificate = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/self-signed-certificates/#generate-the-root-ca-certificate"
+                        SSLBestPractices = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/ssl-best-practices"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/"
+                        ConfigureGrafana = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/configure-grafana"
+                        ConfigureHTTPS = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/configure-grafana/#configure-https"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/"
+                        AddANewWebsite = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#add-a-new-website"
+                        CreateLokiUser = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#create-loki-user"
+                        ConfigureLoki = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki"
+                        InstallIISBasicAuthentication = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#install-iis-basic-authentication"
+                        InstallCertificate = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#install-certificate"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallPromtail]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/"
+                        ConfigurePromtail = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -78,18 +119,50 @@
                     MainDoc = "/docs/reference/blocks/dictionaries/contains-item/"
                     [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKeyAndValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-item-with-key-and-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-item-with-key-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-item-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemsWithKeys]
+                        MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-items-with-keys-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/dictionaries/contains-item/contains-items-with-values-block-3"
                 [Cortex.Reference.Blocks.Dictionaries.GetCount]
                     MainDoc = "/docs/reference/blocks/dictionaries/get-count/"
+                    [Cortex.Reference.Blocks.Dictionaries.GetCount.GetCountOfAllItems]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-count/get-count-of-all-items-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.GetCount.GetCountOfItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/get-count/get-count-of-items-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.GetCount.GetCountsOfItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-count/get-counts-of-items-with-values-block-3"
+                [Cortex.Reference.Blocks.Dictionaries.GetItem]
+                    MainDoc = "/docs/reference/blocks/dictionaries/get-item/"
+                    [Cortex.Reference.Blocks.Dictionaries.GetItem.GetAllItems]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-item/get-all-items-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.GetItem.GetItemWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-item/get-item-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.GetItem.GetItemsWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-item/get-items-with-key-block-3"
+                [Cortex.Reference.Blocks.Dictionaries.GetKey]
+                    MainDoc = "/docs/reference/blocks/dictionaries/get-key/"
+                    [Cortex.Reference.Blocks.Dictionaries.GetKey.GetAllKeys]
+                        MainDoc = "/docs/reference/blocks/dictionaries/get-key/get-all-keys-block-3"
                 [Cortex.Reference.Blocks.Dictionaries.RemoveItem]
                     MainDoc = "/docs/reference/blocks/dictionaries/remove-item/"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveAllItems]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-all-items-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-item-with-key-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-item-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemsWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-items-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemsWithKeys]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-items-with-keys-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-items-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/dictionaries/remove-item/remove-items-with-values-block-3"
                 [Cortex.Reference.Blocks.Dictionaries.SetItem]
                     MainDoc = "/docs/reference/blocks/dictionaries/set-item/"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetAllItems]
@@ -100,8 +173,12 @@
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-item-with-value-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKey]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithKeys]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-keys-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValue]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-value-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-values-block-3"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -134,6 +211,12 @@
                     MainDoc = "/docs/reference/blocks/files-and-folders/check-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.CheckFolder.CheckFolderExists]
                         MainDoc = "/docs/reference/blocks/files-and-folders/check-folder/check-folder-exists-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CopyFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/copy-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFile.CopyFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-file/copy-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CopyFile.CopyFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/copy-file/copy-files-block"
                 [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolder]
@@ -142,13 +225,49 @@
                         MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/copy-folders-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.DuplicateFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/copy-folder/duplicate-folder-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.CreateFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/create-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CreateFolder.CreateFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/create-folder/create-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.CreateFolder.CreateFolders]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/create-folder/create-folders-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.DeleteFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/delete-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFile.DeleteFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-file/delete-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFile.DeleteFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-file/delete-files-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.DeleteFolder]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/delete-folder"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFolder.DeleteFolder]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-folder/delete-folder-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.DeleteFolder.DeleteFolders]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/delete-folder/delete-folders-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.GetFileInformation]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/get-file-information"
+                    [Cortex.Reference.Blocks.FilesAndFolders.GetFileInformation.GetFileInformation]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/get-file-information/get-file-information-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.GetFolderContent]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-content"
+                    [Cortex.Reference.Blocks.FilesAndFolders.GetFolderContent.GetFolderContent]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-content/get-folder-content-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.GetFolderInformation]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-information"
+                    [Cortex.Reference.Blocks.FilesAndFolders.GetFolderInformation.GetFolderInformation]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/get-folder-information/get-folder-information-block"
+                [Cortex.Reference.Blocks.FilesAndFolders.MoveFile]
+                    MainDoc = "/docs/reference/blocks/files-and-folders/move-file"
+                    [Cortex.Reference.Blocks.FilesAndFolders.MoveFile.MoveFile]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/move-file/move-file-block"
+                    [Cortex.Reference.Blocks.FilesAndFolders.MoveFile.MoveFiles]
+                        MainDoc = "/docs/reference/blocks/files-and-folders/move-file/move-files-block"
                 [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/move-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/move-folder/move-folder-block"
                     [Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolders]
                         MainDoc = "/docs/reference/blocks/files-and-folders/move-folder/move-folders-block"
-                    [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
+                [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder]
                     MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder"
                     [Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder]
                         MainDoc = "/docs/reference/blocks/files-and-folders/rename-folder/rename-folder-block"
@@ -198,26 +317,74 @@
                         MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-end-block-2"
                     [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtIndex]
                         MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemsAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-items-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemsAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-items-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemsAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-items-at-index-block-2"
                 [Cortex.Reference.Blocks.Lists.ContainsItem]
                     MainDoc = "/docs/reference/blocks/lists/contains-item/"
                     [Cortex.Reference.Blocks.Lists.ContainsItem.ContainsItemWithValue]
                         MainDoc = "/docs/reference/blocks/lists/contains-item/contains-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.ContainsItem.ContainsItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/lists/contains-item/contains-items-with-values-block-2"
                 [Cortex.Reference.Blocks.Lists.GetCount]
                     MainDoc = "/docs/reference/blocks/lists/get-count/"
+                    [Cortex.Reference.Blocks.Lists.GetCount.GetCountOfAllItems]
+                        MainDoc = "/docs/reference/blocks/lists/get-count/get-count-of-all-items-block-2"
                     [Cortex.Reference.Blocks.Lists.GetCount.GetCountOfItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/get-count/get-count-of-items-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetCount.GetCountOfItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/lists/get-count/get-count-of-items-with-values-block-2"
                 [Cortex.Reference.Blocks.Lists.GetIndex]
                     MainDoc = "/docs/reference/blocks/lists/get-index/"
                     [Cortex.Reference.Blocks.Lists.GetIndex.GetIndexOfItemWithValue]
                         MainDoc = "/docs/reference/blocks/lists/get-index/get-index-of-item-with-value-block-2"
                     [Cortex.Reference.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/get-index/get-indexes-of-items-with-value-block-2"
+                [Cortex.Reference.Blocks.Lists.GetItem]
+                    MainDoc = "/docs/reference/blocks/lists/get-item/"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-item-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-item-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-item-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemsAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-items-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemsAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-items-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemsAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-items-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.GetItem.GetItemsAtIndexes]
+                        MainDoc = "/docs/reference/blocks/lists/get-item/get-items-at-indexes-block-2"
                 [Cortex.Reference.Blocks.Lists.RemoveItem]
                     MainDoc = "/docs/reference/blocks/lists/remove-item/"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveAllItems]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-all-items-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveDuplicateItems]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-duplicate-items-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-item-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-item-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-item-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemWithValue]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-with-values-block-2"
                 [Cortex.Reference.Blocks.Lists.SetItem]
                     MainDoc = "/docs/reference/blocks/lists/set-item/"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetAllItems]
@@ -230,8 +397,24 @@
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-item-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetItemWithValue]
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-item-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtBeginning]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-beginning-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtEnd]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndex]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-index-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndexes]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-at-indexes-block-2"
                     [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-value-block-2"
+                    [Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValues]
+                        MainDoc = "/docs/reference/blocks/lists/set-item/set-items-with-values-block-2"
+            [Cortex.Reference.Blocks.Logs]
+                MainDoc = "/docs/reference/blocks/logs"
+                [Cortex.Reference.Blocks.Logs.LogEvent]
+                    MainDoc = "/docs/reference/blocks/logs/log-event"
+                    [Cortex.Reference.Blocks.Logs.LogEvent.LogEvent]
+                        MainDoc = "/docs/reference/blocks/logs/log-event/log-event-block"
             [Cortex.Reference.Blocks.Loops]
                 MainDoc = "/docs/reference/blocks/loops"
                 [Cortex.Reference.Blocks.Loops.For]
@@ -251,6 +434,12 @@
                     [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
                         MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
                         Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
+                [Cortex.Reference.Blocks.Text.ContainsText]
+                    MainDoc = "/docs/reference/blocks/text/contains-text/"
+                    [Cortex.Reference.Blocks.Text.ContainsText.ContainsAllText]
+                        MainDoc = "/docs/reference/blocks/text/contains-text/contains-all-text-block/"
+                    [Cortex.Reference.Blocks.Text.ContainsText.ContainsAnyText]
+                        MainDoc = "/docs/reference/blocks/text/contains-text/contains-any-text-block/"
                 [Cortex.Reference.Blocks.Text.ConvertTo]
                     MainDoc = "/docs/reference/blocks/text/convert-to/"
                     [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToCamelCase]
@@ -263,6 +452,14 @@
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-title-case-block/"
                     [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase]
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-upper-case-block/"
+                [Cortex.Reference.Blocks.Text.FormatText]
+                    MainDoc = "/docs/reference/blocks/text/format-text/"
+                    [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
+                        MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-values-block-1/"
+                [Cortex.Reference.Blocks.Text.JoinText]
+                    MainDoc = "/docs/reference/blocks/text/join-text/"
+                    [Cortex.Reference.Blocks.Text.JoinText.JoinText]
+                        MainDoc = "/docs/reference/blocks/text/join-text/join-text-block-1/"
             [Cortex.Reference.Blocks.Variables]
                 MainDoc = "/docs/reference/blocks/variables/"
                 [Cortex.Reference.Blocks.Variables.SetVariable]
@@ -420,22 +617,10 @@
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
                 MainDoc = "/docs/reference/data-types/most-common/"
-                ContentOptions = "/docs/reference/data-types/most-common/#contentoptions"
-                CultureInfo = "/docs/reference/data-types/most-common/#cultureinfo"
                 Dictionaries = "/docs/reference/data-types/most-common/#dictionaries"
-                Encoding = "/docs/reference/data-types/most-common/#encoding"
-                EventSeverity = "/docs/reference/data-types/most-common/#eventseverity"
-                FileInformation = "/docs/reference/data-types/most-common/#fileinformation"
-                FileMatch = "/docs/reference/data-types/most-common/#filematch"
-                FolderInformation = "/docs/reference/data-types/most-common/#folderinformation"
-                Guid = "/docs/reference/data-types/most-common/#guid"
-                IFormatProvider = "/docs/reference/data-types/most-common/#iformatprovider"
-                JsonSerializerSettings = "/docs/reference/data-types/most-common/#jsonserializersettings"
+                HttpRequestHeaders = "/docs/reference/data-types/most-common/#httprequestheaders"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
-                Nullable = "/docs/reference/data-types/most-common/#nullable"
-                SearchOptions = "/docs/reference/data-types/most-common/#searchoptions"
-                StringComparison = "/docs/reference/data-types/most-common/#stringcomparison"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -509,6 +694,28 @@
                 MainDoc = "/docs/reference/data-types/exceptions/"
                 [Cortex.Reference.DataTypes.Exceptions.Exception]
                     MainDoc = "/docs/reference/data-types/exceptions/exception"
+            [Cortex.Reference.DataTypes.FilesAndFolders]
+                MainDoc = "/docs/reference/data-types/files-and-folders/"
+                [Cortex.Reference.DataTypes.FilesAndFolders.ContentOptions]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/contentoptions"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileMatch]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
+            [Cortex.Reference.DataTypes.Json]
+                MainDoc = "/docs/reference/data-types/json/"
+                [Cortex.Reference.DataTypes.Json.JsonSerializerSettings]
+                    MainDoc = "/docs/reference/data-types/json/jsonserializersettings"
+            [Cortex.Reference.DataTypes.Logs]
+                MainDoc = "/docs/reference/data-types/logs/"
+                [Cortex.Reference.DataTypes.Logs.EventSeverity]
+                    MainDoc = "/docs/reference/data-types/logs/eventseverity"
+            [Cortex.Reference.DataTypes.Loops]
+                MainDoc = "/docs/reference/data-types/loops/"
+                [Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode]
+                    MainDoc = "/docs/reference/data-types/loops/infinitelooperrorcode"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
@@ -521,13 +728,41 @@
                     MainDoc = "/docs/reference/data-types/numbers/int64"
                 [Cortex.Reference.DataTypes.Numbers.Single]
                     MainDoc = "/docs/reference/data-types/numbers/single"
+            [Cortex.Reference.DataTypes.Other]
+                MainDoc = "/docs/reference/data-types/other/"
+                [Cortex.Reference.DataTypes.Other.Guid]
+                    MainDoc = "/docs/reference/data-types/other/guid"
+                [Cortex.Reference.DataTypes.Other.Nullable]
+                    MainDoc = "/docs/reference/data-types/other/nullable-1"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
                     MainDoc = "/docs/reference/data-types/text/char"
+                [Cortex.Reference.DataTypes.Text.CultureInfo]
+                    MainDoc = "/docs/reference/data-types/text/cultureinfo"
+                [Cortex.Reference.DataTypes.Text.Encoding]
+                    MainDoc = "/docs/reference/data-types/text/encoding"
+                [Cortex.Reference.DataTypes.Text.EncryptableText]
+                    MainDoc = "/docs/reference/data-types/text/encryptabletext"
+                [Cortex.Reference.DataTypes.Text.EncryptedText]
+                    MainDoc = "/docs/reference/data-types/text/encryptedtext"
+                [Cortex.Reference.DataTypes.Text.IFormatProvider]
+                    MainDoc = "/docs/reference/data-types/text/iformatprovider"
+                [Cortex.Reference.DataTypes.Text.SearchOptions]
+                    MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
+                [Cortex.Reference.DataTypes.Text.StringComparison]
+                    MainDoc = "/docs/reference/data-types/text/stringcomparison"
+                [Cortex.Reference.DataTypes.Text.StringSplitOptions]
+                    MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.UnicodeEncoding]
+                    MainDoc = "/docs/reference/data-types/text/unicodeencoding"
+                [Cortex.Reference.DataTypes.Text.UTF32Encoding]
+                    MainDoc = "/docs/reference/data-types/text/utf32encoding"
+                [Cortex.Reference.DataTypes.Text.UTF8Encoding]
+                    MainDoc = "/docs/reference/data-types/text/utf8encoding"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Common]
@@ -535,13 +770,14 @@
                 [Cortex.Reference.Exceptions.Common.Property]
                     MainDoc = "/docs/reference/exceptions/common/property/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertycontainsnulloremptyitemexception/"
+                        MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/"
+                        ValueContainsNullOrEmptyItem = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/#value-contains-null-or-empty-item"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertyemptyexception/"
+                        MainDoc = "/docs/reference/exceptions/common/property/property-empty-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertyitemcountexception/"
+                        MainDoc = "/docs/reference/exceptions/common/property/property-item-count-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertynullexception/"
+                        MainDoc = "/docs/reference/exceptions/common/property/property-null-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException]
                         MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
             [Cortex.Reference.Exceptions.Data]
@@ -697,14 +933,39 @@
     MainDoc = "https://github.com/erlang/otp"
 [GoBetween]
     MainDoc = "https://github.com/yyyar/gobetween"
+[GitHub]
+    [GitHub.Cortex.Observability]
+        GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip"
+        PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Promtail.Install.zip"
+        GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
+    [Grafana.Products.Grafana]
+        MainDoc = "https://grafana.com/grafana/"
+    [Grafana.Products.Loki]
+        MainDoc = "https://grafana.com/oss/loki/"
+        [Grafana.Products.Loki.Promtail]
+            MainDoc = "https://grafana.com/docs/loki/latest/clients/promtail/"
+    [Grafana.SelfManaged.Downloads.GrafanaWebApp]
+        Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
+    [Grafana.SelfManaged.Downloads.GrafanaLoki]
+        GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.Promtail]
+        PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
 [IIS]
-    UrlRewrite = "https://www.iis.net/downloads/microsoft/url-rewrite"
+    MainDoc = "https://www.iis.net/overview"
+    [IIS.Downloads]
+        UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"   
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
     JsonSerializerSettings = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializerSettings.htm"
+[LetsEncrypt]
+    MainDoc = "https://letsencrypt.org/"
+[Microsoft]
+    [Microsoft.Downloads.Windows]
+        Server2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
+        Server2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
 [MSDocs]
     [MSDocs.CSharp]
         MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/"
@@ -718,6 +979,7 @@
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
+        ArgumentOutOfRangeException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception"
         Array = "https://docs.microsoft.com/en-us/dotnet/api/system.array"
         FormatException = "https://docs.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://docs.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
@@ -874,13 +1136,13 @@
 [MSSupport]
     [MSSupport.Troubleshooting]
         DynamicPorts = "https://support.microsoft.com/kb/929851"
-[NSSM]
-    MainDoc = "https://nssm.cc/"
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
+[NSSM]
+    MainDoc = "https://nssm.cc/"
 [Splunk]
     MainDoc = "https://www.splunk.com/"
 [VisualStudio]
