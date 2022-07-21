@@ -43,7 +43,9 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid Cortex licence file must be procured from Cortex. This should contain a fingerprint for the server. To get a licence file take the following steps:
+A valid Cortex licence file and Cortex Innovation feature identifier must be procured from Cortex. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+
+To get a licence file and feature identifier take the following steps:
 
 1. Copy the following template to a text file:
 
@@ -51,6 +53,8 @@ A valid Cortex licence file must be procured from Cortex. This should contain a 
     Web Application/Application Server
     MachineID: 
     Fingerprint: 
+
+    Please also include a suitable Cortex Innovation feature identifier.
     ```
 
 1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
@@ -63,8 +67,8 @@ A valid Cortex licence file must be procured from Cortex. This should contain a 
     ```
 
 1. Copy the output (machine identifier and fingerprint) to the `Web Application/Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string.
-1. Request a licence by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the server, creating the `Cortex` and `Licences` folders if they don't exist.
+1. Request a licence and feature identifier by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
 
 ## Web Browser Requirements
 
@@ -169,7 +173,6 @@ If you are using Windows Firewall, some ports are opened during installation and
 
 The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
-
 ## Additional Web Application Server Requirements
 
 ### Security Requirements
@@ -200,10 +203,11 @@ Supported versions of Active Directory are listed below:
 
 ## Next Steps?
 
-1. [Install Application][]
+1. [Install Application Server][]
 
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Architecture" >}}
-[Install Application]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplication" >}}
+[Install Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
+[Installing Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallGateway" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
@@ -213,7 +217,7 @@ Supported versions of Active Directory are listed below:
 [NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
 [Microsoft SQL Server 2019]: {{< url "MSEval.SQLServer.2019" >}}
 [Microsoft SQL Server 2016]: {{< url "MSEval.SQLServer.2016" >}}
-[Microsoft SQL Express 2016]: {{< url "MSGo.SqlServerExpress.2016" >}}
-[IIS Url Rewrite]: {{< url "IIS.UrlRewrite" >}}
+[Microsoft SQL Express 2016]: {{< url "MSDownload.SqlServerExpress.2016" >}}
+[IIS URL Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
 [Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
 [C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}

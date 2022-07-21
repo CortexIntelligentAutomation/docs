@@ -82,7 +82,7 @@ Once Gateway has been configured, if you wish to encrypt the databases using [Tr
 
 [Configuring TDE]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.ApplyTDE" >}}
 [Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOut" >}}
-[supported web browser]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ClientRequirements" >}}
+[supported web browser]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebBrowserRequirements" >}}
 [Account Details]: {{< ref "#account-details" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}

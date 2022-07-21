@@ -47,7 +47,9 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid Cortex licence file must be procured from Cortex. This should contain fingerprints for the Web Application Server and each Application Server. To get a licence file take the following steps:
+A valid Cortex licence file and Cortex Innovation feature identifier must be procured from Cortex. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+
+To get a licence file and feature identifier take the following steps:
 
 1. Copy the following template to a text file:
 
@@ -67,6 +69,8 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
     Application Server 3
     MachineID: 
     Fingerprint: 
+
+    Please also include a suitable Cortex Innovation feature identifier.
     ```
 
 1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
@@ -89,8 +93,8 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
         ```
 
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. Request a licence by raising a case in the [Cortex Service Portal][]], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
+1. Request a licence and feature identifier by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
 
 ## Web Browser Requirements
 
@@ -104,7 +108,7 @@ Gateway supports the latest versions of the following browsers:
 
 ### Alternative Load Balancer Requirements
 
-Innovation has a [gobetween][] load balancer included, however it is possible to use an alternative load balancer. The requirements for installing an alternative load balancer are as follows:
+Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
 
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
 * Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation 2022.6 - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
@@ -116,6 +120,16 @@ Innovation has a [gobetween][] load balancer included, however it is possible to
 ### Filesystem Requirements
 
 All Application Servers must use an NTFS filesystem.
+
+Network Discovery and File Sharing should be enabled on each Application Server:
+
+1. Open File Explorer.
+1. Click `Network` on the left.
+1. A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
+    {{< figure src="/images/Network Discovery 1.png" title="Network and File Discovery Disabled" >}}
+1. Click the banner.
+1. Click `Turn on network discovery and file sharing`:
+    {{< figure src="/images/Network Discovery 2.png" title="Enable Network and File Discovery" >}}
 
 ### Service Requirements
 
@@ -263,6 +277,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Installing Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
@@ -275,7 +290,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 [NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
 [Microsoft SQL Server 2019]: {{< url "MSEval.SQLServer.2019" >}}
 [Microsoft SQL Server 2016]: {{< url "MSEval.SQLServer.2016" >}}
-[Microsoft SQL Express 2016]: {{< url "MSGo.SqlServerExpress.2016" >}}
-[IIS Url Rewrite]: {{< url "IIS.UrlRewrite" >}}
+[Microsoft SQL Express 2016]: {{< url "MSDownload.SqlServerExpress.2016" >}}
+[IIS Url Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
 [Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
 [C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}

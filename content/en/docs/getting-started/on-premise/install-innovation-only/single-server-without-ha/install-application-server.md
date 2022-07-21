@@ -32,7 +32,7 @@ To find the version of the framework that is installed:
 
 To install .NET Framework 4.7.1:
 
-1. Download the .NET Framework 4.7.1 installer from <https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer>.
+1. Download the [.NET Framework 4.7.1][NET Framework 471] installer.
 2. Double-click on the installer file to run it.
 3. Follow the wizard to complete the installation.
 
@@ -85,6 +85,7 @@ The settings can be applied by running a script. Be aware that the server will b
         ```
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
+    1. A message will indicate that the script has completed successfully.
 
 ## Check Port Usage
 
@@ -153,8 +154,8 @@ The settings can be applied by running a script. Be aware that the server will b
     |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 address of the server.|
-    |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the server. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. |
-    |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
+    |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the server. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the single node cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul>|
+    |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended).|
     |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
@@ -189,7 +190,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If there are no errors, continue to the next section; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
 
-    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
+    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file in the script location, showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
 
 ## Run Installation Script
 
@@ -262,7 +263,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
 [Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
 [Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusions" >}}
-[alternative load balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancer" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
+[NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}

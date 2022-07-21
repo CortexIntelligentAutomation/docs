@@ -47,21 +47,21 @@ To find the version of the framework that is installed:
 
 To install .NET Framework 4.7.1:
 
-1. Download the .NET Framework 4.7.1 installer from <https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-offline-installer>.
+1. Download the [.NET Framework 4.7.1][NET Framework 471] installer.
 2. Double-click on the installer file to run it.
 3. Follow the wizard to complete the installation.
 
 ### Install Microsoft Web Deploy
 
 1. Check if Web Deploy is already installed by going to `Control Panel` → `Programs` → `Programs and Features`; if Web Deploy is already installed, it will be listed as `Microsoft Web Deploy`.
-1. If it is not installed, download Microsoft Web Deploy version 3.0 or later (WebDeploy_amd64_en-US.exe) from <https://www.microsoft.com/en-gb/download/details.aspx?id=43717> to the Web Application Server.
+1. If it is not installed, download [Microsoft Web Deploy][] version 3.0 or later (WebDeploy_amd64_en-US.exe) to the server.
 1. Double-click the downloaded file to start the installation.
 1. Follow the installation wizard to install Web Deploy; on the `Choose Setup Type` page select `Typical`.
 
 ### Install Visual C++ Redistributable
 
 1. Check if Visual C++ 2013 Redistributable (x64) is already installed by going to `Control Panel` → `Programs` → `Programs and Features`; if Visual C++ Redistributable is already installed, it will be listed as `Microsoft Visual C++ 2013 Redistributable (x64)`.
-1. If it is not installed, download Visual C++ 2013 Redistributable (x64) from <http://www.microsoft.com/en-us/download/details.aspx?id=40784> to the Web Application Server.
+1. If it is not installed, download [Visual C++ Redistributable 2013 (x64)][C++ Redistributable].
 1. Double-click the downloaded file to start the installation.
 1. Follow the installation wizard to install the Visual C++ Redistributable.
 
@@ -119,6 +119,7 @@ Install the required features by following these instructions:
     Web-Http-Errors is installed
     Web-Static-Content is installed
     Web-Http-Logging is installed
+    Web-Http-Redirect is installed
     Web-Request-Monitor is installed
     Web-Stat-Compression is installed
     Web-Dyn-Compression is installed
@@ -143,23 +144,19 @@ Install the required features by following these instructions:
 
 ### Install URL Rewrite Module
 
-The following steps describe how to configure an application on your server to allow URLs to be rewritten. This is needed to allow HTTP URLs to redirect to the equivalent HTTPS ones.
+The URL Rewrite IIS Manager module is required to enable web applications on your server to rewrite URLs. This is needed to allow HTTP URLs to redirect to the equivalent HTTPS ones.
 
-1. An IIS Manager module is required to apply rewrite rules:
-    1. In the left-hand pane of Internet Information Service (IIS) Manager, select the server node.
-    1. Ensure that there is an icon with the title `URL Rewrite` under the `IIS` feature section:
+To install the URL Rewrite module take the following steps:
+
+1. In the left-hand pane of Internet Information Service (IIS) Manager, select the server node.
+1. Ensure that there is an icon with the title `URL Rewrite` under the `IIS` feature section:
     {{< figure class="centre" src="/images/Url Rewrite Icon.png" title="Url Rewrite Module Icon" >}}
-2. If there is an icon, `URL Rewrite` module is installed and no further steps are required.
-3. If there is no icon, the module is not installed and must be installed using the module `Web Platform Installer`.
-    1. In IIS Manager ensure that there is an icon with the title `Web Platform Installer` under the `Management` feature section:
-    {{< figure class="centre" src="/images/Web Platform Installer Icon.png" title="Web Platform Installer Icon" >}}
-    1. If there is an icon proceed to step 4.
-    1. If there is no icon, the module is not installed.
-        1. Download and install this module using the latest version located at <https://docs.microsoft.com/en-us/iis/install/web-platform-installer/web-platform-installer-direct-downloads>.
-        1. Once the `Web Platform Installer` module is installed, close and reopen `IIS Manager`.
-4. In `IIS Manager` select your server then double click the `Web Platform Installer` icon under the `Management` feature section.
-5. In the open application, use the search bar to search for `URL Rewrite` to find the module, then click `Add` next to it, then `Install`.
-6. After successfully installing, close and reopen `IIS Manager`. The `URL Rewrite` icon should now be visible.
+1. If there is an icon, `URL Rewrite` module is installed and no further steps are required.
+1. If there is no icon, the module is not installed and the following steps must be taken:
+    1. Download the [URL Rewrite][] module installer.
+    1. Double-click on the installer file to run it.
+    1. Follow the wizard to complete the installation.
+    1. After successfully installing, close and reopen `IIS Manager`. The `URL Rewrite` icon should now be visible.
 
 ### Apply Recommended Security Measures
 
@@ -251,16 +248,14 @@ This user must currently have access to the default NuGet directory, in order to
 
 The user must be given `Log on as a service` and `Log on as a batch job` permissions. To do this take the following steps:
 
-1. Click the Windows button (`Start`).
-1. Type `gpedit.msc` and press `Enter` to open the Local Group Policy Editor dialog
-1. On the left-hand side, click the `Windows Settings` node, then double-click `Security Settings` in the centre.
-1. Double-click `Local Policies`, then double-click `User Rights Assignment`.
-1. Double-click on the `Log on as a batch job` policy.
-1. If the application pool user does not appear in the list of users, click `Add User or Group...` then add the user using the dialog.
-1. Click `Apply` then `OK`.
-1. Double-click on the `Log on as a service` policy.
-1. If the application pool user does not appear in the list of users, click `Add User or Group...` then add the user using the dialog.
-1. Click `Apply` then `OK`.
+1. Navigate to `Start` -> `Administrative Tools` -> `Local Security Policy`.
+1. In the Local Security Policy dialog, expand the `Local Policies` node then select `User Rights Assignment`.
+1. Take the following steps for the `Log on as a service` and `Log on as a batch job` policies:
+    1. In the right-hand panel, double-click on the policy.
+    1. In the Properties dialog, click on the `Add User or Group` button.
+        {{% alert title="Note" %}}It is possible to use the `Advanced…` button to look up names rather than entering them manually. Various filters can be set to find the correct user or group more easily. Multiple users can be selected by holding down `CTRL` while clicking. `OK` adds the selected users or groups into the `Enter the object names to select` text box.{{% /alert %}}
+    1. Type the name of the application pool user account into the `Enter the object names to select` text box. Click the `Check Names` button to confirm that the user exists.
+    1. Click `OK` on the Select Users dialog, and then confirm the user is correct by clicking `OK` on the Properties dialog.
 
 ### Configure Installation Script
 
@@ -371,37 +366,36 @@ To add roles to database users take the following steps:
 
 In line with best practices, this account should not be given administrator rights, nor should it be used for any purposes other than those specified for Gateway.
 
-This user must be given `Log on as a service` and `Log on as a batch job` permissions. To do this, take the following steps:
+The user must be given `Log on as a service` and `Log on as a batch job` permissions. To do this take the following steps:
 
-1. Click the Windows button (`Start`).
-1. Type `gpedit.msc` and press `Enter` to open the Local Group Policy Editor dialog
-1. On the left-hand side, click the `Windows Settings` node, then double-click `Security Settings` in the centre.
-1. Double-click `Local Policies`, then double-click `User Rights Assignment`.
-1. Double-click on the `Log on as a batch job` policy.
-1. If the application pool user does not appear in the list of users, click `Add User or Group...` then add the user using the dialog.
-1. Click `Apply` then `OK`.
-1. Double-click on the `Log on as a service` policy.
-1. If the application pool user does not appear in the list of users, click `Add User or Group...` then add the user using the dialog.
-1. Click `Apply` then `OK`.
+1. Navigate to `Start` -> `Administrative Tools` -> `Local Security Policy`.
+1. In the Local Security Policy dialog, expand the `Local Policies` node then select `User Rights Assignment`.
+1. Take the following steps for the `Log on as a service` and `Log on as a batch job` policies:
+    1. In the right-hand panel, double-click on the policy.
+    1. In the Properties dialog, click on the `Add User or Group` button.
+        {{% alert title="Note" %}}It is possible to use the `Advanced…` button to look up names rather than entering them manually. Various filters can be set to find the correct user or group more easily. Multiple users can be selected by holding down `CTRL` while clicking. `OK` adds the selected users or groups into the `Enter the object names to select` text box.{{% /alert %}}
+    1. Type the name of the application pool user account into the `Enter the object names to select` text box. Click the `Check Names` button to confirm that the user exists.
+    1. Click `OK` on the Select Users dialog, and then confirm the user is correct by clicking `OK` on the Properties dialog.
 
 ### Create Gateway Application Pool
 
 1. Open Internet Information Services (IIS) Manager.
-2. Select and right-click the `Application Pools` node under the server and select `Add Application Pool…`
-3. Set `Name` to `Cortex Gateway`.
-4. Ensure that the `.NET CLR version` is set to `.NET CLR Version v4.0.30319` (This may be configured by default).
-5. Ensure that the `Managed pipeline mode` is set to `Integrated` (This may be configured by default).
-6. Click `OK`
-7. Right click on the created application pool and select `Advanced Settings…`
-8. Change the Identity (under Process Model) to a `Custom Account` and set to the user identified in [Get Application Pool User][].
-9. Click `OK`
-10. Click `OK`
-11. Click `OK`
+1. Select and right-click the `Application Pools` node under the server and select `Add Application Pool…`
+1. Set `Name` to `Cortex Gateway`.
+1. Ensure that the `.NET CLR version` is set to `.NET CLR Version v4.0.30319` (This may be configured by default).
+1. Ensure that the `Managed pipeline mode` is set to `Integrated` (This may be configured by default).
+1. Click `OK`
+1. Right click on the created application pool and select `Advanced Settings…`
+1. Click the `...` next to `Identity` (under Process Model) to open a dialog, then select `Custom Account` and `Set...`.
+1. Enter the username and password for the user identified in [Get Application Pool User][].
+1. Click `OK` to close the `Set Credentials` dialog.
+1. Click `OK` to close the `Application Pool Identity` dialog.
+1. Click `OK` to close the `Advanced Settings` dialog.
 
 ### Create New Web Application
 
 1. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
-2. Right-click on the site the application should be installed under and select `Add Application…`
+2. Right-click on the [site][Create Web Site] the application should be installed under and select `Add Application…`
 3. Set the `Alias` to `gateway`. This must be lowercase.
 4. Click `Select…` and from the Application pool dropdown select the `Cortex Gateway` application pool and click `OK`.
 5. Set the `Physical path` to `C:\inetpub\wwwroot\Cortex\Gateway` by clicking on the ellipses `…` and selecting the appropriate directory. Create the `C:\inetpub\wwwroot\Cortex\Gateway` directory if it does not already exist.
@@ -465,7 +459,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     |Line Number | Name                                           | Description |
     |------------|------------------------------------------------|-------------|
     | 3          |`IIS Web Application Name`                      | Change to the correct `Site Name/Application` if either was modified from the defaults when creating the [website][Create Web Site] or [application][Create Application].  |
-    | 16         |`Feature Flags`                                 | Replace `InnovationId` with the Cortex Innovation feature identifier. This should be retrieved from [Cortex Service Portal][]. |
+    | 16         |`Feature Flags`                                 | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][]. |
     | 17         |`Service Fabric Api Gateway Endpoint`           | Replace `load-balancer.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://load-balancer.domain.com/` or `https://load-balancer.domain.com:8722/`. |
     | 18         |`Service Fabric Using Self Signed Certificates` | Configure the value as `False` if you used valid CA certificates when installing the Application Servers, `True` if you used self-signed certificates. |
     | 20         |`Service Fabric ApiGateway Basic Auth Username` | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. |
@@ -535,7 +529,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 [Configure Web Site]: {{< ref "#configure-web-site" >}}
 [Create Web Site]: {{< ref "#create-web-site" >}}
 [Create Application]: {{< ref "#create-new-web-application" >}}
-[Get Application Pool User]: {{< ref "#get-application-pool-user" >}}
+[Get Application Pool User]: {{< ref "#get-application-pool-user-1" >}}
 [Install Certificate]: {{< ref "#install-certificate" >}}
 [Configure Debugger Installation Script]: {{< ref "#configure-installation-script" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
@@ -543,3 +537,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 [Licensing Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
+[URL Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
+[NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
+[Microsoft Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
+[C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}

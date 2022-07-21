@@ -8,6 +8,8 @@ description: "Information about configuring Gateway Databases to use Transparent
 
 Once the [Gateway Setup][] steps have been completed, if you wish to encrypt the databases using {{< ahref "MSDocs.SqlServer.TransparentDataEncryption" "Transparent Data Encryption" >}} (TDE) for improved security, this should now be performed.
 
+{{% alert title="Note" %}}TDE cannot be applied to SQL Express, only SQL Server instances.{{% /alert %}}
+
 Enabling TDE on the databases ensures that the data is encrypted on disk. The process to do this requires that you:
 
 * Create a master key in the master database with a strong password. This password must be remembered and/or saved in a secure location to enable decryption of the database later.

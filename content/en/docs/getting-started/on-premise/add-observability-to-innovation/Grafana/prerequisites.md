@@ -102,18 +102,18 @@ See [SSL Best Practices][] for a full list of the recommended security changes t
 
 Apply the settings by following these instructions:
 
-1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractises.ps1` file extracted during the [Extract Installation Artefacts][] step into a suitable location on the Web Application Server.
+1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractices.ps1` file extracted during the [Extract Installation Artefacts][] step into a suitable location on the Web Application Server.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Change the location to the folder where the `Cortex.Innovation.Install.SSLBestPractises.ps1` file was copied to using the following command, modifying the path as necessary:
+1. Change the location to the folder where the `Cortex.Innovation.Install.SSLBestPractices.ps1` file was copied to using the following command, modifying the path as necessary:
 
     ```powershell
     cd "C:\Install"
     ```
 
-1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
+1. Run the `Cortex.Innovation.Install.SSLBestPractices.ps1` script using the following command:
 
     ```powershell
-    .\Cortex.Innovation.Install.SSLBestPractises.ps1
+    .\Cortex.Innovation.Install.SSLBestPractices.ps1
     ```
 
 1. To use all the recommended settings click `Apply all` to the first prompt.

@@ -205,4 +205,55 @@ To check that RabbitMQ is working as expected, remote desktop to an Application 
 
 If there are any unhealthy nodes (red) you may need to restart the RabbitMQ Windows service on each of the nodes that is erroring. These can be restarted in any order, but they must be restarted one at a time; wait for the node in the RabbitMQ explorer to be green before restarting the next one (you may need to refresh the browser).
 
+### Service Fabric Explorer displays errored services with RabbitMQ Broker Unreachable Exceptions
+
+If, when checking Service Fabric Explorer, all services are showing as erroring and the details are displaying a message similar to the following:
+
+```text
+RabbitMQ.Client.Exceptions.BrokerUnreachableException (-2146232800)
+None of the specified endpoints were reachable
+```
+
+There may be due to an incompatibility between the version of OpenSSL used and your processor. From Intel's website: **"OpenSSL* 1.0.2 beta (Jun 2014) to OpenSSL 1.0.2k (Jan 2017) contain bugs that either cause a crash or bad SHA (Secure Hash Algorithm) values on processors with the SHA extensions. Both bugs were fixed years ago; however, any application that uses the old version directly, or as one of its dependencies, will fail"**
+
+To verify that this is the problem, open Event Viewer and look in Windows -> Application. If this problem has occurred there will be some errors in the event viewer which contain the following:
+
+```text
+Faulting application name: erl.exe, version: 0.0.0.0, time stamp: 0x5d80b978
+Faulting module name: crypto.dll, version: 0.0.0.0, time stamp: 0x5d80baab
+```
+
+A workaround for this is provided by Intel. 
+
+1. Uninstall the platform by taking the following steps:
+    1. Open a Windows PowerShell (x64) window as administrator.
+    1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+
+        ```powershell
+        cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
+        ```
+
+    1. Uninstall the platform by running the following command for your architecture:
+
+    {{< tabpane lang="powershell" >}}
+        {{< tab header="Multiple Servers With HA" >}}
+        .\Cortex.Innovation.Uninstall.ps1
+        {{< /tab >}}
+        {{< tab header="Single Server Without HA" >}}
+        .\Cortex.Innovation.Uninstall.ps1 -SkipLoadBalancer
+        {{< /tab >}}
+    {{< /tabpane >}}
+    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
+    1. Wait for the command to finish.
+1. Add a system environment variable, provided by Intel, to each Application Server by taking the following steps:
+    1. Remote desktop to one of the Application Servers.
+    1. Right-click on the Start Menu and select `System`.
+    1. Click `Advanced system settings` to open the System Properties dialog.
+    1. Click `Environment Variables...`.
+    1. Under `System variables`, click `New...` to open the New System Variable dialog.
+    1. Set the Variable name to `OPENSSL_ia32cap` and the Variable value to `:~0x20000000`. Make sure to include the colon at the start.
+    1. Click OK.
+    1. Repeat these steps for any other Application Servers.
+1. Run the Application Servers installation script again.
+
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}

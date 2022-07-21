@@ -18,7 +18,7 @@ weight: 10
 | Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service | Application Service that executes automation flows. | Required | Application&nbsp;Server |
 | Cortex&nbsp;Block&nbsp;Packages | A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
 | Cortex&nbsp;Gateway&nbsp;Databases | A set of databases created automatically by Gateway which are used for storing data related to user roles, flows, etc. Hopefully, we can remove the need for Gateway Databases in the next release.  | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
-| [SQL&nbsp;Server&nbsp;Express][] | Free edition of SQL Server, required by Cortex Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server Express in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
+| [SQL&nbsp;Server&nbsp;Express][] or [SQL&nbsp;Server&nbsp;Standard][] | Required by Cortex Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric][] | Distributed systems platform that hosts the Application Services where automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer][] | Web portal for monitoring and managing the Service Fabric instance that automation solutions are deployed to. | Required | Application&nbsp;Server |
 | [Particular&nbsp;NServiceBus][] | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between Application Services. | Required | Application&nbsp;Server |
@@ -40,7 +40,8 @@ The following architecture requires 1 server:
 [Gateway Guide]: {{< url "Cortex.Guides.Gateway.MainDoc" >}}
 [Studio Guide]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
-[SQL&nbsp;Server&nbsp;Express]: {{< url "MSGo.SqlServerExpress.2016" >}}
+[SQL&nbsp;Server&nbsp;Express]: {{< url "MSDownload.SqlServerExpress.2016"  >}}
+[SQL&nbsp;Server&nbsp;Standard]: {{< url "MSEval.SQLServer.2019" >}}
 [Microsoft&nbsp;Service&nbsp;Fabric]: {{< url "MSDocs.ServiceFabric.MainDoc" >}}
 [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer]: {{< url "MSDocs.ServiceFabric.Explorer" >}}
 [Particular&nbsp;NServiceBus]: {{< url "Particular.NServiceBus.MainDoc" >}}

@@ -31,7 +31,7 @@
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
-                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#client-requirements"
+                    WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#web-browser-requirements"
                     AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
@@ -1115,11 +1115,13 @@
         ReverseProxy = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
 [MSDotNet]
     [MSDotNet.Framework471]
-        MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer"
+        MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
 [MSDownload]
     WebDeploy = "https://www.microsoft.com/en-gb/download/details.aspx?id=43717"
     [MSDownload.CPlusPlusRedistributable]
         2013 = "http://www.microsoft.com/en-us/download/details.aspx?id=40784"
+    [MSDownload.SqlServerExpress]
+        2016 = "https://www.microsoft.com/en-us/download/details.aspx?id=103447"
 [MSEval]
     [MSEval.WindowsServer]
         2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
@@ -1130,9 +1132,6 @@
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
-[MSGo]
-    [MSGo.SqlServerExpress]
-        2016 = "https://go.microsoft.com/fwlink/?LinkID=799012"
 [MSSupport]
     [MSSupport.Troubleshooting]
         DynamicPorts = "https://support.microsoft.com/kb/929851"

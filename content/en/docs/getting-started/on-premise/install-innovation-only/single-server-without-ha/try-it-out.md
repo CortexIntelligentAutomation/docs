@@ -22,9 +22,9 @@ Test the platform by creating a new flow and executing it using the following st
     {{< figure src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
     If the blocks in the flow do not display or the palettes are not visible, see [Troubleshooting][Troubleshooting No Blocks] for more information.
 1. Add a `Set Variable` block and connect it between the start and end blocks.
-1. Click the `Set Variable` block to open the Property Editor. Set the `Value` property to `DateTime.Now`. Type `Output` into the `Variable` property and click `Create Variable`.
-1. In the Variable Editor, set `Is Output Variable?` to `true` for the new `Output` variable.
-1. Set a breakpoint on the end block and start the flow. An execution token should appear, the `Output` variable should show the current time. If the token does not appear, try refreshing the page.
+1. Click the `Set Variable` block to open the Property Editor. Set the `Value` property to `DateTimeOffset.Now`. Type `Result` into the `Variable` property and click `Create Variable`.
+1. In the Variable Editor, set `Is Output Variable?` to `true` for the new `Result` variable.
+1. Set a breakpoint on the end block and start the flow. An execution token should appear, the `Result` variable should show the current time. If the token does not appear, try refreshing the page.
 1. Continue or stop the execution.
 1. Commit the flow.
 
@@ -41,7 +41,7 @@ Test the platform by creating a new flow and executing it using the following st
     | Property      | Value                                                                               |
     |---------------|-------------------------------------------------------------------------------------|
     | Action        | POST                                                                                |
-    | URL           | https://{FQDN of server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://server.domain.com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
+    | URL           | https://{FQDN of server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://server&#46;domain&#46;com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
