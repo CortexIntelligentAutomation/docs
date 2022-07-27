@@ -13,7 +13,7 @@ A flow is an object in [Cortex Studio][] that contains the logic and actions (in
 
 ## Anatomy of a Flow
 
-| ![Example Flow](/images/flow.png) |
+| ![Example Flow](/images/Flow.png) |
 |:--:|
 | ***Example Flow*** |
 
@@ -80,8 +80,8 @@ Flows support hierarchical exception handling at any level within the flow.
 Exceptions can be handled:
 
 * At the [block][] level; for further information, see [Block Exception Handling][]
-* At the [workspace][] level; for further information, see [Workspace Exception Handling][]
-* At the flow level; for further information, see [Flow Exception Handling][]
+* At the [workspace][] level; for further information, see [Handling Exceptions within a Workspace][]
+* At the flow level; for further information, see [Handling Exceptions within a Flow][]
 
 ## Remarks
 
@@ -117,14 +117,14 @@ None
 [Block Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling.MainDoc" >}}
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
-[Flow Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
+[Handling Exceptions within a Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
 [flow level exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 [Starting an Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.MainDoc" >}}
 [block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [flow execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 [workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
-[Workspace Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}
+[Handling Exceptions within a Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace.MainDoc" >}}
 
 [Reference Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Decision Blocks]: {{< url "Cortex.Reference.Blocks.Decisions.MainDoc" >}}

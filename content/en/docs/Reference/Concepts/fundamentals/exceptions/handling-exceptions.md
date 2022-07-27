@@ -181,7 +181,6 @@ The top-level [Workspace][Workspace] cannot contain a [Handle Workspace Exceptio
 [What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
-[Workspace-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}
 
 [Exceptions]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}
 [Exception Data Type]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exceptions" >}}

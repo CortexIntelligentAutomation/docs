@@ -523,6 +523,8 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.HiddenProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/hidden-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonBlockProperties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-block-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
@@ -540,6 +542,9 @@
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/"
+                            Inputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/#inputs"
+                            Outputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/#outputs"
+                            InputOutputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/#inputoutputs"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]
@@ -555,6 +560,7 @@
                         BlockLevel = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-block-level"
                         WorkspaceLevel = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-workspace-level"
                         FlowLevel = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-flow-level"
+                        ChainingExceptions = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#chaining-block-exception-handling-blocks"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions]
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/throwing-exceptions"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
@@ -608,8 +614,8 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace"
-                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling]
-                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/workspace-exception-handling"    
+                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace]
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"    
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
                     MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
                     StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"

@@ -17,7 +17,7 @@ A workspace is used to group logic and actions within a [flow][], in order to re
 
 A flow can only contain one Top-Level Workspace, which acts as the entry point for the [flow execution][].
 
-| ![Example Flow](/images/flow.png) |
+| ![Example Flow](/images/Flow.png) |
 |:--:|
 | ***Example Top-Level Workspace*** |
 
@@ -112,9 +112,9 @@ Workspaces support hierarchical exception handling at any level within the works
 Exceptions can be handled:
 
 * At the [block][] level; for further information, see [Block Exception Handling][]
-* At the workspace level; for further information, see [Workspace Exception Handling][]
+* At the workspace level; for further information, see [Handling Exceptions within a Workspace][]
 
-A [Top-Level Workspace][] can also handle exceptions at the [flow][] level; for further information, see [Flow Exception Handling][]
+A [Top-Level Workspace][] can also handle exceptions at the [flow][] level; for further information, see [Handling Exceptions within a Flow][]
 
 ## Remarks
 
@@ -170,11 +170,11 @@ None
 
 [Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
-[Flow Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
+[Handling Exceptions within a Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
 [flow execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
-[Workspace Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WorkspaceExceptionHandling.MainDoc" >}}
+[Handling Exceptions within a Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace.MainDoc" >}}
 
 [Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}

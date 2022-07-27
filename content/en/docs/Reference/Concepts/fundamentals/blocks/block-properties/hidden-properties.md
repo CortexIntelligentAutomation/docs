@@ -9,6 +9,8 @@ weight: 40
 
 ## Summary
 
+TODO: Update Title to 'Advanced Properties' and any links to hidden need updated
+
 Many of the [blocks][What-Is-Block] have properties that are for advanced use; in most instances these [properties][Block-Properties] can be left at their default values.
 
 To avoid unnecessary visual clutter, these advanced-use [properties][Block-Properties] are hidden but may be made visible if required.
