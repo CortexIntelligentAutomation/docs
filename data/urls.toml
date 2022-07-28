@@ -461,6 +461,13 @@
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
+        [Cortex.Reference.Dashboards]
+            [Cortex.Reference.Observability.Grafana.Dashboards.FlowExecutionRequests]
+                MainDoc = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/"
+                TotalRequestsErrored = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/#total-requests-errored"
+            [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup]
+                [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup.ConfigureThresholds]
+                    MainDoc = "/docs/reference/observability/grafana/advanced-setup/configuring-thresholds/"
         [Cortex.Reference.Concepts]
             [Cortex.Reference.Concepts.Fundamentals]
                 MainDoc = "/docs/reference/concepts/fundamentals/"
@@ -907,6 +914,7 @@
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
         MainDoc = "https://grafana.com/grafana/"
+        TimeRange = "https://grafana.com/docs/grafana/latest/dashboards/time-range-controls/"
     [Grafana.Products.Loki]
         MainDoc = "https://grafana.com/oss/loki/"
         [Grafana.Products.Loki.Promtail]
@@ -1085,6 +1093,7 @@
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
     Byte = "https://en.wikipedia.org/wiki/Byte"
+    HttpStatusCodes = "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
 [W3]
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
