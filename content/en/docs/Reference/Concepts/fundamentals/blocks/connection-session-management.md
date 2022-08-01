@@ -2,7 +2,7 @@
 title: "Connection and Session Management"
 linkTitle: "Connection and Session Management"
 description: "The management of connections and sessions to third-party systems."
-weight: 30
+weight: 0
 ---
 
 # {{< param title >}}

@@ -210,7 +210,7 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 [view]: {{< url "Cortex.Guides.Studio.SouthPanel.ViewingVariables" >}}
 [modify]: {{< url "Cortex.Guides.Studio.SouthPanel.ModifyingVariables" >}}
 [delete]: {{< url "Cortex.Guides.Studio.SouthPanel.DeletingVariables" >}}
-[Property Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyViewer" >}}
+[Property Editor]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
 [Execution Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExecutionViewer" >}}
 [Variable Panel]: {{< url "Cortex.Guides.Studio.EastPanel.VariablePanel" >}}
 [Variable Detail]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetail" >}}

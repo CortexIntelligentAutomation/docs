@@ -1,13 +1,25 @@
 ---
 title: "Block Exception Handling"
 linkTitle: "Block Exception Handling"
-description: "Handling exceptions from a specific block."
-weight: 40
+description: "Information regarding handling exceptions at different levels within a block."
+weight: 200
 ---
 
 # {{< param title >}}
 
 ## Summary
+
+Exceptions within a flow can be handled at the following levels:
+
+- The [block level][] (Highest Priority)
+- The [workspace level][]
+- The [flow level][] (Lowest Priority)
+
+Exceptions thrown within the execution of a [block][] can be handled by connecting a [Handle Block Exception block][].
+
+For more information, see [Handling Exceptions at the Block Level][block level].
+
+------------------------
 
 [Flows][Flow] can provide for a range of exception handling techniques:
 
@@ -23,25 +35,25 @@ For detailed information about Block Exception Handling, see [Handling Exception
 
 ## Related Concepts
 
-* [Blocks][What-Is-Block]
-* [Workspaces][Workspace]
-* [Flows][Flow]
-* [Exceptions][Exceptions]
+- [Flows][]
+- [Workspaces][]
+- [Blocks][block]
+- [Exceptions][]
 
 ## Related Blocks
 
-* [Handle Block Exception][Block-Handle-Block-Exception]
-
-[block level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.BlockLevel" >}}
-[Block-Handle-Block-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
-[Block-Handle-Workspace-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
-[Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
-[Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
-[What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
-[Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
+- [Handle Block Exception][Handle Block Exception block]
 
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 [workspace level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.WorkspaceLevel" >}}
+[block level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.BlockLevel" >}}
+[Handle Block Exception block]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+
+[Handle-Flow-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
+[Block-Handle-Workspace-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
+[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
+[What-Is-Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}

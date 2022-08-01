@@ -29,7 +29,7 @@ Flow Control blocks are used to start or end a [flow][] or [workspace][].
 
 #### Block Image
 
-Example block image
+TODO: Example block image
 
 - Flow Control blocks are square shaped
 - Flow Control blocks are smaller than [Action Blocks][]
@@ -53,7 +53,7 @@ Exceptions thrown by Action blocks can be handled by connecting a [Handle Block 
 
 #### Block Image
 
-Example block image
+TODO: Example block image
 
 - The icon of the Action block shows what object or system it interacts with
 - The icon in the bottom right of the Action block provides further information into what type of action or interaction it will take
@@ -74,7 +74,7 @@ Decision blocks are used to branch within a [flow][] based on a condition.
 
 #### Block Image
 
-Example block image
+TODO: Example block image
 
 - The icon of the Decision block shows what object or system it interacts with
 - Decision blocks are diamond shaped
@@ -96,7 +96,7 @@ Exceptions can be handled at different levels within a [flow][]; at the block le
 
 #### Block Image
 
-Example block image
+TODO: Example block image
 
 - Exception Handling blocks have a pink background
 
@@ -122,7 +122,7 @@ Unhandled exceptions thrown within a workspace can be handled by connecting a [H
 
 #### Block Image
 
-Example block image
+TODO: Example block image
 
 - Workspace blocks are rectangle shaped
 - Workspace blocks are larger than [Action Blocks][]
@@ -138,7 +138,7 @@ Workspace Blocks have the following connection ports:
 
 ### Block Properties
 
-Every block can be configured using [Block Properties][]. Properties pass data to the block which is then used to perform an action, or branch based on a condition within a [flow][].
+Blocks are configured using [Block Properties][]. Properties pass data to the block which is then used to perform an action, or branch based on a condition within a [flow][].
 
 Block properties can be of three types:
 
@@ -169,9 +169,10 @@ None
 - [Flows][]
 - [Workspaces][]
 - [Block Properties][]
+- [Executions][]
 - [Exceptions][]
 
-## Related Blocks
+### Related Blocks
 
 - [All Blocks][Blocks]
 
@@ -188,15 +189,20 @@ None
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Handling Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [chained]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.ChainingExceptions" >}}
+
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+
 [Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+
 [Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
-[Advanced Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.HiddenProperties.MainDoc" >}}
-[Common Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonBlockProperties.MainDoc" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes.Inputs" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes.Outputs" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes.InputOutputs" >}}
+[Advanced Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[Common Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.MainDoc" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Block Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling.MainDoc" >}}
+
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 
@@ -205,5 +211,3 @@ None
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.MainDoc" >}}
 [Handle Workspace Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.MainDoc" >}}
-
-Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.

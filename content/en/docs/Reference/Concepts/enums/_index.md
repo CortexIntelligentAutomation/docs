@@ -13,6 +13,7 @@ TODO:
   * Overridden types
   * Out of range ints cast (DayOfWeek)1000
 * Casting - dayofweek<->Int and unable to cast string - use parse
+  * Need to cast int to enum or enum to int if comparing
 * Enum Types
   * DateTimeComponentType
   * SearchOptions

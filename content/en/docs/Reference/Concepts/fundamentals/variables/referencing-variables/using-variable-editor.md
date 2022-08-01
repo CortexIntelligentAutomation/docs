@@ -27,7 +27,7 @@ Items in [complex data types][ComplexDataType] can be referenced in the Variable
 
 ## Creating a Variable
 
-Block properties using the [Variable Editor][] that reference non-existent variables are outlined in <span style="color:orange">orange</span>. Clicking **+** at the top of the [Property Viewer][] will create all non-existent variables for that block.
+Block properties using the [Variable Editor][] that reference non-existent variables are outlined in <span style="color:orange">orange</span>. Clicking **+** at the top of the [Property Editor][] will create all non-existent variables for that block.
 
 Individual variables that do not exist can be created in the Variable Editor. If entered text does not match an existing variable, the option to create that variable is available at the bottom of the dropdown list.
 
@@ -62,7 +62,7 @@ None
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
-[Property Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyViewer" >}}
+[Property Editor]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Guides.Studio.VariableEditor.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

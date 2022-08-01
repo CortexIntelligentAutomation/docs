@@ -49,13 +49,13 @@ A flow is an object in [Cortex Studio][] that contains the logic and actions (in
   * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
   * Cannot be deleted
 * Workspace
-  * The [Top-Level Workspace][TODO] within the flow
+  * The [Top-Level Workspace][] within the flow
   * Canvas on which blocks are placed and connected to create the flow logic
   * See [Workspace][workspaces]
 
 ## Grouping Logic within a Flow
 
-All the logic of a flow can exist on the [Top-Level Workspace][TODO], however, this can quickly become difficult to maintain and understand as the numbers of blocks increase. Blocks can be grouped into workspaces in order to reduce the complexity and make the flow easier to maintain.
+All the logic of a flow can exist on the [Top-Level Workspace][], however, this can quickly become difficult to maintain and understand as the numbers of blocks increase. Blocks can be grouped into workspaces in order to reduce the complexity and make the flow easier to maintain.
 
 A [Workspace][Workspace Block] block can opened by double clicking it, showing its workspace canvas and the logic inside; this could include blocks for executing specific functions or other workspaces to help separate the logic of the flow further.
 
@@ -89,7 +89,7 @@ Exceptions can be handled:
 
 #### Cannot have a Handle Workspace Exception block on the flow's Top-Level Workspace
 
-Currently, it is not possible to have a [Handle Workspace Exception][] block on the [Top-Level Workspace][TODO] of a flow. In future this limitation may be removed.
+Currently, it is not possible to have a [Handle Workspace Exception][] block on the [Top-Level Workspace][] of a flow. In future this limitation may be removed.
 
 ## See Also
 
@@ -122,9 +122,10 @@ None
 [Starting an Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.MainDoc" >}}
 [block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [flow execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
-[workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 [workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [Handling Exceptions within a Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace.MainDoc" >}}
+[workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
+[Top-Level Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.TopLevelWorkspace" >}}
 
 [Reference Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Decision Blocks]: {{< url "Cortex.Reference.Blocks.Decisions.MainDoc" >}}

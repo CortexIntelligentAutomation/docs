@@ -1,15 +1,17 @@
 ---
 title: "Expression Editor"
 linkTitle: "Expression Editor"
-description: "Using the Expression Editor."
-weight: 20
+description: "Information regarding using the Expression Editor to create literal values, expressions, or reference variables."
+weight: 200
 ---
 
 # {{< param title >}}
 
 ## Summary
 
-The [Expression Editor][] is the most powerful [property editor][] and can accept [literal values][], [expressions][Expressions], and references to [variables][Variables].
+The [Expression Editor][] is the most powerful [property editor][] and can accept [literal values][], [expressions][], and references to [variables][].
+
+TODO: Image of blank expression editor
 
 ## Literal Values
 
@@ -26,6 +28,8 @@ A literal is an explicit value that is not calculated during the execution of th
 - [Dictionary][Dictionary literal]
 - [Structure][Structure literal]
 - [List][List literal]
+
+TODO: Image of expression editor with literal values (int, string, list)
 
 ### String literal
 
@@ -65,13 +69,13 @@ The example above becomes:
 He said "Come here!"
 ```
 
-For interpolated [strings][String], [variables][Variables] or [expressions][Expressions] are surrounded by single curly braces. For example:
+For interpolated [strings][String], [variables][] or [expressions][] are surrounded by single curly braces. For example:
 
 ```csharp
 $"He said \"Come here {($)Name}!\""
 ```
 
-For further information on interpolated strings using  [variables][Variables] or [expressions][Expressions] see [String expressions][]
+For further information on interpolated strings using  [variables][] or [expressions][] see [String expressions][]
 
 In the case of interpolated verbatim [string][String] literals, double curly braces are not interpreted literally; they produce a single curly brace character. For example:
 
@@ -85,7 +89,7 @@ The example above becomes:
 This is a single square brace "[", and this is a single curly brace "{"
 ```
 
-For further information, see [String Literals][String-Literals]
+For further information, see [String Literals][]
 
 ### Char literal
 
@@ -103,7 +107,7 @@ The example above becomes:
 'A'
 ```
 
-For further information, [Char Literals][Char-Literals]
+For further information, [Char Literals][]
 
 ### Int32 literal
 
@@ -115,7 +119,7 @@ If an integer literal value is greater than or equal to [Int32.MinValue][] or le
 
 If an integer literal value is less than [Int32.MinValue][] or greater than [Int32.MaxValue][], then it will be of type [Int64][].
 
-For further information, see [Integer Literals][Integer-Literals].
+For further information, see [Integer Literals][].
 
 ### Int64 literal
 
@@ -130,7 +134,7 @@ If an integer literal value is less than [Int32.MinValue][] or greater than [Int
 1234L
 ```
 
-For further information, see [Integer Literals][Integer-Literals].
+For further information, see [Integer Literals][].
 
 ### Double literal
 
@@ -147,7 +151,7 @@ The suffix `d` or `D` can used to create a floating point literal of type [Doubl
 1234.456D
 ```
 
-For further information, see [Real Literals][Real-Literals].
+For further information, see [Real Literals][].
 
 ### Single literal
 
@@ -158,17 +162,17 @@ If it is necessary to create an floating point literal of type [Single][] with a
 1234.456F
 ```
 
-For further information, see [Real Literals][Real-Literals].
+For further information, see [Real Literals][].
 
 ### Boolean literal
 
-A [Boolean][Boolean] literal represents a truth-value of either `true` or `false`.
+A [Boolean][] literal represents a truth-value of either `true` or `false`.
 
 ```json
 true or false
 ```
 
-For further information, see [Boolean Literals][Boolean-Literals].
+For further information, see [Boolean Literals][].
 
 ### Object literal
 
@@ -219,11 +223,11 @@ A [List][] is an object that consists of a number of ordered items that can be o
 
 [Variables][Variables Concept] are named containers for storing values of any [data type][Data Type]; a [variable's][Variables Concept] value can be read, updated, replaced, or removed using variable reference syntax; where the variable name is prefixed with `($)` (e.g. `($)VariableName`).
 
-Variables references can be used within [expressions][Expressions].
+Variables references can be used within [expressions][].
 
 ## Expressions
 
-An expression is a combination of [operands][] (i.e. [variables][Variables], [literals][literal values], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
+An expression is a combination of [operands][] (i.e. [variables][], [literals][literal values], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that will be evaluated when the flow execution reaches the block.
 
 Expressions use the syntax of the [C#][] [programming language][].
 
@@ -242,6 +246,8 @@ Types of expressions:
 - [Enums][Enum expressions]
 - [Casting][Casting expressions]
 - [Indexes][Index expressions]
+
+TODO: Image of expression editor with expression (Arithmetic, Constructors, Properties)
 
 ### Arithmetic expressions
 
@@ -395,7 +401,7 @@ Assume the variable `($)Int` has been set to `1`.
 | `($)Int.ToString()` | `"1"` | Method without parameters |
 | `($)Int.ToString("P0")` | `"100%"` | The `ToString()` method can take parameters in order to format the result. In this case `1` was converted into a percent with zero decimal places |
 
-For further information, see [Methods][].
+For further information, see [Methods][Methods External].
 
 ### Property expressions
 
@@ -520,23 +526,46 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 
 - [Literal Editor][]
 - [Variable Editor][]
-- [Property Types][Property-Types]
 - [Data Types][Data Type]
 - [Object Casting][]
 - [Variables][Variables Concept]
 - [Workspaces][]
 
-### Related Data Types
-
-- [All Data Types][Reference Data Types]
-
 ### Related Blocks
 
 - [All Blocks][Blocks]
 
+### Related Data Types
+
+- [All Data Types][Reference Data Types]
+
+### External Documentation
+
+- [Boolean Literals][]
+- [Char Literals][]
+- [Integer Literals][]
+- [Real Literals][]
+- [String Literals][]
+- [Arithmetic Operators][]
+- [Boolean Logical Operators][]
+- [Comparison Operators][]
+- [Equality Operators][]
+- [String concatenation][]
+- [String interpolation][]
+- [Verbatim string literals][]
+- [Verbatim String Interpolation][]
+- [Constructors][]
+- [Methods][Methods External]
+- [Properties][]
+- [C# identifier naming rules][]
+- [Enumeration types][]
+- [Explicit Conversions][]
+- [Implicit Conversions][]
+- [Indices and Ranges][]
+
 [literal values]: {{< ref "#literal-values" >}}
-[Expressions]: {{< ref "#expressions" >}}
-[Variables]: {{< ref "#variables" >}}
+[expressions]: {{< ref "#expressions" >}}
+[variables]: {{< ref "#variable-references" >}}
 
 [String literal]: {{< ref "#string-literal" >}}
 [Char literal]: {{< ref "#char-literal" >}}
@@ -576,11 +605,10 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 
 [Reference Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
-[Collections]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[Collections]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Int32.MaxValue]: {{< url "MSDocs.DotNet.Api.System.Int32.MaxValue" >}}
@@ -596,19 +624,12 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
-[Property-Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes.MainDoc" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [Workspace Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [Variables Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 
-[input property]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
-[index notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.IndexNotation" >}}
-[dot notation]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.DotNotation" >}}
 [Enum]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
 
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
@@ -619,17 +640,17 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 
 [Expression Editor]: {{< url "Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 
-[Boolean-Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
-[Char-Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}
-[Integer-Literals]: {{< url "MSDocs.CSharp.IntegerLiterals" >}}
-[Real-Literals]: {{< url "MSDocs.CSharp.RealLiterals" >}}
-[String-Literals]: {{< url "MSDocs.CSharp.StringLiterals" >}}
+[Boolean Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
+[Char Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}
+[Integer Literals]: {{< url "MSDocs.CSharp.IntegerLiterals" >}}
+[Real Literals]: {{< url "MSDocs.CSharp.RealLiterals" >}}
+[String Literals]: {{< url "MSDocs.CSharp.StringLiterals" >}}
 [Arithmetic Operators]: {{< url "MSDocs.CSharp.ArithmeticOperators" >}}
 [Boolean Logical Operators]: {{< url "MSDocs.CSharp.BooleanLogicalOperators" >}}
 [Comparison Operators]: {{< url "MSDocs.CSharp.ComparisonOperators" >}}
 [Equality Operators]: {{< url "MSDocs.CSharp.EqualityOperators" >}}
 [Constructors]: {{< url "MSDocs.CSharp.Constructors" >}}
-[Methods]: {{< url "MSDocs.CSharp.Methods" >}}
+[Methods External]: {{< url "MSDocs.CSharp.Methods" >}}
 [Properties]: {{< url "MSDocs.CSharp.Properties" >}}
 [Enumeration types]: {{< url "MSDocs.CSharp.EnumerationTypes" >}}
 [Explicit Conversions]: {{< url "MSDocs.CSharp.ExplicitConversions" >}}
@@ -640,7 +661,6 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [String interpolation]: {{< url "MSDocs.CSharp.Interpolation" >}}
 [Verbatim string literals]: {{< url "MSDocs.CSharp.Verbatim" >}}
 [Verbatim String Interpolation]: {{< url "MSDocs.CSharp.InterpolatedVerbatim" >}}
-[String concatenation]: {{< url "MSDocs.DotNet.Api.System.String.ConcatGuide" >}}
 
 [C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
 [operands]: {{< url "Cortex.Reference.Glossary.K-O.Operand" >}}

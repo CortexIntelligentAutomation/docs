@@ -27,7 +27,7 @@ Only variables in scope will be available in the [Variable Editor][] or the [Exp
 
 ## Create a Variable in a certain Scope
 
-Variables are created in the scope of the workspace currently in focus. This applies to creating variables using the [Variable Grid][] or using the [Variable Editor][] in the [Property Viewer][]. If the variable scope needs to be changed, see [Change Variable Scope](#change-variable-scope)
+Variables are created in the scope of the workspace currently in focus. This applies to creating variables using the [Variable Grid][] or using the [Variable Editor][] in the [Property Editor][]. If the variable scope needs to be changed, see [Change Variable Scope](#change-variable-scope)
 
 ## Change Variable Scope
 
@@ -64,7 +64,7 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 - [Workspace Block][Workspace-block]
 
 [Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGridInnovation" >}}
-[Property Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyViewer" >}}
+[Property Editor]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
 [Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
 [Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}

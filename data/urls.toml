@@ -76,7 +76,7 @@
                 MainDoc = "/docs/guides/cortex-studio/variable-editor/"
             [Cortex.Guides.Studio.EastPanel]
                 MainDoc = "/docs/guides/cortex-studio/east-panel/"
-                PropertyViewer = "/docs/guides/cortex-studio/east-panel/#property-viewer"
+                PropertyEditor = "/docs/guides/cortex-studio/east-panel/#property-editor"
                 ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
                 VariablePanel = "/docs/guides/cortex-studio/east-panel/#variable-panel"                    
                 VariableDetail = "/docs/guides/cortex-studio/east-panel/#variable-detail"
@@ -521,10 +521,14 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/"
-                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.HiddenProperties]
-                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/hidden-properties/"
-                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonBlockProperties]
-                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-block-properties/"
+                            AnatomyOfABlockProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#anatomy-of-a-block-property"
+                            Input = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties"
+                            Output = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties"
+                            InputOutput = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
@@ -540,11 +544,6 @@
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
-                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyTypes]
-                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/"
-                            Inputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/#inputs"
-                            Outputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/#outputs"
-                            InputOutputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-types/#inputoutputs"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]
@@ -614,6 +613,7 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace"
+                        TopLevelWorkspace = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#top-level-workspace"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"    
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
@@ -934,6 +934,10 @@
                 MainDoc = "/docs/reference/exceptions/flows/"
                 [Cortex.Reference.Exceptions.Flows.Blocks]
                     MainDoc = "/docs/reference/exceptions/flows/blocks/"
+                    [Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException]
+                        MainDoc = "/docs/reference/exceptions/flows/blocks/block-timeout-exception/"
+                    [Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException]
+                        MainDoc = "/docs/reference/exceptions/flows/blocks/invalid-block-timeout-exception/"
                     [Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/"
                         ValueIsInvalid = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/#value-is-invalid"

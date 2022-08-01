@@ -1,6 +1,6 @@
 ---
 title: "Property Editors"
 linkTitle: "Property Editors"
-description: "Information regarding the Property Editors."
-weight: 20
+description: "Information regarding the Literal, Variable, and Expression Editors."
+weight: 100
 ---
