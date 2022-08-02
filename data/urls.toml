@@ -104,10 +104,10 @@
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
-        [Cortex.Reference.API]
-            MainDoc = "/docs/reference/APIs/"
-            [Cortex.Reference.API.APIGateway]
-                MainDoc = "/docs/reference/APIs/api-gateway/"        
+        [Cortex.Reference.Apis]
+            MainDoc = "/docs/reference/Apis/"
+            [Cortex.Reference.Apis.ApiGatewayService]
+                MainDoc = "/docs/reference/apis/cortex-api-gateway-service/"        
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -544,6 +544,7 @@
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
+                                CreatingNewVariables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-new-variables"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]

@@ -1,7 +1,7 @@
 ---
 title: "Variable Editor"
 linkTitle: "Variable Editor"
-description: "Using the Variable Editor."
+description: "Information regarding using the Variable Editor."
 weight: 100
 ---
 
