@@ -17,7 +17,7 @@ Exceptions within a flow can be handled at the following levels:
 
 The [Handle Flow Exception][] block, which is located on the top-level [workspace][], handles any exceptions that are not handled at the [block][block level] or [workspace level][].
 
-For more information, see [Handling Exceptions at the Flow Level][flow level].
+For more information, see [Handling Exceptions][].
 
 ## Remarks
 
@@ -52,6 +52,7 @@ None
 [Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Handling Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [block level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.BlockLevel" >}}
 [flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 [workspace level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.WorkspaceLevel" >}}

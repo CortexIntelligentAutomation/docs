@@ -111,7 +111,7 @@ Workspaces support hierarchical exception handling at any level within the works
 
 Exceptions can be handled:
 
-* At the [block][] level; for further information, see [Block Exception Handling][]
+* At the [block][] level; for further information, see [Handling Exceptions within a Block][]
 * At the workspace level; for further information, see [Handling Exceptions within a Workspace][]
 
 A [Top-Level Workspace][] can also handle exceptions at the [flow][] level; for further information, see [Handling Exceptions within a Flow][]
@@ -161,7 +161,7 @@ None
 
 [Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[Block Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling.MainDoc" >}}
+[Handling Exceptions within a Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
 
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [workspace level exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.WorkspaceLevel" >}}

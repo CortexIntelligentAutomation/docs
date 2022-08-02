@@ -79,7 +79,7 @@ Flows support hierarchical exception handling at any level within the flow.
 
 Exceptions can be handled:
 
-* At the [block][] level; for further information, see [Block Exception Handling][]
+* At the [block][] level; for further information, see [Handling Exceptions within a Block][]
 * At the [workspace][] level; for further information, see [Handling Exceptions within a Workspace][]
 * At the flow level; for further information, see [Handling Exceptions within a Flow][]
 
@@ -114,7 +114,7 @@ Currently, it is not possible to have a [Handle Workspace Exception][] block on 
 None
 
 [blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
-[Block Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling.MainDoc" >}}
+[Handling Exceptions within a Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 [Handling Exceptions within a Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}

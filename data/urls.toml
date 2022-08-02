@@ -515,8 +515,8 @@
                 MainDoc = "/docs/reference/concepts/fundamentals/"
                 [Cortex.Reference.Concepts.Fundamentals.Blocks]
                     MainDoc = "/docs/reference/concepts/fundamentals/blocks"
-                    [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling]
-                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-exception-handling/"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/handling-exceptions-within-a-block/"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty]

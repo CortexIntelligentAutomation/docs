@@ -154,7 +154,7 @@ For further information, see [Block Properties][].
 
 Exceptions thrown within the execution of a block can be handled by connecting a [Handle Block Exception block][Handle Block Exception blocks] to the red output port. If there is no [Handle Block Exception block][Handle Block Exception blocks] that can handle the exception then it will be passed to the workspace level to be handled.
 
-For further information, see [Block Exception Handling][].
+For further information, see [Handling Exceptions within a Block][].
 
 ## Remarks
 
@@ -201,7 +201,7 @@ None
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
-[Block Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockExceptionHandling.MainDoc" >}}
+[Handling Exceptions within a Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
 
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}

@@ -19,6 +19,14 @@ All advanced properties can be shown or hidden using the Show/Hide Advanced Prop
 
 TODO: Image of Set Item block with timeout (have label showing how to toggle advanced)
 
+## Finding Advanced Properties
+
+A property is defined as advanced within the documentation of a [Block][All Blocks] or [Data Type][].
+
+Information regarding which properties are advanced for a [Block][All Blocks] can be found in the "Properties" section. The table within each property in the relevant documentation will have an "Is Advanced" row stating whether the property is advanced or not.
+
+Information regarding which properties are advanced for a [Data Type][] can be found in the "Remarks" section under "Advanced Properties" in the relevant documentation for that [Data Type][].
+
 ## Remarks
 
 ### Known Limitations
@@ -59,3 +67,5 @@ None
 [Property Editor]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
 
 [All Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+
+[Data Type]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}

@@ -17,7 +17,7 @@ Exceptions within a workspace can be handled at the following levels:
 
 A single [Handle Workspace Exception][] block may be placed on a [workspace][] to handle any exceptions that are not handled at the [block level][].
 
-For more information, see [Handling Exceptions at the Workspace Level][workspace level].
+For more information, see [Handling Exceptions][].
 
 ## Remarks
 
@@ -50,6 +50,7 @@ None
 [Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Handling Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [block level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.BlockLevel" >}}
 [flow level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 [workspace level]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.WorkspaceLevel" >}}
