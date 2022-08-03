@@ -85,6 +85,8 @@ To verify the certificate is imported:
 3. Expand `Personal` and select `Certificates`
 4. You should see your certificate in this store
 
+{{% alert type="warning" title="Warning" %}}It is very important to set a reminder to update certificates in good time before they expire. If they expire then the platform will cease to function and [Cortex Service Portal][] must be contacted for support.{{% /alert %}}
+
 ### IIS Role Setup and Configuration
 
 #### Install Internet Information Services (IIS)
@@ -399,6 +401,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 3. Set the `Alias` to `gateway`. This must be lowercase.
 4. Click `Select…` and from the Application pool dropdown select the `Cortex Gateway` application pool and click `OK`.
 5. Set the `Physical path` to `C:\inetpub\wwwroot\Cortex\Gateway` by clicking on the ellipses `…` and selecting the appropriate directory. Create the `C:\inetpub\wwwroot\Cortex\Gateway` directory if it does not already exist.
+6. Click `OK`.
 
 ### Configure IIS Site Redirect to the Specified Web Application (Optional)
 

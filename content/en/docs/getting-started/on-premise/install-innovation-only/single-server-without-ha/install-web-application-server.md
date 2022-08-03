@@ -346,6 +346,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 3. Set the `Alias` to `gateway`. This must be lowercase.
 4. Click `Select…` and from the Application pool dropdown select the `Cortex Gateway` application pool and click `OK`.
 5. Set the `Physical path` to `C:\inetpub\wwwroot\Cortex\Gateway` by clicking on the ellipses `…` and selecting the appropriate directory. Create the `C:\inetpub\wwwroot\Cortex\Gateway` directory if it does not already exist.
+6. Click `OK`.
 
 ### Configure IIS Site Redirect to the Specified Web Application (Optional)
 
