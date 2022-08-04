@@ -5,7 +5,7 @@ description: "Information about trying out Cortex Innovation for the first time.
 weight: 60
 ---
 
-# {{% param title %}}
+# {{< param title >}}
 
 This guide describes how to try out a new Innovation installation to make sure it is working. Please ensure that [Setup Gateway][] has been completed before taking these steps.
 
@@ -41,14 +41,14 @@ Test the platform by creating a new flow and executing it using the following st
     | Property      | Value                                                                               |
     |---------------|-------------------------------------------------------------------------------------|
     | Action        | POST                                                                                |
-    | URL           | https://{FQDN of Load Balancer Server}/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://load-balancer&#46;domain&#46;com/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
+    | URL           | https://{FQDN of server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://server&#46;domain&#46;com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
     | Username      | The value used for `ApiGatewayBasicAuthUserName` when installing Application Services              |
     | Password      | The value used for `ApiGatewayBasicAuthPwd` when installing Application Services (Unencrypted) |
 
-    {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
+    {{% alert title="Note" %}} If you used self-signed certificates when installing the server you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
 1. The request should return a JSON object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
 1. Cortex Innovation has now been verified and is ready to use.
@@ -58,4 +58,4 @@ Test the platform by creating a new flow and executing it using the following st
 [Troubleshooting No Blocks]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoBlocks" >}}
 [Troubleshooting No Publish]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
-[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
+[Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.SetupGateway" >}}
