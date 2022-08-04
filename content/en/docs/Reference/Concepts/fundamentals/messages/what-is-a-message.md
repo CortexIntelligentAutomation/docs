@@ -15,8 +15,8 @@ A message is a warning or error generated during the pre-execution phase of a fl
 
 Some examples of issues that can be raised are (please note this is not an exhaustive list):
 
-- Blocks referencing undefined variables
-- Blocks referencing variables with mismatched data types
+- Blocks using undefined variables
+- Blocks using variables with mismatched data types
 - Input variables that have not been initialised
 
 ## Anatomy of a Message

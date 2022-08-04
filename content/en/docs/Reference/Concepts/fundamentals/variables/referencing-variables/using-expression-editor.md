@@ -8,6 +8,8 @@ description: "This page provides a guide on referencing variables in the Express
 
 ## Overview
 
+TODO: Replace refer with use when talking about variables
+
 The [Expression Editor][] is a text editor that allows flow developers to use simple [Expressions][] or complex code as the value of a block property, including referencing variables.
 
 ## Referencing Variables Directly

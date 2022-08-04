@@ -60,7 +60,7 @@ Common reasons for discarding include:
 - Discarding the exception output from [Handle Exception blocks][]
 - Discarding unwanted output values from blocks such as the [Execute SSH Command][TODO] block that have multiple Output properties
 
-To discard an output value, the Output property should reference the built-in `($)_` variable.
+To discard an output value, the Output property should use the built-in `($)_` variable.
 
 TODO: Example image of discarding an output
 

@@ -19,7 +19,7 @@ TODO: Compile Time Issues (e.g. input variable has not been passed into the call
     Provide examples
     Link to Messages
 
-TODO: Update "Calling other flows" to include references where appropriate
+TODO: Update "Calling other flows" to include references to this page where appropriate
 
 Data maybe optionally passed into an [flow execution][What-Is-Execution], and in the case of a synchronously executed [flow][What-Is-Flow], values passed out using global variables.
 
@@ -31,7 +31,7 @@ The global variables used to receive the data passed in must have their `Is Inpu
 
 If a [flow's][What-Is-Flow] logic uses the [Run Flow][TODO] [block][What-Is-Block] to trigger the execution of another [flow][What-Is-Flow], the [block's][What-Is-Block] `Inputs` will automatically display the called [flow's][What-Is-Flow] input variables.
 
-The [block's][What-Is-Block] `Outputs` [property][Block-Properties] would reference a variable that would be assigned a [structure][Structure] value during the [execution][What-Is-Execution]. The [structure][Structure] would contain values of the triggered [flow's][What-Is-Flow] output variables, where the keys are the names of the output variables and the values are the values assigned to the output variables. For example:
+The [block's][What-Is-Block] `Outputs` [property][Block-Properties] would use a variable that would be assigned a [structure][Structure] value during the [execution][What-Is-Execution]. The [structure][Structure] would contain values of the triggered [flow's][What-Is-Flow] output variables, where the keys are the names of the output variables and the values are the values assigned to the output variables. For example:
 
 ```json
 {

@@ -95,6 +95,7 @@
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
                 ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
+                ChangingAVariablesScope = "/docs/guides/cortex-studio/south-panel/#changing-a-variables-scope" 
                 DeletingVariables = "/docs/guides/cortex-studio/south-panel/#deleting-variables"
             [Cortex.Guides.Studio.Debugging]
                 MainDoc = "/docs/guides/cortex-studio/debugging/"
@@ -539,12 +540,12 @@
                                 ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
                                 ObjectLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#object-literal"
                                 StringLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-literal"
-                                VariableReferences = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#variables"
+                                Variables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#variables"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
-                                CreatingNewVariables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-new-variables"
+                                CreatingVariables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]

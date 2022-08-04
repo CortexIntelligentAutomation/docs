@@ -47,7 +47,7 @@ If the final [Handle Block Exception][Block-Handle-Block-Exception] [block][What
 
 ### Saving the Block Exception
 
-The [Handle Block Exception][Block-Handle-Block-Exception] [blocks][What-Is-Block] allows for the exception to be saved to a variable when handling an exception. If it is not necessary to save the exception to a variable, the exception may be discarded by setting the [block's][What-Is-Block] **Exception** [property][Block-Properties] to reference the built-in discard variable `($)_`.
+The [Handle Block Exception][Block-Handle-Block-Exception] [blocks][What-Is-Block] allows for the exception to be saved to a variable when handling an exception. If it is not necessary to save the exception to a variable, the exception may be discarded by setting the [block's][What-Is-Block] **Exception** [property][Block-Properties] to use the built-in discard variable `($)_`.
 
 ## Handling Exceptions at the Workspace level
 
@@ -87,7 +87,7 @@ To create a logically deterministic Exception Handling Strategy for nested [Work
 
 ### Saving the Workspace Exception
 
-The [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block] allows for the exception to be saved to a variable when handling an exception. If it is not necessary to save the exception to a variable, the exception may be discarded by setting the [block's][What-Is-Block] **Exception** [property][Block-Properties] to reference the built-in discard variable `($)_`.
+The [Handle Workspace Exception][Block-Handle-Workspace-Exception] [block][What-Is-Block] allows for the exception to be saved to a variable when handling an exception. If it is not necessary to save the exception to a variable, the exception may be discarded by setting the [block's][What-Is-Block] **Exception** [property][Block-Properties] to use the built-in discard variable `($)_`.
 
 ### Handle Workspace Exception Remarks
 
@@ -117,7 +117,7 @@ The logic contained within the [Handle Flow Exception][Block-Handle-Flow-Excepti
 
 ### Saving the Flow Exception
 
-The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] allows for the exception to be saved to a variable when handling an exception. If it is not necessary to save the exception to a variable, the exception may be discarded by setting the object's **Exception** [property][Block-Properties] to reference the built-in discard variable `($)_`.
+The [Handle Flow Exception][Block-Handle-Flow-Exception] [block][What-Is-Block] allows for the exception to be saved to a variable when handling an exception. If it is not necessary to save the exception to a variable, the exception may be discarded by setting the object's **Exception** [property][Block-Properties] to use the built-in discard variable `($)_`.
 
 ### Handle Flow Exception Remarks
 

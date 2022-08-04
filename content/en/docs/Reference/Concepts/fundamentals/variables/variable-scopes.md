@@ -1,73 +1,99 @@
 ---
 title: "Variable Scopes"
 linkTitle: "Variable Scopes"
-description: "The page provides guidance on creating and working with variables in different scopes"
+description: "Information regarding variable scopes, including: what they are, creating variables at a specific scope, and changing a variable's scope."
+weight: 200
 ---
 # {{< param title >}}
 
-TODO: Review and move into page, or delete
-
-When the [flow execution][What-Is-Execution] exits a [workspace][What-Is-Workspace], any local-scope variables that have been declared in that [workspace][What-Is-Workspace] are deleted and their values, if any, are lost.
-
 ## Summary
 
-Each [workspace][Workspaces] in a flow has a Scope. A Scope is where [Variables][] are defined and controls where they can be used.
+Each [workspace][] in a [flow][] has a scope. A scope is where [variables][variable] are defined and controls where they can be used.
 
-Variables can only be used in the workspace of the scope they are defined in, and any descendant workspaces.
+Variables can only be used in the workspace of the scope they are defined in and any descendant workspaces. Only variables in scope will be available in the [Variable Editor][], or the [Expression Editor][] using [snippets][]. For an example see [Accessing Variables from Other Scopes][].
 
-Only variables in scope will be available in the [Variable Editor][] or the [Expression Editor][] using [Snippets][].
+When the [flow execution][execution] exits a workspace, any local-scope variables that have been declared in that workspace are deleted and their values, if any, are lost.
+
+## Accessing Variables from Other Scopes
+
+For example, the table below shows a hierarchy of workspaces and which variables are available to each workspace due to their scope:
 
 | Workspace Name | Parent Workspace | Defined Variables | Available Variables |
 |----------------|------------------|-------------------|---------------------|
-| Top-Level Workspace | n/a | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> |
+| Top-Level Workspace | N/A | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> |
 | ChildWorkspace1 | Top-Level Workspace | <ul><li>ChildVarA</li><li>ChildVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarA</li><li>ChildVarB</li></ul> |
 | ChildWorkspace2 | Top-Level Workspace | <ul><li>ChildVarC</li><li>ChildVarD</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarC</li><li>ChildVarD</li></ul> |
 | GrandChildWorkspace1 | ChildWorkspace1 | <ul><li>GrandChildVarA</li><li>GrandChildVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarA</li><li>ChildVarB</li><li>GrandChildVarA</li><li>GrandChildVarB</li></ul> |
 | GrandChildWorkspace2 | ChildWorkspace2 | <ul><li>GrandChildVarC</li><li>GrandChildVarD</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarC</li><li>ChildVarD</li><li>GrandChildVarC</li><li>GrandChildVarD</li></ul> |
 
-## Create a Variable in a certain Scope
+## Creating Variables at a Specific Scope
 
-Variables are created in the scope of the workspace currently in focus. This applies to creating variables using the [Variable Grid][] or using the [Variable Editor][] in the [Property Editor][]. If the variable scope needs to be changed, see [Change Variable Scope](#change-variable-scope)
+[Variables][variable] can be created by using the [Variable Grid][Grid: Creating Variables], or through the use of the [Variable Editor][Editor: Creating Variables]. When a new variable is created, it is created in the scope of the currently selected [workspace][]. It is possible to [Change a Variable's Scope][Changing a Variable's Scope]
 
-## Change Variable Scope
+## Changing a Variable's Scope
 
-Variable scope can be changed after a variable has been created.
-
-1. Find the variable in the [Variable Grid][]
-2. Double-click the **Scope** to load a dropdown menu
-3. Select the desired workspace
-
-If the variable does not appear in the grid, the most likely reason is the variable is not in scope of the workspace currently in focus. To resolve this, either select the appropriate workspace, or change the **Scope** filter on the [Variable Grid][] to **All**.
+A [variable's][variable] scope can be changed by using the [Variable Grid][Grid: Changing a Variable's Scope].
 
 ## Remarks
 
 ### Known Limitations
 
-#### Duplicate Variable names across Workspaces
+#### When using variables of the same name the closest scoped is used
 
-It is currently possible to create more than one variable of the same name in the [Variable Grid][]. This is because the same name can be used in different [Workspaces][].
+It is possible to create multiple [variables][variable] with the same name in the [Variable Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
 
-When using the same name in different [Workspaces][], the variable with the lowest level of scope (or closest scope) will be used. For example:
+For example:
 
-`Top-Level` workspace has the variable `($)Variable`. `Child-Level` workspace also has the variable `($)Variable`.
+- `Top-Level` workspace has the variable `($)Variable`
+- `Child-Level` workspace also has the variable `($)Variable`
 
-When executing a block in `Child-Level` that references `($)Variable`, the variable that is used is the variable defined in `Child-Level`.
+When executing a block in `Child-Level` that uses `($)Variable`, the variable that is used is the variable defined in `Child-Level`.
+
+This may change in future to allow developers to specifically select which of the variables with the same name is used in this scenario.
 
 ## See Also
 
 ### Related Concepts
 
+- [Flows][]
 - [Workspaces][]
+- [Blocks][]
+- [Block Properties][]
+- [Executions][]
 
 ### Related Blocks
 
-- [Workspace Block][Workspace-block]
+- [All Blocks][]
 
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGridInnovation" >}}
-[Property Editor]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
-[Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
-[Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
-[Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}
-[Workspace-block]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
+### External Documentation
+
+None
+
+[Accessing Variables from Other Scopes]: {{< ref "#accessing-variables-from-other-scopes" >}}
+[Changing a Variable's Scope]: {{< ref "#changing-a-variables-scope" >}}
+
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Editor: Creating Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.CreatingVariables" >}}
+
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
+
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
-[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
+[workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
+
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
+
+[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Grid: Creating Variables]: {{< url "Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
+[Grid: Changing a Variable's Scope]: {{< url "Cortex.Guides.Studio.SouthPanel.ChangingAVariablesScope" >}}
+
+[All Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+
+[snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}

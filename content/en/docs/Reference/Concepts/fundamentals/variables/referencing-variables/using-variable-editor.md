@@ -8,6 +8,8 @@ description: "This page provides a guide on referencing variables in the Variabl
 
 ## Overview
 
+TODO: Replace refer with use when talking about variables 
+
 The [Variable Editor][] enables variables to be created, selected, and updated whilst configuring a [block][BlocksConcepts].
 
 ## Selecting a Variable

@@ -9,7 +9,7 @@ weight: 1
 
 ## Summary
 
-A variable is a named container for storing data that can then be referenced in [Block Properties][].
+A variable is a named container for storing data that can then be used in [Block Properties][].
 
 Data in a variable can be read, updated, or removed by different blocks. Examples of these include:
 
@@ -34,15 +34,15 @@ Variables have the following properties that can be configured in the [Variable 
 
 ### Variables with a Default Value
 
-Variables can be initialised with a default value. The Default Value can be set to any valid expression or literal, but cannot include any references to variables.
+Variables can be initialised with a default value. The Default Value can be set to any valid expression or literal, but cannot include any variables.
 
-For example, the following expression is valid as it does not reference any variables:
+For example, the following expression is valid as it does not use any variables:
 
 ```c#
 "Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;"
 ```
 
-The following expression is invalid as it references the `($)ServerName` variable:
+The following expression is invalid as it uses the `($)ServerName` variable:
 
 ```c#
 $@"Server={($)ServerName};Database=myDataBase;User Id=myUsername;Password=myPassword;"
@@ -68,7 +68,7 @@ In the following example `($)TotalUnreadEmails` and `($)FoldersWithUnreadEmails`
 
 The [Variable Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of [Cortex Studio][]. For more information see [Variable Grid][].
 
-Variables can also be created through the use of the [Variable Editor][]. For more information see [Creating New Variables][].
+Variables can also be created through the use of the [Variable Editor][]. For more information see [Creating Variables][].
 
 ## Variables at Runtime
 
@@ -76,7 +76,7 @@ Variables can also be created through the use of the [Variable Editor][]. For mo
 
 Variables must be initialised with data before they can be used in a block.
 
-If an [Input][] or [InputOutput][] property [references a variable][] that has not been initialised, a [Message][Messages] will be returned stating `Variable is not initialised`, and the name of the variable will be included within the details of the message. The [Message][Messages] will be:
+If an [Input][] or [InputOutput][] property [uses a variable][] that has not been initialised, a [Message][Messages] will be returned stating `Variable is not initialised`, and the name of the variable will be included within the details of the message. The [Message][Messages] will be:
 
 - Displayed in the [Messages Grid][] when [debugging a flow][] in [Cortex Studio][]
 - Returned as an exception to the caller when a flow is triggered via the [Cortex API Gateway Service][]
@@ -165,9 +165,9 @@ For more information on specific data type conversions, see the relevant documen
 
 ### Known Limitations
 
-#### Default Value can not reference other Variables
+#### Default Value can not use Variables
 
-Currently, default values cannot accept references to other variables. However, this may change in the future.
+Currently, default values cannot use variables. However, this may change in the future.
 
 For examples of valid and invalid default values see [Variables with a Default Value][].
 
@@ -192,6 +192,10 @@ For examples of valid and invalid default values see [Variables with a Default V
 
 - [All Blocks][]
 
+### External Documentation
+
+None
+
 [Variables with a Default Value]: {{< ref "#variables-with-a-default-value" >}}
 [Output Variables Structure]: {{< ref "#output-variables-structure" >}}
 [Flow Input Variable]: {{< ref "#flow-input-variable" >}}
@@ -205,7 +209,7 @@ For examples of valid and invalid default values see [Variables with a Default V
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
-[Creating New Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.CreatingNewVariables" >}}
+[Creating Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.CreatingVariables" >}}
 
 [Data Types Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 [basic data type]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
@@ -222,7 +226,7 @@ For examples of valid and invalid default values see [Variables with a Default V
 [Messages Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.MainDoc" >}}
 [Messages]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
 
-[references a variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.MainDoc" >}}
+[uses a variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.MainDoc" >}}
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}

@@ -27,8 +27,4 @@ TODO: Create variable from property, create all undefined variables
 
 ### Related Concepts
 
-- [What is a Variable][]
-- [Referencing Variables][]
-
-[What is a Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
-[Referencing Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor.MainDoc" >}}
+TODO

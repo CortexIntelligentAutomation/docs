@@ -1,7 +1,7 @@
 ---
 title: "Expression Editor"
 linkTitle: "Expression Editor"
-description: "Information regarding using the Expression Editor to create literal values, expressions, or reference variables."
+description: "Information regarding using the Expression Editor to create literal values, expressions, or use variables."
 weight: 200
 ---
 
@@ -9,7 +9,7 @@ weight: 200
 
 ## Summary
 
-The [Expression Editor][] is the most powerful [property editor][] and can accept [literal values][], [expressions][], and references to [variables][].
+The [Expression Editor][] is the most powerful [property editor][] and can accept [literal values][], [expressions][], and [variables][].
 
 TODO: Image of blank expression editor
 
@@ -219,11 +219,11 @@ A [List][] is an object that consists of a number of ordered items that can be o
 
 [Lists][List] may be heterogeneous, where the items may be of different [data types][Data Type], or homogeneous, when the items are all of the same [data type][Data Type].
 
-## Variable References
+## Variables
 
-[Variables][Variables Concept] are named containers for storing values of any [data type][Data Type]; a [variable's][Variables Concept] value can be read, updated, replaced, or removed using variable reference syntax; where the variable name is prefixed with `($)` (e.g. `($)VariableName`).
+[Variables][Variables Concept] are named containers for storing values of any [data type][Data Type]; a [variable's][Variables Concept] value can be read, updated, replaced, or removed using variable syntax; where the variable name is prefixed with `($)` (e.g. `($)VariableName`).
 
-Variables references can be used within [expressions][].
+Variables can be used within [expressions][].
 
 ## Expressions
 
@@ -322,7 +322,7 @@ For further information, see [String concatenation][].
 
 #### Interpolated Strings
 
-Interpolation is the process of inserting expressions and variable references into a [String][]. An interpolated string is declared by prefixing the string with the `$` character.
+Interpolation is the process of inserting expressions and variables into a [String][]. An interpolated string is declared by prefixing the string with the `$` character.
 
 | Expression                            | Result                       | Notes                              |
 |---------------------------------------|------------------------------|------------------------------------|
@@ -510,26 +510,29 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 
 Dictionaries can be created using expressions, for more information see [Dictionary expressions][].
 
-#### Referencing Variables with the Same Name
+#### When using variables of the same name the closest scoped is used
 
-It is currently possible to create more than one variable of the same name. This is because the same name can be used in different [Workspaces][].
+It is possible to create multiple [variables][Variables: What Is a Variable] with the same name in the [Variable Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
 
-When using the same name in different workspaces, the variable with the lowest level of [scope][Workspace Scope] (or closest scope) will be used. For example:
+For example:
 
-`Top-Level` workspace has the variable `($)Variable`. `Child-Level` workspace also has the variable `($)Variable`.
+- `Top-Level` workspace has the variable `($)Variable`
+- `Child-Level` workspace also has the variable `($)Variable`
 
-When executing a block in `Child-Level` that references `($)Variable`, the variable that is used is the variable defined in `Child-Level`.
+When executing a block in `Child-Level` that uses `($)Variable`, the variable that is used is the variable defined in `Child-Level`.
+
+This may change in future to allow developers to specifically select which of the variables with the same name is used in this scenario.
 
 ## See Also
 
 ### Related Concepts
 
+- [Workspaces][]
 - [Literal Editor][]
 - [Variable Editor][]
+- [Variables][Variables Concept]
 - [Data Types][Data Type]
 - [Object Casting][]
-- [Variables][Variables Concept]
-- [Workspaces][]
 
 ### Related Blocks
 
@@ -565,7 +568,7 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 
 [literal values]: {{< ref "#literal-values" >}}
 [expressions]: {{< ref "#expressions" >}}
-[variables]: {{< ref "#variable-references" >}}
+[variables]: {{< ref "#variables" >}}
 
 [String literal]: {{< ref "#string-literal" >}}
 [Char literal]: {{< ref "#char-literal" >}}
@@ -625,8 +628,11 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
+[workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 [Workspace Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
+
 [Variables Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[Variables: What Is a Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
@@ -639,6 +645,8 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
 
 [Expression Editor]: {{< url "Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
+
+[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
 
 [Boolean Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}

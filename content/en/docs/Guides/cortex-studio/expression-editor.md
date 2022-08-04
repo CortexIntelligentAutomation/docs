@@ -20,7 +20,7 @@ TODO: Full Screen, Find and Replace, Command Menu, Replace All (Ctrl F2), etc
 
 ## Example Expressions
 
-TODO: Variable Reference, Object Construct (Complex/Collection), String Concatenation/Interpolation, Arithmatics, etc
+TODO: Variable, Object Construct (Complex/Collection), String Concatenation/Interpolation, Arithmetics, etc
 
 ## Remarks
 
@@ -30,8 +30,4 @@ TODO: Variable Reference, Object Construct (Complex/Collection), String Concaten
 
 ### Related Concepts
 
-- [Referencing Variables][]
-- [Expressions][]
-
-[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
-[Referencing Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
+TODO

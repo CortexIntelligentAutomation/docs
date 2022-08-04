@@ -13,15 +13,15 @@ weight: 100
 
 TODO
 
-## Referencing Variables
+## Using Variables
 
 TODO:
 
-- You can reference any available variable.
+- You can use any available variable.
 - Available variables are restricted by the scope of the currently selected block
 - All available variables will be shown when the variable editor is empty; typing in the editor will filter the available variables with those that match (contains text) on either the variable name or scope
 
-TODO: Image of referenced variable
+TODO: Image of using a variable
 
 TODO: Image of selecting available variables
 
@@ -42,18 +42,18 @@ TODO:
 - Properties and indexes can be accessed from the Variable editor
 - Translation error shown in messages viewer when using properties or indexes incorrectly for variable that is not dynamic
 
-TODO: Image of accessing referenced variable property and index
+TODO: Image of accessing variable property and index
 
 ## Missing Variables
 
 TODO:
 
-- If a referenced variable does not exist, then a orange border will be shown around the Variable editor
+- If a variable does not exist, then a orange border will be shown around the Variable editor
 - It is possible to create a new variable from a missing one using the variable editor
 
 TODO: Image of orange border for missing variables
 
-## Creating New Variables
+## Creating Variables
 
 TODO:
 
