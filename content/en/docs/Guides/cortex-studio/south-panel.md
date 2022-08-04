@@ -30,7 +30,7 @@ TODO: Screenshots, How to modify
 
 TODO: Screenshots, How to delete
  
-## Message Panel
+## Messages Grid
 
 ## Remarks
 

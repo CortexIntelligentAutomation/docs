@@ -191,4 +191,4 @@ None
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Working with Enums]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
-[Explicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCasting" >}}
+[Explicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}

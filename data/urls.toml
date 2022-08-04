@@ -78,8 +78,8 @@
                 MainDoc = "/docs/guides/cortex-studio/east-panel/"
                 PropertyEditor = "/docs/guides/cortex-studio/east-panel/#property-editor"
                 ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
-                VariablePanel = "/docs/guides/cortex-studio/east-panel/#variable-panel"                    
-                VariableDetail = "/docs/guides/cortex-studio/east-panel/#variable-detail"
+                VariablesPanel = "/docs/guides/cortex-studio/east-panel/#variables-panel"                    
+                VariableDetails = "/docs/guides/cortex-studio/east-panel/#variable-details"
                 Exceptions = "/docs/guides/cortex-studio/east-panel/#exceptions"
             [Cortex.Guides.Studio.MainDisplayArea]
                 MainDoc = "/docs/guides/cortex-studio/main-display-area/"
@@ -90,7 +90,7 @@
             [Cortex.Guides.Studio.SouthPanel]
                 MainDoc = "/docs/guides/cortex-studio/south-panel/"
                 ExecutionViewer = "/docs/guides/cortex-studio/south-panel/#execution-viewer"
-                MessagePanel = "/docs/guides/cortex-studio/south-panel/#message-panel"
+                MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
                 VariableGrid = "/docs/guides/cortex-studio/south-panel/#variable-grid" 
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
@@ -571,7 +571,7 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/exceptions/"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/starting-an-execution"
-                        Internal = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#internal"
+                        InternalExecution = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#internal-execution"
                         FromAnotherFlow = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#from-another-flow"
                         External = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#external"
                         EDA = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#eda"
@@ -689,8 +689,8 @@
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]
                 MainDoc = "/docs/reference/concepts/object-casting/"
-                ImplicitCasting = "/docs/reference/concepts/object-casting/#implicit-cast"
-                ExplicitCasting = "/docs/reference/concepts/object-casting/#explicit-cast"
+                ImplicitCast = "/docs/reference/concepts/object-casting/#implicit-cast"
+                ExplicitCast = "/docs/reference/concepts/object-casting/#explicit-cast"
             [Cortex.Reference.Concepts.ObjectEquality]
                 MainDoc = "/docs/reference/concepts/object-equality/"
                 [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]

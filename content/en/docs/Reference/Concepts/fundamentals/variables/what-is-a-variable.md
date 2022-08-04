@@ -76,9 +76,9 @@ Variables can also be created through the use of the [Variable Editor][]. For mo
 
 Variables must be initialised with data before they can be used in a block.
 
-If an [Input][] or [InputOutput][] property [references a variable][ReferenceVariable] that has not been initialised, a [Message][Messages] will be returned stating `Variable is not initialised`, and the name of the variable will be included within the details of the message. The [Message][Messages] will be:
+If an [Input][] or [InputOutput][] property [references a variable][] that has not been initialised, a [Message][Messages] will be returned stating `Variable is not initialised`, and the name of the variable will be included within the details of the message. The [Message][Messages] will be:
 
-- Displayed in the [Message Panel][] when [debugging a flow][DebuggingExecutions] in [Cortex Studio][]
+- Displayed in the [Messages Grid][] when [debugging a flow][] in [Cortex Studio][]
 - Returned as an exception to the caller when a flow is triggered via the [Cortex API Gateway Service][]
 
 Variables can be initialised in the following ways:
@@ -105,60 +105,61 @@ If a variable has its `Is Input Variable?` and `Set Default Value?` properties s
 
 ### Viewing Variables
 
-TODO: We are here
+When [debugging a flow][debugging a flow] in [Cortex Studio][], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Panel][] of the [Execution Viewer][].
 
-When [debugging a flow][DebuggingExecutions] in [Cortex Studio][], initialised variables are displayed in the [Variable Panel][] of the [Execution Viewer][]. This is available when an execution is selected.
-
-![Variable Panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png)
+![Variables Panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png)
 
 #### Viewing Basic Data Types
 
-When a variable contains a [basic data type][BasicDataType] (e.g. String, Integer, etc), the value will be displayed directly in the [Variable Panel][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
+When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables Panel][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
 
 #### Viewing Complex Data Types
 
-When a variable contains a [complex data type][ComplexDataType] that is not a collection data type like AnyCommand or FlowException, the value will be displayed as `Instance of AnyCommand` or `Instance of FlowException` respectively in the [Variable Panel][].
+When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables Panel][].
 
-When a variable contains a [collection data type][CollectionDataType] (e.g. Dictionary, List, Structure), the [Variable Panel][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
+When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables Panel][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
 
-To see the data in the variable, select the variable in the [Variable Panel][] and the data will be presented in the [Variable Detail][] area.
+To see the data in the variable, select the variable in the [Variables Panel][] and the data will be presented below in the [Variable Details][] area.
 
-This is an example of data in a [Dictionary<string, dynamic>][Dictionary] variable.
+The following examples show the [Variable Details][] area when showing a:
+
+- [Dictionary<string, dynamic>][Dictionary] variable
 
 ![dictionary panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-dictionary-panel.png)
 
-This is an example of data in a [Command][TODO] variable.
+- [Command][TODO] variable
 
 ![command panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-command-panel.png)
 
-This is an example of data in a [FlowException][] variable.
+- [FlowException][] variable
 
 ![exception panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-exception-panel.png)
 
 ### Updating Variables
 
-#### InputOutput and Output Block Properties
-
-Throughout the execution of a flow, variables referenced in [InputOutput][InputOutputPropertyType] and [Output][OutputPropertyType] properties can be updated with different values according to the block function.
+[InputOutput][] and [Output][] properties are used to save values and update variables during the execution of a block.
 
 ### Deleting Variables
 
-When an execution exits a workspace, any variables in that [Workspace Scope][] will be deleted from the execution. This means the variable:
+When an execution exits a [workspace][], any variables defined within that workspace's [scope][] will be deleted from the execution. This means the variables:
 
-- Is no longer accessible to the execution
-- Is no longer presented in the [Variable Panel][] if the flow is being debugged
+- Are no longer accessible to the execution
+- Are no longer presented in the [Variables Panel][] when the flow is being debugged
 
-If the execution re-enters the [Workspace Scope][], the variable will be re-initialised.
+If the execution re-enters the workspace's [scope][], any variables will be [re-initialised][Initialising Variables].
 
-## Typing
+## Variable Typing
 
-Variables do not have a type. The values stored in variables have [data types][DataTypesConcepts].
+Variables do not have their own [data type][Data Types Concept]; they are named containers for storing data of any [data type][Data Types Concept].
 
-The [data types][DataTypesConcepts] are inferred where possible, checking all references of that variable are valid and will warn as appropriate in the [Message Panel][] for invalid references.
+When a variable is used in a [Block Property][Block Properties] it is checked to ensure the data type it contains is supported by the property. For all data types apart from [dynamic][] any variables containing unsupported data types will be displayed in the [Messages Grid][], preventing the execution from starting; for variables containing [dynamic][] data types checking will be performed during the block execution, throwing an exception if the data type is unsupported.
 
-Certain [data types][DataTypesConcepts] can be [implicitly cast][] to work with another (e.g. [Int16][] can be used in properties expecting [Int32][]), but others must be [explicitly cast][] or converted. (e.g. [String][] cannot be directly used in properties expecting [Int32][]. Instead, it must be converted using `Convert.ToInt32(($)String)`).
+Sometimes an unsupported data type can automatically be converted to a supported type through the use of [implicit casting][implicitly cast]; if this is possible the block property will handle this without any input required by the developer. However, if this is not possible an unsupported data type must be converted to a supported type by the developer; this can be done by:
 
-For more information on specific data type conversions, see the relevant data type in [Data Types][].
+- [Explicitly casting][explicitly cast] the unsupported [Data Type][Data Types]
+- Converting the unsupported [Data Type][Data Types] through the use of methods and properties (e.g. `Convert.ToInt32(($)String)` or `Int32.Parse(($)String)`)
+
+For more information on specific data type conversions, see the relevant documentation for that [Data Type][Data Types].
 
 ## Remarks
 
@@ -166,17 +167,22 @@ For more information on specific data type conversions, see the relevant data ty
 
 #### Default Value can not reference other Variables
 
-Currently, the Default Value cannot accept references to other variables. However, this may change in future releases.
+Currently, default values cannot accept references to other variables. However, this may change in the future.
 
-See [Default Value Example](#default-value-example) for examples of valid and invalid Default Values.
+For examples of valid and invalid default values see [Variables with a Default Value][].
 
 ## See Also
 
 ### Related Concepts
 
-- [Fundamental Concepts - Data Types][DataTypesConcepts]
-- [Basic Data Types][BasicDataType]
-- [Complex Data Types][ComplexDataType]
+- [Flows][]
+- [Workspaces][]
+- [Blocks][]
+- [Block Properties][]
+- [Data Types][Data Types Concept]
+- [Executions][]
+- [Exceptions][]
+- [Messages][Messages Concept]
 
 ### Related Data Types
 
@@ -184,60 +190,68 @@ See [Default Value Example](#default-value-example) for examples of valid and in
 
 ### Related Blocks
 
-- [Set Variable][]
-- [All Blocks][Blocks]
+- [All Blocks][]
 
 [Variables with a Default Value]: {{< ref "#variables-with-a-default-value" >}}
 [Output Variables Structure]: {{< ref "#output-variables-structure" >}}
 [Flow Input Variable]: {{< ref "#flow-input-variable" >}}
 [Default Value]: {{< ref "#default-value" >}}
 [Block Output Property]: {{< ref "#block-output-property" >}}
+[Initialising Variables]: {{< ref "#initialising-variables" >}}
 
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Creating New Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.CreatingNewVariables" >}}
 
+[Data Types Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
+[basic data type]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
+[complex data type]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
+
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 [Starting an Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.MainDoc" >}}
+[debugging a flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.InternalExecution" >}}
 
-[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 
-[Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
+[Messages Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.MainDoc" >}}
+[Messages]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
+
+[references a variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.MainDoc" >}}
+[scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
+
+[Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
+[workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
+
+[ObjectCasting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
+[explicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}
 
 [Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
 
-[Message Panel]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagePanel" >}}
-[Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
-[Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
-[BlocksConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[All Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+
 [Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
-[DataTypesConcepts]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
-[BasicDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes.MainDoc" >}}
-[ComplexDataType]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes.MainDoc" >}}
-[CollectionDataType]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
-[DebuggingExecutions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.Internal" >}}
-[FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
-[Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Collections]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
-[ReferenceVariable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.MainDoc" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+
+[FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
+
+[Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
+[Execution Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExecutionViewer" >}}
+[Variables Panel]: {{< url "Cortex.Guides.Studio.EastPanel.VariablesPanel" >}}
+[Variable Details]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetails" >}}
+[Messages Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
 [Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
 [create]: {{< url "Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
 [view]: {{< url "Cortex.Guides.Studio.SouthPanel.ViewingVariables" >}}
 [modify]: {{< url "Cortex.Guides.Studio.SouthPanel.ModifyingVariables" >}}
 [delete]: {{< url "Cortex.Guides.Studio.SouthPanel.DeletingVariables" >}}
-[Property Editor]: {{< url "Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
-[Execution Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExecutionViewer" >}}
-[Variable Panel]: {{< url "Cortex.Guides.Studio.EastPanel.VariablePanel" >}}
-[Variable Detail]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetail" >}}
-[Messages]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc" >}}
-[Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor.MainDoc" >}}
-[Workspace Scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
-[ObjectCasting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
-[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
-[Explicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}
-[Snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}

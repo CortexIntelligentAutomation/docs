@@ -12,9 +12,9 @@ description: "Eastern panel for Property Editor, Execution Viewer and Exceptions
 
 ## Execution Viewer
 
-### Variable Panel
+### Variables Panel
 
-### Variable Detail
+#### Variable Details
 
 ### Exceptions
 

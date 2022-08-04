@@ -130,4 +130,4 @@ None
 [Culture]: {{< url "Cortex.Reference.Concepts.WorkingWithCulture.MainDoc" >}}
 [Current Culture]: {{< url "Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture.MainDoc" >}}
 
-[Implicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
+[Implicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}

@@ -633,7 +633,7 @@ When executing a block in `Child-Level` that references `($)Variable`, the varia
 [Enum]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
 
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
-[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCasting" >}}
+[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
 
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
