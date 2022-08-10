@@ -549,11 +549,11 @@
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]
-                    MainDoc = "/docs/reference/concepts/fundamentals/datatypes/"
-                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.BasicDataTypes]
-                        MainDoc = "/docs/reference/concepts/fundamentals/datatypes/primitive-types/"
-                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.ComplexDataTypes]
-                        MainDoc = "/docs/reference/concepts/fundamentals/datatypes/complex-types/"
+                    MainDoc = "/docs/reference/concepts/fundamentals/data-types/"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType]
+                        MainDoc = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/"
+                        BasicDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#basic-data-types"
+                        ComplexDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#complex-data-types"
                 [Cortex.Reference.Concepts.Fundamentals.Exceptions]
                     MainDoc = "/docs/reference/concepts/fundamentals/exceptions/"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions]
@@ -1094,17 +1094,21 @@
 [MSDocs]
     [MSDocs.CSharp]
         MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/"
+        BuiltinTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types"
         BooleanLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals"
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
         CharLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals"
         Constructors = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors"
+        DefaultValues = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values"
         Methods = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods"
         Properties = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties"
         EnumerationTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum"
         ExplicitConversions = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions"
         ImplicitConversions = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions"
         IndicesAndRanges = "https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes"
+        ReferenceTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types"
+        ValueTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types"
         dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
         IntegerLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals"
         RealLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals"
