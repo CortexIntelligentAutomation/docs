@@ -760,7 +760,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Connection Type]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionType.MainDoc" >}}
 
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
-[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [String Interpolation]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.StringInterpolation" >}}
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}

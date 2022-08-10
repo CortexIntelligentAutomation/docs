@@ -601,12 +601,10 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-object"    
                 [Cortex.Reference.Concepts.Fundamentals.Variables]
                     MainDoc = "/docs/reference/concepts/fundamentals/variables/"
-                    [Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables]
-                        MainDoc = "/docs/reference/concepts/fundamentals/variables/referencing-variables/"
-                        [Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingExpressionEditor]
-                            MainDoc = "/docs/reference/concepts/fundamentals/variables/referencing-variables/using-expression-editor/"
-                        [Cortex.Reference.Concepts.Fundamentals.Variables.ReferencingVariables.UsingVariableEditor]
-                            MainDoc = "/docs/reference/concepts/fundamentals/variables/referencing-variables/using-variable-editor/"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/using-variables/"
+                        ExpressionEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#expression-editor"
+                        VariableEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#variable-editor"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]

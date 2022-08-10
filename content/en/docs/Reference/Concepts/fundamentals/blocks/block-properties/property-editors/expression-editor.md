@@ -253,7 +253,10 @@ TODO: Image of expression editor with expression (Arithmetic, Constructors, Prop
 
 The following [operators][] perform arithmetic operations with [operands][] that have numeric values.
 
-Assume the variable `($)Int1` has been set to `6`, and the variable `($)Int2` has been set to `3`.
+In the examples below assume:
+
+- `($)Int1` has been set to `6`
+- `($)Int2` has been set to `3`
 
 | Expression                | Result | Notes     |
 |---------------------------|--------|-----------|
@@ -269,7 +272,10 @@ For further information, see [Arithmetic Operators][].
 
 The following [operators][] perform logical operations with [operands][] that have boolean values.
 
-Assume the variable `($)Bool1` has been set to `false`, and the variable `($)Bool2` has been set to `true`.
+In the examples below assume:
+
+- `($)Bool1` has been set to `false`
+- `($)Bool2` has been set to `true`
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
@@ -284,7 +290,10 @@ For further information, see [Boolean Logical Operators][].
 
 The following [operators][] perform comparison operations with [operands][].
 
-Assume the variable `($)Int1` has been set to `1`, and the variable `($)Int2` has been set to `2`.
+In the examples below assume:
+
+- `($)Int1` has been set to `1`
+- `($)Int2` has been set to `2`
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
@@ -307,7 +316,11 @@ There are three types of string expressions:
 
 If a data type is used in a string expression that is not a [String][], then it will be [implicitly cast][] to a [String][] as part of the expression.
 
-Assume for all the examples below the variable `($)String1` has been set to `"hello"`, `($)String2` has been set to `"world"` and `($)Int` has been set to `1234`.
+In all of the examples below assume:
+
+- `($)String1` has been set to `"hello"`
+- `($)String2` has been set to `"world"`
+- `($)Int` has been set to `1234`
 
 #### Concatenated Strings
 
@@ -368,7 +381,7 @@ Methods on how to create a new instance of a [Data Type][] can be found in the r
 
 The following examples show two ways a [DateTimeOffset][] can be created using a constructor:
 
-Assume the variable `($)Year` has been set to `2022`.
+In the examples below assume the variable `($)Year` has been set to `2022`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
@@ -389,11 +402,11 @@ For further information, see [Constructors][].
 
 ### Method expressions
 
-Methods can be used to execute specific functionality. Which methods are accessible is defined by the [Data Type][], and information regarding methods can be found in the relevant documentation for that [Data Type][Reference Data Types].
+Methods can be used to execute specific functionality. The methods accessible are defined by the [Data Type][], and information regarding methods can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
 Methods can have parameters passed into them that are then used to execute the functionality, not all methods have parameters. The same method can be defined multiple times, each with different sets of parameters.
 
-Assume the variable `($)Int` has been set to `1`.
+In the examples below assume the variable `($)Int` has been set to `1`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
@@ -405,19 +418,22 @@ For further information, see [Methods][Methods External].
 
 ### Property expressions
 
-Properties can be used to read data from and/or write data to a [Data Type][]. Which properties are accessible is defined by the [Data Type][], and information regarding properties can be found in the relevant documentation for that [Data Type][Reference Data Types].
+Properties can be used to read data from and/or write data to a [Data Type][]. The properties accessible are defined by the [Data Type][], and information regarding properties can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
 Properties can be read-write, read-only, or write-only (extremely rare) depending on the access specified by the [Data Type][].
 
-[Structures][Structure] allow for their keys to be accessed as properties.
+Whilst [Structures][Structure] are [Collections][Collection], they also allow for their keys to be accessed as properties.
 
-Assume the variable `($)TimePeriod` has been set to `{"Years": 1, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}`, and the variable `($)Structure` has been set to `{"FirstKey": 1, "SecondKey": 2}`.
+In the examples below assume:
+
+- `($)TimePeriod` has been set to `{"Years": 1, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}`
+- `($)Structure` has been set to `{"FirstKey": 1, "SecondKey": 2}`
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
-| `DateTimeOffset.UtcNow` | `2022-07-01T13:00:00.0000000+00:00` | Read-only property |
-| `($)TimePeriod.Years` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block |
-| `($)Structure.FirstKey` | `1` | Read-write property. The result column shows reading the property, writing to the property can be achieved by using the [Set Variable][] block  |
+| `DateTimeOffset.UtcNow` | `2022-07-01T13:00:00.0000000+00:00` | Read-only property, this only works in [Input Properties][] |
+| `($)TimePeriod.Years` | `1` | Read-write property, this can be used in [Input][Input Properties], [Output][Output Properties], and [InputOutput Properties][]. The result column shows reading the property; writing to the property can be achieved by using any [Output Property][Output Properties]. |
+| `($)Structure.FirstKey` | `1` | Read-write property, this can be used in [Input][Input Properties], [Output][Output Properties], and [InputOutput Properties][]. The result column shows reading the property; writing to the property can be achieved by using any [Output Property][Output Properties].|
 
 For further information, see [Properties][].
 
@@ -427,7 +443,7 @@ For further information, see [Properties][].
 
 Values within an [Enum][] can be accessed in the same way as properties or can they can be [cast][Casting expressions] from an [Int32][] value.
 
-Assume the variable `($)Int` has been set to `6`.
+In the examples below assume the variable `($)Int` has been set to `6`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
@@ -442,7 +458,7 @@ For further information, see [Enumeration types][].
 
 [Data Types][Data Type] can be used as other [Data Types][Data Type] through the use of implicit casting, this is an automatic process that requires no expression syntax. Information regarding which types a [Data Type][] can be used as can be found in the "Summary" section under "Can be used as" in the relevant documentation for that [Data Type][Reference Data Types].
 
-Assume the variable `($)Int` has been set to `6`.
+In the examples below assume the variable `($)Int` has been set to `6`.
 
 | Expression                     | Result  | Notes                              |
 |--------------------------------|---------|------------------------------------|
@@ -472,7 +488,7 @@ Ranges can also be used within index notation:
 
 For further information on index and range syntax, see [Indices and Ranges][].
 
-In the examples bellow assume:
+In the examples below assume:
 
 - `($)List` has been set to `[1, 2, 3, 4, 5]`
 - `($)Dictionary` of type `Dictionary<string, Int32>` has been set to `{"FirstKey": 1, "SecondKey": 2}`
@@ -607,6 +623,10 @@ This may change in future to allow developers to specifically select which of th
 [Literal Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 
+[Input Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[InputOutput Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+
 [Reference Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [Collections]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
@@ -625,6 +645,7 @@ This may change in future to allow developers to specifically select which of th
 [Single.MinValue]: {{< url "MSDocs.DotNet.Api.System.Single.MinValue" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
+[Collection]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
