@@ -18,6 +18,7 @@
                     CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates"
                     EncryptText = "/docs/getting-started/on-premise/install-innovation-only/advanced/encrypt-text"
                     PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/advanced/port-requirements"
+                    RolloverCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates"
                     SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
