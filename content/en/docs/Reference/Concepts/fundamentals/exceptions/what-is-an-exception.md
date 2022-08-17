@@ -74,4 +74,4 @@ The [Exception Viewer][] currently does not support traditional copy functionali
 [Throwing Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}
 [Exception Data Types]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exceptions" >}}
-[Exception Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExceptionsPanel" >}}
+[Exception Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExceptionsViewer" >}}

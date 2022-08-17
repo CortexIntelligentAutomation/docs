@@ -63,15 +63,13 @@ For further information about [workspaces][workspace], see [Workspaces][workspac
 
 ## Starting a Flow Execution
 
-A [flow execution][flow execution] may be [started][Starting an Execution] by:
+A [flow execution][flow execution] may be started by:
 
 * [Debugging][] a flow in [Cortex Studio][]
 * Triggering it by making an HTTP request from an external source (e.g. a web application or web hooks)
 * Triggering it using the [Run Flow][TODO] block
 * Triggering it using predefined events (future) (e.g. on receipt of an email)
 * Scheduling it to execute at predetermined times
-
-For further information on starting a flow, see [Starting an Execution][].
 
 ## Exceptions within a Flow
 
@@ -119,7 +117,6 @@ None
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 [Handling Exceptions within a Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
 [flow level exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
-[Starting an Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.MainDoc" >}}
 [block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [flow execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}

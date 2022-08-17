@@ -78,11 +78,19 @@
                 MainDoc = "/docs/guides/cortex-studio/east-panel/"
                 PropertyEditor = "/docs/guides/cortex-studio/east-panel/#property-editor"
                 ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
-                VariablesPanel = "/docs/guides/cortex-studio/east-panel/#variables-panel"                    
-                VariableDetails = "/docs/guides/cortex-studio/east-panel/#variable-details"
-                ExceptionsPanel = "/docs/guides/cortex-studio/east-panel/#exceptions-panel"
+                VariablesViewer = "/docs/guides/cortex-studio/east-panel/#variables-viewer"
+                VariableDetailsViewer = "/docs/guides/cortex-studio/east-panel/#variable-details-viewer"
+                LoadValueButton = "/docs/guides/cortex-studio/east-panel/#load-value-button"
+                SettingsEditor = "/docs/guides/cortex-studio/east-panel/#settings-editor"
+                InputsProperty = "/docs/guides/cortex-studio/east-panel/#inputs-property"
+                ExceptionsViewer = "/docs/guides/cortex-studio/east-panel/#exceptions-viewer"
             [Cortex.Guides.Studio.MainDisplayArea]
                 MainDoc = "/docs/guides/cortex-studio/main-display-area/"
+                SetNextBlockToExecute = "/docs/guides/cortex-studio/main-display-area/#set-next-block-to-execute"
+                Breakpoints = "/docs/guides/cortex-studio/main-display-area/#breakpoints"
+                Executions = "/docs/guides/cortex-studio/main-display-area/#executions"
+                StartAnExecution = "/docs/guides/cortex-studio/main-display-area/#start-an-execution"
+                EditAndContinueAnExecution = "/docs/guides/cortex-studio/main-display-area/#edit-and-continue-an-execution"
             [Cortex.Guides.Studio.Navigation]
                 MainDoc = "/docs/guides/cortex-studio/navigation/"                    
             [Cortex.Guides.Studio.Palettes]
@@ -90,6 +98,10 @@
             [Cortex.Guides.Studio.SouthPanel]
                 MainDoc = "/docs/guides/cortex-studio/south-panel/"
                 ExecutionsGrid = "/docs/guides/cortex-studio/south-panel/#executions-grid"
+                PausingAnExecution = "/docs/guides/cortex-studio/south-panel/#pausing-an-execution"
+                SteppingAnExecution = "/docs/guides/cortex-studio/south-panel/#stepping-an-execution"
+                ContinuingAnExecution = "/docs/guides/cortex-studio/south-panel/#continuing-an-execution"
+                StoppingAnExecution = "/docs/guides/cortex-studio/south-panel/#stopping-an-execution"
                 MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
                 VariablesGrid = "/docs/guides/cortex-studio/south-panel/#variables-grid" 
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
@@ -107,8 +119,12 @@
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"
+            [Cortex.Reference.Apis.Studio]
+                MainDoc = "/docs/reference/apis/cortex-studio/"
+                StartAnExecution = "/docs/reference/apis/cortex-studio/#start-an-execution"
             [Cortex.Reference.Apis.ApiGatewayService]
-                MainDoc = "/docs/reference/apis/cortex-api-gateway-service/"        
+                MainDoc = "/docs/reference/apis/cortex-api-gateway-service/"
+                StartAnExecution = "/docs/reference/apis/cortex-api-gateway-service/#start-an-execution"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -567,21 +583,11 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/throwing-exceptions"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
                         MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception"
+                        Debugging = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception/#debugging"
                 [Cortex.Reference.Concepts.Fundamentals.Executions]
                     MainDoc = "/docs/reference/concepts/fundamentals/executions/"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.Exceptions]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/exceptions/"
-                    [Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution]
-                        MainDoc = "/docs/reference/concepts/fundamentals/executions/starting-an-execution"
-                        InternalExecution = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#internal-execution"
-                        FromAnotherFlow = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#from-another-flow"
-                        External = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#external"
-                        EDA = "/docs/reference/concepts/fundamentals/executions/starting-an-execution/#eda"
-                        [Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.ExecutionVariables]
-                            MainDoc = "/docs/reference/concepts/fundamentals/executions/execution-variables"
-                            InputOutput = "/docs/reference/concepts/fundamentals/executions/execution-variables/#inputoutput-variables"
-                            RESTRequest = "/docs/reference/concepts/fundamentals/executions/execution-variables/#using-the-run-flow-block"
-                            RunFlowBlock = "/docs/reference/concepts/fundamentals/executions/execution-variables/#using-a-rest-request"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
                 [Cortex.Reference.Concepts.Fundamentals.Flows]
@@ -611,6 +617,7 @@
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"
                         FlowInputVariable = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable"
+                        OutputVariablesStructure = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#output-variables-structure"
                 [Cortex.Reference.Concepts.Fundamentals.Workspaces]
                     MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]

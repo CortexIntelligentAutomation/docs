@@ -10,6 +10,14 @@ description: "Southern panel for Executions, Messages, and Variables"
 
 ## Executions Grid
 
+### Pausing an Execution
+
+### Stepping an Execution
+
+### Continuing an Execution
+
+### Stopping an Execution
+
 ## Variables Grid
 
 TODO: Add Screenshot of Grid

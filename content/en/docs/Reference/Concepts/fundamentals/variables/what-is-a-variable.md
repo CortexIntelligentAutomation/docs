@@ -105,23 +105,23 @@ If a variable has its `Is Input Variable?` and `Set Default Value?` properties s
 
 ### Viewing Variables
 
-When [debugging a flow][debugging a flow] in [Cortex Studio][], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Panel][].
+When [debugging a flow][debugging a flow] in [Cortex Studio][], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Viewer][].
 
-![Variables Panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png)
+![Variables Viewer](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png)
 
 #### Viewing Basic Data Types
 
-When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables Panel][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
+When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables Viewer][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
 
 #### Viewing Complex Data Types
 
-When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables Panel][].
+When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables Viewer][].
 
-When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables Panel][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
+When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables Viewer][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
 
-To see the data in the variable, select the variable in the [Variables Panel][] and the data will be presented below in the [Variable Details][] area.
+To see the data in the variable, select the variable in the [Variables Viewer][] and the data will be presented in the [Variable Details Viewer][].
 
-The following examples show the [Variable Details][] area when showing a:
+The following examples show the [Variable Details Viewer][] when showing a:
 
 - [Dictionary<string, dynamic>][Dictionary] variable
 
@@ -144,7 +144,7 @@ The following examples show the [Variable Details][] area when showing a:
 When an execution exits a [workspace][], any variables defined within that workspace's [scope][] will be deleted from the execution. This means the variables:
 
 - Are no longer accessible to the execution
-- Are no longer presented in the [Variables Panel][] when the flow is being debugged
+- Are no longer presented in the [Variables Viewer][] when the flow is being debugged
 
 If the execution re-enters the workspace's [scope][], any variables will be [re-initialised][Initialising Variables].
 
@@ -250,8 +250,8 @@ None
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
-[Variables Panel]: {{< url "Cortex.Guides.Studio.EastPanel.VariablesPanel" >}}
-[Variable Details]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetails" >}}
+[Variables Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.VariablesViewer" >}}
+[Variable Details Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetailsViewer" >}}
 [Messages Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
 [Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 [create]: {{< url "Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}

@@ -12,11 +12,17 @@ description: "Eastern panel for Property Editor, Execution Viewer and Exceptions
 
 ## Execution Viewer
 
-### Variables Panel
+### Variables Viewer
 
-#### Variable Details
+#### Variable Details Viewer
 
-### Exceptions Panel
+##### Load Value Button
+
+### Exceptions Viewer
+
+## Settings Editor
+
+### Inputs Property
 
 ## Remarks
 
