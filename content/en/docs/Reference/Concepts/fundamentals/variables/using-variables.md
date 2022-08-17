@@ -132,7 +132,7 @@ For Example:
 
 #### When using variables of the same name the closest scoped is used
 
-It is possible to create multiple variables with the same name in the [Variable Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
+It is possible to create multiple variables with the same name in the [Variables Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
 
 For example:
 
@@ -202,7 +202,7 @@ None
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 [Variable Editor]: {{< url "Cortex.Guides.Studio.VariableEditor.MainDoc" >}}
 
 [Properties]: {{< url "Cortex.Reference.Glossary.P-T.PropertyCSharp" >}}

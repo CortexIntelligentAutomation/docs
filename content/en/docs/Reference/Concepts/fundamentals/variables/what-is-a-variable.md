@@ -20,7 +20,7 @@ Data in a variable can be read, updated, or removed by different blocks. Example
 
 ## Anatomy of a Variable
 
-Variables have the following properties that can be configured in the [Variable Grid][]:
+Variables have the following properties that can be configured in the [Variables Grid][]:
 
 | Variable Property | Notes |
 |-------------|-------------|
@@ -66,7 +66,7 @@ In the following example `($)TotalUnreadEmails` and `($)FoldersWithUnreadEmails`
 
 ## Variables at Design Time
 
-The [Variable Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of [Cortex Studio][]. For more information see [Variable Grid][].
+The [Variables Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of [Cortex Studio][]. For more information see [Variables Grid][].
 
 Variables can also be created through the use of the [Variable Editor][]. For more information see [Creating Variables][].
 
@@ -105,7 +105,7 @@ If a variable has its `Is Input Variable?` and `Set Default Value?` properties s
 
 ### Viewing Variables
 
-When [debugging a flow][debugging a flow] in [Cortex Studio][], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Panel][] of the [Execution Viewer][].
+When [debugging a flow][debugging a flow] in [Cortex Studio][], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Panel][].
 
 ![Variables Panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png)
 
@@ -250,11 +250,10 @@ None
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
-[Execution Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExecutionViewer" >}}
 [Variables Panel]: {{< url "Cortex.Guides.Studio.EastPanel.VariablesPanel" >}}
 [Variable Details]: {{< url "Cortex.Guides.Studio.EastPanel.VariableDetails" >}}
 [Messages Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 [create]: {{< url "Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
 [view]: {{< url "Cortex.Guides.Studio.SouthPanel.ViewingVariables" >}}
 [modify]: {{< url "Cortex.Guides.Studio.SouthPanel.ModifyingVariables" >}}

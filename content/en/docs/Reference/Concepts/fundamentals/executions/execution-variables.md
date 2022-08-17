@@ -8,7 +8,9 @@ weight: 30
 # {{< param title >}}
 
 TODO: Update summary
+
 TODO: Add section explaining what happens to variable during an execution (Could link to things like: variable types changing throughout a flow, viewing variables during an execution)
+
 TODO: Split "Input/Output Variables" into two sections "Input Variables" and "Output Variables"
 
 TODO: Runtime Issues (e.g. dynamic variable is the wrong type for a block property)

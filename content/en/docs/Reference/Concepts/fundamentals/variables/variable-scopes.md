@@ -28,11 +28,11 @@ For example, the table below shows a hierarchy of workspaces and which variables
 
 ## Creating Variables at a Specific Scope
 
-[Variables][variable] can be created by using the [Variable Grid][Grid: Creating Variables], or through the use of the [Variable Editor][Editor: Creating Variables]. When a new variable is created, it is created in the scope of the currently selected [workspace][]. It is possible to [Change a Variable's Scope][Changing a Variable's Scope]
+[Variables][variable] can be created by using the [Variables Grid][Grid: Creating Variables], or through the use of the [Variable Editor][Editor: Creating Variables]. When a new variable is created, it is created in the scope of the currently selected [workspace][]. It is possible to [Change a Variable's Scope][Changing a Variable's Scope]
 
 ## Changing a Variable's Scope
 
-A [variable's][variable] scope can be changed by using the [Variable Grid][Grid: Changing a Variable's Scope].
+A [variable's][variable] scope can be changed by using the [Variables Grid][Grid: Changing a Variable's Scope].
 
 ## Remarks
 
@@ -40,7 +40,7 @@ A [variable's][variable] scope can be changed by using the [Variable Grid][Grid:
 
 #### When using variables of the same name the closest scoped is used
 
-It is possible to create multiple [variables][variable] with the same name in the [Variable Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
+It is possible to create multiple [variables][variable] with the same name in the [Variables Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
 
 For example:
 
@@ -90,7 +90,7 @@ None
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 [Grid: Creating Variables]: {{< url "Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
 [Grid: Changing a Variable's Scope]: {{< url "Cortex.Guides.Studio.SouthPanel.ChangingAVariablesScope" >}}
 

@@ -9,6 +9,8 @@ weight: 1
 
 ## Summary
 
+TODO: Handled vs Unhandled exceptions (skull and crossbones in debugging, and what happens in production)
+
 An Exception is an event that occurs during the execution of a [flow][Flows] that disrupts the standard process of the [flow][Flows] execution.
 
 Exceptions can be caused by:
@@ -72,4 +74,4 @@ The [Exception Viewer][] currently does not support traditional copy functionali
 [Throwing Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}
 [Exception Data Types]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exceptions" >}}
-[Exception Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.Exceptions" >}}
+[Exception Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExceptionsPanel" >}}

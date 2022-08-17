@@ -8,9 +8,9 @@ description: "Southern panel for Executions, Messages, and Variables"
 
 ## Summary
 
-## Execution Viewer
+## Executions Grid
 
-## Variable Grid
+## Variables Grid
 
 TODO: Add Screenshot of Grid
 

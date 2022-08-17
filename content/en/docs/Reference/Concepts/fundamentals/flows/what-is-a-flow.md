@@ -45,8 +45,8 @@ A flow is an object in [Cortex Studio][] that contains the logic and actions (in
   * Cannot be deleted
   * See [Handle Flow Exception][] block
 * Flow Variable Store
-  * This is deprecated in favour of the [Variable Grid][]
-  * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
+  * This is deprecated in favour of the [Variables Grid][]
+  * The [Variables Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
   * Cannot be deleted
 * Workspace
   * The [Top-Level Workspace][] within the flow
@@ -137,4 +137,4 @@ None
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Debugging]: {{< url "Cortex.Guides.Studio.Debugging.MainDoc" >}}
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}

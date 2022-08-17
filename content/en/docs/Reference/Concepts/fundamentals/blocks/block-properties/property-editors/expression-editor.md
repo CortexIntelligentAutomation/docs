@@ -528,7 +528,7 @@ Dictionaries can be created using expressions, for more information see [Diction
 
 #### When using variables of the same name the closest scoped is used
 
-It is possible to create multiple [variables][Variables: What Is a Variable] with the same name in the [Variable Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
+It is possible to create multiple [variables][Variables: What Is a Variable] with the same name in the [Variables Grid][]. When using the same name in different [workspaces][workspace], the variable with the closest scope will be used.
 
 For example:
 
@@ -667,7 +667,7 @@ This may change in future to allow developers to specifically select which of th
 
 [Expression Editor]: {{< url "Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 
 [Boolean Literals]: {{< url "MSDocs.CSharp.BooleanLiterals" >}}
 [Char Literals]: {{< url "MSDocs.CSharp.CharLiterals" >}}

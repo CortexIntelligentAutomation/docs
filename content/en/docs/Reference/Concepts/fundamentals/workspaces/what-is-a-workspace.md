@@ -49,8 +49,8 @@ A flow can only contain one Top-Level Workspace, which acts as the entry point f
   * Cannot be deleted
   * See [Handle Flow Exception][] block
 * Flow Variable Store
-  * This is deprecated in favour of the [Variable Grid][]
-  * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
+  * This is deprecated in favour of the [Variables Grid][]
+  * The [Variables Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
   * Cannot be deleted
 * Workspace
   * The Top-Level Workspace within the flow
@@ -88,8 +88,8 @@ A flow can contain any number of other workspaces that are not the Top-Level Wor
   * Handles [workspace level exceptions][], thrown during the [flow execution][]
   * See [Handle Workspace Exception][] block
 * Workspace Variable Store
-  * This is deprecated in favour of the [Variable Grid][]
-  * The [Variable Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
+  * This is deprecated in favour of the [Variables Grid][]
+  * The [Variables Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
   * Cannot be deleted
 * Workspace
   * A nested workspace within the flow
@@ -177,4 +177,4 @@ None
 [scope]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [Handling Exceptions within a Workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace.MainDoc" >}}
 
-[Variable Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariableGrid" >}}
+[Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}

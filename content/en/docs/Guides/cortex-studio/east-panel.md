@@ -16,7 +16,7 @@ description: "Eastern panel for Property Editor, Execution Viewer and Exceptions
 
 #### Variable Details
 
-### Exceptions
+### Exceptions Panel
 
 ## Remarks
 

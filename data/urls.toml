@@ -80,7 +80,7 @@
                 ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
                 VariablesPanel = "/docs/guides/cortex-studio/east-panel/#variables-panel"                    
                 VariableDetails = "/docs/guides/cortex-studio/east-panel/#variable-details"
-                Exceptions = "/docs/guides/cortex-studio/east-panel/#exceptions"
+                ExceptionsPanel = "/docs/guides/cortex-studio/east-panel/#exceptions-panel"
             [Cortex.Guides.Studio.MainDisplayArea]
                 MainDoc = "/docs/guides/cortex-studio/main-display-area/"
             [Cortex.Guides.Studio.Navigation]
@@ -89,9 +89,9 @@
                 MainDoc = "/docs/guides/cortex-studio/palettes/"
             [Cortex.Guides.Studio.SouthPanel]
                 MainDoc = "/docs/guides/cortex-studio/south-panel/"
-                ExecutionViewer = "/docs/guides/cortex-studio/south-panel/#execution-viewer"
+                ExecutionsGrid = "/docs/guides/cortex-studio/south-panel/#executions-grid"
                 MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
-                VariableGrid = "/docs/guides/cortex-studio/south-panel/#variable-grid" 
+                VariablesGrid = "/docs/guides/cortex-studio/south-panel/#variables-grid" 
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
                 ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
@@ -548,6 +548,7 @@
                                 CreatingVariables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables"
                     [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
                         MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
+                        BlockConnections = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/#block-connections"
                 [Cortex.Reference.Concepts.Fundamentals.DataTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/data-types/"
                     [Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType]
@@ -608,7 +609,8 @@
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
-                        MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"    
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"
+                        FlowInputVariable = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable"
                 [Cortex.Reference.Concepts.Fundamentals.Workspaces]
                     MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
@@ -959,10 +961,17 @@
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
-                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"         
+                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
+        [Cortex.Reference.Logs]
+            MainDoc = "/docs/reference/logs/"
+            CortexGateway = "/docs/reference/logs/cortex-gateway/"
+            CortexStudio = "/docs/reference/logs/cortex-studio/"
+            CortexFlowDebuggerService = "/docs/reference/logs/cortex-flow-debugger-service/"
+            CortexAPIGatewayService = "/docs/reference/logs/cortex-api-gateway-service/"
+            CortexFlowExecutionService = "/docs/reference/logs/cortex-flow-execution-service/"
         [Cortex.Reference.Troubleshooting]
             MainDoc = "/docs/reference/troubleshooting/"
             [Cortex.Reference.Troubleshooting.Installation]
