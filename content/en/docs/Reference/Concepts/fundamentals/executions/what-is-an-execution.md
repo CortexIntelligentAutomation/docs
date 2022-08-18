@@ -27,11 +27,11 @@ The following parameters can be specified:
 Any flow that has [Input Variables][] defined requires them to be provided when debugging, these may be provided to a flow in the following ways:
 
 - From [Cortex Studio][] using the [Inputs Property][] in the [Settings Editor][]
-- From an [HTTP request][HTTP request: Cortex Studio] using the [inputVariables][] in the [body][] of the request
+- From an [HTTP request][HTTP request: Cortex Studio] using the inputVariables in the body of the request
 
 ### Retrieving Output Variables
 
-Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the [outputVariables][] in the [body][] of the [HTTP response][HTTP response: Cortex Studio].
+Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the outputVariables in the body of the [HTTP response][HTTP response: Cortex Studio].
 
 ### Validating a Flow
 
@@ -106,11 +106,11 @@ A [flow][] can be started in Production by making an [API call][API call: Cortex
 
 ### Providing Input Variables
 
-Any flow that has [Input Variables][] defined can have those variables provided by using the [inputVariables][] in the [body][] of the [HTTP request][HTTP request: Cortex API Gateway Service].
+Any flow that has [Input Variables][] defined can have those variables provided by using the inputVariables in the body of the [HTTP request][HTTP request: Cortex API Gateway Service].
 
 ### Retrieving Output Variables
 
-Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the [outputVariables][] in the [body][] of the [HTTP response][HTTP response: Cortex API Gateway Service]
+Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the outputVariables in the body of the [HTTP response][HTTP response: Cortex API Gateway Service]
 
 ### Validating a Flow
 
@@ -213,13 +213,13 @@ None
 
 [All Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 
-[API call: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.StartAnExecution" >}}
-[HTTP request: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.StartAnExecution" >}}
-[HTTP response: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.StartAnExecution" >}}
+[API call: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.MainDoc" >}}
+[HTTP request: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.MainDoc" >}}
+[HTTP response: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.MainDoc" >}}
 [Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[API call: Cortex API Gateway]: {{< url "Cortex.Reference.Apis.ApiGatewayService.StartAnExecution" >}}
-[HTTP request: Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.StartAnExecution" >}}
-[HTTP response: Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.StartAnExecution" >}}
+[API call: Cortex API Gateway]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[HTTP request: Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[HTTP response: Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
 
 [Cortex Flow Debugger Service]: {{< url "Cortex.Reference.Logs.CortexFlowDebuggerService" >}}
 

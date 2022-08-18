@@ -91,8 +91,6 @@ Variables can be initialised in the following ways:
 
 If a variable has its `Is Input Variable?` property set to `true`, and no [Default Value][] has been set, then a value must be provided for the variable when the flow is triggered. When the execution starts, the variable is initialised with the value provided.
 
-For more information see [Starting an Execution][].
-
 #### Default Value
 
 If a variable has its `Set Default Value?` property set to `true`, it will be initialised with the `Default Value` provided when the flow is executed.
@@ -218,8 +216,7 @@ None
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
-[Starting an Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.MainDoc" >}}
-[debugging a flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.StartingAnExecution.InternalExecution" >}}
+[debugging a flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.Debugging" >}}
 
 [Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 

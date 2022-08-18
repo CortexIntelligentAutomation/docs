@@ -5,7 +5,3 @@ description: "This section includes all reference documentation for the APIs exp
 ---
 
 <img src="/images/work-in-progress.jpg">
-
-## Summary
-
-## Start an Execution

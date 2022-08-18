@@ -121,10 +121,8 @@
             MainDoc = "/docs/reference/Apis/"
             [Cortex.Reference.Apis.Studio]
                 MainDoc = "/docs/reference/apis/cortex-studio/"
-                StartAnExecution = "/docs/reference/apis/cortex-studio/#start-an-execution"
             [Cortex.Reference.Apis.ApiGatewayService]
                 MainDoc = "/docs/reference/apis/cortex-api-gateway-service/"
-                StartAnExecution = "/docs/reference/apis/cortex-api-gateway-service/#start-an-execution"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
