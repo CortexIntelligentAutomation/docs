@@ -584,10 +584,12 @@
                         Debugging = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception/#debugging"
                 [Cortex.Reference.Concepts.Fundamentals.Executions]
                     MainDoc = "/docs/reference/concepts/fundamentals/executions/"
-                    [Cortex.Reference.Concepts.Fundamentals.Executions.Exceptions]
-                        MainDoc = "/docs/reference/concepts/fundamentals/executions/exceptions/"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-development"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInProduction]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-production"
                 [Cortex.Reference.Concepts.Fundamentals.Flows]
                     MainDoc = "/docs/reference/concepts/fundamentals/flows"
                     [Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows]
