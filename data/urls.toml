@@ -90,6 +90,29 @@
                     [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallPromtail]
                         MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/"
                         ConfigurePromtail = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+        [Cortex.GettingStarted.Cloud]
+            MainDoc = "/docs/getting-started/cloud"
+                [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation]
+                    MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/"
+                    [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana]
+                        MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Architecture]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/architecture"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Prerequisites]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/prerequisites"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-grafana"
+                            SignUpForGrafanaCloud = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-grafana/#sign-up-for-grafana-cloud"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-loki/"
+                            SetUpGrafanaLoki = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-loki/#set-up-grafana-loki"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.ImportDashboards]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/import-dashboards"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/"
+                            [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.ConfigurePromtail]
+                                MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+
 
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
@@ -963,7 +986,9 @@
 [IIS]
     MainDoc = "https://www.iis.net/overview"
     [IIS.Downloads]
-        UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"   
+        UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"
+        ApplicationRequestRouting-3_0 = "https://www.iis.net/downloads/microsoft/application-request-routing"
+    
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"

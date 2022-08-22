@@ -15,7 +15,7 @@ Please ensure that the Installations for [Grafana][] and [Loki][] have been comp
 
 1. Log in to your configured Grafana instance with a user that has the *admin* role.
 1. In Grafana, go to *Configuration* > *Data Sources* via the cog icon on the left sidebar.
-1. Click the big *Add data* source button.
+1. Click the big *Add data source* button.
 1. Choose *Loki* from the list.
 1. Configure the data source as follows:
 
