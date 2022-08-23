@@ -4,7 +4,7 @@ linkTitle: "FileMatch"
 description: "Used to represent a file matching a file search performed by the Search File and Search Files blocks."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.FilesAndFolders.FileMatch)</p>
 

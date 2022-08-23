@@ -5,7 +5,7 @@ description: "Information regarding throwing an exception within a flow, and sce
 weight: 200
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

@@ -4,7 +4,7 @@ linkTitle: "Single"
 description: "Used to represent a fractional, or very large or small number from `-3.402823e+38` through `3.402823e+38`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Single)</p>
 

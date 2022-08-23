@@ -6,7 +6,7 @@ description: "Splits text into a list of String values, using the given separato
 
 {{< figure src="/blocks/text-split-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.SplitText.SplitTextBlock)</p>
 

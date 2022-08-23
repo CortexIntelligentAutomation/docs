@@ -4,7 +4,7 @@ linkTitle: "Pattern Matching Syntax"
 description: "This page describes Pattern Matching Syntax."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

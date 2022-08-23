@@ -6,7 +6,7 @@ description: "Sets all items matching one of the specified values in a List to n
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsWithValuesBlock`2)</p>
 

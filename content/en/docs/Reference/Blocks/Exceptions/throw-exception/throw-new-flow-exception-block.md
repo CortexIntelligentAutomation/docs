@@ -6,7 +6,7 @@ description: "Throws a new FlowException with the specified message, category, e
 
 {{< figure src="/blocks/exceptions-throw-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.ThrowException.ThrowNewFlowExceptionBlock)</p>
 

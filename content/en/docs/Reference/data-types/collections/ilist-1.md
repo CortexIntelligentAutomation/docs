@@ -4,7 +4,7 @@ linkTitle: "IList<TItem>"
 description: "Any data type representing a list of items that can iterated or looped over. `TItem` indicates the data type of the items contained in the list. Each `TItem` can be individually accessed by an index. `List<TItem>` is the most common example."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.IList&lt;TItem&gt;)</p>
 

@@ -4,7 +4,7 @@ linkTitle: "Current Culture"
 description: "This page describes the concept of current culture."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

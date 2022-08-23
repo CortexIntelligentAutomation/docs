@@ -6,7 +6,7 @@ description: "Checks if a Date Time is equal to another Date Time."
 
 {{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeEqualBlock)</p>
 

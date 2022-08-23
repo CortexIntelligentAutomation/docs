@@ -4,7 +4,7 @@ linkTitle: "Array"
 description: "Any data type representing an array of items. The type of items that can be contained in the array depend upon the type of the array. Common examples include arrays of strings and integers (i.e. `String[]` and `Int32[]`)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Array)</p>
 

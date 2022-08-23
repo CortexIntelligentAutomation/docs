@@ -6,7 +6,7 @@ description: "Checks if a file exists at the specified file path."
 
 {{< figure src="/blocks/files-check-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CheckFile.CheckFileExistsBlock)</p>
 

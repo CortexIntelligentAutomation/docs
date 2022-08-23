@@ -6,7 +6,7 @@ description: "Searches a file at a specified file path for a matching search pat
 
 {{< figure src="/blocks/files-search-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.SearchFile.SearchFileBlock)</p>
 

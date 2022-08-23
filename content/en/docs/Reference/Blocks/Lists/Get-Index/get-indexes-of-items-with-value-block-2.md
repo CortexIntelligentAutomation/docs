@@ -6,7 +6,7 @@ description: "Gets the indexes of all items in a List matching a value."
 
 {{< figure src="/blocks/lists-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValueBlock`2)</p>
 

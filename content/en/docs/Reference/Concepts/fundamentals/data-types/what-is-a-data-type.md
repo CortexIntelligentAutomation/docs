@@ -5,7 +5,7 @@ description: "Information regarding what a data type is, basic and complex data 
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <img src="/images/work-in-progress.jpg">
 

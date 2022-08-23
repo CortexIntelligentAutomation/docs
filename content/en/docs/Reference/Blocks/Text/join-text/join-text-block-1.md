@@ -6,7 +6,7 @@ description: "Joins a set of values together as text, using the given separator 
 
 {{< figure src="/blocks/text-join-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.JoinText.JoinTextBlock`1)</p>
 

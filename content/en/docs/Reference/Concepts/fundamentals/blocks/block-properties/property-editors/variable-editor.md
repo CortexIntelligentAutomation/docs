@@ -5,7 +5,7 @@ description: "Information regarding using the Variable Editor."
 weight: 100
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <img src="/images/work-in-progress.jpg">
 

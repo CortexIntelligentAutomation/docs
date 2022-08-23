@@ -4,7 +4,7 @@ linkTitle: "Keys"
 description: "This page describes the concept of Keys."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

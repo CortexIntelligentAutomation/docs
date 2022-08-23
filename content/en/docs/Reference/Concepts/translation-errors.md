@@ -4,7 +4,7 @@ linkTitle: "Translation Errors"
 description: "This page describes the concept of Translation Errors."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

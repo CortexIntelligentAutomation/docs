@@ -4,7 +4,7 @@ linkTitle: "FolderInformation"
 description: "Used to represent information about a folder."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.FilesAndFolders.FolderInformation)</p>
 

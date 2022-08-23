@@ -4,7 +4,7 @@ linkTitle: "InvalidPropertyValueException"
 description: "The exception thrown when a property is provided with an invalid value."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.InvalidPropertyValueException)</p>
 

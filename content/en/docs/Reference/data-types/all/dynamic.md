@@ -4,7 +4,7 @@ linkTitle: "dynamic"
 description: "Any data type can be used where a `dynamic` data type is required. `dynamic` data type is identical to the `Object` data type, except for one difference; `dynamic` data types do not need to be explicitly cast to other data types to be used, whereas `Object` data types do."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

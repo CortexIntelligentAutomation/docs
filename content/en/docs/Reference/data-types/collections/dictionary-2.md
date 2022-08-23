@@ -4,7 +4,7 @@ linkTitle: "Dictionary<TKey, TItem>"
 description: "Used to represent a collection of key/item pairs. `TKey` indicates the data type of the keys used to access the items contained in the collection. `TItem` indicates the data type of the items contained in the collection. Each `TItem` can be individually accessed by a key."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.Dictionary&lt;TKey, TItem&gt;)</p>
 

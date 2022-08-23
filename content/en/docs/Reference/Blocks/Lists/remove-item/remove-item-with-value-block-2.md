@@ -6,7 +6,7 @@ description: "Removes the specified occurrence of an item matching a value from 
 
 {{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemWithValueBlock`2)</p>
 

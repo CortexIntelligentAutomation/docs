@@ -4,7 +4,7 @@ linkTitle: "Exception Handling"
 description: "This page describes the concept of Exception Handling."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

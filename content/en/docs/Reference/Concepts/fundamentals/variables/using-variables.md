@@ -5,7 +5,7 @@ description: "Information regarding using variables in the Variable and Expressi
 weight: 200
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

@@ -5,7 +5,7 @@ description: "Information regarding the anatomy of a variable, using variables a
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

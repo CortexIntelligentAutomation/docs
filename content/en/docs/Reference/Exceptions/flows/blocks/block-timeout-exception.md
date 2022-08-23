@@ -4,7 +4,7 @@ linkTitle: "BlockTimeoutException"
 description: "The exception thrown when a block timeout has been reached."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.BlockTimeoutException)</p>
 

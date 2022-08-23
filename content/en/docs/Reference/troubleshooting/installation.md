@@ -5,7 +5,7 @@ description: >
     Information on troubleshooting Cortex Innovation installations.
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Troubleshooting issues during installation {#ts-during-installation}
 

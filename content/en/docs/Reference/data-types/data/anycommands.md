@@ -4,7 +4,7 @@ linkTitle: "AnyCommands"
 description: "Holds the information for parsing a command, running multiple query and non query commands on a data source."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Data.AnyCommands)</p>
 

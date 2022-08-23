@@ -6,7 +6,7 @@ description: "Sets a Variable to a given Value."
 
 {{< figure src="/blocks/variables-set-variable-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Variables.SetVariable.SetVariableBlock)</p>
 

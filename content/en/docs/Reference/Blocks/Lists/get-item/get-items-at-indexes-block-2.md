@@ -6,7 +6,7 @@ description: "Gets the items at each of the specified indexes of a List."
 
 {{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtIndexesBlock`2)</p>
 

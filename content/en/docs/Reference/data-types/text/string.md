@@ -4,7 +4,7 @@ linkTitle: "String"
 description: "Used to represent text."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.String)</p>
 

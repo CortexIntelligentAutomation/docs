@@ -5,7 +5,7 @@ description: "Information regarding handling exceptions within a block."
 weight: 200
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

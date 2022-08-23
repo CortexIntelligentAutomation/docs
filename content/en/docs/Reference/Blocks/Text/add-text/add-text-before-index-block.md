@@ -6,7 +6,7 @@ description: "Adds text to another text before the specified index."
 
 {{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextBeforeIndexBlock)</p>
 

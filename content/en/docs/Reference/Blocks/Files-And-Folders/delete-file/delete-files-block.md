@@ -6,7 +6,7 @@ description: "Deletes files at the specified file paths."
 
 {{< figure src="/blocks/files-delete-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.DeleteFile.DeleteFilesBlock)</p>
 

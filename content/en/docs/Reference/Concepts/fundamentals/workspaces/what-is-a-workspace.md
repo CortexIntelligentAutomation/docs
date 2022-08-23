@@ -5,7 +5,7 @@ description: "Information regarding the anatomy of a workspace, nested workspace
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

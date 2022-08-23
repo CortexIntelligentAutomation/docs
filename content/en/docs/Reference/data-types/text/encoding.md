@@ -4,7 +4,7 @@ linkTitle: "Encoding"
 description: "The data type that all encodings inherit from. An encoding is used to represent a specific character encoding (e.g. ASCII, UTF8, Unicode)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Text.Encoding)</p>
 

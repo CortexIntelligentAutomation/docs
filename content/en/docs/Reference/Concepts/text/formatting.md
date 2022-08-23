@@ -4,7 +4,7 @@ linkTitle: "Text Formatting"
 description: "This page describes the concept of Text Formatting."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

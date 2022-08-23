@@ -6,7 +6,7 @@ description: "Adds an Item at the specified Index of a List."
 
 {{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemAtIndexBlock`2)</p>
 

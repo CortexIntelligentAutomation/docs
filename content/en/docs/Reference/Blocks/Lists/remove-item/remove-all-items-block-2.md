@@ -6,7 +6,7 @@ description: "Removes all items from a List."
 
 {{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveAllItemsBlock`2)</p>
 

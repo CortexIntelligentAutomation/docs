@@ -6,7 +6,7 @@ description: "Gets the indexes of all occurrences of a text in another text."
 
 {{< figure src="/blocks/text-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.GetIndex.GetIndexesOfTextBlock)</p>
 

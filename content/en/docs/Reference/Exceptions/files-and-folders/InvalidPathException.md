@@ -4,7 +4,7 @@ linkTitle: "InvalidPathException"
 description: "The exception thrown when a file or folder path is invalid."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.FilesAndFolders.InvalidPathException)</p>
 

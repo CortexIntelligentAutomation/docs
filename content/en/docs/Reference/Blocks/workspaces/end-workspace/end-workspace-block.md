@@ -6,7 +6,7 @@ description: "Indicates the end of a workspace."
 
 {{< figure src="/blocks/workspaces-end-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Workspaces.EndWorkspace.EndWorkspaceBlock)</p>
 

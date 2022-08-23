@@ -6,7 +6,7 @@ description: "Adds Items at the end of a List."
 
 {{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemsAtEndBlock`2)</p>
 

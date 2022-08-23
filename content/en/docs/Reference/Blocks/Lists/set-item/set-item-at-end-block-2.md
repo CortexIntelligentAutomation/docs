@@ -6,7 +6,7 @@ description: "Sets the item at the end of a List to a new value."
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemAtEndBlock`2)</p>
 

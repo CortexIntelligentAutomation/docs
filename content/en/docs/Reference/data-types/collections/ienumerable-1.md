@@ -4,7 +4,7 @@ linkTitle: "IEnumerable<TItem>"
 description: "Any data type representing a collection of items that can iterated or looped over. `TItem` indicates the data type of the items contained in the collection. `List<TItem>` is the most common example."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.IEnumerable&lt;TItem&gt;)</p>
 

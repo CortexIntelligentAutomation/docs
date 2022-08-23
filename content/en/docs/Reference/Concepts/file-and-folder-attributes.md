@@ -4,7 +4,7 @@ linkTitle: "File & Folder Attributes"
 description: "This page describes the concept of file and folder attributes."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

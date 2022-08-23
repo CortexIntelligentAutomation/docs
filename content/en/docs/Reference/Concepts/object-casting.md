@@ -4,7 +4,7 @@ linkTitle: "Object Casting"
 description: "This page describes the concept of Object Casting."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

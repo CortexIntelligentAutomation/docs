@@ -4,7 +4,7 @@ linkTitle: "Specific Cultures"
 description: "This page describes the concept of specific cultures."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

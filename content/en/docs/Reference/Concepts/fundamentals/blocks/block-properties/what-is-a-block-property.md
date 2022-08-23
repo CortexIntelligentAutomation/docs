@@ -5,7 +5,7 @@ description: "Information regarding the anatomy of block properties, types of pr
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

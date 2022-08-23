@@ -5,7 +5,7 @@ description: "Terms, words and phrases beginning with the letters A through E."
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Terms, words and phrases beginning with the letters A through E.
 

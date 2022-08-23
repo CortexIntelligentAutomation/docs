@@ -6,7 +6,7 @@ description: "Loops a specified number of times based on a given start index, en
 
 {{< figure src="/blocks/loops-for-loop-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Loops.For.ForLoopBlock)</p>
 

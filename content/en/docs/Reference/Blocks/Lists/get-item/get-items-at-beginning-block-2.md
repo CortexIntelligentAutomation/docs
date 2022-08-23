@@ -6,7 +6,7 @@ description: "Gets a count of items at the beginning of a List."
 
 {{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtBeginningBlock`2)</p>
 

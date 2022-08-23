@@ -6,7 +6,7 @@ description: "Removes the items at each of the specified indexes of a List."
 
 {{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtIndexesBlock`2)</p>
 

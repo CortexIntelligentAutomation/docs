@@ -4,7 +4,7 @@ linkTitle: "Indexes"
 description: "This page describes the concept of Indexes."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

@@ -6,7 +6,7 @@ description: "Converts a Date Time to Text."
 
 {{< figure src="/blocks/date-and-time-convert-to-text-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.ConvertDateTime.ConvertDateTimeToTextBlock)</p>
 

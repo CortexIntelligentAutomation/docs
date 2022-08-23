@@ -6,7 +6,7 @@ description: "Sets the specified occurrence of an item matching a value in a Lis
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemWithValueBlock`2)</p>
 

@@ -4,7 +4,7 @@ linkTitle: "NonQueryCommand"
 description: "Holds the information for running a Non Query command on a data source."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Data.NonQueryCommand)</p>
 

@@ -4,7 +4,7 @@ linkTitle: "OperationFailedException"
 description: "The exception thrown when a file or folder operation failed for one or more paths."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.FilesAndFolders.OperationFailedException)</p>
 

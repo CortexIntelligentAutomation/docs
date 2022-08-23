@@ -4,7 +4,7 @@ linkTitle: "Date and Time Formatting"
 description: "This page describes the concept of Date and Time Formatting, including Format Providers, Format Templates and Format Specifiers."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

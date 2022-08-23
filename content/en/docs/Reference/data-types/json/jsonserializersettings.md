@@ -4,7 +4,7 @@ linkTitle: "JsonSerializerSettings"
 description: "Used to specify settings for converting objects to and from Json."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Newtonsoft.Json.JsonSerializerSettings)</p>
 

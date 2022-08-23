@@ -6,7 +6,7 @@ description: "Sets the items at each of the specified indexes of a List to new v
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtIndexesBlock`2)</p>
 

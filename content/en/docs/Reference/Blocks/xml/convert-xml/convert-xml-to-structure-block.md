@@ -6,7 +6,7 @@ description: "Converts Xml to a Structure."
 
 {{< figure src="/blocks/xml-convert-to-structure-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock)</p>
 

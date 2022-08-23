@@ -4,7 +4,7 @@ linkTitle: "EventSeverity"
 description: "Used to represent the severity of an event when it is logged."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Logs.EventSeverity)</p>
 

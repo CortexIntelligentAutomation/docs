@@ -6,7 +6,7 @@ description: "Gets the count of items in a Dictionary with the specified value."
 
 {{< figure src="/blocks/dictionaries-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetCount.GetCountOfItemsWithValueBlock`3)</p>
 

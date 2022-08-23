@@ -6,7 +6,7 @@ description: "Finds and removes the specified occurrence of text from a given te
 
 {{< figure src="/blocks/text-find-and-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock)</p>
 

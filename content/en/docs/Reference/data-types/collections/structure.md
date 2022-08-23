@@ -4,7 +4,7 @@ linkTitle: "Structure"
 description: "Used to represent a collection of key/item pairs, where the data type of the keys used to access the items contained in the collection is `String` and the items contained in the collection can be any data type. Each item can be individually accessed by its `String` key."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Dictionaries.Structure)</p>
 

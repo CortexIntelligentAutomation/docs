@@ -5,7 +5,7 @@ description: "Information regarding using the Literal Editor."
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <img src="/images/work-in-progress.jpg">
 

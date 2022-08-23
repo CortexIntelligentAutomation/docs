@@ -6,7 +6,7 @@ description: "Represents a new workspace."
 
 {{< figure src="/blocks/workspaces-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Workspaces.Workspace.WorkspaceBlock)</p>
 

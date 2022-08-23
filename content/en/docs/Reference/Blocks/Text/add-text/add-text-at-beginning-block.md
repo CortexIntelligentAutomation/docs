@@ -6,7 +6,7 @@ description: "Adds text at the beginning of another text."
 
 {{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAtBeginningBlock)</p>
 

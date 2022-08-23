@@ -6,7 +6,7 @@ description: "Renames a folder at the specified folder path to a new name."
 
 {{< figure src="/blocks/folders-rename-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.RenameFolder.RenameFolderBlock)</p>
 

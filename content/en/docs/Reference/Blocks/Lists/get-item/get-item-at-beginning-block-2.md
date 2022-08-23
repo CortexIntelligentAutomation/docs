@@ -6,7 +6,7 @@ description: "Gets the item at the beginning of a List."
 
 {{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtBeginningBlock`2)</p>
 

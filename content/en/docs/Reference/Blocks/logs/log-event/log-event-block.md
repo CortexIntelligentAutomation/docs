@@ -6,7 +6,7 @@ description: "Logs an event to the filesystem."
 
 {{< figure src="/blocks/logs-log-event-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Logs.LogEvent.LogEventBlock)</p>
 

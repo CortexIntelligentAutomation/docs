@@ -6,7 +6,7 @@ description: "Finds and removes all occurrences of text from a given text."
 
 {{< figure src="/blocks/text-find-and-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock)</p>
 

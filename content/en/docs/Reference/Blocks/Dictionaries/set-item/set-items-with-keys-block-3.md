@@ -6,7 +6,7 @@ description: "Sets all items with any of the given keys in a Dictionary to new v
 
 {{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithKeysBlock`3)</p>
 

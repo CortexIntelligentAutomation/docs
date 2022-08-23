@@ -4,7 +4,7 @@ linkTitle: "Object Equality"
 description: "This page describes the concept of Object Equality."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

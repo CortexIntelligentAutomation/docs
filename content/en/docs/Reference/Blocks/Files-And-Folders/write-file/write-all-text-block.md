@@ -6,7 +6,7 @@ description: "Writes all specified text to a file at the given file path."
 
 {{< figure src="/blocks/files-write-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.WriteFile.WriteAllTextBlock)</p>
 

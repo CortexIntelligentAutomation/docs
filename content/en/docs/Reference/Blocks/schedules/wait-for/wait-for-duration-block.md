@@ -6,7 +6,7 @@ description: "Waits for a specified time period (Years, Months, Days, Hours, Min
 
 {{< figure src="/blocks/schedules-wait-for-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Schedules.WaitFor.WaitForDurationBlock)</p>
 

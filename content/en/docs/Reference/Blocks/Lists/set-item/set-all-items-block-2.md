@@ -6,7 +6,7 @@ description: "Sets all items in a List to a new value."
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetAllItemsBlock`2)</p>
 

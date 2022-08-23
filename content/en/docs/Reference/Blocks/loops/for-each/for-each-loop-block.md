@@ -6,7 +6,7 @@ description: "Loops through all items in the specified collection (i.e. Lists, D
 
 {{< figure src="/blocks/loops-for-each-loop-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Loops.ForEach.ForEachLoopBlock)</p>
 

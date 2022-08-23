@@ -4,7 +4,7 @@ linkTitle: "DayOfWeek"
 description: "Used to represent a day of the week from Sunday (i.e. `DayOfWeek.Sunday`) through Saturday (i.e. `DayOfWeek.Saturday`)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.DayOfWeek)</p>
 

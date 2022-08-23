@@ -6,7 +6,7 @@ description: "Converts text to title case (e.g. `\"Title Case\"`)."
 
 {{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToTitleCaseBlock)</p>
 

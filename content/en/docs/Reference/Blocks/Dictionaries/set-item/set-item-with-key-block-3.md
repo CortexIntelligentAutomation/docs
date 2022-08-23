@@ -6,7 +6,7 @@ description: "Sets the specified occurrence of an item with the given key in a D
 
 {{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemWithKeyBlock`3)</p>
 

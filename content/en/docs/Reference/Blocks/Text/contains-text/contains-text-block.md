@@ -6,7 +6,7 @@ description: "Checks if text contains another text."
 
 {{< figure src="/blocks/text-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.ContainsText.ContainsTextBlock)</p>
 

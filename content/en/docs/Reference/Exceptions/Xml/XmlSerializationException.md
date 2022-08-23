@@ -5,7 +5,7 @@ description: "The exception thrown when an Xml Serialization errors occur."
 ---
 
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Xml.XmlSerializationException)</p>
 

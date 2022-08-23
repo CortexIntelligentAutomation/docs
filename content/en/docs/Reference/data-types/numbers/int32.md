@@ -4,7 +4,7 @@ linkTitle: "Int32"
 description: "Used to represent a whole number from `-2,147,483,648` through `2,147,483,647`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Int32)</p>
 

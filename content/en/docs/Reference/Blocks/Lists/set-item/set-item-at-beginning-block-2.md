@@ -6,7 +6,7 @@ description: "Sets the item at the beginning of a List to a new value."
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemAtBeginningBlock`2)</p>
 

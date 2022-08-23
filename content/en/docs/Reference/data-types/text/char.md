@@ -4,7 +4,7 @@ linkTitle: "Char"
 description: "Used to represent unicode characters."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Char)</p>
 

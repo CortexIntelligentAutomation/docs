@@ -6,7 +6,7 @@ description: "Removes all items matching one of the specified values from a Dict
 
 {{< figure src="/blocks/dictionaries-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValuesBlock`3)</p>
 

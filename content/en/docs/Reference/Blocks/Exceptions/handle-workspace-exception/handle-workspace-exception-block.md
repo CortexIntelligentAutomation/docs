@@ -6,7 +6,7 @@ description: "Handles any unhandled exception within its workspace."
 
 {{< figure src="/blocks/exceptions-handle-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleWorkspaceException.HandleWorkspaceExceptionBlock)</p>
 

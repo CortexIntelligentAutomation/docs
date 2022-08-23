@@ -6,7 +6,7 @@ description: "Converts text to upper case (e.g. `\"UPPERCASE\"`)."
 
 {{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToUpperCaseBlock)</p>
 

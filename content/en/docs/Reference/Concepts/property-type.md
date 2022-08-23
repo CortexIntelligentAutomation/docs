@@ -4,7 +4,7 @@ linkTitle: "Property Type"
 description: "This page describes the concepts of Input, Output and InputOutput properties."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 TODO: Write intro
 This page describes the concept of Input, Output and InputOutput properties.

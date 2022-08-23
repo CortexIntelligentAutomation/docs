@@ -5,7 +5,7 @@ description: "Information regarding properties that are common to all or most bl
 weight: 200
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

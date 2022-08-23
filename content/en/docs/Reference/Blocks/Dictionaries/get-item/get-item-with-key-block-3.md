@@ -6,7 +6,7 @@ description: "Gets the specified occurrence of an item with the given key from a
 
 {{< figure src="/blocks/dictionaries-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetItemWithKeyBlock`3)</p>
 

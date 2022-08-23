@@ -6,7 +6,7 @@ description: "Gets information about a file (e.g. file attributes, created, acce
 
 {{< figure src="/blocks/files-get-information-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.GetFileInformation.GetFileInformationBlock)</p>
 

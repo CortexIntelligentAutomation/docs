@@ -4,7 +4,7 @@ linkTitle: "DateTimeOffset"
 description: "Used to represent a date and time between `00:00:00.0000000 UTC, January 1, 0001` and `23:59:59.9999999 UTC, December 31, 9999`, in the Gregorian calendar, along with a UTC time offset."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.DateTimeOffset)</p>
 

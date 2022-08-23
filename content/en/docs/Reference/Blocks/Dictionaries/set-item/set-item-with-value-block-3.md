@@ -6,7 +6,7 @@ description: "Sets the specified occurrence of an item matching a value in a Dic
 
 {{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemWithValueBlock`3)</p>
 

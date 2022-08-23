@@ -4,7 +4,7 @@ linkTitle: "Variable Scopes"
 description: "Information regarding variable scopes, including: what they are, creating variables at a specific scope, and changing a variable's scope."
 weight: 200
 ---
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

@@ -6,7 +6,7 @@ description: "Removes the item at the end of a List."
 
 {{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemAtEndBlock`2)</p>
 

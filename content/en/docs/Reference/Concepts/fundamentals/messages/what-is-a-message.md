@@ -5,7 +5,7 @@ description: "This page describes the concept of a Message"
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 TODO: Paul and Tyler review
 

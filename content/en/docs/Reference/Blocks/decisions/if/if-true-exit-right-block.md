@@ -6,7 +6,7 @@ description: "Checks if a given value evaluates to `true`; if so the flow execut
 
 {{< figure src="/blocks/decisions-if-true-exit-right-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfTrueExitRightBlock)</p>
 

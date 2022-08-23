@@ -6,7 +6,7 @@ description: "Checks if a List contains at least one item matching each of the s
 
 {{< figure src="/blocks/lists-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.ContainsItem.ContainsItemsWithValuesBlock`2)</p>
 

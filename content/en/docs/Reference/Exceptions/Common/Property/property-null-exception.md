@@ -4,7 +4,7 @@ linkTitle: "PropertyNullException"
 description: "The exception thrown when a property is provided with a `null` value, but a non-null value is required."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyNullException)</p>
 

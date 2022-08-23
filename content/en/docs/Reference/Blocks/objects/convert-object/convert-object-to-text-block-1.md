@@ -6,7 +6,7 @@ description: "Converts an object to text by replacing all `{Property}` format pa
 
 {{< figure src="/blocks/objects-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Object.ConvertObject.ConvertObjectToTextBlock`1)</p>
 

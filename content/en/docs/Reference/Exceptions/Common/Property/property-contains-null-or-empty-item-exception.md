@@ -4,7 +4,7 @@ linkTitle: "PropertyContainsNullOrEmptyItemException"
 description: "The exception thrown when a property is provided with a value that contains at least one item that is either `null` or empty, but the item is required to have a value."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException)</p>
 

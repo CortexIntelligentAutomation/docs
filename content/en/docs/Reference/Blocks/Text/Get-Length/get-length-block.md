@@ -6,7 +6,7 @@ description: "Gets the length of a given text."
 
 {{< figure src="/blocks/text-get-length-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.GetLength.GetLengthBlock)</p>
 

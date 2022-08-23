@@ -6,7 +6,7 @@ description: "Removes a count of items starting at the specified index of a List
 
 {{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtIndexBlock`2)</p>
 

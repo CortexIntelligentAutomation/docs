@@ -4,7 +4,7 @@ linkTitle: "Int16"
 description: "Used to represent a whole number from `-32,768` through `32767`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Int16)</p>
 

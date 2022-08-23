@@ -4,7 +4,7 @@ linkTitle: "ICommand"
 description: "The interface defining data source commands."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Data.ICommand)</p>
 

@@ -4,7 +4,7 @@ linkTitle: "KeyNotPresentException"
 description: "The exception thrown when trying to get an item from a dictionary, or set an item in a dictionary, with a key that is not present."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Dictionaries.KeyNotPresentException)</p>
 

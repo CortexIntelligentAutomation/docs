@@ -4,7 +4,7 @@ linkTitle: "File & Folder Paths"
 description: "This page describes the concept of file and folder paths."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

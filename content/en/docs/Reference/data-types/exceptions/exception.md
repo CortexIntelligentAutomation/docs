@@ -4,7 +4,7 @@ linkTitle: "Exception"
 description: "The data type that all exceptions inherit from."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Exception)</p>
 

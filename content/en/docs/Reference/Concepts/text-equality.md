@@ -4,7 +4,7 @@ linkTitle: "Text Equality"
 description: "This page describes the concept of Text Equality."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

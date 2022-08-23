@@ -5,7 +5,7 @@ description: "Information regarding using the Expression Editor to create litera
 weight: 200
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

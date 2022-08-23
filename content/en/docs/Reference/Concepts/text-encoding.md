@@ -4,7 +4,7 @@ linkTitle: "Text Encoding"
 description: "This page describes the concept of Text Encoding."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

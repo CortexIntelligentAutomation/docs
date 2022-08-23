@@ -6,7 +6,7 @@ description: "Gets information about a folder (e.g. folder attributes, created, 
 
 {{< figure src="/blocks/folders-get-information-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.GetFolderInformation.GetFolderInformationBlock)</p>
 

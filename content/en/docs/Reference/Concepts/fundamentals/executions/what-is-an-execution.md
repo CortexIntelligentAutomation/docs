@@ -5,7 +5,7 @@ description: "Information regarding the anatomy of an execution."
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

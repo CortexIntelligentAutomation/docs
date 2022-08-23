@@ -6,7 +6,7 @@ description: "Removes text between the specified start index and end index of a 
 
 {{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextBetweenIndexesBlock)</p>
 

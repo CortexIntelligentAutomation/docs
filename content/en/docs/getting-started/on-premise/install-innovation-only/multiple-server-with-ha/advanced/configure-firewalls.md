@@ -4,7 +4,7 @@ linkTitle: "Configure Firewalls"
 description: "Information about configuring Firewalls, e.g. adding rules."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Add Inbound Rules to Windows Firewall
 

@@ -4,7 +4,7 @@ linkTitle: "Double"
 description: "Used to represent a fractional, or very large or small number from `-1.79769313486232e+308` through `1.79769313486232e+308`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Double)</p>
 

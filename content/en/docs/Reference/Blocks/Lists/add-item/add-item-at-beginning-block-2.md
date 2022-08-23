@@ -6,7 +6,7 @@ description: "Adds an Item at the beginning of a List."
 
 {{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemAtBeginningBlock`2)</p>
 

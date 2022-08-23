@@ -5,7 +5,7 @@ description: "Terms, words and phrases beginning with the letters K through O."
 weight: 30
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Terms, words and phrases beginning with the letters K through O.
 

@@ -6,7 +6,7 @@ description: "Gets the index of the specified occurrence of an item in a List ma
 
 {{< figure src="/blocks/lists-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexOfItemWithValueBlock`2)</p>
 

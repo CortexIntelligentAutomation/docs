@@ -6,7 +6,7 @@ description: "Indicates the start of a workspace."
 
 {{< figure src="/blocks/workspaces-start-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Workspaces.StartWorkspace.StartWorkspaceBlock)</p>
 

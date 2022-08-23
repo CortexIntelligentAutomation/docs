@@ -5,7 +5,7 @@ description: "Information regarding handling exceptions at different levels with
 weight: 100
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

@@ -4,7 +4,7 @@ linkTitle: "Occurrences"
 description: "This page describes the concept of Occurrences."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

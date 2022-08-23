@@ -6,7 +6,7 @@ description: "Gets all items with the given key from a Dictionary."
 
 {{< figure src="/blocks/dictionaries-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetItemsWithKeyBlock`3)</p>
 

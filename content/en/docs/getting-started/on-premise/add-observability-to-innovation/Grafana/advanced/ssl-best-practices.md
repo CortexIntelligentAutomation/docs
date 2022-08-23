@@ -4,7 +4,7 @@ linkTitle: "SSL Best Practices"
 description: "Information about the recommended security settings for the Grafana observability platform servers."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 A collection of registry settings can be applied during installation to guarantee your server is only using the recommended encryption algorithms and TLS protocols:
 

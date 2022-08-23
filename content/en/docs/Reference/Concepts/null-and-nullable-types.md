@@ -4,7 +4,7 @@ linkTitle: "Null and Nullable Types"
 description: "This page describes the concept of Null and Nullable Types."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

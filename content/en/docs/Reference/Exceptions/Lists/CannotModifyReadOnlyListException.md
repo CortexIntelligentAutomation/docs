@@ -4,7 +4,7 @@ linkTitle: "CannotModifyReadOnlyListException"
 description: "The exception thrown when trying to modify a read-only list."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
 

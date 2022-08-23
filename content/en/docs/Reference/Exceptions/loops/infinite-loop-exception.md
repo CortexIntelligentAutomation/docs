@@ -4,7 +4,7 @@ linkTitle: "InfiniteLoopException"
 description: "The exception thrown when an infinite loop can occur."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Loops.InfiniteLoopException)</p>
 

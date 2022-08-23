@@ -5,7 +5,7 @@ description: "Information regarding working with executions in development (i.e.
 weight: 100
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

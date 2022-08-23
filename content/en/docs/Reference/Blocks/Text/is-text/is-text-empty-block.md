@@ -6,7 +6,7 @@ description: "Checks if text is empty (i.e. `\"\"`)."
 
 {{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEmptyBlock)</p>
 

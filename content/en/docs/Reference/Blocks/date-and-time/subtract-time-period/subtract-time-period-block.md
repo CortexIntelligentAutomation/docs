@@ -6,7 +6,7 @@ description: "Subtracts a Time Period to from specified Date Time."
 
 {{< figure src="/blocks/date-and-time-subtract-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.SubtractTimePeriod.SubtractTimePeriodBlock)</p>
 

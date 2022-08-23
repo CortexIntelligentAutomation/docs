@@ -5,7 +5,7 @@ description: "Information regarding calling, and passing data to, other flows."
 weight: 100
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

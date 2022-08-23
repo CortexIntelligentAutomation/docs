@@ -6,7 +6,7 @@ description: "Removes a length of text from the beginning of a given text."
 
 {{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtBeginningBlock)</p>
 

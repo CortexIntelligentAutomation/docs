@@ -6,7 +6,7 @@ description: "Adds text to another text after a given index."
 
 {{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAfterIndexBlock)</p>
 

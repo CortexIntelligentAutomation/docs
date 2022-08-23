@@ -5,7 +5,7 @@ description: "Information regarding properties that do not normally need to be c
 weight: 300
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

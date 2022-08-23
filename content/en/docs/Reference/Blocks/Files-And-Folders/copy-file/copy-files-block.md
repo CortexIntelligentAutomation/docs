@@ -6,7 +6,7 @@ description: "Copies files at the specified file paths to the given destination 
 
 {{< figure src="/blocks/files-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFile.CopyFilesBlock)</p>
 

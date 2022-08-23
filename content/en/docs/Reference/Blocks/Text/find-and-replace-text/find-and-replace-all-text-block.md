@@ -6,7 +6,7 @@ description: "Finds and replaces all occurrences of text in a given text."
 
 {{< figure src="/blocks/text-find-and-replace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock)</p>
 

@@ -6,7 +6,7 @@ description: "Checks if a given value is `null`; if so the flow execution exits 
 
 {{< figure src="/blocks/decisions-if-true-exit-bottom-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfNullExitBottomBlock`1)</p>
 

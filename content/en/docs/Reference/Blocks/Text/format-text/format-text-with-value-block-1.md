@@ -6,7 +6,7 @@ description: "Formats text by replacing all `{0}` format parameters in a specifi
 
 {{< figure src="/blocks/text-format-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.FormatText.FormatTextWithValueBlock`1)</p>
 

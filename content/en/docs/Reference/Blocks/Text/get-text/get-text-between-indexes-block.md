@@ -6,7 +6,7 @@ description: "Gets text between the specified start index and end index of a giv
 
 {{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextBetweenIndexesBlock)</p>
 

@@ -6,7 +6,7 @@ description: "Adds an item to a Dictionary with the specified key."
 
 {{< figure src="/blocks/dictionaries-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.AddItem.AddItemWithKeyBlock`3)</p>
 

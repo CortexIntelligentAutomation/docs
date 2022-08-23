@@ -4,7 +4,7 @@ linkTitle: "Boolean"
 description: "Used to represent a logical value of `true` or `false`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Boolean)</p>
 

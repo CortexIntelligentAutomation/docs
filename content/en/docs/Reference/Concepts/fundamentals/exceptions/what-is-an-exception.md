@@ -5,7 +5,7 @@ description: "Information regarding the anatomy of an exception, and properties 
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

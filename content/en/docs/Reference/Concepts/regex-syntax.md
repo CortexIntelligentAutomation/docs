@@ -5,7 +5,7 @@ description: "This page describes the .Net Regex Syntax."
 ---
 TODO: frontmatter description
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

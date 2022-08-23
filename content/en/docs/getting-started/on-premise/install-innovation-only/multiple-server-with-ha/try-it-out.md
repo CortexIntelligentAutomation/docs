@@ -5,7 +5,7 @@ description: "Information about trying out Cortex Innovation for the first time.
 weight: 60
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to try out a new Innovation installation to make sure it is working. Please ensure that [Setup Gateway][] has been completed before taking these steps.
 

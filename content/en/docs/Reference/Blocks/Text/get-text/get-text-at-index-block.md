@@ -6,7 +6,7 @@ description: "Gets a length of text at the specified index of a given text."
 
 {{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextAtIndexBlock)</p>
 

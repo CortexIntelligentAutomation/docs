@@ -6,7 +6,7 @@ description: "Converts Json to an Object."
 
 {{< figure src="/blocks/json-convert-to-object-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Json.ConvertJson.ConvertJsonToObjectBlock)</p>
 

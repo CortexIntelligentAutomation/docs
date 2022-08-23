@@ -6,7 +6,7 @@ description: "Checks if a text is equal to another text."
 
 {{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEqualBlock)</p>
 

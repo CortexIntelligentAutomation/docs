@@ -6,7 +6,7 @@ description: "Handles any exception thrown by the block it is connected to."
 
 {{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionBlock)</p>
 

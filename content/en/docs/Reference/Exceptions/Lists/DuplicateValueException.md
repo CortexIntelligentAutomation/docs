@@ -5,7 +5,7 @@ description: "The exception thrown when a list contains duplicate values and sho
 ---
 
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Lists.DuplicateValueException)</p>
 

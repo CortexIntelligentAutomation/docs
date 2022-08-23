@@ -4,7 +4,7 @@ linkTitle: "Text Casing"
 description: "This page describes the concept of Text Casing."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Common types of text casing
 

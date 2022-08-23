@@ -6,7 +6,7 @@ description: "Gets the count of all items in a List."
 
 {{< figure src="/blocks/lists-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountOfAllItemsBlock`2)</p>
 

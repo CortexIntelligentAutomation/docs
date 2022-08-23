@@ -4,7 +4,7 @@ linkTitle: "OccurrenceNotPresentException"
 description: "The exception thrown when trying to get a specified occurrence of an item from a dictionary, or set a specified occurrence of an item in a dictionary."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Dictionaries.OccurrenceNotPresentException)</p>
 

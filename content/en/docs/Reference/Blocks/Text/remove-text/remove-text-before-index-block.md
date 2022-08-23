@@ -6,7 +6,7 @@ description: "Removes a length of text before the specified index of a given tex
 
 {{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextBeforeIndexBlock)</p>
 

@@ -4,7 +4,7 @@ linkTitle: "PropertyItemCountException"
 description: "The exception thrown when the values provided for two properties are expected to contain the same number of items, but don't."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyItemCountException)</p>
 

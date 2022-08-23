@@ -4,7 +4,7 @@ linkTitle: "ConnectionType"
 description: "Specifies the type of data source for a data connection."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Data.ConnectionType)</p>
 

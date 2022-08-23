@@ -6,7 +6,7 @@ description: "Sets all items matching one of the specified values in a Dictionar
 
 {{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithValuesBlock`3)</p>
 

@@ -6,7 +6,7 @@ description: "Gets the current Date Time."
 
 {{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.GetDateTime.GetCurrentDateTimeBlock)</p>
 

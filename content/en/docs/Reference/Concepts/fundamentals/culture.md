@@ -4,7 +4,7 @@ linkTitle: "Culture"
 description: "This page describes the concept of culture."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Overview
 

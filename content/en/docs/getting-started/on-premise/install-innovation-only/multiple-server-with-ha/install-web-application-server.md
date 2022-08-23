@@ -5,7 +5,7 @@ description: "Information about installing a Web Application Server."
 weight: 40
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to install the Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation.
 

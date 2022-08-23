@@ -5,7 +5,7 @@ description: "Terms, words and phrases beginning with the letters P through T."
 weight: 40
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Terms, words and phrases beginning with the letters P through T.
 

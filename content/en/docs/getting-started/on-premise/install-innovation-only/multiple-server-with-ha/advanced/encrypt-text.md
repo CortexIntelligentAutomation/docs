@@ -4,7 +4,7 @@ linkTitle: "Encrypt Text"
 description: "Information about encrypting text using the Cortex Encryptor."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 To encrypt text using the Cortex Encryptor PowerShell module:
 

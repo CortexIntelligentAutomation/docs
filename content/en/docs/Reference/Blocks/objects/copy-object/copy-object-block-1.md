@@ -6,7 +6,7 @@ description: "Copies an Object."
 
 {{< figure src="/blocks/objects-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Objects.CopyObject.CopyObjectBlock`1)</p>
 

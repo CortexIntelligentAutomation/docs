@@ -4,7 +4,7 @@ linkTitle: "PropertyEmptyException"
 description: "The exception thrown when a property is provided with an empty value, but a non-empty value is required."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyEmptyException)</p>
 

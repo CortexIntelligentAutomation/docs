@@ -6,7 +6,7 @@ description: "Create folders at the specified folder paths."
 
 {{< figure src="/blocks/folders-create-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CreateFolder.CreateFoldersBlock)</p>
 

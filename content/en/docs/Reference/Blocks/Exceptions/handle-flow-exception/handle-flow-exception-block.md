@@ -6,7 +6,7 @@ description: "Handles any unhandled exception within the Flow."
 
 {{< figure src="/blocks/exceptions-handle-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleFlowException.HandleFlowExceptionWorkspaceBlock)</p>
 

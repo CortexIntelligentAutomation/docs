@@ -6,7 +6,7 @@ description: "Reads all lines from a file at the specified file path."
 
 {{< figure src="/blocks/files-read-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.ReadFile.ReadAllLinesBlock)</p>
 

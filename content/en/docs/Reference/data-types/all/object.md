@@ -4,7 +4,7 @@ linkTitle: "Object"
 description: "Any data type can be used where an `Object` data type is required, as all data types derive from `Object`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Object)</p>
 

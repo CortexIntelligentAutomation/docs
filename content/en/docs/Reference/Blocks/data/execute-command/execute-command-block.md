@@ -6,7 +6,7 @@ description: "Connects to a specific data source and executes a Command, returni
 
 ![Icon](/blocks/data-execute-command-block-icon.png)
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Data.ExecuteCommand.ExecuteCommandBlock)</p>
 

@@ -6,7 +6,7 @@ description: "Moves a folder at the specified folder path to the given destinati
 
 {{< figure src="/blocks/folders-move-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.MoveFolder.MoveFolderBlock)</p>
 

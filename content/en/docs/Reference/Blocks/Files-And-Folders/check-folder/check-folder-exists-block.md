@@ -6,7 +6,7 @@ description: "Checks if a folder exists at the specified folder path."
 
 {{< figure src="/blocks/folders-check-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CheckFolder.CheckFolderExistsBlock)</p>
 

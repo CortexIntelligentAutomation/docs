@@ -4,7 +4,7 @@ linkTitle: "PropertyNotNullableException"
 description: "The exception thrown when a property cannot accept a non-nullable value type."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Decisions.PropertyNotNullableException)</p>
 

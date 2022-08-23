@@ -4,7 +4,7 @@ linkTitle: "CannotModifyReadOnlyDictionaryException"
 description: "The exception thrown when trying to modify a read-only dictionary."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException)</p>
 

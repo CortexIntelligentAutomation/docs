@@ -5,7 +5,7 @@ description: "Information about installing the Application Servers and Load Bala
 weight: 30
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Prerequisites][] have been read before starting this installation.
 

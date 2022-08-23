@@ -6,7 +6,7 @@ description: "Adds a Time Period to a specified Date Time."
 
 {{< figure src="/blocks/date-and-time-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.AddTimePeriod.AddTimePeriodBlock)</p>
 

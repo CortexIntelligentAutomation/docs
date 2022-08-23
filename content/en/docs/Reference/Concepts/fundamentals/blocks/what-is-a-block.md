@@ -5,7 +5,7 @@ description: "Information regarding the anatomy of a block, types of blocks and 
 weight: 1
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

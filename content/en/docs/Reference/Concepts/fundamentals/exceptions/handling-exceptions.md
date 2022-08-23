@@ -5,7 +5,7 @@ description: "Information regarding handling exceptions at the block, workspace 
 weight: 100
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 

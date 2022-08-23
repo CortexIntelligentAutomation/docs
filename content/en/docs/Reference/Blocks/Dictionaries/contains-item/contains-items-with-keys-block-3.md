@@ -6,7 +6,7 @@ description: "Checks if a Dictionary contains at least one item with each of the
 
 {{< figure src="/blocks/dictionaries-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemsWithKeysBlock`3)</p>
 

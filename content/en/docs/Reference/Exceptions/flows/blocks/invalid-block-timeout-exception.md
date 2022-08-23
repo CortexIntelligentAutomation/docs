@@ -4,7 +4,7 @@ linkTitle: "InvalidBlockTimeoutException"
 description: "The exception thrown when a block timeout is invalid."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.InvalidBlockTimeoutException)</p>
 
