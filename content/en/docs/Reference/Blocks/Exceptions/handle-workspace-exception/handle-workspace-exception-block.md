@@ -80,8 +80,9 @@ No exceptions are thrown by the block.
 
 The following restrictions apply to this block:
 
-* A workspace cannot contain more than one [Handle Workspace Exception][] block. If more than one is added to a workspace, it will be reported as a message when trying to debug the flow.
+* A workspace cannot contain more than one [Handle Workspace Exception][] block. If more than one is added, it will be reported as a message when trying to debug the flow.
 * The [Handle Workspace Exception][] block will only handle the first unhandled exception within its workspace. This is to prevent infinite recursion within the flow. Subsequent unhandled exceptions are passed to the next relevant exception handling block. For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
+* A flow's Top-Level Workspace cannot contain a [Handle Workspace Exception][] block. If one is added, it will be reported as a message when trying to debug the flow.
 
 ### Unhandled Exceptions
 

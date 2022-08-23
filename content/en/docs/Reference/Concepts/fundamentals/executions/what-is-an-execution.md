@@ -1,7 +1,7 @@
 ---
 title: "What is an Execution?"
 linkTitle: "What is an Execution?"
-description: "Information regarding what an execution is."
+description: "Information regarding the anatomy of an execution."
 weight: 1
 ---
 
@@ -13,6 +13,26 @@ An execution represents a running instance of a [flow][], the execution moves th
 
 - See [Executions in Development][] for mor information regarding working with executions in [Cortex Studio][].
 - See [Executions in Production][] for more information regarding running executions in the [Cortex Flow Execution Service][].
+
+## Anatomy of an Execution
+
+TODO:
+
+- Example image of execution in the executions grid
+  - Image including both grid and a token, single block flow
+- Finish Table
+- After Table, add line about multiple executions (when run from run flow block), link to executions grid e.g. child execution tokens or alternative name
+
+| Property | Notes | Example |
+|----------|-------|---------|
+| Status Icon | The Icon representing the current Status of the execution | TODO: add list of statuses link |
+| Started At | The date and time that the execution was started | '19 Aug 2022 12:00:00' |
+| Updated At || '19 Aug 2022 12:00:01' |
+| Status || TODO: add list of statuses link |
+| Block Type |||
+| Block Description |||
+| Workspace Name |||
+| Flow Name |||
 
 ## Remarks
 

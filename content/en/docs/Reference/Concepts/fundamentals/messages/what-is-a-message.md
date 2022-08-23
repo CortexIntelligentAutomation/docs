@@ -21,6 +21,8 @@ Some examples of issues that can be raised are (please note this is not an exhau
 
 ## Anatomy of a Message
 
+TODO: Example image of message in the messages grid
+
 | Message Property | Notes |
 |-------------|-------------|
 | Location | Area of the flow that triggered the message. Block or variable property |

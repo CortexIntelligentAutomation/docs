@@ -2,6 +2,7 @@
 title: "Cortex Studio - Expression Editor"
 linkTitle: "Cortex Studio - Expression Editor"
 description: "A guide on how to use the Expression Editor"
+weight: 0
 ---
 
 <img src="/images/work-in-progress.jpg">

@@ -229,10 +229,12 @@
                     MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block"
+                        BlockRestrictions = "/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block/#block-restrictions"
                 [Cortex.Reference.Blocks.Exceptions.HandleWorkspace]
                     MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block"
+                        BlockRestrictions = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block/#block-restrictions"
                 [Cortex.Reference.Blocks.Exceptions.ThrowException]
                     MainDoc = "/docs/reference/blocks/exceptions/throw-exception/"
                     [Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException]
@@ -539,6 +541,7 @@
                             AnatomyOfABlockProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#anatomy-of-a-block-property"
                             Input = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties"
                             Output = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties"
+                            DiscardingOutputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#discarding-outputs"
                             InputOutput = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
@@ -588,8 +591,10 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-development"
+                        ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInProduction]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-production"
+                        ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-production/#validating-a-flow"
                 [Cortex.Reference.Concepts.Fundamentals.Flows]
                     MainDoc = "/docs/reference/concepts/fundamentals/flows"
                     [Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows]
@@ -602,10 +607,6 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/messages/"
                     [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
                         MainDoc = "/docs/reference/concepts/fundamentals/messages/what-is-a-message/"
-                [Cortex.Reference.Concepts.Fundamentals.Objects]
-                        MainDoc = "/docs/reference/concepts/fundamentals/objects/"
-                        [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnObject]
-                            MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-object"    
                 [Cortex.Reference.Concepts.Fundamentals.Variables]
                     MainDoc = "/docs/reference/concepts/fundamentals/variables/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
@@ -623,6 +624,7 @@
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace"
                         TopLevelWorkspace = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#top-level-workspace"
+                        NestedWorkspaces = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#nested-workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"    
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
@@ -962,6 +964,8 @@
                 MainDoc = "/docs/reference/exceptions/loops/"
                     [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
                         MainDoc = "/docs/reference/exceptions/loops/infinite-loop-exception/"
+                        Category = "/docs/reference/exceptions/loops/infinite-loop-exception/#category"
+                        ErrorCode = "/docs/reference/exceptions/loops/infinite-loop-exception/#error-code"
                         IncrementIsZero = "/docs/reference/exceptions/loops/infinite-loop-exception/#100"
                         IncrementIsNegative = "/docs/reference/exceptions/loops/infinite-loop-exception/#101"
                         IncrementIsPositive = "/docs/reference/exceptions/loops/infinite-loop-exception/#102"
@@ -974,11 +978,16 @@
                 XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
         [Cortex.Reference.Logs]
             MainDoc = "/docs/reference/logs/"
-            CortexGateway = "/docs/reference/logs/cortex-gateway/"
-            CortexStudio = "/docs/reference/logs/cortex-studio/"
-            CortexFlowDebuggerService = "/docs/reference/logs/cortex-flow-debugger-service/"
-            CortexAPIGatewayService = "/docs/reference/logs/cortex-api-gateway-service/"
-            CortexFlowExecutionService = "/docs/reference/logs/cortex-flow-execution-service/"
+            [Cortex.Reference.Logs.CortexGateway]
+                MainDoc = "/docs/reference/logs/cortex-gateway/"
+            [Cortex.Reference.Logs.CortexStudio]
+                MainDoc = "/docs/reference/logs/cortex-studio/"
+            [Cortex.Reference.Logs.CortexFlowDebuggerService]
+                MainDoc = "/docs/reference/logs/cortex-flow-debugger-service/"
+            [Cortex.Reference.Logs.CortexAPIGatewayService]
+                MainDoc = "/docs/reference/logs/cortex-api-gateway-service/"
+            [Cortex.Reference.Logs.CortexFlowExecutionService]
+                MainDoc = "/docs/reference/logs/cortex-flow-execution-service/"
         [Cortex.Reference.Troubleshooting]
             MainDoc = "/docs/reference/troubleshooting/"
             [Cortex.Reference.Troubleshooting.Installation]

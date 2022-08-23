@@ -66,7 +66,7 @@ Please see [Representing an Int32 as a String][] for further information.
 * The Expression Editor is available for [Input][] properties where the data type is `Int32`.
 * The Literal Editor is available for [Input][] properties where the data type is `Int32`.
   * Expression syntax is not supported within the Literal Editor for the `Int32` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Int32`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Int32`.
 
 ### Known Limitations
 

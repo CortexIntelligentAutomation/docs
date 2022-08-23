@@ -58,7 +58,7 @@ The following table shows some of the ways that a `List<TItem>` can be converted
 
 * The Expression Editor is available for [Input][] properties where the data type is `List<TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `List<TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `List<TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `List<TItem>`.
 
 ### Known Limitations
 

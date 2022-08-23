@@ -46,7 +46,7 @@ Also note, in these circumstances it is more likely to encounter the `dynamic` d
 
 * The Expression Editor is available for [Input][] properties where the data type is `dynamic`.
 * The Literal Editor is not available for [Input][] properties where the data type is `dynamic`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `dynamic`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `dynamic`.
 
 ### Known Limitations
 

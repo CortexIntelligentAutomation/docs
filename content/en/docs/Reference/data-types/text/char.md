@@ -41,7 +41,7 @@ The following table shows some of the ways that a `Char` can be created.
 
 ### Property Editor Support
 
-Currently no [Input][], [InputOutput][] or [Output] properties require the `Char` data type.
+Currently no [Input][], [InputOutput][] or [Output][] properties require the `Char` data type.
 
 ### Known Limitations
 

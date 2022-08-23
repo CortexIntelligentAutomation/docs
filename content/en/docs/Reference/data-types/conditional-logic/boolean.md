@@ -64,7 +64,7 @@ The following table shows some of the ways that a `Boolean` can be converted to 
 * The Expression Editor is available for [Input][] properties where the data type is `Boolean`.
 * The Literal Editor is available for [Input][] properties where the data type is `Boolean`.
   * Expression syntax is not supported within the Literal Editor for the `Boolean` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Boolean`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Boolean`.
 
 ### Known Limitations
 

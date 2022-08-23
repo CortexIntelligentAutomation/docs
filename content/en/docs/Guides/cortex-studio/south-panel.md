@@ -2,6 +2,7 @@
 title: "Cortex Studio - South Panel (TBC)"
 linkTitle: "Cortex Studio - South Panel (TBC)"
 description: "Southern panel for Executions, Messages, and Variables"
+weight: 1
 ---
 
 <img src="/images/work-in-progress.jpg">

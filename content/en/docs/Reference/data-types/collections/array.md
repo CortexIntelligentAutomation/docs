@@ -70,7 +70,7 @@ The following table shows some of the ways that an `Array` can be converted to t
 
 ### Property Editor Support
 
-Currently no [Input][], [InputOutput][] or [Output] properties require the `Array` data type.
+Currently no [Input][], [InputOutput][] or [Output][] properties require the `Array` data type.
 
 ### Known Limitations
 

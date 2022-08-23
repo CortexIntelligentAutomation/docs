@@ -63,7 +63,7 @@ For some of the ways that an `IEnumerable<TItem>` can be converted to text, plea
 
 * The Expression Editor is available for [Input][] properties where the data type is `IEnumerable<TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IEnumerable<TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IEnumerable<TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IEnumerable<TItem>`.
 
 ### Known Limitations
 

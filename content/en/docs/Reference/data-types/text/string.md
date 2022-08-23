@@ -45,7 +45,7 @@ The following table shows some of the ways that a `String` can be created.
 * The Expression Editor is available for [Input][] properties where the data type is `String`.
 * The Literal Editor is available for [Input][] properties where the data type is `String`.
   * Expression syntax is not supported within the Literal Editor for the `String` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `String`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `String`.
 
 ### Known Limitations
 

@@ -56,7 +56,7 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 
 * The Expression Editor is available for [Input][] properties where the data type is `IDictionary<TKey, TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IDictionary<TKey, TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IDictionary<TKey, TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IDictionary<TKey, TItem>`.
 
 ### Known Limitations
 

@@ -53,7 +53,7 @@ The following table shows some of the ways that a `Dictionary<TKey, TItem>` can 
 
 * The Expression Editor is available for [Input][] properties where the data type is `Dictionary<TKey, TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `Dictionary<TKey, TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Dictionary<TKey, TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Dictionary<TKey, TItem>`.
 
 ### Known Limitations
 

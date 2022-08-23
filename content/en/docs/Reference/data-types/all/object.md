@@ -54,7 +54,7 @@ new Object()
 
 * The Expression Editor is available for [Input][] properties where the data type is `Object`.
 * The Literal Editor is not available for [Input][] properties where the data type is `Object`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Object`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Object`.
 
 ### Known Limitations
 

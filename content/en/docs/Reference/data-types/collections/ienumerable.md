@@ -62,7 +62,7 @@ For some of the ways that an `IEnumerable` can be converted to text, please see 
 
 * The Expression Editor is available for [Input][] properties where the data type is `IEnumerable`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IEnumerable`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IEnumerable`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IEnumerable`.
 
 ### Known Limitations
 

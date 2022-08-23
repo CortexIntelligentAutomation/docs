@@ -58,7 +58,7 @@ The following table shows some of the ways that a `Structure` can be converted t
 
 * The Expression Editor is available for [Input][] properties where the data type is `Structure`.
 * The Literal Editor is not available for [Input][] properties where the data type is `Structure`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Structure`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Structure`.
 
 ### Known Limitations
 

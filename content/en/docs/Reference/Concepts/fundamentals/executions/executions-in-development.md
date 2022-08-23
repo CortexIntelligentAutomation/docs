@@ -204,7 +204,7 @@ None
 [HTTP request: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.MainDoc" >}}
 [HTTP response: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.MainDoc" >}}
 
-[Cortex Flow Debugger Service]: {{< url "Cortex.Reference.Logs.CortexFlowDebuggerService" >}}
+[Cortex Flow Debugger Service]: {{< url "Cortex.Reference.Logs.CortexFlowDebuggerService.MainDoc" >}}
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Set Next Block to Execute]: {{< url "Cortex.Guides.Studio.MainDisplayArea.SetNextBlockToExecute" >}}

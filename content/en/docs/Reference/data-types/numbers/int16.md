@@ -59,7 +59,7 @@ The following table shows some of the ways that an `Int16` can be converted to t
 * The Expression Editor is available for [Input][] properties where the data type is `Int16`.
 * The Literal Editor is available for [Input][] properties where the data type is `Int16`.
   * Expression syntax is not supported within the Literal Editor for the `Int16` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Int16`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Int16`.
 
 ### Known Limitations
 

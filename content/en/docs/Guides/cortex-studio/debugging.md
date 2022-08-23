@@ -2,6 +2,7 @@
 title: "Debugging"
 linkTitle: "Debugging"
 description: ""
+weight: 1
 ---
 
 <img src="/images/work-in-progress.jpg">

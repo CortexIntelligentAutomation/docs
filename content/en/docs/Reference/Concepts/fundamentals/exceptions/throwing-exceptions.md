@@ -1,24 +1,22 @@
 ---
 title: "Throwing Exceptions"
 linkTitle: "Throwing Exceptions"
-description: "This page provides guidance on how to throw custom exceptions"
-weight: 3
+description: "Information regarding throwing an exception within a flow, and scenarios when it is useful to throw an exception."
+weight: 200
 ---
 
 # {{< param title >}}
 
 ## Summary
 
-[Exceptions][what-is-exception] can be thrown as part of the [flow's][Flow] logic, using the [Throw New Flow Exception][Block-Throw-Exception] block.
+A developer can throw an exception as part of a [flow][].
 
-Scenarios where intentionally throwing exceptions is useful include:
+Scenarios where throwing exceptions is useful include:
 
-- When the [flow][] is unable to complete as intended e.g. Input variables have invalid values
-- Wrapping other [exceptions][what-is-exception] e.g. Adding information to a third party error
+- A developer throwing a new exception when a flow reaches a state where it cannot complete its defined functionality
+- A developer enriching an exception that has already been thrown to provide more clarity and/or detail
 
-## Throwing an Exception
-
-For information about throwing an exception, please see [Throw New Flow Exception][Block-Throw-Exception] block.
+For information about throwing an exception, please see the [Throw New Flow Exception][] block.
 
 ## Remarks
 
@@ -30,22 +28,20 @@ None
 
 ### Related Concepts
 
-- [Exceptions][what-is-exception]
 - [Flows][]
-
-### Related Data Types
-
-- [Flow Exception][]
+- [Blocks][]
 
 ### Related Blocks
 
-- [Throw New Flow Exception][Block-Throw-Exception]
+- [Throw New Flow Exception][]
 
-[Flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
-[Block-Throw-Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}
-[Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
-[What-Is-Block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[What-Is-Execution]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
-[what-is-exception]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
-[Flow Exception]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc">}}
-[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+### External Documentation
+
+None
+
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+
+[Throw New Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}

@@ -61,7 +61,7 @@ The following table shows some of the ways that a `Single` can be converted to t
 * The Expression Editor is available for [Input][] properties where the data type is `Single`.
 * The Literal Editor is available for [Input][] properties where the data type is `Single`.
   * Expression syntax is not supported within the Literal Editor for the `Single` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Single`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Single`.
 
 ### Known Limitations
 

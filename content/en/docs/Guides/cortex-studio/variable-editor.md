@@ -2,6 +2,7 @@
 title: "Cortex Studio - Variable Editor"
 linkTitle: "Cortex Studio - Variable Editor"
 description: "A guide on how to use the Variable Editor"
+weight: 0
 ---
 
 <img src="/images/work-in-progress.jpg">

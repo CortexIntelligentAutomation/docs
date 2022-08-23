@@ -146,7 +146,7 @@ The following table shows some of the ways that a `DayOfWeek` can be converted t
 * The Expression Editor is available for [Input][] properties where the data type is `DayOfWeek`.
 * The Literal Editor is available for [Input][] properties where the data type is `DayOfWeek`.
   * Expression syntax is not supported within the Literal Editor for the `DayOfWeek` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `DayOfWeek`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `DayOfWeek`.
 
 ### Known Limitations
 

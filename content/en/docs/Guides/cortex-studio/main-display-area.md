@@ -2,6 +2,7 @@
 title: "Cortex Studio - Main Display Area"
 linkTitle: "Cortex Studio - Main Display Area"
 description: "The Main Display Area for developing and managing a flow"
+weight: 1
 ---
 
 <img src="/images/work-in-progress.jpg">

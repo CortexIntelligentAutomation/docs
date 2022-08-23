@@ -89,7 +89,7 @@ All examples are for a system configured with British [culture][] (i.e. `en-GB`)
 * The Expression Editor is available for [Input][] properties where the data type is `DateTimeOffset`.
 * The Literal Editor is available for [Input][] properties where the data type is `DateTimeOffset`.
   * Expression syntax is not supported within the Literal Editor for the `DateTimeOffset` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `DateTimeOffset`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `DateTimeOffset`.
 
 ### Known Limitations
 
