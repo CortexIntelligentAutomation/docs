@@ -655,6 +655,8 @@
                         MainDoc = "/docs/reference/concepts/working-with/culture/current-culture"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture]
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
+                [Cortex.Reference.Concepts.WorkingWith.DataSources]
+                    MainDoc = "/docs/reference/concepts/working-with-data-sources/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
@@ -717,8 +719,6 @@
                 MainDoc = "/docs/reference/concepts/file-and-folder-paths/"
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
-            [Cortex.Reference.Concepts.WorkingWithDataSources]
-                MainDoc = "/docs/reference/concepts/working-with-data-sources/"
             [Cortex.Reference.Concepts.NullAndNullableTypes]
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]

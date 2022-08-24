@@ -763,7 +763,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [String Interpolation]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.StringInterpolation" >}}
-[Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
+[Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataSources.MainDoc" >}}
 [Connection String Formats]: {{< url "ConnectionStrings.MainDoc" >}}
 [SqlException Error Codes]: {{< url "MSDocs.SqlServer.ErrorCodes" >}}
 [SqlException]: {{< url "MSDocs.SqlServer.SqlException" >}}
