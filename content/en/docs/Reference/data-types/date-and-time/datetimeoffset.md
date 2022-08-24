@@ -149,8 +149,8 @@ None
 
 [Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
-[Culture]: {{< url "Cortex.Reference.Concepts.WorkingWithCulture.MainDoc" >}}
-[Current Culture]: {{< url "Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture.MainDoc" >}}
+[Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.MainDoc" >}}
+[Current Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture.MainDoc" >}}
 
 [Implicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
 

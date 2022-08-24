@@ -143,7 +143,7 @@ TODO:
 [Format Specifiers]: {{< ref "#format-specifiers" >}}
 [Operating System Settings]: {{< ref "#operating-system-settings" >}}
 
-[Culture]: {{< url "Cortex.Reference.Concepts.WorkingWithCulture.MainDoc" >}}
+[Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.MainDoc" >}}
 
 [short date ("d") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.ShortDateFormat" >}}
 [short time ("t") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.ShortTimeFormat" >}}

@@ -630,9 +630,6 @@
                 [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
                     MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
                     StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
-                [Cortex.Reference.Concepts.Fundamentals.Culture]
-                    MainDoc = "/docs/reference/concepts/fundamentals/culture/"
-                    InvariantCulture = "/docs/reference/concepts/fundamentals/culture/#invariant-culture"
                 [Cortex.Reference.Concepts.Fundamentals.ComplexTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
                 [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
@@ -652,6 +649,12 @@
                         MainDoc = "/docs/reference/concepts/working-with/collections/keys/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
                         MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
+                [Cortex.Reference.Concepts.WorkingWith.Culture]
+                    MainDoc = "/docs/reference/concepts/working-with/culture/"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/current-culture"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
@@ -679,10 +682,6 @@
                             InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
                             Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.WorkingWithCulture]
-                MainDoc = "/docs/reference/concepts/culture/"
-                [Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture]
-                    MainDoc = "/docs/reference/concepts/culture/current-culture"
             [Cortex.Reference.Concepts.WorkingWithDateAndTime]
                 MainDoc = "/docs/reference/concepts/date-and-time/"
                 [Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting]
