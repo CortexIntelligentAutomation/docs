@@ -169,5 +169,5 @@ None
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [InfiniteLoopErrorCode]: {{< url "Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
+[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
 [Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWithLoops.MainDoc" >}}

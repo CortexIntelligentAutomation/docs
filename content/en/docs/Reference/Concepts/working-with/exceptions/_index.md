@@ -1,5 +1,5 @@
 ---
-title: "Working with Exceptions"
-linkTitle: "Working with Exceptions"
+title: "Exceptions"
+linkTitle: "Exceptions"
 description: "Information related to working with Exceptions."
 ---
