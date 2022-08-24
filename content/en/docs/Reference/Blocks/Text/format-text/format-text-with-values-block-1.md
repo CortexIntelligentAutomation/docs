@@ -185,8 +185,8 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 
 [Converting Objects To Text]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.MainDoc" >}}
 [Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.Fundamentals.Culture.InvariantCulture" >}}
-[Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.MainDoc" >}}
-[Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.FormatParameters" >}}
+[Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.MainDoc" >}}
+[Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatParameters" >}}
 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}

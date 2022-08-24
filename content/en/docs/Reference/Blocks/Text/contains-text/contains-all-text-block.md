@@ -226,11 +226,11 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[Text Equality]: {{< url "Cortex.Reference.Concepts.TextEquality.MainDoc" >}}
-[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.MainDoc" >}}
-[Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
-[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
-[Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
+[Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}
+[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.MainDoc" >}}
+[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.Ordinal" >}}
+[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax.MainDoc" >}}
+[Regex Syntax]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax.MainDoc" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [RegexParsingFailedException]: {{< url "Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}

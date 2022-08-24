@@ -227,8 +227,8 @@ Currently the block does not support indexing into properties (i.e. `ListPropert
 
 [Converting Objects To Text]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.MainDoc" >}}
 [Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.Fundamentals.Culture.InvariantCulture" >}}
-[Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.MainDoc" >}}
-[Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.FormatParameters" >}}
+[Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.MainDoc" >}}
+[Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatParameters" >}}
 
 [TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

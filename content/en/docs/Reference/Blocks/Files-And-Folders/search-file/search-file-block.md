@@ -356,12 +356,12 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[Text Equality]: {{< url "Cortex.Reference.Concepts.TextEquality.MainDoc" >}}
-[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.MainDoc" >}}
-[Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
-[OrdinalIgnoreCase]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.OrdinalIgnoreCase" >}}
+[Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}
+[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.MainDoc" >}}
+[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.Ordinal" >}}
+[OrdinalIgnoreCase]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.OrdinalIgnoreCase" >}}
 
-[Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
+[Text Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 
@@ -377,8 +377,8 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Example]: {{< ref "#get-matches-for-a-given-text" >}}
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
-[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
-[Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
+[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax.MainDoc" >}}
+[Regex Syntax]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}

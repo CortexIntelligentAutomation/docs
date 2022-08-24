@@ -204,9 +204,9 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[Text Equality]: {{< url "Cortex.Reference.Concepts.TextEquality.MainDoc" >}}
-[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.MainDoc" >}}
-[Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
+[Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}
+[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.MainDoc" >}}
+[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.Ordinal" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}

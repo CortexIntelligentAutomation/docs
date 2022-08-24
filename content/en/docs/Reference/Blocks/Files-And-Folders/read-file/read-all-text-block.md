@@ -146,7 +146,7 @@ For information about encoding of text, examples of available encodings and usin
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
+[Text Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding.MainDoc" >}}
 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
 [Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}

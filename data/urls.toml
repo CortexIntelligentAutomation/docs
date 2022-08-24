@@ -637,6 +637,35 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
                 [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
+            [Cortex.Reference.Concepts.Working.With]
+                MainDoc = "/docs/reference/concepts/working-with/"
+                [Cortex.Reference.Concepts.WorkingWith.Text]
+                    MainDoc = "/docs/reference/concepts/working-with/text/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
+                        MainDoc = "/docs/reference/concepts/working-with/text/formatting/"
+                        FormatParameters = "/docs/reference/concepts/working-with/text/formatting/#format-parameters"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax]
+                        MainDoc = "/docs/reference/concepts/working-with/text/regex-syntax/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.EmptyTextAndWhitespace]
+                        MainDoc = "/docs/reference/concepts/working-with/text/empty-text-and-whitespace/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax]
+                        MainDoc = "/docs/reference/concepts/working-with/text/pattern-matching-syntax/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.TextCasing]
+                        MainDoc = "/docs/reference/concepts/working-with/text/text-casing/"
+                        [Cortex.Reference.Concepts.WorkingWith.Text.TextCasing.CultureInfo]
+                            MainDoc = "/docs/reference/concepts/working-with/text/text-casing/#culture-info"
+                            CurrentCulture = "/docs/reference/concepts/working-with/text/text-casing/#current-culture"
+                            InvariantCulture = "/docs/reference/concepts/working-with/text/text-casing/#invariant-culture"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding]
+                        MainDoc = "/docs/reference/concepts/working-with/text/text-encoding/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.TextEquality]
+                        MainDoc = "/docs/reference/concepts/working-with/text/text-equality/"
+                        [Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes]
+                            MainDoc = "/docs/reference/concepts/working-with/text/text-equality/#comparison-types"
+                            CurrentCulture = "/docs/reference/concepts/working-with/text/text-equality/#current-culture"
+                            InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
+                            Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
+                            OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
             [Cortex.Reference.Concepts.WorkingWithCollections]
                 MainDoc = "/docs/reference/concepts/collections/"
                 ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"
@@ -672,11 +701,6 @@
                 MainDoc = "/docs/reference/concepts/loops/"
             [Cortex.Reference.Concepts.WorkingWithNumbers]
                 MainDoc = "/docs/reference/concepts/numbers/"
-            [Cortex.Reference.Concepts.WorkingWithText]
-                MainDoc = "/docs/reference/concepts/text/"
-                [Cortex.Reference.Concepts.WorkingWithText.Formatting]
-                    MainDoc = "/docs/reference/concepts/text/formatting/"
-                    FormatParameters = "/docs/reference/concepts/text/formatting/#format-parameters"
             [Cortex.Reference.Concepts.WorkingWithVariables]
                 MainDoc = "/docs/reference/concepts/variables/"
             [Cortex.Reference.Concepts.WorkingWithReferences]
@@ -717,30 +741,8 @@
                 InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
                 Output = "/docs/reference/concepts/property-type/#output"
                 DiscardingOutput = "/docs/reference/concepts/property-type/#discarding-output"
-            [Cortex.Reference.Concepts.TextEquality]
-                MainDoc = "/docs/reference/concepts/text-equality/"
-                [Cortex.Reference.Concepts.TextEquality.ComparisonTypes]
-                    MainDoc = "/docs/reference/concepts/text-equality/#comparison-types"
-                    CurrentCulture = "/docs/reference/concepts/text-equality/#current-culture"
-                    InvariantCulture = "/docs/reference/concepts/text-equality/#invariant-culture"
-                    Ordinal = "/docs/reference/concepts/text-equality/#ordinal"
-                    OrdinalIgnoreCase = "/docs/reference/concepts/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.PatternMatchingSyntax]
-                MainDoc = "/docs/reference/concepts/pattern-matching-syntax/"
-            [Cortex.Reference.Concepts.RegexSyntax]
-                MainDoc = "/docs/reference/concepts/regex-syntax/"
-            [Cortex.Reference.Concepts.TextCasing]
-                MainDoc = "/docs/reference/concepts/text-casing/"
-                [Cortex.Reference.Concepts.TextCasing.CultureInfo]
-                    MainDoc = "/docs/reference/concepts/text-casing/#culture-info"
-                    CurrentCulture = "/docs/reference/concepts/text-casing/#current-culture"
-                    InvariantCulture = "/docs/reference/concepts/text-casing/#invariant-culture"
             [Cortex.Reference.Concepts.TranslationErrors]
                 MainDoc = "/docs/reference/concepts/translation-errors/"
-            [Cortex.Reference.Concepts.TextEncoding]
-                MainDoc = "/docs/reference/concepts/text-encoding/"
-            [Cortex.Reference.Concepts.EmptyTextAndWhitespace]
-                MainDoc = "/docs/reference/concepts/empty-text-and-whitespace/"
         [Cortex.Reference.DataTypes]
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]

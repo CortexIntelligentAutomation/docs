@@ -69,4 +69,4 @@ None
 
 [System.Char]: {{< url "MSDocs.DotNet.Api.System.Char.MainDoc" >}}
 
-[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWithText.MainDoc" >}}
+[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}

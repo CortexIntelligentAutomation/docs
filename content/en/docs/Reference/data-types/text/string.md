@@ -78,4 +78,4 @@ None
 [String.Insert]: {{< url "MSDocs.DotNet.Api.System.String.Insert" >}}
 [String.Join]: {{< url "MSDocs.DotNet.Api.System.String.Join" >}}
 
-[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWithText.MainDoc" >}}
+[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
