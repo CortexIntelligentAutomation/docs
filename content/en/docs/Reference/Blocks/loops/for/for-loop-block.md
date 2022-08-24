@@ -225,7 +225,7 @@ The variable used for [Current Index][CurrentIndex Property] must have an [Int32
 
 [StartIndexGreaterThanEndIndex Example]: {{< ref "#loop-between-20-and-10-incrementing-by--5" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 

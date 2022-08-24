@@ -87,4 +87,4 @@ None
 [ListCreateNew]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [ListConvertToText]: {{< url "Cortex.Reference.DataTypes.Collections.List.ConvertToText" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

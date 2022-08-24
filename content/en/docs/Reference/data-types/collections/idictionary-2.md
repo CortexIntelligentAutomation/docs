@@ -100,4 +100,4 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 [StructureCreateNew]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.CreateNew" >}}
 [StructureConvertToText]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.ConvertToText" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

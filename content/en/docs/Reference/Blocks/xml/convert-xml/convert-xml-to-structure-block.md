@@ -318,11 +318,11 @@ This example will only occur when a [Structure][Structure Property] is Converted
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Keys]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
-[Items]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}
+[Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
+[Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items" >}}
 [Primitive Values]: {{< url "Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes.MainDoc" >}}
-[Key Value Pair]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.KeyValuePairs" >}}
-[Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Structures" >}}
+[Key Value Pair]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.KeyValuePairs" >}}
+[Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Structures" >}}
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}

@@ -637,8 +637,21 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
                 [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
-            [Cortex.Reference.Concepts.Working.With]
+            [Cortex.Reference.Concepts.WorkingWith]
                 MainDoc = "/docs/reference/concepts/working-with/"
+                [Cortex.Reference.Concepts.WorkingWith.Collections]
+                    MainDoc = "/docs/reference/concepts/working-with/collections/"
+                    ArraysVersusLists = "/docs/reference/concepts/working-with/collections/#arrays-vs-lists"
+                    Structures = "/docs/reference/concepts/working-with/collections/#structures"
+                    DotNotation = "/docs/reference/concepts/working-with/collections/#dot-notation"
+                    IndexNotation = "/docs/reference/concepts/working-with/collections/#index-notation"
+                    Items = "/docs/reference/concepts/working-with/collections/#items"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Indexes]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/indexes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Keys]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/keys/"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
@@ -666,14 +679,6 @@
                             InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
                             Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.WorkingWithCollections]
-                MainDoc = "/docs/reference/concepts/collections/"
-                ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"
-                Structures = "/docs/reference/concepts/collections/#structures"
-                DotNotation = "/docs/reference/concepts/collections/#dot-notation"
-                IndexNotation = "/docs/reference/concepts/collections/#index-notation"
-                Keys = "/docs/reference/concepts/collections/#keys"
-                Items = "/docs/reference/concepts/collections/#items"
             [Cortex.Reference.Concepts.WorkingWithCulture]
                 MainDoc = "/docs/reference/concepts/culture/"
                 [Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture]
@@ -713,12 +718,8 @@
                 MainDoc = "/docs/reference/concepts/file-and-folder-paths/"
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
-            [Cortex.Reference.Concepts.Indexes]
-                MainDoc = "/docs/reference/concepts/indexes/"
             [Cortex.Reference.Concepts.WorkingWithDataSources]
                 MainDoc = "/docs/reference/concepts/working-with-data-sources/"
-            [Cortex.Reference.Concepts.Keys]
-                MainDoc = "/docs/reference/concepts/keys/"
             [Cortex.Reference.Concepts.NullAndNullableTypes]
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]
@@ -733,8 +734,6 @@
                     ReferenceTypeEquality = "/docs/reference/concepts/object-equality/#reference-type-equality"
                 [Cortex.Reference.Concepts.ObjectEquality.HowCortexComparesObjectsForEquality]
                     MainDoc = "/docs/reference/concepts/object-equality/#how-cortex-compares-objects-for-equality"
-            [Cortex.Reference.Concepts.Occurrences]
-                MainDoc = "/docs/reference/concepts/occurrences/"
             [Cortex.Reference.Concepts.PropertyType]
                 MainDoc = "/docs/reference/concepts/property-type/"
                 Input = "/docs/reference/concepts/property-type/#input"

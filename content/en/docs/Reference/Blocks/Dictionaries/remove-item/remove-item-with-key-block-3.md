@@ -182,9 +182,9 @@ For information about the different types of dictionaries, including those that 
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
-[Keys]: {{< url "Cortex.Reference.Concepts.Keys.MainDoc" >}}
+[Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
-[Occurrences]: {{< url "Cortex.Reference.Concepts.Occurrences.MainDoc" >}}
+[Occurrences]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences.MainDoc" >}}
 
 [Dictionary Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.DictionaryLiteral" >}}
 [Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}

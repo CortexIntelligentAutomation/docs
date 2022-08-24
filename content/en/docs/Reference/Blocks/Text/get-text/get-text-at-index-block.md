@@ -112,7 +112,7 @@ The [Index][Index Property] property is an inclusive [index][Indexes], which mea
 [Length Property]: {{< ref "#length" >}}
 [TextAtIndex Property]: {{< ref "#text-at-index" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 

@@ -92,4 +92,4 @@ None
 [IEnumerable&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [IList&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

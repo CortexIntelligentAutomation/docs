@@ -140,7 +140,7 @@ The [Start Index][StartIndex Property] and [End Index][EndIndex Property] proper
 
 [StartIndexGreaterThanEndIndex Example]: {{< ref "#get-text-where-start-index-is-greater-than-end-index" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 

@@ -106,7 +106,7 @@ To overcome this, this block creates a new [String][] which has the [Length][Len
 [Index Property]: {{< ref "#index" >}}
 [Length Property]: {{< ref "#length" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 

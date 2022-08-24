@@ -133,7 +133,7 @@ To overcome this, this block creates a new [String][] which has the text removed
 
 [StartIndexGreaterThanEndIndex Example]: {{< ref "#get-text-where-start-index-is-greater-than-end-index" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 

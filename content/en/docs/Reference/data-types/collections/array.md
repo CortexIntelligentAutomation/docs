@@ -110,5 +110,5 @@ None
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable.MainDoc" >}}
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
-[Arrays vs Lists]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.ArraysVersusLists" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
+[Arrays vs Lists]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.ArraysVersusLists" >}}
