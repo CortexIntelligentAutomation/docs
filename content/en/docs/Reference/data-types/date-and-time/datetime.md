@@ -116,16 +116,16 @@ None
 [DateTimeOffset.LocalDateTime]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.LocalDateTime" >}}
 [DateTimeOffset.UtcDateTime]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.UtcDateTime" >}}
 
-[Date and Time Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.MainDoc" >}}
-[StandardFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.StandardFormatTemplates" >}}
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Operating System Settings]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.OperatingSystemSettings" >}}
+[Date and Time Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.MainDoc" >}}
+[StandardFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.StandardFormatTemplates" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Operating System Settings]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.OperatingSystemSettings" >}}
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.MainDoc" >}}
 [Current Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture.MainDoc" >}}

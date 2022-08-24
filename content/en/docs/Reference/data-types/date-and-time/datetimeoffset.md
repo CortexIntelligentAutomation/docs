@@ -137,17 +137,17 @@ None
 [DateTimeOffset.UtcDateTime]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.UtcDateTime" >}}
 [DateTimeOffset.ToString]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.ToString" >}}
 
-[Date and Time Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.MainDoc" >}}
-[StandardFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.StandardFormatTemplates" >}}
-[CustomFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.CustomFormatTemplates" >}}
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Operating System Settings]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.OperatingSystemSettings" >}}
+[Date and Time Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.MainDoc" >}}
+[StandardFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.StandardFormatTemplates" >}}
+[CustomFormatTemplates]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.CustomFormatTemplates" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Operating System Settings]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.OperatingSystemSettings" >}}
 
 [DateTime]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc" >}}
 [TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.MainDoc" >}}
 [Current Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture.MainDoc" >}}

@@ -1,10 +1,8 @@
 ---
-title: "Working with Data Sources"
-linkTitle: "Working with Data Sources"
+title: "Data Sources"
+linkTitle: "Data Sources"
 description: "This page gives information about working with Data Sources."
 ---
-
-# {{% param title %}}
 
 ## Overview
 

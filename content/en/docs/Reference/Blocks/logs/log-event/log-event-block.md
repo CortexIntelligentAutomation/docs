@@ -362,8 +362,8 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [Grafana]: {{< url "Grafana.MainDoc" >}}
 [ElasticSearch]: {{< url "ElasticSearch.MainDoc" >}}

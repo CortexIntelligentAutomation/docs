@@ -656,7 +656,20 @@
                     [Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture]
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
-                    MainDoc = "/docs/reference/concepts/working-with-data-sources/"
+                    MainDoc = "/docs/reference/concepts/working-with/data-sources/"
+                [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
+                    MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
+                    [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
+                        MainDoc = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/"
+                        FormatProviders = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#format-providers"
+                        InvariantCulture = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#invariant-culture"
+                        CurrentCulture = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#current-culture"
+                        FormatTemplates = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#format-templates"
+                        StandardFormatTemplates = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates"
+                        ISO8601Standard = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard"
+                        CustomFormatTemplates = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#custom-format-templates"
+                        FormatSpecifiers = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#format-specifiers"
+                        OperatingSystemSettings = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#operating-system-settings"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
@@ -684,19 +697,6 @@
                             InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
                             Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.WorkingWithDateAndTime]
-                MainDoc = "/docs/reference/concepts/date-and-time/"
-                [Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting]
-                    MainDoc = "/docs/reference/concepts/date-and-time/date-and-time-formatting/"
-                    FormatProviders = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-providers"
-                    InvariantCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#invariant-culture"
-                    CurrentCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#current-culture"
-                    FormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-templates"
-                    StandardFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#standard-format-templates"
-                    ISO8601Standard = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#iso-8601-standard"
-                    CustomFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#custom-format-templates"
-                    FormatSpecifiers = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-specifiers"
-                    OperatingSystemSettings = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#operating-system-settings"
             [Cortex.Reference.Concepts.WorkingWithEnums]
                 MainDoc = "/docs/reference/concepts/enums/"
             [Cortex.Reference.Concepts.WorkingWithExceptions]
