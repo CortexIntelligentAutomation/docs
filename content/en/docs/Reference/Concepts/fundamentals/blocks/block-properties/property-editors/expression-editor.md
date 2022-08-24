@@ -657,7 +657,7 @@ This may change in future to allow developers to specifically select which of th
 
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
-[Enum]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
+[Enum]: {{< url "Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
 [implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}

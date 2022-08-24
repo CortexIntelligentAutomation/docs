@@ -190,5 +190,5 @@ None
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Working with Enums]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
+[Working with Enums]: {{< url "Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 [Explicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}
