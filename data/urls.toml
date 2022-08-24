@@ -711,8 +711,6 @@
                 MainDoc = "/docs/reference/concepts/variables/"
             [Cortex.Reference.Concepts.WorkingWithReferences]
                 MainDoc = "/docs/reference/concepts/references/"
-            [Cortex.Reference.Concepts.ExceptionHandling]
-                MainDoc = "/docs/reference/concepts/exception-handling/"
             [Cortex.Reference.Concepts.FileAndFolderAttributes]
                 MainDoc = "/docs/reference/concepts/file-and-folder-attributes/"
             [Cortex.Reference.Concepts.FileAndFolderPaths]

@@ -120,7 +120,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [Unhandled Exceptions]: {{< ref "#unhandled-exceptions" >}}
 
-[Exception Handling]: {{< url "Cortex.Reference.Concepts.ExceptionHandling.MainDoc" >}}
+[Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
 [Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.PropertyType.DiscardingOutput" >}}
 
