@@ -988,6 +988,10 @@
                 MainDoc = "/docs/reference/logs/cortex-api-gateway-service/"
             [Cortex.Reference.Logs.CortexFlowExecutionService]
                 MainDoc = "/docs/reference/logs/cortex-flow-execution-service/"
+        [Cortex.Reference.Messages]
+            MainDoc = "/docs/reference/messages/"
+            [Cortex.Reference.Messages.Validation]
+                MainDoc = "/docs/reference/messages/validation/"
         [Cortex.Reference.Troubleshooting]
             MainDoc = "/docs/reference/troubleshooting/"
             [Cortex.Reference.Troubleshooting.Installation]

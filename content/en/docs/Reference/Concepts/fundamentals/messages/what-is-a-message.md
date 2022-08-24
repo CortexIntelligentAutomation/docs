@@ -1,45 +1,107 @@
 ---
 title: "What is a Message?"
 linkTitle: "What is a Message?"
-description: "This page describes the concept of a Message"
+description: "Information regarding the anatomy of a message, when a message will occur, and using messages to navigate to issues within a flow."
 weight: 1
 ---
 
 # {{% param title %}}
 
-TODO: Paul and Tyler review
-
 ## Summary
 
-A message is a warning or error generated during the pre-execution phase of a flow execution. Prior to execution, the flow is translated for the Cortex engine and is analysed for issues that may occur during execution.
+When [Starting an Execution in Development][] using the [Start an execution][] button, the [flow][] will be [validated][]; if there are issues with the flow, [messages][] explaining the issues will be displayed in the [Messages Grid][].
 
-Some examples of issues that can be raised are (please note this is not an exhaustive list):
+Some examples of issues that can be raised are:
 
-- Blocks using undefined variables
-- Blocks using variables with mismatched data types
-- Input variables that have not been initialised
+- [Blocks][block] using undefined [variables][variable]
+- [Blocks][block] using [variables][variable] with mismatched [data types][data type]
+- [Input variables][] that have not been initialised
+
+For a complete list see [Validation][] messages.
 
 ## Anatomy of a Message
 
 TODO: Example image of message in the messages grid
 
-| Message Property | Notes |
-|-------------|-------------|
-| Location | Area of the flow that triggered the message. Block or variable property |
+Related messages are grouped by the component affected (e.g. A [block][], or the [Settings Editor][])
+
+Each message row contains the following:
+
+| Property | Notes |
+|----------|-------|
+| Location | Path to the specific part of the component that has caused the issue |
 | Summary | Short description of the issue |
-| Details | Information relating to the cause of the issue. May also contain help for resolving the issue |
+| Details | Further information about the issue. This may also contain help for resolving the issue |
+
+## Navigating to the Location of an issue from a message
+
+Double clicking on a message within the [Messages Grid][] will navigate the browser to the affected location.
 
 ## Remarks
 
 ### Known Limitations
 
-#### Navigating to Block Properties
+#### It is not possible to navigate to a nested literal property from a message
 
-When clicking a message to locate an issue with a block property, only the top-level property of a literal property will be highlighted. This may change in future releases.
+It is not possible to navigate to a nested literal property from a message, clicking the message will cause the browser to navigate to the last [property][] of the top-level [literal editor][] that contains the issue.
+
+In future this limitation may be removed.
+
+#### It is not possible to navigate to the Settings Editor from a message
+
+It is not possible to navigate to the [Settings Editor][] from a message, clicking the message will do nothing.
+
+In future this limitation may be removed.
 
 ## See Also
 
 ### Related Concepts
 
-- [Executions][]
+- [Flows][]
+- [Blocks][]
 - [Variables][]
+- [Data Types][]
+- [Executions][]
+
+### Related Blocks
+
+- [All Blocks][]
+
+### Related Data Types
+
+- [All Data Types][]
+
+### External Documentation
+
+None
+
+[messages]: {{< ref "#anatomy-of-a-message" >}}
+
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
+[literal editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
+[Input variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
+
+[Data Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
+[data type]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.MainDoc" >}}
+
+[Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[Starting an Execution in Development]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.MainDoc" >}}
+[validated]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.ValidatingAFlow" >}}
+
+[All Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+
+[All Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
+
+[Validation]: {{< url "Cortex.Reference.Messages.Validation.MainDoc" >}}
+
+[Start an execution]: {{< url "Cortex.Guides.Studio.MainDisplayArea.StartAnExecution" >}}
+[Messages Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
+[Settings Editor]: {{< url "Cortex.Guides.Studio.EastPanel.SettingsEditor" >}}

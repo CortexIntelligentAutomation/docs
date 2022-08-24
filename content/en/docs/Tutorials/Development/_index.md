@@ -1,7 +1,7 @@
 ---
 title: "Development"
 linkTitle: "Development"
-description: "This section includes tutorials about developing automation using the Cortex platform."
+description: "This section includes tutorials about developing automation using the Cortex Innovation platform."
 weight: 30
 ---
 

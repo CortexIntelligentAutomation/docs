@@ -35,6 +35,8 @@ The [flow][] is validated before it's debugged, if this is successful an executi
 
 If there are any issues with the flow then the execution will not start and details of what needs to be resolved will be returned. If the flow was debugged by clicking the [Start an execution][] button, then entries will be displayed in the [Messages Grid][]; if it was debugged by making an [HTTP request][HTTP request: Cortex Studio] to [Cortex Studio][], then a 400 Bad Request is returned.
 
+For a complete list see [Validation][] messages.
+
 ## Selecting an Execution
 
 One or more executions can be selected within [Cortex Studio][] by clicking on their [token][], or selecting them using the [Executions Grid][]. This allows:
@@ -205,6 +207,8 @@ None
 [HTTP response: Cortex Studio]: {{< url "Cortex.Reference.Apis.Studio.MainDoc" >}}
 
 [Cortex Flow Debugger Service]: {{< url "Cortex.Reference.Logs.CortexFlowDebuggerService.MainDoc" >}}
+
+[Validation]: {{< url "Cortex.Reference.Messages.Validation.MainDoc" >}}
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Set Next Block to Execute]: {{< url "Cortex.Guides.Studio.MainDisplayArea.SetNextBlockToExecute" >}}

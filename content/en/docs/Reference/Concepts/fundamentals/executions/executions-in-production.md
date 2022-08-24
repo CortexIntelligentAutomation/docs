@@ -25,6 +25,8 @@ The [flow][] is validated before it's started, if this is successful an executio
 
 If there are any issues with the flow then the execution will not start and details of what needs to be resolved will be returned. If the flow was started by making an [HTTP request][HTTP request: Cortex API Gateway Service] to the [Cortex API Gateway Service][], then a 400 Bad Request is returned.
 
+For a complete list see [Validation][] messages.
+
 ## Handling an Execution's Exceptions
 
 Exceptions thrown by an execution can be handled at any level within a flow.
@@ -110,6 +112,8 @@ None
 [All Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 
 [Cortex API Gateway Service: Logs]: {{< url "Cortex.Reference.Logs.CortexAPIGatewayService.MainDoc" >}}
+
+[Validation]: {{< url "Cortex.Reference.Messages.Validation.MainDoc" >}}
 
 [Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
 [API call: Cortex API Gateway]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
