@@ -70,7 +70,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
     |`SkipLoadBalancer`                             | Updates certificates without updating a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
-## Test Installation Script
+### Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
@@ -93,7 +93,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
     If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file in the script location, showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
 
-## Run Update Certificates Script
+### Run Update Certificates Script
 
 1. Update the certificates for the Application Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
 
@@ -109,7 +109,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [Cortex Service Portal][] for assistance.
 
-## Check Application Services
+### Check Application Services
 
 1. Log on to the server.
 1. Import the certificate, used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your `Current User` certificate store. This can be achieved by double clicking on the certificate .PFX file and following the wizard.
