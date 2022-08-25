@@ -5,7 +5,7 @@ description: "Information about the recommended Innovation platform architecture
 weight: 10
 ---
 
-# {{% param title %}}
+# {{< param title >}}
 
 ## Components
 
