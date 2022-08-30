@@ -1,6 +1,6 @@
 ---
-title: "File & Folder Paths"
-linkTitle: "File & Folder Paths"
+title: "Paths"
+linkTitle: "Paths"
 description: "This page describes the concept of file and folder paths."
 ---
 

@@ -674,6 +674,12 @@
                     MainDoc = "/docs/reference/concepts/working-with/enums/"
                 [Cortex.Reference.Concepts.WorkingWith.Exceptions]
                     MainDoc = "/docs/reference/concepts/working-with/exceptions/"
+                [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders]
+                    MainDoc = "/docs/reference/concepts/working-with/files-and-folders/"
+                    [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Attributes]
+                        MainDoc = "/docs/reference/concepts/working-with/files-and-folders/attributes/"
+                    [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths]
+                        MainDoc = "/docs/reference/concepts/working-with/files-and-folders/paths/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
@@ -701,8 +707,6 @@
                             InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
                             Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.WorkingWithFilesAndFolders]
-                MainDoc = "/docs/reference/concepts/files-and-folders/"
             [Cortex.Reference.Concepts.WorkingWithLoops]
                 MainDoc = "/docs/reference/concepts/loops/"
             [Cortex.Reference.Concepts.WorkingWithNumbers]
@@ -711,10 +715,6 @@
                 MainDoc = "/docs/reference/concepts/variables/"
             [Cortex.Reference.Concepts.WorkingWithReferences]
                 MainDoc = "/docs/reference/concepts/references/"
-            [Cortex.Reference.Concepts.FileAndFolderAttributes]
-                MainDoc = "/docs/reference/concepts/file-and-folder-attributes/"
-            [Cortex.Reference.Concepts.FileAndFolderPaths]
-                MainDoc = "/docs/reference/concepts/file-and-folder-paths/"
             [Cortex.Reference.Concepts.Generics]
                 MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.NullAndNullableTypes]

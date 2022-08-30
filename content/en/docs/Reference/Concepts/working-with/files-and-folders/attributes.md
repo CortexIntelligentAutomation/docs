@@ -1,6 +1,6 @@
 ---
-title: "File & Folder Attributes"
-linkTitle: "File & Folder Attributes"
+title: "Attributes"
+linkTitle: "Attributes"
 description: "This page describes the concept of file and folder attributes."
 ---
 
