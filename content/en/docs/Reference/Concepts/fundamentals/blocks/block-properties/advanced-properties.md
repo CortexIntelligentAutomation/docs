@@ -17,7 +17,7 @@ All advanced properties are hidden by default and can be shown by [Toggling Adva
 
 All advanced properties can be shown or hidden using the Show/Hide Advanced Properties button found on the top right of the [Property Editor][]. This button is used to toggle whether properties are shown or hidden.
 
-TODO: Image of Set Item block with timeout (have label showing how to toggle advanced)
+![Icon](/images/set-variable/set-variable-block-timeout.svg)
 
 ## Finding Advanced Properties
 
