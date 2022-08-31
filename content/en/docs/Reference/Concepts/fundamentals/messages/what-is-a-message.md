@@ -21,7 +21,7 @@ For a complete list see [Validation][] messages.
 
 ## Anatomy of a Message
 
-TODO: Example image of message in the messages grid
+![Example Message in Messages Grid](/images/messages-grid.PNG)
 
 Related messages are grouped by the component affected (e.g. A [block][], or the [Settings Editor][])
 
