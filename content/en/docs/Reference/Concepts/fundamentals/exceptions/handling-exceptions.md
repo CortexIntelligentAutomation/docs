@@ -33,7 +33,7 @@ The [Handle Block Exception][] block can be used to handle all exceptions. This 
 
 For example:
 
-![Icon](/images/chaining-handle-block-exception-blocks.png)
+![Chaining Block Exception Handling Blocks](/images/chaining-handle-block-exception-blocks.png)
 
 ### Saving the Block Exception
 
@@ -85,7 +85,7 @@ The logic contained within the [Handle Flow Exception][] workspace must end the 
 
 Exceptions that occur within the [workspace][] of the [Handle Flow Exception][] block can be handled at the [block level][] and [workspace level][]. If an exception is not handled, the [execution][] will end with a status of Error.
 
-![Icon](/images/flow-error-status.png)
+![Handling Exceptions in the Handle Flow Exception block](/images/flow-error-status.png)
 
 ### Saving the Flow Exception
 

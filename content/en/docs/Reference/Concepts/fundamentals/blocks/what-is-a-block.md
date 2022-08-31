@@ -29,7 +29,7 @@ Flow Control blocks are used to start or end a [flow][] or [workspace][].
 
 #### Block Image
 
-![Icon](/images/flow-control-blocks.svg)
+![Flow Control Blocks](/images/flow-control-blocks.svg)
 
 - Flow Control blocks are square shaped
 - Flow Control blocks are smaller than [Action Blocks][]
@@ -57,7 +57,7 @@ Exceptions thrown by Action blocks can be handled by connecting a [Handle Block 
 
 #### Block Image
 
-![Icon](/images/action-blocks.svg)
+![Action Blocks](/images/action-blocks.svg)
 
 - The icon of the Action block shows what object or system it interacts with
 - The icon in the bottom right of the Action block provides further information into what type of action or interaction it will take
@@ -80,7 +80,7 @@ Decision blocks are used to branch within a [flow][] based on a condition.
 
 #### Block Image
 
-![Icon](/images/decision-blocks.svg)
+![Decision Blocks](/images/decision-blocks.svg)
 
 - The icon of the Decision block shows what object or system it interacts with
 - Decision blocks are diamond shaped
@@ -104,7 +104,7 @@ Exceptions can be handled at different levels within a [flow][]; at the block le
 
 #### Block Image
 
-![Icon](/images/exception-handling-blocks.svg)
+![Exception Handling Blocks](/images/exception-handling-blocks.svg)
 
 - Exception Handling blocks have a pink background
 
@@ -132,7 +132,7 @@ Unhandled exceptions thrown within a workspace can be handled by connecting a [H
 
 #### Block Image
 
-![Icon](/images/workspace-blocks.svg)
+![Workspace Blocks](/images/workspace-blocks.svg)
 
 - Workspace blocks are rectangle shaped
 - Workspace blocks are larger than [Action Blocks][]

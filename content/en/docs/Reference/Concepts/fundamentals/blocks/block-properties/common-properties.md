@@ -20,7 +20,7 @@ These properties include:
 
 The Description property is available on all [blocks][All Blocks]. It defaults to the name of the block and can be used to describe the action or function the block is performing. Any text entered in the Description property is displayed next to the [block's][block] icon on the [workspace][].
 
-![Icon](/images/set-variable/set-variable-description.svg)
+![Description Property](/images/set-variable/set-variable-description.svg)
 
 ## Block Timeout Property
 
@@ -30,7 +30,7 @@ The default value of `null`, or a [TimePeriod][] of `0` seconds, indicates that 
 
 Negative [TimePeriod][] values will cause an [InvalidBlockTimeoutException][] to be raised when the block is executed.
 
-![Icon](/images/set-variable/set-variable-block-timeout.svg)
+![Block Timeout Property](/images/set-variable/set-variable-block-timeout.svg)
 
 ## Remarks
 
