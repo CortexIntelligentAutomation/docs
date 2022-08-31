@@ -149,14 +149,12 @@ None
 [chained]: {{< ref "#chaining-block-exception-handling-blocks" >}}
 [block saved to a variable]: {{< ref "#saving-the-block-exception" >}}
 [workspace saved to a variable]: {{< ref "#saving-the-workspace-exception" >}}
-[flow saved to a variable]: {{< ref "#saving-the-flow-exception" >}}
 [match criteria]: {{< ref "#matching-exceptions" >}}
 [workspace level]: {{< ref "#handling-exceptions-at-the-workspace-level" >}}
 [flow level]: {{< ref "#handling-exceptions-at-the-flow-level" >}}
 
 [Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
-[Flow-Exception-Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
 
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
