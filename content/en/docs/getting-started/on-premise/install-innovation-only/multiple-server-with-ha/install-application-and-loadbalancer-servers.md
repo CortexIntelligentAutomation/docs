@@ -136,7 +136,9 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -ServerCertificatePwd "myPassword" `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
     -ClientCertificatePwd "myPassword" `
-    -Credential $Credential
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEula `
+    | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
     .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -148,7 +150,9 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -UseSelfSignedCertificates `
-    -Credential $Credential
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEula `
+    | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="CA Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -163,7 +167,9 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
     -ClientCertificatePwd "myPassword" `
     -SkipLoadBalancer `
-    -Credential $Credential
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEula `
+    | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -175,7 +181,9 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -UseSelfSignedCertificates `
     -SkipLoadBalancer `
-    -Credential $Credential
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEula `
+    | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
@@ -195,6 +203,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |`UseSelfSignedCertificates`                    | Installs HA Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`SkipLoadBalancer`                             | Installs HA Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the Application Servers. It must be a domain user that is a member of the local Administrators group on all servers. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
+    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
     The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
 
@@ -213,12 +223,19 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
     ```
 
-1. Test `Cortex.Innovation.Install.ps1` by running the following command:
+1. Type the following command into PowerShell:
 
     ```powershell
     .\Cortex.Innovation.Install.ps1 -WhatIf
     ```
 
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -WhatIf -AcceptEULA
+    ```
+
+1. Run the PowerShell command to test the installation script.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ.
 1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system, to ensure things like communication between the servers are working.
@@ -230,12 +247,18 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Run Installation Script
 
-1. Install HA Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
+1. Type the following command into PowerShell:
 
     ```powershell
-    .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    .\Cortex.Innovation.Install.ps1
+    ```
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
     ```
 
+1. Run the PowerShell command to install HA Services and the required infrastructure.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ. This should be entered carefully and recorded as it may be needed if seeking support from [Cortex Service Desk](https://support.cortex.co.uk/). Press OK.
 1. Wait for the script to finish running. This should take approximately 10 minutes.
@@ -293,6 +316,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. [Install Web Application Server][]
 
 [Advanced Application Server and Load Balancer Configuration Changes]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.AdvancedConfig" >}}
+[Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}
 [Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
 [Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
 [Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
