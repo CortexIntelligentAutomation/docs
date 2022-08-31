@@ -20,7 +20,7 @@ Data in a variable can be read, updated, or removed by different blocks. Example
 
 ## Anatomy of a Variable
 
-TODO: Example image of variable in the variables grid
+![Example Variable in Variables Grid](/images/variables-grid.PNG)
 
 Variables have the following properties that can be configured in the [Variables Grid][]:
 
