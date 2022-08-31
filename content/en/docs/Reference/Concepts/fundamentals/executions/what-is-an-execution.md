@@ -16,23 +16,22 @@ An execution represents a running instance of a [flow][], the execution moves th
 
 ## Anatomy of an Execution
 
-TODO:
-
-- Example image of execution in the executions grid
-  - Image including both grid and a token, single block flow
-- Finish Table
-- After Table, add line about multiple executions (when run from run flow block), link to executions grid e.g. child execution tokens or alternative name
+![Example Execution in Executions Grid](/images/execution-in-grid.PNG)
 
 | Property | Notes | Example |
 |----------|-------|---------|
 | Status Icon | The Icon representing the current Status of the execution | TODO: add list of statuses link |
-| Started At | The date and time that the execution was started | '19 Aug 2022 12:00:00' |
-| Updated At || '19 Aug 2022 12:00:01' |
-| Status || TODO: add list of statuses link |
-| Block Type |||
-| Block Description |||
-| Workspace Name |||
-| Flow Name |||
+| Started At | The date and time that the execution was started | `19 Aug 2022 12:00:00` |
+| Updated At || `19 Aug 2022 12:00:01` |
+| Status | The status of the execution | TODO: add list of statuses link |
+| Block Type | The block the execution is currently on | `Set Variable Block` |
+| Block Description | The description of the block the execution is currently on | `Create Message` |
+| Workspace Name | The name of the workspace the execution is currently in | `Top-Level Workspace` |
+| Flow Name | The name of the flow the execution is currently running | `Flow-Name` |
+
+![Example Child Execution in Executions Grid](/images/child-execution-in-grid.PNG)
+
+When a [flow][] starts the execution of a child flow using the [Run Flow][TODO] block, any child executions will be shown within a tree in the [Executions Grid][]
 
 ## Remarks
 
@@ -77,3 +76,4 @@ None
 [All Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
+[Executions Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}

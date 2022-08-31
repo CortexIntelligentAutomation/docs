@@ -24,7 +24,7 @@ An exception can be handled in different ways depending on where the exception o
 
 ## Anatomy of an Exception
 
-| ![Example Exception in Exception Viewer](/images/exception-in-viewer.PNG) |
+![Example Exception in Exception Viewer](/images/exception-in-viewer.PNG)
 
 Data within an exception can be accessed using properties.
 
