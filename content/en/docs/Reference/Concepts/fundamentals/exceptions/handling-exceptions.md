@@ -17,7 +17,7 @@ Exceptions within a flow can be handled at the following levels:
 
 ## Handling Exceptions at the Block level
 
-TODO: Example image of exception thrown by simple flow single block exception handler with token above (animated gif)
+![Example Message in Messages Grid](/images/block-exception.gif)
 
 Exceptions thrown within the [execution][] of a [block][] can be handled by connecting a [Handle Block Exception block][Handle Block Exception blocks]  to the red exception output port. These blocks allow for specific [match criteria][] to be provided; if an exception matches the criteria it will be handled by the block and can be [saved to a variable][block saved to a variable], otherwise, it will be passed to the next [chained][] exception handling block. This process repeats until the exception is either handled or there are no more blocks in the chain; if the exception is not handled at this level it is passed up to the [workspace level][].
 
@@ -33,7 +33,7 @@ The [Handle Block Exception][] block can be used to handle all exceptions. This 
 
 For example:
 
-![Chaining Block Exception Handling Blocks](/images/chaining-handle-block-exception-blocks.png)
+![Chaining Block Exception Handling Blocks](/images/chained-exception.gif)
 
 ### Saving the Block Exception
 
@@ -41,7 +41,7 @@ For example:
 
 ## Handling Exceptions at the Workspace level
 
-TODO: Example image of exception thrown by simple flow single workspace exception handler with token above (animated gif)
+![Example Message in Messages Grid](/images/workspace-exception.gif)
 
 Exceptions not handled at the [block level][] are passed up to the workspace level.
 
@@ -66,7 +66,8 @@ The [Handle Workspace Exception][] block can be used to save the handled excepti
 
 ## Handling Exceptions at the Flow level
 
-TODO: Example image of exception thrown by simple flow, only flow exception handler with token above (animated gif)
+![Example Message in Messages Grid](/images/flow-exception.gif)
+
 
 If an unhandled exception occurs in or reaches the [Top-Level Workspace][], and is not handled at the [block level][] or [workspace level][], it will be passed up to the flow level, where:
 
