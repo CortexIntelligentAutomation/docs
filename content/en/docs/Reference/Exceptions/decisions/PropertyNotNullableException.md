@@ -6,7 +6,7 @@ description: "The exception thrown when a property cannot accept a non-nullable 
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Exceptions.Dictionaries.KeyNotPresentException)</p>
+<p class="namespace">(Cortex.Exceptions.Decisions.PropertyNotNullableException)</p>
 
 The exception thrown when a property cannot accept a non-nullable value type.
 

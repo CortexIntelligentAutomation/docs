@@ -4,7 +4,7 @@ linkTitle: "Get Text At Index"
 description: "Gets a length of text at the specified index of a given text."
 ---
 
-![Icon](/blocks/text-get-block-icon.png)
+{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -118,5 +118,5 @@ The [Index][Index Property] property is an inclusive [index][Indexes], which mea
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

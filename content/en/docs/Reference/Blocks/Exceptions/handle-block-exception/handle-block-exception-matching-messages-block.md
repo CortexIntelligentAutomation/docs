@@ -4,7 +4,7 @@ linkTitle: "Handle Block Exception Matching Messages"
 description: "Handles any exception thrown by the block it is connected to that matches any message in a given set of messages."
 ---
 
-![Icon](/blocks/exceptions-handle-block-block-icon.png)
+{{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -28,7 +28,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of messa
 |--------------------|---------------------------|------------------------------------------|
 | [Messages][Messages Property] | `($)Messages`, with value `["'List' is null", "'List' is empty"]` | `($)Messages` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [Dynamic][] value |
+| [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [dynamic][] value |
 
 #### Result
 
@@ -132,7 +132,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Default Value | `($)Exception` with no value |
 
@@ -166,7 +166,7 @@ Blocks that handle block exceptions can be chained together so different excepti
 * [Handle Block Exception Matching Type Names][]
 * [Handle Block Exception][]
 
-![Icon](/images/chaining-handle-block-exception-blocks.png)<br/><br/><br/>
+![Icon](/images/chaining-handle-block-exception-blocks.png)
 
 Each block has an input port on its left-hand side and, with the exception of the [Handle Block Exception][] block, also have an output port on their right-hand side; this is so they can pass any exception they do not handle to the next block.
 
@@ -174,15 +174,15 @@ As the [Handle Block Exception][] block handles any exception, it does not requi
 
 For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
 
-### Why does the Exception property return a Dynamic data type?
+### Why does the Exception property return a dynamic data type?
 
-The decision for the [Exception][Exception Property] to return a [Dynamic data type][Dynamic] rather than an [Exception data type][Exception], was to avoid users having to [cast][Object Casting] the exception to its correct type to be able to use all of its properties.
+The decision for the [Exception][Exception Property] to return a [dynamic data type][dynamic] rather than an [Exception data type][Exception], was to avoid users having to [cast][Object Casting] the exception to its correct type to be able to use all of its properties.
 
 As a result, any issues with using the [Exception data type][Exception] (i.e. trying to access a property it does not have) will not be reported as messages when trying to debug the flow; they will only be discovered when the flow execution reaches the part of the flow with the issue.
 
 If it is desirable to have any issues reported as messages when trying to debug the flow, the user can [cast][Object Casting] the exception to its correct type.
 
-### Using the built-in ($)_ variable to discard the Exception
+### Using the built-in ($)_ variable to discard the Exception from being saved
 
 Sometimes when an exception occurs the flow execution wants to use the exception to make decisions or take further action. However, there are occasions when the exception is not needed, and being forced to create another variable to save the exception is extra work for no benefit. In these circumstances it is possible to use the built-in `($)_` variable to indicate the exception does not need to be saved.
 
@@ -213,8 +213,8 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

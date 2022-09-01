@@ -4,7 +4,7 @@ linkTitle: "Split Text"
 description: "Splits text into a list of String values, using the given separator to determine where to split."
 ---
 
-![Icon](/blocks/text-split-block-icon.png)
+{{< figure src="/blocks/text-split-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -170,7 +170,7 @@ If the [Separator][Separator Property] is not found in [Text][Text Property], th
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[StringSplitOptions]: {{< url "MSDocs.DotNet.Api.System.StringSplitOptions" >}}
+[StringSplitOptions]: {{< url "Cortex.Reference.DataTypes.Text.StringSplitOptions.MainDoc" >}}

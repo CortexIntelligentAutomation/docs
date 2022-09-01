@@ -4,7 +4,7 @@ linkTitle: "Get Date Time Component"
 description: "Gets a component (e.g. Year, Month, Day) of a specified Date Time."
 ---
 
-![Icon](/blocks/date-and-time-get-block-icon.png)
+{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -330,12 +330,6 @@ Getting the DayOfWeek component of a Date Time representing 5am on 31st December
 DayOfWeek.Friday
 ```
 
-Its text representation is:
-
- ```json
-"DayOfWeek: Friday"
-```
-
 ***
 
 ## Properties
@@ -386,11 +380,11 @@ The exceptions thrown by the block can be found below:
 
 The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information, please see [Working with Dates and Time][].
+For more information, please see [Working with Date and Time][].
 
-### Why does the Component property return a Dynamic data type?
+### Why does the Component property return a dynamic data type?
 
-The decision for [Component][Component Property] to return a [Dynamic data type][Dynamic] rather than an [Object][], was to avoid users having to [cast][Object Casting] the component to its correct type to be able to use all of its properties.
+The decision for [Component][Component Property] to return a [dynamic data type][dynamic] rather than an [Object][], was to avoid users having to [cast][Object Casting] the component to its correct type to be able to use all of its properties.
 
 As a result, any issues with using the [Component][Component Property] (i.e. trying to access a property it does not have) will not be reported as messages when trying to debug the flow; they will only be discovered when the flow execution reaches the part of the flow with the issue.
 
@@ -406,16 +400,16 @@ If it is desirable to have any issues reported as messages when trying to debug 
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
 
-[Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[DateTime]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTime" >}}
-[DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeComponentType" >}}
-[TimePeriod]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimePeriod" >}}
-[TimeSpan]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimeSpan" >}}
-[DayOfWeek]: {{< url "Cortex.Reference.DataTypes.MostCommon.DayOfWeek" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
+[DateTime]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc" >}}
+[DateTimeComponentType]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeComponentType.MainDoc" >}}
+[TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+[TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
+[DayOfWeek]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DayOfWeek.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

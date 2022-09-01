@@ -4,7 +4,7 @@ linkTitle: "Delete Folders"
 description: "Deletes folders at the specified folder paths."
 ---
 
-![Icon](/blocks/folders-delete-block-icon.png)
+{{< figure src="/blocks/folders-delete-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -163,6 +163,6 @@ If an exception occurs when trying to delete a folder in [Folder Paths][FolderPa
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Log Event"
 description: "Logs an event to the filesystem."
 ---
 
-![Icon](/blocks/logs-log-event-block-icon.png)
+{{< figure src="/blocks/logs-log-event-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -92,7 +92,6 @@ Logging the event results in the following log being written:
             },
             "Service":{
                 "Type":null,
-                "Name":null,
                 "IpAddressOrFqdn":null,
                 "$type":"ServiceDetails"
             },
@@ -118,7 +117,7 @@ The [Event Details][EventDetails Property] to log.
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Input][] |
 | Default Value | `($)EventDetails` with value `null` |
 
@@ -165,7 +164,7 @@ Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T0
 
 If [Started At][StartedAt Property] is left blank or set to `null`, a value of `null`   will be logged.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -181,7 +180,7 @@ Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T0
 
 If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null` will be logged.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -249,7 +248,7 @@ Please note that if the appsetting.json file cannot be found for one of the serv
 
 ### Anatomy of a Log
 
-The format of the logs written by this block are the same as the logs written by the rest of the Cortex Services. This is to ensure logging is consistent and done one way within Cortex Evolution. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
+The format of the logs written by this block are the same as the logs written by the rest of the Cortex Services. This is to ensure logging is consistent and done one way within Cortex. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
 
 An example log can be found below:
 
@@ -298,7 +297,6 @@ An example log can be found below:
         },
         "Service":{
             "Type":null,
-            "Name":null,
             "IpAddressOrFqdn":null,
             "$type":"ServiceDetails"
         },
@@ -323,15 +321,14 @@ A list of each of the log's properties and an accompanying description can be fo
 | `Event.Duration.InMs`             | The duration of the event in milliseconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
 | `Event.Duration.$type`            | The .Net data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.Details`                   | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
-| `Event.Correlation`               | For future use. Will contain details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple Cortex Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Correlation.TraceId`       | For future use. ID common to all related logs, so in future they can be easily correlated together. Currently not populated and set to `null`. |
-| `Event.Correlation.SpanId`        | For future use. Unique ID for each log, so in future tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. Currently not populated and set to `null`. |
-| `Event.Correlation.ParentSpanId`  | For future use. The ID of the step that called this step of processing, so in future tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. Currently not populated and set to `null`. |
+| `Event.Correlation`               | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple Cortex Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Correlation.TraceId`       | ID common to all related logs, so they can be easily correlated together. |
+| `Event.Correlation.SpanId`        | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
+| `Event.Correlation.ParentSpanId`  | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
 | `Event.Correlation.$type`  | The .Net data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Service`            | For future use. Will contain details of the Cortex Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Service.Type`       | For future use. The type of the Cortex Service that logged this event. |
-| `Event.Service.Name`       | For future use. The name of the Cortex Service that logged this event. |
-| `Event.Service.IpAddressOrFqdn`   | For future use. The IP address or fully qualified domain name of the Cortex Service that logged this event. |
+| `Event.Service`            | Contains details of the Cortex Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Service.Type`       | The type of the Cortex Service that logged this event. |
+| `Event.Service.IpAddressOrFqdn`   | The IP address or fully qualified domain name of the Cortex Service that logged this event. |
 | `Event.Service.$type`      | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.$type`              | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
 
@@ -365,16 +362,16 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
 [Grafana]: {{< url "Grafana.MainDoc" >}}
 [ElasticSearch]: {{< url "ElasticSearch.MainDoc" >}}
 [Splunk]: {{< url "Splunk.MainDoc" >}}
 
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[EventSeverity]: {{< url "Cortex.Reference.DataTypes.MostCommon.EventSeverity" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
+[EventSeverity]: {{< url "Cortex.Reference.DataTypes.Logs.EventSeverity.MainDoc" >}}

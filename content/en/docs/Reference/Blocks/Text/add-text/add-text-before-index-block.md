@@ -4,7 +4,7 @@ linkTitle: "Add Text Before Index"
 description: "Adds text to another text before the specified index."
 ---
 
-![Icon](/blocks/text-add-block-icon.png)
+{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -128,5 +128,5 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

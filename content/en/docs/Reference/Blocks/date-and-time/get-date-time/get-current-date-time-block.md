@@ -4,7 +4,7 @@ linkTitle: "Get Current Date Time"
 description: "Gets the current Date Time."
 ---
 
-![Icon](/blocks/date-and-time-get-block-icon.png)
+{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -44,7 +44,7 @@ The current [Date Time][DateTime Property] including a UTC time offset.
 
 Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -62,13 +62,13 @@ No exceptions are thrown by the block.
 
 The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information, please see [Working with Dates and Time][].
+For more information, please see [Working with Date and Time][].
 
 [DateTime Property]: {{< ref "#date-time" >}}
 
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Convert Date Time To Text"
 description: "Converts a Date Time to Text."
 ---
 
-![Icon](/blocks/date-and-time-convert-to-text-block-icon.png)
+{{< figure src="/blocks/date-and-time-convert-to-text-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -144,7 +144,7 @@ The [Date Time][DateTime Property] to convert to [Text][Text Property].
 
 By default, if no [Format Template][FormatTemplate Property] or [Format Provider][FormatProvider Property] are specified, the resultant [Text][Text Property] will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -160,7 +160,7 @@ If [Format Template][FormatTemplate Property] contains valid format specifiers (
 
 If [Format Template][FormatTemplate Property] is not specified, `null` or empty (i.e. `""`), the default format template of the specified [Format Provider][FormatProvider Property] is used. If [Format Provider][FormatProvider Property] is also not specified or `null` the [ISO 8601 Standard][] format will be used (i.e. `"yyyy-MM-ddTHH:mm:ss.fffffffzzz"`).
 
-For information about format templates and specifiers, please see [Date and Time Formats][].
+For information about format templates and specifiers, please see [Date and Time Formatting][].
 
 | | |
 |--------------------|---------------------------|
@@ -204,13 +204,13 @@ The exceptions thrown by the block can be found below:
 
 The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information, please see [Working with Dates and Time][].
+For more information, please see [Working with Date and Time][].
 
 ### Format Template and Specifiers
 
 Please note that changes to operating system date and time formats, could result in some of the examples above displaying different results.
 
-For information about format templates and specifiers, please see [Date and Time Formats][].
+For information about format templates and specifiers, please see [Date and Time Formatting][].
 
 ### Null or Empty Format Template
 
@@ -230,11 +230,11 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 
 [FormatException]: {{< url "MSDocs.DotNet.Api.System.FormatException" >}}
 
-[Date and Time Formats]: {{< url "Cortex.Reference.Concepts.DateAndTimeFormats.MainDoc" >}}
-[Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.DateAndTimeFormats.InvariantCulture" >}}
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[Date and Time Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.MainDoc" >}}
+[Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.InvariantCulture" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.MostCommon.IFormatProvider" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}

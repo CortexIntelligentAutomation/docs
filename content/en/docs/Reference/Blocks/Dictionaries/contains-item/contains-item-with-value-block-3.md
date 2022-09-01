@@ -4,7 +4,7 @@ linkTitle: "Contains Item With Value"
 description: "Checks if a Dictionary contains at least one item matching the specified value."
 ---
 
-![Icon](/blocks/dictionaries-contains-block-icon.png)
+{{< figure src="/blocks/dictionaries-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -106,7 +106,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. |
+| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. See [Value Is Invalid][]. |
 | [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] is `null`. |
 
 ## Remarks
@@ -125,7 +125,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -141,16 +141,18 @@ For information about the different types of dictionaries, including those that 
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
 [Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

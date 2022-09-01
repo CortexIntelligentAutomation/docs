@@ -4,7 +4,7 @@ linkTitle: "Contains All Text"
 description: "Checks if text contains all of the texts in a given set of texts."
 ---
 
-![Icon](/blocks/text-contains-block-icon.png)
+{{< figure src="/blocks/text-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -213,9 +213,9 @@ If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified 
 
 If [Texts To Find][TextsToFind Property] is empty or contains any `null` or empty (i.e. `""`) text, the variable specified in the [Contains All Text][ContainsAllText Property] property is set to `false`.
 
-### Known limitations
+### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [Text Property]: {{< ref "#text" >}}
 [TextsToFind Property]: {{< ref "#texts-to-find" >}}
@@ -238,8 +238,8 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [RegexMatchTimeoutException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}

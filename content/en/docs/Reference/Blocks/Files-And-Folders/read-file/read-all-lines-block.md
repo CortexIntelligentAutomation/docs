@@ -4,7 +4,7 @@ linkTitle: "Read All Lines"
 description: "Reads all lines from a file at the specified file path."
 ---
 
-![Icon](/blocks/files-read-block-icon.png)
+{{< figure src="/blocks/files-read-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -90,7 +90,7 @@ For information about encoding, examples of available encodings and using them, 
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Default Value | `($)Encoding` with value `null` |
 
@@ -112,7 +112,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). |
+| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). See [Value Is Invalid][]. |
 | [OperationFailedException][] | The [File Path][FilePath Property] does not exist. |
 |                              | The [File Path][FilePath Property] points to a folder. |
 |                              | The [File Path][FilePath Property] contains leading spaces. |
@@ -152,13 +152,15 @@ For information about encoding of text, examples of available encodings and usin
 
 [Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
 
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [OperationFailedException]: {{< url "Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.MainDoc" >}}
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Set Items At Beginning"
 description: "Sets the items at the beginning of a List to new values."
 ---
 
-![Icon](/blocks/lists-set-block-icon.png)
+{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -83,11 +83,11 @@ If [New Values][NewValues Property] is empty (i.e. `[]`) there is nothing to set
 
 ### Defining lists using literal syntax
 
-For information about how to define lists using literal syntax, see [List Literals][].
+For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Defining lists using expression syntax
 
-For information about how to define lists using expression syntax, see [List Expressions][].
+For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Lists containing items of a single data type vs multiple data types
 
@@ -99,8 +99,7 @@ For information about the different types of lists, including those that can con
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
-[List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
-[List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
+[Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
@@ -109,6 +108,6 @@ For information about the different types of lists, including those that can con
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}

@@ -4,11 +4,11 @@ linkTitle: "Set All Items"
 description: "Sets all items in a List to a new value."
 ---
 
-![Icon](/blocks/lists-set-block-icon.png)
+{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetAllItems`2)</p>
+<p class="namespace">(Cortex.Blocks.Lists.SetItem.SetAllItemsBlock`2)</p>
 
 ## Description
 
@@ -68,7 +68,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|-------------|
 | [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [New Value][NewValue Property] is `null` and [List][List Property] only accepts non-nullable value types. |
+| [InvalidPropertyValueException][] | Thrown when [New Value][NewValue Property] is `null` and [List][List Property] only accepts non-nullable value types. See [Value Is Invalid][]. |
 | [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
 
 ## Remarks
@@ -79,11 +79,11 @@ If [List][List Property] is empty (i.e. `[]`) there is nothing to set, so no ope
 
 ### Defining lists using literal syntax
 
-For information about how to define lists using literal syntax, see [List Literals][].
+For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Defining lists using expression syntax
 
-For information about how to define lists using expression syntax, see [List Expressions][].
+For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Lists containing items of a single data type vs multiple data types
 
@@ -95,16 +95,18 @@ For information about the different types of lists, including those that can con
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
-[List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
-[List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
+[Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Write All Lines"
 description: "Writes all specified lines to a file at the given file path."
 ---
 
-![Icon](/blocks/files-write-block-icon.png)
+{{< figure src="/blocks/files-write-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -146,7 +146,7 @@ For information about encoding, examples of available encodings and using them, 
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Default Value | `($)Encoding` with value `null` |
 
@@ -156,7 +156,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). |
+| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). See [Value Is Invalid][]. |
 | [OperationFailedException][] | The [File Path][FilePath Property] points to a folder. |
 |                              | The [File Path][FilePath Property] contains leading spaces. |
 |                              | The [File Path][FilePath Property] contains only whitespace, or the NUL character (i.e. `\0`), or contains one or more invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`) in any file or folder names. |
@@ -197,14 +197,16 @@ For information about encoding of text, examples of available encodings and usin
 
 [Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
 
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [OperationFailedException]: {{< url "Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.MainDoc" >}}
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

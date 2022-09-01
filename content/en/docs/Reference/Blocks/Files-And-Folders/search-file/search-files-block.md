@@ -4,7 +4,7 @@ linkTitle: "Search Files"
 description: "Searches files at the specified file paths for a matching search pattern."
 ---
 
-![Icon](/blocks/files-search-block-icon.png)
+{{< figure src="/blocks/files-search-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -357,7 +357,7 @@ For information about encoding, examples of available encodings and using them, 
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Default Value | `($)Encoding` with value `null` |
 
@@ -412,7 +412,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
 | | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
-| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). |
+| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). See [Value Is Invalid][]. |
 | [OperationFailedException][] | Any file path in [File Paths][FilePaths Property] is `null` or empty (i.e. `""`). For more information, see [Null or Empty File Paths][]|
 |                              | Any file path in [File Paths][FilePaths Property] is duplicated. For more information, see [Duplicate File Paths][] |
 |                              | Any file path in [File Paths][FilePaths Property] does not exist. |
@@ -459,11 +459,11 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If an exception occurs when trying to search a file in the [File Paths][FilePaths Property], it will be recorded and the block will continue processing the remaining files. Once all files are processed, recorded exceptions will be thrown within an [OperationFailedException][].
 
-### Known limitations
+### Known Limitations
 
 * The text in the files at the specified [File Paths][FilePaths Property] is searched line-by-line. As a result, when using `SearchOptions.Regex` the in-line `s` regex character is not supported.
 * If the text in the files at the specified [File Paths][FilePaths Property] ends with a blank line (`0` length) that line will not be read and therefore not matched against.
-* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [FilePaths Property]: {{< ref "#file-paths" >}}
 [SearchPattern Property]: {{< ref "#search-pattern" >}}
@@ -483,7 +483,10 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 [Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [OperationFailedException]: {{< url "Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.MainDoc" >}}
 [Duplicate File Paths]: {{< url "Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.IndexesOfDuplicatePaths" >}}
 [Null Or Empty File Paths]: {{< url "Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.IndexesOfNullOrEmptyPaths" >}}
@@ -498,11 +501,11 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 [Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
 [Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
-[Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[FileMatch]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileMatch" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+[Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[FileMatch]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileMatch.MainDoc" >}}

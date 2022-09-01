@@ -4,7 +4,7 @@ linkTitle: "Delete File"
 description: "Deletes a file at the specified file path."
 ---
 
-![Icon](/blocks/files-delete-block-icon.png)
+{{< figure src="/blocks/files-delete-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -99,4 +99,4 @@ If the [File Path][FilePath Property] does not exist nothing is deleted, and no 
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

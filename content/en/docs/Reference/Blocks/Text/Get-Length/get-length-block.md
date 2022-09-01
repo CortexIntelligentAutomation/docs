@@ -4,7 +4,7 @@ linkTitle: "Get Length"
 description: "Gets the length of a given text."
 ---
 
-![Icon](/blocks/text-get-length-block-icon.png)
+{{< figure src="/blocks/text-get-length-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -75,5 +75,5 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) the variable specified i
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

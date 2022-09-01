@@ -4,7 +4,7 @@ linkTitle: "Get Index Of Item With Value"
 description: "Gets the index of the specified occurrence of an item in a List matching a value."
 ---
 
-![Icon](/blocks/lists-get-index-block-icon.png)
+{{< figure src="/blocks/lists-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -128,7 +128,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|-------------|
-| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [List][List Property] only accepts non-nullable value types. |
+| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] is `null` and [List][List Property] only accepts non-nullable value types. See [Value Is Invalid][]. |
 | [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
 
 ## Remarks
@@ -155,11 +155,11 @@ If the [Occurrence][Occurrence Property] is set to `0`, the variable specified i
 
 ### Defining lists using literal syntax
 
-For information about how to define lists using literal syntax, see [List Literals][].
+For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Defining lists using expression syntax
 
-For information about how to define lists using expression syntax, see [List Expressions][].
+For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Lists containing items of a single data type vs multiple data types
 
@@ -176,8 +176,7 @@ For information about the different types of lists, including those that can con
 [Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
 [Occurrences]: {{< url "Cortex.Reference.Concepts.Occurrences.MainDoc" >}}
 
-[List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
-[List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
+[Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 
 [TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
@@ -186,7 +185,9 @@ For information about the different types of lists, including those that can con
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

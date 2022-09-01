@@ -4,7 +4,7 @@ linkTitle: "Workspace"
 description: "Represents a new workspace."
 ---
 
-![Icon](/blocks/workspaces-workspace-block-icon.png)
+{{< figure src="/blocks/workspaces-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -28,7 +28,7 @@ No examples for the block.
 
 ## Properties
 
-No properties for the block, other than the `Description` property that is common to all blocks.
+No properties for the block, other than the `Description` property that is common to all blocks, and the `Block Timeout` property that is common to most blocks.
 
 ## Exceptions
 
@@ -55,7 +55,7 @@ This process repeats until:
 
 If an exception occurs within the workspace of the [Handle Flow Exception][] block and is not handled, the flow will end with a status of Error.
 
-![Icon](/images/flow-error-status.png)<br/><br/><br/>
+![Icon](/images/flow-error-status.png)
 
 For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
 

@@ -4,7 +4,7 @@ linkTitle: "Create Folders"
 description: "Create folders at the specified folder paths."
 ---
 
-![Icon](/blocks/folders-create-block-icon.png)
+{{< figure src="/blocks/folders-create-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -105,5 +105,5 @@ If an exception occurs when trying to create a folder in [Folder Paths][FolderPa
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

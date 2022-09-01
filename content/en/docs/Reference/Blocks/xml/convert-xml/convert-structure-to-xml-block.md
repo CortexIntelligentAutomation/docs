@@ -4,7 +4,7 @@ linkTitle: "Convert Structure To Xml"
 description: "Converts a Structure To Xml."
 ---
 
-![Icon](/blocks/xml-convert-to-xml-block-icon.png)
+{{< figure src="/blocks/xml-convert-to-xml-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -177,7 +177,7 @@ For more information about Structures, please see [Working with Structures][].
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Input][] |
-| Default Value | `($)Structure` with value `null` |
+| Default Value | `($)Structure` with no value |
 
 ### Xml
 
@@ -349,8 +349,8 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [XmlSerializationException]: {{< url "Cortex.Reference.Exceptions.Xml.XmlSerializationException" >}}
 
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
 [Items]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}

@@ -4,7 +4,7 @@ linkTitle: "Delete Files"
 description: "Deletes files at the specified file paths."
 ---
 
-![Icon](/blocks/files-delete-block-icon.png)
+{{< figure src="/blocks/files-delete-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -108,6 +108,6 @@ If an exception occurs when trying to delete a file in the [File Paths][FilePath
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

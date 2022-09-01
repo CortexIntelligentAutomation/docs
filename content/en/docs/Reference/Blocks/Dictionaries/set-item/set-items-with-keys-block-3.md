@@ -4,7 +4,7 @@ linkTitle: "Set Items With Keys"
 description: "Sets all items with any of the given keys in a Dictionary to new values."
 ---
 
-![Icon](/blocks/dictionaries-set-block-icon.png)
+{{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -104,7 +104,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -121,7 +121,7 @@ For information about the different types of dictionaries, including those that 
 [Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
 
 [Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
@@ -133,7 +133,7 @@ For information about the different types of dictionaries, including those that 
 [PropertyItemCountException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyItemCountException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

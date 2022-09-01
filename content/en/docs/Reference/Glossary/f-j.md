@@ -19,7 +19,7 @@ Different files can store different types of data (i.e. a text file, `.txt`, sto
 
 ### Flow
 
-A flow is an object in [Cortex Studio][TODO] that contains the logic and actions (in the form of [blocks][TODO]) that the [Cortex Evolution][TODO] [platform][TODO] is able to execute for the [flow developers][TODO].
+A flow is an object in [Cortex Studio][TODO] that contains the logic and actions (in the form of [blocks][TODO]) that the [Cortex][TODO] [platform][TODO] is able to execute for the [flow developers][TODO].
 
 For more detailed information about flows, see [Guides->Cortex Studio->Flows][TODO].
 
@@ -92,7 +92,7 @@ Int32 ThirtyTwoBitInteger = SixteenBitInteger;
 
 See [Explicit Cast][TODO] for an example of where data loss would occur during conversion, and would therefore require an explicit instruction from the developer.
 
-See [Casting and type conversions (C# Programming Guide)][TODO] for a detailed technical explanation of casting in [C#][TODO], the [programming language][TODO] natively supported by the [Cortex Evolution][TODO] [platform][TODO] for writing simple [expressions][TODO] and more complex [code][TODO].
+See [Casting and type conversions (C# Programming Guide)][TODO] for a detailed technical explanation of casting in [C#][TODO], the [programming language][TODO] natively supported by the [Cortex][TODO] [platform][TODO] for writing simple [expressions][TODO] and more complex [code][TODO].
 
 ### Index
 

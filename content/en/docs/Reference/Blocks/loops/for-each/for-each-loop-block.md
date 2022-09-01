@@ -4,7 +4,7 @@ linkTitle: "For Each Loop"
 description: "Loops through all items in the specified collection (i.e. Lists, Dictionaries and Structures)."
 ---
 
-![Icon](/blocks/loops-for-each-loop-block-icon.png)
+{{< figure src="/blocks/loops-for-each-loop-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -169,8 +169,8 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}

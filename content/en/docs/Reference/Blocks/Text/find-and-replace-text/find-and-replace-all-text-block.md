@@ -4,7 +4,7 @@ linkTitle: "Find And Replace All Text"
 description: "Finds and replaces all occurrences of text in a given text."
 ---
 
-![Icon](/blocks/text-find-and-replace-block-icon.png)
+{{< figure src="/blocks/text-find-and-replace-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -224,9 +224,9 @@ The [String][] data type used to represent [Text][Text Property] is immutable, w
 
 To overcome this, this block creates a new [String][] with all occurrences of [Text To Replace][TextToReplace Property] replaced and re-assigns it to the variable specified in the [Text][Text Property] property.
 
-### Known limitations
+### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [Text Property]: {{< ref "#text" >}}
 [TextToReplace Property]: {{< ref "#text-to-replace" >}}
@@ -249,6 +249,6 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [RegexMatchTimeoutException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}

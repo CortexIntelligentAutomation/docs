@@ -4,7 +4,7 @@ linkTitle: "Duplicate Folder"
 description: "Copies a folder at the specified folder path to the same location but with a new name."
 ---
 
-![Icon](/blocks/folders-copy-block-icon.png)
+{{< figure src="/blocks/folders-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -167,5 +167,5 @@ If an exception occurs when trying to copy [Folder Path][FolderPath Property], a
 [Copy Folder]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolder.MainDoc" >}}
 [Copy Folders]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.CopyFolder.CopyFolders.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

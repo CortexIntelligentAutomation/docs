@@ -4,7 +4,7 @@ linkTitle: "Remove Text Before Index"
 description: "Removes a length of text before the specified index of a given text."
 ---
 
-![Icon](/blocks/text-remove-block-icon.png)
+{{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -112,5 +112,5 @@ To overcome this, this block creates a new [String][] which has the [Length][Len
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

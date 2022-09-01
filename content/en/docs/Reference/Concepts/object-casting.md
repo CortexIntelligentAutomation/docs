@@ -14,4 +14,4 @@ TODO: Overview/summary
 
 ## Explicit Cast
 
-## Object vs Dynamic
+## Object vs dynamic

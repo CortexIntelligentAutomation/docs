@@ -4,7 +4,7 @@ linkTitle: "Convert Object To Text"
 description: "Converts an object to text by replacing all `{Property}` format parameters in a specified format template with the Object's corresponding property value."
 ---
 
-![Icon](/blocks/objects-convert-block-icon.png)
+{{< figure src="/blocks/objects-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -123,7 +123,9 @@ All `{Property}` format parameters in [Format Template][FormatTemplate Property]
 
 `{Property}` format parameters are case-sensitive, so must exactly match the property name in the [Object][Object Property]; those that do not will not be replaced.
 
-If [Format Template][FormatTemplate Property] is not specified, `null` or empty (i.e. `""`), or does not contain any `{Property}` format parameters, nothing is replaced; [Text][Text Property] will be set to the value of [Format Template][FormatTemplate Property].
+If [Format Template][FormatTemplate Property] is specified but does not contain any `{Property}` format parameters, nothing is replaced; [Text][Text Property] will be set to the value of [Format Template][FormatTemplate Property].
+
+If [Format Template][FormatTemplate Property] is not specified, `null` or empty (i.e. `""`), [Text][Text Property] will be set to the value of [Convert.ToString(Object, Format Provider)][Convert ToString].
 
 For information about format templates and parameters, please see [Text Formatting][].
 
@@ -174,7 +176,9 @@ For information about format templates and parameters, please see [Text Formatti
 
 ### Null or Empty Format Template
 
-If [Format Template][FormatTemplate Property] is not specified, `null` or empty (i.e. `""`), or does not contain any `{Property}` format parameters, nothing is replaced; [Text][Text Property] will be set to the value of [Format Template][FormatTemplate Property].
+If [Format Template][FormatTemplate Property] is specified but does not contain any `{Property}` format parameters, nothing is replaced; [Text][Text Property] will be set to the value of [Format Template][FormatTemplate Property].
+
+If [Format Template][FormatTemplate Property] is not specified, `null` or empty (i.e. `""`), [Text][Text Property] will be set to the value of [Convert.ToString(Object, Format Provider)][Convert ToString].
 
 ### Null Format Provider
 
@@ -204,7 +208,7 @@ that nested property values such as PaidOff.Total can be accessed. This is done 
 "{PaidOff.Total}"
 ```
 
-### Known limitations
+### Known Limitations
 
 Currently the block does not support indexing into properties (i.e. `ListProperty[0]` or `DictionaryProperty["key"]`).
 
@@ -219,12 +223,14 @@ Currently the block does not support indexing into properties (i.e. `ListPropert
 [FormatException]: {{< url "MSDocs.DotNet.Api.System.FormatException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
+[Convert ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToStringObjectFormatProvider" >}}
+
 [Converting Objects To Text]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.MainDoc" >}}
 [Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.Fundamentals.Culture.InvariantCulture" >}}
 [Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.MainDoc" >}}
 [Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.FormatParameters" >}}
 
 [TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
-[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.MostCommon.IFormatProvider" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}

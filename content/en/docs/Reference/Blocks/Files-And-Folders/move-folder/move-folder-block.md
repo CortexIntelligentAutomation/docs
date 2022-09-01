@@ -4,7 +4,7 @@ linkTitle: "Move Folder"
 description: "Moves a folder at the specified folder path to the given destination path."
 ---
 
-![Icon](/blocks/folders-move-block-icon.png)
+{{< figure src="/blocks/folders-move-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -366,5 +366,5 @@ If an exception occurs when trying to move [Folder Path][FolderPath Property], a
 
 [Rename Folder]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.RenameFolder.RenameFolder.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

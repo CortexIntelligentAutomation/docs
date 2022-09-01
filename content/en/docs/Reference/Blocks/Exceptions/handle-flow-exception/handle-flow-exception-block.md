@@ -4,7 +4,7 @@ linkTitle: "Handle Flow Exception"
 description: "Handles any unhandled exception within the Flow."
 ---
 
-![Icon](/blocks/exceptions-handle-flow-block-icon.png)
+{{< figure src="/blocks/exceptions-handle-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -26,7 +26,7 @@ This example will handle any unhandled exception within the Flow; saving the exc
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [Dynamic][] value |
+| [Exception][Exception Property] | `($)Exception`, with no value | `($)Exception` is a variable that will be set to a [dynamic][] value |
 
 #### Result
 
@@ -34,7 +34,7 @@ The block will handle any unhandled exception within the Flow and save the excep
 
 ***
 
-### Handle and discard the Exception
+### Handle and discard the Exception from being saved
 
 This example will handle any unhandled exception within the Flow; not saving the exception to a variable, as the flow execution does not need it to make decisions or take further action.
 
@@ -66,7 +66,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Default Value | `($)_` meaning the exception will be discarded |
 
@@ -98,19 +98,19 @@ This process repeats until:
 
 If an exception occurs within the workspace of the [Handle Flow Exception][] block and is not handled, the flow will end with a status of Error.
 
-![Icon](/images/flow-error-status.png)<br/><br/><br/>
+![Icon](/images/flow-error-status.png)
 
 For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
 
-### Why does the Exception property return a Dynamic data type?
+### Why does the Exception property return a dynamic data type?
 
-The decision for the [Exception][Exception Property] to return a [Dynamic data type][Dynamic] rather than an [Exception data type][Exception], was to avoid users having to [cast][Object Casting] the exception to its correct type to be able to use all of its properties.
+The decision for the [Exception][Exception Property] to return a [dynamic data type][dynamic] rather than an [Exception data type][Exception], was to avoid users having to [cast][Object Casting] the exception to its correct type to be able to use all of its properties.
 
 As a result, any issues with using the [Exception data type][Exception] (i.e. trying to access a property it does not have) will not be reported as messages when trying to debug the flow; they will only be discovered when the flow execution reaches the part of the flow with the issue.
 
 If it is desirable to have any issues reported as messages when trying to debug the flow, the user can [cast][Object Casting] the exception to its correct type.
 
-### Using the built-in ($)_ variable to discard the Exception
+### Using the built-in ($)_ variable to discard the Exception from being saved
 
 Sometimes when an exception occurs the flow execution wants to use the exception to make decisions or take further action. However, there are occasions when the exception is not needed, and being forced to create another variable to save the exception is extra work for no benefit. In these circumstances it is possible to use the built-in `($)_` variable to indicate the exception does not need to be saved.
 
@@ -130,5 +130,5 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Wait For Duration"
 description: "Waits for a specified time period (Years, Months, Days, Hours, Minutes, Seconds and Milliseconds)."
 ---
 
-![Icon](/blocks/schedules-wait-for-block-icon.png)
+{{< figure src="/blocks/schedules-wait-for-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -64,7 +64,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyValueOutOfRangeException][] | Thrown when [Duration][Duration Property] is negative (i.e. the sum of the components of [Duration][Duration Property] is less than `0`), or any component (i.e. `Years`, `Months`, `Days`, `Hours`, `Minutes`, `Seconds` or `Milliseconds`) is greater than `2147483647`. |
+| [ArgumentOutOfRangeException][] | Thrown when any of the values or the sum of components of [Duration][Duration Property] are out of range. |
+| [PropertyValueOutOfRangeException][] | Thrown when [Duration][Duration Property] is negative (i.e. the sum of the components of [Duration][Duration Property] is less than `0` milliseconds). |
 
 ## Remarks
 
@@ -74,6 +75,8 @@ No remarks for the block.
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
+[ArgumentOutOfRangeException]: {{< url "MSDocs.DotNet.Api.System.ArgumentOutOfRangeException" >}}
+
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[TimePeriod]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimePeriod" >}}
+[TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}

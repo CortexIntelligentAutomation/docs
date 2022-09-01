@@ -4,7 +4,7 @@ linkTitle: "Throw New Flow Exception"
 description: "Throws a new FlowException with the specified message, category, error code, details, inner exception and help link."
 ---
 
-![Icon](/blocks/exceptions-throw-block-icon.png)
+{{< figure src="/blocks/exceptions-throw-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -18,12 +18,12 @@ All properties are optional, and if not supplied will be set to the following de
 
 | Property           | Default Value                     |
 |--------------------|-----------------------------------|
-| [Message][Message Property] | `"Exception of type 'Cortex.Exceptions.FlowException' was thrown."` |
+| [Message][Message Property] | `"Exception of type 'Cortex.Exceptions.Flows.FlowException' was thrown."` |
 | [Category][Category Property] | `null` |
-| [Error Code][ErrorCode Property] | `0` |
+| [Error Code][ErrorCode Property] | `null` |
 | [Details][Details Property] | `null`|
 | [InnerException][InnerException Property] | `null` |
-| [HelpLink][HelpLink Property] | `https://v2022.docs.cortex-ia.com/docs/reference/exceptions/flowexception` |
+| [HelpLink][HelpLink Property] | `https://v2022.docs.cortex-ia.com/docs/reference/exceptions/flows/flow-exception` |
 
 ## Examples
 
@@ -37,7 +37,7 @@ This example will throw a new [FlowException][] with all properties configured.
 |--------------------|---------------------------|------------------------------------------|
 | [Message][Message Property] | `($)Message`, with value `"Custom Message"` | `($)Message` is a variable of type [String][] |
 | [Category][Category Property] | `($)Category`, with value `"Custom Category"` | `($)Category` is a variable of type [String][] |
-| [Error Code][ErrorCode Property] | `($)ErrorCode`, with value `100` | `($)ErrorCode` is a variable of type [Int32][] |
+| [Error Code][ErrorCode Property] | `($)ErrorCode`, with value `100` | `($)ErrorCode` is a variable of type [Nullable][]&lt;[Int32][]&gt; |
 | [Details][Details Property] | `($)Details`, with value `{"DetailsKey1" : "DetailsValue1", "DetailsKey2" : "DetailsValue2"}` | `($)Details` is a variable of type [IDictionary][]&lt;[String][], [String][]&gt; |
 | [InnerException][InnerException Property] | `($)InnerException`, with value `($)Exception` containing another [FlowException][] with default properties | `($)InnerException` is a variable of type [FlowException][] |
 | [HelpLink][HelpLink Property] | `($)HelpLink`, with value `"http://customdomain.com/customurl"` | `($)HelpLink` is a variable of type [String][] |
@@ -46,7 +46,7 @@ This example will throw a new [FlowException][] with all properties configured.
 
 Throwing a new [FlowException][] with properties configured as above will result in the following exception:
 
-![Icon](/images/flow-exception-full-configuration.png)<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+![Icon](/images/flow-exception-full-configuration.png)
 
 ***
 
@@ -62,7 +62,7 @@ No properties are configured for this example.
 
 Throwing a new [FlowException][] without configuring any of the block's properties will result in the following exception:
 
-![Icon](/images/flow-exception-no-configuration.png)<br/><br/><br/><br/><br/><br/>
+![Icon](/images/flow-exception-no-configuration.png)
 
 ***
 
@@ -72,7 +72,7 @@ Throwing a new [FlowException][] without configuring any of the block's properti
 
 A [Message][Message Property] describing the exception that occurred.
 
-If [Message][Message Property] is not provided or is set to `null`, it will default to `"Exception of type 'Cortex.Exceptions.FlowException' was thrown."`.
+If [Message][Message Property] is not provided or is set to `null`, it will default to `"Exception of type 'Cortex.Exceptions.Flows.FlowException' was thrown."`.
 
 | | |
 |--------------------|---------------------------|
@@ -92,15 +92,15 @@ A [Category][Category Property] that can be used to categorise similar types of 
 
 ### Error Code
 
-An [Error Code][ErrorCode Property] that can be used to uniquely identify the type of exception (e.g. There may be multiple exceptions with the same `AuthenticationError` category set, such as `InvalidCredentials`, `TokenExpired`. In this case each exception can be assigned its own unique [Error Code][ErrorCode Property]; `AuthenticationError` = `100` and `InvalidCredentials` = `101`). This can then be used for future decision making in the flow, or to assist in troubleshooting and reporting.
+An [Error Code][ErrorCode Property] that can be used to uniquely identify the type of exception (e.g. There may be multiple exceptions with the same `AuthenticationError` category set, such as `InvalidCredentials`, `TokenExpired`. In this case each exception can be assigned its own unique [Error Code][ErrorCode Property]; `InvalidCredentials` = `100` and `TokenExpired` = `101`). This can then be used for future decision making in the flow, or to assist in troubleshooting and reporting.
 
-If [Error Code][ErrorCode Property] is not provided, it will default to `0`.
+If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Int32][] |
+| Data Type | [Nullable][]&lt;[Int32][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)ErrorCode` with value `0` |
+| Default Value | `($)ErrorCode` with value `null` |
 
 ### Details
 
@@ -108,7 +108,7 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `0`.
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Input][] |
 | Default Value | `($)Details` with value `null` |
 
@@ -142,7 +142,7 @@ No exceptions are thrown by the block.
 
 ### Null Message
 
-If [Message][Message Property] is not provided or is set to `null`, it will default to `"Exception of type 'Cortex.Exceptions.FlowException' was thrown."`.
+If [Message][Message Property] is not provided or is set to `null`, it will default to `"Exception of type 'Cortex.Exceptions.Flows.FlowException' was thrown."`.
 
 ### Null Help Link
 
@@ -157,10 +157,11 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
-[Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}

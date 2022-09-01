@@ -4,7 +4,7 @@ linkTitle: "Move File"
 description: "Moves a file at the specified file path to the given destination path."
 ---
 
-![Icon](/blocks/files-move-block-icon.png)
+{{< figure src="/blocks/files-move-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -207,5 +207,5 @@ For information about the file attributes (i.e. ReadOnly, Hidden, Archive etc.),
 [File & Folder Attributes]: {{< url "Cortex.Reference.Concepts.FileAndFolderAttributes.MainDoc" >}}
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

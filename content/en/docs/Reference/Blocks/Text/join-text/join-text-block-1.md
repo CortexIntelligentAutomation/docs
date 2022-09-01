@@ -4,7 +4,7 @@ linkTitle: "Join Text"
 description: "Joins a set of values together as text, using the given separator between each value."
 ---
 
-![Icon](/blocks/text-join-block-icon.png)
+{{< figure src="/blocks/text-join-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -135,8 +135,8 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [OutOfMemoryException]: {{< url "MSDocs.DotNet.Api.System.OutOfMemoryException" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [ToString]: {{< url "MSDocs.DotNet.Api.System.Object.ToString" >}}

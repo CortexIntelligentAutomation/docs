@@ -4,7 +4,7 @@ linkTitle: "Is Text Null"
 description: "Checks if text is `null`."
 ---
 
-![Icon](/blocks/text-is-block-icon.png)
+{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -151,5 +151,5 @@ If [Text][Text Property] is whitespace (e.g. `"     "`) the variable specified i
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

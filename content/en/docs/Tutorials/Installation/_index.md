@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 linkTitle: "Installation"
-description: "This section includes tutorials about installing the Cortex Evolution platform."
+description: "This section includes tutorials about installing the Cortex platform."
 weight: 10
 ---
 

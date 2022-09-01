@@ -4,7 +4,7 @@ linkTitle: "Format Text With Values"
 description: "Formats text by replacing all format parameters (e.g. `{0}` or `{1}` or `{2}`) in a specified format template with given values."
 ---
 
-![Icon](/blocks/text-format-block-icon.png)
+{{< figure src="/blocks/text-format-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -188,8 +188,8 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 [Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.MainDoc" >}}
 [Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.FormatParameters" >}}
 
-[IEnumerable]: {{< url "Cortex.Reference.DataTypes.MostCommon.IEnumerable" >}}
+[IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Double]: {{< url "Cortex.Reference.DataTypes.MostCommon.Double" >}}
-[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.MostCommon.IFormatProvider" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
+[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}

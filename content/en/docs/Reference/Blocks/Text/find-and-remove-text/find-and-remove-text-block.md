@@ -4,7 +4,7 @@ linkTitle: "Find And Remove Text"
 description: "Finds and removes the specified occurrence of text from a given text."
 ---
 
-![Icon](/blocks/text-find-and-remove-block-icon.png)
+{{< figure src="/blocks/text-find-and-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -234,9 +234,9 @@ The [String][] data type used to represent [Text][Text Property] is immutable, w
 
 To overcome this, this block creates a new [String][] with the specified [Occurrence][Occurrence property] of [Text To Remove][TextToRemove Property] removed and re-assigns it to the variable specified in the [Text][Text Property] property.
 
-### Known limitations
+### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [Text Property]: {{< ref "#text" >}}
 [TextToRemove Property]: {{< ref "#text-to-remove" >}}
@@ -260,7 +260,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [RegexMatchTimeoutException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}

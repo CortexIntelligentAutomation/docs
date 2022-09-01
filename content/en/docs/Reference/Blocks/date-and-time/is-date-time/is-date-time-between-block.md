@@ -4,7 +4,7 @@ linkTitle: "Is Date Time Between"
 description: "Checks if a Date Time is between two Date Times."
 ---
 
-![Icon](/blocks/date-and-time-is-block-icon.png)
+{{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -68,7 +68,7 @@ false
 
 The [Date Time][DateTime Property] to check is between [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Property].
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -80,7 +80,7 @@ For more information about Date and Time, please see [Working with Dates and Tim
 
 The [Start Date Time][StartDateTime Property] to check against. This is inclusive, which means if [Date Time][DateTime Property] is equal to it, it will be considered between.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -92,7 +92,7 @@ For more information about Date and Time, please see [Working with Dates and Tim
 
 The [End Date Time][EndDateTime Property] to check against. This is inclusive, which means if [Date Time][DateTime Property] is equal to it, it will be considered between.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -122,7 +122,7 @@ No exceptions are thrown by the block.
 
 The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information, please see [Working with Dates and Time][].
+For more information, please see [Working with Date and Time][].
 
 ### Start Date Time and End Date Time are inclusive
 
@@ -140,8 +140,8 @@ The [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Pr
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

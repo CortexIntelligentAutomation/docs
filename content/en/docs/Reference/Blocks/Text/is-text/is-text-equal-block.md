@@ -4,7 +4,7 @@ linkTitle: "Is Text Equal"
 description: "Checks if a text is equal to another text."
 ---
 
-![Icon](/blocks/text-is-block-icon.png)
+{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -168,8 +168,8 @@ If [Text][Text Property] is `null` and [Text To Compare][TextToCompare Property]
 [Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
 [OrdinalIgnoreCase]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.OrdinalIgnoreCase" >}}
 
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}

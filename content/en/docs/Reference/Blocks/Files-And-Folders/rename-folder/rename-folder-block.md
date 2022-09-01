@@ -4,7 +4,7 @@ linkTitle: "Rename Folder"
 description: "Renames a folder at the specified folder path to a new name."
 ---
 
-![Icon](/blocks/folders-rename-block-icon.png)
+{{< figure src="/blocks/folders-rename-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -144,5 +144,5 @@ For information about the folder attributes (i.e. ReadOnly, Hidden, Archive etc.
 [Move Folder]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolder.MainDoc" >}}
 [Move Folders]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.MoveFolder.MoveFolders.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

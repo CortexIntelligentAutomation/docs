@@ -4,7 +4,7 @@ linkTitle: "Get All Keys"
 description: "Gets all keys from a Dictionary."
 ---
 
-![Icon](/blocks/dictionaries-get-all-keys-block-icon.png)
+{{< figure src="/blocks/dictionaries-get-all-keys-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -81,7 +81,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -94,7 +94,7 @@ For information about the different types of dictionaries, including those that 
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
@@ -102,7 +102,7 @@ For information about the different types of dictionaries, including those that 
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

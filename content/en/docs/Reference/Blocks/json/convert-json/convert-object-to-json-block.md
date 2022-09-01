@@ -4,7 +4,7 @@ linkTitle: "Convert Object To Json"
 description: "Converts an Object To Json."
 ---
 
-![Icon](/blocks/json-convert-to-json-block-icon.png)
+{{< figure src="/blocks/json-convert-to-json-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -96,7 +96,7 @@ The [Object][Object Property] to convert to [Json][Json Property].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Property Type | [Input][] |
 | Default Value | `($)Object` with value `null` |
 
@@ -170,11 +170,11 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 
 [Convert Json To Object]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertJsonToObject.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Object]: {{< url "Cortex.Reference.DataTypes.MostCommon.Object" >}}
-[Dynamic]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dynamic" >}}
-[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [HttpRequestHeaders]: {{< url "Cortex.Reference.DataTypes.MostCommon.HttpRequestHeaders" >}}
-[JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.MostCommon.JsonSerializerSettings" >}}
+[JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.Json.JsonSerializerSettings.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Check Folder Exists"
 description: "Checks if a folder exists at the specified folder path."
 ---
 
-![Icon](/blocks/folders-check-block-icon.png)
+{{< figure src="/blocks/folders-check-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -145,5 +145,5 @@ If the user the flow is executing as does not have permissions to check if a fol
 
 [Check File Exists block]: {{< url "Cortex.Reference.Blocks.FilesAndFolders.CheckFile.CheckFileExists.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

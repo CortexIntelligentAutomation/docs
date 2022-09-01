@@ -4,7 +4,7 @@ linkTitle: "Get Text At Beginning"
 description: "Gets a length of text from the beginning of a given text."
 ---
 
-![Icon](/blocks/text-get-block-icon.png)
+{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -98,5 +98,5 @@ If [Length][Length Property] is `0`, the variable specified in the [Text At Begi
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

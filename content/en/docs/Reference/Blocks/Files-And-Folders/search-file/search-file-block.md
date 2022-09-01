@@ -4,7 +4,7 @@ linkTitle: "Search File"
 description: "Searches a file at a specified file path for a matching search pattern."
 ---
 
-![Icon](/blocks/files-search-block-icon.png)
+{{< figure src="/blocks/files-search-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -248,7 +248,7 @@ For information about encoding, examples of available encodings and using them, 
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Default Value | `($)Encoding` with value `null` |
 
@@ -299,7 +299,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
 | | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
-| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). |
+| [InvalidPropertyValueException][] | Thrown when [Encoding][Encoding Property] is invalid (e.g. `Encoding.GetEncoding(-1)`). See [Value Is Invalid][]. |
 | [OperationFailedException][] | The [File Path][FilePath Property] does not exist. |
 |                              | The [File Path][FilePath Property] points to a folder. |
 |                              | The [File Path][FilePath Property] contains leading spaces. |
@@ -340,11 +340,11 @@ For information about encoding of text, examples of available encodings and usin
 
 For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
 
-### Known limitations
+### Known Limitations
 
 * The text in the file at the specified [File Path][FilePath Property] is searched line-by-line. As a result, when using `SearchOptions.Regex` the in-line `s` regex character is not supported.
 * If the text in the file at the specified [File Path][FilePath Property] ends with a blank line (`0` length) that line will not be read and therefore not matched against.
-* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+* If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [FilePath Property]: {{< ref "#file-path" >}}
 [SearchPattern Property]: {{< ref "#search-pattern" >}}
@@ -364,7 +364,10 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
 [OperationFailedException]: {{< url "Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.MainDoc" >}}
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
@@ -377,9 +380,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
 [Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
-[Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[FileMatch]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileMatch" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+[Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[FileMatch]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileMatch.MainDoc" >}}

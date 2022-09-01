@@ -4,7 +4,7 @@ linkTitle: "If Null Exit Right"
 description: "Checks if a given value is `null`; if so the flow execution exits via the block's right port, otherwise it exits via the bottom port."
 ---
 
-![Icon](/blocks/decisions-if-true-exit-right-block-icon.png)
+{{< figure src="/blocks/decisions-if-true-exit-right-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -87,4 +87,4 @@ For information about `null`, please see [Null and Nullable Types][].
 
 [PropertyNotNullableException]: {{< url "Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

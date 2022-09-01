@@ -4,7 +4,7 @@ linkTitle: "For Loop"
 description: "Loops a specified number of times based on a given start index, end index and increment."
 ---
 
-![Icon](/blocks/loops-for-loop-block-icon.png)
+{{< figure src="/blocks/loops-for-loop-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -199,10 +199,10 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InfiniteLoopException][] | Thrown when [Increment][Increment Property] is `0`. |
-| | Thrown when [Increment][Increment Property] has a positive value and [Start Index][StartIndex Property] is greater than [End Index][EndIndex Property]. |
-| | Thrown when [Increment][Increment Property] has a negative value and [Start Index][StartIndex Property] is less than [End Index][EndIndex Property]. |
-| [InvalidPropertyValueException][] | Thrown when [Current Index][CurrentIndex Property] does not have an [Int32][] value assigned to it before the block executes. |
+| [InfiniteLoopException][] | Thrown when [Increment][Increment Property] is `0`. See [Increment Is Zero][]. |
+| | Thrown when [Increment][Increment Property] has a positive value and [Start Index][StartIndex Property] is greater than [End Index][EndIndex Property].  See [Increment Is Positive][]. |
+| | Thrown when [Increment][Increment Property] has a negative value and [Start Index][StartIndex Property] is less than [End Index][EndIndex Property].  See [Increment Is Negative][]. |
+| [InvalidPropertyValueException][] | Thrown when [Current Index][CurrentIndex Property] does not have an [Int32][] value assigned to it before the block executes. See [Value Is Invalid][]. |
 
 ## Remarks
 
@@ -214,7 +214,7 @@ The [Start Index][StartIndex Property] and [End Index][EndIndex Property] proper
 
 [Start Index][StartIndex Property] can be greater than [End Index][EndIndex Property]. If this is the case, [Increment][Increment Property] must be a negative value. See [Example][StartIndexGreaterThanEndIndex Example] above.
 
-### Known limitations
+### Known Limitations
 
 The variable used for [Current Index][CurrentIndex Property] must have an [Int32][] value assigned to it before the block executes. If it does not then an [InvalidPropertyValueException][] will be thrown the first time a flow execution executes this block.
 
@@ -230,6 +230,11 @@ The variable used for [Current Index][CurrentIndex Property] must have an [Int32
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 
 [InfiniteLoopException]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+[Increment Is Zero]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsZero" >}}
+[Increment Is Negative]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsNegative" >}}
+[Increment Is Positive]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsPositive" >}}
 
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

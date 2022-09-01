@@ -4,7 +4,7 @@ linkTitle: "Convert To Upper Case"
 description: "Converts text to upper case (e.g. `\"UPPERCASE\"`)."
 ---
 
-![Icon](/blocks/text-convert-block-icon.png)
+{{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -71,7 +71,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [InvalidPropertyValueException][] | Thrown when the culture identifier of the [Culture Info][CultureInfo Property] is invalid (e.g `new CultureInfo("InvalidCultureIdentifier")`)
+| [InvalidPropertyValueException][] | Thrown when the culture identifier of the [Culture Info][CultureInfo Property] is invalid (e.g. `new CultureInfo("InvalidCultureIdentifier")`). See [Value Is Invalid][]. |
 
 ## Remarks
 
@@ -102,8 +102,9 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 [Text Casing]: {{< url "Cortex.Reference.Concepts.TextCasing.MainDoc" >}}
 [CultureInfos]: {{< url "Cortex.Reference.Concepts.TextCasing.CultureInfo.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[CultureInfo]: {{< url "Cortex.Reference.DataTypes.MostCommon.CultureInfo" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[CultureInfo]: {{< url "Cortex.Reference.DataTypes.Text.CultureInfo.MainDoc" >}}
 [InvariantCulture]: {{< url "Cortex.Reference.DataTypes.MostCommon.InvariantCulture" >}}
 
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}

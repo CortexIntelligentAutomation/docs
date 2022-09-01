@@ -4,7 +4,7 @@ linkTitle: "Copy Object"
 description: "Copies an Object."
 ---
 
-![Icon](/blocks/objects-copy-block-icon.png)
+{{< figure src="/blocks/objects-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -98,5 +98,5 @@ If [Object][Object Property] is not provided or is set to `null`, [Copy][Copy Pr
 
 [TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
-[List]: {{< url "Cortex.Reference.DataTypes.MostCommon.List" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

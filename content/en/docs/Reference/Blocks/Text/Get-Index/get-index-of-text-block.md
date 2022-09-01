@@ -4,7 +4,7 @@ linkTitle: "Get Index Of Text"
 description: "Gets the index of the specified occurrence of a text in another text."
 ---
 
-![Icon](/blocks/text-get-index-block-icon.png)
+{{< figure src="/blocks/text-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -283,9 +283,9 @@ If the [Occurrence][Occurrence Property] is set to `0`, the variable specified i
 
 If the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] is not found in [Text][Text Property], the variable specified in the [Index][Index Property] property is set to `-1`.
 
-### Known limitations
+### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [Text Property]: {{< ref "#text" >}}
 [TextToFind Property]: {{< ref "#text-to-find" >}}
@@ -311,7 +311,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [RegexMatchTimeoutException]: {{< url "MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}

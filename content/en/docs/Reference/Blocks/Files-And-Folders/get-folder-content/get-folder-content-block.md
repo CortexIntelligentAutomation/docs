@@ -4,7 +4,7 @@ linkTitle: "Get Folder Content"
 description: "Gets the paths of files or folders under the specified folder path."
 ---
 
-![Icon](/blocks/folders-get-content-block-icon.png)
+{{< figure src="/blocks/folders-get-content-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -330,9 +330,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 If an exception occurs when trying to match a file or folder name, it will be recorded and the block will continue processing the remaining files or folders. Once all files or folders are processed, recorded exceptions will be thrown within an [OperationFailedException][].
 
-### Known limitations
+### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as a equal.
+If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [FolderPath Property]: {{< ref "#folder-path" >}}
 [SearchPattern Property]: {{< ref "#search-pattern" >}}
@@ -361,9 +361,9 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
 [Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
 
-[IList]: {{< url "Cortex.Reference.DataTypes.MostCommon.IList" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
-[ContentOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.ContentOptions" >}}
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
+[IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+[ContentOptions]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.ContentOptions.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Get Text Between Indexes"
 description: "Gets text between the specified start index and end index of a given text."
 ---
 
-![Icon](/blocks/text-get-block-icon.png)
+{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -146,5 +146,5 @@ The [Start Index][StartIndex Property] and [End Index][EndIndex Property] proper
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "Set Item With Value"
 description: "Sets the specified occurrence of an item matching a value in a Dictionary to a new value."
 ---
 
-![Icon](/blocks/dictionaries-set-block-icon.png)
+{{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -127,7 +127,7 @@ The exceptions thrown by the block can be found below:
 | Name     | Description |
 |----------|----------|
 | [CannotModifyReadOnlyDictionaryException][] | Thrown when [Dictionary][Dictionary Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] or [New Value][NewValue Property] are `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. |
+| [InvalidPropertyValueException][] | Thrown when [Value][Value Property] or [New Value][NewValue Property] are `null` and [Dictionary][Dictionary Property] only accepts non-nullable value types. See [Value Is Invalid][]. |
 | [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] is `null`. |
 
 ## Remarks
@@ -156,7 +156,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -174,7 +174,7 @@ For information about the different types of dictionaries, including those that 
 [Occurrences]: {{< url "Cortex.Reference.Concepts.Occurrences.MainDoc" >}}
 
 [Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
@@ -182,8 +182,10 @@ For information about the different types of dictionaries, including those that 
 
 [CannotModifyReadOnlyDictionaryException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Common.Property.InvalidPropertyValueException.MainDoc" >}}
 
-[IDictionary]: {{< url "Cortex.Reference.DataTypes.MostCommon.IDictionary" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
+[InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
+[Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
+[IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

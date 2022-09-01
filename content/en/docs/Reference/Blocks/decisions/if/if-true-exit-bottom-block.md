@@ -4,7 +4,7 @@ linkTitle: "If True Exit Bottom"
 description: "Checks if a given value evaluates to `true`; if so the flow execution exits via the block's bottom port, otherwise it exits via the right port."
 ---
 
-![Icon](/blocks/decisions-if-true-exit-bottom-block-icon.png)
+{{< figure src="/blocks/decisions-if-true-exit-bottom-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -72,4 +72,4 @@ No remarks for the block.
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
-[Boolean]: {{< url "Cortex.Reference.DataTypes.MostCommon.Boolean" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

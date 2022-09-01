@@ -131,8 +131,8 @@ body {
   }
   
   table {
-    display: table !important;
-    
+    display: inline-block !important;
+
     th {
       border-top: none !important;
       border-bottom: none !important;
@@ -147,14 +147,47 @@ body {
     margin: 1rem 0 !important;
     padding: 0;
     max-width: 100% !important;
+
+    table {
+      width: 100% !important;
+    }
   }
-}
-.td-docs {
-  img:first-of-type {
-    float: left;
-    display: inline;
-    margin-right: 10px;
-    vertical-align: bottom;
+
+  figure.block-icon {
+    img {
+      float: left;
+      display: inline;
+      margin-right: 10px;
+      vertical-align: bottom;
+    }
+  }
+
+  figure.centre {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  figcaption {
+    h4 {
+      text-align: center;
+      font-size: inherit !important;
+      margin: 0 !important;
+      font-style: italic;
+    }
+  }
+
+  // Add external link icon.
+  a[href^="https://" i], a[href^="http://" i] {
+    &:after {
+        vertical-align: super;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 60%;
+        content: "\00a0\f35d";
+    }
   }
 }
 

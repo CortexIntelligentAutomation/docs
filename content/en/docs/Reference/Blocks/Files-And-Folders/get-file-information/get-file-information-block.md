@@ -4,7 +4,7 @@ linkTitle: "Get File Information"
 description: "Gets information about a file (e.g. file attributes, created, accessed, modified dates etc.) at the specified file path."
 ---
 
-![Icon](/blocks/files-get-information-block-icon.png)
+{{< figure src="/blocks/files-get-information-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -140,5 +140,5 @@ Escaping can be done in two ways:
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[FileInformation]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileInformation" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[FileInformation]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileInformation.MainDoc" >}}

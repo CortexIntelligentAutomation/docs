@@ -4,7 +4,7 @@ linkTitle: "Get Time Period Between Date Times"
 description: "Gets the Time Period between two Date Times."
 ---
 
-![Icon](/blocks/date-and-time-get-block-icon.png)
+{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -54,7 +54,7 @@ The [Start Date Time][StartDateTime Property] to get the Time Period between.
 
 Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -68,7 +68,7 @@ The [End Date Time][EndDateTime Property] to get the Time Period between.
 
 Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -94,7 +94,7 @@ In this block, the Year and Month components are not used as they aren't constan
 
 [Time Period][TimePeriod Property] is calculated by subtracting [Start Date Time][StartDateTime Property] from [End Date Time][EndDateTime Property]; therefore if [Start Date Time][StartDateTime Property] is less than [End Date Time][EndDateTime Property], the [Time Period][TimePeriod Property] components will be positive, if it is equal they will be `0` and finally if it is greater than they will be negative.
 
-For more information about Date and Time, please see [Working with Dates and Time][].
+For more information about Date and Time, please see [Working with Date and Time][].
 
 | | |
 |--------------------|---------------------------|
@@ -112,7 +112,7 @@ No exceptions are thrown by the block.
 
 The default text representation of Date and Time will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-For more information, please see [Working with Dates and Time][].
+For more information, please see [Working with Date and Time][].
 
 ### Years and Months components not used
 
@@ -129,8 +129,8 @@ In this block, the Year and Month components are not used as they aren't constan
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.ISO8601Standard.MainDoc" >}}
-[Working with Dates and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDatesAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
 
-[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.MostCommon.DateTimeOffset" >}}
-[TimePeriod]: {{< url "Cortex.Reference.DataTypes.MostCommon.TimePeriod" >}}
+[DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
+[TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}

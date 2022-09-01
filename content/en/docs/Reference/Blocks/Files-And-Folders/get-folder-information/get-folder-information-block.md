@@ -4,7 +4,7 @@ linkTitle: "Get Folder Information"
 description: "Gets information about a folder (e.g. folder attributes, created, accessed, modified dates etc.) at the specified folder path."
 ---
 
-![Icon](/blocks/folders-get-information-block-icon.png)
+{{< figure src="/blocks/folders-get-information-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
@@ -144,5 +144,5 @@ Escaping can be done in two ways:
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
-[FolderInformation]: {{< url "Cortex.Reference.DataTypes.MostCommon.FolderInformation" >}}
+[String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[FolderInformation]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation.MainDoc" >}}
