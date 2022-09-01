@@ -178,6 +178,17 @@ body {
       font-style: italic;
     }
   }
+
+  // Add external link icon.
+  a[href^="https://" i], a[href^="http://" i] {
+    &:after {
+        vertical-align: super;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 60%;
+        content: "\00a0\f35d";
+    }
+  }
 }
 
 main {

@@ -13,7 +13,7 @@ This guide describes how to install Promtail on the Application Server(s). Pleas
 
 1. Download [Promtail 2.5.0][] archive.
 1. Extract content of the downloaded archive to a suitable location, e.g. `C:\Promtail`.
-1. Download the [Promtail Install.zip][] archive and extract its contents alongside the previously extracted Grafana Loki `promtail-windows-amd64.exe`.
+1. Download the [Promtail Install.zip][] archive and extract its contents alongside the previously extracted Promtail `promtail-windows-amd64.exe`.
 This archive contains the `promtail-local-config.yaml` configuration file, [NSSM][] (the Non-Sucking Service Manager program) and PowerShell scripts to help manage Promtail as a Windows service.
 1. Run Windows PowerShell as Administrator
 1. Change the location to where all the files were extracted to.

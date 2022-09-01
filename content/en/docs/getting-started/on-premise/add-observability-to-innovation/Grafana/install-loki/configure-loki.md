@@ -49,6 +49,15 @@ All of the steps must be carried out on the Web Application Server.
 1. Once the install has completed, click *Finish*.
 1. Click *Exit* to close the Web Platform Installer.
 
+### Install Application Request Routing
+
+1. Download [Application Request Routing 3.0][]
+1. Run the downloaded installer.
+1. When prompted by the Web Platform Installer, click *Install*.
+1. On the *Prerequisites* page click *I Accept* to agree to the license terms for the module.
+1. Once the install has completed, click *Finish*.
+1. Click *Exit* to close the Web Platform Installer.
+
 ### Set Up Reverse Proxy
 
 To set up a reverse proxy, carry out the following configuration.
@@ -66,7 +75,7 @@ To set up a reverse proxy, carry out the following configuration.
         - *IP address*: `All unassigned`
         - *Port*: `2100`
     - *Host name*: The fully qualified domain name of the Web Application Server. This must match one of the Subject Alternative Names in the SSL certificate selected in the next step.
-    - *SSL certificate*: Select the certificate created as part of the [Certificate Requirements][] instructions.
+    - *SSL certificate*: Select the certificate created as part of the [Certificate Requirements][prerequisites] instructions.
     - Click *OK* to add the website.
 
 #### Enable Basic Authentication
@@ -76,6 +85,19 @@ To set up a reverse proxy, carry out the following configuration.
 1. Double-click on the *Authentication* icon.
 1. Disable *Anonymous Authentication*.
 1. Enable *Basic Authentication*.
+
+## Configure URL Rewrite Rule
+
+1. In the *Connection* pane, browse to *Sites*.
+1. Select the newly created website.
+1. Double-click on the *URL Rewrite* icon.
+1. In the *Actions* pane, click *Add Rule(s)...*.
+1. Select *Reverse Proxy* from the *Inbound and Outbound Rules* section.
+1. Click *OK*.
+1. If prompted to *Add Reverse Proxy Rules*, click *OK* to enable proxy functionality.
+1. In the *Inbound Rules* section enter `localhost:3100` as the server name.
+1. Ensure that *Enable SSL Offloading* is checked.
+1. Click *OK*.
 
 #### Restart the Website
 
@@ -103,6 +125,7 @@ To set up a reverse proxy, carry out the following configuration.
 
 1. [Install Promtail][]
 
+[Application Request Routing 3.0]: {{< url "IIS.Downloads.ApplicationRequestRouting-3_0" >}}
 [Install Promtail]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallPromtail.MainDoc" >}}
 [prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.WebAppCertificateRequirements" >}}
 [Software Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.SoftwareRequirements" >}}

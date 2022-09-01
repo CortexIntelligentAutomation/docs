@@ -74,16 +74,17 @@ Log on to Gateway and run through the setup wizard:
 
 ## Configure the Gateway Databases to use Transparent Data Encryption
 
-Once Gateway has been configured, if you wish to encrypt the databases using [Transparent Data Encryption](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15) for improved security, this should now be performed by following the steps in [Configuring TDE][].
+Once Gateway has been configured, if you wish to encrypt the databases using [Transparent Data Encryption][] for improved security, this should now be performed by following the steps in [Configuring TDE][].
 
 ## Next Steps?
 
 1. [Try it out][]
 
-[Configuring TDE]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.ApplyTDE" >}}
+[Configuring TDE]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.ApplyTDE" >}}
 [Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOut" >}}
-[supported web browser]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ClientRequirements" >}}
+[supported web browser]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebBrowserRequirements" >}}
 [Account Details]: {{< ref "#account-details" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
 [Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
+[Transparent Data Encryption]: {{< url "MSDocs.SqlServer.TransparentDataEncryption" >}}
