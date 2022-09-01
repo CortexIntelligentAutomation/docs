@@ -274,7 +274,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -Credential $AppPoolIdentity `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.FlowDebuggerService.ps1 `
@@ -285,7 +285,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -UseSelfSignedCertificates `
     -Credential $AppPoolIdentity `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
@@ -499,7 +499,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     -GatewayPath "C:\Install\Cortex Innovation 2022.6 - Gateway" `
     -Test:$Test `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-gateway-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
     | Name                                         | Description |

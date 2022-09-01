@@ -139,7 +139,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -ClientCertificatePwd "myPassword" `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
     .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -153,7 +153,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -UseSelfSignedCertificates `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="CA Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -170,7 +170,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -SkipLoadBalancer `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -184,7 +184,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -SkipLoadBalancer `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 

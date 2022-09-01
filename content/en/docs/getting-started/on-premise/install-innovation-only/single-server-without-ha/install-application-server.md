@@ -132,7 +132,7 @@ The settings can be applied by running a script. Be aware that the server will b
     -SkipLoadBalancer `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -146,7 +146,7 @@ The settings can be applied by running a script. Be aware that the server will b
     -SkipLoadBalancer `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
-    | Tee-Object -FilePath "cortex-ha-install-log.txt"
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
@@ -215,7 +215,6 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
     .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
     ```
 
