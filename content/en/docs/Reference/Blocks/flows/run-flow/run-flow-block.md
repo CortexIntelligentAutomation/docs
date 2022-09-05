@@ -66,6 +66,8 @@ As no value is passed into the [Input Variable][] `($)NumberToSquare` for the [F
 }
 ```
 
+For more information see [Default Values][].
+
 ***
 
 ### Running a Flow that Throws an Exception
@@ -127,6 +129,7 @@ It is recommended to use the [Literal Editor][] as it provides the developer  ea
 The [Outputs][Outputs Property] where the output variables from the [Flow][Flow Property] are saved.
 
 Each output variable will be saved to a key within [Outputs][Outputs Property] [Structure][], see [Working with Structures][] for more information.
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
@@ -139,8 +142,8 @@ Each output variable will be saved to a key within [Outputs][Outputs Property] [
 
 The exceptions thrown by the block can be found below:
 
-| Name     | Description |
-|----------|----------|
+| Name | Description |
+|------|-------------|
 | [InvalidInputVariablesException][] | Thrown when [Inputs][Inputs Property] is missing any [Input Variables][Input Variable] from the chosen [Flow][Flow Property]. |
 | | Thrown when [Inputs][Inputs Property] has any extra [Input Variables][Input Variable] that are not in the chosen [Flow][Flow Property]. |
 
@@ -152,13 +155,15 @@ The exceptions thrown by the block can be found below:
 
 A flow can be selected using the [Literal Editor][] on the [Flow Property][], a list of all available flows will be presented to the developer and can be searched by the Name or Id of a flow.
 
-When a flow is selected the any [Input Variables][] are created as sup-properties of the [Inputs Property][], for more information see [Updating the Flow Contract][].
+When a flow is selected the any [Input Variables][Input Variable] are created as sup-properties of the [Inputs Property][], for more information see [Updating the Flow Contract][].
 
 ### Default Values
 
-If an [Input Variable][] has a default value, then this default value will be used when the [Flow][Flow Property] if the corresponding value in the [Inputs Property][] is left empty.
+If an [Input Variable][] has a default value, then this default value will be used when running the [Flow][Flow Property] if the corresponding value in the [Inputs Property][] is left empty. See [Running a Flow with Default Input Variables][] for an example.
 
 Also, if an [Input Variable][] has a default value, and the corresponding value in the [Inputs Property][] is not of the same type, then the block will raise a [Translation Error][TODO: Messages] when the flow is compiled.
+
+For more information see [Input Variables][Input Variable].
 
 ### Exceptions Thrown by a Child Flow
 
@@ -192,8 +197,10 @@ This will cause:
 [Inputs Property]: {{< ref "#inputs" >}}
 [Outputs Property]: {{< ref "#outputs" >}}
 [Updating the Flow Contract]: {{< ref "#flow-contract-changes" >}}
-[Exceptions Thrown by a Child Flow]: {{< ref "#exceptions-thrown-by-a-child-flow" >}}
 [Running a Flow that Throws an Exception]: {{< ref "#running-a-flow-that-throws-an-exception" >}}
+[Running a Flow with Default Input Variables]: {{< ref "#running-a-flow-with-default-input-variables" >}}
+[Default Values]: {{< ref "#default-values" >}}
+[Exceptions Thrown by a Child Flow]: {{< ref "#exceptions-thrown-by-a-child-flow" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
