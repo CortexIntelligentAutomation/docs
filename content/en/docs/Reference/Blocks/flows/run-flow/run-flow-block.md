@@ -98,7 +98,7 @@ The exception is then thrown by the Run Flow block, for more information on how 
 
 The [Flow][Flow Property] where the [Flow][Flow Property] that will be run by the block is chosen.
 
-This property can only be a [Literal][Literal Editor] value, which gives the user a list of all available flows to choose from.
+It is recommended to use the [Literal Editor][] as it provides the developer a list of all available flows to choose from.
 
 | | |
 |--------------------|---------------------------|
@@ -112,7 +112,7 @@ This property can only be a [Literal][Literal Editor] value, which gives the use
 
 The [Inputs][Inputs Property] where the input variables can be assigned for the [Flow][Flow Property] that will be run.
 
-This property can only be a [Literal][Literal Editor] value, which gives the user each input variable for the [Flow][Flow Property] as sub property.
+It is recommended to use the [Literal Editor][] as it provides the developer  each input variable for the [Flow][Flow Property] as sub property, and allows for updating these properties when the [Updating the Flow Contract][].
 
 | | |
 |--------------------|---------------------------|
@@ -120,7 +120,7 @@ This property can only be a [Literal][Literal Editor] value, which gives the use
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
-| Default Value | No value (must be initialised when the [Flow Contract Changes][]) |
+| Default Value | No value (must be initialised when [Updating the Flow Contract][]) |
 
 ### Outputs
 
@@ -146,6 +146,14 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Selecting a Flow
+
+![Selecting a Flow Example](/images/run-flow-selecting-a-flow.gif)
+
+A flow can be selected using the [Literal Editor][] on the [Flow Property][], a list of all available flows will be presented to the developer and can be searched by the Name or Id of a flow.
+
+When a flow is selected the any [Input Variables][] are created as sup-properties of the [Inputs Property][], for more information see [Updating the Flow Contract][].
+
 ### Default Values
 
 If an [Input Variable][] has a default value, then this default value will be used when the [Flow][Flow Property] if the corresponding value in the [Inputs Property][] is left empty.
@@ -163,7 +171,9 @@ This process repeats until:
 - The exception is handled, or
 - The exception reaches the flow's top-level workspace, is not handled by any [Handle Block Exception blocks][] and the top-level workspace does not contain a [Handle Workspace Exception][] block. At this stage, the exception is handled by the flow's [Handle Flow Exception][] block.
 
-### Flow Contract Changes
+### Updating the Flow Contract
+
+![Updating the Flow Contract Example](/images/run-flow-contract-change.gif)
 
 When a flow is first selected, or when the contract of the flow changes (e.g. The [Input Variables][Input Variable] of a flow are updated). Then a prompt will appear when the block is selected, allowing the user to update the contract.
 
@@ -172,18 +182,16 @@ This will cause:
 - Any missing [Input Variables][Input Variable] present in the called [Flow][Flow Property] to be added to the [Inputs Property][]
 - Any extra [Input Variables][Input Variable] not present in the called [Flow][Flow Property] to be deleted from the [Inputs Property][]
 
-![Flow Contract Change Example](/images/run-flow-contract-change.gif)
-
 ### Known Limitations
 
-#### Flow Contract Changes are not detected when using editors other than the Literal Editor
+#### Updating the Flow Contract is not detected when using editors other than the Literal Editor
 
-[Flow Contract Changes][] will not be detected if an [Editor][TODO: Property Editors] other than the [Literal Editor][] is used for the [Flow Property][] or [Inputs Property][]. This will cause the prompt for update the contract to not be displayed if there are any changes.
+[Updating the Flow Contract][] is not detected if an [Editor][TODO: Property Editors] other than the [Literal Editor][] is used for the [Flow Property][] or [Inputs Property][]. This will cause the prompt for update the contract to not be displayed if there are any changes.
 
 [Flow Property]: {{< ref "#flow" >}}
 [Inputs Property]: {{< ref "#inputs" >}}
 [Outputs Property]: {{< ref "#outputs" >}}
-[Flow Contract Changes]: {{< ref "#flow-contract-changes" >}}
+[Updating the Flow Contract]: {{< ref "#flow-contract-changes" >}}
 [Exceptions Thrown by a Child Flow]: {{< ref "#exceptions-thrown-by-a-child-flow" >}}
 [Running a Flow that Throws an Exception]: {{< ref "#running-a-flow-that-throws-an-exception" >}}
 
