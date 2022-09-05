@@ -318,10 +318,14 @@
                     MainDoc = "/docs/reference/blocks/flows/end-flow"
                     [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
                         MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
+                [Cortex.Reference.Blocks.Flows.RunFlow]
+                    MainDoc = "/docs/reference/blocks/flows/run-flow"
+                    [Cortex.Reference.Blocks.Flows.RunFlow.RunFlow]
+                        MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-block"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
-                        MainDoc = "/docs/reference/blocks/flows//start-flow/start-flow-block"
+                        MainDoc = "/docs/reference/blocks/flows/start-flow/start-flow-block"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -651,8 +655,6 @@
                 HttpRequestHeaders = "/docs/reference/data-types/most-common/#httprequestheaders"
                 InvariantCulture = "/docs/reference/data-types/most-common/#invariantculture"
                 Lists = "/docs/reference/data-types/most-common/#lists"
-                FlowReference = "/docs/reference/data-types/most-common/#flowreference"
-                InputVariables = "/docs/reference/data-types/most-common/#inputvariables"
             [Cortex.Reference.DataTypes.All]
                 MainDoc = "/docs/reference/data-types/all"
                 [Cortex.Reference.DataTypes.All.Object]
@@ -736,6 +738,12 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
+            [Cortex.Reference.DataTypes.Flows]
+                MainDoc = "/docs/reference/data-types/flows/"
+                [Cortex.Reference.DataTypes.Flows.FlowReference]
+                    MainDoc = "/docs/reference/data-types/flows/flowreference"
+                [Cortex.Reference.DataTypes.Flows.InputVariables]
+                    MainDoc = "/docs/reference/data-types/flows/inputvariables"
             [Cortex.Reference.DataTypes.Json]
                 MainDoc = "/docs/reference/data-types/json/"
                 [Cortex.Reference.DataTypes.Json.JsonSerializerSettings]

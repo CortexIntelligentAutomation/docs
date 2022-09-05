@@ -4,15 +4,15 @@ linkTitle: "Run Flow"
 description: "Runs a chosen Flow, returning any output variables."
 ---
 
-![Icon](/blocks/flows-run-flow-block-icon.png)
+{{< figure src="/blocks/flows-run-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Flows.StartFlow.StartFlowBlock)</p>
+<p class="namespace">(Cortex.Blocks.Flows.RunFlow.RunFlowBlock)</p>
 
 ## Description
 
-Runs a chosen [Flow][Flow Property] using [Inputs][Inputs Property] provided, returning any [Output Variables][Output Variable] from the [Flow][Flow Property] in the [Outputs][Outputs Property] variable.
+Runs a chosen [Flow][Flow Property] using the [Inputs][Inputs Property] provided, returning any [Output Variables][Output Variable] from the [Flow][Flow Property] in the [Outputs][Outputs Property] variable.
 
 ## Examples
 
@@ -46,7 +46,7 @@ The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)N
 
 This example will run the [Flow][Flow Property] `square-number-flow` saving the output variables to `($)Outputs`.
 
-The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is of type [Int32][], an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not of type [Int32][].
+The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is larger than `0`, an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not larger than `0`.
 
 #### Properties
 
@@ -72,21 +72,23 @@ As no value is passed into the [Input Variable][] `($)NumberToSquare` for the [F
 
 This example will run the [Flow][Flow Property] `square-number-flow` saving the output variables to `($)Outputs`.
 
-The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is of type [Int32][], an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not of type [Int32][].
+The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is larger than `0`, an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not larger than `0`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Flow][Flow Property] | [Flow][Flow Property], with value `square-number-flow` | [Flow][Flow Property] is of type [FlowReference][] |
-| [Inputs][Inputs Property] | `NumberToSquare`, with value `"Not Int32"` | `NumberToSquare` is of type [String][] |
+| [Inputs][Inputs Property] | `NumberToSquare`, with value `-1` | `NumberToSquare` is of type [Int32][] |
 | [Outputs][Outputs Property] | `($)Outputs`, with no value | `($)Outputs` is a variable of type [Structure][] |
 
 #### Result
 
-As a [String][] value is passed into the [Input Variable][] `($)NumberToSquare` for the [Flow][Flow Property] `square-number-flow` an exception is thrown. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is of type [Int32][] and throws an exception if it is not of the correct type.
+As `-1` is passed into the [Input Variable][] `($)NumberToSquare` for the [Flow][Flow Property] `square-number-flow`, and is not greater than `0`, an exception is thrown. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is of type [Int32][] and throws an exception if it is not of the correct type.
 
 `($)Outputs` is not updated as an exception is thrown.
+
+The exception is then thrown by the Run Flow block, for more information on how the exception is thrown and how to handle the exception see [Exceptions Thrown by a Child Flow][].
 
 ***
 
@@ -102,7 +104,9 @@ This property can only be a [Literal][Literal Editor] value, which gives the use
 |--------------------|---------------------------|
 | Data Type | [FlowReference][] |
 | Property Type | [Input][] |
-| Default Value | [Literal][Literal Editor] with value `""` |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value (defaults to `null`) |
 
 ### Inputs
 
@@ -113,20 +117,23 @@ This property can only be a [Literal][Literal Editor] value, which gives the use
 | | |
 |--------------------|---------------------------|
 | Data Type | [InputVariables][] |
-| Property Type | [InputOutput][] |
-| Default Value | [Literal][Literal Editor] with value `{}` |
+| Property Type | [Input][] |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | No value (must be initialised when the [Flow Contract Changes][]) |
 
 ### Outputs
 
 The [Outputs][Outputs Property] where the output variables from the [Flow][Flow Property] are saved.
 
 Each output variable will be saved to a key within [Outputs][Outputs Property] [Structure][], see [Working with Structures][] for more information.
-
 | | |
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
-| Default Value | `($)Outputs` with value `{}` |
+| Is Advanced | `false` |
+| Default Editor | [Variable][TODO] |
+| Default Value | `($)Outputs` with no value |
 
 ## Exceptions
 
@@ -139,9 +146,15 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Default Values
+
+If an [Input Variable][] has a default value, then this default value will be used when the [Flow][Flow Property] if the corresponding value in the [Inputs Property][] is left empty.
+
+Also, if an [Input Variable][] has a default value, and the corresponding value in the [Inputs Property][] is not of the same type, then the block will raise a [Translation Error][TODO: Messages] when the flow is compiled.
+
 ### Exceptions Thrown by a Child Flow
 
-If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then it is rethrown by the Run Flow block. This can then be handled by any connected [Handle Block Exception blocks][].
+If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then it is rethrown by the Run Flow block. This can then be handled by any connected [Handle Block Exception blocks][]. See [Running a Flow that Throws an Exception][] for an example.
 
 If an exception thrown by a block is not handled by any connected [Handle Block Exception blocks][], it will be passed to the [Handle Workspace Exception][] block on the same workspace.
 
@@ -152,22 +165,33 @@ This process repeats until:
 
 ### Flow Contract Changes
 
-### Flow Name Changes
+When a flow is first selected, or when the contract of the flow changes (e.g. The [Input Variables][Input Variable] of a flow are updated). Then a prompt will appear when the block is selected, allowing the user to update the contract.
 
-### Editor Restrictions
-- Flow Property is literal only
-- Inputs might also have restriction
+This will cause:
+
+- Any missing [Input Variables][Input Variable] present in the called [Flow][Flow Property] to be added to the [Inputs Property][]
+- Any extra [Input Variables][Input Variable] not present in the called [Flow][Flow Property] to be deleted from the [Inputs Property][]
+
+![Flow Contract Change Example](/images/run-flow-contract-change.gif)
+
+### Known Limitations
+
+#### Flow Contract Changes are not detected when using editors other than the Literal Editor
+
+[Flow Contract Changes][] will not be detected if an editor other than the [Literal Editor][] is used for the [Flow Property][] or [Inputs Property][]. This will cause the prompt for update the contract to not be displayed if there are any changes.
 
 [Flow Property]: {{< ref "#flow" >}}
 [Inputs Property]: {{< ref "#inputs" >}}
 [Outputs Property]: {{< ref "#outputs" >}}
+[Flow Contract Changes]: {{< ref "#flow-contract-changes" >}}
+[Exceptions Thrown by a Child Flow]: {{< ref "#exceptions-thrown-by-a-child-flow" >}}
+[Running a Flow that Throws an Exception]: {{< ref "#running-a-flow-that-throws-an-exception" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
-[FlowReference]: {{< url "Cortex.Reference.DataTypes.MostCommon.FlowReference" >}}
-[InputVariables]: {{< url "Cortex.Reference.DataTypes.MostCommon.InputVariables" >}}
+[FlowReference]: {{< url "Cortex.Reference.DataTypes.Flows.FlowReference.MainDoc" >}}
+[InputVariables]: {{< url "Cortex.Reference.DataTypes.Flows.InputVariables.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.MostCommon.Structure" >}}
 [Literal Editor]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 [Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Structures" >}}
@@ -180,4 +204,3 @@ This process repeats until:
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
 
 [Int32]: {{< url "Cortex.Reference.DataTypes.MostCommon.Int32" >}}
-[String]: {{< url "Cortex.Reference.DataTypes.MostCommon.String" >}}
