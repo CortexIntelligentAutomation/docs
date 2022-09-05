@@ -8,7 +8,7 @@ description: "Sets all items in a Dictionary to a new value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItems`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItemsBlock`3)</p>
 
 ## Description
 
@@ -83,7 +83,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -96,7 +96,7 @@ For information about the different types of dictionaries, including those that 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
 [TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}

@@ -162,7 +162,7 @@ The [Xml][Xml Property] to convert into a [Structure][Structure Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Xml` with value `""` |
+| Default Value | `($)Xml` with no value |
 
 ### Structure
 

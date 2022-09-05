@@ -130,4 +130,4 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

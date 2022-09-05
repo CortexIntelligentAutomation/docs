@@ -162,6 +162,6 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.Nullable" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}

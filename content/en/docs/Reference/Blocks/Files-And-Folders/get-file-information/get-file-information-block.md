@@ -141,4 +141,4 @@ Escaping can be done in two ways:
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[FileInformation]: {{< url "Cortex.Reference.DataTypes.MostCommon.FileInformation" >}}
+[FileInformation]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileInformation.MainDoc" >}}

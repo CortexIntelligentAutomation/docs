@@ -752,7 +752,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[Array]: {{< url "Cortex.Reference.DataTypes.MostCommon.Array" >}}
+[Array]: {{< url "Cortex.Reference.DataTypes.Collections.Array.MainDoc" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 
 [DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}

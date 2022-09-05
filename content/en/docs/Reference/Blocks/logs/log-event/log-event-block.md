@@ -248,7 +248,7 @@ Please note that if the appsetting.json file cannot be found for one of the serv
 
 ### Anatomy of a Log
 
-The format of the logs written by this block are the same as the logs written by the rest of the Cortex Services. This is to ensure logging is consistent and done one way within Cortex Evolution. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
+The format of the logs written by this block are the same as the logs written by the rest of the Cortex Services. This is to ensure logging is consistent and done one way within Cortex. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
 
 An example log can be found below:
 
@@ -373,5 +373,5 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.Nullable" >}}
-[EventSeverity]: {{< url "Cortex.Reference.DataTypes.MostCommon.EventSeverity" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
+[EventSeverity]: {{< url "Cortex.Reference.DataTypes.Logs.EventSeverity.MainDoc" >}}
