@@ -124,6 +124,17 @@
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.Data]
+                MainDoc = "/docs/reference/blocks/data"
+                [Cortex.Reference.Blocks.Data.ExecuteDataCommand]
+                    MainDoc = "/docs/reference/blocks/data/execute-data-command"
+                    [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
+                        MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
+                        ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
+                        ParameterisedCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#parameterised-commands"
+                        NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#nonquery-statements"
+                        QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
@@ -704,8 +715,8 @@
                     CommandText = "/docs/reference/data-types/data/nonquerycommand/#command-text"
                 [Cortex.Reference.DataTypes.Data.TConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/tconnectiondetails"
-                [Cortex.Reference.DataTypes.Data.IConnectionDetails]
-                    MainDoc = "/docs/reference/data-types/data/iconnectiondetails"
+                [Cortex.Reference.DataTypes.Data.ConnectionDetails]
+                    MainDoc = "/docs/reference/data-types/data/connectiondetails"
                 [Cortex.Reference.DataTypes.Data.OdbcConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]

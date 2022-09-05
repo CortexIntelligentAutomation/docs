@@ -525,7 +525,7 @@ There are multiple types of [Command][Command Property] that can be used, each w
 
 #### Command
 
-An [Command][] parses a single statement provided in the [commandText][Command.CommandText], determining how the statement should be executed against the data source. If the [commandText][Command.CommandText] is a [Query Statement][Query Statements] the rows retrieved from the data source will be returned, otherwise if the [commandText][Command.CommandText] is a [Non Query Statement][Non Query Statements] the number of rows affected will be returned.
+A [Command][] parses a single statement provided in the [commandText][Command.CommandText], determining how the statement should be executed against the data source. If the [commandText][Command.CommandText] is a [Query Statement][Query Statements] the rows retrieved from the data source will be returned, otherwise if the [commandText][Command.CommandText] is a [Non Query Statement][Non Query Statements] the number of rows affected will be returned.
 
 For a [Query Statement][Query Statements] (e.g. select and execute):
 
@@ -653,7 +653,7 @@ The `@` symbol denotes a parameter within the [CommandText][DataCommand.CommandT
 
 [Non Query Statements][] can use any object as a parameter. If an object that derives from [Array][] or [IEnumerable][] is used, the Non Query Statement will be executed for each item in the [Array][] or [IEnumerable][] and the sum of all the results will be returned.
 
-For both [Query Statements][] and [Non Query Statements][], an SqlException is thrown if a parameter is missing from the [Command][Command Property] and the [CommandText][DataCommand.CommandText] contains a parameter  (e.g. `{"CommandText": "SELECT * FROM Table WHERE Name = @Parameter", "Parmeters": {"IncorrectParameter": 0}}`).
+For both [Query Statements][] and [Non Query Statements][], an SqlException is thrown if a parameter is missing from the [Command][Command Property] and the [CommandText][DataCommand.CommandText] contains a parameter  (e.g. `{"CommandText": "SELECT * FROM Table WHERE Name = @Parameter", "Parameters": {"IncorrectParameter": 0}}`).
 
 ### Complex Commands
 

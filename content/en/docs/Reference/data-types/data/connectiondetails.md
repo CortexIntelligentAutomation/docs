@@ -24,24 +24,24 @@ description: "The abstract class defining how to establish and maintain a connec
 
 ### Most Common ConnectionDetails Data Types
 
-Any of the following data types can be used where an `ICommand` is required:
+Any of the following data types can be used where an `ConnectionDetails` is required:
 
-* [SqlServerConnectionDetails][]
-* [OdbcConnectionDetails][]
+- [SqlServerConnectionDetails][]
+- [OdbcConnectionDetails][]
 
 ### Create an ConnectionDetails
 
 For some of the ways that an `ConnectionDetails` can be created, please see each of the `ConnectionDetails` data types:
 
-* [SqlServerConnectionDetails][]
-* [OdbcConnectionDetails][]
+- [SqlServerConnectionDetails][]
+- [OdbcConnectionDetails][]
 
 ### Convert ConnectionDetails to Text
 
 For some of the ways that an `ConnectionDetails` can be converted to text, please see each of the `ConnectionDetails` data types:
 
-* [SqlServerConnectionDetails][]
-* [OdbcConnectionDetails][]
+- [SqlServerConnectionDetails][]
+- [OdbcConnectionDetails][]
 
 ## Known limitations
 
@@ -51,22 +51,16 @@ None
 
 ### Related Data Types
 
-* [SqlServerConnectionDetails][]
-* [OdbcConnectionDetails][]
+- [SqlServerConnectionDetails][]
+- [OdbcConnectionDetails][]
 
 ### Related Concepts
 
-* [Working with Data Sources][]
+- [Working with Data Sources][]
 
 ### External Documentation
 
 None
-
-TODO:
-
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 

@@ -26,7 +26,29 @@ description: "Holds the information for parsing a command, running multiple quer
 
 ### Command Text
 
+The Command Text is used to create the command that will be run against the data source.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | [EncryptableText][] with no value |
+
 ### Parameters
+
+Parameters are used to pass information top the command that will be run against the data source.
+
+It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+
+For more information see [Parameterised Commands][]
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [dynamic][] |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with no value |
 
 ## Remarks
 
@@ -53,6 +75,14 @@ A `Commands` can also be created using the Literal Editor by filling in the nece
 | Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `"1/7/2022 1:00:00 PM +00:00"` | Expression | See [Convert Object To Text][] |
 | Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `""` | Expression | See [Convert Object To Json][] |
 
+### Parameterised Commands
+
+It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+
+The `@` symbol denotes a parameter within the [CommandText][] (e.g. `"SELECT * FROM Table WHERE Name = @Parameter"`). An example of using parameters can be found in [Executing Multiple Commands (Safe)][], whereas, an example of inserting variables into a statement without parameters can be found in [Executing Multiple Commands (Unsafe)][]
+
+For more information see [Parameterised Commands][Block: Parameterised Commands].
+
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `Commands`.
@@ -78,11 +108,18 @@ None
 
 ### External Documentation
 
-None
+* [SQL Injection][]
+
+[CommandText]: {{< ref "#command-text" >}}
+[Parameterised Commands]: {{< ref "#parameterised-commands" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+
+[Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
+[Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
+[Block: Parameterised Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
 
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -93,3 +130,5 @@ None
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+
+[SQL Injection]: {{< url "W3.SqlInjection" >}}
