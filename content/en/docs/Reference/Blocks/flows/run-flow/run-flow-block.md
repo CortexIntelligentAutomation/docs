@@ -20,7 +20,7 @@ Runs a chosen [Flow][Flow Property] using the [Inputs][Inputs Property] provided
 
 This example will run the [Flow][Flow Property] `square-number-flow` saving the output variables to `($)Outputs`.
 
-The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is of type [Int32][], an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not of type [Int32][].
+The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is larger than `0`, an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not larger than `0`.
 
 #### Properties
 
@@ -84,7 +84,7 @@ The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)N
 
 #### Result
 
-As `-1` is passed into the [Input Variable][] `($)NumberToSquare` for the [Flow][Flow Property] `square-number-flow`, and is not greater than `0`, an exception is thrown. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is of type [Int32][] and throws an exception if it is not of the correct type.
+The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is larger than `0`, an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not larger than `0`. As `-1` is passed into the [Input Variable][] `($)NumberToSquare` and is not greater than `0`, an exception is thrown.
 
 `($)Outputs` is not updated as an exception is thrown.
 
