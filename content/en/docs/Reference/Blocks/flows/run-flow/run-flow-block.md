@@ -178,7 +178,7 @@ This will cause:
 
 #### Flow Contract Changes are not detected when using editors other than the Literal Editor
 
-[Flow Contract Changes][] will not be detected if an editor other than the [Literal Editor][] is used for the [Flow Property][] or [Inputs Property][]. This will cause the prompt for update the contract to not be displayed if there are any changes.
+[Flow Contract Changes][] will not be detected if an [Editor][TODO: Property Editors] other than the [Literal Editor][] is used for the [Flow Property][] or [Inputs Property][]. This will cause the prompt for update the contract to not be displayed if there are any changes.
 
 [Flow Property]: {{< ref "#flow" >}}
 [Inputs Property]: {{< ref "#inputs" >}}
