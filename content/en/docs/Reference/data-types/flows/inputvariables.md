@@ -56,7 +56,7 @@ None
 
 ### Related Data Types
 
-- [All Data Types][]
+None
 
 ### Related Concepts
 
@@ -69,7 +69,5 @@ None
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
-
-[All Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 
 [Run Flow]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
