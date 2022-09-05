@@ -184,8 +184,9 @@ When a flow is first selected, or when the contract of the flow changes (e.g. Th
 
 This will cause:
 
-- Any missing [Input Variables][Input Variable] present in the called [Flow][Flow Property] to be added to the [Inputs Property][]
+- Any missing [Input Variables][Input Variable] present in the called [Flow][Flow Property] to be added to the [Inputs Property][], this will cause the data within the missing variable to be 
 - Any extra [Input Variables][Input Variable] not present in the called [Flow][Flow Property] to be deleted from the [Inputs Property][]
+- Any [Input Variables][Input Variable] present in the called [Flow][Flow Property] to be retained, preserving their value
 
 ### Known Limitations
 
