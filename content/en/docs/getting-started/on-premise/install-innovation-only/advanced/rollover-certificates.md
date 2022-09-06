@@ -38,7 +38,7 @@ This file should be placed in a known location on the Application Server where t
 
 If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
-### Configure Installation Script
+### Configure Update Certificates Script
 
 1. In the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, locate the `Cortex.Innovation.Update.Certificates.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
@@ -70,7 +70,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
     |`SkipLoadBalancer`                             | Updates certificates without updating a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
-### Test Installation Script
+### Test Update Certificates Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
@@ -112,7 +112,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 ### Check Application Services
 
 1. Log on to the server.
-1. Import the certificate, used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your `Current User` certificate store. This can be achieved by double clicking on the certificate .PFX file and following the wizard.
+1. Import the certificate, used in the `ServerCertificatePath` parameter of the [Configure Update Certificates Script][] section, to your `Current User` certificate store. This can be achieved by double clicking on the certificate .PFX file and following the wizard.
 
 1. Open a web browser.
 1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
@@ -153,3 +153,8 @@ If using a single server and using the same certificates for both the Applicatio
 1. Click `OK` to close Edit Bindings dialog.
 1. Click `Close` to close the Bindings dialog.
 1. Open Gateway in a browser. Click the padlock icon next to the URL. The certificate displayed should be the updated one.
+
+[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
+[Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
+[Configure Update Certificates Script]:  {{< ref "#configure-update-certificates-script" >}}
+[Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
