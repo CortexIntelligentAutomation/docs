@@ -29,9 +29,9 @@ Ensure that a valid Cortex licence file named `Cortex.lic` exists on the Web App
 ### Install SQL Server or SQL Express
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">Cortex - SQL Server 2019 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">Cortex - SQL Server 2016 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">Cortex - SQL Server 2016 Express Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">Cortex Innovation - SQL Server 2019 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">Cortex Innovation - SQL Server 2016 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">Cortex Innovation - SQL Server 2016 Express Installation Guide</a>
 
 ### Install Microsoft .NET Framework 4.7.1
 
@@ -85,7 +85,7 @@ To verify the certificate is imported:
 3. Expand `Personal` and select `Certificates`
 4. You should see your certificate in this store
 
-{{% alert type="warning" title="Warning" %}}It is very important to set a reminder to update certificates in good time before they expire. If they expire then the platform will cease to function and [Cortex Service Portal][] must be contacted for support.{{% /alert %}}
+{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" "update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}
 
 ### IIS Role Setup and Configuration
 
@@ -565,6 +565,10 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     1. Right-click the `Cortex Gateway` application pool and select `Start`.
 1. Once the application pool has been started, the site will be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
     {{% alert title="Note" %}} If the application pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
+
+## Preserve installation files
+
+Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.
 
 ## Next Steps?
 

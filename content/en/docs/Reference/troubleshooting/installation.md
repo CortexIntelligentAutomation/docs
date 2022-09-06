@@ -256,4 +256,15 @@ A workaround for this is provided by Intel.
     1. Repeat these steps for any other Application Servers.
 1. Run the Application Servers installation script again.
 
+### Service Fabric Explorer displays certificate is about to expire warning
+
+If Service Fabric certificates are going to expire in fewer than 30 days, a warning is displayed as follows:
+
+{{< figure src="/images/Service Fabric Explorer - Expiring Certificate.png" title="Service Fabric Explorer Certificate Expiring" >}}
+
+*Certificate expiration: thumbprint = {thumbprint}, expiration {date} remaining lifetime is {time} please refresh ahead of time to avoid catastrophic failure.*
+
+If this occurs on your server it is important to update your certificates as soon as possible using [Rollover Certificates][].
+
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
+[Rollover Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" >}}
