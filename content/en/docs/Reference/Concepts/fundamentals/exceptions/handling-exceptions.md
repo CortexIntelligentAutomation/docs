@@ -27,13 +27,11 @@ Exceptions thrown within the [execution][] of a [block][] can be handled by conn
 
 ### Chaining Block Exception Handling Blocks
 
+![Chaining Block Exception Handling Blocks](/images/chained-exception.gif)
+
 [Handle Block Exception blocks][] can be chained together by connecting the red exception output port of one [block][] to the red exception input port of another. When an exception is not handled, it will be passed to the next chained exception handling block. This process repeats until the exception is either handled or there are no more blocks in the chain; if the exception is not handled at this level it is passed up to the [workspace level][].
 
 The [Handle Block Exception][] block can be used to handle all exceptions. This block does not have an exception output port and therefore ends the chain.
-
-For example:
-
-![Chaining Block Exception Handling Blocks](/images/chained-exception.gif)
 
 ### Saving the Block Exception
 

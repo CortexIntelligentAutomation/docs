@@ -11,7 +11,7 @@ weight: 200
 
 The [Expression Editor][] is the most powerful [property editor][] and can accept [literal values][], [expressions][], and [variables][].
 
-![Empty Expression](/images/set-variable/set-variable-expression-empty.png)
+![Empty Expression](/images/set-variable/set-variable-expression-empty.PNG)
 
 ## Literal Values
 
@@ -31,7 +31,7 @@ A literal is an explicit value that is not calculated during the execution of th
 
 ### String literal
 
-![String literal](/images/set-variable/set-variable-expression-string.png)
+![String literal](/images/set-variable/set-variable-expression-string.PNG)
 
 [String][String] literals are surrounded by double quotes. For example:
 
@@ -93,7 +93,7 @@ For further information, see [String Literals][]
 
 ### Char literal
 
-![Char literal](/images/set-variable/set-variable-expression-char.png)
+![Char literal](/images/set-variable/set-variable-expression-char.PNG)
 
 Char literals are single characters; they are surrounded by single quotes. For example:
 
@@ -113,7 +113,7 @@ For further information, [Char Literals][]
 
 ### Int32 literal
 
-![Int32 literal](/images/set-variable/set-variable-expression-int.png)
+![Int32 literal](/images/set-variable/set-variable-expression-int.PNG)
 
 If an integer literal value is greater than or equal to [Int32.MinValue][] or less than or equal to [Int32.MaxValue][], then it will be of type [Int32][]
 
@@ -127,7 +127,7 @@ For further information, see [Integer Literals][].
 
 ### Int64 literal
 
-![Int64 literal](/images/set-variable/set-variable-expression-int64.png)
+![Int64 literal](/images/set-variable/set-variable-expression-int64.PNG)
 
 If an integer literal value is less than [Int32.MinValue][] or greater than [Int32.MaxValue][], then it will be of type [Int64][].
 
@@ -144,7 +144,7 @@ For further information, see [Integer Literals][].
 
 ### Double literal
 
-![Double literal](/images/set-variable/set-variable-expression-double.png)
+![Double literal](/images/set-variable/set-variable-expression-double.PNG)
 
 By default, floating point literals are of type [Double][Double].
 
@@ -163,7 +163,7 @@ For further information, see [Real Literals][].
 
 ### Single literal
 
-![Single literal](/images/set-variable/set-variable-expression-single.png)
+![Single literal](/images/set-variable/set-variable-expression-single.PNG)
 
 If it is necessary to create an floating point literal of type [Single][] with a value greater than or equal to [Single.MinValue][] or less than or equal to [Single.MaxValue][], then the floating point literal must be suffixed by the character `f` or `F`. For example:
 
@@ -176,7 +176,7 @@ For further information, see [Real Literals][].
 
 ### Boolean literal
 
-![Boolean literal](/images/set-variable/set-variable-expression-boolean.png)
+![Boolean literal](/images/set-variable/set-variable-expression-boolean.PNG)
 
 A [Boolean][] literal represents a truth-value of either `true` or `false`.
 
@@ -196,7 +196,7 @@ Currently, creating a dictionary using literal syntax is not supported; any atte
 
 ### Structure literal
 
-![Structure literal](/images/set-variable/set-variable-expression-structure.png)
+![Structure literal](/images/set-variable/set-variable-expression-structure.PNG)
 
 [Structures][Structure] are a special type of [Dictionary][] that always have [string][String] keys.
 
@@ -218,7 +218,7 @@ They differ from a [Dictionary][] in the syntax used for accessing the item:
 
 ### List literal
 
-![List literal](/images/set-variable/set-variable-expression-list.png)
+![List literal](/images/set-variable/set-variable-expression-list.PNG)
 
 A [List][] is an object that consists of a number of ordered items that can be of any [data type][Data Type].
 
@@ -237,7 +237,7 @@ A [List][] is an object that consists of a number of ordered items that can be o
 
 ## Variables
 
-![Variables](/images/set-variable/set-variable-expression-variable.png)
+![Variables](/images/set-variable/set-variable-expression-variable.PNG)
 
 [Variables][Variables Concept] are named containers for storing values of any [data type][Data Type]; a [variable's][Variables Concept] value can be read, updated, replaced, or removed using variable syntax; where the variable name is prefixed with `($)` (e.g. `($)VariableName`).
 
@@ -267,7 +267,7 @@ Types of expressions:
 
 ### Arithmetic expressions
 
-![Arithmetic expressions](/images/set-variable/set-variable-expression-arithmetic.png)
+![Arithmetic expressions](/images/set-variable/set-variable-expression-arithmetic.PNG)
 
 The following [operators][] perform arithmetic operations with [operands][] that have numeric values.
 
@@ -288,7 +288,7 @@ For further information, see [Arithmetic Operators][].
 
 ### Boolean expressions
 
-![Boolean expressions](/images/set-variable/set-variable-expression-boolean.png)
+![Boolean expressions](/images/set-variable/set-variable-expression-boolean.PNG)
 
 The following [operators][] perform logical operations with [operands][] that have boolean values.
 
@@ -308,7 +308,7 @@ For further information, see [Boolean Logical Operators][].
 
 ### Comparison expressions
 
-![Comparison expressions](/images/set-variable/set-variable-expression-comparison.png)
+![Comparison expressions](/images/set-variable/set-variable-expression-comparison.PNG)
 
 The following [operators][] perform comparison operations with [operands][].
 
@@ -346,7 +346,7 @@ In all of the examples below assume:
 
 #### Concatenated Strings
 
-![Concatenated Strings](/images/set-variable/set-variable-expression-concatenated-string.png)
+![Concatenated Strings](/images/set-variable/set-variable-expression-concatenated-string.PNG)
 
 Concatenation is the process of appending one [String][] to the end of another [String][]. You concatenate strings by using the `+` [operator][operators].
 
@@ -359,7 +359,7 @@ For further information, see [String concatenation][].
 
 #### Interpolated Strings
 
-![Interpolated Strings](/images/set-variable/set-variable-expression-interpolated-string.png)
+![Interpolated Strings](/images/set-variable/set-variable-expression-interpolated-string.PNG)
 
 Interpolation is the process of inserting expressions and variables into a [String][]. An interpolated string is declared by prefixing the string with the `$` character.
 
@@ -373,7 +373,7 @@ For further information, see [String interpolation][].
 
 #### Verbatim Strings
 
-![Verbatim Strings](/images/set-variable/set-variable-expression-verbatim-string.png)
+![Verbatim Strings](/images/set-variable/set-variable-expression-verbatim-string.PNG)
 
 A verbatim string identifies that characters within the string should be processed literally, and do not need to be escaped. However, the following exceptions apply:
 
@@ -393,17 +393,23 @@ For further information, see [Verbatim string literals][] and [Verbatim String I
 
 [Dictionaries][Dictionary] can be created using [Constructor expressions][] and their items can be accessed using [Index expressions][].
 
+For examples of creating Dictionaries using constructor expressions, see [Create a Dictionary&lt;TKey, TItem&gt;][Create a Dictionary].
+
 ### Structure expressions
 
 [Structures][Structure] can be created using [Constructor expressions][] and their items can be accessed using [Property expressions][] (keys must follow [C# identifier naming rules][]) or [Index expressions][] (keys do not need to follow [C# identifier naming rules][]).
+
+For examples of creating Structures using constructor expressions, see [Create a Structure][].
 
 ### List expressions
 
 [Lists][List] can be created using [Constructor expressions][] and their items can be accessed using [Index expressions][].
 
+For examples of creating Lists using constructor expressions, see [Create a List&lt;TItem&gt;][Create a List].
+
 ### Constructor expressions
 
-![Constructor expressions](/images/set-variable/set-variable-expression-constructor.png)
+![Constructor expressions](/images/set-variable/set-variable-expression-constructor.PNG)
 
 Constructors can be used to create a new instance of a [Data Type][]. A [Data Type][] can have multiple constructors, each with different parameters that are used to create the new instance.
 
@@ -432,7 +438,7 @@ For further information, see [Constructors][].
 
 ### Method expressions
 
-![Method expressions](/images/set-variable/set-variable-expression-method.png)
+![Method expressions](/images/set-variable/set-variable-expression-method.PNG)
 
 Methods can be used to execute specific functionality. The methods accessible are defined by the [Data Type][], and information regarding methods can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
@@ -450,7 +456,7 @@ For further information, see [Methods][Methods External].
 
 ### Property expressions
 
-![Property expressions](/images/set-variable/set-variable-expression-properties.png)
+![Property expressions](/images/set-variable/set-variable-expression-properties.PNG)
 
 Properties can be used to read data from and/or write data to a [Data Type][]. The properties accessible are defined by the [Data Type][], and information regarding properties can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
@@ -473,7 +479,7 @@ For further information, see [Properties][].
 
 ### Enum expressions
 
-![Enum expressions](/images/set-variable/set-variable-expression-enum.png)
+![Enum expressions](/images/set-variable/set-variable-expression-enum.PNG)
 
 [Enum][] data types have a defined set of values, where each value has an associated [String][] name and [Int32][] value. Information regarding values can be found in the relevant documentation for that [Data Type][Reference Data Types].
 
@@ -490,7 +496,7 @@ For further information, see [Enumeration types][].
 
 ### Casting expressions
 
-![Casting expressions](/images/set-variable/set-variable-expression-casting.png)
+![Casting expressions](/images/set-variable/set-variable-expression-casting.PNG)
 
 [Data Types][Data Type] can be cast to other [Data Types][Data Type] through the use of explicit casting, this can sometimes result in the loss of information when converting to a type that does not store the same amount of information. Information regarding which types a [Data Type][] can cast to can be found in the "Summary" section under "Can be cast to" in the relevant documentation for that [Data Type][Reference Data Types].
 
@@ -509,7 +515,7 @@ For further information, see [Explicit Conversions][] and [Implicit Conversions]
 
 ### Index expressions
 
-![Index expressions](/images/set-variable/set-variable-expression-index.png)
+![Index expressions](/images/set-variable/set-variable-expression-index.PNG)
 
 [Data Types][Data Type] that are [Collections][] or [String][] can have their items accessed using index notation:
 
@@ -672,6 +678,7 @@ This may change in future to allow developers to specifically select which of th
 [Collections]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
+[Create a Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Int32.MaxValue]: {{< url "MSDocs.DotNet.Api.System.Int32.MaxValue" >}}
@@ -679,6 +686,7 @@ This may change in future to allow developers to specifically select which of th
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Create a List]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 [Single.MaxValue]: {{< url "MSDocs.DotNet.Api.System.Single.MaxValue" >}}
@@ -687,6 +695,7 @@ This may change in future to allow developers to specifically select which of th
 [Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 [Collection]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[Create a Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.CreateNew" >}}
 
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
