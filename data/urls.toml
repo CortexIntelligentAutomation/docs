@@ -939,6 +939,8 @@
             DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
             Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
             LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+        [Cortex.Website.Eula]
+            MainDoc = "https://www.cortex-ia.com/end-user-licence-agreement/"
         [Cortex.Website.Industries]
             MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
             Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"

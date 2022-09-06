@@ -130,7 +130,9 @@ The settings can be applied by running a script. Be aware that the server will b
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
     -ServerCertificatePwd "myPassword" `
     -SkipLoadBalancer `
-    -Credential $Credential
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
@@ -142,7 +144,9 @@ The settings can be applied by running a script. Be aware that the server will b
     -ApplicationServerIPv4Addresses @("192.168.1.1") `
     -UseSelfSignedCertificates `
     -SkipLoadBalancer `
-    -Credential $Credential
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
@@ -159,7 +163,9 @@ The settings can be applied by running a script. Be aware that the server will b
     |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
-
+    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
+    
     The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
@@ -177,12 +183,19 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
     ```
 
-1. Test `Cortex.Innovation.Install.ps1` by running the following command:
+1. Type the following command into PowerShell:
 
     ```powershell
     .\Cortex.Innovation.Install.ps1 -WhatIf
     ```
 
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -WhatIf -AcceptEULA
+    ```
+
+1. Run the PowerShell command to test the installation script.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ.
 1. Wait for the command to finish. It will display the output of the installation command without making any changes to the system.
@@ -194,12 +207,18 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Run Installation Script
 
-1. Install Application Services and the required infrastructure by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, the `FilePath` value can be changed if required):
+1. Type the following command into PowerShell:
 
     ```powershell
-    .\Cortex.Innovation.Install.ps1 | Tee-Object -FilePath "cortex-app-install-log.txt"
+    .\Cortex.Innovation.Install.ps1
+    ```
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
     ```
 
+1. Run the PowerShell command to install HA Services and the required infrastructure.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
 1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ. This should be entered carefully and recorded as it may be needed if seeking support from [Cortex Service Portal][]. Press OK.
 1. Wait for the script to finish running. This should take approximately 10 minutes.
@@ -256,6 +275,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 1. [Install Web Application Server][]
 
+[Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}
 [Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
 [Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
 [Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallGateway" >}}
