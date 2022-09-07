@@ -11,6 +11,22 @@ weight: 1
 
 ## Main Toolbar
 
+### Undo
+
+TODO:
+
+- What happens when an undo action is taken
+- What can be undone
+- Keyboard Shortcuts?
+
+### Redo
+
+TODO:
+
+- What happens when an redo action is taken
+- What can be redone
+- Keyboard Shortcuts?
+
 ### Start an execution
 
 TODO:

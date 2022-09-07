@@ -137,6 +137,8 @@
                 ExceptionsViewer = "/docs/guides/cortex-studio/east-panel/#exceptions-viewer"
             [Cortex.Guides.Studio.MainDisplayArea]
                 MainDoc = "/docs/guides/cortex-studio/main-display-area/"
+                Undo = "/docs/guides/cortex-studio/main-display-area/#undo"
+                Redo = "/docs/guides/cortex-studio/main-display-area/#redo"
                 SetNextBlockToExecute = "/docs/guides/cortex-studio/main-display-area/#set-next-block-to-execute"
                 Breakpoints = "/docs/guides/cortex-studio/main-display-area/#breakpoints"
                 Executions = "/docs/guides/cortex-studio/main-display-area/#executions"

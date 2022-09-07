@@ -10,13 +10,13 @@ description: "The exception thrown when trying to run a flow with invalid input 
 
 ## Description
 
-The exception thrown when trying to run a [flow][TODO: What is a Flow?] with invalid [Input Variables][].
+The exception thrown when trying to run a [flow][] with invalid [Input Variables][].
 
 ## Reasons
 
 ### Missing Input Variables
 
-This exception is thrown when a [flow][TODO: What is a Flow?] is run and there are missing [Input Variables][]; any missing variables will be shown in the [InvalidVariableErrors][] property.
+This exception is thrown when a [flow][] is run and there are missing [Input Variables][]; any missing variables will be shown in the [InvalidVariableErrors][] property.
 
 #### Message Format
 
@@ -32,7 +32,7 @@ Add the variables referenced in [InvalidVariableErrors][].
 
 ### Extra Input Variables
 
-This exception is thrown when a [flow][TODO: What is a Flow?] is run and extra [Input Variables][] have been provided; any extra variables will be shown in the [InvalidVariableErrors][] property.
+This exception is thrown when a [flow][] is run and extra [Input Variables][] have been provided; any extra variables will be shown in the [InvalidVariableErrors][] property.
 
 #### Message Format
 
@@ -48,7 +48,7 @@ Remove the variables referenced in [InvalidVariableErrors][].
 
 ### Input Variables of an Invalid Type
 
-This exception is thrown when a [flow][TODO: What is a Flow?] is run and there are [Input Variables][] that are of an invalid type; any variables with an invalid type will be shown in the [InvalidVariableErrors][] property.
+This exception is thrown when a [flow][] is run and there are [Input Variables][] that are of an invalid type; any variables with an invalid type will be shown in the [InvalidVariableErrors][] property.
 
 #### Message Format
 
@@ -110,9 +110,9 @@ None
 
 ### Related Concepts
 
-* [Flows][TODO: Fundamentals Flows]
-* [Variables][TODO: Fundamentals Variables]
-* [Exceptions][TODO: Fundamentals Exceptions]
+* [Flows][]
+* [Variables][]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -131,4 +131,8 @@ None
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Input Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[Input Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}

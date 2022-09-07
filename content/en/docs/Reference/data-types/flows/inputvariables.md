@@ -52,24 +52,27 @@ None
 
 ### Related Data Types
 
-* [IEnumerable][]
-* [IEnumerable&lt;TItem&gt;][]
-* [IDictionary&lt;TKey, TItem&gt;][]
-* [Structure][]
+- [IEnumerable][]
+- [IEnumerable&lt;TItem&gt;][]
+- [IDictionary&lt;TKey, TItem&gt;][]
+- [Structure][]
 
 ### Related Concepts
 
-- [Flows][TODO: Fundamentals -> Flows]
-- [Variables][TODO: Fundamentals -> Variables]
-- [Input Variables][TODO: Fundamentals -> Variables -> Input Variables]
+- [Flows][]
+- [Variables][]
+- [Input Variables][]
 
 ### External Documentation
 
 None
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[Input Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
 
 [Run Flow]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
 [Inputs Property]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.InputsProperty" >}}

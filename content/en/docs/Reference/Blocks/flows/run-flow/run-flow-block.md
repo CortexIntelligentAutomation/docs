@@ -101,42 +101,42 @@ In this example, as `-1` is passed into the [Input Variable][] `($)NumberToSquar
 
 The [Flow][Flow Property] that will be run.
 
-The [Literal Editor][TODO] is the only editor available for this property, and it provides the developer a list of all available flows to choose from.
+The [Literal Editor][] is the only editor available for this property, and it provides the developer a list of all available flows to choose from.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [FlowReference][] |
-| Property Type | [Input][TODO] |
+| Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][Literal Editor] |
 | Default Value | No value (defaults to `null`) |
 
 ### Inputs
 
 The [Input Variables][Input Variable] that are passed to the [Flow][Flow Property] that will be run.
 
-It is recommended to use the [Literal Editor][TODO] for this property as it detects and warns of changes to the Flow Contract, allowing users to [Sync the Editor][Syncing the Inputs Property with the Flow Contract].
+It is recommended to use the [Literal Editor][] for this property as it detects and warns of changes to the Flow Contract, allowing users to [Sync the Editor][Syncing the Inputs Property with the Flow Contract].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [InputVariables][] |
-| Property Type | [Input][TODO] |
+| Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][Literal Editor] |
 | Default Value | No initial value (Will be [synced][Syncing the Inputs Property with the Flow Contract] when the [Flow][Flow Property] is first [selected][Selecting a Flow]) |
 
 ### Outputs
 
 The [Output Variables][Output Variable] from the [Flow][Flow Property].
 
-Each of the [Output Variables][Output Variable] will be saved to a [Structure][], where the key is the name of the variable and the item is the value of the variable. 
+Each of the [Output Variables][Output Variable] will be saved to a [Structure][], where the key is the name of the variable and the item is the value of the variable.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
-| Property Type | [Output][TODO] |
+| Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][Variable Editor] |
 | Default Value | `($)Outputs` with no value |
 
 ## Exceptions
@@ -155,7 +155,7 @@ The exceptions thrown by the block can be found below:
 
 ![Selecting a Flow Example](/images/run-flow-selecting-a-flow.gif)
 
-A flow can be selected using the [Literal Editor][TODO] on the [Flow Property][], a list of all available flows will be presented to the developer and can be searched by the Name or Id of a flow.
+A flow can be selected using the [Literal Editor][] on the [Flow Property][], a list of all available flows will be presented to the developer and can be searched by the Name or Id of a flow.
 
 When a [Flow][Flow Property] is selected the [Inputs Property][] will be [Synced with the Flow Contract][Syncing the Inputs Property with the Flow Contract].
 
@@ -163,7 +163,7 @@ When a [Flow][Flow Property] is selected the [Inputs Property][] will be [Synced
 
 If an [Input Variable][] has a default value, then this default value will be used when running the [Flow][Flow Property] if the corresponding value in the [Inputs Property][] is left empty. See [Running a Flow with Default Input Variables][] for an example.
 
-Also, if an [Input Variable][] has a default value, and the corresponding value in the [Inputs Property][] is not of the same type, a [Validation Error][TODO: Messages] will be raised when the flow is validated.
+Also, if an [Input Variable][] has a default value, and the corresponding value in the [Inputs Property][] is not of the same type, a [Validation Error][] will be raised when the flow is validated.
 
 For more information see [Input Variables][Input Variable].
 
@@ -178,7 +178,7 @@ This process repeats until:
 - The exception is handled, or
 - The exception reaches the flow's top-level workspace, is not handled by any [Handle Block Exception blocks][] and the top-level workspace does not contain a [Handle Workspace Exception][] block. At this stage, the exception is handled by the flow's [Handle Flow Exception][] block.
 
-For more information see [Handling Exceptions][TODO].
+For more information see [Handling Exceptions][].
 
 ### Syncing the Inputs Property with the Flow Contract
 
@@ -194,7 +194,7 @@ This will cause:
 - Any extra [Input Variables][Input Variable] present in the [Inputs Property][] to be removed
 - Any [Input Variables][Input Variable] already present in the [Inputs Property][] to be retained
 
-[Undoing][TODO: Undo in Cortex Studio] this action will cause the [Inputs Property][] to return to its previous state, from before it was synced, allowing any data to be retrieved from any extra [Input Variables][Input Variable].
+[Undoing][] this action will cause the [Inputs Property][] to return to its previous state, from before it was synced, allowing any data to be retrieved from any extra [Input Variables][Input Variable].
 
 ### Known Limitations
 
@@ -206,7 +206,7 @@ In future this limitation may be removed.
 
 #### Syncing the Inputs Property with the Flow Contract is not available when using editors other than the Literal Editor
 
-[Syncing the Inputs Property with the Flow Contract][] is only available when the [Inputs Property][] uses the [Literal Editor][TODO]. If any other editor is used, the prompt to sync will not be displayed and any changes will need to be resolved manually.
+[Syncing the Inputs Property with the Flow Contract][] is only available when the [Inputs Property][] uses the [Literal Editor][]. If any other editor is used, the prompt to sync will not be displayed and any changes will need to be resolved manually.
 
 [Flow Property]: {{< ref "#flow" >}}
 [Inputs Property]: {{< ref "#inputs" >}}
@@ -218,16 +218,22 @@ In future this limitation may be removed.
 [Default Values]: {{< ref "#default-values" >}}
 [Exceptions Thrown by a Child Flow]: {{< ref "#exceptions-thrown-by-a-child-flow" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[Literal Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Input Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
+[Output Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.OutputVariablesStructure" >}}
+[Handling Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
+[Validation Error]: {{< url "Cortex.Reference.Concepts.Fundamentals.Messages.MainDoc" >}}
+
+[Undoing]: {{< url "Cortex.Guides.Studio.MainDisplayArea.Undo" >}}
 
 [FlowReference]: {{< url "Cortex.Reference.DataTypes.Flows.FlowReference.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [InputVariables]: {{< url "Cortex.Reference.DataTypes.Flows.InputVariables.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
-[Literal Editor]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
-[Input Variable]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
-[Output Variable]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+
 [InvalidInputVariablesException]: {{< url "Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MainDoc" >}}
 [Missing Input Variables]: {{< url "Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MissingInputVariables" >}}
 [Extra Input Variables]: {{< url "Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.ExtraInputVariables" >}}
@@ -236,4 +242,3 @@ In future this limitation may be removed.
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
-
