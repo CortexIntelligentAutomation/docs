@@ -24,7 +24,7 @@ The data type of the keys used to access the items contained in the collection i
 | **Size:**              | Varies                                                        |
 | **Default Value:**     | `null`                                                        |
 | **Can be used as:**    | `IDictionary<TKey, TItem>`, `IEnumerable`, `Object`, `dynamic` |
-|                        | `IEnumerable<KeyValuePair<TKey, TItem>>` (e.g. where `IEnumerable<KeyValuePair<TKey, TItem>>` is `IEnumerable<KeyValuePair<String, dynamic>>`) |
+|                        | `IEnumerable<KeyValuePair<TKey, TItem>>` (e.g. where `Structure` is `IDictionary<String, Object>` and `IEnumerable<KeyValuePair<TKey, TItem>>` is `IEnumerable<KeyValuePair<String, Object>>`) |
 | **Can be cast to:**    |  N/A |
 
 ## Remarks

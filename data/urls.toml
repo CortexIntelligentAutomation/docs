@@ -18,6 +18,7 @@
                     CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates"
                     EncryptText = "/docs/getting-started/on-premise/install-innovation-only/advanced/encrypt-text"
                     PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/advanced/port-requirements"
+                    RolloverCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates"
                     SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
@@ -385,10 +386,16 @@
                     MainDoc = "/docs/reference/blocks/flows/end-flow"
                     [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
                         MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
+                [Cortex.Reference.Blocks.Flows.RunFlow]
+                    MainDoc = "/docs/reference/blocks/flows/run-flow"
+                    [Cortex.Reference.Blocks.Flows.RunFlow.RunFlow]
+                        MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-block"
+                        FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
+                        InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
-                        MainDoc = "/docs/reference/blocks/flows//start-flow/start-flow-block"
+                        MainDoc = "/docs/reference/blocks/flows/start-flow/start-flow-block"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -889,6 +896,12 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
+            [Cortex.Reference.DataTypes.Flows]
+                MainDoc = "/docs/reference/data-types/flows/"
+                [Cortex.Reference.DataTypes.Flows.FlowReference]
+                    MainDoc = "/docs/reference/data-types/flows/flowreference"
+                [Cortex.Reference.DataTypes.Flows.InputVariables]
+                    MainDoc = "/docs/reference/data-types/flows/inputvariables"
             [Cortex.Reference.DataTypes.Json]
                 MainDoc = "/docs/reference/data-types/json/"
                 [Cortex.Reference.DataTypes.Json.JsonSerializerSettings]
@@ -1009,6 +1022,13 @@
                     [Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/"
                         ValueIsInvalid = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/#value-is-invalid"
+                [Cortex.Reference.Exceptions.Flows.Execution]
+                    MainDoc = "/docs/reference/exceptions/flows/execution/"
+                    [Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException]
+                        MainDoc = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/"
+                        MissingInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#missing-input-variables"
+                        ExtraInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#extra-input-variables"
+                        InputVariablesOfAnInvalidType = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#input-variables-of-an-invalid-type"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
             [Cortex.Reference.Exceptions.Lists]
@@ -1127,6 +1147,8 @@
             DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
             Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
             LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+        [Cortex.Website.Eula]
+            MainDoc = "https://www.cortex-ia.com/end-user-licence-agreement/"
         [Cortex.Website.Industries]
             MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
             Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"
