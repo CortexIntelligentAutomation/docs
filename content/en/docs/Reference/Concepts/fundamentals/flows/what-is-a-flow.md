@@ -67,7 +67,7 @@ A [flow execution][flow execution] may be started by:
 
 * [Debugging][] a flow in [Cortex Studio][]
 * Triggering it by making an HTTP request from an external source (e.g. a web application or web hooks)
-* Triggering it using the [Run Flow][TODO] block
+* Triggering it using the [Run Flow][] block
 * Triggering it using predefined events (future) (e.g. on receipt of an email)
 * Scheduling it to execute at predetermined times
 
@@ -102,7 +102,7 @@ Currently, it is not possible to have a [Handle Workspace Exception][] block on 
 
 * [Start Flow][]
 * [End Flow][]
-* [Run Flow][TODO]
+* [Run Flow][]
 * [Handle Flow Exception][]
 * [Handle Workspace Exception][]
 * [Workspace][Workspace Block]
@@ -135,3 +135,5 @@ None
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Debugging]: {{< url "Cortex.Guides.Studio.Debugging.MainDoc" >}}
 [Variables Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
+
+[Run Flow]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}

@@ -15,7 +15,7 @@ A [flow][] may trigger the execution of another [flow][].
 
 A [flow][] can be called from another [flow][] in the following ways:
 
-- Using the [Run Flow][TODO] block to trigger the execution of another flow directly
+- Using the [Run Flow][] block to trigger the execution of another flow directly
 - Using the [Execute HTTP Request][TODO] block to trigger a flow through the API Gateway service (this should only be used to call [flows][flow] published in a separate Cortex Innovation platform)
 
 ### Input Variables
@@ -24,7 +24,7 @@ Sometimes [flows][flow] require data to be passed to them through the use of inp
 
 Input variables can be passed into flows in the following ways:
 
-- For the [Run Flow][TODO] block, input variables are configured using the Inputs property; for more information see [Run Flow Inputs Example][TODO]
+- For the [Run Flow][] block, input variables are configured using the Inputs property; for more information see [Run Flow Example][]
 - For the [Execute HTTP Request][TODO] block, input variables are configured within the body of the HttpRequest; for more information see [Http Request Inputs Example][TODO]
 
 ### Output Variables
@@ -33,7 +33,7 @@ Sometimes [flows][flow] may return data through the use of output variables (e.g
 
 Output variables are returned to the calling flow in the following ways:
 
-- For the [Run Flow][TODO] block, output variables are saved to the Outputs property; for more information see [Run Flow Outputs Example][TODO]
+- For the [Run Flow][] block, output variables are saved to the Outputs property; for more information see [Run Flow Example][]
 - For the [Execute HTTP Request][TODO] block, output variables are returned within the ResponseBody of the HttpResponse property; for more information see [Http Request Outputs Example][TODO]
 
 ## Remarks
@@ -56,7 +56,7 @@ In the future it will be possible to call flows asynchronously; this means the c
 
 ### Related Blocks
 
-- [Run Flow][TODO]
+- [Run Flow][]
 - [Execute HTTP Request][TODO]
 
 ### External Documentation
@@ -68,3 +68,6 @@ None
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 [flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
 [Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+
+[Run Flow]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
+[Run Flow Example]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.RunningAFlow" >}}

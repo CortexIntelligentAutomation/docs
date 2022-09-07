@@ -43,6 +43,10 @@ TODO:
   - literals and expression
 - Retrieving Output variables (API or Studio)
 
+#### Break On Exception
+
+TODO
+
 ### Edit and Continue an Execution
 
 ## Workspaces

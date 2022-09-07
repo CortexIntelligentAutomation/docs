@@ -29,7 +29,7 @@ An execution represents a running instance of a [flow][], the execution moves th
 | Workspace Name | The name of the workspace the execution is currently in | `Setup and Run Child-Flow` |
 | Flow Name | The name of the flow the execution is currently running | `Parent-Flow` |
 
-When a [flow][] starts the execution of a child flow using the [Run Flow][TODO] block, any child executions will be shown within a tree in the [Executions Grid][], for example:
+When a [flow][] starts the execution of a child flow using the [Run Flow][] block, any child executions will be shown within a tree in the [Executions Grid][], for example:
 
 ![Example Child Execution in Executions Grid](/images/child-execution-in-grid.PNG)
 
@@ -42,7 +42,7 @@ When a [flow][] starts the execution of a child flow using the [Run Flow][TODO] 
 | Paused | The execution is paused on top of a block - before the block starts to execute |
 | | The execution is paused at a breakpoint on top of a block - before the block starts to execute |
 | | The execution is paused on the output port of a block - after the block has executed but before the execution has selected which block is next |
-| Exception | The execution is paused on the exception output port - after the block has thrown an exception when [break on exception][] is turned on |
+| Exception | The execution is paused on the exception output port - after the block has thrown an exception when `break on exception` is turned on |
 | Stopping | The execution is in the process of stopping - e.g. a long running block may have to finish before the execution is stopped |
 | Stopped | The execution has ended after having been manually stopped |
 | Ended | The execution has ended normally |
@@ -96,3 +96,5 @@ None
 [Executions Grid]: {{< url "Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}
 
 [Cortex Flow Execution Service]: {{< url "Cortex.Reference.Apis.FlowExecutionService.MainDoc" >}}
+
+[Run Flow]: {{< url "Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
