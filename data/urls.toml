@@ -217,9 +217,9 @@
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-names-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleFlow]
-                    MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception"
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-flow-exception-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleWorkspace]
                     MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
@@ -322,6 +322,8 @@
                     MainDoc = "/docs/reference/blocks/flows/run-flow"
                     [Cortex.Reference.Blocks.Flows.RunFlow.RunFlow]
                         MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-block"
+                        FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
+                        InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
@@ -864,6 +866,9 @@
                     MainDoc = "/docs/reference/exceptions/flows/execution/"
                     [Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException]
                         MainDoc = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/"
+                        MissingInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#missing-input-variables"
+                        ExtraInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#extra-input-variables"
+                        InputVariablesOfAnInvalidType = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#input-variables-of-an-invalid-type"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
             [Cortex.Reference.Exceptions.Lists]
