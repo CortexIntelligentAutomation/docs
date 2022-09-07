@@ -29,9 +29,9 @@ Ensure that a valid Cortex licence file named `Cortex.lic` exists on the Web App
 ### Install SQL Server or SQL Express
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">Cortex - SQL Server 2019 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">Cortex - SQL Server 2016 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">Cortex - SQL Server 2016 Express Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">Cortex Innovation - SQL Server 2019 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">Cortex Innovation - SQL Server 2016 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">Cortex Innovation - SQL Server 2016 Express Installation Guide</a>
 
 ### Install Microsoft .NET Framework 4.7.1
 
@@ -85,7 +85,7 @@ To verify the certificate is imported:
 3. Expand `Personal` and select `Certificates`
 4. You should see your certificate in this store
 
-{{% alert type="warning" title="Warning" %}}It is very important to set a reminder to update certificates in good time before they expire. If they expire then the platform will cease to function and [Cortex Service Portal][] must be contacted for support.{{% /alert %}}
+{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" "update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}
 
 ### IIS Role Setup and Configuration
 
@@ -272,7 +272,9 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
     -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
-    -Credential $AppPoolIdentity
+    -Credential $AppPoolIdentity `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.FlowDebuggerService.ps1 `
@@ -281,7 +283,9 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
     -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -UseSelfSignedCertificates `
-    -Credential $AppPoolIdentity
+    -Credential $AppPoolIdentity `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
@@ -293,6 +297,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
+    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
 
@@ -305,12 +311,19 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
-1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
-  
+1. Type the following command into PowerShell:
+
     ```powershell
-    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
+    .\Cortex.Innovation.Install.FlowDebuggerService.ps1
     ```
 
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    ```
+
+1. Run the PowerShell command to install the Flow Debugger Service.
 1. A credentials prompt will appear. Enter the credentials of the user that should run the `Debugger` application pool in IIS. If using the `NETWORK SERVICE` user, enter any user as the username and leave the password blank; the `NETWORK SERVICE` user will need to be selected in the final step.
 1. Wait for the script to finish running. This should take approximately 2 minutes.
 1. An error may have appeared saying:
@@ -476,6 +489,28 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     | 33         |`SignalRContext-Web.config Connection String`   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. |
     | 36         |`CortexRepositories-Web.config Connection String` | Change this to the location where the Flow repositories are to be stored. The default location is `c:\CortexWeb\Repo`. |
 
+### Configure Installation Script
+
+1. In the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
+1. Configure the script according to the details given below:
+
+    ```powershell
+    .\Cortex.Install.Gateway.ps1 `
+    -GatewayPath "C:\Install\Cortex Innovation 2022.6 - Gateway" `
+    -Test:$Test `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
+    ```
+
+    | Name                                         | Description |
+    |----------------------------------------------|-------------|
+    |`GatewayPath`                                 | Configure this value with the location of the extracted Gateway folder on the Application Server. |
+    |`Test`                                        | This does not need to be changed, it will be set at a later stage. |
+    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
+
+1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
+
 ### Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
@@ -484,14 +519,20 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     ```powershell
     cd "C:\Install\Cortex Innovation 2022.6 - Gateway"
     ```
-
-1. Test that everything is configured correctly by running the following command:
+1. Type the following command into PowerShell:
 
     ```powershell
-    .\CortexGateway.deploy.cmd /T
+    .\Cortex.Innovation.Install.Gateway.ps1 -Test
     ```
 
-    In the event any errors, there will be an error message displayed at the end of the output with a line confirming the Error Count.
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -Test -AcceptEULA
+    ```
+
+1. Run the PowerShell command to test the configuration.
+    In the event of any errors, there will be an error message displayed at the end of the output with a line confirming the Error Count.
 
 ### Run Installation Script
 
@@ -503,14 +544,20 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
     {{% alert title="Note" %}}Failure to stop the application pool will result in a permissions error when installing Gateway.{{% /alert %}}
 
-1. In the Windows PowerShell (x64) window, run the following command to install Gateway:
+1. Type the following command into PowerShell:
 
     ```powershell
-    .\CortexGateway.deploy.cmd /Y
+    .\Cortex.Innovation.Install.Gateway.ps1
     ```
 
-    In the event of any errors, there will be an error message displayed at the end of the output with a line confirming the Error Count.
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    ```
+
+1. Run the PowerShell command to install Gateway.
+    In the event of any errors, there will be an error message displayed at the end of the output with a line confirming the Error Count.
 1. Start the Gateway application pool:
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
@@ -519,10 +566,15 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 1. Once the application pool has been started, the site will be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
     {{% alert title="Note" %}} If the application pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
 
+## Preserve installation files
+
+Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.
+
 ## Next Steps?
 
 1. [Setup Gateway][]
 
+[Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Setup Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
 [Try it out]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOut" >}}
