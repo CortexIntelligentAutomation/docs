@@ -78,6 +78,24 @@
     .lead {
         margin-bottom: 1.5rem;
     }
+
+    span {
+        &.threshold-ok {
+            background-color: #73BF69;
+            color: black;
+            padding: 0.18rem 0.45rem 0.18rem 0.45rem
+        }
+        &.threshold-warning {
+            background-color:  #FF9830;
+            color: black;
+            padding:  0.18rem 0.45rem 0.18rem 0.45rem
+        }
+        &.threshold-critical {
+            background-color: #F2495C;
+            color: black;
+            padding:  0.18rem 0.45rem 0.18rem 0.45rem
+        }
+    }
 }
 
 .td-title {
