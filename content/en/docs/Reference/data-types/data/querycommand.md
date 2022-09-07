@@ -10,6 +10,8 @@ description: "Holds the information for running a Query command on a data source
 
 ## Summary
 
+A `QueryCommand` executes the given [CommandText][] as a [Query Statement][], returning the rows retrieved from the data source. If the [CommandText][] contains multiple select statements, only the results of the first [Query Statement][] will be returned.
+
 | | |
 |-|-|
 | **Category:**          | Data |
@@ -21,6 +23,22 @@ description: "Holds the information for running a Query command on a data source
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
+
+For a [Query Statement][] (e.g. select):
+
+| Result will be set to | when |
+|-|-|
+| [List][]&lt;[Structure][]&gt; with a single item | Single item is returned |
+| [List][]&lt;[Structure][]&gt; with many items | Many items are returned |
+| [List][]&lt;[Structure][]&gt; with no items | No items are returned |
+
+For a [Non Query Statement][] (e.g. insert, update, delete, etc)
+
+| Result will be set to &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| when |
+|-|-|
+| `null` | always, as [Non Query Statements][Non Query Statement] do not return data |
+
+Note use a [QueryCommand][] for commands that have dependency between their statements (e.g. Cursors and Variables) and return data from the data source. Please see [Complex Commands][] for more information.
 
 ## Properties
 
@@ -65,7 +83,7 @@ A `QueryCommand` can also be created using the Literal Editor by filling in the 
 | Property | Data Type | Notes |
 |-|-|-|
 | `CommandText`        | `Int32`   | The command that will be executed or queried against the data source. |
-| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][TODO]. |
+| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
 
 ### Convert QueryCommand to Text
 
@@ -120,15 +138,23 @@ None
 [Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
 [Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
 [Block: Parameterised Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
+[Complex Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
+[Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.QueryStatements" >}}
+[Non Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.NonQueryStatement" >}}
 
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Commands]: {{< url "Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+[QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

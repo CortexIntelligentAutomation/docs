@@ -21,14 +21,21 @@ The `OdbcConnectionDetails` data type is to establish and maintain a connection 
 | **Description:**       | Holds the information used to establish and maintain a connection to an Odbc data source.  |
 | **Size:**              | Varies |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `ConnectionDetails`, `TConnectionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `ConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |
 
 ## Properties
 
-### Command Text
+### Connection String
 
-### Parameters
+The Connection String is used to connect to the data source.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with value `$@"Dsn=DSN Name;Driver=Driver Name;"` |
 
 ## Remarks
 
@@ -46,6 +53,12 @@ A `OdbcConnectionDetails` can also be created using the Literal Editor by fillin
 |-|-|-|
 | `ConnectionString`        | `Int32`   | The command that will be executed or queried against the data source. |
 
+### Connection Strings
+
+A [Connection String][] must be provided in order to connect to a data source. The [Connection String][] is formatted differently depending on the type of data source, please see [Working with Data Sources][] for more information.
+
+Please see [Working with Data Sources][] for a list of supported data sources and how to construct valid connection strings for them.
+
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `OdbcConnectionDetails`.
@@ -61,7 +74,6 @@ A `OdbcConnectionDetails` can also be created using the Literal Editor by fillin
 ### Related Data Types
 
 * [ConnectionDetails][]
-* [TConnectionDetails][]
 
 ### Related Concepts
 
@@ -71,11 +83,14 @@ A `OdbcConnectionDetails` can also be created using the Literal Editor by fillin
 
 None
 
+[Connection String]: {{< ref "#connection-string" >}}
+
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
-[TConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.TConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
+
+[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}

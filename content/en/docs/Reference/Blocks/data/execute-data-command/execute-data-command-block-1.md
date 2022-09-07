@@ -10,8 +10,6 @@ description: "Connects to a specific data source and executes a Command, returni
 
 <p class="namespace">(Cortex.Blocks.Data.ExecuteDataCommand.ExecuteDataCommandBlock`1)</p>
 
-// TODO: Update help links in url toml to remove BLOCK from end of block links
-
 ## Description
 
 Connects to a data source (e.g. SQL Server) using the specified [Connection Details][Connection Details Property], and executes a [Command][Command Property] (e.g. `SELECT * FROM Table`), returning the [Result][Result Property].
@@ -466,7 +464,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
-| Default Value | [SqlServerConnectionDetails][TODO] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
+| Default Value | [SqlServerConnectionDetails][] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
 
 ### Close Connection
 
@@ -549,7 +547,7 @@ If performance is a key consideration it is recommended to use a [QueryCommand][
 
 #### Commands
 
-An [Commands][] parses single or multiple statements provided in the [commandText][Commands.CommandText], determining how each statement should be executed against the data source. If a [Query Statement][Query Statements] is executed rows retrieved from the data source are added as an entry of the result, If a [Non Query Statement][Non Query Statements] is executed the number of rows affected is added as an entry of the result.
+A [Commands][] parses single or multiple statements provided in the [commandText][Commands.CommandText], determining how each statement should be executed against the data source. If a [Query Statement][Query Statements] is executed rows retrieved from the data source are added as an entry of the result, If a [Non Query Statement][Non Query Statements] is executed the number of rows affected is added as an entry of the result.
 
 For each [Query Statement][Query Statements] (e.g. select and execute):
 
@@ -742,7 +740,6 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [InvalidConnectionStringException]: {{< url "Cortex.Reference.Exceptions.Data.InvalidConnectionStringException.MainDoc" >}}
 [CommandException]: {{< url "Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
 
-[TConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.TConnectionDetails.MainDoc" >}}
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}

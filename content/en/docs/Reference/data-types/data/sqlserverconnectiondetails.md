@@ -21,8 +21,21 @@ The `SqlServerConnectionDetails` data type is to establish and maintain a connec
 | **Description:**       | Holds the information used to establish and maintain a connection to a SqlServer data source. |
 | **Size:**              | Varies |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `ConnectionDetails`, `TConnectionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `ConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |
+
+## Properties
+
+### Connection String
+
+The Connection String is used to connect to the data source.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is Advanced | `false` |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with value `$@"Server=localhost;Database=YourDatabase;Trusted_Connection=true;"` |
 
 ## Remarks
 
@@ -34,6 +47,12 @@ The following table shows some of the ways that a `SqlServerConnectionDetails` c
 |-|-|-|-|-|
 | Use a `SqlServerConnectionDetails` expression | `new SqlServerConnectionDetails("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;")` | `{"ConnectionString": "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | Expression |  |
 
+### Connection Strings
+
+A [Connection String][] must be provided in order to connect to a data source. The [Connection String][] is formatted differently depending on the type of data source, please see [Working with Data Sources][] for more information.
+
+Please see [Working with Data Sources][] for a list of supported data sources and how to construct valid connection strings for them.
+
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `SqlServerConnectionDetails`.
@@ -43,12 +62,12 @@ The following table shows some of the ways that a `SqlServerConnectionDetails` c
 ## Known limitations
 
 None
+
 ## See Also
 
 ### Related Data Types
 
 * [ConnectionDetails][]
-* [TConnectionDetails][]
 
 ### Related Concepts
 
@@ -58,11 +77,14 @@ None
 
 None
 
+[Connection String]: {{< ref "#connection-string" >}}
+
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
-[TConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.TConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
+
+[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}

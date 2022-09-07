@@ -26,7 +26,29 @@ description: "The abstract class defining data source commands."
 
 ### Command Text
 
+The Command Text is used to create the command that will be run against the data source.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is Advanced | `false` |
+| Default Editor | [Literal][TODO] |
+| Default Value | [EncryptableText][] with no value |
+
 ### Parameters
+
+Parameters are used to pass information top the command that will be run against the data source.
+
+It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+
+For more information see [Parameterised Commands][Parameterised Commands]
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [dynamic][] |
+| Is Advanced | `true` |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with no value |
 
 ## Remarks
 
@@ -57,6 +79,14 @@ For some of the ways that an `DataCommand` can be converted to text, please see 
 * [QueryCommand][]
 * [NonQueryCommand][]
 
+### Parameterised Commands
+
+It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+
+The `@` symbol denotes a parameter within the [CommandText][] (e.g. `"SELECT * FROM Table WHERE Name = @Parameter"`). An example of using parameters can be found in [Executing Multiple Commands (Safe)][], whereas, an example of inserting variables into a statement without parameters can be found in [Executing Multiple Commands (Unsafe)][]
+
+For more information see [Parameterised Commands][Block: Parameterised Commands].
+
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `DataCommand`.
@@ -84,9 +114,19 @@ None
 
 None
 
+[CommandText]: {{< ref "#command-text" >}}
+[Parameterised Commands]: {{< ref "#parameterised-commands" >}}
+
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+
+[Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
+[Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
+[Block: Parameterised Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
@@ -94,3 +134,5 @@ None
 [Commands]: {{< url "Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+
+[SQL Injection]: {{< url "W3.SqlInjection" >}}

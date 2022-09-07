@@ -10,6 +10,8 @@ description: "Holds the information for parsing a command, running a single quer
 
 ## Summary
 
+A `Command` parses a single statement provided in the [CommandText][], determining how the statement should be executed against the data source. If the [CommandText][] is a [Query Statement][] the rows retrieved from the data source will be returned, otherwise if the [CommandText][] is a [Non Query Statement][] the number of rows affected will be returned.
+
 | | |
 |-|-|
 | **Category:**          | Data |
@@ -21,8 +23,6 @@ description: "Holds the information for parsing a command, running a single quer
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
-
-A `Command` parses a single statement provided in the [CommandText][], determining how the statement should be executed against the data source. If the [CommandText][] is a [Query Statement][] the rows retrieved from the data source will be returned, otherwise if the [CommandText][] is a [Non Query Statement][] the number of rows affected will be returned.
 
 For a [Query Statement][] (e.g. select and execute):
 
@@ -40,9 +40,7 @@ For a [Non Query Statement][] (e.g. insert, update, delete, etc)
 | [Int32][] with a value greater than `1` | Many rows are affected |
 | [Int32][] with a value of `0` | No rows are affected |
 
-If multiple statements are provided in [CommandText][], the block will throw a [CommandException][] as this type can only run single statements.
-
-If performance is a key consideration it is recommended to use a [QueryCommand][Command Types QueryCommand] or [NonQueryCommand][Command Types NonQueryCommand] instead of [Command][] as they do not parse the [CommandText][].
+If performance is a key consideration it is recommended to use a [QueryCommand][] or [NonQueryCommand][] instead of `Command` as they do not parse the [CommandText][].
 
 ## Properties
 
@@ -87,7 +85,7 @@ A `Command` can also be created using the Literal Editor by filling in the neces
 | Property | Data Type | Notes |
 |-|-|-|
 | `CommandText`        | `Int32`   | The command that will be executed or queried against the data source. |
-| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][TODO]. |
+| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
 
 ### Convert Command to Text
 
@@ -150,7 +148,11 @@ None
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
-[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDo" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [Commands]: {{< url "Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
