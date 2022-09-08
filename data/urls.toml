@@ -37,6 +37,7 @@
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
+                    TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/#test-publishing-production-flows"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture"
@@ -51,6 +52,7 @@
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
+                    TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out/#test-publishing-production-flows"
                     AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#antivirus-exclusions"
                     [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
                         AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes"
@@ -67,6 +69,8 @@
                     MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/"
                     Architecture = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/architecture"
                     Prerequisites = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites"
+                    InstallOnNewHardware = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#option-1-install-on-new-hardware"
+                    InstallOnExistingHardware = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#option-2-install-on-existing-hardware"
                     SoftwareRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#software-requirements"
                     AdditionalWebApplicationServerRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#additional-web-application-server-requirements"
                     SetupGrafana = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/setup-grafana"
@@ -113,6 +117,8 @@
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/"
                             [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.ConfigurePromtail]
                                 MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/"
 
 
     [Cortex.Guides]
@@ -1193,6 +1199,9 @@
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"
+[Postman]
+    [Postman.Downloads]
+        MainDoc = "https://www.postman.com/downloads/"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
 [NSSM]

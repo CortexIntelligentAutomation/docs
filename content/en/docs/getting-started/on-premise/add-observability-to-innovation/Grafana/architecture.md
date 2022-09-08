@@ -18,6 +18,10 @@ weight: 10
 
 ## Recommended Architecture
 
+{{% alert title="Note" %}}
+For production systems it is recommended to {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" "install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" "install on existing hardware" >}}.
+{{% /alert %}}
+
 The following architecture requires 1 + 1..n servers:
 
 * 1 x Web Application Server which contains Grafana, Grafana Loki and Microsoft IIS.

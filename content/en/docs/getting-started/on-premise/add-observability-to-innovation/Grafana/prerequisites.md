@@ -10,9 +10,27 @@ The prerequisites required for each server role (as described in [Architecture][
 
 ## Hardware Requirements
 
+{{% alert title="Note" %}}
+For production systems it is recommended to {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" "install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" "install on existing hardware" >}}.
+{{% /alert %}}
+
+### Option 1: Install on New Hardware
+
+The following hardware requirements are recommended for production systems:
+
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
 | Web&nbsp;Application&nbsp;Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 50+&nbsp;(SSD)&nbsp;*Recommended*<br>40&nbsp;(HDD)&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+
+### Option 2: Install on Existing Hardware
+
+If additional hardware is not available, it is possible to install to the same Web Application server that hosts Cortex Gateway.
+
+The table below specifies additional resources that are recommended to be added to the existing Web Application server:
+
+| Server&nbsp;Role | Additional&nbsp;CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | Additional&nbsp;RAM&nbsp;(GB) | Additional&nbsp;Disk&nbsp;(GB) |  
+|------------------|-----------------------------------|---------------|----------------------|
+| Web&nbsp;Application&nbsp;Server<br>(Shared with Cortex Gateway) | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 12+&nbsp;*Recommended*<br>6&nbsp;*Minimum* | 10+&nbsp;*Recommended*<br>5&nbsp;*Minimum*|
 
 {{% alert title="Note" %}}
 The application servers (as described in {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" "Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
@@ -22,15 +40,14 @@ The application servers (as described in {{< ahref "Cortex.GettingStarted.OnPrem
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | IIS[^2] | Other&nbsp;Software |
 |------------------|-------------------------|---------|----------|
-| Web Application Server[^3] | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | 10.0.17763[^4]<br>10.0.14393[^5]<br>IIS Basic Authentication[^6]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
+| Web Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | 10.0.17763[^3]<br>10.0.14393[^4]<br>IIS Basic Authentication[^5]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
 | Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | | [Promtail 2.5.0][]|
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^2]: IIS is supported; other web servers, including IIS Express are not supported.
-[^3]: This should be a separate machine from the one used for Innovation Web Application Server.
-[^4]: Ships as a windows role within Windows Server 2019.
-[^5]: Ships as a windows role within Windows Server 2016.
-[^6]: Installed during the [Install IIS Basic Authentication][] configuration steps.
+[^3]: Ships as a windows role within Windows Server 2019.
+[^4]: Ships as a windows role within Windows Server 2016.
+[^5]: Installed during the [Install IIS Basic Authentication][] configuration steps.
 
 ## Domain Requirements
 
