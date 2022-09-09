@@ -25,13 +25,13 @@ Input properties are used to provide values to a [block][]. These properties are
 
 #### Supported Editors
 
-TODO: Example Image Property Editors (literal, variable, expression)
-
 Input properties can be configured using the following editors:
 
 - [Literal Editor][]
 - [Variable Editor][]
 - [Expression Editor][]
+
+![Supported Editors](/images/editor-types.svg)
 
 The icons used for Input properties are dark blue to distinguish them from [Output Properties][] or [InputOutput Properties][].
 
@@ -43,11 +43,11 @@ Values from Output properties can be [discarded][Discarding Outputs], this means
 
 #### Supported Editors
 
-TODO: Example Image Property Editors (variable)
-
 Output properties can be configured using the following editors:
 
 - [Variable Editor][]
+
+![Supported Editors](/images/variable-editor.svg)
 
 The icon used for Output properties are light blue to distinguish them from [Input Properties][].
 
@@ -62,7 +62,7 @@ Common reasons for discarding include:
 
 To discard an output value, the Output property should use the built-in `($)_` variable.
 
-TODO: Example image of discarding an output
+![Supported Editors](/images/discarded-variable.PNG)
 
 ### InputOutput Properties
 
@@ -70,11 +70,11 @@ InputOutput properties are used to provide values to a [block][]. These properti
 
 #### Supported Editors
 
-TODO: Example Image Property Editors (variable)
-
 InputOutput properties can be configured using the following editors:
 
 - [Variable Editor][]
+
+![Supported Editors](/images/variable-editor.svg)
 
 The icons used for InputOutput properties are light blue to distinguish them from [Input Properties][].
 
