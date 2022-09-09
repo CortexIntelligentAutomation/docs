@@ -10,7 +10,7 @@ description: "Holds the information for parsing a command, running multiple quer
 
 ## Summary
 
-A `Commands` data type is used to define a single or multiple [statements][Statements] that can be run against a data source.
+A `Commands` data type is used to define single or multiple [statements][Statements] that can be run against a data source. Statements can be [parameterised][Parameterised Commands], which is recommended to prevent [SQL Injection][].
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ A `Commands` data type is used to define a single or multiple [statements][State
 | **Name:**              | `Commands` |
 | **Full Name:**         | `Cortex.DataTypes.Data.Commands` |
 | **Alias:**             | N/A |
-| **Description:**       | Holds the information for parsing a command, running multiple query and non query commands against a data source. |
+| **Description:**       | Defines single or multiple statements that can be run against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -27,7 +27,7 @@ A `Commands` data type is used to define a single or multiple [statements][State
 
 ### Command Text
 
-The Command Text is used to define a single or multiple [statements][Statements] that will be run against the data source.
+The Command Text is used to define single or multiple [statements][Statements] that will be run against the data source.
 
 | | |
 |--------------------|---------------------------|
@@ -42,7 +42,7 @@ Parameters are used to pass information to the single or multiple [statements][S
 
 It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
-For more information see [Parameterised Commands][]
+For more information see [Parameterised Commands][].
 
 | | |
 |--------------------|---------------------------|
@@ -73,7 +73,7 @@ A `Commands` can also be created using the Literal Editor by filling in the nece
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `ToString` | `($)Commands.ToString()` | `"Cortex.DataTypes.Data.Commands"` | Expression | ToString will return the Full Name of the Command Data Type |
+| Use `ToString` | `($)Commands.ToString()` | `"Cortex.DataTypes.Data.Commands"` | Expression | ToString will return the Full Name of the Commands Data Type |
 | Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"Cortex.DataTypes.Data.Commands"` | N/A | See [Convert Object To Text][] |
 | Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"{\r\n  \"CommandText\": \"SELECT * FROM Table\",\r\n  \"Parameters\": null\r\n}"` | N/A  | See [Convert Object To Json][] |
 
@@ -89,13 +89,13 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 * The Expression Editor is available for [Input][] properties where the data type is `Commands`.
 * The Literal Editor is available for [Input][] properties where the data type is `Commands`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Commands`.
+* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Commands`.
 
-## Known limitations
+### Known limitations
 
-### ToString Method always returns the Full Name
+#### ToString Method always returns the Full Name
 
-Currently, if the `ToString()` method is used on a `Commands` , then its Full Name will be returned; instead of a representation of the data within the `Commands`.
+Currently, if the `ToString()` method is used on a `Commands`, then its Full Name will be returned; instead of a representation of the data within the `Commands`.
 
 In future this limitation may be removed.
 

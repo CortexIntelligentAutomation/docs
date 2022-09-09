@@ -994,6 +994,7 @@
     MainDoc = "https://en.wikipedia.org/wiki/Anycast"
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
+    SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
 [ErlangOTP]

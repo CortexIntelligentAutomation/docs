@@ -1,7 +1,7 @@
 ---
 title: "DataCommand"
 linkTitle: "DataCommand"
-description: "The abstract class defining data source commands."
+description: "Any data type representing configuration for data source commands."
 ---
 
 # {{< param title >}}
@@ -10,13 +10,15 @@ description: "The abstract class defining data source commands."
 
 ## Summary
 
+Any data type representing configuration for data source commands.
+
 | | |
 |-|-|
 | **Category:**          | Data |
 | **Name:**              | `DataCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.DataCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | The abstract class defining data source commands. |
+| **Description:**       | Any data type representing configuration for data source commands. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -92,7 +94,7 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 * The Literal Editor is available for [Input][] properties where the data type is `DataCommand`.
 * The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `DataCommand`.
 
-## Known limitations
+### Known limitations
 
 None
 

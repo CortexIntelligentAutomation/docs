@@ -42,7 +42,7 @@ Parameters are used to pass information to the [statement][Statements] that will
 
 It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
-For more information see [Parameterised Commands][]
+For more information see [Parameterised Commands][].
 
 | | |
 |--------------------|---------------------------|
@@ -91,11 +91,11 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 * The Literal Editor is not available for [Input][] properties where the data type is `Command`.
 * The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Command`.
 
-## Known limitations
+### Known limitations
 
-### ToString Method always returns the Full Name
+#### ToString Method always returns the Full Name
 
-Currently, if the `ToString()` method is used on a `Command` , then its Full Name will be returned; instead of a representation of the data within the `Command`.
+Currently, if the `ToString()` method is used on a `Command`, then its Full Name will be returned; instead of a representation of the data within the `Command`.
 
 In future this limitation may be removed.
 

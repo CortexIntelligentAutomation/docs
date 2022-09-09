@@ -1,7 +1,7 @@
 ---
 title: "ConnectionDetails"
 linkTitle: "ConnectionDetails"
-description: "The abstract class defining how to establish and maintain a connection to a data source."
+description: "Any data type representing configuration for establishing and maintaining a connection to a data source."
 ---
 
 # {{< param title >}}
@@ -10,39 +10,43 @@ description: "The abstract class defining how to establish and maintain a connec
 
 ## Summary
 
+Any data type representing configuration for establishing and maintaining a connection to a data source.
+
 | | |
 |-|-|
 | **Category:**          | Data |
 | **Name:**              | `ConnectionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.Data.ConnectionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The abstract class defining how to establish and maintain a connection to a data source. |
+| **Description:**       | Any data type representing configuration for establishing and maintaining a connection to a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
+## Remarks
+
 ### Most Common ConnectionDetails Data Types
 
-Any of the following data types can be used where an `ConnectionDetails` is required:
+Any of the following data types can be used where a `ConnectionDetails` is required:
 
 - [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
 
-### Create an ConnectionDetails
+### Create a ConnectionDetails
 
-For some of the ways that an `ConnectionDetails` can be created, please see each of the `ConnectionDetails` data types:
+For some of the ways that a `ConnectionDetails` can be created, please see each of the `ConnectionDetails` data types:
 
 - [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
 
 ### Convert ConnectionDetails to Text
 
-For some of the ways that an `ConnectionDetails` can be converted to text, please see each of the `ConnectionDetails` data types:
+For some of the ways that a `ConnectionDetails` can be converted to text, please see each of the `ConnectionDetails` data types:
 
 - [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
 
-## Known limitations
+### Known limitations
 
 None
 

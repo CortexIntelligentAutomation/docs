@@ -10,7 +10,7 @@ description: "Holds the information for running a Query command against a data s
 
 ## Summary
 
-A `QueryCommand` data type is used to define a single [Query Statement][] that can be run against a data source.
+A `QueryCommand` data type is used to define single or multiple [Query Statements][Query Statement] that can be run against a data source. Statements can be [parameterised][Parameterised Commands], which is recommended to prevent [SQL Injection][].
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ A `QueryCommand` data type is used to define a single [Query Statement][] that c
 | **Name:**              | `QueryCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.QueryCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | Defines a single Query Statement that can be run against a data source. |
+| **Description:**       | Defines single or multiple Query Statements that can be run against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -27,7 +27,7 @@ A `QueryCommand` data type is used to define a single [Query Statement][] that c
 
 ### Command Text
 
-The Command Text is used to define a single [Query Statement][] that will be run against the data source.
+The Command Text is used to define single or multiple [Query Statements][Query Statement] that will be run against the data source.
 
 | | |
 |--------------------|---------------------------|
@@ -38,11 +38,11 @@ The Command Text is used to define a single [Query Statement][] that will be run
 
 ### Parameters
 
-Parameters are used to pass information to the [Query Statement][] that will be run against the data source.
+Parameters are used to pass information to the [Query Statements][Query Statement] that will be run against the data source.
 
 It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
-For more information see [Parameterised Commands][]
+For more information see [Parameterised Commands][].
 
 | | |
 |--------------------|---------------------------|
@@ -64,16 +64,16 @@ The following table shows some of the ways that a `QueryCommand` can be created.
 
 A `QueryCommand` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-| Property | Data Type | Notes |
-|-|-|-|
-| `CommandText`        | `Int32`   | The command that will be executed or queried against the data source. |
-| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `CommandText`| `EncryptableText`| `$@"SELECT * FROM Table WHERE Id < @SelectParameter"` | The command that will be queried against the data source. |
+| `Parameters`| `dynamic`| `new { SelectParameter = 3 })` | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
 
 ### Convert QueryCommand to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `ToString` | `($)QueryCommand.ToString()` | `"Cortex.DataTypes.Data.QueryCommand"` | Expression | ToString will return the Full Name of the Command Data Type |
+| Use `ToString` | `($)QueryCommand.ToString()` | `"Cortex.DataTypes.Data.QueryCommand"` | Expression | ToString will return the Full Name of the QueryCommand Data Type |
 | Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"Cortex.DataTypes.Data.QueryCommand"` | N/A  | See [Convert Object To Text][] |
 | Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"{\r\n  \"CommandText\": \"SELECT * FROM Table\",\r\n  \"Parameters\": null\r\n}"` | N/A  | See [Convert Object To Json][] |
 
@@ -91,11 +91,11 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 * The Literal Editor is available for [Input][] properties where the data type is `QueryCommand`.
 * The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `QueryCommand`.
 
-## Known limitations
+### Known limitations
 
-### ToString Method always returns the Full Name
+#### ToString Method always returns the Full Name
 
-Currently, if the `ToString()` method is used on a `QueryCommand` , then its Full Name will be returned; instead of a representation of the data within the `QueryCommand`.
+Currently, if the `ToString()` method is used on a `QueryCommand`, then its Full Name will be returned; instead of a representation of the data within the `QueryCommand`.
 
 In future this limitation may be removed.
 

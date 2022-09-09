@@ -10,7 +10,7 @@ description: "Holds the information for running a Non Query command against a da
 
 ## Summary
 
-A `NonQueryCommand` data type is used to define a single [Non Query Statement][] that can be run against a data source.
+A `NonQueryCommand` data type is used to define single or multiple [Non Query Statements][Non Query Statement] that can be run against a data source. Statements can be [parameterised][Parameterised Commands], which is recommended to prevent [SQL Injection][].
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ A `NonQueryCommand` data type is used to define a single [Non Query Statement][]
 | **Name:**              | `NonQueryCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.NonQueryCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | Defines a single Non Query Statement that can be run against a data source. |
+| **Description:**       | Defines single or multiple Non Query Statements that can be run against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -27,7 +27,7 @@ A `NonQueryCommand` data type is used to define a single [Non Query Statement][]
 
 ### Command Text
 
-The Command Text is used to define a single [Non Query Statement][] that will be run against the data source.
+The Command Text is used to define single or multiple [Non Query Statements][Non Query Statement] that will be run against the data source.
 
 | | |
 |--------------------|---------------------------|
@@ -38,11 +38,11 @@ The Command Text is used to define a single [Non Query Statement][] that will be
 
 ### Parameters
 
-Parameters are used to pass information to the [Non Query Statement][] that will be run against the data source.
+Parameters are used to pass information to the [Non Query Statements][Non Query Statement] that will be run against the data source.
 
 It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
-For more information see [Parameterised Commands][]
+For more information see [Parameterised Commands][].
 
 | | |
 |--------------------|---------------------------|
@@ -66,14 +66,14 @@ A `NonQueryCommand` can also be created using the Literal Editor by filling in t
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `CommandText`| `EncryptableText`| `$@"INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)"` | The command that will be executed or queried against the data source. |
+| `CommandText`| `EncryptableText`| `$@"INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)"` | The command that will be executed against the data source. |
 | `Parameters`| `dynamic`| `new { InsertParameter1 = "Value1", InsertParameter2 = "Value2" })` | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
 
 ### Convert NonQueryCommand to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `ToString` | `($)NonQueryCommand.ToString()` | `"Cortex.DataTypes.Data.NonQueryCommand"` | Expression | ToString will return the Full Name of the Command Data Type |
+| Use `ToString` | `($)NonQueryCommand.ToString()` | `"Cortex.DataTypes.Data.NonQueryCommand"` | Expression | ToString will return the Full Name of the NonQueryCommand Data Type |
 | Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"Value1\", \"Value2\")", Parameters: null}` | `"Cortex.DataTypes.Data.NonQueryCommand"` | N/A  | See [Convert Object To Text][] |
 | Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"Value1\", \"Value2\")", Parameters: null}` | `"{\r\n  \"CommandText\": \"INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\\\"Value1\\\", \\\"Value2\\\")\",\r\n  \"Parameters\": null\r\n}"` | N/A  | See [Convert Object To Json][] |
 
@@ -89,13 +89,13 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 * The Expression Editor is available for [Input][] properties where the data type is `NonQueryCommand`.
 * The Literal Editor is available for [Input][] properties where the data type is `NonQueryCommand`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `NonQueryCommand`.
+* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is 
 
-## Known limitations
+### Known limitations
 
-### ToString Method always returns the Full Name
+#### ToString Method always returns the Full Name
 
-Currently, if the `ToString()` method is used on a `NonQueryCommand` , then its Full Name will be returned; instead of a representation of the data within the `NonQueryCommand`.
+Currently, if the `ToString()` method is used on a `NonQueryCommand`, then its Full Name will be returned; instead of a representation of the data within the `NonQueryCommand`.
 
 In future this limitation may be removed.
 

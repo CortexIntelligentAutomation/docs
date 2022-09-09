@@ -1,7 +1,7 @@
 ---
 title: "SqlServerConnectionDetails"
 linkTitle: "SqlServerConnectionDetails"
-description: "Holds the information used to establish and maintain a connection to a SqlServer data source."
+description: "The data type representing configuration for establishing and maintaining a connection to an SQL Server data source."
 ---
 
 # {{< param title >}}
@@ -10,7 +10,7 @@ description: "Holds the information used to establish and maintain a connection 
 
 ## Summary
 
-The `SqlServerConnectionDetails` data type is to establish and maintain a connection to a SqlServer data source.
+The `SqlServerConnectionDetails` data type is used to establish and maintain a connection to a SQL Server data source.
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ The `SqlServerConnectionDetails` data type is to establish and maintain a connec
 | **Name:**              | `SqlServerConnectionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.Data.SqlServerConnectionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | Holds the information used to establish and maintain a connection to a SqlServer data source. |
+| **Description:**       | The data type representing configuration for establishing and maintaining a connection to an SQL Server data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `ConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |
@@ -44,7 +44,7 @@ The following table shows some of the ways that a `SqlServerConnectionDetails` c
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `SqlServerConnectionDetails` expression | `new SqlServerConnectionDetails("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;")` | `{"ConnectionString": "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | Expression |  |
+| Use a `SqlServerConnectionDetails` constructor | `new SqlServerConnectionDetails("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;")` | `{"ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | Expression |  |
 
 A `SqlServerConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
@@ -54,17 +54,17 @@ A `SqlServerConnectionDetails` can also be created using the Literal Editor by f
 
 ### Connection Strings
 
-A [Connection String][] must be provided in order to connect to a data source. The [Connection String][] is formatted differently depending on the type of data source, please see [Working with Data Sources][] for more information.
+A [Connection String][] must be provided in order to connect to a SQL Server data source. The [Connection String][] can be formatted differently depending either on the version of SQL Server or the way the connection will be created and maintained (e.g. Trusted connection vs explicit user). See [ConnectionStrings.com][] for a list of connection strings for SQL Server.
 
-Please see [Working with Data Sources][] for a list of supported data sources and how to construct valid connection strings for them.
+Please see [Working with Data Sources][] for a list of other supported data sources (e.g. ODBC) and how to construct valid connection strings for them.
 
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `SqlServerConnectionDetails`.
 * The Literal Editor is not available for [Input][] properties where the data type is `SqlServerConnectionDetails`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `SqlServerConnectionDetails`.
+* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `SqlServerConnectionDetails`.
 
-## Known limitations
+### Known limitations
 
 None
 
@@ -73,6 +73,7 @@ None
 ### Related Data Types
 
 * [ConnectionDetails][]
+* [OdbcConnectionDetails][]
 
 ### Related Concepts
 
@@ -80,7 +81,7 @@ None
 
 ### External Documentation
 
-None
+* [ConnectionStrings.com][]
 
 [Connection String]: {{< ref "#connection-string" >}}
 
@@ -89,7 +90,10 @@ None
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
+[OdbcConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
 [EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+
+[ConnectionStrings.com]: {{< url "ConnectionStrings.SqlConnection" >}}
