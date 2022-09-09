@@ -18,7 +18,7 @@ A `NonQueryCommand` data type is used to define a single [Non Query Statement][]
 | **Name:**              | `NonQueryCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.NonQueryCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | Holds the information for running a Non Query command against a data source. |
+| **Description:**       | Defines a single Non Query Statement that can be run against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |

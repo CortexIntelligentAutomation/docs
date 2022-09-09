@@ -19,7 +19,6 @@ The `OdbcConnectionDetails` data type is to establish and maintain a connection 
 | **Full Name:**         | `Cortex.DataTypes.Data.OdbcConnectionDetails` |
 | **Alias:**             | N/A |
 | **Description:**       | Holds the information used to establish and maintain a connection to an Odbc data source.  |
-| **Size:**              | Varies |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `ConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |

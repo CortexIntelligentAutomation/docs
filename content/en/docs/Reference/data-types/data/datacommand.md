@@ -16,7 +16,7 @@ description: "The abstract class defining data source commands."
 | **Name:**              | `DataCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.DataCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | The interface defining data source commands. |
+| **Description:**       | The abstract class defining data source commands. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |

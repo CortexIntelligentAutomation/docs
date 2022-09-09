@@ -16,8 +16,7 @@ description: "The abstract class defining how to establish and maintain a connec
 | **Name:**              | `ConnectionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.Data.ConnectionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The interface defining how to establish and maintain a connection to a data source. |
-| **Size:**              | Varies |
+| **Description:**       | The abstract class defining how to establish and maintain a connection to a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |

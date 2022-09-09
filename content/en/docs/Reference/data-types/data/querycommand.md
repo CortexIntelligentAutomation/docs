@@ -18,7 +18,7 @@ A `QueryCommand` data type is used to define a single [Query Statement][] that c
 | **Name:**              | `QueryCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.QueryCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | Defines a single Query Statement][] that can be run against a data source. |
+| **Description:**       | Defines a single Query Statement that can be run against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
