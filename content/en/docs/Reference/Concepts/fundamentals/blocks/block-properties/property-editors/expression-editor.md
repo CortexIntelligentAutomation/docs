@@ -288,7 +288,7 @@ For further information, see [Arithmetic Operators][].
 
 ### Boolean expressions
 
-![Boolean expressions](/images/set-variable/set-variable-expression-boolean.PNG)
+![Boolean expressions](/images/set-variable/set-variable-expression-boolean-and.PNG)
 
 The following [operators][] perform logical operations with [operands][] that have boolean values.
 
