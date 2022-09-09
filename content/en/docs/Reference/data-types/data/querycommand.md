@@ -1,7 +1,7 @@
 ---
 title: "QueryCommand"
 linkTitle: "QueryCommand"
-description: "Holds the information for running a Query command on a data source."
+description: "Holds the information for running a Query command against a data source."
 ---
 
 # {{< param title >}}
@@ -10,7 +10,7 @@ description: "Holds the information for running a Query command on a data source
 
 ## Summary
 
-A `QueryCommand` executes the given [CommandText][] as a [Query Statement][], returning the rows retrieved from the data source. If the [CommandText][] contains multiple select statements, only the results of the first [Query Statement][] will be returned.
+A `QueryCommand` data type is used to define a single [Query Statement][] that can be run against a data source.
 
 | | |
 |-|-|
@@ -18,46 +18,29 @@ A `QueryCommand` executes the given [CommandText][] as a [Query Statement][], re
 | **Name:**              | `QueryCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.QueryCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | Holds the information for running a Query command on a data source. |
-| **Size:**              | Varies |
+| **Description:**       | Defines a single Query Statement][] that can be run against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
-
-For a [Query Statement][] (e.g. select):
-
-| Result will be set to | when |
-|-|-|
-| [List][]&lt;[Structure][]&gt; with a single item | Single item is returned |
-| [List][]&lt;[Structure][]&gt; with many items | Many items are returned |
-| [List][]&lt;[Structure][]&gt; with no items | No items are returned |
-
-For a [Non Query Statement][] (e.g. insert, update, delete, etc)
-
-| Result will be set to &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| when |
-|-|-|
-| `null` | always, as [Non Query Statements][Non Query Statement] do not return data |
-
-Note use a [QueryCommand][] for commands that have dependency between their statements (e.g. Cursors and Variables) and return data from the data source. Please see [Complex Commands][] for more information.
 
 ## Properties
 
 ### Command Text
 
-The Command Text is used to create the command that will be run against the data source.
+The Command Text is used to define a single [Query Statement][] that will be run against the data source.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
 
-Parameters are used to pass information top the command that will be run against the data source.
+Parameters are used to pass information to the [Query Statement][] that will be run against the data source.
 
-It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
 For more information see [Parameterised Commands][]
 
@@ -66,7 +49,7 @@ For more information see [Parameterised Commands][]
 | Data Type | [dynamic][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Value | [dynamic][] with no value |
 
 ## Remarks
 
@@ -76,7 +59,8 @@ The following table shows some of the ways that a `QueryCommand` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `QueryCommand` constructor | `new QueryCommand("select * from Table", null)`    | `{CommandText: "select * from Table", Parameters: null}` | Expression |  |
+| Use a `QueryCommand` constructor | `new QueryCommand("SELECT * FROM Table", null)`    | `{CommandText: "SELECT * FROM Table", Parameters: null}` | Expression |  |
+|  | `new QueryCommand("SELECT * FROM Table WHERE Id < @SelectParameter", new {SelectParameter = 3})`    | `{"CommandText": "SELECT * FROM Table WHERE Id < @SelectParameter", "Parameters": {"SelectParameter": 3}}` | Expression | It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] |
 
 A `QueryCommand` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
@@ -90,8 +74,8 @@ A `QueryCommand` can also be created using the Literal Editor by filling in the 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use `ToString` | `($)QueryCommand.ToString()` | `"Cortex.DataTypes.Data.QueryCommand"` | Expression | ToString will return the Full Name of the Command Data Type |
-| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `"1/7/2022 1:00:00 PM +00:00"` | Expression | See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `""` | Expression | See [Convert Object To Json][] |
+| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"Cortex.DataTypes.Data.QueryCommand"` | N/A  | See [Convert Object To Text][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"{\r\n  \"CommandText\": \"SELECT * FROM Table\",\r\n  \"Parameters\": null\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Parameterised Commands
 
@@ -105,11 +89,15 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 * The Expression Editor is available for [Input][] properties where the data type is `QueryCommand`.
 * The Literal Editor is available for [Input][] properties where the data type is `QueryCommand`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `QueryCommand`.
+* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `QueryCommand`.
 
 ## Known limitations
 
-None
+### ToString Method always returns the Full Name
+
+Currently, if the `ToString()` method is used on a `QueryCommand` , then its Full Name will be returned; instead of a representation of the data within the `QueryCommand`.
+
+In future this limitation may be removed.
 
 ## See Also
 
@@ -138,9 +126,7 @@ None
 [Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
 [Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
 [Block: Parameterised Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
-[Complex Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
 [Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.QueryStatements" >}}
-[Non Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.NonQueryStatement" >}}
 
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -148,13 +134,10 @@ None
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Commands]: {{< url "Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
-[QueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

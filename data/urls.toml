@@ -135,7 +135,8 @@
                         ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
                         ParameterisedCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#parameterised-commands"
                         ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-commands"
-                        NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#nonquery-statements"
+                        Statements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#statement-types"
+                        NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#non-query-statements"
                         QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"

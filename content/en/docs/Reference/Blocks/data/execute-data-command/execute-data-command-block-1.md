@@ -460,7 +460,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [TConnectionDetails][] |
+| Data Type | [ConnectionDetails][]|
 | Property Type | [Input][] |
 | Is Advanced | `false` |
 | Default Editor | [Literal][TODO] |
@@ -745,6 +745,8 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [OdbcConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+
+[TConnectionDetails]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}

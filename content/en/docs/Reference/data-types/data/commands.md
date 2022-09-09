@@ -1,7 +1,7 @@
 ---
 title: "Commands"
 linkTitle: "Commands"
-description: "Holds the information for parsing a command, running multiple query and non query commands on a data source."
+description: "Holds the information for parsing a command, running multiple query and non query commands against a data source."
 ---
 
 # {{< param title >}}
@@ -10,7 +10,7 @@ description: "Holds the information for parsing a command, running multiple quer
 
 ## Summary
 
-A `Commands` parses single or multiple statements provided in the [CommandText][], determining how each statement should be executed against the data source. If a [Query Statement][] is executed rows retrieved from the data source are added as an entry of the result, If a [Non Query Statement][] is executed the number of rows affected is added as an entry of the result.
+A `Commands` data type is used to define a single or multiple [statements][Statements] that can be run against a data source.
 
 | | |
 |-|-|
@@ -18,50 +18,29 @@ A `Commands` parses single or multiple statements provided in the [CommandText][
 | **Name:**              | `Commands` |
 | **Full Name:**         | `Cortex.DataTypes.Data.Commands` |
 | **Alias:**             | N/A |
-| **Description:**       | Holds the information for parsing a command, running multiple query and non query commands on a data source. |
-| **Size:**              | Varies |
+| **Description:**       | Holds the information for parsing a command, running multiple query and non query commands against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
-
-For each [Query Statement][] (e.g. select and execute):
-
-| Result will have the following entry added | when |
-|-|-|
-| [List][]&lt;[Structure][]&gt; with a single item | Single item is returned |
-| [List][]&lt;[Structure][]&gt; with many items | Many items are returned |
-| [List][]&lt;[Structure][]&gt; with no items | No items are returned |
-
-For each [Non Query Statement][] (e.g. insert, update, delete, etc)
-
-| Result will have the following entry added | when &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|-|-|
-| [Int32][] with a value of `1` | Single row is affected |
-| [Int32][] with a value greater than `1` | Many rows are affected |
-| [Int32][] with a value of `0` | No rows are affected |
-
-If performance is a key consideration it is recommended to use a [QueryCommand][] or [NonQueryCommand][] instead of `Commands` as they do not parse the [CommandText][].
-
-Note that the `Commands` should not be used for commands that have dependency between their statements (e.g. Cursors and Variables). Please see [Complex Commands][] for more information on how to deal with these.
 
 ## Properties
 
 ### Command Text
 
-The Command Text is used to create the command that will be run against the data source.
+The Command Text is used to define a single or multiple [statements][Statements] that will be run against the data source.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
 
-Parameters are used to pass information top the command that will be run against the data source.
+Parameters are used to pass information to the single or multiple [statements][Statements] that will be run against the data source.
 
-It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
 For more information see [Parameterised Commands][]
 
@@ -70,7 +49,7 @@ For more information see [Parameterised Commands][]
 | Data Type | [dynamic][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Value | [dynamic][] with no value |
 
 ## Remarks
 
@@ -80,22 +59,23 @@ The following table shows some of the ways that a `Commands` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `Commands` constructor | `new Commands("select * from Table", null)`    | `{CommandText: "select * from Table", Parameters: null}` | Expression |  |
+| Use a `Commands` constructor | `new Commands("SELECT * FROM Table", null)`    | `{CommandText: "SELECT * FROM Table", Parameters: null}` | Expression |  |
+|  | `new Commands("SELECT * FROM Table WHERE Id < @SelectParameter", new {SelectParameter = 3})`    | `{"CommandText": "SELECT * FROM Table WHERE Id < @SelectParameter", "Parameters": {"SelectParameter": 3}}` | Expression | It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] |
 
 A `Commands` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-| Property | Data Type | Notes |
-|-|-|-|
-| `CommandText`        | `Int32`   | The command that will be executed or queried against the data source. |
-| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `CommandText`| `EncryptableText`| `$@"SELECT * FROM Table WHERE Id < @SelectParameter"` | The command that will be executed or queried against the data source. |
+| `Parameters`| `dynamic`| `new {SelectParameter = 3}` | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
 
 ### Convert Commands to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use `ToString` | `($)Commands.ToString()` | `"Cortex.DataTypes.Data.Commands"` | Expression | ToString will return the Full Name of the Command Data Type |
-| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `"1/7/2022 1:00:00 PM +00:00"` | Expression | See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `""` | Expression | See [Convert Object To Json][] |
+| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"Cortex.DataTypes.Data.Commands"` | N/A | See [Convert Object To Text][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "SELECT * FROM Table", Parameters: null}` | `"{\r\n  \"CommandText\": \"SELECT * FROM Table\",\r\n  \"Parameters\": null\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Parameterised Commands
 
@@ -113,7 +93,11 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 ## Known limitations
 
-None
+### ToString Method always returns the Full Name
+
+Currently, if the `ToString()` method is used on a `Commands` , then its Full Name will be returned; instead of a representation of the data within the `Commands`.
+
+In future this limitation may be removed.
 
 ## See Also
 
@@ -142,9 +126,7 @@ None
 [Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
 [Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
 [Block: Parameterised Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
-[Complex Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
-[Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.QueryStatements" >}}
-[Non Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.NonQueryStatement" >}}
+[Statements]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.QueryStatements" >}}
 
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -152,9 +134,6 @@ None
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
-[Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}

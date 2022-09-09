@@ -17,7 +17,6 @@ description: "The abstract class defining data source commands."
 | **Full Name:**         | `Cortex.DataTypes.Data.DataCommand` |
 | **Alias:**             | N/A |
 | **Description:**       | The interface defining data source commands. |
-| **Size:**              | Varies |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -32,12 +31,12 @@ The Command Text is used to create the command that will be run against the data
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
 
-Parameters are used to pass information top the command that will be run against the data source.
+Parameters are used to pass information to the command that will be run against the data source.
 
 It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
@@ -48,22 +47,22 @@ For more information see [Parameterised Commands][Parameterised Commands]
 | Data Type | [dynamic][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Value | [dynamic][] with no value |
 
 ## Remarks
 
 ### Most Common DataCommand Data Types
 
-Any of the following data types can be used where an `DataCommand` is required:
+Any of the following data types can be used where a `DataCommand` is required:
 
 * [Command][]
 * [Commands][]
 * [QueryCommand][]
 * [NonQueryCommand][]
 
-### Create an DataCommand
+### Create a DataCommand
 
-For some of the ways that an `DataCommand` can be created, please see each of the `DataCommand` data types:
+For some of the ways that a `DataCommand` can be created, please see each of the `DataCommand` data types:
 
 * [Command][]
 * [Commands][]
@@ -72,7 +71,7 @@ For some of the ways that an `DataCommand` can be created, please see each of th
 
 ### Convert DataCommand to Text
 
-For some of the ways that an `DataCommand` can be converted to text, please see each of the `DataCommand` data types:
+For some of the ways that a `DataCommand` can be converted to text, please see each of the `DataCommand` data types:
 
 * [Command][]
 * [Commands][]
@@ -91,7 +90,7 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 * The Expression Editor is available for [Input][] properties where the data type is `DataCommand`.
 * The Literal Editor is available for [Input][] properties where the data type is `DataCommand`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `DataCommand`.
+* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `DataCommand`.
 
 ## Known limitations
 
@@ -112,7 +111,7 @@ None
 
 ### External Documentation
 
-None
+* [SQL Injection][]
 
 [CommandText]: {{< ref "#command-text" >}}
 [Parameterised Commands]: {{< ref "#parameterised-commands" >}}

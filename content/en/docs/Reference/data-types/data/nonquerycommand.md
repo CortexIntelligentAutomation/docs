@@ -1,7 +1,7 @@
 ---
 title: "NonQueryCommand"
 linkTitle: "NonQueryCommand"
-description: "Holds the information for running a Non Query command on a data source."
+description: "Holds the information for running a Non Query command against a data source."
 ---
 
 # {{< param title >}}
@@ -10,7 +10,7 @@ description: "Holds the information for running a Non Query command on a data so
 
 ## Summary
 
-A `NonQueryCommand` executes the given [CommandText][] as a [Non Query Statement][], returning the number of rows affected from the data source. If the command contains multiple statements, the sum of all the results will be returned.
+A `NonQueryCommand` data type is used to define a single [Non Query Statement][] that can be run against a data source.
 
 | | |
 |-|-|
@@ -18,46 +18,29 @@ A `NonQueryCommand` executes the given [CommandText][] as a [Non Query Statement
 | **Name:**              | `NonQueryCommand` |
 | **Full Name:**         | `Cortex.DataTypes.Data.NonQueryCommand` |
 | **Alias:**             | N/A |
-| **Description:**       | Holds the information for running a Non Query command on a data source. |
-| **Size:**              | Varies |
+| **Description:**       | Holds the information for running a Non Query command against a data source. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `DataCommand`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
-
-For a [Query Statement][] (e.g. select):
-
-| Result will be set to &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; | when |
-|-|-|
-| [Int32][] with a value of `-1` | always, as [Query Statements][Query Statement] do not return data  |
-
-For a [Non Query Statement][] (e.g. insert, update, delete, etc)
-
-| Result will be set to | when |
-|-|-|
-| [Int32][] with a value of `1` | Single row is affected |
-| [Int32][] with a value greater than `1` | Many rows are affected |
-| [Int32][] with a value of `0` | No rows are affected |
-
-Note use a `NonQueryCommand` for commands that have dependency between their statements (e.g. Cursors and Variables) and return the number of rows affected. Please see [Complex Commands][] for more information.
 
 ## Properties
 
 ### Command Text
 
-The Command Text is used to create the command that will be run against the data source.
+The Command Text is used to define a single [Non Query Statement][] that will be run against the data source.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Editor | [Expression][TODO] |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
 
-Parameters are used to pass information top the command that will be run against the data source.
+Parameters are used to pass information to the [Non Query Statement][] that will be run against the data source.
 
-It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
+It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
 For more information see [Parameterised Commands][]
 
@@ -66,7 +49,7 @@ For more information see [Parameterised Commands][]
 | Data Type | [dynamic][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
-| Default Value | [EncryptableText][] with no value |
+| Default Value | [dynamic][] with no value |
 
 ## Remarks
 
@@ -76,28 +59,29 @@ The following table shows some of the ways that a `NonQueryCommand` can be creat
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `NonQueryCommand` constructor | `new NonQueryCommand("select * from Table", null)`    | `{CommandText: "select * from Table", Parameters: null}` | Expression |  |
+| Use a `NonQueryCommand` constructor | `new NonQueryCommand("INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"Value1\", \"Value2\")", null)`    | `{CommandText: "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"Value1\", \"Value2\")", Parameters: null}` | Expression |  |
+|  | `new NonQueryCommand("INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)", new { InsertParameter1 = "Value1", InsertParameter2 = "Value2" })`    | `{"CommandText": "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)", "Parameters": { "InsertParameter1": \"Value1\", "InsertParameter2": \"Value2\" } }` | Expression | It is recommended to always use [Parameterised Commands][] as they prevent [SQL Injection][] |
 
 A `NonQueryCommand` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-| Property | Data Type | Notes |
-|-|-|-|
-| `CommandText`        | `Int32`   | The command that will be executed or queried against the data source. |
-| `Parameters`       | `Int32`   | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `CommandText`| `EncryptableText`| `$@"INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)"` | The command that will be executed or queried against the data source. |
+| `Parameters`| `dynamic`| `new { InsertParameter1 = "Value1", InsertParameter2 = "Value2" })` | The parameters that are used within a [Parameterised Command][Parameterised Commands]. |
 
 ### Convert NonQueryCommand to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use `ToString` | `($)NonQueryCommand.ToString()` | `"Cortex.DataTypes.Data.NonQueryCommand"` | Expression | ToString will return the Full Name of the Command Data Type |
-| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `"1/7/2022 1:00:00 PM +00:00"` | Expression | See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "select * from Table", Parameters: null}` | `""` | Expression | See [Convert Object To Json][] |
+| Use `Convert Object To Text` block | where `Object` property has a value of `{CommandText: "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"Value1\", \"Value2\")", Parameters: null}` | `"Cortex.DataTypes.Data.NonQueryCommand"` | N/A  | See [Convert Object To Text][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `{CommandText: "INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\"Value1\", \"Value2\")", Parameters: null}` | `"{\r\n  \"CommandText\": \"INSERT INTO Table (FirstColumn, SecondColumn) VALUES (\\\"Value1\\\", \\\"Value2\\\")\",\r\n  \"Parameters\": null\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Parameterised Commands
 
 It is recommended to always use parameterised commands as they prevent [SQL Injection][] attacks by ensuring the parameters are sanitised before the command is executed.
 
-The `@` symbol denotes a parameter within the [CommandText][] (e.g. `"SELECT * FROM Table WHERE Name = @Parameter"`). An example of using parameters can be found in [Executing Multiple Commands (Safe)][], whereas, an example of inserting variables into a statement without parameters can be found in [Executing Multiple Commands (Unsafe)][]
+The `@` symbol denotes a parameter within the [CommandText][] (e.g. `"INSERT INTO Table (FirstColumn) VALUES (@Parameter)"`). An example of using parameters can be found in [Executing Multiple Commands (Safe)][], whereas, an example of inserting variables into a statement without parameters can be found in [Executing Multiple Commands (Unsafe)][]
 
 For more information see [Parameterised Commands][Block: Parameterised Commands].
 
@@ -109,7 +93,11 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 ## Known limitations
 
-None
+### ToString Method always returns the Full Name
+
+Currently, if the `ToString()` method is used on a `NonQueryCommand` , then its Full Name will be returned; instead of a representation of the data within the `NonQueryCommand`.
+
+In future this limitation may be removed.
 
 ## See Also
 
@@ -138,9 +126,7 @@ None
 [Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
 [Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
 [Block: Parameterised Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
-[Complex Commands]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
-[Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.QueryStatements" >}}
-[Non Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.NonQueryStatement" >}}
+[Non Query Statement]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.NonQueryStatements" >}}
 
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -148,7 +134,6 @@ None
 [Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [DataCommand]: {{< url "Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}

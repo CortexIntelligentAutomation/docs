@@ -19,7 +19,6 @@ The `SqlServerConnectionDetails` data type is to establish and maintain a connec
 | **Full Name:**         | `Cortex.DataTypes.Data.SqlServerConnectionDetails` |
 | **Alias:**             | N/A |
 | **Description:**       | Holds the information used to establish and maintain a connection to a SqlServer data source. |
-| **Size:**              | Varies |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `ConnectionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A |
@@ -28,7 +27,7 @@ The `SqlServerConnectionDetails` data type is to establish and maintain a connec
 
 ### Connection String
 
-The Connection String is used to connect to the data source.
+The Connection String that is used to connect to the data source.
 
 | | |
 |--------------------|---------------------------|
@@ -46,6 +45,12 @@ The following table shows some of the ways that a `SqlServerConnectionDetails` c
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use a `SqlServerConnectionDetails` expression | `new SqlServerConnectionDetails("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;")` | `{"ConnectionString": "ConnectionString": "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"}` | Expression |  |
+
+A `SqlServerConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `Connection String`| `EncryptableText`| `$@"Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;"` | The Connection String that is used to connect to the data source. |
 
 ### Connection Strings
 

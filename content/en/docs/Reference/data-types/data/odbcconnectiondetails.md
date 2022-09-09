@@ -28,7 +28,7 @@ The `OdbcConnectionDetails` data type is to establish and maintain a connection 
 
 ### Connection String
 
-The Connection String is used to connect to the data source.
+The Connection String that is used to connect to an ODBC data source.
 
 | | |
 |--------------------|---------------------------|
@@ -49,9 +49,9 @@ The following table shows some of the ways that a `OdbcConnectionDetails` can be
 
 A `OdbcConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-| Property | Data Type | Notes |
-|-|-|-|
-| `ConnectionString`        | `Int32`   | The command that will be executed or queried against the data source. |
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `Connection String`| `EncryptableText`| `$@"DSN=LocalHost;Driver={ODBC Driver Version}"` | The Connection String that is used to connect to an ODBC data source. |
 
 ### Connection Strings
 
