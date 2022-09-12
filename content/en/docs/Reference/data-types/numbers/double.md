@@ -90,7 +90,7 @@ None
 
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToDouble]: {{< url "MSDocs.DotNet.Api.System.Convert.ToDouble" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}

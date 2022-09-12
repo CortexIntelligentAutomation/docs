@@ -217,7 +217,7 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 [Convert Json to a List (with Type information)]: {{< ref "#convert-json-to-a-list-with-type-information" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [JsonReaderException]: {{< url "JsonDotNet.JsonReaderException" >}}
 [JsonSerializationException]: {{< url "JsonDotNet.JsonSerializationException" >}}
