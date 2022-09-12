@@ -89,7 +89,7 @@ None
 * [System.Double][]
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Convert.ToDouble]: {{< url "MSDocs.DotNet.Api.System.Convert.ToDouble" >}}

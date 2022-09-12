@@ -227,7 +227,7 @@ The variable used for [Current Index][CurrentIndex Property] must have an [Int32
 
 [Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [InfiniteLoopException]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.MainDoc" >}}
 [Increment Is Zero]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.IncrementIsZero" >}}

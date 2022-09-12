@@ -128,7 +128,7 @@ For information about the different types of dictionaries, including those that 
 [Dictionary Property]: {{< ref "#dictionary" >}}
 [Key Property]: {{< ref "#key" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}

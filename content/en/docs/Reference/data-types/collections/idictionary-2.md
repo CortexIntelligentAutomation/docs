@@ -86,7 +86,7 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 * [System.Collections.Generic.IDictionary&lt;TKey, TItem&gt;][]
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [System.Collections.Generic.IDictionary&lt;TKey, TItem&gt;]: {{< url "MSDocs.DotNet.Api.System.Collections.Generic.IDictionary" >}}

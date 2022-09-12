@@ -235,7 +235,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}
 [ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.MainDoc" >}}

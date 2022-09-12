@@ -179,7 +179,7 @@ For information about the different types of dictionaries, including those that 
 [Key Property]: {{< ref "#key" >}}
 [Occurrence Property]: {{< ref "#occurrence" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}

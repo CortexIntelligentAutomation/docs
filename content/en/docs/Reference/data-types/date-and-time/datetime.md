@@ -92,7 +92,7 @@ None
 * [System.DateTime][]
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}

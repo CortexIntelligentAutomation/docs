@@ -66,7 +66,7 @@ None
 * [System.String][]
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}

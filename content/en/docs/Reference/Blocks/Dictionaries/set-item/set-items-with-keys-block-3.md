@@ -115,7 +115,7 @@ For information about the different types of dictionaries, including those that 
 [NewValues Property]: {{< ref "#new-values" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 [Object Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectEquality.MainDoc" >}}

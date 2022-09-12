@@ -128,6 +128,6 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 [NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-at-the-end-of-another-text" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

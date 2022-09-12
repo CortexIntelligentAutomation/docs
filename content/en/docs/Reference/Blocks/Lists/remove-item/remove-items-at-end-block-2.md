@@ -96,7 +96,7 @@ For information about the different types of lists, including those that can con
 [List Property]: {{< ref "#list" >}}
 [Count Property]: {{< ref "#count" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}

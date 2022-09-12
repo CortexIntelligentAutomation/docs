@@ -97,7 +97,7 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 [CultureInfo Property]: {{< ref "#culture-info" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Text Casing]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextCasing.MainDoc" >}}
 [CultureInfos]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextCasing.CultureInfo.MainDoc" >}}

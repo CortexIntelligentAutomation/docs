@@ -129,7 +129,7 @@ For information about the different types of lists, including those that can con
 
 [List Property]: {{< ref "#list" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Object Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectEquality.MainDoc" >}}
 

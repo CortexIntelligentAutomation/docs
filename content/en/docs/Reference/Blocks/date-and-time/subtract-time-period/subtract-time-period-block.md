@@ -133,7 +133,7 @@ This block copes with UTC time offsets but does not know anything about which ti
 [DateTime Property]: {{< ref "#date-time" >}}
 [TimePeriod Property]: {{< ref "#time-period" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}

@@ -91,7 +91,7 @@ None
 [Most Common IEnumerable Data Types]: {{< ref "#most-common-ienumerable-data-types" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [System.Collections.IEnumerable]: {{< url "MSDocs.DotNet.Api.System.Collections.IEnumerable" >}}
