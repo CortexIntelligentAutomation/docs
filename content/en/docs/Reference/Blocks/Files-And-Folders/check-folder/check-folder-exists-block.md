@@ -138,7 +138,7 @@ If the user the flow is executing as does not have permissions to check if a fol
 [FolderPath Property]: {{< ref "#folder-path" >}}
 [FolderExists Property]: {{< ref "#folder-exists" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [File & Folder Paths]: {{< url "Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc" >}}

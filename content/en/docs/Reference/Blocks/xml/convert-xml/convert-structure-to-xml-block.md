@@ -342,7 +342,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 [Round Tripping]: {{< ref "#round-tripping" >}}
 [Convert A Structure To Xml Example]: {{< ref "#convert-a-structure-to-xml" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}

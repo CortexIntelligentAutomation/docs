@@ -114,7 +114,7 @@ For information about the different types of lists, including those that can con
 [Count Property]: {{< ref "#count" >}}
 
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}

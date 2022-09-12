@@ -87,7 +87,7 @@ The [String][] data type used to represent [Text][Text Property] is immutable, w
 
 To overcome this, this block creates a new [String][] which has the [Length][Length Property] of text removed at the beginning and re-assigns it to the variable specified in the [Text][Text Property] property.
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}

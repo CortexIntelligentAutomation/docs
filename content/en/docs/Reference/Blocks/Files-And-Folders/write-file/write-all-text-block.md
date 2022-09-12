@@ -191,7 +191,7 @@ For information about encoding of text, examples of available encodings and usin
 [Overwrite Property]: {{< ref "#overwrite" >}}
 [Encoding Property]: {{< ref "#encoding" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Text Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding.MainDoc" >}}
 

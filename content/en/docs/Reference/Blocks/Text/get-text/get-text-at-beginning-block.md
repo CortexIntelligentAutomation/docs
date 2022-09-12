@@ -93,7 +93,7 @@ If [Length][Length Property] is `0`, the variable specified in the [Text At Begi
 [Length Property]: {{< ref "#length" >}}
 [TextAtBeginning Property]: {{< ref "#text-at-beginning" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}

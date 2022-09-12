@@ -174,7 +174,7 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 [Value Property]: {{< ref "#value" >}}
 [Overwriting a Variable Property]: {{< ref "#overwriting-a-variable-property" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [TValue]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}

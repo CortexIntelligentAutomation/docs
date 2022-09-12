@@ -472,7 +472,7 @@ If an exception occurs when trying to search a file in the [File Paths][FilePath
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Matches Property]: {{< ref "#matches" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}

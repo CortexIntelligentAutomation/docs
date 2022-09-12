@@ -357,7 +357,7 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [Configuring Logging]: {{< ref "#configuring-logging" >}}
 [Anatomy of a Log]: {{< ref "#anatomy-of-a-log" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}

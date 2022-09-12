@@ -143,7 +143,7 @@ For information about encoding of text, examples of available encodings and usin
 [Encoding Property]: {{< ref "#encoding" >}}
 [Text Property]: {{< ref "#text" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Text Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding.MainDoc" >}}

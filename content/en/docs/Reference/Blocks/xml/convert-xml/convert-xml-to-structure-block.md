@@ -308,7 +308,7 @@ This example will only occur when a [Structure][Structure Property] is Converted
 [Convert Xml To Structure Example]: {{< ref "#convert-xml-to-structure" >}}
 [Round-Tripping]: {{< ref "#round-tripping" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}

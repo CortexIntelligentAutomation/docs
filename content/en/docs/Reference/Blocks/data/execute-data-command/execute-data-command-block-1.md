@@ -731,7 +731,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Opening Connections]: {{< ref "#keeping-connections-open">}}
 [Closing Connections]: {{< ref "#closing-connections">}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}

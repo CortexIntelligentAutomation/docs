@@ -72,7 +72,7 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) the variable specified i
 [Text Property]: {{< ref "#text" >}}
 [Length Property]: {{< ref "#length" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

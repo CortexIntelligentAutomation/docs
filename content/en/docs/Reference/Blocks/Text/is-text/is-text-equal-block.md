@@ -160,7 +160,7 @@ If [Text][Text Property] is `null` and [Text To Compare][TextToCompare Property]
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [TextIsEqual Property]: {{< ref "#text-is-equal" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}

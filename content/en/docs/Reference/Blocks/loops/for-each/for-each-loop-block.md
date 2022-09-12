@@ -164,7 +164,7 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 [Collection Property]: {{< ref "#collection" >}}
 [CurrentIteration Property]: {{< ref "#current-iteration" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}

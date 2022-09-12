@@ -137,7 +137,7 @@ The [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Pr
 [EndDateTime Property]: {{< ref "#end-date-time" >}}
 [DateTimeIsBetween Property]: {{< ref "#date-time-is-between" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}

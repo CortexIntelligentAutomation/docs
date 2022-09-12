@@ -73,7 +73,7 @@ No remarks for the block.
 
 [Duration Property]: {{< ref "#duration" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [ArgumentOutOfRangeException]: {{< url "MSDocs.DotNet.Api.System.ArgumentOutOfRangeException" >}}
 

@@ -93,7 +93,7 @@ If [Object][Object Property] is not provided or is set to `null`, [Copy][Copy Pr
 [Object Property]: {{< ref "#object" >}}
 [Copy Property]: {{< ref "#copy" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [TObject]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}

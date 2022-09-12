@@ -136,7 +136,7 @@ For more information, please see [Working with Date and Time][].
 [DateTimeToCompare Property]: {{< ref "#date-time-to-compare" >}}
 [DateTimeIsEqual Property]: {{< ref "#date-time-is-equal" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
 
 [ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
