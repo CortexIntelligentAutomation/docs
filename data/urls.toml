@@ -816,12 +816,6 @@
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
                 [Cortex.Reference.Concepts.WorkingWith.Variables]
                     MainDoc = "/docs/reference/concepts/working-with/variables/"
-            [Cortex.Reference.Concepts.PropertyType]
-                MainDoc = "/docs/reference/concepts/property-type/"
-                Input = "/docs/reference/concepts/property-type/#input"
-                InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
-                Output = "/docs/reference/concepts/property-type/#output"
-                DiscardingOutput = "/docs/reference/concepts/property-type/#discarding-output"
             [Cortex.Reference.Concepts.TranslationErrors]
                 MainDoc = "/docs/reference/concepts/translation-errors/"
         [Cortex.Reference.DataTypes]
