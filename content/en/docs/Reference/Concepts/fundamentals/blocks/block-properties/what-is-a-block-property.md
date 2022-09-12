@@ -58,7 +58,7 @@ Output values can be discarded, instead of saving them to a variable.
 Common reasons for discarding include:
 
 - Discarding the exception output from [Handle Exception blocks][]
-- Discarding unwanted output values from blocks such as the [Execute SSH Command][TODO] block that have multiple Output properties
+- Discarding unwanted output values from blocks such as the [Execute SSH Command][] block that have multiple Output properties
 
 To discard an output value, the Output property should use the built-in `($)_` variable.
 
@@ -120,6 +120,7 @@ None
 
 [All Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Handle Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.MainDoc" >}}
+[Execute SSH Command]: {{< url "Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand.MainDoc" >}}
 
 [Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}

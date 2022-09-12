@@ -280,6 +280,12 @@
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-value-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValues]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-values-block-3"
+            [Cortex.Reference.Blocks.Email]
+                MainDoc = "/docs/reference/blocks/email/"
+                [Cortex.Reference.Blocks.Email.SendEmail]
+                    MainDoc = "/docs/reference/blocks/email/send-email"
+                    [Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer]
+                        MainDoc = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -413,6 +419,25 @@
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
                         MainDoc = "/docs/reference/blocks/flows/start-flow/start-flow-block"
+            [Cortex.Reference.Blocks.GoogleWorkspace]
+                MainDoc = "/docs/reference/blocks/google-workspace/"
+                [Cortex.Reference.Blocks.GoogleWorkspace.Gmail]
+                    MainDoc = "/docs/reference/blocks/google-workspace/gmail"
+                    [Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail]
+                        MainDoc = "/docs/reference/blocks/google-workspace/gmail/send-email"
+                        [Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail]
+                            MainDoc = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail"
+            [Cortex.Reference.Blocks.Http]
+                MainDoc = "/docs/reference/blocks/http/"
+                [Cortex.Reference.Blocks.Http.ExecuteHttpRequest]
+                    MainDoc = "/docs/reference/blocks/http/execute-http-request"
+                    [Cortex.Reference.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequest]
+                        MainDoc = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1"
+                        CallingAnotherFlow = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#calling-another-flow"
+                [Cortex.Reference.Blocks.Http.ExecuteSoapRequest]
+                    MainDoc = "/docs/reference/blocks/http/execute-soap-request"
+                    [Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest]
+                        MainDoc = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -535,12 +560,32 @@
                     MainDoc = "/docs/reference/blocks/loops/for"
                     [Cortex.Reference.Blocks.Loops.For.ForLoop]
                         MainDoc = "/docs/reference/blocks/loops/for/for-loop-block"
+            [Cortex.Reference.Blocks.Microsoft365]
+                MainDoc = "/docs/reference/blocks/microsoft365/"
+                [Cortex.Reference.Blocks.Microsoft365.Outlook]
+                    MainDoc = "/docs/reference/blocks/microsoft365/outlook"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail]
+                        MainDoc = "/docs/reference/blocks/microsoft365/outlook/send-email"
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/send-email/send-email-using-microsoft365"
             [Cortex.Reference.Blocks.Objects]
                 MainDoc = "/docs/reference/blocks/objects/"
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
                     MainDoc = "/docs/reference/blocks/objects/convert-object"
                     [Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText]
                         MainDoc = "/docs/reference/blocks/objects/convert-object/convert-object-to-text-block-1"
+            [Cortex.Reference.Blocks.PowerShell]
+                MainDoc = "/docs/reference/blocks/powershell/"
+                [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript]
+                    MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/"
+                    [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript]
+                        MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
+            [Cortex.Reference.Blocks.Ssh]
+                MainDoc = "/docs/reference/blocks/ssh/"
+                [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]
+                    MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
+                    [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
+                        MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]

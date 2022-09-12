@@ -33,7 +33,7 @@ The Command Text is used to define single or multiple [Query Statements][Query S
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
