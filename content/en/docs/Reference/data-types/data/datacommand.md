@@ -33,7 +33,7 @@ The Command Text is used to create the command that will be run against the data
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
@@ -48,7 +48,7 @@ For more information see [Parameterised Commands][Parameterised Commands]
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Is Advanced | `true` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [dynamic][] with no value |
 
 ## Remarks
@@ -121,6 +121,7 @@ None
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}

@@ -33,7 +33,7 @@ The Connection String that is used to connect to the data source.
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `$@"Server=localhost;Database=YourDatabase;Trusted_Connection=true;"` |
 
 ## Remarks
@@ -88,6 +88,7 @@ None
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}

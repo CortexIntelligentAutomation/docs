@@ -445,7 +445,7 @@ The [Command][Command Property] executed on the connected data source. There are
 | Data Type | [DataCommand][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | [Command][Command Types Command] with value `{"CommandText": "", "Parameters": null}` |
 
 ### Connection Details
@@ -463,7 +463,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 | Data Type | [ConnectionDetails][]|
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | [SqlServerConnectionDetails][] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
 
 ### Close Connection
@@ -475,7 +475,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | [Boolean][] with value `true` |
 
 ### Result
@@ -489,7 +489,7 @@ Depending on the type of [Command][Command Property], the data returned within t
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][Variable Editor] |
 | Default Value | `($)Result` with no value |
 
 ## Exceptions
@@ -769,7 +769,8 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
 [NonQueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 
-[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [String Interpolation]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.StringInterpolation" >}}

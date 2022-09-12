@@ -33,7 +33,7 @@ The Connection String that is used to connect to an ODBC data source.
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `$@"Dsn=DSN Name;Driver=Driver Name;"` |
 
 ## Remarks
@@ -88,6 +88,7 @@ Please see [Working with Data Sources][] for a list of other supported data sour
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [ConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url "Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}

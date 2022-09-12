@@ -33,7 +33,7 @@ The Command Text is used to define single or multiple [statements][Statements] t
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `$@""` |
 
 ### Parameters
@@ -48,7 +48,7 @@ For more information see [Parameterised Commands][].
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Is Advanced | `true` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | [dynamic][] with no value |
 
 ## Remarks
@@ -122,6 +122,7 @@ In future this limitation may be removed.
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [Executing Multiple Commands (Safe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsSafe" >}}
 [Executing Multiple Commands (Unsafe)]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
