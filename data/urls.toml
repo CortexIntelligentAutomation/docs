@@ -703,6 +703,10 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/"
                         BasicDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#basic-data-types"
                         ComplexDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#complex-data-types"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics]
+                        MainDoc = "/docs/reference/concepts/fundamentals/data-types/generics/"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes]
+                        MainDoc = "/docs/reference/concepts/fundamentals/data-types/null-and-nullable-types/"
                 [Cortex.Reference.Concepts.Fundamentals.Exceptions]
                     MainDoc = "/docs/reference/concepts/fundamentals/exceptions/"
                     [Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions]
@@ -792,24 +796,6 @@
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
                     MainDoc = "/docs/reference/concepts/working-with/data-sources/"
-                [Cortex.Reference.Concepts.WorkingWith.DataTypes]
-                    MainDoc = "/docs/reference/concepts/working-with/data-types/"
-                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.Generics]
-                        MainDoc = "/docs/reference/concepts/working-with/data-types/generics/"
-                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.NullAndNullableTypes]
-                        MainDoc = "/docs/reference/concepts/working-with/data-types/null-and-nullable-types/"
-                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectCasting]
-                        MainDoc = "/docs/reference/concepts/working-with/data-types/object-casting/"
-                        ImplicitCast = "/docs/reference/concepts/working-with/data-types/object-casting/#implicit-cast"
-                        ExplicitCast = "/docs/reference/concepts/working-with/data-types/object-casting/#explicit-cast"
-                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectEquality]
-                        MainDoc = "/docs/reference/concepts/working-with/data-types/object-equality/"
-                        [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectEquality.ValueTypeVsReferenceTypeEquality]
-                            MainDoc = "/docs/reference/concepts/working-with/data-types/object-equality/#value-type-vs-reference-type-equality"
-                            ValueTypeEquality = "/docs/reference/concepts/working-with/data-types/object-equality/#value-type-equality"
-                            ReferenceTypeEquality = "/docs/reference/concepts/working-with/data-types/object-equality/#reference-type-equality"
-                        [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectEquality.HowCortexComparesObjectsForEquality]
-                            MainDoc = "/docs/reference/concepts/working-with/data-types/object-equality/#how-cortex-compares-objects-for-equality"
                 [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
                     MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
                     [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
@@ -837,6 +823,22 @@
                     MainDoc = "/docs/reference/concepts/working-with/loops/"
                 [Cortex.Reference.Concepts.WorkingWith.Numbers]
                     MainDoc = "/docs/reference/concepts/working-with/numbers/"
+                [Cortex.Reference.Concepts.WorkingWith.Objects]
+                    MainDoc = "/docs/reference/concepts/working-with/objects/"
+                    [Cortex.Reference.Concepts.WorkingWith.Objects.WhatIsAnObject]
+                        MainDoc = "/docs/reference/concepts/working-with/objects/what-is-an-object/"
+                    [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting]
+                        MainDoc = "/docs/reference/concepts/working-with/objects/object-casting/"
+                        ImplicitCast = "/docs/reference/concepts/working-with/objects/object-casting/#implicit-cast"
+                        ExplicitCast = "/docs/reference/concepts/working-with/objects/object-casting/#explicit-cast"
+                    [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality]
+                        MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/"
+                        [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.ValueTypeVsReferenceTypeEquality]
+                            MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#value-type-vs-reference-type-equality"
+                            ValueTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#value-type-equality"
+                            ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
+                        [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
+                            MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
                 [Cortex.Reference.Concepts.WorkingWith.References]
                     MainDoc = "/docs/reference/concepts/working-with/references/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]

@@ -402,7 +402,7 @@ If it is desirable to have any issues reported as messages when trying to debug 
 
 [ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
 [Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectCasting.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}

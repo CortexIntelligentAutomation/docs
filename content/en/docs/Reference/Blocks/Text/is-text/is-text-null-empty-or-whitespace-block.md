@@ -139,7 +139,7 @@ No remarks for the block.
 [Text Property]: {{< ref "#text" >}}
 [TextIsNullEmptyOrWhitespace Property]: {{< ref "#text-is-null-empty-or-whitespace" >}}
 
-[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.NullAndNullableTypes.MainDoc" >}}
+[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes.MainDoc" >}}
 
 [Empty Text and Whitespace]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.EmptyTextAndWhitespace.MainDoc" >}}
 

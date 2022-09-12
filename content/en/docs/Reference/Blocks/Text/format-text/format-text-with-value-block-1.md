@@ -166,7 +166,7 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 [Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.MainDoc" >}}
 [Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatParameters" >}}
 
-[TValue]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.Generics.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 [IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}
