@@ -156,7 +156,7 @@ For information about the different types of lists, including those that can con
 
 [Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 
-[TItem]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.Generics.MainDoc" >}}
 
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 

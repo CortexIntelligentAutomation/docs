@@ -168,8 +168,6 @@ The [Xml][Xml Property] to convert into a [Structure][Structure Property].
 
 The [Structure][Structure Property] that has been converted from the [Xml][Xml Property].
 
-For more information about Structures, please see [Working with Structures][].
-
 | | |
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
@@ -305,7 +303,6 @@ This example will only occur when a [Structure][Structure Property] is Converted
 
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}
-[Convert Xml To Structure Example]: {{< ref "#convert-xml-to-structure" >}}
 [Round-Tripping]: {{< ref "#round-tripping" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
@@ -319,10 +316,7 @@ This example will only occur when a [Structure][Structure Property] is Converted
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
-[Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items" >}}
-[Primitive Values]: {{< url "Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes.MainDoc" >}}
-[Key Value Pair]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.KeyValuePairs" >}}
-[Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Structures" >}}
+[Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}

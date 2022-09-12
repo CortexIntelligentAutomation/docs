@@ -171,8 +171,6 @@ to [Xml][Xml Property] results in the variable `($)Xml` being updated to the fol
 
 The [Structure][Structure Property] to convert into [Xml][Xml Property].
 
-For more information about Structures, please see [Working with Structures][].
-
 | | |
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
@@ -340,7 +338,6 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}
 [Round Tripping]: {{< ref "#round-tripping" >}}
-[Convert A Structure To Xml Example]: {{< ref "#convert-a-structure-to-xml" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -353,11 +350,9 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
-[Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items" >}}
+[Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
 [Complex Type]: {{< url "Cortex.Reference.Concepts.Fundamentals.ComplexTypes.MainDoc" >}}
 [Primitive Values]: {{< url "Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes.MainDoc" >}}
-[Key Value Pair]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.KeyValuePairs" >}}
-[Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Structures" >}}
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}

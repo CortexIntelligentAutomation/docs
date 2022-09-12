@@ -82,8 +82,8 @@ For information about `null`, please see [Null and Nullable Types][].
 
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
-[TValue]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
-[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.NullAndNullableTypes.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.Generics.MainDoc" >}}
+[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.NullAndNullableTypes.MainDoc" >}}
 
 [PropertyNotNullableException]: {{< url "Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException.MainDoc" >}}
 

@@ -746,7 +746,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
-[TConnectionDetails]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
+[TConnectionDetails]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
@@ -779,6 +779,6 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [SqlException Error Codes]: {{< url "MSDocs.SqlServer.ErrorCodes" >}}
 [SqlException]: {{< url "MSDocs.SqlServer.SqlException" >}}
 [Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectCasting.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectCasting.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

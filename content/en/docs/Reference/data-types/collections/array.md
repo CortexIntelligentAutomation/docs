@@ -111,4 +111,4 @@ None
 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable.MainDoc" >}}
 [Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
-[Arrays vs Lists]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.ArraysVersusLists" >}}
+[Arrays vs Lists]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.ArraysVersusLists" >}}

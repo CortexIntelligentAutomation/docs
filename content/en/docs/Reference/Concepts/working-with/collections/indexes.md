@@ -1,13 +1,50 @@
 ---
 title: "Indexes"
 linkTitle: "Indexes"
-description: "This page describes the concept of Indexes."
+description: "Information related to working with Indexes."
 ---
 
 # {{% param title %}}
 
-## Overview
+<img src="/images/work-in-progress.jpg">
 
-TODO: Overview/summary
+## Summary
 
-## Blocks which use Indexes
+TODO:
+
+- Overview/summary
+- What is an Index?
+- How are they accessed?
+- Indexes are zero based
+- Difference between occurrence and indexes
+
+## Accessing an item using Indexes
+
+[Indexes][] can be used in the [Expression Editor][] to access items in a Collection.
+
+## Remarks
+
+### Known Limitations
+
+TODO
+
+## See Also
+
+### Related Concepts
+
+TODO
+
+### Related Data Types
+
+TODO
+
+### Related Blocks
+
+TODO
+
+### External Documentation
+
+TODO
+
+[Expression Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.IndexExpressions" >}}

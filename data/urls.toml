@@ -682,6 +682,7 @@
                                 Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
                                 InterpolatedStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#interpolated-strings"
                                 MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
+                                IndexExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#index-expressions"
                                 LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
                                 ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
@@ -765,11 +766,18 @@
                 MainDoc = "/docs/reference/concepts/working-with/"
                 [Cortex.Reference.Concepts.WorkingWith.Collections]
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
-                    ArraysVersusLists = "/docs/reference/concepts/working-with/collections/#arrays-vs-lists"
-                    Structures = "/docs/reference/concepts/working-with/collections/#structures"
-                    DotNotation = "/docs/reference/concepts/working-with/collections/#dot-notation"
-                    IndexNotation = "/docs/reference/concepts/working-with/collections/#index-notation"
-                    Items = "/docs/reference/concepts/working-with/collections/#items"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection/"
+                        Dictionaries = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#dictionaries"
+                        DictionariesIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes"
+                        Structures = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#structures"
+                        StructuresIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes-1"
+                        StructuresProperties = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#properties"
+                        Lists = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#lists"
+                        ListsIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes-2"
+                        ArraysVersusLists = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#arrays-vs-lists"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Items]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/items/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Indexes]
                         MainDoc = "/docs/reference/concepts/working-with/collections/indexes/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Keys]
@@ -784,24 +792,24 @@
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
                     MainDoc = "/docs/reference/concepts/working-with/data-sources/"
-                [Cortex.Reference.Concepts.WorkingWith.Datatypes]
+                [Cortex.Reference.Concepts.WorkingWith.DataTypes]
                     MainDoc = "/docs/reference/concepts/working-with/data-types/"
-                    [Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics]
+                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.Generics]
                         MainDoc = "/docs/reference/concepts/working-with/data-types/generics/"
-                    [Cortex.Reference.Concepts.WorkingWith.Datatypes.NullAndNullableTypes]
+                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.NullAndNullableTypes]
                         MainDoc = "/docs/reference/concepts/working-with/data-types/null-and-nullable-types/"
-                    [Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectCasting]
-                        MainDoc = "/docs/reference/concepts/object-casting/"
-                        ImplicitCast = "/docs/reference/concepts/object-casting/#implicit-cast"
-                        ExplicitCast = "/docs/reference/concepts/object-casting/#explicit-cast"
-                    [Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectEquality]
-                        MainDoc = "/docs/reference/concepts/object-equality/"
-                        [Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectEquality.ValueTypeVsReferenceTypeEquality]
-                            MainDoc = "/docs/reference/concepts/object-equality/#value-type-vs-reference-type-equality"
-                            ValueTypeEquality = "/docs/reference/concepts/object-equality/#value-type-equality"
-                            ReferenceTypeEquality = "/docs/reference/concepts/object-equality/#reference-type-equality"
-                        [Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectEquality.HowCortexComparesObjectsForEquality]
-                            MainDoc = "/docs/reference/concepts/object-equality/#how-cortex-compares-objects-for-equality"
+                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectCasting]
+                        MainDoc = "/docs/reference/concepts/working-with/data-types/object-casting/"
+                        ImplicitCast = "/docs/reference/concepts/working-with/data-types/object-casting/#implicit-cast"
+                        ExplicitCast = "/docs/reference/concepts/working-with/data-types/object-casting/#explicit-cast"
+                    [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectEquality]
+                        MainDoc = "/docs/reference/concepts/working-with/data-types/object-equality/"
+                        [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectEquality.ValueTypeVsReferenceTypeEquality]
+                            MainDoc = "/docs/reference/concepts/working-with/data-types/object-equality/#value-type-vs-reference-type-equality"
+                            ValueTypeEquality = "/docs/reference/concepts/working-with/data-types/object-equality/#value-type-equality"
+                            ReferenceTypeEquality = "/docs/reference/concepts/working-with/data-types/object-equality/#reference-type-equality"
+                        [Cortex.Reference.Concepts.WorkingWith.DataTypes.ObjectEquality.HowCortexComparesObjectsForEquality]
+                            MainDoc = "/docs/reference/concepts/working-with/data-types/object-equality/#how-cortex-compares-objects-for-equality"
                 [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
                     MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
                     [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
