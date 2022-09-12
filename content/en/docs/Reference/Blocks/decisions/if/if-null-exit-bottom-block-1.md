@@ -83,7 +83,7 @@ For information about `null`, please see [Null and Nullable Types][].
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [TValue]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
-[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.NullAndNullableTypes.MainDoc" >}}
+[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.NullAndNullableTypes.MainDoc" >}}
 
 [PropertyNotNullableException]: {{< url "Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException.MainDoc" >}}
 

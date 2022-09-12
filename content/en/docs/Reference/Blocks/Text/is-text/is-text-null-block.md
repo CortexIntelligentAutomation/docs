@@ -146,7 +146,7 @@ If [Text][Text Property] is whitespace (e.g. `"     "`) the variable specified i
 [EmptyText Example]: {{< ref "#text-is-empty" >}}
 [WhitespaceText Example]: {{< ref "#text-is-whitespace" >}}
 
-[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.NullAndNullableTypes.MainDoc" >}}
+[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.NullAndNullableTypes.MainDoc" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}

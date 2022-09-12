@@ -231,8 +231,8 @@ None
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 
-[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
-[explicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}
+[implicitly cast]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectCasting.ImplicitCast" >}}
+[explicitly cast]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectCasting.ExplicitCast" >}}
 
 [Cortex API Gateway Service]: {{< url "Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
 

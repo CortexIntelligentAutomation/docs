@@ -704,12 +704,12 @@ This may change in future to allow developers to specifically select which of th
 [Variables Concept]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Variables: What Is a Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
-[Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
+[Object Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectEquality.MainDoc" >}}
 
 [Enum]: {{< url "Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
-[implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectCasting.MainDoc" >}}
+[implicitly cast]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.ObjectCasting.ImplicitCast" >}}
 
 [Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Set Variable]: {{< url "Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
