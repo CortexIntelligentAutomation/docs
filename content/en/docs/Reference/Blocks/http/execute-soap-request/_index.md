@@ -1,5 +1,5 @@
 ---
-title: "Execute Http Request"
-linkTitle: "Execute Http Request"
-description: "Blocks related to executing Http requests."
+title: "Execute Soap Request"
+linkTitle: "Execute Soap Request"
+description: "Blocks related to executing SOAP requests."
 ---

@@ -1,10 +1,10 @@
 ---
 title: "Send Email Using Smtp Server"
 linkTitle: "Send Email Using Smtp Server"
-description: "Sends the specified email using the SMTP client connected to the specified mail server with the provided credentials."
+description: "Sends an email using the specified SMTP server."
 ---
 
-{{< figure src="" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/email-send-email-using-smtp-server-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -14,7 +14,7 @@ description: "Sends the specified email using the SMTP client connected to the s
 
 ## Description
 
-Sends the specified email using the SMTP client connected to the specified mail server with the provided credentials.
+Sends an email using the specified SMTP server.
 
 ## Examples
 

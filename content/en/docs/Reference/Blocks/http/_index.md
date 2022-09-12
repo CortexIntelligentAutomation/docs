@@ -1,5 +1,5 @@
 ---
 title: "Http"
 linkTitle: "Http"
-description: "Blocks related to working with Http."
+description: "Blocks related to working with HTTP."
 ---

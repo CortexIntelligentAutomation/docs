@@ -1,10 +1,10 @@
 ---
 title: "Execute Http Request"
 linkTitle: "Execute Http Request"
-description: "Executes an HTTP rest request and returns a response."
+description: "Executes an HTTP request and returns a response."
 ---
 
-{{< figure src="" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/http-execute-http-request-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -14,7 +14,7 @@ description: "Executes an HTTP rest request and returns a response."
 
 ## Description
 
-Executes an HTTP rest request and returns a response.
+Executes an HTTP request and returns a response.
 
 ## Examples
 

@@ -1,10 +1,10 @@
 ---
 title: "Send Email Using Microsoft365"
 linkTitle: "Send Email Using Microsoft365"
-description: "Sends the specified email using the SMTP client connected to the specified mail server with the provided credentials."
+description: "Sends an email using Microsoft365."
 ---
 
-{{< figure src="" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/microsoft365-send-email-using-microsoft365-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -14,7 +14,7 @@ description: "Sends the specified email using the SMTP client connected to the s
 
 ## Description
 
-Sends the specified email using the SMTP client connected to the specified mail server with the provided credentials.
+Sends an email using Microsoft365.
 
 ## Examples
 

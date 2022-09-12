@@ -1,10 +1,10 @@
 ---
-title: "Execute SOAP Request"
-linkTitle: "Execute SOAP Request"
-description: "Executes a SOAP rest request and returns a response."
+title: "Execute Soap Request"
+linkTitle: "Execute Soap Request"
+description: "Executes a SOAP request and returns a response."
 ---
 
-{{< figure src="" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/http-execute-soap-request-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -14,7 +14,7 @@ description: "Executes a SOAP rest request and returns a response."
 
 ## Description
 
-Executes a SOAP rest request and returns a response.
+Executes a SOAP request and returns a response.
 
 ## Examples
 

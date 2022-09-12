@@ -1,10 +1,10 @@
 ---
 title: "Execute PowerShell Script"
 linkTitle: "Execute PowerShell Script"
-description: "Executes a PowerShell script on the specified host that has PSRemoting enabled."
+description: "Executes a PowerShell script on the specified host."
 ---
 
-{{< figure src="" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/powershell-execute-powershell-script-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -14,7 +14,7 @@ description: "Executes a PowerShell script on the specified host that has PSRemo
 
 ## Description
 
-Executes a PowerShell script on the specified host that has PSRemoting enabled.
+Executes a PowerShell script on the specified host.
 
 ## Examples
 

@@ -1,10 +1,10 @@
 ---
 title: "Send Email Using Gmail"
 linkTitle: "Send Email Using Gmail"
-description: "Sends the specified email using the SMTP client connected to the specified mail server with the provided credentials."
+description: "Sends an email using Gmail."
 ---
 
-{{< figure src="" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/google-workspace-send-email-using-gmail-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -14,7 +14,7 @@ description: "Sends the specified email using the SMTP client connected to the s
 
 ## Description
 
-Sends the specified email using the SMTP client connected to the specified mail server with the provided credentials.
+Sends an email using Gmail.
 
 ## Examples
 
