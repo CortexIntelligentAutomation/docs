@@ -76,5 +76,5 @@ For information about variables and scope, please see [Working with Variables][]
 
 [Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [Translation Errors]: {{< url "Cortex.Reference.Concepts.TranslationErrors.MainDoc" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}

@@ -184,4 +184,4 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Working with References]: {{< url "Cortex.Reference.Concepts.WorkingWith.References.MainDoc" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}

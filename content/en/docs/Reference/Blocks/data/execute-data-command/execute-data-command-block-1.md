@@ -777,7 +777,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Connection String Formats]: {{< url "ConnectionStrings.MainDoc" >}}
 [SqlException Error Codes]: {{< url "MSDocs.SqlServer.ErrorCodes" >}}
 [SqlException]: {{< url "MSDocs.SqlServer.SqlException" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
 [Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

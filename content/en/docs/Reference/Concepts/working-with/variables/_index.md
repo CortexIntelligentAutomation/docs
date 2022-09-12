@@ -1,6 +1,6 @@
 ---
-title: "Working with Variables"
-linkTitle: "Working with Variables"
+title: "Variables"
+linkTitle: "Variables"
 description: "Information related to working with Variables."
 ---
 
