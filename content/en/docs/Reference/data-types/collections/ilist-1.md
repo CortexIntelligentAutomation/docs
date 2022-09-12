@@ -53,7 +53,7 @@ For some of the ways that an `IList<TItem>` can be converted to text, please see
 
 * The Expression Editor is available for [Input][] properties where the data type is `IList<TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IList<TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IList<TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IList<TItem>`.
 
 ### Known Limitations
 

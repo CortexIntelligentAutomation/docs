@@ -131,6 +131,19 @@
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.Data]
+                MainDoc = "/docs/reference/blocks/data"
+                [Cortex.Reference.Blocks.Data.ExecuteDataCommand]
+                    MainDoc = "/docs/reference/blocks/data/execute-data-command"
+                    [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
+                        MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
+                        ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
+                        ParameterisedCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#parameterised-commands"
+                        ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-commands"
+                        Statements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#statement-types"
+                        NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#non-query-statements"
+                        QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
@@ -500,7 +513,7 @@
                 MainDoc = "/docs/reference/blocks/variables/"
                 [Cortex.Reference.Blocks.Variables.SetVariable]
                     MainDoc = "/docs/reference/blocks/variables/set-variable/"
-                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
+                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock]
                        MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
             [Cortex.Reference.Blocks.Workspaces]
                 MainDoc = "/docs/reference/blocks/workspaces/"
@@ -700,15 +713,15 @@
                     MainDoc = "/docs/reference/data-types/conditional-logic/boolean"
             [Cortex.Reference.DataTypes.Data]
                 MainDoc = "/docs/reference/data-types/data/"
-                [Cortex.Reference.DataTypes.Data.ICommand]
-                    MainDoc = "/docs/reference/data-types/data/icommand/"
-                    CommandText = "/docs/reference/data-types/data/icommand/#command-text"
-                [Cortex.Reference.DataTypes.Data.AnyCommand]
-                    MainDoc = "/docs/reference/data-types/data/anycommand/"
-                    CommandText = "/docs/reference/data-types/data/anycommand/#command-text"
-                [Cortex.Reference.DataTypes.Data.AnyCommands]
-                    MainDoc = "/docs/reference/data-types/data/anycommands"
-                    CommandText = "/docs/reference/data-types/data/anycommands/#command-text"
+                [Cortex.Reference.DataTypes.Data.DataCommand]
+                    MainDoc = "/docs/reference/data-types/data/datacommand/"
+                    CommandText = "/docs/reference/data-types/data/datacommand/#command-text"
+                [Cortex.Reference.DataTypes.Data.Command]
+                    MainDoc = "/docs/reference/data-types/data/command/"
+                    CommandText = "/docs/reference/data-types/data/command/#command-text"
+                [Cortex.Reference.DataTypes.Data.Commands]
+                    MainDoc = "/docs/reference/data-types/data/commands"
+                    CommandText = "/docs/reference/data-types/data/commands/#command-text"
                 [Cortex.Reference.DataTypes.Data.QueryCommand]
                     MainDoc = "/docs/reference/data-types/data/querycommand"
                     CommandText = "/docs/reference/data-types/data/querycommand/#command-text"
@@ -717,8 +730,10 @@
                     CommandText = "/docs/reference/data-types/data/nonquerycommand/#command-text"
                 [Cortex.Reference.DataTypes.Data.ConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
-                [Cortex.Reference.DataTypes.Data.ConnectionType]
-                    MainDoc = "/docs/reference/data-types/data/connectiontype"
+                [Cortex.Reference.DataTypes.Data.OdbcConnectionDetails]
+                    MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
+                [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
+                    MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]
                 MainDoc = "/docs/reference/data-types/date-and-time/"
                 [Cortex.Reference.DataTypes.DateAndTime.DateTime]
@@ -985,6 +1000,7 @@
     MainDoc = "https://en.wikipedia.org/wiki/Anycast"
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
+    SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
 [ErlangOTP]

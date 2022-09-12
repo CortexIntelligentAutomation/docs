@@ -8,7 +8,7 @@ description: "Sets a Variable to a given Value."
 
 # {{< param title >}}
 
-<p class="namespace">(Cortex.Blocks.Variables.SetVariable.SetVariableBlock)</p>
+<p class="namespace">(Cortex.Blocks.Variables.SetVariable.SetVariableBlock`1)</p>
 
 ## Description
 
