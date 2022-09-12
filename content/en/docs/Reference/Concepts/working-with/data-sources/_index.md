@@ -1,7 +1,7 @@
 ---
 title: "Data Sources"
 linkTitle: "Data Sources"
-description: "This page gives information about working with Data Sources."
+description: "Information related to working with Data Sources."
 ---
 
 ## Overview
