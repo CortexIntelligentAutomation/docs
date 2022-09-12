@@ -680,6 +680,8 @@
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/"
                                 Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
+                                InterpolatedStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#interpolated-strings"
+                                MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
                                 LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
                                 ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
@@ -754,10 +756,7 @@
                         TopLevelWorkspace = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#top-level-workspace"
                         NestedWorkspaces = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#nested-workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace]
-                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"    
-                [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
-                    MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
-                    StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"
                 [Cortex.Reference.Concepts.Fundamentals.ComplexTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
                 [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
@@ -834,6 +833,9 @@
                     MainDoc = "/docs/reference/concepts/working-with/references/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
+                        MainDoc = "/docs/reference/concepts/working-with/text/converting-objects-to-text"
+                        StringInterpolation = "/docs/reference/concepts/working-with/text/converting-objects-to-text/#string-interpolation"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
                         MainDoc = "/docs/reference/concepts/working-with/text/formatting/"
                         FormatParameters = "/docs/reference/concepts/working-with/text/formatting/#format-parameters"
