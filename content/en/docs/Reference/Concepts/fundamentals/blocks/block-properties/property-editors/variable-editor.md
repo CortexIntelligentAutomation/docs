@@ -62,6 +62,16 @@ TODO:
 
 TODO: Image of option to create a new variable
 
+## Renaming Variables
+
+TODO:
+
+- If a variable editor already contains a reference to a variable that exists, typing the name of a non-existent variable will provide the option to rename the previously selected variable (and all references to it within the flow) to the new variable name
+- If the variable name is invalid ([C# identifier naming rules][]) then there will be no option to rename the variable
+- Renaming a variable does not include any index or method expressions (e.g. renaming to `($)NewVar.ToString()` will rename the selected variable to `($)NewVar`)
+
+TODO: Image of option to rename a variable
+
 ## Remarks
 
 ### Known Limitations

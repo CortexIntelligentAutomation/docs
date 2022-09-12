@@ -42,6 +42,7 @@ TODO: Image of complex literal editor
 
 TODO:
 
+- What are DataType and CurrentType?
 - An editor can be switched using the type selector (accessed by clicking on the property name)
 
 TODO: Image of type selector
