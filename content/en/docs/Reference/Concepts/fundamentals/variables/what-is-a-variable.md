@@ -127,7 +127,7 @@ The following examples show the [Variable Details Viewer][] when showing a:
 
 ![dictionary panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-dictionary-panel.png)
 
-- [Command][TODO] variable
+- [Command][] variable
 
 ![command panel](/images/reference/concepts/fundamentals/variables/what-is-a-variable-command-panel.png)
 
@@ -231,7 +231,6 @@ None
 [Workspaces]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [workspace]: {{< url "Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 
-[ObjectCasting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
 [implicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ImplicitCast" >}}
 [explicitly cast]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCast" >}}
 
@@ -245,6 +244,7 @@ None
 [Dictionary]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 
