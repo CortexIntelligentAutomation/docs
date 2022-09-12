@@ -109,4 +109,4 @@ None
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 
-[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWithNumbers.MainDoc" >}}
+[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWith.Numbers.MainDoc" >}}

@@ -1,6 +1,6 @@
 ---
-title: "Working with Numbers"
-linkTitle: "Working with Numbers"
+title: "Numbers"
+linkTitle: "Numbers"
 description: "Information related to working with Numbers."
 ---
 
