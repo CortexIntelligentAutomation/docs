@@ -14,7 +14,7 @@ description: "Represents a new workspace."
 
 This block represents a new workspace; when a flow execution reaches this block it will move to the [Start Workspace][] block within this block's workspace; each workspace has its own [scope][WorkspaceScope].
 
-The [Workspace][] block can be used to orginise block logic into smaller steps with distinct functions. When a new [Workspace][] block is placed on a flow, it will contain a [Start Workspace][] and [End Workspace][] block within its workspace.
+The [Workspace][] block can be used to organise block logic into smaller steps with distinct functions. When a new [Workspace][] block is placed on a flow, it will contain a [Start Workspace][] and [End Workspace][] block within its workspace.
 
 If a [Workspace][] block is copied and pasted its workspace is also copied, along with all blocks and variables within its [scope][WorkspaceScope].
 
@@ -40,7 +40,7 @@ No exceptions are thrown by the block.
 
 A workspace can contain any number of blocks. The only restrictions within a workspace are that there can only be one [Start Workspace][] block and one [Handle Workspace Exception][] block within a workspace.
 
-Starting a flow that contains more than one of the restricted blocks within a workspace will cause a [Translation Error][Translation Errors] to occur.
+Starting a flow that contains more than one of the restricted blocks within a workspace will cause a [Validation Error][Validation Errors] to occur.
 
 ### Unhandled Exceptions
 
@@ -75,6 +75,5 @@ For information about variables and scope, please see [Working with Variables][]
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
 
 [Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
-[Translation Errors]: {{< url "Cortex.Reference.Concepts.TranslationErrors.MainDoc" >}}
+[Validation Errors]: {{< url "Cortex.Reference.Messages.Validation.Errors.MainDoc" >}}
 [Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}

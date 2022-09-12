@@ -816,8 +816,6 @@
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
                 [Cortex.Reference.Concepts.WorkingWith.Variables]
                     MainDoc = "/docs/reference/concepts/working-with/variables/"
-            [Cortex.Reference.Concepts.TranslationErrors]
-                MainDoc = "/docs/reference/concepts/translation-errors/"
         [Cortex.Reference.DataTypes]
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
@@ -1084,6 +1082,8 @@
             MainDoc = "/docs/reference/messages/"
             [Cortex.Reference.Messages.Validation]
                 MainDoc = "/docs/reference/messages/validation/"
+                [Cortex.Reference.Messages.Validation.Errors]
+                    MainDoc = "/docs/reference/messages/validation/errors/"
         [Cortex.Reference.Troubleshooting]
             MainDoc = "/docs/reference/troubleshooting/"
             [Cortex.Reference.Troubleshooting.Installation]
