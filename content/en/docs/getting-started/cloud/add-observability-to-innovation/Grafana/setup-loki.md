@@ -5,7 +5,7 @@ description: "Information about setting up Grafana Loki in the cloud."
 weight: 40
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to set up Grafana Loki in the cloud. Please ensure that the [Prerequisites][] have been completed before starting this installation.
 

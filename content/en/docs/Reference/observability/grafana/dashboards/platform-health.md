@@ -5,7 +5,7 @@ description: "Information about the Platform Health Dashboard."
 weight: 20
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Description
 

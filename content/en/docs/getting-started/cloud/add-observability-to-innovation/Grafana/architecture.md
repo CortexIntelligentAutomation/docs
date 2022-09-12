@@ -5,7 +5,7 @@ description: "Information about the recommended architecture for a Grafana Cloud
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Components
 

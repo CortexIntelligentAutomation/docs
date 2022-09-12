@@ -4,7 +4,7 @@ linkTitle: "InvalidInputVariablesException"
 description: "The exception thrown when trying to run a flow with invalid input variables."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Execution.InvalidInputVariablesException)</p>
 

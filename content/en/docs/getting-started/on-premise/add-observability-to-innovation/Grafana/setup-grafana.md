@@ -26,6 +26,7 @@ Please ensure that the Installations for [Grafana][] and [Loki][] have been comp
     | Timeout | The HTTP request timeout in seconds set to the same value as configured in the Grafana Loki `loki-local-config.yaml` configuration file located alongside the Grafana Loki `loki-windows-amd64.exe` file. | `600` |
 
 1. Click *Save and Test*.
+1. *Data source connected and labels found.* message should be displayed above the *Save and Test*
 
 ## Download the Cortex Innovation Default Dashboards
 
@@ -65,15 +66,20 @@ To do this, follow these steps for all default Cortex Innovation dashboards impo
     1. Click the Dashboards icon ![Dashboards Icon](/images/DashboardsIcon.png 'Dashboards Icon') in the side menu, and then click *Browse*.
     1. Click the folder name that the dashboards were imported to.
     1. Click the *Flow Execution Requests* dashboard to open it.
-1. Open the Dashboard Settings menu via the cog icon in the top left side of the dashboard.
+1. Open the Dashboard Settings menu via the cog icon in the top right-hand side of the dashboard.
 1. Click *Variables* on the left-hand side of the page.
-1. Click *Custom Filter* on the right-hand side of the page.
+1. Click *Custom Filter* at the bottom of the *Variables* list.
 1. Select your configured Loki data source in the *Options* > *Data source* drop-down menu.
 1. Click *Update*.
 1. Click the back button on the top left corner of the page to go back to the dashboard.
 1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible.
 1. Repeat steps 2 - 9 for the *Platform Health* dashboard.
 
+## Next Steps?
+
+1. [Try it Out][]
+
 [Grafana.Dashboards.zip]: {{< url "GitHub.Cortex.Observability.GrafanaDashboardsZip" >}}
 [Grafana]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.MainDoc" >}}
 [Loki]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.MainDoc" >}}
+[Try it Out]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.TryItOut" >}}

@@ -5,7 +5,7 @@ description: "Instructions on how to configure thresholds in the Grafana Dashboa
 weight: 30
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Configure Thresholds
 

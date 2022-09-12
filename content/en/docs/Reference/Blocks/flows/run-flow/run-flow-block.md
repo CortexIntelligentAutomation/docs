@@ -6,7 +6,7 @@ description: "Runs a chosen Flow, returning any output variables."
 
 {{< figure src="/blocks/flows-run-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Flows.RunFlow.RunFlowBlock)</p>
 

@@ -5,7 +5,7 @@ description: "Information about configuring Promtail on the Application Server(s
 weight: 20
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to configure Promtail on the Application Server(s).
 

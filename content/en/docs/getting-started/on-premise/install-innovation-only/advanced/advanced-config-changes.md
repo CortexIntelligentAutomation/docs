@@ -4,7 +4,7 @@ linkTitle: "Advanced Application Server and Load Balancer Configuration Changes"
 description: "Information about installing Cortex Innovation with non-default installation values."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Advanced configuration (such as port changes) can be undertaken by taking the following steps before running the PowerShell script. Some values will be modified by the script and they will take precedence, but those parameters can be removed from the script and this file used entirely if required.
 

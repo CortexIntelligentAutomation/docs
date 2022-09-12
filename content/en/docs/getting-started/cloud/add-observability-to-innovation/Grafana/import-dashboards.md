@@ -5,7 +5,7 @@ description: "Information about setting up Grafana to communicate with the Cloud
 weight: 60
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes where to get the default Cortex Innovation Dashboards from and how to import them for use in Grafana Cloud.
 
@@ -55,7 +55,12 @@ To do this, follow these steps for all default Cortex Innovation dashboards impo
 1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Promtail there will be no options available for selection.
 1. Repeat steps 2 - 9 for the *Platform Health* dashboard.
 
+## Next Steps?
+
+1. [Try it Out][]
+
 [configured]: {{< url "Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Grafana.Dashboards.zip]: {{< url "GitHub.Cortex.Observability.GrafanaDashboardsZip" >}}
 [Grafana]: {{< url "Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
 [Loki]: {{< url "Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
+[Try it Out]: {{< url "Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut.MainDoc" >}}

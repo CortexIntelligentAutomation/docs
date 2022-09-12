@@ -4,7 +4,7 @@ linkTitle: "InputVariables"
 description: "A collection of flow Input Variables."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Flows.InputVariables)</p>
 

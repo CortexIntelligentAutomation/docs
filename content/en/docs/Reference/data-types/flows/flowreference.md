@@ -4,7 +4,7 @@ linkTitle: "FlowReference"
 description: "Used to reference a Flow using its Id."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Flows.FlowReference)</p>
 
