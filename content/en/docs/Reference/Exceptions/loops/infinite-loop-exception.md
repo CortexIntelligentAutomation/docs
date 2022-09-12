@@ -170,4 +170,4 @@ None
 [InfiniteLoopErrorCode]: {{< url "Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode.MainDoc" >}}
 
 [Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
-[Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWithLoops.MainDoc" >}}
+[Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWith.Loops.MainDoc" >}}

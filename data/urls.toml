@@ -763,6 +763,8 @@
                         MainDoc = "/docs/reference/concepts/working-with/files-and-folders/attributes/"
                     [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths]
                         MainDoc = "/docs/reference/concepts/working-with/files-and-folders/paths/"
+                [Cortex.Reference.Concepts.WorkingWith.Loops]
+                    MainDoc = "/docs/reference/concepts/working-with/loops/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
@@ -790,8 +792,6 @@
                             InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
                             Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.WorkingWithLoops]
-                MainDoc = "/docs/reference/concepts/loops/"
             [Cortex.Reference.Concepts.WorkingWithNumbers]
                 MainDoc = "/docs/reference/concepts/numbers/"
             [Cortex.Reference.Concepts.WorkingWithVariables]
