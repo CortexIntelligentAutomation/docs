@@ -127,7 +127,7 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [Separator Property]: {{< ref "#separator" >}}
 [Text Property]: {{< ref "#text" >}}
 
-[TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
 
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}

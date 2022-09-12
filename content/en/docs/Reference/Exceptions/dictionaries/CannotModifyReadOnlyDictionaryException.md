@@ -31,8 +31,8 @@ When using a variable, convert the read-only dictionary to a dictionary that can
 
 TODO: Confirm if this is all correct
 
-[TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TKey]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics.MainDoc" >}}
 [expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 [Dictionary]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.Dictionary >}}
 [IDictionary]: {{< url MSDocs.DotNet.Api.System.Collections.Generic.IDictionary >}}

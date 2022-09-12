@@ -740,6 +740,10 @@
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
                     MainDoc = "/docs/reference/concepts/working-with/data-sources/"
+                [Cortex.Reference.Concepts.WorkingWith.Datatypes]
+                    MainDoc = "/docs/reference/concepts/working-with/data-types/"
+                    [Cortex.Reference.Concepts.WorkingWith.Datatypes.Generics]
+                        MainDoc = "/docs/reference/concepts/working-with/data-types/generics/"
                 [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
                     MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
                     [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
@@ -798,8 +802,6 @@
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
                 [Cortex.Reference.Concepts.WorkingWith.Variables]
                     MainDoc = "/docs/reference/concepts/working-with/variables/"
-            [Cortex.Reference.Concepts.Generics]
-                MainDoc = "/docs/reference/concepts/generics/"
             [Cortex.Reference.Concepts.NullAndNullableTypes]
                 MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
             [Cortex.Reference.Concepts.ObjectCasting]
