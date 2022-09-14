@@ -16,7 +16,9 @@ Sets a [Variable][Variable Property] to a given [Value][Value Property].
 
 Any type of [Value][Value Property] can be set, including Lists, Dictionaries, Structures etc.
 
-If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] then they will have the same reference. This means that if either [Variable][Variable Property] has new items added to it, items updated in it, or items removed from it, then both will be affected, please see [Reference Types][] for more information.
+If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] that is a [Reference Type][Reference Types]  then they will refer to the same instance. This means that if either [Variable][Variable Property] has new items added to it, items updated in it, or items removed from it, then both will be affected, please see [Reference Types][] for more information.
+
+If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] that is a [Value Type][Value Types] then they will refer to different instances. This means that if either [Variable][Variable Property] is updated, then only the updated variable will be affected, please see [Value Types][] for more information.
 
 ## Examples
 
@@ -54,7 +56,7 @@ Setting `($)Variable` to `[[1, 2, 3], [4, 5, 6]]` results in the variable `($)Va
 
 ### Overwriting a Variable
 
-This example will overwrite an exisiting [Variable][Variable Property] that has the text value `"A text value"`, to a list value of `[1, 2, 3]`.
+This example will overwrite an existing [Variable][Variable Property] that has the text value `"A text value"`, to a list value of `[1, 2, 3]`.
 
 #### Properties
 
@@ -132,9 +134,11 @@ A [Variable][Variable Property] can be set to any type of object, including List
 
 ### Variable
 
-The [Variable][Variable Property] that will be set to the [Value][Value Property].  
+The [Variable][Variable Property] that will be set to the [Value][Value Property].
 
-If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] then they will have the same reference, for more information see [Reference Types][].
+If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] that is a [Reference Type][Reference Types]  then they will refer to the same instance. This means that if either [Variable][Variable Property] has new items added to it, items updated in it, or items removed from it, then both will be affected, please see [Reference Types][] for more information.
+
+If a [Variable][Variable Property] is set to the [Value][Value Property] of another [Variable][Variable Property] that is a [Value Type][Value Types] then they will refer to different instances. This means that if either [Variable][Variable Property] is updated, then only the updated variable will be affected, please see [Value Types][] for more information.
   
 | | |
 |--------------------|---------------------------|
@@ -184,4 +188,5 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Reference Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ReferenceTypes" >}}
+[Value Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ValueTypes" >}}
 [Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}

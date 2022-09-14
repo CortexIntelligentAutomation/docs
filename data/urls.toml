@@ -703,6 +703,7 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/"
                         BasicDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#basic-data-types"
                         ComplexDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#complex-data-types"
+                        ValueTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#value-types"
                         ReferenceTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#reference-types"
                     [Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics]
                         MainDoc = "/docs/reference/concepts/fundamentals/data-types/generics/"
