@@ -1,29 +1,53 @@
 ---
 title: "Paths"
 linkTitle: "Paths"
-description: "This page describes the concept of file and folder paths."
+description: "Information regarding file and folder paths."
 ---
 
 # {{% param title %}}
 
-## Overview
+<img src="/images/work-in-progress.jpg">
 
-TODO: Overview/summary
+## Summary
 
-TODO: Supported file and folder path formats and examples of using them
-TODO: How we determine is a path is a folder or a file
-    path\ = folder (path with terminating \ or /)
-    path = folder (path not ending in extension)
-    path.extension = file (path ending in extension)
-    path.anotherpartofpath\ = folder (as it ends in a \ or /)
-http://vd-tfs1.pivetal.com:8080/tfs/Product%20Development/Cortex/Team%201/_git/Cortex.Blocks?path=%2FCortex.Blocks%2FAcceptanceCriteria%2FFilesAndFolders.cs&version=GBrefactor%2F51984-missing-file-ac-unit-tests
+TODO:
 
-https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats
-https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
-https://docs.microsoft.com/en-us/windows/wsl/filesystems
-https://docs.microsoft.com/en-us/dotnet/standard/io/
-https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0
+- Supported file and folder path formats and examples of using them
+- How we determine is a path is a folder or a file
+  - path\ = folder (path with terminating \ or /)
+  - path = folder (path not ending in extension)
+  - path.extension = file (path ending in extension)
+  - path.anotherpartofpath\ = folder (as it ends in a \ or /)
+- Valid file and folder names
 
-TODO: Valid folder names
+Links:
 
-## Blocks which use File and Folder Paths
+- https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats
+- https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+- https://docs.microsoft.com/en-us/windows/wsl/filesystems
+- https://docs.microsoft.com/en-us/dotnet/standard/io/
+- https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0
+
+## Remarks
+
+### Known Limitations
+
+TODO
+
+## See Also
+
+### Related Concepts
+
+TODO
+
+### Related Data Types
+
+TODO
+
+### Related Blocks
+
+TODO
+
+### External Documentation
+
+TODO
