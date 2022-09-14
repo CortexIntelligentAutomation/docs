@@ -703,6 +703,7 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/"
                         BasicDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#basic-data-types"
                         ComplexDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#complex-data-types"
+                        ReferenceTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#reference-types"
                     [Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics]
                         MainDoc = "/docs/reference/concepts/fundamentals/data-types/generics/"
                     [Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes]
@@ -839,8 +840,6 @@
                             ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
                         [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
                             MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
-                [Cortex.Reference.Concepts.WorkingWith.References]
-                    MainDoc = "/docs/reference/concepts/working-with/references/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
