@@ -84,9 +84,9 @@ Currently, the `<first-property-name>` and `<second-property-name>` have been in
 
 ### Related Concepts
 
-* [Working with Exceptions][]
 * [Blocks][TODO]
 * [Block Properties][TODO]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -109,6 +109,6 @@ None
 [Set Items At Indexes]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndexes.MainDoc" >}}
 [List Set Items With Values]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValues.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

@@ -87,9 +87,9 @@ TODO
 
 TODO
 
-* [Working with Exceptions][]
 * [Blocks][TODO]
 * [Block Properties][TODO]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -112,7 +112,7 @@ TODO
 
 [Message]: {{< ref "#message" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}

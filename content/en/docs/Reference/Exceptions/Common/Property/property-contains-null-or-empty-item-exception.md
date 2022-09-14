@@ -79,9 +79,9 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 
 ### Related Concepts
 
-* [Working with Exceptions][]
 * [Blocks][block]
 * [Block Properties][property]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -101,4 +101,4 @@ None
 [block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}

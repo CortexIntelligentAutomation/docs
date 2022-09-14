@@ -78,9 +78,9 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 
 ### Related Concepts
 
-* [Working with Exceptions][]
 * [Blocks][TODO]
 * [Block Properties][TODO]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -333,6 +333,6 @@ None
 [Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
 [Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

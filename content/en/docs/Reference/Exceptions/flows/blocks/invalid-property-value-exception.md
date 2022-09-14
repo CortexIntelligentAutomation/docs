@@ -96,9 +96,9 @@ Currently, only the [PropertyId][] has been included in the exception. In future
 
 ### Related Concepts
 
-* [Working with Exceptions][]
 * [Blocks][TODO]
 * [Block Properties][TODO]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -199,4 +199,4 @@ None
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [Guid]: {{< url "Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWith.Exceptions.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}

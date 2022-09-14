@@ -813,8 +813,6 @@
                         OperatingSystemSettings = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#operating-system-settings"
                 [Cortex.Reference.Concepts.WorkingWith.Enums]
                     MainDoc = "/docs/reference/concepts/working-with/enums/"
-                [Cortex.Reference.Concepts.WorkingWith.Exceptions]
-                    MainDoc = "/docs/reference/concepts/working-with/exceptions/"
                 [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders]
                     MainDoc = "/docs/reference/concepts/working-with/files-and-folders/"
                     [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Attributes]
