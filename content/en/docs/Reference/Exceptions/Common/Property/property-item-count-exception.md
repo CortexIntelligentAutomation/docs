@@ -10,13 +10,13 @@ description: "The exception thrown when the values provided for two properties a
 
 ## Description
 
-The exception thrown when the values provided for two [properties][TODO] are expected to contain the same number of items, but don't.
+The exception thrown when the values provided for two [properties][] are expected to contain the same number of items, but don't.
 
 ## Reasons
 
 ### Item Counts Are Different
 
-Values provided for two [properties][TODO] are expected to contain the same number of items, but don't.
+Values provided for two [properties][] are expected to contain the same number of items, but don't.
 
 #### Message Format
 
@@ -35,7 +35,7 @@ where:
 
 #### How to fix
 
-Ensure that the value provided for each of the two [properties][TODO] contains the same number of items.
+Ensure that the value provided for each of the two [properties][] contains the same number of items.
 
 ## Properties
 
@@ -74,7 +74,7 @@ The URL for the relevant section of this exception's help page.
 
 ### Known Limitations
 
-Currently, the `<first-property-name>` and `<second-property-name>` have been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the id, name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
+Currently, the `<first-property-name>` and `<second-property-name>` have been included in the exception. In future, we will look to include the name and Id of the [block][], the id, name and value of the [property][properties], as well as allowing the exception to contain a link to take you directly to the offending value.
 
 ## See Also
 
@@ -84,8 +84,8 @@ Currently, the `<first-property-name>` and `<second-property-name>` have been in
 
 ### Related Concepts
 
-* [Blocks][TODO]
-* [Block Properties][TODO]
+* [Blocks][]
+* [Block Properties][]
 * [Exceptions][]
 
 ### Related Blocks
@@ -109,6 +109,10 @@ None
 [Set Items At Indexes]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndexes.MainDoc" >}}
 [List Set Items With Values]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValues.MainDoc" >}}
 
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
