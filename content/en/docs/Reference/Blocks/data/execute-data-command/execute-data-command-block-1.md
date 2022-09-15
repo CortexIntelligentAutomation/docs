@@ -683,7 +683,7 @@ For information on how to explicitly close a connection, please see [Closing Con
 
 Connections can be explicitly closed by setting [Close Connection][Close Connection Property] to `true`. This causes the connection to be closed after the [Command][Command Property] has been executed.
 
-If a [Variable][] is used to pass in the [Connection Details][Connection Details Property] and [Close Connection][Close Connection Property] is set to `false` the connection will be closed when the [Variable][] goes out of scope or the flow ends, whichever happens first. For more information about variables and scope, please see [Working with Variables][].
+If a [Variable][] is used to pass in the [Connection Details][Connection Details Property] and [Close Connection][Close Connection Property] is set to `false` the connection will be closed when the [Variable][] goes out of scope or the flow ends, whichever happens first. For more information about variables and scope, please see [Variables][].
 
 If a [Literal][] or an [Expression][] is used to create the [Connection Details][Connection Details Property] and [Close Connection][Close Connection Property] is set to `false` the connection will be closed automatically at some point after the Execute Command block finishes and before the flow ends.
 
@@ -778,7 +778,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Connection String Formats]: {{< url "ConnectionStrings.MainDoc" >}}
 [SqlException Error Codes]: {{< url "MSDocs.SqlServer.ErrorCodes" >}}
 [SqlException]: {{< url "MSDocs.SqlServer.SqlException" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

@@ -63,7 +63,7 @@ For more information about chaining of exception handling blocks and passing of 
 
 Each workspace has its own scope; as a result, variables can be defined that only exist and are accessible in this workspace and any of its sub-workspaces. On exiting a workspace any variables defined for the workspace's scope are deleted.
 
-For information about variables and scope, please see [Working with Variables][].
+For information about variables and scope, please see [Variables][].
 
 [WorkspaceScope]: {{< ref "#workspace-scope" >}}
 
@@ -76,4 +76,4 @@ For information about variables and scope, please see [Working with Variables][]
 
 [Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [Validation Errors]: {{< url "Cortex.Reference.Messages.Validation.Errors.MainDoc" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}

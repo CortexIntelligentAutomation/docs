@@ -869,8 +869,6 @@
                             InvariantCulture = "/docs/reference/concepts/working-with/text/equality/#invariant-culture"
                             Ordinal = "/docs/reference/concepts/working-with/text/equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case"
-                [Cortex.Reference.Concepts.WorkingWith.Variables]
-                    MainDoc = "/docs/reference/concepts/working-with/variables/"
         [Cortex.Reference.DataTypes]
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]

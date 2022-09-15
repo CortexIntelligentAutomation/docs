@@ -168,7 +168,7 @@ Each workspace has its own scope; as a result, variables can be defined that onl
 
 The Set Variable block can only set a [Variable][Variable Property] that is accessible from its scope.
 
-For information about variables and scope, please see [Working with Variables][].
+For information about variables and scope, please see [Variables][].
 
 ### Null Value
 
@@ -189,4 +189,4 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 
 [Reference Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ReferenceTypes" >}}
 [Value Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ValueTypes" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWith.Variables.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
