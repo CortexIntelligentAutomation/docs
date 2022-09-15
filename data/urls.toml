@@ -1158,6 +1158,7 @@
                 Dictionary = "/docs/reference/glossary/a-e/#dictionary"
                 Double = "/docs/reference/glossary/a-e/#double"
                 Expression = "/docs/reference/glossary/a-e/#expression"
+                Empty = "/docs/reference/glossary/a-e/#empty"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
                 Flow = "/docs/reference/glossary/f-j/#flow"
