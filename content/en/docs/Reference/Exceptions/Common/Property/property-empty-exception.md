@@ -10,13 +10,13 @@ description: "The exception thrown when a property is provided with an empty val
 
 ## Description
 
-The exception thrown when a [property][TODO] is provided with an [empty][TODO] value, but a non-empty value is required.
+The exception thrown when a [property][] is provided with an [empty][] value, but a non-empty value is required.
 
 ## Reasons
 
 ### Empty value
 
-An [empty][TODO] value was provided for the [property][TODO].
+An [empty][] value was provided for the [property][].
 
 #### Message Format
 
@@ -32,7 +32,7 @@ where:
 
 #### How to fix
 
-Ensure the value provided for the [property][TODO] named `<property-name>` is not [empty][TODO].
+Ensure the value provided for the [property][] named `<property-name>` is not [empty][].
 
 ## Properties
 
@@ -50,7 +50,7 @@ The exception message, providing information about the exception that occurred.
 
 For this exception:
 
-* `<property-name>` will be replaced with the name of the [property][TODO].
+* `<property-name>` will be replaced with the name of the [property][].
 
 | | |
 |-----------|------------|
@@ -68,7 +68,7 @@ The URL for the relevant section of this exception's help page.
 
 ### Known Limitations
 
-Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the id, name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
+Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][], the id, name and value of the [property][], as well as allowing the exception to contain a link to take you directly to the offending value.
 
 ## See Also
 
@@ -78,14 +78,14 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 
 ### Related Concepts
 
-* [Blocks][TODO]
-* [Block Properties][TODO]
+* [Blocks][]
+* [Block Properties][]
 * [Exceptions][]
 
 ### Related Blocks
 
 * Data
-  * [Execute Data Command][TODO]
+  * [Execute Data Command][]
 * Date & Time
   * [Convert Text To Date Time][]
 * Exceptions
@@ -138,6 +138,8 @@ None
 
 [Message]: {{< ref "#message" >}}
 
+[Execute Data Command]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.MainDoc" >}}
+
 [Convert Text To Date Time]: {{< url "Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime.MainDoc" >}}
 
 [Handle Block Exception Matching Messages]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessages.MainDoc" >}}
@@ -183,6 +185,12 @@ None
 [Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
 [Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[empty]: {{< url "Cortex.Reference.Glossary.A-E.Empty" >}}
