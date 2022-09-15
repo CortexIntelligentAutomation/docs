@@ -29,33 +29,29 @@ weight: 10
 
 ## Possible Architectures
 
-Cortex Innovation can be added to a Cortex v7.2 installation by using existing hardware or adding new hardware. The only component shared by both Innovation and v7.2 is Gateway. These two engines can run side-by-side, allowing flows to be built and run for both Innovation and v7.2 from the same Gateway instance.
+Cortex Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed, however. Cortex Innovation can be added to a Cortex v7.2 installation by using the existing hardware containing V7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
 
-The recommended Innovation architecture requires 5 servers:
+The recommended Innovation + V7.2 architecture for a Dual Site, Dual Server system requires 7 servers in total; the 4 existing servers, plus 3 new servers:
 
-* 1x Web Application Server which contains Gateway, Flow Debugger Service and Databases OR 1x Web Application Server which contains Gateway and Flow Debugger Service and 1x Database Server
-* 1x Load Balancer Server
-* 3x Application Servers
 
-Innovation roles can be installed on machines with v7.2 roles as follows:
+* 2x Application Servers for V7.2, one of which is also the Web Application Server which will contain Gateway and the Flow Debugger Service for Innovation
+* 2x Database Servers for V7.2 and Gateway
+* 1x Load Balancer Server for Innovation
+* 3x Application Servers for Innovation
 
-v7.2 | Innovation
------|-----------
-Gateway Server | Web Application Server and/or Application Server
-Database Server | Database Server and/or Application Server
-Application Server | Application Server or Load Balancer Server
+{{< figure src="/images/Cortex Innovation and v7.2 Best Architecture.drawio.png" class="centre" title="7 Server, Recommended Architecture Diagram" >}}.
 
-The Gateway and Databases will be shared between 7.2 and Innovation. The Flow Debugger Service will be added to the same server as Gateway to allow debugging of Innovation Flows.
+The minimum architecture requires only the 4 existing servers:
 
-Each of the 3 Innovation Application Servers can be installed on either an existing Cortex Server machine (provided that the hardware is capable of running everything according to the Hardware Prerequisites) or on a new machine. They can be a mix of the two.
+* 2x Application Servers for V7.2 with the Application Servers for Innovation
+* 1x Database Server for V7.2 with the remaining Application Server for Innovation
+* 1x Database Server for V7.2 with the Load Balancer for Innovation
 
-It is recommended that the load balancer is installed on a new machine. It can be installed on the same machine as Gateway but it is not recommended as there may be performance impact. It can also be installed on a Cortex Server machine provided that it is not being used as an Application Server.
+{{< figure src="/images/Cortex Innovation and v7.2 Min Architecture.drawio.png" class="centre" title="4 Server, Minimum Architecture Diagram" >}}.
 
-{{< figure src="/images/Cortex Innovation Overview.png" class="centre" title="5 Server Architecture Diagram" >}}.
+A combination of the two architectures can also be used so that any of the Innovation server roles may be installed on any of the existing or new servers provided that the hardware is capable of running everything according to the Hardware Prerequisites. For example, if the database servers cannot have anything else installed on them, new servers may be used for the load balancer and the third Innovation Application Server. Additionally, an existing, alternative load balancer may be used instead of the bundled one. The only caveat is that the load balancer must not be installed on the same machine as an Innovation Application Server as it cannot be used to send traffic to itself.
 
-Recommended to put Application Servers on the live database server, standby application server and standby database server. Or just the two database servers and a new machine, or all new machines.
-
-Debugger will need to be installed on both sites?
+The installation process is the same, regardless of whether new or existing hardware is being used. The only difference is the Hardware Prerequisites, which will be greater for existing machines as they need more resources to run more components.
 
 ## Next Steps?
 
