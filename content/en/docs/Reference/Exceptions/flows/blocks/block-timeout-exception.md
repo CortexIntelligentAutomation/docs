@@ -87,8 +87,8 @@ TODO
 
 TODO
 
-* [Blocks][TODO]
-* [Block Properties][TODO]
+* [Blocks][]
+* [Block Properties][]
 * [Exceptions][]
 
 ### Related Blocks
@@ -98,20 +98,30 @@ TODO: Update list
 All Blocks except:
 
 * Flows
-  * [Start Flow][TODO]
-  * [End Flow][TODO]
+  * [Start Flow][]
+  * [End Flow][]
 * Schedules
-  * [Wait For Duration][TODO]
+  * [Wait For Duration][]
 * Workspaces
-  * [Start Workspace][TODO]
-  * [End Workspace][TODO]
+  * [Start Workspace][]
+  * [End Workspace][]
   
 ### External Documentation
 
 TODO
 
+[Start Flow]: {{< url "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
+[End Flow]: {{< url "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
+
+[Wait For Duration]: {{< url "Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration.MainDoc" >}}
+
+[Start Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
+[End Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+
 [Message]: {{< ref "#message" >}}
 
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

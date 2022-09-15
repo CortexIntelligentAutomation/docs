@@ -619,6 +619,12 @@
                     MainDoc = "/docs/reference/blocks/text/join-text/"
                     [Cortex.Reference.Blocks.Text.JoinText.JoinText]
                         MainDoc = "/docs/reference/blocks/text/join-text/join-text-block-1/"
+            [Cortex.Reference.Blocks.Schedules]
+                MainDoc = "/docs/reference/blocks/schedules/"
+                [Cortex.Reference.Blocks.Schedules.WaitFor]
+                    MainDoc = "/docs/reference/blocks/schedules/wait-for/"
+                    [Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration]
+                       MainDoc = "/docs/reference/blocks/schedules/wait-for/wait-for-duration-block/"
             [Cortex.Reference.Blocks.Variables]
                 MainDoc = "/docs/reference/blocks/variables/"
                 [Cortex.Reference.Blocks.Variables.SetVariable]
