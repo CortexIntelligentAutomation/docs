@@ -57,7 +57,7 @@ The [Text][Text Property] to convert to title case.
 
 The [Culture Info][CultureInfo Property] used to perform the conversion of the [Text][Text Property].
 
-For information about the [supported values][CultureInfos] for the [Culture Info][CultureInfo Property] property and examples of how it affects casing rules, please see [Text Casing][].
+For information about the [supported values][CultureInfos] for the [Culture Info][CultureInfo Property] property and examples of how it affects casing rules, please see [Casing][].
 
 | | |
 |--------------------|---------------------------|
@@ -77,7 +77,7 @@ The exceptions thrown by the block can be found below:
 
 ### Culture Info
 
-For information about the [supported values][CultureInfos] for the [CultureInfo][CultureInfo Property] property and examples of how it affects casing rules, please see [Text Casing][].
+For information about the [supported values][CultureInfos] for the [CultureInfo][CultureInfo Property] property and examples of how it affects casing rules, please see [Casing][].
 
 ### Null Culture Info
 
@@ -99,8 +99,8 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[Text Casing]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextCasing.MainDoc" >}}
-[CultureInfos]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextCasing.CultureInfo.MainDoc" >}}
+[Casing]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Casing.MainDoc" >}}
+[CultureInfos]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Casing.CultureInfo.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [CultureInfo]: {{< url "Cortex.Reference.DataTypes.Text.CultureInfo.MainDoc" >}}

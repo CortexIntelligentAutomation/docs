@@ -17,6 +17,8 @@ TODO:
 - https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats
 - https://docs.microsoft.com/en-us/dotnet/standard/io/handling-io-errors
 - https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks
+- list of common extensions
+- list of common environment variables (`%PROGRAMDATA%` check this works)
 
 ## Remarks
 

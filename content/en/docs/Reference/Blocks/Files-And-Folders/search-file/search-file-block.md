@@ -244,7 +244,7 @@ Option to specify the [Encoding][Encoding Property] that should be used to read 
 
 Most of the time [Encoding][Encoding Property] can be left as `null`; allowing the block to automatically attempt to detect the encoding of the file based on the presence of byte order marks. However, if it is found that the returned [Matches][Matches Property] are not correct because the block was unable to detect the encoding of the file, it is possible to specify the [Encoding][Encoding Property] explicitly using this property.
 
-For information about encoding, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 | | |
 |--------------------|---------------------------|
@@ -256,7 +256,7 @@ For information about encoding, examples of available encodings and using them, 
 
 The [Comparison Type][ComparisonType Property] specifying the rules used to match text against the given [Search Pattern][SearchPattern Property].
 
-For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
 
 | | |
 |--------------------|---------------------------|
@@ -334,11 +334,11 @@ A `null` or empty (i.e. `""`) [Search Pattern][SearchPattern Property] means mat
 
 ### Encoding of text
 
-For information about encoding of text, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding of text, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 ### Comparison Types
 
-For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
 
 ### Known Limitations
 
@@ -356,12 +356,12 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Text Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.MainDoc" >}}
-[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.MainDoc" >}}
-[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.Ordinal" >}}
-[OrdinalIgnoreCase]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes.OrdinalIgnoreCase" >}}
+[Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc" >}}
+[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.MainDoc" >}}
+[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.Ordinal" >}}
+[OrdinalIgnoreCase]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.OrdinalIgnoreCase" >}}
 
-[Text Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding.MainDoc" >}}
+[Working with Text - Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Encoding.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 

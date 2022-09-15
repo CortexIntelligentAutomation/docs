@@ -13,6 +13,8 @@ weight: 300
 
 TODO: summary
 
+- For a list of cultures that can be returned on Windows systems see https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c under The Language table (`Language tag` defines the code required to create the culture)
+
 ## Remarks
 
 ### Known Limitations

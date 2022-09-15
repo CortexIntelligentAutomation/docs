@@ -853,22 +853,22 @@
                         MainDoc = "/docs/reference/concepts/working-with/text/empty-text-and-whitespace/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax]
                         MainDoc = "/docs/reference/concepts/working-with/text/pattern-matching-syntax/"
-                    [Cortex.Reference.Concepts.WorkingWith.Text.TextCasing]
-                        MainDoc = "/docs/reference/concepts/working-with/text/text-casing/"
-                        [Cortex.Reference.Concepts.WorkingWith.Text.TextCasing.CultureInfo]
-                            MainDoc = "/docs/reference/concepts/working-with/text/text-casing/#culture-info"
-                            CurrentCulture = "/docs/reference/concepts/working-with/text/text-casing/#current-culture"
-                            InvariantCulture = "/docs/reference/concepts/working-with/text/text-casing/#invariant-culture"
-                    [Cortex.Reference.Concepts.WorkingWith.Text.TextEncoding]
-                        MainDoc = "/docs/reference/concepts/working-with/text/text-encoding/"
-                    [Cortex.Reference.Concepts.WorkingWith.Text.TextEquality]
-                        MainDoc = "/docs/reference/concepts/working-with/text/text-equality/"
-                        [Cortex.Reference.Concepts.WorkingWith.Text.TextEquality.ComparisonTypes]
-                            MainDoc = "/docs/reference/concepts/working-with/text/text-equality/#comparison-types"
-                            CurrentCulture = "/docs/reference/concepts/working-with/text/text-equality/#current-culture"
-                            InvariantCulture = "/docs/reference/concepts/working-with/text/text-equality/#invariant-culture"
-                            Ordinal = "/docs/reference/concepts/working-with/text/text-equality/#ordinal"
-                            OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/text-equality/#ordinal-ignore-case"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Casing]
+                        MainDoc = "/docs/reference/concepts/working-with/text/casing/"
+                        [Cortex.Reference.Concepts.WorkingWith.Text.Casing.CultureInfo]
+                            MainDoc = "/docs/reference/concepts/working-with/text/casing/#culture-info"
+                            CurrentCulture = "/docs/reference/concepts/working-with/text/casing/#current-culture"
+                            InvariantCulture = "/docs/reference/concepts/working-with/text/casing/#invariant-culture"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Encoding]
+                        MainDoc = "/docs/reference/concepts/working-with/text/encoding/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Equality]
+                        MainDoc = "/docs/reference/concepts/working-with/text/equality/"
+                        [Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes]
+                            MainDoc = "/docs/reference/concepts/working-with/text/equality/#comparison-types"
+                            CurrentCulture = "/docs/reference/concepts/working-with/text/equality/#current-culture"
+                            InvariantCulture = "/docs/reference/concepts/working-with/text/equality/#invariant-culture"
+                            Ordinal = "/docs/reference/concepts/working-with/text/equality/#ordinal"
+                            OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case"
                 [Cortex.Reference.Concepts.WorkingWith.Variables]
                     MainDoc = "/docs/reference/concepts/working-with/variables/"
         [Cortex.Reference.DataTypes]

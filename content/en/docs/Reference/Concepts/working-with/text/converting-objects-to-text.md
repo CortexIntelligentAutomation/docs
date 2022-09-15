@@ -1,16 +1,32 @@
 ---
 title: "Converting Objects To Text"
 linkTitle: "Converting Objects To Text"
-description: "This page describes how to convert objects to their text representation."
+description: "Information regarding converting objects to their text representation."
 ---
 
 # {{% param title %}}
 
-## Overview
+<img src="/images/work-in-progress.jpg">
 
-TODO: Overview/summary
+## Summary
 
-### ToString()
+TODO
+
+### Using Blocks
+
+TODO:
+
+- Explain that blocks can be used - maybe with examples or link to examples within the block documentation
+  - Format Text With Value
+  - Format Text With Values
+  - Join Text
+  - Convert Date Time To Text
+  - Convert Object To Text - need to make it clear how this works - does tostring and if tostring returns class name does json serialisation
+  - Convert Object To Json - need to make it clear how this works - does json serialisation
+
+### Using Expressions
+
+#### ToString()
 
 TODO:
 
@@ -18,24 +34,13 @@ TODO:
 - Convert.ToString()
 - Examples and where to find in Data Types documentation
 
-### String interpolation
+#### String interpolation
 
 See [Interpolated Strings][].
 
-### String.Format()
+#### String.Format()
 
 TODO: String.Format
-
-## Blocks that automatically convert Objects to Text
-
-TODO:
-
-- Format Text With Value
-- Format Text With Values
-- Join Text
-- Convert Date Time To Text
-- Convert Object To Text - need to make it clear how this works - does tostring and if tostring returns class name does json serialisation
-- Convert Object To Json - need to make it clear how this works - does json serialisation
 
 ## Remarks
 
@@ -55,3 +60,28 @@ In future this limitation may be removed.
 [Interpolated Strings]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.InterpolatedStrings" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+## See Also
+
+### Related Concepts
+
+TODO
+
+### Related Data Types
+
+TODO
+
+### Related Blocks
+
+TODO:
+
+- Format Text With Value
+- Format Text With Values
+- Join Text
+- Convert Date Time To Text
+- Convert Object To Text - need to make it clear how this works - does tostring and if tostring returns class name does json serialisation
+- Convert Object To Json - need to make it clear how this works - does json serialisation
+
+### External Documentation
+
+TODO
