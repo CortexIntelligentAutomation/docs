@@ -176,7 +176,7 @@ The [Structure][Structure Property] to convert into [Xml][Xml Property].
 | Data Type | [Structure][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Structure` with no value |
 
 ### Xml
@@ -188,7 +188,7 @@ The [Xml][Xml Property] that has been converted from the [Structure][Structure P
 | Data Type | [String][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Xml` with no value |
 
 ## Exceptions
@@ -360,3 +360,7 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
