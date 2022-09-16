@@ -78,7 +78,7 @@ The [Text][Text Property] to get the [Text Between Indexes][TextBetweenIndexes P
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
@@ -92,7 +92,7 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `0` |
 
@@ -106,7 +106,7 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `0` |
 
@@ -118,7 +118,7 @@ The text between (and including) the [Start Index][StartIndex Property] and [End
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)TextBetweenIndexes` with no value |
 
@@ -160,3 +160,5 @@ The [Start Index][StartIndex Property] and [End Index][EndIndex Property] proper
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

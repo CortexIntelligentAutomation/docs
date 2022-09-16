@@ -89,7 +89,7 @@ The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
@@ -101,7 +101,7 @@ The [Text To Add][TextToAdd Property] at the end of the [Text][Text Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `$@""` |
 
@@ -139,3 +139,5 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

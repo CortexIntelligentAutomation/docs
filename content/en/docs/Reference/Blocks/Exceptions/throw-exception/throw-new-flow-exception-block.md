@@ -78,7 +78,7 @@ If [Message][Message Property] is not provided or is set to `null`, it will defa
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `$@""` |
 
@@ -90,7 +90,7 @@ A [Category][Category Property] that can be used to categorise similar types of 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
@@ -104,7 +104,7 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[Int32][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
@@ -116,7 +116,7 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
-| Is Advanced | `true` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
@@ -128,7 +128,7 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 |--------------------|---------------------------|
 | Data Type | [Exception][] |
 | Property Type | [Input][] |
-| Is Advanced | `true` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
@@ -142,7 +142,7 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `true` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
@@ -181,3 +181,5 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

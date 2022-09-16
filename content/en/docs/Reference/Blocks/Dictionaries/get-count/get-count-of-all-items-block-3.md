@@ -49,7 +49,7 @@ The [Dictionary][Dictionary Property] to get the [Count][Count Property] of all 
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Dictionary` with no value |
 
@@ -61,7 +61,7 @@ The [Count][Count Property] of all items in [Dictionary][Dictionary Property].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Count` with no value |
 
@@ -112,3 +112,5 @@ For information about the different types of dictionaries, including those that 
 
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

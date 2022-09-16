@@ -127,7 +127,7 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Collection` with no value |
 
@@ -147,7 +147,7 @@ If [Current Iteration][CurrentIteration Property] `"Index"` is modified during a
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)CurrentIteration` with no value |
 
@@ -182,3 +182,5 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

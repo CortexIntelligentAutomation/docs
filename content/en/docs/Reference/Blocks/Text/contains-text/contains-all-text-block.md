@@ -132,7 +132,7 @@ The [Text][Text Property] to check whether it contains all of the texts in the g
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
@@ -144,7 +144,7 @@ The set of [Texts To Find][TextsToFind Property] to check are all contained in [
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[String][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `new List<string>() {}` |
 
@@ -165,7 +165,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Is Advanced | `true` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
 | Default Value | `ContainsText` |
 
@@ -179,7 +179,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Is Advanced | `true` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
 | Default Value | `Ordinal` |
 
@@ -193,7 +193,7 @@ If all of the texts in [Texts To Find][TextsToFind Property] are contained in [T
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)ContainsAllText` with no value |
 
@@ -257,3 +257,5 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -104,7 +104,7 @@ For information about format templates and parameters, please see [Text Formatti
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `@"{0} {1}"` |
 
@@ -124,7 +124,7 @@ For information about how types are converted to their text representation pleas
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TValue][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `new List<dynamic>() {0, "1"}` |
 
@@ -138,7 +138,7 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 |--------------------|---------------------------|
 | Data Type | [IFormatProvider][] |
 | Property Type | [Input][] |
-| Is Advanced | `true` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
 | Default Value | `CultureInfo.InvariantCulture` |
 
@@ -150,7 +150,7 @@ The formatted [Text][Text Property] that results from replacing all format param
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
@@ -205,3 +205,5 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

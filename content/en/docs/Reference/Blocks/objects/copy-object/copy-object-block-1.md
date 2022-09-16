@@ -68,7 +68,7 @@ A deep copy will be performed, which means if the [Object][Object Property] cont
 |--------------------|---------------------------|
 | Data Type | [TObject][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Object` with no value |
 
@@ -80,7 +80,7 @@ The [Copy][Copy Property] of the [Object][Object Property].
 |--------------------|---------------------------|
 | Data Type | [TObject][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Copy` with no value |
 
@@ -108,3 +108,5 @@ If [Object][Object Property] is not provided or is set to `null`, [Copy][Copy Pr
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

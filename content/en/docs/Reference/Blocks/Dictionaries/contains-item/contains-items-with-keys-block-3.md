@@ -72,7 +72,7 @@ The [Dictionary][Dictionary Property] to check whether it contains at least one 
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Dictionary` with no value |
 
@@ -88,7 +88,7 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TKey][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
@@ -102,7 +102,7 @@ If [Dictionary][Dictionary Property] contains at least one item with each of the
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)ContainsItems` with no value |
 
@@ -170,3 +170,5 @@ For information about the different types of dictionaries, including those that 
 
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

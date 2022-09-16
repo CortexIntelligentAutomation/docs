@@ -107,7 +107,7 @@ The [Literal Editor][] is the only editor available for this property, and it pr
 |--------------------|---------------------------|
 | Data Type | [FlowReference][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][Literal Editor] |
 | Default Value | No value (defaults to `null`) |
 
@@ -121,7 +121,7 @@ It is recommended to use the [Literal Editor][] for this property as it detects 
 |--------------------|---------------------------|
 | Data Type | [InputVariables][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][Literal Editor] |
 | Default Value | No initial value (Will be [synced][Syncing the Inputs Property with the Flow Contract] when the [Flow][Flow Property] is first [selected][Selecting a Flow]) |
 
@@ -135,7 +135,7 @@ Each of the [Output Variables][Output Variable] will be saved to a [Structure][]
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][Variable Editor] |
 | Default Value | `($)Outputs` with no value |
 
@@ -242,3 +242,5 @@ In future this limitation may be removed.
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

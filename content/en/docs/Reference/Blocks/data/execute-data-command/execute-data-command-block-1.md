@@ -444,7 +444,7 @@ The [Command][Command Property] executed on the connected data source. There are
 |--------------------|---------------------------|
 | Data Type | [DataCommand][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | [Command][Command Types Command] with value `{"CommandText": "", "Parameters": null}` |
 
@@ -462,7 +462,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 |--------------------|---------------------------|
 | Data Type | [ConnectionDetails][]|
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | [SqlServerConnectionDetails][] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
 
@@ -474,7 +474,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | [Boolean][] with value `true` |
 
@@ -488,7 +488,7 @@ Depending on the type of [Command][Command Property], the data returned within t
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][Variable Editor] |
 | Default Value | `($)Result` with no value |
 
@@ -780,5 +780,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [SqlException]: {{< url "MSDocs.SqlServer.SqlException" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

@@ -62,7 +62,7 @@ For information about `null`, please see [Null and Nullable Types][].
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | No value |
 
@@ -92,3 +92,5 @@ For information about `null`, please see [Null and Nullable Types][].
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

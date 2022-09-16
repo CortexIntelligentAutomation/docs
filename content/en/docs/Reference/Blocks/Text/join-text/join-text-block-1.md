@@ -78,7 +78,7 @@ Each non-text value will be converted to its text representation, by calling its
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TValue][]&gt; |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Values` with no value |
 
@@ -94,7 +94,7 @@ The [Separator][Separator Property] is only included in the resultant [Text][Tex
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `,` |
 
@@ -106,7 +106,7 @@ The resultant [Text][Text Property] containing the specified [Values][Values Pro
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
-| Is Advanced | `false` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
@@ -150,3 +150,5 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
