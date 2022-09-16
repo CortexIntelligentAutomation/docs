@@ -70,7 +70,9 @@ The [List][List Property] where the [Item][Item Property] is added.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)List` with no value |
 
 ### Item
 
@@ -80,7 +82,9 @@ The [Item][Item Property] to be added at the beginning of the [List][List Proper
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)Item` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 
@@ -125,3 +129,9 @@ For information about the different types of lists, including those that can con
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

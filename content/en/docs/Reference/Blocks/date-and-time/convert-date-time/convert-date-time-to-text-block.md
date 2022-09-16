@@ -150,7 +150,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)DateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)DateTime` with no value |
 
 ### Format Template
 
@@ -166,7 +168,9 @@ For information about format templates and specifiers, please see [Date and Time
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FormatTemplate` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `yyyy-MM-ddTHH:mm:ss.fffffffzzz` |
 
 ### Format Provider
 
@@ -178,7 +182,9 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 |--------------------|---------------------------|
 | Data Type | [IFormatProvider][] |
 | Property Type | [Input][] |
-| Default Value | `($)FormatProvider` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | `CultureInfo.InvariantCulture` |
 
 ### Text
 
@@ -188,6 +194,8 @@ The [Text][Text Property] representation of the [Date Time][DateTime Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
@@ -238,3 +246,9 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

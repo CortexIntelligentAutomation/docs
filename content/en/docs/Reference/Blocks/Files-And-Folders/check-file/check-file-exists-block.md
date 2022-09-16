@@ -72,7 +72,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FilePath` with no value |
 
 ### File Exists
 
@@ -84,6 +86,8 @@ If the file exists at the specified [File Path][FilePath Property], the specifie
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)FileExists` with no value |
 
 ## Exceptions
@@ -147,3 +151,9 @@ If the user the flow is executing as does not have permissions to check if a fil
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

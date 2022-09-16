@@ -50,7 +50,9 @@ The [List][List Property] to set the items in.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)List` with no value |
 
 ### New Values
 
@@ -64,7 +66,9 @@ The item at [Index][Index Property] of [List][List Property] will be set to the 
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)NewValues` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Index
 
@@ -78,8 +82,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
-
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `0` |
 ## Exceptions
 
 The exceptions thrown by the block can be found below:
@@ -133,3 +138,9 @@ For information about the different types of lists, including those that can con
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

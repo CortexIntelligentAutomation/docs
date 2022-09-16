@@ -78,7 +78,9 @@ The [Text][Text Property] to get the [Text Between Indexes][TextBetweenIndexes P
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Start Index
 
@@ -90,7 +92,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)StartIndex` with value `0` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `0` |
 
 ### End Index
 
@@ -102,7 +106,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)EndIndex` with value `0` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `0` |
 
 ### Text Between Indexes
 
@@ -112,6 +118,8 @@ The text between (and including) the [Start Index][StartIndex Property] and [End
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)TextBetweenIndexes` with no value |
 
 ## Exceptions
@@ -148,3 +156,9 @@ The [Start Index][StartIndex Property] and [End Index][EndIndex Property] proper
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

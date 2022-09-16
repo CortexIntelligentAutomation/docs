@@ -82,7 +82,9 @@ The [Dictionary][Dictionary Property] to get the specified [Occurrence][Occurren
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Key
 
@@ -96,7 +98,9 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [TKey][] |
 | Property Type | [Input][] |
-| Default Value | `($)Key` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Occurrence
 
@@ -112,7 +116,9 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Occurrence` with value `1` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `1` |
 
 ### Item
 
@@ -122,6 +128,8 @@ The specified [Occurrence][Occurrence Property] of [Item][Item Property] with th
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Item` with no value |
 
 ## Exceptions
@@ -186,3 +194,9 @@ For information about the different types of dictionaries, including those that 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

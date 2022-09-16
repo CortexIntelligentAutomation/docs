@@ -51,7 +51,9 @@ The [Text][Text Property] to convert to pascal case.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Culture Info
 
@@ -63,7 +65,9 @@ For information about the [supported values][CultureInfos] for the [Culture Info
 |--------------------|---------------------------|
 | Data Type | [CultureInfo][] |
 | Property Type | [Input][] |
-| Default Value | `($)CultureInfo` with value `CultureInfo.InvariantCulture` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | `CultureInfo.InvariantCulture` |
 
 ## Exceptions
 
@@ -108,3 +112,9 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
 [Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

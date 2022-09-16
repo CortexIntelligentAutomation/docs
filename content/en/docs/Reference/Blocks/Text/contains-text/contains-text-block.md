@@ -132,7 +132,9 @@ The [Text][Text Property] to check whether it contains [Text To Find][TextToFind
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Find
 
@@ -142,7 +144,9 @@ The [Text To Find][TextToFind Property] in [Text][Text Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToFind` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `$@""` |
 
 ### Search Options
 
@@ -161,7 +165,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `ContainsText` |
 
 ### Comparison Type
 
@@ -173,7 +179,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `Ordinal` |
 
 ### Contains Text
 
@@ -185,6 +193,8 @@ If [Text To Find][TextToFind Property] is contained in [Text][Text Property], th
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)ContainsText` with no value |
 
 ## Exceptions
@@ -240,3 +250,9 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

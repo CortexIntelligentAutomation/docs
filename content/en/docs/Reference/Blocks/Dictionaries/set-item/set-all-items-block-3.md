@@ -49,7 +49,9 @@ The [Dictionary][Dictionary Property] to set all items in.
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Dictionary` with no value |
 
 ### New Value
 
@@ -59,7 +61,9 @@ The [New Value][NewValue Property] to set all items in [Dictionary][Dictionary P
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)NewValue` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 
@@ -111,3 +115,9 @@ For information about the different types of dictionaries, including those that 
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

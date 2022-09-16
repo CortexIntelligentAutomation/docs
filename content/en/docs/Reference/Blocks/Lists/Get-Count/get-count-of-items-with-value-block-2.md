@@ -50,7 +50,9 @@ The [List][List Property] to get the [Count][Count Property] of items with the s
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)List` with no value |
 
 ### Value
 
@@ -62,7 +64,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [TItem][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Count
 
@@ -72,6 +76,8 @@ The [Count][Count Property] of items in [List][List Property] with the specified
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Count` with no value |
 
 ## Exceptions
@@ -131,3 +137,9 @@ For information about the different types of lists, including those that can con
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

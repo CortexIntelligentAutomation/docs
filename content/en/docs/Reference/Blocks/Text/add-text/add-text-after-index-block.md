@@ -70,7 +70,9 @@ The [Text][Text Property] where the [Text To Add][TextToAdd Property] is added.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Add
 
@@ -80,7 +82,9 @@ The [Text To Add][TextToAdd Property] to the [Text][Text Property] after the giv
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToAdd` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `$@""` |
 
 ### Index
 
@@ -92,7 +96,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `0` |
 
 ## Exceptions
 
@@ -128,3 +134,9 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

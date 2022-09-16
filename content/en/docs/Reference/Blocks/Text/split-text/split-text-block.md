@@ -97,7 +97,9 @@ The [Text][Text Property] to split into [Values][Values Property] using the give
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Separator
 
@@ -111,7 +113,9 @@ The [Separator][Separator Property] is not included in the resultant [Values][Va
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Separator` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `,` |
 
 ### Split Options
 
@@ -126,7 +130,9 @@ Currently supported values for the [Split Options][SplitOptions Property] proper
 |--------------------|---------------------------|
 | Data Type | [StringSplitOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SplitOpions` with value `StringSplitOptions.None` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `None` |
 
 ### Values
 
@@ -136,6 +142,8 @@ The resultant [Values][Values Property] containing an entry for each piece of sp
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[String][]&gt; |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Values` with no value |
 
 ## Exceptions
@@ -174,3 +182,9 @@ If the [Separator][Separator Property] is not found in [Text][Text Property], th
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [StringSplitOptions]: {{< url "Cortex.Reference.DataTypes.Text.StringSplitOptions.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

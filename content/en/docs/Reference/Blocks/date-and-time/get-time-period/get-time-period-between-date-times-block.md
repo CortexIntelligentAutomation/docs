@@ -18,7 +18,7 @@ Get the [Time Period][TimePeriod Property] between the specified [Start Date Tim
 
 ### Get Time Period between Start Date Time and End Date Time
 
-This example will get the Time Period beween `2021-01-01T00:00:00+00:00` and `2022-01-01T00:00:00+00:00`.
+This example will get the Time Period between `2021-01-01T00:00:00+00:00` and `2022-01-01T00:00:00+00:00`.
 
 #### Properties
 
@@ -60,7 +60,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)StartDateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)StartDateTime` with no value |
 
 ### End Date Time
 
@@ -74,7 +76,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)EndDateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)EndDateTime` with no value |
 
 ### Time Period
 
@@ -100,6 +104,8 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [TimePeriod][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)TimePeriod` with no value |
 
 ## Exceptions
@@ -134,3 +140,7 @@ In this block, the Year and Month components are not used as they aren't constan
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

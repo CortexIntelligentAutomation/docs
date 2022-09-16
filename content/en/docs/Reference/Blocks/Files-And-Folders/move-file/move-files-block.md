@@ -96,7 +96,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[String][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)FilePaths` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FilePaths` with no value |
 
 ### Destination Path
 
@@ -116,7 +118,9 @@ For information about the supported file and folder path formats (i.e. absolute,
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)DestinationPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | No value (defaults to `""`) |
 
 ### Overwrite
 
@@ -128,7 +132,9 @@ If any file exists, [Overwrite][Overwrite Property] must be set to `true`, other
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Overwrite` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `false` |
 
 ## Exceptions
 
@@ -202,3 +208,9 @@ If an exception occurs when trying to move a file in the [File Paths][FilePaths 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

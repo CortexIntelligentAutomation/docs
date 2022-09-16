@@ -130,7 +130,9 @@ A [Variable][Variable Property] can be set to any type of object, including List
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Variable
 
@@ -144,6 +146,8 @@ If a [Variable][Variable Property] is set to the [Value][Value Property] of anot
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Variable` with no value |
 
 ## Exceptions
@@ -190,3 +194,9 @@ If [Value][Value Property] is not provided or is set to null, [Variable][Variabl
 [Reference Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ReferenceTypes" >}}
 [Value Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ValueTypes" >}}
 [Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

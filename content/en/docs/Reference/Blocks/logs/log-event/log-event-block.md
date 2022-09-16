@@ -119,19 +119,23 @@ The [Event Details][EventDetails Property] to log.
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
-| Default Value | `($)EventDetails` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)EventDetails` with no value |
 
 ### Event Type
 
 [Event Type][EventType Property] can be specified to define the type of event being logged.
 
-[Event Type][EventType Property] is a free format text property. If left blank or `null` it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
+[Event Type][EventType Property] is a free format text property. If left blank, `null`, or empty (i.e. `""`) it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)EventType` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Event Severity
 
@@ -154,7 +158,9 @@ Logs with an [Event Severity][EventSeverity Property] of `EventSeverity.Informat
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[EventSeverity][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)EventSeverity` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `Information` |
 
 ### Started At
 
@@ -170,7 +176,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[DateTimeOffset][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)StartedAt` with value null |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `DateTimeOffset.UtcNow` |
 
 ### Ended At
 
@@ -186,7 +194,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[DateTimeOffset][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)EndedAt` with value null |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `DateTimeOffset.UtcNow` |
 
 ## Exceptions
 
@@ -332,9 +342,9 @@ A list of each of the log's properties and an accompanying description can be fo
 | `Event.Service.$type`      | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.$type`              | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
 
-### Null Event Type
+### Null or Empty Event Type
 
-If [Event Type][EventType Property] is left blank or `null` it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
+If [Event Type][EventType Property] is left blank, `null`, or empty (i.e. `""`) it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
 
 ### Null Event Severity
 
@@ -375,3 +385,9 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
 [EventSeverity]: {{< url "Cortex.Reference.DataTypes.Logs.EventSeverity.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

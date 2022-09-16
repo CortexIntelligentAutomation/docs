@@ -49,7 +49,9 @@ The [Dictionary][Dictionary Property] to get all [Keys][Keys Property] from.
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Keys
 
@@ -59,6 +61,8 @@ The [Keys][Keys Property] in the [Dictionary][Dictionary Property].
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TKey][]&gt; |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Keys` with no value |
 
 ## Exceptions
@@ -106,3 +110,7 @@ For information about the different types of dictionaries, including those that 
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -181,7 +181,9 @@ The [Text][Text Property] to get the [Index][Index Property] of the specified [O
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Find
 
@@ -191,7 +193,9 @@ The [Text To Find][TextToFind Property] the [Index][Index Property] of the speci
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToFind` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `$@""` |
 
 ### Occurrence
 
@@ -203,7 +207,9 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Occurrence` with value `1` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `1` |
 
 ### Search Options
 
@@ -222,7 +228,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `ContainsText` |
 
 ### Comparison Type
 
@@ -234,7 +242,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `Ordinal` |
 
 ### Index
 
@@ -248,6 +258,8 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Index` with no value |
 
 ## Exceptions
@@ -315,3 +327,9 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

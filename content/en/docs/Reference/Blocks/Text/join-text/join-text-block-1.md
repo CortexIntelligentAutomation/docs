@@ -78,7 +78,9 @@ Each non-text value will be converted to its text representation, by calling its
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TValue][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Values` with no value |
 
 ### Separator
 
@@ -92,7 +94,9 @@ The [Separator][Separator Property] is only included in the resultant [Text][Tex
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Separator` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `,` |
 
 ### Text
 
@@ -102,6 +106,8 @@ The resultant [Text][Text Property] containing the specified [Values][Values Pro
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
@@ -140,3 +146,9 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [ToString]: {{< url "MSDocs.DotNet.Api.System.Object.ToString" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -50,7 +50,9 @@ The [List][List Property] to set the items in.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)List` with no value |
 
 ### New Values
 
@@ -64,7 +66,9 @@ The [List][List Property] item at the first index in [Indexes][Indexes Property]
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)NewValues` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Indexes
 
@@ -78,7 +82,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[Int32][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Indexes` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `new List<int>() {}` |
 
 ## Exceptions
 
@@ -132,3 +138,9 @@ For information about the different types of lists, including those that can con
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -91,7 +91,9 @@ The [List][List Property] where the item is removed from.
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [InputOutput][] |
-| Default Value | `($)List` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)List` with no value |
 
 ### Index
 
@@ -105,7 +107,9 @@ For information about what an index is, please see [Indexes][].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
-| Default Value | `($)Index` with value `0` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `0` |
 
 ## Exceptions
 
@@ -151,3 +155,9 @@ For information about the different types of lists, including those that can con
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

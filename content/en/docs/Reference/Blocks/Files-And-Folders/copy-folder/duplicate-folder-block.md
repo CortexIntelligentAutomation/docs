@@ -76,7 +76,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FolderPath` with no value |
 
 ### New Name
 
@@ -94,7 +96,9 @@ For information about valid folder names, please see [File & Folder Paths][].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)NewName` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | No value (defaults to `""`) |
 
 ## Exceptions
 
@@ -169,3 +173,9 @@ If an exception occurs when trying to copy [Folder Path][FolderPath Property], a
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

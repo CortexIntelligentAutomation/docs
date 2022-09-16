@@ -74,7 +74,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [InputOutput][] |
-| Default Value | `($)DateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)DateTime` with no value |
 
 ### Time Period
 
@@ -100,7 +102,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [TimePeriod][] |
 | Property Type | [Input][] |
-| Default Value | `($)TimePeriod` with value `{"Years": 0, "Months": 0, "Days": 0, "Hours": 0, "Minutes": 0, "Seconds": 0, "Milliseconds": 0}` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | Years: `0` <br /> Months: `0` <br /> Days: `0` <br /> Hours: `0` <br /> Minutes: `0` <br /> Seconds: `0` <br /> Milliseconds: `0`|
 
 ## Exceptions
 
@@ -143,3 +147,8 @@ This block copes with UTC time offsets but does not know anything about which ti
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

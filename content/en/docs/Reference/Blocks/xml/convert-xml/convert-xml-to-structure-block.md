@@ -162,6 +162,8 @@ The [Xml][Xml Property] to convert into a [Structure][Structure Property].
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Xml` with no value |
 
 ### Structure
@@ -172,6 +174,8 @@ The [Structure][Structure Property] that has been converted from the [Xml][Xml P
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Structure` with no value |
 
 ## Exceptions
@@ -320,3 +324,9 @@ This example will only occur when a [Structure][Structure Property] is Converted
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

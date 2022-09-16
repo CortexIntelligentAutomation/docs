@@ -78,7 +78,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FilePath` with no value |
 
 ### Encoding
 
@@ -92,7 +94,9 @@ For information about encoding, examples of available encodings and using them, 
 |--------------------|---------------------------|
 | Data Type | [Encoding][] |
 | Property Type | [Input][] |
-| Default Value | `($)Encoding` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Lines
 
@@ -104,6 +108,8 @@ A line is defined as a sequence of characters followed by a carriage return (i.e
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[String][]&gt; |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Lines` with no value |
 
 ## Exceptions
@@ -164,3 +170,9 @@ For information about encoding of text, examples of available encodings and usin
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -68,7 +68,10 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
-| Default Value | `($)Exception` with no value |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)_` to [discard][] |
+
 
 ## Exceptions
 
@@ -116,6 +119,7 @@ Sometimes when an exception occurs the flow execution wants to use the exception
 For more infomation about using the built-in `($)_` variable, please see [Discarding Output Properties][].
 
 [Exception Property]: {{< ref "#exception" >}}
+[discard]: {{< ref "#using-the-built-in-_-variable-to-discard-the-exception-from-being-saved" >}}
 
 [Unhandled Exceptions]: {{< ref "#unhandled-exceptions" >}}
 
@@ -132,3 +136,9 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -83,7 +83,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FolderPath` with no value |
 
 ### Folder Information
 
@@ -97,6 +99,8 @@ For more information see the [example][] above, or the [FolderInformation][] dat
 |--------------------|---------------------------|
 | Data Type | [FolderInformation][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)FolderInformation` with no value |
 
 ## Exceptions
@@ -146,3 +150,9 @@ Escaping can be done in two ways:
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [FolderInformation]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

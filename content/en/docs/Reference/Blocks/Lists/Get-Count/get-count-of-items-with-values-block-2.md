@@ -52,7 +52,9 @@ The [List][List Property] to get the [Counts][Counts Property] of items matching
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)List` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)List` with no value |
 
 ### Values
 
@@ -64,7 +66,9 @@ For information and examples of how it is determined whether an item matches a s
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Counts
 
@@ -78,6 +82,8 @@ I.e. The count of items matching the first value in [Values][Values Property] wi
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[Int32][]&gt; |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Counts` with no value |
 
 ## Exceptions
@@ -135,3 +141,9 @@ For information about the different types of lists, including those that can con
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

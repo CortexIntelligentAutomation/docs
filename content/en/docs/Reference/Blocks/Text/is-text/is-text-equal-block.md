@@ -101,7 +101,9 @@ The [Text][Text Property] to check is equal to [Text To Compare][TextToCompare P
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Text To Compare
 
@@ -111,7 +113,9 @@ The [Text To Compare][TextToCompare Property] if [Text][Text Property] is equal 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TextToCompare` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `$@""` |
 
 ### Comparison Type
 
@@ -123,7 +127,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `Ordinal` |
 
 ### Text Is Equal
 
@@ -135,6 +141,8 @@ If they are equal the specified variable will be set to `true`, otherwise it wil
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)TextIsEqual` with no value |
 
 ## Exceptions
@@ -173,3 +181,9 @@ If [Text][Text Property] is `null` and [Text To Compare][TextToCompare Property]
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -62,7 +62,9 @@ For information about `null`, please see [Null and Nullable Types][].
 |--------------------|---------------------------|
 | Data Type | [TValue][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | No value |
 
 ## Exceptions
 
@@ -88,3 +90,7 @@ For information about `null`, please see [Null and Nullable Types][].
 [PropertyNotNullableException]: {{< url "Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

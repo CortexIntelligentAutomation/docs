@@ -106,7 +106,9 @@ The [Type Name][TypeName Property] the [Exception's][Exception Property] fully q
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)TypeName` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Comparison Type
 
@@ -118,7 +120,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `Ordinal` |
 
 ### Exception
 
@@ -134,7 +138,9 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
-| Default Value | `($)Exception` with no value |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)_` to [discard][] |
 
 ## Exceptions
 
@@ -187,6 +193,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [TypeName Property]: {{< ref "#type-name" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Exception Property]: {{< ref "#exception" >}}
+[discard]: {{< ref "#using-the-built-in-_-variable-to-discard-the-exception-from-being-saved" >}}
 
 [Handle Block Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
 [Handle Block Exception Matching Message]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessage.MainDoc" >}}
@@ -213,3 +220,9 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

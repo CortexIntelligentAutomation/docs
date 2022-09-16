@@ -198,7 +198,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FolderPath` with no value |
 
 ### Search Pattern
 
@@ -212,7 +214,9 @@ A [Search Pattern][SearchPattern Property] of `null` or empty (i.e. `""`) means 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchPattern` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | No value (defaults to `""`) |
 
 ### Search Options
 
@@ -231,7 +235,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)SearchOptions` with value `SearchOptions.ContainsText` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `ContainsText` |
 
 ### Content Options
 
@@ -244,7 +250,9 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 |--------------------|---------------------------|
 | Data Type | [ContentOptions][] |
 | Property Type | [Input][] |
-| Default Value | `($)ContentOptions` with value `ContentOptions.Files` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `Files` |
 
 ### Recursive
 
@@ -256,7 +264,9 @@ To search only in the specified [Folder Path][FolderPath Property] set [Recursiv
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Recursive` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `false` |
 
 ### Comparison Type
 
@@ -268,7 +278,9 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 |--------------------|---------------------------|
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
-| Default Value | `($)ComparisonType` with value `StringComparison.Ordinal` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `Ordinal` |
 
 ### Paths
 
@@ -280,6 +292,8 @@ The [Paths][Paths Property] returned will be absolute paths, and based on the [F
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[String][]&gt; |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Paths` with no value |
 
 ## Exceptions
@@ -367,3 +381,9 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ContentOptions]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.ContentOptions.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

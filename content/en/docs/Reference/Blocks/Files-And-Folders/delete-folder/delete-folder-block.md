@@ -82,7 +82,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FolderPath` with no value |
 
 ### Recursive
 
@@ -96,7 +98,9 @@ By default, this is set to `false` to prevent unintentional and destructive dele
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Recursive` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `false` |
 
 ## Exceptions
 
@@ -151,3 +155,9 @@ If an exception occurs when trying to delete [Folder Path][FolderPath Property],
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

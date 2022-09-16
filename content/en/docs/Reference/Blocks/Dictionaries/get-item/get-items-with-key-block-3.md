@@ -54,7 +54,9 @@ The [Dictionary][Dictionary Property] to get all [Items][Items Property] with th
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Key
 
@@ -68,7 +70,9 @@ For information about what a key is, please see [Keys][].
 |--------------------|---------------------------|
 | Data Type | [TKey][] |
 | Property Type | [Input][] |
-| Default Value | `($)Key` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Items
 
@@ -78,6 +82,8 @@ All [Items][Items Property] with the given [Key][Key Property] in [Dictionary][D
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TItem][]&gt; |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Items` with no value |
 
 ## Exceptions
@@ -132,3 +138,8 @@ For information about the different types of dictionaries, including those that 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

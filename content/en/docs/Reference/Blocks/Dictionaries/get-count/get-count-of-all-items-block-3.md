@@ -49,7 +49,9 @@ The [Dictionary][Dictionary Property] to get the [Count][Count Property] of all 
 |--------------------|---------------------------|
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Dictionary` with value `{}` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Dictionary` with no value |
 
 ### Count
 
@@ -59,6 +61,8 @@ The [Count][Count Property] of all items in [Dictionary][Dictionary Property].
 |--------------------|---------------------------|
 | Data Type | [Int32][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Count` with no value |
 
 ## Exceptions
@@ -105,3 +109,8 @@ For information about the different types of dictionaries, including those that 
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

@@ -242,7 +242,9 @@ For information about the supported folder path formats (i.e. absolute, relative
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FolderPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FolderPath` with no value |
 
 ### Destination Path
 
@@ -262,7 +264,9 @@ For information about the supported file and folder path formats (i.e. absolute,
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)DestinationPath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | No value (defaults to `""`) |
 
 ### Overwrite
 
@@ -274,7 +278,9 @@ If the folder and/or contents exists, [Overwrite][Overwrite Property] must be se
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Overwrite` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `false` |
 
 ### Content Only
 
@@ -286,7 +292,9 @@ To copy the folder and its content, [Content Only][ContentOnly Property] must be
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)ContentOnly` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `false` |
 
 ## Exceptions
 
@@ -370,3 +378,9 @@ If an exception occurs when trying to copy [Folder Path][FolderPath Property], a
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
