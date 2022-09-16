@@ -6,7 +6,7 @@ description: "Subtracts a Time Period to from specified Date Time."
 
 {{< figure src="/blocks/date-and-time-subtract-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.SubtractTimePeriod.SubtractTimePeriodBlock)</p>
 
@@ -137,13 +137,13 @@ This block copes with UTC time offsets but does not know anything about which ti
 [DateTime Property]: {{< ref "#date-time" >}}
 [TimePeriod Property]: {{< ref "#time-period" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}

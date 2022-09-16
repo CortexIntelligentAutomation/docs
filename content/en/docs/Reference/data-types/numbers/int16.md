@@ -4,7 +4,7 @@ linkTitle: "Int16"
 description: "Used to represent a whole number from `-32,768` through `32767`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Int16)</p>
 
@@ -59,7 +59,7 @@ The following table shows some of the ways that an `Int16` can be converted to t
 * The Expression Editor is available for [Input][] properties where the data type is `Int16`.
 * The Literal Editor is available for [Input][] properties where the data type is `Int16`.
   * Expression syntax is not supported within the Literal Editor for the `Int16` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Int16`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Int16`.
 
 ### Known Limitations
 
@@ -82,9 +82,9 @@ None
 
 * [System.Int16][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToInt16]: {{< url "MSDocs.DotNet.Api.System.Convert.ToInt16" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}
@@ -103,4 +103,4 @@ None
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 
-[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWithNumbers.MainDoc" >}}
+[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWith.Numbers.MainDoc" >}}

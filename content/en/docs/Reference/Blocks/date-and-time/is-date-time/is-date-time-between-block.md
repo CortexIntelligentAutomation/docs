@@ -6,7 +6,7 @@ description: "Checks if a Date Time is between two Date Times."
 
 {{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeBetweenBlock)</p>
 
@@ -145,11 +145,11 @@ The [Start Date Time][StartDateTime Property] and [End Date Time][EndDateTime Pr
 [EndDateTime Property]: {{< ref "#end-date-time" >}}
 [DateTimeIsBetween Property]: {{< ref "#date-time-is-between" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

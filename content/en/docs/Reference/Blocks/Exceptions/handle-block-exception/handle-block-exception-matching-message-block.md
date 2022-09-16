@@ -6,7 +6,7 @@ description: "Handles any exception thrown by the block it is connected to that 
 
 {{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingMessageBlock)</p>
 
@@ -114,7 +114,7 @@ The [Message][Message Property] the [Exception's][Exception Property] `Message` 
 
 The [Comparison Type][ComparisonType Property] specifying the rules used to determine whether [Message][Message Property] is contained in the [Exception's][Exception Property] `Message` property.
 
-For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
 
 | | |
 |--------------------|---------------------------|
@@ -154,7 +154,7 @@ The exceptions thrown by the block can be found below:
 
 ### Comparison Types
 
-For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
 
 ### Null or empty Message
 
@@ -202,16 +202,16 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [Handle Block Exception Matching Messages]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessages.MainDoc" >}}
 [Handle Block Exception Matching Type Name]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeName.MainDoc" >}}
 [Handle Block Exception Matching Type Names]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames.MainDoc" >}}
-[Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.PropertyType.DiscardingOutput" >}}
-[Exception Handling]: {{< url "Cortex.Reference.Concepts.ExceptionHandling.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.DiscardingOutputs" >}}
+[Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Text Equality]: {{< url "Cortex.Reference.Concepts.TextEquality.MainDoc" >}}
-[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.MainDoc" >}}
-[Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
+[Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc" >}}
+[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.MainDoc" >}}
+[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.Ordinal" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
@@ -219,5 +219,5 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

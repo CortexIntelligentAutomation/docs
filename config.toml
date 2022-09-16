@@ -183,40 +183,6 @@ enable = true
 	url = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
 	icon = "fab fa-youtube"
 
-# End user relevant links. These will show up on left side of footer and in the community page if you have one.
-[[params.links.user]] #TODO Remove
-	name = "User mailing list"
-	url = "https://example.org/mail"
-	icon = "fa fa-envelope"
-        desc = "Discussion and help from your fellow users"
-[[params.links.user]] #TODO Remove
-	name ="Twitter"
-	url = "https://example.org/twitter"
-	icon = "fab fa-twitter"
-        desc = "Follow us on Twitter to get the latest news!"
-[[params.links.user]] #TODO Remove
-	name = "Stack Overflow"
-	url = "https://example.org/stack"
-	icon = "fab fa-stack-overflow"
-        desc = "Practical questions and curated answers"
-
-# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
-[[params.links.developer]] #TODO Remove?
-	name = "GitHub"
-	url = "https://github.com/CortexIntelligentAutomation/"
-	icon = "fab fa-github"
-        desc = "Development takes place here!"
-[[params.links.developer]] #TODO Remove
-	name = "Slack"
-	url = "https://example.org/slack"
-	icon = "fab fa-slack"
-        desc = "Chat with other project developers"
-[[params.links.developer]] #TODO Remove
-	name = "Developer mailing list"
-	url = "https://example.org/mail"
-	icon = "fa fa-envelope"
-        desc = "Discuss development issues around the project"
-
 # Legal info relevant links. These will show up on left side of footer.
 [[params.links.legal]]
 	name = "Privacy Policy"
@@ -243,13 +209,6 @@ enable = true
 	phone = "+44 23 8254 8990"
 	email = "info@cortex-ia.com"
 
-# End user relevant links. These will show up on left side of footer and in the community page if you have one.
-[[params.links.user]] #TODO Remove
-	name = "User mailing list"
-	url = "https://example.org/mail"
-	icon = "fa fa-envelope"
-        desc = "Discussion and help from your fellow users"
-
 # Additional menu links
 [menu]
 [[menu.main]]
@@ -258,6 +217,14 @@ name = 'Documentation'
 pre = "<i class='fa fa-heart'></i>"
 url = '/docs/'
 weight = 10
+
+[[menu.main]]
+identifier = 'community'
+name = 'Community'
+pre = "<i class='fa fa-heart'></i>"
+url = 'https://community.cortex.co.uk/'
+weight = 30
+
 
 # Releases menu
 [[params.versions]]

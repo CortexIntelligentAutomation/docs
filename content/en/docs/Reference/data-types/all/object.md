@@ -4,7 +4,7 @@ linkTitle: "Object"
 description: "Any data type can be used where an `Object` data type is required, as all data types derive from `Object`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Object)</p>
 
@@ -54,7 +54,7 @@ new Object()
 
 * The Expression Editor is available for [Input][] properties where the data type is `Object`.
 * The Literal Editor is not available for [Input][] properties where the data type is `Object`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Object`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Object`.
 
 ### Known Limitations
 
@@ -77,12 +77,12 @@ None
 
 [Object vs dynamic]: {{< ref "#object-vs-dynamic" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Collection]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
-[Variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
 [System.Object]: {{< url "MSDocs.DotNet.Api.System.Object.MainDoc" >}}
 [Using dynamic]: {{< url "MSDocs.DotNet.Api.System.dynamic.MainDoc" >}}

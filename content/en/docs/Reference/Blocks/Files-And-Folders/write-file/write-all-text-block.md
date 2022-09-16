@@ -6,7 +6,7 @@ description: "Writes all specified text to a file at the given file path."
 
 {{< figure src="/blocks/files-write-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.WriteFile.WriteAllTextBlock)</p>
 
@@ -20,7 +20,7 @@ An option can also be specified to [Overwrite][Overwrite Property] rather than a
 
 ### Write all text, appending to the end of the file
 
-This example will append `"New Line 1\r\n\New Line 2"` to `"C:\Source\File.txt"`, using UTF-8 encoding without a byte order mark.
+This example will append `"New Line 1\r\nNew Line 2"` to `"C:\Source\File.txt"`, using UTF-8 encoding without a byte order mark.
 
 In this example assume `"C:\Source\File.txt"` contains the following text:
 
@@ -34,13 +34,13 @@ Original Line 2
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [File Path][FilePath Property] | `($)FilePath`, with value `@"C:\Source\File.txt"` | `($)FilePath` is a variable of type [String][] |
-| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\n\New Line 2"` | `($)Text` is a variable of type [String][] |
+| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\nNew Line 2"` | `($)Text` is a variable of type [String][] |
 | [Overwrite][Overwrite Property] | `($)Overwrite`, with value `false` | `($)Overwrite` is a variable of type [Boolean][] |
 | [Encoding][Encoding Property] | `($)Encoding`, with value `null` | `($)Encoding` is a variable of type [Encoding][] |
 
 #### Result
 
-Writing `"New Line 1\r\n\New Line 2"` to `"C:\Source\File.txt"` results in the content being updated to the following:
+Writing `"New Line 1\r\nNew Line 2"` to `"C:\Source\File.txt"` results in the content being updated to the following:
 
 ```plaintext
 Original Line 1
@@ -53,7 +53,7 @@ New Line 2
 
 ### Write all text, overwriting the file content
 
-This example will overwrite the content of `"C:\Source\File.txt"` with `"New Line 1\r\n\New Line 2"`, using UTF-8 encoding without a byte order mark.
+This example will overwrite the content of `"C:\Source\File.txt"` with `"New Line 1\r\nNew Line 2"`, using UTF-8 encoding without a byte order mark.
 
 In this example assume `"C:\Source\File.txt"` contains the following text:
 
@@ -67,13 +67,13 @@ Original Line 2
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [File Path][FilePath Property] | `($)FilePath`, with value `@"C:\Source\File.txt"` | `($)FilePath` is a variable of type [String][] |
-| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\n\New Line 2"` | `($)Text` is a variable of type [String][] |
+| [Text][Text Property] | `($)Text`, with value `"New Line 1\r\nNew Line 2"` | `($)Text` is a variable of type [String][] |
 | [Overwrite][Overwrite Property] | `($)Overwrite`, with value `true` | `($)Overwrite` is a variable of type [Boolean][] |
 | [Encoding][Encoding Property] | `($)Encoding`, with value `null` | `($)Encoding` is a variable of type [Encoding][] |
 
 #### Result
 
-Overwriting `"C:\Source\File.txt"` with `"New Line 1\r\n\New Line 2"` results in the content being updated to the following:
+Overwriting `"C:\Source\File.txt"` with `"New Line 1\r\nNew Line 2"` results in the content being updated to the following:
 
 ```plaintext
 New Line 1
@@ -146,11 +146,11 @@ Option to specify the [Encoding][Encoding Property] that should be used to write
 
 If the [Encoding][Encoding Property] is left as `null`, the [Text][Text Property] will be written using UTF-8 encoding without a byte order mark.
 
-For information about encoding, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
@@ -192,16 +192,16 @@ Escaping can be done in two ways:
 
 ### Encoding of text
 
-For information about encoding of text, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding of text, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 [FilePath Property]: {{< ref "#file-path" >}}
 [Text Property]: {{< ref "#text" >}}
 [Overwrite Property]: {{< ref "#overwrite" >}}
 [Encoding Property]: {{< ref "#encoding" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
-[Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
+[Working with Text - Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Encoding.MainDoc" >}}
 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
 [Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
@@ -210,8 +210,8 @@ For information about encoding of text, examples of available encodings and usin
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
+[File & Folder Paths]: {{< url "Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
+[Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

@@ -6,7 +6,7 @@ description: "Adds text to another text before the specified index."
 
 {{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextBeforeIndexBlock)</p>
 
@@ -127,10 +127,10 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 
 [NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-to-another-text-before-the-given-index" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 

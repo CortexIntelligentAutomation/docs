@@ -6,7 +6,7 @@ description: "Converts text to lower case (e.g. `\"lowercase\"`)."
 
 {{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToLowerCaseBlock)</p>
 
@@ -59,7 +59,7 @@ The [Text][Text Property] to convert to lower case.
 
 The [Culture Info][CultureInfo Property] used to perform the conversion of the [Text][Text Property].
 
-For information about the [supported values][CultureInfos] for the [Culture Info][CultureInfo Property] property and examples of how it affects casing rules, please see [Text Casing][].
+For information about the [supported values][CultureInfos] for the [Culture Info][CultureInfo Property] property and examples of how it affects casing rules, please see [Casing][].
 
 | | |
 |--------------------|---------------------------|
@@ -81,7 +81,7 @@ The exceptions thrown by the block can be found below:
 
 ### Culture Info
 
-For information about the [supported values][CultureInfos] for the [CultureInfo][CultureInfo Property] property and examples of how it affects casing rules, please see [Text Casing][].
+For information about the [supported values][CultureInfos] for the [CultureInfo][CultureInfo Property] property and examples of how it affects casing rules, please see [Casing][].
 
 ### Null Culture Info
 
@@ -100,14 +100,14 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 [Text Property]: {{< ref "#text" >}}
 [CultureInfo Property]: {{< ref "#culture-info" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[Text Casing]: {{< url "Cortex.Reference.Concepts.TextCasing.MainDoc" >}}
-[CultureInfos]: {{< url "Cortex.Reference.Concepts.TextCasing.CultureInfo.MainDoc" >}}
+[Casing]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Casing.MainDoc" >}}
+[CultureInfos]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Casing.CultureInfo.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[CultureInfo]: {{< url "Cortex.Reference.DataTypes.MostCommon.CultureInfo" >}}
+[CultureInfo]: {{< url "Cortex.Reference.DataTypes.Text.CultureInfo.MainDoc" >}}
 [InvariantCulture]: {{< url "Cortex.Reference.DataTypes.MostCommon.InvariantCulture" >}}
 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}

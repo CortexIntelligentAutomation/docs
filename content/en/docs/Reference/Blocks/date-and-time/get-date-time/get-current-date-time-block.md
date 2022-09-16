@@ -6,7 +6,7 @@ description: "Gets the current Date Time."
 
 {{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.GetDateTime.GetCurrentDateTimeBlock)</p>
 
@@ -68,9 +68,9 @@ For more information, please see [Working with Date and Time][].
 
 [DateTime Property]: {{< ref "#date-time" >}}
 
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}

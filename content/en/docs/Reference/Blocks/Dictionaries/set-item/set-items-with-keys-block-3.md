@@ -6,7 +6,7 @@ description: "Sets all items with any of the given keys in a Dictionary to new v
 
 {{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithKeysBlock`3)</p>
 
@@ -109,7 +109,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -119,18 +119,18 @@ For information about the different types of dictionaries, including those that 
 [Keys Property]: {{< ref "#keys" >}}
 [NewValues Property]: {{< ref "#new-values" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[Keys]: {{< url "Cortex.Reference.Concepts.Keys.MainDoc" >}}
-[Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
+[Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
+[Object Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.MainDoc" >}}
 
-[Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Dictionary Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.DictionaryLiteral" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
-[TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TKey]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [ArgumentNullException]: {{< url "MSDocs.DotNet.Api.System.ArgumentNullException" >}}
 [CannotModifyReadOnlyDictionaryException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}

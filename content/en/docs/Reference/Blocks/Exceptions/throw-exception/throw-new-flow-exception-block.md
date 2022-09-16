@@ -6,7 +6,7 @@ description: "Throws a new FlowException with the specified message, category, e
 
 {{< figure src="/blocks/exceptions-throw-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.ThrowException.ThrowNewFlowExceptionBlock)</p>
 
@@ -167,13 +167,13 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [InnerException Property]: {{< ref "#inner-exception" >}}
 [HelpLink Property]: {{< ref "#help-link" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.Nullable" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}

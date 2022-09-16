@@ -1,8 +1,8 @@
 ---
 title: "Concepts"
 linkTitle: "Concepts"
-description: "Various concepts of the engine."
-weight: 100
+description: "This section includes all reference documentation for concepts required to use Cortex Innovation."
+weight: 1
 ---
 
-TODO: Null, reference types, value types, nullable value types - also search for "non-nullable value types" and add links
+

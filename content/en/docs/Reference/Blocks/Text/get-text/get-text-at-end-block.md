@@ -6,7 +6,7 @@ description: "Gets a length of text from the end of a given text."
 
 {{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextAtEndBlock)</p>
 
@@ -99,8 +99,8 @@ If [Length][Length Property] is `0`, the variable specified in the [Text At End]
 [Length Property]: {{< ref "#length" >}}
 [TextAtEnd Property]: {{< ref "#text-at-end" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 

@@ -6,7 +6,7 @@ description: "Checks if a given value is `null`; if so the flow execution exits 
 
 {{< figure src="/blocks/decisions-if-true-exit-right-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfNullExitRightBlock`1)</p>
 
@@ -82,10 +82,10 @@ For information about `null`, please see [Null and Nullable Types][].
 
 [Value Property]: {{< ref "#value" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
-[TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.NullAndNullableTypes.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes.MainDoc" >}}
 
 [PropertyNotNullableException]: {{< url "Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException.MainDoc" >}}
 

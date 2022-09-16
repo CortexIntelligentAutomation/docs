@@ -6,7 +6,7 @@ description: "Converts Json to an Object."
 
 {{< figure src="/blocks/json-convert-to-object-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Json.ConvertJson.ConvertJsonToObjectBlock)</p>
 
@@ -222,8 +222,8 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 
 [Convert Json to a List (with Type information)]: {{< ref "#convert-json-to-a-list-with-type-information" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [JsonReaderException]: {{< url "JsonDotNet.JsonReaderException" >}}
 [JsonSerializationException]: {{< url "JsonDotNet.JsonSerializationException" >}}
@@ -239,4 +239,4 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [HttpRequestHeaders]: {{< url "Cortex.Reference.DataTypes.MostCommon.HttpRequestHeaders" >}}
-[JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.MostCommon.JsonSerializerSettings" >}}
+[JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.Json.JsonSerializerSettings.MainDoc" >}}

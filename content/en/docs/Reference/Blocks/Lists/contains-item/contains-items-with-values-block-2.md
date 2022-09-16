@@ -6,7 +6,7 @@ description: "Checks if a List contains at least one item matching each of the s
 
 {{< figure src="/blocks/lists-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.ContainsItem.ContainsItemsWithValuesBlock`2)</p>
 
@@ -130,11 +130,11 @@ If [Values][Values Property] is empty (i.e. `[]`), the variable specified in the
 
 ### Defining lists using literal syntax
 
-For information about how to define lists using literal syntax, see [List Literals][].
+For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Defining lists using expression syntax
 
-For information about how to define lists using expression syntax, see [List Expressions][].
+For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Lists containing items of a single data type vs multiple data types
 
@@ -144,16 +144,15 @@ For information about the different types of lists, including those that can con
 [Values Property]: {{< ref "#values" >}}
 [ContainsItems Property]: {{< ref "#contains-items" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
-[List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
+[Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 
-[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
-[Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
+[Object Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.MainDoc" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 

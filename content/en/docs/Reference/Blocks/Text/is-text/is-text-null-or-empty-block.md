@@ -6,7 +6,7 @@ description: "Checks if text is `null` or empty (i.e. `\"\"`)."
 
 {{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextNullOrEmptyBlock)</p>
 
@@ -147,12 +147,12 @@ If [Text][Text Property] is whitespace (e.g. `"     "`) the variable specified i
 
 [WhitespaceText Example]: {{< ref "#text-is-whitespace" >}}
 
-[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.NullAndNullableTypes.MainDoc" >}}
+[Null and Nullable Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes.MainDoc" >}}
 
-[Empty Text and Whitespace]: {{< url "Cortex.Reference.Concepts.EmptyTextAndWhitespace.MainDoc" >}}
+[Empty Text and Whitespace]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.EmptyTextAndWhitespace.MainDoc" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}

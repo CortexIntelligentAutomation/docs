@@ -6,7 +6,7 @@ description: "Joins a set of values together as text, using the given separator 
 
 {{< figure src="/blocks/text-join-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.JoinText.JoinTextBlock`1)</p>
 
@@ -133,10 +133,10 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [Separator Property]: {{< ref "#separator" >}}
 [Text Property]: {{< ref "#text" >}}
 
-[TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [OutOfMemoryException]: {{< url "MSDocs.DotNet.Api.System.OutOfMemoryException" >}}

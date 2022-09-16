@@ -4,7 +4,7 @@ linkTitle: "Char"
 description: "Used to represent unicode characters."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Char)</p>
 
@@ -41,7 +41,7 @@ The following table shows some of the ways that a `Char` can be created.
 
 ### Property Editor Support
 
-Currently no [Input][], [InputOutput][] or [Output] properties require the `Char` data type.
+Currently no [Input][], [InputOutput][] or [Output][] properties require the `Char` data type.
 
 ### Known Limitations
 
@@ -61,12 +61,12 @@ None
 
 * [System.Char][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [System.Char]: {{< url "MSDocs.DotNet.Api.System.Char.MainDoc" >}}
 
-[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWithText.MainDoc" >}}
+[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}

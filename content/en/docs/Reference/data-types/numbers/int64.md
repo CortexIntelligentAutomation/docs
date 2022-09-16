@@ -4,7 +4,7 @@ linkTitle: "Int64"
 description: "Used to represent a whole number from `-9,223,372,036,854,775,808` through `9,223,372,036,854,775,807`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Int64)</p>
 
@@ -66,7 +66,7 @@ Please see [Representing an Int64 as a String][] for further information.
 * The Expression Editor is available for [Input][] properties where the data type is `Int64`.
 * The Literal Editor is available for [Input][] properties where the data type is `Int64`.
   * Expression syntax is not supported within the Literal Editor for the `Int64` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Int64`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Int64`.
 
 ### Known Limitations
 
@@ -89,9 +89,9 @@ None
 
 * [System.Int64][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToInt64]: {{< url "MSDocs.DotNet.Api.System.Convert.ToInt64" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}
@@ -112,4 +112,4 @@ None
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 
-[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWithNumbers.MainDoc" >}}
+[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWith.Numbers.MainDoc" >}}

@@ -4,7 +4,7 @@ linkTitle: "CommandException"
 description: "Exception thrown when any command execution has resulted in an exception being thrown."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Data.CommandException)</p>
 

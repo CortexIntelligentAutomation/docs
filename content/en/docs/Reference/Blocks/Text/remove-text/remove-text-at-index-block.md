@@ -6,7 +6,7 @@ description: "Removes a length of text at the specified index of a given text."
 
 {{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtIndexBlock)</p>
 
@@ -112,9 +112,9 @@ To overcome this, this block creates a new [String][] which has the [Length][Len
 [Index Property]: {{< ref "#index" >}}
 [Length Property]: {{< ref "#length" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 

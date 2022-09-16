@@ -6,7 +6,7 @@ description: "Logs an event to the filesystem."
 
 {{< figure src="/blocks/logs-log-event-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Logs.LogEvent.LogEventBlock)</p>
 
@@ -367,13 +367,13 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [Configuring Logging]: {{< ref "#configuring-logging" >}}
 [Anatomy of a Log]: {{< ref "#anatomy-of-a-log" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [Grafana]: {{< url "Grafana.MainDoc" >}}
 [ElasticSearch]: {{< url "ElasticSearch.MainDoc" >}}
@@ -383,5 +383,5 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.Nullable" >}}
-[EventSeverity]: {{< url "Cortex.Reference.DataTypes.MostCommon.EventSeverity" >}}
+[Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
+[EventSeverity]: {{< url "Cortex.Reference.DataTypes.Logs.EventSeverity.MainDoc" >}}

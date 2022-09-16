@@ -6,7 +6,7 @@ description: "Handles any exception thrown by the block it is connected to."
 
 {{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionBlock)</p>
 
@@ -116,11 +116,11 @@ For more information about using the built-in `($)_` variable, please see [Disca
 [Handle Block Exception Matching Messages]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessages.MainDoc" >}}
 [Handle Block Exception Matching Type Name]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeName.MainDoc" >}}
 [Handle Block Exception Matching Type Names]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames.MainDoc" >}}
-[Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.PropertyType.DiscardingOutput" >}}
-[Exception Handling]: {{< url "Cortex.Reference.Concepts.ExceptionHandling.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.DiscardingOutputs" >}}
+[Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

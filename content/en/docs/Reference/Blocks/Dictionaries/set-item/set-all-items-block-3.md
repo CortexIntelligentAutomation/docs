@@ -6,9 +6,9 @@ description: "Sets all items in a Dictionary to a new value."
 
 {{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItems`3)</p>
+<p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItemsBlock`3)</p>
 
 ## Description
 
@@ -87,7 +87,7 @@ For information about how to define dictionaries using literal syntax, see [Dict
 
 ### Defining dictionaries using expression syntax
 
-For information about how to define dictionaries using expression syntax, see [Dictionary Expressions][].
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
 
 ### Dictionaries containing items with same data types vs different data types
 
@@ -96,15 +96,15 @@ For information about the different types of dictionaries, including those that 
 [Dictionary Property]: {{< ref "#dictionary" >}}
 [NewValue Property]: {{< ref "#new-value" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
-[Dictionary Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryLiterals" >}}
-[Dictionary Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.DictionaryExpressions" >}}
+[Dictionary Literals]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.DictionaryLiteral" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
 [Dictionaries]: {{< url "Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
 
-[TKey]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
-[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TKey]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [CannotModifyReadOnlyDictionaryException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}

@@ -6,7 +6,7 @@ description: "Converts an object to text by replacing all `{Property}` format pa
 
 {{< figure src="/blocks/objects-convert-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Object.ConvertObject.ConvertObjectToTextBlock`1)</p>
 
@@ -225,20 +225,20 @@ Currently the block does not support indexing into properties (i.e. `ListPropert
 [FormatProvider Property]: {{< ref "#format-provider" >}}
 [Text Property]: {{< ref "#text" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [FormatException]: {{< url "MSDocs.DotNet.Api.System.FormatException" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [Convert ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToStringObjectFormatProvider" >}}
 
-[Converting Objects To Text]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.MainDoc" >}}
-[Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.Fundamentals.Culture.InvariantCulture" >}}
-[Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.MainDoc" >}}
-[Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWithText.Formatting.FormatParameters" >}}
+[Converting Objects To Text]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText.MainDoc" >}}
+[Invariant Culture rules]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture.MainDoc" >}}
+[Text Formatting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.MainDoc" >}}
+[Valid Format Parameter]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatParameters" >}}
 
-[TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TObject]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
-[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.MostCommon.IFormatProvider" >}}
+[IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}

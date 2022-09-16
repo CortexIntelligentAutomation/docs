@@ -6,7 +6,7 @@ description: "Handles any unhandled exception within its workspace."
 
 {{< figure src="/blocks/exceptions-handle-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleWorkspaceException.HandleWorkspaceExceptionBlock)</p>
 
@@ -83,8 +83,9 @@ No exceptions are thrown by the block.
 
 The following restrictions apply to this block:
 
-* A workspace cannot contain more than one [Handle Workspace Exception][] block. If more than one is added to a workspace, it will be reported as a message when trying to debug the flow.
+* A workspace cannot contain more than one [Handle Workspace Exception][] block. If more than one is added, it will be reported as a message when trying to debug the flow.
 * The [Handle Workspace Exception][] block will only handle the first unhandled exception within its workspace. This is to prevent infinite recursion within the flow. Subsequent unhandled exceptions are passed to the next relevant exception handling block. For more information about chaining of exception handling blocks and passing of exceptions, please see [Exception Handling][].
+* A flow's Top-Level Workspace cannot contain a [Handle Workspace Exception][] block. If one is added, it will be reported as a message when trying to debug the flow.
 
 ### Unhandled Exceptions
 
@@ -122,16 +123,16 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 
 [Unhandled Exceptions]: {{< ref "#unhandled-exceptions" >}}
 
-[Exception Handling]: {{< url "Cortex.Reference.Concepts.ExceptionHandling.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
-[Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.PropertyType.DiscardingOutput" >}}
+[Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
+[Discarding Output Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.DiscardingOutputs" >}}
 
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
-[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
+[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
 
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}

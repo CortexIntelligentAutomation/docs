@@ -4,7 +4,7 @@ linkTitle: "KeyPresentException"
 description: "The exception thrown when trying to add an item to a dictionary with a key that is already present."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Dictionaries.KeyPresentException)</p>
 

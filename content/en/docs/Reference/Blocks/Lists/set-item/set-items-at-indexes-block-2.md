@@ -6,7 +6,7 @@ description: "Sets the items at each of the specified indexes of a List to new v
 
 {{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtIndexesBlock`2)</p>
 
@@ -103,11 +103,11 @@ The exceptions thrown by the block can be found below:
 
 ### Defining lists using literal syntax
 
-For information about how to define lists using literal syntax, see [List Literals][].
+For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Defining lists using expression syntax
 
-For information about how to define lists using expression syntax, see [List Expressions][].
+For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Lists containing items of a single data type vs multiple data types
 
@@ -117,16 +117,15 @@ For information about the different types of lists, including those that can con
 [NewValues Property]: {{< ref "#new-values" >}}
 [Indexes Property]: {{< ref "#indexes" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
-[List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
-[List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
+[Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 
-[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [DuplicateValueException]: {{< url "Cortex.Reference.Exceptions.Lists.DuplicateValueException.MainDoc" >}}

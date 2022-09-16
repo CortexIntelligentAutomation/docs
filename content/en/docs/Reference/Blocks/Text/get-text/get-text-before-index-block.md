@@ -6,7 +6,7 @@ description: "Gets a length of text before the specified index of a given text."
 
 {{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextBeforeIndexBlock)</p>
 
@@ -120,9 +120,9 @@ The [Index][Index Property] property is an exclusive [index][Indexes], which mea
 [Length Property]: {{< ref "#length" >}}
 [TextBeforeIndex Property]: {{< ref "#text-before-index" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 

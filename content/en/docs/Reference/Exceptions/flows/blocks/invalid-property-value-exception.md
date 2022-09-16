@@ -4,21 +4,21 @@ linkTitle: "InvalidPropertyValueException"
 description: "The exception thrown when a property is provided with an invalid value."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.InvalidPropertyValueException)</p>
 
 ## Description
 
-The exception thrown when a [property][TODO] is provided with an invalid value.
+The exception thrown when a [property][] is provided with an invalid value.
 
-This exception wraps the [InnerException][] that occurred when the value provided for the [property][TODO] was used.
+This exception wraps the [InnerException][] that occurred when the value provided for the [property][] was used.
 
 ## Reasons
 
 ### Value Is Invalid
 
-An invalid value was provided for the [property][TODO] with the specified [PropertyId][].
+An invalid value was provided for the [property][] with the specified [PropertyId][].
 
 #### Message Format
 
@@ -30,7 +30,7 @@ The format of the [Message][] is as follows:
 
 #### How to fix
 
-Provide a valid value for the [property][TODO] with the specified [PropertyId][], as instructed by the [Message][].
+Provide a valid value for the [property][] with the specified [PropertyId][], as instructed by the [Message][].
 
 More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message of the [InnerException][].
 
@@ -41,7 +41,7 @@ More information on why the value is invalid, or instruction on how to provide a
 The type of the exception (i.e. `InvalidPropertyValueException`).
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Message
@@ -51,36 +51,40 @@ The exception message, providing information about the exception that occurred.
 For this exception, the message will always be the same. More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message of the [InnerException][].
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### PropertyId
 
-The Id of the [property][TODO] that has been provided an invalid value.
+The Id of the [property][] that has been provided an invalid value.
 
 | | |
-|--------------------|---------------------------|
+|-----------|----------|
 | Data Type | [Guid][] |
 
 ### InnerException
 
-The exception that occurred when the value provided for the [property][TODO] was used.
+The exception that occurred when the value provided for the [property][] was used.
 
 This may contain more information on why the value is invalid, or instruction on how to provide a valid value in its message.
 
 | | |
-|--------------------|---------------------------|
+|-----------|---------------|
 | Data Type | [Exception][] |
 
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
 
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
 ## Remarks
 
 ### Known Limitations
 
-Currently, only the [PropertyId][] has been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
+Currently, only the [PropertyId][] has been included in the exception. In future, we will look to include the name and Id of the [block][], the name and value of the [property][], as well as allowing the exception to contain a link to take you directly to the offending value.
 
 ## See Also
 
@@ -92,9 +96,9 @@ Currently, only the [PropertyId][] has been included in the exception. In future
 
 ### Related Concepts
 
-* [Working with Exceptions][]
-* [Blocks][TODO]
-* [Block Properties][TODO]
+* [Blocks][]
+* [Block Properties][]
+* [Exceptions][]
 
 ### Related Blocks
 
@@ -132,7 +136,7 @@ Currently, only the [PropertyId][] has been included in the exception. In future
   * [Set Item At Index][]
   * [Set Item With Value][List Set Item With Value]
   * [Set Items With Value][List Set Items With Value]
-* Looping
+* Loops
   * [For Loop][]
 * Text
   * [Convert To Camel Case][]
@@ -191,8 +195,12 @@ None
 [Convert To Title Case]: {{< url "Cortex.Reference.Blocks.Text.ConvertTo.ConvertToTitleCase.MainDoc" >}}
 [Convert To Upper Case]: {{< url "Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase.MainDoc" >}}
 
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Exception]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exception" >}}
-[Guid]: {{< url "Cortex.Reference.DataTypes.MostCommon.Guid" >}}
+[Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
+[Guid]: {{< url "Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}

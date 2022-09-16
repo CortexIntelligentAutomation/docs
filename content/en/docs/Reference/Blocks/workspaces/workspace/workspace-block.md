@@ -6,7 +6,7 @@ description: "Represents a new workspace."
 
 {{< figure src="/blocks/workspaces-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Workspaces.Workspace.WorkspaceBlock)</p>
 
@@ -14,7 +14,7 @@ description: "Represents a new workspace."
 
 This block represents a new workspace; when a flow execution reaches this block it will move to the [Start Workspace][] block within this block's workspace; each workspace has its own [scope][WorkspaceScope].
 
-The [Workspace][] block can be used to orginise block logic into smaller steps with distinct functions. When a new [Workspace][] block is placed on a flow, it will contain a [Start Workspace][] and [End Workspace][] block within its workspace.
+The [Workspace][] block can be used to organise block logic into smaller steps with distinct functions. When a new [Workspace][] block is placed on a flow, it will contain a [Start Workspace][] and [End Workspace][] block within its workspace.
 
 If a [Workspace][] block is copied and pasted its workspace is also copied, along with all blocks and variables within its [scope][WorkspaceScope].
 
@@ -28,7 +28,7 @@ No examples for the block.
 
 ## Properties
 
-No properties for the block, other than the `Description` property that is common to all blocks.
+No properties for the block, other than the `Description` property that is common to all blocks, and the `Block Timeout` property that is common to most blocks.
 
 ## Exceptions
 
@@ -40,7 +40,7 @@ No exceptions are thrown by the block.
 
 A workspace can contain any number of blocks. The only restrictions within a workspace are that there can only be one [Start Workspace][] block and one [Handle Workspace Exception][] block within a workspace.
 
-Starting a flow that contains more than one of the restricted blocks within a workspace will cause a [Translation Error][Translation Errors] to occur.
+Starting a flow that contains more than one of the restricted blocks within a workspace will cause a [Validation Error][Validation Errors] to occur.
 
 ### Unhandled Exceptions
 
@@ -63,18 +63,17 @@ For more information about chaining of exception handling blocks and passing of 
 
 Each workspace has its own scope; as a result, variables can be defined that only exist and are accessible in this workspace and any of its sub-workspaces. On exiting a workspace any variables defined for the workspace's scope are deleted.
 
-For information about variables and scope, please see [Working with Variables][].
+For information about variables and scope, please see [Variables][].
 
 [WorkspaceScope]: {{< ref "#workspace-scope" >}}
 
-[Start Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.StartWorkspaceBlock.MainDoc" >}}
-[End Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.EndWorkspaceBlock.MainDoc" >}}
-[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock.MainDoc" >}}
+[Start Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
+[End Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+[Workspace]: {{< url "Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
 [Handle Block Exception blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.MainDoc" >}}
 [Handle Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Handle Workspace Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException.MainDoc" >}}
 
-[Exception Handling]: {{< url "Cortex.Reference.Concepts.ExceptionHandling.MainDoc" >}}
-[Translation Errors]: {{< url "Cortex.Reference.Concepts.TranslationErrors.MainDoc" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
+[Exception Handling]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
+[Validation Errors]: {{< url "Cortex.Reference.Messages.Validation.Errors.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}

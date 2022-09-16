@@ -6,7 +6,7 @@ description: "Checks if text contains all of the texts in a given set of texts."
 
 {{< figure src="/blocks/text-contains-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.ContainsText.ContainsAllTextBlock)</p>
 
@@ -173,7 +173,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 
 The [Comparison Type][ComparisonType Property] specifying the rules used to determine whether each text in [Texts To Find][TextsToFind Property] is contained in [Text][Text Property]
 
-For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
 
 | | |
 |--------------------|---------------------------|
@@ -213,7 +213,7 @@ The exceptions thrown by the block can be found below:
 
 ### Comparison Types
 
-For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Text Equality][].
+For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
 
 ### Null or empty Text
 
@@ -233,14 +233,14 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [ContainsAllText Property]: {{< ref "#contains-all-text" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Text Equality]: {{< url "Cortex.Reference.Concepts.TextEquality.MainDoc" >}}
-[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.MainDoc" >}}
-[Ordinal]: {{< url "Cortex.Reference.Concepts.TextEquality.ComparisonTypes.Ordinal" >}}
-[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.PatternMatchingSyntax.MainDoc" >}}
-[Regex Syntax]: {{< url "Cortex.Reference.Concepts.RegexSyntax.MainDoc" >}}
+[Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc" >}}
+[ComparisonTypes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.MainDoc" >}}
+[Ordinal]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.Ordinal" >}}
+[Pattern Matching Syntax]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax.MainDoc" >}}
+[Regex Syntax]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax.MainDoc" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [RegexParsingFailedException]: {{< url "Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
@@ -251,5 +251,5 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[StringComparison]: {{< url "Cortex.Reference.DataTypes.MostCommon.StringComparison" >}}
-[SearchOptions]: {{< url "Cortex.Reference.DataTypes.MostCommon.SearchOptions" >}}
+[StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
+[SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}

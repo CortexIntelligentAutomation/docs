@@ -6,7 +6,7 @@ description: "Adds text at the beginning of another text."
 
 {{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAtBeginningBlock)</p>
 
@@ -131,7 +131,7 @@ To overcome this, this block creates a new [String][] which has the [Text To Add
 [NullOrEmptyText Example]: {{< ref "#add-text-to-add-at-the-beginning-of-a-null-or-empty-text" >}}
 [NullOrEmptyTextToAdd Example]: {{< ref "#add-null-or-empty-text-to-add-at-the-beginning-of-another-text" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

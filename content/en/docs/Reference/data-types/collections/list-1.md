@@ -4,7 +4,7 @@ linkTitle: "List<TItem>"
 description: "Used to represent a list of items that can iterated or looped over. `TItem` indicates the data type of the items contained in the list. Each `TItem` can be individually accessed by an index."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.List&lt;TItem&gt;)</p>
 
@@ -58,7 +58,7 @@ The following table shows some of the ways that a `List<TItem>` can be converted
 
 * The Expression Editor is available for [Input][] properties where the data type is `List<TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `List<TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `List<TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `List<TItem>`.
 
 ### Known Limitations
 
@@ -80,9 +80,9 @@ None
 
 * [System.Collections.Generic.List&lt;TItem&gt;][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
@@ -92,4 +92,4 @@ None
 [IEnumerable&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [IList&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

@@ -6,7 +6,7 @@ description: "Gets a component (e.g. Year, Month, Day) of a specified Date Time.
 
 {{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.GetDateTime.GetDateTimeComponentBlock)</p>
 
@@ -401,14 +401,14 @@ If it is desirable to have any issues reported as messages when trying to debug 
 [Component Property]: {{< ref "#component" >}}
 [Examples]: {{< ref "#examples" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}

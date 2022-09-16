@@ -6,7 +6,7 @@ description: "Loops through all items in the specified collection (i.e. Lists, D
 
 {{< figure src="/blocks/loops-for-each-loop-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Loops.ForEach.ForEachLoopBlock)</p>
 
@@ -168,8 +168,8 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 [Collection Property]: {{< ref "#collection" >}}
 [CurrentIteration Property]: {{< ref "#current-iteration" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 

@@ -6,7 +6,7 @@ description: "Copies an Object."
 
 {{< figure src="/blocks/objects-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Objects.CopyObject.CopyObjectBlock`1)</p>
 
@@ -97,10 +97,10 @@ If [Object][Object Property] is not provided or is set to `null`, [Copy][Copy Pr
 [Object Property]: {{< ref "#object" >}}
 [Copy Property]: {{< ref "#copy" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TObject]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

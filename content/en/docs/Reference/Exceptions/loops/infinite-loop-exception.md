@@ -4,7 +4,7 @@ linkTitle: "InfiniteLoopException"
 description: "The exception thrown when an infinite loop can occur."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Loops.InfiniteLoopException)</p>
 
@@ -87,7 +87,7 @@ Provide a negative value for the increment as instructed by the [Message][].
 The type of the exception (i.e. `InfiniteLoopException`).
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Message
@@ -95,7 +95,7 @@ The type of the exception (i.e. `InfiniteLoopException`).
 The exception message, providing information about the exception that occurred.
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Category
@@ -105,7 +105,7 @@ The category of the exception, which is used to categorise an exception if there
 For `InfiniteLoopException` the only category is `Increment`.
 
 | | |
-|--------------------|---------------------------|
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Error Code
@@ -119,12 +119,16 @@ For `InfiniteLoopException` there are three error codes:
 * [102][IncrementIsPositive] - indicates the increment is positive, but should be negative
 
 | | |
-|--------------------|---------------------------|
-| Data Type | [Nullable][]&lt;[Int32][]&gt; |
+|-----------|---------------------------|
+| Data Type | [InfiniteLoopErrorCode][] |
 
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
 
 ## Remarks
 
@@ -137,11 +141,11 @@ None
 ### Related Data Types
 
 * [String][]
-* [Nullable][]&lt;[Int32][]&gt;
+* [InfiniteLoopErrorCode][]
 
 ### Related Concepts
 
-* [Working with Exceptions][]
+* [Exceptions][]
 * [Working with Loops][]
 
 ### Related Blocks
@@ -163,7 +167,7 @@ None
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[Nullable]: {{< url "Cortex.Reference.DataTypes.MostCommon.Nullable" >}}
+[InfiniteLoopErrorCode]: {{< url "Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
-[Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWithLoops.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWith.Loops.MainDoc" >}}

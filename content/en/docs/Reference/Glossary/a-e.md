@@ -5,7 +5,7 @@ description: "Terms, words and phrases beginning with the letters A through E."
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Terms, words and phrases beginning with the letters A through E.
 
@@ -51,13 +51,19 @@ Blocks (or [functional blocks]) expose the logic and actions that the [Cortex] [
 
 For more detailed information about blocks, see [Guides->Cortex Studio->Blocks][TODO].
 
-For a complete list of available blocks deployed with the platform, see [Reference->Blocks].
+For a complete list of available blocks deployed with the platform, see [Blocks][].
 
 ### Block Property
 
 [Blocks][Block] have block properties (or [properties]) that allow the [flow developers] to configure how the block should behave; e.g. a block to send emails would have properties for specifying things like the sender, recipients, summary, body, attachments etc.
 
 For more detailed information about configuring blocks using block properties, see [Guides->Cortex Studio->Blocks->Configuring Blocks][TODO].
+
+### Boolean
+
+A [data type][] that represents a logical value of `true` or `false`.
+
+For more detailed information about the Boolean data type, see [Boolean][].
 
 ### Byte
 
@@ -100,6 +106,12 @@ The process of explicitly converting one [data type] to another.
 See [Casting and type conversions (C# Programming Guide)] for a detailed technical explanation of casting in [C#], the [programming language] natively supported by the [Cortex] [platform] for writing simple [expressions][expression] and more complex [code].
 
 Also see [Explicit Cast] for more information.
+
+### Char
+
+A [data type][] that represents a character or letter.
+
+For more detailed information about the Char data type, see [Char][].
 
 ### Cloud
 
@@ -167,9 +179,9 @@ TODO: In .Net details about the current culture are represented by the culturein
 
 ### Data Type
 
-A data type (or [type]) defines the type of data or values that a [block property] can accept.
+A data type (or [type][]) defines the type of data or values that a [block property][] can accept.
 
-For more detailed information about data types, see [Reference->Data Types].
+For more detailed information about data types, see [Data Types][].
 
 ### Debug
 
@@ -201,19 +213,25 @@ TODO Probably remove
 
 ### Dictionary
 
-A [data type] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and its associated item. Dictionaries are optimised for fast lookup of items using their key.
+A [data type][] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and its associated item. Dictionaries are optimised for fast lookup of items using their key.
 
-For more detailed information about dictionaries, see [Reference->Data Types->Dictionaries][TODO].
+For more detailed information about the Dictionary data type, see [Dictionary&lt;TKey, TItem&gt;][].
 
 ### Digital Transformation
 
 TODO
 
+### Double
+
+A [data type][] that represents a fractional, or very large or small number from `-1.79769313486232e+308` through `1.79769313486232e+308`.
+
+For more detailed information about the Double data type, see [Double][].
+
 ### dynamic
 
-A [data type] that indicates that any data type can be used.
+A [data type][] that indicates that any data type can be used.
 
-For more detailed information about the dynamic data type, see [Reference->Data Types->dynamic][TODO].
+For more detailed information about the dynamic data type, see [dynamic][].
 
 ## E
 
@@ -241,13 +259,13 @@ An example is intended to show [flow developers] how something works. Examples c
 
 ### Exception
 
-An exception represents [errors] that occur during the [execution] of a [flow].
+An exception represents [errors][] that occur during the [execution][] of a [flow][].
 
-Exceptions are [data types][Data Type] that can be reasoned with during the execution of a flow, in order to handle errors during the [automation] of a [task][Tasks] or [process][Processes].
+Exceptions are [data types][Data Type] that can be reasoned with during the execution of a flow, in order to handle errors during the [automation][] of a [task][Tasks] or [process][Processes].
 
-For a complete list of available [blocks][block] that can be used to handle exceptions, see [Exception Blocks].
+For a complete list of available [blocks][block] that can be used to handle exceptions, see [Exception Blocks][].
 
-For more detailed information about exceptions, see [Reference->Exceptions].
+For more detailed information about exceptions, see [Exceptions][].
 
 ### Execution
 
@@ -274,11 +292,11 @@ Also see [Cast] for more information.
 
 ### Expression
 
-An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type] etc.) and [operators] (i.e. =, +, -, *, / etc.) that can be evaluated by the [Cortex] [platform] to a single value.
+An expression is a combination of [operands] (i.e. [variables], [literals], calls to [methods] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators] (i.e. =, +, -, *, /) that can be evaluated by the [Cortex] [platform] to a single value.
 
 Expressions use the syntax of the [C#] [programming language].
 
-For more detailed information about expressions, see [Guides->Cortex Studio->Expressions][TODO].
+For more detailed information about expressions, see [Expressions][].
 
 ### Expression Editor
 
@@ -311,14 +329,19 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [Expression]: {{< ref "#expression" >}}
 [Expression Editor]: {{< ref "#expression-editor" >}}
 
-[Reference->Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
+[Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Exception Blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.MainDoc" >}}
 [Add Text At Beginning]: {{< url "Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning.MainDoc" >}}
 
 [Examples]: {{< url "Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning.Examples" >}}
 
-[Reference->Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
-[Reference->Exceptions]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}
+[Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
+[Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+[Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
+[Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
+[dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Dictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}
 
 [Flow]: {{< url "Cortex.Reference.Glossary.F-J.Flow" >}}
 [Flow Developers]: {{< url "Cortex.Reference.Glossary.F-J.FlowDeveloper" >}}
@@ -350,6 +373,9 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 [Variables]: {{< url "Cortex.Reference.Glossary.U-Z.Variable" >}}
 [16-bit]: {{< url "Cortex.Reference.Glossary.0-9.16Bit" >}}
 [32-bit]: {{< url "Cortex.Reference.Glossary.0-9.32Bit" >}}
+[data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
+
+[Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 
 [Casting and type conversions (C# Programming Guide)]: {{< url "MSDocs.CSharp.Casting" >}}
 [Cast expression (C# Reference)]: {{< url "MSDocs.CSharp.CastExpression" >}}

@@ -6,7 +6,7 @@ description: "Gets the index of the specified occurrence of an item in a List ma
 
 {{< figure src="/blocks/lists-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexOfItemWithValueBlock`2)</p>
 
@@ -163,11 +163,11 @@ If the [Occurrence][Occurrence Property] is set to `0`, the variable specified i
 
 ### Defining lists using literal syntax
 
-For information about how to define lists using literal syntax, see [List Literals][].
+For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Defining lists using expression syntax
 
-For information about how to define lists using expression syntax, see [List Expressions][].
+For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
 
 ### Lists containing items of a single data type vs multiple data types
 
@@ -178,19 +178,18 @@ For information about the different types of lists, including those that can con
 [Occurrence Property]: {{< ref "#occurrence" >}}
 [Index Property]: {{< ref "#index" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Indexes]: {{< url "Cortex.Reference.Concepts.Indexes.MainDoc" >}}
-[Occurrences]: {{< url "Cortex.Reference.Concepts.Occurrences.MainDoc" >}}
+[Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
+[Occurrences]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences.MainDoc" >}}
 
-[List Literals]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListLiterals" >}}
-[List Expressions]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.ListExpressions" >}}
+[Create a List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [Lists]: {{< url "Cortex.Reference.DataTypes.MostCommon.Lists" >}}
 
-[TItem]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TItem]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
-[Object Equality]: {{< url "Cortex.Reference.Concepts.ObjectEquality.MainDoc" >}}
+[Object Equality]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.MainDoc" >}}
 
 [CannotModifyReadOnlyListException]: {{< url "Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}

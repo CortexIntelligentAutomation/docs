@@ -6,7 +6,7 @@ description: "Reads all lines from a file at the specified file path."
 
 {{< figure src="/blocks/files-read-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.ReadFile.ReadAllLinesBlock)</p>
 
@@ -88,11 +88,11 @@ Option to specify the [Encoding][Encoding Property] that should be used to read 
 
 Most of the time [Encoding][Encoding Property] can be left as `null`; allowing the block to automatically attempt to detect the encoding of the file based on the presence of byte order marks. However, if it is found that the returned [Lines][Lines Property] are not in the correct format because the block was unable to detect the encoding of the file, it is possible to specify the [Encoding][Encoding Property] explicitly using this property.
 
-For information about encoding, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
 | Default Editor | [Expression][TODO] |
@@ -147,16 +147,16 @@ Escaping can be done in two ways:
 
 ### Encoding of text
 
-For information about encoding of text, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding of text, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 [FilePath Property]: {{< ref "#file-path" >}}
 [Encoding Property]: {{< ref "#encoding" >}}
 [Lines Property]: {{< ref "#lines" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
+[Working with Text - Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Encoding.MainDoc" >}}
 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
 [Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
@@ -165,8 +165,8 @@ For information about encoding of text, examples of available encodings and usin
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
+[File & Folder Paths]: {{< url "Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc" >}}
 
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Encoding]: {{< url "Cortex.Reference.DataTypes.MostCommon.Encoding" >}}
+[Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
