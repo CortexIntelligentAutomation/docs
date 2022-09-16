@@ -61,7 +61,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)StartDateTime` with no value |
 
 ### End Date Time
@@ -77,7 +77,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)EndDateTime` with no value |
 
 ### Time Period
@@ -105,7 +105,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [TimePeriod][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)TimePeriod` with no value |
 
 ## Exceptions
@@ -140,3 +140,5 @@ In this block, the Year and Month components are not used as they aren't constan
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}

@@ -343,7 +343,7 @@ The [Date Time][DateTime Property] to get the specified [Component Type][Compone
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)DateTime` with no value |
 
 ### Component Type
@@ -357,7 +357,7 @@ For more information about values that can be specified for [Component Type][Com
 | Data Type | [DateTimeComponentType][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `LocalDateTime` |
 
 ### Component
@@ -369,7 +369,7 @@ The [Component][Component Property] from the [Date Time][DateTime Property].
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Component` with no value |
 
 ## Exceptions
@@ -419,3 +419,6 @@ If it is desirable to have any issues reported as messages when trying to debug 
 [TimeSpan]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimeSpan.MainDoc" >}}
 [DayOfWeek]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DayOfWeek.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}

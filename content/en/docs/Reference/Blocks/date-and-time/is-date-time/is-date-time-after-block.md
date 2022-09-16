@@ -95,7 +95,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)DateTime` with no value |
 
 ### Date Time To Compare
@@ -109,7 +109,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)DateTimeToCompare` with no value |
 
 ### Date Time Is After
@@ -123,7 +123,7 @@ If [Date Time][DateTime Property] is after [Date Time To Compare][DateTimeToComp
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)DateTimeIsAfter` with no value |
 
 ## Exceptions
@@ -150,3 +150,5 @@ For more information, please see [Working with Date and Time][].
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
