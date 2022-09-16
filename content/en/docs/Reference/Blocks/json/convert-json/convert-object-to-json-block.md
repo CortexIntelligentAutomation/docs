@@ -99,7 +99,7 @@ The [Object][Object Property] to convert to [Json][Json Property].
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Object` with no value |
 ### Settings
 
@@ -117,7 +117,7 @@ For information about the default [Settings][Settings Property] used if none are
 | Data Type | [JsonSerializerSettings][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `new JsonSerializerSettings {Formatting = Formatting.Indented}` |
 
 ### Json
@@ -129,7 +129,7 @@ The [Json][Json Property] that has been converted from [Object][Object Property]
 | Data Type | [String][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Json` with no value |
 
 ## Exceptions
@@ -183,3 +183,7 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [HttpRequestHeaders]: {{< url "Cortex.Reference.DataTypes.MostCommon.HttpRequestHeaders" >}}
 [JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.Json.JsonSerializerSettings.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
