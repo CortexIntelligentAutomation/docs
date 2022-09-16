@@ -49,7 +49,7 @@ The [Text][Text Property] to remove the [Length][Length Property] of text from.
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 
@@ -64,7 +64,7 @@ For information about what an index is, please see [Indexes][].
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `0` |
 
 ### Length
@@ -76,7 +76,7 @@ The [Length][Length Property] of text to remove.
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `-1` |
 
 ## Exceptions
@@ -121,3 +121,7 @@ To overcome this, this block creates a new [String][] which has the [Length][Len
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

@@ -89,7 +89,7 @@ For information about format templates and parameters, please see [Text Formatti
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `@"{0}"` |
 
 ### Value
@@ -105,7 +105,7 @@ For information about how types are converted to their text representation pleas
 | Data Type | [TValue][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
 ### Format Provider
@@ -119,7 +119,7 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 | Data Type | [IFormatProvider][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `CultureInfo.InvariantCulture` |
 
 ### Text
@@ -131,7 +131,7 @@ The formatted [Text][Text Property] that results from replacing all `{0}` format
 | Data Type | [String][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
@@ -178,3 +178,7 @@ If [Format Provider][FormatProvider Property] is not specified or `null`, `Cultu
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 [IFormatProvider]: {{< url "Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

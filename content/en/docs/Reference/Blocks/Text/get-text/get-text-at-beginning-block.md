@@ -49,7 +49,7 @@ The [Text][Text Property] to get the [Text At Beginning][TextAtBeginning Propert
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ### Length
@@ -61,7 +61,7 @@ The [Length][Length Property] of text to get.
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `-1` |
 
 ### Text At Beginning
@@ -73,7 +73,7 @@ The [Length][Length Property] of text at the beginning of [Text][Text Property].
 | Data Type | [String][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)TextAtBeginning` with no value |
 
 ## Exceptions
@@ -106,3 +106,7 @@ If [Length][Length Property] is `0`, the variable specified in the [Text At Begi
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

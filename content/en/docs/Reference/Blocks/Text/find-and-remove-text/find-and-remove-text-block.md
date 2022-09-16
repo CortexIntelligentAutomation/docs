@@ -141,7 +141,7 @@ The [Text][Text Property] to find and remove the specified [Occurrence][Occurren
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ### Text To Remove
@@ -153,7 +153,7 @@ The [Text To Remove][TextToRemove Property] the specified [Occurrence][Occurrenc
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `$@""` |
 
 ### Occurrence
@@ -167,7 +167,7 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 | Data Type | [Int32][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `1` |
 
 ### Search Options
@@ -188,7 +188,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `ContainsText` |
 
 ### Comparison Type
@@ -202,7 +202,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `Ordinal` |
 
 ## Exceptions
@@ -274,3 +274,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

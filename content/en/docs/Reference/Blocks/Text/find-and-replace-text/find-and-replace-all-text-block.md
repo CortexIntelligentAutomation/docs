@@ -133,7 +133,7 @@ The [Text][Text Property] to find and replace all occurrences of [Text To Replac
 | Data Type | [String][] |
 | Property Type | [InputOutput][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ### Text To Replace
@@ -145,7 +145,7 @@ The [Text To Replace][TextToReplace Property] all occurrences with [Replacement 
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `$@""` |
 
 ### Replacement Text
@@ -157,7 +157,7 @@ The [Replacement Text][ReplacementText Property] used to replace all occurrences
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `$@""` |
 
 ### Search Options
@@ -178,7 +178,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `ContainsText` |
 
 ### Comparison Type
@@ -192,7 +192,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `Ordinal` |
 
 ## Exceptions
@@ -262,3 +262,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [SearchOptions]: {{< url "Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
