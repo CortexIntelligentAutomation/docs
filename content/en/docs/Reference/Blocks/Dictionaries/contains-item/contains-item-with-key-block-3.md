@@ -73,7 +73,7 @@ The [Dictionary][Dictionary Property] to check whether it contains at least one 
 | Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Dictionary` with no value |
 
 ### Key
@@ -89,7 +89,7 @@ For information about what a key is, please see [Keys][].
 | Data Type | [TKey][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
 ### Contains Item
@@ -103,7 +103,7 @@ If [Dictionary][Dictionary Property] contains at least one item with the specifi
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)ContainsItem` with no value |
 
 ## Exceptions
@@ -160,3 +160,6 @@ For information about the different types of dictionaries, including those that 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
