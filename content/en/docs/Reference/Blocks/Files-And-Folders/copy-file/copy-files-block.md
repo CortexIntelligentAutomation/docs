@@ -97,7 +97,7 @@ For information about the supported file path formats (i.e. absolute, relative, 
 | Data Type | [IEnumerable][]&lt;[String][]&gt; |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)FilePaths` with no value |
 
 ### Destination Path
@@ -119,7 +119,7 @@ For information about the supported file and folder path formats (i.e. absolute,
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | No value (defaults to `""`) |
 
 ### Overwrite
@@ -133,7 +133,7 @@ If any file exists, [Overwrite][Overwrite Property] must be set to `true`, other
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `false` |
 
 ## Exceptions
@@ -209,3 +209,7 @@ If an exception occurs when trying to copy a file in the [File Paths][FilePaths 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

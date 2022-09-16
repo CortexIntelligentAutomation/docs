@@ -77,7 +77,7 @@ For information about the supported file path formats (i.e. absolute, relative, 
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)FilePath` with no value |
 
 ### Encoding
@@ -93,7 +93,7 @@ For information about encoding, examples of available encodings and using them, 
 | Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
 ### Text
@@ -105,7 +105,7 @@ All [Text][Text Property] that was read from the file.
 | Data Type | [String][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
@@ -165,3 +165,7 @@ For information about encoding of text, examples of available encodings and usin
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

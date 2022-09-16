@@ -81,7 +81,7 @@ For information about the supported file path formats (i.e. absolute, relative, 
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)FilePath` with no value |
 
 ### File Information
@@ -97,7 +97,7 @@ For more information see the [example][] above, or the [FileInformation][] data 
 | Data Type | [FileInformation][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)FileInformation` with no value |
 
 ## Exceptions
@@ -146,3 +146,7 @@ Escaping can be done in two ways:
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [FileInformation]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileInformation.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

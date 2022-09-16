@@ -206,7 +206,7 @@ For information about the supported file path formats (i.e. absolute, relative, 
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)FilePath` with no value |
 
 ### Search Pattern
@@ -220,7 +220,7 @@ A `null` or empty (i.e. `""`) [Search Pattern][SearchPattern Property] means mat
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | No value (defaults to `""`) |
 
 ### Search Options
@@ -241,7 +241,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 | Data Type | [SearchOptions][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `ContainsText` |
 
 ### Encoding
@@ -257,7 +257,7 @@ For information about encoding, examples of available encodings and using them, 
 | Data Type | [Encoding][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | No value (defaults to `null`) |
 
 ### Comparison Type
@@ -271,7 +271,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `Ordinal` |
 
 ### Matches
@@ -300,7 +300,7 @@ For more information see the [example][] above, or the [FileMatch][] data type.
 | Data Type | [IList][]&lt;[FileMatch][]&gt; |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)Matches` with no value |
 
 ## Exceptions
@@ -398,3 +398,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [FileMatch]: {{< url "Cortex.Reference.DataTypes.FilesAndFolders.FileMatch.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
