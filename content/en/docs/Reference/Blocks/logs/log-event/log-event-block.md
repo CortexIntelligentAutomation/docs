@@ -120,7 +120,7 @@ The [Event Details][EventDetails Property] to log.
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)EventDetails` with no value |
 
 ### Event Type
@@ -134,7 +134,7 @@ The [Event Details][EventDetails Property] to log.
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | No value (defaults to `null`) |
 
 ### Event Severity
@@ -159,7 +159,7 @@ Logs with an [Event Severity][EventSeverity Property] of `EventSeverity.Informat
 | Data Type | [Nullable][]&lt;[EventSeverity][]&gt; |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `Information` |
 
 ### Started At
@@ -177,7 +177,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [Nullable][]&lt;[DateTimeOffset][]&gt; |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `DateTimeOffset.UtcNow` |
 
 ### Ended At
@@ -195,7 +195,7 @@ For more information about Date and Time, please see [Working with Date and Time
 | Data Type | [Nullable][]&lt;[DateTimeOffset][]&gt; |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `DateTimeOffset.UtcNow` |
 
 ## Exceptions
@@ -385,3 +385,7 @@ If [Ended At][EndedAt Property] is left blank or set to `null`, a value of `null
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
 [EventSeverity]: {{< url "Cortex.Reference.DataTypes.Logs.EventSeverity.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
