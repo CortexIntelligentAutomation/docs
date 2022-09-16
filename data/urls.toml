@@ -1176,6 +1176,7 @@
                 Int32 = "/docs/reference/glossary/f-j/#int32"
                 Int64 = "/docs/reference/glossary/f-j/#int64"
                 IDE = "/docs/reference/glossary/f-j/#ide"
+                Intellisense = "/docs/reference/glossary/f-j/#intellisense"
             [Cortex.Reference.Glossary.K-O]
                 MainDoc = "/docs/reference/glossary/k-o/"
                 Literal = "/docs/reference/glossary/k-o/#literal"
@@ -1199,6 +1200,7 @@
                 Snippets = "/docs/reference/glossary/p-t/#snippets"
                 String = "/docs/reference/glossary/p-t/#string"
                 Structure = "/docs/reference/glossary/p-t/#structure"
+                SyntaxHighlighting = "/docs/reference/glossary/p-t/#syntax-highlighting"
                 Task = "/docs/reference/glossary/p-t/#task"
                 Text = "/docs/reference/glossary/p-t/#text"
                 Trigger = "/docs/reference/glossary/p-t/#trigger"

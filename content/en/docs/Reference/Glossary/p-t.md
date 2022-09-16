@@ -125,6 +125,10 @@ For more detailed information about the Structure data type, see [Structure][].
 
 TODO
 
+### Syntax Highlighting
+
+TODO
+
 ## T
 
 ### Task
