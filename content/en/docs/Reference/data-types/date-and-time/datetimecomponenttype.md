@@ -4,7 +4,7 @@ linkTitle: "DateTimeComponentType"
 description: "Used to represent a component of a `DateTimeOffset` (e.g. `Year`, `Month`, `Day`)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.DateAndTime.DateTimeComponentType)</p>
 

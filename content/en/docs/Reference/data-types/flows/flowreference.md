@@ -4,7 +4,7 @@ linkTitle: "FlowReference"
 description: "Used to reference a Flow using its Id."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Flows.FlowReference)</p>
 
@@ -33,7 +33,7 @@ The unique Id of the flow that is referenced.
 |--------------------|---------------------------|
 | Data Type | [Guid][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | No value (defaults to `00000000-0000-0000-0000-000000000000`) |
 
 ## Remarks
@@ -60,15 +60,17 @@ None
 
 ### Related Concepts
 
-- [Flows][TODO: Fundamentals -> Flows]
+- [Flows][]
 
 ### External Documentation
 
 None
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 
 [Guid]: {{< url "Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
 

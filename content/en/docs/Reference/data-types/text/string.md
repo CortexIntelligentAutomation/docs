@@ -4,7 +4,7 @@ linkTitle: "String"
 description: "Used to represent text."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.String)</p>
 
@@ -45,7 +45,7 @@ The following table shows some of the ways that a `String` can be created.
 * The Expression Editor is available for [Input][] properties where the data type is `String`.
 * The Literal Editor is available for [Input][] properties where the data type is `String`.
   * Expression syntax is not supported within the Literal Editor for the `String` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `String`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `String`.
 
 ### Known Limitations
 
@@ -65,9 +65,9 @@ None
 
 * [System.String][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Char]: {{< url "Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 
@@ -78,4 +78,4 @@ None
 [String.Insert]: {{< url "MSDocs.DotNet.Api.System.String.Insert" >}}
 [String.Join]: {{< url "MSDocs.DotNet.Api.System.String.Join" >}}
 
-[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWithText.MainDoc" >}}
+[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}

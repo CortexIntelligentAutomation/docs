@@ -4,7 +4,7 @@ linkTitle: "InvalidFolderNameException"
 description: "The exception thrown when a folder name is invalid."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.FilesAndFolders.InvalidFolderNameException)</p>
 

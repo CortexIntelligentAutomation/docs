@@ -5,7 +5,7 @@ description: "Information about the Flow Executions Request Dashboard."
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Description
 

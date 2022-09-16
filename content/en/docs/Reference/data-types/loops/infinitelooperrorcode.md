@@ -4,7 +4,7 @@ linkTitle: "InfiniteLoopErrorCode"
 description: "Used to represent an error code explaining the reason an `InfiniteLoopException` occurred."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Loops.InfiniteLoopErrorCode)</p>
 

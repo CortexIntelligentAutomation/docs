@@ -4,7 +4,7 @@ linkTitle: "DayOfWeek"
 description: "Used to represent a day of the week from Sunday (i.e. `DayOfWeek.Sunday`) through Saturday (i.e. `DayOfWeek.Saturday`)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.DayOfWeek)</p>
 
@@ -146,7 +146,7 @@ The following table shows some of the ways that a `DayOfWeek` can be converted t
 * The Expression Editor is available for [Input][] properties where the data type is `DayOfWeek`.
 * The Literal Editor is available for [Input][] properties where the data type is `DayOfWeek`.
   * Expression syntax is not supported within the Literal Editor for the `DayOfWeek` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `DayOfWeek`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `DayOfWeek`.
 
 ### Known Limitations
 
@@ -169,9 +169,9 @@ None
 * [System.DayOfWeek][]
 * [System.Enum][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToInt32]: {{< url "MSDocs.DotNet.Api.System.Convert.ToInt32" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}
@@ -190,5 +190,5 @@ None
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Working with Enums]: {{< url "Cortex.Reference.Concepts.WorkingWithEnums.MainDoc" >}}
-[Explicit Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.ExplicitCasting" >}}
+[Working with Enums]: {{< url "Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
+[Explicit Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}

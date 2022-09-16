@@ -4,7 +4,7 @@ linkTitle: "InfiniteLoopException"
 description: "The exception thrown when an infinite loop can occur."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Loops.InfiniteLoopException)</p>
 
@@ -145,7 +145,7 @@ None
 
 ### Related Concepts
 
-* [Working with Exceptions][]
+* [Exceptions][]
 * [Working with Loops][]
 
 ### Related Blocks
@@ -169,5 +169,5 @@ None
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [InfiniteLoopErrorCode]: {{< url "Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
-[Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWithLoops.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Working with Loops]: {{< url "Cortex.Reference.Concepts.WorkingWith.Loops.MainDoc" >}}

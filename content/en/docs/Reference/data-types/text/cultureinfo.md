@@ -4,7 +4,7 @@ linkTitle: "CultureInfo"
 description: "Used to represent information about a specific culture, including the names for the culture, the writing system, the calendar used, the sort order of strings, and formatting for dates and numbers."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Globalization.CultureInfo)</p>
 

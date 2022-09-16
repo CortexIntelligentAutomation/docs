@@ -4,7 +4,7 @@ linkTitle: "Guid"
 description: "Used to represent a globally unique identifier (GUID)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Guid)</p>
 

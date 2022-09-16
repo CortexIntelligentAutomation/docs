@@ -4,7 +4,7 @@ linkTitle: "IEnumerable<TItem>"
 description: "Any data type representing a collection of items that can iterated or looped over. `TItem` indicates the data type of the items contained in the collection. `List<TItem>` is the most common example."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.IEnumerable&lt;TItem&gt;)</p>
 
@@ -63,7 +63,7 @@ For some of the ways that an `IEnumerable<TItem>` can be converted to text, plea
 
 * The Expression Editor is available for [Input][] properties where the data type is `IEnumerable<TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IEnumerable<TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IEnumerable<TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IEnumerable<TItem>`.
 
 ### Known Limitations
 
@@ -91,9 +91,9 @@ None
 
 [Most Common IEnumerable&lt;TItem&gt; Data Types]: {{< ref "#most-common-ienumerablelttitemgt-data-types" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [System.Collections.Generic.IEnumerable&lt;TItem&gt;]: {{< url "MSDocs.DotNet.Api.System.Collections.Generic.IEnumerable_TItem" >}}
 
@@ -112,4 +112,4 @@ None
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringCreateNew]: {{< url "Cortex.Reference.DataTypes.Text.String.CreateNew" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

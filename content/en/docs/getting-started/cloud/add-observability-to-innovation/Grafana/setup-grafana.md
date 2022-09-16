@@ -5,7 +5,7 @@ description: "Information about setting up Grafana in the cloud."
 weight: 30
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Sign up for Grafana Cloud
 

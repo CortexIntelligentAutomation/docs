@@ -4,7 +4,7 @@ linkTitle: "Boolean"
 description: "Used to represent a logical value of `true` or `false`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Boolean)</p>
 
@@ -64,7 +64,7 @@ The following table shows some of the ways that a `Boolean` can be converted to 
 * The Expression Editor is available for [Input][] properties where the data type is `Boolean`.
 * The Literal Editor is available for [Input][] properties where the data type is `Boolean`.
   * Expression syntax is not supported within the Literal Editor for the `Boolean` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Boolean`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Boolean`.
 
 ### Known Limitations
 
@@ -84,9 +84,9 @@ None
 
 * [System.Boolean][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToBoolean]: {{< url "MSDocs.DotNet.Api.System.Convert.ToBoolean" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}

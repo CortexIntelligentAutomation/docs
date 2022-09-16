@@ -4,7 +4,7 @@ linkTitle: "IEnumerable"
 description: "Any data type representing a collection of items that can iterated or looped over. The items contained in the collection can be any data type. `List<TItem>` is the most common example."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.IEnumerable)</p>
 
@@ -62,7 +62,7 @@ For some of the ways that an `IEnumerable` can be converted to text, please see 
 
 * The Expression Editor is available for [Input][] properties where the data type is `IEnumerable`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IEnumerable`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IEnumerable`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IEnumerable`.
 
 ### Known Limitations
 
@@ -90,9 +90,9 @@ None
 
 [Most Common IEnumerable Data Types]: {{< ref "#most-common-ienumerable-data-types" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [System.Collections.IEnumerable]: {{< url "MSDocs.DotNet.Api.System.Collections.IEnumerable" >}}
 
@@ -111,4 +111,4 @@ None
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringCreateNew]: {{< url "Cortex.Reference.DataTypes.Text.String.CreateNew" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

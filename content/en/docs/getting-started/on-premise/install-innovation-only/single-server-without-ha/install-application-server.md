@@ -5,7 +5,7 @@ description: "Information about installing the Application Server."
 weight: 30
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to install the Application Server components on the server. Please ensure that the [Prerequisites][] have been read before starting this installation.
 

@@ -4,7 +4,7 @@ linkTitle: "PropertyValueOutOfRangeException"
 description: "The exception thrown when a property is provided with a value that falls outside its accepted range."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyValueOutOfRangeException)</p>
 

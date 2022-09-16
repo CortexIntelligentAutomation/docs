@@ -5,7 +5,7 @@ description: "Information about setting up Grafana to communicate with the insta
 weight: 60
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes where to get the default Cortex Innovation Dashboards from and how to import them for use in Grafana.
 

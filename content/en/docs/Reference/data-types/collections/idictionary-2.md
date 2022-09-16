@@ -4,7 +4,7 @@ linkTitle: "IDictionary<TKey, TItem>"
 description: "Any data type representing a collection of key/item pairs. `TKey` indicates the data type of the keys used to access the items contained in the collection. `TItem` indicates the data type of the items contained in the collection. Each `TItem` can be individually accessed by a key. `Dictionary<TKey, TItem>` is the most common example."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.IDictionary&lt;TKey, TItem&gt;)</p>
 
@@ -56,7 +56,7 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 
 * The Expression Editor is available for [Input][] properties where the data type is `IDictionary<TKey, TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IDictionary<TKey, TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IDictionary<TKey, TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IDictionary<TKey, TItem>`.
 
 ### Known Limitations
 
@@ -85,9 +85,9 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 
 * [System.Collections.Generic.IDictionary&lt;TKey, TItem&gt;][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [System.Collections.Generic.IDictionary&lt;TKey, TItem&gt;]: {{< url "MSDocs.DotNet.Api.System.Collections.Generic.IDictionary" >}}
 
@@ -100,4 +100,4 @@ For some of the ways that an `IDictionary<TKey, TItem>` can be converted to text
 [StructureCreateNew]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.CreateNew" >}}
 [StructureConvertToText]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.ConvertToText" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

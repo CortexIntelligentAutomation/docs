@@ -4,7 +4,7 @@ linkTitle: "StringSplitOptions"
 description: "Used to specify settings for splitting text (i.e. whether to include or remove empty entries from results)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.StringSplitOptions)</p>
 

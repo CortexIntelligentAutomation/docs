@@ -4,7 +4,7 @@ linkTitle: "Structure"
 description: "Used to represent a collection of key/item pairs, where the data type of the keys used to access the items contained in the collection is `String` and the items contained in the collection can be any data type. Each item can be individually accessed by its `String` key."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Dictionaries.Structure)</p>
 
@@ -58,7 +58,7 @@ The following table shows some of the ways that a `Structure` can be converted t
 
 * The Expression Editor is available for [Input][] properties where the data type is `Structure`.
 * The Literal Editor is not available for [Input][] properties where the data type is `Structure`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Structure`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Structure`.
 
 ### Known Limitations
 
@@ -80,9 +80,9 @@ None
 
 N/A
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
@@ -90,4 +90,4 @@ N/A
 [IEnumerable&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [IDictionary&lt;TKey, TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

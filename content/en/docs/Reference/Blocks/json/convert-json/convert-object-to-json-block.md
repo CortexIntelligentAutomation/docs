@@ -6,7 +6,7 @@ description: "Converts an Object To Json."
 
 {{< figure src="/blocks/json-convert-to-json-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Json.ConvertJson.ConvertObjectToJsonBlock)</p>
 
@@ -163,8 +163,8 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 
 [Convert a List to Json (with Type information)]: {{< ref "#convert-a-list-to-json-with-type-information" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [JsonSerializationException]: {{< url "JsonDotNet.JsonSerializationException" >}}
 

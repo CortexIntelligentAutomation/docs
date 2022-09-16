@@ -5,7 +5,7 @@ description: "Information about the prerequisites required on each server type f
 weight: 20
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 The prerequisites required for a single server (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 

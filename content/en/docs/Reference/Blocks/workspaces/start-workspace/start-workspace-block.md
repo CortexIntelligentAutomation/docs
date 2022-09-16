@@ -6,7 +6,7 @@ description: "Indicates the start of a workspace."
 
 {{< figure src="/blocks/workspaces-start-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Workspaces.StartWorkspace.StartWorkspaceBlock)</p>
 
@@ -38,8 +38,8 @@ No exceptions are thrown by the block.
 
 Each workspace has its own scope; as a result, variables can be defined that only exist and are accessible in this workspace and any of its sub-workspaces. On exiting a workspace any variables defined for the workspace's scope are deleted.
 
-For information about variables and scope, please see [Working with Variables][].
+For information about variables and scope, please see [Variables][].
 
 [WorkspaceScope]: {{< ref "#workspace-scope" >}}
 
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}

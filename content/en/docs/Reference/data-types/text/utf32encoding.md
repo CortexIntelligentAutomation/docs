@@ -4,7 +4,7 @@ linkTitle: "UTF32Encoding"
 description: "Used to represent UTF32 character encoding."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Text.UTF32Encoding)</p>
 

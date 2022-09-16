@@ -5,7 +5,7 @@ description: "Information about setting up Cortex Gateway for first-time use."
 weight: 50
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to setup Gateway. Please ensure that [Install Web Application Server][] has been completed before taking these steps.
 

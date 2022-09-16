@@ -6,7 +6,7 @@ description: "Converts a Structure To Xml."
 
 {{< figure src="/blocks/xml-convert-to-xml-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock)</p>
 
@@ -14,7 +14,7 @@ description: "Converts a Structure To Xml."
 
 Converts a [Structure][Structure Property] to [Xml][Xml Property].
 
-Each top level [Key][Keys] will be converted using the following rules:
+Each top-level [Key][Keys] will be converted using the following rules:
 
 * [Keys][] become [Nodes][Xml Nodes]
 * [Items][] become the values of the corresponding node.
@@ -83,7 +83,7 @@ to [Xml][Xml Property] results in the variable `($)Xml` being updated to the fol
 </Cortex_DataTypes_Dictionaries_Structure>"
 ```
 
-* The `"Cortex_DataTypes_Dictionaries_Structure"` root node is added as there is no single top level key.
+* The `"Cortex_DataTypes_Dictionaries_Structure"` root node is added as there is no single top-level key.
 * The `"node1"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
 * The `"node2"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
 * The `"node3"` [Key][Keys] is converted into a child node of `"Cortex_DataTypes_Dictionaries_Structure"` with its corresponding [Item][Items] as the value.
@@ -170,8 +170,6 @@ to [Xml][Xml Property] results in the variable `($)Xml` being updated to the fol
 ### Structure
 
 The [Structure][Structure Property] to convert into [Xml][Xml Property].
-
-For more information about Structures, please see [Working with Structures][].
 
 | | |
 |--------------------|---------------------------|
@@ -315,7 +313,7 @@ It should be possible to pass the [Xml][Xml Property]  created by this block to 
 
 ### <Cortex_DataTypes_Dictionaries_Structure> Node
 
-`"<Cortex_DataTypes_Dictionaries_Structure>"` is added as a root node when the [Structure][Structure Property] has more than one top level key to ensure that valid [Xml][Xml Property] is produced.
+`"<Cortex_DataTypes_Dictionaries_Structure>"` is added as a root node when the [Structure][Structure Property] has more than one top-level key to ensure that valid [Xml][Xml Property] is produced.
 
 ``` json
 {
@@ -335,15 +333,14 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 </Cortex_DataTypes_Dictionaries_Structure>"
 ```
 
-[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock.MainDoc" >}}
+[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
 [Structure Property]: {{< ref "#structure" >}}
 [Xml Property]: {{< ref "#xml" >}}
 [Round Tripping]: {{< ref "#round-tripping" >}}
-[Convert A Structure To Xml Example]: {{< ref "#convert-a-structure-to-xml" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
@@ -352,12 +349,10 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Keys]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Keys" >}}
-[Items]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Items" >}}
+[Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
+[Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
 [Complex Type]: {{< url "Cortex.Reference.Concepts.Fundamentals.ComplexTypes.MainDoc" >}}
 [Primitive Values]: {{< url "Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes.MainDoc" >}}
-[Key Value Pair]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.KeyValuePairs" >}}
-[Working with Structures]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.Structures" >}}
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}

@@ -4,7 +4,7 @@ linkTitle: "Rollover CA certificates"
 description: "Information about updating the certificates on a single or multi-server Cortex platform which uses CA certificates."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 {{% pageinfo %}}
 This process MUST be undertaken before certificates expire, otherwise your system will become unusable. If certificates have already expired, contact {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} at the earliest opportunity.

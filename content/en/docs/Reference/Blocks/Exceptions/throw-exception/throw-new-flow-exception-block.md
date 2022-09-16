@@ -6,7 +6,7 @@ description: "Throws a new FlowException with the specified message, category, e
 
 {{< figure src="/blocks/exceptions-throw-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.ThrowException.ThrowNewFlowExceptionBlock)</p>
 
@@ -155,7 +155,7 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [InnerException Property]: {{< ref "#inner-exception" >}}
 [HelpLink Property]: {{< ref "#help-link" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}

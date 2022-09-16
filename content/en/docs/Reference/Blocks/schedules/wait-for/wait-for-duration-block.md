@@ -6,7 +6,7 @@ description: "Waits for a specified time period (Years, Months, Days, Hours, Min
 
 {{< figure src="/blocks/schedules-wait-for-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Schedules.WaitFor.WaitForDurationBlock)</p>
 
@@ -73,7 +73,7 @@ No remarks for the block.
 
 [Duration Property]: {{< ref "#duration" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [ArgumentOutOfRangeException]: {{< url "MSDocs.DotNet.Api.System.ArgumentOutOfRangeException" >}}
 

@@ -4,7 +4,7 @@ linkTitle: "Configure TDE"
 description: "Information about configuring Gateway Databases to use Transparent Data Encryption."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Once the [Gateway Setup][] steps have been completed, if you wish to encrypt the databases using {{< ahref "MSDocs.SqlServer.TransparentDataEncryption" "Transparent Data Encryption" >}} (TDE) for improved security, this should now be performed.
 

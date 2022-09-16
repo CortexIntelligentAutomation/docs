@@ -6,7 +6,7 @@ description: "Connects to a specific data source and executes a Command, returni
 
 ![Icon](/blocks/data-execute-command-block-icon.png)
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Data.ExecuteDataCommand.ExecuteDataCommandBlock`1)</p>
 
@@ -445,7 +445,7 @@ The [Command][Command Property] executed on the connected data source. There are
 | Data Type | [DataCommand][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | [Command][Command Types Command] with value `{"CommandText": "", "Parameters": null}` |
 
 ### Connection Details
@@ -463,7 +463,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 | Data Type | [ConnectionDetails][]|
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | [SqlServerConnectionDetails][] with value `{"ConnectionString": "Server=localhost;Database=YourDatabase;Trusted_Connection=true;"}` |
 
 ### Close Connection
@@ -475,7 +475,7 @@ Note it is recommended to use a [Variable][] for [Connection Details][Connection
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | [Boolean][] with value `true` |
 
 ### Result
@@ -489,7 +489,7 @@ Depending on the type of [Command][Command Property], the data returned within t
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][Variable Editor] |
 | Default Value | `($)Result` with no value |
 
 ## Exceptions
@@ -683,7 +683,7 @@ For information on how to explicitly close a connection, please see [Closing Con
 
 Connections can be explicitly closed by setting [Close Connection][Close Connection Property] to `true`. This causes the connection to be closed after the [Command][Command Property] has been executed.
 
-If a [Variable][] is used to pass in the [Connection Details][Connection Details Property] and [Close Connection][Close Connection Property] is set to `false` the connection will be closed when the [Variable][] goes out of scope or the flow ends, whichever happens first. For more information about variables and scope, please see [Working with Variables][].
+If a [Variable][] is used to pass in the [Connection Details][Connection Details Property] and [Close Connection][Close Connection Property] is set to `false` the connection will be closed when the [Variable][] goes out of scope or the flow ends, whichever happens first. For more information about variables and scope, please see [Variables][].
 
 If a [Literal][] or an [Expression][] is used to create the [Connection Details][Connection Details Property] and [Close Connection][Close Connection Property] is set to `false` the connection will be closed automatically at some point after the Execute Command block finishes and before the flow ends.
 
@@ -731,8 +731,8 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Opening Connections]: {{< ref "#keeping-connections-open">}}
 [Closing Connections]: {{< ref "#closing-connections">}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
@@ -746,7 +746,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
-[TConnectionDetails]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TConnectionDetails]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
@@ -769,15 +769,16 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [NonQueryCommand]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
 [NonQueryCommand.CommandText]: {{< url "Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 
-[Expression]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Expressions" >}}
-[Variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
-[Literal]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.Literal" >}}
-[String Interpolation]: {{< url "Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText.StringInterpolation" >}}
-[Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWithDataSources.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Variable Editor]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[String Interpolation]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText.StringInterpolation" >}}
+[Working with Data Sources]: {{< url "Cortex.Reference.Concepts.WorkingWith.DataSources.MainDoc" >}}
 [Connection String Formats]: {{< url "ConnectionStrings.MainDoc" >}}
 [SqlException Error Codes]: {{< url "MSDocs.SqlServer.ErrorCodes" >}}
 [SqlException]: {{< url "MSDocs.SqlServer.SqlException" >}}
-[Working with Variables]: {{< url "Cortex.Reference.Concepts.WorkingWithVariables.MainDoc" >}}
-[Object Casting]: {{< url "Cortex.Reference.Concepts.ObjectCasting.MainDoc" >}}
+[Variables]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[Object Casting]: {{< url "Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
 [SQL Injection]: {{< url "W3.SqlInjection" >}}

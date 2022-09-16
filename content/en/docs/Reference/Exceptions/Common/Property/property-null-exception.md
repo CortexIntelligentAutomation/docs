@@ -4,7 +4,7 @@ linkTitle: "PropertyNullException"
 description: "The exception thrown when a property is provided with a `null` value, but a non-null value is required."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyNullException)</p>
 
@@ -16,7 +16,7 @@ The exception thrown when a [property][] is provided with a `null` value, but a 
 
 ### Value Is `null`
 
-A `null` value was provided for the [property][TODO] when a non-null was required.
+A `null` value was provided for the [property][] when a non-null was required.
 
 #### Message Format
 
@@ -32,7 +32,7 @@ where:
 
 #### How to fix
 
-Provide a non-null value for the [property][TODO].
+Provide a non-null value for the [property][].
 
 ## Properties
 
@@ -50,7 +50,7 @@ The exception message, providing information about the exception that occurred.
 
 For this exception:
 
-* `<property-name>` will be replaced with the name of the [property][TODO].
+* `<property-name>` will be replaced with the name of the [property][].
 
 | | |
 |-----------|------------|
@@ -68,7 +68,7 @@ The URL for the relevant section of this exception's help page.
 
 ### Known Limitations
 
-Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][TODO], the id, name and value of the [property][TODO], as well as allowing the exception to contain a link to take you directly to the offending value.
+Currently, only the `<property-name>` has been included in the exception. In future, we will look to include the name and Id of the [block][], the id, name and value of the [property][], as well as allowing the exception to contain a link to take you directly to the offending value.
 
 ## See Also
 
@@ -78,14 +78,14 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 
 ### Related Concepts
 
-* [Working with Exceptions][]
-* [Blocks][TODO]
-* [Block Properties][TODO]
+* [Blocks][]
+* [Block Properties][]
+* [Exceptions][]
 
 ### Related Blocks
 
 * Data
-  * [Execute Data Command][TODO]
+  * [Execute Data Command][]
 * Date & Time
   * [Convert Text To Date Time][]
 * Dictionaries
@@ -213,6 +213,8 @@ None
 
 [Message]: {{< ref "#message" >}}
 
+[Execute Data Command]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.MainDoc" >}}
+
 [Convert Text To Date Time]: {{< url "Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime.MainDoc" >}}
 
 [Add Item With Key]: {{< url "Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKey.MainDoc" >}}
@@ -330,9 +332,13 @@ None
 [Format Text With Values]: {{< url "Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues.MainDoc" >}}
 [Join Text]: {{< url "Cortex.Reference.Blocks.Text.JoinText.JoinText.MainDoc" >}}
 
-[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock.MainDoc" >}}
-[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock.MainDoc" >}}
+[Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
+[Convert Xml To Structure]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
+[Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[block]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[Block Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

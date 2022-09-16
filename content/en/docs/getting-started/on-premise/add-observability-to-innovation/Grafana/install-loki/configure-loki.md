@@ -5,7 +5,7 @@ description: "Information about configuring Grafana Loki on the Web Application 
 weight: 20
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to configure Grafana Loki on the Web Application Server.
 

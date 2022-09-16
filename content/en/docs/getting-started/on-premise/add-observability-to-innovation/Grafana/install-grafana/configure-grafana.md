@@ -5,7 +5,7 @@ description: "Information about configuring Grafana on the Web Application Serve
 weight: 20
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to configure Grafana on the Web Application Server.
 

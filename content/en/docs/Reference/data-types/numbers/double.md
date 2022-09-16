@@ -4,7 +4,7 @@ linkTitle: "Double"
 description: "Used to represent a fractional, or very large or small number from `-1.79769313486232e+308` through `1.79769313486232e+308`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Double)</p>
 
@@ -65,7 +65,7 @@ The following table shows some of the ways that a `Double` can be converted to t
 * The Expression Editor is available for [Input][] properties where the data type is `Double`.
 * The Literal Editor is available for [Input][] properties where the data type is `Double`.
   * Expression syntax is not supported within the Literal Editor for the `Double` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Double`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Double`.
 
 ### Known Limitations
 
@@ -88,9 +88,9 @@ None
 
 * [System.Double][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToDouble]: {{< url "MSDocs.DotNet.Api.System.Convert.ToDouble" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}
@@ -109,4 +109,4 @@ None
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
 [Single]: {{< url "Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 
-[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWithNumbers.MainDoc" >}}
+[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWith.Numbers.MainDoc" >}}

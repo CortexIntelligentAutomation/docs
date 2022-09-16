@@ -5,7 +5,7 @@ description: "Information about setting up Grafana to communicate with the Cloud
 weight: 60
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes where to get the default Cortex Innovation Dashboards from and how to import them for use in Grafana Cloud.
 

@@ -5,7 +5,7 @@ description: "Information about installing Promtail on the Application Server(s)
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to install Promtail on the Application Server(s). Please ensure that the [Prerequisites][] have been completed before starting this installation.
 

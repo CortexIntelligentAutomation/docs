@@ -4,7 +4,7 @@ linkTitle: "Single"
 description: "Used to represent a fractional, or very large or small number from `-3.402823e+38` through `3.402823e+38`."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Single)</p>
 
@@ -61,7 +61,7 @@ The following table shows some of the ways that a `Single` can be converted to t
 * The Expression Editor is available for [Input][] properties where the data type is `Single`.
 * The Literal Editor is available for [Input][] properties where the data type is `Single`.
   * Expression syntax is not supported within the Literal Editor for the `Single` data type.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `Single`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `Single`.
 
 ### Known Limitations
 
@@ -84,9 +84,9 @@ None
 
 * [System.Single][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert.ToSingle]: {{< url "MSDocs.DotNet.Api.System.Convert.ToSingle" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}
@@ -105,4 +105,4 @@ None
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 
-[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWithNumbers.MainDoc" >}}
+[Working with Numbers]: {{< url "Cortex.Reference.Concepts.WorkingWith.Numbers.MainDoc" >}}

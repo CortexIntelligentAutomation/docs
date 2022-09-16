@@ -5,7 +5,7 @@ description: "Information about trying out Grafana Observability Dashboards for 
 weight: 60
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Check Dashboards are Displaying Data
 
