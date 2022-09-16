@@ -59,7 +59,7 @@ The [Value][Value Property] to check evaluates to `true` or `false`.
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | No value |
 
 ## Exceptions
@@ -75,3 +75,5 @@ No remarks for the block.
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
