@@ -107,7 +107,7 @@ The [Message][Message Property] the [Exception's][Exception Property] `Message` 
 | Data Type | [String][] |
 | Property Type | [Input][] |
 | Is Advanced | `false` |
-| Default Editor | [Expression][TODO] |
+| Default Editor | [Expression][] |
 | Default Value | `$@""` |
 
 ### Comparison Type
@@ -121,7 +121,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Data Type | [StringComparison][] |
 | Property Type | [Input][] |
 | Is Advanced | `true` |
-| Default Editor | [Literal][TODO] |
+| Default Editor | [Literal][] |
 | Default Value | `Ordinal` |
 
 ### Exception
@@ -139,7 +139,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 | Data Type | [dynamic][] |
 | Property Type | [Output][] |
 | Is Advanced | `false` |
-| Default Editor | [Variable][TODO] |
+| Default Editor | [Variable][] |
 | Default Value | `($)_` to [discard][] |
 
 ## Exceptions
@@ -221,3 +221,7 @@ For more infomation about using the built-in `($)_` variable, please see [Discar
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringComparison]: {{< url "Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
