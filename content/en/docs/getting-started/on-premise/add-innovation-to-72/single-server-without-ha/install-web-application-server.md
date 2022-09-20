@@ -7,11 +7,10 @@ weight: 40
 
 # {{< param title >}}
 
-This guide describes how to add Innovation functionality to a 7.2 Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed on the Web Application Server.
+This guide describes how to add Innovation functionality to a 7.2 Web Application Server. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed on the server.
 
 The steps to add Innovation functionality to 7.2 are:
 1. Install Flow Debugger Service
-1. Reconfigure the Cortex.Gateway.SetParameters.xml file
 1. Update Gateway
 
 ## Extract Installation Artefacts
@@ -174,9 +173,9 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. |
     |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
     |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing Gateway and Flow Debugger Service, `$true` if using self-signed certificates. |
-    |`Test`                                        | This does not need to be changed, it will be set at a later stage. |
-    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
-    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
+    |`Test`                                          | This does not need to be changed, it will be set at a later stage. |
+    |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                      | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
@@ -238,14 +237,14 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 ## Next Steps?
 1. [Try it out][]
 
-[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.TryItOut" >}}
-[Configure Installation Script]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScript" >}}
+[Try it out]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.TryItOut" >}}
+[Configure Installation Script]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureInstallationScript" >}}
 [Get Application Pool User]: {{< ref "#get-application-pool-user" >}}
 [Install Certificate]: {{< ref "#install-certificate" >}}
 [Configure Debugger Installation Script]: {{< ref "#configure-installation-script" >}}
-[Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallGateway" >}}
-[Licensing Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.LicensingRequirements" >}}
+[Install Application Server]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
+[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallGateway" >}}
+[Licensing Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.LicensingRequirements" >}}
 [Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
 [URL Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
