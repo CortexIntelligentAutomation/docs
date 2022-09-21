@@ -23,7 +23,8 @@ An [empty][] value was provided for the [property][].
 The format of the [Message][] is as follows:
 
 ```json
-"'<property-name>' is empty; it must be provided a value.\r\nPlease click the HelpLink for more information on how to fix this."
+"'<property-name>' is empty; it must be provided a value.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:

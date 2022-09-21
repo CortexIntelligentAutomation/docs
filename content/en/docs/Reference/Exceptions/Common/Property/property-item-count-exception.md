@@ -23,7 +23,10 @@ Values provided for two [properties][] are expected to contain the same number o
 The format of the [Message][] is as follows:
 
 ```json
-"Invalid '<second-property-name>' provided.\r\nThere are <items-in-second-property> items in '<second-property-name>' and <items-in-first-property> items in '<first-property-name>'.\r\nThe number of items in '<second-property-name>' must be the same as the number of items in '<first-property-name>'.\r\nPlease click the HelpLink for more information on how to fix this."
+"Invalid '<second-property-name>' provided.
+There are <items-in-second-property> items in '<second-property-name>' and <items-in-first-property> items in '<first-property-name>'.
+The number of items in '<second-property-name>' must be the same as the number of items in '<first-property-name>'.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:

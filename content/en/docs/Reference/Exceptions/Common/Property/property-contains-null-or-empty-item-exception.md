@@ -24,7 +24,8 @@ The format of the [Message][] is as follows:
 
 ```json
 
-"'<property-name>' contains at least one null or empty value; it must only contain values that are not null or empty.\r\nPlease click the HelpLink for more information on how to fix this."
+"'<property-name>' contains at least one null or empty value; it must only contain values that are not null or empty.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:

@@ -23,7 +23,8 @@ A `null` value was provided for the [property][] when a non-null was required.
 The format of the [Message][] is as follows:
 
 ```json
-"'<property-name>' is null; it must be provided with a non-null value.\r\nPlease click the HelpLink for more information on how to fix this."
+"'<property-name>' is null; it must be provided with a non-null value.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
