@@ -9,29 +9,47 @@ weight: 20
 
 The prerequisites required for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 
+{{% alert title="Note" %}}
+All server roles (e.g. Load Balancer, Application Server, Web Application Server) referenced in the rest of this guide will refer to Innovation server roles unless otherwise stated.
+{{% / alert %}}
+
 ## Hardware Requirements
 
-Hardware requirements differ for each server role depending on whether it is being installed on new hardware or hardware which already contains v7.2 components. The requirements for existing hardware will be greater than those for new hardware. The requirements for server roles being installed on existing hardware can be found [here][Reqs for Existing Hardware], those for new hardware can be found [here][Reqs for New Hardware]. Use the correct section for each server role.
+Hardware requirements differ for each server role depending on whether it is being installed on new hardware or hardware which already contains v7.2 components. The requirements for existing hardware will be greater than those for new hardware. The requirements for using the [Recommended Architecture][] and installing server roles (apart from the Web Application Server) on new hardware can be found [here][Requirements For Recommended Architecture]. Requirements for using the [Minimum Architecture][] and installing on existing v7.2 hardware can be found [here][Requirements For Recommended Architecture]. [This table][Requirements For Alternative Architecture] is also provided to help calculate requirements for [Alternative Architectures][].
 
-### Hardware Requirements - Existing Hardware (Innovation + v7.2)
-{{% alert title="Note" %}}The recommended number of servers is 5, and allows each server role instance to be installed on its own server.{{% /alert %}}
+### Recommended Architecture
+
+Use these hardware requirements if using the Recommended Architecture and installing server roles (apart from the Web Application Server) on new hardware.
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-| Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 120+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive|
-| Web&nbsp;Application&nbsp;Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| New Innovation Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| New Innovation Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
+| Upgrade Existing v7.2 Gateway to<br>Innovation Web Application Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+
+### Minimum Architecture
+
+Use these hardware requirements if using the Minimum Architecture and installing on existing v7.2 hardware.
+
+| Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
+|------------------|-----------------------|-----------------------------------|---------------|----------------------|
+| Existing V7.2 Database Server <br>+ Innovation Load Balancer| 1[^1] | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| Existing V7.2 Database Server <br>+ Innovation Application Server | 1 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 120+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive|
+| Existing V7.2 Application Server <br>+ Innovation Application Server | 1 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 120+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive|
+| Existing V7.2 Application Server with Gateway<br>+ Innovation Application Server<br>+ Upgrade to Innovation Web Application Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
 
 [^1]: A software-based load balancer called [gobetween][] is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast][Anycast]; however, this has not been verified yet. It is possible to use an [alternative load balancer][] to the one provided.
 [^2]: Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
 
-### Hardware Requirements - New Hardware (Innovation Only)
+### Alternative Architecture
 
-| Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
-|------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-| Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
-| Web&nbsp;Application&nbsp;Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+This table displays the additional resources required when adding an Innovation Server Role to an existing server regardless of which components are installed on it. It can be used to calculate how many additional resources are needed to install Innovation by adding the numbers in the table to fully utilised resource usage on a given server.
+
+| Server&nbsp;Role | Minimum Additional CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | Minimum Additional RAM&nbsp;(GB) | Minimum Additional Disk&nbsp;(GB) |  
+|------------------|-----------------------------------|---------------|----------------------|
+| Load&nbsp;Balancer | 2 | 2 | 10&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| Application&nbsp;Server | 2 | 8 | 40&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
+| Web&nbsp;Application&nbsp;Server | 2 | 4 | 30&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
 
 ## Software Requirements
 
@@ -105,7 +123,7 @@ To get a licence file and feature identifier take the following steps:
 
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
 1. Request a licence and feature identifier by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
+1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
 
 ## Web Browser Requirements
 
@@ -289,8 +307,11 @@ Application Servers and Load Balancer server are installed in the same way regar
 
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Installing Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallGateway" >}}
+[Upgrading Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallGateway" >}}
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Architecture" >}}
+[Recommended Architecture]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.RecommendedArchitecture" >}}
+[Minimum Architecture]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.MinimumArchitecture" >}}
+[Alternative Architectures]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AlternativeArchitectures" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [gobetween]: {{< url "GoBetween.MainDoc" >}}
@@ -306,3 +327,7 @@ Application Servers and Load Balancer server are installed in the same way regar
 [IIS Url Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
 [Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
 [C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}
+[Requirements For Minimum Architecture]: {{< ref "#minimum-architecture" >}}
+[Requirements For Recommended Architecture]: {{< ref "#recommended-architecture" >}}
+[Requirements For Alternative Architecture]: {{< ref "#alternative-architecture" >}}
+[Transparent Data Encryption]: {{< url "MSDocs.SqlServer.TransparentDataEncryption" >}}

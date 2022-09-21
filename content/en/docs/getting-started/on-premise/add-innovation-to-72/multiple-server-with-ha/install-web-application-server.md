@@ -1,18 +1,17 @@
 ---
-title: "Add Innovation to the 7.2 Web Application Server"
-linkTitle: "Add Innovation to the 7.2 Web Application Server"
-description: "Information about adding Innovation functionality to the 7.2 Web Application Server."
+title: "Upgrade v7.2 Gateway to Include Innovation"
+linkTitle: "Upgrade v7.2 Gateway to Include Innovation"
+description: "Information about upgrading v7.2 Gateway with Innovation functionality."
 weight: 40
 ---
 
 # {{< param title >}}
 
-This guide describes how to add Innovation functionality to a 7.2 Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed on the Web Application Server.
+This guide describes how to upgrade Gateway on v7.2 to include Innovation. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
 
-The steps to add Innovation functionality to 7.2 are:
+The steps to add Innovation functionality to v7.2 are:
 1. Install Flow Debugger Service
-1. Reconfigure the Cortex.Gateway.SetParameters.xml file
-1. Update Gateway
+1. Upgrade Gateway
 
 ## Extract Installation Artefacts
 
@@ -23,7 +22,6 @@ The steps to add Innovation functionality to 7.2 are:
    * Cortex Innovation 2022.6 - Web App Server Install Scripts.zip
 
 1. Extract the `Cortex Innovation 2022.6 - Web App Server Install Scripts.zip` zip file to a folder with the same name.
-1. Extract the `Cortex Innovation 2022.6 - Gateway.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
@@ -89,8 +87,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |----------------------------------------------|-------------|
     |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
-    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when updating Gateway][Install Gateway]. |
-    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when updating Gateway][Install Gateway].|
+    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when upgrading Gateway][Install Gateway]. |
+    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when upgrading Gateway][Install Gateway].|
     |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
@@ -136,7 +134,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     1. In the `Application Pool Identity` dialog, select `Built-in account`, then select `NetworkService` from the drop-down, then click `OK`.
     1. Right-click on the `Debugger` application pool and click `Recycle...`.
 
-## Update Gateway
+## Upgrade Gateway
 
 ### Configure Installation Script
 
@@ -145,10 +143,10 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
-    -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway" `
+    -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway.zip" `
     -GatewayApplicationIISPath "Cortex\gateway" `
     -FeatureFlags "InnovationId" `
-    -ServiceFabricApiGatewayEndpoint "https://loadbalancerserver.domain.com/" `
+    -ServiceFabricApiGatewayEndpoint "https://server.domain.com/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
     -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
@@ -163,31 +161,32 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
-    |`GatewayPackagePath`                            | Configure this value with the location of the extracted Gateway folder on the Application Server. |
-    |`GatewayApplicationIISPath`                     | Change to the correct `Site Name/Application` if either was modified from the defaults when creating the [website][Create Web Site] or [application][Create Application]. If an instance of Cortex Gateway is already at this location, the installation script will maintain the current Cortex Gateway settings which are stored in web.config. |
-    |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][]. |
-    |`ServiceFabricApiGatewayEndpoint`               | Replace `load-balancer.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://load-balancer.domain.com/` or `https://load-balancer.domain.com:8722/`. |
-    |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when installing the Application Servers, `$true` if you used self-signed certificates. |
-    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. |
-    |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
-    |`DotNetFlowDebuggerEndpoint`                    | Replace `app-server.domain.com` with the fully qualified domain name of the Web Application Server. |
-    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. |
-    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].|
-    |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing Gateway and Flow Debugger Service, `$true` if using self-signed certificates. |
-    |`Test`                                        | This does not need to be changed, it will be set at a later stage. |
-    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
-    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
+    |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation 2022.6 - Gateway.zip` file on the installation server. |
+    |`GatewayApplicationIISPath`                     | Change to the correct `Site Name/Application` if either was modified from the defaults (`Cortex/gateway`) when creating the website or application. |
+    |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][].<br /><br />This will overwrite the `FeatureFlags` value in the Gateway web.config.|
+    |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://server.domain.com/` or `https://server.domain.com:8722/`.<br /><br />This will overwrite the `ServiceFabricApiGatewayEndpoint` value in the Gateway web.config.|
+    |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Servers][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will overwrite the `ServiceFabricUsingSelfSignedCertificates` value in the Gateway web.config.|
+    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the Gateway web.config.|
+    |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthPassword` value in the Gateway web.config.|
+    |`DotNetFlowDebuggerEndpoint`                    | Replace `server.domain.com` with the fully qualified domain name of the Web Application Server.<br /><br />This will overwrite the `DotNetFlowDebuggerEndpoint` value in the Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthUsername` value in the Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthPassword` value in the Gateway web.config.|
+    |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing Gateway and Flow Debugger Service, `$true` if using self-signed certificates.<br /><br />This will overwrite the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the Gateway web.config.|
+    |`Test`                                          | This does not need to be changed, it will be set at a later stage. |
+    |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                      | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
 ### Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Gateway` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.6 - Gateway"
+    cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
+
 1. Type the following command into PowerShell:
 
     ```powershell
@@ -252,3 +251,4 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 [NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
 [Microsoft Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
 [C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}
+[Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}

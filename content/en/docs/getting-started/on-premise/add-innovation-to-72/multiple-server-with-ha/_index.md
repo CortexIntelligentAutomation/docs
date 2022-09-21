@@ -10,5 +10,3 @@ Multiple server installations with HA are recommended for the following scenario
 
 * Production installations that are required to scale and support HA
 {{% /pageinfo %}}
-
-<img src="/images/work-in-progress.jpg">

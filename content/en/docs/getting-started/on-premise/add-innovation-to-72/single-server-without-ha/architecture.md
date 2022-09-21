@@ -27,9 +27,9 @@ weight: 10
 
 ## Single Server Architecture
 
-Cortex Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed, however. Cortex Innovation can be added to a Cortex v7.2 installation by using the existing hardware containing V7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
+Cortex Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a Cortex v7.2 installation by using the existing hardware. The only components shared by both Innovation and v7.2 are Gateway and its databases.
 
-The very minimum Innovation + V7.2 architecture for a single server system without high availability is as follows:
+The minimum architecture for adding Innovation to a v7.2 Single Site, Single Server system is as follows:
 
 {{< figure src="/images/Cortex Innovation v7.2 Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
 

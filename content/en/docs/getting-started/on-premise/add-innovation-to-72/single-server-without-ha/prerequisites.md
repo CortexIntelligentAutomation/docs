@@ -65,7 +65,7 @@ To get a licence file and feature identifier take the following steps:
 
 1. Copy the output (machine identifier and fingerprint) to the `Web Application/Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string.
 1. Request a licence and feature identifier by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
+1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
 
 ## Web Browser Requirements
 
@@ -206,7 +206,7 @@ Supported versions of Active Directory are listed below:
 
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Architecture" >}}
 [Install Application Server]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
-[Installing Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallGateway" >}}
+[Upgrading Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallGateway" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
