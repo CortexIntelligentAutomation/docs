@@ -6,7 +6,7 @@ description: "Checks if a Date Time is equal to another Date Time."
 
 {{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeEqualBlock)</p>
 
@@ -94,7 +94,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)DateTime` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)DateTime` with no value |
 
 ### Date Time To Compare
 
@@ -106,7 +108,9 @@ For more information about Date and Time, please see [Working with Date and Time
 |--------------------|---------------------------|
 | Data Type | [DateTimeOffset][] |
 | Property Type | [Input][] |
-| Default Value | `($)DateTimeToCompare` with [DateTimeOffset][] value that has a text representation of `0001-01-01T00:00:00+00:00`|
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)DateTimeToCompare` with no value |
 
 ### Date Time Is Equal
 
@@ -118,6 +122,8 @@ If [Date Time][DateTime Property] is equal to [Date Time To Compare][DateTimeToC
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)DateTimeIsEqual` with no value |
 
 ## Exceptions
@@ -136,11 +142,15 @@ For more information, please see [Working with Date and Time][].
 [DateTimeToCompare Property]: {{< ref "#date-time-to-compare" >}}
 [DateTimeIsEqual Property]: {{< ref "#date-time-is-equal" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
+[ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

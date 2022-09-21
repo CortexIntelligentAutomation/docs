@@ -4,7 +4,7 @@ linkTitle: "EncryptedText"
 description: "Used to represent text that must be encrypted."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Text.EncryptedText)</p>
 

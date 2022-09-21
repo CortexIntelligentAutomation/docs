@@ -6,7 +6,7 @@ description: "Joins a set of values together as text, using the given separator 
 
 {{< figure src="/blocks/text-join-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Text.JoinText.JoinTextBlock`1)</p>
 
@@ -78,7 +78,9 @@ Each non-text value will be converted to its text representation, by calling its
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][]&lt;[TValue][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)Values` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Values` with no value |
 
 ### Separator
 
@@ -92,7 +94,9 @@ The [Separator][Separator Property] is only included in the resultant [Text][Tex
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Separator` with value `""` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `,` |
 
 ### Text
 
@@ -102,6 +106,8 @@ The resultant [Text][Text Property] containing the specified [Values][Values Pro
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
 
 ## Exceptions
@@ -127,10 +133,10 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [Separator Property]: {{< ref "#separator" >}}
 [Text Property]: {{< ref "#text" >}}
 
-[TValue]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TValue]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [OutOfMemoryException]: {{< url "MSDocs.DotNet.Api.System.OutOfMemoryException" >}}
@@ -140,3 +146,9 @@ If any value in [Values][Values Property] is `null` or empty (i.e. `""`), an emp
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [ToString]: {{< url "MSDocs.DotNet.Api.System.Object.ToString" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

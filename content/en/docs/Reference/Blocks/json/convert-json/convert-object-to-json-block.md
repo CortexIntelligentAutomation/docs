@@ -6,7 +6,7 @@ description: "Converts an Object To Json."
 
 {{< figure src="/blocks/json-convert-to-json-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Json.ConvertJson.ConvertObjectToJsonBlock)</p>
 
@@ -98,8 +98,9 @@ The [Object][Object Property] to convert to [Json][Json Property].
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
-| Default Value | `($)Object` with value `null` |
-
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Object` with no value |
 ### Settings
 
 Optional [Settings][Settings Property] that can be specified to control how the conversion should deal with things such as:
@@ -115,7 +116,9 @@ For information about the default [Settings][Settings Property] used if none are
 |--------------------|---------------------------|
 | Data Type | [JsonSerializerSettings][] |
 | Property Type | [Input][] |
-| Default Value | `($)Settings` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | `new JsonSerializerSettings {Formatting = Formatting.Indented}` |
 
 ### Json
 
@@ -125,6 +128,8 @@ The [Json][Json Property] that has been converted from [Object][Object Property]
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Json` with no value |
 
 ## Exceptions
@@ -163,8 +168,8 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 
 [Convert a List to Json (with Type information)]: {{< ref "#convert-a-list-to-json-with-type-information" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [JsonSerializationException]: {{< url "JsonDotNet.JsonSerializationException" >}}
 
@@ -178,3 +183,9 @@ An example of a data type that is not able to be round-tripped is [HttpRequestHe
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [HttpRequestHeaders]: {{< url "Cortex.Reference.DataTypes.MostCommon.HttpRequestHeaders" >}}
 [JsonSerializerSettings]: {{< url "Cortex.Reference.DataTypes.Json.JsonSerializerSettings.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

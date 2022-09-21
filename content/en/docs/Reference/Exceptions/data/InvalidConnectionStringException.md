@@ -4,7 +4,7 @@ linkTitle: "InvalidConnectionStringException"
 description: "Exception thrown when an invalid connection string is used."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Data.InvalidConnectionStringException)</p>
 

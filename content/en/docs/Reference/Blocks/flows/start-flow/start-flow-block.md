@@ -6,7 +6,7 @@ description: "Indicates the start of a flow."
 
 {{< figure src="/blocks/flows-start-flow-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Flows.StartFlow.StartFlowBlock)</p>
 

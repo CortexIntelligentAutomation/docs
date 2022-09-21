@@ -5,9 +5,21 @@
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
-            MainDoc = "/docs/getting-started/on-premise"
+            MainDoc = "/docs/getting-started/on-premise/"
             [Cortex.GettingStarted.OnPremise.InstallInnovationOnly]
                 MainDoc = "/docs/getting-started/on-premise/install-innovation-only/"
+                [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced]
+                    AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes"
+                    AdvancedConfigSingleServer = "/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes#single-server-without-ha"
+                    AdvancedConfigMultipleServer = "/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes#multiple-server-with-ha"
+                    AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/advanced/alternative-architectures"
+                    ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/advanced/tde"
+                    ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/advanced/configure-firewalls"
+                    CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates"
+                    EncryptText = "/docs/getting-started/on-premise/install-innovation-only/advanced/encrypt-text"
+                    PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/advanced/port-requirements"
+                    RolloverCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates"
+                    SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture"
@@ -20,10 +32,28 @@
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
-                    ClientRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#client-requirements"
+                    WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#web-browser-requirements"
+                    AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
+                    TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/#test-publishing-production-flows"
+                [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA]
+                    MainDoc = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/"       
+                    Architecture = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture"
+                    InstallApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server"
+                    ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server#configure-installation-script"
+                    RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server#run-installation-script"
+                    InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server#install-gateway"
+                    Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites"
+                    CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#certificate-requirements"
+                    WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#web-browser-requirements"
+                    LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#licensing-requirements"
+                    SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
+                    TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
+                    TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out/#test-publishing-production-flows"
+                    AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#antivirus-exclusions"
                     [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
                         AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes"
                         AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/alternative-architectures"
@@ -39,6 +69,8 @@
                     MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/"
                     Architecture = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/architecture"
                     Prerequisites = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites"
+                    InstallOnNewHardware = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#option-1-install-on-new-hardware"
+                    InstallOnExistingHardware = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#option-2-install-on-existing-hardware"
                     SoftwareRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#software-requirements"
                     AdditionalWebApplicationServerRequirements = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites/#additional-web-application-server-requirements"
                     SetupGrafana = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/setup-grafana"
@@ -63,17 +95,113 @@
                     [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallPromtail]
                         MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/"
                         ConfigurePromtail = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+        [Cortex.GettingStarted.Cloud]
+            MainDoc = "/docs/getting-started/cloud"
+                [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation]
+                    MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/"
+                    [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana]
+                        MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Architecture]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/architecture"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Prerequisites]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/prerequisites"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-grafana"
+                            SignUpForGrafanaCloud = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-grafana/#sign-up-for-grafana-cloud"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-loki/"
+                            SetUpGrafanaLoki = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-loki/#set-up-grafana-loki"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.ImportDashboards]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/import-dashboards"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/"
+                            [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.ConfigurePromtail]
+                                MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/"
+
 
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
             MainDoc = "/docs/guides/cortex-studio/"
+            [Cortex.Guides.Studio.ExpressionEditor]
+                MainDoc = "/docs/guides/cortex-studio/expression-editor/"
+                Snippets = "/docs/guides/cortex-studio/expression-editor/#snippets"
+                Tools = "/docs/guides/cortex-studio/expression-editor/#tools"
+            [Cortex.Guides.Studio.VariableEditor]
+                MainDoc = "/docs/guides/cortex-studio/variable-editor/"
+            [Cortex.Guides.Studio.EastPanel]
+                MainDoc = "/docs/guides/cortex-studio/east-panel/"
+                PropertyEditor = "/docs/guides/cortex-studio/east-panel/#property-editor"
+                ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
+                VariablesViewer = "/docs/guides/cortex-studio/east-panel/#variables-viewer"
+                VariableDetailsViewer = "/docs/guides/cortex-studio/east-panel/#variable-details-viewer"
+                LoadValueButton = "/docs/guides/cortex-studio/east-panel/#load-value-button"
+                SettingsEditor = "/docs/guides/cortex-studio/east-panel/#settings-editor"
+                InputsProperty = "/docs/guides/cortex-studio/east-panel/#inputs-property"
+                ExceptionsViewer = "/docs/guides/cortex-studio/east-panel/#exceptions-viewer"
+            [Cortex.Guides.Studio.MainDisplayArea]
+                MainDoc = "/docs/guides/cortex-studio/main-display-area/"
+                Undo = "/docs/guides/cortex-studio/main-display-area/#undo"
+                Redo = "/docs/guides/cortex-studio/main-display-area/#redo"
+                SetNextBlockToExecute = "/docs/guides/cortex-studio/main-display-area/#set-next-block-to-execute"
+                Breakpoints = "/docs/guides/cortex-studio/main-display-area/#breakpoints"
+                BreakOnException = "/docs/guides/cortex-studio/main-display-area/#break-on-exception"
+                Executions = "/docs/guides/cortex-studio/main-display-area/#executions"
+                StartAnExecution = "/docs/guides/cortex-studio/main-display-area/#start-an-execution"
+                EditAndContinueAnExecution = "/docs/guides/cortex-studio/main-display-area/#edit-and-continue-an-execution"
+            [Cortex.Guides.Studio.Navigation]
+                MainDoc = "/docs/guides/cortex-studio/navigation/"                    
+            [Cortex.Guides.Studio.Palettes]
+                MainDoc = "/docs/guides/cortex-studio/palettes/"
+            [Cortex.Guides.Studio.SouthPanel]
+                MainDoc = "/docs/guides/cortex-studio/south-panel/"
+                ExecutionsGrid = "/docs/guides/cortex-studio/south-panel/#executions-grid"
+                PausingAnExecution = "/docs/guides/cortex-studio/south-panel/#pausing-an-execution"
+                SteppingAnExecution = "/docs/guides/cortex-studio/south-panel/#stepping-an-execution"
+                ContinuingAnExecution = "/docs/guides/cortex-studio/south-panel/#continuing-an-execution"
+                StoppingAnExecution = "/docs/guides/cortex-studio/south-panel/#stopping-an-execution"
+                MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
+                VariablesGrid = "/docs/guides/cortex-studio/south-panel/#variables-grid" 
+                CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
+                ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
+                ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
+                ChangingAVariablesScope = "/docs/guides/cortex-studio/south-panel/#changing-a-variables-scope" 
+                DeletingVariables = "/docs/guides/cortex-studio/south-panel/#deleting-variables"
+            [Cortex.Guides.Studio.Debugging]
+                MainDoc = "/docs/guides/cortex-studio/debugging/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
+            [Cortex.Guides.Gateway.Settings]
+                MainDoc = "/docs/guides/cortex-gateway/settings/"
+                [Cortex.Guides.Gateway.Settings.StudioAuthorisation]
+                    MainDoc = "/docs/guides/cortex-gateway/settings/studio-authorisation"
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
+        [Cortex.Reference.Apis]
+            MainDoc = "/docs/reference/Apis/"
+            [Cortex.Reference.Apis.Studio]
+                MainDoc = "/docs/reference/apis/cortex-studio/"
+            [Cortex.Reference.Apis.ApiGatewayService]
+                MainDoc = "/docs/reference/apis/cortex-api-gateway-service/"
+            [Cortex.Reference.Apis.FlowExecutionService]
+                MainDoc = "/docs/reference/apis/cortex-flow-execution-service/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
+            [Cortex.Reference.Blocks.Data]
+                MainDoc = "/docs/reference/blocks/data"
+                [Cortex.Reference.Blocks.Data.ExecuteDataCommand]
+                    MainDoc = "/docs/reference/blocks/data/execute-data-command"
+                    [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
+                        MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
+                        ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
+                        ParameterisedCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#parameterised-commands"
+                        ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-commands"
+                        Statements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#statement-types"
+                        NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#non-query-statements"
+                        QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
@@ -82,6 +210,8 @@
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-date-time-to-text-block"
                     [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime]
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-text-to-date-time-block"
+            [Cortex.Reference.Blocks.Decisions]
+                MainDoc = "/docs/reference/blocks/decisions/"
             [Cortex.Reference.Blocks.Dictionaries]
                 MainDoc = "/docs/reference/blocks/dictionaries/"
                 [Cortex.Reference.Blocks.Dictionaries.AddItem]
@@ -152,6 +282,12 @@
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-value-block-3"
                     [Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemsWithValues]
                         MainDoc = "/docs/reference/blocks/dictionaries/set-item/set-items-with-values-block-3"
+            [Cortex.Reference.Blocks.Email]
+                MainDoc = "/docs/reference/blocks/email/"
+                [Cortex.Reference.Blocks.Email.SendEmail]
+                    MainDoc = "/docs/reference/blocks/email/send-email"
+                    [Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer]
+                        MainDoc = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server"
             [Cortex.Reference.Blocks.Exceptions]
                 MainDoc = "/docs/reference/blocks/exceptions/"
                 [Cortex.Reference.Blocks.Exceptions.HandleBlock]
@@ -167,13 +303,19 @@
                     [Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-names-block"
                 [Cortex.Reference.Blocks.Exceptions.HandleFlow]
-                    MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception"
+                    MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException]
-                        MainDoc = "/docs/reference/blocks/exceptions/handle-block-exception/handle-flow-exception-block"
+                        MainDoc = "/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block"
+                        BlockRestrictions = "/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block/#block-restrictions"
                 [Cortex.Reference.Blocks.Exceptions.HandleWorkspace]
                     MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception"
                     [Cortex.Reference.Blocks.Exceptions.HandleWorkspace.HandleWorkspaceException]
                         MainDoc = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block"
+                        BlockRestrictions = "/docs/reference/blocks/exceptions/handle-workspace-exception/handle-workspace-exception-block/#block-restrictions"
+                [Cortex.Reference.Blocks.Exceptions.ThrowException]
+                    MainDoc = "/docs/reference/blocks/exceptions/throw-exception/"
+                    [Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException]
+                        MainDoc = "/docs/reference/blocks/exceptions/throw-exception/throw-new-flow-exception-block"
             [Cortex.Reference.Blocks.FilesAndFolders]
                 MainDoc = "/docs/reference/blocks/files-and-folders/"
                 [Cortex.Reference.Blocks.FilesAndFolders.CheckFile]
@@ -268,10 +410,36 @@
                     MainDoc = "/docs/reference/blocks/flows/end-flow"
                     [Cortex.Reference.Blocks.Flows.EndFlow.EndFlow]
                         MainDoc = "/docs/reference/blocks/flows/end-flow/end-flow-block"
+                [Cortex.Reference.Blocks.Flows.RunFlow]
+                    MainDoc = "/docs/reference/blocks/flows/run-flow"
+                    [Cortex.Reference.Blocks.Flows.RunFlow.RunFlow]
+                        MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-block"
+                        RunningAFlow = "/docs/reference/blocks/flows/run-flow/run-flow-block/#running-a-flow"
+                        FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
+                        InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
-                        MainDoc = "/docs/reference/blocks/flows//start-flow/start-flow-block"
+                        MainDoc = "/docs/reference/blocks/flows/start-flow/start-flow-block"
+            [Cortex.Reference.Blocks.GoogleWorkspace]
+                MainDoc = "/docs/reference/blocks/google-workspace/"
+                [Cortex.Reference.Blocks.GoogleWorkspace.Gmail]
+                    MainDoc = "/docs/reference/blocks/google-workspace/gmail"
+                    [Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail]
+                        MainDoc = "/docs/reference/blocks/google-workspace/gmail/send-email"
+                        [Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail]
+                            MainDoc = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail"
+            [Cortex.Reference.Blocks.Http]
+                MainDoc = "/docs/reference/blocks/http/"
+                [Cortex.Reference.Blocks.Http.ExecuteHttpRequest]
+                    MainDoc = "/docs/reference/blocks/http/execute-http-request"
+                    [Cortex.Reference.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequest]
+                        MainDoc = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1"
+                        CallingAnotherFlow = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#calling-another-flow"
+                [Cortex.Reference.Blocks.Http.ExecuteSoapRequest]
+                    MainDoc = "/docs/reference/blocks/http/execute-soap-request"
+                    [Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest]
+                        MainDoc = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -394,12 +562,32 @@
                     MainDoc = "/docs/reference/blocks/loops/for"
                     [Cortex.Reference.Blocks.Loops.For.ForLoop]
                         MainDoc = "/docs/reference/blocks/loops/for/for-loop-block"
+            [Cortex.Reference.Blocks.Microsoft365]
+                MainDoc = "/docs/reference/blocks/microsoft365/"
+                [Cortex.Reference.Blocks.Microsoft365.Outlook]
+                    MainDoc = "/docs/reference/blocks/microsoft365/outlook"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail]
+                        MainDoc = "/docs/reference/blocks/microsoft365/outlook/send-email"
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/send-email/send-email-using-microsoft365"
             [Cortex.Reference.Blocks.Objects]
                 MainDoc = "/docs/reference/blocks/objects/"
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
                     MainDoc = "/docs/reference/blocks/objects/convert-object"
                     [Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText]
                         MainDoc = "/docs/reference/blocks/objects/convert-object/convert-object-to-text-block-1"
+            [Cortex.Reference.Blocks.PowerShell]
+                MainDoc = "/docs/reference/blocks/powershell/"
+                [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript]
+                    MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/"
+                    [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript]
+                        MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
+            [Cortex.Reference.Blocks.Ssh]
+                MainDoc = "/docs/reference/blocks/ssh/"
+                [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]
+                    MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
+                    [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
+                        MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.Add]
@@ -433,159 +621,265 @@
                     MainDoc = "/docs/reference/blocks/text/join-text/"
                     [Cortex.Reference.Blocks.Text.JoinText.JoinText]
                         MainDoc = "/docs/reference/blocks/text/join-text/join-text-block-1/"
+            [Cortex.Reference.Blocks.Schedules]
+                MainDoc = "/docs/reference/blocks/schedules/"
+                [Cortex.Reference.Blocks.Schedules.WaitFor]
+                    MainDoc = "/docs/reference/blocks/schedules/wait-for/"
+                    [Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration]
+                       MainDoc = "/docs/reference/blocks/schedules/wait-for/wait-for-duration-block/"
             [Cortex.Reference.Blocks.Variables]
                 MainDoc = "/docs/reference/blocks/variables/"
                 [Cortex.Reference.Blocks.Variables.SetVariable]
                     MainDoc = "/docs/reference/blocks/variables/set-variable/"
-                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariableBlock1]
+                    [Cortex.Reference.Blocks.Variables.SetVariable.SetVariable]
                        MainDoc = "/docs/reference/blocks/variables/set-variable/set-variable-block-1/"
             [Cortex.Reference.Blocks.Workspaces]
                 MainDoc = "/docs/reference/blocks/workspaces/"
                 [Cortex.Reference.Blocks.Workspaces.StartWorkspace]
                     MainDoc = "/docs/reference/blocks/workspaces/start-workspace"
-                    [Cortex.Reference.Blocks.Workspaces.Workspace.StartWorkspaceBlock]
+                    [Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace]
                         MainDoc = "/docs/reference/blocks/workspaces/start-workspace/start-workspace-block"
                 [Cortex.Reference.Blocks.Workspaces.EndWorkspace]
                     MainDoc = "/docs/reference/blocks/workspaces/end-workspace"
-                    [Cortex.Reference.Blocks.Workspaces.Workspace.EndWorkspaceBlock]
+                    [Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace]
                         MainDoc = "/docs/reference/blocks/workspaces/end-workspace/end-workspace-block"
                 [Cortex.Reference.Blocks.Workspaces.Workspace]
                     MainDoc = "/docs/reference/blocks/workspaces/workspace"
-                    [Cortex.Reference.Blocks.Workspaces.Workspace.WorkspaceBlock]
+                    [Cortex.Reference.Blocks.Workspaces.Workspace.Workspace]
                         MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
                 [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
                     MainDoc = "/docs/reference/blocks/xml/convert-xml/"
-                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock]
+                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
-                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock]
+                    [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
+        [Cortex.Reference.Dashboards]
+            [Cortex.Reference.Observability.Grafana.Dashboards.FlowExecutionRequests]
+                MainDoc = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/"
+                TotalRequestsErrored = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/#total-requests-errored"
+            [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup]
+                [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup.ConfigureThresholds]
+                    MainDoc = "/docs/reference/observability/grafana/advanced-setup/configuring-thresholds/"
         [Cortex.Reference.Concepts]
+            MainDoc = "/docs/reference/concepts/"
             [Cortex.Reference.Concepts.Fundamentals]
                 MainDoc = "/docs/reference/concepts/fundamentals/"
-                [Cortex.Reference.Concepts.Fundamentals.ConvertingObjectsToText]
-                    MainDoc = "/docs/reference/concepts/fundamentals/converting-objects-to-text"
-                    StringInterpolation = "/docs/reference/concepts/fundamentals/converting-objects-to-text/#string-interpolation"
-                [Cortex.Reference.Concepts.Fundamentals.Culture]
-                    MainDoc = "/docs/reference/concepts/fundamentals/culture/"
-                    InvariantCulture = "/docs/reference/concepts/fundamentals/culture/#invariant-culture"
+                [Cortex.Reference.Concepts.Fundamentals.Blocks]
+                    MainDoc = "/docs/reference/concepts/fundamentals/blocks"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/handling-exceptions-within-a-block/"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/"
+                            AnatomyOfABlockProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#anatomy-of-a-block-property"
+                            Input = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties"
+                            Output = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties"
+                            DiscardingOutputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#discarding-outputs"
+                            InputOutput = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/"
+                        [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
+                            MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
+                            [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
+                                MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/"
+                                Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
+                                InterpolatedStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#interpolated-strings"
+                                MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
+                                PropertyExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#property-expressions"
+                                IndexExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#index-expressions"
+                                LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
+                                DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
+                                ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
+                                ObjectLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#object-literal"
+                                StringLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-literal"
+                                Variables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#variables"
+                            [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
+                                MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
+                            [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
+                                MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
+                                CreatingVariables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables"
+                    [Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock]
+                        MainDoc = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/"
+                        BlockConnections = "/docs/reference/concepts/fundamentals/blocks/what-is-a-block/#block-connections"
+                [Cortex.Reference.Concepts.Fundamentals.DataTypes]
+                    MainDoc = "/docs/reference/concepts/fundamentals/data-types/"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType]
+                        MainDoc = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/"
+                        BasicDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#basic-data-types"
+                        ComplexDataTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#complex-data-types"
+                        ValueTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#value-types"
+                        ReferenceTypes = "/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#reference-types"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics]
+                        MainDoc = "/docs/reference/concepts/fundamentals/data-types/generics/"
+                    [Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes]
+                        MainDoc = "/docs/reference/concepts/fundamentals/data-types/null-and-nullable-types/"
+                [Cortex.Reference.Concepts.Fundamentals.Exceptions]
+                    MainDoc = "/docs/reference/concepts/fundamentals/exceptions/"
+                    [Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions]
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions"
+                        BlockLevel = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-block-level"
+                        WorkspaceLevel = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-workspace-level"
+                        FlowLevel = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-flow-level"
+                        ChainingExceptions = "/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#chaining-block-exception-handling-blocks"
+                    [Cortex.Reference.Concepts.Fundamentals.Exceptions.ThrowingExceptions]
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/throwing-exceptions"
+                    [Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException]
+                        MainDoc = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception"
+                        Debugging = "/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception/#debugging"
+                [Cortex.Reference.Concepts.Fundamentals.Executions]
+                    MainDoc = "/docs/reference/concepts/fundamentals/executions/"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-development"
+                        ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow"
+                    [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInProduction]
+                        MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-production"
+                        ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-production/#validating-a-flow"
+                [Cortex.Reference.Concepts.Fundamentals.Flows]
+                    MainDoc = "/docs/reference/concepts/fundamentals/flows"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/calling-other-flows"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/handling-exceptions-within-a-flow"
+                    [Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow]
+                        MainDoc = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow"
+                [Cortex.Reference.Concepts.Fundamentals.Messages]
+                    MainDoc = "/docs/reference/concepts/fundamentals/messages/"
+                    [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
+                        MainDoc = "/docs/reference/concepts/fundamentals/messages/what-is-a-message/"
+                [Cortex.Reference.Concepts.Fundamentals.Variables]
+                    MainDoc = "/docs/reference/concepts/fundamentals/variables/"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/using-variables/"
+                        ExpressionEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#expression-editor"
+                        VariableEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#variable-editor"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
+                    [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
+                        MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"
+                        FlowInputVariable = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable"
+                        OutputVariablesStructure = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#output-variables-structure"
+                [Cortex.Reference.Concepts.Fundamentals.Workspaces]
+                    MainDoc = "/docs/reference/concepts/fundamentals/workspaces"
+                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace]
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace"
+                        TopLevelWorkspace = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#top-level-workspace"
+                        NestedWorkspaces = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#nested-workspaces"
+                    [Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace]
+                        MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"
                 [Cortex.Reference.Concepts.Fundamentals.ComplexTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
                 [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
                     MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
-            [Cortex.Reference.Concepts.WorkingWithCollections]
-                MainDoc = "/docs/reference/concepts/collections/"
-                ArraysVersusLists = "/docs/reference/concepts/collections/#arrays-vs-lists"
-                Structures = "/docs/reference/concepts/collections/#structures"
-                Keys = "/docs/reference/concepts/collections/#keys"
-                Items = "/docs/reference/concepts/collections/#items"
-            [Cortex.Reference.Concepts.WorkingWithCulture]
-                MainDoc = "/docs/reference/concepts/culture/"
-                [Cortex.Reference.Concepts.WorkingWithCulture.CurrentCulture]
-                    MainDoc = "/docs/reference/concepts/culture/current-culture"
-            [Cortex.Reference.Concepts.WorkingWithDateAndTime]
-                MainDoc = "/docs/reference/concepts/date-and-time/"
-                [Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting]
-                    MainDoc = "/docs/reference/concepts/date-and-time/date-and-time-formatting/"
-                    FormatProviders = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-providers"
-                    InvariantCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#invariant-culture"
-                    CurrentCulture = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#current-culture"
-                    FormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-templates"
-                    StandardFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#standard-format-templates"
-                    ISO8601Standard = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#iso-8601-standard"
-                    CustomFormatTemplates = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#custom-format-templates"
-                    FormatSpecifiers = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#format-specifiers"
-                    OperatingSystemSettings = "/docs/reference/concepts/date-and-time/date-and-time-formatting/#operating-system-settings"
-            [Cortex.Reference.Concepts.WorkingWithEnums]
-                MainDoc = "/docs/reference/concepts/enums/"
-            [Cortex.Reference.Concepts.WorkingWithExceptions]
-                MainDoc = "/docs/reference/concepts/exceptions/"
-            [Cortex.Reference.Concepts.WorkingWithFilesAndFolders]
-                MainDoc = "/docs/reference/concepts/files-and-folders/"
-            [Cortex.Reference.Concepts.WorkingWithLoops]
-                MainDoc = "/docs/reference/concepts/loops/"
-            [Cortex.Reference.Concepts.WorkingWithNumbers]
-                MainDoc = "/docs/reference/concepts/numbers/"
-            [Cortex.Reference.Concepts.WorkingWithText]
-                MainDoc = "/docs/reference/concepts/text/"
-                [Cortex.Reference.Concepts.WorkingWithText.Formatting]
-                    MainDoc = "/docs/reference/concepts/text/formatting/"
-                    FormatParameters = "/docs/reference/concepts/text/formatting/#format-parameters"
-            [Cortex.Reference.Concepts.WorkingWithVariables]
-                MainDoc = "/docs/reference/concepts/variables/"
-            [Cortex.Reference.Concepts.WorkingWithReferences]
-                MainDoc = "/docs/reference/concepts/references/"
-            [Cortex.Reference.Concepts.ExceptionHandling]
-                MainDoc = "/docs/reference/concepts/exception-handling/"
-            [Cortex.Reference.Concepts.FileAndFolderAttributes]
-                MainDoc = "/docs/reference/concepts/file-and-folder-attributes/"
-            [Cortex.Reference.Concepts.FileAndFolderPaths]
-                MainDoc = "/docs/reference/concepts/file-and-folder-paths/"
-            [Cortex.Reference.Concepts.Generics]
-                MainDoc = "/docs/reference/concepts/generics/"
-            [Cortex.Reference.Concepts.Indexes]
-                MainDoc = "/docs/reference/concepts/indexes/"
-            [Cortex.Reference.Concepts.WorkingWithDataSources]
-                MainDoc = "/docs/reference/concepts/working-with-data-sources/"
-            [Cortex.Reference.Concepts.Keys]
-                MainDoc = "/docs/reference/concepts/keys/"
-            [Cortex.Reference.Concepts.LiteralVariablesExpressions]
-                MainDoc = "/docs/reference/concepts/literal-variables-expressions/"
-                Literal = "/docs/reference/concepts/literal-variables-expressions/#literals"
-                DictionaryLiterals = "/docs/reference/concepts/literal-variables-expressions/#dictionary-literals"
-                ListLiterals = "/docs/reference/concepts/literal-variables-expressions/#list-literals"
-                Expressions = "/docs/reference/concepts/literal-variables-expressions/#expressions"
-                DictionaryExpressions = "/docs/reference/concepts/literal-variables-expressions/#dictionary-expressions"
-                ListExpressions = "/docs/reference/concepts/literal-variables-expressions/#list-expressions"
-                ExplicitlyCastAVariable = "/docs/reference/concepts/literal-variables-expressions/#explicitly-cast-a-variable"
-                VariableReference = "/docs/reference/concepts/literal-variables-expressions/#variable-reference"
-            [Cortex.Reference.Concepts.NullAndNullableTypes]
-                MainDoc = "/docs/reference/concepts/null-and-nullable-types/"
-            [Cortex.Reference.Concepts.ObjectCasting]
-                MainDoc = "/docs/reference/concepts/object-casting/"
-                ImplicitCasting = "/docs/reference/concepts/object-casting/#implicit-cast"
-                ExplicitCasting = "/docs/reference/concepts/object-casting/#explicit-cast"
-            [Cortex.Reference.Concepts.ObjectEquality]
-                MainDoc = "/docs/reference/concepts/object-equality/"
-                [Cortex.Reference.Concepts.ObjectEquality.ValueTypeVsReferenceTypeEquality]
-                    MainDoc = "/docs/reference/concepts/object-equality/#value-type-vs-reference-type-equality"
-                    ValueTypeEquality = "/docs/reference/concepts/object-equality/#value-type-equality"
-                    ReferenceTypeEquality = "/docs/reference/concepts/object-equality/#reference-type-equality"
-                [Cortex.Reference.Concepts.ObjectEquality.HowCortexComparesObjectsForEquality]
-                    MainDoc = "/docs/reference/concepts/object-equality/#how-cortex-compares-objects-for-equality"
-            [Cortex.Reference.Concepts.Occurrences]
-                MainDoc = "/docs/reference/concepts/occurrences/"
-            [Cortex.Reference.Concepts.PropertyType]
-                MainDoc = "/docs/reference/concepts/property-type/"
-                Input = "/docs/reference/concepts/property-type/#input"
-                InputOutput = "/docs/reference/concepts/property-type/#inputoutput"
-                Output = "/docs/reference/concepts/property-type/#output"
-                DiscardingOutput = "/docs/reference/concepts/property-type/#discarding-output"
-            [Cortex.Reference.Concepts.TextEquality]
-                MainDoc = "/docs/reference/concepts/text-equality/"
-                [Cortex.Reference.Concepts.TextEquality.ComparisonTypes]
-                    MainDoc = "/docs/reference/concepts/text-equality/#comparison-types"
-                    CurrentCulture = "/docs/reference/concepts/text-equality/#current-culture"
-                    InvariantCulture = "/docs/reference/concepts/text-equality/#invariant-culture"
-                    Ordinal = "/docs/reference/concepts/text-equality/#ordinal"
-                    OrdinalIgnoreCase = "/docs/reference/concepts/text-equality/#ordinal-ignore-case"
-            [Cortex.Reference.Concepts.PatternMatchingSyntax]
-                MainDoc = "/docs/reference/concepts/pattern-matching-syntax/"
-            [Cortex.Reference.Concepts.RegexSyntax]
-                MainDoc = "/docs/reference/concepts/regex-syntax/"
-            [Cortex.Reference.Concepts.TextCasing]
-                MainDoc = "/docs/reference/concepts/text-casing/"
-                [Cortex.Reference.Concepts.TextCasing.CultureInfo]
-                    MainDoc = "/docs/reference/concepts/text-casing/#culture-info"
-                    CurrentCulture = "/docs/reference/concepts/text-casing/#current-culture"
-                    InvariantCulture = "/docs/reference/concepts/text-casing/#invariant-culture"
-            [Cortex.Reference.Concepts.TranslationErrors]
-                MainDoc = "/docs/reference/concepts/translation-errors/"
-            [Cortex.Reference.Concepts.TextEncoding]
-                MainDoc = "/docs/reference/concepts/text-encoding/"
-            [Cortex.Reference.Concepts.EmptyTextAndWhitespace]
-                MainDoc = "/docs/reference/concepts/empty-text-and-whitespace/"
+            [Cortex.Reference.Concepts.WorkingWith]
+                MainDoc = "/docs/reference/concepts/working-with/"
+                [Cortex.Reference.Concepts.WorkingWith.Collections]
+                    MainDoc = "/docs/reference/concepts/working-with/collections/"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection/"
+                        Dictionaries = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#dictionaries"
+                        DictionariesIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes"
+                        Structures = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#structures"
+                        StructuresIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes-1"
+                        StructuresProperties = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#properties"
+                        Lists = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#lists"
+                        ListsIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes-2"
+                        ArraysVersusLists = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#arrays-vs-lists"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Items]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/items/"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Indexes]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/indexes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Keys]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/keys/"
+                    [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
+                [Cortex.Reference.Concepts.WorkingWith.Culture]
+                    MainDoc = "/docs/reference/concepts/working-with/culture/"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/current-culture"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
+                [Cortex.Reference.Concepts.WorkingWith.DataSources]
+                    MainDoc = "/docs/reference/concepts/working-with/data-sources/"
+                [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
+                    MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
+                    [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
+                        MainDoc = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/"
+                        FormatProviders = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#format-providers"
+                        InvariantCulture = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#invariant-culture"
+                        CurrentCulture = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#current-culture"
+                        FormatTemplates = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#format-templates"
+                        StandardFormatTemplates = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates"
+                        ISO8601Standard = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard"
+                        CustomFormatTemplates = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#custom-format-templates"
+                        FormatSpecifiers = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#format-specifiers"
+                        OperatingSystemSettings = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#operating-system-settings"
+                [Cortex.Reference.Concepts.WorkingWith.Enums]
+                    MainDoc = "/docs/reference/concepts/working-with/enums/"
+                [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders]
+                    MainDoc = "/docs/reference/concepts/working-with/files-and-folders/"
+                    [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Attributes]
+                        MainDoc = "/docs/reference/concepts/working-with/files-and-folders/attributes/"
+                    [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths]
+                        MainDoc = "/docs/reference/concepts/working-with/files-and-folders/paths/"
+                [Cortex.Reference.Concepts.WorkingWith.Loops]
+                    MainDoc = "/docs/reference/concepts/working-with/loops/"
+                [Cortex.Reference.Concepts.WorkingWith.Numbers]
+                    MainDoc = "/docs/reference/concepts/working-with/numbers/"
+                [Cortex.Reference.Concepts.WorkingWith.Objects]
+                    MainDoc = "/docs/reference/concepts/working-with/objects/"
+                    [Cortex.Reference.Concepts.WorkingWith.Objects.WhatIsAnObject]
+                        MainDoc = "/docs/reference/concepts/working-with/objects/what-is-an-object/"
+                    [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting]
+                        MainDoc = "/docs/reference/concepts/working-with/objects/object-casting/"
+                        ImplicitCast = "/docs/reference/concepts/working-with/objects/object-casting/#implicit-cast"
+                        ExplicitCast = "/docs/reference/concepts/working-with/objects/object-casting/#explicit-cast"
+                    [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality]
+                        MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/"
+                        [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.ValueTypeVsReferenceTypeEquality]
+                            MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#value-type-vs-reference-type-equality"
+                            ValueTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#value-type-equality"
+                            ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
+                        [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
+                            MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
+                [Cortex.Reference.Concepts.WorkingWith.Text]
+                    MainDoc = "/docs/reference/concepts/working-with/text/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
+                        MainDoc = "/docs/reference/concepts/working-with/text/converting-objects-to-text"
+                        StringInterpolation = "/docs/reference/concepts/working-with/text/converting-objects-to-text/#string-interpolation"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
+                        MainDoc = "/docs/reference/concepts/working-with/text/formatting/"
+                        FormatParameters = "/docs/reference/concepts/working-with/text/formatting/#format-parameters"
+                        FormatSpecifiers = "/docs/reference/concepts/working-with/text/formatting/#format-specifiers"
+                        FormatTemplates = "/docs/reference/concepts/working-with/text/formatting/#format-templates"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax]
+                        MainDoc = "/docs/reference/concepts/working-with/text/regex-syntax/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.EmptyTextAndWhitespace]
+                        MainDoc = "/docs/reference/concepts/working-with/text/empty-text-and-whitespace/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax]
+                        MainDoc = "/docs/reference/concepts/working-with/text/pattern-matching-syntax/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Casing]
+                        MainDoc = "/docs/reference/concepts/working-with/text/casing/"
+                        [Cortex.Reference.Concepts.WorkingWith.Text.Casing.CultureInfo]
+                            MainDoc = "/docs/reference/concepts/working-with/text/casing/#culture-info"
+                            CurrentCulture = "/docs/reference/concepts/working-with/text/casing/#current-culture"
+                            InvariantCulture = "/docs/reference/concepts/working-with/text/casing/#invariant-culture"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Encoding]
+                        MainDoc = "/docs/reference/concepts/working-with/text/encoding/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.Equality]
+                        MainDoc = "/docs/reference/concepts/working-with/text/equality/"
+                        [Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes]
+                            MainDoc = "/docs/reference/concepts/working-with/text/equality/#comparison-types"
+                            CurrentCulture = "/docs/reference/concepts/working-with/text/equality/#current-culture"
+                            InvariantCulture = "/docs/reference/concepts/working-with/text/equality/#invariant-culture"
+                            Ordinal = "/docs/reference/concepts/working-with/text/equality/#ordinal"
+                            OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case"
         [Cortex.Reference.DataTypes]
             MainDoc = "/docs/reference/data-types/"
             [Cortex.Reference.DataTypes.MostCommon]
@@ -630,15 +924,15 @@
                     MainDoc = "/docs/reference/data-types/conditional-logic/boolean"
             [Cortex.Reference.DataTypes.Data]
                 MainDoc = "/docs/reference/data-types/data/"
-                [Cortex.Reference.DataTypes.Data.ICommand]
-                    MainDoc = "/docs/reference/data-types/data/icommand/"
-                    CommandText = "/docs/reference/data-types/data/icommand/#command-text"
-                [Cortex.Reference.DataTypes.Data.AnyCommand]
-                    MainDoc = "/docs/reference/data-types/data/anycommand/"
-                    CommandText = "/docs/reference/data-types/data/anycommand/#command-text"
-                [Cortex.Reference.DataTypes.Data.AnyCommands]
-                    MainDoc = "/docs/reference/data-types/data/anycommands"
-                    CommandText = "/docs/reference/data-types/data/anycommands/#command-text"
+                [Cortex.Reference.DataTypes.Data.DataCommand]
+                    MainDoc = "/docs/reference/data-types/data/datacommand/"
+                    CommandText = "/docs/reference/data-types/data/datacommand/#command-text"
+                [Cortex.Reference.DataTypes.Data.Command]
+                    MainDoc = "/docs/reference/data-types/data/command/"
+                    CommandText = "/docs/reference/data-types/data/command/#command-text"
+                [Cortex.Reference.DataTypes.Data.Commands]
+                    MainDoc = "/docs/reference/data-types/data/commands"
+                    CommandText = "/docs/reference/data-types/data/commands/#command-text"
                 [Cortex.Reference.DataTypes.Data.QueryCommand]
                     MainDoc = "/docs/reference/data-types/data/querycommand"
                     CommandText = "/docs/reference/data-types/data/querycommand/#command-text"
@@ -647,8 +941,10 @@
                     CommandText = "/docs/reference/data-types/data/nonquerycommand/#command-text"
                 [Cortex.Reference.DataTypes.Data.ConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
-                [Cortex.Reference.DataTypes.Data.ConnectionType]
-                    MainDoc = "/docs/reference/data-types/data/connectiontype"
+                [Cortex.Reference.DataTypes.Data.OdbcConnectionDetails]
+                    MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
+                [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
+                    MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]
                 MainDoc = "/docs/reference/data-types/date-and-time/"
                 [Cortex.Reference.DataTypes.DateAndTime.DateTime]
@@ -677,6 +973,12 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
+            [Cortex.Reference.DataTypes.Flows]
+                MainDoc = "/docs/reference/data-types/flows/"
+                [Cortex.Reference.DataTypes.Flows.FlowReference]
+                    MainDoc = "/docs/reference/data-types/flows/flowreference"
+                [Cortex.Reference.DataTypes.Flows.InputVariables]
+                    MainDoc = "/docs/reference/data-types/flows/inputvariables"
             [Cortex.Reference.DataTypes.Json]
                 MainDoc = "/docs/reference/data-types/json/"
                 [Cortex.Reference.DataTypes.Json.JsonSerializerSettings]
@@ -790,9 +1092,20 @@
                 MainDoc = "/docs/reference/exceptions/flows/"
                 [Cortex.Reference.Exceptions.Flows.Blocks]
                     MainDoc = "/docs/reference/exceptions/flows/blocks/"
+                    [Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException]
+                        MainDoc = "/docs/reference/exceptions/flows/blocks/block-timeout-exception/"
+                    [Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException]
+                        MainDoc = "/docs/reference/exceptions/flows/blocks/invalid-block-timeout-exception/"
                     [Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException]
                         MainDoc = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/"
                         ValueIsInvalid = "/docs/reference/exceptions/flows/blocks/invalid-property-value-exception/#value-is-invalid"
+                [Cortex.Reference.Exceptions.Flows.Execution]
+                    MainDoc = "/docs/reference/exceptions/flows/execution/"
+                    [Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException]
+                        MainDoc = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/"
+                        MissingInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#missing-input-variables"
+                        ExtraInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#extra-input-variables"
+                        InputVariablesOfAnInvalidType = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#input-variables-of-an-invalid-type"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
             [Cortex.Reference.Exceptions.Lists]
@@ -805,16 +1118,36 @@
                 MainDoc = "/docs/reference/exceptions/loops/"
                     [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
                         MainDoc = "/docs/reference/exceptions/loops/infinite-loop-exception/"
+                        Category = "/docs/reference/exceptions/loops/infinite-loop-exception/#category"
+                        ErrorCode = "/docs/reference/exceptions/loops/infinite-loop-exception/#error-code"
                         IncrementIsZero = "/docs/reference/exceptions/loops/infinite-loop-exception/#100"
                         IncrementIsNegative = "/docs/reference/exceptions/loops/infinite-loop-exception/#101"
                         IncrementIsPositive = "/docs/reference/exceptions/loops/infinite-loop-exception/#102"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
-                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"         
+                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
+        [Cortex.Reference.Logs]
+            MainDoc = "/docs/reference/logs/"
+            [Cortex.Reference.Logs.CortexGateway]
+                MainDoc = "/docs/reference/logs/cortex-gateway/"
+            [Cortex.Reference.Logs.CortexStudio]
+                MainDoc = "/docs/reference/logs/cortex-studio/"
+            [Cortex.Reference.Logs.CortexFlowDebuggerService]
+                MainDoc = "/docs/reference/logs/cortex-flow-debugger-service/"
+            [Cortex.Reference.Logs.CortexAPIGatewayService]
+                MainDoc = "/docs/reference/logs/cortex-api-gateway-service/"
+            [Cortex.Reference.Logs.CortexFlowExecutionService]
+                MainDoc = "/docs/reference/logs/cortex-flow-execution-service/"
+        [Cortex.Reference.Messages]
+            MainDoc = "/docs/reference/messages/"
+            [Cortex.Reference.Messages.Validation]
+                MainDoc = "/docs/reference/messages/validation/"
+                [Cortex.Reference.Messages.Validation.Errors]
+                    MainDoc = "/docs/reference/messages/validation/errors/"
         [Cortex.Reference.Troubleshooting]
             MainDoc = "/docs/reference/troubleshooting/"
             [Cortex.Reference.Troubleshooting.Installation]
@@ -828,20 +1161,46 @@
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
                 MainDoc = "/docs/reference/glossary/a-e/"
+                Automation = "/docs/reference/glossary/a-e/#automation"
+                Block = "/docs/reference/glossary/a-e/#block"
+                BlockProperty = "/docs/reference/glossary/a-e/#block-property"
+                Boolean = "/docs/reference/glossary/a-e/#boolean"
+                Char = "/docs/reference/glossary/a-e/#char"
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
+                Code = "/docs/reference/glossary/a-e/#code"
+                Cortex = "/docs/reference/glossary/a-e/#cortex"
+                CortexStudio = "/docs/reference/glossary/a-e/#cortex-studio"
+                DataType = "/docs/reference/glossary/a-e/#data-type"
+                Developer = "/docs/reference/glossary/a-e/#developer"
+                Dictionary = "/docs/reference/glossary/a-e/#dictionary"
+                DragAndDrop = "/docs/reference/glossary/a-e/#drag-and-drop"
+                Double = "/docs/reference/glossary/a-e/#double"
+                Expression = "/docs/reference/glossary/a-e/#expression"
+                ExpressionEditor = "/docs/reference/glossary/a-e/#expression-editor"
+                Empty = "/docs/reference/glossary/a-e/#empty"
+                ExplicitCast = "/docs/reference/glossary/a-e/#explicit-cast"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
+                File = "/docs/reference/glossary/f-j/#file"
                 Flow = "/docs/reference/glossary/f-j/#flow"
                 FlowDeveloper = "/docs/reference/glossary/f-j/#flow-developer"
                 FunctionalBlock = "/docs/reference/glossary/f-j/#functional-block"
+                GUI = "/docs/reference/glossary/f-j/#gui"
+                Heterogenous = "/docs/reference/glossary/f-j/#heterogenous"
+                Homogenous = "/docs/reference/glossary/f-j/#homogenous"
                 Initialised = "/docs/reference/glossary/f-j/#initialised"
                 Integer = "/docs/reference/glossary/f-j/#integer"
                 Int16 = "/docs/reference/glossary/f-j/#int16"
                 Int32 = "/docs/reference/glossary/f-j/#int32"
+                Int64 = "/docs/reference/glossary/f-j/#int64"
                 IDE = "/docs/reference/glossary/f-j/#ide"
+                Item = "/docs/reference/glossary/f-j/#item"
+                Index = "/docs/reference/glossary/f-j/#index"
+                Intellisense = "/docs/reference/glossary/f-j/#intellisense"
             [Cortex.Reference.Glossary.K-O]
                 MainDoc = "/docs/reference/glossary/k-o/"
+                List = "/docs/reference/glossary/k-o/#list"
                 Literal = "/docs/reference/glossary/k-o/#literal"
                 LowerCase = "/docs/reference/glossary/k-o/#lowercase"
                 Method = "/docs/reference/glossary/k-o/#method"
@@ -859,6 +1218,11 @@
                 PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
                 PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
                 Request = "/docs/reference/glossary/p-t/#request"
+                Single = "/docs/reference/glossary/p-t/#single"
+                Snippets = "/docs/reference/glossary/p-t/#snippets"
+                String = "/docs/reference/glossary/p-t/#string"
+                Structure = "/docs/reference/glossary/p-t/#structure"
+                SyntaxHighlighting = "/docs/reference/glossary/p-t/#syntax-highlighting"
                 Task = "/docs/reference/glossary/p-t/#task"
                 Text = "/docs/reference/glossary/p-t/#text"
                 Trigger = "/docs/reference/glossary/p-t/#trigger"
@@ -867,6 +1231,8 @@
                 MainDoc = "/docs/reference/glossary/u-z/"
                 UpperCase = "/docs/reference/glossary/u-z/#uppercase"
                 Variable = "/docs/reference/glossary/u-z/#variable"
+                WindowsPowerShell = "/docs/reference/glossary/u-z/#windows-powershell"
+                ZeroBased = "/docs/reference/glossary/u-z/#zero-based"
             [Cortex.Reference.Glossary.0-9]
                 MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
@@ -882,6 +1248,8 @@
             DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
             Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
             LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+        [Cortex.Website.Eula]
+            MainDoc = "https://www.cortex-ia.com/end-user-licence-agreement/"
         [Cortex.Website.Industries]
             MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
             Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"
@@ -889,15 +1257,24 @@
             Telco = "https://www.cortex-ia.com/telecommunications-automation/"
         [Cortex.Website.UseCases]
             MainDoc = "https://www.cortex-ia.com/download-centre/"
+    [Cortex.ServicePortal]
+        MainDoc = "https://support.cortex.co.uk/"
     [Cortex.YouTube]
         MainDoc = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
         [Cortex.YouTube.Webinars]
             MainDoc = "https://www.youtube.com/playlist?list=PLPBEMXlXxB_oFKNwxwrXtXzU-WBvgAgz7"
 # External links
+[Anycast]
+    MainDoc = "https://en.wikipedia.org/wiki/Anycast"
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
+    SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
+[ErlangOTP]
+    MainDoc = "https://github.com/erlang/otp"
+[GoBetween]
+    MainDoc = "https://github.com/yyyar/gobetween"
 [GitHub]
     [GitHub.Cortex.Observability]
         GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip"
@@ -907,6 +1284,7 @@
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
         MainDoc = "https://grafana.com/grafana/"
+        TimeRange = "https://grafana.com/docs/grafana/latest/dashboards/time-range-controls/"
     [Grafana.Products.Loki]
         MainDoc = "https://grafana.com/oss/loki/"
         [Grafana.Products.Loki.Promtail]
@@ -921,6 +1299,7 @@
     MainDoc = "https://www.iis.net/overview"
     [IIS.Downloads]
         UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"
+        ApplicationRequestRouting-3_0 = "https://www.iis.net/downloads/microsoft/application-request-routing"
     
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
@@ -935,12 +1314,38 @@
 [MSDocs]
     [MSDocs.CSharp]
         MainDoc = "https://docs.microsoft.com/en-us/dotnet/csharp/"
+        BuiltinTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types"
+        BooleanLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals"
         Casting = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions"
         CastExpression = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/type-testing-and-cast#cast-expression"
+        CharLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals"
+        Constructors = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors"
+        DefaultValues = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values"
+        Methods = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods"
+        Properties = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties"
+        EnumerationTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum"
+        ExplicitConversions = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions"
+        ImplicitConversions = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions"
+        IndicesAndRanges = "https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes"
+        ReferenceTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types"
+        ValueTypes = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types"
         dynamic = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-dynamic-type"
+        IntegerLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals"
+        RealLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals"
+        StringLiterals = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals"
+        IdentifierNamingRules = "https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names"
+        OperatorsAndExpressions = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/"
+        ArithmeticOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators"
+        BooleanLogicalOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators"
+        ComparisonOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"
+        EqualityOperators = "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators"
+        Interpolation = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation"
+        Verbatim = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals"
+        InterpolatedVerbatim = "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation"
     [MSDocs.SqlServer]
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
+        TransparentDataEncryption = "https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
@@ -1061,6 +1466,7 @@
         [MSDocs.DotNet.Api.System.String]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.string"
             Concat = "https://docs.microsoft.com/en-us/dotnet/api/system.string.concat"
+            ConcatGuide = "https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings"
             ConcatOperator = "https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
             Format = "https://docs.microsoft.com/en-us/dotnet/api/system.string.format"
             Insert = "https://docs.microsoft.com/en-us/dotnet/api/system.string.insert"
@@ -1072,20 +1478,60 @@
             CultureInfo = "https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
             RegexMatchTimeoutException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
+    [MSDocs.PowerShell]
+        WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
+        InstallModule = "https://docs.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
+    [MSDocs.ServiceFabric]
+        MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
+        Explorer = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
+        ReverseProxy = "https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
+[MSDotNet]
+    [MSDotNet.Framework471]
+        MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
+[MSDownload]
+    WebDeploy = "https://www.microsoft.com/en-gb/download/details.aspx?id=43717"
+    [MSDownload.CPlusPlusRedistributable]
+        2013 = "http://www.microsoft.com/en-us/download/details.aspx?id=40784"
+    [MSDownload.SqlServerExpress]
+        2016 = "https://www.microsoft.com/en-us/download/details.aspx?id=103447"
+[MSEval]
+    [MSEval.WindowsServer]
+        2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
+        2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
+    [MSEval.SQLServer]
+        2019 = "https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe"
+        2016 = "https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016?filetype=exe"
 [MSGitHub]
     [MSGitHub.MonacoEditor]
         MainDoc = "https://microsoft.github.io/monaco-editor/"
+[MSSupport]
+    [MSSupport.Troubleshooting]
+        DynamicPorts = "https://support.microsoft.com/kb/929851"
+[Particular]
+    [Particular.NServiceBus]
+        MainDoc = "https://particular.net/nservicebus"
+[Postman]
+    [Postman.Downloads]
+        MainDoc = "https://www.postman.com/downloads/"
+[RabbitMQ]
+    MainDoc = "https://www.rabbitmq.com/"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]
     MainDoc = "https://www.splunk.com/"
+[Unicode]
+    WhatIsUnicode = "https://www.unicode.org/standard/WhatIsUnicode.html"
 [VisualStudio]
     [VisualStudio.Code]
         MainDoc = "https://code.visualstudio.com/"
+        Intellisense = "https://code.visualstudio.com/docs/editor/intellisense"
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
     Byte = "https://en.wikipedia.org/wiki/Byte"
+    HttpStatusCodes = "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+    InformationTechnology = "https://en.wikipedia.org/wiki/Information_technology"
 [W3]
+    WhatIsJson = "https://www.w3schools.com/whatis/whatis_json.asp"
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"

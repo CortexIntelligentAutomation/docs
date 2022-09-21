@@ -4,15 +4,33 @@ linkTitle: "Prerequisites"
 description: "Information about the prerequisites required on each server type for installation."
 weight: 20
 ---
-# {{< param title >}}
+# {{% param title %}}
 
 The prerequisites required for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking the installation.
 
 ## Hardware Requirements
 
+{{% alert title="Note" %}}
+For production systems it is recommended to {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" "install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" "install on existing hardware" >}}.
+{{% /alert %}}
+
+### Option 1: Install on New Hardware
+
+The following hardware requirements are recommended for production systems:
+
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
 | Web&nbsp;Application&nbsp;Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 50+&nbsp;(SSD)&nbsp;*Recommended*<br>40&nbsp;(HDD)&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+
+### Option 2: Install on Existing Hardware
+
+If additional hardware is not available, it is possible to install to the same Web Application server that hosts Cortex Gateway.
+
+The table below specifies additional resources that are recommended to be added to the existing Web Application server:
+
+| Server&nbsp;Role | Additional&nbsp;CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | Additional&nbsp;RAM&nbsp;(GB) | Additional&nbsp;Disk&nbsp;(GB) |  
+|------------------|-----------------------------------|---------------|----------------------|
+| Web&nbsp;Application&nbsp;Server<br>(Shared with Cortex Gateway) | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 12+&nbsp;*Recommended*<br>6&nbsp;*Minimum* | 10+&nbsp;*Recommended*<br>5&nbsp;*Minimum*|
 
 {{% alert title="Note" %}}
 The application servers (as described in {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" "Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
@@ -22,15 +40,14 @@ The application servers (as described in {{< ahref "Cortex.GettingStarted.OnPrem
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | IIS[^2] | Other&nbsp;Software |
 |------------------|-------------------------|---------|----------|
-| Web Application Server[^3] | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | 10.0.17763[^4]<br>10.0.14393[^5]<br>IIS Basic Authentication[^6]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
+| Web Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | 10.0.17763[^3]<br>10.0.14393[^4]<br>IIS Basic Authentication[^5]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
 | Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | | [Promtail 2.5.0][]|
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^2]: IIS is supported; other web servers, including IIS Express are not supported.
-[^3]: This should be a separate machine from the one used for Innovation Web Application Server.
-[^4]: Ships as a windows role within Windows Server 2019.
-[^5]: Ships as a windows role within Windows Server 2016.
-[^6]: Installed during the [Install IIS Basic Authentication][] configuration steps.
+[^3]: Ships as a windows role within Windows Server 2019.
+[^4]: Ships as a windows role within Windows Server 2016.
+[^5]: Installed during the [Install IIS Basic Authentication][] configuration steps.
 
 ## Domain Requirements
 
@@ -102,18 +119,18 @@ See [SSL Best Practices][] for a full list of the recommended security changes t
 
 Apply the settings by following these instructions:
 
-1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractises.ps1` file extracted during the [Extract Installation Artefacts][] step into a suitable location on the Web Application Server.
+1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractices.ps1` file extracted during the [Extract Installation Artefacts][] step into a suitable location on the Web Application Server.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Change the location to the folder where the `Cortex.Innovation.Install.SSLBestPractises.ps1` file was copied to using the following command, modifying the path as necessary:
+1. Change the location to the folder where the `Cortex.Innovation.Install.SSLBestPractices.ps1` file was copied to using the following command, modifying the path as necessary:
 
     ```powershell
     cd "C:\Install"
     ```
 
-1. Run the `Cortex.Innovation.Install.SSLBestPractises.ps1` script using the following command:
+1. Run the `Cortex.Innovation.Install.SSLBestPractices.ps1` script using the following command:
 
     ```powershell
-    .\Cortex.Innovation.Install.SSLBestPractises.ps1
+    .\Cortex.Innovation.Install.SSLBestPractices.ps1
     ```
 
 1. To use all the recommended settings click `Apply all` to the first prompt.

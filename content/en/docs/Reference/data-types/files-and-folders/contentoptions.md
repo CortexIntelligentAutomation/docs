@@ -4,7 +4,7 @@ linkTitle: "ContentOptions"
 description: "Used to define whether the Get Folder Content block should get file or folder paths."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.FilesAndFolders.ContentOptions)</p>
 

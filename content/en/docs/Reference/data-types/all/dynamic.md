@@ -4,7 +4,7 @@ linkTitle: "dynamic"
 description: "Any data type can be used where a `dynamic` data type is required. `dynamic` data type is identical to the `Object` data type, except for one difference; `dynamic` data types do not need to be explicitly cast to other data types to be used, whereas `Object` data types do."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Summary
 
@@ -46,7 +46,7 @@ Also note, in these circumstances it is more likely to encounter the `dynamic` d
 
 * The Expression Editor is available for [Input][] properties where the data type is `dynamic`.
 * The Literal Editor is not available for [Input][] properties where the data type is `dynamic`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `dynamic`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `dynamic`.
 
 ### Known Limitations
 
@@ -68,12 +68,12 @@ None
 
 [Object vs dynamic]: {{< ref "#object-vs-dynamic" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Collection]: {{< url "Cortex.Reference.DataTypes.Collections.MainDoc" >}}
-[Variable]: {{< url "Cortex.Reference.Concepts.LiteralVariablesExpressions.VariableReference" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
 [System.Object]: {{< url "MSDocs.DotNet.Api.System.Object.MainDoc" >}}
 [Using dynamic]: {{< url "MSDocs.DotNet.Api.System.dynamic.MainDoc" >}}

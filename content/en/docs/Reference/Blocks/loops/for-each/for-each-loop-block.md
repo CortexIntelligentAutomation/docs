@@ -6,7 +6,7 @@ description: "Loops through all items in the specified collection (i.e. Lists, D
 
 {{< figure src="/blocks/loops-for-each-loop-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Loops.ForEach.ForEachLoopBlock)</p>
 
@@ -127,7 +127,9 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 |--------------------|---------------------------|
 | Data Type | [IEnumerable][] |
 | Property Type | [Input][] |
-| Default Value | `($)Collection` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Collection` with no value |
 
 ### Current Iteration
 
@@ -145,6 +147,8 @@ If [Current Iteration][CurrentIteration Property] `"Index"` is modified during a
 |--------------------|---------------------------|
 | Data Type | [Structure][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)CurrentIteration` with no value |
 
 ## Exceptions
@@ -164,8 +168,8 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 [Collection Property]: {{< ref "#collection" >}}
 [CurrentIteration Property]: {{< ref "#current-iteration" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
@@ -174,3 +178,9 @@ If [Collection][Collection Property] is empty (i.e. contains no items), no loopi
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

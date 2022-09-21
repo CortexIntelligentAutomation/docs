@@ -6,7 +6,7 @@ description: "Copies an Object."
 
 {{< figure src="/blocks/objects-copy-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Objects.CopyObject.CopyObjectBlock`1)</p>
 
@@ -68,7 +68,9 @@ A deep copy will be performed, which means if the [Object][Object Property] cont
 |--------------------|---------------------------|
 | Data Type | [TObject][] |
 | Property Type | [Input][] |
-| Default Value | `($)Object` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Object` with no value |
 
 ### Copy
 
@@ -78,6 +80,8 @@ The [Copy][Copy Property] of the [Object][Object Property].
 |--------------------|---------------------------|
 | Data Type | [TObject][] |
 | Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
 | Default Value | `($)Copy` with no value |
 
 ## Exceptions
@@ -93,10 +97,16 @@ If [Object][Object Property] is not provided or is set to `null`, [Copy][Copy Pr
 [Object Property]: {{< ref "#object" >}}
 [Copy Property]: {{< ref "#copy" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[TObject]: {{< url "Cortex.Reference.Concepts.Generics.MainDoc" >}}
+[TObject]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [List]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

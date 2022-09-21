@@ -4,7 +4,7 @@ linkTitle: "Array"
 description: "Any data type representing an array of items. The type of items that can be contained in the array depend upon the type of the array. Common examples include arrays of strings and integers (i.e. `String[]` and `Int32[]`)."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Array)</p>
 
@@ -70,7 +70,7 @@ The following table shows some of the ways that an `Array` can be converted to t
 
 ### Property Editor Support
 
-Currently no [Input][], [InputOutput][] or [Output] properties require the `Array` data type.
+Currently no [Input][], [InputOutput][] or [Output][] properties require the `Array` data type.
 
 ### Known Limitations
 
@@ -92,9 +92,9 @@ None
 
 [Most Common Array Data Types]: {{< ref "#most-common-array-data-types" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
@@ -110,5 +110,5 @@ None
 [Double]: {{< url "Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 
 [IEnumerable]: {{< url "Cortex.Reference.DataTypes.Collections.IEnumerable.MainDoc" >}}
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
-[Arrays vs Lists]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.ArraysVersusLists" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
+[Arrays vs Lists]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.ArraysVersusLists" >}}

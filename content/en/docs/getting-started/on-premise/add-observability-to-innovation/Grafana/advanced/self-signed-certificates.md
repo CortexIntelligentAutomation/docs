@@ -4,7 +4,7 @@ linkTitle: "Create Self-Signed Certificates"
 description: "Information about creating and installing self-signed certificates."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 Self-signed certificates should be generated using OpenSSL which is bundled in the Cortex Web Application Server Installation Scripts:
 
@@ -26,7 +26,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
 1. Temporarily add OpenSSL to the Path environment variable of your system by running the following command, modifying the path according to the location of `openssl.exe` in the installation scripts on the machine:
 
     ```powershell
-    $env:PATH += ";C:\Cortex Evolution - Innovation 2022.5 - Web Application Server Installation Scripts\OpenSSL"
+    $env:PATH += ";C:\Cortex Innovation 2022.6 - Web App Server Install Scripts\OpenSSL"
     ```
 
 ## Generate the Root CA Certificate

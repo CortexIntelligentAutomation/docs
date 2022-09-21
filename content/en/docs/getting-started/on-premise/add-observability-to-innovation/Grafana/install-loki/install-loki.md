@@ -5,7 +5,7 @@ description: "Information about installing Grafana Loki on the Web Application S
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 This guide describes how to install Grafana Loki on the Web Application Server. Please ensure that the [Prerequisites][] have been completed before starting this installation.
 

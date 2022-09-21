@@ -6,7 +6,7 @@ description: "Checks if a given value evaluates to `true`; if so the flow execut
 
 {{< figure src="/blocks/decisions-if-true-exit-right-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfTrueExitRightBlock)</p>
 
@@ -58,7 +58,9 @@ The [Value][Value Property] to check evaluates to `true` or `false`.
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Value` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | No value |
 
 ## Exceptions
 
@@ -70,6 +72,10 @@ No remarks for the block.
 
 [Value Property]: {{< ref "#value" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

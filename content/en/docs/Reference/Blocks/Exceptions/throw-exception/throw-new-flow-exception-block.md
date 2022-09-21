@@ -6,7 +6,7 @@ description: "Throws a new FlowException with the specified message, category, e
 
 {{< figure src="/blocks/exceptions-throw-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.Exceptions.ThrowException.ThrowNewFlowExceptionBlock)</p>
 
@@ -78,7 +78,9 @@ If [Message][Message Property] is not provided or is set to `null`, it will defa
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Message` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `$@""` |
 
 ### Category
 
@@ -88,7 +90,9 @@ A [Category][Category Property] that can be used to categorise similar types of 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Category` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Error Code
 
@@ -100,7 +104,9 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 |--------------------|---------------------------|
 | Data Type | [Nullable][]&lt;[Int32][]&gt; |
 | Property Type | [Input][] |
-| Default Value | `($)ErrorCode` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Details
 
@@ -110,7 +116,9 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
 | Property Type | [Input][] |
-| Default Value | `($)Details` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Inner Exception
 
@@ -120,7 +128,9 @@ If [Error Code][ErrorCode Property] is not provided, it will default to `null`.
 |--------------------|---------------------------|
 | Data Type | [Exception][] |
 | Property Type | [Input][] |
-| Default Value | `($)InnerException` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ### Help Link
 
@@ -132,7 +142,9 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)HelpLink` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 
@@ -155,7 +167,7 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [InnerException Property]: {{< ref "#inner-exception" >}}
 [HelpLink Property]: {{< ref "#help-link" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
@@ -165,3 +177,9 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
 [Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

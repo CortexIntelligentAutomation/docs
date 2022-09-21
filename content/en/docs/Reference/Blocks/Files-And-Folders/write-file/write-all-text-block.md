@@ -6,7 +6,7 @@ description: "Writes all specified text to a file at the given file path."
 
 {{< figure src="/blocks/files-write-block-icon.png" alt="Icon" class="block-icon" >}}
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.WriteFile.WriteAllTextBlock)</p>
 
@@ -103,7 +103,9 @@ For information about the supported file path formats (i.e. absolute, relative, 
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)FilePath` with value `null` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)FilePath` with no value |
 
 ### Text
 
@@ -120,7 +122,9 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) and [Overwrite][Overwrit
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Property Type | [Input][] |
-| Default Value | `($)Text` with value `[]` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Text` with no value |
 
 ### Overwrite
 
@@ -132,7 +136,9 @@ By default, this is set to `false` to avoid implicit and accidental overwriting 
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
 | Property Type | [Input][] |
-| Default Value | `($)Overwrite` with value `false` |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `false` |
 
 ### Encoding
 
@@ -140,13 +146,15 @@ Option to specify the [Encoding][Encoding Property] that should be used to write
 
 If the [Encoding][Encoding Property] is left as `null`, the [Text][Text Property] will be written using UTF-8 encoding without a byte order mark.
 
-For information about encoding, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Encoding][] |
 | Property Type | [Input][] |
-| Default Value | `($)Encoding` with value `null` |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
 
 ## Exceptions
 
@@ -184,16 +192,16 @@ Escaping can be done in two ways:
 
 ### Encoding of text
 
-For information about encoding of text, examples of available encodings and using them, please see [Text Encoding][].
+For information about encoding of text, examples of available encodings and using them, please see [Encoding][Working with Text - Encoding].
 
 [FilePath Property]: {{< ref "#file-path" >}}
 [Text Property]: {{< ref "#text" >}}
 [Overwrite Property]: {{< ref "#overwrite" >}}
 [Encoding Property]: {{< ref "#encoding" >}}
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
-[Text Encoding]: {{< url "Cortex.Reference.Concepts.TextEncoding.MainDoc" >}}
+[Working with Text - Encoding]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Encoding.MainDoc" >}}
 
 [InvalidPropertyValueException]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
 [Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
@@ -202,8 +210,14 @@ For information about encoding of text, examples of available encodings and usin
 [PropertyEmptyException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
-[File & Folder Paths]: {{< url "Cortex.Reference.Concepts.FileAndFolderPaths.MainDoc" >}}
+[File & Folder Paths]: {{< url "Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Encoding]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.MainDoc" >}}
 [Boolean]: {{< url "Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
+
+[Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}

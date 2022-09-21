@@ -5,7 +5,7 @@ description: "Information about the recommended architecture for a Grafana platf
 weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 ## Components
 
@@ -18,12 +18,16 @@ weight: 10
 
 ## Recommended Architecture
 
+{{% alert title="Note" %}}
+For production systems it is recommended to {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" "install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" "install on existing hardware" >}}.
+{{% /alert %}}
+
 The following architecture requires 1 + 1..n servers:
 
 * 1 x Web Application Server which contains Grafana, Grafana Loki and Microsoft IIS.
-* 1..n x Application Servers
+* 1..n x Application Servers.
 
-{{< figure src="/images/Grafana Platform Architecture Diagram.svg" title="Grafana Platform Architecture Diagram" >}}
+{{< figure src="/images/Grafana Platform Architecture Diagram - On-Premise.svg" >}}
 
 ## Next Steps?
 

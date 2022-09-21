@@ -4,7 +4,7 @@ linkTitle: "IList<TItem>"
 description: "Any data type representing a list of items that can iterated or looped over. `TItem` indicates the data type of the items contained in the list. Each `TItem` can be individually accessed by an index. `List<TItem>` is the most common example."
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 <p class="namespace">(System.Collections.Generic.IList&lt;TItem&gt;)</p>
 
@@ -53,7 +53,7 @@ For some of the ways that an `IList<TItem>` can be converted to text, please see
 
 * The Expression Editor is available for [Input][] properties where the data type is `IList<TItem>`.
 * The Literal Editor is not available for [Input][] properties where the data type is `IList<TItem>`.
-* The Variable Editor is available for [InputOutput][] and [Output] properties where the data type is `IList<TItem>`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `IList<TItem>`.
 
 ### Known Limitations
 
@@ -75,9 +75,9 @@ None
 
 * [System.Collections.Generic.IList&lt;TItem&gt;][]
 
-[Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
-[InputOutput]: {{< url "Cortex.Reference.Concepts.PropertyType.InputOutput" >}}
-[Output]: {{< url "Cortex.Reference.Concepts.PropertyType.Output" >}}
+[Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [System.Collections.Generic.IList&lt;TItem&gt;]: {{< url "MSDocs.DotNet.Api.System.Collections.Generic.IList" >}}
 
@@ -87,4 +87,4 @@ None
 [ListCreateNew]: {{< url "Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
 [ListConvertToText]: {{< url "Cortex.Reference.DataTypes.Collections.List.ConvertToText" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}

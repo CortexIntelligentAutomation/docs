@@ -5,7 +5,7 @@ description: "Information about the prerequisites required on each server type f
 weight: 20
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
 The prerequisites required for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 
@@ -15,23 +15,23 @@ The prerequisites required for each server role (as described in [Architecture][
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
 | Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
 | Web&nbsp;Application&nbsp;Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>50&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
 
-[^1]: A software-based load balancer called [gobetween](https://github.com/yyyar/gobetween) is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast](https://en.wikipedia.org/wiki/Anycast); however, this has not been verified yet. It is possible to use an [alternative load balancer](#alternative-load-balancer-requirements) to the one provided.
+[^1]: A software-based load balancer called [gobetween][] is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast][Anycast]; however, this has not been verified yet. It is possible to use an [alternative load balancer][] to the one provided.
 [^2]: Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
 
 ## Software Requirements
 
 | Server&nbsp;Role | Windows&nbsp;Server[^3] | SQL&nbsp;Server[^4] | .Net | PowerShell[^5] | IIS[^6] | Other Software |
 |------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Load&nbsp;Balancer | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer) | 5.1 | |
-| Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | | [Framework&nbsp;4.7.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer) | 5.1 | |
-| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)&nbsp;*Recommended*<br>[2016&nbsp;(x64)](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO) | [2019](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe)<br />[2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016?filetype=exe)<br />[2016&nbsp;Express](https://go.microsoft.com/fwlink/?LinkID=799012) | [Framework&nbsp;4.7.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-web-installer) | 5.1 | 10.0.17763[^7]<br>10.0.14393[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1](https://www.iis.net/downloads/microsoft/url-rewrite) | [Microsoft Web Deploy 3.0 or later](https://www.microsoft.com/en-gb/download/details.aspx?id=43717)<br>[Visual C++ Redistributable 2013 (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=40784) |
+| Load&nbsp;Balancer | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | | [Framework&nbsp;4.7.1][NET Framework 471] | 5.1 | |
+| Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | | [Framework&nbsp;4.7.1][NET Framework 471] | 5.1 | |
+| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.1][NET Framework 471] | 5.1 | 10.0.17763[^7]<br>10.0.14393[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^4]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported.
+[^4]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported. Note that [Transparent Data Encryption][] is not supported on SQL Server Express.
 [^5]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
 [^6]: IIS is supported; other web servers, including IIS Express are not supported.
 [^7]: Ships as a windows role within Windows Server 2019.
@@ -47,7 +47,9 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid Cortex licence file must be procured from Cortex. This should contain fingerprints for the Web Application Server and each Application Server. To get a licence file take the following steps:
+A valid Cortex licence file and Cortex Innovation feature identifier must be procured from Cortex. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+
+To get a licence file and feature identifier take the following steps:
 
 1. Copy the following template to a text file:
 
@@ -67,6 +69,8 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
     Application Server 3
     MachineID: 
     Fingerprint: 
+
+    Please also include a suitable Cortex Innovation feature identifier.
     ```
 
 1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
@@ -84,13 +88,13 @@ A valid Cortex licence file must be procured from Cortex. This should contain fi
     1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
         ```text
-        MachineID: HA-SERVER1
+        MachineID: APP-SERVER1
         Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
         ```
 
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. Request a licence by raising a case in the [Cortex Service Portal](https://support.cortex.co.uk/), including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence has arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist.
+1. Request a licence and feature identifier by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
 
 ## Web Browser Requirements
 
@@ -104,7 +108,7 @@ Gateway supports the latest versions of the following browsers:
 
 ### Alternative Load Balancer Requirements
 
-Innovation has a [gobetween](https://github.com/yyyar/gobetween) load balancer included, however it is possible to use an alternative load balancer. The requirements for installing an alternative load balancer are as follows:
+Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
 
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
 * Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation 2022.6 - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
@@ -116,6 +120,16 @@ Innovation has a [gobetween](https://github.com/yyyar/gobetween) load balancer i
 ### Filesystem Requirements
 
 All Application Servers must use an NTFS filesystem.
+
+Network Discovery and File Sharing should be enabled on each Application Server:
+
+1. Open File Explorer.
+1. Click `Network` on the left.
+1. A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
+    {{< figure src="/images/Network Discovery 1.png" title="Network and File Discovery Disabled" >}}
+1. Click the banner.
+1. Click `Turn on network discovery and file sharing`:
+    {{< figure src="/images/Network Discovery 2.png" title="Enable Network and File Discovery" >}}
 
 ### Service Requirements
 
@@ -176,10 +190,10 @@ For production systems it is recommended that X.509 SSL wildcard certificates ar
 
 An X.509 SSL wildcard certificate should be used to:
 
-* Secure communication between the load balancer and the HA nodes on the Application Servers.
-* Secure communication between the HA nodes.
-* Allow HA Services to identify themselves to clients such as Gateway.
-* Prevent unauthorised HA nodes from joining the HA cluster.
+* Secure communication between the load balancer and the nodes on the Application Servers.
+* Secure communication between the Application Services.
+* Allow Application Services to identify themselves to clients such as Gateway.
+* Prevent unauthorised nodes from joining the HA cluster.
 * Connect to Service Fabric Explorer from each of the Application Servers.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
@@ -189,10 +203,14 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
+* Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
+* Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
 This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.
 
-If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the HA nodes. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
+If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
+
+{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" "update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}
 
 #### TLS Requirements
 
@@ -201,7 +219,7 @@ There is a set of non-compulsory security measures, recommended to be applied to
 * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.Multiple.SSLBestPractises.ps1` script is provided during installation to apply these security changes to the Web Application Server.
+See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the Web Application Server.
 
 ## Additional Web Application Server Requirements
 
@@ -211,7 +229,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 Domain users must be available to run the Application Pools for Gateway and Flow Debugger Service. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
-For Flow Debugger Service, the `NT AUTHORITY\NETWORK SERVICE` user can also be used.
+For Flow Debugger Service, the `NETWORK SERVICE` user can also be used.
 
 #### Domain Requirements
 
@@ -242,6 +260,8 @@ If the user tries to navigate to an address not in the SAN list, then they will 
 
 Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
 
+The certificate may be the same one used for the Application Server installation.
+
 More information about importing the certificate is given during installation.
 
 #### TLS Requirements
@@ -251,14 +271,29 @@ There is a set of non-compulsory security measures, recommended to be applied to
 * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractises.ps1` script is provided during installation to apply these security changes to the Web Application Server.
+See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the Web Application Server.
 
 ## Next Steps?
 
 1. [Install Application Servers and Load Balancer][]
 
-[Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.PortRequirements" >}}
+[Port Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [Install Application Servers and Load Balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Installing Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
-[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.CreateSelfSignedCertificates" >}}
-[SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced.SSLBestPractices" >}}
+[Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
+[SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[gobetween]: {{< url "GoBetween.MainDoc" >}}
+[Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
+[Anycast]: {{< url "Anycast.MainDoc" >}}
+[alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
+[Microsoft Server 2019]: {{< url "MSEval.WindowsServer.2019" >}}
+[Microsoft Server 2016]: {{< url "MSEval.WindowsServer.2016" >}}
+[NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
+[Microsoft SQL Server 2019]: {{< url "MSEval.SQLServer.2019" >}}
+[Microsoft SQL Server 2016]: {{< url "MSEval.SQLServer.2016" >}}
+[Microsoft SQL Express 2016]: {{< url "MSDownload.SqlServerExpress.2016" >}}
+[IIS Url Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
+[Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
+[C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}
+[Transparent Data Encryption]: {{< url "MSDocs.SqlServer.TransparentDataEncryption" >}}
