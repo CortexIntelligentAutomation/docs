@@ -313,9 +313,9 @@ For more detailed information about the Expression Editor, see [Guides->Cortex S
 
 [Reference->Blocks]: {{< url "Cortex.Reference.Blocks.MainDoc" >}}
 [Exception Blocks]: {{< url "Cortex.Reference.Blocks.Exceptions.MainDoc" >}}
-[Add Text At Beginning]: {{< url "Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning.MainDoc" >}}
+[Add Text At Beginning]: {{< url "Cortex.Reference.Blocks.Text.AddText.AddTextAtBeginning.MainDoc" >}}
 
-[Examples]: {{< url "Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning.Examples" >}}
+[Examples]: {{< url "Cortex.Reference.Blocks.Text.AddText.AddTextAtBeginning.Examples" >}}
 
 [Reference->Data Types]: {{< url "Cortex.Reference.DataTypes.MainDoc" >}}
 [Reference->Exceptions]: {{< url "Cortex.Reference.Exceptions.MainDoc" >}}

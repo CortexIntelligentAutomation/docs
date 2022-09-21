@@ -108,7 +108,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyValueOutOfRangeException][] | Thrown when subtracting [Time Period][TimePeriod Property] from [Date Time][DateTime Property] will result in the [Date Time][DateTime Property] being less than `0001-01-01T00:00:00+00:00` or greater than `9999-12-31T23:59:59+00:00`. |
+| [PropertyValueOutOfRangeException][] | Thrown when subtracting [Time Period][TimePeriod Property] from [Date Time][DateTime Property] will result in the [Date Time][DateTime Property] being less than `0001-01-01T00:00:00+00:00`. See [Property Less Than Minimum Value][].|
+|                                      | Thrown when subtracting [Time Period][TimePeriod Property] from [Date Time][DateTime Property] will result in the [Date Time][DateTime Property] being greater than `9999-12-31T23:59:59+00:00`. See [Property Greater Than Maximum Value][]. |
 
 ## Remarks
 
@@ -137,6 +138,8 @@ This block copes with UTC time offsets but does not know anything about which ti
 [Input]: {{< url "Cortex.Reference.Concepts.PropertyType.Input" >}}
 
 [PropertyValueOutOfRangeException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
+[Property Greater Than Maximum Value]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.PropertyGreaterThanMaximumValue" >}}
+[Property Less Than Minimum Value]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.PropertyLessThanMinimumValue" >}}
 
 [ISO 8601 Standard]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
 [Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
