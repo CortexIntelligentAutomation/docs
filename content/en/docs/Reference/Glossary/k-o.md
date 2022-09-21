@@ -13,23 +13,23 @@ Terms, words and phrases beginning with the letters K through O.
 
 ### Kickstarter
 
-TODO
+Free two/three day workshop that enables the rapid configuration of a cloud-based Cortex platform to prototype, and demonstrate automation in context.
+
+See [Kickstarter][].
 
 ## L
 
 ### Launch Program
 
-TODO
+A twelve week program which takes your team through the phases of mobilisation, design of automation, trial testing and sign-off to production.
 
-### Lifecyle
-
-TODO
+See [Launch Program][].
 
 ### List
 
 A [data type][] that represents a list of items that can iterated or looped over.
 
-For more detailed information about the List data type, see [List&lt;TItem&gt;][].
+For more detailed information about the List data type, see [Data Types > List&lt;TItem&gt;][].
 
 ### Literal
 
@@ -49,43 +49,29 @@ A literal is an explicit value that is not calculated during the execution of th
 
 ### lowercase
 
-TODO
+The term lowercase refers to small letters (a,b,c ...) as distinguished from capital letters (A,B,C...).
 
 ### Low-code
 
-Low-code is an approach to developing [automation](TODO) through a [graphical user interface (GUI)](TODO) that requires little to no coding; where the [developers](TODO) predominantly use [drag-and-drop](TODO) features, rather than writing [code](TODO).
+Low-code is an approach to developing [automation][] through a [graphical user interface (GUI)][GUI] that requires little to no coding; where the [developers][] predominantly use [drag-and-drop][] features, rather than writing [code][].
 
 ## M
 
-### Market
-
-TODO
-
 ### Method
 
-TODO
+In [C#][], a Method is used to execute behaviour of a [data type][] (e.g. the `ToString()` method returns a text representation of the data type).
 
-### Mission-critical
-
-TODO
-
-### Mean-Time-To-Recovery (MTTR)
-
-TODO
-
-### Monitoring
-
-TODO
+See [Method Expressions][] for information on how methods can be used within the [expression editor][].
 
 ## N
 
 ### Non-Null
 
-TODO
+Non-Null indicates that a [data type][] has been [initialised][] and has a value.
 
 ### Null
 
-TODO
+Null indicates that a [data type][] has been [initialised][] with no value.
 
 ## O
 
@@ -93,15 +79,19 @@ TODO
 
 A [data type][] that indicates that any data type can be used.
 
-For more detailed information about the Object data type, see [Object][].
+For more detailed information about the Object data type, see [Data Types > Object][].
 
 ### Occurrence
 
-TODO
+A value can occur in a [collection][] multiple times, these are called Occurrences.
+
+Occurrences are 1 based (e.g. The first occurrence of an item in a list is at occurrence 1, the second occurrence of an item is at occurrence 2, etc.).
+
+See [Collections > Occurrences][].
 
 ### On-premise
 
-TODO
+On-premise refers to infrastructure and software that is deployed and running within a physical location of an organisation.
 
 ### Operand
 
@@ -113,25 +103,15 @@ Operators are used to manipulate and check operands values. For example, in the 
 
 For more detailed information about operators, see [C# operators and expressions][].
 
-### Orchestration
-
-The co-ordination of multiple technologies, [services](TODO) and [processes](TODO).
-
-### Organisation
-
-TODO
-
-### Outcome
-
-TODO
-
 ### Output
 
-TODO
+Output properties are used to save values from a [block][blocks]. These properties will saved to a [variable][] during the block’s execution.
 
-### Out-of-the-box (OOB)
+See [Block Properties > Output Properties][].
 
-TODO
+### Out-of-the-box (OOTB)
+
+Out-of-the-box functionality of a product that works immediately after any installation without any configuration or modification.
 
 [List]: {{< ref "#list" >}}
 [literal]: {{< ref "#literal" >}}
@@ -142,18 +122,36 @@ TODO
 [expression]: {{< url "Cortex.Reference.Glossary.A-E.Expression" >}}
 [variable]: {{< url "Cortex.Reference.Glossary.U-Z.Variable" >}}
 
+[automation]: {{< url "Cortex.Reference.Glossary.A-E.Automation" >}}
+[blocks]: {{< url "Cortex.Reference.Glossary.A-E.Block" >}}
 [Boolean]: {{< url "Cortex.Reference.Glossary.A-E.Boolean" >}}
 [Char]: {{< url "Cortex.Reference.Glossary.A-E.Char" >}}
+[code]: {{< url "Cortex.Reference.Glossary.A-E.Code" >}}
+[C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
+[developers]: {{< url "Cortex.Reference.Glossary.A-E.Developer" >}}
+[drag-and-drop]: {{< url "Cortex.Reference.Glossary.A-E.DragAndDrop" >}}
 [Dictionary]: {{< url "Cortex.Reference.Glossary.A-E.Dictionary" >}}
 [Double]: {{< url "Cortex.Reference.Glossary.A-E.Double" >}}
+[expression editor]: {{< url "Cortex.Reference.Glossary.A-E.ExpressionEditor" >}}
+[GUI]: {{< url "Cortex.Reference.Glossary.F-J.GUI" >}}
+[initialised]: {{< url "Cortex.Reference.Glossary.F-J.Initialised" >}}
 [Int32]: {{< url "Cortex.Reference.Glossary.F-J.Int32" >}}
 [Int64]: {{< url "Cortex.Reference.Glossary.F-J.Int32" >}}
 [Single]: {{< url "Cortex.Reference.Glossary.P-T.Single" >}}
 [String]: {{< url "Cortex.Reference.Glossary.P-T.String" >}}
 [Structure]: {{< url "Cortex.Reference.Glossary.P-T.Structure" >}}
 
-[List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
-[Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+[Method Expressions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MethodExpressions" >}}
+[collection]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
+[Data Types > List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+[Data Types > Object]: {{< url "Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
+
+[Block Properties > Output Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+
+[Collections > Occurrences]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences.MainDoc" >}}
 
 [C# operators and expressions]: {{< url "MSDocs.CSharp.OperatorsAndExpressions" >}}
+
+[Kickstarter]: {{< url "Cortex.Website.EngageWithUs.Kickstarter" >}}
+[Launch Program]: {{< url "Cortex.Website.EngageWithUs.LaunchProgram" >}}

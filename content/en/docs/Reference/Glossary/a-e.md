@@ -189,11 +189,19 @@ The default that is assigned as the value of a [block property][] when a new [bl
 
 See [Design Sprint][]
 
+### Developer
+
+A developer is an individual that builds and creates software and applications.
+
 ### Dictionary
 
 A [data type][] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and its associated item. Dictionaries are optimised for fast lookup of items using their key.
 
 For more detailed information about the Dictionary data type, see [Data Types > Dictionary&lt;TKey, TItem&gt;][].
+
+### Drag-and-Drop
+
+Functionality that allows a user to select an object and move it to another location.
 
 ### Double
 
@@ -233,7 +241,7 @@ For more detailed information about exceptions, see [Fundamentals > Exceptions][
 
 For a complete list of available [blocks][block] that can be used to handle exceptions, see [Blocks > Exception Blocks][].
 
-For a complete list of available [exceptions][exception] that can be used to handle exceptions, see [Reference > Exceptions][].
+For a complete list of exceptions, see [Reference > Exceptions][].
 
 ### Execution
 
