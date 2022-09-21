@@ -19,59 +19,84 @@ Different files can store different types of data (i.e. a text file, `.txt`, sto
 
 ### Flow
 
-A flow is an object in [Cortex Studio][TODO] that contains the logic and actions (in the form of [blocks][TODO]) that the [Cortex][TODO] [platform][TODO] is able to execute for the [flow developers][TODO].
+A flow is an object in [Cortex Studio][] that contains the logic and actions (in the form of [blocks][]) that the [Cortex][] [platform][] is able to execute for the [flow developers][].
 
-For more detailed information about flows, see [Guides->Cortex Studio->Flows][TODO].
+For more detailed information about flows, see [Fundamentals > Flows][].
 
 ### Flow Developer
 
-A flow developer is a user that has been granted permissions to develop [flows][TODO] in [Cortex Studio][TODO].
+A flow developer is a user that has been granted permissions to develop [flows][] in [Cortex Studio][].
 
-For more detailed information about granting permissions to develop [flows][TODO], see [Guides->Cortex Gateway->Authorisation][TODO].
+For more detailed information about granting permissions to develop [flows][], see [Cortex Studio > Authorisation][].
 
 ### Folder
 
-A folder (or directory) is an object on a computer that contains [files][TODO].
+A folder (or directory) is an object on a computer that contains [files][].
 
 Folders can contain different types of file and can also contain other folders.
 
 ### Format Parameter
 
-TODO
+See [Text > Format Parameters][].
 
 ### Format Specifier
 
-TODO
+See [Text > Format Specifiers][].
 
 ### Format Template
 
-TODO
+See [Text > Format Templates][].
 
 ### Functional Block
 
-See [block][TODO].
+See [block][blocks].
 
 ## G
 
 ### Generics
 
-TODO
+Generic means not specific to a particular [data type][].
+
+An example of a generic data type is [List&lt;TItem&gt;][] where TItem is a placeholder which indicates it can be initialised with any data type, such as:
+
+- List&lt;int&gt; and List&lt;string&gt; which are [homogenous][] lists that can only contain integers and strings respectively
+- List&lt;object&gt; and List&lt;dynamic&gt; are [heterogenous][] lists that can contain multiple data types
+
+### GUI
+
+GUI stands for "Graphical User Interface". It is used to graphically display information and represent user interactions with a system, without the need for typing commands.
 
 ## H
+
+### Heterogenous
+
+Consists of dissimilar or diverse constituents.
+
+Heterogenous collections can contain multiple [data types][data type] (e.g. [List&lt;dynamic&gt;][List&lt;TItem&gt;]).
+
+Collections that can only contain a single data type are known as [homogenous][].
+
+### Homogenous
+
+Consists of the same or a similar constituents.
+
+Homogenous collections can only contain a single [data type][] (e.g. [List&lt;int&gt;][List&lt;TItem&gt;]).
+
+Collections that can contain multiple data types are known as [heterogenous][].
 
 ## I
 
 ### IDE
 
-IDE or Integrated Development Environment is a software application such as [Cortex Studio][TODO], that allows users to create a program or application.
+IDE or Integrated Development Environment is a software application such as [Cortex Studio][], that allows users to create a program or application.
 
-In [Cortex Studio][TODO], the users are called [flow developers][TODO], and the programs are called [flows][TODO].
+In [Cortex Studio][], the users are called [flow developers][], and the programs are called [flows][].
 
 Some common and popular examples of IDE's include:
 
-* [Visual Studio][TODO]
-* [VSCode][TODO]
-* [Eclipse][TODO]
+* Visual Studio
+* VSCode
+* Eclipse
 
 ### Immutable
 
@@ -79,48 +104,52 @@ Unable to be changed.
 
 ### Implicit Cast
 
-The process of an application converting one [data type][TODO] to another, without requiring an explicit instruction from the developer.
+The process of an application converting one [data type][] to another, without requiring an explicit instruction from the developer.
 
-For one [data type][TODO] to be able to be implicitly cast to another, there should be no data loss during the conversion.
+For one [data type][] to be able to be implicitly cast to another, there should be no data loss during the conversion.
 
-An example would be converting a [16-bit][TODO] [integer][TODO] ([Int16][TODO]) to a [32-bit][TODO] [integer][TODO] ([Int32][TODO]), as the entire range of the 16-bit integer will fit into a 32-bit integer:
+An example would be converting a [16-Bit][] [integer][] ([Int16][]) to a [32-Bit][] [integer][] ([Int32][]), as the entire range of the 16-bit integer will fit into a 32-bit integer:
 
 ```csharp
 Int16 SixteenBitInteger = 100;
 Int32 ThirtyTwoBitInteger = SixteenBitInteger;
 ```
 
-See [Explicit Cast][TODO] for an example of where data loss would occur during conversion, and would therefore require an explicit instruction from the developer.
+See [Explicit Cast][] for an example of where data loss would occur during conversion, and would therefore require an explicit instruction from the developer.
 
-See [Casting and type conversions (C# Programming Guide)][TODO] for a detailed technical explanation of casting in [C#][TODO], the [programming language][TODO] natively supported by the [Cortex][TODO] [platform][TODO] for writing simple [expressions][TODO] and more complex [code][TODO].
+See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [Cortex][] [platform][] for writing simple [expressions][] and more complex [code][].
 
 ### Index
 
-TODO
+An [Index][Collections > Indexes] is used to access an [item][] in a [list][] and relates to the position of the item in the list.
 
-### Industry
+Indexes are 0 based (e.g. The first item in a list is at index 0, the second item is at index 1, etc.).
 
-TODO
+See [Collections > Indexes][].
+
+### Intellisense
+
+IntelliSense is a general term for various [code][] editing features such as code completion and [snippets][].
 
 ### Initialised
 
-TODO
+A [variable][] is initialised when its value has been set for the first time.
 
 ### Input
 
-TODO
+Input properties are used to provide values to a [block][blocks]. These properties are used in the block's execution.
+
+See [Block Properties > Input Properties][].
 
 ### InputOutput
 
-TODO
+InputOutput properties are used to provide values to a [block][blocks]. These properties are used, updated and saved back to a variable during the block's execution.
+
+See [Block Properties > InputOutput Properties][].
 
 ### Integer
 
-TODO
-
-### Interactive
-
-TODO
+A whole number (e.g. `100`).
 
 ### Int16
 
@@ -140,31 +169,23 @@ A [data type][] that represents a whole number from `-9,223,372,036,854,775,808`
 
 For more detailed information about the Int64 data type, see [Int64][].
 
-### Invalid
-
-TODO
-
 ### Invariant Culture
 
 A culture associated with the English language, but not with any country or region; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and string comparisons.
 
 It has a stable and unchanging set of rules that cannot be customized and is unaffected by culture related changes to the operating system.
 
-TODO: In .Net details about invariant culture are represented by the cultureinfo data type...https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture?view=net-5.0
+See [Working With > Invariant Culture][].
 
 ### Item
 
-TODO
-
-### IList&lt;TItem&gt;
-
-TODO
+Each object within a [collection][] is called an [item][].
 
 ### IT
 
 IT stands for Information Technology, which is the use of computers to create, process, store, retrieve, and exchange electronic data and information.
 
-See [Wikipedia][TODO - https://en.wikipedia.org/wiki/Information_technology] for more information.
+See [Wikipedia][Information Technology (Wikipedia)] for more information.
 
 ## J
 
@@ -172,10 +193,51 @@ See [Wikipedia][TODO - https://en.wikipedia.org/wiki/Information_technology] for
 
 JSON stands for JavaScript Object Notation, and is a format for storing and transporting data between computer applications.
 
-See [What is JSON][TODO - https://www.w3schools.com/whatis/whatis_json.asp] for more information.
+See [What is JSON][What is Json (W3)] for more information.
 
+[16-Bit]: {{< url "Cortex.Reference.Glossary.0-9.16Bit" >}}
+[32-Bit]: {{< url "Cortex.Reference.Glossary.0-9.32Bit" >}}
+[blocks]: {{< url "Cortex.Reference.Glossary.A-E.Block" >}}
+[code]: {{< url "Cortex.Reference.Glossary.A-E.Code" >}}
+[Cortex]: {{< url "Cortex.Reference.Glossary.A-E.Cortex" >}}
+[Cortex Studio]: {{< url "Cortex.Reference.Glossary.A-E.CortexStudio" >}}
+[C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
+[Explicit Cast]: {{< url "Cortex.Reference.Glossary.A-E.ExplicitCast" >}}
+[expressions]: {{< url "Cortex.Reference.Glossary.A-E.Expression" >}}
+[files]: {{< url "Cortex.Reference.Glossary.F-J.File" >}}
+[flows]: {{< url "Cortex.Reference.Glossary.F-J.Flow" >}}
+[flow developers]: {{< url "Cortex.Reference.Glossary.F-J.FlowDeveloper" >}}
+[heterogenous]: {{< url "Cortex.Reference.Glossary.F-J.Heterogenous" >}}
+[homogenous]: {{< url "Cortex.Reference.Glossary.F-J.Homogenous" >}}
+[integer]: {{< url "Cortex.Reference.Glossary.F-J.Integer" >}}
+[item]: {{< url "Cortex.Reference.Glossary.F-J.Item" >}}
+[list]: {{< url "Cortex.Reference.Glossary.K-O.List" >}}
+[platform]: {{< url "Cortex.Reference.Glossary.P-T.Platform" >}}
+[programming language]: {{< url "Cortex.Reference.Glossary.P-T.ProgrammingLanguage" >}}
+[snippets]: {{< url "Cortex.Reference.Glossary.P-T.Snippets" >}}
+[variable]: {{< url "Cortex.Reference.Glossary.U-Z.Variable" >}}
+
+[List&lt;TItem&gt;]: {{< url "Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
+
+[Fundamentals > Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+[Text > Format Parameters]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatTemplates" >}}
+[Text > Format Specifiers]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatSpecifiers" >}}
+[Text > Format Templates]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatTemplates" >}}
+[Working With > Invariant Culture]: {{< url "Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture.MainDoc" >}}
+[Block Properties > Input Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Block Properties > InputOutput Properties]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+
+[collection]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
+[Collections > Indexes]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
+[Cortex Studio > Authorisation]: {{< url "Cortex.Guides.Gateway.Settings.StudioAuthorisation.MainDoc" >}}
 
 [Int16]: {{< url "Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Int64]: {{< url "Cortex.Reference.DataTypes.Numbers.Int64.MainDoc" >}}
+
+[Casting and type conversions (C# Programming Guide)]: {{< url "MSDocs.CSharp.Casting" >}}
+
+[What is Json (W3)]: {{< url "W3.WhatIsJson" >}}
+
+[Information Technology (Wikipedia)]: {{< url "Wikipedia.InformationTechnology" >}}

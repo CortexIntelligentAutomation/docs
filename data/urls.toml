@@ -175,6 +175,8 @@
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
+                [Cortex.Guides.Gateway.Settings.StudioAuthorisation]
+                    MainDoc = "/docs/guides/cortex-gateway/settings/studio-authorisation"
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
@@ -688,6 +690,7 @@
                                 Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
                                 InterpolatedStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#interpolated-strings"
                                 MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
+                                PropertyExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#property-expressions"
                                 IndexExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#index-expressions"
                                 LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
@@ -853,6 +856,8 @@
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
                         MainDoc = "/docs/reference/concepts/working-with/text/formatting/"
                         FormatParameters = "/docs/reference/concepts/working-with/text/formatting/#format-parameters"
+                        FormatSpecifiers = "/docs/reference/concepts/working-with/text/formatting/#format-specifiers"
+                        FormatTemplates = "/docs/reference/concepts/working-with/text/formatting/#format-templates"
                     [Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax]
                         MainDoc = "/docs/reference/concepts/working-with/text/regex-syntax/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.EmptyTextAndWhitespace]
@@ -1156,28 +1161,46 @@
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
                 MainDoc = "/docs/reference/glossary/a-e/"
+                Automation = "/docs/reference/glossary/a-e/#automation"
+                Block = "/docs/reference/glossary/a-e/#block"
+                BlockProperty = "/docs/reference/glossary/a-e/#block-property"
                 Boolean = "/docs/reference/glossary/a-e/#boolean"
                 Char = "/docs/reference/glossary/a-e/#char"
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
+                Code = "/docs/reference/glossary/a-e/#code"
+                Cortex = "/docs/reference/glossary/a-e/#cortex"
+                CortexStudio = "/docs/reference/glossary/a-e/#cortex-studio"
                 DataType = "/docs/reference/glossary/a-e/#data-type"
+                Developer = "/docs/reference/glossary/a-e/#developer"
                 Dictionary = "/docs/reference/glossary/a-e/#dictionary"
+                DragAndDrop = "/docs/reference/glossary/a-e/#drag-and-drop"
                 Double = "/docs/reference/glossary/a-e/#double"
                 Expression = "/docs/reference/glossary/a-e/#expression"
+                ExpressionEditor = "/docs/reference/glossary/a-e/#expression-editor"
                 Empty = "/docs/reference/glossary/a-e/#empty"
+                ExplicitCast = "/docs/reference/glossary/a-e/#explicit-cast"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
+                File = "/docs/reference/glossary/f-j/#file"
                 Flow = "/docs/reference/glossary/f-j/#flow"
                 FlowDeveloper = "/docs/reference/glossary/f-j/#flow-developer"
                 FunctionalBlock = "/docs/reference/glossary/f-j/#functional-block"
+                GUI = "/docs/reference/glossary/f-j/#gui"
+                Heterogenous = "/docs/reference/glossary/f-j/#heterogenous"
+                Homogenous = "/docs/reference/glossary/f-j/#homogenous"
                 Initialised = "/docs/reference/glossary/f-j/#initialised"
                 Integer = "/docs/reference/glossary/f-j/#integer"
                 Int16 = "/docs/reference/glossary/f-j/#int16"
                 Int32 = "/docs/reference/glossary/f-j/#int32"
                 Int64 = "/docs/reference/glossary/f-j/#int64"
                 IDE = "/docs/reference/glossary/f-j/#ide"
+                Item = "/docs/reference/glossary/f-j/#item"
+                Index = "/docs/reference/glossary/f-j/#index"
+                Intellisense = "/docs/reference/glossary/f-j/#intellisense"
             [Cortex.Reference.Glossary.K-O]
                 MainDoc = "/docs/reference/glossary/k-o/"
+                List = "/docs/reference/glossary/k-o/#list"
                 Literal = "/docs/reference/glossary/k-o/#literal"
                 LowerCase = "/docs/reference/glossary/k-o/#lowercase"
                 Method = "/docs/reference/glossary/k-o/#method"
@@ -1199,6 +1222,7 @@
                 Snippets = "/docs/reference/glossary/p-t/#snippets"
                 String = "/docs/reference/glossary/p-t/#string"
                 Structure = "/docs/reference/glossary/p-t/#structure"
+                SyntaxHighlighting = "/docs/reference/glossary/p-t/#syntax-highlighting"
                 Task = "/docs/reference/glossary/p-t/#task"
                 Text = "/docs/reference/glossary/p-t/#text"
                 Trigger = "/docs/reference/glossary/p-t/#trigger"
@@ -1207,6 +1231,8 @@
                 MainDoc = "/docs/reference/glossary/u-z/"
                 UpperCase = "/docs/reference/glossary/u-z/#uppercase"
                 Variable = "/docs/reference/glossary/u-z/#variable"
+                WindowsPowerShell = "/docs/reference/glossary/u-z/#windows-powershell"
+                ZeroBased = "/docs/reference/glossary/u-z/#zero-based"
             [Cortex.Reference.Glossary.0-9]
                 MainDoc = "/docs/reference/glossary/0-9/"
                 16Bit = "/docs/reference/glossary/0-9/#16-bit"
@@ -1453,6 +1479,7 @@
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
             RegexMatchTimeoutException = "https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
     [MSDocs.PowerShell]
+        WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
         InstallModule = "https://docs.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
     [MSDocs.ServiceFabric]
         MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
@@ -1492,14 +1519,19 @@
     MainDoc = "https://nssm.cc/"
 [Splunk]
     MainDoc = "https://www.splunk.com/"
+[Unicode]
+    WhatIsUnicode = "https://www.unicode.org/standard/WhatIsUnicode.html"
 [VisualStudio]
     [VisualStudio.Code]
         MainDoc = "https://code.visualstudio.com/"
+        Intellisense = "https://code.visualstudio.com/docs/editor/intellisense"
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
     Byte = "https://en.wikipedia.org/wiki/Byte"
     HttpStatusCodes = "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+    InformationTechnology = "https://en.wikipedia.org/wiki/Information_technology"
 [W3]
+    WhatIsJson = "https://www.w3schools.com/whatis/whatis_json.asp"
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"

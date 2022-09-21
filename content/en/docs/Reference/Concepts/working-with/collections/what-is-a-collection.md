@@ -20,7 +20,7 @@ TODO
 TODO:
 
 - Talk about typed dictionaries (TKey, TItem)
-- Talk about heterogenous vs homogenous dictionaries
+- Talk about heterogenous vs homogenous dictionaries (fix single data type vs multiple data types links in all dictionary blocks)
 - Talk about keys, uniqueness and equality (link to Keys page)
 - Talk about complex keys (link to Keys page)
 - Items can be accessed as indexes
@@ -55,7 +55,7 @@ TODO:
 - Talk about typed dictionaries (TItem)
 - Talk about [] and dynamic vs object
 - Talk about typed lists
-- Talk about heterogenous vs homogenous lists
+- Talk about heterogenous vs homogenous lists (fix single data type vs multiple data types links in all list blocks)
 - Items can be accessed as indexes
 - Link to Data Type
 - Creating a List
