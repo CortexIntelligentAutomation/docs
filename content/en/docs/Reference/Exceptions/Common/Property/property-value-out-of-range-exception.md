@@ -10,7 +10,7 @@ description: "The exception thrown when a property is provided with a value that
 
 ## Description
 
-The exception thrown when a [property][TODO] is provided with a value that falls outside its accepted range.
+The exception thrown when a [property][] is provided with a value that falls outside its accepted range.
 
 There are multiple reasons that this exception can be thrown:
 
@@ -25,7 +25,7 @@ There are multiple reasons that this exception can be thrown:
 
 ### Property Is Empty
 
-An operation such as getting, setting or removing one or more items from an empty collection [property][TODO] was performed.
+An operation such as getting, setting or removing one or more items from an empty collection [property][] was performed.
 
 #### Message Format
 
@@ -40,16 +40,16 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<collection-property-name>` is the name of the empty collection [property][TODO].
-* `<property-name>` is the name of another [property][TODO] used to perform the get, set or remove operation (e.g. `index`, `indexes`, `count` etc.).
+* `<collection-property-name>` is the name of the empty collection [property][].
+* `<property-name>` is the name of another [property][] used to perform the get, set or remove operation (e.g. `index`, `indexes`, `count` etc.).
 
 #### How to fix
 
-Provide a non-empty collection [property][TODO].
+Provide a non-empty collection [property][].
 
 ### Property Is Empty Or `null`
 
-An operation such as adding, getting or removing text from a `null` or empty (i.e. `""`) text [property][TODO] was performed.
+An operation such as adding, getting or removing text from a `null` or empty (i.e. `""`) text [property][] was performed.
 
 #### Message Format
 
@@ -63,15 +63,15 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<property-name>` is the name of the `null` or empty (i.e. `""`) text [property][TODO].
+* `<property-name>` is the name of the `null` or empty (i.e. `""`) text [property][].
 
 #### How to fix
 
-Provide a non-`null` or non-empty text [property][TODO].
+Provide a non-`null` or non-empty text [property][].
 
 ### Property Is Invalid
 
-A [property][TODO] was set to an invalid value.
+A [property][] was set to an invalid value.
 
 #### Message Format
 
@@ -108,21 +108,21 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<property-name>` is the name of the [property][TODO] with the invalid value (e.g. `Length`, `Count`, `Index`).
-* `<invalid-value>` is the invalid value of the [property][TODO] (e.g. `100` for non-collection values or `100, 200` for collection values).
+* `<property-name>` is the name of the [property][] with the invalid value (e.g. `Length`, `Count`, `Index`).
+* `<invalid-value>` is the invalid value of the [property][] (e.g. `100` for non-collection values or `100, 200` for collection values).
 * `<minimum-allowed-value>` is the minimum value allowed (e.g. `0`).
 * `<maximum-allowed-value>` is the maximum value allowed (e.g. `9`).
 * `<calculation-of-maximum-allowed-value>` is how the maximum allowed value is calculated (e.g. `'Text.Length' - 1`).
-* `<related-property-name>` is the name of a related [property][TODO] relevant to the exception (e.g. `Index`).
-* `<related-property-value>` is the value of a related [property][TODO] relevant to the exception (e.g. `1`).
+* `<related-property-name>` is the name of a related [property][] relevant to the exception (e.g. `Index`).
+* `<related-property-value>` is the value of a related [property][] relevant to the exception (e.g. `1`).
 
 #### How to fix
 
-Provide a valid value for the [property][TODO] as instructed by the [Message][].
+Provide a valid value for the [property][] as instructed by the [Message][].
 
 ### Property Is Negative
 
-A [property][TODO] was set to a negative [TimePeriod][] when a positive [TimePeriod][] was required.
+A [property][] was set to a negative [TimePeriod][] when a positive [TimePeriod][] was required.
 
 #### Message Format
 
@@ -140,11 +140,11 @@ where:
 
 #### How to fix
 
-Provide a valid non-negative [TimePeriod][] value for the [property][TODO] as instructed by the [Message][].
+Provide a valid non-negative [TimePeriod][] value for the [property][] as instructed by the [Message][].
 
 ### Property Greater Than Maximum Value
 
-A positive [TimePeriod][] was added to the [property][TODO] or a negative [TimePeriod][] was subtracted from the [property][TODO], and the result is greater than the allowed maximum value of the [DateTimeOffset][] data type.
+A positive [TimePeriod][] was added to the [property][] or a negative [TimePeriod][] was subtracted from the [property][], and the result is greater than the allowed maximum value of the [DateTimeOffset][] data type.
 
 #### Message Format
 
@@ -172,11 +172,11 @@ where:
 
 #### How to fix
 
-Provide a [TimePeriod][] value that when added to or subtracted from the [property][TODO] results in the [property][TODO] being less than the allowed maximum value of the [DateTimeOffset][] data type.
+Provide a [TimePeriod][] value that when added to or subtracted from the [property][] results in the [property][] being less than the allowed maximum value of the [DateTimeOffset][] data type.
 
 ### Property Less Than Minimum Value
 
-A positive [TimePeriod][] was subtracted from the [property][TODO] or a negative [TimePeriod][] was added to the [property][TODO], and the result was less than the allowed minimum value of the [DateTimeOffset][] data type.
+A positive [TimePeriod][] was subtracted from the [property][] or a negative [TimePeriod][] was added to the [property][], and the result was less than the allowed minimum value of the [DateTimeOffset][] data type.
 
 #### Message Format
 
@@ -204,7 +204,7 @@ where:
 
 #### How to fix
 
-Provide a [TimePeriod][] value that when added to or subtracted from the [property][TODO] results in the [property][TODO] being greater than the allowed minimum value of the [DateTimeOffset][] data type.
+Provide a [TimePeriod][] value that when added to or subtracted from the [property][] results in the [property][] being greater than the allowed minimum value of the [DateTimeOffset][] data type.
 
 ## Properties
 
@@ -250,9 +250,9 @@ None
 
 ### Related Concepts
 
+* [Exceptions][]
 * [Working with Collections][]
 * [Working with Date and Time][]
-* [Working with Exceptions][]
 * [Working with Text][]
 
 ### Related Blocks
@@ -339,12 +339,16 @@ None
 [Remove Text Before Index]: {{< url "Cortex.Reference.Blocks.Text.RemoveText.RemoveTextBeforeIndex.MainDoc" >}}
 [Remove Text Between Indexes]: {{< url "Cortex.Reference.Blocks.Text.RemoveText.RemoveTextBetweenIndexes.MainDoc" >}}
 
-[ISO 8601 format]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+[property]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 
-[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWithCollections.MainDoc" >}}
-[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWithDateAndTime.MainDoc" >}}
-[Working with Exceptions]: {{< url "Cortex.Reference.Concepts.WorkingWithExceptions.MainDoc" >}}
-[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWithText.MainDoc" >}}
+[Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[Working with Collections]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
+
+[Working with Date and Time]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.MainDoc" >}}
+[ISO 8601 format]: {{< url "Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting.ISO8601Standard" >}}
+
+[Working with Text]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}

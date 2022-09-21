@@ -204,12 +204,20 @@
                         QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
+                [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
+                    MainDoc = "/docs/reference/blocks/date-and-time/add-time-period"
+                    [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod.AddTimePeriod]
+                        MainDoc = "/docs/reference/blocks/date-and-time/add-time-period/add-time-period-block"
                 [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime]
                     MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time"
                     [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertDateTimeToText]
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-date-time-to-text-block"
                     [Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime]
                         MainDoc = "/docs/reference/blocks/date-and-time/convert-date-time/convert-text-to-date-time-block"
+                [Cortex.Reference.Blocks.DateAndTime.SubtractTimePeriod]
+                    MainDoc = "/docs/reference/blocks/date-and-time/subtract-time-period"
+                    [Cortex.Reference.Blocks.DateAndTime.SubtractTimePeriod.SubtractTimePeriod]
+                        MainDoc = "/docs/reference/blocks/date-and-time/subtract-time-period/subtract-time-period-block"
             [Cortex.Reference.Blocks.Decisions]
                 MainDoc = "/docs/reference/blocks/decisions/"
             [Cortex.Reference.Blocks.Dictionaries]
@@ -590,11 +598,15 @@
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
-                [Cortex.Reference.Blocks.Text.Add]
+                [Cortex.Reference.Blocks.Text.AddText]
                     MainDoc = "/docs/reference/blocks/text/add-text/"
-                    [Cortex.Reference.Blocks.Text.Add.AddTextAtBeginning]
+                    [Cortex.Reference.Blocks.Text.AddText.AddTextAfterIndex]
+                        MainDoc = "/docs/reference/blocks/text/add-text/add-text-after-index-block/"
+                    [Cortex.Reference.Blocks.Text.AddText.AddTextAtBeginning]
                         MainDoc = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/"
                         Examples = "/docs/reference/blocks/text/add-text/add-text-at-beginning-block/#examples"
+                    [Cortex.Reference.Blocks.Text.AddText.AddTextBeforeIndex]
+                        MainDoc = "/docs/reference/blocks/text/add-text/add-text-before-index-block/"
                 [Cortex.Reference.Blocks.Text.ContainsText]
                     MainDoc = "/docs/reference/blocks/text/contains-text/"
                     [Cortex.Reference.Blocks.Text.ContainsText.ContainsAllText]
@@ -617,10 +629,34 @@
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
                         MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-values-block-1/"
+                [Cortex.Reference.Blocks.Text.GetText]
+                    MainDoc = "/docs/reference/blocks/text/get-text/"
+                    [Cortex.Reference.Blocks.Text.GetText.GetTextAtBeginning]
+                        MainDoc = "/docs/reference/blocks/text/get-text/get-text-at-beginning-block/"
+                    [Cortex.Reference.Blocks.Text.GetText.GetTextAtEnd]
+                        MainDoc = "/docs/reference/blocks/text/get-text/get-text-at-end-block/"
+                    [Cortex.Reference.Blocks.Text.GetText.GetTextAtIndex]
+                        MainDoc = "/docs/reference/blocks/text/get-text/get-text-at-index-block/"
+                    [Cortex.Reference.Blocks.Text.GetText.GetTextBeforeIndex]
+                        MainDoc = "/docs/reference/blocks/text/get-text/get-text-before-index-block/"
+                    [Cortex.Reference.Blocks.Text.GetText.GetTextBetweenIndexes]
+                        MainDoc = "/docs/reference/blocks/text/get-text/get-text-between-indexes-block/"
                 [Cortex.Reference.Blocks.Text.JoinText]
                     MainDoc = "/docs/reference/blocks/text/join-text/"
                     [Cortex.Reference.Blocks.Text.JoinText.JoinText]
                         MainDoc = "/docs/reference/blocks/text/join-text/join-text-block-1/"
+                [Cortex.Reference.Blocks.Text.RemoveText]
+                    MainDoc = "/docs/reference/blocks/text/remove-text/"
+                    [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextAtBeginning]
+                        MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-at-beginning-block/"
+                    [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextAtEnd]
+                        MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-at-end-block/"
+                    [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextAtIndex]
+                        MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-at-index-block/"
+                    [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextBeforeIndex]
+                        MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-before-index-block/"
+                    [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextBetweenIndexes]
+                        MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-between-indexes-block/"
             [Cortex.Reference.Blocks.Schedules]
                 MainDoc = "/docs/reference/blocks/schedules/"
                 [Cortex.Reference.Blocks.Schedules.WaitFor]
@@ -1054,7 +1090,9 @@
                     [Cortex.Reference.Exceptions.Common.Property.PropertyNullException]
                         MainDoc = "/docs/reference/exceptions/common/property/property-null-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException]
-                        MainDoc = "/docs/reference/exceptions/common/property/propertyvalueoutofrangeexception/"
+                        MainDoc = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/"
+                        PropertyGreaterThanMaximumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-greater-than-maximum-value"
+                        PropertyLessThanMinimumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-less-than-minimum-value"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
