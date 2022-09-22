@@ -146,7 +146,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway.zip" `
     -GatewayApplicationIISPath "Cortex\gateway" `
     -FeatureFlags "InnovationId" `
-    -ServiceFabricApiGatewayEndpoint "https://server.domain.com/" `
+    -ServiceFabricApiGatewayEndpoint "https://server.domain.com:8722/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
     -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `

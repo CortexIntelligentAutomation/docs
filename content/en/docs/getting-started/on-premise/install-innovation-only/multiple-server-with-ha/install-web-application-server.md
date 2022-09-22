@@ -433,7 +433,7 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
-    -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway" `
+    -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway.zip" `
     -GatewayApplicationIISPath "Cortex\gateway" `
     -ModelDBContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True",
     -AuthContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True",

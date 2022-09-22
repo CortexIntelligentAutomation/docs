@@ -378,13 +378,13 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
-    -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway" `
+    -GatewayPackagePath "C:\Install\Cortex Innovation 2022.6 - Gateway.zip" `
     -GatewayApplicationIISPath "Cortex\gateway" `
     -ModelDBContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True",
     -AuthContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True",
     -SignalRContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True",
     -FeatureFlags "InnovationId" `
-    -ServiceFabricApiGatewayEndpoint "https://server.domain.com/" `
+    -ServiceFabricApiGatewayEndpoint "https://server.domain.com:8722/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
     -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `

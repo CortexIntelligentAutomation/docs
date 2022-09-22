@@ -35,6 +35,8 @@ Cortex v7.2 component descriptions are not covered in this guide. See separate v
 
 Cortex Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation by using the existing hardware containing v7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
 
+The installation process is the same, regardless of which architecture is used; [Recommended][], [Minimum][] or [Alternative][]. The only difference is the [Hardware Requirements][], which will be greater for existing machines as they need more resources to run more components.
+
 ### Recommended Architecture
 
 The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Server system requires 8 servers in total; the 4 existing servers, plus 4 new servers:
@@ -58,9 +60,7 @@ The minimum architecture requires only the 4 existing servers:
 
 ### Alternative Architectures
 
-Alternative architectures are possible, any of the Innovation server roles may be installed on any of the existing or new servers provided that the hardware is capable of running everything according to the [Hardware Requirements][]. For example, if the database servers cannot have anything else installed on them, new servers may be used for the load balancer and the third Innovation Application Server. Additionally, an existing, alternative load balancer may be used instead of the bundled one. The only caveat is that the load balancer must not be installed on the same machine as an Innovation Application Server as it cannot be used to send traffic to itself.
-
-The installation process is the same, regardless of whether new or existing hardware is being used. The only difference is the Hardware Prerequisites, which will be greater for existing machines as they need more resources to run more components.
+Alternative architectures are possible; any of the Innovation server roles may be installed on any of the existing or new servers provided that the hardware is capable of running everything according to the [Hardware Requirements for Alternative Architectures][]. For example, if the database servers cannot have anything else installed on them, new servers may be used for the load balancer and the third Innovation Application Server. Additionally, an existing, alternative load balancer may be used instead of the bundled one. The only caveat is that the load balancer must not be installed on the same machine as an Innovation Application Server as it cannot be used to send traffic to itself.
 
 ## Next Steps?
 
@@ -70,6 +70,7 @@ The installation process is the same, regardless of whether new or existing hard
 [Studio Guide]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
 [Hardware Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.HardwareRequirements" >}}
+[Hardware Requirements for Alternative Architectures]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.HardwareRequirementsAlternativeArchitecture" >}}
 [SQL&nbsp;Server&nbsp;Express]: {{< url "MSDownload.SqlServerExpress.2016" >}}
 [SQL&nbsp;Server&nbsp;Standard]: {{< url "MSEval.SQLServer.2019" >}}
 [Microsoft&nbsp;Service&nbsp;Fabric]: {{< url "MSDocs.ServiceFabric.MainDoc" >}}
@@ -79,3 +80,6 @@ The installation process is the same, regardless of whether new or existing hard
 [Erlang&nbsp;OTP]: {{< url "ErlangOTP.MainDoc" >}}
 [gobetween]: {{< url "GoBetween.MainDoc" >}}
 [NSSM]: {{< url "NSSM.MainDoc" >}}
+[Recommended]: {{< ref "#recommended-architecture" >}}
+[Minimum]: {{< ref "#minimum-architecture" >}}
+[Alternative]: {{< ref "#alternative-architectures" >}}
