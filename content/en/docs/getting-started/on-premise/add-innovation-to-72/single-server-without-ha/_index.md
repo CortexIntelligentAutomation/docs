@@ -10,5 +10,3 @@ Single server installations with HA are not recommended for the following scenar
 
 * Production installations that are required to scale and support HA
 {{% /pageinfo %}}
-
-<img src="/images/work-in-progress.jpg">

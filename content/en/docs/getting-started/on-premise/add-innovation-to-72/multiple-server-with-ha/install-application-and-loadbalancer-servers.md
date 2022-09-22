@@ -5,9 +5,9 @@ description: "Information about installing the Application Servers and Load Bala
 weight: 30
 ---
 
-# {{% param title %}}
+# {{< param title >}}
 
-This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Prerequisites for installing Innovation][] have been read before starting this installation.
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that [Prerequisites for adding Innovation to v7.2][] have been read before starting this installation.
 
 ## Extract Installation Artefacts
 
@@ -192,8 +192,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
-    |`ApiGatewayBasicAuthUserName`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUserName`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway]. |
+    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
@@ -207,7 +207,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
-    The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
+    The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when upgrading Gateway][Upgrade Gateway].
 
     {{% alert title="Note" %}}
 More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigMultipleServer" "Advanced Application Server and Load Balancer Configuration Changes" >}}.
@@ -318,17 +318,18 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 ## Next Steps?
 
-1. [Install Web Application Server][]
+1. [Upgrade v7.2 Gateway to Include Innovation][]
 
 [Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}
-[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
-[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
-[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallGateway" >}}
+[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallWebApplicationServer" >}}
+[Upgrade v7.2 Gateway to Include Innovation]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServer" >}}
+[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirements" >}}
+[Upgrade Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallGateway" >}}
 [Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
+[Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
-[Prerequisites for installing Innovation]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
-[alternative load balancer]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancer" >}}
+[Prerequisites for adding Innovation to v7.2]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
+[alternative load balancer]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AltLoadBalancer" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}

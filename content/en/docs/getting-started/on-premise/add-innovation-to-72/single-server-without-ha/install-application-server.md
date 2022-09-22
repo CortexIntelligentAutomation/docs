@@ -5,7 +5,7 @@ description: "Information about installing the Application Server."
 weight: 30
 ---
 
-# {{% param title %}}
+# {{< param title >}}
 
 This guide describes how to install the Application Server components on the server. Please ensure that the [Prerequisites][] have been read before starting this installation.
 
@@ -154,8 +154,8 @@ The settings can be applied by running a script. Be aware that the server will b
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the App Services zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
-    |`ApiGatewayBasicAuthUserName`                 | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUserName`                 | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway]. |
+    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 address of the server.|
     |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the server. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the single node cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul>{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" "update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}|
@@ -165,8 +165,8 @@ The settings can be applied by running a script. Be aware that the server will b
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
-    
-    The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
+
+    The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when upgrading Gateway][Upgrade Gateway].
 
     {{% alert title="Note" %}}
 More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigSingleServer" "Advanced Application Server and Load Balancer Configuration Changes" >}}.
@@ -212,6 +212,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     ```powershell
     .\Cortex.Innovation.Install.ps1
     ```
+
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
@@ -280,13 +281,13 @@ Ensure that the installation files are backed up or kept on the server, especial
 1. [Install Web Application Server][]
 
 [Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}
-[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
-[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
-[Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallGateway" >}}
+[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServer" >}}
+[Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.CertificateRequirements" >}}
+[Upgrade Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallGateway" >}}
 [Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
-[Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
-[Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusions" >}}
+[Prerequisites]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Prerequisites" >}}
+[Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AntivirusExclusions" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
