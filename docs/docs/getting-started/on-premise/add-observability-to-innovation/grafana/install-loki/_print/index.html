@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.88.0" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Install Grafana Loki | Cortex</title><meta property="og:title" content="Install Grafana Loki" />
+<meta property="og:description" content="Information about installing and configuring Grafana Loki on the Web Application Server." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/" /><meta property="og:site_name" content="Cortex" />
+
+<meta itemprop="name" content="Install Grafana Loki">
+<meta itemprop="description" content="Information about installing and configuring Grafana Loki on the Web Application Server."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Grafana Loki"/>
+<meta name="twitter:description" content="Information about installing and configuring Grafana Loki on the Web Application Server."/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" as="style">
+<link href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_4_copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1388 475.1" style="enable-background:new 0 0 1388 475.1"><style>.st0{fill:#3b8fce}.st1{fill:#262056}.st2{fill:#a1c429}.st3{fill:#fff}.st4{fill:url(#SVGID_1_)}.st5{opacity:.6;fill:url(#SVGID_2_)}.st6{filter:url(#Adobe_OpacityMaskFilter)}.st7{fill:url(#SVGID_4_)}.st8{mask:url(#SVGID_3_);fill:#fff}.st9{fill:#3f3f3e}</style><path class="st0" d="M122.1 231.7c0-15.7 3.6-30.5 9.9-43.8l-81.1-46.8c-22.9 43.5-28.5 93.3-15.7 141 13.5 50.3 45.7 92.3 90.8 118.3 29 16.7 56.9 24.9 89.6 26v-93.7c-52.3-4-93.5-47.6-93.5-101z"/><path class="st1" d="M223.5 130.3c34.7.0 65.3 17.5 83.6 44.1l81.1-46.8c-35.6-56.2-98-90.8-164.9-90.8-34 0-67.6 9-97.3 26.1-29 16.7-50 36.8-67.3 64.6l81.1 46.8c18.4-26.5 49-44 83.7-44z"/><path class="st2" d="M396.1 141.1 315 188c6.3 13.2 9.9 28.1 9.9 43.7.0 53.3-41.2 97-93.5 101v93.7c103.8-4.1 187-89.9 187-194.7C418.4 198.2 411.5 170 396.1 141.1z"/><g><path class="st3" d="M223.5 231.7l-65.8-38c-21 36.4-8.5 82.9 27.8 103.9 12.1 7 24 10.2 38 10.2V231.7z"/></g><g><path class="st3" d="M223.5 231.7l65.8-38c-21-36.4-67.5-48.8-103.9-27.8-12.1 7-20.8 15.7-27.8 27.8l65.9 38z"/></g><g><path class="st3" d="M223.5 231.7v76c42 0 76-34 76-76 0-14-3.2-25.9-10.2-38l-65.8 38z"/></g><g><radialGradient id="SVGID_1_" cx="223.5157" cy="231.6926" r="76.1085" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#969695"/><stop offset="1" style="stop-color:#3F3F3E"/></radialGradient><path class="st4" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="223.5157" y1="155.5859" x2="223.5157" y2="307.7993"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#3F3F3E"/></linearGradient><path class="st5" d="M147.4 231.7c0-42 34.1-76.1 76.1-76.1s76.1 34.1 76.1 76.1-34.1 76.1-76.1 76.1C181.5 307.8 147.4 273.7 147.4 231.7z"/><defs><filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/></filter></defs><mask maskUnits="userSpaceOnUse" x="177.2" y="172.1" width="92.7" height="59.5" id="SVGID_3_"><g class="st6"><linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="220.0409" y1="123.6788" x2="220.0409" y2="238.3832"><stop offset="0" style="stop-color:#FFFFFF"/><stop offset="1" style="stop-color:#000000"/></linearGradient><rect x="158.4" y="123.7" class="st7" width="123.3" height="114.7"/></g></mask><path class="st8" d="M177.2 201.9c0-16.5 20.7-29.8 46.3-29.8s46.3 13.3 46.3 29.8c0 16.4-20.7 29.8-46.3 29.8s-46.3-13.3-46.3-29.8z"/></g><g><path class="st9" d="M549.7 146c42.6.0 62.7 24.3 62.7 24.3l-17.9 27.8s-17-17.6-42.6-17.6c-30.1.0-49.6 22.7-49.6 50.6.0 27.5 19.8 51.2 50.9 51.2 27.5.0 48-20.8 48-20.8l15.7 28.8s-23.4 26.5-67.2 26.5c-54.1.0-88.6-38.1-88.6-85.4.0-46.4 34.5-85.4 88.6-85.4z"/><path class="st9" d="M697.7 146c49.9.0 89.9 35.5 89.9 85.4.0 50.2-40 85.4-89.6 85.4-49.9.0-89.9-35.2-89.9-85.4.0-49.9 40-85.4 89.6-85.4zM698 282.3c26.3.0 48.3-20.5 48.3-50.9.0-30.1-22.1-50.9-48.3-50.9-26.6.0-48.6 20.8-48.6 50.9.0 30.4 22.1 50.9 48.6 50.9z"/><path class="st9" d="M796.6 149.8h39V178c0 6.1-.6 11.5-.6 11.5h.6c7.4-23.4 26.9-41.9 51.9-41.9 3.8.0 7.3.6 7.3.6v40s-4.2-.6-9.6-.6c-17.3.0-36.8 9.9-44.5 34.2-2.6 8-3.5 16.9-3.5 26.6V313h-40.6V149.8z"/><path class="st9" d="M904.2 105.4h40.7v47H982v32.3h-37.1v63.4c0 26.9 21.1 30.7 32.3 30.7 4.5.0 7.4-.6 7.4-.6v35.5s-4.8 1-12.5 1c-22.7.0-67.9-6.7-67.9-61.4V105.4z"/><path class="st9" d="M1065.5 146c47 0 72.3 34.2 72.3 77.4.0 4.8-1 15.7-1 15.7h-112.6c2.6 28.5 24.6 43.2 49 43.2 26.2.0 47.1-17.9 47.1-17.9l15.7 29.1s-25 23.4-65.6 23.4c-54.1.0-87.7-39-87.7-85.4C982.6 181.2 1016.9 146 1065.5 146zM1096.9 211.3c-.6-22.1-14.4-33.9-32.3-33.9-20.8.0-35.2 12.8-39 33.9h71.3z"/><path class="st9" d="M1236 230.5l52.5-80.6h-46.1l-25.3 44.5c-2.6 4.2-5.4 10.2-5.4 10.2h-.6s-2.9-6.1-5.4-10.2l-25.3-44.5h-46.1l52.5 80.6L1133 313h45.1l28.5-47.4c2.3-3.5 4.5-8.6 4.5-8.6h.6s2.3 5.1 4.5 8.6l28.5 47.4h45.1L1236 230.5z"/><g><path class="st9" d="M1313.8 149.8c9.5.0 17.2 7.7 17.2 17.4.0 9.8-7.6 17.5-17.2 17.5-9.4.0-16.9-7.7-16.9-17.5C1296.8 157.6 1304.4 149.8 1313.8 149.8zm0 32.3c8.2.0 14.4-6.5 14.4-14.9.0-8.3-6.2-14.8-14.4-14.8-8 0-14.1 6.5-14.1 14.8C1299.6 175.6 1305.8 182.1 1313.8 182.1zM1308.1 157.9h6.7c3.3.0 5.6 2.2 5.6 5.6.0 2.8-1.8 4.5-3.5 4.9v.1s.2.2.6 1.1l3.6 7.1h-3l-3.7-7.6h-3.6v7.6h-2.7V157.9zM1314.3 166.9c2 0 3.3-1.3 3.3-3.5.0-2.1-1.3-3.3-3.3-3.3h-3.5v6.8h3.5z"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Cortex</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				<a id="documentation" class="nav-link" href="/docs/" ><span>Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a  class="nav-link" href="/blog/" ><span>Blog</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				<a id="community" class="nav-link" href="https://community.cortex.co.uk/" target="_blank" ><span>Community</span></a>
+			</li>
+			
+			
+			<li class="nav-item dropdown d-block pl-2">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Releases
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="http://v2022.docs.cortex-ia.com/">v2022 (latest)</a>
+	
+	<a class="dropdown-item" href="https://community.cortex.co.uk/">v7.2</a>
+	
+</div>
+
+			</li>
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="50"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Install Grafana Loki</h1>
+<div class="lead">Information about installing and configuring Grafana Loki on the Web Application Server.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-2d8cf1bdd8cf0ae749a167a8e8e1cd82">Install Loki</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-d6710f97aa12527849c80fd98cf88444">Configure Loki</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-2d8cf1bdd8cf0ae749a167a8e8e1cd82">1 - Install Loki</h1>
+    <div class="lead">Information about installing Grafana Loki on the Web Application Server.</div>
+	<h1 id="install-loki">Install Loki</h1>
+<p>This guide describes how to install Grafana Loki on the Web Application Server. Please ensure that the <a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites">Prerequisites</a> have been completed before starting this installation.</p>
+<h2 id="install-grafana-loki">Install Grafana Loki</h2>
+<ol>
+<li>Download <a href="https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip">Grafana Loki 2.5.0</a> archive.</li>
+<li>Extract content of the downloaded archive to a suitable location, e.g. <code>C:\Loki</code>.</li>
+<li>Download the <a href="https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip">Grafana Loki Install.zip</a> archive and extract its contents alongside the previously extracted Grafana Loki <code>loki-windows-amd64.exe</code>.
+This archive contains the <code>loki-local-config.yaml</code> configuration file, <a href="https://nssm.cc/">NSSM</a> (the Non-Sucking Service Manager program) and PowerShell scripts to help manage Grafana Loki as a Windows service.</li>
+<li>Run Windows PowerShell as Administrator.</li>
+<li>Change the location to where all the files were extracted to.</li>
+<li>Execute the <code>.\Install-Loki.ps1</code> command to install the downloaded Grafana Loki <code>loki-windows-amd64.exe</code> as a service.</li>
+<li>Execute the <code>.\Start-Loki.ps1</code> command to start the Grafana Loki service.</li>
+</ol>
+<h2 id="next-steps">Next Steps?</h2>
+<ol>
+<li><a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki">Configure Loki</a></li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d6710f97aa12527849c80fd98cf88444">2 - Configure Loki</h1>
+    <div class="lead">Information about configuring Grafana Loki on the Web Application Server.</div>
+	<h1 id="configure-loki">Configure Loki</h1>
+<p>This guide describes how to configure Grafana Loki on the Web Application Server.</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    For security reasons, Grafana Loki should be run behind an encrypted and authenticated reverse proxy as it does not provide these features by itself.
+
+</div>
+
+<h2 id="install-certificate">Install Certificate</h2>
+<p>IIS requires the X.509 SSL certificate, obtained in the <a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#certificate-requirements">prerequisites</a>, to be installed on the Web Application Server.</p>
+<p>You can import the certificate by right clicking the certificate file, selecting <code>Install Certificate</code> and following the wizard. When prompted, ensure you import it into the <code>Local Machine</code> store and not <code>Current User</code>.</p>
+<p>To verify the certificate is imported:</p>
+<ol>
+<li>Click the Windows button (<code>Start</code>)</li>
+<li>Type <code>certlm.msc</code> and press <code>Enter</code> to open the Certificate Manager dialog</li>
+<li>Expand <code>Personal</code> and select <code>Certificates</code></li>
+<li>You should see your certificate in this store</li>
+</ol>
+<h2 id="setup-reverse-proxy-with-iis">Setup Reverse Proxy with IIS</h2>
+<p>All of the steps must be carried out on the Web Application Server.</p>
+<h3 id="install-iis-basic-authentication">Install IIS Basic Authentication</h3>
+<ol>
+<li>Run <em>Server Manager</em>.</li>
+<li>Expand the <em>Manage</em> menu and select <em>Add Roles and Features</em>.</li>
+<li>In the left-hand menu, select <em>Server Selection</em>.</li>
+<li>Select the name of the Web Application Server, click <em>Next</em>.</li>
+<li>On the <em>Server Roles</em> page, in the <em>Roles</em> tree, expand <em>Web Server (IIS)</em> &ndash;&gt; <em>Web Server</em> &ndash;&gt; <em>Security</em>.</li>
+<li>Select <em>Basic Authentication</em>, click <em>Next</em>.</li>
+<li>Click <em>Next</em> to get to the <em>Confirm installation selections</em> page.</li>
+<li>Click <em>Install</em>.</li>
+<li>Click <em>Close</em> on the <em>Results</em> page.</li>
+</ol>
+<h3 id="install-iis-url-rewrite-module">Install IIS URL Rewrite Module</h3>
+<ol>
+<li>Download the <a href="https://www.iis.net/downloads/microsoft/url-rewrite">URL Rewrite module 2.1</a></li>
+<li>Run the downloaded installer.</li>
+<li>When prompted by the Web Platform Installer, click <em>Install</em>.</li>
+<li>On the <em>Prerequisites</em> page click <em>I Accept</em> to agree to the license terms for the module.</li>
+<li>Once the install has completed, click <em>Finish</em>.</li>
+<li>Click <em>Exit</em> to close the Web Platform Installer.</li>
+</ol>
+<h3 id="install-application-request-routing">Install Application Request Routing</h3>
+<ol>
+<li>Download <a href="https://www.iis.net/downloads/microsoft/application-request-routing">Application Request Routing 3.0</a></li>
+<li>Run the downloaded installer.</li>
+<li>When prompted by the Web Platform Installer, click <em>Install</em>.</li>
+<li>On the <em>Prerequisites</em> page click <em>I Accept</em> to agree to the license terms for the module.</li>
+<li>Once the install has completed, click <em>Finish</em>.</li>
+<li>Click <em>Exit</em> to close the Web Platform Installer.</li>
+</ol>
+<h3 id="set-up-reverse-proxy">Set Up Reverse Proxy</h3>
+<p>To set up a reverse proxy, carry out the following configuration.</p>
+<h4 id="add-a-new-website">Add a New Website</h4>
+<ol>
+<li>Run IIS Manager.</li>
+<li>In the <em>Connection</em> pane, expand the server.</li>
+<li>Right-click on <em>Sites</em> and select <em>Add Website&hellip;</em> from the menu.</li>
+<li>In the <em>Add Website</em> window:
+<ul>
+<li>Provide the site name, e.g. <code>Grafana Loki</code>.</li>
+<li>Set the <em>Physical path</em> to the location where the site will be stored and ensure that the path exists, e.g. <code>C:\inetpub\wwwroot\Grafana Loki</code>.</li>
+<li>For <em>Binding</em> set:
+<ul>
+<li><em>Type</em>: <code>https</code></li>
+<li><em>IP address</em>: <code>All unassigned</code></li>
+<li><em>Port</em>: <code>2100</code></li>
+</ul>
+</li>
+<li><em>Host name</em>: The fully qualified domain name of the Web Application Server. This must match one of the Subject Alternative Names in the SSL certificate selected in the next step.</li>
+<li><em>SSL certificate</em>: Select the certificate created as part of the <a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/prerequisites#certificate-requirements">Certificate Requirements</a> instructions.</li>
+<li>Click <em>OK</em> to add the website.</li>
+</ul>
+</li>
+</ol>
+<h4 id="enable-basic-authentication">Enable Basic Authentication</h4>
+<ol>
+<li>In the <em>Connection</em> pane, browse to <em>Sites</em>.</li>
+<li>Select the newly created website.</li>
+<li>Double-click on the <em>Authentication</em> icon.</li>
+<li>Disable <em>Anonymous Authentication</em>.</li>
+<li>Enable <em>Basic Authentication</em>.</li>
+</ol>
+<h2 id="configure-url-rewrite-rule">Configure URL Rewrite Rule</h2>
+<ol>
+<li>In the <em>Connection</em> pane, browse to <em>Sites</em>.</li>
+<li>Select the newly created website.</li>
+<li>Double-click on the <em>URL Rewrite</em> icon.</li>
+<li>In the <em>Actions</em> pane, click <em>Add Rule(s)&hellip;</em>.</li>
+<li>Select <em>Reverse Proxy</em> from the <em>Inbound and Outbound Rules</em> section.</li>
+<li>Click <em>OK</em>.</li>
+<li>If prompted to <em>Add Reverse Proxy Rules</em>, click <em>OK</em> to enable proxy functionality.</li>
+<li>In the <em>Inbound Rules</em> section enter <code>localhost:3100</code> as the server name.</li>
+<li>Ensure that <em>Enable SSL Offloading</em> is checked.</li>
+<li>Click <em>OK</em>.</li>
+</ol>
+<h4 id="restart-the-website">Restart the Website</h4>
+<ol>
+<li>In the <em>Connection</em> pane, browse to <em>Sites</em>.</li>
+<li>Select the newly created website.</li>
+<li>In the <em>Manage Website</em> pane, click <em>Restart</em>.</li>
+</ol>
+<h4 id="create-loki-user">Create Loki User</h4>
+<ol>
+<li>
+<p>Run Windows PowerShell as Administrator.</p>
+</li>
+<li>
+<p>Execute the following command to create a new local user on the Web Application Server:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Powershell" data-lang="Powershell"><span style="color:#204a87">New-LocalUser</span> <span style="color:#4e9a06">&#34;&lt;username&gt;&#34;</span> <span style="color:#000">-Password</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">ConvertTo-SecureString</span> <span style="color:#4e9a06">&#34;&lt;password&gt;&#34;</span> <span style="color:#000">-AsPlainText</span> <span style="color:#000">-force</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">-FullName</span> <span style="color:#4e9a06">&#34;&lt;name&gt;&#34;</span> <span style="color:#000">-Description</span> <span style="color:#4e9a06">&#34;&lt;description&gt;&#34;</span> <span style="color:#a40000">–</span><span style="color:#000">PasswordNeverExpires</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>The username of the user to be created.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The password for the user account.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The full name for the user account.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>The description of the user account.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="next-steps">Next Steps?</h2>
+<ol>
+<li><a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/">Install Promtail</a></li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+
+<footer class="bg-dark row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-12 col-sm-12 text-center py-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://twitter.com/cortex_software">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Facebook" aria-label="Facebook">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cortexintelligentautomation/">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Vimeo" aria-label="Vimeo">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://vimeo.com/cortexautomationsoftware">
+      <i class="fab fa-vimeo"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="LinkedIn" aria-label="LinkedIn">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/10975051">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="YouTube" aria-label="YouTube">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-6 text-xs-center order-sm-1">
+        
+        
+        
+<ul class="list-unstyled">
+  
+  <li data-toggle="tooltip" data-placement="top" aria-label="Privacy Policy">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.cortex-ia.com/gdpr-privacy-policy/">
+      Privacy Policy
+    </a>
+  </li>
+  
+  <li data-toggle="tooltip" data-placement="top" aria-label="Terms and Conditions">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.cortex-ia.com/terms-conditions/">
+      Terms and Conditions
+    </a>
+  </li>
+  
+  <li data-toggle="tooltip" data-placement="top" aria-label="Disclaimer">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.cortex-ia.com/disclaimer/">
+      Disclaimer
+    </a>
+  </li>
+  
+  <li data-toggle="tooltip" data-placement="top" aria-label="Registration Number: 05023238">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://find-and-update.company-information.service.gov.uk/company/05023238">
+      Registration Number: 05023238
+    </a>
+  </li>
+  
+  <li data-toggle="tooltip" data-placement="top" aria-label="VAT Number: GB204612157">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.tax.service.gov.uk/check-vat-number/enter-vat-details">
+      VAT Number: GB204612157
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-6 text-right text-xs-center order-sm-2"> 
+        <ul class="list-unstyled">
+          
+            
+  <li class="text-white" data-toggle="tooltip" data-placement="top" aria-label="22 Kings Park Road">
+      22 Kings Park Road
+  </li>
+
+            
+  <li class="text-white" data-toggle="tooltip" data-placement="top" aria-label="Southampton, SO15 2AT">
+      Southampton, SO15 2AT
+  </li>
+
+            
+  <li class="text-white" data-toggle="tooltip" data-placement="top" aria-label="&#43;44 23 8254 8990">
+      &#43;44 23 8254 8990
+  </li>
+
+            
+  <li class="text-white" data-toggle="tooltip" data-placement="top" aria-label="info@cortex-ia.com">
+      info@cortex-ia.com
+  </li>
+
+            
+  <li class="text-white" data-toggle="tooltip" data-placement="top" aria-label="Southampton, SO15 2AT">
+      Southampton, SO15 2AT
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
+        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
