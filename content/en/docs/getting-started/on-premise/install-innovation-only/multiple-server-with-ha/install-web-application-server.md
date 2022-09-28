@@ -9,7 +9,7 @@ weight: 40
 
 This guide describes how to install the Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation.
 
-## Extract Installation Artefacts
+## Make Installation Artefacts Available
 
 1. We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):
    * Cortex Innovation 2022.6 - Block Packages.zip
@@ -186,6 +186,11 @@ Apply the settings by following these instructions:
     .\Cortex.Innovation.Install.SSLBestPractices.ps1
     ```
 
+    {{% alert title="Note" %}}
+To avoid answering all of the prompts `-Override 0` can be added to the end of the script. This will automatically apply all settings and forcibly restart the server.
+    {{% /alert %}}
+
+    If `-Override 0` has been specified no further steps need to be taken and you can move on to the next section when the server has restarted.
 1. To use all the recommended settings click `Apply all` to the first prompt.
 
     To selectively apply each setting select `Choose which to apply`. Each change will then be prompted with a Yes/No confirmation before applying.

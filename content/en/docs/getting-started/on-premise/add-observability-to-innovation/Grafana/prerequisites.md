@@ -119,7 +119,7 @@ See [SSL Best Practices][] for a full list of the recommended security changes t
 
 Apply the settings by following these instructions:
 
-1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractices.ps1` file extracted during the [Extract Installation Artefacts][] step into a suitable location on the Web Application Server.
+1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractices.ps1` file extracted during the [Make Installation Artefacts Available][] step into a suitable location on the Web Application Server.
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Change the location to the folder where the `Cortex.Innovation.Install.SSLBestPractices.ps1` file was copied to using the following command, modifying the path as necessary:
 
@@ -157,7 +157,7 @@ A domain user which is a member of the Local Administrators group on all Applica
 [Architecture]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Architecture" >}}
 [configuring Grafana to use HTTPS]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.ConfigureHTTPS" >}}
 [Create Self-Signed Certificates]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced.CreateSelfSignedCertificates" >}}
-[Extract Installation Artefacts]:  {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ExtractInstallationArtefacts" >}}
+[Make Installation Artefacts Available]:  {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.MakeInstallationArtefactsAvailable" >}}
 [Grafana 8.5.4]: {{< url "Grafana.SelfManaged.Downloads.GrafanaWebApp.Windows" >}}
 [Grafana Loki 2.5.0]: {{< url "Grafana.SelfManaged.Downloads.GrafanaLoki.GrafanaLokiInstallZip" >}}
 [Install Grafana]: {{< url "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.MainDoc" >}}
