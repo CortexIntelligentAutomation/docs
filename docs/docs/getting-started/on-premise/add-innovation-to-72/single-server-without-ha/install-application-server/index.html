@@ -22,12 +22,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-09-21T18:17:10+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-09-28T10:52:56+01:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Install Application Server">
 <meta itemprop="description" content="Information about installing the Application Server.">
-<meta itemprop="dateModified" content="2022-09-21T18:17:10+01:00" />
-<meta itemprop="wordCount" content="2509">
+<meta itemprop="dateModified" content="2022-09-28T10:52:56+01:00" />
+<meta itemprop="wordCount" content="2567">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Application Server"/>
 <meta name="twitter:description" content="Information about installing the Application Server."/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -8731,7 +8731,7 @@
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#extract-installation-artefacts">Extract Installation Artefacts</a></li>
+    <li><a href="#make-installation-artefacts-available">Make Installation Artefacts Available</a></li>
     <li><a href="#install-microsoft-net-framework-471">Install Microsoft .NET Framework 4.7.1</a></li>
     <li><a href="#apply-recommended-security-measures">Apply Recommended Security Measures</a>
       <ul>
@@ -8823,11 +8823,11 @@
             
 <div class="td-content">
 	
-        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 12 minute read</p>
+        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 13 minute read</p>
            
 	<h1 id="hahahugoshortcode-s0-hbhb">Install Application Server</h1>
 <p>This guide describes how to install the Application Server components on the server. Please ensure that the <a href="/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites">Prerequisites</a> have been read before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Copy the following artefacts to a folder on the server (the version numbers may differ):</p>
@@ -8883,7 +8883,17 @@
 <li>
 <p>Run the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> script using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SSLBestPractices</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
-</code></pre></div></li>
+</code></pre></div>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To avoid answering all of the prompts <code>-Override 0</code> can be added to the end of the script. This will automatically apply all settings and forcibly restart the server.
+
+</div>
+
+<p>If <code>-Override 0</code> has been specified no further steps need to be taken and you can move on to the next section when the server has restarted.</p>
+</li>
 <li>
 <p>To use all the recommended settings click <code>Apply all</code> to the first prompt.</p>
 <p>To selectively apply each setting select <code>Choose which to apply</code>. Each change will then be prompted with a Yes/No confirmation before applying.</p>
@@ -8981,23 +8991,23 @@
 
 
 
-    <ul class="nav nav-tabs" id="tabs-2" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-3" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-2-0-tab" data-toggle="tab" href="#tabs-2-0" role="tab"
-        aria-controls="tabs-2-0" aria-selected="true">
+        id="tabs-3-0-tab" data-toggle="tab" href="#tabs-3-0" role="tab"
+        aria-controls="tabs-3-0" aria-selected="true">
         CA Certs
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-2-1-tab" data-toggle="tab" href="#tabs-2-1" role="tab"
-        aria-controls="tabs-2-1" aria-selected="false">
+        id="tabs-3-1-tab" data-toggle="tab" href="#tabs-3-1" role="tab"
+        aria-controls="tabs-3-1" aria-selected="false">
         Self-Signed Certs
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-2-content"><div class="tab-pane fade show active"
-        id="tabs-2-0" role="tabpanel" aria-labelled-by="tabs-2-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<div class="tab-content" id="tabs-3-content"><div class="tab-pane fade show active"
+        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -9013,7 +9023,7 @@
     <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-app-install-log.txt&#34;</span>
         </code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -9245,7 +9255,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified September 21, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/d1f99fd4ce51a27d30d06c71e078c00d3540f152">Changes to support adding Innovation to v7.2 (d1f99fd4)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified September 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/43542ac71d5341f7d973daa0ed668da77840d71d">Bug/61550 install doc improvements (#28) (43542ac7)</a>
 </div>
 </div>
 

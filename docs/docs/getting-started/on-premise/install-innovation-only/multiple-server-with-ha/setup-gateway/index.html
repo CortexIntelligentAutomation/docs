@@ -22,12 +22,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-08-23T16:26:42+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-09-28T10:52:56+01:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Setup Gateway">
 <meta itemprop="description" content="Information about setting up Cortex Gateway for first-time use.">
-<meta itemprop="dateModified" content="2022-08-23T16:26:42+01:00" />
-<meta itemprop="wordCount" content="582">
+<meta itemprop="dateModified" content="2022-09-28T10:52:56+01:00" />
+<meta itemprop="wordCount" content="598">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setup Gateway"/>
 <meta name="twitter:description" content="Information about setting up Cortex Gateway for first-time use."/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -8931,6 +8931,15 @@ Gateway currently supports four roles, but only two are relevant for Cortex Inno
 </li>
 </ol>
 <h2 id="configure-the-gateway-databases-to-use-transparent-data-encryption">Configure the Gateway Databases to use Transparent Data Encryption</h2>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    Transparent Data Encryption cannot be applied to SQL Server Express, only full SQL Server instances.
+
+</div>
+
 <p>Once Gateway has been configured, if you wish to encrypt the databases using <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15">Transparent Data Encryption</a> for improved security, this should now be performed by following the steps in <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/tde">Configuring TDE</a>.</p>
 <h2 id="next-steps">Next Steps?</h2>
 <ol>
@@ -8939,7 +8948,7 @@ Gateway currently supports four roles, but only two are relevant for Cortex Inno
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified August 23, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/cee349083e16c9eb2f2439c257ccb754a7f8e2dc">updated param title link from # {{&lt; param title &gt;}} to # {{% param title %}} (cee34908)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified September 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/43542ac71d5341f7d973daa0ed668da77840d71d">Bug/61550 install doc improvements (#28) (43542ac7)</a>
 </div>
 </div>
 

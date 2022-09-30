@@ -22,12 +22,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-08-23T16:26:42+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-09-28T10:52:56+01:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Try it out">
 <meta itemprop="description" content="Information about trying out Cortex Innovation for the first time.">
-<meta itemprop="dateModified" content="2022-08-23T16:26:42+01:00" />
-<meta itemprop="wordCount" content="518">
+<meta itemprop="dateModified" content="2022-09-28T10:52:56+01:00" />
+<meta itemprop="wordCount" content="520">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Try it out"/>
 <meta name="twitter:description" content="Information about trying out Cortex Innovation for the first time."/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -8833,7 +8833,9 @@
 
 If the blocks in the flow do not display or the palettes are not visible, see <a href="/docs/reference/troubleshooting/installation#ts-no-blocks">Troubleshooting</a> for more information.</li>
 <li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
-<li>Click the <code>Set Variable</code> block to open the Property Editor. Set the <code>Value</code> property to <code>DateTimeOffset.Now</code>. Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Variable</code>.</li>
+<li>Click the <code>Set Variable</code> block to open the Property Editor.</li>
+<li>Set the <code>Value</code> property to the expression <code>DateTimeOffset.Now</code>.</li>
+<li>Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Result</code>.</li>
 <li>In the Variable Editor, set <code>Is Output Variable?</code> to <code>true</code> for the new <code>Result</code> variable.</li>
 <li>Set a breakpoint on the end block and start the flow. An execution token should appear, the <code>Result</code> variable should show the current time. If the token does not appear, try refreshing the page.</li>
 <li>Continue or stop the execution.</li>
@@ -8908,7 +8910,7 @@ If the blocks in the flow do not display or the palettes are not visible, see <a
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified August 23, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/cee349083e16c9eb2f2439c257ccb754a7f8e2dc">updated param title link from # {{&lt; param title &gt;}} to # {{% param title %}} (cee34908)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified September 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/43542ac71d5341f7d973daa0ed668da77840d71d">Bug/61550 install doc improvements (#28) (43542ac7)</a>
 </div>
 </div>
 

@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -1270,12 +1270,12 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 </div>
 
 <h4 id="tls-requirements">TLS Requirements</h4>
-<p>There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
+<p>There is a set of non-compulsory security measures, recommended to be applied to the Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
 <ul>
 <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
 <li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
 </ul>
-<p>See <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices">SSL Best Practices</a> for a full list of the security changes which will be applied. The <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script is provided during installation to apply these security changes to the Web Application Server.</p>
+<p>See <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices">SSL Best Practices</a> for a full list of the security changes which will be applied. The <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script is provided during installation to apply these security changes to the Application Servers.</p>
 <h2 id="additional-web-application-server-requirements">Additional Web Application Server Requirements</h2>
 <h3 id="security-requirements-1">Security Requirements</h3>
 <h4 id="installation-user-1">Installation User</h4>
@@ -1361,7 +1361,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <p>The certificate may be the same one used for the Application Server installation.</p>
 <p>More information about importing the certificate is given during installation.</p>
 <h4 id="tls-requirements-1">TLS Requirements</h4>
-<p>There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
+<p>There is a set of non-compulsory security measures, recommended to be applied to the Web Application Server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
 <ul>
 <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
 <li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
@@ -1419,7 +1419,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <div class="lead">Information about installing the Application Servers and Load Balancer Server.</div>
 	<h1 id="install-application-servers-and-load-balancer">Install Application Servers and Load Balancer</h1>
 <p>This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the <a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites">Prerequisites for installing Innovation</a> have been read before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):</p>
@@ -1487,6 +1487,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 </li>
 <li>
 <p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press <code>OK</code>.</p>
+<p>If <code>-Override 0</code> has been specified no further steps need to be taken and you can move on to the next section when the servers have restarted.</p>
 </li>
 <li>
 <p>To use all the recommended settings click <code>Apply all</code> to the each <code>Apply Cortex recommended security best practices</code> prompt.</p>
@@ -1962,7 +1963,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <div class="lead">Information about installing the Web Application Server.</div>
 	<h1 id="install-the-web-application-server">Install the Web Application Server</h1>
 <p>This guide describes how to install the Web Application Server. Please ensure that <a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers">Install Application Servers and Load Balancer</a> has been completed before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):</p>
@@ -2155,7 +2156,17 @@ Web-Mgmt-Service is installed
 <li>
 <p>Run the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> script using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SSLBestPractices</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
-</code></pre></div></li>
+</code></pre></div>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To avoid answering all of the prompts <code>-Override 0</code> can be added to the end of the script. This will automatically apply all settings and forcibly restart the server.
+
+</div>
+
+<p>If <code>-Override 0</code> has been specified no further steps need to be taken and you can move on to the next section when the server has restarted.</p>
+</li>
 <li>
 <p>To use all the recommended settings click <code>Apply all</code> to the first prompt.</p>
 <p>To selectively apply each setting select <code>Choose which to apply</code>. Each change will then be prompted with a Yes/No confirmation before applying.</p>
@@ -2285,23 +2296,23 @@ Web-Mgmt-Service is installed
 
 
 
-    <ul class="nav nav-tabs" id="tabs-8" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-9" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-8-0-tab" data-toggle="tab" href="#tabs-8-0" role="tab"
-        aria-controls="tabs-8-0" aria-selected="true">
+        id="tabs-9-0-tab" data-toggle="tab" href="#tabs-9-0" role="tab"
+        aria-controls="tabs-9-0" aria-selected="true">
         CA Certs
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-8-1-tab" data-toggle="tab" href="#tabs-8-1" role="tab"
-        aria-controls="tabs-8-1" aria-selected="false">
+        id="tabs-9-1-tab" data-toggle="tab" href="#tabs-9-1" role="tab"
+        aria-controls="tabs-9-1" aria-selected="false">
         Self-Signed Certs
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-8-content"><div class="tab-pane fade show active"
-        id="tabs-8-0" role="tabpanel" aria-labelled-by="tabs-8-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<div class="tab-content" id="tabs-9-content"><div class="tab-pane fade show active"
+        id="tabs-9-0" role="tabpanel" aria-labelled-by="tabs-9-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -2312,7 +2323,7 @@ Web-Mgmt-Service is installed
     <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
         </code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-8-1" role="tabpanel" aria-labelled-by="tabs-8-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+        id="tabs-9-1" role="tabpanel" aria-labelled-by="tabs-9-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -2835,6 +2846,15 @@ Gateway currently supports four roles, but only two are relevant for Cortex Inno
 </li>
 </ol>
 <h2 id="configure-the-gateway-databases-to-use-transparent-data-encryption">Configure the Gateway Databases to use Transparent Data Encryption</h2>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    Transparent Data Encryption cannot be applied to SQL Server Express, only full SQL Server instances.
+
+</div>
+
 <p>Once Gateway has been configured, if you wish to encrypt the databases using <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15">Transparent Data Encryption</a> for improved security, this should now be performed by following the steps in <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/tde">Configuring TDE</a>.</p>
 <h2 id="next-steps">Next Steps?</h2>
 <ol>
@@ -2877,7 +2897,9 @@ Gateway currently supports four roles, but only two are relevant for Cortex Inno
 
 If the blocks in the flow do not display or the palettes are not visible, see <a href="/docs/reference/troubleshooting/installation#ts-no-blocks">Troubleshooting</a> for more information.</li>
 <li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
-<li>Click the <code>Set Variable</code> block to open the Property Editor. Set the <code>Value</code> property to <code>DateTimeOffset.Now</code>. Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Variable</code>.</li>
+<li>Click the <code>Set Variable</code> block to open the Property Editor.</li>
+<li>Set the <code>Value</code> property to the expression <code>DateTimeOffset.Now</code>.</li>
+<li>Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Result</code>.</li>
 <li>In the Variable Editor, set <code>Is Output Variable?</code> to <code>true</code> for the new <code>Result</code> variable.</li>
 <li>Set a breakpoint on the end block and start the flow. An execution token should appear, the <code>Result</code> variable should show the current time. If the token does not appear, try refreshing the page.</li>
 <li>Continue or stop the execution.</li>
@@ -3450,7 +3472,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <div class="lead">Information about installing the Application Server.</div>
 	<h1 id="install-application-server">Install Application Server</h1>
 <p>This guide describes how to install the Application Server components on the server. Please ensure that the <a href="/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites">Prerequisites</a> have been read before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Copy the following artefacts to a folder on the server (the version numbers may differ):</p>
@@ -3506,7 +3528,17 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <li>
 <p>Run the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> script using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SSLBestPractices</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
-</code></pre></div></li>
+</code></pre></div>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To avoid answering all of the prompts <code>-Override 0</code> can be added to the end of the script. This will automatically apply all settings and forcibly restart the server.
+
+</div>
+
+<p>If <code>-Override 0</code> has been specified no further steps need to be taken and you can move on to the next section when the server has restarted.</p>
+</li>
 <li>
 <p>To use all the recommended settings click <code>Apply all</code> to the first prompt.</p>
 <p>To selectively apply each setting select <code>Choose which to apply</code>. Each change will then be prompted with a Yes/No confirmation before applying.</p>
@@ -3604,23 +3636,23 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 
 
 
-    <ul class="nav nav-tabs" id="tabs-2" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-3" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-2-0-tab" data-toggle="tab" href="#tabs-2-0" role="tab"
-        aria-controls="tabs-2-0" aria-selected="true">
+        id="tabs-3-0-tab" data-toggle="tab" href="#tabs-3-0" role="tab"
+        aria-controls="tabs-3-0" aria-selected="true">
         CA Certs
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-2-1-tab" data-toggle="tab" href="#tabs-2-1" role="tab"
-        aria-controls="tabs-2-1" aria-selected="false">
+        id="tabs-3-1-tab" data-toggle="tab" href="#tabs-3-1" role="tab"
+        aria-controls="tabs-3-1" aria-selected="false">
         Self-Signed Certs
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-2-content"><div class="tab-pane fade show active"
-        id="tabs-2-0" role="tabpanel" aria-labelled-by="tabs-2-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<div class="tab-content" id="tabs-3-content"><div class="tab-pane fade show active"
+        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -3636,7 +3668,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-app-install-log.txt&#34;</span>
         </code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -3884,7 +3916,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <div class="lead">Information about installing the Web Application Server.</div>
 	<h1 id="install-the-web-application-server">Install the Web Application Server</h1>
 <p>This guide describes how to install the Web Application Server components on the server. Please ensure that <a href="/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server">Install Application Server</a> has been completed before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Copy the following artefacts to a folder on the server (the version numbers may differ):</p>
@@ -4699,6 +4731,15 @@ Gateway currently supports four roles, but only two are relevant for Cortex Inno
 </li>
 </ol>
 <h2 id="configure-the-gateway-databases-to-use-transparent-data-encryption">Configure the Gateway Databases to use Transparent Data Encryption</h2>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    Transparent Data Encryption cannot be applied to SQL Express, only SQL Server instances.
+
+</div>
+
 <p>Once Gateway has been configured, if you wish to encrypt the databases using <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15">Transparent Data Encryption</a> for improved security, this should now be performed by following the steps in <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/tde">Configuring TDE</a>.</p>
 <h2 id="next-steps">Next Steps?</h2>
 <ol>
@@ -4741,7 +4782,9 @@ Gateway currently supports four roles, but only two are relevant for Cortex Inno
 
 If the blocks in the flow do not display or the palettes are not visible, see <a href="/docs/reference/troubleshooting/installation#ts-no-blocks">Troubleshooting</a> for more information.</li>
 <li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
-<li>Click the <code>Set Variable</code> block to open the Property Editor. Set the <code>Value</code> property to <code>DateTimeOffset.Now</code>. Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Variable</code>.</li>
+<li>Click the <code>Set Variable</code> block to open the Property Editor.</li>
+<li>Set the <code>Value</code> property to the expression <code>DateTimeOffset.Now</code>.</li>
+<li>Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Result</code>.</li>
 <li>In the Variable Editor, set <code>Is Output Variable?</code> to <code>true</code> for the new <code>Result</code> variable.</li>
 <li>Set a breakpoint on the end block and start the flow. An execution token should appear, the <code>Result</code> variable should show the current time. If the token does not appear, try refreshing the page.</li>
 <li>Continue or stop the execution.</li>
@@ -7315,12 +7358,12 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <p>This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.</p>
 <p>If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. <code>CN=machine-name.domain.com</code>).</p>
 <h4 id="tls-requirements">TLS Requirements</h4>
-<p>There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
+<p>There is a set of non-compulsory security measures, recommended to be applied to the Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
 <ul>
 <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
 <li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
 </ul>
-<p>See <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices">SSL Best Practices</a> for a full list of the security changes which will be applied. The <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script is provided during installation to apply these security changes to the Web Application Server.</p>
+<p>See <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices">SSL Best Practices</a> for a full list of the security changes which will be applied. The <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script is provided during installation to apply these security changes to the Application Servers.</p>
 <h2 id="additional-web-application-server-requirements">Additional Web Application Server Requirements</h2>
 <h3 id="security-requirements-1">Security Requirements</h3>
 <h4 id="installation-user-1">Installation User</h4>
@@ -7406,7 +7449,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <p>The certificate may be the same one used for the Application Server installation.</p>
 <p>More information about importing the certificate is given during installation.</p>
 <h4 id="tls-requirements-1">TLS Requirements</h4>
-<p>There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
+<p>There is a set of non-compulsory security measures, recommended to be applied to the Web Application Server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
 <ul>
 <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
 <li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
@@ -7465,7 +7508,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <div class="lead">Information about installing the Application Servers and Load Balancer Server.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Install Application Servers and Load Balancer</h1>
 <p>This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that <a href="/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites">Prerequisites for adding Innovation to v7.2</a> have been read before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):</p>
@@ -7533,6 +7576,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 </li>
 <li>
 <p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press <code>OK</code>.</p>
+<p>If <code>-Override 0</code> has been specified no further steps need to be taken and you can move on to the next section when the servers have restarted.</p>
 </li>
 <li>
 <p>To use all the recommended settings click <code>Apply all</code> to the each <code>Apply Cortex recommended security best practices</code> prompt.</p>
@@ -8013,7 +8057,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <li>Install Flow Debugger Service</li>
 <li>Upgrade Gateway</li>
 </ol>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>We recommend that the Flow Debugger Service and Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine (the version numbers may differ):</p>
@@ -8433,7 +8477,9 @@ In the event of any errors, there will be an error message displayed at the end 
 
 If the blocks in the flow do not display or the palettes are not visible, see <a href="/docs/reference/troubleshooting/installation#ts-no-blocks">Troubleshooting</a> for more information.</li>
 <li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
-<li>Click the <code>Set Variable</code> block to open the Property Editor. Set the <code>Value</code> property to <code>DateTimeOffset.Now</code>. Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Variable</code>.</li>
+<li>Click the <code>Set Variable</code> block to open the Property Editor.</li>
+<li>Set the <code>Value</code> property to the expression <code>DateTimeOffset.Now</code>.</li>
+<li>Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Result</code>.</li>
 <li>In the Variable Editor, set <code>Is Output Variable?</code> to <code>true</code> for the new <code>Result</code> variable.</li>
 <li>Set a breakpoint on the end block and start the flow. An execution token should appear, the <code>Result</code> variable should show the current time. If the token does not appear, try refreshing the page.</li>
 <li>Continue or stop the execution.</li>
@@ -9007,7 +9053,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <div class="lead">Information about installing the Application Server.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Install Application Server</h1>
 <p>This guide describes how to install the Application Server components on the server. Please ensure that the <a href="/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites">Prerequisites</a> have been read before starting this installation.</p>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Copy the following artefacts to a folder on the server (the version numbers may differ):</p>
@@ -9063,7 +9109,17 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <li>
 <p>Run the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> script using the following command:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SSLBestPractices</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
-</code></pre></div></li>
+</code></pre></div>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Note</h4>
+
+    To avoid answering all of the prompts <code>-Override 0</code> can be added to the end of the script. This will automatically apply all settings and forcibly restart the server.
+
+</div>
+
+<p>If <code>-Override 0</code> has been specified no further steps need to be taken and you can move on to the next section when the server has restarted.</p>
+</li>
 <li>
 <p>To use all the recommended settings click <code>Apply all</code> to the first prompt.</p>
 <p>To selectively apply each setting select <code>Choose which to apply</code>. Each change will then be prompted with a Yes/No confirmation before applying.</p>
@@ -9161,23 +9217,23 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 
 
 
-    <ul class="nav nav-tabs" id="tabs-2" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-3" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-2-0-tab" data-toggle="tab" href="#tabs-2-0" role="tab"
-        aria-controls="tabs-2-0" aria-selected="true">
+        id="tabs-3-0-tab" data-toggle="tab" href="#tabs-3-0" role="tab"
+        aria-controls="tabs-3-0" aria-selected="true">
         CA Certs
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-2-1-tab" data-toggle="tab" href="#tabs-2-1" role="tab"
-        aria-controls="tabs-2-1" aria-selected="false">
+        id="tabs-3-1-tab" data-toggle="tab" href="#tabs-3-1" role="tab"
+        aria-controls="tabs-3-1" aria-selected="false">
         Self-Signed Certs
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-2-content"><div class="tab-pane fade show active"
-        id="tabs-2-0" role="tabpanel" aria-labelled-by="tabs-2-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+<div class="tab-content" id="tabs-3-content"><div class="tab-pane fade show active"
+        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -9193,7 +9249,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-app-install-log.txt&#34;</span>
         </code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
 <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -9446,7 +9502,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <li>Install Flow Debugger Service</li>
 <li>Upgrade Gateway</li>
 </ol>
-<h2 id="extract-installation-artefacts">Extract Installation Artefacts</h2>
+<h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
 <p>Copy the following artefacts to a folder on the machine (the version numbers may differ):</p>
@@ -9866,7 +9922,9 @@ In the event of any errors, there will be an error message displayed at the end 
 
 If the blocks in the flow do not display or the palettes are not visible, see <a href="/docs/reference/troubleshooting/installation#ts-no-blocks">Troubleshooting</a> for more information.</li>
 <li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
-<li>Click the <code>Set Variable</code> block to open the Property Editor. Set the <code>Value</code> property to <code>DateTimeOffset.Now</code>. Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Variable</code>.</li>
+<li>Click the <code>Set Variable</code> block to open the Property Editor.</li>
+<li>Set the <code>Value</code> property to the expression <code>DateTimeOffset.Now</code>.</li>
+<li>Type <code>Result</code> into the <code>Variable</code> property and click <code>Create Result</code>.</li>
 <li>In the Variable Editor, set <code>Is Output Variable?</code> to <code>true</code> for the new <code>Result</code> variable.</li>
 <li>Set a breakpoint on the end block and start the flow. An execution token should appear, the <code>Result</code> variable should show the current time. If the token does not appear, try refreshing the page.</li>
 <li>Continue or stop the execution.</li>
@@ -10264,7 +10322,7 @@ If the blocks in the flow do not display or the palettes are not visible, see <a
 <p>Apply the settings by following these instructions:</p>
 <ol>
 <li>
-<p>Copy from one of the application servers the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> file extracted during the <a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/#extract-installation-artefacts">Extract Installation Artefacts</a> step into a suitable location on the Web Application Server.</p>
+<p>Copy from one of the application servers the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> file extracted during the <a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/#make-installation-artefacts-available">Make Installation Artefacts Available</a> step into a suitable location on the Web Application Server.</p>
 </li>
 <li>
 <p>Open a Windows PowerShell (x64) window as administrator.</p>

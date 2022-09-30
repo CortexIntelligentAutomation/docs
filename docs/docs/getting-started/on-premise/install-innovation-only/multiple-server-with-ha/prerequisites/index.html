@@ -22,11 +22,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-08-25T15:58:36+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-09-28T10:52:56+01:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Prerequisites">
 <meta itemprop="description" content="Information about the prerequisites required on each server type for installation.">
-<meta itemprop="dateModified" content="2022-08-25T15:58:36+01:00" />
+<meta itemprop="dateModified" content="2022-09-28T10:52:56+01:00" />
 <meta itemprop="wordCount" content="2178">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Prerequisites"/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f280f81ffc39bea8e1b775a9103fb1ab.json"
+  data-offline-search-index-json-src="/offline-search-index.8f5c3b80cf0f077c5de4117ebac4add8.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -9108,12 +9108,12 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 </div>
 
 <h4 id="tls-requirements">TLS Requirements</h4>
-<p>There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
+<p>There is a set of non-compulsory security measures, recommended to be applied to the Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
 <ul>
 <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
 <li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
 </ul>
-<p>See <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices">SSL Best Practices</a> for a full list of the security changes which will be applied. The <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script is provided during installation to apply these security changes to the Web Application Server.</p>
+<p>See <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices">SSL Best Practices</a> for a full list of the security changes which will be applied. The <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script is provided during installation to apply these security changes to the Application Servers.</p>
 <h2 id="additional-web-application-server-requirements">Additional Web Application Server Requirements</h2>
 <h3 id="security-requirements-1">Security Requirements</h3>
 <h4 id="installation-user-1">Installation User</h4>
@@ -9199,7 +9199,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <p>The certificate may be the same one used for the Application Server installation.</p>
 <p>More information about importing the certificate is given during installation.</p>
 <h4 id="tls-requirements-1">TLS Requirements</h4>
-<p>There is a set of non-compulsory security measures, recommended to be applied to Web Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
+<p>There is a set of non-compulsory security measures, recommended to be applied to the Web Application Server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:</p>
 <ul>
 <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
 <li>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
@@ -9241,7 +9241,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified August 25, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/83a006948f24861a499d082ca6a1cc7df3aa9d32">Changes from sign off (83a00694)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified September 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/43542ac71d5341f7d973daa0ed668da77840d71d">Bug/61550 install doc improvements (#28) (43542ac7)</a>
 </div>
 </div>
 
