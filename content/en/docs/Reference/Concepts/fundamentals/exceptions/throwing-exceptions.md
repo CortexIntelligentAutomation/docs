@@ -15,8 +15,12 @@ Scenarios where throwing exceptions is useful include:
 
 - A developer throwing a new exception when a flow reaches a state where it cannot complete its defined functionality
 - A developer enriching an exception that has already been thrown to provide more clarity and/or detail
+- A developer rethrowing an exception to propagate the exception to the caller; typically this can be useful when [calling another flow][]
 
-For information about throwing an exception, please see the [Throw New Flow Exception][] block.
+For information about throwing an exception, please see the:
+
+- [Throw New Flow Exception][] block
+- [Rethrow Exception][] block
 
 ## Remarks
 
@@ -34,6 +38,7 @@ None
 ### Related Blocks
 
 - [Throw New Flow Exception][]
+- [Rethrow Exception][]
 
 ### External Documentation
 
@@ -44,4 +49,7 @@ None
 
 [Blocks]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 
+[Rethrow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.RethrowException.RethrowException.MainDoc" >}}
+
 [Throw New Flow Exception]: {{< url "Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException.MainDoc" >}}
+[calling another flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.CallingOtherFlows.MainDoc" >}}
