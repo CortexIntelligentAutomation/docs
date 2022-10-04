@@ -349,6 +349,10 @@
                     MainDoc = "/docs/reference/blocks/exceptions/throw-exception/"
                     [Cortex.Reference.Blocks.Exceptions.ThrowException.ThrowNewFlowException]
                         MainDoc = "/docs/reference/blocks/exceptions/throw-exception/throw-new-flow-exception-block"
+                [Cortex.Reference.Blocks.Exceptions.RethrowException]
+                    MainDoc = "/docs/reference/blocks/exceptions/rethrow-exception/"
+                    [Cortex.Reference.Blocks.Exceptions.RethrowException.RethrowException]
+                        MainDoc = "/docs/reference/blocks/exceptions/rethrow-exception/rethrow-exception-block"
             [Cortex.Reference.Blocks.FilesAndFolders]
                 MainDoc = "/docs/reference/blocks/files-and-folders/"
                 [Cortex.Reference.Blocks.FilesAndFolders.CheckFile]
