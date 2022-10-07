@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/">
+<meta name="generator" content="Hugo 0.88.0" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" as="style">
+<link href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.4b819867a7bc55c10e4b95b11d6f085b.json"
+  data-offline-search-index-json-src="/offline-search-index.a75ddc2fff0e966c7fc1bb03ce8e0038.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -650,6 +650,29 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <li>Firefox</li>
 </ul>
 <h2 id="additional-load-balancer-server-requirements">Additional Load Balancer Server Requirements</h2>
+<h3 id="filesystem-requirements">Filesystem Requirements</h3>
+<p>If using the included <a href="https://github.com/yyyar/gobetween">gobetween</a> load balancer, Network Discovery and File Sharing must be enabled on the Load Balancer Server:</p>
+<ol>
+<li>Open File Explorer.</li>
+<li>Click <code>Network</code> on the left.</li>
+<li>A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
+
+<figure>
+    <img src=" /images/Network%20Discovery%201.png "/> <figcaption>
+            <h4>Network and File Discovery Disabled</h4>
+        </figcaption>
+</figure>
+</li>
+<li>Click the banner.</li>
+<li>Click <code>Turn on network discovery and file sharing</code>:
+
+<figure>
+    <img src=" /images/Network%20Discovery%202.png "/> <figcaption>
+            <h4>Enable Network and File Discovery</h4>
+        </figcaption>
+</figure>
+</li>
+</ol>
 <h3 id="alternative-load-balancer-requirements">Alternative Load Balancer Requirements</h3>
 <p>Innovation has a <a href="https://github.com/yyyar/gobetween">gobetween</a> load balancer included that isn&rsquo;t highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:</p>
 <ul>
@@ -659,7 +682,7 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <li>Ideally it should be highly available to avoid a single point of failure in the system.</li>
 </ul>
 <h2 id="additional-application-server-requirements">Additional Application Server Requirements</h2>
-<h3 id="filesystem-requirements">Filesystem Requirements</h3>
+<h3 id="filesystem-requirements-1">Filesystem Requirements</h3>
 <p>All Application Servers must use an NTFS filesystem.</p>
 <p>Network Discovery and File Sharing should be enabled on each Application Server:</p>
 <ol>
@@ -1566,7 +1589,9 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
         </code></pre></div></div>
   <div class="tab-pane fade"
         id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
@@ -1576,7 +1601,9 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
     <span style="color:#000">-FlowDebuggerBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
         </code></pre></div></div>
   
 </div>
@@ -1612,6 +1639,14 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <td><code>Credential</code></td>
 <td>The credentials of the user that will be used to run the <code>Debugger</code> application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.</td>
 </tr>
+<tr>
+<td><code>AcceptEULA</code></td>
+<td>This does not need to be changed, the EULA will be accepted at a later stage.</td>
+</tr>
+<tr>
+<td><code>FilePath</code></td>
+<td>The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified.</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -1629,9 +1664,16 @@ Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts&#34;</span>
 </code></pre></div></li>
 <li>
-<p>Install the Flow Debugger Service by running the following command (<code>Tee-Object</code> will write output to both the PowerShell console and a log file, <code>FilePath</code> can be changed if required):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
+<p>Type the following command into PowerShell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
 </code></pre></div></li>
+<li>
+<p>Please read the End User Licence Agreement which can be found <a href="https://www.cortex-ia.com/end-user-licence-agreement/">here</a>. Once you agree to the terms, add the flag <code>-AcceptEULA</code> to the command entered above, e.g:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\&lt;</span><span style="color:#000">CortexInnovationInstallScriptName</span><span style="color:#000;font-weight:bold">&gt;.</span><span style="color:#000">ps1</span> <span style="color:#000">-AcceptEULA</span>
+</code></pre></div></li>
+<li>
+<p>Run the PowerShell command to install the Flow Debugger Service.</p>
+</li>
 <li>
 <p>A credentials prompt will appear. Enter the credentials of the user that should run the <code>Debugger</code> application pool in IIS. If using the <code>NETWORK SERVICE</code> user, enter any user as the username and leave the password blank; the <code>NETWORK SERVICE</code> user will need to be selected in the final step.</p>
 </li>

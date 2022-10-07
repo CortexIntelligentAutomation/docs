@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -22,12 +22,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-09-28T10:52:56+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-10-07T12:30:27+01:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Upgrade v7.2 Gateway to Include Innovation">
 <meta itemprop="description" content="Information about upgrading v7.2 Gateway with Innovation functionality.">
-<meta itemprop="dateModified" content="2022-09-28T10:52:56+01:00" />
-<meta itemprop="wordCount" content="2052">
+<meta itemprop="dateModified" content="2022-10-07T12:30:27+01:00" />
+<meta itemprop="wordCount" content="2129">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Upgrade v7.2 Gateway to Include Innovation"/>
 <meta name="twitter:description" content="Information about upgrading v7.2 Gateway with Innovation functionality."/>
@@ -36,8 +36,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" as="style">
+<link href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.4b819867a7bc55c10e4b95b11d6f085b.json"
+  data-offline-search-index-json-src="/offline-search-index.a75ddc2fff0e966c7fc1bb03ce8e0038.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.4b819867a7bc55c10e4b95b11d6f085b.json"
+  data-offline-search-index-json-src="/offline-search-index.a75ddc2fff0e966c7fc1bb03ce8e0038.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -8985,7 +8985,9 @@
     <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
         </code></pre></div></div>
   <div class="tab-pane fade"
         id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
@@ -8995,7 +8997,9 @@
     <span style="color:#000">-FlowDebuggerBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-FlowDebuggerBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
     <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span>
+    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
         </code></pre></div></div>
   
 </div>
@@ -9031,6 +9035,14 @@
 <td><code>Credential</code></td>
 <td>The credentials of the user that will be used to run the <code>Debugger</code> application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.</td>
 </tr>
+<tr>
+<td><code>AcceptEULA</code></td>
+<td>This does not need to be changed, the EULA will be accepted at a later stage.</td>
+</tr>
+<tr>
+<td><code>FilePath</code></td>
+<td>The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified.</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -9048,9 +9060,16 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts&#34;</span>
 </code></pre></div></li>
 <li>
-<p>Install the Flow Debugger Service by running the following command (<code>Tee-Object</code> will write output to both the PowerShell console and a log file, <code>FilePath</code> can be changed if required):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
+<p>Type the following command into PowerShell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
 </code></pre></div></li>
+<li>
+<p>Please read the End User Licence Agreement which can be found <a href="https://www.cortex-ia.com/end-user-licence-agreement/">here</a>. Once you agree to the terms, add the flag <code>-AcceptEULA</code> to the command entered above, e.g:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\&lt;</span><span style="color:#000">CortexInnovationInstallScriptName</span><span style="color:#000;font-weight:bold">&gt;.</span><span style="color:#000">ps1</span> <span style="color:#000">-AcceptEULA</span>
+</code></pre></div></li>
+<li>
+<p>Run the PowerShell command to install the Flow Debugger Service.</p>
+</li>
 <li>
 <p>A credentials prompt will appear. Enter the credentials of the user that should run the <code>Debugger</code> application pool in IIS. If using the <code>NETWORK SERVICE</code> user, enter any user as the username and leave the password blank; the <code>NETWORK SERVICE</code> user will need to be selected in the final step.</p>
 </li>
@@ -9257,7 +9276,7 @@ In the event of any errors, there will be an error message displayed at the end 
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified September 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/43542ac71d5341f7d973daa0ed668da77840d71d">Bug/61550 install doc improvements (#28) (43542ac7)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified October 7, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/6ebcc0fb8f67c5bf82dcb277236a5c9f53a1acaa">Documentation fixes and improvements (#30) (6ebcc0fb)</a>
 </div>
 </div>
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/troubleshooting/">
+<meta name="generator" content="Hugo 0.88.0" /><link rel="canonical" type="text/html" href="/docs/reference/troubleshooting/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" as="style">
+<link href="/scss/main.min.f7b0bb20ca89f6233681ff080b535d607f53711f5b85a9cced233965e27b45f8.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.4b819867a7bc55c10e4b95b11d6f085b.json"
+  data-offline-search-index-json-src="/offline-search-index.a75ddc2fff0e966c7fc1bb03ce8e0038.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-f80f43550683636a7db864a249f97125">Installation</a></li>
+<li>1: <a href="#pg-f58fd528c064e49713ac8dfcdab94316">Installation</a></li>
 
 
     
@@ -198,7 +198,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-f80f43550683636a7db864a249f97125">1 - Installation</h1>
+	<h1 id="pg-f58fd528c064e49713ac8dfcdab94316">1 - Installation</h1>
     <div class="lead">Information on troubleshooting Cortex Innovation installations.</div>
 	<h1 id="installation">Installation</h1>
 <h2 id="ts-during-installation">Troubleshooting issues during installation</h2>
@@ -414,6 +414,7 @@ Retry rabbitmqctl start_app --erlang-cookie <span style="color:#000">$ErlangCook
 <li>%ProgramData%\Cortex\Cortex Flow Debugger</li>
 <li>C:\temp\Cortex.Gateway.log</li>
 </ul>
+<p>Restart the Cortex website. Open IIS, In the <code>Connection</code> pane, browse to <code>Sites</code>. Select the <code>Cortex</code> website and click <code>Restart</code> in the <code>Manage Website</code> pane.</p>
 <p>If the issues cannot be resolved, please contact <a href="https://support.cortex.co.uk/">Cortex Service Portal</a> for assistance.</p>
 <h3 id="ts-no-publish">Cannot publish a package</h3>
 <p>Check that the <code>Service Fabric Api Gateway Endpoint</code>, <code>Service Fabric Using Self Signed Certificates</code>, <code>Service Fabric ApiGateway Basic Auth Username</code> and <code>Service Fabric ApiGateway Basic Auth Password</code> in the <code>CortexGateway.SetParameters.xml</code> file used for installing Cortex Gateway are correct. If any of them are not, update them and reinstall Cortex Gateway or update the value in the &ldquo;web.config&rdquo; file and restart the website. If the value is correct, please contact <a href="https://support.cortex.co.uk/">Cortex Service Portal</a> for assistance.</p>
