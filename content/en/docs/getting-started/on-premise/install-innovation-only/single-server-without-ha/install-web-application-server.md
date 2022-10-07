@@ -255,7 +255,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
-1. 1. Type the following command into PowerShell:
+1. Type the following command into PowerShell:
 
     ```powershell
     .\Cortex.Innovation.Install.FlowDebuggerService.ps1

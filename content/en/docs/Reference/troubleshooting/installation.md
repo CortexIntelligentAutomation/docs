@@ -171,6 +171,8 @@ If no misconfiguration can be found, the service log files may contain more info
 * %ProgramData%\Cortex\Cortex Flow Debugger
 * C:\temp\Cortex.Gateway.log
 
+Restart the Cortex website. Open IIS, In the `Connection` pane, browse to `Sites`. Select the `Cortex` website and click `Restart` in the `Manage Website` pane.
+
 If the issues cannot be resolved, please contact [Cortex Service Portal][] for assistance.
 
 ### Cannot publish a package {#ts-no-publish}

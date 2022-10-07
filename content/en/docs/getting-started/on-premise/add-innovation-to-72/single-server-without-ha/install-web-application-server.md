@@ -70,7 +70,9 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -BlockPackagesPath "C:\Install\Cortex Innovation 2022.6 - Block Packages.zip" `
     -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
     -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
-    -Credential $AppPoolIdentity
+    -Credential $AppPoolIdentity `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
         {{< /tab >}}
         {{< tab header="Self-Signed Certs" >}}
 .\Cortex.Install.FlowDebuggerService.ps1 `
@@ -79,7 +81,9 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
     -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -UseSelfSignedCertificates `
-    -Credential $AppPoolIdentity
+    -Credential $AppPoolIdentity `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
@@ -91,6 +95,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when upgrading Gateway][Install Gateway].|
     |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
+    |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
+    |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
 
@@ -103,11 +109,19 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     cd "C:\Install\Cortex Innovation 2022.6 - Web App Server Install Scripts"
     ```
 
-1. Install the Flow Debugger Service by running the following command (`Tee-Object` will write output to both the PowerShell console and a log file, `FilePath` can be changed if required):
-  
+1. Type the following command into PowerShell:
+
     ```powershell
-    .\Cortex.Innovation.Install.FlowDebuggerService.ps1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
+    .\Cortex.Innovation.Install.FlowDebuggerService.ps1
     ```
+
+1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
+
+    ```powershell
+    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    ```
+
+1. Run the PowerShell command to install the Flow Debugger Service.
 
 1. A credentials prompt will appear. Enter the credentials of the user that should run the `Debugger` application pool in IIS. If using the `NETWORK SERVICE` user, enter any user as the username and leave the password blank; the `NETWORK SERVICE` user will need to be selected in the final step.
 1. Wait for the script to finish running. This should take approximately 2 minutes.

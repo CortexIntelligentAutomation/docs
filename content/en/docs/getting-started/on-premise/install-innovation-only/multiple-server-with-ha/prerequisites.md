@@ -106,6 +106,17 @@ Gateway supports the latest versions of the following browsers:
 
 ## Additional Load Balancer Server Requirements
 
+### Filesystem Requirements
+If using the included [gobetween][] load balancer, Network Discovery and File Sharing must be enabled on the Load Balancer Server:
+
+1. Open File Explorer.
+1. Click `Network` on the left.
+1. A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
+    {{< figure src="/images/Network Discovery 1.png" title="Network and File Discovery Disabled" >}}
+1. Click the banner.
+1. Click `Turn on network discovery and file sharing`:
+    {{< figure src="/images/Network Discovery 2.png" title="Enable Network and File Discovery" >}}
+    
 ### Alternative Load Balancer Requirements
 
 Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
