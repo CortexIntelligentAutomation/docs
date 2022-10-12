@@ -13,674 +13,492 @@
     
     
     <item>
-      <title>Blog: Easy documentation with Docsy</title>
-      <link>/blog/2018/10/06/easy-documentation-with-docsy/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <title>Blog: 2022.9</title>
+      <link>/blog/2022/09/27/2022.9/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2018/10/06/easy-documentation-with-docsy/</guid>
+      <guid>/blog/2022/09/27/2022.9/</guid>
       <description>
         
         
-        
-        <![CDATA[<img src="/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_3.png" width="640" height="253"/>]]>
-        
-        &lt;p&gt;&lt;strong&gt;This is a typical blog post that includes images.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p&gt;
-&lt;h2 id=&#34;including-images&#34;&gt;Including images&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s an image (&lt;code&gt;featured-sunset-get.png&lt;/code&gt;) that includes a byline and a caption.&lt;/p&gt;
-
-
-
-
-
-
-
-&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
-	
-	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
-Fetch and scale an image in the upcoming Hugo 0.43.
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Riona MacNamara / CC-BY-CA&lt;/small&gt;&lt;/p&gt;
-	&lt;/div&gt;
-	
-&lt;/div&gt;
-&lt;p&gt;The front matter of this post specifies properties to be assigned to all image resources:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;resources:
-- src: &amp;quot;**.{png,jpg}&amp;quot;
-  title: &amp;quot;Image #:counter&amp;quot;
-  params:
-    byline: &amp;quot;Photo: Riona MacNamara / CC-BY-CA&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To include the image in a page, specify its details like this:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-
-
-
-
-
-
-&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
-	
-	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
-		&lt;p class=&#34;card-text&#34;&gt;
-Fetch and scale an image in the upcoming Hugo 0.43.
-&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Riona MacNamara / CC-BY-CA&lt;/small&gt;&lt;/p&gt;
-	&lt;/div&gt;
-	
-&lt;/div&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The image will be rendered at the size and byline specified in the front matter.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Blog: The second blog post</title>
-      <link>/blog/2018/10/06/the-second-blog-post/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2018/10/06/the-second-blog-post/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href=&#34;https://github.com&#34;&gt;Links&lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There should be no margin above this first sentence.&lt;/p&gt;
-&lt;p&gt;Blockquotes should be a lighter gray with a border along the left side in the secondary color.&lt;/p&gt;
-&lt;p&gt;There should be no margin below this final sentence.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;first-header&#34;&gt;First Header&lt;/h2&gt;
-&lt;p&gt;This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;p&gt;On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.&lt;/p&gt;
-&lt;p&gt;Lorem markdownum tuta hospes stabat; idem saxum facit quaterque repetito
-occumbere, oves novem gestit haerebat frena; qui. Respicit recurvam erat:
-pignora hinc reppulit nos &lt;strong&gt;aut&lt;/strong&gt;, aptos, ipsa.&lt;/p&gt;
-&lt;p&gt;Meae optatos &lt;em&gt;passa est&lt;/em&gt; Epiros utiliter &lt;em&gt;Talibus niveis&lt;/em&gt;, hoc lata, edidit.
-Dixi ad aestum.&lt;/p&gt;
-&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is a code block following a header.
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;header-4&#34;&gt;Header 4&lt;/h4&gt;
+        &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;The 2022.9 Release is now available.&lt;/p&gt;
+&lt;h2 id=&#34;download-artefacts&#34;&gt;Download Artefacts&lt;/h2&gt;
+&lt;p&gt;Installation artefacts can be requested by raising a case in the &lt;a href=&#34;https://support.cortex.co.uk/&#34;&gt;Cortex Service Portal&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
+&lt;p&gt;2022.9 is the first release of our next generation of Cortex and begins our journey to improve on the previous 7.X generation in the following areas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Scalability&lt;/li&gt;
+&lt;li&gt;Usability&lt;/li&gt;
+&lt;li&gt;Security&lt;/li&gt;
+&lt;li&gt;Observability&lt;/li&gt;
+&lt;li&gt;Cost of ownership&lt;/li&gt;
+&lt;li&gt;Documentation&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;header-5&#34;&gt;Header 5&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h6 id=&#34;header-6&#34;&gt;Header 6&lt;/h6&gt;
+&lt;p&gt;This first release shows &lt;a href=&#34;#improved-performance-vs-7x&#34;&gt;improved performance vs 7.X&lt;/a&gt;, using a new &lt;a href=&#34;#new-ha-architecture&#34;&gt;high availability (HA) architecture&lt;/a&gt; and &lt;a href=&#34;#components&#34;&gt;components&lt;/a&gt; including the new &lt;a href=&#34;#new-innovation-engine&#34;&gt;Innovation Engine&lt;/a&gt; which has support for &lt;a href=&#34;#180-new-blocks&#34;&gt;180+ blocks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Speed and ease of developing automation solutions has been improved with the introduction of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;#new-property-editor&#34;&gt;new Property Editor&lt;/a&gt; for configuring blocks&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#messages&#34;&gt;Validation messages&lt;/a&gt; to warn the developer of errors with their flows&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#flow-contract&#34;&gt;Flow contracts&lt;/a&gt; declaring what information is required to run a flow and what data will be returned.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A new &lt;a href=&#34;#package-management&#34;&gt;Package Management&lt;/a&gt; system has been introduced to improve the speed and ease of deploying solutions into production.&lt;/p&gt;
+&lt;p&gt;Security has been improved by the introduction of the new concept of &lt;a href=&#34;#new-concept-of-encryptable-and-encrypted-text&#34;&gt;Encrypted Text&lt;/a&gt;, which ensures sensitive information must be encrypted before a flow can be run.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#structured-logging&#34;&gt;Structured Logging&lt;/a&gt; has been introduced and acts as the source of data for the new &lt;a href=&#34;#grafana-dashboards&#34;&gt;Grafana Dashboards&lt;/a&gt; providing observability over the platform health and flow execution requests.&lt;/p&gt;
+&lt;p&gt;Finally, this &lt;a href=&#34;#product-portal&#34;&gt;Product Portal&lt;/a&gt; has been created to act as a central source of information regarding the Innovation Platform, including information of how to &lt;a href=&#34;/docs/getting-started/on-premise/install-innovation-only/&#34;&gt;install Innovation on its own&lt;/a&gt; or &lt;a href=&#34;/docs/getting-started/on-premise/add-innovation-to-72/&#34;&gt;add it to an existing 7.X installation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;components&#34;&gt;Components&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;What&lt;/th&gt;
-&lt;th&gt;Follows&lt;/th&gt;
+&lt;th&gt;Release Component&lt;/th&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th&gt;Updated This Release&lt;/th&gt;
+&lt;th&gt;Update Type&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;15.0.1.2241&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Major&lt;/td&gt;
+&lt;td&gt;First Release&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9.0.4.2241&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Major&lt;/td&gt;
+&lt;td&gt;First Release&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9.0.1.2241&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Major&lt;/td&gt;
+&lt;td&gt;First Release&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/docs/guides/cortex-gateway/&#34;&gt;Cortex Gateway&lt;/a&gt;, including &lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3.1.2&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Minor&lt;/td&gt;
+&lt;td&gt;First Release&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;/docs/reference/blocks/&#34;&gt;Cortex Block Packages&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;29.2.0&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;Major&lt;/td&gt;
+&lt;td&gt;First Release&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;There&amp;rsquo;s a horizontal rule above and below this.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Here is an unordered list:&lt;/p&gt;
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+&lt;h4 id=&#34;improved-performance-vs-7x&#34;&gt;Improved Performance vs 7.X&lt;/h4&gt;
+&lt;p&gt;The 2022.9 release has shown significant performance improvements compared to 7.X both in our own observations and customers installations. For example, one customer solution that has been migrated to 2022.9 has shown the time taken to run their tests reduce from 210 minutes to 10 minutes.&lt;/p&gt;
+&lt;h4 id=&#34;new-ha-architecture&#34;&gt;New HA architecture&lt;/h4&gt;
+&lt;p&gt;Innovation can be installed on-premise across multiple servers with our new &lt;a href=&#34;/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/&#34;&gt;high availability (HA) architecture&lt;/a&gt; based on Microsoft&amp;rsquo;s &lt;a href=&#34;/docs/reference/glossary/p-t/#service-fabric&#34;&gt;Service Fabric&lt;/a&gt;. This provides:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Salt-n-Pepa&lt;/li&gt;
-&lt;li&gt;Bel Biv DeVoe&lt;/li&gt;
-&lt;li&gt;Kid &amp;lsquo;N Play&lt;/li&gt;
+&lt;li&gt;Elimination of single points of failure resulting in reduced downtime&lt;/li&gt;
+&lt;li&gt;The ability to perform zero downtime upgrades&lt;/li&gt;
+&lt;li&gt;Increased processing capacity resulting in increased throughput&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And an ordered list:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Michael Jackson&lt;/li&gt;
-&lt;li&gt;Michael Bolton&lt;/li&gt;
-&lt;li&gt;Michael Bublé&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;And an unordered task list:&lt;/p&gt;
+&lt;p&gt;It also lays the foundations for future releases to provide:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create a sample markdown document&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add task lists to it&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Take a vacation&lt;/li&gt;
+&lt;li&gt;Manual scaling and on demand automated scaling&lt;/li&gt;
+&lt;li&gt;Single click deployments and upgrades&lt;/li&gt;
+&lt;li&gt;Multi Tenancy, including the ability to choose the level of separation of tenants based on your compliance and hardware constraints&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And a &amp;ldquo;mixed&amp;rdquo; task list:&lt;/p&gt;
+&lt;p&gt;The use of Service Fabric currently permits deployment on VMs hosted with any &lt;a href=&#34;/docs/reference/glossary/a-e/#cloud-service-provider&#34;&gt;cloud service provider&lt;/a&gt;, and in future deploying on Microsoft&amp;rsquo;s &lt;a href=&#34;/docs/reference/glossary/p-t/#service-fabric&#34;&gt;Azure Service Fabric&lt;/a&gt; and &lt;a href=&#34;/docs/reference/glossary/k-o/#linux&#34;&gt;Linux&lt;/a&gt; based operating systems.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Steal underpants&lt;/li&gt;
-&lt;li&gt;?&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Profit!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And a nested list:&lt;/p&gt;
+&lt;h4 id=&#34;new-innovation-engine&#34;&gt;New Innovation Engine&lt;/h4&gt;
+&lt;p&gt;A new engine, which executes the automation solutions developed for the Innovation Platform, has been created. In early customer deployments this has shown a &lt;a href=&#34;#improved-performance-vs-7x&#34;&gt;dramatic improvement in performance vs the 7.X Engine&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The new engine supports &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions&#34;&gt;expressions&lt;/a&gt; written in the &lt;a href=&#34;/docs/reference/glossary/a-e/#c-1&#34;&gt;C# Programming Language&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It also lays the foundations for future releases to provide:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Jackson 5
+&lt;li&gt;&lt;a href=&#34;/docs/reference/glossary/a-e/#autogeneration&#34;&gt;Autogeneration&lt;/a&gt; of new blocks from existing dotnet &lt;a href=&#34;/docs/reference/glossary/a-e/#dll&#34;&gt;dlls&lt;/a&gt; and &lt;a href=&#34;/docs/reference/glossary/k-o/#nuget-package&#34;&gt;nuget packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&#34;/docs/reference/glossary/p-t/#sdk&#34;&gt;SDK&lt;/a&gt; to develop your own blocks&lt;/li&gt;
+&lt;li&gt;Execution of automation solutions on &lt;a href=&#34;/docs/reference/glossary/k-o/#linux&#34;&gt;Linux&lt;/a&gt; based operating systems&lt;/li&gt;
+&lt;li&gt;Execution of automation solutions on serverless cloud services such as Microsoft&amp;rsquo;s &lt;a href=&#34;/docs/reference/glossary/a-e/#azure-functions&#34;&gt;Azure Functions&lt;/a&gt; and &lt;a href=&#34;/docs/reference/glossary/a-e/#aws-lambda&#34;&gt;AWS Lambda&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Michael&lt;/li&gt;
-&lt;li&gt;Tito&lt;/li&gt;
-&lt;li&gt;Jackie&lt;/li&gt;
-&lt;li&gt;Marlon&lt;/li&gt;
-&lt;li&gt;Jermaine&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TMNT
+&lt;h4 id=&#34;innovation-engine-requires-new-cortexlic-licence&#34;&gt;Innovation Engine Requires New Cortex.lic Licence&lt;/h4&gt;
+&lt;p&gt;A new Cortex.lic licence is required in order to &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/executions-in-development&#34;&gt;debug&lt;/a&gt; flows developed for the Innovation Engine and &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/executions-in-production&#34;&gt;execute&lt;/a&gt; them in Production.&lt;/p&gt;
+&lt;p&gt;For more information about licensing requirements, including how to obtain a licence, see:&lt;/p&gt;
+&lt;p&gt;Installing Innovation Only:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Leonardo&lt;/li&gt;
-&lt;li&gt;Michelangelo&lt;/li&gt;
-&lt;li&gt;Donatello&lt;/li&gt;
-&lt;li&gt;Raphael&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/&#34;&gt;Single Server - Without HA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/&#34;&gt;Multiple Server - With HA&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
+&lt;p&gt;Adding Innovation to a 7.2 Installation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/&#34;&gt;Single Server - Without HA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/&#34;&gt;Multiple Server - With HA&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Definition lists can be used with Markdown syntax. Definition terms are bold.&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;Name&lt;/dt&gt;
-&lt;dd&gt;Godzilla&lt;/dd&gt;
-&lt;dt&gt;Born&lt;/dt&gt;
-&lt;dd&gt;1952&lt;/dd&gt;
-&lt;dt&gt;Birthplace&lt;/dt&gt;
-&lt;dd&gt;Japan&lt;/dd&gt;
-&lt;dt&gt;Color&lt;/dt&gt;
-&lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;hr&gt;
-&lt;p&gt;Tables should have bold headings and alternating shaded rows.&lt;/p&gt;
+&lt;p&gt;Please note 7.2 installations still require a g2.ok licence for each Cortex Server component.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;180-new-blocks&#34;&gt;180+ New Blocks&lt;/h4&gt;
+&lt;p&gt;180+ new &lt;a href=&#34;/docs/reference/blocks/&#34;&gt;Blocks&lt;/a&gt; have been added to the Innovation platform to work with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/date-and-time&#34;&gt;Date &amp;amp; Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/decisions/&#34;&gt;Decisions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/dictionaries/&#34;&gt;Dictionaries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/email/&#34;&gt;Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/exceptions/&#34;&gt;Exceptions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/files-and-folders/&#34;&gt;Files &amp;amp; Folders&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/flows&#34;&gt;Flows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/google-workspace/&#34;&gt;Google Workspace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/http/&#34;&gt;Http&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/lists/&#34;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/logs&#34;&gt;Logs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/microsoft365/&#34;&gt;Microsoft365&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/objects/&#34;&gt;Objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/powershell/&#34;&gt;PowerShell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/schedules/&#34;&gt;Schedules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/ssh/&#34;&gt;Ssh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/text/&#34;&gt;Text&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/variables/&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/workspaces/&#34;&gt;Workspaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/xml/&#34;&gt;Xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Many palettes include blocks for performing single and batch operations, such as &lt;a href=&#34;/docs/reference/blocks/files-and-folders/copy-file/copy-file-block&#34;&gt;copying a single file&lt;/a&gt; or &lt;a href=&#34;/docs/reference/blocks/files-and-folders/copy-file/copy-files-block&#34;&gt;copying multiple files&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In comparison to 7.X, improvements have been made to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The performance of blocks in the Innovation platform&lt;/li&gt;
+&lt;li&gt;The consistency in naming of blocks and properties in relation to their functionality&lt;/li&gt;
+&lt;li&gt;The consistency in functionality across similar palettes such as &lt;a href=&#34;/docs/reference/blocks/lists/&#34;&gt;Lists&lt;/a&gt; and &lt;a href=&#34;/docs/reference/blocks/dictionaries/&#34;&gt;Dictionaries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most blocks have a &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#block-timeout-property&#34;&gt;Block Timeout&lt;/a&gt; property that can be used to cancel a block operation if it has run for longer than intended.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/&#34;&gt;Cortex Block Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;new-concept-of-encryptable-and-encrypted-text&#34;&gt;New concept of Encryptable and Encrypted Text&lt;/h4&gt;
+&lt;p&gt;The concept of Encryptable and Encrypted text has been added to the Innovation Engine, allowing for data to be encrypted and handled by the platform.&lt;/p&gt;
+&lt;p&gt;Two &lt;a href=&#34;/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/&#34;&gt;data types&lt;/a&gt; have been added, &lt;a href=&#34;/docs/reference/data-types/text/encryptabletext&#34;&gt;EncryptableText&lt;/a&gt; and &lt;a href=&#34;/docs/reference/data-types/text/encryptedtext&#34;&gt;EncryptedText&lt;/a&gt;. Any block property using &lt;a href=&#34;/docs/reference/data-types/text/encryptabletext&#34;&gt;EncryptableText&lt;/a&gt; allows for encrypted, partially encrypted or unencrypted values to be used. Any block property using &lt;a href=&#34;/docs/reference/data-types/text/encryptedtext&#34;&gt;EncryptedText&lt;/a&gt; will only allow encrypted values to be used, throwing an error if partially encrypted or unencrypted values are used.&lt;/p&gt;
+&lt;p&gt;The same encryption mechanism is used in both the 2022.9 and the 7.X platforms.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/&#34;&gt;Cortex Block Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;new-property-editor&#34;&gt;New Property Editor&lt;/h4&gt;
+&lt;p&gt;A new &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#property-editor&#34;&gt;Property Editor&lt;/a&gt; has been added to &lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt; for configuring &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/what-is-a-block/&#34;&gt;blocks&lt;/a&gt;, allowing for quicker configuration and better ease of use compared to 7.X.&lt;/p&gt;
+&lt;p&gt;Each &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/&#34;&gt;Block Property&lt;/a&gt; can be configured using one of three new editors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#variable-editor&#34;&gt;Variable Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#literal-editor&#34;&gt;Literal Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#expression-editor&#34;&gt;Expression Editor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/blocks/&#34;&gt;Cortex Block Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;variable-editor&#34;&gt;Variable Editor&lt;/h5&gt;
+&lt;p&gt;The &lt;a href=&#34;/docs/guides/cortex-studio/variable-editor/&#34;&gt;Variable Editor&lt;/a&gt; is used to select, create and rename &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/&#34;&gt;variables&lt;/a&gt; that will be used by a &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/what-is-a-block/&#34;&gt;block&lt;/a&gt;. It has &lt;a href=&#34;/docs/reference/glossary/p-t/#typeahead&#34;&gt;typeahead&lt;/a&gt; selection of variables accessible by the block being configured, highlighting if the variable selected is missing and not available.&lt;/p&gt;
+&lt;p&gt;The Variable Editor allows for the creation of missing variables at the &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/variable-scopes/&#34;&gt;scope&lt;/a&gt; of the block being configured.&lt;/p&gt;
+&lt;p&gt;The Variable Editor allows for a variable to be renamed from within the editor, also updating any references to this variable in the &lt;a href=&#34;/docs/reference/concepts/fundamentals/flows/what-is-a-flow&#34;&gt;flow&lt;/a&gt;.&lt;/p&gt;
+&lt;h5 id=&#34;literal-editor&#34;&gt;Literal Editor&lt;/h5&gt;
+&lt;p&gt;The &lt;a href=&#34;/docs/guides/cortex-studio/literal-editor/&#34;&gt;Literal Editor&lt;/a&gt; is used to create &lt;a href=&#34;/docs/reference/concepts/fundamentals/data-types/what-is-a-data-type/#complex-data-types&#34;&gt;complex data types&lt;/a&gt; more easily, allowing you to switch between any available &lt;a href=&#34;/docs/reference/data-types/&#34;&gt;Data Types&lt;/a&gt; for the &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/&#34;&gt;Block Property&lt;/a&gt; selected.&lt;/p&gt;
+&lt;p&gt;Please note that the Literal Editor does not currently support any &lt;a href=&#34;/docs/reference/data-types/collections&#34;&gt;Collection&lt;/a&gt; data types, this may change in a future release.&lt;/p&gt;
+&lt;h5 id=&#34;expression-editor&#34;&gt;Expression Editor&lt;/h5&gt;
+&lt;p&gt;The &lt;a href=&#34;/docs/guides/cortex-studio/expression-editor/&#34;&gt;Expression Editor&lt;/a&gt; allows for use of &lt;a href=&#34;/docs/reference/glossary/a-e/#c-1&#34;&gt;C# code&lt;/a&gt; for the &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/&#34;&gt;Block Property&lt;/a&gt; selected. It contains built in encryption to convert any text highlighted to an &lt;a href=&#34;/docs/reference/data-types/text/encryptedtext&#34;&gt;EncryptedText&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It also has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Built-in &lt;a href=&#34;/docs/reference/glossary/p-t/#snippets&#34;&gt;snippets&lt;/a&gt; that are filtered based on the &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/&#34;&gt;Block Property&lt;/a&gt; selected to help configure the block&lt;/li&gt;
+&lt;li&gt;Built-in &lt;a href=&#34;/docs/guides/cortex-studio/expression-editor/#tools&#34;&gt;tools&lt;/a&gt;, such as Full Screen, Find and Replace, Change all occurrences, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;other-features-of-the-property-editor&#34;&gt;Other Features of the Property Editor&lt;/h5&gt;
+&lt;p&gt;Other features of the &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#property-editor&#34;&gt;Property Editor&lt;/a&gt; include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating all missing &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/&#34;&gt;variables&lt;/a&gt; required by a &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/what-is-a-block/&#34;&gt;block&lt;/a&gt; using the &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#add-variables-button&#34;&gt;Add Variables button&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Every &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/what-is-a-block/&#34;&gt;block&lt;/a&gt; has a sensible editor selected for each &lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/&#34;&gt;Block Property&lt;/a&gt;, as well as a sensible default value to minimise the configuration required&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/&#34;&gt;Advanced Properties&lt;/a&gt; that do not normally need to be configured have preset default values and are hidden from view&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/&#34;&gt;Advanced Properties&lt;/a&gt; can be shown for more complex configuration of blocks using the &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#show-hide-advanced-properties-button&#34;&gt;Show/Hide Advanced Properties button&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Product Portal page for a block can be accessed from the &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#property-editor&#34;&gt;Property Editor&lt;/a&gt; by using the &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#help-button&#34;&gt;Help button&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Flow Debugging Service&lt;/li&gt;
+&lt;li&gt;Gateway&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;messages&#34;&gt;Messages&lt;/h4&gt;
+&lt;p&gt;Validation is now performed before a &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/what-is-an-execution&#34;&gt;flow execution&lt;/a&gt; begins, the process will evaluate the &lt;a href=&#34;/docs/reference/concepts/fundamentals/flows/what-is-a-flow&#34;&gt;flow&lt;/a&gt; assessing for any issues that would cause the flow to fail and returns them as &lt;a href=&#34;/docs/reference/messages/validation/errors/&#34;&gt;validation errors&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow&#34;&gt;validating a flow&lt;/a&gt; in development, any &lt;a href=&#34;/docs/reference/messages/validation/&#34;&gt;validation&lt;/a&gt; message in the &lt;a href=&#34;/docs/guides/cortex-studio/south-panel/#messages-grid&#34;&gt;messages grid&lt;/a&gt; can be double clicked to navigate to the source of the issue.&lt;/p&gt;
+&lt;p&gt;This feature lays the foundations for configurable best practices, where a system can have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Control over whether a validation rule is classed as an error, warning, information, or shown at all&lt;/li&gt;
+&lt;li&gt;Control over whether a flow can be run or debugged, committed, or published when specific validation rules are broken&lt;/li&gt;
+&lt;li&gt;Suggested automatic fixes for specific error, warning, and information messages, including a single click application of the fix&lt;/li&gt;
+&lt;li&gt;Suggested manual fixes for specific error, warning, and information messages, including a description of how to apply the fix&lt;/li&gt;
+&lt;li&gt;Additional classification of rules such as performance, security, and development best practices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It also leads to the:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identification of fixes that need to be applied to flows in order to migrate them to a new version of the Innovation Platform&lt;/li&gt;
+&lt;li&gt;Required automatic fixes, including a single click application of the fix&lt;/li&gt;
+&lt;li&gt;Required manual fixes, including a description of how to apply the fix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;flow-contract&#34;&gt;Flow Contract&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/reference/concepts/fundamentals/flows/what-is-a-flow&#34;&gt;Flows&lt;/a&gt; can now declare which &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable&#34;&gt;Input Variables&lt;/a&gt; are required to run the flow, and what &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#output-variables-structure&#34;&gt;Output Variables&lt;/a&gt; will be returned by the flow. This is called the Flow Contract.&lt;/p&gt;
+&lt;p&gt;If a call to start a flow &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/what-is-an-execution&#34;&gt;execution&lt;/a&gt; does not meet the requirements of the Flow Contract, then the execution will not begin and &lt;a href=&#34;/docs/reference/messages/validation/errors/&#34;&gt;validation errors&lt;/a&gt; will be returned.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;calling-other-flows&#34;&gt;Calling other Flows&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/reference/concepts/fundamentals/flows/what-is-a-flow&#34;&gt;Flows&lt;/a&gt; can be called from within another flow by using the &lt;a href=&#34;/docs/reference/blocks/flows/run-flow/run-flow-block&#34;&gt;Run Flow&lt;/a&gt; block, passing in any &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable&#34;&gt;Input Variables&lt;/a&gt; required by the child flow, and returning any &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#output-variables-structure&#34;&gt;Output Variables&lt;/a&gt; when the child flow&amp;rsquo;s &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/what-is-an-execution&#34;&gt;execution&lt;/a&gt; has completed.&lt;/p&gt;
+&lt;p&gt;By default a new flow is set up to &lt;a href=&#34;/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-flow-level&#34;&gt;handle any exceptions at the flow level&lt;/a&gt; and end the flow without error. However, when calling a child flow it may be useful to propagate any &lt;a href=&#34;/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception&#34;&gt;exceptions&lt;/a&gt; to the parent flow; this can be done by using the &lt;a href=&#34;/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block&#34;&gt;Rethrow Exception&lt;/a&gt; block within the &lt;a href=&#34;/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block&#34;&gt;Handle Flow Exception&lt;/a&gt; workspace, causing the flow to end with an error.&lt;/p&gt;
+&lt;p&gt;Please note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Flows can only be run synchronously and the parent flow will wait for any child flow execution to finish before continuing. This may change in a future release to support running flows asynchronously&lt;/li&gt;
+&lt;li&gt;In 7.X, flows could also call subtasks. In 2022.9 and onwards, subtasks no longer exist&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;debug-with-input-variables&#34;&gt;Debug with Input Variables&lt;/h4&gt;
+&lt;p&gt;When &lt;a href=&#34;/docs/reference/concepts/fundamentals/executions/executions-in-development&#34;&gt;debugging&lt;/a&gt; a &lt;a href=&#34;/docs/reference/concepts/fundamentals/flows/what-is-a-flow&#34;&gt;flow&lt;/a&gt;, any &lt;a href=&#34;/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable&#34;&gt;Input Variables&lt;/a&gt; can be provided within the &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#inputs-property&#34;&gt;Input Variables property&lt;/a&gt; in the flow&amp;rsquo;s &lt;a href=&#34;/docs/guides/cortex-studio/east-panel/#settings-editor&#34;&gt;Settings Editor&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;package-management&#34;&gt;Package Management&lt;/h4&gt;
+&lt;p&gt;A new &lt;a href=&#34;/docs/guides/cortex-studio/package-management/&#34;&gt;Package Management&lt;/a&gt; system has been added to &lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt; and allows a &lt;a href=&#34;/docs/reference/glossary/f-j/#flow-developer&#34;&gt;flow developer&lt;/a&gt; to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a Package&lt;/li&gt;
+&lt;li&gt;Add new versions of a Package&lt;/li&gt;
+&lt;li&gt;Publish specific version(s) of a Package&lt;/li&gt;
+&lt;li&gt;Unpublish specific version(s) of a Package&lt;/li&gt;
+&lt;li&gt;Export a Package version out of &lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Import a Package version into &lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Packages are intended to represent self contained automation solutions and are aimed at improving the speed and ease of deploying these solutions into production.&lt;/p&gt;
+&lt;p&gt;Packages introduce the ability to host and execute multiple automation solutions on the same platform/hardware (reducing costs), as well as being able to run multiple versions of the same solution (permitting CI/CD).&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt; exposes a versioned API for executing flows in specific packages and package versions. This allows for the integration with third party applications, websites or toolings such as CI/CD Pipelines.&lt;/p&gt;
+&lt;p&gt;This feature lays the foundations for future work including multi tenancy with environment variables.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-execution-service/&#34;&gt;Cortex Flow Execution Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;structured-logging&#34;&gt;Structured Logging&lt;/h4&gt;
+&lt;p&gt;Structured logging provides a defined format for &lt;a href=&#34;/docs/reference/logs/&#34;&gt;logs&lt;/a&gt; produced by the Innovation Platform, this helps with reporting and diagnostics and is used as the source of &lt;a href=&#34;#grafana-dashboards&#34;&gt;dashboards&lt;/a&gt;. The structured logs produced are in a &lt;a href=&#34;/docs/reference/glossary/f-j/#json&#34;&gt;JSON&lt;/a&gt; format.&lt;/p&gt;
+&lt;p&gt;Structured logging has been added to the following components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/logs/cortex-api-gateway-service/&#34;&gt;API Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/logs/cortex-flow-debugger-service/&#34;&gt;Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The ability to write structured logs has also been exposed to &lt;a href=&#34;/docs/reference/glossary/f-j/#flow-developer&#34;&gt;flow developers&lt;/a&gt; so they can write logs in the same format as the platform; they can be created by using the &lt;a href=&#34;/docs/reference/blocks/logs/log-event/log-event-block&#34;&gt;Log Event&lt;/a&gt; block.&lt;/p&gt;
+&lt;p&gt;Please note that structured logging may be added to more components in a future release.&lt;/p&gt;
+&lt;p&gt;This feature provides telemetry which can be used in future to offer request tracing and configurable alerting within the Innovation Platform.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;grafana-dashboards&#34;&gt;Grafana Dashboards&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;&#34;&gt;Dashboards&lt;/a&gt; have been created to provide observability of the Innovation Platform in Production.&lt;/p&gt;
+&lt;p&gt;The new dashboards are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/observability/grafana/dashboards/platform-health/&#34;&gt;Platform Health&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/reference/observability/grafana/dashboards/flow-execution-requests/&#34;&gt;Flow Execution Requests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In future additional dashboards may be added. Currently, these have been produced for Grafana and in future releases other reporting and observability platforms such as Splunk and Elastic may be supported.&lt;/p&gt;
+&lt;p&gt;For more information about adding observability to Innovation see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/getting-started/on-premise/add-observability-to-innovation/grafana/&#34;&gt;Installing Grafana On-Premise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/getting-started/cloud/add-observability-to-innovation/grafana/&#34;&gt;Setup Grafana Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;simplified-installation&#34;&gt;Simplified Installation&lt;/h4&gt;
+&lt;p&gt;The installation of 2022.9 has been improved in comparison to the 7.X Platform.&lt;/p&gt;
+&lt;p&gt;The installation is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simpler and easier to perform&lt;/li&gt;
+&lt;li&gt;Quicker with significantly fewer steps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also, the installation documentation is clearer and more concise, whilst being more comprehensive.&lt;/p&gt;
+&lt;p&gt;This feature lays the foundations for future work including single click installation of development and production environments from &lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;versioned-apis&#34;&gt;Versioned APIs&lt;/h4&gt;
+&lt;p&gt;The Innovation Platform has been developed with an API First approach, allowing the APIs used within the platform to be more robust and easier to use compared to the 7.X platform.&lt;/p&gt;
+&lt;p&gt;API Versioning has been applied to the &lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt; and &lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;, this means that improvements can be made to the APIs without breaking automation solutions when new updates are rolled out.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-api-gateway-service/&#34;&gt;Cortex API Gateway Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-flow-debugger-service/&#34;&gt;Cortex Flow Debugger Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;product-portal&#34;&gt;Product Portal&lt;/h4&gt;
+&lt;p&gt;The Product Portal contains materials regarding the 2022.9 release and how to use the product; it is hosted online but can be hosted locally if required.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt; integrates with the portal, providing links to documentation for Blocks and Exceptions. In future this may extend to Validation Messages, Guides, Tutorials, etc.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt; can be configured to connect and integrate with a locally hosted version of the Product Portal; typically this would only be required for air gapped systems where connectivity to the internet is unavailable.&lt;/p&gt;
+&lt;p&gt;Affected Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/guides/cortex-studio/&#34;&gt;Cortex Studio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bug-fixes&#34;&gt;Bug Fixes&lt;/h3&gt;
+&lt;p&gt;As 2022.9 is the first GA release of the platform there are no bug fixes.&lt;/p&gt;
+&lt;h3 id=&#34;deprecated-features&#34;&gt;Deprecated Features&lt;/h3&gt;
+&lt;p&gt;The following features have been deprecated in the 2022.9 release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL Server will no longer be required by &lt;a href=&#34;/docs/guides/cortex-gateway/&#34;&gt;Gateway&lt;/a&gt; in a future release; currently targeting removal in the 2023.3 or 2023.6 release and no additional third party software should be required&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;removed-features&#34;&gt;Removed Features&lt;/h3&gt;
+&lt;p&gt;The following features have been removed in the 2022.9 release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subtasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;breaking-changes&#34;&gt;Breaking Changes&lt;/h3&gt;
+&lt;p&gt;As 2022.9 is the first GA release of the platform there are no breaking changes. However, if you have installed the early access 2022.6 release, flows may need to be manually migrated to be compatible; please request assistance by raising a case in the &lt;a href=&#34;https://support.cortex.co.uk/&#34;&gt;Cortex Service Portal&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please note that 7.X flows cannot be run by the Innovation Engine. In a future release we will provide the capability to partially or fully automate the migration of 7.X flows to be compatible with the Innovation Engine.&lt;/p&gt;
+&lt;h3 id=&#34;known-limitations&#34;&gt;Known Limitations&lt;/h3&gt;
+&lt;p&gt;As 2022.9 is the first GA release of the platform we have chosen not to list all known limitations here. Most pages within the Product Portal contain a &amp;ldquo;Known Limitations&amp;rdquo; section listing any relevant known limitations.&lt;/p&gt;
+&lt;p&gt;In future releases, this section will contain known limitations newly introduced as part of that release.&lt;/p&gt;
+&lt;h2 id=&#34;version-support&#34;&gt;Version Support&lt;/h2&gt;
+&lt;h3 id=&#34;operating-systems&#34;&gt;Operating Systems&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Artist&lt;/th&gt;
-&lt;th&gt;Album&lt;/th&gt;
-&lt;th&gt;Year&lt;/th&gt;
+&lt;th&gt;OS Type&lt;/th&gt;
+&lt;th&gt;Supported Versions&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Michael Jackson&lt;/td&gt;
-&lt;td&gt;Thriller&lt;/td&gt;
-&lt;td&gt;1982&lt;/td&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;&lt;ul&gt;&lt;li&gt;Server 2016&lt;/li&gt;&lt;li&gt;Server 2019&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Prince&lt;/td&gt;
-&lt;td&gt;Purple Rain&lt;/td&gt;
-&lt;td&gt;1984&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beastie Boys&lt;/td&gt;
-&lt;td&gt;License to Ill&lt;/td&gt;
-&lt;td&gt;1986&lt;/td&gt;
+&lt;td&gt;Linux&lt;/td&gt;
+&lt;td&gt;Linux is not currently supported&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;If a table is too wide, it should scroll horizontally.&lt;/p&gt;
+&lt;h3 id=&#34;databases&#34;&gt;Databases&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Artist&lt;/th&gt;
-&lt;th&gt;Album&lt;/th&gt;
-&lt;th&gt;Year&lt;/th&gt;
-&lt;th&gt;Label&lt;/th&gt;
-&lt;th&gt;Awards&lt;/th&gt;
-&lt;th&gt;Songs&lt;/th&gt;
+&lt;th&gt;Database Type&lt;/th&gt;
+&lt;th&gt;Supported Versions&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Michael Jackson&lt;/td&gt;
-&lt;td&gt;Thriller&lt;/td&gt;
-&lt;td&gt;1982&lt;/td&gt;
-&lt;td&gt;Epic Records&lt;/td&gt;
-&lt;td&gt;Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical&lt;/td&gt;
-&lt;td&gt;Wanna Be Startin&amp;rsquo; Somethin&#39;, Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life&lt;/td&gt;
+&lt;td&gt;SQL Server&lt;/td&gt;
+&lt;td&gt;&lt;ul&gt;&lt;li&gt;SQL Server 2016&lt;/li&gt;&lt;li&gt;SQL Server 2019&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Prince&lt;/td&gt;
-&lt;td&gt;Purple Rain&lt;/td&gt;
-&lt;td&gt;1984&lt;/td&gt;
-&lt;td&gt;Warner Brothers Records&lt;/td&gt;
-&lt;td&gt;Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal&lt;/td&gt;
-&lt;td&gt;Let&amp;rsquo;s Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I&amp;rsquo;m a Star, Purple Rain&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beastie Boys&lt;/td&gt;
-&lt;td&gt;License to Ill&lt;/td&gt;
-&lt;td&gt;1986&lt;/td&gt;
-&lt;td&gt;Mercury Records&lt;/td&gt;
-&lt;td&gt;noawardsbutthistablecelliswide&lt;/td&gt;
-&lt;td&gt;Rhymin &amp;amp; Stealin, The New Style, She&amp;rsquo;s Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td&gt;
+&lt;td&gt;Other&lt;/td&gt;
+&lt;td&gt;No other databases are currently supported&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Code snippets like &lt;code&gt;var foo = &amp;quot;bar&amp;quot;;&lt;/code&gt; can be shown inline.&lt;/p&gt;
-&lt;p&gt;Also, &lt;code&gt;this should vertically align&lt;/code&gt; &lt;del&gt;&lt;code&gt;with this&lt;/code&gt;&lt;/del&gt; &lt;del&gt;and this&lt;/del&gt;.&lt;/p&gt;
-&lt;p&gt;Code can also be shown in a block element.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;foo := &amp;quot;bar&amp;quot;;
-bar := &amp;quot;foo&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Code can also use syntax highlighting.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;`var foo = &amp;#34;bar&amp;#34;;`&lt;/span&gt;
-
-  &lt;span style=&#34;color:#000&#34;&gt;lexer&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lexers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;javascript&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;iterator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lexer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Tokenise&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;input&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;style&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;styles&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;github&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;formatter&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;WithLineNumbers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;bytes&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Buffer&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;formatter&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Format&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;iterator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-
-  &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inline code inside table cells should still be distinguishable.&lt;/p&gt;
+&lt;p&gt;Note: This is for the platform&amp;rsquo;s functionality and does not represent the databases that can be connected to and interacted with using the platform.&lt;/p&gt;
+&lt;h3 id=&#34;7x-compatibility&#34;&gt;7.X Compatibility&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Language&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;7.X Version&lt;/th&gt;
+&lt;th&gt;Is compatible?&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Javascript&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;var foo = &amp;quot;bar&amp;quot;;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;7.2&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ruby&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;foo = &amp;quot;bar&amp;quot;{&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;7.1&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Need to upgrade 7.1 to 7.2 for compatibility&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7.0&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Need to upgrade 7.0 to 7.2 for compatibility&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Small images should be shown at their actual size.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/300/200/&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/1200/800/&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;components&#34;&gt;Components&lt;/h2&gt;
-&lt;h3 id=&#34;alerts&#34;&gt;Alerts&lt;/h3&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is an alert.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Note:&lt;/h4&gt;
-
-    This is an alert with a title.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is a successful alert.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is a warning!
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Warning!&lt;/h4&gt;
-
-    This is a warning with a title!
-
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;sizing&#34;&gt;Sizing&lt;/h2&gt;
-&lt;p&gt;Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;parameters-available&#34;&gt;Parameters available&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;using-pixels&#34;&gt;Using pixels&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;using-rem&#34;&gt;Using rem&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h2 id=&#34;memory&#34;&gt;Memory&lt;/h2&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;ram-to-use&#34;&gt;RAM to use&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;more-is-better&#34;&gt;More is better&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;used-ram&#34;&gt;Used RAM&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is the final element on the page and there should be no margin below this.
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Blog: Another Great Release</title>
-      <link>/blog/2018/01/04/another-great-release/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2018/01/04/another-great-release/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href=&#34;https://github.com&#34;&gt;Links&lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There should be no margin above this first sentence.&lt;/p&gt;
-&lt;p&gt;Blockquotes should be a lighter gray with a border along the left side in the secondary color.&lt;/p&gt;
-&lt;p&gt;There should be no margin below this final sentence.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;first-header&#34;&gt;First Header&lt;/h2&gt;
-&lt;p&gt;This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;p&gt;On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.&lt;/p&gt;
-&lt;p&gt;Lorem markdownum tuta hospes stabat; idem saxum facit quaterque repetito
-occumbere, oves novem gestit haerebat frena; qui. Respicit recurvam erat:
-pignora hinc reppulit nos &lt;strong&gt;aut&lt;/strong&gt;, aptos, ipsa.&lt;/p&gt;
-&lt;p&gt;Meae optatos &lt;em&gt;passa est&lt;/em&gt; Epiros utiliter &lt;em&gt;Talibus niveis&lt;/em&gt;, hoc lata, edidit.
-Dixi ad aestum.&lt;/p&gt;
-&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is a code block following a header.
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;header-4&#34;&gt;Header 4&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id=&#34;header-5&#34;&gt;Header 5&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h6 id=&#34;header-6&#34;&gt;Header 6&lt;/h6&gt;
+&lt;h2 id=&#34;upgrade-instructions&#34;&gt;Upgrade Instructions&lt;/h2&gt;
+&lt;p&gt;As 2022.9 is the first GA release of the platform there are no upgrade instructions. However, if you have installed the early access 2022.6 release; please request assistance by raising a case in the &lt;a href=&#34;https://support.cortex.co.uk/&#34;&gt;Cortex Service Portal&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;upcoming-releases&#34;&gt;Upcoming Releases&lt;/h2&gt;
+&lt;p&gt;2023 releases are currently forecast to be made available on:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;What&lt;/th&gt;
-&lt;th&gt;Follows&lt;/th&gt;
+&lt;th&gt;Release&lt;/th&gt;
+&lt;th&gt;Release Type&lt;/th&gt;
+&lt;th&gt;Forecast Release Date&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
+&lt;td&gt;2023.3&lt;/td&gt;
+&lt;td&gt;RTM&lt;/td&gt;
+&lt;td&gt;Week commencing 27th March 2023&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
+&lt;td&gt;2023.6&lt;/td&gt;
+&lt;td&gt;RTM&lt;/td&gt;
+&lt;td&gt;Week commencing 3rd July 2023&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
+&lt;td&gt;2023.9&lt;/td&gt;
+&lt;td&gt;GA&lt;/td&gt;
+&lt;td&gt;Week commencing 25th September 2023&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;There&amp;rsquo;s a horizontal rule above and below this.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Here is an unordered list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Salt-n-Pepa&lt;/li&gt;
-&lt;li&gt;Bel Biv DeVoe&lt;/li&gt;
-&lt;li&gt;Kid &amp;lsquo;N Play&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And an ordered list:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Michael Jackson&lt;/li&gt;
-&lt;li&gt;Michael Bolton&lt;/li&gt;
-&lt;li&gt;Michael Bublé&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;And an unordered task list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create a sample markdown document&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add task lists to it&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Take a vacation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And a &amp;ldquo;mixed&amp;rdquo; task list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Steal underpants&lt;/li&gt;
-&lt;li&gt;?&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Profit!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And a nested list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Jackson 5
-&lt;ul&gt;
-&lt;li&gt;Michael&lt;/li&gt;
-&lt;li&gt;Tito&lt;/li&gt;
-&lt;li&gt;Jackie&lt;/li&gt;
-&lt;li&gt;Marlon&lt;/li&gt;
-&lt;li&gt;Jermaine&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TMNT
-&lt;ul&gt;
-&lt;li&gt;Leonardo&lt;/li&gt;
-&lt;li&gt;Michelangelo&lt;/li&gt;
-&lt;li&gt;Donatello&lt;/li&gt;
-&lt;li&gt;Raphael&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Definition lists can be used with Markdown syntax. Definition terms are bold.&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;Name&lt;/dt&gt;
-&lt;dd&gt;Godzilla&lt;/dd&gt;
-&lt;dt&gt;Born&lt;/dt&gt;
-&lt;dd&gt;1952&lt;/dd&gt;
-&lt;dt&gt;Birthplace&lt;/dt&gt;
-&lt;dd&gt;Japan&lt;/dd&gt;
-&lt;dt&gt;Color&lt;/dt&gt;
-&lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;hr&gt;
-&lt;p&gt;Tables should have bold headings and alternating shaded rows.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Artist&lt;/th&gt;
-&lt;th&gt;Album&lt;/th&gt;
-&lt;th&gt;Year&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Michael Jackson&lt;/td&gt;
-&lt;td&gt;Thriller&lt;/td&gt;
-&lt;td&gt;1982&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Prince&lt;/td&gt;
-&lt;td&gt;Purple Rain&lt;/td&gt;
-&lt;td&gt;1984&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beastie Boys&lt;/td&gt;
-&lt;td&gt;License to Ill&lt;/td&gt;
-&lt;td&gt;1986&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;If a table is too wide, it should scroll horizontally.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Artist&lt;/th&gt;
-&lt;th&gt;Album&lt;/th&gt;
-&lt;th&gt;Year&lt;/th&gt;
-&lt;th&gt;Label&lt;/th&gt;
-&lt;th&gt;Awards&lt;/th&gt;
-&lt;th&gt;Songs&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Michael Jackson&lt;/td&gt;
-&lt;td&gt;Thriller&lt;/td&gt;
-&lt;td&gt;1982&lt;/td&gt;
-&lt;td&gt;Epic Records&lt;/td&gt;
-&lt;td&gt;Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical&lt;/td&gt;
-&lt;td&gt;Wanna Be Startin&amp;rsquo; Somethin&#39;, Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Prince&lt;/td&gt;
-&lt;td&gt;Purple Rain&lt;/td&gt;
-&lt;td&gt;1984&lt;/td&gt;
-&lt;td&gt;Warner Brothers Records&lt;/td&gt;
-&lt;td&gt;Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal&lt;/td&gt;
-&lt;td&gt;Let&amp;rsquo;s Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I&amp;rsquo;m a Star, Purple Rain&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beastie Boys&lt;/td&gt;
-&lt;td&gt;License to Ill&lt;/td&gt;
-&lt;td&gt;1986&lt;/td&gt;
-&lt;td&gt;Mercury Records&lt;/td&gt;
-&lt;td&gt;noawardsbutthistablecelliswide&lt;/td&gt;
-&lt;td&gt;Rhymin &amp;amp; Stealin, The New Style, She&amp;rsquo;s Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Code snippets like &lt;code&gt;var foo = &amp;quot;bar&amp;quot;;&lt;/code&gt; can be shown inline.&lt;/p&gt;
-&lt;p&gt;Also, &lt;code&gt;this should vertically align&lt;/code&gt; &lt;del&gt;&lt;code&gt;with this&lt;/code&gt;&lt;/del&gt; &lt;del&gt;and this&lt;/del&gt;.&lt;/p&gt;
-&lt;p&gt;Code can also be shown in a block element.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;foo := &amp;quot;bar&amp;quot;;
-bar := &amp;quot;foo&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Code can also use syntax highlighting.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;`var foo = &amp;#34;bar&amp;#34;;`&lt;/span&gt;
+&lt;p&gt;Any changes to these forecasts will be announced via the &lt;a href=&#34;/blog/news&#34;&gt;News channel&lt;/a&gt;.&lt;/p&gt;
 
-  &lt;span style=&#34;color:#000&#34;&gt;lexer&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lexers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;javascript&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;iterator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lexer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Tokenise&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;input&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;style&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;styles&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;github&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;formatter&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;WithLineNumbers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;bytes&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Buffer&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;formatter&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Format&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;iterator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-
-  &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inline code inside table cells should still be distinguishable.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Language&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Javascript&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;var foo = &amp;quot;bar&amp;quot;;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ruby&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;foo = &amp;quot;bar&amp;quot;{&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Small images should be shown at their actual size.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/300/200/&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://placekitten.com/g/1200/800/&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;components&#34;&gt;Components&lt;/h2&gt;
-&lt;h3 id=&#34;alerts&#34;&gt;Alerts&lt;/h3&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is an alert.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Note:&lt;/h4&gt;
-
-    This is an alert with a title.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is a successful alert.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is a warning!
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Warning!&lt;/h4&gt;
-
-    This is a warning with a title!
-
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;sizing&#34;&gt;Sizing&lt;/h2&gt;
-&lt;p&gt;Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;parameters-available&#34;&gt;Parameters available&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;using-pixels&#34;&gt;Using pixels&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;using-rem&#34;&gt;Using rem&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h2 id=&#34;memory&#34;&gt;Memory&lt;/h2&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;ram-to-use&#34;&gt;RAM to use&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;more-is-better&#34;&gt;More is better&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;h3 id=&#34;used-ram&#34;&gt;Used RAM&lt;/h3&gt;
-&lt;p&gt;Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is the final element on the page and there should be no margin below this.
-&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
