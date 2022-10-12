@@ -102,7 +102,7 @@ To get a licence file and feature identifier take the following steps:
     Please also include a suitable Cortex Innovation with v7.2 feature identifier.
     ```
 
-1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
+1. Extract `Cortex Innovation 2022.9 - Licence Fingerprint Generator.zip`.
 1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the Web Application server.
 1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
@@ -151,7 +151,7 @@ If using the included [gobetween][] load balancer, Network Discovery and File Sh
 Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
 
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
-* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation 2022.6 - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
+* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation 2022.9 - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
 * Must be able to access each of the Application Servers via HTTPS.
 * Ideally it should be highly available to avoid a single point of failure in the system.
 
@@ -277,15 +277,15 @@ Supported versions of Active Directory are listed below:
 
 | Version                    | Verified?      | Supported From | Supported Until  |  
 |----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2003 R2     |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2008        |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2012        |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2016        |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2019        |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2022        |                | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2003        |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | Cortex v2022.9 | To be evaluated  |
 
 #### Certificate Requirements
 

@@ -1,5 +1,31 @@
 # Internal links
 [Cortex]
+    [Cortex.Blogs]
+        MainDoc = "/blog/"
+        [Cortex.Blogs.News]
+            MainDoc = "/blog/news"
+        [Cortex.Blogs.Releases]
+            MainDoc = "/blog/releases"
+            [Cortex.Blogs.Releases.2022.X]
+                MainDoc = "/blog/releases/2022.x"    
+                [Cortex.Blogs.Releases.2022.9]
+                    MainDoc =  "/blog/2022/09/27/2022.9/"
+                    ImprovedPerformance =  "/blog/2022/09/27/2022.9/#improved-performance-vs-7x"
+                    NewEngine =  "/blog/2022/09/27/2022.9/#new-innovation-engine"
+                    HAArchitecture =  "/blog/2022/09/27/2022.9/#new-ha-architecture"
+                    180NewBlocks =  "/blog/2022/09/27/2022.9/#180-new-blocks"
+                    EncryptableAndEncryptedText = "/blog/2022/09/27/2022.9/#new-concept-of-encryptable-and-encrypted-text"
+                    NewPropertyEditor =  "/blog/2022/09/27/2022.9/#new-property-editor"
+                    Messages =  "/blog/2022/09/27/2022.9/#messages"
+                    FlowContract =  "/blog/2022/09/27/2022.9/#flow-contract"
+                    CallingOtherFlows =  "/blog/2022/09/27/2022.9/#calling-other-flows"
+                    DebugWithInputVariables =  "/blog/2022/09/27/2022.9/#debug-with-input-variables"
+                    PackageManagement =  "/blog/2022/09/27/2022.9/#package-management"
+                    StructuredLogging =  "/blog/2022/09/27/2022.9/#structured-logging"
+                    GrafanaDashboards =  "/blog/2022/09/27/2022.9/#grafana-dashboards"
+                    SimplifiedInstallation =  "/blog/2022/09/27/2022.9/#simplified-installation"
+                    VersionedAPIs =  "/blog/2022/09/27/2022.9/#versioned-apis"
+                    ProductPortal =  "/blog/2022/09/27/2022.9/#product-portal"
     [Cortex.Faqs]
         MainDoc = "/docs/faqs/"
     [Cortex.GettingStarted]
@@ -54,6 +80,17 @@
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
                     TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out/#test-publishing-production-flows"
                     AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#antivirus-exclusions"
+                    [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Advanced]
+                        AdvancedConfig = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/advanced-config-changes"
+                        AlternativeArchitectures = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/alternative-architectures"
+                        ApplyTDE = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/tde"
+                        ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/configure-firewalls"
+                        CreateSelfSignedCertificates = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/self-signed-certificates"
+                        EncryptText = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/encrypt-text"
+                        PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/port-requirements"
+                        SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
+            [Cortex.GettingStarted.OnPremise.AddInnovationTo72]
+                MainDoc = "/docs/getting-started/on-premise/add-innovation-to-72/"
                 [Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/"       
                     Architecture = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/architecture"
@@ -156,9 +193,14 @@
                 Tools = "/docs/guides/cortex-studio/expression-editor/#tools"
             [Cortex.Guides.Studio.VariableEditor]
                 MainDoc = "/docs/guides/cortex-studio/variable-editor/"
+            [Cortex.Guides.Studio.LiteralEditor]
+                MainDoc = "/docs/guides/cortex-studio/literal-editor/"
             [Cortex.Guides.Studio.EastPanel]
                 MainDoc = "/docs/guides/cortex-studio/east-panel/"
                 PropertyEditor = "/docs/guides/cortex-studio/east-panel/#property-editor"
+                AddVariablesButton = "/docs/guides/cortex-studio/east-panel/#add-variables-button"
+                ShowHideAdvancedPropertiesButton = "/docs/guides/cortex-studio/east-panel/#show-hide-advanced-properties-button"
+                HelpButton = "/docs/guides/cortex-studio/east-panel/#help-button"
                 ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
                 VariablesViewer = "/docs/guides/cortex-studio/east-panel/#variables-viewer"
                 VariableDetailsViewer = "/docs/guides/cortex-studio/east-panel/#variable-details-viewer"
@@ -177,7 +219,9 @@
                 StartAnExecution = "/docs/guides/cortex-studio/main-display-area/#start-an-execution"
                 EditAndContinueAnExecution = "/docs/guides/cortex-studio/main-display-area/#edit-and-continue-an-execution"
             [Cortex.Guides.Studio.Navigation]
-                MainDoc = "/docs/guides/cortex-studio/navigation/"                    
+                MainDoc = "/docs/guides/cortex-studio/navigation/" 
+            [Cortex.Guides.Studio.PackageManagement]
+                MainDoc = "/docs/guides/cortex-studio/package-management/"                   
             [Cortex.Guides.Studio.Palettes]
                 MainDoc = "/docs/guides/cortex-studio/palettes/"
             [Cortex.Guides.Studio.SouthPanel]
@@ -196,6 +240,12 @@
                 DeletingVariables = "/docs/guides/cortex-studio/south-panel/#deleting-variables"
             [Cortex.Guides.Studio.Debugging]
                 MainDoc = "/docs/guides/cortex-studio/debugging/"
+        [Cortex.Guides.FlowExecutionService]
+            MainDoc = "/docs/guides/cortex-flow-execution-service/"
+        [Cortex.Guides.FlowDebuggerService]
+            MainDoc = "/docs/guides/cortex-flow-debugger-service/"
+        [Cortex.Guides.ApiGatewayService]
+            MainDoc = "/docs/guides/cortex-api-gateway-service/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
@@ -724,6 +774,8 @@
             [Cortex.Reference.Observability.Grafana.Dashboards.FlowExecutionRequests]
                 MainDoc = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/"
                 TotalRequestsErrored = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/#total-requests-errored"
+            [Cortex.Reference.Observability.Grafana.Dashboards.PlatformHealth]
+                MainDoc = "/docs/reference/observability/grafana/dashboards/platform-health/"
             [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup]
                 [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup.ConfigureThresholds]
                     MainDoc = "/docs/reference/observability/grafana/advanced-setup/configuring-thresholds/"
@@ -748,6 +800,7 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/"
+                            BlockTimeoutProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#block-timeout-property"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
@@ -1228,12 +1281,16 @@
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
                 MainDoc = "/docs/reference/glossary/a-e/"
+                Autogeneration = "/docs/reference/glossary/a-e/#autogeneration"
                 Automation = "/docs/reference/glossary/a-e/#automation"
+                AWSLambda = "/docs/reference/glossary/a-e/#aws-lambda"
+                AzureFunctions = "/docs/reference/glossary/a-e/#azure-functions"
                 Block = "/docs/reference/glossary/a-e/#block"
                 BlockProperty = "/docs/reference/glossary/a-e/#block-property"
                 Boolean = "/docs/reference/glossary/a-e/#boolean"
                 Char = "/docs/reference/glossary/a-e/#char"
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
+                CloudServiceProvider = "/docs/reference/glossary/a-e/#cloud-service-provider"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
                 Code = "/docs/reference/glossary/a-e/#code"
                 Cortex = "/docs/reference/glossary/a-e/#cortex"
@@ -1241,6 +1298,7 @@
                 DataType = "/docs/reference/glossary/a-e/#data-type"
                 Developer = "/docs/reference/glossary/a-e/#developer"
                 Dictionary = "/docs/reference/glossary/a-e/#dictionary"
+                DLL = "/docs/reference/glossary/a-e/#dll"
                 DragAndDrop = "/docs/reference/glossary/a-e/#drag-and-drop"
                 Double = "/docs/reference/glossary/a-e/#double"
                 Expression = "/docs/reference/glossary/a-e/#expression"
@@ -1265,13 +1323,16 @@
                 Item = "/docs/reference/glossary/f-j/#item"
                 Index = "/docs/reference/glossary/f-j/#index"
                 Intellisense = "/docs/reference/glossary/f-j/#intellisense"
+                Json = "/docs/reference/glossary/f-j/#json"
             [Cortex.Reference.Glossary.K-O]
                 MainDoc = "/docs/reference/glossary/k-o/"
+                Linux = "/docs/reference/glossary/k-o/#linux"
                 List = "/docs/reference/glossary/k-o/#list"
                 Literal = "/docs/reference/glossary/k-o/#literal"
                 LowerCase = "/docs/reference/glossary/k-o/#lowercase"
                 Method = "/docs/reference/glossary/k-o/#method"
                 NonNull = "/docs/reference/glossary/k-o/#non-null"
+                NuGetPackage = "/docs/reference/glossary/k-o/#nuget-package"
                 Null = "/docs/reference/glossary/k-o/#null"
                 Operand = "/docs/reference/glossary/k-o/#operand"
                 Operator = "/docs/reference/glossary/k-o/#operator"
@@ -1285,6 +1346,8 @@
                 PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
                 PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
                 Request = "/docs/reference/glossary/p-t/#request"
+                SDK = "/docs/reference/glossary/p-t/#sdk"
+                ServiceFabric = "/docs/reference/glossary/p-t/#service-fabric"
                 Single = "/docs/reference/glossary/p-t/#single"
                 Snippets = "/docs/reference/glossary/p-t/#snippets"
                 String = "/docs/reference/glossary/p-t/#string"
@@ -1294,6 +1357,7 @@
                 Text = "/docs/reference/glossary/p-t/#text"
                 Trigger = "/docs/reference/glossary/p-t/#trigger"
                 Type = "/docs/reference/glossary/p-t/#type"
+                Typeahead = "/docs/reference/glossary/p-t/#typeahead"
             [Cortex.Reference.Glossary.U-Z]
                 MainDoc = "/docs/reference/glossary/u-z/"
                 UpperCase = "/docs/reference/glossary/u-z/#uppercase"

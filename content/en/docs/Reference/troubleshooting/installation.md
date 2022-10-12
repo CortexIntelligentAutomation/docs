@@ -124,10 +124,10 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 1. Uninstall the platform by taking the following steps:
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
+        cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
         ```
 
     1. Uninstall the platform by running the following command for your architecture:
@@ -142,7 +142,7 @@ To work around this error, either uninstall the platform and reinstall it using 
     {{< /tabpane >}}
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
     1. Wait for the command to finish.
-1. In the `Cortex Innovation 2022.6 - App Server Install Scripts` folder, navigate to `Resources`.
+1. In the `Cortex Innovation 2022.9 - App Server Install Scripts` folder, navigate to `Resources`.
 1. Backup the file `RabbitMqInterNodePublicTemplate.config` and then open it with a text editor.
 1. Replace both instances of the text `verify_peer` with the text `verify_none`.
 1. Change the value of both occurrences of `fail_if_no_peer_cert` to `false` so that they resemble the following:
@@ -229,10 +229,10 @@ A workaround for this is provided by Intel.
 
 1. Uninstall the platform by taking the following steps:
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation 2022.6 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Innovation 2022.6 - App Server Install Scripts"
+        cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
         ```
 
     1. Uninstall the platform by running the following command for your architecture:

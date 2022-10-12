@@ -10,7 +10,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
 
 ## Multiple Server With HA
 
-1. In the `Cortex Innovation 2022.6 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
+1. In the `Cortex Innovation 2022.9 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
 1. Change the configuration file according to your cluster, referring to the following example and details:
 
     {{< highlight json "linenos=table,hl_lines=4 17 18 21 22 23 27-28 31-32 35-36 42 44 46 48 50 52 73-75 80-82,linenostart=1" >}}
@@ -127,7 +127,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
 
 ## Single Server Without HA
 
-1. In the `Cortex Innovation 2022.6 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
+1. In the `Cortex Innovation 2022.9 - Installation Scripts` folder, locate the file `Cortex.Innovation.Install.Config.json` and open it with a text editor.
 1. Change the configuration file according to your cluster, referring to the following example and details:
 
     {{< highlight json "linenos=table,hl_lines=4 18 19 25 27 48-50,linenostart=1" >}}

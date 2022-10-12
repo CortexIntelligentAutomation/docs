@@ -19,6 +19,7 @@ TODO:
 - https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks
 - list of common extensions
 - list of common environment variables (`%PROGRAMDATA%` check this works)
+- Best Practices (how to work with files, where to save them when working with files and folders in a flow)
 
 ## Remarks
 

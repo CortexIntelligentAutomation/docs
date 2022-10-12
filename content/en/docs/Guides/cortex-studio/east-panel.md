@@ -11,6 +11,12 @@ weight: 1
 
 ## Property Editor
 
+### Add Variables button
+
+### Show/Hide Advanced Properties button
+
+### Help button
+
 ## Execution Viewer
 
 ### Variables Viewer

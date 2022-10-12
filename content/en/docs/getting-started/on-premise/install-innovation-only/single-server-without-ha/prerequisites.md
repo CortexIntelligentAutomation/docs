@@ -54,7 +54,7 @@ To get a licence file and feature identifier take the following steps:
     Please also include a suitable Cortex Innovation feature identifier.
     ```
 
-1. Extract `Cortex Innovation 2022.6 - Licence Fingerprint Generator.zip`.
+1. Extract `Cortex Innovation 2022.9 - Licence Fingerprint Generator.zip`.
 1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the server.
 1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
@@ -190,15 +190,15 @@ Supported versions of Active Directory are listed below:
 
 | Version                    | Verified?      | Supported From | Supported Until  |  
 |----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2003 R2     |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2008        |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2012        |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2016        |      ✓        | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2019        |                | Cortex v2022.6 | To be evaluated  |
-| Windows Server 2022        |                | Cortex v2022.6 | To be evaluated  |
+| Windows Server 2003        |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | Cortex v2022.9 | To be evaluated  |
 
 ## Next Steps?
 

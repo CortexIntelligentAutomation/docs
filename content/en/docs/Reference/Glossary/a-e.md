@@ -19,6 +19,10 @@ See [Acceleration Program][].
 
 An API (Application Programming Interface) is a set of functions that allows applications to access data from and interact with external systems, services or applications.
 
+### Autogeneration
+
+Autogeneration, is the process in which something is created automatically for use within a process.
+
 ### Automate
 
 The application of [automation][].
@@ -26,6 +30,14 @@ The application of [automation][].
 ### Automation
 
 Automation is a term for techniques, methods, systems or technologies that reduce human intervention in [tasks][] and [processes][].
+
+### AWS Lambda
+
+AWS Lambda is an event driven serverless solution from AWS. Instead of deploying and maintaining servers, cloud infrastructure is used to run applications.
+
+### Azure Functions
+
+Azure Functions is an event driven serverless solution from Microsoft. Instead of deploying and maintaining servers, cloud infrastructure is used to run applications.
 
 ## B
 
@@ -113,6 +125,10 @@ Examples of publicly available Cloud providers include:
 * Google Cloud Platform
 * Microsoft Azure
 
+### Cloud Service Provider
+
+A cloud service provider is a third-party company offering a cloud-based platform, infrastructure, application, or storage services.
+
 ### Code
 
 A set of instructions in a computer program.
@@ -198,6 +214,10 @@ A developer is an individual that builds and creates software and applications.
 A [data type][] that represents an unordered collection of key-item pairs, where each pair consists of a unique key and its associated item. Dictionaries are optimised for fast lookup of items using their key.
 
 For more detailed information about the Dictionary data type, see [Data Types > Dictionary&lt;TKey, TItem&gt;][].
+
+### DLL
+
+DLL files are binary files that can contain executable code and resources.
 
 ### Drag-and-Drop
 
