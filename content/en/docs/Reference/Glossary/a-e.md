@@ -109,6 +109,14 @@ See [Casting and type conversions (C# Programming Guide)][] for a detailed techn
 
 Also see [Explicit Cast][] for more information.
 
+### CI/CD
+
+CI/CD is a software development practice and is broken down into the following concepts:
+
+- [Continuous Integration][]
+- [Continuous Delivery][]
+- [Continuous Deployment][]
+
 ### Char
 
 A [data type][] that represents a character or letter.
@@ -136,6 +144,26 @@ A set of instructions in a computer program.
 ### Concurrent
 
 At the same time.
+
+### Continuous Integration
+
+Continuous Integration is a software development practice where developers frequently:
+
+- Integrate their local changes with source code from the main branch
+- Use automated testing to ensure that their changes work as expected
+- Merge their changes into the main branch, if no issues were found
+
+### Continuous Delivery
+
+Continuous Delivery is a software development practice where:
+
+- Changes to the main branch are detected
+- The main branch is packaged into deployment artefacts
+- Deployment artefacts are made available
+
+### Continuous Deployment
+
+Continuous Deployment is a software development practice which extends [Continuous Delivery][] by automatically deploying the generated artefacts.
 
 ### Convert
 
@@ -315,6 +343,9 @@ For more detailed information about the Expression Editor, see [Cortex Studio > 
 [Cast]: {{< ref "#cast" >}}
 [Code]: {{< ref "#code" >}}
 [Concurrent]: {{< ref "#concurrent" >}}
+[Continuous Integration]: {{< ref "#continuous-integration" >}}
+[Continuous Delivery]: {{< ref "#continuous-delivery" >}}
+[Continuous Deployment]: {{< ref "#continuous-deployment" >}}
 [Cortex]: {{< ref "#cortex" >}}
 [Cortex Studio]: {{< ref "#cortex-studio" >}}
 [Data Type]: {{< ref "#data-type" >}}

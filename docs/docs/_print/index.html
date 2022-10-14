@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d033a2151a286b395a6544410eed85fc.json"
+  data-offline-search-index-json-src="/offline-search-index.8969843724dc3be6fb37f621d98eade9.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -2358,7 +2358,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.2.2: <a href="#pg-d8a3e47a4f41755da1c845719b0f1d2a">Cortex Flow Execution Service</a></li>
+<li>6.2.2: <a href="#pg-c3b5cc92cce2b9fa5ba5d606ec475569">Cortex Flow Debugger Service</a></li>
 
 
     
@@ -2377,7 +2377,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.2.3: <a href="#pg-34b7672404b423d5c809e250fa20ba6a">Cortex Gateway</a></li>
+<li>6.2.3: <a href="#pg-d8a3e47a4f41755da1c845719b0f1d2a">Cortex Flow Execution Service</a></li>
 
 
     
@@ -2396,7 +2396,26 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.2.4: <a href="#pg-548938a7821c99d49e6f4a6a9da0ea6c">Cortex Studio</a></li>
+<li>6.2.4: <a href="#pg-34b7672404b423d5c809e250fa20ba6a">Cortex Gateway</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6.2.5: <a href="#pg-548938a7821c99d49e6f4a6a9da0ea6c">Cortex Studio</a></li>
 
 
     
@@ -7525,7 +7544,16 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-715bf54e2360e5ef7196d91553690092">1 - What&#39;s New?</h1>
     <div class="lead">Discover what&rsquo;s new in the Cortex Innovation platform.</div>
-	<h2 id="improved-performance">Improved Performance</h2>
+	<h2 id="summary">Summary</h2>
+<p>2022.9 is the first release of the next generation of Cortex and begins our journey to improve on the previous 7.X generation starting with the following areas:</p>
+<ul>
+<li><a href="#improved-performance">Performance</a></li>
+<li><a href="#improved-availability">Availability</a></li>
+<li><a href="#improved-usability">Usability</a></li>
+<li><a href="#improved-security">Security</a></li>
+<li><a href="#improved-observability">Observability</a></li>
+</ul>
+<h2 id="improved-performance">Improved Performance</h2>
 <p>This release introduces a <a href="/blog/2022/09/27/2022.9/#new-innovation-engine">new engine</a> to execute automation solutions, and has shown <a href="/blog/2022/09/27/2022.9/#improved-performance-vs-7x">significant performance improvements</a> compared to 7.X, both in our own observations and customers installations. For example, one customer solution that has been migrated to 2022.9 has shown the time taken to run their tests reduce from 210 minutes to 10 minutes.</p>
 <h2 id="improved-availability">Improved Availability</h2>
 <p>This release introduces a new <a href="/blog/2022/09/27/2022.9/#new-ha-architecture">high availability (HA) architecture</a>, which provides:</p>
@@ -9551,9 +9579,9 @@ below.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Gateway</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-GatewayPackagePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Gateway.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-GatewayApplicationIISPath</span> <span style="color:#4e9a06">&#34;Cortex\gateway&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-<span style="color:#000">-ModelDBContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="color:#000">-AuthContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="color:#000">-SignalRContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000">-ModelDBContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-AuthContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-SignalRContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-FeatureFlags</span> <span style="color:#4e9a06">&#34;InnovationId&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-ServiceFabricApiGatewayEndpoint</span> <span style="color:#4e9a06">&#34;https://server.domain.com/&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-ServiceFabricUsingSelfSignedCertificates</span> <span style="color:#000">$false</span> <span style="color:#000;font-weight:bold">`</span>
@@ -27296,7 +27324,37 @@ TODO: Complex/Collection variable referencing</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-d8a3e47a4f41755da1c845719b0f1d2a">6.2.2 - Cortex Flow Execution Service</h1>
+	<h1 id="pg-c3b5cc92cce2b9fa5ba5d606ec475569">6.2.2 - Cortex Flow Debugger Service</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Flow Debugger Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d8a3e47a4f41755da1c845719b0f1d2a">6.2.3 - Cortex Flow Execution Service</h1>
     <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Flow Execution Service.</div>
 	<img src="/images/work-in-progress.jpg">
 
@@ -27326,7 +27384,7 @@ TODO: Complex/Collection variable referencing</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-34b7672404b423d5c809e250fa20ba6a">6.2.3 - Cortex Gateway</h1>
+	<h1 id="pg-34b7672404b423d5c809e250fa20ba6a">6.2.4 - Cortex Gateway</h1>
     <div class="lead">This section includes all reference documentation for the APIs exposed by Cortex Gateway.</div>
 	<img src="/images/work-in-progress.jpg">
 
@@ -27356,7 +27414,7 @@ TODO: Complex/Collection variable referencing</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-548938a7821c99d49e6f4a6a9da0ea6c">6.2.4 - Cortex Studio</h1>
+	<h1 id="pg-548938a7821c99d49e6f4a6a9da0ea6c">6.2.5 - Cortex Studio</h1>
     <div class="lead">This section includes all reference documentation for the APIs exposed by Cortex Studio.</div>
 	<img src="/images/work-in-progress.jpg">
 
@@ -87733,6 +87791,13 @@ Faulting module name: crypto.dll, version: 0.0.0.0, time stamp: 0x5d80baab
 <p>The process of explicitly converting one <a href="#data-type">data type</a> to another.</p>
 <p>See <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions">Casting and type conversions (C# Programming Guide)</a> for a detailed technical explanation of casting in <a href="#c-1">C#</a>, the <a href="/docs/reference/glossary/p-t/#programming-language">programming language</a> natively supported by the <a href="#cortex">Cortex</a> <a href="/docs/reference/glossary/p-t/#platform">platform</a> for writing simple <a href="#expression">expressions</a> and more complex <a href="#code">code</a>.</p>
 <p>Also see <a href="#explicit-cast">Explicit Cast</a> for more information.</p>
+<h3 id="cicd">CI/CD</h3>
+<p>CI/CD is a software development practice and is broken down into the following concepts:</p>
+<ul>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+<li><a href="#continuous-delivery">Continuous Delivery</a></li>
+<li><a href="#continuous-deployment">Continuous Deployment</a></li>
+</ul>
 <h3 id="char">Char</h3>
 <p>A <a href="#data-type">data type</a> that represents a character or letter.</p>
 <p>For more detailed information about the Char data type, see <a href="/docs/reference/data-types/text/char">Data Types &gt; Char</a>.</p>
@@ -87750,6 +87815,22 @@ Faulting module name: crypto.dll, version: 0.0.0.0, time stamp: 0x5d80baab
 <p>A set of instructions in a computer program.</p>
 <h3 id="concurrent">Concurrent</h3>
 <p>At the same time.</p>
+<h3 id="continuous-integration">Continuous Integration</h3>
+<p>Continuous Integration is a software development practice where developers frequently:</p>
+<ul>
+<li>Integrate their local changes with source code from the main branch</li>
+<li>Use automated testing to ensure that their changes work as expected</li>
+<li>Merge their changes into the main branch, if no issues were found</li>
+</ul>
+<h3 id="continuous-delivery">Continuous Delivery</h3>
+<p>Continuous Delivery is a software development practice where:</p>
+<ul>
+<li>Changes to the main branch are detected</li>
+<li>The main branch is packaged into deployment artefacts</li>
+<li>Deployment artefacts are made available</li>
+</ul>
+<h3 id="continuous-deployment">Continuous Deployment</h3>
+<p>Continuous Deployment is a software development practice which extends <a href="#continuous-delivery">Continuous Delivery</a> by automatically deploying the generated artefacts.</p>
 <h3 id="convert">Convert</h3>
 <p>To change something into a different form. E.g. Change some <a href="/docs/reference/glossary/p-t/#text">text</a> from <a href="/docs/reference/glossary/k-o/#lowercase">lowercase</a> to <a href="/docs/reference/glossary/u-z/#uppercase">UPPERCASE</a>.</p>
 <h3 id="cortex">Cortex</h3>

@@ -5,6 +5,16 @@ description: "Discover what's new in the Cortex Innovation platform."
 weight: 1
 ---
 
+## Summary
+
+2022.9 is the first release of the next generation of Cortex and begins our journey to improve on the previous 7.X generation starting with the following areas:
+
+- [Performance][]
+- [Availability][]
+- [Usability][]
+- [Security][]
+- [Observability][]
+
 ## Improved Performance
 
 This release introduces a [new engine][] to execute automation solutions, and has shown [significant performance improvements][] compared to 7.X, both in our own observations and customers installations. For example, one customer solution that has been migrated to 2022.9 has shown the time taken to run their tests reduce from 210 minutes to 10 minutes.
@@ -49,6 +59,12 @@ This release introduces a number of other improvements, such as:
 - [Versioned APIs][] which allow our APIs to evolve in future releases without breaking existing automation solutions
 
 For a full list of what has been introduced in this release, please see the [2022.9 Release Notes][]
+
+[Performance]: {{< ref "#improved-performance" >}}
+[Availability]: {{< ref "#improved-availability" >}}
+[Usability]: {{< ref "#improved-usability" >}}
+[Security]: {{< ref "#improved-security" >}}
+[Observability]: {{< ref "#improved-observability" >}}
 
 [2022.9 Release Notes]: {{< url "Cortex.Blogs.Releases.2022.9.MainDoc" >}}
 [new engine]: {{< url "Cortex.Blogs.Releases.2022.9.NewEngine" >}}

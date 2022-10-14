@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Install the Web Application Server">
 <meta itemprop="description" content="Information about installing the Web Application Server.">
 <meta itemprop="dateModified" content="2022-10-12T14:55:47+01:00" />
-<meta itemprop="wordCount" content="4885">
+<meta itemprop="wordCount" content="4888">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install the Web Application Server"/>
 <meta name="twitter:description" content="Information about installing the Web Application Server."/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d033a2151a286b395a6544410eed85fc.json"
+  data-offline-search-index-json-src="/offline-search-index.8969843724dc3be6fb37f621d98eade9.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d033a2151a286b395a6544410eed85fc.json"
+  data-offline-search-index-json-src="/offline-search-index.8969843724dc3be6fb37f621d98eade9.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -2722,6 +2722,31 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferenceapiscortex-api-gateway-service">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/apis/cortex-flow-debugger-service/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cortex Flow Debugger Service</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferenceapiscortex-flow-debugger-service">
       
       
       
@@ -9551,9 +9576,9 @@ below.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Gateway</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-GatewayPackagePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Gateway.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-GatewayApplicationIISPath</span> <span style="color:#4e9a06">&#34;Cortex\gateway&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-<span style="color:#000">-ModelDBContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="color:#000">-AuthContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="color:#000">-SignalRContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True&#34;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000">-ModelDBContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-AuthContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+<span style="color:#000">-SignalRContextConnectionString</span> <span style="color:#4e9a06">&#34;Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-FeatureFlags</span> <span style="color:#4e9a06">&#34;InnovationId&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-ServiceFabricApiGatewayEndpoint</span> <span style="color:#4e9a06">&#34;https://server.domain.com/&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 <span style="color:#000">-ServiceFabricUsingSelfSignedCertificates</span> <span style="color:#000">$false</span> <span style="color:#000;font-weight:bold">`</span>

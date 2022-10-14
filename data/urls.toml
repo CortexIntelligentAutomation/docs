@@ -199,7 +199,7 @@
                 MainDoc = "/docs/guides/cortex-studio/east-panel/"
                 PropertyEditor = "/docs/guides/cortex-studio/east-panel/#property-editor"
                 AddVariablesButton = "/docs/guides/cortex-studio/east-panel/#add-variables-button"
-                ShowHideAdvancedPropertiesButton = "/docs/guides/cortex-studio/east-panel/#show-hide-advanced-properties-button"
+                ShowHideAdvancedPropertiesButton = "/docs/guides/cortex-studio/east-panel/#showhide-advanced-properties-button"
                 HelpButton = "/docs/guides/cortex-studio/east-panel/#help-button"
                 ExecutionViewer = "/docs/guides/cortex-studio/east-panel/#execution-viewer"
                 VariablesViewer = "/docs/guides/cortex-studio/east-panel/#variables-viewer"
@@ -262,6 +262,8 @@
                 MainDoc = "/docs/reference/apis/cortex-api-gateway-service/"
             [Cortex.Reference.Apis.FlowExecutionService]
                 MainDoc = "/docs/reference/apis/cortex-flow-execution-service/"
+            [Cortex.Reference.Apis.FlowDebuggerService]
+                MainDoc = "/docs/reference/apis/cortex-flow-debugger-service/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -771,14 +773,18 @@
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
         [Cortex.Reference.Dashboards]
-            [Cortex.Reference.Observability.Grafana.Dashboards.FlowExecutionRequests]
-                MainDoc = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/"
-                TotalRequestsErrored = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/#total-requests-errored"
-            [Cortex.Reference.Observability.Grafana.Dashboards.PlatformHealth]
-                MainDoc = "/docs/reference/observability/grafana/dashboards/platform-health/"
-            [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup]
-                [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup.ConfigureThresholds]
-                    MainDoc = "/docs/reference/observability/grafana/advanced-setup/configuring-thresholds/"
+            [Cortex.Reference.Observability.Grafana]
+                MainDoc = "/docs/reference/observability/grafana/"
+                [Cortex.Reference.Observability.Grafana.Dashboards]
+                    MainDoc = "/docs/reference/observability/grafana/dashboards/"
+                    [Cortex.Reference.Observability.Grafana.Dashboards.FlowExecutionRequests]
+                        MainDoc = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/"
+                        TotalRequestsErrored = "/docs/reference/observability/grafana/dashboards/flow-execution-requests/#total-requests-errored"
+                    [Cortex.Reference.Observability.Grafana.Dashboards.PlatformHealth]
+                        MainDoc = "/docs/reference/observability/grafana/dashboards/platform-health/"
+                    [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup]
+                        [Cortex.Reference.Observability.Grafana.Dashboards.Grafana.AdvancedSetup.ConfigureThresholds]
+                            MainDoc = "/docs/reference/observability/grafana/advanced-setup/configuring-thresholds/"
         [Cortex.Reference.Concepts]
             MainDoc = "/docs/reference/concepts/"
             [Cortex.Reference.Concepts.Fundamentals]
@@ -1292,6 +1298,7 @@
                 CSharp = "/docs/reference/glossary/a-e/#c-1"
                 CloudServiceProvider = "/docs/reference/glossary/a-e/#cloud-service-provider"
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
+                CICD = "/docs/reference/glossary/a-e/#cicd"
                 Code = "/docs/reference/glossary/a-e/#code"
                 Cortex = "/docs/reference/glossary/a-e/#cortex"
                 CortexStudio = "/docs/reference/glossary/a-e/#cortex-studio"

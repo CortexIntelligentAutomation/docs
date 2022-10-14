@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d033a2151a286b395a6544410eed85fc.json"
+  data-offline-search-index-json-src="/offline-search-index.8969843724dc3be6fb37f621d98eade9.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -384,7 +384,7 @@ This the multi-page printable view of this section.
 <p>Installation artefacts can be requested by raising a case in the <a href="https://support.cortex.co.uk/">Cortex Service Portal</a>.</p>
 <h2 id="release-notes">Release Notes</h2>
 <h3 id="overview">Overview</h3>
-<p>2022.9 is the first release of our next generation of Cortex and begins our journey to improve on the previous 7.X generation in the following areas:</p>
+<p>2022.9 is the first release of the next generation of Cortex and begins our journey to improve on the previous 7.X generation in the following areas:</p>
 <ul>
 <li>Performance</li>
 <li>Availability</li>
@@ -422,36 +422,36 @@ This the multi-page printable view of this section.
 <td><a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a></td>
 <td>15.0.1.2241</td>
 <td>Yes</td>
-<td>Major</td>
 <td>First Release</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="/docs/guides/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a></td>
 <td>9.0.4.2241</td>
 <td>Yes</td>
-<td>Major</td>
 <td>First Release</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="/docs/guides/cortex-flow-execution-service/">Cortex Flow Execution Service</a></td>
 <td>9.0.1.2241</td>
 <td>Yes</td>
-<td>Major</td>
 <td>First Release</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="/docs/guides/cortex-gateway/">Cortex Gateway</a>, including <a href="/docs/guides/cortex-studio/">Cortex Studio</a></td>
-<td>3.1.2</td>
+<td>3.1.3</td>
 <td>Yes</td>
 <td>Minor</td>
-<td>First Release</td>
+<td>Support for Innovation added</td>
 </tr>
 <tr>
 <td><a href="/docs/reference/blocks/">Cortex Block Packages</a></td>
 <td>29.2.0</td>
 <td>Yes</td>
-<td>Major</td>
 <td>First Release</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -497,13 +497,13 @@ This the multi-page printable view of this section.
 <p>For more information about licensing requirements, including how to obtain a licence, see:</p>
 <p>Installing Innovation Only:</p>
 <ul>
-<li><a href="/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/">Single Server - Without HA</a></li>
 <li><a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/">Multiple Server - With HA</a></li>
+<li><a href="/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/">Single Server - Without HA</a></li>
 </ul>
 <p>Adding Innovation to a 7.2 Installation:</p>
 <ul>
-<li><a href="/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/">Single Server - Without HA</a></li>
 <li><a href="/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/">Multiple Server - With HA</a></li>
+<li><a href="/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/">Single Server - Without HA</a></li>
 </ul>
 <p>Please note 7.2 installations still require a g2.ok licence for each Cortex Server component.</p>
 <p>Affected Components:</p>
@@ -594,18 +594,18 @@ This the multi-page printable view of this section.
 <li>Creating all missing <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/">variables</a> required by a <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a> using the <a href="/docs/guides/cortex-studio/east-panel/#add-variables-button">Add Variables button</a></li>
 <li>Every <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a> has a sensible editor selected for each <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">Block Property</a>, as well as a sensible default value to minimise the configuration required</li>
 <li><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced Properties</a> that do not normally need to be configured have preset default values and are hidden from view</li>
-<li><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced Properties</a> can be shown for more complex configuration of blocks using the <a href="/docs/guides/cortex-studio/east-panel/#show-hide-advanced-properties-button">Show/Hide Advanced Properties button</a></li>
+<li><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced Properties</a> can be shown for more complex configuration of blocks using the <a href="/docs/guides/cortex-studio/east-panel/#showhide-advanced-properties-button">Show/Hide Advanced Properties button</a></li>
 <li>The Product Portal page for a block can be accessed from the <a href="/docs/guides/cortex-studio/east-panel/#property-editor">Property Editor</a> by using the <a href="/docs/guides/cortex-studio/east-panel/#help-button">Help button</a></li>
 </ul>
 <p>Affected Components:</p>
 <ul>
-<li>Flow Debugging Service</li>
-<li>Gateway</li>
+<li><a href="/docs/guides/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a></li>
+<li><a href="/docs/guides/cortex-studio/">Cortex Studio</a></li>
 </ul>
 <h4 id="messages">Messages</h4>
 <p>Validation is now performed before a <a href="/docs/reference/concepts/fundamentals/executions/what-is-an-execution">flow execution</a> begins, the process will evaluate the <a href="/docs/reference/concepts/fundamentals/flows/what-is-a-flow">flow</a> assessing for any issues that would cause the flow to fail and returns them as <a href="/docs/reference/messages/validation/errors/">validation errors</a>.</p>
-<p>After <a href="/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow">validating a flow</a> in development, any <a href="/docs/reference/messages/validation/">validation</a> message in the <a href="/docs/guides/cortex-studio/south-panel/#messages-grid">messages grid</a> can be double clicked to navigate to the source of the issue.</p>
-<p>This feature lays the foundations for configurable best practices, where a system can have:</p>
+<p>After <a href="/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow">validating a flow</a> in development, any <a href="/docs/reference/messages/validation/">validation message</a> in the <a href="/docs/guides/cortex-studio/south-panel/#messages-grid">messages grid</a> can be double clicked to navigate to the source of the issue.</p>
+<p>This feature lays the foundations for future releases to provide configurable best practices, where a system can have:</p>
 <ul>
 <li>Control over whether a validation rule is classed as an error, warning, information, or shown at all</li>
 <li>Control over whether a flow can be run or debugged, committed, or published when specific validation rules are broken</li>
@@ -636,7 +636,7 @@ This the multi-page printable view of this section.
 </ul>
 <h4 id="calling-other-flows">Calling other Flows</h4>
 <p><a href="/docs/reference/concepts/fundamentals/flows/what-is-a-flow">Flows</a> can be called from within another flow by using the <a href="/docs/reference/blocks/flows/run-flow/run-flow-block">Run Flow</a> block, passing in any <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable">Input Variables</a> required by the child flow, and returning any <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#output-variables-structure">Output Variables</a> when the child flow&rsquo;s <a href="/docs/reference/concepts/fundamentals/executions/what-is-an-execution">execution</a> has completed.</p>
-<p>By default a new flow is set up to <a href="/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-flow-level">handle any exceptions at the flow level</a> and end the flow without error. However, when calling a child flow it may be useful to propagate any <a href="/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception">exceptions</a> to the parent flow; this can be done by using the <a href="/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block">Rethrow Exception</a> block within the <a href="/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block">Handle Flow Exception</a> workspace, causing the flow to end with an error.</p>
+<p>By default a new flow is set up to <a href="/docs/reference/concepts/fundamentals/exceptions/handling-exceptions/#handling-exceptions-at-the-flow-level">handle any exceptions at the flow level</a> and end the flow without error. However, when calling a child flow it may be useful to propagate any <a href="/docs/reference/concepts/fundamentals/exceptions/what-is-an-exception">exceptions</a> to the parent flow; this can be done by using the <a href="/docs/reference/blocks/exceptions/rethrow-exception/rethrow-exception-block">Rethrow Exception</a> block within the <a href="/docs/reference/blocks/exceptions/handle-flow-exception/handle-flow-exception-block">Handle Flow Exception</a> workspace, causing the flow to end with an error.</p>
 <p>Please note:</p>
 <ul>
 <li>Flows can only be run synchronously and the parent flow will wait for any child flow execution to finish before continuing. This may change in a future release to support running flows asynchronously</li>
@@ -666,9 +666,9 @@ This the multi-page printable view of this section.
 <li>Import a Package version into <a href="/docs/guides/cortex-studio/">Cortex Studio</a></li>
 </ul>
 <p>Packages are intended to represent self contained automation solutions and are aimed at improving the speed and ease of deploying these solutions into production.</p>
-<p>Packages introduce the ability to host and execute multiple automation solutions on the same platform/hardware (reducing costs), as well as being able to run multiple versions of the same solution (permitting CI/CD).</p>
-<p>The <a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a> exposes a versioned API for executing flows in specific packages and package versions. This allows for the integration with third party applications, websites or toolings such as CI/CD Pipelines.</p>
-<p>This feature lays the foundations for future work including multi tenancy with environment variables.</p>
+<p>Packages introduce the ability to host and execute multiple automation solutions on the same platform/hardware (reducing costs), as well as being able to run multiple versions of the same solution (permitting <a href="/docs/reference/glossary/a-e/#cicd">CI/CD</a>).</p>
+<p>The <a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a> exposes a <a href="/docs/reference/apis/cortex-api-gateway-service/">versioned API</a> for executing flows in specific packages and package versions. This allows for the integration with third party applications, websites or toolings such as <a href="/docs/reference/glossary/a-e/#cicd">CI/CD</a> Pipelines.</p>
+<p>This feature lays the foundations for future releases to provide multi tenancy with environment variables.</p>
 <p>Affected Components:</p>
 <ul>
 <li><a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a></li>
@@ -679,8 +679,8 @@ This the multi-page printable view of this section.
 <p>Structured logging provides a defined format for <a href="/docs/reference/logs/">logs</a> produced by the Innovation Platform, this helps with reporting and diagnostics and is used as the source of <a href="#grafana-dashboards">dashboards</a>. The structured logs produced are in a <a href="/docs/reference/glossary/f-j/#json">JSON</a> format.</p>
 <p>Structured logging has been added to the following components:</p>
 <ul>
-<li><a href="/docs/reference/logs/cortex-api-gateway-service/">API Gateway</a></li>
-<li><a href="/docs/reference/logs/cortex-flow-debugger-service/">Flow Debugger Service</a></li>
+<li><a href="/docs/reference/logs/cortex-api-gateway-service/">Cortex API Gateway</a></li>
+<li><a href="/docs/reference/logs/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a></li>
 </ul>
 <p>The ability to write structured logs has also been exposed to <a href="/docs/reference/glossary/f-j/#flow-developer">flow developers</a> so they can write logs in the same format as the platform; they can be created by using the <a href="/docs/reference/blocks/logs/log-event/log-event-block">Log Event</a> block.</p>
 <p>Please note that structured logging may be added to more components in a future release.</p>
@@ -691,13 +691,13 @@ This the multi-page printable view of this section.
 <li><a href="/docs/guides/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a></li>
 </ul>
 <h4 id="grafana-dashboards">Grafana Dashboards</h4>
-<p><a href="">Dashboards</a> have been created to provide observability of the Innovation Platform in Production.</p>
+<p><a href="/docs/reference/observability/grafana/dashboards/">Dashboards</a> have been created to provide observability of the Innovation Platform in Production.</p>
 <p>The new dashboards are:</p>
 <ul>
 <li><a href="/docs/reference/observability/grafana/dashboards/platform-health/">Platform Health</a></li>
 <li><a href="/docs/reference/observability/grafana/dashboards/flow-execution-requests/">Flow Execution Requests</a></li>
 </ul>
-<p>In future additional dashboards may be added. Currently, these have been produced for Grafana and in future releases other reporting and observability platforms such as Splunk and Elastic may be supported.</p>
+<p>In future additional dashboards may be added. Currently, these have been produced for <a href="https://grafana.com/">Grafana</a> and in future releases other reporting and observability platforms such as <a href="https://www.splunk.com/">Splunk</a> and <a href="https://www.elastic.co/">Elastic</a> may be supported.</p>
 <p>For more information about adding observability to Innovation see:</p>
 <ul>
 <li><a href="/docs/getting-started/on-premise/add-observability-to-innovation/grafana/">Installing Grafana On-Premise</a></li>
@@ -715,14 +715,14 @@ This the multi-page printable view of this section.
 <li>Quicker with significantly fewer steps</li>
 </ul>
 <p>Also, the installation documentation is clearer and more concise, whilst being more comprehensive.</p>
-<p>This feature lays the foundations for future work including single click installation of development and production environments from <a href="/docs/guides/cortex-studio/">Cortex Studio</a>.</p>
+<p>This feature lays the foundations for future releases to provide single click installation of development and production environments from <a href="/docs/guides/cortex-studio/">Cortex Studio</a>.</p>
 <p>Affected Components:</p>
 <ul>
 <li>None</li>
 </ul>
 <h4 id="versioned-apis">Versioned APIs</h4>
 <p>The Innovation Platform has been developed with an API First approach, allowing the APIs used within the platform to be more robust and easier to use compared to the 7.X platform.</p>
-<p>API Versioning has been applied to the <a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a> and <a href="/docs/guides/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a>, this means that improvements can be made to the APIs without breaking automation solutions when new updates are rolled out.</p>
+<p>API Versioning has been applied to the <a href="/docs/reference/apis/cortex-api-gateway-service/">Cortex API Gateway Service</a> and <a href="/docs/reference/apis/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a>, this means that improvements can be made to the APIs without breaking automation solutions when new updates are rolled out.</p>
 <p>Affected Components:</p>
 <ul>
 <li><a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a></li>
@@ -824,6 +824,18 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
+<h2 id="install-instructions">Install Instructions</h2>
+<p>If you are installing a new 2022.9 platform or adding it to an existing 7.2 Installation see the guidance below; otherwise, if you are upgrading from an existing 2022.6 platform refer to the <a href="#upgrade-instructions">Upgrade Instructions</a>.</p>
+<p>Installing Innovation Only:</p>
+<ul>
+<li><a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/">Multiple Server - With HA</a></li>
+<li><a href="/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/">Single Server - Without HA</a></li>
+</ul>
+<p>Adding Innovation to a 7.2 Installation:</p>
+<ul>
+<li><a href="/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/">Multiple Server - With HA</a></li>
+<li><a href="/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/">Single Server - Without HA</a></li>
+</ul>
 <h2 id="upgrade-instructions">Upgrade Instructions</h2>
 <p>As 2022.9 is the first GA release of the platform there are no upgrade instructions. However, if you have installed the early access 2022.6 release; please request assistance by raising a case in the <a href="https://support.cortex.co.uk/">Cortex Service Portal</a>.</p>
 <h2 id="upcoming-releases">Upcoming Releases</h2>
