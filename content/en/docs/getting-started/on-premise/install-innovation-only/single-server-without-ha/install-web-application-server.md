@@ -39,16 +39,16 @@ Gateway requires a minimum of Microsoft .NET Framework 4.7.1.
 To find the version of the framework that is installed:
 
 1. On the Start menu, choose `Run`.
-2. In the open box, enter `regedit.exe`. You must have administrative credentials to run regedit.exe.
-3. In the Registry Editor, open the subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.
-4. If the `Full` subkey is not present, then you do not have the .NET Framework 4.5 or later installed.
-5. Check for a `DWORD` value named `Release`. The existence of the Release DWORD indicates the .NET Framework 4.5 or newer has been installed on that computer. If the value is `461308` or over then at least .NET Framework 4.7.1 is installed and no further steps need to be taken. If it is not installed, continue with the following steps to install it.
+1. In the open box, enter `regedit.exe`. You must have administrative credentials to run regedit.exe.
+1. In the Registry Editor, open the subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.
+1. If the `Full` subkey is not present, then you do not have the .NET Framework 4.5 or later installed.
+1. Check for a `DWORD` value named `Release`. The existence of the Release DWORD indicates the .NET Framework 4.5 or newer has been installed on that computer. If the value is `461308` or over then at least .NET Framework 4.7.1 is installed and no further steps need to be taken. If it is not installed, continue with the following steps to install it.
 
 To install .NET Framework 4.7.1:
 
 1. Download the [.NET Framework 4.7.1][NET Framework 471] installer.
-2. Double-click on the installer file to run it.
-3. Follow the wizard to complete the installation.
+1. Double-click on the installer file to run it.
+1. Follow the wizard to complete the installation.
 
 ### Install Microsoft Web Deploy
 
@@ -148,12 +148,12 @@ Gateway and Flow Debugger Service can either be installed to an existing web sit
 The steps to create a new web site are:
 
 1. In Windows File Explorer, navigate to the default IIS folder (usually `%SystemDrive%\inetpub\wwwroot`, e.g. `C:\inetpub\wwwroot`).
-2. Ensure there is a folder called `Cortex`; if not create it.
-3. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
-4. Right-click the `Sites` node under the server and select `Add Website…`.
-5. Set the `Site name` to `Cortex`.
-6. Set the `Physical path` to the folder created above (e.g. `C:\inetpub\wwwroot\Cortex`), by clicking on the ellipses `…`, selecting the appropriate directory and clicking `OK`.
-7. Click `OK`. If an existing site is already using the specified port, a warning will be displayed. Either click `No` and change the `Port` in the `Add Website` dialog, or click `Yes` and stop the other website.
+1. Ensure there is a folder called `Cortex`; if not create it.
+1. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
+1. Right-click the `Sites` node under the server and select `Add Website…`.
+1. Set the `Site name` to `Cortex`.
+1. Set the `Physical path` to the folder created above (e.g. `C:\inetpub\wwwroot\Cortex`), by clicking on the ellipses `…`, selecting the appropriate directory and clicking `OK`.
+1. Click `OK`. If an existing site is already using the specified port, a warning will be displayed. Either click `No` and change the `Port` in the `Add Website` dialog, or click `Yes` and stop the other website.
 
 ## Configure Web Site
 
@@ -237,8 +237,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |----------------------------------------------|-------------|
     |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
-    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. This must not be left as its default value for security reasons. This should be [Cortex Encrypted][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
+    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
@@ -308,20 +308,20 @@ This user account is required to enable Gateway to access the Cortex database, w
 To add roles to database users take the following steps:
 
 1. Open SQL Server Management Studio on the server and log in.
-2. Expand the server node, then `Security` then `Logins`.
-3. If the user that will run the Gateway application pool is not in the list of logins, take the following steps, otherwise skip to step 4:
+1. Expand the server node, then `Security` then `Logins`.
+1. If the user that will run the Gateway application pool is not in the list of logins, take the following steps, otherwise skip to step 4:
     1. Right-click the `Logins` node and click `New Login...`.
-    2. Enter the application pool user in the `Login name` box.
-    3. On the left pane, click `Server Roles`.
-    4. Check `public` and `dbcreator`
-    5. Click `OK`.
+    1. Enter the application pool user in the `Login name` box.
+    1. On the left pane, click `Server Roles`.
+    1. Check `public` and `dbcreator`
+    1. Click `OK`.
 
-4. If the user that will run the Gateway application pool is in the list of logins, take the following steps:
+1. If the user that will run the Gateway application pool is in the list of logins, take the following steps:
     1. Right-click on the application pool user.
-    2. Click `Properties`.
-    3. On the left pane, click `Server Roles`.
-    4. Check `public` and `dbcreator`.
-    5. Click `OK`.
+    1. Click `Properties`.
+    1. On the left pane, click `Server Roles`.
+    1. Check `public` and `dbcreator`.
+    1. Click `OK`.
 
 In line with best practices, this account should not be given administrator rights, nor should it be used for any purposes other than those specified for Gateway.
 
@@ -354,22 +354,22 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 ### Create New Web Application
 
 1. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
-2. Right-click on the [site][Create Web Site] the application should be installed under and select `Add Application…`
-3. Set the `Alias` to `gateway`. This must be lowercase.
-4. Click `Select…` and from the Application pool dropdown select the `Cortex Gateway` application pool and click `OK`.
-5. Set the `Physical path` to `C:\inetpub\wwwroot\Cortex\Gateway` by clicking on the ellipses `…` and selecting the appropriate directory. Create the `C:\inetpub\wwwroot\Cortex\Gateway` directory if it does not already exist.
-6. Click `OK`.
+1. Right-click on the [site][Create Web Site] the application should be installed under and select `Add Application…`
+1. Set the `Alias` to `gateway`. This must be lowercase.
+1. Click `Select…` and from the Application pool dropdown select the `Cortex Gateway` application pool and click `OK`.
+1. Set the `Physical path` to `C:\inetpub\wwwroot\Cortex\Gateway` by clicking on the ellipses `…` and selecting the appropriate directory. Create the `C:\inetpub\wwwroot\Cortex\Gateway` directory if it does not already exist.
+1. Click `OK`.
 
 ### Configure IIS Site Redirect to the Specified Web Application (Optional)
 
 If the site hosting the Gateway web application is a newly created Cortex site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the `gateway` web application URL, e.g. `https://FullyQualifiedDomainName` to `https://FullyQualifiedDomainName/gateway`.
 
 1. Open Internet Information Services (IIS) Manager.
-2. Select the site hosting the `gateway` web application and from IIS settings double-click the `HTTP Redirect` icon.
-3. Click the check box `Redirect requests to this destination`.
-4. Enter `https://FullyQualifiedDomainName/gateway`, replacing `FullyQualifiedDomainName` with the FQDN of the server.
-5. In the `Redirect Behaviour` section, click `Only redirect requests to content in this directory (not subdirectories)`.
-6. In `Actions` click the `Apply` button.
+1. Select the site hosting the `gateway` web application and from IIS settings double-click the `HTTP Redirect` icon.
+1. Click the check box `Redirect requests to this destination`.
+1. Enter `https://FullyQualifiedDomainName/gateway`, replacing `FullyQualifiedDomainName` with the FQDN of the server.
+1. In the `Redirect Behaviour` section, click `Only redirect requests to content in this directory (not subdirectories)`.
+1. In `Actions` click the `Apply` button.
 
 ### Configure Installation Script
 
@@ -401,9 +401,9 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation 2022.9 - Gateway.zip` file on the installation server. |
     |`GatewayApplicationIISPath`                     | Change to the correct `Site Name/Application` if either was modified from the defaults (`Cortex/gateway`) when creating the [website][Create Web Site] or [application][Create Application]. |
-    |`ModelDBContextConnectionString`                | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance.<br /><br />This will set the `ModelDBContextConnectionString` value in the Gateway web.config.|
-    |`AuthContextConnectionString`                   | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance.<br /><br />This will set the `AuthContextConnectionString` value in the Gateway web.config.|
-    |`SignalRContextConnectionString`                | Change the `Data Source` to `localhost` if the database was installed as the default instance. If it was installed as a named instance, change it to `.\instanceName` replacing `instanceName` with the name of the instance. <br /><br />This will set the `SignalRContextConnectionString` value in the Gateway web.config.|
+    |`ModelDBContextConnectionString`                | If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `ModelDBContextConnectionString` value in the Gateway web.config.|
+    |`AuthContextConnectionString`                   |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `AuthContextConnectionString` value in the Gateway web.config. |
+    |`SignalRContextConnectionString`                |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `SignalRContextConnectionString` value in the Gateway web.config. |
     |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the Gateway web.config.|
@@ -467,6 +467,17 @@ If the site hosting the Gateway web application is a newly created Cortex site o
 
 1. Run the PowerShell command to install Gateway.
     In the event of any errors, there will be an error message displayed at the end of the output with a line confirming the Error Count.
+1. Ensure that the user identified in [Get Application Pool User][] has `Full control` access to the Gateway folder created in [Create New Web Application][]:
+   1. Navigate to `C:\inetpub\wwwroot\Cortex\`.
+   1. Right-click the `Gateway` folder and click `Properties`.
+   1. In the `Gateway Properties` dialog, click the `Security` tab.
+   1. Click the user identified in [Get Application Pool User][] within the `Group or user names` section.
+   1. In the `Permissions` section, ensure the user has `Full control` checked. If not:
+      1. Click the `Edit...` button.
+      1. Select the user identified in [Get Application Pool User][] within the `Group or user names` section.
+      1. In the `Permissions` section, check `Full control`.
+      1. Click `OK`, then wait for `Windows Security` to update the security information to the folder.
+      1. Click `OK`.
 1. Start the Gateway application pool:
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
@@ -494,6 +505,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Create Web Site]: {{< ref "#create-web-site" >}}
 [Create Application]: {{< ref "#create-new-web-application" >}}
 [Get Application Pool User]: {{< ref "#get-application-pool-user-1" >}}
+[Create New Web Application]: {{< ref "#create-new-web-application" >}}
 [Install Application Server]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Install Gateway]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallGateway" >}}
 [Licensing Requirements]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.LicensingRequirements" >}}
