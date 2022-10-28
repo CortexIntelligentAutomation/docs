@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/files-and-folders/search-file/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/files-and-folders/search-file/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-b84db72a12d20c4f4918bd6322d9fc65">Search File</a></li>
+<li>1: <a href="#pg-eca04f2cd620b08be3a3ec7f292d7411">Search File</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-408448e29dc93fe1c33fbe3651f118e2">Search Files</a></li>
+<li>2: <a href="#pg-815419117ed0797949abfd34951a6016">Search Files</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-b84db72a12d20c4f4918bd6322d9fc65">1 - Search File</h1>
+	<h1 id="pg-eca04f2cd620b08be3a3ec7f292d7411">1 - Search File</h1>
     <div class="lead">Searches a file at a specified file path for a matching search pattern.</div>
 	
 <figure class="block-icon">
@@ -230,11 +230,11 @@ This the multi-page printable view of this section.
 <p>This example will get all matches in the file <code>&quot;C:\Source\File.txt&quot;</code> that match the text <code>&quot;error&quot;</code>.</p>
 <p>It will perform a case-insensitive search, and let the block determine the encoding of the file automatically.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Error: Failed to determine uptime.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: An terminal error has occurred. The service will restart now.
-</code></pre></div><h4 id="properties">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: An terminal error has occurred. The service will restart now.
+</span></span></code></pre></div><h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -278,42 +278,42 @@ Error: An terminal error has occurred. The service will restart now.
 </table>
 <h4 id="result">Result</h4>
 <p>Searching <code>&quot;C:\Source\File.txt&quot;</code> for all text matching <code>&quot;error&quot;</code> (case-insensitive), results in the variable <code>($)Matches</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">19</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">19</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h3 id="get-matches-for-a-given-pattern">Get matches for a given pattern</h3>
 <p>This example will get all matches in the file <code>&quot;C:\Source\File.txt&quot;</code> that match the pattern <code>&quot;Uptime is * hours.&quot;</code>.</p>
 <p>It will perform a case-sensitive search, and let the block determine the encoding of the file automatically.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Error: Failed to determine uptime.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: An terminal error has occurred. The service will restart now.
-</code></pre></div><h4 id="properties-1">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: An terminal error has occurred. The service will restart now.
+</span></span></code></pre></div><h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -357,34 +357,34 @@ Error: An terminal error has occurred. The service will restart now.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Searching <code>&quot;C:\Source\File.txt&quot;</code> for all text matching the pattern <code>&quot;Uptime is * hours.&quot;</code> (case-sensitive), results in the variable <code>($)Matches</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 2 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 3 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 2 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 3 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h3 id="get-matches-for-a-given-regex">Get matches for a given regex</h3>
 <p>This example will get all matches in the file <code>&quot;C:\Source\File.txt&quot;</code> that match the regex <code>&quot;^Error:.*$&quot;</code>.</p>
 <p>It will perform a case-sensitive search, explicitly specify the encoding of the file as UTF-8 and will match any line that starts with <code>&quot;Error:&quot;</code>.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Error: Failed to determine uptime.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: An terminal error has occurred. The service will restart now.
-</code></pre></div><h4 id="properties-2">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: An terminal error has occurred. The service will restart now.
+</span></span></code></pre></div><h4 id="properties-2">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -428,25 +428,25 @@ Error: An terminal error has occurred. The service will restart now.
 </table>
 <h4 id="result-2">Result</h4>
 <p>Searching <code>&quot;C:\Source\File.txt&quot;</code> for all text matching the regex <code>&quot;^Error:.*$&quot;</code> (case-sensitive), results in the variable <code>($)Matches</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: An terminal error has occurred. The service will restart now.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">68</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: An terminal error has occurred. The service will restart now.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">68</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-3">Properties</h2>
 <h3 id="file-path">File Path</h3>
 <p>The <a href="#file-path">File Path</a> to search for text that matches a given <a href="#search-pattern">Search Pattern</a>.</p>
@@ -629,17 +629,17 @@ Error: An terminal error has occurred. The service will restart now.
 <h3 id="matches">Matches</h3>
 <p><a href="#matches">Matches</a> containing a <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> for every text that matches the specified <a href="#search-pattern">Search Pattern</a> based on the other specified options.</p>
 <p>A basic example with a single <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>For more information see the <a href="#get-matches-for-a-given-text">example</a> above, or the <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> data type.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>For more information see the <a href="#get-matches-for-a-given-text">example</a> above, or the <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> data type.</p>
 <table>
 <thead>
 <tr>
@@ -787,7 +787,7 @@ Error: An terminal error has occurred. The service will restart now.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-408448e29dc93fe1c33fbe3651f118e2">2 - Search Files</h1>
+	<h1 id="pg-815419117ed0797949abfd34951a6016">2 - Search Files</h1>
     <div class="lead">Searches files at the specified file paths for a matching search pattern.</div>
 	
 <figure class="block-icon">
@@ -811,18 +811,18 @@ Error: An terminal error has occurred. The service will restart now.
 <p>This example will get all matches in the files <code>[&quot;C:\Source\File1.txt&quot;, &quot;C:\Source\File2.txt&quot;]</code> that match the text <code>&quot;error&quot;</code>.</p>
 <p>It will perform a case-insensitive search, and let the block determine the encoding of the files automatically.</p>
 <p>In this example assume <code>&quot;C:\Source\File1.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Error: Failed to determine uptime.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: An terminal error has occurred. The service will restart now.
-</code></pre></div><p>and <code>&quot;C:\Source\File2.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Information: Uptime is 1 hour.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: Failed to determine uptime.
-Error: Failed to determine uptime.
-Information: Uptime is 6 hours.
-</code></pre></div><h4 id="properties">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: An terminal error has occurred. The service will restart now.
+</span></span></code></pre></div><p>and <code>&quot;C:\Source\File2.txt&quot;</code> contains the following text:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Information: Uptime is 1 hour.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 6 hours.
+</span></span></code></pre></div><h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -866,69 +866,69 @@ Information: Uptime is 6 hours.
 </table>
 <h4 id="result">Result</h4>
 <p>Searching <code>&quot;C:\Source\File.txt&quot;</code> for all text matching <code>&quot;error&quot;</code> (case-insensitive), results in the variable <code>($)Matches</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">19</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">],</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File2.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">]</span>                            
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">19</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File2.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">]</span>                            
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><hr>
 <h3 id="get-matches-for-a-given-pattern">Get matches for a given pattern</h3>
 <p>This example will get all matches in the files <code>[&quot;C:\Source\File1.txt&quot;, &quot;C:\Source\File2.txt&quot;]</code> that match the pattern <code>&quot;Uptime is * hour?.&quot;</code>.</p>
 <p>It will perform a case-sensitive search, and let the block determine the encoding of the files automatically.</p>
 <p>In this example assume <code>&quot;C:\Source\File1.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Error: Failed to determine uptime.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: An terminal error has occurred. The service will restart now.
-</code></pre></div><p>and <code>&quot;C:\Source\File2.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Information: Uptime is 1 hour.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: Failed to determine uptime.
-Error: Failed to determine uptime.
-Information: Uptime is 6 hours.
-</code></pre></div><h4 id="properties-1">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: An terminal error has occurred. The service will restart now.
+</span></span></code></pre></div><p>and <code>&quot;C:\Source\File2.txt&quot;</code> contains the following text:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Information: Uptime is 1 hour.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 6 hours.
+</span></span></code></pre></div><h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -972,77 +972,77 @@ Information: Uptime is 6 hours.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Searching the files <code>[&quot;C:\Source\File1.txt&quot;, &quot;C:\Source\File2.txt&quot;]</code> for all text matching the pattern <code>&quot;Uptime is * hour?.&quot;</code> (case-sensitive), results in the variable <code>($)Matches</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 2 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 3 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">],</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File2.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 1 hour.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">17</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 2 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 3 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 6 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">]</span>                            
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 2 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 3 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File2.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 1 hour.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">17</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 2 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 3 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Uptime is 6 hours.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">]</span>                            
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><hr>
 <h3 id="get-matches-for-a-given-regex">Get matches for a given regex</h3>
 <p>This example will get all matches in the files <code>[&quot;C:\Source\File1.txt&quot;, &quot;C:\Source\File2.txt&quot;]</code> that match the regex <code>&quot;^Error:.*$&quot;</code>.</p>
 <p>It will perform a case-sensitive search, explicitly specify the encoding of the files as UTF-8 and will match any lines that start with <code>&quot;Error:&quot;</code>.</p>
 <p>In this example assume <code>&quot;C:\Source\File1.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Error: Failed to determine uptime.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: An terminal error has occurred. The service will restart now.
-</code></pre></div><p>and <code>&quot;C:\Source\File2.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Information: Uptime is 1 hour.
-Information: Uptime is 2 hours.
-Information: Uptime is 3 hours.
-Error: Failed to determine uptime.
-Error: Failed to determine uptime.
-Information: Uptime is 6 hours.
-</code></pre></div><h4 id="properties-2">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: An terminal error has occurred. The service will restart now.
+</span></span></code></pre></div><p>and <code>&quot;C:\Source\File2.txt&quot;</code> contains the following text:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Information: Uptime is 1 hour.
+</span></span><span style="display:flex;"><span>Information: Uptime is 2 hours.
+</span></span><span style="display:flex;"><span>Information: Uptime is 3 hours.
+</span></span><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Error: Failed to determine uptime.
+</span></span><span style="display:flex;"><span>Information: Uptime is 6 hours.
+</span></span></code></pre></div><h4 id="properties-2">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -1086,45 +1086,45 @@ Information: Uptime is 6 hours.
 </table>
 <h4 id="result-2">Result</h4>
 <p>Searching the files <code>[&quot;C:\Source\File1.txt&quot;, &quot;C:\Source\File2.txt&quot;]</code> for all text matching the regex <code>&quot;^Error:.*$&quot;</code> (case-sensitive), results in the variable <code>($)Matches</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: An terminal error has occurred. The service will restart now.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">68</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">],</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File2.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">},</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">]</span>                            
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: An terminal error has occurred. The service will restart now.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">68</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File2.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File2.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">]</span>                            
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-3">Properties</h2>
 <h3 id="file-paths">File Paths</h3>
 <p>The <a href="#file-paths">File Paths</a> to search for text that matches a given <a href="#search-pattern">Search Pattern</a>.</p>
@@ -1308,19 +1308,19 @@ Information: Uptime is 6 hours.
 <p><a href="#matches">Matches</a> containing an entry for each file in <a href="#file-paths">File Paths</a>.</p>
 <p>The key of each entry is the file path, and the value contains a <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> for every text in the file path that matches the specified <a href="#search-pattern">Search Pattern</a> based on the other specified options.</p>
 <p>A basic example with a single file path and a single <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-                              <span style="color:#000;font-weight:bold">{</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
-                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
-                              <span style="color:#000;font-weight:bold">}</span>
-                            <span style="color:#000;font-weight:bold">]</span>                          
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>For more information see the <a href="#get-matches-for-a-given-text">example</a> above, or the <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> data type.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;C:\\Source\\File1.txt&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;FilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Source\\File1.txt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Value&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Error: Failed to determine uptime.&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Index&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">34</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#204a87;font-weight:bold">&#34;Groups&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#000;font-weight:bold">]</span>                          
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>For more information see the <a href="#get-matches-for-a-given-text">example</a> above, or the <a href="/docs/reference/data-types/files-and-folders/filematch">FileMatch</a> data type.</p>
 <table>
 <thead>
 <tr>
@@ -1629,7 +1629,7 @@ Information: Uptime is 6 hours.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/email/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/email/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-844437a31cd9f8c71dd8c0f1785e8937">Send Email</a></li>
+<li>1: <a href="#pg-c24d623ee0a1f9f99158ff5add6a70b5">Send Email</a></li>
 
 
     
@@ -182,7 +182,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.1: <a href="#pg-cc58ac88e61c4ddd018bc6f29e07d303">Send Email Using Smtp Server</a></li>
+<li>1.1: <a href="#pg-2ec675c12c762bd84fbd59d84d4108ec">Send Email Using SMTP Server</a></li>
 
 
     
@@ -217,7 +217,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-844437a31cd9f8c71dd8c0f1785e8937">1 - Send Email</h1>
+	<h1 id="pg-c24d623ee0a1f9f99158ff5add6a70b5">1 - Send Email</h1>
     <div class="lead">Blocks related to sending Emails.</div>
 	
 </div>
@@ -242,7 +242,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-cc58ac88e61c4ddd018bc6f29e07d303">1.1 - Send Email Using Smtp Server</h1>
+	<h1 id="pg-2ec675c12c762bd84fbd59d84d4108ec">1.1 - Send Email Using SMTP Server</h1>
     <div class="lead">Sends an email using the specified SMTP server.</div>
 	
 <figure class="block-icon">
@@ -250,16 +250,728 @@ This the multi-page printable view of this section.
          alt="Icon"/> 
 </figure>
 
-<h1 id="send-email-using-smtp-server">Send Email Using Smtp Server</h1>
+<h1 id="send-email-using-smtp-server">Send Email Using SMTP Server</h1>
 <p class="namespace">(Cortex.Blocks.Email.SendEmail.SendEmailUsingSmtpServerBlock)</p>
-<img src="/images/work-in-progress.jpg">
 <h2 id="description">Description</h2>
-<p>Sends an email using the specified SMTP server.</p>
+<p>Connects to an <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server using the specified <a href="#basic-email-session-details">Basic Email Session Details</a>, and sends an <a href="#email-message">Email Message</a>.</p>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the connection to the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server is closed or is kept open for use on subsequent Send Email Using SMTP Server blocks.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
+<h3 id="sending-an-email-to-a-single-recipient">Sending an email to a single recipient</h3>
+<p>This example will send an email from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code>. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be to set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information about when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-to-multiple-recipients">Sending an email to multiple recipients</h3>
+<p>This example will send an email from <code>sender@gmail.com</code> to <code>recipient1@outlook.com</code>, <code>recipient2@outlook.com</code> and <code>recipient3@outlook.com</code>. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information about when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient1@outlook.com&quot;},  {&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient2@outlook.com&quot;}, {&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient3@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient1@outlook.com&quot;), new EmailAddress(&quot;recipient2@outlook.com&quot;), new EmailAddress(&quot;recipient3@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@gmail.com</code> to <code>recipient1@outlook.com</code>, <code>recipient2@outlook.com</code> and <code>recipient3@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-a-cc-or-bcc-recipient">Sending an email with a CC or BCC recipient</h3>
+<p>This example will send an email from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with <code>cc@outlook.com</code> and <code>bcc@outlook.com</code> as the <a href="/docs/reference/glossary/a-e/#cc">CC</a> and <a href="/docs/reference/glossary/a-e/#bcc">BCC</a> recipients for the email respectively. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information about when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</p>
+<h4 id="properties-2">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;cc@outlook.com&quot;}], &quot;Bcc&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;bcc@outlook.com&quot;}], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;cc@outlook.com&quot;) }, bcc: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;bcc@outlook.com&quot;) }, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-2">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>. Both <code>cc@outlook.com</code> and <code>bcc@outlook.com</code> will also recieve copies of the email as they are listed as <a href="/docs/reference/glossary/a-e/#cc">CC</a> and <a href="/docs/reference/glossary/a-e/#bcc">BCC</a> recipients, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-multiple-cc-or-bcc-recipients">Sending an email with multiple CC or BCC recipients</h3>
+<p>This example will send an email from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with <code>cc1@outlook.com</code> and <code>cc2@outlook.com</code> as the <a href="/docs/reference/glossary/a-e/#cc">CC</a> recipients and <code>bcc1@outlook.com</code> and <code>bcc2@outlook.com</code> as the <a href="/docs/reference/glossary/a-e/#bcc">BCC</a> recipients for the email. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information about when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</p>
+<h4 id="properties-3">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;cc1@outlook.com&quot;}, {&quot;Name&quot;: null, &quot;Address&quot;: &quot;cc2@outlook.com&quot;}], &quot;Bcc&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;bcc1@outlook.com&quot;}, {&quot;Name&quot;: null, &quot;Address&quot;: &quot;bcc2@outlook.com&quot;}], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;cc1@outlook.com&quot;), new EmailAddress(&quot;cc2@outlook.com&quot;) }, bcc: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;bcc1@outlook.com&quot;), new EmailAddress(&quot;bcc2@outlook.com&quot;) }, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-3">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>. Both <code>cc1@outlook.com</code> and <code>cc2@outlook.com</code> will also recieve copies of the email as they are listed as <a href="/docs/reference/glossary/a-e/#cc">CC</a> recipients, and both <code>bcc1@outlook.com</code> and <code>bcc2@outlook.com</code> will recieve copies of the email as they are listed as <a href="/docs/reference/glossary/a-e/#bcc">BCC</a> recipients. Finally, the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-a-different-priority">Sending an email with a different priority</h3>
+<p>This example will send an email with <a href="/docs/reference/data-types/email/emailmessagepriority/#urgent">Urgent</a> priority from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code>. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information on:</p>
+<ul>
+<li>What priorities an email can be sent as, see <a href="/docs/reference/data-types/email/emailmessagepriority">EmailMessagePriority</a></li>
+<li>The effect of changing the <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> of the <a href="#email-message">Email Message</a>, see <a href="#how-does-priority-affect-sending-an-email">How does Priority affect sending an email?</a></li>
+<li>When <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</li>
+</ul>
+<h4 id="properties-4">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: &quot;EmailMessagePriority.Urgent&quot;, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: null, bcc: null, priority: EmailMessagePriority.Urgent, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> is <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-4">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#urgent">Urgent</a> priority is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-an-html-body">Sending an email with an HTML body</h3>
+<p>This example will send an email with an <a href="/docs/reference/data-types/email/emailmessagebodyformat/#html">HTML</a> body from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code>. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information on:</p>
+<ul>
+<li>What other body formats an email can be sent with, see <a href="/docs/reference/data-types/email/emailmessagebodyformat">EmailMessageBodyFormat</a></li>
+<li>The effect of changing the <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> of the <a href="#email-message">Email Message</a>, see <a href="#how-does-bodyformat-affect-sending-an-email">How does BodyFormat affect sending an email?</a></li>
+<li>When <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</li>
+</ul>
+<h4 id="properties-5">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: &quot;EmailMessageBodyFormat.Html&quot;, &quot;Body&quot;: &quot;&lt;h1&gt;Example email body&lt;/h1&gt;&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: EmailMessageBodyFormat.Html, body: &quot;&lt;h1&gt;Example email body&lt;/h1&gt;&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br> As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> is <code>null</code>, the email will be sent with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-5">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and an <a href="/docs/reference/data-types/email/emailmessagebodyformat/#html">HTML</a> body of <code>&quot;&lt;h1&gt;Example email body&lt;/h1&gt;&quot;</code>, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-a-single-attachment">Sending an email with a single attachment</h3>
+<p>This example will send an email with a single attachment, <code>attachment.txt</code>, from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code>. The attachment is located at <code>C:\attachment.txt</code> on the server executing the flow. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information on:</p>
+<ul>
+<li>Email attachments, see <a href="#attachments">Attachments</a></li>
+<li>When <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</li>
+</ul>
+<h4 id="properties-6">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: [&quot;C:\\attachment.txt&quot;]}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: new List&lt;string&gt;(){ @&quot;C:\attachment.txt&quot; })</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.<br><br>The <a href="#attachments">Attachments</a> are added to the email by providing file paths pointing to the files to be attached to the email.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-6">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority containing a text file attachment, <code>attachment.txt</code>, is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-multiple-attachments">Sending an email with multiple attachments</h3>
+<p>This example will send an email with mutiple attachments, <code>attachment1.txt</code> and <code>attachment2.txt</code> from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code>.  The attachments are located at the paths <code>C:\attachment1.txt</code> and <code>C:\attachment2.txt</code> on the server executing the flow. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp.gmail.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>465</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>true</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information on:</p>
+<ul>
+<li>Email attachments, see <a href="#attachments">Attachments</a></li>
+<li>When <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</li>
+</ul>
+<h4 id="properties-7">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;: [{&quot;Name&quot;: null, &quot;Address&quot;: &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@gmail.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: [&quot;C:\\attachment1.txt&quot;, &quot;C:\\attachment2.txt&quot;]}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@gmail.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: new List&lt;string&gt;(){ @&quot;C:\attachment1.txt&quot;, @&quot;C:\attachment2.txt&quot; })</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.<br><br>The <a href="#attachments">Attachments</a> are added to the email by providing file paths pointing to the files to be attached to the email.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-7">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority containing two text file attachments, <code>attachment1.txt</code> and <code>attachment2.txt</code>, is sent from <code>sender@gmail.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the session is closed.</p>
+<hr>
+<h3 id="sending-an-email-with-usessl-set-to-false">Sending an email with UseSsl set to false</h3>
+<p>This example will send an email from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code>. The example uses the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted at <code>smtp-mail.outlook.com</code> on <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> <code>587</code> which requires <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> to be set to <code>false</code> within the <a href="#basic-email-session-details">Basic Email Session Details</a>.</p>
+<p>For more information on when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</p>
+<h4 id="properties-8">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@outlook.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@outlook.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#basic-email-session-details">Basic Email Session Details</a></td>
+<td><code>($)BasicEmailSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp-mail.outlook.com&quot;, &quot;Port&quot;: 587, &quot;UseSsl&quot;: false}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@outlook.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)BasicEmailSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new BasicEmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp-mail.outlook.com&quot;, 587, false), credentials: new UserCredentials(&quot;sender@outlook.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)BasicEmailSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-8">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the session is closed.</p>
+<hr>
+<h2 id="properties-9">Properties</h2>
+<h3 id="email-message">Email Message</h3>
+<p>The <a href="#email-message">Email Message</a> to send via the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server specified in the <a href="#basic-email-session-details">Basic Email Session Details</a>. This property contains all of the information in relation to the email to be sent, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/email/emailmessage/#to">To</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#from">From</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#cc">Cc</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#bcc">Bcc</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#subject">Subject</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#body">Body</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a></li>
+</ul>
+<p>Note that if the properties <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are set to <code>null</code> when <a href="/docs/reference/data-types/email/emailmessage/#create-an-emailmessage">creating an EmailMessage using a constructor</a>, the email will be sent with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority and with a text body.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;To&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;From&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Cc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Bcc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Priority&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EmailMessagePriority.Normal&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Subject&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;BodyFormat&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EmailMessageBodyFormat.Text&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Attachments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="basic-email-session-details">Basic Email Session Details</h3>
+<p>The <a href="#basic-email-session-details">Basic Email Session Details</a> object that includes all of the information required to open and maintain a session with an <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server, including:</p>
+<ul>
+<li><a href="/docs/reference/data-types/email/basicemailsessiondetails/#serverdetails">ServerDetails</a> - must be provided in order to connect to an <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server. This object contains the properties <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a>, <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> and <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a>. For more information on:
+<ul>
+<li>Supported server address formats, see <a href="#supported-formats-for-serverdetailshost">Supported formats for ServerDetails.Host</a>.</li>
+<li>When <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>, see <a href="#setting-usessl">Setting UseSsl</a>.</li>
+</ul>
+</li>
+<li><a href="/docs/reference/data-types/email/basicemailsessiondetails/#credentials">Credentials</a> - must be provided in order to connect to an <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server. This object contains the properties <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> and <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> to be used for authentication. For more information, see <a href="#setting-credentials">Setting Credentials</a>.</li>
+</ul>
+<p>If the <a href="#close-session">Close Session</a> property is set to <code>false</code>, then the session will be kept open and can be used in subsequent Send Email Using SMTP Server blocks which improves performance, see <a href="#opening-sessions">Opening Sessions</a> for more information.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/email/basicemailsessiondetails">BasicEmailSessionDetails</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)BasicEmailSessionDetails</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="close-session">Close Session</h3>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session is closed or is kept open for use on subsequent Send Email Using SMTP Server blocks, this defaults to <code>false</code> if left blank, please see <a href="#closing-sessions">Closing Sessions</a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a> with value <code>true</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a></td>
+<td>Thrown when <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> within the <a href="#email-message">Email Message</a> is not one of the specified <a href="/docs/reference/data-types/email/emailmessagebodyformat">EmailMessageBodyFormat</a> values (e.g. <code>(EmailMessageBodyFormat)10</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> within the <a href="#email-message">Email Message</a> is not one of the specified <a href="/docs/reference/data-types/email/emailmessagepriority">EmailMessagePriority</a> values (e.g. <code>(EmailMessagePriority)10</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a file path provided in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> is empty (i.e. <code>&quot;&quot;</code>), contains only whitespace (i.e. <code>&quot;   &quot;</code>) or contains the NUL character (i.e. <code>\0</code>).</td>
+</tr>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=netcore-3.1
+">ArgumentNullException</a></td>
+<td>Thrown when a file path provided in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/email/email-session-exception/">EmailSessionException</a></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> is provided in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#basic-email-session-details">Basic Email Session Details</a>. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#invalid-port">Invalid Port</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> is provided in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#basic-email-session-details">Basic Email Session Details</a>. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#invalid-host">Invalid Host</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a connection cannot be established; this typically occurs when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is set to <code>false</code> with a <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> which requires it to be set to <code>true</code>. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#ssl-required">SSL Required</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a connection cannot be established; this typically occurs when <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is set to <code>true</code> with a <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> which requires it to be set to <code>false</code>. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#ssl-unsupported">SSL Not Supported</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/glossary/p-t/#tls">TLS</a>/<a href="/docs/reference/glossary/p-t/#ssl">SSL</a> certificate has expired on the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> or is untrusted or invalid. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#ssl-unsupported">SSL Not Supported</a>. Note that this exception has the same category and error code as the above row, this is a known limitation, see <a href="/docs/reference/data-types/email/emailsessionerrorcode/#known-limitations">EmailSessionErrorCode Limitations</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a locally installed anti-virus software replaces the <a href="/docs/reference/glossary/p-t/#tls">TLS</a>/<a href="/docs/reference/glossary/p-t/#ssl">SSL</a> certificate in order to scan web traffic. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#ssl-unsupported">SSL Not Supported</a>. Note that this exception has the same category and error code as the above row, this is a known limitation, see <a href="/docs/reference/data-types/email/emailsessionerrorcode/#known-limitations">EmailSessionErrorCode Limitations</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/glossary/a-e/#crl">CRL</a> (Certificate Revocation List) server for the <a href="/docs/reference/glossary/p-t/#tls">TLS</a>/<a href="/docs/reference/glossary/p-t/#ssl">SSL</a> certificate is down. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#ssl-unsupported">SSL Not Supported</a>. Note that this exception has the same category and error code as the above row, this is a known limitation, see <a href="/docs/reference/data-types/email/emailsessionerrorcode/#known-limitations">EmailSessionErrorCode Limitations</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> and <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is incorrect. For more information, see <a href="/docs/reference/exceptions/email/email-session-exception/#invalid-user-credentials">Invalid Username and Password</a>.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></td>
+<td>Thrown when a non-existent file path is provided in <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within <a href="#email-message">Email Message</a>.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception">IOException</a></td>
+<td>Thrown when the desired socket is held by another process; re-running the flow typically solves this.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a file path within <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> contains leading spaces.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a file path within <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> contains invalid characters (i.e. <code>&quot;</code>, <code>*</code>, <code>?</code>, <code>|</code>, <code>&lt;</code>, <code>&gt;</code>, <code>:</code>, <code>\</code>, <code>/</code>).</td>
+</tr>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.io.pathtoolongexception?view=netcore-3.1
+">PathTooLongException</a></td>
+<td>Thrown when a file path provided in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> exceeds the system-defined maximum length (typically 32,767).</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#basic-email-session-details">Basic Email Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> in <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#to">To</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#from">From</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> in <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#to">To</a> within <a href="#email-message">Email Message</a> is empty (i.e. <code>[]</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-value-out-of-range-exception/">PropertyValueOutOfRangeException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within <a href="#basic-email-session-details">Basic Email Session Details</a> is below <code>1</code> or above <code>65535</code>. For more information, see <a href="/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-is-invalid">Property Is Invalid</a>.</td>
+</tr>
+<tr>
+<td><a href="http://www.mimekit.net/docs/html/T_MailKit_Net_Smtp_SmtpCommandException.htm">SmtpCommandException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is not of the correct format (<a href="https://www.ietf.org/rfc/rfc5321.txt">RFC 5321</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the combined size of all of the attachments in the list of <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> is greater than the limit specified by the email service provider; for <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> this is <code>20 MB</code> and for <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> this is <code>25 MB</code>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></td>
+<td>Thrown when access is denied to a file provided in <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within <a href="#email-message">Email Message</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a file path within the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> property within <a href="#email-message">Email Message</a> points to a folder.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
+<h3 id="how-does-priority-affect-sending-an-email">How does Priority affect sending an email?</h3>
+<p>An email sent with <a href="/docs/reference/data-types/email/emailmessagepriority/#urgent">Urgent</a> or <a href="/docs/reference/data-types/email/emailmessagepriority/#nonurgent">NonUrgent</a> priority will have its priority displayed differently depending on the email client. For example, <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> displays an email that has an <a href="/docs/reference/data-types/email/emailmessagepriority/#urgent">Urgent</a> priority with a red exclamation mark like so:</p>
+<p><img src="/images/send-email-using-smtp-server-important-email.png" alt="Important email"></p>
+<p>For more information on how the priority of an email will be displayed, see the help provided by the respective email client.</p>
+<h3 id="how-does-bodyformat-affect-sending-an-email">How does BodyFormat affect sending an email?</h3>
+<p>An email sent with an <a href="/docs/reference/data-types/email/emailmessagebodyformat/#html">HTML</a> body will have its body displayed as an HTML page instead of as plain text. How the email looks in the email client may differ depending on the email client in use. For example, if the <a href="#email-message">Email Message</a> has its <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> set to <a href="/docs/reference/data-types/email/emailmessagebodyformat/#html">HTML</a> and the <a href="/docs/reference/data-types/email/emailmessage/#body">Body</a> has a value of:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&lt;h1&gt;Example header text&lt;/h1&gt;\n&lt;p&gt;Example paragraph text&lt;/p&gt;&#34;</span>
+</span></span></code></pre></div><p><a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> will display the email body as follows:</p>
+<p><img src="/images/send-email-using-smtp-server-html-email.png" alt="HTML email"></p>
+<p>For more information on how the body of an email will be displayed, see the help provided by the respective email client.</p>
+<h3 id="attachments">Attachments</h3>
+<p>Attachments can be sent in an email by providing a list of file paths in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> property of the <a href="#email-message">Email Message</a>. For more information concerning attaching files to an email, see the sections below.</p>
+<h4 id="supported-file-path-formats">Supported file path formats</h4>
+<p>Each file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> can be an:</p>
+<ul>
+<li>Absolute file path</li>
+<li>Relative file path</li>
+<li>UNC file path</li>
+</ul>
+<p>where each file path must be accessible from the server executing the flow.</p>
+<p>For more information about each of these supported file path formats, please see <a href="/docs/reference/concepts/working-with/files-and-folders/paths/">File &amp; Folder Paths</a>.</p>
+<h4 id="file-paths-need-escaping">File paths need escaping</h4>
+<p>Each file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> requires \ characters to be escaped, otherwise each unescaped \ will be reported as an Invalid property value message when trying to debug the flow.</p>
+<p>Escaping can be done in two ways:</p>
+<ul>
+<li>Escaping the <code>\</code> character with another <code>\</code> character (e.g. <code>&quot;C:\\Attachments\\attachment.txt&quot;</code>), or</li>
+<li>Prepending an <code>@</code> character before the start of the File Path (e.g. <code>@&quot;C:\Attachments\attachment.txt&quot;</code>)</li>
+</ul>
+<h4 id="null-file-path">Null file path</h4>
+<p>If <code>null</code> is provided as a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a>, an <a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=netcore-3.1
+">ArgumentNullException</a> is thrown.</p>
+<h4 id="empty-file-path">Empty file path</h4>
+<p>If an empty string is provided as a file path in the the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a>, an <a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a> is thrown.</p>
+<h4 id="file-path-does-not-exist">File path does not exist</h4>
+<p>If a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> does not exist, a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a> is thrown.</p>
+<h4 id="invalid-file-path">Invalid file path</h4>
+<p>If a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> is invalid (i.e. contains any of the following characters: &ldquo;, *, ?, |, &lt;, &gt;, :, , /), an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception">IOException</a> will be thrown.</p>
+<h4 id="file-path-points-to-a-folder">File path points to a folder</h4>
+<p>If a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> points to a folder, an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a> will be thrown.</p>
+<h4 id="file-path-contains-leading-spaces">File path contains leading spaces</h4>
+<p>If a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> contains leading spaces they are not removed and an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception">IOException</a> will be thrown; however, trailing spaces are removed.</p>
+<h4 id="file-path-contains-only-whitespace-or-the-nul-character">File path contains only whitespace or the NUL character</h4>
+<p>If a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> contains only whitespace (i.e. <code>&quot;  &quot;</code>) or the NUL character (i.e. <code>\0</code>), an <a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a> will be thrown.</p>
+<h4 id="file-path-exceeds-the-system-defined-maximum-length">File path exceeds the system-defined maximum length</h4>
+<p>If a file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> exceeds the system-defined maximum length (typically 32,767), a <a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.io.pathtoolongexception?view=netcore-3.1
+">PathTooLongException</a> will be thrown.</p>
+<h4 id="user-does-not-have-necessary-permissions-to-attach-the-file">User does not have necessary permissions to attach the file</h4>
+<p>If the user the flow is executing as does not have permissions to access the file at the provided file path in the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a>, an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a> will be thrown.</p>
+<h4 id="attachment-size-limit">Attachment size limit</h4>
+<p>The combined size of all the <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> must be less than the limit specified by the email service provider. If the combined size of all of the attachments is greater than the limit, an <a href="http://www.mimekit.net/docs/html/T_MailKit_Net_Smtp_SmtpCommandException.htm">SmtpCommandException</a> will be thrown.</p>
+<p>For <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> this is <code>20 MB</code> and for <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> this is <code>25 MB</code>, for more information on the size limits for other email service providers, see the help provided by the respective email service provider.</p>
+<h3 id="supported-formats-for-serverdetailshost">Supported formats for ServerDetails.Host</h3>
+<p>The following formats are supported for <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> in <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a>:</p>
+<ul>
+<li>Fully Qualified Domain Name (e.g. <code>&quot;smtp.gmail.com&quot;</code>)</li>
+<li>Machine name (e.g. <code>&quot;mail-server1&quot;</code>)</li>
+<li>IP address (e.g. <code>&quot;127.0.0.1&quot;</code>)</li>
+<li>Localhost (e.g. <code>&quot;localhost&quot;</code>)</li>
+</ul>
+<h3 id="setting-usessl">Setting UseSsl</h3>
+<p>The <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#basic-email-session-details">Basic Email Session Details</a> specifies which <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server to connect to. The value of the <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> property inside this object depends on the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> and <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> being connected to. There are two types of <a href="/docs/reference/glossary/p-t/#ssl">SSL</a>/<a href="/docs/reference/glossary/p-t/#tls">TLS</a> connections that can occur:</p>
+<ul>
+<li><a href="/docs/reference/glossary/p-t/#ssl">SSL</a>/<a href="/docs/reference/glossary/p-t/#tls">TLS</a> is used as soon as a connection is established</li>
+<li><a href="/docs/reference/glossary/p-t/#ssl">SSL</a>/<a href="/docs/reference/glossary/p-t/#tls">TLS</a> is used via the STARTTLS command if it is available</li>
+</ul>
+<p>The above two points correspond to the <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> property being set to <code>true</code> and <code>false</code> respectively. As such, generally the following rules can be followed to determine whether <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>:</p>
+<ul>
+<li>If the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> being connected to is <code>465</code> then <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code></li>
+<li>If the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> being connected to is <code>25</code> or <code>567</code> then <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>false</code></li>
+</ul>
+<h3 id="setting-credentials">Setting Credentials</h3>
+<p>The <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> within the <a href="#basic-email-session-details">Basic Email Session Details</a> specifies what user to connect as on the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server. The value of the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> property may optionally be encrypted, however the <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> must be encrypted otherwise an <a href="/docs/reference/exceptions/common/unencryptedtextexception/">UnencryptedTextException</a> will be thrown when the object is created. For more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</p>
+<p>Note that the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> object also contains a <a href="/docs/reference/data-types/credentials/usercredentials/#domain">Domain</a> property which is ignored by this block.</p>
+<h3 id="opening-sessions">Opening Sessions</h3>
+<p>The Send Email Using SMTP Server block automatically handles creating and opening sessions for the specified <a href="#basic-email-session-details">Basic Email Session Details</a> using the following rules:</p>
+<ul>
+<li>If a session does not exist, a new session will be created, opened and used when the block runs.</li>
+<li>If a session already exists but is closed, the session will be opened and used when the block runs.</li>
+<li>If a session already exists and is open, the session will be used when the block runs.</li>
+</ul>
+<p><a href="#basic-email-session-details">Basic Email Session Details</a> will keep the session open across multiple Send Email Using SMTP Server blocks as long as <a href="#close-session">Close Session</a> is set to <code>false</code>. Keeping the session open helps increase the performance of the block due to the subsequent blocks not having to spend resources creating and opening sessions for each execution.</p>
+<p>Note that for all <a href="/docs/reference/glossary/p-t/#ssl">SSL</a> connections, the protocol to be used will be negotiated with the server depending on which protocols are available. Similarly, the <a href="/docs/reference/glossary/p-t/#sasl">SASL</a> mechanism to be used will be negotiated with the mail server based on the available mechanisms.</p>
+<p>For information on how to explicitly close a session, please see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<h3 id="closing-sessions">Closing Sessions</h3>
+<p>Sessions can be explicitly closed by setting <a href="#close-session">Close Session</a> to <code>true</code>. This causes the session to be closed after the <a href="#email-message">Email Message</a> has been sent.</p>
+<p>If <a href="#close-session">Close Session</a> is set to <code>false</code> the session will be closed when the <a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a> that <a href="#basic-email-session-details">Basic Email Session Details</a> is set to goes out of scope or the flow ends, whichever happens first. For more information about variables and scope, please see <a href="/docs/reference/concepts/fundamentals/variables/">Variables</a>.</p>
+<p>For information on how to open a session, please see <a href="#opening-sessions">Opening Sessions</a>.</p>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>Currently unauthenticated <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> servers are not supported.</p>
+<p>This limitation may be removed in the future.</p>
 
 </div>
 
@@ -430,7 +1142,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

@@ -89,6 +89,8 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Execute Data Command][]
 * Date & Time
   * [Convert Text To Date Time][]
+* Email
+  * [Send Email Using SMTP Server][]
 * Exceptions
   * [Handle Block Exception Matching Messages][]
   * [Handle Block Exception Matching Type Name][]
@@ -142,6 +144,8 @@ None
 [Execute Data Command]: {{< url "Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.MainDoc" >}}
 
 [Convert Text To Date Time]: {{< url "Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime.MainDoc" >}}
+
+[Send Email Using SMTP Server]: {{< url "Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.MainDoc" >}}
 
 [Handle Block Exception Matching Messages]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingMessages.MainDoc" >}}
 [Handle Block Exception Matching Type Name]: {{< url "Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeName.MainDoc" >}}

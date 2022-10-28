@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/data/execute-data-command/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/data/execute-data-command/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-7c545abd1ba774d7df61b03585d2d956">Execute Data Command</a></li>
+<li>1: <a href="#pg-43a32560b12d42d492112b5e589d4bdd">Execute Data Command</a></li>
 
 
     
@@ -198,7 +198,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-7c545abd1ba774d7df61b03585d2d956">1 - Execute Data Command</h1>
+	<h1 id="pg-43a32560b12d42d492112b5e589d4bdd">1 - Execute Data Command</h1>
     <div class="lead">Connects to a specific data source and executes a Command, returning any object from the Command&rsquo;s result.</div>
 	<p><img src="/blocks/data-execute-command-block-icon.png" alt="Icon"></p>
 <h1 id="execute-data-command">Execute Data Command</h1>
@@ -271,19 +271,19 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Selecting all rows and columns that have an Id less than 3 from <code>Table</code> using a <a href="#querycommand">QueryCommand</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">{</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn1&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn1&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#000;font-weight:bold">{</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn2&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn2&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>Note that using a <a href="#parameterised-commands">Parameterised Command</a> helps prevent against <a href="https://www.w3schools.com/sql/sql_injection.asp">SQL Injection</a>, for more information please see <a href="#parameterised-commands">Parameterised Commands</a>. For an example of a non parameterised command please see <a href="#executing-multiple-commands-unsafe">Executing Multiple Commands (Unsafe)</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn1&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn2&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn2&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>Note that using a <a href="#parameterised-commands">Parameterised Command</a> helps prevent against <a href="https://www.w3schools.com/sql/sql_injection.asp">SQL Injection</a>, for more information please see <a href="#parameterised-commands">Parameterised Commands</a>. For an example of a non parameterised command please see <a href="#executing-multiple-commands-unsafe">Executing Multiple Commands (Unsafe)</a></p>
 <hr>
 <h3 id="inserting-rows">Inserting Rows</h3>
 <p>This example will insert a new row into a connected SQL Server data source, saving the number of rows inserted to the <a href="#result-8">Result</a>.</p>
@@ -349,8 +349,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Inserting a new row into <code>Table</code> using a parameterised <a href="#nonquerycommand">NonQueryCommand</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">1</span>
-</code></pre></div><p>This indicates that 1 row has been inserted into <code>Table</code>, with <code>Table</code> being updated to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1</span>
+</span></span></code></pre></div><p>This indicates that 1 row has been inserted into <code>Table</code>, with <code>Table</code> being updated to:</p>
 <table>
 <thead>
 <tr>
@@ -448,8 +448,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-2">Result</h4>
 <p>Updating all rows that have an Id less than <code>3</code> in <code>Table</code> using a <a href="#nonquerycommand">NonQueryCommand</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">2</span>
-</code></pre></div><p>This indicates that 2 rows have been updated in <code>Table</code>, with <code>Table</code> being updated to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2</span>
+</span></span></code></pre></div><p>This indicates that 2 rows have been updated in <code>Table</code>, with <code>Table</code> being updated to:</p>
 <table>
 <thead>
 <tr>
@@ -542,8 +542,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-3">Result</h4>
 <p>Deleting all rows that have an Id less than <code>3</code> in <code>Table</code> using a <a href="#nonquerycommand">NonQueryCommand</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">2</span>
-</code></pre></div><p>This indicates that 2 rows have been deleted in <code>Table</code>, with <code>Table</code> being updated to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2</span>
+</span></span></code></pre></div><p>This indicates that 2 rows have been deleted in <code>Table</code>, with <code>Table</code> being updated to:</p>
 <table>
 <thead>
 <tr>
@@ -626,12 +626,12 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-4">Result</h4>
 <p>Selecting the maximum Id value from <code>Table</code> using a <a href="#querycommand">QueryCommand</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">{</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>Note that the <code>AS</code> keyword can be used to give aliases to results, for example the CommandText <code>&quot;SELECT Max(Id) AS MaxId FROM Table;&quot;</code> would have resulted in the variable <code>($)Result</code> being updated to <code>[ { &quot;MaxId&quot;: 3 } ]</code>; the <code>AS</code> keyword also allows for <a href="#using-multiple-functions">Using Multiple Functions</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>Note that the <code>AS</code> keyword can be used to give aliases to results, for example the CommandText <code>&quot;SELECT Max(Id) AS MaxId FROM Table;&quot;</code> would have resulted in the variable <code>($)Result</code> being updated to <code>[ { &quot;MaxId&quot;: 3 } ]</code>; the <code>AS</code> keyword also allows for <a href="#using-multiple-functions">Using Multiple Functions</a>.</p>
 <hr>
 <h3 id="using-multiple-functions">Using Multiple Functions</h3>
 <p>This example will select the maximum Id value as MaxId and the minimum Id value as MinId from a connected SQL Server data source, saving the values of the functions to the <a href="#result-8">Result</a>.</p>
@@ -697,13 +697,13 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-5">Result</h4>
 <p>Selecting the maximum Id value as MaxId and the minimum Id value as MinId from <code>Table</code> using a <a href="#querycommand">QueryCommand</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">{</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;MaxId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;MinId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span> 
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;MaxId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;MinId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h3 id="executing-multiple-commands-safe">Executing Multiple Commands (Safe)</h3>
 <p>This example will select, insert, update and delete from a connected SQL Server data source, using a parameterised command. The result of each command will be saved to the result.</p>
 <p>An <a href="#commands">Commands</a> is used throughout this example, as it is the only type of <a href="#command">Command</a> that allows you to execute and return the results of multiple commands.</p>
@@ -768,36 +768,36 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-6">Result</h4>
 <p>Running the <a href="#commands">Commands</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn1&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn1&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn2&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn2&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn3&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn3&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn4&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn4&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn1&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn2&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn2&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn3&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn3&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn4&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn4&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><ul>
 <li>The first item of <code>($)Result</code> represents the rows selected by the first select statement (<code>SELECT * FROM Table WHERE Id &lt; @SelectParameter</code>).</li>
 <li>The second item of <code>($)Result</code> indicates that 1 row has been inserted into <code>Table</code> (<code>INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)</code>).</li>
 <li>The third item of <code>($)Result</code> indicates that 2 rows have been updated in <code>Table</code> (<code>UPDATE Table SET FirstColumn = \&quot;Updated\&quot; WHERE Id &lt; @UpdateParameter</code>).</li>
@@ -911,36 +911,36 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-7">Result</h4>
 <p>Running the <a href="#commands">Commands</a> results in the variable <code>($)Result</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn1&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn1&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn2&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn2&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn3&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn3&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn4&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn4&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn1&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn2&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn2&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn3&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn3&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;Id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;FirstColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FirstColumn4&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;SecondColumn&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;SecondColumn4&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><ul>
 <li>The first item of <code>($)Result</code> represents the rows selected by the first select statement (<code>SELECT * FROM Table WHERE Id &lt; @SelectParameter</code>).</li>
 <li>The second item of <code>($)Result</code> indicates that 1 row has been inserted into <code>Table</code> (<code>INSERT INTO Table (FirstColumn, SecondColumn) VALUES (@InsertParameter1, @InsertParameter2)</code>).</li>
 <li>The third item of <code>($)Result</code> indicates that 2 rows have been updated in <code>Table</code> (<code>UPDATE Table SET FirstColumn = \&quot;Updated\&quot; WHERE Id &lt; @UpdateParameter</code>).</li>
@@ -1600,7 +1600,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

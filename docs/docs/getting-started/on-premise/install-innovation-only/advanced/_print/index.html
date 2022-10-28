@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/install-innovation-only/advanced/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/getting-started/on-premise/install-innovation-only/advanced/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -265,182 +265,180 @@ This the multi-page printable view of this section.
 </li>
 <li>
 <p>Change the configuration file according to your cluster, referring to the following example and details:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;customers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span>          <span style="color:#204a87;font-weight:bold">&#34;isPrimary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;clientConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8001&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;clusterConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8002&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;leaseDriverEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8003&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;serviceConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8004&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;httpGatewayEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9080&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reverseProxyEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9081&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;applicationPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10010-10500&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;ephemeralPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10501-20000&#34;</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;loadBalancer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;installDirectory&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;%ProgramData%\\loadbalancer&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.20.178&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span>            <span style="color:#204a87;font-weight:bold">&#34;loadBalancerSnmpPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;162&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;snmpReceiverServicePort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10001&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;loadBalancerTlsPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;443&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;apiGatewayServicePort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8722&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">            <span style="color:#204a87;font-weight:bold">&#34;adminCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;loadBalancerCertificate&#34;</span>
-</span>          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-            <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.1&#34;</span>
-</span>            <span style="color:#000;font-weight:bold">},</span>
-            <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span>
-</span>            <span style="color:#000;font-weight:bold">},</span>
-            <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span>
-</span>            <span style="color:#000;font-weight:bold">}</span>
-          <span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">],</span>
-      <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">},</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">},</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;windowsSmbRemoteRegistry&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-          <span style="color:#4e9a06">&#34;135&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;137&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;138&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;139&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;445&#34;</span>
-        <span style="color:#000;font-weight:bold">],</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqAmqpPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-          <span style="color:#4e9a06">&#34;5671&#34;</span>
-        <span style="color:#000;font-weight:bold">],</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqEpmdPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4369&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionClientPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;35672-35682&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionServerPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25672&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqManagementApiPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;15671&#34;</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;serverCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;serverCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\wildCardCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;adminCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;loadBalancerCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\lbCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-    </code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;customers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;isPrimary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;clientConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8001&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;clusterConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8002&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;leaseDriverEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8003&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;serviceConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8004&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;httpGatewayEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9080&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;reverseProxyEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9081&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;applicationPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10010-10500&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ephemeralPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10501-20000&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;loadBalancer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>        <span style="color:#204a87;font-weight:bold">&#34;installDirectory&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;%ProgramData%\\loadbalancer&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>        <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.20.178&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;loadBalancerSnmpPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;162&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;snmpReceiverServicePort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10001&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>        <span style="color:#204a87;font-weight:bold">&#34;loadBalancerTlsPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;443&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>        <span style="color:#204a87;font-weight:bold">&#34;apiGatewayServicePort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8722&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>        <span style="color:#204a87;font-weight:bold">&#34;adminCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;loadBalancerCertificate&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>    <span style="color:#204a87;font-weight:bold">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>    <span style="color:#204a87;font-weight:bold">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>    <span style="color:#204a87;font-weight:bold">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;windowsSmbRemoteRegistry&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;135&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;137&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;138&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;139&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;445&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqAmqpPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;5671&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqEpmdPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4369&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionClientPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;35672-35682&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionServerPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25672&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqManagementApiPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;15671&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;serverCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;serverCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\wildCardCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;adminCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;loadBalancerCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\lbCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <table>
@@ -541,118 +539,116 @@ This the multi-page printable view of this section.
 </li>
 <li>
 <p>Change the configuration file according to your cluster, referring to the following example and details:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-</span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
-</span></span><span style="display:block;width:100%;background-color:#dfdfdf"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span></span><span style="background-color:#dfdfdf"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span></span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">&#34;customers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span>          <span style="color:#204a87;font-weight:bold">&#34;isPrimary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;clientConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8001&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;clusterConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8002&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;leaseDriverEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8003&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;serviceConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8004&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;httpGatewayEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9080&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;reverseProxyEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9081&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;applicationPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10010-10500&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;ephemeralPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10501-20000&#34;</span>
-          <span style="color:#000;font-weight:bold">},</span>
-          <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-            <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">              <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.1&#34;</span>
-</span>            <span style="color:#000;font-weight:bold">}</span>
-          <span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">],</span>
-      <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">        <span style="color:#204a87;font-weight:bold">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-</span>          <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;windowsSmbRemoteRegistry&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-          <span style="color:#4e9a06">&#34;135&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;137&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;138&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;139&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          <span style="color:#4e9a06">&#34;445&#34;</span>
-        <span style="color:#000;font-weight:bold">],</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqAmqpPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-          <span style="color:#4e9a06">&#34;5671&#34;</span>
-        <span style="color:#000;font-weight:bold">],</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqEpmdPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4369&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionClientPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;35672-35682&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionServerPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25672&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;rabbitMqManagementApiPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;15671&#34;</span>
-      <span style="color:#000;font-weight:bold">},</span>
-      <span style="color:#204a87;font-weight:bold">&#34;serverCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;serverCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-<span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\wildCardCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
-</span><span style="display:block;width:100%;background-color:#dfdfdf">          <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
-</span>        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-    </code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;customers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;isPrimary&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;clientConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8001&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;clusterConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8002&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;leaseDriverEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8003&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;serviceConnectionEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8004&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;httpGatewayEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9080&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;reverseProxyEndpointPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9081&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;applicationPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10010-10500&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ephemeralPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10501-20000&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;serverName&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>          <span style="color:#204a87;font-weight:bold">&#34;iPAddress&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;192.168.1.1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;servers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>    <span style="color:#204a87;font-weight:bold">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;faultDomain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;fd:/fd1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;serverCertificate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;serverCert&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;rules&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;windowsSmbRemoteRegistry&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;135&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;137&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;138&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;139&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;445&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqAmqpPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;5671&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqEpmdPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4369&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionClientPorts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;35672-35682&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqErlangDistributionServerPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25672&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;rabbitMqManagementApiPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;15671&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;serverCertificates&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;serverCert&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;C:\\Certificates\\wildCardCert.pfx&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pfxCertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;pfxPassword&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>      <span style="color:#204a87;font-weight:bold">&#34;pemRootCertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <table>
@@ -848,88 +844,88 @@ button.</li>
 </li>
 <li>
 <p>Make a directory in which to store the certificates by running the following command, changing the path as required:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">mkdir</span> <span style="color:#000">C:</span><span style="color:#000;font-weight:bold">\</span><span style="color:#000">Certificates</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">mkdir</span> <span style="color:#000">C:</span><span style="color:#000;font-weight:bold">\</span><span style="color:#000">Certificates</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Navigate PowerShell to inside the certificates folder created above, using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Certificates&#34;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Certificates&#34;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Temporarily add OpenSSL to the Path environment variable of your system by running the following command, modifying the path according to the location of <code>openssl.exe</code> in the installation scripts on the machine:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">$env:PATH</span> <span style="color:#000;font-weight:bold">+=</span> <span style="color:#4e9a06">&#34;;C:\Cortex Innovation 2022.9 - Web App Server Install Scripts\OpenSSL&#34;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">$env:PATH</span> <span style="color:#000;font-weight:bold">+=</span> <span style="color:#4e9a06">&#34;;C:\Cortex Innovation 2022.9 - Web App Server Install Scripts\OpenSSL&#34;</span>
+</span></span></code></pre></div></li>
 </ol>
 <h2 id="generate-the-root-ca-certificate">Generate the Root CA Certificate</h2>
 <ol>
 <li>
 <p>Create the Root CA private key by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">4096</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">4096</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Generate the Root CA certificate signed with the private key:</p>
 <ol>
 <li>
 <p>Copy the following text into a text editor:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#000">RANDFILE</span>		<span style="color:#ce5c00;font-weight:bold">=</span> .rnd
-<span style="color:#ce5c00;font-weight:bold">[</span> ca <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#000">default_ca</span>	<span style="color:#ce5c00;font-weight:bold">=</span> CA_default	<span style="color:#8f5902;font-style:italic"># The default ca section</span>
-<span style="color:#ce5c00;font-weight:bold">[</span> CA_default <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># Directory and file locations.</span>
-<span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
-<span style="color:#000">default_md</span>        <span style="color:#ce5c00;font-weight:bold">=</span> sha256
-<span style="color:#000">policy</span>            <span style="color:#ce5c00;font-weight:bold">=</span> policy_strict
-<span style="color:#ce5c00;font-weight:bold">[</span> policy_strict <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># The root CA should only sign intermediate certificates that match.</span>
-<span style="color:#8f5902;font-style:italic"># See the POLICY FORMAT section of `man ca`.</span>
-<span style="color:#000">countryName</span>             <span style="color:#ce5c00;font-weight:bold">=</span> match
-<span style="color:#000">stateOrProvinceName</span>     <span style="color:#ce5c00;font-weight:bold">=</span> match
-<span style="color:#000">organizationName</span>        <span style="color:#ce5c00;font-weight:bold">=</span> match
-<span style="color:#000">organizationalUnitName</span>  <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#000">commonName</span>              <span style="color:#ce5c00;font-weight:bold">=</span> supplied
-<span style="color:#000">emailAddress</span>            <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#ce5c00;font-weight:bold">[</span> req <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># Options for the `req` tool (`man req`).</span>
-<span style="color:#000">default_bits</span>        <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2048</span>
-<span style="color:#000">distinguished_name</span>  <span style="color:#ce5c00;font-weight:bold">=</span> req_distinguished_name
-<span style="color:#000">string_mask</span>         <span style="color:#ce5c00;font-weight:bold">=</span> utf8only
-
-<span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
-<span style="color:#000">default_md</span>          <span style="color:#ce5c00;font-weight:bold">=</span> sha256
-<span style="color:#8f5902;font-style:italic"># Extension to add when the -x509 option is used.</span>
-<span style="color:#000">x509_extensions</span>     <span style="color:#ce5c00;font-weight:bold">=</span> v3_ca
-<span style="color:#ce5c00;font-weight:bold">[</span> req_distinguished_name <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#000">countryName</span>				<span style="color:#ce5c00;font-weight:bold">=</span> Country Name <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2</span> letter code<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">countryName_min</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
-<span style="color:#000">countryName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
-<span style="color:#000">stateOrProvinceName</span>		<span style="color:#ce5c00;font-weight:bold">=</span> State or Province Name <span style="color:#ce5c00;font-weight:bold">(</span>full name<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">localityName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Locality Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, city<span style="color:#ce5c00;font-weight:bold">)</span>
-0.organizationName		<span style="color:#ce5c00;font-weight:bold">=</span> Organization Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, company<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">organizationalUnitName</span>	<span style="color:#ce5c00;font-weight:bold">=</span> Organizational Unit Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, section<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">commonName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Common Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, your website<span style="color:#a40000">&#39;</span>s domain name<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">commonName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">64</span>
-<span style="color:#000">emailAddress</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Email Address
-<span style="color:#000">emailAddress_max</span>		<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">40</span>
-<span style="color:#8f5902;font-style:italic"># Optionally, specify some defaults.</span>
-<span style="color:#000">countryName_default</span>             <span style="color:#ce5c00;font-weight:bold">=</span> GB
-<span style="color:#000">stateOrProvinceName_default</span>     <span style="color:#ce5c00;font-weight:bold">=</span> Hampshire
-<span style="color:#000">localityName_default</span>            <span style="color:#ce5c00;font-weight:bold">=</span> Southampton
-0.organizationName_default      <span style="color:#ce5c00;font-weight:bold">=</span> Cortex Ltd
-<span style="color:#000">organizationalUnitName_default</span>	<span style="color:#ce5c00;font-weight:bold">=</span> Cortex 
-<span style="color:#000">emailAddress_default</span>			<span style="color:#ce5c00;font-weight:bold">=</span> info@cortex.co.uk
-<span style="color:#ce5c00;font-weight:bold">[</span> v3_ca <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># Extensions for a typical CA (`man x509v3_config`).</span>
-<span style="color:#000">subjectKeyIdentifier</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">hash</span>
-<span style="color:#000">authorityKeyIdentifier</span> <span style="color:#ce5c00;font-weight:bold">=</span> keyid:always,issuer
-<span style="color:#000">basicConstraints</span> <span style="color:#ce5c00;font-weight:bold">=</span> critical, CA:true
-<span style="color:#000">keyUsage</span> <span style="color:#ce5c00;font-weight:bold">=</span> critical, digitalSignature, cRLSign, keyCertSign
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#000">RANDFILE</span>		<span style="color:#ce5c00;font-weight:bold">=</span> .rnd
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> ca <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_ca</span>	<span style="color:#ce5c00;font-weight:bold">=</span> CA_default	<span style="color:#8f5902;font-style:italic"># The default ca section</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> CA_default <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Directory and file locations.</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_md</span>        <span style="color:#ce5c00;font-weight:bold">=</span> sha256
+</span></span><span style="display:flex;"><span><span style="color:#000">policy</span>            <span style="color:#ce5c00;font-weight:bold">=</span> policy_strict
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> policy_strict <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># The root CA should only sign intermediate certificates that match.</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># See the POLICY FORMAT section of `man ca`.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName</span>             <span style="color:#ce5c00;font-weight:bold">=</span> match
+</span></span><span style="display:flex;"><span><span style="color:#000">stateOrProvinceName</span>     <span style="color:#ce5c00;font-weight:bold">=</span> match
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationName</span>        <span style="color:#ce5c00;font-weight:bold">=</span> match
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationalUnitName</span>  <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#000">commonName</span>              <span style="color:#ce5c00;font-weight:bold">=</span> supplied
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress</span>            <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> req <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Options for the `req` tool (`man req`).</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_bits</span>        <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2048</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">distinguished_name</span>  <span style="color:#ce5c00;font-weight:bold">=</span> req_distinguished_name
+</span></span><span style="display:flex;"><span><span style="color:#000">string_mask</span>         <span style="color:#ce5c00;font-weight:bold">=</span> utf8only
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_md</span>          <span style="color:#ce5c00;font-weight:bold">=</span> sha256
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Extension to add when the -x509 option is used.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">x509_extensions</span>     <span style="color:#ce5c00;font-weight:bold">=</span> v3_ca
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> req_distinguished_name <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName</span>				<span style="color:#ce5c00;font-weight:bold">=</span> Country Name <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2</span> letter code<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName_min</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">stateOrProvinceName</span>		<span style="color:#ce5c00;font-weight:bold">=</span> State or Province Name <span style="color:#ce5c00;font-weight:bold">(</span>full name<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">localityName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Locality Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, city<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>0.organizationName		<span style="color:#ce5c00;font-weight:bold">=</span> Organization Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, company<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationalUnitName</span>	<span style="color:#ce5c00;font-weight:bold">=</span> Organizational Unit Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, section<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">commonName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Common Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, your website<span style="color:#a40000">&#39;</span>s domain name<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">commonName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">64</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Email Address
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress_max</span>		<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">40</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Optionally, specify some defaults.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName_default</span>             <span style="color:#ce5c00;font-weight:bold">=</span> GB
+</span></span><span style="display:flex;"><span><span style="color:#000">stateOrProvinceName_default</span>     <span style="color:#ce5c00;font-weight:bold">=</span> Hampshire
+</span></span><span style="display:flex;"><span><span style="color:#000">localityName_default</span>            <span style="color:#ce5c00;font-weight:bold">=</span> Southampton
+</span></span><span style="display:flex;"><span>0.organizationName_default      <span style="color:#ce5c00;font-weight:bold">=</span> Cortex Ltd
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationalUnitName_default</span>	<span style="color:#ce5c00;font-weight:bold">=</span> Cortex 
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress_default</span>			<span style="color:#ce5c00;font-weight:bold">=</span> info@cortex.co.uk
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> v3_ca <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Extensions for a typical CA (`man x509v3_config`).</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">subjectKeyIdentifier</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">hash</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">authorityKeyIdentifier</span> <span style="color:#ce5c00;font-weight:bold">=</span> keyid:always,issuer
+</span></span><span style="display:flex;"><span><span style="color:#000">basicConstraints</span> <span style="color:#ce5c00;font-weight:bold">=</span> critical, CA:true
+</span></span><span style="display:flex;"><span><span style="color:#000">keyUsage</span> <span style="color:#ce5c00;font-weight:bold">=</span> critical, digitalSignature, cRLSign, keyCertSign
+</span></span></code></pre></div></li>
 <li>
 <p>Save the file as <code>ca.cnf</code> in the directory created for the certificates above.</p>
 </li>
 <li>
 <p>In the PowerShell window, run the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-x509</span> <span style="color:#000">-new</span> <span style="color:#000">-nodes</span> <span style="color:#000">-key</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-days</span> <span style="color:#000">3650</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-config</span> <span style="color:#000">ca</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-x509</span> <span style="color:#000">-new</span> <span style="color:#000">-nodes</span> <span style="color:#000">-key</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-days</span> <span style="color:#000">3650</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-config</span> <span style="color:#000">ca</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Press <code>Enter</code> for all parameters except the Common Name. For this enter <code>Cortex CA</code>.</p>
 </li>
@@ -937,8 +933,8 @@ button.</li>
 </li>
 <li>
 <p>Package your public and private key in a pkcs12 encrypted file (to install with certmgr on windows) by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">pkcs12</span> <span style="color:#000">-export</span> <span style="color:#000">-inkey</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-in</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pfx</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">pkcs12</span> <span style="color:#000">-export</span> <span style="color:#000">-inkey</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-in</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pfx</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Enter a memorable string as the Export Password when asked, this will be needed when adding the certificate to certmgr.</p>
 </li>
@@ -959,71 +955,71 @@ button.</li>
 <ol>
 <li>
 <p>Create a private key for the SSL cert by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">2048</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">2048</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Generate the SSL certificate request:</p>
 <ol>
 <li>
 <p>Copy the following text into a text editor:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#000">RANDFILE</span>		<span style="color:#ce5c00;font-weight:bold">=</span> .rnd
-<span style="color:#ce5c00;font-weight:bold">[</span> ca <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#000">default_ca</span>	<span style="color:#ce5c00;font-weight:bold">=</span> CA_default	<span style="color:#8f5902;font-style:italic"># The default ca section</span>
-<span style="color:#ce5c00;font-weight:bold">[</span> CA_default <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
-<span style="color:#000">default_md</span>        <span style="color:#ce5c00;font-weight:bold">=</span> sha256
-<span style="color:#000">policy</span>            <span style="color:#ce5c00;font-weight:bold">=</span> policy_loose
-<span style="color:#ce5c00;font-weight:bold">[</span> policy_loose <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># Allow the intermediate CA to sign a more diverse range of certificates.</span>
-<span style="color:#8f5902;font-style:italic"># See the POLICY FORMAT section of the `ca` man page.</span>
-<span style="color:#000">countryName</span>             <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#000">stateOrProvinceName</span>     <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#000">localityName</span>            <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#000">organizationName</span>        <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#000">organizationalUnitName</span>  <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#000">commonName</span>              <span style="color:#ce5c00;font-weight:bold">=</span> supplied
-<span style="color:#000">emailAddress</span>            <span style="color:#ce5c00;font-weight:bold">=</span> optional
-<span style="color:#ce5c00;font-weight:bold">[</span> req <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># Options for the `req` tool (`man req`).</span>
-<span style="color:#000">default_bits</span>        <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2048</span>
-<span style="color:#000">distinguished_name</span>  <span style="color:#ce5c00;font-weight:bold">=</span> req_distinguished_name
-<span style="color:#000">string_mask</span>         <span style="color:#ce5c00;font-weight:bold">=</span> utf8only
-<span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
-<span style="color:#000">default_md</span>          <span style="color:#ce5c00;font-weight:bold">=</span> sha256
-<span style="color:#8f5902;font-style:italic"># Extension to add when the -x509 option is used.</span>
-<span style="color:#000">x509_extensions</span>     <span style="color:#ce5c00;font-weight:bold">=</span> v3_req
-<span style="color:#000">req_extensions</span>      <span style="color:#ce5c00;font-weight:bold">=</span> v3_req
-<span style="color:#ce5c00;font-weight:bold">[</span> req_distinguished_name <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#000">countryName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Country Name <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2</span> letter code<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">countryName_min</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
-<span style="color:#000">countryName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
-<span style="color:#000">stateOrProvinceName</span>		<span style="color:#ce5c00;font-weight:bold">=</span> State or Province Name <span style="color:#ce5c00;font-weight:bold">(</span>full name<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">localityName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Locality Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, city<span style="color:#ce5c00;font-weight:bold">)</span>
-0.organizationName		<span style="color:#ce5c00;font-weight:bold">=</span> Organization Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, company<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">organizationalUnitName</span>	<span style="color:#ce5c00;font-weight:bold">=</span> Organizational Unit Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, section<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">commonName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Common Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, your website<span style="color:#a40000">&#39;</span>s domain name<span style="color:#ce5c00;font-weight:bold">)</span>
-<span style="color:#000">commonName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">64</span>
-<span style="color:#000">emailAddress</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Email Address
-<span style="color:#000">emailAddress_max</span>		<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">40</span>
-<span style="color:#8f5902;font-style:italic"># Optionally, specify some defaults.</span>
-<span style="color:#000">countryName_default</span>             <span style="color:#ce5c00;font-weight:bold">=</span> GB
-<span style="color:#000">stateOrProvinceName_default</span>     <span style="color:#ce5c00;font-weight:bold">=</span> Hampshire
-<span style="color:#000">localityName_default</span>            <span style="color:#ce5c00;font-weight:bold">=</span> Southampton
-0.organizationName_default      <span style="color:#ce5c00;font-weight:bold">=</span> Cortex Ltd
-<span style="color:#000">organizationalUnitName_default</span>  <span style="color:#ce5c00;font-weight:bold">=</span> Cortex 
-<span style="color:#000">emailAddress_default</span>	       <span style="color:#ce5c00;font-weight:bold">=</span> info@cortex.co.uk
-<span style="color:#ce5c00;font-weight:bold">[</span> v3_req <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#000">basicConstraints</span> <span style="color:#ce5c00;font-weight:bold">=</span> CA:FALSE
-<span style="color:#000">keyUsage</span> <span style="color:#ce5c00;font-weight:bold">=</span> nonRepudiation, digitalSignature, keyEncipherment
-<span style="color:#000">subjectAltName</span> <span style="color:#ce5c00;font-weight:bold">=</span> @alt_names
-<span style="color:#ce5c00;font-weight:bold">[</span> alt_names <span style="color:#ce5c00;font-weight:bold">]</span>
-<span style="color:#8f5902;font-style:italic"># Specify all DNS and/or IP addresses that clients can use to access the secured resource.</span>
-DNS.1 <span style="color:#ce5c00;font-weight:bold">=</span> MACHINE-NAME 
-DNS.2 <span style="color:#ce5c00;font-weight:bold">=</span> FULLY QUALIFIED MACHINE NAME
-DNS.3 <span style="color:#ce5c00;font-weight:bold">=</span> localhost 
-IP.1 <span style="color:#ce5c00;font-weight:bold">=</span> IP ADDRESS
-IP.2 <span style="color:#ce5c00;font-weight:bold">=</span> 127.0.0.1 
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#000">RANDFILE</span>		<span style="color:#ce5c00;font-weight:bold">=</span> .rnd
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> ca <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_ca</span>	<span style="color:#ce5c00;font-weight:bold">=</span> CA_default	<span style="color:#8f5902;font-style:italic"># The default ca section</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> CA_default <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_md</span>        <span style="color:#ce5c00;font-weight:bold">=</span> sha256
+</span></span><span style="display:flex;"><span><span style="color:#000">policy</span>            <span style="color:#ce5c00;font-weight:bold">=</span> policy_loose
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> policy_loose <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Allow the intermediate CA to sign a more diverse range of certificates.</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># See the POLICY FORMAT section of the `ca` man page.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName</span>             <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#000">stateOrProvinceName</span>     <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#000">localityName</span>            <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationName</span>        <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationalUnitName</span>  <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#000">commonName</span>              <span style="color:#ce5c00;font-weight:bold">=</span> supplied
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress</span>            <span style="color:#ce5c00;font-weight:bold">=</span> optional
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> req <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Options for the `req` tool (`man req`).</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_bits</span>        <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2048</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">distinguished_name</span>  <span style="color:#ce5c00;font-weight:bold">=</span> req_distinguished_name
+</span></span><span style="display:flex;"><span><span style="color:#000">string_mask</span>         <span style="color:#ce5c00;font-weight:bold">=</span> utf8only
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># SHA-1 is deprecated, so use SHA-2 instead.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">default_md</span>          <span style="color:#ce5c00;font-weight:bold">=</span> sha256
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Extension to add when the -x509 option is used.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">x509_extensions</span>     <span style="color:#ce5c00;font-weight:bold">=</span> v3_req
+</span></span><span style="display:flex;"><span><span style="color:#000">req_extensions</span>      <span style="color:#ce5c00;font-weight:bold">=</span> v3_req
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> req_distinguished_name <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Country Name <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">2</span> letter code<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName_min</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">stateOrProvinceName</span>		<span style="color:#ce5c00;font-weight:bold">=</span> State or Province Name <span style="color:#ce5c00;font-weight:bold">(</span>full name<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">localityName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Locality Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, city<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>0.organizationName		<span style="color:#ce5c00;font-weight:bold">=</span> Organization Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, company<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationalUnitName</span>	<span style="color:#ce5c00;font-weight:bold">=</span> Organizational Unit Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, section<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">commonName</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Common Name <span style="color:#ce5c00;font-weight:bold">(</span>eg, your website<span style="color:#a40000">&#39;</span>s domain name<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">commonName_max</span>			<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">64</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress</span>			<span style="color:#ce5c00;font-weight:bold">=</span> Email Address
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress_max</span>		<span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">40</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Optionally, specify some defaults.</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">countryName_default</span>             <span style="color:#ce5c00;font-weight:bold">=</span> GB
+</span></span><span style="display:flex;"><span><span style="color:#000">stateOrProvinceName_default</span>     <span style="color:#ce5c00;font-weight:bold">=</span> Hampshire
+</span></span><span style="display:flex;"><span><span style="color:#000">localityName_default</span>            <span style="color:#ce5c00;font-weight:bold">=</span> Southampton
+</span></span><span style="display:flex;"><span>0.organizationName_default      <span style="color:#ce5c00;font-weight:bold">=</span> Cortex Ltd
+</span></span><span style="display:flex;"><span><span style="color:#000">organizationalUnitName_default</span>  <span style="color:#ce5c00;font-weight:bold">=</span> Cortex 
+</span></span><span style="display:flex;"><span><span style="color:#000">emailAddress_default</span>	       <span style="color:#ce5c00;font-weight:bold">=</span> info@cortex.co.uk
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> v3_req <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">basicConstraints</span> <span style="color:#ce5c00;font-weight:bold">=</span> CA:FALSE
+</span></span><span style="display:flex;"><span><span style="color:#000">keyUsage</span> <span style="color:#ce5c00;font-weight:bold">=</span> nonRepudiation, digitalSignature, keyEncipherment
+</span></span><span style="display:flex;"><span><span style="color:#000">subjectAltName</span> <span style="color:#ce5c00;font-weight:bold">=</span> @alt_names
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span> alt_names <span style="color:#ce5c00;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Specify all DNS and/or IP addresses that clients can use to access the secured resource.</span>
+</span></span><span style="display:flex;"><span>DNS.1 <span style="color:#ce5c00;font-weight:bold">=</span> MACHINE-NAME 
+</span></span><span style="display:flex;"><span>DNS.2 <span style="color:#ce5c00;font-weight:bold">=</span> FULLY QUALIFIED MACHINE NAME
+</span></span><span style="display:flex;"><span>DNS.3 <span style="color:#ce5c00;font-weight:bold">=</span> localhost 
+</span></span><span style="display:flex;"><span>IP.1 <span style="color:#ce5c00;font-weight:bold">=</span> IP ADDRESS
+</span></span><span style="display:flex;"><span>IP.2 <span style="color:#ce5c00;font-weight:bold">=</span> 127.0.0.1 
+</span></span></code></pre></div></li>
 <li>
 <p>Modify the section <code>[alt_names]</code> to include all the required DNS names and IP addresses that clients can use to access the secured resource.
 Each DNS name or IP address entry must be suffixed with <code>.N</code> where <code>N</code> is the unique index of the DNS name or IP address entry; see below for examples:</p>
@@ -1059,19 +1055,19 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 </li>
 <li>
 <p>In the PowerShell window, run the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">req</span> <span style="color:#000">-new</span> <span style="color:#000">-sha256</span> <span style="color:#000">-key</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">req</span> <span style="color:#000">-extensions</span> <span style="color:#000">v3_req</span> <span style="color:#000">-config</span> <span style="color:#000">san</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">req</span> <span style="color:#000">-new</span> <span style="color:#000">-sha256</span> <span style="color:#000">-key</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">req</span> <span style="color:#000">-extensions</span> <span style="color:#000">v3_req</span> <span style="color:#000">-config</span> <span style="color:#000">san</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Press <code>Enter</code> for everything except the Common Name. For this enter <code>Cortex</code>.</p>
 </li>
 <li>
 <p>Sign the request with a previously generated Root CA by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">x509</span> <span style="color:#000">-req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-in</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">req</span> <span style="color:#000">-CA</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-CAkey</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-CAcreateserial</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-days</span> <span style="color:#000">3650</span> <span style="color:#000">-extensions</span> <span style="color:#000">v3_req</span> <span style="color:#000">-extfile</span> <span style="color:#000">san</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">x509</span> <span style="color:#000">-req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-in</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">req</span> <span style="color:#000">-CA</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-CAkey</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-CAcreateserial</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-days</span> <span style="color:#000">3650</span> <span style="color:#000">-extensions</span> <span style="color:#000">v3_req</span> <span style="color:#000">-extfile</span> <span style="color:#000">san</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Package your public and private key in a pkcs12 encrypted file (to install with certmgr on windows) by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000">openssl</span> <span style="color:#000">pkcs12</span> <span style="color:#000">-export</span> <span style="color:#000">-inkey</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-in</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pfx</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">pkcs12</span> <span style="color:#000">-export</span> <span style="color:#000">-inkey</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-in</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pfx</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Enter a memorable string as the Export Password when asked, this will be needed when adding the certificate to certmgr.</p>
 </li>
@@ -1120,16 +1116,16 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 </li>
 <li>
 <p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - Encryptor</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Encryptor&#34;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Encryptor&#34;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>In the Windows PowerShell (x64) window, run the following command to import the module:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">Import-Module</span> <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Encryptor</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">psd1</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">Import-Module</span> <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Encryptor</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">psd1</span>
+</span></span></code></pre></div></li>
 <li>
 <p>In the Windows PowerShell (x64) window, run the following command to encrypt text, replacing <code>text to encrypt</code> with the text that you want to encrypt:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">ConvertTo-EncryptedText</span> <span style="color:#000">-Text</span> <span style="color:#4e9a06">&#34;text to encrypt&#34;</span>
-</code></pre></div><p>The command will return the encrypted text, beginning with <code>#_</code>. This step can be repeated for any texts that need to be encrypted.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">ConvertTo-EncryptedText</span> <span style="color:#000">-Text</span> <span style="color:#4e9a06">&#34;text to encrypt&#34;</span>
+</span></span></code></pre></div><p>The command will return the encrypted text, beginning with <code>#_</code>. This step can be repeated for any texts that need to be encrypted.</p>
 
 
 <div class="alert alert-primary" role="alert">
@@ -1576,22 +1572,22 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 
 
 <div class="tab-content" id="tabs-3-content"><div class="tab-pane fade show active"
-        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
-<span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-ClientCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-ClientCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
-        </code></pre></div></div>
+        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ClientCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ClientCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
+</span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
-<span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-SkipLoadBalancer</span> <span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
-        </code></pre></div></div>
+        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-SkipLoadBalancer</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span>
+</span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   
 </div>
 <table>
@@ -1637,12 +1633,12 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 </li>
 <li>
 <p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Test <code>Cortex.Innovation.Update.Certificates.ps1</code> by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-WhatIf</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-WhatIf</span>
+</span></span></code></pre></div></li>
 <li>
 <p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.</p>
 </li>
@@ -1659,8 +1655,8 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 <ol>
 <li>
 <p>Update the certificates for the Application Services and the required infrastructure by running the following command (<code>Tee-Object</code> will write output to both the PowerShell console and a log file, the <code>FilePath</code> value can be changed if required):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-app-certificate-update-log.txt&#34;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Update</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Certificates</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-app-certificate-update-log.txt&#34;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.</p>
 </li>
@@ -1688,11 +1684,11 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 <p>Navigate to <code>https://server.domain.com:9080/Explorer</code>, where <code>server.domain.com</code> is the fully qualified domain name of the server. Replace <code>9080</code> with new <code>httpGatewayEndpointPort</code> value if it was changed during configuration.</p>
 <p>The screen should resemble that in the following figure:
 
-<figure>
-    <img src=" /images/Service%20Fabric%20Explorer%20-%20Single.png "/> <figcaption>
-            <h4>Healthy Service Fabric Explorer Cluster</h4>
-        </figcaption>
-</figure>
+    <figure>
+        <img src=" /images/Service%20Fabric%20Explorer%20-%20Single.png "/> <figcaption>
+                <h4>Healthy Service Fabric Explorer Cluster</h4>
+            </figcaption>
+    </figure>
 </p>
 <p>The status circles should be entirely green - this indicates that the node and all services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on.</p>
 <p>If there is still a warning that the certificate is close to expiring, wait a few hours and refresh the page and it should go away. It can take some time for the certificate to rollover.</p>
@@ -2275,7 +2271,7 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/text/get-index/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/text/get-index/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-40037d3aac24c504ad41d9454230f614">Get Index Of Text</a></li>
+<li>1: <a href="#pg-0adabb0dce4bb35ff56c593bee1dfdfb">Get Index Of Text</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-4ac958bc15e55f8fe0463288c895a9df">Get Indexes Of Text</a></li>
+<li>2: <a href="#pg-77109844ba82f39da9566a0a1cdc3c18">Get Indexes Of Text</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-40037d3aac24c504ad41d9454230f614">1 - Get Index Of Text</h1>
+	<h1 id="pg-0adabb0dce4bb35ff56c593bee1dfdfb">1 - Get Index Of Text</h1>
     <div class="lead">Gets the index of the specified occurrence of a text in another text.</div>
 	
 <figure class="block-icon">
@@ -268,8 +268,8 @@ This the multi-page printable view of this section.
 <h4 id="result">Result</h4>
 <p>An <a href="#occurrence">Occurrence</a> of <code>1</code> means get the index of the first occurrence; <code>2</code> means second etc.</p>
 <p>As this example is performing a <a href="/docs/reference/concepts/working-with/text/equality/#ordinal">case-sensitive, culture-insensitive</a> comparison of text, <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> only contains the text <code>&quot;The&quot;</code> once; <code>&quot;the&quot;</code> has a different case so does not match. Therefore, the variable <code>($)Index</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">0</span>
-</code></pre></div><p>where <code>0</code> indicates the index of the first character of the first and only occurrence matching <code>&quot;The&quot;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span>
+</span></span></code></pre></div><p>where <code>0</code> indicates the index of the first character of the first and only occurrence matching <code>&quot;The&quot;</code>.</p>
 <hr>
 <h3 id="get-the-index-of-the-last-occurrence-of-text-to-find-ordinal-ignore-case">Get the Index of the last Occurrence of Text To Find (Ordinal Ignore Case)</h3>
 <p>This example will get the index of the last occurrence of <code>&quot;The&quot;</code> in <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -319,8 +319,8 @@ This the multi-page printable view of this section.
 <h4 id="result-1">Result</h4>
 <p>An <a href="#occurrence">Occurrence</a> of <code>-1</code> means get the index of the last occurrence; <code>2</code> means second last etc.</p>
 <p>As this example is performing a <a href="/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case">case-insensitive, culture-insensitive</a> comparison of text, <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains the text <code>&quot;The&quot;</code> twice; the first occurrence is <code>&quot;The&quot;</code> and the second and last occurrence is <code>&quot;the&quot;</code>. Therefore, the variable <code>($)Index</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">31</span>
-</code></pre></div><p>where <code>31</code> indicates the index of the first character of the last matching occurrence, <code>&quot;the&quot;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">31</span>
+</span></span></code></pre></div><p>where <code>31</code> indicates the index of the first character of the last matching occurrence, <code>&quot;the&quot;</code>.</p>
 <hr>
 <h3 id="text-does-not-contain-text-to-find">Text does not contain Text To Find</h3>
 <p>This example will attempt to get the index of the first occurrence of <code>&quot;slow&quot;</code> in <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -369,8 +369,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-2">Result</h4>
 <p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain the text <code>&quot;slow&quot;</code>, so the index cannot be found. Therefore, the variable <code>($)Index</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">-1</span>
-</code></pre></div><p>where <code>-1</code> indicates that there are no matching occurrences.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">-1</span>
+</span></span></code></pre></div><p>where <code>-1</code> indicates that there are no matching occurrences.</p>
 <hr>
 <h3 id="get-the-index-of-the-first-occurrence-matching-the-pattern-in-text-to-find">Get the Index of the first Occurrence matching the pattern in Text To Find</h3>
 <p>This example will get the index of the first occurrence of text matching the pattern <code>&quot;?he&quot;</code> from <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -420,8 +420,8 @@ This the multi-page printable view of this section.
 <h4 id="result-3">Result</h4>
 <p>An <a href="#occurrence">Occurrence</a> of <code>1</code> means get the index of the first occurrence; <code>2</code> means second etc.</p>
 <p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains two occurrences that match the pattern <code>&quot;?he&quot;</code>; the first occurrence is <code>&quot;The&quot;</code> and the second occurrence is <code>&quot;the&quot;</code>. Therefore, the variable <code>($)Index</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">0</span>
-</code></pre></div><p>where <code>0</code> indicates the index of the first character of the first occurrence matching the pattern <code>&quot;?he&quot;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span>
+</span></span></code></pre></div><p>where <code>0</code> indicates the index of the first character of the first occurrence matching the pattern <code>&quot;?he&quot;</code>.</p>
 <hr>
 <h3 id="get-the-index-of-the-last-occurrence-matching-the-regex-in-text-to-remove">Get the Index of the last Occurrence matching the regex in Text To Remove</h3>
 <p>This example will get the index of the last occurrence of text matching the regex <code>&quot;(fox|dog)&quot;</code> from <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -471,8 +471,8 @@ This the multi-page printable view of this section.
 <h4 id="result-4">Result</h4>
 <p>An <a href="#occurrence">Occurrence</a> of <code>-1</code> means get the index of the last occurrence; <code>2</code> means second last etc.</p>
 <p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains two occurrences that match the regex <code>&quot;(fox|dog)&quot;</code>; the first occurrence is <code>&quot;fox&quot;</code> and the second and last occurrence is <code>&quot;dog&quot;</code>. Therefore, the variable <code>($)Index</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">40</span>
-</code></pre></div><p>where <code>0</code> indicates the index of the first character of the last occurrence matching the regex <code>&quot;(fox|dog)&quot;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">40</span>
+</span></span></code></pre></div><p>where <code>0</code> indicates the index of the first character of the last occurrence matching the regex <code>&quot;(fox|dog)&quot;</code>.</p>
 <hr>
 <h2 id="properties-5">Properties</h2>
 <h3 id="text">Text</h3>
@@ -747,7 +747,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-4ac958bc15e55f8fe0463288c895a9df">2 - Get Indexes Of Text</h1>
+	<h1 id="pg-77109844ba82f39da9566a0a1cdc3c18">2 - Get Indexes Of Text</h1>
     <div class="lead">Gets the indexes of all occurrences of a text in another text.</div>
 	
 <figure class="block-icon">
@@ -803,8 +803,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>As this example is performing a <a href="/docs/reference/concepts/working-with/text/equality/#ordinal">case-sensitive, culture-insensitive</a> comparison of text, <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> only contains the text <code>&quot;The&quot;</code> once; <code>&quot;the&quot;</code> has a different case so does not match. Therefore, the variable <code>($)Indexes</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>where <code>0</code> indicates the index of the first character of the matching <code>&quot;The&quot;</code> occurrence.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>where <code>0</code> indicates the index of the first character of the matching <code>&quot;The&quot;</code> occurrence.</p>
 <hr>
 <h3 id="get-indexes-of-all-occurrences-of-text-to-find-ordinal-ignore-case">Get Indexes of all occurrences of Text To Find (Ordinal Ignore Case)</h3>
 <p>This example will get the indexes of all occurrences of <code>&quot;The&quot;</code> in <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -848,8 +848,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>As this example is performing a <a href="/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case">case-insensitive, culture-insensitive</a> comparison of text, <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains the text <code>&quot;The&quot;</code> twice; the first occurrence is <code>&quot;The&quot;</code> and the second occurrence is <code>&quot;the&quot;</code>. Therefore, the variable <code>($)Indexes</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">31</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>where <code>0</code> indicates the index of the first character of the matching <code>&quot;The&quot;</code> occurrence, and <code>31</code> indicates the index of the first character of the matching <code>&quot;the&quot;</code> occurrence.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">31</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>where <code>0</code> indicates the index of the first character of the matching <code>&quot;The&quot;</code> occurrence, and <code>31</code> indicates the index of the first character of the matching <code>&quot;the&quot;</code> occurrence.</p>
 <hr>
 <h3 id="text-does-not-contain-text-to-find">Text does not contain Text To Find</h3>
 <p>This example will attempt to get the indexes of all occurrences of <code>&quot;slow&quot;</code> in <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -893,8 +893,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-2">Result</h4>
 <p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> does not contain the text <code>&quot;slow&quot;</code>, so the index cannot be found. Therefore, the variable <code>($)Indexes</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>where <code>-1</code> indicates that there are no matching occurrences.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>where <code>-1</code> indicates that there are no matching occurrences.</p>
 <hr>
 <h3 id="get-indexes-of-all-occurrences-matching-the-pattern-in-text-to-find">Get Indexes of all occurrences matching the pattern in Text To Find</h3>
 <p>This example will get the indexes of all occurrences of text matching the pattern <code>&quot;?he&quot;</code> from <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -938,8 +938,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-3">Result</h4>
 <p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains two occurrences that match the pattern <code>&quot;?he&quot;</code>; the first occurrence is <code>&quot;The&quot;</code> and the second occurrence is <code>&quot;the&quot;</code>. Therefore, the variable <code>($)Indexes</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">31</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>where <code>0</code> indicates the index of the first character of the matching <code>&quot;The&quot;</code> occurrence, and <code>31</code> indicates the index of the first character of the matching <code>&quot;the&quot;</code> occurrence.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">31</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>where <code>0</code> indicates the index of the first character of the matching <code>&quot;The&quot;</code> occurrence, and <code>31</code> indicates the index of the first character of the matching <code>&quot;the&quot;</code> occurrence.</p>
 <hr>
 <h3 id="get-indexes-of-all-occurrences-matching-the-regex-in-text-to-remove">Get Indexes of all occurrences matching the regex in Text To Remove</h3>
 <p>This example will get the indexes of all occurrences of text matching the regex <code>&quot;(fox|dog)&quot;</code> from <code>&quot;The quick brown fox jumps over the lazy dog&quot;</code>.</p>
@@ -983,8 +983,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-4">Result</h4>
 <p><code>&quot;The quick brown fox jumps over the lazy dog&quot;</code> contains two occurrences that match the regex <code>&quot;(fox|dog)&quot;</code>; the first occurrence is <code>&quot;fox&quot;</code> and the second and last occurrence is <code>&quot;dog&quot;</code>. Therefore, the variable <code>($)Indexes</code> will be updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">16</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>where <code>16</code> indicates the index of the first character of the matching <code>&quot;fox&quot;</code> occurrence, and <code>40</code> indicates the index of the first character of the matching <code>&quot;dog&quot;</code> occurrence.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">16</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>where <code>16</code> indicates the index of the first character of the matching <code>&quot;fox&quot;</code> occurrence, and <code>40</code> indicates the index of the first character of the matching <code>&quot;dog&quot;</code> occurrence.</p>
 <hr>
 <h2 id="properties-5">Properties</h2>
 <h3 id="text">Text</h3>
@@ -1375,7 +1375,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

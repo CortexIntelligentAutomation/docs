@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/objects/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/objects/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-4ca65602ebac475e8caeb3aefe7ecb5c">Convert Object</a></li>
+<li>1: <a href="#pg-33a4e211a03217e64c79e660e7b20213">Convert Object</a></li>
 
 
     
@@ -182,7 +182,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.1: <a href="#pg-66d1231c208e02045632a7a0e9734383">Convert Object To Text</a></li>
+<li>1.1: <a href="#pg-b0422f23d1f31e79fbf09a69f1cd31df">Convert Object To Text</a></li>
 
 
     
@@ -194,7 +194,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-463b60d95fd7ba6138277dda295d57e9">Copy Object</a></li>
+<li>2: <a href="#pg-89f3f978a992f6824516a51353710b1e">Copy Object</a></li>
 
 
     
@@ -209,7 +209,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2.1: <a href="#pg-ec911820de8cec2683f48a7f7c4098c8">Copy Object</a></li>
+<li>2.1: <a href="#pg-772e3a67b20739cba4ed7e31743404fd">Copy Object</a></li>
 
 
     
@@ -244,7 +244,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-4ca65602ebac475e8caeb3aefe7ecb5c">1 - Convert Object</h1>
+	<h1 id="pg-33a4e211a03217e64c79e660e7b20213">1 - Convert Object</h1>
     <div class="lead">Convert an object to other data types.</div>
 	
 </div>
@@ -269,7 +269,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-66d1231c208e02045632a7a0e9734383">1.1 - Convert Object To Text</h1>
+	<h1 id="pg-b0422f23d1f31e79fbf09a69f1cd31df">1.1 - Convert Object To Text</h1>
     <div class="lead">Converts an object to text by replacing all <code>{Property}</code> format parameters in a specified format template with the Object&rsquo;s corresponding property value.</div>
 	
 <figure class="block-icon">
@@ -286,16 +286,16 @@ This the multi-page printable view of this section.
 <h2 id="examples">Examples</h2>
 <h3 id="convert-structure-to-text">Convert Structure to Text</h3>
 <p>This example will convert:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;LastPaymentAmount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99.99</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;PercentagePaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.8000</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;PercentageRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.2000</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;TotalPaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">350.99</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;TotalRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">40</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>to text, based on the following format template:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Your latest payment of {LastPaymentAmount:C2} has been received. You have paid {PercentagePaidOff:P0} of your total and have {TotalRemaining:C2} outstanding.&#34;</span>
-</code></pre></div><p>The format parameter <code>{LastPaymentAmount:C2}</code> will display the <code>99.99</code> as U.S currency to two decimal places (i.e. <code>$99.99</code>):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;LastPaymentAmount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99.99</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;PercentagePaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.8000</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;PercentageRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.2000</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;TotalPaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">350.99</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;TotalRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">40</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>to text, based on the following format template:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Your latest payment of {LastPaymentAmount:C2} has been received. You have paid {PercentagePaidOff:P0} of your total and have {TotalRemaining:C2} outstanding.&#34;</span>
+</span></span></code></pre></div><p>The format parameter <code>{LastPaymentAmount:C2}</code> will display the <code>99.99</code> as U.S currency to two decimal places (i.e. <code>$99.99</code>):</p>
 <ul>
 <li><code>LastPaymentAmount</code> - is replaced by the value of the <code>&quot;LastPaymentAmount&quot;</code> property (i.e. <code>99.99</code>).</li>
 <li><code>C</code> - indicates to include the currency symbol for the specified culture (i.e. <code>$</code>).</li>
@@ -348,18 +348,18 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Converting:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;LastPaymentAmount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99.99</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;PercentagePaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.8000</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;PercentageRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.2000</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;TotalPaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">350.99</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;TotalRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">40</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>to text, based on the following format template:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Your latest payment of {LastPaymentAmount:C2} has been received. You have paid {PercentagePaidOff:P0} of your total and have {TotalRemaining:C2} outstanding.&#34;</span>
-</code></pre></div><p>results in the variable <code>($)Text</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Your latest payment of $99.99 has been received. You have paid 80 % of your total and have $40.00 outstanding.&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;LastPaymentAmount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99.99</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;PercentagePaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.8000</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;PercentageRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.2000</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;TotalPaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">350.99</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;TotalRemaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">40</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>to text, based on the following format template:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Your latest payment of {LastPaymentAmount:C2} has been received. You have paid {PercentagePaidOff:P0} of your total and have {TotalRemaining:C2} outstanding.&#34;</span>
+</span></span></code></pre></div><p>results in the variable <code>($)Text</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Your latest payment of $99.99 has been received. You have paid 80 % of your total and have $40.00 outstanding.&#34;</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-1">Properties</h2>
 <h3 id="object">Object</h3>
 <p>The <a href="#object">Object</a> to convert to <a href="#text">Text</a>.</p>
@@ -545,20 +545,20 @@ This the multi-page printable view of this section.
 <p>If <a href="#format-provider">Format Provider</a> is not specified or <code>null</code>, <code>CultureInfo.InvariantCulture</code> will be used; <code>CultureInfo.InvariantCulture</code> is associated with the English language but not with any country/region. For more information, please see <a href="/docs/reference/concepts/working-with/culture/invariant-culture">Invariant Culture rules</a>.</p>
 <h3 id="nested-properties">Nested Properties</h3>
 <p>Format parameters support nested properties, which means given an object like the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;LastPaymentAmount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99.99</span><span style="color:#000;font-weight:bold">,</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;PaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;Percentage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.8000</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;Total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">350.99</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;Remaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;Remaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.2000</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;Total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">40</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>that nested property values such as PaidOff.Total can be accessed. This is done by using the following format parameter syntax:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;{PaidOff.Total}&#34;</span>
-</code></pre></div><h3 id="known-limitations">Known Limitations</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;LastPaymentAmount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99.99</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;PaidOff&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Percentage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.8000</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">350.99</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Remaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Remaining&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.2000</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">40</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>that nested property values such as PaidOff.Total can be accessed. This is done by using the following format parameter syntax:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;{PaidOff.Total}&#34;</span>
+</span></span></code></pre></div><h3 id="known-limitations">Known Limitations</h3>
 <p>Currently the block does not support indexing into properties (i.e. <code>ListProperty[0]</code> or <code>DictionaryProperty[&quot;key&quot;]</code>).</p>
 
 </div>
@@ -579,7 +579,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-463b60d95fd7ba6138277dda295d57e9">2 - Copy Object</h1>
+	<h1 id="pg-89f3f978a992f6824516a51353710b1e">2 - Copy Object</h1>
     <div class="lead">Copy an object.</div>
 	
 </div>
@@ -604,7 +604,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-ec911820de8cec2683f48a7f7c4098c8">2.1 - Copy Object</h1>
+	<h1 id="pg-772e3a67b20739cba4ed7e31743404fd">2.1 - Copy Object</h1>
     <div class="lead">Copies an Object.</div>
 	
 <figure class="block-icon">
@@ -645,19 +645,19 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Making a copy of <code>[[1, 2, 3], [4, 5, 6]]</code> results in the variable <code>($)Copy</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">3</span>
-    <span style="color:#000;font-weight:bold">],</span> 
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">6</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>Note that <code>($)Copy</code> is an exact copy. If <code>($)Copy</code> has new items added to it, items updated in it, or items removed from it, the original that <code>($)Copy</code> was copied from will not be affected.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">6</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>Note that <code>($)Copy</code> is an exact copy. If <code>($)Copy</code> has new items added to it, items updated in it, or items removed from it, the original that <code>($)Copy</code> was copied from will not be affected.</p>
 <hr>
 <h2 id="properties-1">Properties</h2>
 <h3 id="object">Object</h3>
@@ -901,7 +901,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

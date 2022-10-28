@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/date-and-time/get-date-time/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/date-and-time/get-date-time/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-af4c7f82d518ee47fe8612c8e2afc7d2">Get Current Date Time</a></li>
+<li>1: <a href="#pg-30118f37b584d2211b6ece7dfcf1c234">Get Current Date Time</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-afac9eeff9c75c4eb064ee2998e5693a">Get Date Time Component</a></li>
+<li>2: <a href="#pg-3ee1789fac26ed28144ac135faa21dc5">Get Date Time Component</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-af4c7f82d518ee47fe8612c8e2afc7d2">1 - Get Current Date Time</h1>
+	<h1 id="pg-30118f37b584d2211b6ece7dfcf1c234">1 - Get Current Date Time</h1>
     <div class="lead">Gets the current Date Time.</div>
 	
 <figure class="block-icon">
@@ -240,8 +240,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Getting the current Date Time will result in the variable <code>($)DateTime</code> being set to a <a href="/docs/reference/data-types/date-and-time/datetimeoffset">DateTimeOffset</a> representing the current Date Time (including a UTC time offset). Its text representation will be in the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard">ISO 8601 Standard</a>, which can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;2021-11-05T08:48:08.0307614+00:00&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;2021-11-05T08:48:08.0307614+00:00&#34;</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-1">Properties</h2>
 <h3 id="date-time">Date Time</h3>
 <p>The current <a href="#date-time">Date Time</a> including a UTC time offset.</p>
@@ -298,7 +298,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-afac9eeff9c75c4eb064ee2998e5693a">2 - Get Date Time Component</h1>
+	<h1 id="pg-3ee1789fac26ed28144ac135faa21dc5">2 - Get Date Time Component</h1>
     <div class="lead">Gets a component (e.g. Year, Month, Day) of a specified Date Time.</div>
 	
 <figure class="block-icon">
@@ -345,8 +345,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Getting the LocalDateTime (GMT) of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to a <a href="/docs/reference/data-types/date-and-time/datetime">DateTime</a> value. Its text representation will be in the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard">ISO 8601 Standard</a>, which can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;2021-12-31T10:00:00+00:00&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;2021-12-31T10:00:00+00:00&#34;</span>
+</span></span></code></pre></div><hr>
 <h3 id="utcdatetime">UtcDateTime</h3>
 <p>This example will get the UTCDateTime of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-1">Properties</h4>
@@ -378,8 +378,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Getting the UTCDateTime of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to a <a href="/docs/reference/data-types/date-and-time/datetime">DateTime</a> value. Its text representation will be in the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard">ISO 8601 Standard</a>, which can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;2021-12-31T10:00:00Z&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;2021-12-31T10:00:00Z&#34;</span>
+</span></span></code></pre></div><hr>
 <h3 id="date">Date</h3>
 <p>This example will get the Date component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-2">Properties</h4>
@@ -411,8 +411,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-2">Result</h4>
 <p>Getting the Date component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to a <a href="/docs/reference/data-types/date-and-time/datetime">DateTime</a> value. Its text representation will be in the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard">ISO 8601 Standard</a>, which can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;2021-12-31T00:00:00&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;2021-12-31T00:00:00&#34;</span>
+</span></span></code></pre></div><hr>
 <h3 id="time">Time</h3>
 <p>This example will get the Time component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-3">Properties</h4>
@@ -444,16 +444,16 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-3">Result</h4>
 <p>Getting the Time component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Years&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Months&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Days&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Hours&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Minutes&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Seconds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;Milliseconds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h3 id="year">Year</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Years&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Months&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Days&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Hours&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Minutes&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Seconds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Milliseconds&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="year">Year</h3>
 <p>This example will get the Year component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-4">Properties</h4>
 <table>
@@ -484,8 +484,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-4">Result</h4>
 <p>Getting the Year component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">2021</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2021</span>
+</span></span></code></pre></div><hr>
 <h3 id="month">Month</h3>
 <p>This example will get the Month component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-5">Properties</h4>
@@ -517,8 +517,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-5">Result</h4>
 <p>Getting the Month component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">12</span>
-</code></pre></div><h3 id="day">Day</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">12</span>
+</span></span></code></pre></div><h3 id="day">Day</h3>
 <p>This example will get the Day component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-6">Properties</h4>
 <table>
@@ -549,8 +549,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-6">Result</h4>
 <p>Getting the Day component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">31</span>
-</code></pre></div><h3 id="hour">Hour</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">31</span>
+</span></span></code></pre></div><h3 id="hour">Hour</h3>
 <p>This example will get the Hour component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-7">Properties</h4>
 <table>
@@ -581,8 +581,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-7">Result</h4>
 <p>Getting the Hour component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">5</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">5</span>
+</span></span></code></pre></div><hr>
 <h3 id="minute">Minute</h3>
 <p>This example will get the Minute component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-8">Properties</h4>
@@ -614,8 +614,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-8">Result</h4>
 <p>Getting the Minute component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">0</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span>
+</span></span></code></pre></div><hr>
 <h3 id="second">Second</h3>
 <p>This example will get the Second component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-9">Properties</h4>
@@ -647,8 +647,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-9">Result</h4>
 <p>Getting the Second component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">0</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span>
+</span></span></code></pre></div><hr>
 <h3 id="millisecond">Millisecond</h3>
 <p>This example will get the Millisecond component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-10">Properties</h4>
@@ -680,8 +680,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-10">Result</h4>
 <p>Getting the Millisecond component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">0</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">0</span>
+</span></span></code></pre></div><hr>
 <h3 id="offset">Offset</h3>
 <p>This example will get the Offset component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-11">Properties</h4>
@@ -713,8 +713,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-11">Result</h4>
 <p>Getting the Offset component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/date-and-time/timespan">TimeSpan</a> value with the following text representation:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;-5:00:00&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;-5:00:00&#34;</span>
+</span></span></code></pre></div><hr>
 <h3 id="dayofyear">DayOfYear</h3>
 <p>This example will get the DayOfYear component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-12">Properties</h4>
@@ -746,8 +746,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-12">Result</h4>
 <p>Getting the DayOfYear component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/numbers/int32">Int32</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">365</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">365</span>
+</span></span></code></pre></div><hr>
 <h3 id="dayofweek">DayOfWeek</h3>
 <p>This example will get the DayOfWeek component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset).</p>
 <h4 id="properties-13">Properties</h4>
@@ -779,8 +779,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-13">Result</h4>
 <p>Getting the DayOfWeek component of a Date Time representing 5am on 31st December 2021 (with <code>-5</code> UTC time offset), will result in the variable <code>($)Component</code> being updated to the following <a href="/docs/reference/data-types/date-and-time/dayofweek">DayOfWeek</a> value:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">DayOfWeek.Friday</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">DayOfWeek.Friday</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-14">Properties</h2>
 <h3 id="date-time">Date Time</h3>
 <p>The <a href="#date-time">Date Time</a> to get the specified <a href="#component-type">Component Type</a> from.</p>
@@ -1073,7 +1073,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

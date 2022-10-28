@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/common/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/common/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-d7bfe42b101579593a7d3d592cda17cd">Property</a></li>
+<li>1: <a href="#pg-c6f4ba1b0b15d50f652fb639dc3476cd">Property</a></li>
 
 
     
@@ -182,7 +182,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.1: <a href="#pg-d0e6514bec303d789c3325b9faddec32">PropertyContainsNullOrEmptyItemException</a></li>
+<li>1.1: <a href="#pg-f438e5ef7dd8361b5032f634a56a0bf0">PropertyContainsNullOrEmptyItemException</a></li>
 
 
     
@@ -190,7 +190,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.2: <a href="#pg-db6505b9d0e9d3d474974fc7594ad29d">PropertyEmptyException</a></li>
+<li>1.2: <a href="#pg-8d00d62829693f0f56ef6492c59c1734">PropertyEmptyException</a></li>
 
 
     
@@ -198,7 +198,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.3: <a href="#pg-a0417f3dd793f4c621bd204e6e6f7792">PropertyItemCountException</a></li>
+<li>1.3: <a href="#pg-325ba9e574c9367b8edf8e8ce8e98988">PropertyItemCountException</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.4: <a href="#pg-cedb155f794c20d19b78c43902513240">PropertyNullException</a></li>
+<li>1.4: <a href="#pg-b8a60c7009c805a16c040224bf45c537">PropertyNullException</a></li>
 
 
     
@@ -214,13 +214,21 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.5: <a href="#pg-4948650e760d44de014ae89ef8ed4fff">PropertyValueOutOfRangeException</a></li>
+<li>1.5: <a href="#pg-fbe13bed53e3b1ad8a6e0935cc0f5535">PropertyValueOutOfRangeException</a></li>
 
 
     
   
 
     </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-a375fb871f95ec5b1417e6336d726a9f">UnencryptedTextException</a></li>
+
+
     
   
 
@@ -249,7 +257,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-d7bfe42b101579593a7d3d592cda17cd">1 - Property</h1>
+	<h1 id="pg-c6f4ba1b0b15d50f652fb639dc3476cd">1 - Property</h1>
     <div class="lead">Exceptions related to issues with Block Properties</div>
 	
 </div>
@@ -274,7 +282,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-d0e6514bec303d789c3325b9faddec32">1.1 - PropertyContainsNullOrEmptyItemException</h1>
+	<h1 id="pg-f438e5ef7dd8361b5032f634a56a0bf0">1.1 - PropertyContainsNullOrEmptyItemException</h1>
     <div class="lead">The exception thrown when a property is provided with a value that contains at least one item that is either <code>null</code> or empty, but the item is required to have a value.</div>
 	<h1 id="propertycontainsnulloremptyitemexception">PropertyContainsNullOrEmptyItemException</h1>
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException)</p>
@@ -285,10 +293,10 @@ This the multi-page printable view of this section.
 <p>A <code>null</code> or empty item is contained in the value that was provided for the <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a>.</p>
 <h4 id="message-format">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">
-<span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; contains at least one null or empty value; it must only contain values that are not null or empty.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; contains at least one null or empty value; it must only contain values that are not null or empty.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;property-name&gt;</code> is the name of the property.</li>
 </ul>
@@ -386,7 +394,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-db6505b9d0e9d3d474974fc7594ad29d">1.2 - PropertyEmptyException</h1>
+	<h1 id="pg-8d00d62829693f0f56ef6492c59c1734">1.2 - PropertyEmptyException</h1>
     <div class="lead">The exception thrown when a property is provided with an empty value, but a non-empty value is required.</div>
 	<h1 id="propertyemptyexception">PropertyEmptyException</h1>
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyEmptyException)</p>
@@ -397,9 +405,9 @@ This the multi-page printable view of this section.
 <p>An <a href="/docs/reference/glossary/a-e/#empty">empty</a> value was provided for the <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a>.</p>
 <h4 id="message-format">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; is empty; it must be provided a value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; is empty; it must be provided a value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;property-name&gt;</code> is the name of the property.</li>
 </ul>
@@ -484,6 +492,11 @@ This the multi-page printable view of this section.
 <li><a href="/docs/reference/blocks/date-and-time/convert-date-time/convert-text-to-date-time-block">Convert Text To Date Time</a></li>
 </ul>
 </li>
+<li>Email
+<ul>
+<li><a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block">Send Email Using SMTP Server</a></li>
+</ul>
+</li>
 <li>Exceptions
 <ul>
 <li><a href="/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-messages-block">Handle Block Exception Matching Messages</a></li>
@@ -560,7 +573,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-a0417f3dd793f4c621bd204e6e6f7792">1.3 - PropertyItemCountException</h1>
+	<h1 id="pg-325ba9e574c9367b8edf8e8ce8e98988">1.3 - PropertyItemCountException</h1>
     <div class="lead">The exception thrown when the values provided for two properties are expected to contain the same number of items, but don&rsquo;t.</div>
 	<h1 id="propertyitemcountexception">PropertyItemCountException</h1>
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyItemCountException)</p>
@@ -571,11 +584,11 @@ This the multi-page printable view of this section.
 <p>Values provided for two <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">properties</a> are expected to contain the same number of items, but don&rsquo;t.</p>
 <h4 id="message-format">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Invalid &#39;&lt;second-property-name&gt;&#39; provided.
-</span><span style="color:#4e9a06">There are &lt;items-in-second-property&gt; items in &#39;&lt;second-property-name&gt;&#39; and &lt;items-in-first-property&gt; items in &#39;&lt;first-property-name&gt;&#39;.
-</span><span style="color:#4e9a06">The number of items in &#39;&lt;second-property-name&gt;&#39; must be the same as the number of items in &#39;&lt;first-property-name&gt;&#39;.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Invalid &#39;&lt;second-property-name&gt;&#39; provided.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">There are &lt;items-in-second-property&gt; items in &#39;&lt;second-property-name&gt;&#39; and &lt;items-in-first-property&gt; items in &#39;&lt;first-property-name&gt;&#39;.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">The number of items in &#39;&lt;second-property-name&gt;&#39; must be the same as the number of items in &#39;&lt;first-property-name&gt;&#39;.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;first-property-name&gt;</code> is the name of the first property.</li>
 <li><code>&lt;second-property-name&gt;</code> is the name of the second property.</li>
@@ -686,7 +699,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-cedb155f794c20d19b78c43902513240">1.4 - PropertyNullException</h1>
+	<h1 id="pg-b8a60c7009c805a16c040224bf45c537">1.4 - PropertyNullException</h1>
     <div class="lead">The exception thrown when a property is provided with a <code>null</code> value, but a non-null value is required.</div>
 	<h1 id="propertynullexception">PropertyNullException</h1>
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyNullException)</p>
@@ -697,9 +710,9 @@ This the multi-page printable view of this section.
 <p>A <code>null</code> value was provided for the <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> when a non-null was required.</p>
 <h4 id="message-format">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; is null; it must be provided with a non-null value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; is null; it must be provided with a non-null value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;property-name&gt;</code> is the name of the property.</li>
 </ul>
@@ -821,6 +834,11 @@ This the multi-page printable view of this section.
 <li><a href="/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-name-block">Handle Block Exception Matching Type Name</a></li>
 <li><a href="/docs/reference/blocks/exceptions/handle-block-exception/handle-block-exception-matching-type-names-block">Handle Block Exception Matching Type Names</a></li>
 <li><a href="/docs/reference/blocks/exceptions/rethrow-exception/rethrow-exception-block">Rethrow Exception</a></li>
+</ul>
+</li>
+<li>Email
+<ul>
+<li><a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block">Send Email Using SMTP Server</a></li>
 </ul>
 </li>
 <li>Files &amp; Folders
@@ -951,7 +969,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-4948650e760d44de014ae89ef8ed4fff">1.5 - PropertyValueOutOfRangeException</h1>
+	<h1 id="pg-fbe13bed53e3b1ad8a6e0935cc0f5535">1.5 - PropertyValueOutOfRangeException</h1>
     <div class="lead">The exception thrown when a property is provided with a value that falls outside its accepted range.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">PropertyValueOutOfRangeException</h1>
 <p class="namespace">(Cortex.Exceptions.Common.Property.PropertyValueOutOfRangeException)</p>
@@ -971,11 +989,11 @@ This the multi-page printable view of this section.
 <p>An operation such as getting, setting or removing one or more items from an empty collection <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> was performed.</p>
 <h4 id="message-format">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Invalid &#39;&lt;property-name&gt;&#39; provided.
-</span><span style="color:#4e9a06">There are no items in &#39;&lt;collection-property-name&gt;&#39;.
-</span><span style="color:#4e9a06">Check that &#39;&lt;collection-property-name&gt;&#39; is not empty.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Invalid &#39;&lt;property-name&gt;&#39; provided.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">There are no items in &#39;&lt;collection-property-name&gt;&#39;.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Check that &#39;&lt;collection-property-name&gt;&#39; is not empty.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;collection-property-name&gt;</code> is the name of the empty collection <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a>.</li>
 <li><code>&lt;property-name&gt;</code> is the name of another <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> used to perform the get, set or remove operation (e.g. <code>index</code>, <code>indexes</code>, <code>count</code> etc.).</li>
@@ -986,10 +1004,10 @@ This the multi-page printable view of this section.
 <p>An operation such as adding, getting or removing text from a <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) text <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> was performed.</p>
 <h4 id="message-format-1">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Invalid &#39;&lt;property-name&gt;&#39; provided.
-</span><span style="color:#4e9a06">Check that &#39;&lt;property-name&gt;&#39; is not null or empty.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Invalid &#39;&lt;property-name&gt;&#39; provided.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Check that &#39;&lt;property-name&gt;&#39; is not null or empty.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;property-name&gt;</code> is the name of the <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) text <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a>.</li>
 </ul>
@@ -999,21 +1017,21 @@ This the multi-page printable view of this section.
 <p>A <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> was set to an invalid value.</p>
 <h4 id="message-format-2">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> can be one of the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; given was &lt;invalid-value&gt;; it must be a value between &lt;minimum-allowed-value&gt; and &lt;maximum-allowed-value&gt;.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>or</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; given was &lt;invalid-value&gt;; it must be a value between &lt;minimum-allowed-value&gt; and &lt;maximum-allowed-value&gt; (&lt;calculation-of-maximum-allowed-value&gt;).
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>or</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;&#39;&lt;related-property-name&gt;&#39; given was &lt;related-property-value&gt; and &#39;&lt;property-name&gt;&#39; given was &lt;invalid-value&gt;.
-</span><span style="color:#4e9a06">The &#39;&lt;property-name&gt;&#39; must be less than or equal to &lt;maximum-allowed-value&gt; (&lt;calculation-of-maximum-allowed-value&gt;).
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>or</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Invalid &#39;&lt;property-name&gt;&#39; provided.
-</span><span style="color:#4e9a06">The values &lt;invalid-value&gt; in &#39;&lt;property-name&gt;&#39; are outside of the expected range.
-</span><span style="color:#4e9a06">Check that the provided values of &#39;&lt;property-name&gt;&#39; are between &lt;minimum-allowed-value&gt; and &lt;maximum-allowed-value&gt;.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; given was &lt;invalid-value&gt;; it must be a value between &lt;minimum-allowed-value&gt; and &lt;maximum-allowed-value&gt;.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;property-name&gt;&#39; given was &lt;invalid-value&gt;; it must be a value between &lt;minimum-allowed-value&gt; and &lt;maximum-allowed-value&gt; (&lt;calculation-of-maximum-allowed-value&gt;).
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;related-property-name&gt;&#39; given was &lt;related-property-value&gt; and &#39;&lt;property-name&gt;&#39; given was &lt;invalid-value&gt;.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">The &#39;&lt;property-name&gt;&#39; must be less than or equal to &lt;maximum-allowed-value&gt; (&lt;calculation-of-maximum-allowed-value&gt;).
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Invalid &#39;&lt;property-name&gt;&#39; provided.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">The values &lt;invalid-value&gt; in &#39;&lt;property-name&gt;&#39; are outside of the expected range.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Check that the provided values of &#39;&lt;property-name&gt;&#39; are between &lt;minimum-allowed-value&gt; and &lt;maximum-allowed-value&gt;.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;property-name&gt;</code> is the name of the <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> with the invalid value (e.g. <code>Length</code>, <code>Count</code>, <code>Index</code>).</li>
 <li><code>&lt;invalid-value&gt;</code> is the invalid value of the <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> (e.g. <code>100</code> for non-collection values or <code>100, 200</code> for collection values).</li>
@@ -1029,9 +1047,9 @@ This the multi-page printable view of this section.
 <p>A <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/">property</a> was set to a negative <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> when a positive <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> was required.</p>
 <h4 id="message-format-3">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The provided &#39;TimePeriod&#39; (&lt;time-period-value-as-text&gt;) equates to &lt;time-period-value-as-milliseconds&gt; milliseconds which is invalid; it must be a non-negative value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The provided &#39;TimePeriod&#39; (&lt;time-period-value-as-text&gt;) equates to &lt;time-period-value-as-milliseconds&gt; milliseconds which is invalid; it must be a non-negative value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;time-period-value-as-text&gt;</code> is the <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> value in its text representation (e.g. <code>0.0.0.0:0:0:-10</code>).</li>
 <li><code>&lt;time-period-value-as-milliseconds&gt;</code> is the <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> value represented as total milliseconds (e.g. <code>-10</code>).</li>
@@ -1045,14 +1063,14 @@ This the multi-page printable view of this section.
 <ul>
 <li>If a positive <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> was added</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the addition of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is greater than the maximum of a DateTimeOffset (&lt;maximum-value-of-date-time-offset&gt;).
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the addition of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is greater than the maximum of a DateTimeOffset (&lt;maximum-value-of-date-time-offset&gt;).
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><ul>
 <li>If a negative <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> value was subtracted</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the subtraction of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is greater than the maximum of a DateTimeOffset (&lt;maximum-value-of-date-time-offset&gt;).
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the subtraction of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is greater than the maximum of a DateTimeOffset (&lt;maximum-value-of-date-time-offset&gt;).
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;value-of-date-time-property&gt;</code> is the value of the <a href="/docs/reference/data-types/date-and-time/datetimeoffset">DateTimeOffset</a> in <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard">ISO 8601 format</a> (i.e. <code>2022-07-01T14:00:00.0000000+01:00</code>).</li>
 <li><code>&lt;value-of-time-period-property&gt;</code> is the value of the <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> in text format (i.e. <code>9999.0.0.0:0:0:0</code>).</li>
@@ -1067,14 +1085,14 @@ This the multi-page printable view of this section.
 <ul>
 <li>If a positive <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> was subtracted</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the subtraction of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is less than the minimum of a DateTimeOffset (&lt;minimum-value-of-date-time-offset&gt;).
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the subtraction of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is less than the minimum of a DateTimeOffset (&lt;minimum-value-of-date-time-offset&gt;).
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><ul>
 <li>If a negative <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> value was added</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the addition of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is less than the minimum of a DateTimeOffset (&lt;minimum-value-of-date-time-offset&gt;).
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><p>where:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The provided &#39;DateTimeOffset&#39; (&lt;value-of-date-time-offset-property&gt;) with the addition of the given &#39;TimePeriod&#39; (&lt;value-of-time-period-property&gt;) is less than the minimum of a DateTimeOffset (&lt;minimum-value-of-date-time-offset&gt;).
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><p>where:</p>
 <ul>
 <li><code>&lt;value-of-date-time-property&gt;</code> is the value of the <a href="/docs/reference/data-types/date-and-time/datetimeoffset">DateTimeOffset</a> in <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#iso-8601-standard">ISO 8601 format</a> (i.e. <code>2022-07-01T14:00:00.0000000+01:00</code>).</li>
 <li><code>&lt;value-of-time-period-property&gt;</code> is the value of the <a href="/docs/reference/data-types/date-and-time/timeperiod">TimePeriod</a> in text format (i.e. <code>-9999.0.0.0:0:0:0</code>).</li>
@@ -1215,6 +1233,25 @@ This the multi-page printable view of this section.
     
 	
   
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a375fb871f95ec5b1417e6336d726a9f">2 - UnencryptedTextException</h1>
+    
+	<h1 id="unencryptedtextexception">UnencryptedTextException</h1>
+<p class="namespace">(Cortex.Exceptions.Common.UnencryptedTextException)</p>
+<img src="/images/work-in-progress.jpg">
+</div>
+
+
 
     
 	
@@ -1377,7 +1414,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

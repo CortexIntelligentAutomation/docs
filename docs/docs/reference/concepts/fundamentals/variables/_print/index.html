@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/concepts/fundamentals/variables/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/concepts/fundamentals/variables/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-a691aab5a44a93645e727e863eac5535">What is a Variable?</a></li>
+<li>1: <a href="#pg-9549542fefc2f645fbda9b0e90146212">What is a Variable?</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-5ba01dcd69065d529c950e6bd94df97f">Using Variables</a></li>
+<li>2: <a href="#pg-1d1cca1af41b4e802ef7b8b61f19b8d1">Using Variables</a></li>
 
 
     
@@ -183,7 +183,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>3: <a href="#pg-85cab1929a9e3afd67c536928bec30de">Variable Scopes</a></li>
+<li>3: <a href="#pg-585f391cadc9c4db9f90425a47415fb1">Variable Scopes</a></li>
 
 
     
@@ -214,7 +214,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-a691aab5a44a93645e727e863eac5535">1 - What is a Variable?</h1>
+	<h1 id="pg-9549542fefc2f645fbda9b0e90146212">1 - What is a Variable?</h1>
     <div class="lead">Information regarding the anatomy of a variable, using variables at design and runtime, and variable typing.</div>
 	<h1 id="what-is-a-variable">What is a Variable?</h1>
 <h2 id="summary">Summary</h2>
@@ -270,20 +270,20 @@ This the multi-page printable view of this section.
 <h3 id="variables-with-a-default-value">Variables with a Default Value</h3>
 <p>Variables can be initialised with a default value. The Default Value can be set to any valid expression or literal, but cannot include any variables.</p>
 <p>For example, the following expression is valid as it does not use any variables:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#4e9a06">&#34;Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;&#34;</span>
-</code></pre></div><p>The following expression is invalid as it uses the <code>($)ServerName</code> variable:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#4e9a06">$@&#34;Server={($)ServerName};Database=myDataBase;User Id=myUsername;Password=myPassword;&#34;</span>
-</code></pre></div><h3 id="output-variables-structure">Output Variables Structure</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;&#34;</span>
+</span></span></code></pre></div><p>The following expression is invalid as it uses the <code>($)ServerName</code> variable:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#4e9a06">$@&#34;Server={($)ServerName};Database=myDataBase;User Id=myUsername;Password=myPassword;&#34;</span>
+</span></span></code></pre></div><h3 id="output-variables-structure">Output Variables Structure</h3>
 <p>When any variables have their <code>Is Output Variable?</code> property set to <code>true</code>, they will be returned to the caller as items in a <a href="/docs/reference/data-types/collections/structure">Structure</a> when the flow ends.</p>
 <p>In the following example <code>($)TotalUnreadEmails</code> and <code>($)FoldersWithUnreadEmails</code> are both set as outputs and the following <a href="/docs/reference/data-types/collections/structure">Structure</a> is returned:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;TotalUnreadEmails&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;FoldersWithUnreadEmails&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;Inbox&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">8</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#204a87;font-weight:bold">&#34;Junk&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h2 id="variables-at-design-time">Variables at Design Time</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;TotalUnreadEmails&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">12</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;FoldersWithUnreadEmails&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Inbox&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">8</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Junk&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">4</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="variables-at-design-time">Variables at Design Time</h2>
 <p>The <a href="/docs/guides/cortex-studio/south-panel/#variables-grid">Variables Grid</a> is used to <a href="/docs/guides/cortex-studio/south-panel/#creating-variables">create</a>, <a href="/docs/guides/cortex-studio/south-panel/#viewing-variables">view</a>, <a href="/docs/guides/cortex-studio/south-panel/#modifying-variables">modify</a>, and <a href="/docs/guides/cortex-studio/south-panel/#deleting-variables">delete</a> variables. It is opened by clicking <code>Variables</code> tab at the bottom of <a href="/docs/guides/cortex-studio/">Cortex Studio</a>. For more information see <a href="/docs/guides/cortex-studio/south-panel/#variables-grid">Variables Grid</a>.</p>
 <p>Variables can also be created through the use of the <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/">Variable Editor</a>. For more information see <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables">Creating Variables</a>.</p>
 <h2 id="variables-at-runtime">Variables at Runtime</h2>
@@ -389,7 +389,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-5ba01dcd69065d529c950e6bd94df97f">2 - Using Variables</h1>
+	<h1 id="pg-1d1cca1af41b4e802ef7b8b61f19b8d1">2 - Using Variables</h1>
     <div class="lead">Information regarding using variables in the Variable and Expression editors.</div>
 	<h1 id="using-variables">Using Variables</h1>
 <h2 id="summary">Summary</h2>
@@ -639,7 +639,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-85cab1929a9e3afd67c536928bec30de">3 - Variable Scopes</h1>
+	<h1 id="pg-585f391cadc9c4db9f90425a47415fb1">3 - Variable Scopes</h1>
     <div class="lead">Information regarding variable scopes, including: what they are, creating variables at a specific scope, and changing a variable&rsquo;s scope.</div>
 	<h1 id="variable-scopes">Variable Scopes</h1>
 <h2 id="summary">Summary</h2>
@@ -886,7 +886,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

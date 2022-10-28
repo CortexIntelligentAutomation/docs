@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/files-and-folders/write-file/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/files-and-folders/write-file/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-2987bed79e3c0bb15bd0a0b20b3600f9">Write All Lines</a></li>
+<li>1: <a href="#pg-7dcbca18e6de8c46b10acce5e57235f8">Write All Lines</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-2cd31c2f562fd9db957f2c31c6019d01">Write All Text</a></li>
+<li>2: <a href="#pg-4582b7e5b857af65308f81e9f5915f71">Write All Text</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-2987bed79e3c0bb15bd0a0b20b3600f9">1 - Write All Lines</h1>
+	<h1 id="pg-7dcbca18e6de8c46b10acce5e57235f8">1 - Write All Lines</h1>
     <div class="lead">Writes all specified lines to a file at the given file path.</div>
 	
 <figure class="block-icon">
@@ -223,9 +223,9 @@ This the multi-page printable view of this section.
 <h3 id="write-all-lines-appending-to-the-end-of-the-file">Write all lines, appending to the end of the file</h3>
 <p>This example will append <code>[&quot;New Line 1&quot;, &quot;New Line 2&quot;]</code> to <code>&quot;C:\Source\File.txt&quot;</code>, using UTF-8 encoding without a byte order mark.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains 2 lines:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Original Line 1
-Original Line 2
-</code></pre></div><h4 id="properties">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Original Line 1
+</span></span><span style="display:flex;"><span>Original Line 2
+</span></span></code></pre></div><h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -259,17 +259,17 @@ Original Line 2
 </table>
 <h4 id="result">Result</h4>
 <p>Writing <code>[&quot;New Line 1&quot;, &quot;New Line 2&quot;]</code> to <code>&quot;C:\Source\File.txt&quot;</code> results in the content being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Original Line 1
-Original Line 2
-New Line 1
-New Line 2
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Original Line 1
+</span></span><span style="display:flex;"><span>Original Line 2
+</span></span><span style="display:flex;"><span>New Line 1
+</span></span><span style="display:flex;"><span>New Line 2
+</span></span></code></pre></div><hr>
 <h3 id="write-all-lines-overwriting-the-file-content">Write all lines, overwriting the file content</h3>
 <p>This example will overwrite the content of <code>&quot;C:\Source\File.txt&quot;</code> with <code>[&quot;New Line 1&quot;, &quot;New Line 2&quot;]</code>, using UTF-8 encoding without a byte order mark.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains 2 lines:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Original Line 1
-Original Line 2
-</code></pre></div><h4 id="properties-1">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Original Line 1
+</span></span><span style="display:flex;"><span>Original Line 2
+</span></span></code></pre></div><h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -303,9 +303,9 @@ Original Line 2
 </table>
 <h4 id="result-1">Result</h4>
 <p>Overwriting <code>&quot;C:\Source\File.txt&quot;</code> with <code>[&quot;New Line 1&quot;, &quot;New Line 2&quot;]</code> results in the content being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">New Line 1
-New Line 2
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>New Line 1
+</span></span><span style="display:flex;"><span>New Line 2
+</span></span></code></pre></div><hr>
 <h2 id="properties-2">Properties</h2>
 <h3 id="file-path">File Path</h3>
 <p>The <a href="#file-path">File Path</a> to write all <a href="#lines">Lines</a> to.</p>
@@ -540,7 +540,7 @@ New Line 2
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2cd31c2f562fd9db957f2c31c6019d01">2 - Write All Text</h1>
+	<h1 id="pg-4582b7e5b857af65308f81e9f5915f71">2 - Write All Text</h1>
     <div class="lead">Writes all specified text to a file at the given file path.</div>
 	
 <figure class="block-icon">
@@ -557,9 +557,9 @@ New Line 2
 <h3 id="write-all-text-appending-to-the-end-of-the-file">Write all text, appending to the end of the file</h3>
 <p>This example will append <code>&quot;New Line 1\r\nNew Line 2&quot;</code> to <code>&quot;C:\Source\File.txt&quot;</code>, using UTF-8 encoding without a byte order mark.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Original Line 1
-Original Line 2
-</code></pre></div><h4 id="properties">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Original Line 1
+</span></span><span style="display:flex;"><span>Original Line 2
+</span></span></code></pre></div><h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -593,17 +593,17 @@ Original Line 2
 </table>
 <h4 id="result">Result</h4>
 <p>Writing <code>&quot;New Line 1\r\nNew Line 2&quot;</code> to <code>&quot;C:\Source\File.txt&quot;</code> results in the content being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Original Line 1
-Original Line 2
-New Line 1
-New Line 2
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Original Line 1
+</span></span><span style="display:flex;"><span>Original Line 2
+</span></span><span style="display:flex;"><span>New Line 1
+</span></span><span style="display:flex;"><span>New Line 2
+</span></span></code></pre></div><hr>
 <h3 id="write-all-text-overwriting-the-file-content">Write all text, overwriting the file content</h3>
 <p>This example will overwrite the content of <code>&quot;C:\Source\File.txt&quot;</code> with <code>&quot;New Line 1\r\nNew Line 2&quot;</code>, using UTF-8 encoding without a byte order mark.</p>
 <p>In this example assume <code>&quot;C:\Source\File.txt&quot;</code> contains the following text:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Original Line 1
-Original Line 2
-</code></pre></div><h4 id="properties-1">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Original Line 1
+</span></span><span style="display:flex;"><span>Original Line 2
+</span></span></code></pre></div><h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -637,9 +637,9 @@ Original Line 2
 </table>
 <h4 id="result-1">Result</h4>
 <p>Overwriting <code>&quot;C:\Source\File.txt&quot;</code> with <code>&quot;New Line 1\r\nNew Line 2&quot;</code> results in the content being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">New Line 1
-New Line 2
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>New Line 1
+</span></span><span style="display:flex;"><span>New Line 2
+</span></span></code></pre></div><hr>
 <h2 id="properties-2">Properties</h2>
 <h3 id="file-path">File Path</h3>
 <p>The <a href="#file-path">File Path</a> to write the <a href="#text">Text</a> to.</p>
@@ -1024,7 +1024,7 @@ New Line 2
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

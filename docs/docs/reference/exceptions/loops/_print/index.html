@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/loops/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/loops/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-ae510f52f6c2fdd477d10e527d64985f">InfiniteLoopException</a></li>
+<li>1: <a href="#pg-f8308af95044d533be83aa56a8af44a9">InfiniteLoopException</a></li>
 
 
     
@@ -198,7 +198,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-ae510f52f6c2fdd477d10e527d64985f">1 - InfiniteLoopException</h1>
+	<h1 id="pg-f8308af95044d533be83aa56a8af44a9">1 - InfiniteLoopException</h1>
     <div class="lead">The exception thrown when an infinite loop can occur.</div>
 	<h1 id="infiniteloopexception">InfiniteLoopException</h1>
 <p class="namespace">(Cortex.Exceptions.Loops.InfiniteLoopException)</p>
@@ -218,30 +218,30 @@ This the multi-page printable view of this section.
 <ul>
 <li>If a zero value was provided and a negative value was expected</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided (0) causes an infinite loop. It must be a negative value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided (0) causes an infinite loop. It must be a negative value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><ul>
 <li>If a zero value was provided and a positive value was expected</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided (0) causes an infinite loop. It must be a positive value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><h4 id="how-to-fix">How to fix</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided (0) causes an infinite loop. It must be a positive value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><h4 id="how-to-fix">How to fix</h4>
 <p>Provide a negative or positive value for the increment as instructed by the <a href="#message">Message</a>.</p>
 <h3 id="101">Increment Is Negative</h3>
 <p>A <a href="#category">Category</a> of <code>&quot;Increment&quot;</code>and an <a href="#error-code">Error Code</a> of <code>101</code> indicates that a negative increment value was provided when a positive value was required.</p>
 <h4 id="message-format-1">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided ({NegativeIncrement}) causes an infinite loop. It must be a positive value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><h4 id="how-to-fix-1">How to fix</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided ({NegativeIncrement}) causes an infinite loop. It must be a positive value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><h4 id="how-to-fix-1">How to fix</h4>
 <p>Provide a positive value for the increment as instructed by the <a href="#message">Message</a>.</p>
 <h3 id="102">Increment Is Positive</h3>
 <p>A <a href="#category">Category</a> of <code>&quot;Increment&quot;</code>and an <a href="#error-code">Error Code</a> of <code>102</code> indicates that a positive increment value was provided when a negative value was required.</p>
 <h4 id="message-format-2">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided ({PositiveIncrement}) causes an infinite loop. It must be a negative value.
-</span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
-</code></pre></div><h4 id="how-to-fix-2">How to fix</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The &#39;Increment&#39; provided ({PositiveIncrement}) causes an infinite loop. It must be a negative value.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><h4 id="how-to-fix-2">How to fix</h4>
 <p>Provide a negative value for the increment as instructed by the <a href="#message">Message</a>.</p>
 <h2 id="properties">Properties</h2>
 <h3 id="exception-type">Exception Type</h3>
@@ -517,7 +517,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

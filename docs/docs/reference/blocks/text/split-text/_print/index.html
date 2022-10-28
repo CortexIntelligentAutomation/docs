@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/text/split-text/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/text/split-text/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-781a93d52d8081186adc3c67949aea68">Split Text</a></li>
+<li>1: <a href="#pg-8965d1333d59585f8f4dd15fd59add42">Split Text</a></li>
 
 
     
@@ -198,7 +198,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-781a93d52d8081186adc3c67949aea68">1 - Split Text</h1>
+	<h1 id="pg-8965d1333d59585f8f4dd15fd59add42">1 - Split Text</h1>
     <div class="lead">Splits text into a list of String values, using the given separator to determine where to split.</div>
 	
 <figure class="block-icon">
@@ -248,8 +248,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Splitting <code>&quot;Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday&quot;</code> using a pipe separator (i.e. <code>&quot;|&quot;</code>), results in the variable <code>($)Values</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;Sunday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Monday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Tuesday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Wednesday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Thursday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Friday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Saturday&#34;</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;Sunday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Monday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Tuesday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Wednesday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Thursday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Friday&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Saturday&#34;</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h3 id="split-text-into-a-list-of-string-values-using-a-comma-separator-removing-empty-entries">Split Text into a list of String Values using a comma Separator (removing empty entries)</h3>
 <p>This example will split the text <code>&quot;1,2,3,,&quot;</code> into a list of <a href="/docs/reference/data-types/text/string">String</a> values, using the comma separator (i.e. <code>&quot;,&quot;</code>) to determine where to split, and removing empty entries (i.e. <code>&quot;&quot;</code>).</p>
 <h4 id="properties-1">Properties</h4>
@@ -286,8 +286,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Splitting <code>&quot;1,2,3,,&quot;</code> using a comma separator (i.e. <code>&quot;,&quot;</code>) and removing the last 2 entries which are  empty (i.e. <code>&quot;&quot;</code>), results in the variable <code>($)Values</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h3 id="split-text-into-a-list-of-string-values-using-a-comma-separator-keeping-empty-entries">Split Text into a list of String Values using a comma Separator (keeping empty entries)</h3>
 <p>This example will split the text <code>&quot;1,2,3,,&quot;</code> into a list of <a href="/docs/reference/data-types/text/string">String</a> values, using the comma separator (i.e. <code>&quot;,&quot;</code>) to determine where to split, and keeping empty entries (i.e. <code>&quot;&quot;</code>).</p>
 <h4 id="properties-2">Properties</h4>
@@ -324,8 +324,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-2">Result</h4>
 <p>Splitting <code>&quot;1,2,3,,&quot;</code> using a comma separator (i.e. <code>&quot;,&quot;</code>) and keeping the last 2 entries which are empty, results in the variable <code>($)Values</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;3&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-3">Properties</h2>
 <h3 id="text">Text</h3>
 <p>The <a href="#text">Text</a> to split into <a href="#values">Values</a> using the given <a href="#separator">Separator</a>.</p>
@@ -655,7 +655,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

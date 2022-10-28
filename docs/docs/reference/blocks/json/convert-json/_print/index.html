@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/json/convert-json/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/json/convert-json/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-0e7fe0aae7d4941701315eca784e3bd0">Convert Json To Object</a></li>
+<li>1: <a href="#pg-7cadc4e8c7682345a6a801b7968d7d34">Convert Json To Object</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-2ccb259218bd98a50f09f78358a048a5">Convert Object To Json</a></li>
+<li>2: <a href="#pg-0b476c724a191621981afcfd424297ef">Convert Object To Json</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-0e7fe0aae7d4941701315eca784e3bd0">1 - Convert Json To Object</h1>
+	<h1 id="pg-7cadc4e8c7682345a6a801b7968d7d34">1 - Convert Json To Object</h1>
     <div class="lead">Converts Json to an Object.</div>
 	
 <figure class="block-icon">
@@ -259,38 +259,38 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Converting <code>&quot;[[1, 2, 3], [4, 5, 6]]&quot;</code> to an object results in the variable <code>($)Object</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">3</span>
-    <span style="color:#000;font-weight:bold">],</span> 
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">6</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>As the Json does not include any type information, <code>($)Object</code> will be a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;. This is because when performing the conversion there is no type information to tell the converter that the items in the list are <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt; data types.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">6</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>As the Json does not include any type information, <code>($)Object</code> will be a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;. This is because when performing the conversion there is no type information to tell the converter that the items in the list are <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt; data types.</p>
 <p>See <a href="#convert-json-to-a-list-with-type-information">Convert Json to a List (with Type information)</a> for an example on how to include type information in the Json.</p>
 <hr>
 <h3 id="convert-json-to-a-list-with-type-information">Convert Json to a List (with Type information)</h3>
 <p>This example will convert <code>&quot;[[1, 2, 3], [4, 5, 6]]&quot;</code> into a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt; as above.</p>
 <p>For this to work, type information needs to be included in the Json representation. This can be seen below:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>Realistically, this example is only useful if you have already produced Json including type information by using the <a href="/docs/reference/blocks/json/convert-json/convert-object-to-json-block">Convert Object To Json</a> block. If this is the case, you can then convert it back with the correct data types.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Realistically, this example is only useful if you have already produced Json including type information by using the <a href="/docs/reference/blocks/json/convert-json/convert-object-to-json-block">Convert Object To Json</a> block. If this is the case, you can then convert it back with the correct data types.</p>
 <h4 id="properties-1">Properties</h4>
 <table>
 <thead>
@@ -320,33 +320,33 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Converting:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>to an object results in the variable <code>($)Object</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">3</span>
-    <span style="color:#000;font-weight:bold">],</span> 
-    <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> 
-        <span style="color:#0000cf;font-weight:bold">6</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>As the Json does include type information, <code>($)Object</code> will be a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>to an object results in the variable <code>($)Object</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#0000cf;font-weight:bold">6</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>As the Json does include type information, <code>($)Object</code> will be a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt;.</p>
 <hr>
 <h2 id="properties-2">Properties</h2>
 <h3 id="json">Json</h3>
@@ -507,7 +507,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2ccb259218bd98a50f09f78358a048a5">2 - Convert Object To Json</h1>
+	<h1 id="pg-0b476c724a191621981afcfd424297ef">2 - Convert Object To Json</h1>
     <div class="lead">Converts an Object To Json.</div>
 	
 <figure class="block-icon">
@@ -560,8 +560,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Converting <code>[[1, 2, 3], [4, 5, 6]]</code> to Json results in the variable <code>($)Json</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;[[1, 2, 3],[4, 5, 6]]&#34;</span>
-</code></pre></div><p>As the resultant Json does not include any type information, if this Json was then used as input to the <a href="/docs/reference/blocks/json/convert-json/convert-json-to-object-block">Convert Json To Object</a> block, the resultant object would be a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;[[1, 2, 3],[4, 5, 6]]&#34;</span>
+</span></span></code></pre></div><p>As the resultant Json does not include any type information, if this Json was then used as input to the <a href="/docs/reference/blocks/json/convert-json/convert-json-to-object-block">Convert Json To Object</a> block, the resultant object would be a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/all/object">Object</a>&gt;, rather than a <a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/collections/list-1">List</a>&lt;<a href="/docs/reference/data-types/numbers/int32">Int32</a>&gt;&gt;.</p>
 <p>See <a href="#convert-a-list-to-json-with-type-information">Convert a List To Json (with Type information)</a> for an example on how to include type information in the Json.</p>
 <hr>
 <h3 id="convert-a-list-to-json-with-type-information">Convert a List to Json (with Type information)</h3>
@@ -595,20 +595,20 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Converting <code>[[1, 2, 3], [4, 5, 6]]</code> to its Json representation (including type information) results in the variable <code>($)Json</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">]</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;$values&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-2">Properties</h2>
 <h3 id="object">Object</h3>
 <p>The <a href="#object">Object</a> to convert to <a href="#json">Json</a>.</p>
@@ -907,7 +907,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

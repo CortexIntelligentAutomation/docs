@@ -123,6 +123,10 @@ See [Block Properties > Output Properties][].
 
 Out-of-the-box functionality of a product that works immediately after any installation without any configuration or modification.
 
+### Outlook
+
+Outlook is a free web-based email service provided by Microsoft.
+
 [List]: {{< ref "#list" >}}
 [literal]: {{< ref "#literal" >}}
 [operand]: {{< ref "#operand" >}}

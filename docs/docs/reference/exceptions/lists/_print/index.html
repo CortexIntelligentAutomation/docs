@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/lists/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/lists/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-fd0ec299c28f3c50d23bd8b4055b7346">CannotModifyReadOnlyListException</a></li>
+<li>1: <a href="#pg-824fd7b1da2d1b9e51038db4fb29861a">CannotModifyReadOnlyListException</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-163cd8cc0d1a9f91d29d61425aaa636a">DuplicateValueException</a></li>
+<li>2: <a href="#pg-b4546332ff4865fb824a765bdb7e6a2e">DuplicateValueException</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-fd0ec299c28f3c50d23bd8b4055b7346">1 - CannotModifyReadOnlyListException</h1>
+	<h1 id="pg-824fd7b1da2d1b9e51038db4fb29861a">1 - CannotModifyReadOnlyListException</h1>
     <div class="lead">The exception thrown when trying to modify a read-only list.</div>
 	<h1 id="cannotmodifyreadonlylistexception">CannotModifyReadOnlyListException</h1>
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
@@ -219,18 +219,18 @@ This the multi-page printable view of this section.
 ">IList</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">T</a>&gt; have the option to be read-only.</p>
 </blockquote>
 <p>The format of the exception message is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;The value of &#39;&lt;property-display-name&gt;&#39; cannot be modified.
-</span><span style="color:#4e9a06">This is because the value of &#39;&lt;property-display-name&gt;&#39; is read-only.
-</span><span style="color:#4e9a06">See the CannotModifyReadOnlyListException help page for more information on how to fix this.&#34;</span>
-</code></pre></div><h2 id="how-to-fix">How to fix</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The value of &#39;&lt;property-display-name&gt;&#39; cannot be modified.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">This is because the value of &#39;&lt;property-display-name&gt;&#39; is read-only.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">See the CannotModifyReadOnlyListException help page for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><h2 id="how-to-fix">How to fix</h2>
 <p>If the list was written directly into the block property using an <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions">expression</a>, use a list type that is not read-only, such as <a href="
     
     
     https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1
 ">List</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">T</a>&gt;.</p>
 <p>When using a variable, convert the list to a list that can be written to by using the <code>.ToList()</code> expression like follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSharp" data-lang="CSharp"><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">List</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ToList</span><span style="color:#000;font-weight:bold">()</span>
-</code></pre></div><p>TODO: Confirm if this is all correct - look at cannotmodifyreadonlydictionaryexception for consistency</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">List</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ToList</span><span style="color:#000;font-weight:bold">()</span>
+</span></span></code></pre></div><p>TODO: Confirm if this is all correct - look at cannotmodifyreadonlydictionaryexception for consistency</p>
 
 </div>
 
@@ -246,14 +246,14 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-163cd8cc0d1a9f91d29d61425aaa636a">2 - DuplicateValueException</h1>
+	<h1 id="pg-b4546332ff4865fb824a765bdb7e6a2e">2 - DuplicateValueException</h1>
     <div class="lead">The exception thrown when a list contains duplicate values and shouldn&rsquo;t.</div>
 	<h1 id="duplicatevalueexception">DuplicateValueException</h1>
 <p class="namespace">(Cortex.Exceptions.Lists.DuplicateValueException)</p>
 <p>TODO: The exception thrown when&hellip;</p>
 <p>The format of the exception message is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">TODO:</span> <span style="color:#a40000">Format</span>
-</code></pre></div><h2 id="how-to-fix">How to fix</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">TODO:</span> <span style="color:#a40000">Format</span>
+</span></span></code></pre></div><h2 id="how-to-fix">How to fix</h2>
 <p>TODO: How to fix&hellip;</p>
 
 </div>
@@ -421,7 +421,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

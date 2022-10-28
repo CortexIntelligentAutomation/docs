@@ -41,6 +41,10 @@ Azure Functions is an event driven serverless solution from Microsoft. Instead o
 
 ## B
 
+### BCC
+
+Blind Carbon Copy (BCC) is a way of sending copies of an email to other people. Unlike [CC][] recipients, the other recipients of the email will not be able to see who recieved the email via BCC.
+
 ### Bit
 
 A bit is the most basic unit of information in computing, and represents a logical state with one of two possible values; most commonly represented as 1 or 0.
@@ -108,6 +112,10 @@ The process of explicitly converting one [data type][] to another.
 See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [Cortex][] [platform][] for writing simple [expressions][Expression] and more complex [code][].
 
 Also see [Explicit Cast][] for more information.
+
+### CC
+
+Carbon Copy (CC) is a way of sending copies of an email to other people. The other recipients of the email will be able to see who recieved the email via CC.
 
 ### CI/CD
 
@@ -208,6 +216,10 @@ If something is culture-sensitive, it means that it does get affected by culture
 The current culture used by the executing thread; it determines the default format for dates, times, numbers, currency values, the sorting order of text, casing conventions, and string comparisons.
 
 For more detailed information about Culture, see [Working With > Current Culture][].
+
+### CRL
+
+Certificate Revocation List (CRL) is a list of certificates that have been revoked by the issuing certificate authority prior to their actual/assigned expiration date. It is essentially a list of certificates that should no longer be trusted.
 
 ## D
 
@@ -341,6 +353,7 @@ For more detailed information about the Expression Editor, see [Cortex Studio > 
 [Block Property]: {{< ref "#block-property" >}}
 [C#]: {{< ref "#c-1" >}}
 [Cast]: {{< ref "#cast" >}}
+[CC]: {{< ref "#cc" >}}
 [Code]: {{< ref "#code" >}}
 [Concurrent]: {{< ref "#concurrent" >}}
 [Continuous Integration]: {{< ref "#continuous-integration" >}}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/flows/execution/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/exceptions/flows/execution/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-31a9e0cef0c1699c048f679e43d29f2a">InvalidInputVariablesException</a></li>
+<li>1: <a href="#pg-7923f1f81639e049733a0581b6269dfe">InvalidInputVariablesException</a></li>
 
 
     
@@ -198,7 +198,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-31a9e0cef0c1699c048f679e43d29f2a">1 - InvalidInputVariablesException</h1>
+	<h1 id="pg-7923f1f81639e049733a0581b6269dfe">1 - InvalidInputVariablesException</h1>
     <div class="lead">The exception thrown when trying to run a flow with invalid input variables.</div>
 	<h1 id="invalidinputvariablesexception">InvalidInputVariablesException</h1>
 <p class="namespace">(Cortex.Exceptions.Flows.Execution.InvalidInputVariablesException)</p>
@@ -209,22 +209,22 @@ This the multi-page printable view of this section.
 <p>This exception is thrown when a <a href="/docs/reference/concepts/fundamentals/flows/what-is-a-flow">flow</a> is run and there are missing <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable">Input Variables</a>; any missing variables will be shown in the <a href="#invalidvariableerrors">InvalidVariableErrors</a> property.</p>
 <h4 id="message-format">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Couldn&#39;t initialize variable store because of invalid input variables.&#34;</span>
-</code></pre></div><h4 id="how-to-fix">How to fix</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Couldn&#39;t initialize variable store because of invalid input variables.&#34;</span>
+</span></span></code></pre></div><h4 id="how-to-fix">How to fix</h4>
 <p>Add the variables referenced in <a href="#invalidvariableerrors">InvalidVariableErrors</a>.</p>
 <h3 id="extra-input-variables">Extra Input Variables</h3>
 <p>This exception is thrown when a <a href="/docs/reference/concepts/fundamentals/flows/what-is-a-flow">flow</a> is run and extra <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable">Input Variables</a> have been provided; any extra variables will be shown in the <a href="#invalidvariableerrors">InvalidVariableErrors</a> property.</p>
 <h4 id="message-format-1">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Couldn&#39;t initialize variable store because of invalid input variables.&#34;</span>
-</code></pre></div><h4 id="how-to-fix-1">How to fix</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Couldn&#39;t initialize variable store because of invalid input variables.&#34;</span>
+</span></span></code></pre></div><h4 id="how-to-fix-1">How to fix</h4>
 <p>Remove the variables referenced in <a href="#invalidvariableerrors">InvalidVariableErrors</a>.</p>
 <h3 id="input-variables-of-an-invalid-type">Input Variables of an Invalid Type</h3>
 <p>This exception is thrown when a <a href="/docs/reference/concepts/fundamentals/flows/what-is-a-flow">flow</a> is run and there are <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable">Input Variables</a> that are of an invalid type; any variables with an invalid type will be shown in the <a href="#invalidvariableerrors">InvalidVariableErrors</a> property.</p>
 <h4 id="message-format-2">Message Format</h4>
 <p>The format of the <a href="#message">Message</a> is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Couldn&#39;t initialize variable store because of invalid input variables.&#34;</span>
-</code></pre></div><h4 id="how-to-fix-2">How to fix</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Couldn&#39;t initialize variable store because of invalid input variables.&#34;</span>
+</span></span></code></pre></div><h4 id="how-to-fix-2">How to fix</h4>
 <p>Ensure the value provided for the variables referenced in <a href="#invalidvariableerrors">InvalidVariableErrors</a> is either the same type as, or can be implicitly cast to the type defined in the default value for that <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable">Input Variable</a>.</p>
 <h2 id="properties">Properties</h2>
 <h3 id="exception-type">Exception Type</h3>
@@ -479,7 +479,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

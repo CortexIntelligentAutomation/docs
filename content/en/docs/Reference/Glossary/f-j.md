@@ -62,6 +62,10 @@ An example of a generic data type is [List&lt;TItem&gt;][] where TItem is a plac
 - List&lt;int&gt; and List&lt;string&gt; which are [homogenous][] lists that can only contain integers and strings respectively
 - List&lt;object&gt; and List&lt;dynamic&gt; are [heterogenous][] lists that can contain multiple data types
 
+### Gmail
+
+Gmail is a free web-based email service provided by Google.
+
 ### GUI
 
 GUI stands for "Graphical User Interface". It is used to graphically display information and represent user interactions with a system, without the need for typing commands.
@@ -97,6 +101,10 @@ Some common and popular examples of IDE's include:
 * Visual Studio
 * VSCode
 * Eclipse
+
+### IMAP
+
+Internet Messaging Access Protocol (IMAP) in an internet protocol used by email clients to retrieve email messages from a mail server.
 
 ### Immutable
 

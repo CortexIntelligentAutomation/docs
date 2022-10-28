@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/text/format-text/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/text/format-text/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-495deb53e62eaeb1448aadfdf11be316">Format Text With Value</a></li>
+<li>1: <a href="#pg-3e95a7197729907c28e0a8eff705f50d">Format Text With Value</a></li>
 
 
     
@@ -175,7 +175,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-dc477d5fbb607e1a274adaae53c4403b">Format Text With Values</a></li>
+<li>2: <a href="#pg-e6b42f60b6243569693f5f7cabb35b14">Format Text With Values</a></li>
 
 
     
@@ -206,7 +206,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-495deb53e62eaeb1448aadfdf11be316">1 - Format Text With Value</h1>
+	<h1 id="pg-3e95a7197729907c28e0a8eff705f50d">1 - Format Text With Value</h1>
     <div class="lead">Formats text by replacing all <code>{0}</code> format parameters in a specified format template with a given value.</div>
 	
 <figure class="block-icon">
@@ -256,8 +256,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Formatting <code>&quot;Hello {0}&quot;</code> with <code>&quot;world!&quot;</code> results in the variable <code>($)Text</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Hello world!&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Hello world!&#34;</span>
+</span></span></code></pre></div><hr>
 <h3 id="double-value-using-american-english-en-us">Double Value using American English (&ldquo;en-US&rdquo;)</h3>
 <p>This example will format <code>&quot;Your final bill is {0:C2}&quot;</code> with <code>99.99</code>.</p>
 <p>The format parameter <code>{0:C2}</code> will display the double value as U.S currency to two decimal places (i.e. <code>$99.99</code>):</p>
@@ -301,8 +301,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Formatting <code>&quot;Your final bill is {0:C2}&quot;</code> with <code>99.99</code> results in the variable <code>($)Text</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Your final bill is $99.99&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Your final bill is $99.99&#34;</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-2">Properties</h2>
 <h3 id="format-template">Format Template</h3>
 <p><a href="#format-template">Format Template</a> can be specified to define the format of the resultant <a href="#text">Text</a>.</p>
@@ -485,7 +485,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-dc477d5fbb607e1a274adaae53c4403b">2 - Format Text With Values</h1>
+	<h1 id="pg-e6b42f60b6243569693f5f7cabb35b14">2 - Format Text With Values</h1>
     <div class="lead">Formats text by replacing all format parameters (e.g. <code>{0}</code> or <code>{1}</code> or <code>{2}</code>) in a specified format template with given values.</div>
 	
 <figure class="block-icon">
@@ -535,8 +535,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Formatting <code>&quot;Hello {0} {1}&quot;</code> with <code>[&quot;Mr&quot;, &quot;Smith&quot;]</code> results in the variable <code>($)Text</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Hello Mr Smith&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Hello Mr Smith&#34;</span>
+</span></span></code></pre></div><hr>
 <h3 id="multiple-non-text-values-using-american-english-en-us">Multiple non-text values using American English (&ldquo;en-US&rdquo;)</h3>
 <p>This example will format <code>&quot;Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C2} outstanding.&quot;</code> with <code>[99.99, 0.8, 40]</code>.</p>
 <p>The format parameter <code>{0:C2}</code> will display the <code>99.99</code> as U.S currency to two decimal places (i.e. <code>$99.99</code>):</p>
@@ -592,8 +592,8 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p><code>&quot;Your latest payment of {0:C2} has been received. You have paid {1:P0} of your total and have {2:C2} outstanding.&quot;</code> with <code>[99.99, 0.8, 40]</code> results in the variable <code>($)Text</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;Your latest payment of $99.99 has been received. You have paid 80 % of your total and have $40.00 outstanding.&#34;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Your latest payment of $99.99 has been received. You have paid 80 % of your total and have $40.00 outstanding.&#34;</span>
+</span></span></code></pre></div><hr>
 <h2 id="properties-2">Properties</h2>
 <h3 id="format-template">Format Template</h3>
 <p><a href="#format-template">Format Template</a> can be specified to define the format of the resultant <a href="#text">Text</a>.</p>
@@ -935,7 +935,7 @@ This the multi-page printable view of this section.
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 

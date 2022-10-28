@@ -85,6 +85,10 @@ A method of communication over a network, in which one computer sends a request 
 
 ## S
 
+### SASL
+
+Simple Authentication and Security Layer (SASL) is a framework for protocols like [SMTP][] and [IMAP][] to add authentication support.
+
 ### SDK
 
 SDK stands for "Software Development Kit", and is a collection of software development tools.
@@ -103,6 +107,10 @@ A [data type][] that represents a fractional, or very large or small number from
 
 For more detailed information about the Single data type, see [Data Types > Single][].
 
+### SMTP
+
+Simple Mail Transfer Protocol (SMTP) is an internet protocol for email transmission. Mail servers typically only use SMTP to send emails.
+
 ### Snippets
 
 Snippet is a term for a small section of re-usable code.
@@ -112,6 +120,10 @@ Snippets can be accessed from any editor using [Intellisense][].
 ### Software Development
 
 The process of developing software.
+
+### SSL
+
+Secure Sockets Layer (SSL) is the technology that keeps an internet connection secure via the encryption of data in transit.
 
 ### String
 
@@ -145,6 +157,10 @@ Data which can be interpreted as human-readable text, this is represented by [St
 
 Title Case is a typographical convention in which the first letter of all words are capitalized and all other letters lower cased; except for words that are entirely upper cased, such as acronyms, which remain upper cased.
 
+### TLS
+
+Transport Layer Security is a more secure, updated version of [SSL][]. Note that TLS is still often referred to as [SSL][].
+
 ### Trigger
 
 A mechanism used to initiate an action when a specific event occurs (e.g. When a given date or time is reached).
@@ -157,6 +173,9 @@ See [Data Type][data type].
 
 Typeahead is a language prediction tool that is used to provide suggestions based on what a user has already typed.
 
+[SMTP]: {{< ref "#smtp" >}}
+[SSL]: {{< ref "#ssl" >}}
+
 [Block Property]: {{< url "Cortex.Reference.Glossary.A-E.BlockProperty" >}}
 [C#]: {{< url "Cortex.Reference.Glossary.A-E.CSharp" >}}
 [camelCase]: {{< url "Cortex.Reference.Glossary.A-E.CamelCase" >}}
@@ -164,6 +183,7 @@ Typeahead is a language prediction tool that is used to provide suggestions base
 [data type]: {{< url "Cortex.Reference.Glossary.A-E.DataType" >}}
 [expression editor]: {{< url "Cortex.Reference.Glossary.A-E.ExpressionEditor" >}}
 [Intellisense]: {{< url "Cortex.Reference.Glossary.F-J.Intellisense" >}}
+[IMAP]: {{< url "Cortex.Reference.Glossary.F-J.IMAP" >}}
 [tasks]: {{< url "Cortex.Reference.Glossary.P-T.Task" >}}
 [Windows PowerShell]: {{< url "Cortex.Reference.Glossary.U-Z.WindowsPowerShell" >}}
 

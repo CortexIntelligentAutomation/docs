@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.91.2" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/xml/">
+<meta name="generator" content="Hugo 0.102.3" /><link rel="canonical" type="text/html" href="/docs/reference/blocks/xml/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" as="style">
-<link href="/scss/main.min.42ca918ff01f3baf0c46b62950a7adcbc69284274167c28d2f053c02fd28ffdb.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
+<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23cfa29d08eab4d4a6c55eb80a349952.json"
+  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-0ae717edbbc3dac720754a51c30a0588">Convert Xml</a></li>
+<li>1: <a href="#pg-6715d299882457ecc253a60054f8582c">Convert Xml</a></li>
 
 
     
@@ -182,7 +182,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.1: <a href="#pg-5e913768f41f030a554326f094816794">Convert Structure To Xml</a></li>
+<li>1.1: <a href="#pg-9ede8c70327f6dc492826498f83c392d">Convert Structure To Xml</a></li>
 
 
     
@@ -190,7 +190,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1.2: <a href="#pg-c53caa36fe952ccc192bb9a0a525579f">Convert Xml To Structure</a></li>
+<li>1.2: <a href="#pg-c3c46cf4e6c08634215ef637ac698c38">Convert Xml To Structure</a></li>
 
 
     
@@ -225,7 +225,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-0ae717edbbc3dac720754a51c30a0588">1 - Convert Xml</h1>
+	<h1 id="pg-6715d299882457ecc253a60054f8582c">1 - Convert Xml</h1>
     <div class="lead">Convert xml to and from other data types.</div>
 	
 </div>
@@ -250,7 +250,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-5e913768f41f030a554326f094816794">1.1 - Convert Structure To Xml</h1>
+	<h1 id="pg-9ede8c70327f6dc492826498f83c392d">1.1 - Convert Structure To Xml</h1>
     <div class="lead">Converts a Structure To Xml.</div>
 	
 <figure class="block-icon">
@@ -273,22 +273,22 @@ This the multi-page printable view of this section.
 <li>Items of inner keys become the values of the corresponding inner nodes.</li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;topLevelNode&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;innerNodeValue&#34;</span> 
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>will be converted into:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>innerNodeValue<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
-</code></pre></div><h2 id="examples">Examples</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;topLevelNode&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;innerNodeValue&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>will be converted into:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>innerNodeValue<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
+</span></span></code></pre></div><h2 id="examples">Examples</h2>
 <h3 id="convert-a-structure-to-xml">Convert a Structure To Xml</h3>
 <p>This example will convert the <a href="#structure">Structure</a> below to its <a href="#xml">Xml</a> representation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h4 id="properties">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -312,18 +312,18 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Converting:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>to <a href="#xml">Xml</a> results in the variable <code>($)Xml</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>to <a href="#xml">Xml</a> results in the variable <code>($)Xml</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
+</span></span></code></pre></div><ul>
 <li>The <code>&quot;Cortex_DataTypes_Dictionaries_Structure&quot;</code> root node is added as there is no single top-level key.</li>
 <li>The <code>&quot;node1&quot;</code> <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> is converted into a child node of <code>&quot;Cortex_DataTypes_Dictionaries_Structure&quot;</code> with its corresponding <a href="/docs/reference/concepts/working-with/collections/items/">Item</a> as the value.</li>
 <li>The <code>&quot;node2&quot;</code> <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> is converted into a child node of <code>&quot;Cortex_DataTypes_Dictionaries_Structure&quot;</code> with its corresponding <a href="/docs/reference/concepts/working-with/collections/items/">Item</a> as the value.</li>
@@ -332,22 +332,22 @@ This the multi-page printable view of this section.
 <hr>
 <h3 id="convert-a-complex-structure-to-xml">Convert a Complex Structure to Xml</h3>
 <p>This example will convert the <a href="#structure">Structure</a> below to its <a href="#xml">Xml</a> representation. This scenario is unlikely unless <a href="#xml">Xml</a> has been converted to a <a href="#structure">Structure</a> and is being <a href="#round-tripping">Round-Tripped</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;topLevelKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@topLevelAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innerKey&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;@innerNodeAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleInnerNodeAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;nestedKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;nested key text&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;inner key text&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-            <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#0000cf;font-weight:bold">3</span>
-        <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h4 id="properties-1">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;topLevelKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@topLevelAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innerKey&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;@innerNodeAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleInnerNodeAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;nestedKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;nested key text&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;inner key text&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h4 id="properties-1">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -371,32 +371,32 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result-1">Result</h4>
 <p>Converting:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;topLevelKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@topLevelAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innerKey&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;@innerNodeAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleInnerNodeAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;nestedKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;nested key text&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;inner key text&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-            <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#0000cf;font-weight:bold">3</span>
-        <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>to <a href="#xml">Xml</a> results in the variable <code>($)Xml</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelKey</span> <span style="color:#c4a000">topLevelAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerKey</span> <span style="color:#c4a000">innerNodeAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleInnerNodeAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-        <span style="color:#204a87;font-weight:bold">&lt;nestedKey&gt;</span>nested key text<span style="color:#204a87;font-weight:bold">&lt;/nestedKey&gt;</span>
-        inner key text
-    <span style="color:#204a87;font-weight:bold">&lt;/innerKey&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/topLevelKey&gt;</span>&#34;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;topLevelKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@topLevelAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innerKey&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;@innerNodeAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleInnerNodeAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;nestedKey&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;nested key text&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;inner key text&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>to <a href="#xml">Xml</a> results in the variable <code>($)Xml</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelKey</span> <span style="color:#c4a000">topLevelAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerKey</span> <span style="color:#c4a000">innerNodeAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleInnerNodeAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;nestedKey&gt;</span>nested key text<span style="color:#204a87;font-weight:bold">&lt;/nestedKey&gt;</span>
+</span></span><span style="display:flex;"><span>        inner key text
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/innerKey&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/topLevelKey&gt;</span>&#34;
+</span></span></code></pre></div><ul>
 <li>The key <code>&quot;topLevelKey&quot;</code> is converted into the <code>&quot;topLevelKey&quot;</code> node.</li>
 <li>The key <code>&quot;@topLevelAttribute&quot;</code> is converted into the <code>&quot;topLevelAttribute&quot;</code> attribute with its corresponding item as the value.</li>
 <li>The key <code>&quot;innerKey&quot;</code> is converted into the <code>&quot;innerKey&quot;</code> node.</li>
@@ -514,85 +514,85 @@ This the multi-page printable view of this section.
 <h2 id="remarks">Remarks</h2>
 <h3 id="attributes">Attributes</h3>
 <p>If a <a href="https://www.w3schools.com/XML/dom_nodes.asp">Node</a> requires an attribute, the attribute is defined by a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> where the key is the attribute name with an <code>&quot;@&quot;</code> before it and the <a href="/docs/reference/concepts/working-with/collections/items/">Item</a> is the attribute data, for example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@attribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innernode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;node</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>Inner Node Value<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
-</code></pre></div><h3 id="primitive-values-within-attribute-keys">Primitive Values within Attribute Keys</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@attribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innernode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;node</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>Inner Node Value<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
+</span></span></code></pre></div><h3 id="primitive-values-within-attribute-keys">Primitive Values within Attribute Keys</h3>
 <p>Attribute keys may only have <a href="/docs/reference/concepts/fundamentals/primitive-types/">Primitive Values</a> as shown in the example below. An <a href="/docs/reference/exceptions/xml/xmlserializationexception/">XmlSerializationException</a> will be thrown if a <a href="/docs/reference/concepts/fundamentals/complex-types/">Complex Value</a> is used as an attribute key.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@validAttribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@invalidAttribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">new</span> <span style="color:#a40000">ComplexValue(</span><span style="color:#4e9a06">&#34;Invalid&#34;</span><span style="color:#a40000">)</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h3 id="key-restrictions">Key Restrictions</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@validAttribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@invalidAttribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">new</span> <span style="color:#a40000">ComplexValue(</span><span style="color:#4e9a06">&#34;Invalid&#34;</span><span style="color:#a40000">)</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="key-restrictions">Key Restrictions</h3>
 <p>An Xml declaration key (e.g. <code>&quot;?xml&quot;</code>) can only accept the following attributes: <code>&quot;@version&quot;</code>, <code>&quot;@encoding&quot;</code> and <code>&quot;@standalone&quot;</code>.</p>
 <p>A document type definition key (e.g. <code>&quot;!DOCTYPE&quot;</code>) can only accept the following attributes: <code>&quot;@name&quot;</code>, <code>&quot;@public&quot;</code>, <code>&quot;@system&quot;</code> and <code>&quot;@internalSubset&quot;</code>.</p>
 <p><code>&quot;$id&quot;</code>, <code>&quot;$ref&quot;</code>, <code>&quot;$type&quot;</code>, <code>&quot;$value&quot;</code> and <code>&quot;values&quot;</code> are reserved words and should not be used as keys.</p>
 <h3 id="text-nodes">Text Nodes</h3>
 <p>If a key contains a structure as its item, the inner keys are converted into <a href="https://www.w3schools.com/XML/dom_nodes.asp">Nodes</a> with their corresponding items as the values. The key <code>&quot;#text&quot;</code> is converted into value of its parent node.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;@attrubute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Node Value&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>The <a href="#structure">Structure</a> example above would be converted to the following <a href="#xml">Xml</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-        Inner Node Value
-    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-    Node Value
-<span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
-</code></pre></div><h3 id="duplicate-nodes-at-the-same-level">Duplicate Nodes at the Same Level</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;@attrubute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Node Value&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>The <a href="#structure">Structure</a> example above would be converted to the following <a href="#xml">Xml</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        Inner Node Value
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span>    Node Value
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
+</span></span></code></pre></div><h3 id="duplicate-nodes-at-the-same-level">Duplicate Nodes at the Same Level</h3>
 <p>If there are multiple duplicate nodes at the same level, they are defined using a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> where the key is the duplicated node name and the <a href="/docs/reference/concepts/working-with/collections/items/">Item</a> is a list of each of the corresponding duplicate node&rsquo;s values, for example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;duplicateNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;First Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Second Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">],</span>
-        <span style="color:#204a87;font-weight:bold">&#34;distinctNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Distinct Node&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>The <a href="#structure">Structure</a> example above would be converted to the following <a href="#xml">Xml</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
-        First Duplicate Node
-    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
-        Second Duplicate Node
-    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;distinctNode&gt;</span>
-        Distinct Node
-    <span style="color:#204a87;font-weight:bold">&lt;/distinctNode&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
-</code></pre></div><h3 id="using-non-alphanumeric-symbols-within-node-names">Using Non-Alphanumeric Symbols within Node Names</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;duplicateNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;First Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Second Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;distinctNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Distinct Node&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>The <a href="#structure">Structure</a> example above would be converted to the following <a href="#xml">Xml</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>        First Duplicate Node
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>        Second Duplicate Node
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;distinctNode&gt;</span>
+</span></span><span style="display:flex;"><span>        Distinct Node
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/distinctNode&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
+</span></span></code></pre></div><h3 id="using-non-alphanumeric-symbols-within-node-names">Using Non-Alphanumeric Symbols within Node Names</h3>
 <p>Any non-alphanumeric symbol (i.e. symbols that are not <code>&quot;0&quot;</code> to <code>&quot;9&quot;</code>, <code>&quot;a&quot;</code> to <code>&quot;z&quot;</code>, or <code>&quot;A&quot;</code> to <code>&quot;Z&quot;</code>) will be converted to their respective Unicode values when used within a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a>. For example, <code>&quot;!&quot;</code> and <code>&quot;&amp;&quot;</code> are both non-alphanumeric symbols and would be converted to <code>&quot;x0021&quot;</code> and <code>&quot;x0026&quot;</code> respectively.</p>
 <p>For more information on characters and their Unicode values please see <a href="https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf">Character Sets</a></p>
 <h3 id="round-tripping">Round-tripping</h3>
 <p>It should be possible to pass the <a href="#xml">Xml</a>  created by this block to the <a href="/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/">Convert Xml To Structure</a> block, and then pass the <a href="#structure">Structure</a> created by the <a href="/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/">Convert Xml To Structure</a> block back to this block, as long all values within the <a href="#xml">Xml</a> are <a href="/docs/reference/data-types/text/string">Strings</a>; this is called round-tripping.</p>
 <h3 id="cortex_datatypes_dictionaries_structure-node">&lt;Cortex_DataTypes_Dictionaries_Structure&gt; Node</h3>
 <p><code>&quot;&lt;Cortex_DataTypes_Dictionaries_Structure&gt;&quot;</code> is added as a root node when the <a href="#structure">Structure</a> has more than one top-level key to ensure that valid <a href="#xml">Xml</a> is produced.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
+</span></span></code></pre></div>
 </div>
 
 
@@ -607,7 +607,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-c53caa36fe952ccc192bb9a0a525579f">1.2 - Convert Xml To Structure</h1>
+	<h1 id="pg-c3c46cf4e6c08634215ef637ac698c38">1.2 - Convert Xml To Structure</h1>
     <div class="lead">Converts Xml to a Structure.</div>
 	
 <figure class="block-icon">
@@ -630,26 +630,26 @@ This the multi-page printable view of this section.
 <li>Inner node values become the corresponding <a href="/docs/reference/concepts/working-with/collections/items/">Item</a> for their <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a></li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>innerNodeValue<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
-</code></pre></div><p>will be converted into:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#4e9a06">&#34;topLevelNode&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span> 
-    <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;innerNodeValue&#34;</span> 
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h2 id="examples">Examples</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>innerNodeValue<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
+</span></span></code></pre></div><p>will be converted into:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;topLevelNode&#34;</span><span style="color:#a40000">:</span> <span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;innerNodeValue&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="examples">Examples</h2>
 <h3 id="convert-xml-to-a-structure">Convert Xml to a Structure</h3>
 <p>This example will convert the <a href="#xml">Xml</a> below to its <a href="#structure">Structure</a> representation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode</span> <span style="color:#c4a000">topLevelAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">innerNodeAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleInnerNodeAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-        <span style="color:#204a87;font-weight:bold">&lt;nestedNode&gt;</span>nested node text<span style="color:#204a87;font-weight:bold">&lt;/nestedNode&gt;</span>
-        inner node text
-    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
-</code></pre></div><h4 id="properties">Properties</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode</span> <span style="color:#c4a000">topLevelAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">innerNodeAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleInnerNodeAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;nestedNode&gt;</span>nested node text<span style="color:#204a87;font-weight:bold">&lt;/nestedNode&gt;</span>
+</span></span><span style="display:flex;"><span>        inner node text
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
+</span></span></code></pre></div><h4 id="properties">Properties</h4>
 <table>
 <thead>
 <tr>
@@ -673,32 +673,32 @@ This the multi-page printable view of this section.
 </table>
 <h4 id="result">Result</h4>
 <p>Converting:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode</span> <span style="color:#c4a000">topLevelAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">innerNodeAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleInnerNodeAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-        <span style="color:#204a87;font-weight:bold">&lt;nestedNode&gt;</span>nested node text<span style="color:#204a87;font-weight:bold">&lt;/nestedNode&gt;</span>
-        inner node text
-    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
-</code></pre></div><p>to a <a href="#structure">Structure</a> results in the variable <code>($)Structure</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;topLevelNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@topLevelAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;@innerNodeAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleInnerNodeAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;nestedNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;nested node text&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;inner node text&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-            <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
-            <span style="color:#0000cf;font-weight:bold">3</span>
-        <span style="color:#000;font-weight:bold">],</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;topLevelNode</span> <span style="color:#c4a000">topLevelAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">innerNodeAttribute=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#a40000">exampleInnerNodeAttribute&#34;&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&lt;nestedNode&gt;</span>nested node text<span style="color:#204a87;font-weight:bold">&lt;/nestedNode&gt;</span>
+</span></span><span style="display:flex;"><span>        inner node text
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/topLevelNode&gt;</span>&#34;
+</span></span></code></pre></div><p>to a <a href="#structure">Structure</a> results in the variable <code>($)Structure</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;topLevelNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@topLevelAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;@innerNodeAttribute&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;exampleInnerNodeAttribute&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;nestedNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;nested node text&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;inner node text&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><ul>
 <li>The node <code>&quot;topLevelNode&quot;</code> is converted into the <code>&quot;topLevelNode&quot;</code> key.</li>
 <li>The attribute <code>&quot;topLevelAttribute&quot;</code> is converted into the <code>&quot;@topLevelAttribute&quot;</code> key with its corresponding value as the item.</li>
 <li>The node <code>&quot;innerNode&quot;</code> is converted into the <code>&quot;innerNode&quot;</code> key.</li>
@@ -735,18 +735,18 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 </table>
 <h4 id="result-1">Result</h4>
 <p>Converting:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
-</code></pre></div><p>to a <a href="#structure">Structure</a> results in the variable <code>($)Structure</code> being updated to the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
+</span></span></code></pre></div><p>to a <a href="#structure">Structure</a> results in the variable <code>($)Structure</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><ul>
 <li>The <code>&quot;Cortex_DataTypes_Dictionaries_Structure&quot;</code> root node is removed and the child nodes are all at the root level.</li>
 <li>The <code>&quot;node1&quot;</code> <a href="https://www.w3schools.com/XML/dom_nodes.asp">Node</a> is converted into a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> of <code>&quot;node1&quot;</code> with its corresponding value as the <a href="/docs/reference/concepts/working-with/collections/items/">Item</a>.</li>
 <li>The <code>&quot;node2&quot;</code> <a href="https://www.w3schools.com/XML/dom_nodes.asp">Node</a> is converted into a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> of <code>&quot;node2&quot;</code> with its corresponding value as the <a href="/docs/reference/concepts/working-with/collections/items/">Item</a>.</li>
@@ -845,55 +845,55 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <h2 id="remarks">Remarks</h2>
 <h3 id="attributes">Attributes</h3>
 <p>If a <a href="https://www.w3schools.com/XML/dom_nodes.asp">Node</a> has an attribute, the attribute is converted to a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> where the key is the attribute name with an <code>&quot;@&quot;</code> before it and the value is the attribute data, for example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;node</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>Inner Node Value<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
-</code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;@attribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innernode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h3 id="text-nodes">Text Nodes</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;node</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode&gt;</span>Inner Node Value<span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
+</span></span></code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;@attribute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Attribute Value&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innernode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="text-nodes">Text Nodes</h3>
 <p>If a node contains a value and inner nodes or attributes, the inner nodes and attributes are converted into <a href="/docs/reference/concepts/working-with/collections/keys/">Keys</a> with their corresponding values as the <a href="/docs/reference/concepts/working-with/collections/items/">Items</a>. The value of the node is converted into the <code>&quot;#text&quot;</code> key with its value as the item.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-        Inner Node Value
-    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
-    Node Value
-<span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
-</code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;@attrubute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Node Value&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h3 id="duplicate-nodes-at-the-same-level">Duplicate Nodes at the Same Level</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;innerNode</span> <span style="color:#c4a000">attribute=</span><span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>        Inner Node Value
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/innerNode&gt;</span>
+</span></span><span style="display:flex;"><span>    Node Value
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
+</span></span></code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;innerNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;@attrubute&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;attributeValue&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Inner Node Value&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;#text&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Node Value&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="duplicate-nodes-at-the-same-level">Duplicate Nodes at the Same Level</h3>
 <p>If a node contains duplicate nodes at the same level, they are converted into a <a href="/docs/reference/concepts/working-with/collections/keys/">Key</a> where the key is the duplicated node name and the <a href="/docs/reference/concepts/working-with/collections/items/">Item</a> is a list of each of the corresponding duplicate node&rsquo;s values, for example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
-        First Duplicate Node
-    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
-        Second Duplicate Node
-    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;distinctNode&gt;</span>
-        Distinct Node
-    <span style="color:#204a87;font-weight:bold">&lt;/distinctNode&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
-</code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;duplicateNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;First Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Second Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">],</span>
-        <span style="color:#204a87;font-weight:bold">&#34;distinctNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Distinct Node&#34;</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h3 id="using-non-alphanumeric-symbols-within-node-names">Using Non-Alphanumeric Symbols within Node Names</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;node&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>        First Duplicate Node
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>        Second Duplicate Node
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/duplicateNode&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;distinctNode&gt;</span>
+</span></span><span style="display:flex;"><span>        Distinct Node
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/distinctNode&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/node&gt;</span>&#34;
+</span></span></code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;duplicateNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;First Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Second Duplicate Node&#34;</span><span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;distinctNode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Distinct Node&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="using-non-alphanumeric-symbols-within-node-names">Using Non-Alphanumeric Symbols within Node Names</h3>
 <p>Any non-alphanumeric symbol (i.e. symbols that are not <code>&quot;0&quot;</code> to <code>&quot;9&quot;</code>, <code>&quot;a&quot;</code> to <code>&quot;z&quot;</code>, or <code>&quot;A&quot;</code> to <code>&quot;Z&quot;</code>) will be converted to their respective Unicode values when used within a node name. For example, <code>&quot;!&quot;</code> and <code>&quot;&amp;&quot;</code> are both non-alphanumeric symbols and would be converted to <code>&quot;x0021&quot;</code> and <code>&quot;x0026&quot;</code> respectively.</p>
 <p>For more information on characters and their Unicode values please see <a href="https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf">Character Sets</a></p>
 <h3 id="round-tripping">Round-tripping</h3>
@@ -901,18 +901,18 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <h3 id="cortex_datatypes_dictionaries_structure-node">&lt;Cortex_DataTypes_Dictionaries_Structure&gt; Node</h3>
 <p>The <a href="/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/">Convert Structure To Xml</a> adds <code>&quot;&lt;Cortex_DataTypes_Dictionaries_Structure&gt;&quot;</code> as a root node when the structure has more than one top-level key to ensure that valid <a href="#xml">Xml</a> is produced.</p>
 <p>When the <code>&quot;&lt;Cortex_DataTypes_Dictionaries_Structure&gt;&quot;</code> root node is converted from <a href="#xml">Xml</a> to a <a href="#structure">Structure</a> the root node is removed and any inner nodes become the top-level keys.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
-</code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>This example will only occur when a <a href="#structure">Structure</a> is Converted to <a href="#xml">Xml</a> and is then converted again using this block. This is called <a href="#round-tripping">Round-Tripping</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>@&#34;<span style="color:#204a87;font-weight:bold">&lt;Cortex_DataTypes_Dictionaries_Structure&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node1&gt;</span>1<span style="color:#204a87;font-weight:bold">&lt;/node1&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node2&gt;</span>2<span style="color:#204a87;font-weight:bold">&lt;/node2&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;node3&gt;</span>3<span style="color:#204a87;font-weight:bold">&lt;/node3&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/Cortex_DataTypes_Dictionaries_Structure&gt;</span>&#34;
+</span></span></code></pre></div><p>The <a href="#xml">Xml</a> example above would be converted to the following <a href="#structure">Structure</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node1&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node2&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;node3&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>This example will only occur when a <a href="#structure">Structure</a> is Converted to <a href="#xml">Xml</a> and is then converted again using this block. This is called <a href="#round-tripping">Round-Tripping</a>.</p>
 
 </div>
 
@@ -1083,7 +1083,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 
 
-<script src="/js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
+<script src="/js/main.min.357cdcbd77fb614ceb215987dafe216ba8720b4aa10ecd38bccb7c0013e32f2a.js" integrity="sha256-NXzcvXf7YUzrIVmH2v4ha6hyC0qhDs04vMt8ABPjLyo=" crossorigin="anonymous"></script>
 
 
 
