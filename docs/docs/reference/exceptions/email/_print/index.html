@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.dc74cff63bb0175fa045955d3eddccea.json"
+  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -206,13 +206,13 @@ This the multi-page printable view of this section.
 <p>The exception thrown when an issue occurs while opening a session with a mail server.</p>
 <p>There are multiple reasons that this exception can be thrown:</p>
 <ul>
-<li><a href="#invalid-port">Invalid Port</a></li>
-<li><a href="#invalid-host">Invalid Host</a></li>
-<li><a href="#ssl-required">SSL Required</a></li>
-<li><a href="#ssl-unsupported">SSL Unsupported</a></li>
-<li><a href="#invalid-user-credentials">Invalid User Credentials</a></li>
-<li><a href="#invalid-ssl-certificate">Invalid SSL Certificate</a></li>
-<li><a href="#invalid-gmail-client-credentials">Invalid Gmail Client Credentials</a></li>
+<li><a href="#100">Invalid Port</a></li>
+<li><a href="#101">Invalid Host</a></li>
+<li><a href="#200">SSL Required</a></li>
+<li><a href="#201">SSL Unsupported</a></li>
+<li><a href="#300">Invalid User Credentials</a></li>
+<li><a href="#400">Invalid SSL Certificate</a></li>
+<li><a href="#401">Invalid Gmail Client Credentials</a></li>
 </ul>
 <h2 id="reasons">Reasons</h2>
 <h3 id="100">Invalid Port</h3>
@@ -370,13 +370,13 @@ This the multi-page printable view of this section.
 <p>The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.</p>
 <p>For <code>EmailSessionException</code> there are the following error codes:</p>
 <ul>
-<li><a href="#invalid-port">100</a> - indicates that the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> provided in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> is invalid</li>
-<li><a href="#invalid-host">101</a> - indicates that the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> provided in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> is invalid</li>
-<li><a href="#ssl-required">200</a> - indicates that <a href="/docs/reference/glossary/p-t/#ssl">SSL</a> is required</li>
-<li><a href="#ssl-unsupported">201</a> - indicates that an <a href="/docs/reference/glossary/p-t/#ssl">SSL</a> connection is not supported</li>
-<li><a href="#invalid-user-credentials">300</a> - indicates that the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> and <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> combination provided in in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is invalid</li>
-<li><a href="#invalid-ssl-certificate">400</a> - indicates that the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepath">CertificatePath</a> or <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepassword">CertificatePassword</a> provided in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> is invalid</li>
-<li><a href="#invalid-gmail-client-credentials">401</a> - indicates that the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#fromaddress">FromAddress</a> or <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#clientid">ClientId</a> provided in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> is invalid</li>
+<li><a href="#100">100</a> - indicates that the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> provided in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> is invalid</li>
+<li><a href="#101">101</a> - indicates that the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> provided in the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> is invalid</li>
+<li><a href="#200">200</a> - indicates that <a href="/docs/reference/glossary/p-t/#ssl">SSL</a> is required</li>
+<li><a href="#201">201</a> - indicates that an <a href="/docs/reference/glossary/p-t/#ssl">SSL</a> connection is not supported</li>
+<li><a href="#300">300</a> - indicates that the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> and <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> combination provided in in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is invalid</li>
+<li><a href="#400">400</a> - indicates that the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepath">CertificatePath</a> or <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepassword">CertificatePassword</a> provided in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> is invalid</li>
+<li><a href="#401">401</a> - indicates that the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#fromaddress">FromAddress</a> or <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#clientid">ClientId</a> provided in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> is invalid</li>
 </ul>
 <table>
 <thead>

@@ -276,13 +276,13 @@ None
 
 None
 
-[InvalidPortProvided]: {{< ref "#invalid-port">}}
-[InvalidHostProvided]: {{< ref "#invalid-host">}}
-[SslWrappedConnectionRequired]: {{< ref "#ssl-required">}}
-[SslWrappedConnectionNotSupported]: {{< ref "#ssl-unsupported">}}
-[InvalidSslCertificate]: {{< ref "#invalid-ssl-certificate">}}
-[InvalidUsernameAndPassword]: {{< ref "#invalid-user-credentials">}}
-[InvalidClientCredentials]: {{< ref "#invalid-gmail-client-credentials">}}
+[InvalidPortProvided]: {{< ref "#100">}}
+[InvalidHostProvided]: {{< ref "#101">}}
+[SslWrappedConnectionRequired]: {{< ref "#200">}}
+[SslWrappedConnectionNotSupported]: {{< ref "#201">}}
+[InvalidUsernameAndPassword]: {{< ref "#300">}}
+[InvalidSslCertificate]: {{< ref "#400">}}
+[InvalidClientCredentials]: {{< ref "#401">}}
 [Message]: {{< ref "#message" >}}
 [Category]: {{< ref "#category" >}}
 [Error Code]: {{< ref "#error-code" >}}

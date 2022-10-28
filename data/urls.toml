@@ -1307,13 +1307,13 @@
                 MainDoc = "/docs/reference/exceptions/email/"
                     [Cortex.Reference.Exceptions.Email.EmailSessionException]
                         MainDoc = "/docs/reference/exceptions/email/email-session-exception/"
-                        InvalidPort = "/docs/reference/exceptions/email/email-session-exception/#invalid-port"
-                        InvalidHost = "/docs/reference/exceptions/email/email-session-exception/#invalid-host"
-                        SslRequired = "/docs/reference/exceptions/email/email-session-exception/#ssl-required"
-                        SslUnsupported = "/docs/reference/exceptions/email/email-session-exception/#ssl-unsupported"
-                        InvalidUserCredentials = "/docs/reference/exceptions/email/email-session-exception/#invalid-user-credentials"
-                        InvalidSslCertificate = "/docs/reference/exceptions/email/email-session-exception/#invalid-ssl-certificate"
-                        InvalidClientCredentials = "/docs/reference/exceptions/email/email-session-exception/#invalid-gmail-client-credentials"
+                        InvalidPort = "/docs/reference/exceptions/email/email-session-exception/#100"
+                        InvalidHost = "/docs/reference/exceptions/email/email-session-exception/#101"
+                        SslRequired = "/docs/reference/exceptions/email/email-session-exception/#200"
+                        SslUnsupported = "/docs/reference/exceptions/email/email-session-exception/#201"
+                        InvalidUserCredentials = "/docs/reference/exceptions/email/email-session-exception/#300"
+                        InvalidSslCertificate = "/docs/reference/exceptions/email/email-session-exception/#400"
+                        InvalidClientCredentials = "/docs/reference/exceptions/email/email-session-exception/#401"
             [Cortex.Reference.Exceptions.FilesAndFolders]
                 MainDoc = "/docs/reference/exceptions/files-and-folders/"
                 [Cortex.Reference.Exceptions.FilesAndFolders.InvalidFolderNameException]

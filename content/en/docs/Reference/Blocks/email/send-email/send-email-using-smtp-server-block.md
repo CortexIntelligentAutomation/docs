@@ -308,11 +308,11 @@ The exceptions thrown by the block can be found below:
 | [EmailSessionException][]            |Thrown when an invalid [Port][] is provided in the [ServerDetails][] within the [Basic Email Session Details][Basic Email Session Details Property]. For more information, see [Invalid Port][].|
 | |Thrown when an invalid [Host][] is provided in the [ServerDetails][] within the [Basic Email Session Details][Basic Email Session Details Property]. For more information, see [Invalid Host][].|
 | |Thrown when a connection cannot be established; this typically occurs when [UseSsl][] within [Basic Email Session Details][Basic Email Session Details Property] is set to `false` with a [Port][] which requires it to be set to `true`. For more information, see [SSL Required][]. |
-| |Thrown when a connection cannot be established; this typically occurs when [UseSsl][] within [Basic Email Session Details][Basic Email Session Details Property] is set to `true` with a [Port][] which requires it to be set to `false`. For more information, see [SSL Not Supported][]. |
-| |Thrown when the [TLS][]/[SSL][] certificate has expired on the [Host][] or is untrusted or invalid. For more information, see [SSL Not Supported][]. Note that this exception has the same category and error code as the above row, this is a known limitation, see [EmailSessionErrorCode Limitations][]. |
-| |Thrown when a locally installed anti-virus software replaces the [TLS][]/[SSL][] certificate in order to scan web traffic. For more information, see [SSL Not Supported][]. Note that this exception has the same category and error code as the above row, this is a known limitation, see [EmailSessionErrorCode Limitations][]. |
-| |Thrown when the [CRL][] (Certificate Revocation List) server for the [TLS][]/[SSL][] certificate is down. For more information, see [SSL Not Supported][]. Note that this exception has the same category and error code as the above row, this is a known limitation, see [EmailSessionErrorCode Limitations][]. |
-| |Thrown when the [Username][] and [Password][] in the [UserCredentials][] within [Basic Email Session Details][Basic Email Session Details Property] is incorrect. For more information, see [Invalid Username and Password][]. |
+| |Thrown when a connection cannot be established; this typically occurs when [UseSsl][] within [Basic Email Session Details][Basic Email Session Details Property] is set to `true` with a [Port][] which requires it to be set to `false`. For more information, see [SSL Unsupported][]. |
+| |Thrown when the [TLS][]/[SSL][] certificate has expired on the [Host][] or is untrusted or invalid. For more information, see [SSL Unsupported][]. Note that this exception has the same category and error code as the above row, this is a known limitation, see [EmailSessionErrorCode Limitations][]. |
+| |Thrown when a locally installed anti-virus software replaces the [TLS][]/[SSL][] certificate in order to scan web traffic. For more information, see [SSL Unsupported][]. Note that this exception has the same category and error code as the above row, this is a known limitation, see [EmailSessionErrorCode Limitations][]. |
+| |Thrown when the [CRL][] (Certificate Revocation List) server for the [TLS][]/[SSL][] certificate is down. For more information, see [SSL Unsupported][]. Note that this exception has the same category and error code as the above row, this is a known limitation, see [EmailSessionErrorCode Limitations][]. |
+| |Thrown when the [Username][] and [Password][] in the [UserCredentials][] within [Basic Email Session Details][Basic Email Session Details Property] is incorrect. For more information, see [Invalid User Credentials][]. |
 | [FileNotFoundException][]            |Thrown when a non-existent file path is provided in [Attachments][] within [Email Message][Email Message Property]. |
 | [IOException][]                      |Thrown when the desired socket is held by another process; re-running the flow typically solves this. |
 | |Thrown when a file path within [Attachments][] within the [Email Message][Email Message Property] contains leading spaces.|
@@ -501,8 +501,8 @@ This limitation may be removed in the future.
 [Invalid Port]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.InvalidPort" >}}
 [Invalid Host]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.InvalidHost" >}}
 [SSL Required]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.SslRequired" >}}
-[SSL Not Supported]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.SslUnsupported" >}}
-[Invalid Username and Password]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.InvalidUserCredentials" >}}
+[SSL Unsupported]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.SslUnsupported" >}}
+[Invalid User Credentials]: {{< url "Cortex.Reference.Exceptions.Email.EmailSessionException.InvalidUserCredentials" >}}
 [creating an EmailMessage using a constructor]: {{< url "Cortex.Reference.DataTypes.Email.EmailMessage.CreateAnEmailMessage" >}}
 
 [EmailSessionErrorCode Limitations]: {{< url "Cortex.Reference.DataTypes.Email.EmailSessionErrorCode.Limitations" >}}
