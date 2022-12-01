@@ -127,6 +127,7 @@ The Attachments is used to define the list of attachments for the email message,
 The supported file path formats are dependent on the block being used:
 
 - [Send Email Using SMTP Server Block][Send Email Using SMTP Server Block Supported File Paths]
+- [Send Email Using Gmail Block][Send Email Using Gmail Block Supported File Paths]
 
 | | |
 |--------------------|---------------------------|
@@ -218,6 +219,7 @@ None
 [Working with Email]: {{< url "Cortex.Reference.Concepts.WorkingWith.Email.MainDoc" >}}
 
 [Send Email Using SMTP Server Block Supported File Paths]: {{< url "Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.SupportedFilePaths" >}}
+[Send Email Using Gmail Block Supported File Paths]: {{< url "Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail.SupportedFilePaths" >}}
 
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 [IList]: {{< url "Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}

@@ -18,19 +18,19 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>GmailSessionDetails | Cortex</title><meta property="og:title" content="GmailSessionDetails" />
-<meta property="og:description" content="Used to represent configuration for opening and maintaining a session with a mail server." />
+<meta property="og:description" content="Used to represent configuration for opening and maintaining a session with a mail server hosted by Gmail." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/reference/data-types/google-workspace/gmail/gmailsessiondetails/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-10-28T13:13:10+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-11-30T16:59:03+00:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="GmailSessionDetails">
-<meta itemprop="description" content="Used to represent configuration for opening and maintaining a session with a mail server.">
-<meta itemprop="dateModified" content="2022-10-28T13:13:10+01:00" />
-<meta itemprop="wordCount" content="2">
+<meta itemprop="description" content="Used to represent configuration for opening and maintaining a session with a mail server hosted by Gmail.">
+<meta itemprop="dateModified" content="2022-11-30T16:59:03+00:00" />
+<meta itemprop="wordCount" content="809">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GmailSessionDetails"/>
-<meta name="twitter:description" content="Used to represent configuration for opening and maintaining a session with a mail server."/>
+<meta name="twitter:description" content="Used to represent configuration for opening and maintaining a session with a mail server hosted by Gmail."/>
 
 
 
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
+  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
+  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -2397,6 +2397,14 @@
   <ul>
     <li class="collapse " id="docsreferenceconceptsworking-withemail">
       
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceconceptsworking-withemailauthentication" href="/docs/reference/concepts/working-with/email/authentication/">Authentication</a>
+        
       
       
       
@@ -9404,6 +9412,33 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#properties">Properties</a>
+      <ul>
+        <li><a href="#serverdetails">ServerDetails</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+      </ul>
+    </li>
+    <li><a href="#remarks">Remarks</a>
+      <ul>
+        <li><a href="#create-a-gmailsessiondetails">Create a GmailSessionDetails</a></li>
+        <li><a href="#convert-gmailsessiondetails-to-text">Convert GmailSessionDetails to Text</a></li>
+        <li><a href="#property-editor-support">Property Editor Support</a></li>
+        <li><a href="#known-limitations">Known Limitations</a></li>
+      </ul>
+    </li>
+    <li><a href="#see-also">See Also</a>
+      <ul>
+        <li><a href="#related-data-types">Related Data Types</a></li>
+        <li><a href="#related-concepts">Related Concepts</a></li>
+        <li><a href="#external-documentation">External Documentation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -9478,15 +9513,252 @@
             
 <div class="td-content">
 	
-        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 1 minute read</p>
+        <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 4 minute read</p>
            
 	<h1 id="gmailsessiondetails">GmailSessionDetails</h1>
 <p class="namespace">(Cortex.DataTypes.GoogleWorkspace.Gmail.GmailSessionDetails)</p>
-<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<p>The <code>GmailSessionDetails</code> data type is used to represent configuration for opening and maintaining a session with a mail server hosted by <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category:</strong></td>
+<td>Gmail</td>
+</tr>
+<tr>
+<td><strong>Name:</strong></td>
+<td><code>GmailSessionDetails</code></td>
+</tr>
+<tr>
+<td><strong>Full Name:</strong></td>
+<td><code>Cortex.DataTypes.GoogleWorkspace.Gmail.GmailSessionDetails</code></td>
+</tr>
+<tr>
+<td><strong>Alias:</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Description:</strong></td>
+<td>Configuration for opening and maintaining a session with a mail server hosted by <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a>.</td>
+</tr>
+<tr>
+<td><strong>Default Value:</strong></td>
+<td>null</td>
+</tr>
+<tr>
+<td><strong>Can be used as:</strong></td>
+<td><code>GmailSessionDetails</code>, <code>Object</code>, <code>dynamic</code></td>
+</tr>
+<tr>
+<td><strong>Can be cast to:</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties">Properties</h2>
+<h3 id="serverdetails">ServerDetails</h3>
+<p>The ServerDetails are used to configure the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> and <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> of the mail server to connect to and whether or not to <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Host&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Port&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">465</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;UseSsl&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="credentials">Credentials</h3>
+<p>The Credentials are used to configure the information required for authentication with the mail server. There are multiple data types that can be used:</p>
+<ul>
+<li><a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>: Used to configure the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> and <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> for Basic authentication</li>
+<li><a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a>: Used to configure the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepath">CertificatePath</a>, <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepassword">CertificatePassword</a>, <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#fromaddress">FromAddress</a> and <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#clientid">ClientId</a> for OAuth</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/email/authentication/iemailcredentials">IEmailCredentials</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Domain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Username&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Password&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="remarks">Remarks</h2>
+<h3 id="create-a-gmailsessiondetails">Create a GmailSessionDetails</h3>
+<p>The following table shows some of the ways that <code>GmailSessionDetails</code> can be created.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Example</th>
+<th>Result</th>
+<th>Editor Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use a <code>GmailSessionDetails</code> constructor</td>
+<td><code>new GmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new UserCredentials(&quot;sender@gmail.com&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code></td>
+<td>Expression</td>
+<td>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> can be the password associated with the username (if the account is associated with a Google Workspace with access enabled for less secure apps) or an app password, for more information, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-app-password-for-a-gmail-account">Setting up an app password for a Gmail account</a>.<br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>new GmailSessionDetails(serverDetails: new ServerDetails(&quot;smtp.gmail.com&quot;, 465, true), credentials: new GmailOAuthCertificateCredentials(@&quot;C:\certificate.p12&quot;, &quot;encryptedPassword&quot;, &quot;sender@gmail.com&quot;, &quot;clientId&quot;)</code></td>
+<td><code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;CertificatePath&quot;: &quot;C:\\certificate.p12&quot;, &quot;CertificatePassword&quot;: &quot;encryptedPassword&quot;, &quot;FromAddress&quot;: &quot;sender@gmail.com&quot;, &quot;ClientId&quot;: &quot;clientId&quot;}}</code></td>
+<td>Expression</td>
+<td>The <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepath">CertificatePath</a> in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> is a path pointing to a certificate accessible from the server executing the flow.<br><br>For information on:<ul><li>What each of the properties in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> needs to be, see <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a></li><li>How to set up the <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication">Setting up a Gmail account for OAuth authentication</a></li></ul>The <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepassword">CertificatePassword</a> property  must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>GmailSessionDetails</code> with a <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> as the <a href="#credentials">Credentials</a> can also be created using the Literal Editor by filling in the necessary values for the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Data Type</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ServerDetails</code></td>
+<td><code>ServerDetails</code></td>
+<td>Host: <code>&quot;smtp.gmail.com&quot;</code><br>Port: <code>465</code><br>UseSsl: <code>true</code></td>
+<td>The <a href="#serverdetails">ServerDetails</a> that are used to connect to the server.</td>
+</tr>
+<tr>
+<td><code>Credentials</code></td>
+<td><code>UserCredentials</code></td>
+<td>Domain: <code>&quot;&quot;</code><br>Username: <code>&quot;sender@gmail.com&quot;</code><br>Password: <code>&quot;encryptedPassword&quot;</code></td>
+<td>The <a href="#credentials">Credentials</a> that are used for authentication on the server.<br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> can be the password associated with the username (if the account is associated with a Google Workspace with access enabled for less secure apps) or an app password, for more information, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-app-password-for-a-gmail-account">Setting up an app password for a Gmail account</a>.<br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>GmailSessionDetails</code> with a <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> as the <a href="#credentials">Credentials</a> can also be created using the Literal Editor by filling in the necessary values for the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Data Type</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ServerDetails</code></td>
+<td><code>ServerDetails</code></td>
+<td>Host: <code>&quot;smtp.gmail.com&quot;</code><br>Port: <code>465</code><br>UseSsl: <code>true</code></td>
+<td>The <a href="#serverdetails">ServerDetails</a> that are used to connect to the server.</td>
+</tr>
+<tr>
+<td><code>Credentials</code></td>
+<td><code>GmailOAuthCertificateCredentials</code></td>
+<td>CertificatePath: <code>$@&quot;C:\certificate.p12&quot;</code><br>CertificatePassword: <code>&quot;encryptedPassword&quot;</code><br>FromAddress: <code>&quot;sender@gmail.com&quot;</code><br>ClientId: <code>&quot;clientId&quot;</code></td>
+<td>The <a href="#credentials">Credentials</a> that are used for authentication on the server.<br><br>The <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepath">CertificatePath</a> in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> is a path pointing to a certificate which must be accessible from the server executing the flow.<br><br>For information on:<ul><li>What each of the properties in the <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a> needs to be, see <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a></li><li>How to set up the <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication">Setting up a Gmail account for OAuth authentication</a></li></ul>The <a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#certificatepassword">CertificatePassword</a> property  must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="convert-gmailsessiondetails-to-text">Convert GmailSessionDetails to Text</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Example</th>
+<th>Result</th>
+<th>Editor Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use <code>Convert Object To Json</code> block</td>
+<td>where <code>Object</code> property has a value of <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;smtp.gmail.com&quot;, &quot;Port&quot;: 465, &quot;UseSsl&quot;: true}, &quot;Credentials&quot;: {&quot;Domain&quot;: null, &quot;Username&quot;: &quot;sender@gmail.com&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code></td>
+<td><code>&quot;{\r\n  \&quot;ServerDetails\&quot;: {\r\n    \&quot;Host\&quot;: \&quot;smtp.gmail.com\&quot;,\r\n    \&quot;Port\&quot;: 465,\r\n    \&quot;UseSsl\&quot;: true\r\n  },\r\n  \&quot;Credentials\&quot;: {\r\n    \&quot;Domain\&quot;: null,\r\n    \&quot;Username\&quot;: \&quot;sender@gmail.com\&quot;,\r\n    \&quot;Password\&quot;: \&quot;encryptedPassword\&quot;\r\n  }\r\n}&quot;</code></td>
+<td>N/A</td>
+<td>See <a href="/docs/reference/blocks/json/convert-json/convert-object-to-json-block">Convert Object To Json</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-editor-support">Property Editor Support</h3>
+<ul>
+<li>The Expression Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a> properties where the data type is <code>GmailSessionDetails</code>.</li>
+<li>The Literal Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a> properties where the data type is <code>GmailSessionDetails</code>.</li>
+<li>The Variable Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a>, <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a> and <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a> properties where the data type is <code>GmailSessionDetails</code>.</li>
+</ul>
+<h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
+<h2 id="see-also">See Also</h2>
+<h3 id="related-data-types">Related Data Types</h3>
+<ul>
+<li><a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a></li>
+<li><a href="/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</a></li>
+<li><a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a></li>
+<li><a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a></li>
+</ul>
+<h3 id="related-concepts">Related Concepts</h3>
+<ul>
+<li><a href="/docs/reference/concepts/working-with/email/">Working with Email</a></li>
+</ul>
+<h3 id="external-documentation">External Documentation</h3>
+<p>None</p>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified October 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/5289fa88686b765da530d0b1989eb1d632ad089c">Feature/initial structure email blocks help (#33) (5289fa88)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified November 30, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/bcf7fcff42304831d52c3a5a6e2ededa6f8b73e4">changes from doc review (bcf7fcff)</a>
 </div>
 </div>
 

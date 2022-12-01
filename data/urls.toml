@@ -522,6 +522,10 @@
                         MainDoc = "/docs/reference/blocks/google-workspace/gmail/send-email"
                         [Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail]
                             MainDoc = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block"
+                            SupportedServerAddressFormats = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/#supported-formats-for-serverdetailshost"
+                            SettingUseSsl = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/#setting-usessl"
+                            SettingCredentials = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/#setting-credentials"
+                            SupportedFilePaths = "/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/#supported-file-path-formats"
             [Cortex.Reference.Blocks.Http]
                 MainDoc = "/docs/reference/blocks/http/"
                 [Cortex.Reference.Blocks.Http.ExecuteHttpRequest]
@@ -950,6 +954,10 @@
                         OperatingSystemSettings = "/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#operating-system-settings"
                 [Cortex.Reference.Concepts.WorkingWith.Email]
                     MainDoc = "/docs/reference/concepts/working-with/email/"
+                    [Cortex.Reference.Concepts.WorkingWith.Email.Authentication]
+                        MainDoc = "/docs/reference/concepts/working-with/email/authentication"
+                        SettingUpAppPassword = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-app-password-for-a-gmail-account"
+                        SettingUpOAuthGmail = "/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication"
                 [Cortex.Reference.Concepts.WorkingWith.Enums]
                     MainDoc = "/docs/reference/concepts/working-with/enums/"
                 [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders]
@@ -1163,6 +1171,8 @@
                     MainDoc = "/docs/reference/data-types/google-workspace/gmail/"
                     [Cortex.Reference.DataTypes.GoogleWorkspace.Gmail.GmailSessionDetails]
                         MainDoc = "/docs/reference/data-types/google-workspace/gmail/gmailsessiondetails"
+                        ServerDetails = "/docs/reference/data-types/google-workspace/gmail/gmailsessiondetails/#serverdetails"
+                        Credentials = "/docs/reference/data-types/google-workspace/gmail/gmailsessiondetails/#credentials"
                     [Cortex.Reference.DataTypes.GoogleWorkspace.Gmail.Authentication]
                         MainDoc = "/docs/reference/data-types/google-workspace/gmail/authentication/"
                         [Cortex.Reference.DataTypes.GoogleWorkspace.Gmail.Authentication.OAuth]
@@ -1534,6 +1544,10 @@
     MainDoc = "https://github.com/erlang/otp"
 [GoBetween]
     MainDoc = "https://github.com/yyyar/gobetween"
+[Google]
+    [Google.Authentication]
+        [Google.Authentication.LessSecureApps]
+            MainDoc = "https://support.google.com/accounts/answer/6010255"
 [GitHub]
     [GitHub.Cortex.Observability]
         GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip"

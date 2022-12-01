@@ -22,12 +22,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/reference/data-types/session-details/serverdetails/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-10-28T13:13:10+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2022-11-25T08:42:25+00:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="ServerDetails">
 <meta itemprop="description" content="Used to represent details required to connect to a server.">
-<meta itemprop="dateModified" content="2022-10-28T13:13:10+01:00" />
-<meta itemprop="wordCount" content="459">
+<meta itemprop="dateModified" content="2022-11-25T08:42:25+00:00" />
+<meta itemprop="wordCount" content="457">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ServerDetails"/>
 <meta name="twitter:description" content="Used to represent details required to connect to a server."/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
+  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
+  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -2397,6 +2397,14 @@
   <ul>
     <li class="collapse " id="docsreferenceconceptsworking-withemail">
       
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceconceptsworking-withemailauthentication" href="/docs/reference/concepts/working-with/email/authentication/">Authentication</a>
+        
       
       
       
@@ -9557,6 +9565,7 @@
 <p>The server address formats supported are dependent on the block being used:</p>
 <ul>
 <li><a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#supported-formats-for-serverdetailshost">Send Email Using SMTP Server Block</a></li>
+<li><a href="/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/#supported-formats-for-serverdetailshost">Send Email Using Gmail Block</a></li>
 </ul>
 <table>
 <thead>
@@ -9614,7 +9623,11 @@
 </table>
 <h3 id="usessl">UseSsl</h3>
 <p>UseSsl is used to define whether or not connection to the server should use <a href="/docs/reference/glossary/p-t/#ssl">SSL</a>.</p>
-<p>When using this data type with <a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block">Send Email Using SMTP Server Block</a>, the value of this property depends on the <a href="#port">Port</a>. For more information, see <a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-usessl">Send Email Using SMTP Server Block</a>.</p>
+<p>The value of this property depends on the <a href="#port">Port</a> for the following blocks:</p>
+<ul>
+<li><a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-usessl">Send Email Using SMTP Server Block</a></li>
+<li><a href="/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/#setting-usessl">Send Email Using Gmail Block</a></li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -9741,7 +9754,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified October 28, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/5289fa88686b765da530d0b1989eb1d632ad089c">Feature/initial structure email blocks help (#33) (5289fa88)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified November 25, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/d9bb5a828b663c370bf71c85d8eeec7602210d85">done data type help for GmailOAuthCertificateCredentials (d9bb5a82)</a>
 </div>
 </div>
 

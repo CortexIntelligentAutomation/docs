@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
+  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -811,7 +811,7 @@ This the multi-page printable view of this section.
 </tr>
 <tr>
 <td></td>
-<td>Thrown when the combined size of all of the attachments in the list of <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> is greater than the limit specified by the email service provider; for <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> this is <code>20 MB</code> and for <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> this is <code>25 MB</code>).</td>
+<td>Thrown when the combined size of all of the attachments in the list of <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within the <a href="#email-message">Email Message</a> is greater than the limit specified by the email service provider; for <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> this is <code>20 MB</code> and for <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> this is <code>25 MB</code>.</td>
 </tr>
 <tr>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></td>
@@ -830,7 +830,7 @@ This the multi-page printable view of this section.
 <p>For more information on how the priority of an email will be displayed, see the help provided by the respective email client.</p>
 <h3 id="how-does-bodyformat-affect-sending-an-email">How does BodyFormat affect sending an email?</h3>
 <p>An email sent with an <a href="/docs/reference/data-types/email/emailmessagebodyformat/#html">HTML</a> body will have its body displayed as an HTML page instead of as plain text. How the email looks in the email client may differ depending on the email client in use. For example, if the <a href="#email-message">Email Message</a> has its <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> set to <a href="/docs/reference/data-types/email/emailmessagebodyformat/#html">HTML</a> and the <a href="/docs/reference/data-types/email/emailmessage/#body">Body</a> has a value of:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&lt;h1&gt;Example header text&lt;/h1&gt;\n&lt;p&gt;Example paragraph text&lt;/p&gt;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&lt;h1&gt;Example header text&lt;/h1&gt;&lt;p&gt;Example paragraph text&lt;/p&gt;&#34;</span>
 </span></span></code></pre></div><p><a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> will display the email body as follows:</p>
 <p><img src="/images/send-email-using-smtp-server-html-email.png" alt="HTML email"></p>
 <p>For more information on how the body of an email will be displayed, see the help provided by the respective email client.</p>
@@ -906,7 +906,7 @@ This the multi-page printable view of this section.
 <p>The above two points correspond to the <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> property being set to <code>true</code> and <code>false</code> respectively. As such, generally the following rules can be followed to determine whether <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code> or <code>false</code>:</p>
 <ul>
 <li>If the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> being connected to is <code>465</code> then <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>true</code></li>
-<li>If the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> being connected to is <code>25</code> or <code>567</code> then <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>false</code></li>
+<li>If the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> being connected to is <code>25</code> or <code>587</code> then <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> should be set to <code>false</code></li>
 </ul>
 <h3 id="setting-credentials">Setting Credentials</h3>
 <p>The <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> within the <a href="#basic-email-session-details">Basic Email Session Details</a> specifies what user to connect as on the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server. The value of the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> property may optionally be encrypted, however the <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> must be encrypted otherwise an <a href="/docs/reference/exceptions/common/unencryptedtextexception/">UnencryptedTextException</a> will be thrown when the object is created. For more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</p>

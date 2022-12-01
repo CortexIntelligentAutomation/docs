@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.03dd078dc6b5ce080d03bbec20224cf0.json"
+  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -199,16 +199,286 @@ This the multi-page printable view of this section.
 <div class="td-content" style="">
     
 	<h1 id="pg-541a1d65b218f08ebb079cd7da3678e0">1 - GmailOAuthCertificateCredentials</h1>
-    <div class="lead">The data type representing configuration for authentication via OAuth when establishing a connection with a Gmail server.</div>
+    <div class="lead">Used to represent configuration for authentication via OAuth when establishing a connection with a mail server hosted by Gmail.</div>
 	<h1 id="gmailoauthcertificatecredentials">GmailOAuthCertificateCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.GoogleWorkspace.Gmail.Authentication.OAuth.GmailOAuthCertificateCredentials)</p>
-<img src="/images/work-in-progress.jpg">
 <h2 id="summary">Summary</h2>
+<p>The <code>GmailOAuthCertificateCredentials</code> data type is used to represent configuration for authentication via OAuth when establishing a connection with a mail server hosted by <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a>. For more information on how to set up a <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication">Setting up a Gmail account for OAuth authentication</a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category:</strong></td>
+<td>Gmail</td>
+</tr>
+<tr>
+<td><strong>Name:</strong></td>
+<td><code>GmailOAuthCertificateCredentials</code></td>
+</tr>
+<tr>
+<td><strong>Full Name:</strong></td>
+<td><code>Cortex.DataTypes.GoogleWorkspace.Gmail.Authentication.OAuth.GmailOAuthCertificateCredentials</code></td>
+</tr>
+<tr>
+<td><strong>Alias:</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Description:</strong></td>
+<td>Configuration for authentication via OAuth when establishing a connection with a mail server hosted by <a href="/docs/reference/glossary/f-j/#gmail">Gmail</a>.</td>
+</tr>
+<tr>
+<td><strong>Default Value:</strong></td>
+<td>null</td>
+</tr>
+<tr>
+<td><strong>Can be used as:</strong></td>
+<td><code>GmailOAuthCertificateCredentials</code>, <code>EmailCredentials</code>, <code>IEmailCredentials</code>, <code>Object</code>, <code>dynamic</code></td>
+</tr>
+<tr>
+<td><strong>Can be cast to:</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h2 id="properties">Properties</h2>
 <h3 id="certificatepath">CertificatePath</h3>
+<p>The CertificatePath is used to define the path pointing to the certificate (.p12) file to be used for authentication via OAuth, the certificate file must be accessible from the server executing the flow. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a> with value <code>$@&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="certificatepassword">CertificatePassword</h3>
+<p>The CertificatePassword is used to define the password associated with the certificate file at the <a href="#certificatepath">CertificatePath</a>. This property is an <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a> and so it must be encrypted; for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="fromaddress">FromAddress</h3>
+<p>The FromAddress is used to define the address of the account used to set up the client application created to allow authentication via OAuth.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/text/string">String</a> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="clientid">ClientId</h3>
+<p>The ClientId is used to define client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the data type can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/common/unencryptedtextexception/">UnencryptedTextException</a></td>
+<td>Thrown when the <a href="#certificatepassword">CertificatePassword</a> is not encrypted.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="create-a-gmailoauthcertificatecredentials">Create a GmailOAuthCertificateCredentials</h3>
+<p>The following table shows how a <code>GmailOAuthCertificateCredentials</code> can be created.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Example</th>
+<th>Result</th>
+<th>Editor Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use a <code>GmailOAuthCertificateCredentials</code> constructor</td>
+<td><code>new GmailOAuthCertificateCredentials(certificatePath: @&quot;C:\certificate.p12&quot;, certificatePassword: &quot;encryptedPassword&quot;, fromAddress: &quot;sender@gmail.com&quot;, clientId: &quot;clientId&quot;)</code></td>
+<td><code>{&quot;CertificatePath&quot;: &quot;C:\\certificate.p12&quot;, &quot;CertificatePassword&quot;: &quot;encryptedPassword&quot;, &quot;FromAddress&quot;: &quot;sender@gmail.com&quot;, &quot;ClientId&quot;: &quot;clientId&quot;}</code></td>
+<td>Expression</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>GmailOAuthCertificateCredentials</code> can also be created using the Literal Editor by filling in the necessary values for the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Data Type</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CertificatePath</code></td>
+<td><code>EncryptableText</code></td>
+<td><code>$@&quot;C:\certificate.p12&quot;</code></td>
+<td>The <a href="#certificatepath">CertificatePath</a> defines the path pointing to the certificate (.p12) file to be used for authentication via OAuth.</td>
+</tr>
+<tr>
+<td><code>CertificatePassword</code></td>
+<td><code>EncryptedText</code></td>
+<td><code>&quot;encryptedPassword&quot;</code></td>
+<td>The <a href="#certificatepassword">CertificatePassword</a> defines the password associated with the certificate file at the <a href="#certificatepath">CertificatePath</a>.</td>
+</tr>
+<tr>
+<td><code>FromAddress</code></td>
+<td><code>String</code></td>
+<td><code>&quot;sender@gmail.com&quot;</code></td>
+<td>The <a href="#fromaddress">FromAddress</a> defines the address of the account used to set up the client application created to allow authentication via OAuth.</td>
+</tr>
+<tr>
+<td><code>ClientId</code></td>
+<td><code>EncryptableText</code></td>
+<td><code>&quot;clientid&quot;</code></td>
+<td>The <a href="#clientid">ClientId</a> defines the client ID of the client application created to allow authentication via OAuth.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="convert-gmailoauthcertificatecredentials-to-text">Convert GmailOAuthCertificateCredentials to Text</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Example</th>
+<th>Result</th>
+<th>Editor Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use <code>Convert Object To Json</code> block</td>
+<td>where <code>Object</code> property has a value of <code>{&quot;CertificatePath&quot;: &quot;C:\\certificate.p12&quot;, &quot;CertificatePassword&quot;: &quot;encryptedPassword&quot;, &quot;FromAddress&quot;: &quot;sender@gmail.com&quot;, &quot;ClientId&quot;: &quot;clientId&quot;}</code></td>
+<td><code>&quot;{\r\n  \&quot;CertificatePath\&quot;: \&quot;C:\\\\certificate.p12\&quot;,\r\n  \&quot;CertificatePassword\&quot;: \&quot;encryptedPassword\&quot;,\r\n  \&quot;FromAddress\&quot;: \&quot;sender@gmail.com\&quot;,\r\n  \&quot;ClientId\&quot;: \&quot;clientId\&quot;\r\n}&quot;</code></td>
+<td>N/A</td>
+<td>See <a href="/docs/reference/blocks/json/convert-json/convert-object-to-json-block">Convert Object To Json</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-editor-support">Property Editor Support</h3>
+<ul>
+<li>The Expression Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a> properties where the data type is <code>GmailOAuthCertificateCredentials</code>.</li>
+<li>The Literal Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a> properties where the data type is <code>GmailOAuthCertificateCredentials</code>.</li>
+<li>The Variable Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a>, <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a> and <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a> properties where the data type is <code>GmailOAuthCertificateCredentials</code>.</li>
+</ul>
+<h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
+<h2 id="see-also">See Also</h2>
+<h3 id="related-data-types">Related Data Types</h3>
+<ul>
+<li><a href="/docs/reference/data-types/email/authentication/emailcredentials">EmailCredentials</a></li>
+<li><a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a></li>
+<li><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></li>
+<li><a href="/docs/reference/data-types/google-workspace/gmail/gmailsessiondetails">GmailSessionDetails</a></li>
+<li><a href="/docs/reference/data-types/email/authentication/iemailcredentials">IEmailCredentials</a></li>
+</ul>
+<h3 id="related-concepts">Related Concepts</h3>
+<ul>
+<li><a href="/docs/reference/concepts/working-with/email/">Working with Email</a></li>
+</ul>
+<h3 id="external-documentation">External Documentation</h3>
+<p>None</p>
 
 </div>
 

@@ -143,6 +143,13 @@ A [Category][] of `OAuthCredentials` and an [Error Code][] of `400` indicates th
 
 - An invalid [CertificatePath][] and [CertificatePassword][] combination has been provided in the [GmailOAuthCertificateCredentials][]
 - The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] points to an invalid [SSL][] certificate
+- The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] points to a non-existant file
+- The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] points to a folder
+- The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] is longer than the system defined maximum length (typically 32,767)
+- The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] contains only whitespace (i.e. `" "`) or contains the NUL character (i.e. `\0`)
+- The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] contains leading spaces
+- The [CertificatePath][] in the [GmailOAuthCertificateCredentials][] contains invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`)
+- Access is denied to the file at the [CertificatePath][] in the [GmailOAuthCertificateCredentials][]
 
 #### Message Format
 
@@ -157,7 +164,7 @@ where:
 
 #### How to Fix
 
-Provide a [CertificatePath][] pointing to a valid [SSL][] certificate and ensure that the [CertificatePassword][] is correct in the [GmailOAuthCertificateCredentials][].
+Provide a [CertificatePath][] which is a valid file path pointing to a valid [SSL][] certificate and ensure that the [CertificatePassword][] is correct in the [GmailOAuthCertificateCredentials][].
 
 ***
 

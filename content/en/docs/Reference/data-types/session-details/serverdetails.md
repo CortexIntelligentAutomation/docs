@@ -39,6 +39,7 @@ A server address can typically be represented in one of the following formats:
 The server address formats supported are dependent on the block being used:
 
 - [Send Email Using SMTP Server Block][Send Email Using SMTP Server Block Supported Server Address Formats]
+- [Send Email Using Gmail Block][Send Email Using Gmail Block Supported Server Address Formats]
 
 | | |
 |--------------------|---------------------------|
@@ -62,7 +63,10 @@ The Port is used to define the port on the server to connect to.
 
 UseSsl is used to define whether or not connection to the server should use [SSL][].
 
-When using this data type with [Send Email Using SMTP Server Block][], the value of this property depends on the [Port][Port Property]. For more information, see [Send Email Using SMTP Server Block][Send Email Using SMTP Server Block Setting UseSsl].
+The value of this property depends on the [Port][Port Property] for the following blocks:
+
+- [Send Email Using SMTP Server Block][Send Email Using SMTP Server Block Setting UseSsl]
+- [Send Email Using Gmail Block][Send Email Using Gmail Block Setting UseSsl]
 
 | | |
 |--------------------|---------------------------|
@@ -135,9 +139,11 @@ None
 
 [BasicEmailSessionDetails]: {{< url "Cortex.Reference.DataTypes.Email.BasicEmailSessionDetails.MainDoc" >}}
 
-[Send Email Using SMTP Server Block]: {{< url "Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.MainDoc" >}}
 [Send Email Using SMTP Server Block Supported Server Address Formats]: {{< url "Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.SupportedServerAddressFormats" >}}
 [Send Email Using SMTP Server Block Setting UseSsl]: {{< url "Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.SettingUseSsl" >}}
+
+[Send Email Using Gmail Block Supported Server Address Formats]: {{< url "Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail.SupportedServerAddressFormats" >}}
+[Send Email Using Gmail Block Setting UseSsl]: {{< url "Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail.SettingUseSsl" >}}
 
 [Working with Email]: {{< url "Cortex.Reference.Concepts.WorkingWith.Email.MainDoc" >}}
 

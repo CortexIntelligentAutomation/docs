@@ -27,7 +27,7 @@ The `BasicEmailSessionDetails` data type is used to represent configuration for 
 
 ### ServerDetails
 
-The ServerDetails are used to configure the [Host][] and [Port][] of the [SMTP][] server to connect to and whether or not to [UseSsl][].
+The ServerDetails are used to configure the [Host][] and [Port][] of the mail server to connect to and whether or not to [UseSsl][].
 
 | | |
 |--------------------|---------------------------|
@@ -46,7 +46,7 @@ The ServerDetails are used to configure the [Host][] and [Port][] of the [SMTP][
 
 ### Credentials
 
-The Credentials are used to configure the [Username][] and [Password][] used for [SMTP][] Authentication.
+The Credentials are used to configure the [Username][] and [Password][] used for authentication.
 
 | | |
 |--------------------|---------------------------|
@@ -94,7 +94,7 @@ A `BasicEmailSessionDetails` can also be created using the Literal Editor by fil
 
 ### Known Limitations
 
-Currently, this data type is not compatible for use with unauthenticated [SMTP][] servers.
+Currently, this data type is not compatible for use with unauthenticated mail servers.
 
 This limitation may be removed in the future.
 
@@ -123,9 +123,7 @@ None
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
-[EncryptableText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [EncryptedText]: {{< url "Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}
-[UnencryptedTextException]: {{< url "Cortex.Reference.Exceptions.Common.UnencryptedTextException.MainDoc" >}}
 
 [ServerDetails]: {{< url "Cortex.Reference.DataTypes.SessionDetails.ServerDetails.MainDoc" >}}
 [Host]: {{< url "Cortex.Reference.DataTypes.SessionDetails.ServerDetails.Host" >}}
@@ -133,13 +131,9 @@ None
 [UseSsl]: {{< url "Cortex.Reference.DataTypes.SessionDetails.ServerDetails.UseSsl" >}}
 
 [UserCredentials]: {{< url "Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
-[Domain]: {{< url "Cortex.Reference.DataTypes.Credentials.UserCredentials.Domain" >}}
 [Username]: {{< url "Cortex.Reference.DataTypes.Credentials.UserCredentials.Username" >}}
 [Password]: {{< url "Cortex.Reference.DataTypes.Credentials.UserCredentials.Password" >}}
 
-[Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
 [Working with Email]: {{< url "Cortex.Reference.Concepts.WorkingWith.Email.MainDoc" >}}
-
-[SMTP]: {{< url "Cortex.Reference.Glossary.P-T.SMTP" >}}

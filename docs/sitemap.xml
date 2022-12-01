@@ -5,6 +5,9 @@
     <loc>/docs/reference/data-types/all/</loc>
     <lastmod>2022-06-16T14:15:00+01:00</lastmod>
   </url><url>
+    <loc>/docs/reference/concepts/working-with/email/authentication/</loc>
+    <lastmod>2022-11-08T09:39:16+00:00</lastmod>
+  </url><url>
     <loc>/docs/reference/data-types/email/authentication/</loc>
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
   </url><url>
@@ -93,7 +96,7 @@
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-30T16:59:03+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/google-workspace/</loc>
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
@@ -108,7 +111,7 @@
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/email/authentication/iemailcredentials/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-23T12:55:43+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/http/authentication/ihttpcredentials/</loc>
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
@@ -657,7 +660,7 @@
     <lastmod>2022-09-14T12:05:30+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/email/basicemailsessiondetails/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-23T12:55:43+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/exceptions/flows/blocks/</loc>
     <lastmod>2022-05-18T13:45:13+01:00</lastmod>
@@ -996,7 +999,7 @@
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/email/emailmessage/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-25T08:42:25+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/email/emailmessagebodyformat/</loc>
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
@@ -1008,7 +1011,7 @@
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/exceptions/email/email-session-exception/</loc>
-    <lastmod>2022-10-28T13:48:06+01:00</lastmod>
+    <lastmod>2022-11-23T10:36:50+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/working-with/text/empty-text-and-whitespace/</loc>
     <lastmod>2022-09-15T14:21:09+01:00</lastmod>
@@ -1305,7 +1308,7 @@
     <lastmod>2022-09-12T09:10:20+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/google-workspace/gmail/gmailsessiondetails/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-30T16:59:03+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/google-workspace/</loc>
     <lastmod>2022-09-12T09:10:20+01:00</lastmod>
@@ -1776,16 +1779,16 @@
     <lastmod>2022-09-12T09:10:20+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/google-workspace/gmail/send-email/send-email-using-gmail-block/</loc>
-    <lastmod>2022-09-12T11:20:36+01:00</lastmod>
+    <lastmod>2022-11-30T16:59:03+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/microsoft365/outlook/send-email/send-email-using-microsoft365-block/</loc>
     <lastmod>2022-09-12T11:20:36+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/</loc>
-    <lastmod>2022-10-28T13:48:06+01:00</lastmod>
+    <lastmod>2022-11-22T16:42:43+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/session-details/serverdetails/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-25T08:42:25+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/dictionaries/set-item/set-all-items-block-3/</loc>
     <lastmod>2022-09-16T10:30:55+01:00</lastmod>
@@ -1953,7 +1956,7 @@
     <lastmod>2022-08-23T16:26:42+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/credentials/usercredentials/</loc>
-    <lastmod>2022-10-28T13:13:10+01:00</lastmod>
+    <lastmod>2022-11-25T09:49:43+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/text/utf32encoding/</loc>
     <lastmod>2022-08-23T16:26:42+01:00</lastmod>

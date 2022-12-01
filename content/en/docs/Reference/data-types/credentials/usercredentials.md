@@ -32,6 +32,7 @@ The Domain is used to define the domain or server to authenticate with. The valu
 Whether or not the Domain is required is dependent on the block being used:
 
 - [Send Email Using SMTP Server Block][Send Email Using SMTP Server Block Setting Credentials]
+- [Send Email Using Gmail Block][Send Email Using Gmail Block Setting Credentials]
 
 | | |
 |--------------------|---------------------------|
@@ -154,6 +155,7 @@ None
 [NetworkCredential]: {{< url "MSDocs.DotNet.Api.System.Net.NetworkCredential" >}}
 
 [Send Email Using SMTP Server Block Setting Credentials]: {{< url "Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.SettingCredentials" >}}
+[Send Email Using Gmail Block Setting Credentials]: {{< url "Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail.SettingCredentials" >}}
 
 [Working with Email]: {{< url "Cortex.Reference.Concepts.WorkingWith.Email.MainDoc" >}}
 

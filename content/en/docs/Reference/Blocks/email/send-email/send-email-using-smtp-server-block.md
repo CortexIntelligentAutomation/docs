@@ -331,7 +331,7 @@ The exceptions thrown by the block can be found below:
 | |Thrown when the [Address][] in an [EmailAddress][] within [Email Message][Email Message Property] is empty (i.e. `""`). |
 | [PropertyValueOutOfRangeException][] |Thrown when the [Port][] in the [ServerDetails][] within [Basic Email Session Details][Basic Email Session Details Property] is below `1` or above `65535`. For more information, see [Property Is Invalid][]. |
 | [SmtpCommandException][]             |Thrown when the [Address][] in an [EmailAddress][] within [Email Message][Email Message Property] is not of the correct format ([RFC 5321][]).|
-| |Thrown when the combined size of all of the attachments in the list of [Attachments][] within the [Email Message][Email Message Property] is greater than the limit specified by the email service provider; for [Outlook][] this is `20 MB` and for [Gmail][] this is `25 MB`).|
+| |Thrown when the combined size of all of the attachments in the list of [Attachments][] within the [Email Message][Email Message Property] is greater than the limit specified by the email service provider; for [Outlook][] this is `20 MB` and for [Gmail][] this is `25 MB`.|
 | [UnauthorizedAccessException][]      |Thrown when access is denied to a file provided in [Attachments][] within [Email Message][Email Message Property].|
 | |Thrown when a file path within the [Attachments][] property within [Email Message][Email Message Property] points to a folder.|
 
@@ -350,7 +350,7 @@ For more information on how the priority of an email will be displayed, see the 
 An email sent with an [HTML][] body will have its body displayed as an HTML page instead of as plain text. How the email looks in the email client may differ depending on the email client in use. For example, if the [Email Message][Email Message Property] has its [BodyFormat][] set to [HTML][] and the [Body][] has a value of:
 
 ```json
-"<h1>Example header text</h1>\n<p>Example paragraph text</p>"
+"<h1>Example header text</h1><p>Example paragraph text</p>"
 ```
 
 [Outlook][] will display the email body as follows:
@@ -445,7 +445,7 @@ The [ServerDetails][] within the [Basic Email Session Details][Basic Email Sessi
 The above two points correspond to the [UseSsl][] property being set to `true` and `false` respectively. As such, generally the following rules can be followed to determine whether [UseSsl][] should be set to `true` or `false`:
 
 - If the [Port][] being connected to is `465` then [UseSsl][] should be set to `true`
-- If the [Port][] being connected to is `25` or `567` then [UseSsl][] should be set to `false`
+- If the [Port][] being connected to is `25` or `587` then [UseSsl][] should be set to `false`
 
 ### Setting Credentials
 
