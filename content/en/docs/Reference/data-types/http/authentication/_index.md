@@ -1,6 +1,6 @@
 ---
 title: "Authentication"
 linkTitle: "Authentication"
-description: "Data types used for authenticating with servers."
+description: "Data types used for authentication when working with HTTP."
 weight: 1
 ---

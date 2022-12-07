@@ -19,14 +19,14 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Authentication | Cortex</title><meta property="og:title" content="Authentication" />
-<meta property="og:description" content="Data types used for authenticating with servers." />
+<meta property="og:description" content="Data types used for authentication when working with HTTP." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/reference/data-types/http/authentication/" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Authentication">
-<meta itemprop="description" content="Data types used for authenticating with servers."><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Data types used for authentication when working with HTTP."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authentication"/>
-<meta name="twitter:description" content="Data types used for authenticating with servers."/>
+<meta name="twitter:description" content="Data types used for authentication when working with HTTP."/>
 
 
 
@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
+  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -151,7 +151,7 @@ This the multi-page printable view of this section.
 
 
 <h1 class="title">Authentication</h1>
-<div class="lead">Data types used for authenticating with servers.</div>
+<div class="lead">Data types used for authentication when working with HTTP.</div>
 
 
 
@@ -188,6 +188,65 @@ This the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>4: <a href="#pg-eb179dbee481f4f34ef751e9197d429f">OAuth</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.1: <a href="#pg-1f8634aa040dfb1b8588842f10e4167e">ClientAuthentication</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-eb9923b699c59cd2398b2a3286313f8c">ClientAuthType</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.3: <a href="#pg-fa6d9031318f6d85cd0fda9a9406751a">HttpOAuthCientCredentials</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.4: <a href="#pg-ef668f13466bb3fa7c966044245c16ad">HttpOAuthCredentials</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.5: <a href="#pg-3f03e29f64f94464fa30c1eead537210">HttpOAuthPasswordCredentials</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -215,7 +274,7 @@ This the multi-page printable view of this section.
 <div class="td-content" style="">
     
 	<h1 id="pg-be62ec9b59ccb18cf224c3beabc7034a">1 - HttpCredentials</h1>
-    <div class="lead">Used to represent details required to authenticate with a server.</div>
+    <div class="lead">Used to represent details required for authentication when working with HTTP.</div>
 	<h1 id="httpcredentials">HttpCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Http.Authentication.HttpCredentials)</p>
 <img src="/images/work-in-progress.jpg">
@@ -235,7 +294,7 @@ This the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-5b9ec8d3fc9f728f4fc1cc7bd374f110">2 - HttpUserCredentials</h1>
-    <div class="lead">Used to represent details required to authenticate with a server.</div>
+    <div class="lead">Used to represent details required for basic authentication when working with HTTP.</div>
 	<h1 id="httpusercredentials">HttpUserCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Http.Authentication.HttpUserCredentials)</p>
 <img src="/images/work-in-progress.jpg">
@@ -255,7 +314,7 @@ This the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-9e99ff930eb7db0f118ba2b2daedc5ed">3 - IHttpCredentials</h1>
-    <div class="lead">Used to represent details required to authenticate with a server.</div>
+    <div class="lead">Any data type used to represent details required for authentication when working with HTTP.</div>
 	<h1 id="ihttpcredentials">IHttpCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Http.Authentication.IHttpCredentials)</p>
 <img src="/images/work-in-progress.jpg">
@@ -263,6 +322,152 @@ This the multi-page printable view of this section.
 </div>
 
 
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-eb179dbee481f4f34ef751e9197d429f">4 - OAuth</h1>
+    <div class="lead">Data types used for authentication via OAuth when working with HTTP.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-1f8634aa040dfb1b8588842f10e4167e">4.1 - ClientAuthentication</h1>
+    <div class="lead">Used to represent client credentials for OAuth.</div>
+	<h1 id="clientauthentication">ClientAuthentication</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthentication)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="clientid">ClientId</h3>
+<h3 id="clientsecret">ClientSecret</h3>
+<h3 id="sendas">SendAs</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-eb9923b699c59cd2398b2a3286313f8c">4.2 - ClientAuthType</h1>
+    <div class="lead">Used to represent the client authentication type for OAuth.</div>
+	<h1 id="clientauthtype">ClientAuthType</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthType)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-fa6d9031318f6d85cd0fda9a9406751a">4.3 - HttpOAuthCientCredentials</h1>
+    <div class="lead">Used to represent details required for OAuth authentication using client credentials.</div>
+	<h1 id="httpoauthcientcredentials">HttpOAuthCientCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthCientCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="accesstokenuri">AccessTokenUri</h3>
+<h3 id="clientauthentication">ClientAuthentication</h3>
+<h3 id="scope">Scope</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ef668f13466bb3fa7c966044245c16ad">4.4 - HttpOAuthCredentials</h1>
+    <div class="lead">Used to represent details required for OAuth authentication.</div>
+	<h1 id="httpoauthcredentials">HttpOAuthCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3f03e29f64f94464fa30c1eead537210">4.5 - HttpOAuthPasswordCredentials</h1>
+    <div class="lead">Used to represent details required for OAuth authentication using password credentials.</div>
+	<h1 id="httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="resourceownerusername">ResourceOwnerUsername</h3>
+<h3 id="resourceownerpassword">ResourceOwnerPassword</h3>
+<h3 id="accesstokenuri">AccessTokenUri</h3>
+<h3 id="clientauthentication">ClientAuthentication</h3>
+<h3 id="scope">Scope</h3>
+
+</div>
+
+
+
+    
+	
+  
 
     
 	

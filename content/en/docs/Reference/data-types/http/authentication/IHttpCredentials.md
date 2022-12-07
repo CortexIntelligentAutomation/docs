@@ -1,7 +1,7 @@
 ---
 title: "IHttpCredentials"
 linkTitle: "IHttpCredentials"
-description: "Used to represent details required to authenticate with a server."
+description: "Any data type used to represent details required for authentication when working with HTTP."
 weight: 1
 ---
 

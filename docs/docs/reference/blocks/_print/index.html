@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
+  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -2595,7 +2595,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>15.1.1.1: <a href="#pg-768ea96a3a6a683e2ccf0ac76f500af6">Send Email Using Microsoft365</a></li>
+<li>15.1.1.1: <a href="#pg-768ea96a3a6a683e2ccf0ac76f500af6">Send Email Using Microsoft 365</a></li>
 
 
     
@@ -29370,20 +29370,594 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 
 <h1 id="execute-http-request">Execute Http Request</h1>
 <p class="namespace">(Cortex.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequestBlock`1)</p>
-<img src="/images/work-in-progress.jpg">
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Executes an HTTP request and returns a response.</p>
+<p>Executes an <a href="#http-request">HTTP Request</a> using the specified <a href="#http-credentials">Http Credentials</a> and returns the <a href="#http-response">Http Response</a>.</p>
 <h2 id="examples">Examples</h2>
-<h3 id="calling-another-flow">Calling Another Flow</h3>
-<p>TODO</p>
+<p>The following examples will use an example <a href="/docs/reference/glossary/a-e/#api">API</a> with a base <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api</code> and resource called <code>items</code> at <code>https://test-shop.com/api/items</code>. Each example assumes that the resource <code>items</code> contains the following data before the example is executed:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>The example <a href="/docs/reference/glossary/a-e/#api">API</a> supports:</p>
 <ul>
-<li>Show example of passing input variables to a flow</li>
-<li>Show returned Output variables from a flow</li>
+<li>Retrieval of every item in the <code>items</code> resource via a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request which returns the <code>items</code> resource as the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> of the <a href="#http-response">Http Response</a></li>
+<li>Creation of a new item in the <code>items</code> resource via a <a href="/docs/reference/data-types/http/requestverb/#post">POST</a> request which returns the updated <code>items</code> resource as the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> of the <a href="#http-response">Http Response</a></li>
+<li>Unauthenticated requests</li>
+<li>Basic authentication</li>
+<li>Retrieval of access tokens from <code>https://test-shop.com/api/oauth2/token</code></li>
+<li>OAuth authentication using password credentials</li>
+<li>OAuth authentication using client credentials</li>
 </ul>
-<h2 id="properties">Properties</h2>
+<h3 id="executing-a-get-request">Executing a GET request</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> with no authentication which requires <a href="#http-credentials">Http Credentials</a> to be <code>null</code>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>null</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>null</code></td>
+<td><code>($)HttpCredentials</code> is a variable with value <code>null</code><br><br>As <code>($)HttpCredentials</code> is <code>null</code>, no authentication will occur when making the request.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-post-request">Executing a POST request</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#post">POST</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> with no authentication which requires <a href="#http-credentials">Http Credentials</a> to be <code>null</code>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.POST&quot;, &quot;ContentType&quot;: &quot;application/json&quot;, &quot;Body&quot;: &quot;{'name': 'item 3', 'id': 3}&quot;, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.POST, contentType: &quot;application/json&quot;, headers: null, body: &quot;{'name': 'item 3', 'id': 3}&quot;, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>null</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>null</code></td>
+<td><code>($)HttpCredentials</code> is a variable with value <code>null</code><br><br>As <code>($)HttpCredentials</code> is <code>null</code>, no authentication will occur when making the request.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#post">POST</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note the following:</p>
+<ul>
+<li>The resource <code>items</code> at <code>https://test-shop.com/api/items</code> contains <code>item 3</code> as shown in the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> of the <a href="#http-response">Http Response</a> shown above</li>
+<li>As the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data</li>
+</ul>
+<hr>
+<h3 id="executing-a-request-using-basic-authentication">Executing a request using Basic authentication</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> using Basic authentication which requires <a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-2">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;Domain&quot;: null, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new UserCredentials(username: &quot;username&quot;, password: &quot;encryptedPassword&quot;)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-2">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-oauth-password-credentials">Executing a request using OAuth password credentials</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> using OAuth authentication with password credentials which requires <a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-3">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-shop.com/api/oauth2/token&quot;, &quot;ClientAuthentication&quot;: null, &quot;Scope&quot;: null, &quot;ResourceOwnerUsername&quot;: &quot;username&quot;, &quot;ResourceOwnerPassword&quot;: &quot;encryptedPassword&quot;}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthPasswordCredentials(accessTokenUri: &quot;https://test-shop.com/api/oauth2/token&quot;, clientAuthentication: null, scope: null, resourceOwnerUsername: &quot;username&quot;, resourceOwnerPassword: &quot;encryptedPassword&quot;)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword">ResourceOwnerPassword</a> property in the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-3">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-oauth-client-credentials">Executing a request using OAuth client credentials</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> using OAuth authentication with client credentials which requires <a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-4">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-shop.com/api/oauth2/token&quot;, &quot;ClientAuthentication&quot;: {&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;SendAs&quot;: &quot;ClientAuthType.Header&quot;}, &quot;Scope&quot;: null}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthClientCredentials(accessTokenUri: &quot;https://test-shop.com/api/oauth2/token&quot;, clientAuthentication: new ClientAuthentication(&quot;clientId&quot;, &quot;encryptedClientSecret&quot;, ClientAuthType.Header), scope: null)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-4">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h2 id="properties-5">Properties</h2>
+<h3 id="http-request">Http Request</h3>
+<p>The <a href="#http-request">Http Request</a> to execute using the <a href="#http-credentials">Http Credentials</a>. This property contains all of the information in relation to the request to be sent, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#queryparameters">QueryParameters</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#contenttype">ContentType</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#body">Body</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#httpversion">HttpVersion</a></li>
+</ul>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Uri&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;QueryParameters&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Verb&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RequestVerb.GET&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ContentType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;HttpVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpRequestVersion.HTTP10&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="http-credentials">Http Credentials</h3>
+<p>The <a href="#http-credentials">Http Credentials</a> object that includes all of the information required for authentication. Mutliple authentication mechanisms are supported which correspond to specific values/data types:</p>
+<ul>
+<li><code>null</code>: No authentication</li>
+<li><a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>: Basic authentication</li>
+<li><a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a>: OAuth authentication using password credentials</li>
+<li><a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a>: OAuth authentication using client credentials</li>
+</ul>
+<p>Note that when using <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> or <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> as the <a href="#http-credentials">Http Credentials</a>, the Execute Http Request block automatically handles retrieval of access tokens using the following rules:</p>
+<ul>
+<li>If an access token does not exist, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists but is expired, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists and is valid, it will be used when the block runs.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/authentication/httpcredentials">HttpCredentials</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)HttpCredentials</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http-response">Http Response</h3>
+<p>The <a href="#http-response">Http Response</a> object which contains the response returned from the server. This property contains all of the information in relation to the response from the server, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#errormessage">ErrorMessage</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#statuscode">StatusCode</a></li>
+</ul>
+<p>Note that if the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value containing <code>json</code> or <code>xml</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> will be set to a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)HttpResponse</code> with no value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/http/http-authorisation-exception">HttpAuthorisationException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword">ResourceOwnerPassword</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/http/invalid-request-exception">InvalidRequestException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> within <a href="#http-request">Http Request</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> within <a href="#http-request">Http Request</a> is not one of the specified <a href="/docs/reference/data-types/http/requestverb">RequestVerb</a> values (e.g. <code>(RequestVerb)10</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> is restricted.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> is restricted and forbidden.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header value in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> could not be assigned to its restricted header key.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header value in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> could not be converted to its restricted header key&rsquo;s type.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#body">Body</a> within <a href="#http-request">Http Request</a> is not <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) and <a href="/docs/reference/data-types/http/requestverb">RequestVerb</a> is <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> or <a href="/docs/reference/data-types/http/requestverb/#head">HEAD</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#body">Body</a> within <a href="#http-request">Http Request</a> does not match the <a href="/docs/reference/data-types/http/rest/httprequest/#contenttype">ContentType</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#httpversion">HttpVersion</a> within <a href="#http-request">Http Request</a> is not one of the specified <a href="/docs/reference/data-types/http/httprequestversion">HttpRequestVersion</a> values (e.g. <code>(HttpRequestVersion)20</code>).</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#http-request">Http Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> within <a href="#http-request">Http Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> within <a href="#http-request">Http Request</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 
@@ -40012,24 +40586,406 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 
 <div class="td-content" style="">
     
-	<h1 id="pg-768ea96a3a6a683e2ccf0ac76f500af6">15.1.1.1 - Send Email Using Microsoft365</h1>
-    <div class="lead">Sends an email using Microsoft365.</div>
+	<h1 id="pg-768ea96a3a6a683e2ccf0ac76f500af6">15.1.1.1 - Send Email Using Microsoft 365</h1>
+    <div class="lead">Sends an email using the SMTP server hosted by Outlook.</div>
 	
 <figure class="block-icon">
     <img src=" /blocks/microsoft365-send-email-using-microsoft365-block-icon.png "
          alt="Icon"/> 
 </figure>
 
-<h1 id="send-email-using-microsoft365">Send Email Using Microsoft365</h1>
+<h1 id="send-email-using-microsoft-365">Send Email Using Microsoft 365</h1>
 <p class="namespace">(Cortex.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365Block)</p>
-<img src="/images/work-in-progress.jpg">
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Sends an email using Microsoft365.</p>
+<p>Connects to the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> using the specified <a href="#credentials">Credentials</a>, and sends an <a href="#email-message">Email Message</a>.</p>
+<p>This block only supports authentication via OAuth (using <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> or <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>), to send an email using basic authentication, see <a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block">Send Email Using SMTP Server</a>.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
-<h2 id="exceptions">Exceptions</h2>
+<h3 id="sending-an-email-using-client-credentials">Sending an email using client credentials</h3>
+<p>This example will send an email from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> using the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>.</p>
+<p>The OAuth mechanism in this example uses client credentials. Therefore, for this example to work correctly, the <a href="#credentials">Credentials</a> provided must be a <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</p>
+<p>For more information on:</p>
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> needs to be, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials">Setting up an Outlook account for OAuth authentication using client credentials</a></li>
+</ul>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@outlook.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@outlook.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#credentials">Credentials</a></td>
+<td><code>($)Credentials</code> with value <code>{&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;TenantId&quot;: &quot;tenantId&quot;, ObjectId: &quot;objectId&quot;}</code><br><br>In this example <code>($)Credentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new Microsoft365OAuthCredentials(clientId: &quot;clientId&quot;, clientSecret: &quot;encryptedClientSecret&quot;, tenantId: &quot;tenantId&quot;, objectId: &quot;objectId&quot;)</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a><br><br>The <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> property in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the connection is closed.</p>
+<hr>
+<h3 id="sending-an-email-using-certificate-credentials">Sending an email using certificate credentials</h3>
+<p>This example will send an email from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> using the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>.</p>
+<p>The OAuth mechanism in this example uses certificate credentials. Therefore, for this example to work correctly:</p>
+<ul>
+<li><a href="#credentials">Credentials</a> provided must be a <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a></li>
+<li><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> must be a path pointing to a certificate accessible from the server executing the flow</li>
+</ul>
+<p>For more information on:</p>
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> needs to be, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials">Setting up an Outlook account for OAuth authentication using certificate credentials</a></li>
+</ul>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@outlook.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@outlook.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#credentials">Credentials</a></td>
+<td><code>($)Credentials</code> with value <code>{&quot;CertificatePath&quot;: &quot;C:\\certificate.pfx&quot;, &quot;CertificatePassword&quot;: &quot;encryptedPassword&quot;, &quot;ClientId&quot;: &quot;clientId&quot;, &quot;TenantId&quot;: &quot;tenantId&quot;, &quot;ObjectId&quot;: &quot;objectId&quot;}</code><br><br>In this example <code>($)Credentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new Microsoft365OAuthCertificateCredentials(certificatePath: @&quot;C:\certificate.pfx&quot;, certificatePassword: &quot;encryptedPassword&quot;, clientId: &quot;clientId&quot;, tenantId: &quot;tenantId&quot;, objectId: &quot;objectId&quot;)</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a><br><br>The <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> property in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the connection is closed.</p>
+<hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="email-message">Email Message</h3>
+<p>The <a href="#email-message">Email Message</a> to send via the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>. This property contains all of the information in relation to the email to be sent, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/email/emailmessage/#to">To</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#from">From</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#cc">Cc</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#bcc">Bcc</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#subject">Subject</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#body">Body</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a></li>
+</ul>
+<p>Note that if the properties <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are set to <code>null</code> when <a href="/docs/reference/data-types/email/emailmessage/#create-an-emailmessage">creating an EmailMessage using a constructor</a>, the email will be sent with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority and with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;To&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;From&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Cc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Bcc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Priority&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EmailMessagePriority.Normal&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Subject&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;BodyFormat&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EmailMessageBodyFormat.Text&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Attachments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="credentials">Credentials</h3>
+<p>The <a href="#credentials">Credentials</a> object that includes all of the information required to connect to an <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>. There are two data types that can be used, which depends on the desired OAuth mechanism:</p>
+<ul>
+<li><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>: Using client credentials. For information on:
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> needs to be, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials">Setting up an Outlook account for OAuth authentication using client credentials</a></li>
+</ul>
+</li>
+<li><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>: Using certificate credentials. For information on:
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials">Setting up an Outlook account for OAuth authentication using certificate credentials</a></li>
+</ul>
+</li>
+</ul>
+<p>Note that the Send Email Using Microsoft 365 block automatically handles retrieval of access tokens using the following rules:</p>
+<ul>
+<li>If an access token does not exist, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists but is expired, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists and is valid, it will be used when the block runs.</li>
+</ul>
+<p>It is recommended to use a <a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a> for <a href="#credentials">Credentials</a> when it will be used across multiple Send Email Using Microsoft 365 blocks, as using a variable will allow for reuse of the same access token. Using a <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a> to set the <a href="#credentials">Credentials</a> will cause the access token to only be used once and a new acccess token will be requested for every Send Email Using Microsoft 365 block.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365credentials">Microsoft365Credentials</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ClientId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ClientSecret&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;TenantId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ObjectId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a></td>
+<td>Thrown when <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> within the <a href="#email-message">Email Message</a> is not one of the specified <a href="/docs/reference/data-types/email/emailmessagebodyformat">EmailMessageBodyFormat</a> values (e.g. <code>(EmailMessageBodyFormat)10</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> within the <a href="#email-message">Email Message</a> is not one of the specified <a href="/docs/reference/data-types/email/emailmessagepriority">EmailMessagePriority</a> values (e.g. <code>(EmailMessagePriority)10</code>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.cryptographicexception">CryptographicException</a></td>
+<td>Thrown when an incorrect <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an incorrect <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></td>
+<td>Thrown when a non-existent file path is provided in <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within <a href="#email-message">Email Message</a>.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception">IOException</a></td>
+<td>Thrown when the desired socket is held by another process; re-running the flow typically solves this.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalserviceexception">MsalServiceException</a></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid">ClientId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid">TenantId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid">ClientId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid">TenantId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#email-message">Email Message</a>  is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#to">To</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#from">From</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="#credentials">Credentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#to">To</a> within <a href="#email-message">Email Message</a> is empty (i.e. <code>[]</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.serviceexception">ServiceException</a></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid">ObjectId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid">ObjectId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when trying to send an email as a user that the client application does not have rights to send as.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is not of the correct format (<a href="https://www.ietf.org/rfc/rfc5321.txt">RFC 5321</a>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></td>
+<td>Thrown when access is denied to a file provided in <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within <a href="#email-message">Email Message</a>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 
@@ -40652,14 +41608,591 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 
 <h1 id="execute-powershell-script">Execute PowerShell Script</h1>
 <p class="namespace">(Cortex.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScriptBlock`1)</p>
-<img src="/images/work-in-progress.jpg">
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Executes a PowerShell script on the specified host.</p>
+<p>Connects to a host (e.g. SQL Server) using the specified <a href="#powershell-session-details">PowerShell Session Details</a>, and executes a <a href="#script">Script</a>, returning the <a href="#outputs">Outputs</a> and <a href="#records">Records</a>.</p>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute PowerShell Script blocks.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
+<h3 id="execute-a-script-using-powershellwinrmsessiondetails">Execute a Script using PowerShellWinRMSessionDetails</h3>
+<p>This example will execute a script on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;host.domain.com&quot;</code></li>
+<li>Port -  <code>5986</code></li>
+<li>UseSsl - <code>true</code></li>
+</ul>
+<p>The host can be connected to with the following credentials:</p>
+<ul>
+<li>Domain - <code>&quot;domain.com&quot;</code></li>
+<li>Username - <code>&quot;username&quot;</code></li>
+<li>Password - <code>&quot;password&quot;</code></li>
+</ul>
+<p>The server that the script will be executed on contains a text file in the following location <code>C:\Folder\Example.txt</code>, the file contains the following text before the script is executed:</p>
+<p><code>&quot;This is the content of the file located on the host the script is running on.&quot;</code></p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#script">Script</a></td>
+<td><code>($)Script</code> with value <code>&quot;Get-Content \&quot;C:\\Folder\\Example.txt\&quot;&quot;</code></td>
+<td><code>($)Script</code> is a variable of type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#parameters">Parameters</a></td>
+<td><code>($)Parameters</code> with no value</td>
+<td><code>($)Parameters</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#powershell-session-details">PowerShell Session Details</a></td>
+<td><code>($)PowerShellSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;host.domain.com&quot;, &quot;Port&quot;: 5986, &quot;UseSsl&quot;: &quot;true&quot;}, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain.com&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)PowerShellSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new PowerShellWinRMSessionDetails(serverDetails: new ServerDetails(&quot;host.domain.com&quot;, 5986, true), credentials: new UserCredentials(&quot;domain.com&quot;, &quot;username&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/powershell/powershellwinrmsessiondetails">PowerShellWinRMSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> of the <a href="/docs/reference/data-types/powershell/powershellwinrmsessiondetails">PowerShellWinRMSessionDetails</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code>, with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#outputs">Outputs</a></td>
+<td><code>($)Outputs</code>, with no value</td>
+<td><code>($)Outputs</code> will be set to the type <a href="/docs/reference/data-types/collections/ilist-1">IList</a>&lt;<a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#records">Records</a></td>
+<td><code>($)Records</code>, with no value</td>
+<td><code>($)Records</code> will be set to the type <a href="/docs/reference/data-types/powershell/records">Records</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Running the <a href="#script">Script</a> results in the variable <code>($)Outputs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;This is the content of the file located on the host the script is running on.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>It also results in the variable <code>($)Records</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WarningRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;DebugRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ProgressRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;VerboseRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;InformationRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>After the <a href="#script">Script</a> has been executed, the session will be closed, for more information see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<hr>
+<h3 id="execute-a-script-with-parameters-using-powershellwinrmsessiondetails">Execute a Script with Parameters using PowerShellWinRMSessionDetails</h3>
+<p>This example will execute a script on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;host.domain.com&quot;</code></li>
+<li>Port -  <code>5986</code></li>
+<li>UseSsl - <code>true</code></li>
+</ul>
+<p>The host can be connected to with the following credentials:</p>
+<ul>
+<li>Domain - <code>&quot;domain.com&quot;</code></li>
+<li>Username - <code>&quot;username&quot;</code></li>
+<li>Password - <code>&quot;password&quot;</code></li>
+</ul>
+<p>The server that the script will be executed on contains a text file in the following location <code>C:\Folder\Example.txt</code>, the file contains the following text before the script is executed:</p>
+<p><code>&quot;This is the content of the file located on the host the script is running on.&quot;</code></p>
+<p>In this example assume the following variables have been set before the script has been executed:</p>
+<ul>
+<li><code>($)FilePath</code> with the value <code>&quot;Get-Content \&quot;C:\\Folder\\Example.txt\&quot;&quot;</code></li>
+</ul>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#script">Script</a></td>
+<td><code>($)Script</code> with value <code>&quot;Get-Content $FilePath&quot;</code></td>
+<td><code>($)Script</code> is a variable of type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#parameters">Parameters</a></td>
+<td><code>($)Parameters</code> with value <code>{&quot;FilePath&quot;: ($)FilePath&quot;}</code></td>
+<td><code>($)Parameters</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#powershell-session-details">PowerShell Session Details</a></td>
+<td><code>($)PowerShellSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;host.domain.com&quot;, &quot;Port&quot;: 5986, &quot;UseSsl&quot;: &quot;true&quot;}, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain.com&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)PowerShellSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new PowerShellWinRMSessionDetails(serverDetails: new ServerDetails(&quot;host.domain.com&quot;, 5986, true), credentials: new UserCredentials(&quot;domain.com&quot;, &quot;username&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/powershell/powershellwinrmsessiondetails">PowerShellWinRMSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> of the <a href="/docs/reference/data-types/powershell/powershellwinrmsessiondetails">PowerShellWinRMSessionDetails</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code>, with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#outputs">Outputs</a></td>
+<td><code>($)Outputs</code>, with no value</td>
+<td><code>($)Outputs</code> will be set to the type <a href="/docs/reference/data-types/collections/ilist-1">IList</a>&lt;<a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#records">Records</a></td>
+<td><code>($)Records</code>, with no value</td>
+<td><code>($)Records</code> will be set to the type <a href="/docs/reference/data-types/powershell/records">Records</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>Running the <a href="#script">Script</a> results in the variable <code>($)Outputs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;This is the content of the file located on the host the script is running on.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>It also results in the variable <code>($)Records</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WarningRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;DebugRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ProgressRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;VerboseRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;InformationRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>After the <a href="#script">Script</a> has been executed, the session will be closed, for more information see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<hr>
+<h3 id="execute-a-script-that-returns-records-using-powershellwinrmsessiondetails">Execute a Script that returns Records using PowerShellWinRMSessionDetails</h3>
+<p>This example will execute a script on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;host.domain.com&quot;</code></li>
+<li>Port -  <code>5986</code></li>
+<li>UseSsl - <code>true</code></li>
+</ul>
+<p>The host can be connected to with the following credentials:</p>
+<ul>
+<li>Domain - <code>&quot;domain.com&quot;</code></li>
+<li>Username - <code>&quot;username&quot;</code></li>
+<li>Password - <code>&quot;password&quot;</code></li>
+</ul>
+<p>The server that the script will be executed on contains a text file in the following location <code>C:\Folder\Example.txt</code>, the file contains the following text before the script is executed:</p>
+<p><code>&quot;This is the content of the file located on the host the script is running on.&quot;</code></p>
+<h4 id="properties-2">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#script">Script</a></td>
+<td><code>($)Script</code> with value <code>$@&quot;Get-Content \&quot;C:\\Folder\\Example.txt\&quot;; $DebugPreference = 'Continue'; Write-Warning 'Warning'; Write-Debug 'Debug'; Write-Information 'Information'; Write-Verbose 'Verbose' -Verbose; Get-Error&quot;</code></td>
+<td><code>($)Script</code> is a variable of type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#parameters">Parameters</a></td>
+<td><code>($)Parameters</code> with no value</td>
+<td><code>($)Parameters</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#powershell-session-details">PowerShell Session Details</a></td>
+<td><code>($)PowerShellSessionDetails</code> with value <code>{&quot;ServerDetails&quot;: {&quot;Host&quot;: &quot;host.domain.com&quot;, &quot;Port&quot;: 5986, &quot;UseSsl&quot;: &quot;true&quot;}, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain.com&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}}</code><br><br>In this example <code>($)PowerShellSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new PowerShellWinRMSessionDetails(serverDetails: new ServerDetails(&quot;host.domain.com&quot;, 5986, true), credentials: new UserCredentials(&quot;domain.com&quot;, &quot;username&quot;, &quot;encryptedPassword&quot;))</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/powershell/powershellwinrmsessiondetails">PowerShellWinRMSessionDetails</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> of the <a href="/docs/reference/data-types/powershell/powershellwinrmsessiondetails">PowerShellWinRMSessionDetails</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code>, with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#outputs">Outputs</a></td>
+<td><code>($)Outputs</code>, with no value</td>
+<td><code>($)Outputs</code> will be set to the type <a href="/docs/reference/data-types/collections/ilist-1">IList</a>&lt;<a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#records">Records</a></td>
+<td><code>($)Records</code>, with no value</td>
+<td><code>($)Records</code> will be set to the type <a href="/docs/reference/data-types/powershell/records">Records</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-2">Result</h4>
+<p>Running the <a href="#script">Script</a> results in the variable <code>($)Outputs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;This is the content of the file located on the host the script is running on.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>It also results in the variable <code>($)Records</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;The term &#39;Get-Error&#39; is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WarningRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;Warning&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;DebugRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;Debug&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ProgressRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;parent = -1 id = 0 act = Preparing modules for first use. stat =   cur =  pct = -1 sec = -1 type = Completed&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;VerboseRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;Verbose&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;InformationRecords&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#4e9a06">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>After the <a href="#script">Script</a> has been executed, the session will be closed, for more information see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<hr>
+<h2 id="properties-3">Properties</h2>
+<h3 id="script">Script</h3>
+<p>The <a href="#script">Script</a> which will be executed on the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> provided within the <a href="#powershell-session-details">PowerShell Session Details</a>, this can be a script, a file path of a script on the host, or a cmdlet.</p>
+<p>Note that to execute a script using its file path, the file path must accessible to the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>$@&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters">Parameters</h3>
+<p>The parameters to be passed into the <a href="#script">Script</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/collections/idictionary-2">IDictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>No value (defaults to <code>null</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="powershell-session-details">PowerShell Session Details</h3>
+<p>The <a href="#powershell-session-details">PowerShell Session Details</a> object that includes all of the information required to connect and maintain a PowerShell Session. This property contains all of the information in relation to the server the script will be executed on, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/powershell/powershellsessiondetails/#serverdetails">ServerDetails</a></li>
+<li><a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a></li>
+<li><a href="/docs/reference/data-types/powershell/powershellsessiondetails/#psconfiguration">PsConfiguration</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/powershell/powershellsessiondetails">PowerShellSessionDetails</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)PowerShellSessionDetails</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="close-session">Close Session</h3>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> is closed or is kept open for use on subsequent Execute PowerShell Script blocks, this defaults to <code>false</code> if left blank, please see <a href="#closing-sessions">Closing Sessions</a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a> with value <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="outputs">Outputs</h3>
+<p>IList&lt;dynamic&gt; of outputs from the execution of the <a href="#script">Script</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/collections/ilist-1">IList</a>&lt;<a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Outputs</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="records">Records</h3>
+<p>The Records object that includes the error, warning, debug, progress, verbose, and information records from the execution of the script or cmdlet.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/powershell/records">Records</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Records</code> with no value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/powershell/psremotingexception">PSRemotingException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is invalid (e.g. host does not exist or invalid characters/whitespace).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> does not have PSRemoting configured correctly.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is a host name; is being accessed through a private or domain network, and Kerberos authentication is disabled on the host&rsquo;s WinRM service or the server&rsquo;s WinRM client.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is a host name; is being accessed through a public network, and its name is not on the server&rsquo;s WinRM TrustedHosts list.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is an IP Address; is being accessed through any network (i.e. public, private or domain), and is not on the server&rsquo;s WinRM TrustedHosts list.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is an IP Address being accessed through any network (i.e. public, private or domain) or a host name being accessed through a public network, and Negotiate authentication is disabled on the host&rsquo;s WinRM service.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> is <code>false</code> and the specified <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is not configured for HTTP protocols.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> is <code>true</code> and the specified <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is not configured for HTTPS protocols.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#usessl">UseSsl</a> is <code>true</code> and the host does not have a valid certificate configured.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#domain">Domain</a>, <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a>, or <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> in the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#domain">Domain</a> in the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code> or empty and is required.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the user does not have the correct user permissions to execute PowerShell scripts or cmdlets on the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#psconfiguration">PsConfiguration</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is invalid or is not configured on the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/powershell/psexception">PSException</a></td>
+<td>Thrown when the <a href="#script">Script</a> contains any unexpected or invalid tokens.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="#script">Script</a> is missing any necessary tokens.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#script">Script</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> in the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> in the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when <a href="#script">Script</a> is empty.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#host">Host</a> within the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> in the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> in the <a href="/docs/reference/data-types/powershell/powershellsessiondetails/#credentials">Credentials</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/session-details/serverdetails/#port">Port</a> within the <a href="/docs/reference/data-types/session-details/serverdetails">ServerDetails</a> within the <a href="#powershell-session-details">PowerShell Session Details</a> is below <code>1</code> or above <code>65535</code>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
+<h3 id="opening-sessions">Opening Sessions</h3>
+<p>The Execute PowerShell Script block automatically handles creating and opening session for the specified <a href="#powershell-session-details">PowerShell Session Details</a> using the following rules:</p>
+<ul>
+<li>If a session does not exist, a new session will be created, opened and used when the block runs.</li>
+<li>If a session already exists but is closed, the session will be opened and used when the block runs.</li>
+<li>If a session already exists and is open, the session will used the block runs.</li>
+</ul>
+<p>For information on how to explicitly close a session, please see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<h3 id="closing-sessions">Closing Sessions</h3>
+<p>Sessions can be explicitly closed by setting <a href="#close-session">Close Session</a> to <code>true</code>. This causes the session to be closed after the <a href="#script">Script</a> has been executed.</p>
+<p>For information on how to open a session, please see <a href="#opening-sessions">Opening Sessions</a>.</p>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 

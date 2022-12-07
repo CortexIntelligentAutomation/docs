@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
+  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -203,6 +203,191 @@ This the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>1.4: <a href="#pg-eb179dbee481f4f34ef751e9197d429f">OAuth</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.4.1: <a href="#pg-1f8634aa040dfb1b8588842f10e4167e">ClientAuthentication</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4.2: <a href="#pg-eb9923b699c59cd2398b2a3286313f8c">ClientAuthType</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4.3: <a href="#pg-fa6d9031318f6d85cd0fda9a9406751a">HttpOAuthCientCredentials</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4.4: <a href="#pg-ef668f13466bb3fa7c966044245c16ad">HttpOAuthCredentials</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4.5: <a href="#pg-3f03e29f64f94464fa30c1eead537210">HttpOAuthPasswordCredentials</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-1738a87f0d2c6827f5f7831c07090eac">HttpRequestVersion</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-c5b792ffe481f6860294616c62b5ce75">Request</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-570923fcf72fe90b4cf8f62f367c089c">RequestContentType</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-656f8c6a5b2ea65f00458d7d88f71a6a">RequestVerb</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-a94cf01c4985154ba09c5e05fb50c2ad">Rest</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>6.1: <a href="#pg-c500a8b5f0c4f61127dcf72f76b2b3ae">HttpRequest</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.2: <a href="#pg-16d8135dab7d2631346ebe30ea6d09ba">HttpResponse</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-9f636450ca53c741a3b734ae99869080">Soap</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>7.1: <a href="#pg-1188003a78b384defdcfe61e574846f0">Soap11Message</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7.2: <a href="#pg-63ab5bef205cf326a8bd98b7c58b1cc2">Soap12Message</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7.3: <a href="#pg-49579988ba26ec0854db726e89371985">SoapMessage</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7.4: <a href="#pg-a323352426485f3c1decb325a33ba006">SoapRequest</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7.5: <a href="#pg-bfb026df7f1ac7bd973090d04c339fd6">SoapResponse</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -234,7 +419,7 @@ This the multi-page printable view of this section.
 <div class="td-content" style="">
     
 	<h1 id="pg-df6298b804f51b87eec769c2a06d646d">1 - Authentication</h1>
-    <div class="lead">Data types used for authenticating with servers.</div>
+    <div class="lead">Data types used for authentication when working with HTTP.</div>
 	
 </div>
 
@@ -259,7 +444,7 @@ This the multi-page printable view of this section.
 <div class="td-content" style="">
     
 	<h1 id="pg-be62ec9b59ccb18cf224c3beabc7034a">1.1 - HttpCredentials</h1>
-    <div class="lead">Used to represent details required to authenticate with a server.</div>
+    <div class="lead">Used to represent details required for authentication when working with HTTP.</div>
 	<h1 id="httpcredentials">HttpCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Http.Authentication.HttpCredentials)</p>
 <img src="/images/work-in-progress.jpg">
@@ -279,7 +464,7 @@ This the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-5b9ec8d3fc9f728f4fc1cc7bd374f110">1.2 - HttpUserCredentials</h1>
-    <div class="lead">Used to represent details required to authenticate with a server.</div>
+    <div class="lead">Used to represent details required for basic authentication when working with HTTP.</div>
 	<h1 id="httpusercredentials">HttpUserCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Http.Authentication.HttpUserCredentials)</p>
 <img src="/images/work-in-progress.jpg">
@@ -299,10 +484,482 @@ This the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-9e99ff930eb7db0f118ba2b2daedc5ed">1.3 - IHttpCredentials</h1>
-    <div class="lead">Used to represent details required to authenticate with a server.</div>
+    <div class="lead">Any data type used to represent details required for authentication when working with HTTP.</div>
 	<h1 id="ihttpcredentials">IHttpCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Http.Authentication.IHttpCredentials)</p>
 <img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-eb179dbee481f4f34ef751e9197d429f">1.4 - OAuth</h1>
+    <div class="lead">Data types used for authentication via OAuth when working with HTTP.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-1f8634aa040dfb1b8588842f10e4167e">1.4.1 - ClientAuthentication</h1>
+    <div class="lead">Used to represent client credentials for OAuth.</div>
+	<h1 id="clientauthentication">ClientAuthentication</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthentication)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="clientid">ClientId</h3>
+<h3 id="clientsecret">ClientSecret</h3>
+<h3 id="sendas">SendAs</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-eb9923b699c59cd2398b2a3286313f8c">1.4.2 - ClientAuthType</h1>
+    <div class="lead">Used to represent the client authentication type for OAuth.</div>
+	<h1 id="clientauthtype">ClientAuthType</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthType)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-fa6d9031318f6d85cd0fda9a9406751a">1.4.3 - HttpOAuthCientCredentials</h1>
+    <div class="lead">Used to represent details required for OAuth authentication using client credentials.</div>
+	<h1 id="httpoauthcientcredentials">HttpOAuthCientCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthCientCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="accesstokenuri">AccessTokenUri</h3>
+<h3 id="clientauthentication">ClientAuthentication</h3>
+<h3 id="scope">Scope</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ef668f13466bb3fa7c966044245c16ad">1.4.4 - HttpOAuthCredentials</h1>
+    <div class="lead">Used to represent details required for OAuth authentication.</div>
+	<h1 id="httpoauthcredentials">HttpOAuthCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3f03e29f64f94464fa30c1eead537210">1.4.5 - HttpOAuthPasswordCredentials</h1>
+    <div class="lead">Used to represent details required for OAuth authentication using password credentials.</div>
+	<h1 id="httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="resourceownerusername">ResourceOwnerUsername</h3>
+<h3 id="resourceownerpassword">ResourceOwnerPassword</h3>
+<h3 id="accesstokenuri">AccessTokenUri</h3>
+<h3 id="clientauthentication">ClientAuthentication</h3>
+<h3 id="scope">Scope</h3>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1738a87f0d2c6827f5f7831c07090eac">2 - HttpRequestVersion</h1>
+    <div class="lead">Used to represent the version of HTTP to be used when making a HTTP request.</div>
+	<h1 id="httprequestversion">HttpRequestVersion</h1>
+<p class="namespace">(Cortex.DataTypes.Http.HttpRequestVersion)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="values">Values</h2>
+<h3 id="http10">HTTP10</h3>
+<h3 id="http11">HTTP11</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c5b792ffe481f6860294616c62b5ce75">3 - Request</h1>
+    <div class="lead">Used to represent a request.</div>
+	<h1 id="request">Request</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Request)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-570923fcf72fe90b4cf8f62f367c089c">4 - RequestContentType</h1>
+    <div class="lead">Used to represent the content type of a request.</div>
+	<h1 id="requestcontenttype">RequestContentType</h1>
+<p class="namespace">(Cortex.DataTypes.Http.RequestContentType)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-656f8c6a5b2ea65f00458d7d88f71a6a">5 - RequestVerb</h1>
+    <div class="lead">Used to represent the type of request.</div>
+	<h1 id="requestverb">RequestVerb</h1>
+<p class="namespace">(Cortex.DataTypes.Http.RequestVerb)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="values">Values</h2>
+<h3 id="get">GET</h3>
+<h3 id="post">POST</h3>
+<h3 id="put">PUT</h3>
+<h3 id="delete">DELETE</h3>
+<h3 id="patch">PATCH</h3>
+<h3 id="head">HEAD</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a94cf01c4985154ba09c5e05fb50c2ad">6 - Rest</h1>
+    <div class="lead">Data types used when working with REST.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-c500a8b5f0c4f61127dcf72f76b2b3ae">6.1 - HttpRequest</h1>
+    <div class="lead">Used to represent an HTTP request.</div>
+	<h1 id="httprequest">HttpRequest</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Rest.HttpRequest)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="uri">Uri</h3>
+<h3 id="queryparameters">QueryParameters</h3>
+<h3 id="verb">Verb</h3>
+<h3 id="contenttype">ContentType</h3>
+<h3 id="headers">Headers</h3>
+<h3 id="body">Body</h3>
+<h3 id="httpversion">HttpVersion</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-16d8135dab7d2631346ebe30ea6d09ba">6.2 - HttpResponse</h1>
+    <div class="lead">Used to represent an HTTP response.</div>
+	<h1 id="httpresponse">HttpResponse</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Rest.HttpResponse)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="responsebody">ResponseBody</h3>
+<h3 id="errormessage">ErrorMessage</h3>
+<h3 id="headers">Headers</h3>
+<h3 id="statuscode">StatusCode</h3>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9f636450ca53c741a3b734ae99869080">7 - Soap</h1>
+    <div class="lead">Data types used when working with SOAP.</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-1188003a78b384defdcfe61e574846f0">7.1 - Soap11Message</h1>
+    <div class="lead">Used to represent a SOAP 1.1 message.</div>
+	<h1 id="soap11message">Soap11Message</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Soap.Soap11Message)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="action">Action</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-63ab5bef205cf326a8bd98b7c58b1cc2">7.2 - Soap12Message</h1>
+    <div class="lead">Used to represent a SOAP 1.2 message.</div>
+	<h1 id="soap12message">Soap12Message</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Soap.Soap12Message)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-49579988ba26ec0854db726e89371985">7.3 - SoapMessage</h1>
+    <div class="lead">Used to represent a SOAP message.</div>
+	<h1 id="soapmessage">SoapMessage</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Soap.SoapMessage)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="envelope">Envelope</h3>
+<h3 id="version">Version</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a323352426485f3c1decb325a33ba006">7.4 - SoapRequest</h1>
+    <div class="lead">Used to represent a SOAP request.</div>
+	<h1 id="soaprequest">SoapRequest</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Soap.SoapRequest)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="soapmessage">SoapMessage</h3>
+<h3 id="uri">Uri</h3>
+<h3 id="headers">Headers</h3>
+<h3 id="httpversion">HttpVersion</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-bfb026df7f1ac7bd973090d04c339fd6">7.5 - SoapResponse</h1>
+    <div class="lead">Used to represent a SOAP response.</div>
+	<h1 id="soapresponse">SoapResponse</h1>
+<p class="namespace">(Cortex.DataTypes.Http.Soap.SoapResponse)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<h2 id="properties">Properties</h2>
+<h3 id="responseenvelope">ResponseEnvelope</h3>
+<h3 id="errormessage">ErrorMessage</h3>
+<h3 id="headers">Headers</h3>
+<h3 id="statuscode">StatusCode</h3>
 
 </div>
 

@@ -1,7 +1,7 @@
 ---
 title: "HttpCredentials"
 linkTitle: "HttpCredentials"
-description: "Used to represent details required to authenticate with a server."
+description: "Used to represent details required for authentication when working with HTTP."
 weight: 1
 ---
 

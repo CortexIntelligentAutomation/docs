@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
+  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -167,7 +167,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-768ea96a3a6a683e2ccf0ac76f500af6">Send Email Using Microsoft365</a></li>
+<li>1: <a href="#pg-768ea96a3a6a683e2ccf0ac76f500af6">Send Email Using Microsoft 365</a></li>
 
 
     
@@ -198,24 +198,406 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-768ea96a3a6a683e2ccf0ac76f500af6">1 - Send Email Using Microsoft365</h1>
-    <div class="lead">Sends an email using Microsoft365.</div>
+	<h1 id="pg-768ea96a3a6a683e2ccf0ac76f500af6">1 - Send Email Using Microsoft 365</h1>
+    <div class="lead">Sends an email using the SMTP server hosted by Outlook.</div>
 	
 <figure class="block-icon">
     <img src=" /blocks/microsoft365-send-email-using-microsoft365-block-icon.png "
          alt="Icon"/> 
 </figure>
 
-<h1 id="send-email-using-microsoft365">Send Email Using Microsoft365</h1>
+<h1 id="send-email-using-microsoft-365">Send Email Using Microsoft 365</h1>
 <p class="namespace">(Cortex.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365Block)</p>
-<img src="/images/work-in-progress.jpg">
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Sends an email using Microsoft365.</p>
+<p>Connects to the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> using the specified <a href="#credentials">Credentials</a>, and sends an <a href="#email-message">Email Message</a>.</p>
+<p>This block only supports authentication via OAuth (using <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> or <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>), to send an email using basic authentication, see <a href="/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block">Send Email Using SMTP Server</a>.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
-<h2 id="exceptions">Exceptions</h2>
+<h3 id="sending-an-email-using-client-credentials">Sending an email using client credentials</h3>
+<p>This example will send an email from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> using the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>.</p>
+<p>The OAuth mechanism in this example uses client credentials. Therefore, for this example to work correctly, the <a href="#credentials">Credentials</a> provided must be a <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</p>
+<p>For more information on:</p>
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> needs to be, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials">Setting up an Outlook account for OAuth authentication using client credentials</a></li>
+</ul>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@outlook.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@outlook.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#credentials">Credentials</a></td>
+<td><code>($)Credentials</code> with value <code>{&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;TenantId&quot;: &quot;tenantId&quot;, ObjectId: &quot;objectId&quot;}</code><br><br>In this example <code>($)Credentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new Microsoft365OAuthCredentials(clientId: &quot;clientId&quot;, clientSecret: &quot;encryptedClientSecret&quot;, tenantId: &quot;tenantId&quot;, objectId: &quot;objectId&quot;)</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a><br><br>The <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> property in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the connection is closed.</p>
+<hr>
+<h3 id="sending-an-email-using-certificate-credentials">Sending an email using certificate credentials</h3>
+<p>This example will send an email from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> using the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>.</p>
+<p>The OAuth mechanism in this example uses certificate credentials. Therefore, for this example to work correctly:</p>
+<ul>
+<li><a href="#credentials">Credentials</a> provided must be a <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a></li>
+<li><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> must be a path pointing to a certificate accessible from the server executing the flow</li>
+</ul>
+<p>For more information on:</p>
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> needs to be, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials">Setting up an Outlook account for OAuth authentication using certificate credentials</a></li>
+</ul>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#email-message">Email Message</a></td>
+<td><code>($)EmailMessage</code> with value <code>{&quot;To&quot;:  [{&quot;Name&quot;:  null,  &quot;Address&quot;:  &quot;recipient@outlook.com&quot;}], &quot;From&quot;: {&quot;Name&quot;: null, &quot;Address&quot;: &quot;sender@outlook.com&quot;}, &quot;Cc&quot;: [], &quot;Bcc&quot;: [], &quot;Priority&quot;: null, &quot;Subject&quot;: &quot;Example email subject&quot;, &quot;BodyFormat&quot;: null, &quot;Body&quot;: &quot;Example email body&quot;, &quot;Attachments&quot;: []}</code><br><br>In this example <code>($)EmailMessage</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new EmailMessage(to: new List&lt;EmailAddress&gt;(){ new EmailAddress(&quot;recipient@outlook.com&quot;) }, from: new EmailAddress(&quot;sender@outlook.com&quot;), cc: null, bcc: null, priority: null, subject: &quot;Example email subject&quot;, bodyFormat: null, body: &quot;Example email body&quot;, attachments: null)</code></td>
+<td><code>($)EmailMessage</code> is a variable of type <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a><br><br>As <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are <code>null</code>, the email will be sent with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body and <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority.</td>
+</tr>
+<tr>
+<td><a href="#credentials">Credentials</a></td>
+<td><code>($)Credentials</code> with value <code>{&quot;CertificatePath&quot;: &quot;C:\\certificate.pfx&quot;, &quot;CertificatePassword&quot;: &quot;encryptedPassword&quot;, &quot;ClientId&quot;: &quot;clientId&quot;, &quot;TenantId&quot;: &quot;tenantId&quot;, &quot;ObjectId&quot;: &quot;objectId&quot;}</code><br><br>In this example <code>($)Credentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new Microsoft365OAuthCertificateCredentials(certificatePath: @&quot;C:\certificate.pfx&quot;, certificatePassword: &quot;encryptedPassword&quot;, clientId: &quot;clientId&quot;, tenantId: &quot;tenantId&quot;, objectId: &quot;objectId&quot;)</code></td>
+<td><code>($)Credentials</code> is a variable of type <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a><br><br>The <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> property in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>An email with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority is sent from <code>sender@outlook.com</code> to <code>recipient@outlook.com</code> with a subject of <code>&quot;Example email subject&quot;</code> and a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body of <code>&quot;Example email body&quot;</code>, and then the connection is closed.</p>
+<hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="email-message">Email Message</h3>
+<p>The <a href="#email-message">Email Message</a> to send via the <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>. This property contains all of the information in relation to the email to be sent, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/email/emailmessage/#to">To</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#from">From</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#cc">Cc</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#bcc">Bcc</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#subject">Subject</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#body">Body</a></li>
+<li><a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a></li>
+</ul>
+<p>Note that if the properties <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> and <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> are set to <code>null</code> when <a href="/docs/reference/data-types/email/emailmessage/#create-an-emailmessage">creating an EmailMessage using a constructor</a>, the email will be sent with <a href="/docs/reference/data-types/email/emailmessagepriority/#normal">Normal</a> priority and with a <a href="/docs/reference/data-types/email/emailmessagebodyformat/#text">Text</a> body.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/email/emailmessage">EmailMessage</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;To&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;Address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;From&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Address&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Cc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Bcc&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Priority&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EmailMessagePriority.Normal&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Subject&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;BodyFormat&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EmailMessageBodyFormat.Text&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Attachments&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="credentials">Credentials</h3>
+<p>The <a href="#credentials">Credentials</a> object that includes all of the information required to connect to an <a href="/docs/reference/glossary/p-t/#smtp">SMTP</a> server hosted by <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a>. There are two data types that can be used, which depends on the desired OAuth mechanism:</p>
+<ul>
+<li><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>: Using client credentials. For information on:
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> needs to be, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials">Setting up an Outlook account for OAuth authentication using client credentials</a></li>
+</ul>
+</li>
+<li><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>: Using certificate credentials. For information on:
+<ul>
+<li>What each of the properties in the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>, see <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a></li>
+<li>How to set up an <a href="/docs/reference/glossary/k-o/#outlook">Outlook</a> account so that this authentication mechanism can be used, see <a href="/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials">Setting up an Outlook account for OAuth authentication using certificate credentials</a></li>
+</ul>
+</li>
+</ul>
+<p>Note that the Send Email Using Microsoft 365 block automatically handles retrieval of access tokens using the following rules:</p>
+<ul>
+<li>If an access token does not exist, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists but is expired, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists and is valid, it will be used when the block runs.</li>
+</ul>
+<p>It is recommended to use a <a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a> for <a href="#credentials">Credentials</a> when it will be used across multiple Send Email Using Microsoft 365 blocks, as using a variable will allow for reuse of the same access token. Using a <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a> to set the <a href="#credentials">Credentials</a> will cause the access token to only be used once and a new acccess token will be requested for every Send Email Using Microsoft 365 block.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365credentials">Microsoft365Credentials</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ClientId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ClientSecret&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;TenantId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ObjectId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception?view=netcore-3.1
+">ArgumentException</a></td>
+<td>Thrown when <a href="/docs/reference/data-types/email/emailmessage/#bodyformat">BodyFormat</a> within the <a href="#email-message">Email Message</a> is not one of the specified <a href="/docs/reference/data-types/email/emailmessagebodyformat">EmailMessageBodyFormat</a> values (e.g. <code>(EmailMessageBodyFormat)10</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when <a href="/docs/reference/data-types/email/emailmessage/#priority">Priority</a> within the <a href="#email-message">Email Message</a> is not one of the specified <a href="/docs/reference/data-types/email/emailmessagepriority">EmailMessagePriority</a> values (e.g. <code>(EmailMessagePriority)10</code>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.cryptographicexception">CryptographicException</a></td>
+<td>Thrown when an incorrect <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an incorrect <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></td>
+<td>Thrown when a non-existent file path is provided in <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within <a href="#email-message">Email Message</a>.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception">IOException</a></td>
+<td>Thrown when the desired socket is held by another process; re-running the flow typically solves this.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalserviceexception">MsalServiceException</a></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid">ClientId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid">TenantId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid">ClientId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid">TenantId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#email-message">Email Message</a>  is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#to">To</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#from">From</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="#credentials">Credentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailmessage/#to">To</a> within <a href="#email-message">Email Message</a> is empty (i.e. <code>[]</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret">ClientSecret</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath">CertificatePath</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword">CertificatePassword</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid">ClientId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid">TenantId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid">ObjectId</a> within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.serviceexception">ServiceException</a></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid">ObjectId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials">Microsoft365OAuthCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when an invalid <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid">ObjectId</a> is provided within <a href="/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials">Microsoft365OAuthCertificateCredentials</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when trying to send an email as a user that the client application does not have rights to send as.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/email/emailaddress/#address">Address</a> in an <a href="/docs/reference/data-types/email/emailaddress">EmailAddress</a> within <a href="#email-message">Email Message</a> is not of the correct format (<a href="https://www.ietf.org/rfc/rfc5321.txt">RFC 5321</a>).</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></td>
+<td>Thrown when access is denied to a file provided in <a href="/docs/reference/data-types/email/emailmessage/#attachments">Attachments</a> within <a href="#email-message">Email Message</a>.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 

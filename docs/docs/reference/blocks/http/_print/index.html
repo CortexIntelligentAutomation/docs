@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.39efe12802d34b814e8e4187eef2da9a.json"
+  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -279,20 +279,594 @@ This the multi-page printable view of this section.
 
 <h1 id="execute-http-request">Execute Http Request</h1>
 <p class="namespace">(Cortex.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequestBlock`1)</p>
-<img src="/images/work-in-progress.jpg">
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Executes an HTTP request and returns a response.</p>
+<p>Executes an <a href="#http-request">HTTP Request</a> using the specified <a href="#http-credentials">Http Credentials</a> and returns the <a href="#http-response">Http Response</a>.</p>
 <h2 id="examples">Examples</h2>
-<h3 id="calling-another-flow">Calling Another Flow</h3>
-<p>TODO</p>
+<p>The following examples will use an example <a href="/docs/reference/glossary/a-e/#api">API</a> with a base <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api</code> and resource called <code>items</code> at <code>https://test-shop.com/api/items</code>. Each example assumes that the resource <code>items</code> contains the following data before the example is executed:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">]</span>
+</span></span></code></pre></div><p>The example <a href="/docs/reference/glossary/a-e/#api">API</a> supports:</p>
 <ul>
-<li>Show example of passing input variables to a flow</li>
-<li>Show returned Output variables from a flow</li>
+<li>Retrieval of every item in the <code>items</code> resource via a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request which returns the <code>items</code> resource as the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> of the <a href="#http-response">Http Response</a></li>
+<li>Creation of a new item in the <code>items</code> resource via a <a href="/docs/reference/data-types/http/requestverb/#post">POST</a> request which returns the updated <code>items</code> resource as the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> of the <a href="#http-response">Http Response</a></li>
+<li>Unauthenticated requests</li>
+<li>Basic authentication</li>
+<li>Retrieval of access tokens from <code>https://test-shop.com/api/oauth2/token</code></li>
+<li>OAuth authentication using password credentials</li>
+<li>OAuth authentication using client credentials</li>
 </ul>
-<h2 id="properties">Properties</h2>
+<h3 id="executing-a-get-request">Executing a GET request</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> with no authentication which requires <a href="#http-credentials">Http Credentials</a> to be <code>null</code>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>null</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>null</code></td>
+<td><code>($)HttpCredentials</code> is a variable with value <code>null</code><br><br>As <code>($)HttpCredentials</code> is <code>null</code>, no authentication will occur when making the request.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-post-request">Executing a POST request</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#post">POST</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> with no authentication which requires <a href="#http-credentials">Http Credentials</a> to be <code>null</code>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.POST&quot;, &quot;ContentType&quot;: &quot;application/json&quot;, &quot;Body&quot;: &quot;{'name': 'item 3', 'id': 3}&quot;, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.POST, contentType: &quot;application/json&quot;, headers: null, body: &quot;{'name': 'item 3', 'id': 3}&quot;, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>null</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>null</code></td>
+<td><code>($)HttpCredentials</code> is a variable with value <code>null</code><br><br>As <code>($)HttpCredentials</code> is <code>null</code>, no authentication will occur when making the request.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#post">POST</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 3&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note the following:</p>
+<ul>
+<li>The resource <code>items</code> at <code>https://test-shop.com/api/items</code> contains <code>item 3</code> as shown in the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> of the <a href="#http-response">Http Response</a> shown above</li>
+<li>As the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data</li>
+</ul>
+<hr>
+<h3 id="executing-a-request-using-basic-authentication">Executing a request using Basic authentication</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> using Basic authentication which requires <a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-2">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;Domain&quot;: null, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new UserCredentials(username: &quot;username&quot;, password: &quot;encryptedPassword&quot;)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-2">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-oauth-password-credentials">Executing a request using OAuth password credentials</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> using OAuth authentication with password credentials which requires <a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-3">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-shop.com/api/oauth2/token&quot;, &quot;ClientAuthentication&quot;: null, &quot;Scope&quot;: null, &quot;ResourceOwnerUsername&quot;: &quot;username&quot;, &quot;ResourceOwnerPassword&quot;: &quot;encryptedPassword&quot;}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthPasswordCredentials(accessTokenUri: &quot;https://test-shop.com/api/oauth2/token&quot;, clientAuthentication: null, scope: null, resourceOwnerUsername: &quot;username&quot;, resourceOwnerPassword: &quot;encryptedPassword&quot;)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword">ResourceOwnerPassword</a> property in the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-3">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-oauth-client-credentials">Executing a request using OAuth client credentials</h3>
+<p>This example will send a <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> request to <code>https://test-shop.com/api/items</code> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> using OAuth authentication with client credentials which requires <a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a>.</p>
+<p>Note that the result of executing an <a href="#http-request">Http Request</a> is dependent on the <a href="/docs/reference/glossary/a-e/#api">API</a> that the request is being made to.</p>
+<h4 id="properties-4">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#http-request">Http Request</a></td>
+<td><code>($)HttpRequest</code>, with value <code>{&quot;QueryStringParameters&quot;: null, &quot;Verb&quot;: &quot;RequestVerb.GET&quot;, &quot;ContentType&quot;: null, &quot;Body&quot;: null, &quot;Uri&quot;: &quot;https://test-shop.com/api/items&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)HttpRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpRequest(uri: &quot;https://test-api/com/items&quot;, queryParameters: null, verb: RequestVerb.GET, contentType: null, headers: null, body: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)HttpRequest</code> is a variable of type <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-shop.com/api/oauth2/token&quot;, &quot;ClientAuthentication&quot;: {&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;SendAs&quot;: &quot;ClientAuthType.Header&quot;}, &quot;Scope&quot;: null}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthClientCredentials(accessTokenUri: &quot;https://test-shop.com/api/oauth2/token&quot;, clientAuthentication: new ClientAuthentication(&quot;clientId&quot;, &quot;encryptedClientSecret&quot;, ClientAuthType.Header), scope: null)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#http-response">Http Response</a></td>
+<td><code>($)HttpResponse</code>, with no value</td>
+<td><code>($)HttpResponse</code> will be set to the type <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-4">Result</h4>
+<p>Executing an <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with a <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> of <code>https://test-shop.com/api/items</code> and a <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> of <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> using <a href="/docs/reference/data-types/http/httprequestversion/#http11">HTTP 1.1</a> results in the variable <code>($)HttpResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ResponseBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;item 2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Length&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1024</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/json</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h2 id="properties-5">Properties</h2>
+<h3 id="http-request">Http Request</h3>
+<p>The <a href="#http-request">Http Request</a> to execute using the <a href="#http-credentials">Http Credentials</a>. This property contains all of the information in relation to the request to be sent, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#queryparameters">QueryParameters</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#contenttype">ContentType</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#body">Body</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httprequest/#httpversion">HttpVersion</a></li>
+</ul>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/http/rest/httprequest">HttpRequest</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Uri&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;QueryParameters&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Verb&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RequestVerb.GET&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;ContentType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;HttpVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpRequestVersion.HTTP10&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="http-credentials">Http Credentials</h3>
+<p>The <a href="#http-credentials">Http Credentials</a> object that includes all of the information required for authentication. Mutliple authentication mechanisms are supported which correspond to specific values/data types:</p>
+<ul>
+<li><code>null</code>: No authentication</li>
+<li><a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>: Basic authentication</li>
+<li><a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a>: OAuth authentication using password credentials</li>
+<li><a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a>: OAuth authentication using client credentials</li>
+</ul>
+<p>Note that when using <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> or <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> as the <a href="#http-credentials">Http Credentials</a>, the Execute Http Request block automatically handles retrieval of access tokens using the following rules:</p>
+<ul>
+<li>If an access token does not exist, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists but is expired, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists and is valid, it will be used when the block runs.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/authentication/httpcredentials">HttpCredentials</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)HttpCredentials</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http-response">Http Response</h3>
+<p>The <a href="#http-response">Http Response</a> object which contains the response returned from the server. This property contains all of the information in relation to the response from the server, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#errormessage">ErrorMessage</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a></li>
+<li><a href="/docs/reference/data-types/http/rest/httpresponse/#statuscode">StatusCode</a></li>
+</ul>
+<p>Note that if the <a href="/docs/reference/data-types/http/rest/httpresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value containing <code>json</code> or <code>xml</code>, the <a href="/docs/reference/data-types/http/rest/httpresponse/#responsebody">ResponseBody</a> will be set to a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/rest/httpresponse">HttpResponse</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)HttpResponse</code> with no value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/http/http-authorisation-exception">HttpAuthorisationException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword">ResourceOwnerPassword</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/http/invalid-request-exception">InvalidRequestException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> within <a href="#http-request">Http Request</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#verb">Verb</a> within <a href="#http-request">Http Request</a> is not one of the specified <a href="/docs/reference/data-types/http/requestverb">RequestVerb</a> values (e.g. <code>(RequestVerb)10</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> is restricted.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> is restricted and forbidden.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header value in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> could not be assigned to its restricted header key.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header value in <a href="/docs/reference/data-types/http/rest/httprequest/#headers">Headers</a> within <a href="#http-request">Http Request</a> could not be converted to its restricted header key&rsquo;s type.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#body">Body</a> within <a href="#http-request">Http Request</a> is not <code>null</code> or empty (i.e. <code>&quot;&quot;</code>) and <a href="/docs/reference/data-types/http/requestverb">RequestVerb</a> is <a href="/docs/reference/data-types/http/requestverb/#get">GET</a> or <a href="/docs/reference/data-types/http/requestverb/#head">HEAD</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#body">Body</a> within <a href="#http-request">Http Request</a> does not match the <a href="/docs/reference/data-types/http/rest/httprequest/#contenttype">ContentType</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#httpversion">HttpVersion</a> within <a href="#http-request">Http Request</a> is not one of the specified <a href="/docs/reference/data-types/http/httprequestversion">HttpRequestVersion</a> values (e.g. <code>(HttpRequestVersion)20</code>).</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#http-request">Http Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> within <a href="#http-request">Http Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/rest/httprequest/#uri">Uri</a> within <a href="#http-request">Http Request</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 

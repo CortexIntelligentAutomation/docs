@@ -958,6 +958,8 @@
                         MainDoc = "/docs/reference/concepts/working-with/email/authentication"
                         SettingUpAppPassword = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-app-password-for-a-gmail-account"
                         SettingUpOAuthGmail = "/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication"
+                        SettingUpClientCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials"
+                        SettingUpCertificateCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials"
                 [Cortex.Reference.Concepts.WorkingWith.Enums]
                     MainDoc = "/docs/reference/concepts/working-with/enums/"
                 [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders]
@@ -1185,6 +1187,18 @@
                                 ClientId = "/docs/reference/data-types/google-workspace/gmail/authentication/oauth/gmailoauthcertificatecredentials/#clientid"
             [Cortex.Reference.DataTypes.Http]
                 MainDoc = "/docs/reference/data-types/http/"
+                [Cortex.Reference.DataTypes.Http.RequestVerb]
+                    MainDoc = "/docs/reference/data-types/http/requestverb"
+                    GET = "/docs/reference/data-types/http/requestverb/#get"
+                    POST = "/docs/reference/data-types/http/requestverb/#post"
+                    PUT = "/docs/reference/data-types/http/requestverb/#put"
+                    DELETE = "/docs/reference/data-types/http/requestverb/#delete"
+                    PATCH = "/docs/reference/data-types/http/requestverb/#patch"
+                    HEAD = "/docs/reference/data-types/http/requestverb/#head"
+                [Cortex.Reference.DataTypes.Http.HttpRequestVersion]
+                    MainDoc = "/docs/reference/data-types/http/httprequestversion"
+                    HTTP10 = "/docs/reference/data-types/http/httprequestversion/#http10"
+                    HTTP11 = "/docs/reference/data-types/http/httprequestversion/#http11"
                 [Cortex.Reference.DataTypes.Http.Authentication]
                     MainDoc = "/docs/reference/data-types/http/authentication/"
                     [Cortex.Reference.DataTypes.Http.Authentication.IHttpCredentials]
@@ -1193,6 +1207,69 @@
                         MainDoc = "/docs/reference/data-types/http/authentication/httpcredentials"
                     [Cortex.Reference.DataTypes.Http.Authentication.HttpUserCredentials]
                         MainDoc = "/docs/reference/data-types/http/authentication/httpusercredentials"
+                    [Cortex.Reference.DataTypes.Http.Authentication.OAuth]
+                        MainDoc = "/docs/reference/data-types/http/authentication/oauth/"
+                        [Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication]
+                            MainDoc = "/docs/reference/data-types/http/authentication/oauth/clientauthentication"
+                            ClientId = "/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid"
+                            ClientSecret = "/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret"
+                            SendAs = "/docs/reference/data-types/http/authentication/oauth/clientauthentication/#sendas"
+                        [Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthType]
+                            MainDoc = "/docs/reference/data-types/http/authentication/oauth/clientauthtype"
+                        [Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials]
+                            MainDoc = "/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials"
+                            AccessTokenUri = "/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri"
+                            ClientAuthentication = "/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#clientauthentication"
+                            Scope = "/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#scope"
+                        [Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials]
+                            MainDoc = "/docs/reference/data-types/http/authentication/oauth/httpoauthcredentials"
+                        [Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials]
+                            MainDoc = "/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials"
+                            ResourceOwnerUsername = "/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername"
+                            ResourceOwnerPassword = "/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword"
+                            AccessTokenUri = "/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri"
+                            ClientAuthentication = "/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#clientauthentication"
+                            Scope = "/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#scope"
+                [Cortex.Reference.DataTypes.Http.Rest]
+                    MainDoc = "/docs/reference/data-types/http/rest/"
+                    [Cortex.Reference.DataTypes.Http.Rest.HttpRequest]
+                        MainDoc = "/docs/reference/data-types/http/rest/httprequest"
+                        Uri = "/docs/reference/data-types/http/rest/httprequest/#uri"
+                        QueryParameters = "/docs/reference/data-types/http/rest/httprequest/#queryparameters"
+                        Verb = "/docs/reference/data-types/http/rest/httprequest/#verb"
+                        ContentType = "/docs/reference/data-types/http/rest/httprequest/#contenttype"
+                        Headers = "/docs/reference/data-types/http/rest/httprequest/#headers"
+                        Body = "/docs/reference/data-types/http/rest/httprequest/#body"
+                        HttpVersion = "/docs/reference/data-types/http/rest/httprequest/#httpversion"
+                    [Cortex.Reference.DataTypes.Http.Rest.HttpResponse]
+                        MainDoc = "/docs/reference/data-types/http/rest/httpresponse"
+                        ResponseBody = "/docs/reference/data-types/http/rest/httpresponse/#responsebody"
+                        ErrorMessage = "/docs/reference/data-types/http/rest/httpresponse/#errormessage"
+                        Headers = "/docs/reference/data-types/http/rest/httpresponse/#headers"
+                        StatusCode = "/docs/reference/data-types/http/rest/httpresponse/#statuscode"
+                [Cortex.Reference.DataTypes.Http.Soap]
+                    MainDoc = "/docs/reference/data-types/http/soap/"
+                    [Cortex.Reference.DataTypes.Http.Soap.Soap11Message]
+                        MainDoc = "/docs/reference/data-types/http/soap/soap11message"
+                        Action = "/docs/reference/data-types/http/soap/soap11message/#action"
+                    [Cortex.Reference.DataTypes.Http.Soap.Soap12Message]
+                        MainDoc = "/docs/reference/data-types/http/soap/soap12message"
+                    [Cortex.Reference.DataTypes.Http.Soap.SoapMessage]
+                        MainDoc = "/docs/reference/data-types/http/soap/soapmessage"
+                        Envelope = "/docs/reference/data-types/http/soap/soapmessage/#envelope"
+                        Version = "/docs/reference/data-types/http/soap/soapmessage/#version"
+                    [Cortex.Reference.DataTypes.Http.Soap.SoapRequest]
+                        MainDoc = "/docs/reference/data-types/http/soap/soaprequest"
+                        SoapMessage = "/docs/reference/data-types/http/soap/soaprequest/#soapmessage"
+                        Uri = "/docs/reference/data-types/http/soap/soaprequest/#uri"
+                        Headers = "/docs/reference/data-types/http/soap/soaprequest/#headers"
+                        HttpVersion = "/docs/reference/data-types/http/soap/soaprequest/#httpversion"
+                    [Cortex.Reference.DataTypes.Http.Soap.SoapResponse]
+                        MainDoc = "/docs/reference/data-types/http/soap/soapresponse"
+                        ResponseEnvelope = "/docs/reference/data-types/http/soap/soapresponse/#responseenvelope"
+                        ErrorMessage = "/docs/reference/data-types/http/soap/soapresponse/#errormessage"
+                        Headers = "/docs/reference/data-types/http/soap/soapresponse/#headers"
+                        StatusCode = "/docs/reference/data-types/http/soap/soapresponse/#statuscode"
             [Cortex.Reference.DataTypes.Json]
                 MainDoc = "/docs/reference/data-types/json/"
                 [Cortex.Reference.DataTypes.Json.JsonSerializerSettings]
@@ -1205,6 +1282,27 @@
                 MainDoc = "/docs/reference/data-types/loops/"
                 [Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode]
                     MainDoc = "/docs/reference/data-types/loops/infinitelooperrorcode"
+            [Cortex.Reference.DataTypes.Microsoft365]
+                MainDoc = "/docs/reference/data-types/microsoft365/"
+                [Cortex.Reference.DataTypes.Microsoft365.Authentication]
+                    MainDoc = "/docs/reference/data-types/microsoft365/authentication"
+                    [Cortex.Reference.DataTypes.Microsoft365.Authentication.OAuth]
+                        MainDoc = "/docs/reference/data-types/microsoft365/authentication/oauth"
+                        [Cortex.Reference.DataTypes.Microsoft365.Authentication.OAuth.Microsoft365Credentials]
+                            MainDoc = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365credentials"
+                        [Cortex.Reference.DataTypes.Microsoft365.Authentication.OAuth.Microsoft365OAuthCredentials]
+                            MainDoc = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials"
+                            ClientId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientid"
+                            ClientSecret = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#clientsecret"
+                            TenantId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#tenantid"
+                            ObjectId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcredentials/#objectid"
+                        [Cortex.Reference.DataTypes.Microsoft365.Authentication.OAuth.Microsoft365OAuthCertificateCredentials]
+                            MainDoc = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials"
+                            CertificatePath = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepath"
+                            CertificatePassword = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#certificatepassword"
+                            ClientId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid"
+                            TenantId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid"
+                            ObjectId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid"
             [Cortex.Reference.DataTypes.Numbers]
                 MainDoc = "/docs/reference/data-types/numbers/"
                 [Cortex.Reference.DataTypes.Numbers.Double]
@@ -1223,6 +1321,17 @@
                     MainDoc = "/docs/reference/data-types/other/guid"
                 [Cortex.Reference.DataTypes.Other.Nullable]
                     MainDoc = "/docs/reference/data-types/other/nullable-1"
+            [Cortex.Reference.DataTypes.PowerShell]
+                MainDoc = "/docs/reference/data-types/powershell/"
+                [Cortex.Reference.DataTypes.PowerShell.PowerShellSessionDetails]
+                    MainDoc = "/docs/reference/data-types/powershell/powershellsessiondetails"
+                    ServerDetails = "/docs/reference/data-types/powershell/powershellsessiondetails/#serverdetails"
+                    Credentials = "/docs/reference/data-types/powershell/powershellsessiondetails/#credentials"
+                    PsConfiguration = "/docs/reference/data-types/powershell/powershellsessiondetails/#psconfiguration"
+                [Cortex.Reference.DataTypes.PowerShell.PowerShellWinRMSessionDetails]
+                    MainDoc = "/docs/reference/data-types/powershell/powershellwinrmsessiondetails"
+                [Cortex.Reference.DataTypes.PowerShell.Records]
+                    MainDoc = "/docs/reference/data-types/powershell/records"
             [Cortex.Reference.DataTypes.SessionDetails]
                 MainDoc = "/docs/reference/data-types/session-details/"
                 [Cortex.Reference.DataTypes.SessionDetails.ServerDetails]
@@ -1355,6 +1464,14 @@
                         InputVariablesOfAnInvalidType = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#input-variables-of-an-invalid-type"
             [Cortex.Reference.Exceptions.FlowException]
                 MainDoc = "/docs/reference/exceptions/flowexception/"
+            [Cortex.Reference.Exceptions.Http]
+                MainDoc = "/docs/reference/exceptions/http/"
+                [Cortex.Reference.Exceptions.Http.HttpAuthorisationException]
+                    MainDoc = "/docs/reference/exceptions/http/http-authorisation-exception"
+                [Cortex.Reference.Exceptions.Http.InvalidRequestException]
+                    MainDoc = "/docs/reference/exceptions/http/invalid-request-exception"
+                [Cortex.Reference.Exceptions.Http.InvalidResponseException]
+                    MainDoc = "/docs/reference/exceptions/http/invalid-response-exception"
             [Cortex.Reference.Exceptions.Lists]
                 MainDoc = "/docs/reference/exceptions/lists/"
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
@@ -1370,6 +1487,12 @@
                         IncrementIsZero = "/docs/reference/exceptions/loops/infinite-loop-exception/#100"
                         IncrementIsNegative = "/docs/reference/exceptions/loops/infinite-loop-exception/#101"
                         IncrementIsPositive = "/docs/reference/exceptions/loops/infinite-loop-exception/#102"
+            [Cortex.Reference.Exceptions.PowerShell]
+                MainDoc = "/docs/reference/exceptions/powershell/"
+                [Cortex.Reference.Exceptions.PowerShell.PSRemotingException]
+                    MainDoc = "/docs/reference/exceptions/powershell/psremotingexception"
+                [Cortex.Reference.Exceptions.PowerShell.PSException]
+                    MainDoc = "/docs/reference/exceptions/powershell/psexception"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
@@ -1408,6 +1531,7 @@
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
                 MainDoc = "/docs/reference/glossary/a-e/"
+                API = "/docs/reference/glossary/a-e/#api"
                 Autogeneration = "/docs/reference/glossary/a-e/#autogeneration"
                 Automation = "/docs/reference/glossary/a-e/#automation"
                 AWSLambda = "/docs/reference/glossary/a-e/#aws-lambda"
@@ -1626,6 +1750,16 @@
         ErrorCodes = "https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
         TransparentDataEncryption = "https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15"
+    [MSDocs.DotNet.Api.Microsoft]
+        MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft"
+        [MSDocs.DotNet.Api.Microsoft.Identity.Client]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client"
+            [MSDocs.DotNet.Api.Microsoft.Identity.Client.MsalServiceException]
+                MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalserviceexception"
+        [MSDocs.DotNet.Api.Microsoft.Graph]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph"
+            [MSDocs.DotNet.Api.Microsoft.Graph.ServiceException]
+                MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.serviceexception"
     [MSDocs.DotNet.Api.System]
         ArgumentException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception"
         ArgumentNullException = "https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
@@ -1742,6 +1876,12 @@
         [MSDocs.DotNet.Api.System.Object]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.object"
             ToString = "https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring"
+        [MSDocs.DotNet.Api.System.Security]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.security"
+            [MSDocs.DotNet.Api.System.Security.Cryptography]
+                MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography"
+                [MSDocs.DotNet.Api.System.Security.Cryptography.CryptographicException]
+                    MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.cryptographicexception"
         [MSDocs.DotNet.Api.System.Single]
             MainDoc = "https://docs.microsoft.com/en-us/dotnet/api/system.single"
             MaxValue = "https://docs.microsoft.com/en-us/dotnet/api/system.single.maxvalue"
