@@ -14,7 +14,7 @@ description: "Executes a PowerShell script on the specified host."
 
 ## Description
 
-Connects to a host (e.g. SQL Server) using the specified [PowerShell Session Details][PowerShell Session Details Property], and executes a [Script][Script Property], returning the [Outputs][Outputs Property] and [Records][Records Property].
+Connects to a host using the specified [PowerShell Session Details][PowerShell Session Details Property], and executes a [Script][Script Property], returning the [Outputs][Outputs Property] and [Records][Records Property].
 
 [Close Session][Close Session Property] can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute PowerShell Script blocks.
 

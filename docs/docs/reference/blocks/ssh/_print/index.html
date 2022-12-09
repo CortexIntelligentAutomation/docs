@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
+  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -251,15 +251,469 @@ This the multi-page printable view of this section.
 </figure>
 
 <h1 id="execute-ssh-command">Execute Ssh Command</h1>
-<p class="namespace">(Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
-<img src="/images/work-in-progress.jpg">
+<p class="namespace">("Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Executes an SSH command on the specified host.</p>
+<p>Connects to a host using the <a href="#ssh-session-details">Ssh Session Details</a>, and executes a <a href="#command">Command</a>, returning the <a href="#response">Response</a> and <a href="#ssh-logs">Ssh Logs</a>.</p>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute Ssh Command blocks.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
+<h3 id="execute-a-command-using-usercredentials">Execute a Command using UserCredentials</h3>
+<p>This example will execute a <a href="#command">Command</a> on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;localhost&quot;</code></li>
+<li>Port -  <code>22</code></li>
+<li>Domain - <code>&quot;domain&quot;</code></li>
+<li>Username - <code>&quot;username&quot;</code></li>
+<li>Password - <code>&quot;password&quot;</code></li>
+</ul>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#command">Command</a></td>
+<td><code>($)Command</code> with value <code>&quot;ipconfig&quot;</code></td>
+<td><code>($)Command</code> is a variable of type <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-session-details">Ssh Session Details</a></td>
+<td><code>($)SshSessionDetails</code> with value <code>{&quot;Host&quot;: &quot;localhost&quot;, &quot;Port&quot;: 22, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}, &quot;TerminalPrompt&quot;: &quot;(.*(~(.*[\\r\\n]?)\\$|&gt;))&quot;}</code><br><br>In this example <code>($)SshSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new SshSessionDetails(&quot;localhost&quot;, 22, new UserCredentials(&quot;domain&quot;, &quot;username&quot;,  &quot;encryptedPassword&quot;), @&quot;(.*(~(.*[\r\n]?)\$|&gt;))&quot;)</code></td>
+<td><code>($)SshSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/ssh/sshsessiondetails">SshSessionDetails</a></td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#configuration-settings">Configuration Settings</a></td>
+<td><code>($)ConfigurationSettings</code>, with no value</td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#response">Response</a></td>
+<td><code>($)Response</code>, with no value</td>
+<td><code>($)Response</code> will be set to the type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-logs">Ssh Logs</a></td>
+<td><code>($)SshLogs</code>, with no value</td>
+<td><code>($)SshLogs</code> will be set to the type <a href="/docs/reference/data-types/ssh/sshlogs">SshLogs</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Running the <a href="#command">Command</a> results in the variable <code>($)Response</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Windows IP Configuration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ethernet adapter Ethernet 3:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Connection-specific DNS Suffix. : reddog.microsoft.com
+</span></span><span style="display:flex;"><span>Link-local IPv6 Address. . . . . : fe80::78eb:a051:2b84:e8bd%6
+</span></span><span style="display:flex;"><span>IPv4 Address. . . . . . . . . . . : 10.3.0.4
+</span></span><span style="display:flex;"><span>Subnet Mask . . . . . . . . . . . : 255.255.255.0
+</span></span><span style="display:flex;"><span>Default Gateway . . . . . . . . . : 10.3.0.1
+</span></span></code></pre></div><p>It also results in the variable <code>($)SshLogs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WelcomeMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Logs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange.[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange...&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that more logs are included in this example, but have been omitted from <code>($)SshLogs.Logs</code>.</p>
+<hr>
+<h3 id="execute-a-command-using-sshcertificatecredentials">Execute a Command using SshCertificateCredentials</h3>
+<p>This example will execute a <a href="#command">Command</a> on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;localhost&quot;</code></li>
+<li>Port -  <code>22</code></li>
+<li>Domain - <code>&quot;domain&quot;</code></li>
+</ul>
+<p>The server can be connected to using a valid certificate.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#command">Command</a></td>
+<td><code>($)Command</code> with value <code>&quot;ipconfig&quot;</code></td>
+<td><code>($)Command</code> is a variable of type <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-session-details">Ssh Session Details</a></td>
+<td><code>($)SshSessionDetails</code> with value <code>{&quot;Host&quot;: &quot;localhost&quot;, &quot;Port&quot;: 22, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;CertificatePath&quot;: &quot;C:\\Certificate.pfx&quot;, &quot;CertificatePassword&quot;: &quot;encryptedCertificatePassword&quot;}, &quot;TerminalPrompt&quot;: &quot;(.*(~(.*[\\r\\n]?)\\$|&gt;))&quot;}</code><br><br>In this example <code>($)SshSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new SshSessionDetails(&quot;localhost&quot;, 22, new SshCertificateCredentials(&quot;domain&quot;, &quot;username&quot;, @&quot;C\Certificate.pfx&quot;, &quot;encryptedCertificatePassword&quot;), @&quot;(.*(~(.*[\r\n]?)\$|&gt;))&quot;)</code></td>
+<td><code>($)SshSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/ssh/sshsessiondetails">SshSessionDetails</a></td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#configuration-settings">Configuration Settings</a></td>
+<td><code>($)ConfigurationSettings</code>, with no value</td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#response">Response</a></td>
+<td><code>($)Response</code>, with no value</td>
+<td><code>($)Response</code> will be set to the type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-logs">Ssh Logs</a></td>
+<td><code>($)SshLogs</code>, with no value</td>
+<td><code>($)SshLogs</code> will be set to the type <a href="/docs/reference/data-types/ssh/sshlogs">SshLogs</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>Running the <a href="#command">Command</a> results in the variable <code>($)Response</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Windows IP Configuration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ethernet adapter Ethernet 3:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Connection-specific DNS Suffix. : reddog.microsoft.com
+</span></span><span style="display:flex;"><span>Link-local IPv6 Address. . . . . : fe80::78eb:a051:2b84:e8bd%6
+</span></span><span style="display:flex;"><span>IPv4 Address. . . . . . . . . . . : 10.3.0.4
+</span></span><span style="display:flex;"><span>Subnet Mask . . . . . . . . . . . : 255.255.255.0
+</span></span><span style="display:flex;"><span>Default Gateway . . . . . . . . . : 10.3.0.1
+</span></span></code></pre></div><p>It also results in the variable <code>($)SshLogs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WelcomeMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Logs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange.[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange...&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that more logs are included in this example, but have been omitted from <code>($)SshLogs.Logs</code>.</p>
+<hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="command">Command</h3>
+<p>The <a href="#command">Command</a> that will be executed on the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> specified in the <a href="#ssh-session-details">Ssh Session Details</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>$@&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssh-session-details">Ssh Session Details</h3>
+<p>The <a href="#ssh-session-details">Ssh Session Details</a> object that includes all of the information required to open and maintain a SSH session. This property contains all of the information in relation to the server the <a href="#command">Command</a> will be executed on, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a></li>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#port">Port</a></li>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a></li>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt">TerminalPrompt</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/ssh/sshsessiondetails">SshSessionDetails</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)SshSessionDetails</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="close-session">Close Session</h3>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> is closed or is kept open for use on subsequent Execute Ssh Command blocks, this defaults to <code>false</code> if left blank, please see <a href="#closing-sessions">Closing Sessions</a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a> with value <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-settings">Configuration Settings</h3>
+<p>The <a href="#configuration-settings">Configuration Settings</a> for the SSH connection and execution.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/collections/idictionary-2">IDictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/collections/idictionary-2">IDictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt; with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Dictionary</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">dynamic</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;TerminalWidth&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;TerminalType&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;vt100&#34;</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;Timeout&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">60</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;EndOfLineCharacters&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;\r&#34;</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;CancelCommand&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;\x03&#34;</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="response">Response</h3>
+<p>The SSH <a href="#response">Response</a> that is returned from the execution of the <a href="#command">Command</a> on the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> specified in the <a href="#ssh-session-details">Ssh Session Details</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Response</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssh-logs">Ssh Logs</h3>
+<p>The <a href="#ssh-logs">Ssh Logs</a> that is returned from the execution of the <a href="#command">Command</a> on the host specified in the <a href="#ssh-session-details">Ssh Session Details</a>. This property contains all of the information in relation to the logs returned by the <a href="#command">Command</a>, these are:</p>
+<ul>
+<li>WelcomeMessage</li>
+<li>Logs</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/ssh/sshlogs">SshLogs</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)SshLogs</code> with no value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when <a href="#command">Command</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when using <a href="/docs/reference/data-types/ssh/authentication/sshcertificatecredentials">SshCertificateCredentials</a>, the CertificatePath in the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the CertificatePath in the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-value-out-of-range-exception/">PropertyValueOutOfRangeException</a></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#port">Port</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is below 1 or above 65535.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/ssh/sshclientexception/">SshClientException</a></td>
+<td>Thrown when one or more settings in <a href="#configuration-settings">Configuration Settings</a> are invalid. (includes a dictionary of SettingName: ExceptionMessage from IPWorksSSHSshClientException)</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#port">Port</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the server host key has not been accepted.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when using <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>, the specified domain, username or password within <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when using <a href="/docs/reference/data-types/ssh/authentication/sshcertificatecredentials">SshCertificateCredentials</a>, the specified Domain, Username, CertificatePath or CertificatePassword is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> exits without using <a href="#close-session">Close Session</a>, returning the response received up to the point the host exited the session.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/ssh/sshresponseexception/">SshResponseException</a></td>
+<td>Thrown if the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt">TerminalPrompt</a> does not match the terminal prompt on the host causing the execution to timeout or the timeout was too short to allow for data to be received.</td>
+</tr>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception?view=netcore-3.1
+">RegexMatchTimeoutException</a></td>
+<td>Thrown when the execution time of the regular expression pattern-matching exceeds the time-out interval.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/text/regex/regexparsingfailedexception/">RegexParsingFailedException</a></td>
+<td>Thrown when <a href="/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt">TerminalPrompt</a> within <a href="#ssh-session-details">Ssh Session Details</a> contains invalid regex.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
+<h3 id="opening-sessions">Opening Sessions</h3>
+<p>The Execute Ssh Command block automatically handles creating and opening session for the specified <a href="#ssh-session-details">Ssh Session Details</a> using the following rules:</p>
+<ul>
+<li>If a session does not exist, a new session will be created, opened and used when the block runs.</li>
+<li>If a session already exists but is closed, the session will be opened and used when the block runs.</li>
+<li>If a session already exists and is open, the session will used the block runs.</li>
+</ul>
+<p>For information on how to explicitly close a session, please see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<h3 id="closing-sessions">Closing Sessions</h3>
+<p>Sessions can be explicitly closed by setting <a href="#close-session">Close Session</a> to <code>true</code>. This causes the session to be closed after the <a href="#command">Command</a> has been executed.</p>
+<p>For information on how to open a session, please see <a href="#opening-sessions">Opening Sessions</a>.</p>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 

@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
+  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -478,7 +478,7 @@ This the multi-page printable view of this section.
 <tr>
 <td><a href="#http-credentials">Http Credentials</a></td>
 <td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-shop.com/api/oauth2/token&quot;, &quot;ClientAuthentication&quot;: {&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;SendAs&quot;: &quot;ClientAuthType.Header&quot;}, &quot;Scope&quot;: null}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthClientCredentials(accessTokenUri: &quot;https://test-shop.com/api/oauth2/token&quot;, clientAuthentication: new ClientAuthentication(&quot;clientId&quot;, &quot;encryptedClientSecret&quot;, ClientAuthType.Header), scope: null)</code></td>
-<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a>, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
 </tr>
 <tr>
 <td><a href="#http-response">Http Response</a></td>

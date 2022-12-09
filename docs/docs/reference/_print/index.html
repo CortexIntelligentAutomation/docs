@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c78ab69a1e1745f42b9a7e797fac95fa.json"
+  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -5920,7 +5920,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>4.20.1.1: <a href="#pg-dfe3f580bb1f3fbedfb70622e2566c22">ISshCredentials</a></li>
+<li>4.20.1.1: <a href="#pg-32a2aed0d33ac76ca33a1107508bca8d">ISshCredentials</a></li>
 
 
     
@@ -5928,7 +5928,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>4.20.1.2: <a href="#pg-c2b0cf969e2380665386e3f93ad43229">SshCredentials</a></li>
+<li>4.20.1.2: <a href="#pg-e0426ce5160dace864e7c4489a4a82d9">SshCertificateCredentials</a></li>
 
 
     
@@ -5936,13 +5936,37 @@ This the multi-page printable view of this section.
     
     
 	
-<li>4.20.1.3: <a href="#pg-ed94f76e5fbb5ff37fcb16e5411cc792">SshUserCredentials</a></li>
+<li>4.20.1.3: <a href="#pg-17e03c8492e3c3a12c0f507c3538efe6">SshCredentials</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.20.1.4: <a href="#pg-8591267e4282dd599c1633a5581e5be4">SshUserCredentials</a></li>
 
 
     
   
 
     </ul>
+    
+  
+    
+    
+	
+<li>4.20.2: <a href="#pg-8aa3bc7f3997ac28c67c9204095b8c93">SshLogs</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.20.3: <a href="#pg-ff9c92b7d22ba7e6dc5ba00bc8ebd151">SshSessionDetails</a></li>
+
+
     
   
 
@@ -6662,7 +6686,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>5.13: <a href="#pg-ab9fb634c3f92724d3b447a36c959863">Text</a></li>
+<li>5.13: <a href="#pg-84aee2eefb61d62ea7faf800091922f4">Ssh</a></li>
 
 
     
@@ -6677,7 +6701,27 @@ This the multi-page printable view of this section.
     
     
 	
-<li>5.13.1: <a href="#pg-e3dec882250e7ec66aab261e8b2a3f49">Regex</a></li>
+<li>5.13.1: <a href="#pg-7d9c1d6b5f49867c747654699a2ec6af">SshClientException</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.13.2: <a href="#pg-57b77506048d598e4eb494dec8449502">SshResponseException</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>5.14: <a href="#pg-ab9fb634c3f92724d3b447a36c959863">Text</a></li>
 
 
     
@@ -6692,7 +6736,22 @@ This the multi-page printable view of this section.
     
     
 	
-<li>5.13.1.1: <a href="#pg-f9706ea7bbd1b8f603c38687b8866cb6">RegexParsingFailedException</a></li>
+<li>5.14.1: <a href="#pg-e3dec882250e7ec66aab261e8b2a3f49">Regex</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>5.14.1.1: <a href="#pg-f9706ea7bbd1b8f603c38687b8866cb6">RegexParsingFailedException</a></li>
 
 
     
@@ -6708,7 +6767,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>5.14: <a href="#pg-4730ba811a34f60ce192122c50010f93">Xml</a></li>
+<li>5.15: <a href="#pg-4730ba811a34f60ce192122c50010f93">Xml</a></li>
 
 
     
@@ -6723,7 +6782,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>5.14.1: <a href="#pg-377a9e0c0855debedabbd374c7adeb51">XmlSerializationException</a></li>
+<li>5.15.1: <a href="#pg-377a9e0c0855debedabbd374c7adeb51">XmlSerializationException</a></li>
 
 
     
@@ -40122,7 +40181,7 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 <tr>
 <td><a href="#http-credentials">Http Credentials</a></td>
 <td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-shop.com/api/oauth2/token&quot;, &quot;ClientAuthentication&quot;: {&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;SendAs&quot;: &quot;ClientAuthType.Header&quot;}, &quot;Scope&quot;: null}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthClientCredentials(accessTokenUri: &quot;https://test-shop.com/api/oauth2/token&quot;, clientAuthentication: new ClientAuthentication(&quot;clientId&quot;, &quot;encryptedClientSecret&quot;, ClientAuthType.Header), scope: null)</code></td>
-<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a>, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
 </tr>
 <tr>
 <td><a href="#http-response">Http Response</a></td>
@@ -40494,14 +40553,637 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 
 <h1 id="execute-soap-request">Execute Soap Request</h1>
 <p class="namespace">(Cortex.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequestBlock`1)</p>
-<img src="/images/work-in-progress.jpg">
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Executes a SOAP request and returns a response.</p>
+<p>Executes a <a href="#soap-request">Soap Request</a> using the specified <a href="#http-credentials">Http Credentials</a> and returns the <a href="#soap-response">Soap Response</a>.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
+<p>The following examples will use an example SOAP service with a base <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> of <code>https://test-converter.com/xml</code>.</p>
+<p>The example SOAP service supports the following:</p>
+<ul>
+<li>Conversion of a temperature in Degrees Celcius to Kelvin using an <a href="/docs/reference/data-types/http/soap/soap11message/#action">Action</a> of <code>https://test-converter.com/DegreesToKelvin</code></li>
+<li>Unauthenticated requests</li>
+<li>Basic authentication</li>
+<li>Retrieval of access tokens from <code>https://test-converter.com/oauth2/token</code></li>
+<li>OAuth authentication using password credentials</li>
+<li>OAuth authentication using client credentials</li>
+</ul>
+<h3 id="executing-a-request-using-soap-11">Executing a request using SOAP 1.1</h3>
+<p>This example will send a <a href="#soap-request">Soap Request</a> to <code>https://test-converter.com/xml</code> using SOAP 1.1 with no authentication which requires:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> to be a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a></li>
+<li><a href="#http-credentials">Http Credentials</a> to be <code>null</code></li>
+</ul>
+<p>Note that the result of executing a <a href="#soap-request">Soap Request</a> is dependent on the SOAP service that the request is being made to.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#soap-request">Soap Request</a></td>
+<td><code>($)SoapRequest</code>, with value <code>{&quot;SoapMessage&quot;: {&quot;Action&quot;: &quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;Envelope&quot;: &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;, &quot;Version&quot;: 11}, &quot;Uri&quot;: &quot;https://test-converter.com/xml&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)SoapRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new SoapRequest(uri: &quot;https://test-converter.com/xml&quot;, soapMessage: new Soap11Message(&quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;), headers: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)SoapRequest</code> is a variable of type <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>null</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>null</code></td>
+<td><code>($)HttpCredentials</code> is a variable with value <code>null</code><br><br>As <code>($)HttpCredentials</code> is <code>null</code>, no authentication will occur when making the request.</td>
+</tr>
+<tr>
+<td><a href="#soap-response">Soap Response</a></td>
+<td><code>($)SoapResponse</code>, with no value</td>
+<td><code>($)SoapResponse</code> will be set to the type <a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Executing a <a href="#soap-request">Soap Request</a> with a <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> of <code>https://test-converter.com/xml</code> using a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a> with an <a href="/docs/reference/data-types/http/soap/soap11message/#action">Action</a> of <code>https://test-converter.com/DegreesToKelvin</code> results in the variable <code>($)SoapResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ResponseEnvelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;?xml&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@encoding&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;soap:Envelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsi&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:soap&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://schemas.xmlsoap.org/soap/envelope/&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;soap:Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;DegreesToKelvinResponse&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;@xmlns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://test-converter.com/DegreesToKelvin/schema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;kelvin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;293&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;text/xml; charset=utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>text/xml; charset=utf-8</code>, the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-soap-12">Executing a request using SOAP 1.2</h3>
+<p>This example will send a <a href="#soap-request">Soap Request</a> to <code>https://test-converter.com/xml</code> using SOAP 1.2 with no authentication which requires:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> to be a <a href="/docs/reference/data-types/http/soap/soap12message">Soap12Message</a></li>
+<li><a href="#http-credentials">Http Credentials</a> to be <code>null</code></li>
+</ul>
+<p>Note that the result of executing a <a href="#soap-request">Soap Request</a> is dependent on the SOAP service that the request is being made to.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#soap-request">Soap Request</a></td>
+<td><code>($)SoapRequest</code>, with value <code>{&quot;SoapMessage&quot;: {&quot;Envelope&quot;: &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap12:Envelope xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot; xmlns:soap12=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot;&gt;&lt;soap12:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap12:Body&gt;&lt;/soap12:Envelope&gt;&quot;, &quot;Version&quot;: 12}, &quot;Uri&quot;: &quot;https://test-converter.com/xml&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)SoapRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new SoapRequest(uri: &quot;https://test-converter.com/xml&quot;, soapMessage: new Soap12Message(&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap12:Envelope xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot; xmlns:soap12=\&quot;http://www.w3.org/2003/05/soap-envelope\&quot;&gt;&lt;soap12:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap12:Body&gt;&lt;/soap12:Envelope&gt;&quot;), headers: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)SoapRequest</code> is a variable of type <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>null</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>null</code></td>
+<td><code>($)HttpCredentials</code> is a variable with value <code>null</code><br><br>As <code>($)HttpCredentials</code> is <code>null</code>, no authentication will occur when making the request.</td>
+</tr>
+<tr>
+<td><a href="#soap-response">Soap Response</a></td>
+<td><code>($)SoapResponse</code>, with no value</td>
+<td><code>($)SoapResponse</code> will be set to the type <a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>Executing a <a href="#soap-request">Soap Request</a> with a <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> of <code>https://test-converter.com/xml</code> using a <a href="/docs/reference/data-types/http/soap/soap12message">Soap12Message</a> results in the variable <code>($)SoapResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ResponseEnvelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;?xml&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@encoding&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;soap12:Envelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsi&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:soap12&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2003/05/soap-envelope&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;soap12:Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;DegreesToKelvinResponse&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;@xmlns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://test-converter.com/DegreesToKelvin/schema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;kelvin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;293&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;application/soap+xml; charset=utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>application/soap+xml; charset=utf-8</code>, the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-basic-authentication">Executing a request using Basic authentication</h3>
+<p>This example will send a <a href="#soap-request">Soap Request</a> to <code>https://test-converter.com/xml</code> using SOAP 1.1 with Basic authentication which requires:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> to be a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a></li>
+<li><a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a></li>
+</ul>
+<p>Note that the result of executing a <a href="#soap-request">Soap Request</a> is dependent on the SOAP service that the request is being made to.</p>
+<h4 id="properties-2">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#soap-request">Soap Request</a></td>
+<td><code>($)SoapRequest</code>, with value <code>{&quot;SoapMessage&quot;: {&quot;Action&quot;: &quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;Envelope&quot;: &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;, &quot;Version&quot;: 11}, &quot;Uri&quot;: &quot;https://test-converter.com/xml&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)SoapRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new SoapRequest(uri: &quot;https://test-converter.com/xml&quot;, soapMessage: new Soap11Message(&quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;), headers: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)SoapRequest</code> is a variable of type <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;Domain&quot;: null, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new UserCredentials(username: &quot;username&quot;, password: &quot;encryptedPassword&quot;)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a><br><br>The <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> property in the <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#soap-response">Soap Response</a></td>
+<td><code>($)SoapResponse</code>, with no value</td>
+<td><code>($)SoapResponse</code> will be set to the type <a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-2">Result</h4>
+<p>Executing a <a href="#soap-request">Soap Request</a> with a <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> of <code>https://test-converter.com/xml</code> using a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a> with an <a href="/docs/reference/data-types/http/soap/soap11message/#action">Action</a> of <code>https://test-converter.com/DegreesToKelvin</code> results in the variable <code>($)SoapResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ResponseEnvelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;?xml&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@encoding&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;soap:Envelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsi&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:soap&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://schemas.xmlsoap.org/soap/envelope/&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;soap:Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;DegreesToKelvinResponse&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;@xmlns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://test-converter.com/DegreesToKelvin/schema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;kelvin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;293&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;text/xml; charset=utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>text/xml; charset=utf-8</code>, the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-oauth-password-credentials">Executing a request using OAuth password credentials</h3>
+<p>This example will send a <a href="#soap-request">Soap Request</a> to <code>https://test-converter.com/xml</code> using SOAP 1.1 with OAuth authentication using password credentials which requires:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> to be a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a></li>
+<li><a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a></li>
+</ul>
+<p>Note that the result of executing a <a href="#soap-request">Soap Request</a> is dependent on the SOAP service that the request is being made to.</p>
+<h4 id="properties-3">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#soap-request">Soap Request</a></td>
+<td><code>($)SoapRequest</code>, with value <code>{&quot;SoapMessage&quot;: {&quot;Action&quot;: &quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;Envelope&quot;: &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;, &quot;Version&quot;: 11}, &quot;Uri&quot;: &quot;https://test-converter.com/xml&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)SoapRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new SoapRequest(uri: &quot;https://test-converter.com/xml&quot;, soapMessage: new Soap11Message(&quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;), headers: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)SoapRequest</code> is a variable of type <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-converter.com/oauth2/token&quot;, &quot;ClientAuthentication&quot;: null, &quot;Scope&quot;: null, &quot;ResourceOwnerUsername&quot;: &quot;username&quot;, &quot;ResourceOwnerPassword&quot;: &quot;encryptedPassword&quot;}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthPasswordCredentials(accessTokenUri: &quot;https://test-converter.com/oauth2/token&quot;, clientAuthentication: null, scope: null, resourceOwnerUsername: &quot;username&quot;, resourceOwnerPassword: &quot;encryptedPassword&quot;)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword">ResourceOwnerPassword</a> property in the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> must be encrypted, for more information on how to encrypt the password, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#soap-response">Soap Response</a></td>
+<td><code>($)SoapResponse</code>, with no value</td>
+<td><code>($)SoapResponse</code> will be set to the type <a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-3">Result</h4>
+<p>Executing a <a href="#soap-request">Soap Request</a> with a <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> of <code>https://test-converter.com/xml</code> using a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a> with an <a href="/docs/reference/data-types/http/soap/soap11message/#action">Action</a> of <code>https://test-converter.com/DegreesToKelvin</code> results in the variable <code>($)SoapResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ResponseEnvelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;?xml&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@encoding&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;soap:Envelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsi&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:soap&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://schemas.xmlsoap.org/soap/envelope/&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;soap:Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;DegreesToKelvinResponse&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;@xmlns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://test-converter.com/DegreesToKelvin/schema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;kelvin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;293&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;text/xml; charset=utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>text/xml; charset=utf-8</code>, the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h3 id="executing-a-request-using-oauth-client-credentials">Executing a request using OAuth client credentials</h3>
+<p>This example will send a <a href="#soap-request">Soap Request</a> to <code>https://test-converter.com/xml</code> using SOAP 1.1 with OAuth authentication using client credentials which requires:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> to be a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a></li>
+<li><a href="#http-credentials">Http Credentials</a> to be a <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a></li>
+</ul>
+<p>Note that the result of executing a <a href="#soap-request">Soap Request</a> is dependent on the SOAP service that the request is being made to.</p>
+<h4 id="properties-4">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#soap-request">Soap Request</a></td>
+<td><code>($)SoapRequest</code>, with value <code>{&quot;SoapMessage&quot;: {&quot;Action&quot;: &quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;Envelope&quot;: &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;, &quot;Version&quot;: 11}, &quot;Uri&quot;: &quot;https://test-converter.com/xml&quot;, &quot;Headers&quot;: null, &quot;HttpVersion&quot;: &quot;HttpRequestVersion.HTTP11&quot;}</code><br><br>In this example <code>($)SoapRequest</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new SoapRequest(uri: &quot;https://test-converter.com/xml&quot;, soapMessage: new Soap11Message(&quot;https://test-converter.com/DegreesToKelvin&quot;, &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;soap:Envelope xmlns:soap=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot;&gt;&lt;soap:Body&gt;&lt;DegreesToKelvin xmlns=\&quot;https://test-converter.com/DegreesToKelvin/schema\&quot;&gt;&lt;degrees&gt;20&lt;/degrees&gt;&lt;/DegreesToKelvin&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&quot;), headers: null, httpVersion: HttpRequestVersion.HTTP11)</code></td>
+<td><code>($)SoapRequest</code> is a variable of type <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></td>
+</tr>
+<tr>
+<td><a href="#http-credentials">Http Credentials</a></td>
+<td><code>($)HttpCredentials</code>, with value <code>{&quot;AccessTokenUri&quot;: &quot;https://test-converter.com/oauth2/token&quot;, &quot;ClientAuthentication&quot;: {&quot;ClientId&quot;: &quot;clientId&quot;, &quot;ClientSecret&quot;: &quot;encryptedClientSecret&quot;, &quot;SendAs&quot;: &quot;ClientAuthType.Header&quot;}, &quot;Scope&quot;: null}</code><br><br>In this example, <code>($)HttpCredentials</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br><code>new HttpOAuthClientCredentials(accessTokenUri: &quot;https://test-converter.com/oauth2/token&quot;, clientAuthentication: new ClientAuthentication(&quot;clientId&quot;, &quot;encryptedClientSecret&quot;, ClientAuthType.Header), scope: null)</code></td>
+<td><code>($)HttpCredentials</code> is a variable of type <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a><br><br>The <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> property in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> must be encrypted, for more information on how to encrypt the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a>, see <a href="/docs/reference/data-types/text/encryptedtext">EncryptedText</a>.</td>
+</tr>
+<tr>
+<td><a href="#soap-response">Soap Response</a></td>
+<td><code>($)SoapResponse</code>, with no value</td>
+<td><code>($)SoapResponse</code> will be set to the type <a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-4">Result</h4>
+<p>Executing a <a href="#soap-request">Soap Request</a> with a <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> of <code>https://test-converter.com/xml</code> using a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a> with an <a href="/docs/reference/data-types/http/soap/soap11message/#action">Action</a> of <code>https://test-converter.com/DegreesToKelvin</code> results in the variable <code>($)SoapResponse</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ResponseEnvelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;?xml&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@encoding&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;soap:Envelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsi&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:xsd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://www.w3.org/2001/XMLSchema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;@xmlns:soap&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://schemas.xmlsoap.org/soap/envelope/&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;soap:Body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;DegreesToKelvinResponse&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;@xmlns&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://test-converter.com/DegreesToKelvin/schema&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;kelvin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;293&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ErrorMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Content-Type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;text/xml; charset=utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;StatusCode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpStatusCode.OK (200)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that as the <a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value of <code>text/xml; charset=utf-8</code>, the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> is a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<hr>
+<h2 id="properties-5">Properties</h2>
+<h3 id="soap-request">Soap Request</h3>
+<p>The <a href="#soap-request">Soap Request</a> to execute using the <a href="#http-credentials">Http Credentials</a>. This property contains all of the information in relation to the request to be sent, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a></li>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a></li>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#headers">Headers</a></li>
+<li><a href="/docs/reference/data-types/http/soap/soaprequest/#httpversion">HttpVersion</a></li>
+</ul>
+<p>SOAP 1.1 and SOAP 1.2 are both supported, which correspond to <a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> within <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a> being a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a> and <a href="/docs/reference/data-types/http/soap/soap12message">Soap12Message</a> respectively.</p>
+<p>For more information on:</p>
+<ul>
+<li>How to use a <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a>, see <a href="#executing-a-request-using-soap-11">Executing a request using SOAP 1.1</a></li>
+<li>How to use a <a href="/docs/reference/data-types/http/soap/soap12message">Soap12Message</a>, see <a href="#executing-a-request-using-soap-12">Executing a request using SOAP 1.2</a></li>
+<li>Each of the properties, see <a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/http/soap/soaprequest">SoapRequest</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;SoapMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Envelope&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;Version&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">11</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Uri&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Headers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;HttpVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;HttpRequestVersion.HTTP10&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="http-credentials">Http Credentials</h3>
+<p>The <a href="#http-credentials">Http Credentials</a> object that includes all of the information required for authentication. Mutliple authentication mechanisms are supported which correspond to specific values/data types:</p>
+<ul>
+<li><code>null</code>: No authentication</li>
+<li><a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>: Basic authentication</li>
+<li><a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a>: OAuth authentication using password credentials</li>
+<li><a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a>: OAuth authentication using client credentials</li>
+</ul>
+<p>Note that when using <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> or <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> as the <a href="#http-credentials">Http Credentials</a>, the Execute Soap Request block automatically handles retrieval of access tokens using the following rules:</p>
+<ul>
+<li>If an access token does not exist, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists but is expired, a new access token will be retrieved and used when the block runs.</li>
+<li>If an access token already exists and is valid, it will be used when the block runs.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/authentication/httpcredentials">HttpCredentials</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)HttpCredentials</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="soap-response">Soap Response</h3>
+<p>The <a href="#soap-response">Soap Response</a> object which contains the response returned from the server. This property contains all of the information in relation to the response from the server, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a></li>
+<li><a href="/docs/reference/data-types/http/soap/soapresponse/#errormessage">ErrorMessage</a></li>
+<li><a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a></li>
+<li><a href="/docs/reference/data-types/http/soap/soapresponse/#statuscode">StatusCode</a></li>
+</ul>
+<p>Note that if the <a href="/docs/reference/data-types/http/soap/soapresponse/#headers">Headers</a> contains a key of <code>Content-Type</code> with a value containing <code>json</code> or <code>xml</code>, the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> will be set to a <a href="/docs/reference/data-types/collections/structure">Structure</a> containing the data.</p>
+<p>For more detailed information on each of the properties, see <a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/http/soap/soapresponse">SoapResponse</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)SoapResponse</code> with no value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/http/http-authorisation-exception">HttpAuthorisationException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerpassword">ResourceOwnerPassword</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is invalid.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/http/invalid-request-exception">InvalidRequestException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> within <a href="#soap-request">Soap Request</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is not in the correct format or contains invalid characters.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/soap/soaprequest/#headers">Headers</a> within <a href="#soap-request">Soap Request</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/soap/soaprequest/#headers">Headers</a> within <a href="#soap-request">Soap Request</a> is restricted.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header key in <a href="/docs/reference/data-types/http/soap/soaprequest/#headers">Headers</a> within <a href="#soap-request">Soap Request</a> is restricted and forbidden.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header value in <a href="/docs/reference/data-types/http/soap/soaprequest/#headers">Headers</a> within <a href="#soap-request">Soap Request</a> could not be assigned to its restricted header key.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when a header value in <a href="/docs/reference/data-types/http/soap/soaprequest/#headers">Headers</a> within <a href="#soap-request">Soap Request</a> could not be converted to its restricted header key&rsquo;s type.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soapmessage/#envelope">Envelope</a> in the <a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> within <a href="#soap-request">Soap Request</a> is not valid XML.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soaprequest/#httpversion">HttpVersion</a> within <a href="#soap-request">Soap Request</a> is not one of the specified <a href="/docs/reference/data-types/http/httprequestversion">HttpRequestVersion</a> values (e.g. <code>(HttpRequestVersion)20</code>).</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/http/invalid-response-exception">InvalidResponseException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soapresponse/#responseenvelope">ResponseEnvelope</a> within <a href="#soap-response">Soap Response</a> is not valid XML.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when the <a href="#soap-request">Soap Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> within <a href="#soap-request">Soap Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> within <a href="#soap-request">Soap Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soap11message/#action">Action</a> in the <a href="/docs/reference/data-types/http/soap/soap11message">Soap11Message</a> within <a href="#soap-request">Soap Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soapmessage/#envelope">Envelope</a> in the <a href="/docs/reference/data-types/http/soap/soaprequest/#soapmessage">SoapMessage</a> within <a href="#soap-request">Soap Request</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/soap/soaprequest/#uri">Uri</a> within <a href="#soap-request">Soap Request</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> within <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials/#resourceownerusername">ResourceOwnerUsername</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthpasswordcredentials">HttpOAuthPasswordCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials/#accesstokenuri">AccessTokenUri</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientid">ClientId</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication/#clientsecret">ClientSecret</a> in <a href="/docs/reference/data-types/http/authentication/oauth/clientauthentication">ClientAuthentication</a> within <a href="/docs/reference/data-types/http/authentication/oauth/httpoauthclientcredentials">HttpOAuthClientCredentials</a> is empty (i.e. <code>&quot;&quot;</code>).</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 
@@ -52100,7 +52782,7 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 </div>
 
 <h2 id="description">Description</h2>
-<p>Connects to a host (e.g. SQL Server) using the specified <a href="#powershell-session-details">PowerShell Session Details</a>, and executes a <a href="#script">Script</a>, returning the <a href="#outputs">Outputs</a> and <a href="#records">Records</a>.</p>
+<p>Connects to a host using the specified <a href="#powershell-session-details">PowerShell Session Details</a>, and executes a <a href="#script">Script</a>, returning the <a href="#outputs">Outputs</a> and <a href="#records">Records</a>.</p>
 <p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute PowerShell Script blocks.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="execute-a-script-using-powershellwinrmsessiondetails">Execute a Script using PowerShellWinRMSessionDetails</h3>
@@ -52936,15 +53618,469 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 </figure>
 
 <h1 id="execute-ssh-command">Execute Ssh Command</h1>
-<p class="namespace">(Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
-<img src="/images/work-in-progress.jpg">
+<p class="namespace">("Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Information</h4>
+
+    Improvements to this page are planned for the future; this will include further examples and remarks.
+
+</div>
+
 <h2 id="description">Description</h2>
-<p>Executes an SSH command on the specified host.</p>
+<p>Connects to a host using the <a href="#ssh-session-details">Ssh Session Details</a>, and executes a <a href="#command">Command</a>, returning the <a href="#response">Response</a> and <a href="#ssh-logs">Ssh Logs</a>.</p>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute Ssh Command blocks.</p>
 <h2 id="examples">Examples</h2>
-<h2 id="properties">Properties</h2>
+<h3 id="execute-a-command-using-usercredentials">Execute a Command using UserCredentials</h3>
+<p>This example will execute a <a href="#command">Command</a> on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;localhost&quot;</code></li>
+<li>Port -  <code>22</code></li>
+<li>Domain - <code>&quot;domain&quot;</code></li>
+<li>Username - <code>&quot;username&quot;</code></li>
+<li>Password - <code>&quot;password&quot;</code></li>
+</ul>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#command">Command</a></td>
+<td><code>($)Command</code> with value <code>&quot;ipconfig&quot;</code></td>
+<td><code>($)Command</code> is a variable of type <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-session-details">Ssh Session Details</a></td>
+<td><code>($)SshSessionDetails</code> with value <code>{&quot;Host&quot;: &quot;localhost&quot;, &quot;Port&quot;: 22, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;Password&quot;: &quot;encryptedPassword&quot;}, &quot;TerminalPrompt&quot;: &quot;(.*(~(.*[\\r\\n]?)\\$|&gt;))&quot;}</code><br><br>In this example <code>($)SshSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new SshSessionDetails(&quot;localhost&quot;, 22, new UserCredentials(&quot;domain&quot;, &quot;username&quot;,  &quot;encryptedPassword&quot;), @&quot;(.*(~(.*[\r\n]?)\$|&gt;))&quot;)</code></td>
+<td><code>($)SshSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/ssh/sshsessiondetails">SshSessionDetails</a></td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#configuration-settings">Configuration Settings</a></td>
+<td><code>($)ConfigurationSettings</code>, with no value</td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#response">Response</a></td>
+<td><code>($)Response</code>, with no value</td>
+<td><code>($)Response</code> will be set to the type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-logs">Ssh Logs</a></td>
+<td><code>($)SshLogs</code>, with no value</td>
+<td><code>($)SshLogs</code> will be set to the type <a href="/docs/reference/data-types/ssh/sshlogs">SshLogs</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result">Result</h4>
+<p>Running the <a href="#command">Command</a> results in the variable <code>($)Response</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Windows IP Configuration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ethernet adapter Ethernet 3:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Connection-specific DNS Suffix. : reddog.microsoft.com
+</span></span><span style="display:flex;"><span>Link-local IPv6 Address. . . . . : fe80::78eb:a051:2b84:e8bd%6
+</span></span><span style="display:flex;"><span>IPv4 Address. . . . . . . . . . . : 10.3.0.4
+</span></span><span style="display:flex;"><span>Subnet Mask . . . . . . . . . . . : 255.255.255.0
+</span></span><span style="display:flex;"><span>Default Gateway . . . . . . . . . : 10.3.0.1
+</span></span></code></pre></div><p>It also results in the variable <code>($)SshLogs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WelcomeMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Logs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange.[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange...&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that more logs are included in this example, but have been omitted from <code>($)SshLogs.Logs</code>.</p>
+<hr>
+<h3 id="execute-a-command-using-sshcertificatecredentials">Execute a Command using SshCertificateCredentials</h3>
+<p>This example will execute a <a href="#command">Command</a> on the server with the following details:</p>
+<ul>
+<li>Host -  <code>&quot;localhost&quot;</code></li>
+<li>Port -  <code>22</code></li>
+<li>Domain - <code>&quot;domain&quot;</code></li>
+</ul>
+<p>The server can be connected to using a valid certificate.</p>
+<h4 id="properties-1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#command">Command</a></td>
+<td><code>($)Command</code> with value <code>&quot;ipconfig&quot;</code></td>
+<td><code>($)Command</code> is a variable of type <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-session-details">Ssh Session Details</a></td>
+<td><code>($)SshSessionDetails</code> with value <code>{&quot;Host&quot;: &quot;localhost&quot;, &quot;Port&quot;: 22, &quot;Credentials&quot;: {&quot;Domain&quot;: &quot;domain&quot;, &quot;Username&quot;: &quot;username&quot;, &quot;CertificatePath&quot;: &quot;C:\\Certificate.pfx&quot;, &quot;CertificatePassword&quot;: &quot;encryptedCertificatePassword&quot;}, &quot;TerminalPrompt&quot;: &quot;(.*(~(.*[\\r\\n]?)\\$|&gt;))&quot;}</code><br><br>In this example <code>($)SshSessionDetails</code> has been set up using the following <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a>:<br><br> <code>new SshSessionDetails(&quot;localhost&quot;, 22, new SshCertificateCredentials(&quot;domain&quot;, &quot;username&quot;, @&quot;C\Certificate.pfx&quot;, &quot;encryptedCertificatePassword&quot;), @&quot;(.*(~(.*[\r\n]?)\$|&gt;))&quot;)</code></td>
+<td><code>($)SshSessionDetails</code> is a variable of type <a href="/docs/reference/data-types/ssh/sshsessiondetails">SshSessionDetails</a></td>
+</tr>
+<tr>
+<td><a href="#close-session">Close Session</a></td>
+<td><code>($)CloseSession</code> with value <code>true</code></td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td><a href="#configuration-settings">Configuration Settings</a></td>
+<td><code>($)ConfigurationSettings</code>, with no value</td>
+<td><code>($)CloseSession</code> is a variable of type <a href="/docs/reference/data-types/collections/dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>&gt;</td>
+</tr>
+<tr>
+<td><a href="#response">Response</a></td>
+<td><code>($)Response</code>, with no value</td>
+<td><code>($)Response</code> will be set to the type <a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td><a href="#ssh-logs">Ssh Logs</a></td>
+<td><code>($)SshLogs</code>, with no value</td>
+<td><code>($)SshLogs</code> will be set to the type <a href="/docs/reference/data-types/ssh/sshlogs">SshLogs</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-1">Result</h4>
+<p>Running the <a href="#command">Command</a> results in the variable <code>($)Response</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Windows IP Configuration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Ethernet adapter Ethernet 3:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Connection-specific DNS Suffix. : reddog.microsoft.com
+</span></span><span style="display:flex;"><span>Link-local IPv6 Address. . . . . : fe80::78eb:a051:2b84:e8bd%6
+</span></span><span style="display:flex;"><span>IPv4 Address. . . . . . . . . . . : 10.3.0.4
+</span></span><span style="display:flex;"><span>Subnet Mask . . . . . . . . . . . : 255.255.255.0
+</span></span><span style="display:flex;"><span>Default Gateway . . . . . . . . . : 10.3.0.1
+</span></span></code></pre></div><p>It also results in the variable <code>($)SshLogs</code> being updated to the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;WelcomeMessage&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Logs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange.[Info] Sending local version: \&#34;SSH-2.0-IPWorks SSH Client 2020\&#34;.\r\n[Info] Read remote version string: \&#34;SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1.2\&#34;.\r\n[Info] Beginning key exchange...&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Note that more logs are included in this example, but have been omitted from <code>($)SshLogs.Logs</code>.</p>
+<hr>
+<h2 id="properties-2">Properties</h2>
+<h3 id="command">Command</h3>
+<p>The <a href="#command">Command</a> that will be executed on the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> specified in the <a href="#ssh-session-details">Ssh Session Details</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>$@&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssh-session-details">Ssh Session Details</h3>
+<p>The <a href="#ssh-session-details">Ssh Session Details</a> object that includes all of the information required to open and maintain a SSH session. This property contains all of the information in relation to the server the <a href="#command">Command</a> will be executed on, these are:</p>
+<ul>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a></li>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#port">Port</a></li>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a></li>
+<li><a href="/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt">TerminalPrompt</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/ssh/sshsessiondetails">SshSessionDetails</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)SshSessionDetails</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="close-session">Close Session</h3>
+<p><a href="#close-session">Close Session</a> can be specified to choose whether the session on the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> is closed or is kept open for use on subsequent Execute Ssh Command blocks, this defaults to <code>false</code> if left blank, please see <a href="#closing-sessions">Closing Sessions</a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a> with value <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-settings">Configuration Settings</h3>
+<p>The <a href="#configuration-settings">Configuration Settings</a> for the SSH connection and execution.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/collections/idictionary-2">IDictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt;</td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/collections/idictionary-2">IDictionary</a>&lt;<a href="/docs/reference/data-types/text/string">String</a>, <a href="/docs/reference/data-types/all/dynamic">dynamic</a>&gt; with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Dictionary</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">dynamic</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;TerminalWidth&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;TerminalType&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;vt100&#34;</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;Timeout&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">60</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;EndOfLineCharacters&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;\r&#34;</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;CancelCommand&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;\x03&#34;</span> <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="response">Response</h3>
+<p>The SSH <a href="#response">Response</a> that is returned from the execution of the <a href="#command">Command</a> on the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> specified in the <a href="#ssh-session-details">Ssh Session Details</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)Response</code> with no value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssh-logs">Ssh Logs</h3>
+<p>The <a href="#ssh-logs">Ssh Logs</a> that is returned from the execution of the <a href="#command">Command</a> on the host specified in the <a href="#ssh-session-details">Ssh Session Details</a>. This property contains all of the information in relation to the logs returned by the <a href="#command">Command</a>, these are:</p>
+<ul>
+<li>WelcomeMessage</li>
+<li>Logs</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/ssh/sshlogs">SshLogs</a></td>
+</tr>
+<tr>
+<td>Property Type</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/variables/using-variables/">Variable</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><code>($)SshLogs</code> with no value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="exceptions">Exceptions</h2>
+<p>The exceptions thrown by the block can be found below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-null-exception/">PropertyNullException</a></td>
+<td>Thrown when <a href="#command">Command</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when using <a href="/docs/reference/data-types/ssh/authentication/sshcertificatecredentials">SshCertificateCredentials</a>, the CertificatePath in the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-empty-exception/">PropertyEmptyException</a></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the CertificatePath in the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is empty.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/common/property/property-value-out-of-range-exception/">PropertyValueOutOfRangeException</a></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#port">Port</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is below 1 or above 65535.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/ssh/sshclientexception/">SshClientException</a></td>
+<td>Thrown when one or more settings in <a href="#configuration-settings">Configuration Settings</a> are invalid. (includes a dictionary of SettingName: ExceptionMessage from IPWorksSSHSshClientException)</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#port">Port</a> within the <a href="#ssh-session-details">Ssh Session Details</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the server host key has not been accepted.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when using <a href="/docs/reference/data-types/credentials/usercredentials">UserCredentials</a>, the specified domain, username or password within <a href="/docs/reference/data-types/ssh/sshsessiondetails/#credentials">Credentials</a> is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when using <a href="/docs/reference/data-types/ssh/authentication/sshcertificatecredentials">SshCertificateCredentials</a>, the specified Domain, Username, CertificatePath or CertificatePassword is invalid.</td>
+</tr>
+<tr>
+<td></td>
+<td>Thrown when the <a href="/docs/reference/data-types/ssh/sshsessiondetails/#host">Host</a> exits without using <a href="#close-session">Close Session</a>, returning the response received up to the point the host exited the session.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/ssh/sshresponseexception/">SshResponseException</a></td>
+<td>Thrown if the specified <a href="/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt">TerminalPrompt</a> does not match the terminal prompt on the host causing the execution to timeout or the timeout was too short to allow for data to be received.</td>
+</tr>
+<tr>
+<td><a href="
+    
+    
+    https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception?view=netcore-3.1
+">RegexMatchTimeoutException</a></td>
+<td>Thrown when the execution time of the regular expression pattern-matching exceeds the time-out interval.</td>
+</tr>
+<tr>
+<td><a href="/docs/reference/exceptions/text/regex/regexparsingfailedexception/">RegexParsingFailedException</a></td>
+<td>Thrown when <a href="/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt">TerminalPrompt</a> within <a href="#ssh-session-details">Ssh Session Details</a> contains invalid regex.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
+<h3 id="opening-sessions">Opening Sessions</h3>
+<p>The Execute Ssh Command block automatically handles creating and opening session for the specified <a href="#ssh-session-details">Ssh Session Details</a> using the following rules:</p>
+<ul>
+<li>If a session does not exist, a new session will be created, opened and used when the block runs.</li>
+<li>If a session already exists but is closed, the session will be opened and used when the block runs.</li>
+<li>If a session already exists and is open, the session will used the block runs.</li>
+</ul>
+<p>For information on how to explicitly close a session, please see <a href="#closing-sessions">Closing Sessions</a>.</p>
+<h3 id="closing-sessions">Closing Sessions</h3>
+<p>Sessions can be explicitly closed by setting <a href="#close-session">Close Session</a> to <code>true</code>. This causes the session to be closed after the <a href="#command">Command</a> has been executed.</p>
+<p>For information on how to open a session, please see <a href="#opening-sessions">Opening Sessions</a>.</p>
 <h3 id="known-limitations">Known Limitations</h3>
+<p>None</p>
 
 </div>
 
@@ -77836,7 +78972,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="">
     
-	<h1 id="pg-dfe3f580bb1f3fbedfb70622e2566c22">4.20.1.1 - ISshCredentials</h1>
+	<h1 id="pg-32a2aed0d33ac76ca33a1107508bca8d">4.20.1.1 - ISshCredentials</h1>
     <div class="lead">Used to represent details required to authenticate with a server.</div>
 	<h1 id="isshcredentials">ISshCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Ssh.Authentication.ISshCredentials)</p>
@@ -77856,7 +78992,27 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-c2b0cf969e2380665386e3f93ad43229">4.20.1.2 - SshCredentials</h1>
+	<h1 id="pg-e0426ce5160dace864e7c4489a4a82d9">4.20.1.2 - SshCertificateCredentials</h1>
+    <div class="lead">Used to represent details required to authenticate with a server, using public key credentials.</div>
+	<h1 id="sshcertificatecredentials">SshCertificateCredentials</h1>
+<p class="namespace">(Cortex.DataTypes.Ssh.Authentication.SshCertificateCredentials)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-17e03c8492e3c3a12c0f507c3538efe6">4.20.1.3 - SshCredentials</h1>
     <div class="lead">Used to represent details required to authenticate with a server.</div>
 	<h1 id="sshcredentials">SshCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Ssh.Authentication.SshCredentials)</p>
@@ -77876,7 +79032,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ed94f76e5fbb5ff37fcb16e5411cc792">4.20.1.3 - SshUserCredentials</h1>
+	<h1 id="pg-8591267e4282dd599c1633a5581e5be4">4.20.1.4 - SshUserCredentials</h1>
     <div class="lead">Used to represent details required to authenticate with a server.</div>
 	<h1 id="sshusercredentials">SshUserCredentials</h1>
 <p class="namespace">(Cortex.DataTypes.Ssh.Authentication.SshUserCredentials)</p>
@@ -77889,6 +79045,236 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
     
 	
   
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8aa3bc7f3997ac28c67c9204095b8c93">4.20.2 - SshLogs</h1>
+    <div class="lead">Used to represent logs returned by an Ssh Command.</div>
+	<h1 id="sshlogs">SshLogs</h1>
+<p class="namespace">(Cortex.DataTypes.Ssh.SshLogs)</p>
+<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ff9c92b7d22ba7e6dc5ba00bc8ebd151">4.20.3 - SshSessionDetails</h1>
+    <div class="lead">The data type representing configuration for executing ssh commands on a specified host.</div>
+	<h1 id="sshsessiondetails">SshSessionDetails</h1>
+<p class="namespace">(Cortex.DataTypes.Ssh.SshSessionDetails)</p>
+<img src="/images/work-in-progress.jpg">
+<h2 id="summary">Summary</h2>
+<p>The data type representing configuration for executing ssh commands on a specified host.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category:</strong></td>
+<td>Data</td>
+</tr>
+<tr>
+<td><strong>Name:</strong></td>
+<td><code>SshSessionDetails</code></td>
+</tr>
+<tr>
+<td><strong>Full Name:</strong></td>
+<td><code>Cortex.DataTypes.PowerShell.SshSessionDetails</code></td>
+</tr>
+<tr>
+<td><strong>Alias:</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Description:</strong></td>
+<td>The data type representing configuration for executing ssh commands on a specified host.</td>
+</tr>
+<tr>
+<td><strong>Default Value:</strong></td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><strong>Can be used as:</strong></td>
+<td><code>PowerShellSessionDetails</code>, <code>Object</code>, <code>dynamic</code></td>
+</tr>
+<tr>
+<td><strong>Can be cast to:</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties">Properties</h2>
+<h3 id="host">Host</h3>
+<p>The Host is used to define the address of the server to connect to. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see <a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a>.</p>
+<p>A server address can typically be represented in one of the following formats:</p>
+<ul>
+<li>Fully Qualified Domain Name (e.g. <code>&quot;machine.domain.com&quot;</code>)</li>
+<li>Machine name (e.g. <code>&quot;server1&quot;</code>)</li>
+<li>IP address (e.g. <code>&quot;127.0.0.1&quot;</code>)</li>
+<li>Localhost (e.g. <code>&quot;localhost&quot;</code>)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/">Expression</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/text/encryptabletext">EncryptableText</a> with value <code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="port">Port</h3>
+<p>The Port is used to define the port on the server to connect to.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/numbers/int32">Int32</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/numbers/int32">Int32</a> with value <code>22</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="credentials">Credentials</h3>
+<p>The Credentials are used to configure the <a href="/docs/reference/data-types/credentials/usercredentials/#domain">Domain</a>, <a href="/docs/reference/data-types/credentials/usercredentials/#username">Username</a> and <a href="/docs/reference/data-types/credentials/usercredentials/#password">Password</a> used to connect to the host.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/ssh/authentication/isshcredentials">ISshCredentials</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/ssh/authentication/sshcertificatecredentials">SshCertificateCredentials</a> with value shown below:</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Domain&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;Username&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;CertificatePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;CertificatePassword&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h3 id="terminalprompt">TerminalPrompt</h3>
+<p>The regex used to match the host&rsquo;s terminal prompt.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td><a href="/docs/reference/data-types/text/string">String</a></td>
+</tr>
+<tr>
+<td>Is <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/">Advanced</a></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>Default Editor</td>
+<td><a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/">Literal</a></td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td><a href="/docs/reference/data-types/text/string">String</a> with value `&quot;(.<em>(~(.</em>[\r\n]?)$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<h3 id="create-a-sshsessiondetails">Create a SshSessionDetails</h3>
+<p>TODO</p>
+<h3 id="convert-sshsessiondetails-to-text">Convert SshSessionDetails to Text</h3>
+<p>TODO</p>
+<h3 id="property-editor-support">Property Editor Support</h3>
+<ul>
+<li>The Expression Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a> properties where the data type is <code>SshSessionDetails</code>.</li>
+<li>The Literal Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a> properties where the data type is <code>SshSessionDetails</code>.</li>
+<li>The Variable Editor is available for <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#input-properties">Input</a>, <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties">InputOutput</a> and <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties">Output</a> properties where the data type is <code>SshSessionDetails</code>.</li>
+</ul>
+<h3 id="known-limitations">Known limitations</h3>
+<p>None</p>
+<h2 id="see-also">See Also</h2>
+<h3 id="related-data-types">Related Data Types</h3>
+<p>TODO</p>
+<h3 id="related-concepts">Related Concepts</h3>
+<p>None</p>
+<h3 id="external-documentation">External Documentation</h3>
+<p>None</p>
+
+</div>
+
+
 
     
 	
@@ -82092,7 +83478,86 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ab9fb634c3f92724d3b447a36c959863">5.13 - Text</h1>
+	<h1 id="pg-84aee2eefb61d62ea7faf800091922f4">5.13 - Ssh</h1>
+    <div class="lead">Exceptions related to Ssh</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-7d9c1d6b5f49867c747654699a2ec6af">5.13.1 - SshClientException</h1>
+    <div class="lead">Exception thrown when an error occurs from the Sshclient object.</div>
+	<h1 id="sshclientexception">SshClientException</h1>
+<p class="namespace">(Cortex.Exceptions.Ssh.SshClientException)</p>
+<p>Exception thrown when an error occurs from the Sshclient object.</p>
+<p>The format of the exception message is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;TODO.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><h2 id="how-to-fix">How to fix</h2>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-57b77506048d598e4eb494dec8449502">5.13.2 - SshResponseException</h1>
+    <div class="lead">Exception thrown when an error occurs from the Ssh response.</div>
+	<h1 id="sshresponseexception">SshResponseException</h1>
+<p class="namespace">(Cortex.Exceptions.Ssh.SshResponseException)</p>
+<p>Exception thrown when an error occurs from the Ssh response.</p>
+<p>The format of the exception message is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;TODO.
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
+</span></span></code></pre></div><h2 id="how-to-fix">How to fix</h2>
+<p>TODO:</p>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ab9fb634c3f92724d3b447a36c959863">5.14 - Text</h1>
     <div class="lead">Exceptions related to Text blocks</div>
 	
 </div>
@@ -82117,7 +83582,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="">
     
-	<h1 id="pg-e3dec882250e7ec66aab261e8b2a3f49">5.13.1 - Regex</h1>
+	<h1 id="pg-e3dec882250e7ec66aab261e8b2a3f49">5.14.1 - Regex</h1>
     <div class="lead">Exceptions related to issues with Regex</div>
 	
 </div>
@@ -82142,7 +83607,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="">
     
-	<h1 id="pg-f9706ea7bbd1b8f603c38687b8866cb6">5.13.1.1 - RegexParsingFailedException</h1>
+	<h1 id="pg-f9706ea7bbd1b8f603c38687b8866cb6">5.14.1.1 - RegexParsingFailedException</h1>
     <div class="lead">The exception thrown when a property is provided with an invalid regex value.</div>
 	<h1 id="regexparsingfailedexception">RegexParsingFailedException</h1>
 <p class="namespace">(Cortex.Exceptions.Text.Regex.RegexParsingFailedException)</p>
@@ -82174,7 +83639,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-4730ba811a34f60ce192122c50010f93">5.14 - Xml</h1>
+	<h1 id="pg-4730ba811a34f60ce192122c50010f93">5.15 - Xml</h1>
     <div class="lead">Exceptions related to Xml blocks.</div>
 	
 </div>
@@ -82199,7 +83664,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="">
     
-	<h1 id="pg-377a9e0c0855debedabbd374c7adeb51">5.14.1 - XmlSerializationException</h1>
+	<h1 id="pg-377a9e0c0855debedabbd374c7adeb51">5.15.1 - XmlSerializationException</h1>
     <div class="lead">The exception thrown when an Xml Serialization errors occur.</div>
 	<h1 id="xmlserializationexception">XmlSerializationException</h1>
 <p class="namespace">(Cortex.Exceptions.Xml.XmlSerializationException)</p>

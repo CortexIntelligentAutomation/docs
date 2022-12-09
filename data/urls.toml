@@ -1341,12 +1341,22 @@
                     UseSsl = "/docs/reference/data-types/session-details/serverdetails/#usessl"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
+                [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]
+                    MainDoc = "/docs/reference/data-types/ssh/sshsessiondetails"
+                    Host = "/docs/reference/data-types/ssh/sshsessiondetails/#host"
+                    Port = "/docs/reference/data-types/ssh/sshsessiondetails/#port"
+                    Credentials = "/docs/reference/data-types/ssh/sshsessiondetails/#credentials"
+                    TerminalPrompt = "/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt"
+                [Cortex.Reference.DataTypes.Ssh.SshLogs]
+                    MainDoc = "/docs/reference/data-types/ssh/sshlogs"
                 [Cortex.Reference.DataTypes.Ssh.Authentication]
                     MainDoc = "/docs/reference/data-types/ssh/authentication/"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/isshcredentials"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcredentials"
+                    [Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials]
+                        MainDoc = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
             [Cortex.Reference.DataTypes.Text]
@@ -1497,6 +1507,10 @@
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
                         MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"
+            [Cortex.Reference.Exceptions.Ssh]
+                MainDoc = "/docs/reference/exceptions/ssh/"
+                SshClientException = "/docs/reference/exceptions/ssh/sshclientexception/"
+                SshResponseException = "/docs/reference/exceptions/ssh/sshresponseexception/"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
