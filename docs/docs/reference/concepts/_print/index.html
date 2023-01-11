@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -2149,14 +2149,14 @@ This the multi-page printable view of this section.
 <p>TODO:</p>
 <ul>
 <li>If a variable does not already exist, the variable editor can be used to create a new one at the current scope</li>
-<li>If the variable name is invalid (<a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable</li>
+<li>If the variable name is invalid (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable</li>
 </ul>
 <p>TODO: Image of option to create a new variable</p>
 <h2 id="renaming-variables">Renaming Variables</h2>
 <p>TODO:</p>
 <ul>
 <li>If a variable editor already contains a reference to a variable that exists, typing the name of a non-existent variable will provide the option to rename the previously selected variable (and all references to it within the flow) to the new variable name</li>
-<li>If the variable name is invalid (<a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to rename the variable</li>
+<li>If the variable name is invalid (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to rename the variable</li>
 <li>Renaming a variable does not include any index or method expressions (e.g. renaming to <code>($)NewVar.ToString()</code> will rename the selected variable to <code>($)NewVar</code>)</li>
 </ul>
 <p>TODO: Image of option to rename a variable</p>
@@ -2233,7 +2233,7 @@ This the multi-page printable view of this section.
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#4e9a06">$@&#34;This is a single square brace &#34;&#34;[&#34;&#34;, and this is a single curly brace &#34;&#34;{{&#34;&#34;&#34;</span>
 </span></span></code></pre></div><p>The example above becomes:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>This is a single square brace &#34;[&#34;, and this is a single curly brace &#34;{&#34;
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></p>
 <h3 id="char-literal">Char literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-char.PNG" alt="Char literal"></p>
 <p>Char literals are single characters; they are surrounded by single quotes. For example:</p>
@@ -2242,44 +2242,20 @@ This the multi-page printable view of this section.
 </span></span></code></pre></div><p>The example above becomes:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#39;A&#39;
 </span></span><span style="display:flex;"><span>&#39;A&#39;
-</span></span></code></pre></div><p>For further information, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></p>
+</span></span></code></pre></div><p>For further information, <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></p>
 <h3 id="int32-literal">Int32 literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-int.PNG" alt="Int32 literal"></p>
-<p>If an integer literal value is greater than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.minvalue?view=netcore-3.1
-">Int32.MinValue</a> or less than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.maxvalue?view=netcore-3.1
-">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int32">Int32</a></p>
+<p>If an integer literal value is greater than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.minvalue">Int32.MinValue</a> or less than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int32">Int32</a></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234</span>
-</span></span></code></pre></div><p>If an integer literal value is less than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.minvalue?view=netcore-3.1
-">Int32.MinValue</a> or greater than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.maxvalue?view=netcore-3.1
-">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
+</span></span></code></pre></div><p>If an integer literal value is less than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.minvalue">Int32.MinValue</a> or greater than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
 <h3 id="int64-literal">Int64 literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-int64.PNG" alt="Int64 literal"></p>
-<p>If an integer literal value is less than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.minvalue?view=netcore-3.1
-">Int32.MinValue</a> or greater than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.maxvalue?view=netcore-3.1
-">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
+<p>If an integer literal value is less than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.minvalue">Int32.MinValue</a> or greater than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2147483648</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234l</span>
 </span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234L</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
 <h3 id="double-literal">Double literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-double.PNG" alt="Double literal"></p>
 <p>By default, floating point literals are of type <a href="/docs/reference/data-types/numbers/double">Double</a>.</p>
@@ -2287,26 +2263,18 @@ This the multi-page printable view of this section.
 </span></span></code></pre></div><p>The suffix <code>d</code> or <code>D</code> can used to create a floating point literal of type <a href="/docs/reference/data-types/numbers/double">Double</a>, but is unnecessary.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456d</span>
 </span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456D</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
 <h3 id="single-literal">Single literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-single.PNG" alt="Single literal"></p>
-<p>If it is necessary to create an floating point literal of type <a href="/docs/reference/data-types/numbers/single">Single</a> with a value greater than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.single.minvalue?view=netcore-3.1
-">Single.MinValue</a> or less than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.single.maxvalue?view=netcore-3.1
-">Single.MaxValue</a>, then the floating point literal must be suffixed by the character <code>f</code> or <code>F</code>. For example:</p>
+<p>If it is necessary to create an floating point literal of type <a href="/docs/reference/data-types/numbers/single">Single</a> with a value greater than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.single.minvalue">Single.MinValue</a> or less than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.single.maxvalue">Single.MaxValue</a>, then the floating point literal must be suffixed by the character <code>f</code> or <code>F</code>. For example:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456f</span>
 </span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456F</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
 <h3 id="boolean-literal">Boolean literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-boolean.PNG" alt="Boolean literal"></p>
 <p>A <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a> literal represents a truth-value of either <code>true</code> or <code>false</code>.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">true</span> <span style="color:#a40000">or</span> <span style="color:#204a87;font-weight:bold">false</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a>.</p>
 <h3 id="object-literal">Object literal</h3>
 <p>Currently, creating an object using literal syntax is not supported.</p>
 <h3 id="dictionary-literal">Dictionary literal</h3>
@@ -2406,7 +2374,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a>.</p>
 <h3 id="boolean-expressions">Boolean expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-boolean-and.PNG" alt="Boolean expressions"></p>
 <p>The following <a href="/docs/reference/glossary/k-o/#operator">operators</a> perform logical operations with <a href="/docs/reference/glossary/k-o/#operand">operands</a> that have boolean values.</p>
@@ -2446,7 +2414,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a>.</p>
 <h3 id="comparison-expressions">Comparison expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-comparison.PNG" alt="Comparison expressions"></p>
 <p>The following <a href="/docs/reference/glossary/k-o/#operator">operators</a> perform comparison operations with <a href="/docs/reference/glossary/k-o/#operand">operands</a>.</p>
@@ -2496,7 +2464,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a>, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a>, and <a href="/docs/reference/concepts/working-with/objects/object-equality/">Object Equality</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a>, <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a>, and <a href="/docs/reference/concepts/working-with/objects/object-equality/">Object Equality</a>.</p>
 <h3 id="string-expressions">String expressions</h3>
 <p>There are three types of string expressions:</p>
 <ul>
@@ -2535,7 +2503,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a>.</p>
 <h4 id="interpolated-strings">Interpolated Strings</h4>
 <p><img src="/images/set-variable/set-variable-expression-interpolated-string.PNG" alt="Interpolated Strings"></p>
 <p>Interpolation is the process of inserting expressions and variables into a <a href="/docs/reference/data-types/text/string">String</a>. An interpolated string is declared by prefixing the string with the <code>$</code> character.</p>
@@ -2565,7 +2533,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a>.</p>
 <h4 id="verbatim-strings">Verbatim Strings</h4>
 <p><img src="/images/set-variable/set-variable-expression-verbatim-string.PNG" alt="Verbatim Strings"></p>
 <p>A verbatim string identifies that characters within the string should be processed literally, and do not need to be escaped. However, the following exceptions apply:</p>
@@ -2604,12 +2572,12 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a> and <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a> and <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a>.</p>
 <h3 id="dictionary-expressions">Dictionary expressions</h3>
 <p><a href="/docs/reference/data-types/collections/dictionary-2">Dictionaries</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#index-expressions">Index expressions</a>.</p>
 <p>For examples of creating Dictionaries using constructor expressions, see <a href="/docs/reference/data-types/collections/dictionary-2#create-a-dictionarylttkey-titemgt">Create a Dictionary&lt;TKey, TItem&gt;</a>.</p>
 <h3 id="structure-expressions">Structure expressions</h3>
-<p><a href="/docs/reference/data-types/collections/structure">Structures</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#property-expressions">Property expressions</a> (keys must follow <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) or <a href="#index-expressions">Index expressions</a> (keys do not need to follow <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>).</p>
+<p><a href="/docs/reference/data-types/collections/structure">Structures</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#property-expressions">Property expressions</a> (keys must follow <a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) or <a href="#index-expressions">Index expressions</a> (keys do not need to follow <a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>).</p>
 <p>For examples of creating Structures using constructor expressions, see <a href="/docs/reference/data-types/collections/structure#create-a-structure">Create a Structure</a>.</p>
 <h3 id="list-expressions">List expressions</h3>
 <p><a href="/docs/reference/data-types/collections/list-1">Lists</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#index-expressions">Index expressions</a>.</p>
@@ -2651,7 +2619,7 @@ This the multi-page printable view of this section.
 <li><a href="#single-literal">Single</a></li>
 <li><a href="#boolean-literal">Boolean</a></li>
 </ul>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a>.</p>
 <h3 id="method-expressions">Method expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-method.PNG" alt="Method expressions"></p>
 <p>Methods can be used to execute specific functionality. The methods accessible are defined by the <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a>, and information regarding methods can be found in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2683,7 +2651,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a>.</p>
 <h3 id="property-expressions">Property expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-properties.PNG" alt="Property expressions"></p>
 <p>Properties can be used to read data from and/or write data to a <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a>. The properties accessible are defined by the <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a>, and information regarding properties can be found in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2720,7 +2688,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a>.</p>
 <h3 id="enum-expressions">Enum expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-enum.PNG" alt="Enum expressions"></p>
 <p><a href="/docs/reference/concepts/working-with/enums/">Enum</a> data types have a defined set of values, where each value has an associated <a href="/docs/reference/data-types/text/string">String</a> name and <a href="/docs/reference/data-types/numbers/int32">Int32</a> value. Information regarding values can be found in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2747,7 +2715,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a>.</p>
 <h3 id="casting-expressions">Casting expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-casting.PNG" alt="Casting expressions"></p>
 <p><a href="/docs/reference/concepts/fundamentals/data-types/">Data Types</a> can be cast to other <a href="/docs/reference/concepts/fundamentals/data-types/">Data Types</a> through the use of explicit casting, this can sometimes result in the loss of information when converting to a type that does not store the same amount of information. Information regarding which types a <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a> can cast to can be found in the &ldquo;Summary&rdquo; section under &ldquo;Can be cast to&rdquo; in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2784,7 +2752,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a> and <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a> and <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a>.</p>
 <h3 id="index-expressions">Index expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-index.PNG" alt="Index expressions"></p>
 <p><a href="/docs/reference/concepts/fundamentals/data-types/">Data Types</a> that are <a href="/docs/reference/data-types/collections">Collections</a> or <a href="/docs/reference/data-types/text/string">String</a> can have their items accessed using index notation:</p>
@@ -2802,7 +2770,7 @@ This the multi-page printable view of this section.
 <li><code>[..3]</code> gets three items from the first item (inclusively) (i.e. the first, second, and third item)</li>
 <li><code>[3..]</code> gets all items from the fourth item (inclusively) (i.e. the fourth to the last item)</li>
 </ul>
-<p>For further information on index and range syntax, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a>.</p>
+<p>For further information on index and range syntax, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a>.</p>
 <p>In the examples below assume:</p>
 <ul>
 <li><code>($)List</code> has been set to <code>[1, 2, 3, 4, 5]</code></li>
@@ -2918,27 +2886,27 @@ This the multi-page printable view of this section.
 </ul>
 <h3 id="external-documentation">External Documentation</h3>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a></li>
 </ul>
 
 </div>
@@ -3332,7 +3300,7 @@ This the multi-page printable view of this section.
 <p>The <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a> allows the the developer to <a href="#creating-a-variable">create</a> and <a href="#using-a-variable">use</a> variables whilst configuring a <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a>.</p>
 <h3 id="creating-a-variable">Creating a Variable</h3>
 <p>If a variable does not already exist, the <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a>  can be used to <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables">create</a> a new one at the <a href="/docs/reference/concepts/fundamentals/variables/variable-scopes/">scope</a> of the selected <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a>.</p>
-<p>If the variable name is invalid (does not conform with the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable.</p>
+<p>If the variable name is invalid (does not conform with the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable.</p>
 <h3 id="using-a-variable">Using a Variable</h3>
 <p>The <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a> provides a list of variables that are available at the <a href="/docs/reference/concepts/fundamentals/variables/variable-scopes/">scope</a> of the selected <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a>.</p>
 <p>Typing any text in the <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a> will filter the available variables, showing any variable whose name or scope contains the text.</p>
@@ -3766,10 +3734,10 @@ This the multi-page printable view of this section.
 <h3 id="external-documentation">External Documentation</h3>
 <p>TODO:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types">Value Types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types">Reference Types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Builtin Types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values">Default Values</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types">Value Types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types">Reference Types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Builtin Types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values">Default Values</a></li>
 </ul>
 
 </div>
@@ -5013,7 +4981,7 @@ This the multi-page printable view of this section.
 <p>TODO:</p>
 <ul>
 <li>Link to Culture Pages (Invariant/Current/Specific/Custom)</li>
-<li>For a list of predefined cultures that can be returned on Windows systems see <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a></li>
+<li>For a list of predefined cultures that can be returned on Windows systems see <a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a></li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
@@ -5115,7 +5083,7 @@ This the multi-page printable view of this section.
 <h2 id="summary">Summary</h2>
 <p>TODO: summary</p>
 <ul>
-<li>For a list of cultures that can be returned on Windows systems see <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a> under The Language table (<code>Language tag</code> defines the code required to create the culture)</li>
+<li>For a list of cultures that can be returned on Windows systems see <a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a> under The Language table (<code>Language tag</code> defines the code required to create the culture)</li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
@@ -5417,7 +5385,7 @@ This the multi-page printable view of this section.
 </li>
 <li>We don&rsquo;t deal with timezone issues within the blocks</li>
 <li>Offsets are handled within DateTimeOffset and can be dealt with using our blocks</li>
-<li>Useful link - <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0</a></li>
+<li>Useful link - <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0">https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0</a></li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
@@ -5469,13 +5437,13 @@ This the multi-page printable view of this section.
 </li>
 </ul>
 <p>or</p>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties</a></p>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0</a></p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties</a></p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0">https://learn.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0</a></p>
 <h3 id="invariant-culture">Invariant Culture</h3>
 <p>TODO:</p>
 <ul>
 <li>default format <code>&quot;MM/dd/yyyy HH:mm:ss zzz&quot;</code></li>
-<li>rules <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0</a></li>
+<li>rules <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0">https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0</a></li>
 </ul>
 <h3 id="current-culture">Current Culture</h3>
 <p>TODO</p>
@@ -5511,28 +5479,28 @@ This the multi-page printable view of this section.
 <td><code>d</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>1/7/2022</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortDate">short date (&ldquo;d&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortDate">short date (&ldquo;d&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Short Time Pattern</td>
 <td><code>t</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>2:00 PM</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortTime">short time (&ldquo;t&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortTime">short time (&ldquo;t&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Long Date Pattern</td>
 <td><code>D</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>5 April 2022</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongDate">long date (&ldquo;D&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongDate">long date (&ldquo;D&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Long Time Pattern</td>
 <td><code>T</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>2:00:00 PM</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongTime">long time (&ldquo;T&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongTime">long time (&ldquo;T&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Full Date/Time Pattern (Short Time)</td>
@@ -5546,49 +5514,49 @@ This the multi-page printable view of this section.
 <td><code>F</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateLongTime">full date long time (&ldquo;F&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateLongTime">full date long time (&ldquo;F&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>General Date/Time Pattern (Short Time)</td>
 <td><code>g</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateShortTime">general date short time (&ldquo;g&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateShortTime">general date short time (&ldquo;g&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>General Date/Time Pattern (Long Time)</td>
 <td><code>G</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateLongTime">general date long time (&ldquo;G&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateLongTime">general date long time (&ldquo;G&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Round-Trip Date/Time Pattern</td>
 <td><code>O</code>, <code>o</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip">round-trip (&ldquo;O&rdquo;, &ldquo;o&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip">round-trip (&ldquo;O&rdquo;, &ldquo;o&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>RFC1123 Pattern</td>
 <td><code>R</code>, <code>r</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#RFC1123">RFC1123 (&ldquo;R&rdquo;, &ldquo;r&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#RFC1123">RFC1123 (&ldquo;R&rdquo;, &ldquo;r&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Sortable Date/Time Pattern</td>
 <td><code>s</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Sortable">sortable (&ldquo;s&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Sortable">sortable (&ldquo;s&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Universal Sortable Date/Time Pattern</td>
 <td><code>u</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#UniversalSortable">universal sortable (&ldquo;u&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#UniversalSortable">universal sortable (&ldquo;u&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Universal Full Date/Time Pattern</td>
@@ -5602,25 +5570,21 @@ This the multi-page printable view of this section.
 <td><code>M</code>, <code>m</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#MonthDay">month (&ldquo;M&rdquo;, &ldquo;m&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#MonthDay">month (&ldquo;M&rdquo;, &ldquo;m&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Year Month Pattern</td>
 <td><code>Y</code>, <code>y</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code> -&gt; <code>TODO</code></td>
 <td>TODO</td>
-<td>See <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#YearMonth">year month (&ldquo;Y&rdquo;) format specifier</a> for further information</td>
+<td>See <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#YearMonth">year month (&ldquo;Y&rdquo;) format specifier</a> for further information</td>
 </tr>
 <tr>
 <td>Unknown Pattern</td>
 <td>Any other single character</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>Throws a <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.formatexception?view=netcore-3.1
-">FormatException</a></td>
+<td>Throws a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.formatexception">FormatException</a></td>
 </tr>
 </tbody>
 </table>
@@ -5637,7 +5601,7 @@ This the multi-page printable view of this section.
 <li>&ldquo;R&rdquo; or &ldquo;r&rdquo;	RFC1123Pattern	ddd, dd MMM yyyy HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss &lsquo;GMT&rsquo;</li>
 <li>&ldquo;s&rdquo;	SortableDateTimePattern	yyyy&rsquo;-&lsquo;MM&rsquo;-&lsquo;dd&rsquo;T&rsquo;HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss</li>
 <li>&ldquo;u&rdquo;	UniversalSortableDateTimePattern	yyyy&rsquo;-&lsquo;MM&rsquo;-&lsquo;dd HH&rsquo;:&lsquo;mm&rsquo;:&lsquo;ss&rsquo;Z&rsquo;</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</a></li>
 </ul>
 </li>
 </ul>
@@ -5655,7 +5619,7 @@ This the multi-page printable view of this section.
 <ul>
 <li>What are they - multiple character format specifiers</li>
 <li>Some examples</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings</a></li>
 </ul>
 <h2 id="format-specifiers">Format specifiers</h2>
 <p>TODO:</p>
@@ -5681,19 +5645,19 @@ This the multi-page printable view of this section.
 <p>TODO:</p>
 <ul>
 <li>How can these affect datetime formats etc.</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings</a></li>
 </ul>
 <p>TODO Add concepts page for string/object formatting that links to:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting">https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting">https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data">https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data</a></li>
 </ul>
 <p>TODO Add concepts page for formatting numbers that links to:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings</a></li>
 </ul>
-<p>TODO: <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime">https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime</a></p>
+<p>TODO: <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime">https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime</a></p>
 <p>TODO: Update examples for most common en-gb os formats</p>
 
 </div>
@@ -5917,12 +5881,12 @@ This the multi-page printable view of this section.
 <li>Enums names are not localised - e.g. DayOfWeek.Sunday cannot display Dimanche for french</li>
 <li>Links to microsoft docs
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.enum">https://docs.microsoft.com/en-us/dotnet/api/system.enum</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.enum">https://learn.microsoft.com/en-us/dotnet/api/system.enum</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum</a></li>
 <li>probably not:
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/enums">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/enums</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum">https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/enums">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/enums</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/enum">https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/enum</a></li>
 </ul>
 </li>
 </ul>
@@ -5991,10 +5955,10 @@ This the multi-page printable view of this section.
 <h2 id="summary">Summary</h2>
 <p>TODO:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/">https://docs.microsoft.com/en-us/dotnet/standard/io/</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats">https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/handling-io-errors">https://docs.microsoft.com/en-us/dotnet/standard/io/handling-io-errors</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks">https://docs.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/io/">https://learn.microsoft.com/en-us/dotnet/standard/io/</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats">https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/io/handling-io-errors">https://learn.microsoft.com/en-us/dotnet/standard/io/handling-io-errors</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks">https://learn.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks</a></li>
 <li>list of common extensions</li>
 <li>list of common environment variables (<code>%PROGRAMDATA%</code> check this works)</li>
 <li>Best Practices (how to work with files, where to save them when working with files and folders in a flow)</li>
@@ -6034,7 +5998,7 @@ This the multi-page printable view of this section.
 <p>TODO:</p>
 <ul>
 <li>Supported file and folder attributes and examples of using them</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-5.0</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-5.0">https://learn.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-5.0</a></li>
 <li>Currently there are no specific blocks for setting attributes of files and folders (setting can be done through c# or PowerShell)</li>
 </ul>
 <h2 id="remarks">Remarks</h2>
@@ -6084,11 +6048,11 @@ This the multi-page printable view of this section.
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats">https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats</a></li>
-<li><a href="https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file">https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file</a></li>
-<li><a href="https://docs.microsoft.com/en-us/windows/wsl/filesystems">https://docs.microsoft.com/en-us/windows/wsl/filesystems</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/io/">https://docs.microsoft.com/en-us/dotnet/standard/io/</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0">https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats">https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file">https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/wsl/filesystems">https://learn.microsoft.com/en-us/windows/wsl/filesystems</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/io/">https://learn.microsoft.com/en-us/dotnet/standard/io/</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0">https://learn.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0</a></li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
@@ -6303,13 +6267,13 @@ This the multi-page printable view of this section.
 <ul>
 <li>using blocks</li>
 <li>ToString()</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric">https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric">https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric</a></li>
 </ul>
 </li>
 <li>Converting Integer Types to Floating Types (and reverse)
 <ul>
-<li>Built in numeric conversion - <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#1023-implicit-numeric-conversions">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#1023-implicit-numeric-conversions</a></li>
+<li>Built in numeric conversion - <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#1023-implicit-numeric-conversions">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#1023-implicit-numeric-conversions</a></li>
 <li>Data loss when converting from Floating Types to Integer Types</li>
 </ul>
 </li>
@@ -6323,8 +6287,8 @@ This the multi-page printable view of this section.
 </li>
 <li>Format Templates
 <ul>
-<li>Standard Format Templates - <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
-<li>Custom Format Templates - <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings</a></li>
+<li>Standard Format Templates - <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings</a></li>
+<li>Custom Format Templates - <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings</a></li>
 </ul>
 </li>
 <li>Format specifiers</li>
@@ -6473,7 +6437,7 @@ This the multi-page printable view of this section.
 <img src="/images/work-in-progress.jpg">
 <h2 id="summary">Summary</h2>
 <p>TODO</p>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/equality-comparisons">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/equality-comparisons</a></p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/equality-comparisons">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/equality-comparisons</a></p>
 <h2 id="value-type-vs-reference-type-equality">Value Type vs Reference Type Equality</h2>
 <p>TODO:</p>
 <h3 id="value-type-equality">Value Type Equality</h3>
@@ -6554,7 +6518,7 @@ This the multi-page printable view of this section.
 <li>Difference between string and char</li>
 <li>Operators and Comparisons
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations">https://docs.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations">https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations</a></li>
 <li>Concatenation</li>
 <li>Equality
 <ul>
@@ -6564,7 +6528,7 @@ This the multi-page printable view of this section.
 <li>Current Culture</li>
 </ul>
 </li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings</a></li>
 <li>ContainsText vs Regex vs PatternMatching
 <ul>
 <li>Links to ContainsText</li>
@@ -6582,17 +6546,17 @@ This the multi-page printable view of this section.
 </ul>
 </li>
 <li>Encoding</li>
-<li>Immutability of strings <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings</a></li>
+<li>Immutability of strings <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings</a></li>
 <li>Literal, Verbatim and Interpolated Strings
 <ul>
-<li>String escape sequences <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences</a></li>
+<li>String escape sequences <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences</a></li>
 </ul>
 </li>
 <li>Substrings and Indexing</li>
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/</a></li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
@@ -6636,8 +6600,8 @@ This the multi-page printable view of this section.
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations">https://docs.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case">https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations">https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case">https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case</a></li>
 </ul>
 <h2 id="common-types-of-text-casing">Common types of text casing</h2>
 <p>There are many different types of text casing.</p>
@@ -6707,11 +6671,7 @@ This the multi-page printable view of this section.
 <li><a href="#specific-cultures">Specific Cultures</a></li>
 <li><a href="#custom-cultures">Custom Cultures</a></li>
 </ul>
-<p>For more information about culture info, please see <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=netcore-3.1
-">CultureInfo</a>.</p>
+<p>For more information about culture info, please see <a href="https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo">CultureInfo</a>.</p>
 <h3 id="invariant-culture">Invariant Culture</h3>
 <p>For Invariant Culture, the casing rules used to determine how the case of text is changed are not culture-sensitive.</p>
 <p>TODO:</p>
@@ -6719,7 +6679,7 @@ This the multi-page printable view of this section.
 <li>Link to Working with Culture -&gt; Invariant Culture</li>
 <li>When to use? If not sure what to choose?</li>
 <li>notes about invariant culture and a worked through example</li>
-<li>From <a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0</a></li>
+<li>From <a href="https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0">https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0</a></li>
 </ul>
 <p>If a security decision depends on a string comparison or a case-change operation, the application should use the InvariantCulture to ensure that the behavior is consistent regardless of the culture settings of the system. However, the invariant culture must be used only by processes that require culture-independent results, such as system services. Otherwise, it produces results that might be linguistically incorrect or culturally inappropriate.</p>
 <h3 id="current-culture">Current Culture</h3>
@@ -6737,7 +6697,7 @@ This the multi-page printable view of this section.
 <li>Talk about how there are a number of specific cultures, each with their own casing rules</li>
 <li>When to use? If not sure what to choose?</li>
 <li>Link to Working with Culture -&gt; Specific Cultures</li>
-<li>For a list of cultures that can be returned on Windows systems see <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a> under The Language table (<code>Language tag</code> defines the code required to create the culture)</li>
+<li>For a list of cultures that can be returned on Windows systems see <a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a> under The Language table (<code>Language tag</code> defines the code required to create the culture)</li>
 </ul>
 <h3 id="custom-cultures">Custom Cultures</h3>
 <p>TODO:</p>
@@ -6864,7 +6824,7 @@ This the multi-page printable view of this section.
 <li>How to create an empty text - <code>&quot;&quot;</code> or <code>String.Empty</code></li>
 </ul>
 <h2 id="whitespace">Whitespace</h2>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char">https://docs.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char</a>_ and textual representation \t \r \n etc.</p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char">https://learn.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char</a>_ and textual representation \t \r \n etc.</p>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
 <p>TODO</p>
@@ -6914,7 +6874,7 @@ This the multi-page printable view of this section.
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction">https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction">https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction</a></li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <h3 id="known-limitations">Known Limitations</h3>
@@ -6959,8 +6919,8 @@ This the multi-page printable view of this section.
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case">https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case">https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case</a></li>
 </ul>
 <h2 id="comparison-types">Comparison Types</h2>
 <p>Comparison Types specify the rules used to determine whether two pieces of text match.</p>
@@ -7013,11 +6973,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For more information about comparison types, please see <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=netcore-3.1
-">StringComparison</a>.</p>
+<p>For more information about comparison types, please see <a href="https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison">StringComparison</a>.</p>
 <p>TODO: Consider moving sections below into the StringComparison Data Type documentation and removed from this page</p>
 <h3 id="ordinal">Ordinal</h3>
 <p>TODO:</p>
@@ -7158,28 +7114,28 @@ This the multi-page printable view of this section.
 <p>Add table of format specifiers</p>
 </li>
 <li>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting</a></p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting">https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting</a></p>
 </li>
 </ul>
 <p>TODO: Control formatting</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting">https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting</a></li>
 </ul>
 <p>TODO: Control spacing</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing">https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing</a></li>
 </ul>
 <p>TODO: Control alignment</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment">https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment</a></li>
 </ul>
 <p>TODO: Composite formatting</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief">https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief</a></li>
 </ul>
 <p>TODO: Format Item</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item">https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item">https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item</a></li>
 </ul>
 <p>TODO: Anything else relevant on formatting links above</p>
 <h2 id="remarks">Remarks</h2>
@@ -7275,12 +7231,12 @@ This the multi-page printable view of this section.
 <li>how is it different to contains or pattern matching</li>
 </ul>
 </li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions">https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference">https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference</a></li>
 <li>Common regex expressions
 <ul>
 <li>urls, emails, etc</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs">https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs</a></li>
 <li>and subsequent links</li>
 </ul>
 </li>
@@ -7289,12 +7245,12 @@ This the multi-page printable view of this section.
 </ul>
 <p>TODO: Options</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options">https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions">https://docs.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options">https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions">https://learn.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions</a></li>
 </ul>
 <p>Links:</p>
 <ul>
-<li>Regex Best Practices - <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices">https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices</a></li>
+<li>Regex Best Practices - <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices">https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices</a></li>
 </ul>
 <h3 id="character-classes">Character Classes</h3>
 <p>TODO:</p>
@@ -7386,8 +7342,8 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories">https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories</a>
-<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks">https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks</a></p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories">https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks">https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks</a></p>
 <h3 id="character-escapes">Character Escapes</h3>
 <p>TODO:</p>
 <ul>
@@ -8005,7 +7961,7 @@ This the multi-page printable view of this section.
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2023 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>

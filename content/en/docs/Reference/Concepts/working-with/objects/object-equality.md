@@ -12,7 +12,7 @@ description: "Information regarding object equality, and what defines two object
 
 TODO
 
-https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/equality-comparisons
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/equality-comparisons
 
 ## Value Type vs Reference Type Equality
 

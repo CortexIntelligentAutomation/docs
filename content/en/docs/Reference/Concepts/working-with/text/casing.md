@@ -17,8 +17,8 @@ TODO:
 
 Links:
 
-- https://docs.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case
+- https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case
 
 ## Common types of text casing
 
@@ -61,7 +61,7 @@ TODO:
 - Link to Working with Culture -> Invariant Culture
 - When to use? If not sure what to choose?
 - notes about invariant culture and a worked through example
-- From https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0
+- From https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0
 
 If a security decision depends on a string comparison or a case-change operation, the application should use the InvariantCulture to ensure that the behavior is consistent regardless of the culture settings of the system. However, the invariant culture must be used only by processes that require culture-independent results, such as system services. Otherwise, it produces results that might be linguistically incorrect or culturally inappropriate.
 
@@ -83,7 +83,7 @@ TODO:
 - Talk about how there are a number of specific cultures, each with their own casing rules
 - When to use? If not sure what to choose?
 - Link to Working with Culture -> Specific Cultures
-- For a list of cultures that can be returned on Windows systems see https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c under The Language table (`Language tag` defines the code required to create the culture)
+- For a list of cultures that can be returned on Windows systems see https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c under The Language table (`Language tag` defines the code required to create the culture)
 
 ### Custom Cultures
 

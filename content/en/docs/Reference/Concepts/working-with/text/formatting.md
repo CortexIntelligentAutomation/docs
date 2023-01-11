@@ -64,27 +64,27 @@ TODO:
 
 - Add table of format specifiers
 
-- https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting
+- https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#Starting
 
 TODO: Control formatting
 
-- https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting
+- https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-formatting
 
 TODO: Control spacing
 
-- https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing
+- https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-spacing
 
 TODO: Control alignment
 
-- https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment
+- https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#control-alignment
 
 TODO: Composite formatting
 
-- https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief
+- https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-method-in-brief
 
 TODO: Format Item
 
-- https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item
+- https://learn.microsoft.com/en-us/dotnet/api/system.string.format?view=net-6.0#the-format-item
 
 TODO: Anything else relevant on formatting links above
 

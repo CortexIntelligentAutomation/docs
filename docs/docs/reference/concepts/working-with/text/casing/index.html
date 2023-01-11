@@ -22,11 +22,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/reference/concepts/working-with/text/casing/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-09-15T14:21:09+01:00" /><meta property="og:site_name" content="Cortex" />
+<meta property="article:modified_time" content="2023-01-10T12:38:40+00:00" /><meta property="og:site_name" content="Cortex" />
 
 <meta itemprop="name" content="Casing">
 <meta itemprop="description" content="Information regarding text casing.">
-<meta itemprop="dateModified" content="2022-09-15T14:21:09+01:00" />
+<meta itemprop="dateModified" content="2023-01-10T12:38:40+00:00" />
 <meta itemprop="wordCount" content="592">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Casing"/>
@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -10035,8 +10035,8 @@
 </ul>
 <p>Links:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations">https://docs.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case">https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations">https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case">https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case</a></li>
 </ul>
 <h2 id="common-types-of-text-casing">Common types of text casing</h2>
 <p>There are many different types of text casing.</p>
@@ -10106,11 +10106,7 @@
 <li><a href="#specific-cultures">Specific Cultures</a></li>
 <li><a href="#custom-cultures">Custom Cultures</a></li>
 </ul>
-<p>For more information about culture info, please see <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=netcore-3.1
-">CultureInfo</a>.</p>
+<p>For more information about culture info, please see <a href="https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo">CultureInfo</a>.</p>
 <h3 id="invariant-culture">Invariant Culture</h3>
 <p>For Invariant Culture, the casing rules used to determine how the case of text is changed are not culture-sensitive.</p>
 <p>TODO:</p>
@@ -10118,7 +10114,7 @@
 <li>Link to Working with Culture -&gt; Invariant Culture</li>
 <li>When to use? If not sure what to choose?</li>
 <li>notes about invariant culture and a worked through example</li>
-<li>From <a href="https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0</a></li>
+<li>From <a href="https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0">https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper?view=net-6.0</a></li>
 </ul>
 <p>If a security decision depends on a string comparison or a case-change operation, the application should use the InvariantCulture to ensure that the behavior is consistent regardless of the culture settings of the system. However, the invariant culture must be used only by processes that require culture-independent results, such as system services. Otherwise, it produces results that might be linguistically incorrect or culturally inappropriate.</p>
 <h3 id="current-culture">Current Culture</h3>
@@ -10136,7 +10132,7 @@
 <li>Talk about how there are a number of specific cultures, each with their own casing rules</li>
 <li>When to use? If not sure what to choose?</li>
 <li>Link to Working with Culture -&gt; Specific Cultures</li>
-<li>For a list of cultures that can be returned on Windows systems see <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a> under The Language table (<code>Language tag</code> defines the code required to create the culture)</li>
+<li>For a list of cultures that can be returned on Windows systems see <a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c">https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c</a> under The Language table (<code>Language tag</code> defines the code required to create the culture)</li>
 </ul>
 <h3 id="custom-cultures">Custom Cultures</h3>
 <p>TODO:</p>
@@ -10164,7 +10160,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified September 15, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/550283b429a6b7ba38adf637dd7d20638633c2f7">stubbed working with text (550283b4)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified January 10, 2023: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/678ac48c00e3ac2a809eaa918eef7b942e999e12">Updated Microsoft links from docs.microsoft.com to learn.microsoft.com (678ac48c)</a>
 </div>
 </div>
 
@@ -10295,7 +10291,7 @@
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2023 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>

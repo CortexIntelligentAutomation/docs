@@ -18,8 +18,8 @@ TODO:
 
 Links:
 
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case
 
 ## Comparison Types
 

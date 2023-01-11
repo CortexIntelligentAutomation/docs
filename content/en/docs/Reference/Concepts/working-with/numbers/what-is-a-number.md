@@ -29,18 +29,18 @@ TODO:
 - Converting numbers to text
   - using blocks
   - ToString()
-  - https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric
+  - https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric
 - Converting Integer Types to Floating Types (and reverse)
-  - Built in numeric conversion - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions
-  - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#1023-implicit-numeric-conversions
+  - Built in numeric conversion - https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions
+  - https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#1023-implicit-numeric-conversions
   - Data loss when converting from Floating Types to Integer Types
 - Numeric Formatting
   - Format providers
     - Invariant Culture
     - Current Culture
   - Format Templates
-    - Standard Format Templates - https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
-    - Custom Format Templates - https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings
+    - Standard Format Templates - https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+    - Custom Format Templates - https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings
   - Format specifiers
 
 ## Remarks

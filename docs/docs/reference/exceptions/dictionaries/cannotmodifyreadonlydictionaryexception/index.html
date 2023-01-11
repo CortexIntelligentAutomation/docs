@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -9988,21 +9988,13 @@
 <p class="namespace">(Cortex.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException)</p>
 <p>The exception thrown when trying to modify a read-only dictionary.</p>
 <blockquote>
-<p>Dictionaries implementing <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2?view=netcore-3.1
-">IDictionary</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">TKey</a>, <a href="/docs/reference/concepts/fundamentals/data-types/generics/">TItem</a>&gt; have the option to be read-only.</p>
+<p>Dictionaries implementing <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">TKey</a>, <a href="/docs/reference/concepts/fundamentals/data-types/generics/">TItem</a>&gt; have the option to be read-only.</p>
 </blockquote>
 <p>The format of the exception message is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;&#39;&lt;property-display-name&gt;&#39; cannot be because it&#39;s read-only.
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">Please click the HelpLink for more information on how to fix this.&#34;</span>
 </span></span></code></pre></div><h2 id="how-to-fix">How to fix</h2>
-<p>If the dictionary was written directly into the block property using an <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions">expression</a>, use a dictionary type that is not read-only, such as <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=netcore-3.1
-">Dictionary</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">TKey</a>, <a href="/docs/reference/concepts/fundamentals/data-types/generics/">TItem</a>&gt;.</p>
+<p>If the dictionary was written directly into the block property using an <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions">expression</a>, use a dictionary type that is not read-only, such as <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">TKey</a>, <a href="/docs/reference/concepts/fundamentals/data-types/generics/">TItem</a>&gt;.</p>
 <p>When using a variable, convert the read-only dictionary to a dictionary that can be written to by using the <code>.ToDictionary(item =&gt; item.Key, item =&gt; item.Value)</code> expression like follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">Dictionary</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ToDictionary</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">item</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000">item</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Key</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">item</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000">item</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Value</span><span style="color:#000;font-weight:bold">);</span>
 </span></span></code></pre></div><p>TODO: Confirm if this is all correct</p>
@@ -10140,7 +10132,7 @@
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2023 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>

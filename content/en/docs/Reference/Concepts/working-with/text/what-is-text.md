@@ -17,14 +17,14 @@ TODO:
   - null, string.Empty, and whitespace
 - Difference between string and char
 - Operators and Comparisons
-  - https://docs.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations
+  - https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations
   - Concatenation
   - Equality
     - Casing
     - Ordinal
     - Invariant Culture
     - Current Culture
-  - https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings
+  - https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings
   - ContainsText vs Regex vs PatternMatching
     - Links to ContainsText
     - Links to Regex
@@ -34,14 +34,14 @@ TODO:
   - Date Formatting
   - Number Formatting
 - Encoding
-- Immutability of strings https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings
+- Immutability of strings https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings
 - Literal, Verbatim and Interpolated Strings
-  - String escape sequences https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences
+  - String escape sequences https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences
 - Substrings and Indexing
 
 Links:
 
-- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
+- https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
 
 ## Remarks
 

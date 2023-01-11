@@ -24,7 +24,7 @@ TODO:
   - When should they be used
 - We don't deal with timezone issues within the blocks
 - Offsets are handled within DateTimeOffset and can be dealt with using our blocks
-- Useful link - https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0
+- Useful link - https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0
 
 ## Remarks
 

@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -1578,14 +1578,14 @@ This the multi-page printable view of this section.
 <p>TODO:</p>
 <ul>
 <li>If a variable does not already exist, the variable editor can be used to create a new one at the current scope</li>
-<li>If the variable name is invalid (<a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable</li>
+<li>If the variable name is invalid (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable</li>
 </ul>
 <p>TODO: Image of option to create a new variable</p>
 <h2 id="renaming-variables">Renaming Variables</h2>
 <p>TODO:</p>
 <ul>
 <li>If a variable editor already contains a reference to a variable that exists, typing the name of a non-existent variable will provide the option to rename the previously selected variable (and all references to it within the flow) to the new variable name</li>
-<li>If the variable name is invalid (<a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to rename the variable</li>
+<li>If the variable name is invalid (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to rename the variable</li>
 <li>Renaming a variable does not include any index or method expressions (e.g. renaming to <code>($)NewVar.ToString()</code> will rename the selected variable to <code>($)NewVar</code>)</li>
 </ul>
 <p>TODO: Image of option to rename a variable</p>
@@ -1662,7 +1662,7 @@ This the multi-page printable view of this section.
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#4e9a06">$@&#34;This is a single square brace &#34;&#34;[&#34;&#34;, and this is a single curly brace &#34;&#34;{{&#34;&#34;&#34;</span>
 </span></span></code></pre></div><p>The example above becomes:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>This is a single square brace &#34;[&#34;, and this is a single curly brace &#34;{&#34;
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></p>
 <h3 id="char-literal">Char literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-char.PNG" alt="Char literal"></p>
 <p>Char literals are single characters; they are surrounded by single quotes. For example:</p>
@@ -1671,44 +1671,20 @@ This the multi-page printable view of this section.
 </span></span></code></pre></div><p>The example above becomes:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#39;A&#39;
 </span></span><span style="display:flex;"><span>&#39;A&#39;
-</span></span></code></pre></div><p>For further information, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></p>
+</span></span></code></pre></div><p>For further information, <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></p>
 <h3 id="int32-literal">Int32 literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-int.PNG" alt="Int32 literal"></p>
-<p>If an integer literal value is greater than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.minvalue?view=netcore-3.1
-">Int32.MinValue</a> or less than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.maxvalue?view=netcore-3.1
-">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int32">Int32</a></p>
+<p>If an integer literal value is greater than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.minvalue">Int32.MinValue</a> or less than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int32">Int32</a></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234</span>
-</span></span></code></pre></div><p>If an integer literal value is less than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.minvalue?view=netcore-3.1
-">Int32.MinValue</a> or greater than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.maxvalue?view=netcore-3.1
-">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
+</span></span></code></pre></div><p>If an integer literal value is less than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.minvalue">Int32.MinValue</a> or greater than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
 <h3 id="int64-literal">Int64 literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-int64.PNG" alt="Int64 literal"></p>
-<p>If an integer literal value is less than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.minvalue?view=netcore-3.1
-">Int32.MinValue</a> or greater than <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.int32.maxvalue?view=netcore-3.1
-">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
+<p>If an integer literal value is less than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.minvalue">Int32.MinValue</a> or greater than <a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32.maxvalue">Int32.MaxValue</a>, then it will be of type <a href="/docs/reference/data-types/numbers/int64">Int64</a>.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">2147483648</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234l</span>
 </span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234L</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a>.</p>
 <h3 id="double-literal">Double literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-double.PNG" alt="Double literal"></p>
 <p>By default, floating point literals are of type <a href="/docs/reference/data-types/numbers/double">Double</a>.</p>
@@ -1716,26 +1692,18 @@ This the multi-page printable view of this section.
 </span></span></code></pre></div><p>The suffix <code>d</code> or <code>D</code> can used to create a floating point literal of type <a href="/docs/reference/data-types/numbers/double">Double</a>, but is unnecessary.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456d</span>
 </span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456D</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
 <h3 id="single-literal">Single literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-single.PNG" alt="Single literal"></p>
-<p>If it is necessary to create an floating point literal of type <a href="/docs/reference/data-types/numbers/single">Single</a> with a value greater than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.single.minvalue?view=netcore-3.1
-">Single.MinValue</a> or less than or equal to <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.single.maxvalue?view=netcore-3.1
-">Single.MaxValue</a>, then the floating point literal must be suffixed by the character <code>f</code> or <code>F</code>. For example:</p>
+<p>If it is necessary to create an floating point literal of type <a href="/docs/reference/data-types/numbers/single">Single</a> with a value greater than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.single.minvalue">Single.MinValue</a> or less than or equal to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.single.maxvalue">Single.MaxValue</a>, then the floating point literal must be suffixed by the character <code>f</code> or <code>F</code>. For example:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456f</span>
 </span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">1234.456F</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a>.</p>
 <h3 id="boolean-literal">Boolean literal</h3>
 <p><img src="/images/set-variable/set-variable-expression-boolean.PNG" alt="Boolean literal"></p>
 <p>A <a href="/docs/reference/data-types/conditional-logic/boolean">Boolean</a> literal represents a truth-value of either <code>true</code> or <code>false</code>.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">true</span> <span style="color:#a40000">or</span> <span style="color:#204a87;font-weight:bold">false</span>
-</span></span></code></pre></div><p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a>.</p>
+</span></span></code></pre></div><p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a>.</p>
 <h3 id="object-literal">Object literal</h3>
 <p>Currently, creating an object using literal syntax is not supported.</p>
 <h3 id="dictionary-literal">Dictionary literal</h3>
@@ -1835,7 +1803,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a>.</p>
 <h3 id="boolean-expressions">Boolean expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-boolean-and.PNG" alt="Boolean expressions"></p>
 <p>The following <a href="/docs/reference/glossary/k-o/#operator">operators</a> perform logical operations with <a href="/docs/reference/glossary/k-o/#operand">operands</a> that have boolean values.</p>
@@ -1875,7 +1843,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a>.</p>
 <h3 id="comparison-expressions">Comparison expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-comparison.PNG" alt="Comparison expressions"></p>
 <p>The following <a href="/docs/reference/glossary/k-o/#operator">operators</a> perform comparison operations with <a href="/docs/reference/glossary/k-o/#operand">operands</a>.</p>
@@ -1925,7 +1893,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a>, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a>, and <a href="/docs/reference/concepts/working-with/objects/object-equality/">Object Equality</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a>, <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a>, and <a href="/docs/reference/concepts/working-with/objects/object-equality/">Object Equality</a>.</p>
 <h3 id="string-expressions">String expressions</h3>
 <p>There are three types of string expressions:</p>
 <ul>
@@ -1964,7 +1932,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a>.</p>
 <h4 id="interpolated-strings">Interpolated Strings</h4>
 <p><img src="/images/set-variable/set-variable-expression-interpolated-string.PNG" alt="Interpolated Strings"></p>
 <p>Interpolation is the process of inserting expressions and variables into a <a href="/docs/reference/data-types/text/string">String</a>. An interpolated string is declared by prefixing the string with the <code>$</code> character.</p>
@@ -1994,7 +1962,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a>.</p>
 <h4 id="verbatim-strings">Verbatim Strings</h4>
 <p><img src="/images/set-variable/set-variable-expression-verbatim-string.PNG" alt="Verbatim Strings"></p>
 <p>A verbatim string identifies that characters within the string should be processed literally, and do not need to be escaped. However, the following exceptions apply:</p>
@@ -2033,12 +2001,12 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a> and <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a> and <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a>.</p>
 <h3 id="dictionary-expressions">Dictionary expressions</h3>
 <p><a href="/docs/reference/data-types/collections/dictionary-2">Dictionaries</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#index-expressions">Index expressions</a>.</p>
 <p>For examples of creating Dictionaries using constructor expressions, see <a href="/docs/reference/data-types/collections/dictionary-2#create-a-dictionarylttkey-titemgt">Create a Dictionary&lt;TKey, TItem&gt;</a>.</p>
 <h3 id="structure-expressions">Structure expressions</h3>
-<p><a href="/docs/reference/data-types/collections/structure">Structures</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#property-expressions">Property expressions</a> (keys must follow <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) or <a href="#index-expressions">Index expressions</a> (keys do not need to follow <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>).</p>
+<p><a href="/docs/reference/data-types/collections/structure">Structures</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#property-expressions">Property expressions</a> (keys must follow <a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) or <a href="#index-expressions">Index expressions</a> (keys do not need to follow <a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>).</p>
 <p>For examples of creating Structures using constructor expressions, see <a href="/docs/reference/data-types/collections/structure#create-a-structure">Create a Structure</a>.</p>
 <h3 id="list-expressions">List expressions</h3>
 <p><a href="/docs/reference/data-types/collections/list-1">Lists</a> can be created using <a href="#constructor-expressions">Constructor expressions</a> and their items can be accessed using <a href="#index-expressions">Index expressions</a>.</p>
@@ -2080,7 +2048,7 @@ This the multi-page printable view of this section.
 <li><a href="#single-literal">Single</a></li>
 <li><a href="#boolean-literal">Boolean</a></li>
 </ul>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a>.</p>
 <h3 id="method-expressions">Method expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-method.PNG" alt="Method expressions"></p>
 <p>Methods can be used to execute specific functionality. The methods accessible are defined by the <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a>, and information regarding methods can be found in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2112,7 +2080,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a>.</p>
 <h3 id="property-expressions">Property expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-properties.PNG" alt="Property expressions"></p>
 <p>Properties can be used to read data from and/or write data to a <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a>. The properties accessible are defined by the <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a>, and information regarding properties can be found in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2149,7 +2117,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a>.</p>
 <h3 id="enum-expressions">Enum expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-enum.PNG" alt="Enum expressions"></p>
 <p><a href="/docs/reference/concepts/working-with/enums/">Enum</a> data types have a defined set of values, where each value has an associated <a href="/docs/reference/data-types/text/string">String</a> name and <a href="/docs/reference/data-types/numbers/int32">Int32</a> value. Information regarding values can be found in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2176,7 +2144,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a>.</p>
 <h3 id="casting-expressions">Casting expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-casting.PNG" alt="Casting expressions"></p>
 <p><a href="/docs/reference/concepts/fundamentals/data-types/">Data Types</a> can be cast to other <a href="/docs/reference/concepts/fundamentals/data-types/">Data Types</a> through the use of explicit casting, this can sometimes result in the loss of information when converting to a type that does not store the same amount of information. Information regarding which types a <a href="/docs/reference/concepts/fundamentals/data-types/">Data Type</a> can cast to can be found in the &ldquo;Summary&rdquo; section under &ldquo;Can be cast to&rdquo; in the relevant documentation for that <a href="/docs/reference/data-types/">Data Type</a>.</p>
@@ -2213,7 +2181,7 @@ This the multi-page printable view of this section.
 </tr>
 </tbody>
 </table>
-<p>For further information, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a> and <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a>.</p>
+<p>For further information, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a> and <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a>.</p>
 <h3 id="index-expressions">Index expressions</h3>
 <p><img src="/images/set-variable/set-variable-expression-index.PNG" alt="Index expressions"></p>
 <p><a href="/docs/reference/concepts/fundamentals/data-types/">Data Types</a> that are <a href="/docs/reference/data-types/collections">Collections</a> or <a href="/docs/reference/data-types/text/string">String</a> can have their items accessed using index notation:</p>
@@ -2231,7 +2199,7 @@ This the multi-page printable view of this section.
 <li><code>[..3]</code> gets three items from the first item (inclusively) (i.e. the first, second, and third item)</li>
 <li><code>[3..]</code> gets all items from the fourth item (inclusively) (i.e. the fourth to the last item)</li>
 </ul>
-<p>For further information on index and range syntax, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a>.</p>
+<p>For further information on index and range syntax, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a>.</p>
 <p>In the examples below assume:</p>
 <ul>
 <li><code>($)List</code> has been set to <code>[1, 2, 3, 4, 5]</code></li>
@@ -2347,27 +2315,27 @@ This the multi-page printable view of this section.
 </ul>
 <h3 id="external-documentation">External Documentation</h3>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool#literals">Boolean Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char#literals">Char Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals">Integer Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types#real-literals">Real Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals">String Literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators">Arithmetic Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators">Boolean Logical Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators">Comparison Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators">Equality Operators</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings">String concatenation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation">String interpolation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals">Verbatim string literals</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation">Verbatim String Interpolation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors">Constructors</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">Methods</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enumeration types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#explicit-conversions">Explicit Conversions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions#implicit-conversions">Implicit Conversions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/ranges-indexes">Indices and Ranges</a></li>
 </ul>
 
 </div>
@@ -2761,7 +2729,7 @@ This the multi-page printable view of this section.
 <p>The <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a> allows the the developer to <a href="#creating-a-variable">create</a> and <a href="#using-a-variable">use</a> variables whilst configuring a <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a>.</p>
 <h3 id="creating-a-variable">Creating a Variable</h3>
 <p>If a variable does not already exist, the <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a>  can be used to <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables">create</a> a new one at the <a href="/docs/reference/concepts/fundamentals/variables/variable-scopes/">scope</a> of the selected <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a>.</p>
-<p>If the variable name is invalid (does not conform with the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable.</p>
+<p>If the variable name is invalid (does not conform with the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names">C# identifier naming rules</a>) then there will be no option to create a new variable.</p>
 <h3 id="using-a-variable">Using a Variable</h3>
 <p>The <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a> provides a list of variables that are available at the <a href="/docs/reference/concepts/fundamentals/variables/variable-scopes/">scope</a> of the selected <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a>.</p>
 <p>Typing any text in the <a href="/docs/guides/cortex-studio/variable-editor/">Variable Editor</a> will filter the available variables, showing any variable whose name or scope contains the text.</p>
@@ -3195,10 +3163,10 @@ This the multi-page printable view of this section.
 <h3 id="external-documentation">External Documentation</h3>
 <p>TODO:</p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types">Value Types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types">Reference Types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Builtin Types</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values">Default Values</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types">Value Types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types">Reference Types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">Builtin Types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values">Default Values</a></li>
 </ul>
 
 </div>
@@ -4191,7 +4159,7 @@ This the multi-page printable view of this section.
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2023 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>

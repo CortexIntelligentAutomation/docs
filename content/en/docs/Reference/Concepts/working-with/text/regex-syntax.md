@@ -14,23 +14,23 @@ TODO:
 
 - What is regex matching?
   - how is it different to contains or pattern matching
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
 - Common regex expressions
   - urls, emails, etc
-  - https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs
+  - https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs
   - and subsequent links
 - State that we specify a timeout to prevent dos attacks
 - Talk about no current support for old g2 syntax - may add in future
 
 TODO: Options
 
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options
-- https://docs.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options
+- https://learn.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions
 
 Links:
 
-- Regex Best Practices - https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices
+- Regex Best Practices - https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices
 
 ### Character Classes
 
@@ -55,8 +55,8 @@ A character class matches any of a set of characters. Character classes include 
 | `\d` | Matches any decimal digit. | `\d` | 7 in Cortex 7! |
 | `\D` | Matches any character except a decimal digit. | `\D` | C, o, r, t, e, x,  , ! in Cortex 7! |
 
-https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories
-https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks
+https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories
+https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks
 
 ### Character Escapes
 

@@ -116,7 +116,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -212,22 +212,14 @@ This the multi-page printable view of this section.
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
 <p>The exception thrown when trying to modify a read-only list.</p>
 <blockquote>
-<p>Lists deriving from <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1?view=netcore-3.1
-">IList</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">T</a>&gt; have the option to be read-only.</p>
+<p>Lists deriving from <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">T</a>&gt; have the option to be read-only.</p>
 </blockquote>
 <p>The format of the exception message is as follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;The value of &#39;&lt;property-display-name&gt;&#39; cannot be modified.
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">This is because the value of &#39;&lt;property-display-name&gt;&#39; is read-only.
 </span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">See the CannotModifyReadOnlyListException help page for more information on how to fix this.&#34;</span>
 </span></span></code></pre></div><h2 id="how-to-fix">How to fix</h2>
-<p>If the list was written directly into the block property using an <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions">expression</a>, use a list type that is not read-only, such as <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1
-">List</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">T</a>&gt;.</p>
+<p>If the list was written directly into the block property using an <a href="/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions">expression</a>, use a list type that is not read-only, such as <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a href="/docs/reference/concepts/fundamentals/data-types/generics/">T</a>&gt;.</p>
 <p>When using a variable, convert the list to a list that can be written to by using the <code>.ToList()</code> expression like follows:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">List</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ToList</span><span style="color:#000;font-weight:bold">()</span>
 </span></span></code></pre></div><p>TODO: Confirm if this is all correct - look at cannotmodifyreadonlydictionaryexception for consistency</p>
@@ -392,7 +384,7 @@ This the multi-page printable view of this section.
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2023 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>

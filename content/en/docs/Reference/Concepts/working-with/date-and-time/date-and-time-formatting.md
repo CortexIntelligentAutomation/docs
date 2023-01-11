@@ -26,16 +26,16 @@ TODO:
 
 or
 
-https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties 
+https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#datetimeformatinfo-properties 
 
-https://docs.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0
+https://learn.microsoft.com/en-us/dotnet/api/system.globalization.datetimeformatinfo?view=net-5.0
 
 ### Invariant Culture
 
 TODO:
 
 * default format `"MM/dd/yyyy HH:mm:ss zzz"`
-* rules https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0
+* rules https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse?view=net-5.0
 
 ### Current Culture
 
@@ -95,7 +95,7 @@ TODO:
     * "R" or "r"	RFC1123Pattern	ddd, dd MMM yyyy HH':'mm':'ss 'GMT'
     * "s"	SortableDateTimePattern	yyyy'-'MM'-'dd'T'HH':'mm':'ss
     * "u"	UniversalSortableDateTimePattern	yyyy'-'MM'-'dd HH':'mm':'ss'Z'
-    * https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+    * https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
 
 #### ISO 8601 Standard
 
@@ -111,7 +111,7 @@ TODO:
 
 * What are they - multiple character format specifiers
 * Some examples
-* https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
 
 ## Format specifiers
 
@@ -136,7 +136,7 @@ TODO:
 TODO:
 
 * How can these affect datetime formats etc.
-* https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#control-panel-settings
 
 [Standard Format Templates]: {{< ref "#standard-format-templates" >}}
 [Custom Format Templates]: {{< ref "#custom-format-templates" >}}
@@ -168,14 +168,14 @@ TODO:
 
 TODO Add concepts page for string/object formatting that links to:
 
-* https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting 
-* https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting 
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-display-data
 
 TODO Add concepts page for formatting numbers that links to:
 
-* https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings 
-* https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings 
+* https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings
 
-TODO: https://docs.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime
+TODO: https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-datetime
 
 TODO: Update examples for most common en-gb os formats

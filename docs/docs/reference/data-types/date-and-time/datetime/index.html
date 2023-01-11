@@ -120,7 +120,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +152,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.025fd6eeeb5d6d691a5e49aa98a9364e.json"
+  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -10044,11 +10044,7 @@
 </tr>
 <tr>
 <td><strong>Default Value:</strong></td>
-<td><code>0001-01-01T00:00:00</code> (i.e. <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime.minvalue?view=netcore-3.1
-">DateTime.MinValue</a>)</td>
+<td><code>0001-01-01T00:00:00</code> (i.e. <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime.minvalue">DateTime.MinValue</a>)</td>
 </tr>
 <tr>
 <td><strong>Can be used as:</strong></td>
@@ -10080,87 +10076,53 @@
 <td><code>DateTime.Now</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code></td>
 <td>Expression</td>
-<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as local time. See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime.now?view=netcore-3.1
-">DateTime.Now</a></td>
+<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as local time. See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime.now">DateTime.Now</a></td>
 </tr>
 <tr>
 <td>Use <code>DateTime.UtcNow</code></td>
 <td><code>DateTime.UtcNow</code></td>
 <td><code>2022-07-01T13:00:00.0000000Z</code></td>
 <td>Expression</td>
-<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as the Coordinated Universal Time (UTC). See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime.utcnow?view=netcore-3.1
-">DateTime.UtcNow</a></td>
+<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as the Coordinated Universal Time (UTC). See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime.utcnow">DateTime.UtcNow</a></td>
 </tr>
 <tr>
 <td>Use <code>DateTime.Parse</code></td>
 <td><code>DateTime.Parse(&quot;1/7/2022 2:00:00 PM&quot;)</code></td>
 <td><code>2022-07-01T14:00:00</code></td>
 <td>Expression</td>
-<td>Parses a date string and converts it to a <code>DateTime</code> using the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> of the system. In this example it parses <code>&quot;1/7/2022 2:00:00 PM&quot;</code> using <code>en-GB</code> <a href="/docs/reference/concepts/working-with/culture/">culture</a> and converts it to <code>2022-07-01T14:00:00</code>. See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parse?view=netcore-3.1
-">DateTime.Parse</a></td>
+<td>Parses a date string and converts it to a <code>DateTime</code> using the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> of the system. In this example it parses <code>&quot;1/7/2022 2:00:00 PM&quot;</code> using <code>en-GB</code> <a href="/docs/reference/concepts/working-with/culture/">culture</a> and converts it to <code>2022-07-01T14:00:00</code>. See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime.parse">DateTime.Parse</a></td>
 </tr>
 <tr>
 <td>Use a <code>DateTime</code> constructor</td>
 <td><code>new DateTime(2022, 7, 1, 14, 0, 0, 0)</code></td>
 <td><code>2022-07-01T14:00:00</code></td>
 <td>Expression</td>
-<td><code>2PM 1st July 2022</code> with <code>1</code> hour UTC offset, honouring British Summer Time (BST). See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime.-ctor?view=netcore-3.1
-">DateTime Constructors</a>.</td>
+<td><code>2PM 1st July 2022</code> with <code>1</code> hour UTC offset, honouring British Summer Time (BST). See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime.-ctor">DateTime Constructors</a>.</td>
 </tr>
 <tr>
 <td>Use <code>DateTimeOffset.DateTime</code></td>
 <td><code>DateTimeOffset.UtcNow.DateTime</code></td>
 <td><code>2022-07-01T13:00:00.0000000</code></td>
 <td>Expression</td>
-<td>Converts <code>DateTimeOffset.UtcNow</code> to a <code>DateTime</code> using the date and time components, but not the offset. See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.datetime?view=netcore-3.1
-">DateTimeOffset.DateTime</a></td>
+<td>Converts <code>DateTimeOffset.UtcNow</code> to a <code>DateTime</code> using the date and time components, but not the offset. See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.datetime">DateTimeOffset.DateTime</a></td>
 </tr>
 <tr>
 <td>Use <code>DateTimeOffset.LocalDateTime</code></td>
 <td><code>DateTimeOffset.UtcNow.LocalDateTime</code></td>
 <td><code>2022-07-01T14:00:00.0000000+01:00</code></td>
 <td>Expression</td>
-<td>Converts <code>DateTimeOffset.UtcNow</code> to a <code>DateTime</code> relative to the local time. See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.localdatetime?view=netcore-3.1
-">DateTimeOffset.LocalDateTime</a></td>
+<td>Converts <code>DateTimeOffset.UtcNow</code> to a <code>DateTime</code> relative to the local time. See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.localdatetime">DateTimeOffset.LocalDateTime</a></td>
 </tr>
 <tr>
 <td>Use <code>DateTimeOffset.UtcDateTime</code></td>
 <td><code>DateTimeOffset.UtcNow.UtcDateTime</code></td>
 <td><code>2022-07-01T13:00:00.0000000Z</code></td>
 <td>Expression</td>
-<td>Converts <code>DateTimeOffset.UtcNow</code> to a <code>DateTime</code> relative to Coordinated Universal Time (UTC). See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcdatetime?view=netcore-3.1
-">DateTimeOffset.UtcDateTime</a></td>
+<td>Converts <code>DateTimeOffset.UtcNow</code> to a <code>DateTime</code> relative to Coordinated Universal Time (UTC). See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcdatetime">DateTimeOffset.UtcDateTime</a></td>
 </tr>
 </tbody>
 </table>
-<p>Please see <a href="
-    
-    
-        
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1#initializing-a-datetime-object
-">Initializing a DateTime object</a> for further information.</p>
+<p>Please see <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime?#initializing-a-datetime-object">Initializing a DateTime object</a> for further information.</p>
 <h3 id="convert-datetime-to-text">Convert DateTime to Text</h3>
 <p>The following table shows some of the ways that a <code>DateTime</code> can be converted to text.</p>
 <p>All examples are for a system configured with British <a href="/docs/reference/concepts/working-with/culture/">culture</a> (i.e. <code>en-GB</code>), and use a local time of <code>2PM 1st of July 2022</code> with <code>1</code> hour UTC offset, honouring British Summer Time (BST).</p>
@@ -10180,22 +10142,14 @@
 <td><code>DateTime.UtcNow.ToString()</code></td>
 <td><code>&quot;1/7/2022 1:00:00 PM&quot;</code></td>
 <td>Expression</td>
-<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as the Coordinated Universal Time (UTC) converted to text. Both the example and actual result will use the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">short date pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> and the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">long time pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> with each element separated from the previous element by a space. See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime.ToString?view=netcore-3.1
-">DateTime.ToString</a></td>
+<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as the Coordinated Universal Time (UTC) converted to text. Both the example and actual result will use the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">short date pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> and the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">long time pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> with each element separated from the previous element by a space. See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime.ToString">DateTime.ToString</a></td>
 </tr>
 <tr>
 <td>Use <code>Convert.ToString</code></td>
 <td><code>Convert.ToString(DateTime.UtcNow)</code></td>
 <td><code>&quot;1/7/2022 1:00:00 PM&quot;</code></td>
 <td>Expression</td>
-<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as the Coordinated Universal Time (UTC) converted to text. Both the example and actual result will use the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">short date pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> and the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">long time pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a>, with each element separated from the previous element by a space. See <a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring?view=netcore-3.1
-">Convert.ToString</a></td>
+<td>The result shown is an example result. The actual result will show the current date and time on the current computer expressed as the Coordinated Universal Time (UTC) converted to text. Both the example and actual result will use the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">short date pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a> and the <a href="/docs/reference/concepts/working-with/date-and-time/date-and-time-formatting/#standard-format-templates">long time pattern</a> for the <a href="/docs/reference/concepts/working-with/culture/current-culture">current culture</a>, with each element separated from the previous element by a space. See <a href="https://learn.microsoft.com/en-us/dotnet/api/system.convert.tostring">Convert.ToString</a></td>
 </tr>
 <tr>
 <td>Use <code>Convert DateTime To Text</code> block</td>
@@ -10248,11 +10202,7 @@
 </ul>
 <h3 id="external-documentation">External Documentation</h3>
 <ul>
-<li><a href="
-    
-    
-    https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1
-">System.DateTime</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime">System.DateTime</a></li>
 </ul>
 
 	
@@ -10388,7 +10338,7 @@
     </div>
     <div class="row">
       <div class="col-12 col-sm-12 text-center order-sm-1 copyright-container">
-        Copyright &copy; 2022 Cortex Limited. All Rights Reserved
+        Copyright &copy; 2023 Cortex Limited. All Rights Reserved
 	
       </div>
     </div>

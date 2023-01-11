@@ -24,7 +24,7 @@ TODO:
 
 ## Whitespace
 
-https://docs.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char_ and textual representation \t \r \n etc.
+https://learn.microsoft.com/en-us/dotnet/api/system.char.iswhitespace?view=net-5.0#System_Char_IsWhiteSpace_System_Char_ and textual representation \t \r \n etc.
 
 ## Remarks
 

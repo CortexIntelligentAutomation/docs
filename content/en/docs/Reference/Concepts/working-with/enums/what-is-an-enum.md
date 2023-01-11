@@ -29,11 +29,11 @@ TODO:
   - Currently not possible to have combined values in the literal editor (is possible in expression)
 - Enums names are not localised - e.g. DayOfWeek.Sunday cannot display Dimanche for french
 - Links to microsoft docs
-  - https://docs.microsoft.com/en-us/dotnet/api/system.enum
-  - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
+  - https://learn.microsoft.com/en-us/dotnet/api/system.enum
+  - https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
   - probably not:
-    - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/enums
-    - https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/enum
+    - https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/enums
+    - https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/enum
 
 ## Remarks
 

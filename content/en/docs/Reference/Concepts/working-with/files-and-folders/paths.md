@@ -22,11 +22,11 @@ TODO:
 
 Links:
 
-- https://docs.microsoft.com/en-us/dotnet/standard/io/file-path-formats
-- https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
-- https://docs.microsoft.com/en-us/windows/wsl/filesystems
-- https://docs.microsoft.com/en-us/dotnet/standard/io/
-- https://docs.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0
+- https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats
+- https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+- https://learn.microsoft.com/en-us/windows/wsl/filesystems
+- https://learn.microsoft.com/en-us/dotnet/standard/io/
+- https://learn.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0
 
 ## Remarks
 
