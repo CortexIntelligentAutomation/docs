@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.102.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.110.0"><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -23,7 +23,6 @@
 <meta property="og:url" content="/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates/" /><meta property="article:section" content="docs" />
 
 <meta property="article:modified_time" content="2022-10-12T14:55:47+01:00" /><meta property="og:site_name" content="Cortex" />
-
 <meta itemprop="name" content="Create Self-Signed Certificates">
 <meta itemprop="description" content="Information about creating and installing self-signed certificates.">
 <meta itemprop="dateModified" content="2022-10-12T14:55:47+01:00" />
@@ -36,8 +35,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
-<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" as="style">
+<link href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -120,7 +119,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
+  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +151,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
+  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -10027,7 +10026,7 @@
 <ol>
 <li>
 <p>Create the Root CA private key by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">4096</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#0000cf;font-weight:bold">4096</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Generate the Root CA certificate signed with the private key:</p>
@@ -10092,7 +10091,7 @@
 </li>
 <li>
 <p>In the PowerShell window, run the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-x509</span> <span style="color:#000">-new</span> <span style="color:#000">-nodes</span> <span style="color:#000">-key</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-days</span> <span style="color:#000">3650</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-config</span> <span style="color:#000">ca</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-x509</span> <span style="color:#000">-new</span> <span style="color:#000">-nodes</span> <span style="color:#000">-key</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-days</span> <span style="color:#0000cf;font-weight:bold">3650</span> <span style="color:#000">-out</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-config</span> <span style="color:#000">ca</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Press <code>Enter</code> for all parameters except the Common Name. For this enter <code>Cortex CA</code>.</p>
@@ -10123,7 +10122,7 @@
 <ol>
 <li>
 <p>Create a private key for the SSL cert by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">2048</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">genrsa</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#0000cf;font-weight:bold">2048</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Generate the SSL certificate request:</p>
@@ -10230,7 +10229,7 @@ Each DNS name or IP address entry must be suffixed with <code>.N</code> where <c
 </li>
 <li>
 <p>Sign the request with a previously generated Root CA by running the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">x509</span> <span style="color:#000">-req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-in</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">req</span> <span style="color:#000">-CA</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-CAkey</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-CAcreateserial</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-days</span> <span style="color:#000">3650</span> <span style="color:#000">-extensions</span> <span style="color:#000">v3_req</span> <span style="color:#000">-extfile</span> <span style="color:#000">san</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000">openssl</span> <span style="color:#000">x509</span> <span style="color:#000">-req</span> <span style="color:#000">-sha256</span> <span style="color:#000">-in</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">req</span> <span style="color:#000">-CA</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-CAkey</span> <span style="color:#000">cortexCA</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">key</span> <span style="color:#000">-CAcreateserial</span> <span style="color:#000">-out</span> <span style="color:#000">cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pem</span> <span style="color:#000">-days</span> <span style="color:#0000cf;font-weight:bold">3650</span> <span style="color:#000">-extensions</span> <span style="color:#000">v3_req</span> <span style="color:#000">-extfile</span> <span style="color:#000">san</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cnf</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Package your public and private key in a pkcs12 encrypted file (to install with certmgr on windows) by running the following command:</p>

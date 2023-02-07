@@ -45,7 +45,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
     {{< tabpane lang="powershell" >}}
         {{< tab header="Multiple Servers with HA" >}}
-.\Cortex.Innovation.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
+.\Cortex.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
     -ServerCertificatePwd "myPassword" `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
@@ -53,7 +53,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
     -Credential $Credential
         {{< /tab >}}
         {{< tab header="Single Server without HA" >}}
-.\Cortex.Innovation.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
+.\Cortex.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
     -ServerCertificatePwd "myPassword" `
     -SkipLoadBalancer `

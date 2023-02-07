@@ -3,5 +3,5 @@ public/
 resources/
 node_modules/
 tech-doc-hugo
-content/static/images/*.dtmp
-content/static/images/*.bkp
+content/static/images/**/*.dtmp
+content/static/images/**/*.bkp

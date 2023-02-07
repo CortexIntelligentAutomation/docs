@@ -31,7 +31,7 @@ Input properties can be configured using the following editors:
 - [Variable Editor][]
 - [Expression Editor][]
 
-![Supported Editors](/images/editor-types.svg)
+![Supported Editors](/images/editable/editor-types.png)
 
 The icons used for Input properties are dark blue to distinguish them from [Output Properties][] or [InputOutput Properties][].
 
@@ -47,7 +47,7 @@ Output properties can be configured using the following editors:
 
 - [Variable Editor][]
 
-![Supported Editors](/images/variable-editor.svg)
+![Supported Editors](/images/editable/variable-editor.png)
 
 The icon used for Output properties are light blue to distinguish them from [Input Properties][].
 
@@ -74,7 +74,7 @@ InputOutput properties can be configured using the following editors:
 
 - [Variable Editor][]
 
-![Supported Editors](/images/variable-editor.svg)
+![Supported Editors](/images/editable/variable-editor.png)
 
 The icons used for InputOutput properties are light blue to distinguish them from [Input Properties][].
 

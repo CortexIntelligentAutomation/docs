@@ -19,7 +19,7 @@ weight: 10
 
 The following architecture requires 1..n Application servers and 1 [Grafana Cloud][] managed service.
 
-{{< figure src="/images/Grafana Platform Architecture Diagram - Cloud.svg" >}}
+{{< figure src="/images/editable/Grafana Platform Architecture Diagram - Cloud.png" >}}
 
 ## Next Steps?
 

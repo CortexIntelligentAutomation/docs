@@ -23,7 +23,7 @@ The dashboard is then split into 5 main sections:
 
 There are several [filters](#filters) available to filter the data to a more fine-grained level as necessary and are explained in further detail below.
 
-{{< figure src="/images/Platform Health Dashboard.svg" >}}
+{{< figure src="/images/editable/Platform Health Dashboard.png" >}}
 
 ## Time Range
 
@@ -31,7 +31,7 @@ There are several [filters](#filters) available to filter the data to a more fin
 
 The time range for which the dashboard displays data is configurable in the top right of the dashboard using the Time Range selector (defaults to the last 3 hours):
 
-{{< figure src="/images/Platform Health - Time Range.svg">}}
+{{< figure src="/images/editable/Platform Health - Time Range.png">}}
 
 There are a number of predefined quick ranges to choose from:
 
@@ -53,7 +53,7 @@ To configure an absolute time range, you should specify a From and To date and t
 
 If an absolute time range is specified, the Time Range selector will show the selected time range with arrows either side. These arrows can be used to shift the time range forwards and backwards. This feature is not available for quick ranges.
 
-{{< figure src="/images/Platform Health - Time Range extended.svg">}}
+{{< figure src="/images/editable/Platform Health - Time Range extended.png">}}
 
 The magnifying glass icon allows you to zoom out of the time range specified. It will substract half the current time range from the From field and add half the current time range to the To field.
 
@@ -63,7 +63,7 @@ For more information regarding the Time Range selector, see Grafana's [Time rang
 
 At the top of the dashboard, there are 9 filters available to restrict the data queried:
 
-{{< figure src="/images/Platform Health - Filters.svg">}}
+{{< figure src="/images/editable/Platform Health - Filters.png">}}
 
 |Filter  |Description|
 |--------|-----------|
@@ -83,7 +83,7 @@ All filters (excluding Interval and Custom Filter) will display their list of av
 
 This section displays key platform health metrics for the specified [time range][] and consists of 4 panels.
 
-{{< figure src="/images/Platform Health - Overview.svg">}}
+{{< figure src="/images/editable/Platform Health - Overview.png">}}
 
 {{% alert type="note" title="Note" %}}The Interval filter does not affect these panels.{{% /alert %}}
 
@@ -120,7 +120,7 @@ This tile displays the mean duration for requests during the specified [time ran
 
 This section displays the availability of the Cortex Innovation platform and consists of 1 panel.
 
-{{< figure src="/images/Platform Health - Availability.svg">}}
+{{< figure src="/images/editable/Platform Health - Availability.png">}}
 
 ### Availability
 
@@ -142,7 +142,7 @@ This graph is configured to start the availability axis at 80%. However, if the 
 
 This section provides information regarding the history of the requests processed by the Cortex Innovation platform for the specified [time range][] and consists of 2 panels.
 
-{{< figure src="/images/Platform Health - Requests.svg">}}
+{{< figure src="/images/editable/Platform Health - Requests.png">}}
 
 ### Requests
 
@@ -161,7 +161,7 @@ This table displays the Top 10 HTTP responses that occurred during the specified
 
 This section provides information regarding the errored request history for the specified [time range][] and consists of 2 panels.
 
-{{< figure src="/images/Platform Health - Errors.svg">}}
+{{< figure src="/images/editable/Platform Health - Errors.png">}}
 
 ### Errored Requests
 
@@ -186,7 +186,7 @@ This section provides information regarding the request duration history for the
 
 {{% alert type="note" title="Note" %}}Certain APIs may take significantly longer than others skewing the result.{{% /alert %}}
 
-{{< figure src="/images/Platform Health - Duration.svg">}}
+{{< figure src="/images/editable/Platform Health - Duration.png">}}
 
 ### Request Duration
 
@@ -214,7 +214,7 @@ The dashboard may display HTTP requests that have an `Unknown` status code or re
 
 When appropriate, there may occur breaks in the line graphs. This is relevant to the Availability graph.  When there is no data, it is not appropriate to say that the availability is the same as the previous data point or that it is zero as if there is no data, we cannot accurately reflect the data at this point, and therefore, the line will break.
 
-{{< figure src="/images/Platform Health - Break in Line.svg">}}
+{{< figure src="/images/editable/Platform Health - Break in Line.png">}}
 
 ### Known Limitations
 
@@ -222,7 +222,7 @@ When appropriate, there may occur breaks in the line graphs. This is relevant to
 
 There is a limitation in Grafana where the graph does not always return to the zero line when there is no data for a given time point. This only occurs when there is a data point available at the beginning of the graph, followed by a period with no data, then data occurs again.  When hovering the mouse over this area, it will show that the value is 0, and any other tiles will reflect the zero data at this point accordingly.
 
-{{< figure src="/images/Platform Health - Not Zeros.svg">}}
+{{< figure src="/images/editable/Platform Health - Not Zeros.png">}}
 
 ## Related Dashboards
 

@@ -35,7 +35,7 @@ The following architecture requires 5 servers:
 * 1x Load Balancer Server
 * 3x Application Servers
 
-{{< figure src="/images/Cortex Innovation Overview.png" class="centre" title="5 Server Architecture Diagram" >}}
+{{< figure src="/images/editable/Cortex Innovation Overview.png" class="centre" title="5 Server Architecture Diagram" >}}
 
 ## Next Steps?
 

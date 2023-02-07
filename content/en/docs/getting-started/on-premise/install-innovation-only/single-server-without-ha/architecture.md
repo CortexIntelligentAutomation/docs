@@ -29,7 +29,7 @@ weight: 10
 
 The following architecture requires 1 server:
 
-{{< figure src="/images/Cortex Innovation Overview-Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
+{{< figure src="/images/editable/Cortex Innovation Overview-Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
 
 {{% alert type="warning" title="Warning" %}} This architecture is not recommended for production platforms that are required to scale and support HA. Additionally, upgrades require application redeployment with downtime rather than using rolling upgrades. {{%/alert %}}
 

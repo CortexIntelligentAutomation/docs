@@ -104,7 +104,7 @@ Exceptions can be handled at different levels within a [flow][]; at the block le
 
 #### Block Image
 
-![Exception Handling Blocks](/images/exception-handling-blocks.svg)
+![Exception Handling Blocks](/images/editable/exception-handling-blocks.png)
 
 - Exception Handling blocks have a pink background
 

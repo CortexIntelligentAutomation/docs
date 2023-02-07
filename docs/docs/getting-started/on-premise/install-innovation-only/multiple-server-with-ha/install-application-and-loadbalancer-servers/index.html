@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.102.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.110.0"><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -22,11 +22,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-10-12T14:55:47+01:00" /><meta property="og:site_name" content="Cortex" />
-
+<meta property="article:modified_time" content="2023-02-06T13:04:46+00:00" /><meta property="og:site_name" content="Cortex" />
 <meta itemprop="name" content="Install Application Servers and Load Balancer">
 <meta itemprop="description" content="Information about installing the Application Servers and Load Balancer Server.">
-<meta itemprop="dateModified" content="2022-10-12T14:55:47+01:00" />
+<meta itemprop="dateModified" content="2023-02-06T13:04:46+00:00" />
 <meta itemprop="wordCount" content="3098">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Application Servers and Load Balancer"/>
@@ -36,8 +35,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" as="style">
-<link href="/scss/main.min.0891f4e5e1c0bde61105cc497e03ebcbaca32a0d8daea6962bff385b48328a50.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" as="style">
+<link href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -120,7 +119,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
+  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -152,7 +151,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d176b2c4fdfda138d7c66587ae2e138c.json"
+  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -10034,7 +10033,7 @@
 <p>Microsoft Service Fabric requires a minimum of Microsoft .NET Framework 4.7.1 to be installed on each Application Server.</p>
 <p>To find the version of the framework that is installed:</p>
 <ol>
-<li>On the Start menu, choose Run.</li>
+<li>On the Start menu, choose <code>Run</code>.</li>
 <li>In the open box, enter <code>regedit.exe</code>. You must have administrative credentials to run regedit.exe.</li>
 <li>In the Registry Editor, open the subkey <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</code>.</li>
 <li>If the <code>Full</code> subkey is not present, then you do not have the .NET Framework 4.5 or later installed.</li>
@@ -10071,7 +10070,7 @@
 </span></span></code></pre></div></li>
 <li>
 <p>Run the <code>Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the <code>LoadBalancerServer</code> value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the <code>LoadBalancerServer</code> parameter if using an <a href="/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements">alternative load balancer</a>):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Multiple</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SSLBestPractices</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">-LoadBalancerServer</span> <span style="color:#4e9a06">&#34;lb-server&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Multiple</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SSLBestPractices</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">-LoadBalancerServer</span> <span style="color:#4e9a06">&#34;lb-server&#34;</span>
 </span></span></code></pre></div>
 
 <div class="alert alert-primary" role="alert">
@@ -10107,7 +10106,7 @@
 </span></span></code></pre></div></li>
 <li>
 <p>Run the <code>Cortex.Innovation.Add.WindowsDefenderExclusions.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS names or fully qualified domain names of the Application Servers:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WindowsDefenderExclusions</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WindowsDefenderExclusions</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">)</span>
 </span></span></code></pre></div></li>
 <li>
 <p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.</p>
@@ -10131,7 +10130,7 @@
 </span></span></code></pre></div></li>
 <li>
 <p>Run the <code>Cortex.Innovation.Test.PortUsage.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS names or fully qualified domain names of the Application Servers:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Test</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PortUsage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Test</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PortUsage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ApplicationServers</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;app-server1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;app-server3&#34;</span><span style="color:#000;font-weight:bold">)</span>
 </span></span></code></pre></div></li>
 <li>
 <p>A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.</p>
@@ -10248,30 +10247,30 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-LoadBalancerServerIPv4Address</span> <span style="color:#4e9a06">&#34;192.168.1.4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ClientCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ClientCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
         id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-LoadBalancerServerIPv4Address</span> <span style="color:#4e9a06">&#34;192.168.1.4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
         id="tabs-3-2" role="tabpanel" aria-labelled-by="tabs-3-2-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
@@ -10281,15 +10280,15 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ServerCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ClientCertificatePath</span> <span style="color:#4e9a06">&#34;C:\Install\Certificates\cert.pfx&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ClientCertificatePwd</span> <span style="color:#4e9a06">&#34;myPassword&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-SkipLoadBalancer</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
         id="tabs-3-3" role="tabpanel" aria-labelled-by="tabs-3-3-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
@@ -10299,12 +10298,12 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000;font-weight:bold">@(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-ApplicationServerIPv4Addresses</span> <span style="color:#000">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;192.168.1.1&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.2&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;192.168.1.3&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-SkipLoadBalancer</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$Credential</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA</span><span style="color:#a40000">:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#000">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-AcceptEULA:</span><span style="color:#000">$AcceptEula</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-ha-install-log.txt&#34;</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   
 </div>
@@ -10544,7 +10543,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified October 12, 2022: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/911894d53ff9aa5afa5fd9fbfa90943480ae0e80">61580 - Add Release Notes to Product Portal (#31) (911894d5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2023: <a  href="https://github.com/CortexIntelligentAutomation/docs_v2022/commit/a44de7e84c7b18329048688d092cd171d95e73ad">fix formatting (a44de7e8)</a>
 </div>
 </div>
 

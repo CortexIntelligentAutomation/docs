@@ -262,7 +262,6 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 [Cortex Encrypted]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url "Cortex.ServicePortal.MainDoc" >}}
 [URL Rewrite]: {{< url "IIS.Downloads.UrlRewrite-2_1" >}}
-[NET Framework 471]: {{< url "MSDotNet.Framework471.MainDoc" >}}
 [Microsoft Web Deploy]: {{< url "MSDownload.WebDeploy" >}}
 [C++ Redistributable]: {{< url "MSDownload.CPlusPlusRedistributable.2013" >}}
 [Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}

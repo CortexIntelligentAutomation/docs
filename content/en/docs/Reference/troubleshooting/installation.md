@@ -262,7 +262,7 @@ A workaround for this is provided by Intel.
 
 If Service Fabric certificates are going to expire in fewer than 30 days, a warning is displayed as follows:
 
-{{< figure src="/images/Service Fabric Explorer - Expiring Certificate.png" title="Service Fabric Explorer Certificate Expiring" >}}
+{{< figure src="/images/Service Fabric Explorer - Expiring Certificate.PNG" title="Service Fabric Explorer Certificate Expiring" >}}
 
 *Certificate expiration: thumbprint = {thumbprint}, expiration {date} remaining lifetime is {time} please refresh ahead of time to avoid catastrophic failure.*
 

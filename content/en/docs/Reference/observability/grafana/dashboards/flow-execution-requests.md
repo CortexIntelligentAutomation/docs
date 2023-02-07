@@ -22,7 +22,7 @@ The dashboard is then split into 4 main sections:
 
 There are several [filters](#filters) available to filter the data to a more fine-grained level as necessary and are explained in further detail below.
 
-{{< figure src="/images/Flow Execution Requests Dashboard.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests Dashboard.png" >}}
 
 ## Time Range
 
@@ -30,7 +30,7 @@ There are several [filters](#filters) available to filter the data to a more fin
 
 The time range for which the dashboard displays data is configurable in the top right of the dashboard using the Time Range selector (defaults to the last 3 hours):
 
-{{< figure src="/images/Flow Execution Requests - Time Range.svg">}}
+{{< figure src="/images/editable/Flow Execution Requests - Time Range.png">}}
 
 There are a number of predefined quick ranges to choose from:
 
@@ -52,7 +52,7 @@ To configure an absolute time range, you should specify a From and To date and t
 
 If an absolute time range is specified, the Time Range selector will show the selected time range with arrows either side. These arrows can be used to shift the time range forwards and backwards. This feature is not available for quick ranges.
 
-{{< figure src="/images/Flow Execution Requests - Time Range extended.svg">}}
+{{< figure src="/images/editable/Flow Execution Requests - Time Range extended.png">}}
 
 The magnifying glass icon allows you to zoom out of the time range specified. It will substract half the current time range from the From field and add half the current time range to the To field.
 
@@ -62,7 +62,7 @@ For more information regarding the Time Range selector, see Grafana's [Time rang
 
 At the top of the dashboard, there are 10 filters available to restrict the data queried:
 
-{{< figure src="/images/Flow Execution Requests - Filters.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests - Filters.png" >}}
 
 |Filter  |Description|
 |--------|-----------|
@@ -83,7 +83,7 @@ All filters (excluding Interval and Custom Filter) will display their list of av
 
 This section displays key flow execution request metrics for the specified [time range][] and consists of 4 panels.
 
-{{< figure src="/images/Flow Execution Requests - Overview.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests - Overview.png" >}}
 
 {{% alert type="note" title="Note" %}}The Interval filter does not affect these panels.{{% /alert %}}
 
@@ -118,7 +118,7 @@ This tile displays the mean duration for flow execution requests during the spec
 
 This section provides information regarding the flow execution request history for the specified [time range][] and consists of 3 panels.
 
-{{< figure src="/images/Flow Execution Requests - Requests.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests - Requests.png" >}}
 
 ### Requests
 
@@ -145,7 +145,7 @@ This table displays the 10 flows with the least execution requests during the sp
 
 This section provides information regarding the errored flow execution request history for the specified [time range][] and consists of 2 panels.
 
-{{< figure src="/images/Flow Execution Requests - Errors.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests - Errors.png" >}}
 
 ### Errored Requests
 
@@ -166,7 +166,7 @@ This table displays the 10 flows with the most errored execution requests (by st
 
 This section provides information regarding the flow execution request duration history for the specified [time range][] and consists of 3 panels.
 
-{{< figure src="/images/Flow Execution Requests - Duration.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests - Duration.png" >}}
 
 ### Request Duration
 
@@ -202,7 +202,7 @@ The dashboard may display flow execution requests that have an `Unknown` status 
 
 There is a limitation in Grafana where the graph does not always return to the zero line when there is no data for a given time point.  This only occurs when there is a data point available at the beginning of the graph, followed by a period with no data, then data occurs again.  When hovering the mouse over this area, it will show that the value is 0, and any other tiles will reflect the zero data at this point accordingly.
 
-{{< figure src="/images/Flow Execution Requests - Not Zero.svg" >}}
+{{< figure src="/images/editable/Flow Execution Requests - Not Zero.png" >}}
 
 ## Related Dashboards
 
