@@ -213,10 +213,10 @@ The exceptions thrown by the block can be found below:
 
 Log settings exist for the following Cortex Services:
 
-| Service                       | Default File Location                 | Description                       |
-|-------------------------------|---------------------------------------|-----------------------------------|
-| `Cortex Debugger Service`     | `<install-location>\appsettings.json` | Debugger Service is used to debug flows when developing them in Cortex Studio |
-| `Cortex Flow Execution Service`| `<install-location>\appsettings.json` | Flow Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production) |
+| Service                    | Default File Location                 | Description                                                                                                            |
+|----------------------------|---------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| `Cortex Debugger Service`  | `<install-location>\appsettings.json` | Debugger Service is used to debug flows when developing them in Cortex Studio                                          |
+| `Cortex Execution Service` | `<install-location>\appsettings.json` | Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production)      |
 
 An example of the log settings can be found below (some settings that do not need to be modified have been ommitted):
 

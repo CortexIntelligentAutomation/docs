@@ -40,7 +40,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
 ### Configure Update Certificates Script
 
-1. In the `Cortex Innovation 2022.9 - App Server Install Scripts` folder, locate the `Cortex.Innovation.Update.Certificates.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, locate the `Cortex.Innovation.Update.Certificates.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
 
     {{< tabpane lang="powershell" >}}
@@ -73,10 +73,10 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 ### Test Update Certificates Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
     ```
 
 1. Test `Cortex.Innovation.Update.Certificates.ps1` by running the following command:

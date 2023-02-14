@@ -20,7 +20,7 @@ TODO:
 TODO:
 
 - Connected as the user running the service or as a custom user (e.g. trusted user vs username and password)
-  - can have issues when there is a difference in permissions between the flow debugger service user vs flow execution service user
+  - can have issues when there is a difference in permissions between the Flow Debugger service user vs Execution Service user
   - check that impersonation works with trusted when implemented
 
 ### Known Limitations

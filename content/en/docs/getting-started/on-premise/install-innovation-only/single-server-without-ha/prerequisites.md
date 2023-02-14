@@ -54,7 +54,7 @@ To get a licence file and feature identifier take the following steps:
     Please also include a suitable Cortex Innovation feature identifier.
     ```
 
-1. Extract `Cortex Innovation 2022.9 - Licence Fingerprint Generator.zip`.
+1. Extract `Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip`.
 1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the server.
 1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 

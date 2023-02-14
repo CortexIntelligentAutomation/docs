@@ -1,0 +1,11 @@
+{{ $filePath := .Get 0 }}
+{{ $page := .Site.GetPage $filePath }}
+{{ with $page }}
+  {{ with .Content }}
+    {{ . }}
+  {{ else }}
+    {{ errorf "File is empty %q, add some content." $filePath }}
+  {{ end }}
+{{ else }}
+  {{ errorf "File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." $filePath }}
+{{ end }}

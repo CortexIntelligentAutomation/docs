@@ -19,9 +19,9 @@ The application servers must have internet access in order to communicate with t
 
 ## Software Requirements
 
-| Server&nbsp;Role | Windows&nbsp;Server[^1] | Other&nbsp;Software |
-|------------------|-------------------------|---------|----------|
-| Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | [Promtail 2.5.0][]|
+| Server Role        | Windows Server[^1]                             | Other Software     |
+|--------------------|------------------------------------------------|--------------------|
+| Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | [Promtail 2.5.0][] |
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 

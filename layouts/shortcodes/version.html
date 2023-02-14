@@ -1,0 +1,11 @@
+{{- $filePath := "/headless/currentVersion.md" -}}
+{{- $page := .Site.GetPage $filePath -}}
+{{- with $page -}}
+    {{- with .Plain -}}
+        {{-  (trim . "\n") -}}
+    {{- else -}}
+        {{ errorf "Version file at path %q is empty" $filePath }}
+    {{- end -}}
+{{- else -}}
+    {{ errorf "Version file at path %q is missing" $filePath }}
+{{- end -}}

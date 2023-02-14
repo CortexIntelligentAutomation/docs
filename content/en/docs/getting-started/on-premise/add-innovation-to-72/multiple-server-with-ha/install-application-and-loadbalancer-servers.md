@@ -11,12 +11,12 @@ This guide describes how to install the Application Servers and Load Balancer Se
 
 ## Make Installation Artefacts Available
 
-1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it (the version numbers may differ):
-   * Cortex Innovation 2022.9 - Block Packages.zip
-   * Cortex Innovation 2022.9 - App Services.zip
-   * Cortex Innovation 2022.9 - App Server Install Scripts.zip
+1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it:
+   * Cortex Innovation {{< version >}} - Block Packages.zip
+   * Cortex Innovation {{< version >}} - App Services.zip
+   * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
 
-1. Extract the `Cortex Innovation 2022.9 - App Server Install Scripts.zip` file to a folder with the same name.
+2. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 
 ## Install Microsoft .NET Framework 4.7.1
 
@@ -51,10 +51,10 @@ A collection of registry settings need to be applied to guarantee your server is
 The settings can be applied by running a script. Be aware that each server will be restarted when the script is run. Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
     ```
 
 1. Run the `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
@@ -79,10 +79,10 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
+        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
         ```
 
     1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
@@ -98,10 +98,10 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 1. To check all necessary ports are free, follow these steps.
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
-        cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
+        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
         ```
 
     1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
@@ -116,20 +116,20 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
         `All ports required by Cortex Innovation are free`
 
-        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation 2022.9 - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
 
         The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
 ## Configure Installation Script
 
-1. In the `Cortex Innovation 2022.9 - App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
 
     {{< tabpane lang="powershell" >}}
         {{< tab header="CA Certs, Built-in Load Balancer">}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -AppServicesPath "C:\Install\Cortex Innovation 2022.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -145,8 +145,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -AppServicesPath "C:\Install\Cortex Innovation 2022.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -159,8 +159,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="CA Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -AppServicesPath "C:\Install\Cortex Innovation 2022.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -176,8 +176,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
         {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
-    -AppServicesPath "C:\Install\Cortex Innovation 2022.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2022.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUserName "BasicAuthUser" `
     -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
@@ -220,10 +220,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 ## Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts"
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
     ```
 
 1. Type the following command into PowerShell:
@@ -279,40 +279,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Check Application Services
 
-1. Log on to one of the Application Servers.
-1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. This can be achieved by double clicking on the client certificate .PFX file and following the wizard.
-
-    If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the `CortexServerCertificate` from the `Personal` store and then importing it to the `Current User` store by double-clicking on it and following the wizard.
-1. Open a web browser.
-1. Navigate to `https://app-server.domain.com:9080/Explorer`, where `app-server.domain.com` is the fully qualified domain name of any Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
-
-    The screen should resemble that in the following figure:
-    {{< figure src="/images/Service Fabric Explorer.png" title="Healthy Service Fabric Explorer Cluster" >}}
-
-    The status circles should be entirely green - this indicates that all nodes, services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on. The next few diagrams show the status pages for a healthy system.
-
-    After expanding the application, clicking on any of the services should display a green circle and `Status = Active`:
-
-    {{< figure src="/images/Service Fabric Explorer - Service.png" title="Healthy Service Fabric Explorer Service" >}}
-
-    After expanding either of the services, clicking on any of the instances/partitions should display a green circle and `Status = Ready`:
-
-    {{< figure src="/images/Service Fabric Explorer - Instance.png" title="Healthy Service Fabric Explorer Instance" >}}
-
-    Clicking on any of the nodes at the bottom of the leftmost pane should display a green circle and `Status = Up`:
-
-    {{< figure src="/images/Service Fabric Explorer - Node.png" title="Healthy Service Fabric Explorer Node" >}}
-
-    If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, go to the next section.
-
-    If the warnings persist or anything on the screen goes red, expand the items to find the individual services and instances which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase. Error and warning messages should be displayed on the status screens and should indicate what is wrong.
-
-    If no useful message can be seen here, the service log files may contain more information. These can be found on each Application Server at:
-
-    * %ProgramData%/Cortex/Cortex API Gateway Service
-    * %ProgramData%/Cortex/Cortex Flow Execution Service
-
-    If no solution can be found, please contact [Cortex Service Portal][] for further assistance.
+{{< section "/headless/install-application-server/check-application-services/multi-server.md">}}
 
 ## Preserve installation files
 
@@ -329,7 +296,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Upgrade Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallGateway" >}}
 [Troubleshooting During Installation]: {{< url "Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Antivirus Exclusions]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}
-[Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
 [Prerequisites for adding Innovation to v7.2]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
 [alternative load balancer]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AltLoadBalancer" >}}
 [SSL Best Practices]: {{< url "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}

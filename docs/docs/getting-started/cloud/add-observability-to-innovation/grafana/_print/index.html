@@ -31,8 +31,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" as="style">
-<link href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.af1267ad815a97d60e523ac9e4692adfba89c41feaac08a11d4cb6e1d3ce1cba.css" as="style">
+<link href="/scss/main.min.af1267ad815a97d60e523ac9e4692adfba89c41feaac08a11d4cb6e1d3ce1cba.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -115,7 +115,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
+  data-offline-search-index-json-src="/offline-search-index.3653eee0c434ffe7510c6cf752fde0a5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -315,11 +315,7 @@ This the multi-page printable view of this section.
 </table>
 <h2 id="recommended-architecture">Recommended Architecture</h2>
 <p>The following architecture requires 1..n Application servers and 1 <a href="https://grafana.com/">Grafana Cloud</a> managed service.</p>
-
-<figure>
-    <img src=" /images/editable/Grafana%20Platform%20Architecture%20Diagram%20-%20Cloud.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Grafana%20Platform%20Architecture%20Diagram%20-%20Cloud.png"/></figure>
 <h2 id="next-steps">Next Steps?</h2>
 <ol>
 <li><a href="/docs/getting-started/cloud/add-observability-to-innovation/grafana/prerequisites">Prerequisites</a></li>
@@ -358,10 +354,9 @@ This the multi-page printable view of this section.
 <table>
 <thead>
 <tr>
-<th>Server Role</th>
-<th>Windows Server<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></th>
-<th>Other Software</th>
-<th></th>
+<th>Server Role</th>
+<th>Windows Server<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></th>
+<th>Other Software</th>
 </tr>
 </thead>
 <tbody>
@@ -369,7 +364,6 @@ This the multi-page printable view of this section.
 <td>Application Server</td>
 <td><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO">2019 (x64)</a> <em>Recommended</em><br><a href="https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO">2016 (x64)</a></td>
 <td><a href="https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip">Promtail 2.5.0</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -444,11 +438,7 @@ This the multi-page printable view of this section.
 </li>
 <li>
 <p>On the <strong>Let&rsquo;s create your Grafana Stack</strong> dialog:</p>
-
-   <figure>
-       <img src=" /images/Grafana%20Cloud%20-%20Create%20Stack.png "/> 
-   </figure>
-
+<figure><img src="/images/Grafana%20Cloud%20-%20Create%20Stack.png"/></figure>
 <ul>
 <li>Enter an appropriate <code>Team URL</code> which will be used as a customised link to access the Grafana Cloud.</li>
 <li>Select the <code>Deployment region</code> which is where the service will be deployed to. This should be preferably close to the High Availability nodes.</li>
@@ -488,30 +478,14 @@ This the multi-page printable view of this section.
 <li>Click the Lightening icon <img src="/images/GrafanaLighteningIcon.png" alt="Lightening Icon" title="Integrations and Connections Icon">.</li>
 <li>Select <em>Integrations and Connections</em>.</li>
 <li>In the <em>Add and manage Grafana Cloud integrations and connections</em> click on the <em>Hosted Logs</em>..
-
-  <figure>
-      <img src=" /images/Grafana%20Cloud%20-%20Hosted%20Logs.png "/> 
-  </figure>
-</li>
+<figure><img src="/images/Grafana%20Cloud%20-%20Hosted%20Logs.png"/></figure></li>
 <li>In the <em>Choose your usecase</em> section select <em>Send logs from a standalone host</em>.
-
-  <figure>
-      <img src=" /images/Grafana%20Cloud%20-%20Hosted%20Logs%20Config%20Usecase.png "/> 
-  </figure>
-</li>
+<figure><img src="/images/Grafana%20Cloud%20-%20Hosted%20Logs%20Config%20Usecase.png"/></figure></li>
 <li>Enter an <em>Api key name</em> in the <em>Configure promtail to send logs to your Grafana Cloud</em> section and click the <em>Create API key</em> button. <br>
 The key name is used in the Grafana Cloud website to easily identify the key after its creation.
-
-  <figure>
-      <img src=" /images/Grafana%20Cloud%20-%20Hosted%20Logs%20Config%20Key%20Name.png "/> 
-  </figure>
-</li>
+<figure><img src="/images/Grafana%20Cloud%20-%20Hosted%20Logs%20Config%20Key%20Name.png"/></figure></li>
 <li>Make a note of the value of the <em>url</em> in the <em>client</em> section of the example configuration. Ignore the instruction to copy and paste the whole content.
-
-  <figure>
-      <img src=" /images/Grafana%20Cloud%20-%20Hosted%20Logs%20Config%20Data.png "/> 
-  </figure>
-</li>
+<figure><img src="/images/Grafana%20Cloud%20-%20Hosted%20Logs%20Config%20Data.png"/></figure></li>
 </ol>
 <h2 id="next-steps">Next Steps?</h2>
 <ol>

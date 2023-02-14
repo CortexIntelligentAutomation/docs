@@ -8,12 +8,12 @@ description: "Information about encrypting text using the Cortex Encryptor."
 
 To encrypt text using the Cortex Encryptor PowerShell module:
 
-1. Extract the `Cortex Innovation 2022.9 - Encryptor.zip` file to a folder with the same name.
+1. Extract the `Cortex Innovation {{< version >}} - Encryptor.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2022.9 - Encryptor` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Encryptor` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2022.9 - Encryptor"
+    cd "C:\Install\Cortex Innovation {{< version >}} - Encryptor"
     ```
 
 1. In the Windows PowerShell (x64) window, run the following command to import the module:

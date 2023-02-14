@@ -31,8 +31,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" as="style">
-<link href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.af1267ad815a97d60e523ac9e4692adfba89c41feaac08a11d4cb6e1d3ce1cba.css" as="style">
+<link href="/scss/main.min.af1267ad815a97d60e523ac9e4692adfba89c41feaac08a11d4cb6e1d3ce1cba.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -115,7 +115,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
+  data-offline-search-index-json-src="/offline-search-index.3653eee0c434ffe7510c6cf752fde0a5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -1144,7 +1144,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2.1: <a href="#pg-6d731729519189bb7549bae01cdec6fa">Cortex API Gateway Service</a></li>
+<li>2.1: <a href="#pg-cc276ef9963f5b19484033de81850004">Cortex Gateway</a></li>
 
 
     
@@ -1163,7 +1163,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2.2: <a href="#pg-0b850484135ef7c88b59e6bfa25a1522">Cortex Flow Debugger Service</a></li>
+<li>2.2: <a href="#pg-191a83caa54009e1c561ed5d276a93a0">Cortex Studio</a></li>
 
 
     
@@ -1182,7 +1182,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2.3: <a href="#pg-3d69c4250eb8470067184e6dbb56fe41">Cortex Flow Execution Service</a></li>
+<li>2.3: <a href="#pg-0b850484135ef7c88b59e6bfa25a1522">Cortex Flow Debugger Service</a></li>
 
 
     
@@ -1201,7 +1201,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2.4: <a href="#pg-cc276ef9963f5b19484033de81850004">Cortex Gateway</a></li>
+<li>2.4: <a href="#pg-6d731729519189bb7549bae01cdec6fa">Cortex API Gateway Service</a></li>
 
 
     
@@ -1220,7 +1220,64 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2.5: <a href="#pg-191a83caa54009e1c561ed5d276a93a0">Cortex Studio</a></li>
+<li>2.5: <a href="#pg-023d86f21a9813eda6f016f7bd5caf37">Cortex Execution Service</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.6: <a href="#pg-3d69c4250eb8470067184e6dbb56fe41">Cortex Flow Execution Service (Deprecated)</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.7: <a href="#pg-8ef3d967801ada44c25e2537154303bf">Cortex Package Service</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.8: <a href="#pg-ce9324fe4596c415bfe19300e194511a">Cortex Provisioning Service</a></li>
 
 
     
@@ -6888,7 +6945,45 @@ This the multi-page printable view of this section.
     
     
 	
-<li>6.5: <a href="#pg-7faf4332b9e39a07efcfa53c8f287b08">Cortex Flow Execution Service</a></li>
+<li>6.5: <a href="#pg-70da214bfbda88f284891a9582ac2c14">Cortex Execution Service</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6.6: <a href="#pg-c6b8ea49193ab3960ae248659b3a9e29">Cortex Package Service</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6.7: <a href="#pg-43e045137065d9bed612b86673b0a26e">Cortex Provisioning Service</a></li>
 
 
     
@@ -9936,7 +10031,7 @@ This the multi-page printable view of this section.
 <p>An execution represents a running instance of a <a href="/docs/reference/concepts/fundamentals/flows/what-is-a-flow">flow</a>, the execution moves through the flow sequentially executing each <a href="/docs/reference/concepts/fundamentals/blocks/what-is-a-block/">block</a> saving any outputs to <a href="/docs/reference/concepts/fundamentals/variables/what-is-a-variable/">variables</a>. A flow can have one or more executions running at any time, each with their own variables.</p>
 <ul>
 <li>See <a href="/docs/reference/concepts/fundamentals/executions/executions-in-development">Executions in Development</a> for more information regarding working with executions in <a href="/docs/guides/cortex-studio/">Cortex Studio</a>.</li>
-<li>See <a href="/docs/reference/concepts/fundamentals/executions/executions-in-production">Executions in Production</a> for more information regarding running executions in the <a href="/docs/reference/apis/cortex-flow-execution-service/">Cortex Flow Execution Service</a>.</li>
+<li>See <a href="/docs/reference/concepts/fundamentals/executions/executions-in-production">Executions in Production</a> for more information regarding running executions in the <a href="/docs/reference/apis/cortex-execution-service/">Cortex Execution Service</a>.</li>
 </ul>
 <h2 id="anatomy-of-an-execution">Anatomy of an Execution</h2>
 <p><img src="/images/execution-in-grid.PNG" alt="Example Execution in Executions Grid"></p>
@@ -11370,7 +11465,7 @@ This the multi-page printable view of this section.
 <ul>
 <li>Connected as the user running the service or as a custom user (e.g. trusted user vs username and password)
 <ul>
-<li>can have issues when there is a difference in permissions between the flow debugger service user vs flow execution service user</li>
+<li>can have issues when there is a difference in permissions between the Flow Debugger service user vs Execution Service user</li>
 <li>check that impersonation works with trusted when implemented</li>
 </ul>
 </li>
@@ -13944,97 +14039,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-6d731729519189bb7549bae01cdec6fa">2.1 - Cortex API Gateway Service</h1>
-    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex API Gateway Service.</div>
-	<img src="/images/work-in-progress.jpg">
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-0b850484135ef7c88b59e6bfa25a1522">2.2 - Cortex Flow Debugger Service</h1>
-    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Flow Debugger Service.</div>
-	<img src="/images/work-in-progress.jpg">
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-3d69c4250eb8470067184e6dbb56fe41">2.3 - Cortex Flow Execution Service</h1>
-    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Flow Execution Service.</div>
-	<img src="/images/work-in-progress.jpg">
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-cc276ef9963f5b19484033de81850004">2.4 - Cortex Gateway</h1>
+	<h1 id="pg-cc276ef9963f5b19484033de81850004">2.1 - Cortex Gateway</h1>
     <div class="lead">This section includes all reference documentation for the APIs exposed by Cortex Gateway.</div>
 	<img src="/images/work-in-progress.jpg">
 
@@ -14064,8 +14069,188 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-191a83caa54009e1c561ed5d276a93a0">2.5 - Cortex Studio</h1>
+	<h1 id="pg-191a83caa54009e1c561ed5d276a93a0">2.2 - Cortex Studio</h1>
     <div class="lead">This section includes all reference documentation for the APIs exposed by Cortex Studio.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0b850484135ef7c88b59e6bfa25a1522">2.3 - Cortex Flow Debugger Service</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Flow Debugger Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6d731729519189bb7549bae01cdec6fa">2.4 - Cortex API Gateway Service</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex API Gateway Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-023d86f21a9813eda6f016f7bd5caf37">2.5 - Cortex Execution Service</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Execution Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3d69c4250eb8470067184e6dbb56fe41">2.6 - Cortex Flow Execution Service (Deprecated)</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Flow Execution Service, which has now been replaced by the Cortex Execution Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8ef3d967801ada44c25e2537154303bf">2.7 - Cortex Package Service</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Package Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ce9324fe4596c415bfe19300e194511a">2.8 - Cortex Provisioning Service</h1>
+    <div class="lead">This section includes all reference documentation for the APIs exposed by the Cortex Provisioning Service.</div>
 	<img src="/images/work-in-progress.jpg">
 
 </div>
@@ -15480,12 +15665,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-736391bf30581de59eaad9b9ad308e4f">3.2.1.1 - Add Time Period</h1>
     <div class="lead">Adds a Time Period to a specified Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-time-period">Add Time Period</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.AddTimePeriod.AddTimePeriodBlock)</p>
 <h2 id="description">Description</h2>
@@ -15704,12 +15885,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3f8c1142082f3baf6924875029795552">3.2.2.1 - Convert Date Time To Text</h1>
     <div class="lead">Converts a Date Time to Text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-convert-to-text-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-convert-to-text-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-date-time-to-text">Convert Date Time To Text</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.ConvertDateTime.ConvertDateTimeToTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -16089,12 +16266,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-6f4795745487c07c92bfafcf13800383">3.2.2.2 - Convert Text To Date Time</h1>
     <div class="lead">Converts Text to a Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-convert-to-datetime-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-convert-to-datetime-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-text-to-date-time">Convert Text To Date Time</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTimeBlock)</p>
 <h2 id="description">Description</h2>
@@ -16524,12 +16697,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-30118f37b584d2211b6ece7dfcf1c234">3.2.3.1 - Get Current Date Time</h1>
     <div class="lead">Gets the current Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-current-date-time">Get Current Date Time</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.GetDateTime.GetCurrentDateTimeBlock)</p>
 <h2 id="description">Description</h2>
@@ -16616,12 +16785,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3ee1789fac26ed28144ac135faa21dc5">3.2.3.2 - Get Date Time Component</h1>
     <div class="lead">Gets a component (e.g. Year, Month, Day) of a specified Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-date-time-component">Get Date Time Component</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.GetDateTime.GetDateTimeComponentBlock)</p>
 <h2 id="description">Description</h2>
@@ -17265,12 +17430,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-076b5694343b29c28032a2ed2c8a30a6">3.2.4.1 - Get Time Period Between Date Times</h1>
     <div class="lead">Gets the Time Period between two Date Times.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-time-period-between-date-times">Get Time Period Between Date Times</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.GetTimePeriod.GetTimePeriodBetweenDateTimesBlock)</p>
 <h2 id="description">Description</h2>
@@ -17487,12 +17648,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-28e153bf57287ba04b52f74e5faf48d8">3.2.5.1 - Is Date Time After</h1>
     <div class="lead">Checks if a Date Time is after another Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-date-time-after">Is Date Time After</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeAfterBlock)</p>
 <h2 id="description">Description</h2>
@@ -17720,12 +17877,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-e27c8be749241975227a963d92cceec5">3.2.5.2 - Is Date Time Before</h1>
     <div class="lead">Checks if a Date Time is before another Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-date-time-before">Is Date Time Before</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeBeforeBlock)</p>
 <h2 id="description">Description</h2>
@@ -17953,12 +18106,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-0ef55cc7ccbd9e5da9ed980800dfac2b">3.2.5.3 - Is Date Time Between</h1>
     <div class="lead">Checks if a Date Time is between two Date Times.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-date-time-between">Is Date Time Between</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeBetweenBlock)</p>
 <h2 id="description">Description</h2>
@@ -18200,12 +18349,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-dbcfc38be855657cbae2ccb82305792b">3.2.5.4 - Is Date Time Equal</h1>
     <div class="lead">Checks if a Date Time is equal to another Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-date-time-equal">Is Date Time Equal</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.IsDateTime.IsDateTimeEqualBlock)</p>
 <h2 id="description">Description</h2>
@@ -18462,12 +18607,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-0bfc16b1fdfd8e84a749d54f128c02f9">3.2.6.1 - Subtract Time Period</h1>
     <div class="lead">Subtracts a Time Period to from specified Date Time.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/date-and-time-subtract-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/date-and-time-subtract-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="subtract-time-period">Subtract Time Period</h1>
 <p class="namespace">(Cortex.Blocks.DateAndTime.SubtractTimePeriod.SubtractTimePeriodBlock)</p>
 <h2 id="description">Description</h2>
@@ -18715,12 +18856,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3278994b9b3fbb8ff6ac8193eaf448c7">3.3.1.1 - If Null Exit Bottom</h1>
     <div class="lead">Checks if a given value is <code>null</code>; if so the flow execution exits via the block&rsquo;s bottom port, otherwise it exits via the right port.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/decisions-if-true-exit-bottom-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/decisions-if-true-exit-bottom-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="if-null-exit-bottom">If Null Exit Bottom</h1>
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfNullExitBottomBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -18841,12 +18978,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-45baca4b6febc6c73069fdc1d9c7c036">3.3.1.2 - If Null Exit Right</h1>
     <div class="lead">Checks if a given value is <code>null</code>; if so the flow execution exits via the block&rsquo;s right port, otherwise it exits via the bottom port.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/decisions-if-true-exit-right-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/decisions-if-true-exit-right-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="if-null-exit-right">If Null Exit Right</h1>
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfNullExitRightBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -18967,12 +19100,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-1235f1406d61cf81b91a249c6508bcf1">3.3.1.3 - If True Exit Bottom</h1>
     <div class="lead">Checks if a given value evaluates to <code>true</code>; if so the flow execution exits via the block&rsquo;s bottom port, otherwise it exits via the right port.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/decisions-if-true-exit-bottom-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/decisions-if-true-exit-bottom-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="if-true-exit-bottom">If True Exit Bottom</h1>
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfTrueExitBottomBlock)</p>
 <h2 id="description">Description</h2>
@@ -19076,12 +19205,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-99910bb84c5e945ee41fe7a56192914b">3.3.1.4 - If True Exit Right</h1>
     <div class="lead">Checks if a given value evaluates to <code>true</code>; if so the flow execution exits via the block&rsquo;s right port, otherwise it exits via the bottom port.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/decisions-if-true-exit-right-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/decisions-if-true-exit-right-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="if-true-exit-right">If True Exit Right</h1>
 <p class="namespace">(Cortex.Blocks.Decisions.If.IfTrueExitRightBlock)</p>
 <h2 id="description">Description</h2>
@@ -19243,12 +19368,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-8724b8a65f7bec0a2bd874b3da2369b6">3.4.1.1 - Add Item With Key</h1>
     <div class="lead">Adds an item to a Dictionary with the specified key.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-item-with-key">Add Item With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.AddItem.AddItemWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -19504,12 +19625,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-6c397c2ab958c0a333454c00205c31e6">3.4.2.1 - Contains Item With Key</h1>
     <div class="lead">Checks if a Dictionary contains at least one item with the specified key.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-item-with-key">Contains Item With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -19726,12 +19843,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-a5ceb9fd709198a3621390c82040c185">3.4.2.2 - Contains Item With Key And Value</h1>
     <div class="lead">Checks if a Dictionary contains at least one item with the specified key and matching the specified value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-item-with-key-and-value">Contains Item With Key And Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemWithKeyAndValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -19997,12 +20110,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-be63c9cb508f2a34caebe12db8d88b30">3.4.2.3 - Contains Item With Value</h1>
     <div class="lead">Checks if a Dictionary contains at least one item matching the specified value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-item-with-value">Contains Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemWithValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -20223,12 +20332,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-662fb575c9ca8ce4fa0add7b9d0b4fa0">3.4.2.4 - Contains Items With Keys</h1>
     <div class="lead">Checks if a Dictionary contains at least one item with each of the specified keys.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-items-with-keys">Contains Items With Keys</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemsWithKeysBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -20451,12 +20556,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-02147bf66d7dec6e8b66b843aec9f539">3.4.2.5 - Contains Items With Values</h1>
     <div class="lead">Checks if a Dictionary contains at least one item matching each of the specified values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-items-with-values">Contains Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.ContainsItem.ContainsItemsWithValuesBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -20704,12 +20805,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-cd706fef8b2593e697f01ac5f9842533">3.4.3.1 - Get Count Of All Items</h1>
     <div class="lead">Gets the count of all items in a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-count-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-count-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-count-of-all-items">Get Count Of All Items</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetCount.GetCountOfAllItemsBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -20851,12 +20948,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-d1b7cc1520b6092ebd5fc28d78b052dd">3.4.3.2 - Get Count Of Items With Value</h1>
     <div class="lead">Gets the count of items in a Dictionary with the specified value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-count-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-count-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-count-of-items-with-value">Get Count Of Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetCount.GetCountOfItemsWithValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -21044,12 +21137,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-b6b5bebba56ebe95bca6021525c079e5">3.4.3.3 - Get Counts Of Items With Values</h1>
     <div class="lead">Gets the counts of items in a Dictionary matching each of the specified values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-count-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-count-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-counts-of-items-with-values">Get Counts Of Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetCount.GetCountsOfItemsWithValuesBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -21265,12 +21354,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-24c64c1eb7e7d633c969048fbac1dd87">3.4.4.1 - Get All Items</h1>
     <div class="lead">Gets all items from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-all-items-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-all-items-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-all-items">Get All Items</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetAllItemsBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -21412,12 +21497,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-405a9ce39a552bbb6aab98b6644a07bb">3.4.4.2 - Get Item With Key</h1>
     <div class="lead">Gets the specified occurrence of an item with the given key from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-item-with-key">Get Item With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetItemWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -21691,12 +21772,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3a9fb9878ee55d7257e30cb045b91cde">3.4.4.3 - Get Items With Key</h1>
     <div class="lead">Gets all items with the given key from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-items-with-key">Get Items With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetItem.GetItemsWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -21912,12 +21989,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-eccbf5d4d8d6694544e34e1aa736f865">3.4.5.1 - Get All Keys</h1>
     <div class="lead">Gets all keys from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-get-all-keys-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-get-all-keys-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-all-keys">Get All Keys</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.GetKey.GetAllKeysBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -22088,12 +22161,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-5c2c16244022dc0c46e0c822d86350ef">3.4.6.1 - Remove All Items</h1>
     <div class="lead">Removes all items from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-all-items">Remove All Items</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveAllItemsBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -22225,12 +22294,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-9a377ab5b9a0ecbfc3a6e2d94cb7401e">3.4.6.2 - Remove Item With Key</h1>
     <div class="lead">Removes the specified occurrence of an item with the given key from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-item-with-key">Remove Item With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -22495,12 +22560,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-214a097c41e541fa5a93d2d3b92eae49">3.4.6.3 - Remove Item With Value</h1>
     <div class="lead">Removes the specified occurrence of an item matching a value from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-item-with-value">Remove Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemWithValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -22767,12 +22828,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-f6bd43026cac75f2bde43ef9016b25df">3.4.6.4 - Remove Items With Key</h1>
     <div class="lead">Removes all items with the given key from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-with-key">Remove Items With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemsWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -22954,12 +23011,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-1f97e10e33df08a30bfa7b0502696640">3.4.6.5 - Remove Items With Keys</h1>
     <div class="lead">Removes all items with any of the given keys from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-with-keys">Remove Items With Keys</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemsWithKeysBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -23147,12 +23200,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-ad75603a410968db0ed6db874ac0a4ea">3.4.6.6 - Remove Items With Value</h1>
     <div class="lead">Removes all items matching a value from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-with-value">Remove Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -23336,12 +23385,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-19a4b7ce18deca0a1ecb281e15efc9a4">3.4.6.7 - Remove Items With Values</h1>
     <div class="lead">Removes all items matching one of the specified values from a Dictionary.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-with-values">Remove Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemsWithValuesBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -23554,12 +23599,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-2aa8dd0e24fb9819892e848f3bd2eb76">3.4.7.1 - Set All Items</h1>
     <div class="lead">Sets all items in a Dictionary to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-all-items">Set All Items</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetAllItemsBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -23709,12 +23750,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-c7d3cdc0955a974a44aff514a9675f03">3.4.7.2 - Set Item With Key</h1>
     <div class="lead">Sets the specified occurrence of an item with the given key in a Dictionary to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-item-with-key">Set Item With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -23997,12 +24034,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-28f1997a19e494a6ebc8a7bfac049fb4">3.4.7.3 - Set Item With Value</h1>
     <div class="lead">Sets the specified occurrence of an item matching a value in a Dictionary to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-item-with-value">Set Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemWithValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -24278,12 +24311,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-ac19a48b5898aaa2e13edd5117a9f846">3.4.7.4 - Set Items With Key</h1>
     <div class="lead">Sets all items with the given key in a Dictionary to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-with-key">Set Items With Key</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithKeyBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -24479,12 +24508,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-f2d685cbf35dc251f16c5f81418948f2">3.4.7.5 - Set Items With Keys</h1>
     <div class="lead">Sets all items with any of the given keys in a Dictionary to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-with-keys">Set Items With Keys</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithKeysBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -24683,12 +24708,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-6839ab9c3e9c90cc914ef224fe357ada">3.4.7.6 - Set Items With Value</h1>
     <div class="lead">Sets all items matching a value in a Dictionary to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-with-value">Set Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithValueBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -24881,12 +24902,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-2c7a0c2647072647da761778802c6627">3.4.7.7 - Set Items With Values</h1>
     <div class="lead">Sets all items matching one of the specified values in a Dictionary to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/dictionaries-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/dictionaries-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-with-values">Set Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Dictionaries.SetItem.SetItemsWithValuesBlock`3)</p>
 <h2 id="description">Description</h2>
@@ -25145,12 +25162,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-2ec675c12c762bd84fbd59d84d4108ec">3.5.1.1 - Send Email Using SMTP Server</h1>
     <div class="lead">Sends an email using the specified SMTP server.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/email-send-email-using-smtp-server-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/email-send-email-using-smtp-server-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="send-email-using-smtp-server">Send Email Using SMTP Server</h1>
 <p class="namespace">(Cortex.Blocks.Email.SendEmail.SendEmailUsingSmtpServerBlock)</p>
 <h2 id="description">Description</h2>
@@ -25920,12 +25933,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-78c34004acc2d2ee56fc586b93338e1b">3.6.1.1 - Handle Block Exception</h1>
     <div class="lead">Handles any exception thrown by the block it is connected to.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-block-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-block-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-block-exception">Handle Block Exception</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionBlock)</p>
 <h2 id="description">Description</h2>
@@ -26052,12 +26061,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3a6bf86a9e9e7fe9cbdad920a9f88f52">3.6.1.2 - Handle Block Exception Matching Message</h1>
     <div class="lead">Handles any exception thrown by the block it is connected to that matches a specified message.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-block-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-block-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-block-exception-matching-message">Handle Block Exception Matching Message</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingMessageBlock)</p>
 <h2 id="description">Description</h2>
@@ -26331,12 +26336,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-0c8eaaf7aff1818aa07d1263350654e0">3.6.1.3 - Handle Block Exception Matching Messages</h1>
     <div class="lead">Handles any exception thrown by the block it is connected to that matches any message in a given set of messages.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-block-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-block-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-block-exception-matching-messages">Handle Block Exception Matching Messages</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingMessagesBlock)</p>
 <h2 id="description">Description</h2>
@@ -26618,12 +26619,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-989f5f32936130986c38dac7a0903956">3.6.1.4 - Handle Block Exception Matching Type Name</h1>
     <div class="lead">Handles any exception thrown by the block it is connected to that matches a specified type name.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-block-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-block-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-block-exception-matching-type-name">Handle Block Exception Matching Type Name</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingTypeNameBlock)</p>
 <h2 id="description">Description</h2>
@@ -26903,12 +26900,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3fdd75737791ab1f3272422cae2a2d1b">3.6.1.5 - Handle Block Exception Matching Type Names</h1>
     <div class="lead">Handles any exception thrown by the block it is connected to that matches any type name in a given set of type names.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-block-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-block-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-block-exception-matching-type-names">Handle Block Exception Matching Type Names</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleBlockException.HandleBlockExceptionMatchingTypeNamesBlock)</p>
 <h2 id="description">Description</h2>
@@ -27221,12 +27214,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-2d26227c0a39c037df4180b2f6e48f1b">3.6.2.1 - Handle Flow Exception</h1>
     <div class="lead">Handles any unhandled exception within the Flow.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-flow-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-flow-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-flow-exception">Handle Flow Exception</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleFlowException.HandleFlowExceptionWorkspaceBlock)</p>
 <h2 id="description">Description</h2>
@@ -27389,12 +27378,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-e40fed6ba99619aebcadaec4cad555c8">3.6.3.1 - Handle Workspace Exception</h1>
     <div class="lead">Handles any unhandled exception within its workspace.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-handle-workspace-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-handle-workspace-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="handle-workspace-exception">Handle Workspace Exception</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.HandleWorkspaceException.HandleWorkspaceExceptionBlock)</p>
 <h2 id="description">Description</h2>
@@ -27556,12 +27541,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-35e238750dd48ff687a4f2045fa64a7b">3.6.4.1 - Rethrow Exception</h1>
     <div class="lead">Rethrows an Exception which has previously been thrown and handled.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-rethrow-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-rethrow-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="rethrow-exception">Rethrow Exception</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.RethrowException.RethrowExceptionBlock)</p>
 <h2 id="description">Description</h2>
@@ -27692,12 +27673,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-e8f69fe7314120a797ff4f59ff81d8be">3.6.5.1 - Throw New Flow Exception</h1>
     <div class="lead">Throws a new FlowException with the specified message, category, error code, details, inner exception and help link.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/exceptions-throw-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/exceptions-throw-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="throw-new-flow-exception">Throw New Flow Exception</h1>
 <p class="namespace">(Cortex.Blocks.Exceptions.ThrowException.ThrowNewFlowExceptionBlock)</p>
 <h2 id="description">Description</h2>
@@ -28072,12 +28049,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-b6b9cede60417adfc442632f9b8428f0">3.7.1.1 - Check File Exists</h1>
     <div class="lead">Checks if a file exists at the specified file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-check-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-check-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="check-file-exists">Check File Exists</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CheckFile.CheckFileExistsBlock)</p>
 <h2 id="description">Description</h2>
@@ -28280,12 +28253,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-16433513ae3171e1a9522f46ea16a29d">3.7.2.1 - Check Folder Exists</h1>
     <div class="lead">Checks if a folder exists at the specified folder path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-check-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-check-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="check-folder-exists">Check Folder Exists</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CheckFolder.CheckFolderExistsBlock)</p>
 <h2 id="description">Description</h2>
@@ -28488,12 +28457,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-6eec96ea6978541494b429b6ad4bfac6">3.7.3.1 - Copy File</h1>
     <div class="lead">Copies a file at the specified file path to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-copy-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-copy-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="copy-file">Copy File</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFile.CopyFileBlock)</p>
 <h2 id="description">Description</h2>
@@ -28846,12 +28811,8 @@ This the multi-page printable view of this section.
     
 	<h1 id="pg-3fc92300f0c72713e86613e0206b420e">3.7.3.2 - Copy Files</h1>
     <div class="lead">Copies files at the specified file paths to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-copy-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-copy-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="copy-files">Copy Files</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFile.CopyFilesBlock)</p>
 <h2 id="description">Description</h2>
@@ -29218,12 +29179,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-44bd4d7ae288293fb70fe2c3d209c60a">3.7.4.1 - Copy Folder</h1>
     <div class="lead">Copies a folder at the specified folder path to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-copy-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-copy-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="copy-folder">Copy Folder</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFolder.CopyFolderBlock)</p>
 <h2 id="description">Description</h2>
@@ -29837,12 +29794,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-e9452736b38de1242b30066a4165c054">3.7.4.2 - Copy Folders</h1>
     <div class="lead">Copies folders at the specified folder paths to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-copy-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-copy-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="copy-folders">Copy Folders</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFolder.CopyFoldersBlock)</p>
 <h2 id="description">Description</h2>
@@ -30630,12 +30583,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-ec390f3c0b972dc59598d757e1bb8976">3.7.4.3 - Duplicate Folder</h1>
     <div class="lead">Copies a folder at the specified folder path to the same location but with a new name.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-copy-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-copy-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="duplicate-folder">Duplicate Folder</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CopyFolder.DuplicateFolderBlock)</p>
 <h2 id="description">Description</h2>
@@ -30910,12 +30859,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-85fc48f1b6035c05965513f4ae16d78d">3.7.5.1 - Create Folder</h1>
     <div class="lead">Creates a folder at the specified folder path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-create-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-create-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="create-folder">Create Folder</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CreateFolder.CreateFolderBlock)</p>
 <h2 id="description">Description</h2>
@@ -31057,12 +31002,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-fcea1343a8ae7fc6aa2b3e53048c97be">3.7.5.2 - Create Folders</h1>
     <div class="lead">Create folders at the specified folder paths.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-create-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-create-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="create-folders">Create Folders</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.CreateFolder.CreateFoldersBlock)</p>
 <h2 id="description">Description</h2>
@@ -31243,12 +31184,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-70469ad5c1cfb4b4c586f6ad6896c941">3.7.6.1 - Delete File</h1>
     <div class="lead">Deletes a file at the specified file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-delete-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-delete-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="delete-file">Delete File</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.DeleteFile.DeleteFileBlock)</p>
 <h2 id="description">Description</h2>
@@ -31398,12 +31335,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-949e3ca04f2e0b40f578f3c6d0973c80">3.7.6.2 - Delete Files</h1>
     <div class="lead">Deletes files at the specified file paths.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-delete-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-delete-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="delete-files">Delete Files</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.DeleteFile.DeleteFilesBlock)</p>
 <h2 id="description">Description</h2>
@@ -31593,12 +31526,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-3db57cbcb639c056478076f3e9e36977">3.7.7.1 - Delete Folder</h1>
     <div class="lead">Deletes a folder at the specified folder path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-delete-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-delete-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="delete-folder">Delete Folder</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.DeleteFolder.DeleteFolderBlock)</p>
 <h2 id="description">Description</h2>
@@ -31833,12 +31762,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-200857e901b172a179400547b7be8001">3.7.7.2 - Delete Folders</h1>
     <div class="lead">Deletes folders at the specified folder paths.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-delete-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-delete-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="delete-folders">Delete Folders</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.DeleteFolder.DeleteFoldersBlock)</p>
 <h2 id="description">Description</h2>
@@ -32126,12 +32051,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-67d393a72657d49d80a99409b6178dfe">3.7.8.1 - Get File Information</h1>
     <div class="lead">Gets information about a file (e.g. file attributes, created, accessed, modified dates etc.) at the specified file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-get-information-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-get-information-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-file-information">Get File Information</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.GetFileInformation.GetFileInformationBlock)</p>
 <h2 id="description">Description</h2>
@@ -32367,12 +32288,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-117d798bf3bc0142784d4a16939e9869">3.7.9.1 - Get Folder Content</h1>
     <div class="lead">Gets the paths of files or folders under the specified folder path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-get-content-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-get-content-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-folder-content">Get Folder Content</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.GetFolderContent.GetFolderContentBlock)</p>
 <h2 id="description">Description</h2>
@@ -33041,12 +32958,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-bf04dfa563ffabede4a558db7f2d353f">3.7.10.1 - Get Folder Information</h1>
     <div class="lead">Gets information about a folder (e.g. folder attributes, created, accessed, modified dates etc.) at the specified folder path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-get-information-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-get-information-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-folder-information">Get Folder Information</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.GetFolderInformation.GetFolderInformationBlock)</p>
 <h2 id="description">Description</h2>
@@ -33285,12 +33198,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-804df81cbbf5e46377e61b710760acfc">3.7.11.1 - Move File</h1>
     <div class="lead">Moves a file at the specified file path to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-move-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-move-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="move-file">Move File</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.MoveFile.MoveFileBlock)</p>
 <h2 id="description">Description</h2>
@@ -33639,12 +33548,8 @@ file path (e.g. <code>@&quot;C:\Source\File.txt&quot;</code>).</li>
     
 	<h1 id="pg-5a2812c360a5a499b4b1c85b482af971">3.7.11.2 - Move Files</h1>
     <div class="lead">Moves files at the specified file paths to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-move-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-move-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="move-files">Move Files</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.MoveFile.MoveFilesBlock)</p>
 <h2 id="description">Description</h2>
@@ -34007,12 +33912,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-c5825d01276b709e54ee332e5f3de355">3.7.12.1 - Move Folder</h1>
     <div class="lead">Moves a folder at the specified folder path to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-move-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-move-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="move-folder">Move Folder</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.MoveFolder.MoveFolderBlock)</p>
 <h2 id="description">Description</h2>
@@ -34622,12 +34523,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-21f6fa39ea663951bba58899933c5423">3.7.12.2 - Move Folders</h1>
     <div class="lead">Moves folders at the specified folder paths to the given destination path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-move-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-move-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="move-folders">Move Folders</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.MoveFolder.MoveFoldersBlock)</p>
 <h2 id="description">Description</h2>
@@ -35440,12 +35337,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-1b36551ad6590f5682fbc344bbd55c87">3.7.13.1 - Read All Lines</h1>
     <div class="lead">Reads all lines from a file at the specified file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-read-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-read-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="read-all-lines">Read All Lines</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.ReadFile.ReadAllLinesBlock)</p>
 <h2 id="description">Description</h2>
@@ -35693,12 +35586,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5eca7019b27004c12f9b9d0f3cdb9310">3.7.13.2 - Read All Text</h1>
     <div class="lead">Reads all text from a file at the specified file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-read-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-read-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="read-all-text">Read All Text</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.ReadFile.ReadAllTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -35972,12 +35861,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0bd2ecbe73c4bd17b4d23194c24cbf5b">3.7.14.1 - Rename Folder</h1>
     <div class="lead">Renames a folder at the specified folder path to a new name.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/folders-rename-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/folders-rename-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="rename-folder">Rename Folder</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.RenameFolder.RenameFolderBlock)</p>
 <h2 id="description">Description</h2>
@@ -36230,12 +36115,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-eca04f2cd620b08be3a3ec7f292d7411">3.7.15.1 - Search File</h1>
     <div class="lead">Searches a file at a specified file path for a matching search pattern.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-search-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-search-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="search-file">Search File</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.SearchFile.SearchFileBlock)</p>
 <h2 id="description">Description</h2>
@@ -36803,12 +36684,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-815419117ed0797949abfd34951a6016">3.7.15.2 - Search Files</h1>
     <div class="lead">Searches files at the specified file paths for a matching search pattern.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-search-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-search-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="search-files">Search Files</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.SearchFile.SearchFilesBlock)</p>
 <h2 id="description">Description</h2>
@@ -37515,12 +37392,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-7dcbca18e6de8c46b10acce5e57235f8">3.7.16.1 - Write All Lines</h1>
     <div class="lead">Writes all specified lines to a file at the given file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-write-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-write-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="write-all-lines">Write All Lines</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.WriteFile.WriteAllLinesBlock)</p>
 <h2 id="description">Description</h2>
@@ -37849,12 +37722,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-4582b7e5b857af65308f81e9f5915f71">3.7.16.2 - Write All Text</h1>
     <div class="lead">Writes all specified text to a file at the given file path.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/files-write-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/files-write-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="write-all-text">Write All Text</h1>
 <p class="namespace">(Cortex.Blocks.FilesAndFolders.WriteFile.WriteAllTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -38240,12 +38109,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b46d4fb5a803c2c05984186630dc9dae">3.8.1.1 - End Flow</h1>
     <div class="lead">Indicates the end of a flow.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/flows-end-flow-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/flows-end-flow-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="end-flow">End Flow</h1>
 <p class="namespace">(Cortex.Blocks.Flows.EndFlow.EndFlowBlock)</p>
 <h2 id="description">Description</h2>
@@ -38307,12 +38172,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-984a17459f8ef86419f456d614a59c2a">3.8.2.1 - Run Flow</h1>
     <div class="lead">Runs a chosen Flow, returning any output variables.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/flows-run-flow-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/flows-run-flow-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="run-flow">Run Flow</h1>
 <p class="namespace">(Cortex.Blocks.Flows.RunFlow.RunFlowBlock)</p>
 <h2 id="description">Description</h2>
@@ -38645,12 +38506,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5353236568d0bcb838f6695793cbd549">3.8.3.1 - Start Flow</h1>
     <div class="lead">Indicates the start of a flow.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/flows-start-flow-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/flows-start-flow-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="start-flow">Start Flow</h1>
 <p class="namespace">(Cortex.Blocks.Flows.StartFlow.StartFlowBlock)</p>
 <h2 id="description">Description</h2>
@@ -38766,12 +38623,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-95040e1fcd955598063044871641bdbf">3.9.1.1.1 - Send Email Using Gmail</h1>
     <div class="lead">Sends an email using the SMTP server hosted by Gmail.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/google-workspace-send-email-using-gmail-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/google-workspace-send-email-using-gmail-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="send-email-using-gmail">Send Email Using Gmail</h1>
 <p class="namespace">(Cortex.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmailBlock)</p>
 <h2 id="description">Description</h2>
@@ -39734,12 +39587,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-bb7172ee6cfb0450993eb1b60de14124">3.10.1.1 - Execute Http Request</h1>
     <div class="lead">Executes an HTTP request and returns a response.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/http-execute-http-request-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/http-execute-http-request-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="execute-http-request">Execute Http Request</h1>
 <p class="namespace">(Cortex.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequestBlock`1)</p>
 
@@ -40376,12 +40225,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-605b4f163274c8ea0e6171381dca7a6d">3.10.2.1 - Execute Soap Request</h1>
     <div class="lead">Executes a SOAP request and returns a response.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/http-execute-soap-request-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/http-execute-soap-request-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="execute-soap-request">Execute Soap Request</h1>
 <p class="namespace">(Cortex.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequestBlock`1)</p>
 
@@ -41090,12 +40935,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-7cadc4e8c7682345a6a801b7968d7d34">3.11.1.1 - Convert Json To Object</h1>
     <div class="lead">Converts Json to an Object.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/json-convert-to-object-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/json-convert-to-object-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-json-to-object">Convert Json To Object</h1>
 <p class="namespace">(Cortex.Blocks.Json.ConvertJson.ConvertJsonToObjectBlock)</p>
 <h2 id="description">Description</h2>
@@ -41391,12 +41232,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0b476c724a191621981afcfd424297ef">3.11.1.2 - Convert Object To Json</h1>
     <div class="lead">Converts an Object To Json.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/json-convert-to-json-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/json-convert-to-json-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-object-to-json">Convert Object To Json</h1>
 <p class="namespace">(Cortex.Blocks.Json.ConvertJson.ConvertObjectToJsonBlock)</p>
 <h2 id="description">Description</h2>
@@ -41698,12 +41535,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-17318d14741193f883ae4a8af7dad193">3.12.1.1 - Add Item At Beginning</h1>
     <div class="lead">Adds an Item at the beginning of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-item-at-beginning">Add Item At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -41879,12 +41712,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-543e6d6f3b4b8c561cb84d8bd68ba776">3.12.1.2 - Add Item At End</h1>
     <div class="lead">Adds an Item at the end of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-item-at-end">Add Item At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -42060,12 +41889,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0e4de7fe3727ad49cb96cfd899603910">3.12.1.3 - Add Item At Index</h1>
     <div class="lead">Adds an Item at the specified Index of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-item-at-index">Add Item At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -42322,12 +42147,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-c445a13495231e7582b3cffdb3acb7ad">3.12.1.4 - Add Items At Beginning</h1>
     <div class="lead">Adds Items at the beginning of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-items-at-beginning">Add Items At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemsAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -42501,12 +42322,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-567bbb61ceca7658d560a74c7bfcce28">3.12.1.5 - Add Items At End</h1>
     <div class="lead">Adds Items at the end of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-items-at-end">Add Items At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemsAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -42680,12 +42497,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-4b42fb59eff96c83423b598af171ea4c">3.12.1.6 - Add Items At Index</h1>
     <div class="lead">Adds Items at the specified Index of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-items-at-index">Add Items At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.AddItem.AddItemsAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -42969,12 +42782,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-bc18403c449687e609c7fab3364bb674">3.12.2.1 - Contains Item With Value</h1>
     <div class="lead">Checks if a List contains at least one item matching the specified value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-item-with-value">Contains Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.ContainsItem.ContainsItemWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -43195,12 +43004,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-d8020ca6409a346641e6a0f3be1ab87f">3.12.2.2 - Contains Items With Values</h1>
     <div class="lead">Checks if a List contains at least one item matching each of the specified values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-items-with-values">Contains Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Lists.ContainsItem.ContainsItemsWithValuesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -43448,12 +43253,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-af71f5f250fff7992458102eea689548">3.12.3.1 - Get Count Of All Items</h1>
     <div class="lead">Gets the count of all items in a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-count-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-count-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-count-of-all-items">Get Count Of All Items</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountOfAllItemsBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -43595,12 +43396,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-1cbc20861c9ed6d0d29b9bde8e9a59ec">3.12.3.2 - Get Count Of Items With Value</h1>
     <div class="lead">Gets the count of items in a List with the specified value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-count-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-count-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-count-of-items-with-value">Get Count Of Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountOfItemsWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -43788,12 +43585,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-07aafb352e22c7e0753e4e5256decf6b">3.12.3.3 - Get Counts Of Items With Values</h1>
     <div class="lead">Gets the counts of items in a List matching each of the specified values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-count-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-count-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-counts-of-items-with-values">Get Counts Of Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetCount.GetCountsOfItemsWithValuesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -44009,12 +43802,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-17d4c879aff3660e3bde22d0ac3a1ce6">3.12.4.1 - Get Index Of Item With Value</h1>
     <div class="lead">Gets the index of the specified occurrence of an item in a List matching a value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-index-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-index-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-index-of-item-with-value">Get Index Of Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexOfItemWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -44288,12 +44077,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-42b7e8c640f75c8b12431d3d0ab82965">3.12.4.2 - Get Indexes Of Items With Value</h1>
     <div class="lead">Gets the indexes of all items in a List matching a value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-index-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-index-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-indexes-of-items-with-value">Get Indexes Of Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -44513,12 +44298,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b5a98c56b25a8c4511f06c4217b2cc58">3.12.5.1 - Get Item At Beginning</h1>
     <div class="lead">Gets the item at the beginning of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-item-at-beginning">Get Item At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -44662,12 +44443,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-3cd353f8130dea8b48f4c0f39d17370a">3.12.5.2 - Get Item At End</h1>
     <div class="lead">Gets the item at the end of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-item-at-end">Get Item At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -44811,12 +44588,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-23d421ba68eee16af5799e28dfb9d762">3.12.5.3 - Get Item At Index</h1>
     <div class="lead">Gets the item at the specified index of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-item-at-index">Get Item At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -45036,12 +44809,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-30236a1b8aff919d81cabb9ccc0678f8">3.12.5.4 - Get Items At Beginning</h1>
     <div class="lead">Gets a count of items at the beginning of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-items-at-beginning">Get Items At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -45227,12 +44996,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-c21a1dcf4e704b97c9b863197db8e49d">3.12.5.5 - Get Items At End</h1>
     <div class="lead">Gets a count of items at the end of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-items-at-end">Get Items At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -45418,12 +45183,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-2b3967b0f10d3912f20da5203082ca94">3.12.5.6 - Get Items At Index</h1>
     <div class="lead">Gets a count of items starting at the specified index of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-items-at-index">Get Items At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -45654,12 +45415,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-ee4ff8e2c05bbddd034af6e7a06610d6">3.12.5.7 - Get Items At Indexes</h1>
     <div class="lead">Gets the items at each of the specified indexes of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-items-at-indexes">Get Items At Indexes</h1>
 <p class="namespace">(Cortex.Blocks.Lists.GetItem.GetItemsAtIndexesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -45880,12 +45637,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-658b6cd923548fc0c0f6ffdfddc25e16">3.12.6.1 - Remove All Items</h1>
     <div class="lead">Removes all items from a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-all-items">Remove All Items</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveAllItemsBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -46017,12 +45770,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-6266462a23927a594b8932205c108331">3.12.6.2 - Remove Duplicate Items</h1>
     <div class="lead">Removes duplicate items from a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-duplicate-items">Remove Duplicate Items</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveDuplicateItemsBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -46182,12 +45931,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-9b837fff617324a09f146656be45414e">3.12.6.3 - Remove Item At Beginning</h1>
     <div class="lead">Removes the item at the beginning of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-item-at-beginning">Remove Item At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -46319,12 +46064,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-40cca6049c2d1d2d0002dbc24001829f">3.12.6.4 - Remove Item At End</h1>
     <div class="lead">Removes the item at the end of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-item-at-end">Remove Item At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -46456,12 +46197,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-3d61283b9eb35f351fa67872d30f1b9d">3.12.6.5 - Remove Item At Index</h1>
     <div class="lead">Removes the item at the specified index of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-item-at-index">Remove Item At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -46667,12 +46404,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0b329f730a576c759a07bf606c8bf05c">3.12.6.6 - Remove Item With Value</h1>
     <div class="lead">Removes the specified occurrence of an item matching a value from a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-item-with-value">Remove Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -46937,12 +46670,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-7bc5b7b44d5f886b388d8dcd63e1f895">3.12.6.7 - Remove Items At Beginning</h1>
     <div class="lead">Removes a count of items from the beginning of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-at-beginning">Remove Items At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -47094,12 +46823,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-471a1c5d8fd87eca6d3797812572b2f5">3.12.6.8 - Remove Items At End</h1>
     <div class="lead">Removes a count of items from the end of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-at-end">Remove Items At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -47251,12 +46976,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-feaac6be1e65ec8473a339ef382c0c94">3.12.6.9 - Remove Items At Index</h1>
     <div class="lead">Removes a count of items starting at the specified index of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-at-index">Remove Items At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -47453,12 +47174,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-84481abbe67902501a0b1c69b2dcecea">3.12.6.10 - Remove Items At Indexes</h1>
     <div class="lead">Removes the items at each of the specified indexes of a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-at-indexes">Remove Items At Indexes</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsAtIndexesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -47616,12 +47333,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-654464c8e172a646ccfc121cb7d12982">3.12.6.11 - Remove Items With Value</h1>
     <div class="lead">Removes all items matching a value from a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-with-value">Remove Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -47805,12 +47518,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-a399f4cfa7cbf059256df5f0a544658d">3.12.6.12 - Remove Items With Values</h1>
     <div class="lead">Removes all items matching one of the specified values from a List.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-items-with-values">Remove Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Lists.RemoveItem.RemoveItemsWithValuesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -48023,12 +47732,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-401160db899aeb41108c45bc760288d0">3.12.7.1 - Set All Items</h1>
     <div class="lead">Sets all items in a List to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-all-items">Set All Items</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetAllItemsBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -48178,12 +47883,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-6e4add35d5800b06da3ab84afccc3231">3.12.7.2 - Set Item At Beginning</h1>
     <div class="lead">Sets the item at the beginning of a List to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-item-at-beginning">Set Item At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -48335,12 +48036,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-154a0d289c634a376878487155cd197e">3.12.7.3 - Set Item At End</h1>
     <div class="lead">Sets the item at the end of a List to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-item-at-end">Set Item At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -48492,12 +48189,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5a045298db5e46ae32dec5f9c49d9d9f">3.12.7.4 - Set Item At Index</h1>
     <div class="lead">Sets the item at the specified index of a List to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-item-at-index">Set Item At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -48725,12 +48418,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-47dc6d3c7086d938a2347165a15b7a46">3.12.7.5 - Set Item With Value</h1>
     <div class="lead">Sets the specified occurrence of an item matching a value in a List to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-item-with-value">Set Item With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -49004,12 +48693,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b2c3d5a3252901caccb248c858ed22f3">3.12.7.6 - Set Items At Beginning</h1>
     <div class="lead">Sets the items at the beginning of a List to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-at-beginning">Set Items At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtBeginningBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -49161,12 +48846,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-ccab80e7bbb43d4e4125e5045971231b">3.12.7.7 - Set Items At End</h1>
     <div class="lead">Sets the items at the end of a List to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-at-end">Set Items At End</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtEndBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -49318,12 +48999,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b1613350cd81b004f832654d7f3423ec">3.12.7.8 - Set Items At Index</h1>
     <div class="lead">Sets the items at the specified index of a List to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-at-index">Set Items At Index</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtIndexBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -49522,12 +49199,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-1a4296399e30cb50b64991bda2593c35">3.12.7.9 - Set Items At Indexes</h1>
     <div class="lead">Sets the items at each of the specified indexes of a List to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-at-indexes">Set Items At Indexes</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsAtIndexesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -49728,12 +49401,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-8121583eb1e0542b013436e686e028d5">3.12.7.10 - Set Items With Value</h1>
     <div class="lead">Sets all items matching a value in a List to a new value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-with-value">Set Items With Value</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsWithValueBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -49926,12 +49595,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-e1f23336c504957c8ad0ff59f4f793e4">3.12.7.11 - Set Items With Values</h1>
     <div class="lead">Sets all items matching one of the specified values in a List to new values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/lists-set-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/lists-set-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-items-with-values">Set Items With Values</h1>
 <p class="namespace">(Cortex.Blocks.Lists.SetItem.SetItemsWithValuesBlock`2)</p>
 <h2 id="description">Description</h2>
@@ -50190,12 +49855,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-ad7caaf9e0dfe5c542980f36b9c9dc4a">3.13.1.1 - Log Event</h1>
     <div class="lead">Logs an event to the filesystem.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/logs-log-event-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/logs-log-event-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="log-event">Log Event</h1>
 <p class="namespace">(Cortex.Blocks.Logs.LogEvent.LogEventBlock)</p>
 <h2 id="description">Description</h2>
@@ -50592,9 +50253,9 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
 <td>Debugger Service is used to debug flows when developing them in Cortex Studio</td>
 </tr>
 <tr>
-<td><code>Cortex Flow Execution Service</code></td>
+<td><code>Cortex Execution Service</code></td>
 <td><code>&lt;install-location&gt;\appsettings.json</code></td>
-<td>Flow Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production)</td>
+<td>Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production)</td>
 </tr>
 </tbody>
 </table>
@@ -50920,12 +50581,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-1d7870bf795b14c47b04e550419bc67f">3.14.1.1 - For Each Loop</h1>
     <div class="lead">Loops through all items in the specified collection (i.e. Lists, Dictionaries and Structures).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/loops-for-each-loop-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/loops-for-each-loop-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="for-each-loop">For Each Loop</h1>
 <p class="namespace">(Cortex.Blocks.Loops.ForEach.ForEachLoopBlock)</p>
 <h2 id="description">Description</h2>
@@ -51160,12 +50817,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-ce71fdbee1c3f3569c84f01665b340f4">3.14.2.1 - For Loop</h1>
     <div class="lead">Loops a specified number of times based on a given start index, end index and increment.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/loops-for-loop-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/loops-for-loop-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="for-loop">For Loop</h1>
 <p class="namespace">(Cortex.Blocks.Loops.For.ForLoopBlock)</p>
 <h2 id="description">Description</h2>
@@ -51579,12 +51232,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-768ea96a3a6a683e2ccf0ac76f500af6">3.15.1.1.1 - Send Email Using Microsoft 365</h1>
     <div class="lead">Sends an email using the SMTP server hosted by Outlook.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/microsoft365-send-email-using-microsoft365-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/microsoft365-send-email-using-microsoft365-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="send-email-using-microsoft-365">Send Email Using Microsoft 365</h1>
 <p class="namespace">(Cortex.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365Block)</p>
 
@@ -52052,12 +51701,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b0422f23d1f31e79fbf09a69f1cd31df">3.16.1.1 - Convert Object To Text</h1>
     <div class="lead">Converts an object to text by replacing all <code>{Property}</code> format parameters in a specified format template with the Object&rsquo;s corresponding property value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/objects-convert-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/objects-convert-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-object-to-text">Convert Object To Text</h1>
 <p class="namespace">(Cortex.Blocks.Object.ConvertObject.ConvertObjectToTextBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -52371,12 +52016,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-772e3a67b20739cba4ed7e31743404fd">3.16.2.1 - Copy Object</h1>
     <div class="lead">Copies an Object.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/objects-copy-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/objects-copy-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="copy-object">Copy Object</h1>
 <p class="namespace">(Cortex.Blocks.Objects.CopyObject.CopyObjectBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -52571,12 +52212,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5cf5cfa5eea83ae1e957bb0e2753bd0d">3.17.1.1 - Execute PowerShell Script</h1>
     <div class="lead">Executes a PowerShell script on the specified host.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/powershell-execute-powershell-script-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/powershell-execute-powershell-script-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="execute-powershell-script">Execute PowerShell Script</h1>
 <p class="namespace">(Cortex.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScriptBlock`1)</p>
 
@@ -53239,12 +52876,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5ff5ea1939c2250fab9b4d2ace0a539b">3.18.1.1 - Wait For Duration</h1>
     <div class="lead">Waits for a specified time period (Years, Months, Days, Hours, Minutes, Seconds and Milliseconds).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/schedules-wait-for-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/schedules-wait-for-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="wait-for-duration">Wait For Duration</h1>
 <p class="namespace">(Cortex.Blocks.Schedules.WaitFor.WaitForDurationBlock)</p>
 <h2 id="description">Description</h2>
@@ -53414,12 +53047,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-55ea052ef729336849b0313b65dea26c">3.19.1.1 - Execute Ssh Command</h1>
     <div class="lead">Executes an SSH command on the specified host.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/ssh-execute-ssh-command-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/ssh-execute-ssh-command-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="execute-ssh-command">Execute Ssh Command</h1>
 <p class="namespace">("Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
 
@@ -53955,12 +53584,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-dbdcf8f6098e19aae7e13c5a1f1f4167">3.20.1.1 - Add Text After Index</h1>
     <div class="lead">Adds text to another text after a given index.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-text-after-index">Add Text After Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAfterIndexBlock)</p>
 <h2 id="description">Description</h2>
@@ -54173,12 +53798,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-dfa714520c697ee0e711201b51fcec1e">3.20.1.2 - Add Text At Beginning</h1>
     <div class="lead">Adds text at the beginning of another text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-text-at-beginning">Add Text At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAtBeginningBlock)</p>
 <h2 id="description">Description</h2>
@@ -54360,12 +53981,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-a665948b28cdce21052fecf3f2e189e3">3.20.1.3 - Add Text At End</h1>
     <div class="lead">Adds text at the end of another text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-text-at-end">Add Text At End</h1>
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextAtEndBlock)</p>
 <h2 id="description">Description</h2>
@@ -54547,12 +54164,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-f4bd12b21cc04ef48ebc5a96c2f4d7a2">3.20.1.4 - Add Text Before Index</h1>
     <div class="lead">Adds text to another text before the specified index.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-add-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-add-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="add-text-before-index">Add Text Before Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.AddText.AddTextBeforeIndexBlock)</p>
 <h2 id="description">Description</h2>
@@ -54794,12 +54407,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b13ec9269c84d8232bb6592740eda444">3.20.2.1 - Contains All Text</h1>
     <div class="lead">Checks if text contains all of the texts in a given set of texts.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-all-text">Contains All Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.ContainsText.ContainsAllTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -55215,12 +54824,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-37fbe6d832bb9445c53023c4cb3bd9f4">3.20.2.2 - Contains Any Text</h1>
     <div class="lead">Checks if text contains any of the texts in a given set of texts.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-any-text">Contains Any Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.ContainsText.ContainsAnyTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -55636,12 +55241,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-681bdb3a76054e64673c38e0c4a947d2">3.20.2.3 - Contains Text</h1>
     <div class="lead">Checks if text contains another text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-contains-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-contains-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="contains-text">Contains Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.ContainsText.ContainsTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -56082,12 +55683,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-e11ec8ac405f6c61c3a597a291e13689">3.20.3.1 - Convert To Camel Case</h1>
     <div class="lead">Converts text to camel case (e.g. <code>&quot;camelCase&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-convert-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-convert-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-to-camel-case">Convert To Camel Case</h1>
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToCamelCaseBlock)</p>
 <h2 id="description">Description</h2>
@@ -56232,12 +55829,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-e9877d311cd40cd4cd2073af00abf5d9">3.20.3.2 - Convert To Lower Case</h1>
     <div class="lead">Converts text to lower case (e.g. <code>&quot;lowercase&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-convert-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-convert-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-to-lower-case">Convert To Lower Case</h1>
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToLowerCaseBlock)</p>
 <h2 id="description">Description</h2>
@@ -56382,12 +55975,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-37e3499f30d47510f227bbb98e629866">3.20.3.3 - Convert To Pascal Case</h1>
     <div class="lead">Converts text to pascal case (e.g. <code>&quot;PascalCase&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-convert-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-convert-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-to-pascal-case">Convert To Pascal Case</h1>
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToPascalCaseBlock)</p>
 <h2 id="description">Description</h2>
@@ -56532,12 +56121,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-edbee4bea0b3b196542c80175e210972">3.20.3.4 - Convert To Title Case</h1>
     <div class="lead">Converts text to title case (e.g. <code>&quot;Title Case&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-convert-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-convert-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-to-title-case">Convert To Title Case</h1>
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToTitleCaseBlock)</p>
 <h2 id="description">Description</h2>
@@ -56682,12 +56267,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-d02979633967511efda8b61fabe21b91">3.20.3.5 - Convert To Upper Case</h1>
     <div class="lead">Converts text to upper case (e.g. <code>&quot;UPPERCASE&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-convert-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-convert-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-to-upper-case">Convert To Upper Case</h1>
 <p class="namespace">(Cortex.Blocks.Text.ConvertTo.ConvertToUpperCaseBlock)</p>
 <h2 id="description">Description</h2>
@@ -56861,12 +56442,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-f896dc82341ebc2383ac9beced22319b">3.20.4.1 - Find And Remove All Text</h1>
     <div class="lead">Finds and removes all occurrences of text from a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-find-and-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-find-and-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="find-and-remove-all-text">Find And Remove All Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -57230,12 +56807,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-239e36499ee8333eb329fafb4ed2fe94">3.20.4.2 - Find And Remove Text</h1>
     <div class="lead">Finds and removes the specified occurrence of text from a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-find-and-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-find-and-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="find-and-remove-text">Find And Remove Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -57687,12 +57260,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-3d0de44689e8a1bee83431835f1953f1">3.20.5.1 - Find And Replace All Text</h1>
     <div class="lead">Finds and replaces all occurrences of text in a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-find-and-replace-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-find-and-replace-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="find-and-replace-all-text">Find And Replace All Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -58110,12 +57679,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-7d697584d1f9be70e24f56b3b9401c05">3.20.5.2 - Find And Replace Text</h1>
     <div class="lead">Finds and replaces the specified occurrence of text in a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-find-and-replace-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-find-and-replace-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="find-and-replace-text">Find And Replace Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.FindAndReplaceText.FindAndReplaceTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -58621,12 +58186,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-3e95a7197729907c28e0a8eff705f50d">3.20.6.1 - Format Text With Value</h1>
     <div class="lead">Formats text by replacing all <code>{0}</code> format parameters in a specified format template with a given value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-format-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-format-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="format-text-with-value">Format Text With Value</h1>
 <p class="namespace">(Cortex.Blocks.Text.FormatText.FormatTextWithValueBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -58896,12 +58457,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-e6b42f60b6243569693f5f7cabb35b14">3.20.6.2 - Format Text With Values</h1>
     <div class="lead">Formats text by replacing all format parameters (e.g. <code>{0}</code> or <code>{1}</code> or <code>{2}</code>) in a specified format template with given values.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-format-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-format-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="format-text-with-values">Format Text With Values</h1>
 <p class="namespace">(Cortex.Blocks.Text.FormatText.FormatTextWithValuesBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -59220,12 +58777,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0adabb0dce4bb35ff56c593bee1dfdfb">3.20.7.1 - Get Index Of Text</h1>
     <div class="lead">Gets the index of the specified occurrence of a text in another text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-index-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-index-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-index-of-text">Get Index Of Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetIndex.GetIndexOfTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -59753,12 +59306,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-77109844ba82f39da9566a0a1cdc3c18">3.20.7.2 - Get Indexes Of Text</h1>
     <div class="lead">Gets the indexes of all occurrences of a text in another text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-index-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-index-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-indexes-of-text">Get Indexes Of Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetIndex.GetIndexesOfTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -60251,12 +59800,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-709e17c5e2790681e5b3290c8f166095">3.20.8.1 - Get Length</h1>
     <div class="lead">Gets the length of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-length-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-length-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-length">Get Length</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetLength.GetLengthBlock)</p>
 <h2 id="description">Description</h2>
@@ -60406,12 +59951,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0362e18eab4fa75558155d3af4bbe7a8">3.20.9.1 - Get Text At Beginning</h1>
     <div class="lead">Gets a length of text from the beginning of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-text-at-beginning">Get Text At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextAtBeginningBlock)</p>
 <h2 id="description">Description</h2>
@@ -60589,12 +60130,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-8f1fffee421c8a9060c7ab0b812d458f">3.20.9.2 - Get Text At End</h1>
     <div class="lead">Gets a length of text from the end of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-text-at-end">Get Text At End</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextAtEndBlock)</p>
 <h2 id="description">Description</h2>
@@ -60772,12 +60309,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-e7c470bb3dc08429cb9aed906c54349c">3.20.9.3 - Get Text At Index</h1>
     <div class="lead">Gets a length of text at the specified index of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-text-at-index">Get Text At Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextAtIndexBlock)</p>
 <h2 id="description">Description</h2>
@@ -60999,12 +60532,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-270f789700fe5a61b2c4d2731a33ce35">3.20.9.4 - Get Text Before Index</h1>
     <div class="lead">Gets a length of text before the specified index of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-text-before-index">Get Text Before Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextBeforeIndexBlock)</p>
 <h2 id="description">Description</h2>
@@ -61226,12 +60755,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-0d735d7813314e96b4cd6605a31cb81e">3.20.9.5 - Get Text Between Indexes</h1>
     <div class="lead">Gets text between the specified start index and end index of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-get-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-get-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="get-text-between-indexes">Get Text Between Indexes</h1>
 <p class="namespace">(Cortex.Blocks.Text.GetText.GetTextBetweenIndexesBlock)</p>
 <h2 id="description">Description</h2>
@@ -61518,12 +61043,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-9a2a141553b1853c0a7b708cd647102f">3.20.10.1 - Is Text Empty</h1>
     <div class="lead">Checks if text is empty (i.e. <code>&quot;&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-text-empty">Is Text Empty</h1>
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEmptyBlock)</p>
 <h2 id="description">Description</h2>
@@ -61732,12 +61253,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-511acad88dc2153edd9fcc8ab22a2bc2">3.20.10.2 - Is Text Empty Or Whitespace</h1>
     <div class="lead">Checks if text is empty (i.e. <code>&quot;&quot;</code>) or whitespace (i.e. <code>space</code>, <code>tab</code>, <code>carriage return</code>, <code>line feed</code> characters).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-text-empty-or-whitespace">Is Text Empty Or Whitespace</h1>
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEmptyOrWhitespaceBlock)</p>
 <h2 id="description">Description</h2>
@@ -61944,12 +61461,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-b013218ddde5c70076a4b966461ceea3">3.20.10.3 - Is Text Equal</h1>
     <div class="lead">Checks if a text is equal to another text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-text-equal">Is Text Equal</h1>
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextEqualBlock)</p>
 <h2 id="description">Description</h2>
@@ -62241,12 +61754,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5ca6d8d180e465496b888638c8308cc0">3.20.10.4 - Is Text Null</h1>
     <div class="lead">Checks if text is <code>null</code>.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-text-null">Is Text Null</h1>
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextNullBlock)</p>
 <h2 id="description">Description</h2>
@@ -62455,12 +61964,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-928475d82a3f5fa0765eecd6f1d69571">3.20.10.5 - Is Text Null Or Empty</h1>
     <div class="lead">Checks if text is <code>null</code> or empty (i.e. <code>&quot;&quot;</code>).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-text-null-or-empty">Is Text Null Or Empty</h1>
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextNullOrEmptyBlock)</p>
 <h2 id="description">Description</h2>
@@ -62668,12 +62173,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-4ba6d89f1c0337efdaf899237f732777">3.20.10.6 - Is Text Null, Empty Or Whitespace</h1>
     <div class="lead">Checks if text is <code>null</code>, empty (i.e. <code>&quot;&quot;</code>) or whitespace (i.e. <code>space</code>, <code>tab</code>, <code>carriage return</code>, <code>line feed</code> characters).</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-is-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-is-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="is-text-null-empty-or-whitespace">Is Text Null, Empty Or Whitespace</h1>
 <p class="namespace">(Cortex.Blocks.Text.IsText.IsTextNullEmptyOrWhitespaceBlock)</p>
 <h2 id="description">Description</h2>
@@ -62909,12 +62410,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-bdf8370e51e2f0866a26f3a4ac4b3329">3.20.11.1 - Join Text</h1>
     <div class="lead">Joins a set of values together as text, using the given separator between each value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-join-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-join-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="join-text">Join Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.JoinText.JoinTextBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -63160,12 +62657,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-6649848ae633a768379c5d89b6d1687e">3.20.12.1 - Remove Text At Beginning</h1>
     <div class="lead">Removes a length of text from the beginning of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-text-at-beginning">Remove Text At Beginning</h1>
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtBeginningBlock)</p>
 <h2 id="description">Description</h2>
@@ -63309,12 +62802,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-6536362e2dbb6b9e6fc40d7ab860ab1c">3.20.12.2 - Remove Text At End</h1>
     <div class="lead">Removes a length of text from the end of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-text-at-end">Remove Text At End</h1>
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtEndBlock)</p>
 <h2 id="description">Description</h2>
@@ -63458,12 +62947,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-f4cbaa4b232e1e124487b5f948b54271">3.20.12.3 - Remove Text At Index</h1>
     <div class="lead">Removes a length of text at the specified index of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-text-at-index">Remove Text At Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextAtIndexBlock)</p>
 <h2 id="description">Description</h2>
@@ -63651,12 +63136,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-89fa185524d47bfea4b42d1bd3dbc4f8">3.20.12.4 - Remove Text Before Index</h1>
     <div class="lead">Removes a length of text before the specified index of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-text-before-index">Remove Text Before Index</h1>
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextBeforeIndexBlock)</p>
 <h2 id="description">Description</h2>
@@ -63844,12 +63325,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-5840e8991ebafb02527f1c7e0dfb0db0">3.20.12.5 - Remove Text Between Indexes</h1>
     <div class="lead">Removes text between the specified start index and end index of a given text.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-remove-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-remove-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="remove-text-between-indexes">Remove Text Between Indexes</h1>
 <p class="namespace">(Cortex.Blocks.Text.RemoveText.RemoveTextBetweenIndexesBlock)</p>
 <h2 id="description">Description</h2>
@@ -64097,12 +63574,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-8965d1333d59585f8f4dd15fd59add42">3.20.13.1 - Split Text</h1>
     <div class="lead">Splits text into a list of String values, using the given separator to determine where to split.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/text-split-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/text-split-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="split-text">Split Text</h1>
 <p class="namespace">(Cortex.Blocks.Text.SplitText.SplitTextBlock)</p>
 <h2 id="description">Description</h2>
@@ -64457,12 +63930,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-eb78556ffad1f26f59354000bf49897b">3.21.1.1 - Set Variable</h1>
     <div class="lead">Sets a Variable to a given Value.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/variables-set-variable-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/variables-set-variable-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="set-variable">Set Variable</h1>
 <p class="namespace">(Cortex.Blocks.Variables.SetVariable.SetVariableBlock`1)</p>
 <h2 id="description">Description</h2>
@@ -64739,12 +64208,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-35a13a5602a244b3324cccb93ae19a55">3.22.1.1 - End Workspace</h1>
     <div class="lead">Indicates the end of a workspace.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/workspaces-end-workspace-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/workspaces-end-workspace-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="end-workspace">End Workspace</h1>
 <p class="namespace">(Cortex.Blocks.Workspaces.EndWorkspace.EndWorkspaceBlock)</p>
 <h2 id="description">Description</h2>
@@ -64808,12 +64273,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-81f8c041857a10d9fa4a0173516e7691">3.22.2.1 - Start Workspace</h1>
     <div class="lead">Indicates the start of a workspace.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/workspaces-start-workspace-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/workspaces-start-workspace-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="start-workspace">Start Workspace</h1>
 <p class="namespace">(Cortex.Blocks.Workspaces.StartWorkspace.StartWorkspaceBlock)</p>
 <h2 id="description">Description</h2>
@@ -64877,12 +64338,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-9862fd3df9d5dad471d081a3233d5982">3.22.3.1 - Workspace</h1>
     <div class="lead">Represents a new workspace.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/workspaces-workspace-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/workspaces-workspace-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="workspace">Workspace</h1>
 <p class="namespace">(Cortex.Blocks.Workspaces.Workspace.WorkspaceBlock)</p>
 <h2 id="description">Description</h2>
@@ -64990,12 +64447,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-9ede8c70327f6dc492826498f83c392d">3.23.1.1 - Convert Structure To Xml</h1>
     <div class="lead">Converts a Structure To Xml.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/xml-convert-to-xml-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/xml-convert-to-xml-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-structure-to-xml">Convert Structure To Xml</h1>
 <p class="namespace">(Cortex.Blocks.Xml.ConvertXml.ConvertStructureToXmlBlock)</p>
 <h2 id="description">Description</h2>
@@ -65347,12 +64800,8 @@ file path (e.g. <code>@&quot;C:\Source\OriginalFile.txt&quot;</code>) and <a hre
     
 	<h1 id="pg-c3c46cf4e6c08634215ef637ac698c38">3.23.1.2 - Convert Xml To Structure</h1>
     <div class="lead">Converts Xml to a Structure.</div>
-	
-<figure class="block-icon">
-    <img src=" /blocks/xml-convert-to-structure-block-icon.png "
-         alt="Icon"/> 
-</figure>
-
+	<figure class="block-icon"><img src="/blocks/xml-convert-to-structure-block-icon.png"
+            alt="Icon"/></figure>
 <h1 id="convert-xml-to-structure">Convert Xml To Structure</h1>
 <p class="namespace">(Cortex.Blocks.Xml.ConvertXml.ConvertXmlToStructureBlock)</p>
 <h2 id="description">Description</h2>
@@ -82707,8 +82156,68 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-7faf4332b9e39a07efcfa53c8f287b08">6.5 - Cortex Flow Execution Service</h1>
-    <div class="lead">This section includes all reference documentation for the logs generated by the Cortex Flow Execution Service.</div>
+	<h1 id="pg-70da214bfbda88f284891a9582ac2c14">6.5 - Cortex Execution Service</h1>
+    <div class="lead">This section includes all reference documentation for the logs generated by the Cortex Execution Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c6b8ea49193ab3960ae248659b3a9e29">6.6 - Cortex Package Service</h1>
+    <div class="lead">This section includes all reference documentation for the logs generated by the Cortex Package Service.</div>
+	<img src="/images/work-in-progress.jpg">
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-43e045137065d9bed612b86673b0a26e">6.7 - Cortex Provisioning Service</h1>
+    <div class="lead">This section includes all reference documentation for the logs generated by the Cortex Provisioning Service.</div>
 	<img src="/images/work-in-progress.jpg">
 
 </div>
@@ -82919,11 +82428,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <li><a href="#duration-section">Duration</a></li>
 </ul>
 <p>There are several <a href="#filters">filters</a> available to filter the data to a more fine-grained level as necessary and are explained in further detail below.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20Dashboard.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20Dashboard.png"/></figure>
 <h2 id="time-range">Time Range</h2>
 
 
@@ -82935,11 +82440,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 </div>
 
 <p>The time range for which the dashboard displays data is configurable in the top right of the dashboard using the Time Range selector (defaults to the last 3 hours):</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Time%20Range.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Time%20Range.png"/></figure>
 <p>There are a number of predefined quick ranges to choose from:</p>
 <ul>
 <li>Last 5, 15 and 30 minutes</li>
@@ -82958,20 +82459,12 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 </ul>
 <p>To configure an absolute time range, you should specify a From and To date and time.  These values can be in the format of <code>YYYY-MM-DD HH:MM:SS</code>, e.g. <code>2022-07-22 13:54:23</code>, or alternatively can use times relative to now, e.g. <code>now-24h</code>. It is also possible to use the date time picker available for both the From and To fields. Once the absolute time range has been configured you must click the &lsquo;Apply time range&rsquo; button.</p>
 <p>If an absolute time range is specified, the Time Range selector will show the selected time range with arrows either side. These arrows can be used to shift the time range forwards and backwards. This feature is not available for quick ranges.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Time%20Range%20extended.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Time%20Range%20extended.png"/></figure>
 <p>The magnifying glass icon allows you to zoom out of the time range specified. It will substract half the current time range from the From field and add half the current time range to the To field.</p>
 <p>For more information regarding the Time Range selector, see Grafana&rsquo;s <a href="https://grafana.com/docs/grafana/latest/dashboards/time-range-controls/">Time range controls</a> documentation.</p>
 <h2 id="filters">Filters</h2>
 <p>At the top of the dashboard, there are 10 filters available to restrict the data queried:</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Filters.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Filters.png"/></figure>
 <table>
 <thead>
 <tr>
@@ -83025,11 +82518,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>All filters (excluding Interval and Custom Filter) will display their list of available options dependent on the preceding filters selected.</p>
 <h2 id="overview-section">Overview Section</h2>
 <p>This section displays key flow execution request metrics for the specified <a href="#time-range">time range</a> and consists of 4 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Overview.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Overview.png"/></figure>
 
 
 <div class="alert alert-primary" role="alert">
@@ -83096,11 +82585,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>This tile displays the mean duration for flow execution requests during the specified <a href="#time-range">time range</a>. This is usually reported in seconds, however the unit may change if the number is much smaller or larger.</p>
 <h2 id="requests-section">Requests Section</h2>
 <p>This section provides information regarding the flow execution request history for the specified <a href="#time-range">time range</a> and consists of 3 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Requests.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Requests.png"/></figure>
 <h3 id="requests">Requests</h3>
 <p>This graph displays, for the specified <a href="#time-range">time range</a>, the:</p>
 <ul>
@@ -83132,11 +82617,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <h2 id="errors-section">Errors Section</h2>
 <p>This section provides information regarding the errored flow execution request history for the specified <a href="#time-range">time range</a> and consists of 2 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Errors.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Errors.png"/></figure>
 <h3 id="errored-requests">Errored Requests</h3>
 <p>This graph displays, for the specified <a href="#time-range">time range</a>, the:</p>
 <ul>
@@ -83157,11 +82638,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <h2 id="duration-section">Duration Section</h2>
 <p>This section provides information regarding the flow execution request duration history for the specified <a href="#time-range">time range</a> and consists of 3 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Duration.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Duration.png"/></figure>
 <h3 id="request-duration">Request Duration</h3>
 <p>This graph displays, for the specified <a href="#time-range">time range</a>, the:</p>
 <ul>
@@ -83198,11 +82675,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <h3 id="known-limitations">Known Limitations</h3>
 <h4 id="graphs-do-not-reset-to-zero">Graphs do not reset to zero</h4>
 <p>There is a limitation in Grafana where the graph does not always return to the zero line when there is no data for a given time point.  This only occurs when there is a data point available at the beginning of the graph, followed by a period with no data, then data occurs again.  When hovering the mouse over this area, it will show that the value is 0, and any other tiles will reflect the zero data at this point accordingly.</p>
-
-<figure>
-    <img src=" /images/editable/Flow%20Execution%20Requests%20-%20Not%20Zero.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Flow%20Execution%20Requests%20-%20Not%20Zero.png"/></figure>
 <h2 id="related-dashboards">Related Dashboards</h2>
 <p>None</p>
 <!-- Same page links -->
@@ -83237,11 +82710,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <li><a href="#duration-section">Duration</a></li>
 </ul>
 <p>There are several <a href="#filters">filters</a> available to filter the data to a more fine-grained level as necessary and are explained in further detail below.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20Dashboard.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20Dashboard.png"/></figure>
 <h2 id="time-range">Time Range</h2>
 
 
@@ -83253,11 +82722,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 </div>
 
 <p>The time range for which the dashboard displays data is configurable in the top right of the dashboard using the Time Range selector (defaults to the last 3 hours):</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Time%20Range.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Time%20Range.png"/></figure>
 <p>There are a number of predefined quick ranges to choose from:</p>
 <ul>
 <li>Last 5, 15 and 30 minutes</li>
@@ -83276,20 +82741,12 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 </ul>
 <p>To configure an absolute time range, you should specify a From and To date and time.  These values can be in the format of <code>YYYY-MM-DD HH:MM:SS</code>, e.g. <code>2022-07-22 13:54:23</code>, or alternatively can use times relative to now, e.g. <code>now-24h</code>. It is also possible to use the date time picker available for both the From and To fields. Once the absolute time range has been configured you must click the &lsquo;Apply time range&rsquo; button.</p>
 <p>If an absolute time range is specified, the Time Range selector will show the selected time range with arrows either side. These arrows can be used to shift the time range forwards and backwards. This feature is not available for quick ranges.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Time%20Range%20extended.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Time%20Range%20extended.png"/></figure>
 <p>The magnifying glass icon allows you to zoom out of the time range specified. It will substract half the current time range from the From field and add half the current time range to the To field.</p>
 <p>For more information regarding the Time Range selector, see Grafana&rsquo;s <a href="https://grafana.com/docs/grafana/latest/dashboards/time-range-controls/">Time range controls</a> documentation.</p>
 <h2 id="filters">Filters</h2>
 <p>At the top of the dashboard, there are 9 filters available to restrict the data queried:</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Filters.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Filters.png"/></figure>
 <table>
 <thead>
 <tr>
@@ -83339,11 +82796,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>All filters (excluding Interval and Custom Filter) will display their list of available options dependent on the preceding filters selected.</p>
 <h2 id="overview-section">Overview Section</h2>
 <p>This section displays key platform health metrics for the specified <a href="#time-range">time range</a> and consists of 4 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Overview.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Overview.png"/></figure>
 
 
 <div class="alert alert-primary" role="alert">
@@ -83419,11 +82872,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <h2 id="availability-section">Availability Section</h2>
 <p>This section displays the availability of the Cortex Innovation platform and consists of 1 panel.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Availability.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Availability.png"/></figure>
 <h3 id="availability-1">Availability</h3>
 <p>This graph displays the availability of the Cortex Innovation Platform during the specified <a href="#time-range">time range</a> by calculating successful requests / total requests. Successful requests are all requests that do not result in an unknown or 5xx HTTP response. 4xx responses are considered successful in this scenario.</p>
 <p>Each data point value is calculated by aggregating requests based on the Interval filter. If there is no data for the previous interval, the line will be <a href="#breaks-in-graph-lines">broken</a> as the availability is not known at the time.</p>
@@ -83457,11 +82906,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>This graph is configured to start the availability axis at 80%. However, if the availability drops below this level, the axis will modify to show the lowest availability level.</p>
 <h2 id="requests-section">Requests Section</h2>
 <p>This section provides information regarding the history of the requests processed by the Cortex Innovation platform for the specified <a href="#time-range">time range</a> and consists of 2 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Requests.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Requests.png"/></figure>
 <h3 id="requests">Requests</h3>
 <p>This graph displays, for the specified <a href="#time-range">time range</a>, the:</p>
 <ul>
@@ -83481,11 +82926,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 <h2 id="errors-section">Errors Section</h2>
 <p>This section provides information regarding the errored request history for the specified <a href="#time-range">time range</a> and consists of 2 panels.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Errors.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Errors.png"/></figure>
 <h3 id="errored-requests-1">Errored Requests</h3>
 <p>This graph displays, for the specified <a href="#time-range">time range</a>, the:</p>
 <ul>
@@ -83516,11 +82957,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 </div>
 
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Duration.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Duration.png"/></figure>
 <h3 id="request-duration">Request Duration</h3>
 <p>This graph displays, for the specified <a href="#time-range">time range</a>, the:</p>
 <ul>
@@ -83545,19 +82982,11 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>The dashboard may display HTTP requests that have an <code>Unknown</code> status code or result, if they are missing from the raw logs. The chances of this occurring are minimal.</p>
 <h3 id="breaks-in-graph-lines">Breaks in Graph Lines</h3>
 <p>When appropriate, there may occur breaks in the line graphs. This is relevant to the Availability graph.  When there is no data, it is not appropriate to say that the availability is the same as the previous data point or that it is zero as if there is no data, we cannot accurately reflect the data at this point, and therefore, the line will break.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Break%20in%20Line.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Break%20in%20Line.png"/></figure>
 <h3 id="known-limitations">Known Limitations</h3>
 <h4 id="graphs-do-not-reset-to-zero">Graphs do not reset to zero</h4>
 <p>There is a limitation in Grafana where the graph does not always return to the zero line when there is no data for a given time point. This only occurs when there is a data point available at the beginning of the graph, followed by a period with no data, then data occurs again.  When hovering the mouse over this area, it will show that the value is 0, and any other tiles will reflect the zero data at this point accordingly.</p>
-
-<figure>
-    <img src=" /images/editable/Platform%20Health%20-%20Not%20Zeros.png "/> 
-</figure>
-
+<figure><img src="/images/editable/Platform%20Health%20-%20Not%20Zeros.png"/></figure>
 <h2 id="related-dashboards">Related Dashboards</h2>
 <p>None</p>
 <!-- Same page links -->
@@ -83807,8 +83236,8 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Uninstall the platform by running the following command for your architecture:</p>
@@ -83845,27 +83274,27 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 
 
 
-    <ul class="nav nav-tabs" id="tabs-1" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-3" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-1-0-tab" data-toggle="tab" href="#tabs-1-0" role="tab"
-        aria-controls="tabs-1-0" aria-selected="true">
+        id="tabs-3-0-tab" data-toggle="tab" href="#tabs-3-0" role="tab"
+        aria-controls="tabs-3-0" aria-selected="true">
         Multiple Servers With HA
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-1-1-tab" data-toggle="tab" href="#tabs-1-1" role="tab"
-        aria-controls="tabs-1-1" aria-selected="false">
+        id="tabs-3-1-tab" data-toggle="tab" href="#tabs-3-1" role="tab"
+        aria-controls="tabs-3-1" aria-selected="false">
         Single Server Without HA
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-1-content"><div class="tab-pane fade show active"
-        id="tabs-1-0" role="tabpanel" aria-labelled-by="tabs-1-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+<div class="tab-content" id="tabs-3-content"><div class="tab-pane fade show active"
+        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Uninstall</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-1-1" role="tabpanel" aria-labelled-by="tabs-1-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Uninstall</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-SkipLoadBalancer</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   
@@ -83876,7 +83305,7 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 </ol>
 </li>
 <li>
-<p>In the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder, navigate to <code>Resources</code>.</p>
+<p>In the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder, navigate to <code>Resources</code>.</p>
 </li>
 <li>
 <p>Backup the file <code>RabbitMqInterNodePublicTemplate.config</code> and then open it with a text editor.</p>
@@ -83919,13 +83348,9 @@ This example will only occur when a <a href="#structure">Structure</a> is Conver
 <p>Navigate to <code>https://app-server.domain.com:9080/Explorer</code>, where <code>app-server.domain.com</code> is the fully qualified domain name of any Application Server. Replace <code>9080</code> with new <code>httpGatewayEndpointPort</code> value if it was changed during configuration.</p>
 <p>If page access is denied it may be necessary to import the server certificate used in installation to the Current User certificate store (usually achieved by double clicking on it and following the wizard). If using self-signed certificates, the certificate can be retrieved by using the <code>Manage Computer Certificates</code> tool in Windows to export the CortexServerCertificate from the <code>Personal</code> store and then importing it to the Current User store by double-clicking on it and following the wizard. The browser may need to be restarted before the site can be accessed</p>
 <p>The screen should resemble that in the following figure, all services should have <code>Health State = OK</code> and <code>Status = Active</code>. All instances below the service should have Health State = OK and Status = Ready.</p>
-
-    <figure>
-        <img src=" /images/Service%20Fabric%20Explorer.png "/> <figcaption>
-                <h4>Healthy Service Fabric Explorer</h4>
-            </figcaption>
-    </figure>
-
+<figure><img src="/images/Service%20Fabric%20Explorer.png"/><figcaption>
+                    <h4>Healthy Service Fabric Explorer</h4>
+                </figcaption></figure>
 <p>If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
 If no useful message can be seen here, the service log files may contain more information.</p>
 </li>
@@ -83934,13 +83359,9 @@ If no useful message can be seen here, the service log files may contain more in
 <h3 id="managing-rabbitmq">Managing RabbitMQ</h3>
 <p>There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send messages between services.</p>
 <p>To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to <code>https://app-server1.domain.com:15671</code>, replacing <code>app-server1.domain.com</code> with the FQDN of one of the Application Servers. Sign in with username &lsquo;administrator&rsquo; and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:</p>
-
-<figure>
-    <img src=" /images/RabbitMQ%20Status.png "/> <figcaption>
-            <h4>Healthy RabbitMQ status.</h4>
-        </figcaption>
-</figure>
-
+<figure><img src="/images/RabbitMQ%20Status.png"/><figcaption>
+                <h4>Healthy RabbitMQ status.</h4>
+            </figcaption></figure>
 
 
 <div class="alert alert-primary" role="alert">
@@ -83968,8 +83389,8 @@ If no useful message can be seen here, the service log files may contain more in
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Uninstall the platform by running the following command for your architecture:</p>
@@ -84006,27 +83427,27 @@ If no useful message can be seen here, the service log files may contain more in
 
 
 
-    <ul class="nav nav-tabs" id="tabs-5" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-10" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-5-0-tab" data-toggle="tab" href="#tabs-5-0" role="tab"
-        aria-controls="tabs-5-0" aria-selected="true">
+        id="tabs-10-0-tab" data-toggle="tab" href="#tabs-10-0" role="tab"
+        aria-controls="tabs-10-0" aria-selected="true">
         Multiple Servers With HA
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-5-1-tab" data-toggle="tab" href="#tabs-5-1" role="tab"
-        aria-controls="tabs-5-1" aria-selected="false">
+        id="tabs-10-1-tab" data-toggle="tab" href="#tabs-10-1" role="tab"
+        aria-controls="tabs-10-1" aria-selected="false">
         Single Server Without HA
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-5-content"><div class="tab-pane fade show active"
-        id="tabs-5-0" role="tabpanel" aria-labelled-by="tabs-5-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+<div class="tab-content" id="tabs-10-content"><div class="tab-pane fade show active"
+        id="tabs-10-0" role="tabpanel" aria-labelled-by="tabs-10-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Uninstall</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-5-1" role="tabpanel" aria-labelled-by="tabs-5-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+        id="tabs-10-1" role="tabpanel" aria-labelled-by="tabs-10-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Uninstall</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-SkipLoadBalancer</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   
@@ -84055,13 +83476,9 @@ If no useful message can be seen here, the service log files may contain more in
 </ol>
 <h3 id="service-fabric-explorer-displays-certificate-is-about-to-expire-warning">Service Fabric Explorer displays certificate is about to expire warning</h3>
 <p>If Service Fabric certificates are going to expire in fewer than 30 days, a warning is displayed as follows:</p>
-
-<figure>
-    <img src=" /images/Service%20Fabric%20Explorer%20-%20Expiring%20Certificate.PNG "/> <figcaption>
-            <h4>Service Fabric Explorer Certificate Expiring</h4>
-        </figcaption>
-</figure>
-
+<figure><img src="/images/Service%20Fabric%20Explorer%20-%20Expiring%20Certificate.PNG"/><figcaption>
+                <h4>Service Fabric Explorer Certificate Expiring</h4>
+            </figcaption></figure>
 <p><em>Certificate expiration: thumbprint = {thumbprint}, expiration {date} remaining lifetime is {time} please refresh ahead of time to avoid catastrophic failure.</em></p>
 <p>If this occurs on your server it is important to update your certificates as soon as possible using <a href="/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates">Rollover Certificates</a>.</p>
 

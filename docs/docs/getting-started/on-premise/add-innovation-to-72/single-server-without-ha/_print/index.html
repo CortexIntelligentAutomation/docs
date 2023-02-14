@@ -31,8 +31,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" as="style">
-<link href="/scss/main.min.aa5e8a7de09e9dc7424a6bdfd90c903040a98e678e4b77d2993e762123ca6be2.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.af1267ad815a97d60e523ac9e4692adfba89c41feaac08a11d4cb6e1d3ce1cba.css" as="style">
+<link href="/scss/main.min.af1267ad815a97d60e523ac9e4692adfba89c41feaac08a11d4cb6e1d3ce1cba.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -115,7 +115,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8b67e4219c6b3b642c21ebae1c466b67.json"
+  data-offline-search-index-json-src="/offline-search-index.3653eee0c434ffe7510c6cf752fde0a5.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="50"
 >
@@ -243,7 +243,11 @@ This the multi-page printable view of this section.
     <div class="lead">Information about the recommended Innovation platform architecture, including component descriptions.</div>
 	<h1 id="hahahugoshortcode-s0-hbhb">Architecture</h1>
 <h2 id="components">Components</h2>
-<table>
+
+
+
+  
+    <table>
 <thead>
 <tr>
 <th>Component</th>
@@ -254,95 +258,211 @@ This the multi-page printable view of this section.
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/guides/cortex-gateway/">Cortex Gateway</a></td>
-<td>Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life.</td>
+<td><a href="/docs/guides/cortex-gateway/">Cortex Gateway</a></td>
+<td>
+
+
+  
+    <p>Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Web Application Server</td>
+<td>Web Application Server</td>
 </tr>
 <tr>
-<td><a href="/docs/guides/cortex-studio/">Cortex Studio</a></td>
-<td>Application hosted in Cortex Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions.</td>
+<td><a href="/docs/guides/cortex-studio/">Cortex Studio</a></td>
+<td>
+
+
+  
+    <p>Application hosted in Cortex Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Web Application Server</td>
+<td>Web Application Server</td>
 </tr>
 <tr>
-<td>Cortex Flow Debugger Service</td>
-<td>Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information.</td>
+<td><a href="/docs/guides/cortex-flow-debugger-service/">Cortex Flow Debugger Service</a></td>
+<td>
+
+
+  
+    <p>Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Web Application Server</td>
+<td>Web Application Server</td>
 </tr>
 <tr>
-<td>Cortex API Gateway Service</td>
-<td>Application Service that routes client requests to the correct Application Services.</td>
+<td><a href="/docs/guides/cortex-api-gateway-service/">Cortex API Gateway Service</a></td>
+<td>
+
+
+  
+    <p>Application Service that routes client requests to the correct distributed Cortex services.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td>Cortex Flow Execution Service</td>
-<td>Application Service that executes automation flows.</td>
+<td><a href="/docs/guides/cortex-execution-service/">Cortex Execution Service</a></td>
+<td>
+
+
+  
+    <p>Application Service that executes automation flows.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td>Cortex Block Packages</td>
-<td>A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service.</td>
+<td><a href="/docs/guides/cortex-package-service/">Cortex Package Service</a></td>
+<td>
+
+
+  
+    <p>Application Service that handles publishing and unpublishing packages. It also stores package configuration.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Web Application Server, Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td>Cortex Gateway Databases</td>
-<td>A set of databases created automatically by Gateway which are used for storing data related to user roles, flows, etc. Hopefully, we can remove the need for Gateway Databases in the next release.</td>
+<td><a href="/docs/guides/cortex-provisioning-service/">Cortex Provisioning Service</a></td>
+<td>
+
+
+  
+    <p>Application Service that provisions new services on demand. For example, a new Execution Service is provisioned when a package is published with a new version of block packages.</p>
+
+  
+</td>
+<td>Required</td>
+<td>Application Server</td>
+</tr>
+<tr>
+<td>Cortex Block Packages</td>
+<td>
+
+
+  
+    <p>A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Execution Service.</p>
+
+  
+</td>
+<td>Required</td>
+<td>Web Application Server, Application Server</td>
+</tr>
+<tr>
+<td>Cortex Gateway Databases</td>
+<td>
+
+
+  
+    <p>A set of databases created automatically by Gateway which are used for storing data related to user roles, flows, etc. Hopefully, we can remove the need for Gateway Databases in the next release.</p>
+
+  
+</td>
 <td>Required<br />(End of life)</td>
-<td>Web Application Server</td>
+<td>Web Application Server</td>
 </tr>
 <tr>
-<td><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103447">SQL Server Express</a> or <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe">SQL Server Standard</a></td>
-<td>Required by Cortex Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release.</td>
+<td><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103447">SQL Server Express</a> or <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=exe">SQL Server Standard</a></td>
+<td>
+
+
+  
+    <p>Required by Cortex Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release.</p>
+
+  
+</td>
 <td>Required<br />(End of life)</td>
-<td>Web Application Server</td>
+<td>Web Application Server</td>
 </tr>
 <tr>
-<td><a href="https://azure.microsoft.com/en-us/services/service-fabric/">Microsoft Service Fabric</a></td>
-<td>Distributed systems platform that hosts the Application Services where automation solutions are deployed to.</td>
+<td><a href="https://azure.microsoft.com/en-us/services/service-fabric/">Microsoft Service Fabric</a></td>
+<td>
+
+
+  
+    <p>Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td><a href="https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster">Microsoft Service Fabric Explorer</a></td>
-<td>Web portal for monitoring and managing the Service Fabric instance that automation solutions are deployed to.</td>
+<td><a href="https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster">Microsoft Service Fabric Explorer</a></td>
+<td>
+
+
+  
+    <p>Web portal for monitoring and managing the Service Fabric instance that automation solutions are deployed to.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td><a href="https://particular.net/nservicebus">Particular NServiceBus</a></td>
-<td>Messaging platform enabling scalable, reliable and flexible asynchronous messaging between Application Services.</td>
+<td><a href="https://particular.net/nservicebus">Particular NServiceBus</a></td>
+<td>
+
+
+  
+    <p>Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td><a href="https://www.rabbitmq.com/">Pivotal RabbitMQ</a></td>
-<td>Message broker used by the NServiceBus messaging platform to transport messages asynchronously between Application Services using publish/subscribe mechanism.</td>
+<td><a href="https://www.rabbitmq.com/">Pivotal RabbitMQ</a></td>
+<td>
+
+
+  
+    <p>Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex services using publish/subscribe mechanism.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 <tr>
-<td><a href="https://github.com/erlang/otp">Erlang OTP</a></td>
-<td>Erlang run-time required by the RabbitMQ message broker.</td>
+<td><a href="https://github.com/erlang/otp">Erlang OTP</a></td>
+<td>
+
+
+  
+    <p>Erlang run-time required by the RabbitMQ message broker.</p>
+
+  
+</td>
 <td>Required</td>
-<td>Application Server</td>
+<td>Application Server</td>
 </tr>
 </tbody>
 </table>
+
+  
+
 <h2 id="single-server-architecture">Single Server Architecture</h2>
 <p>Cortex Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a Cortex v7.2 installation by using the existing hardware. The only components shared by both Innovation and v7.2 are Gateway and its databases.</p>
 <p>The minimum architecture for adding Innovation to a v7.2 Single Site, Single Server system is as follows:</p>
-
-<figure class="centre">
-    <img src=" /images/editable/Cortex%20Innovation%20v7.2%20Single%20Server.png "/> <figcaption>
-            <h4>1 Server Architecture Diagram</h4>
-        </figcaption>
-</figure>
-
+<figure class="centre"><img src="/images/editable/Cortex%20Innovation%20v7.2%20Single%20Server.png"/><figcaption>
+                <h4>1 Server Architecture Diagram</h4>
+            </figcaption></figure>
 
 
 <div class="alert alert-primary" role="alert">
@@ -690,15 +810,15 @@ This the multi-page printable view of this section.
 <h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
-<p>Copy the following artefacts to a folder on the server (the version numbers may differ):</p>
+<p>Copy the following artefacts to a folder on the server:</p>
 <ul>
-<li>Cortex Innovation 2022.9 - Block Packages.zip</li>
-<li>Cortex Innovation 2022.9 - App Services.zip</li>
-<li>Cortex Innovation 2022.9 - App Server Install Scripts.zip</li>
+<li>Cortex Innovation 2023.3 - Block Packages.zip</li>
+<li>Cortex Innovation 2023.3 - App Services.zip</li>
+<li>Cortex Innovation 2023.3 - App Server Install Scripts.zip</li>
 </ul>
 </li>
 <li>
-<p>Extract the <code>Cortex Innovation 2022.9 - App Server Install Scripts.zip</code> file to a folder with the same name.</p>
+<p>Extract the <code>Cortex Innovation 2023.3 - App Server Install Scripts.zip</code> file to a folder with the same name.</p>
 </li>
 </ol>
 <h2 id="install-microsoft-net-framework-471">Install Microsoft .NET Framework 4.7.1</h2>
@@ -737,8 +857,8 @@ This the multi-page printable view of this section.
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Run the <code>Cortex.Innovation.Install.SSLBestPractices.ps1</code> script using the following command:</p>
@@ -770,8 +890,8 @@ This the multi-page printable view of this section.
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Run the <code>Cortex.Innovation.Add.WindowsDefenderExclusions.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS name or fully qualified domain name of the server:</p>
@@ -794,8 +914,8 @@ This the multi-page printable view of this section.
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Run the <code>Cortex.Innovation.Test.PortUsage.ps1</code> script using the following command, modifying the <code>ApplicationServers</code> value to contain the NETBIOS name or fully qualified domain name of the server:</p>
@@ -807,7 +927,7 @@ This the multi-page printable view of this section.
 <li>
 <p>If all ports are free, the script will report the following:</p>
 <p><code>All ports required by Cortex Innovation are free</code></p>
-<p>If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the <code>Cortex.Innovation.Install.Config.json</code> configuration file, in the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder, to use different ports. This will be used later during installation.</p>
+<p>If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the <code>Cortex.Innovation.Install.Config.json</code> configuration file, in the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder, to use different ports. This will be used later during installation.</p>
 <p>The <code>Cortex.Innovation.Test.PortUsage.ps1</code> script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.</p>
 </li>
 </ol>
@@ -816,7 +936,7 @@ This the multi-page printable view of this section.
 <h2 id="configure-installation-script">Configure Installation Script</h2>
 <ol>
 <li>
-<p>In the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder, locate the <code>Cortex.Innovation.Install.ps1</code> script and open it with a text editor.</p>
+<p>In the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder, locate the <code>Cortex.Innovation.Install.ps1</code> script and open it with a text editor.</p>
 </li>
 <li>
 <p>Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:</p>
@@ -851,26 +971,26 @@ This the multi-page printable view of this section.
 
 
 
-    <ul class="nav nav-tabs" id="tabs-3" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-15" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-3-0-tab" data-toggle="tab" href="#tabs-3-0" role="tab"
-        aria-controls="tabs-3-0" aria-selected="true">
+        id="tabs-15-0-tab" data-toggle="tab" href="#tabs-15-0" role="tab"
+        aria-controls="tabs-15-0" aria-selected="true">
         CA Certs
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-3-1-tab" data-toggle="tab" href="#tabs-3-1" role="tab"
-        aria-controls="tabs-3-1" aria-selected="false">
+        id="tabs-15-1-tab" data-toggle="tab" href="#tabs-15-1" role="tab"
+        aria-controls="tabs-15-1" aria-selected="false">
         Self-Signed Certs
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-3-content"><div class="tab-pane fade show active"
-        id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+<div class="tab-content" id="tabs-15-content"><div class="tab-pane fade show active"
+        id="tabs-15-0" role="tabpanel" aria-labelled-by="tabs-15-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -883,10 +1003,10 @@ This the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-app-install-log.txt&#34;</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+        id="tabs-15-1" role="tabpanel" aria-labelled-by="tabs-15-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000">-ConfigFileName</span> <span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Innovation</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Config</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">json</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-AppServicesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Services.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-ApiGatewayBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-CustomerName</span> <span style="color:#4e9a06">&#34;Customer1&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -990,8 +1110,8 @@ This the multi-page printable view of this section.
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Type the following command into PowerShell:</p>
@@ -1050,7 +1170,11 @@ This the multi-page printable view of this section.
 </li>
 </ol>
 <h2 id="check-application-services">Check Application Services</h2>
-<ol>
+
+
+
+  
+    <ol>
 <li>
 <p>Log on to the server.</p>
 </li>
@@ -1064,48 +1188,27 @@ This the multi-page printable view of this section.
 <li>
 <p>Navigate to <code>https://server.domain.com:9080/Explorer</code>, where <code>server.domain.com</code> is the fully qualified domain name of the server. Replace <code>9080</code> with new <code>httpGatewayEndpointPort</code> value if it was changed during configuration.</p>
 <p>The screen should resemble that in the following figure:
-
-    <figure>
-        <img src=" /images/Service%20Fabric%20Explorer%20-%20Single.png "/> <figcaption>
-                <h4>Healthy Service Fabric Explorer Cluster</h4>
-            </figcaption>
-    </figure>
-</p>
+<figure><img src="/images/Service%20Fabric%20Explorer%20-%20Single.png"/></figure></p>
 <p>The status circles should be entirely green - this indicates that the node and all services and instances are healthy. Other status pages can be accessed by expanding items in the leftmost pane. Issues can be tracked down to the failing component by expanding items with warning triangles or error icons on. The next few diagrams show the status pages for a healthy system.</p>
 <p>After expanding the application, clicking on any of the services should display a green circle and <code>Status = Active</code>:</p>
-
-    <figure>
-        <img src=" /images/Service%20Fabric%20Explorer%20-%20Service%20-%20Single.png "/> <figcaption>
-                <h4>Healthy Service Fabric Explorer Service</h4>
-            </figcaption>
-    </figure>
-
+<figure><img src="/images/Service%20Fabric%20Explorer%20-%20Service%20-%20Single.png"/></figure>
 <p>After expanding either of the services, clicking on any of the instances/partitions should display a green circle and <code>Status = Ready</code>:</p>
-
-    <figure>
-        <img src=" /images/Service%20Fabric%20Explorer%20-%20Instance%20-%20Single.png "/> <figcaption>
-                <h4>Healthy Service Fabric Explorer Instance</h4>
-            </figcaption>
-    </figure>
-
+<figure><img src="/images/Service%20Fabric%20Explorer%20-%20Instance%20-%20Single.png"/></figure>
 <p>Clicking on any of the nodes at the bottom of the leftmost pane should display a green circle and <code>Status = Up</code>:</p>
-
-    <figure>
-        <img src=" /images/Service%20Fabric%20Explorer%20-%20Node%20-%20Single.png "/> <figcaption>
-                <h4>Healthy Service Fabric Explorer Node</h4>
-            </figcaption>
-    </figure>
-
+<figure><img src="/images/Service%20Fabric%20Explorer%20-%20Node%20-%20Single.png"/></figure>
 <p>If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, go to the next section.</p>
 <p>If the warnings persist or anything on the screen goes red, expand the items to find the individual services and instances which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase. Error and warning messages should be displayed on the status screens and should indicate what is wrong.</p>
 <p>If no useful message can be seen here, the service log files may contain more information. These can be found on the server at:</p>
 <ul>
-<li>%ProgramData%/Cortex/Cortex API Gateway Service</li>
-<li>%ProgramData%/Cortex/Cortex Flow Execution Service</li>
+<li><code>%ProgramData%/Cortex/Cortex API Gateway Service</code></li>
+<li><code>%ProgramData%/Cortex/Cortex Execution Service</code></li>
 </ul>
 <p>If no solution can be found, please contact <a href="https://support.cortex.co.uk/">Cortex Service Portal</a> for further assistance.</p>
 </li>
 </ol>
+
+  
+
 <h2 id="preserve-installation-files">Preserve installation files</h2>
 <p>Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.</p>
 <h2 id="next-steps">Next Steps?</h2>
@@ -1139,16 +1242,16 @@ This the multi-page printable view of this section.
 <h2 id="make-installation-artefacts-available">Make Installation Artefacts Available</h2>
 <ol>
 <li>
-<p>Copy the following artefacts to a folder on the machine (the version numbers may differ):</p>
+<p>Copy the following artefacts to a folder on the machine:</p>
 <ul>
-<li>Cortex Innovation 2022.9 - Block Packages.zip</li>
-<li>Cortex Innovation 2022.9 - Gateway.zip</li>
-<li>Cortex Innovation 2022.9 - Flow Debugger Service.zip</li>
-<li>Cortex Innovation 2022.9 - Web App Server Install Scripts.zip</li>
+<li>Cortex Innovation 2023.3 - Block Packages.zip</li>
+<li>Cortex Innovation 2023.3 - Gateway.zip</li>
+<li>Cortex Innovation 2023.3 - Flow Debugger Service.zip</li>
+<li>Cortex Innovation 2023.3 - Web App Server Install Scripts.zip</li>
 </ul>
 </li>
 <li>
-<p>Extract the <code>Cortex Innovation 2022.9 - Web App Server Install Scripts.zip</code> zip file to a folder with the same name.</p>
+<p>Extract the <code>Cortex Innovation 2023.3 - Web App Server Install Scripts.zip</code> zip file to a folder with the same name.</p>
 </li>
 </ol>
 <h2 id="install-prerequisites">Install Prerequisites</h2>
@@ -1193,7 +1296,7 @@ This the multi-page printable view of this section.
 <h3 id="configure-installation-script">Configure Installation Script</h3>
 <ol>
 <li>
-<p>In the <code>Cortex Innovation 2022.9 - Web App Server Install Scripts</code> folder, locate the <code>Cortex.Innovation.Install.FlowDebuggerService.ps1</code> script and open it with a text editor.</p>
+<p>In the <code>Cortex Innovation 2023.3 - Web App Server Install Scripts</code> folder, locate the <code>Cortex.Innovation.Install.FlowDebuggerService.ps1</code> script and open it with a text editor.</p>
 </li>
 <li>
 <p>Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:</p>
@@ -1228,26 +1331,26 @@ This the multi-page printable view of this section.
 
 
 
-    <ul class="nav nav-tabs" id="tabs-2" role="tablist"><li class="nav-item">
+    <ul class="nav nav-tabs" id="tabs-8" role="tablist"><li class="nav-item">
       <a class="nav-link active"
-        id="tabs-2-0-tab" data-toggle="tab" href="#tabs-2-0" role="tab"
-        aria-controls="tabs-2-0" aria-selected="true">
+        id="tabs-8-0-tab" data-toggle="tab" href="#tabs-8-0" role="tab"
+        aria-controls="tabs-8-0" aria-selected="true">
         CA Certs
       </a>
     </li><li class="nav-item">
       <a class="nav-link"
-        id="tabs-2-1-tab" data-toggle="tab" href="#tabs-2-1" role="tab"
-        aria-controls="tabs-2-1" aria-selected="false">
+        id="tabs-8-1-tab" data-toggle="tab" href="#tabs-8-1" role="tab"
+        aria-controls="tabs-8-1" aria-selected="false">
         Self-Signed Certs
       </a>
     </li></ul>
 
 
-<div class="tab-content" id="tabs-2-content"><div class="tab-pane fade show active"
-        id="tabs-2-0" role="tabpanel" aria-labelled-by="tabs-2-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+<div class="tab-content" id="tabs-8-content"><div class="tab-pane fade show active"
+        id="tabs-8-0" role="tabpanel" aria-labelled-by="tabs-8-0-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-Credential</span> <span style="color:#000">$AppPoolIdentity</span> <span style="color:#000;font-weight:bold">`</span>
@@ -1255,10 +1358,10 @@ This the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">*&gt;&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#204a87">Tee-Object</span> <span style="color:#000">-FilePath</span> <span style="color:#4e9a06">&#34;cortex-flow-debugger-service-install-log.txt&#34;</span>
 </span></span><span style="display:flex;"><span>        </span></span></code></pre></div></div>
   <div class="tab-pane fade"
-        id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
+        id="tabs-8-1" role="tabpanel" aria-labelled-by="tabs-8-1-tab"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">FlowDebuggerService</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerServicePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Flow Debugger Service.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">-BlockPackagesPath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Block Packages.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerBasicAuthUserName</span> <span style="color:#4e9a06">&#34;BasicAuthUser&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-FlowDebuggerBasicAuthPwd</span> <span style="color:#4e9a06">&#34;ADA9883B11BD4CDC908B8131B57944A4&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">-UseSelfSignedCertificates</span> <span style="color:#000;font-weight:bold">`</span>
@@ -1321,8 +1424,8 @@ This the multi-page printable view of this section.
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - Web App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Web App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - Web App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Web App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Type the following command into PowerShell:</p>
@@ -1368,12 +1471,12 @@ This the multi-page printable view of this section.
 <h3 id="configure-installation-script-1">Configure Installation Script</h3>
 <ol>
 <li>
-<p>In the <code>Cortex Innovation 2022.9 - Web App Server Install Scripts</code> folder, locate the <code>Cortex.Innovation.Install.Gateway.ps1</code> script and open it with a text editor.</p>
+<p>In the <code>Cortex Innovation 2023.3 - Web App Server Install Scripts</code> folder, locate the <code>Cortex.Innovation.Install.Gateway.ps1</code> script and open it with a text editor.</p>
 </li>
 <li>
 <p>Configure the script according to the details given below:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">.\</span><span style="color:#000">Cortex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Install</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Gateway</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ps1</span> <span style="color:#000;font-weight:bold">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">-GatewayPackagePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Gateway.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">-GatewayPackagePath</span> <span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Gateway.zip&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">-GatewayApplicationIISPath</span> <span style="color:#4e9a06">&#34;Cortex\gateway&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">-FeatureFlags</span> <span style="color:#4e9a06">&#34;InnovationId&#34;</span> <span style="color:#000;font-weight:bold">`</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">-ServiceFabricApiGatewayEndpoint</span> <span style="color:#4e9a06">&#34;https://server.domain.com:8722/&#34;</span> <span style="color:#000;font-weight:bold">`</span>
@@ -1397,7 +1500,7 @@ This the multi-page printable view of this section.
 <tbody>
 <tr>
 <td><code>GatewayPackagePath</code></td>
-<td>Configure this value with the location of the <code>Cortex Innovation 2022.9 - Gateway.zip</code> file on the installation server.</td>
+<td>Configure this value with the location of the <code>Cortex Innovation 2023.3 - Gateway.zip</code> file on the installation server.</td>
 </tr>
 <tr>
 <td><code>GatewayApplicationIISPath</code></td>
@@ -1464,8 +1567,8 @@ This the multi-page printable view of this section.
 <p>Open a Windows PowerShell (x64) window as administrator.</p>
 </li>
 <li>
-<p>Navigate PowerShell to inside the <code>Cortex Innovation 2022.9 - Web App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2022.9 - Web App Server Install Scripts&#34;</span>
+<p>Navigate PowerShell to inside the <code>Cortex Innovation 2023.3 - Web App Server Install Scripts</code> folder using the following command, modifying the path as necessary:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#204a87">cd </span><span style="color:#4e9a06">&#34;C:\Install\Cortex Innovation 2023.3 - Web App Server Install Scripts&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Type the following command into PowerShell:</p>
@@ -1566,13 +1669,9 @@ In the event of any errors, there will be an error message displayed at the end 
 <li>Inside the group, click the <code>+</code> button again and click on <code>Flow<sup>(Innovation)</sup></code> to open a dialog. If the menu item is not present, it means that the <code>FeatureFlags</code> in the <code>CortexGateway.SetParameters.xml</code> file was not set properly when installing Gateway. See <a href="/docs/reference/troubleshooting/installation#ts-no-innovation">Troubleshooting</a> for more information.</li>
 <li>Enter a name for the flow, configure the <code>Permission Groups</code> and click <code>OK</code> to create the flow.</li>
 <li>The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
-
-    <figure>
-        <img src=" /images/New%20Innovation%20Flow%20View.PNG "/> <figcaption>
-                <h4>New Flow - Number of palettes may differ</h4>
-            </figcaption>
-    </figure>
-
+<figure><img src="/images/New%20Innovation%20Flow%20View.PNG"/><figcaption>
+                    <h4>New Flow - Number of palettes may differ</h4>
+                </figcaption></figure>
 If the blocks in the flow do not display or the palettes are not visible, see <a href="/docs/reference/troubleshooting/installation#ts-no-blocks">Troubleshooting</a> for more information.</li>
 <li>Add a <code>Set Variable</code> block and connect it between the start and end blocks.</li>
 <li>Click the <code>Set Variable</code> block to open the Property Editor.</li>

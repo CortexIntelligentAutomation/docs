@@ -39,7 +39,13 @@
     <lastmod>2022-06-16T14:15:00+01:00</lastmod>
   </url><url>
     <loc>/docs/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
+  </url><url>
+    <loc>/docs/guides/cortex-gateway/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/apis/cortex-gateway/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/logs/cortex-gateway/</loc>
     <lastmod>2022-08-17T13:20:32+01:00</lastmod>
@@ -240,10 +246,10 @@
     <lastmod>2023-01-11T09:55:24+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-07T10:26:48+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/fundamentals/blocks/what-is-a-block/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-07T10:26:48+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/working-with/collections/what-is-a-collection/</loc>
     <lastmod>2022-09-21T12:25:06+01:00</lastmod>
@@ -282,7 +288,7 @@
     <lastmod>2022-08-31T08:32:22+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/fundamentals/executions/what-is-an-execution/</loc>
-    <lastmod>2022-09-09T09:18:50+01:00</lastmod>
+    <lastmod>2023-02-06T10:31:56+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/working-with/objects/what-is-an-object/</loc>
     <lastmod>2022-09-12T16:57:43+01:00</lastmod>
@@ -321,22 +327,22 @@
     <lastmod>2021-07-08T13:37:13+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/cloud/add-observability-to-innovation/grafana/architecture/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-07T10:26:48+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/architecture/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/architecture/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/architecture/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-07T10:26:48+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/architecture/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/</loc>
     <lastmod>2021-06-25T18:21:14+01:00</lastmod>
@@ -351,7 +357,7 @@
     <lastmod>2021-06-25T18:21:14+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/observability/grafana/dashboards/flow-execution-requests/</loc>
-    <lastmod>2023-02-02T13:27:54+00:00</lastmod>
+    <lastmod>2023-02-07T10:26:48+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/</loc>
     <lastmod>2022-08-22T10:00:30+01:00</lastmod>
@@ -426,13 +432,13 @@
     <lastmod>2022-10-12T14:55:47+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/observability/grafana/dashboards/platform-health/</loc>
-    <lastmod>2023-02-02T13:53:54+00:00</lastmod>
+    <lastmod>2023-02-07T10:26:48+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/cloud/add-observability-to-innovation/grafana/prerequisites/</loc>
-    <lastmod>2022-08-22T10:00:30+01:00</lastmod>
+    <lastmod>2023-02-13T14:36:00+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites/</loc>
-    <lastmod>2023-02-01T09:09:26+00:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites/</loc>
     <lastmod>2023-02-01T09:09:26+00:00</lastmod>
@@ -441,10 +447,10 @@
     <lastmod>2022-09-28T10:52:56+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites/</loc>
-    <lastmod>2023-02-01T09:09:26+00:00</lastmod>
+    <lastmod>2023-02-13T15:02:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites/</loc>
-    <lastmod>2023-02-01T09:09:26+00:00</lastmod>
+    <lastmod>2023-02-13T15:02:57+00:00</lastmod>
   </url><url>
     <loc>/blog/releases/</loc>
     <lastmod>2022-10-12T14:55:47+01:00</lastmod>
@@ -465,16 +471,16 @@
     <lastmod>2022-08-24T15:03:50+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server/</loc>
-    <lastmod>2023-02-01T09:12:05+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server/</loc>
-    <lastmod>2023-02-01T09:12:05+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers/</loc>
-    <lastmod>2023-02-06T13:04:46+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/</loc>
-    <lastmod>2023-02-06T13:04:46+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/</loc>
     <lastmod>2022-07-01T09:46:20+01:00</lastmod>
@@ -492,10 +498,10 @@
     <lastmod>2022-07-01T09:46:20+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-01T09:12:05+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-01T09:09:26+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/glossary/p-t/</loc>
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
@@ -504,10 +510,10 @@
     <lastmod>2022-08-22T10:00:30+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-01T09:09:26+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-01T09:09:26+00:00</lastmod>
+    <lastmod>2023-02-14T10:30:42+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/</loc>
     <lastmod>2022-08-22T10:00:30+01:00</lastmod>
@@ -566,6 +572,12 @@
     <loc>/docs/reference/concepts/fundamentals/flows/calling-other-flows/</loc>
     <lastmod>2022-09-12T11:52:44+01:00</lastmod>
   </url><url>
+    <loc>/docs/guides/cortex-studio/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/apis/cortex-studio/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
+  </url><url>
     <loc>/docs/reference/logs/cortex-studio/</loc>
     <lastmod>2022-08-17T13:20:32+01:00</lastmod>
   </url><url>
@@ -611,6 +623,12 @@
     <loc>/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/</loc>
     <lastmod>2022-08-31T14:16:55+01:00</lastmod>
   </url><url>
+    <loc>/docs/guides/cortex-flow-debugger-service/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/apis/cortex-flow-debugger-service/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
+  </url><url>
     <loc>/docs/reference/logs/cortex-flow-debugger-service/</loc>
     <lastmod>2022-08-17T13:20:32+01:00</lastmod>
   </url><url>
@@ -653,8 +671,14 @@
     <loc>/docs/reference/concepts/fundamentals/variables/</loc>
     <lastmod>2022-08-04T16:53:15+01:00</lastmod>
   </url><url>
-    <loc>/docs/reference/logs/cortex-flow-execution-service/</loc>
-    <lastmod>2022-08-17T13:20:32+01:00</lastmod>
+    <loc>/docs/reference/logs/cortex-execution-service/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/logs/cortex-package-service/</loc>
+    <lastmod>2023-02-08T10:19:36+00:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/logs/cortex-provisioning-service/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/working-with/culture/custom-cultures/</loc>
     <lastmod>2022-09-12T16:06:49+01:00</lastmod>
@@ -681,10 +705,85 @@
     <lastmod>2022-09-21T18:17:10+01:00</lastmod>
   </url><url>
     <loc>/blog/2022/10/27/2022.9/</loc>
-    <lastmod>2023-02-02T14:16:07+00:00</lastmod>
+    <lastmod>2023-02-13T13:19:56+00:00</lastmod>
   </url><url>
     <loc>/blog/releases/2022.x/</loc>
     <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+  </url><url>
+    <loc>/headless/</loc>
+    <lastmod>2023-01-27T11:37:11+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/multi-server/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-api-gateway-service/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-block-packages/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-execution-service/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-flow-debugger-service/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-gateway-databases/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-gateway/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-package-service/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-provisioning-service/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/cortex-studio/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/erlang-otp/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/gobetween/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/ms-service-fabric-explorer/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/ms-service-fabric/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/ms-sql-server/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/nssm/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/particular-nservicebus/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/purpose/pivotal-rabbitmq/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/architecture/components/single-server/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/currentversion/</loc>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
+  </url><url>
+    <loc>/headless/install-application-server/check-application-services/multi-server/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/install-application-server/check-application-services/single-server/</loc>
+    <lastmod>2023-02-13T15:19:03+00:00</lastmod>
+  </url><url>
+    <loc>/headless/port-requirements/description/api-gateway/</loc>
+    <lastmod>2023-02-06T10:31:56+00:00</lastmod>
+  </url><url>
+    <loc>/headless/port-requirements/description/execution/</loc>
+    <lastmod>2023-02-06T10:31:56+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/lists/add-item/add-item-at-beginning-block-2/</loc>
     <lastmod>2022-09-16T10:30:55+01:00</lastmod>
@@ -735,7 +834,7 @@
     <lastmod>2022-09-21T12:52:47+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/advanced-config-changes/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/collections/array/</loc>
     <lastmod>2022-09-12T15:57:36+01:00</lastmod>
@@ -801,7 +900,7 @@
     <lastmod>2022-06-22T14:42:05+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/tde/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <lastmod>2023-02-13T14:36:00+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/data/connectiondetails/</loc>
     <lastmod>2022-09-12T08:40:39+01:00</lastmod>
@@ -935,32 +1034,32 @@
     <loc>/docs/reference/apis/cortex-api-gateway-service/</loc>
     <lastmod>2022-08-18T15:10:34+01:00</lastmod>
   </url><url>
-    <loc>/docs/guides/cortex-flow-debugger-service/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <loc>/docs/guides/cortex-execution-service/</loc>
+    <lastmod>2023-02-02T14:48:48+00:00</lastmod>
   </url><url>
-    <loc>/docs/reference/apis/cortex-flow-debugger-service/</loc>
-    <lastmod>2022-10-14T16:49:45+01:00</lastmod>
+    <loc>/docs/reference/apis/cortex-execution-service/</loc>
+    <lastmod>2023-02-02T14:48:48+00:00</lastmod>
   </url><url>
     <loc>/docs/guides/cortex-flow-execution-service/</loc>
-    <lastmod>2023-02-02T14:14:13+00:00</lastmod>
+    <lastmod>2023-02-13T13:17:30+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/apis/cortex-flow-execution-service/</loc>
-    <lastmod>2022-08-31T15:27:29+01:00</lastmod>
-  </url><url>
-    <loc>/docs/guides/cortex-gateway/</loc>
-    <lastmod>2022-08-24T15:03:50+01:00</lastmod>
-  </url><url>
-    <loc>/docs/reference/apis/cortex-gateway/</loc>
-    <lastmod>2022-08-18T15:10:34+01:00</lastmod>
+    <lastmod>2023-02-13T13:38:25+00:00</lastmod>
   </url><url>
     <loc>/docs/guides/cortex-gateway/settings/</loc>
     <lastmod>2022-05-06T10:12:26+01:00</lastmod>
   </url><url>
-    <loc>/docs/guides/cortex-studio/</loc>
-    <lastmod>2022-06-22T17:08:09+01:00</lastmod>
+    <loc>/docs/guides/cortex-package-service/</loc>
+    <lastmod>2023-02-08T10:19:36+00:00</lastmod>
   </url><url>
-    <loc>/docs/reference/apis/cortex-studio/</loc>
-    <lastmod>2022-08-18T15:10:34+01:00</lastmod>
+    <loc>/docs/reference/apis/cortex-package-service/</loc>
+    <lastmod>2023-02-08T10:19:36+00:00</lastmod>
+  </url><url>
+    <loc>/docs/guides/cortex-provisioning-service/</loc>
+    <lastmod>2023-02-02T14:48:48+00:00</lastmod>
+  </url><url>
+    <loc>/docs/reference/apis/cortex-provisioning-service/</loc>
+    <lastmod>2023-02-02T16:30:55+00:00</lastmod>
   </url><url>
     <loc>/docs/guides/cortex-studio/expression-editor/</loc>
     <lastmod>2022-08-23T16:22:28+01:00</lastmod>
@@ -981,10 +1080,10 @@
     <lastmod>2022-09-16T10:30:55+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/self-signed-certificates/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/working-with/culture/</loc>
     <lastmod>2022-09-12T16:06:49+01:00</lastmod>
@@ -1107,7 +1206,7 @@
     <lastmod>2022-08-23T16:26:42+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/encrypt-text/</loc>
-    <lastmod>2022-10-12T14:55:47+01:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/text/encryptabletext/</loc>
     <lastmod>2022-08-23T16:26:42+01:00</lastmod>
@@ -1488,7 +1587,7 @@
     <lastmod>2022-05-30T10:51:03+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/troubleshooting/installation/</loc>
-    <lastmod>2023-02-02T13:53:54+00:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/numbers/int16/</loc>
     <lastmod>2022-09-12T10:26:10+01:00</lastmod>
@@ -1605,7 +1704,7 @@
     <lastmod>2022-01-04T16:00:09+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/logs/log-event/log-event-block/</loc>
-    <lastmod>2022-09-16T10:30:55+01:00</lastmod>
+    <lastmod>2023-02-06T10:31:56+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/logs/</loc>
     <lastmod>2022-01-04T16:00:09+00:00</lastmod>
@@ -1692,7 +1791,7 @@
     <lastmod>2022-09-15T14:21:09+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/port-requirements/</loc>
-    <lastmod>2022-07-06T14:02:50+01:00</lastmod>
+    <lastmod>2023-02-08T16:27:48+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/port-requirements/</loc>
     <lastmod>2022-08-23T16:26:42+01:00</lastmod>
@@ -1857,7 +1956,7 @@
     <lastmod>2022-10-04T12:09:04+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates/</loc>
-    <lastmod>2023-02-02T14:14:13+00:00</lastmod>
+    <lastmod>2023-02-09T17:58:33+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/flows/run-flow/</loc>
     <lastmod>2022-02-08T14:05:40+00:00</lastmod>
@@ -1983,7 +2082,7 @@
     <lastmod>2022-09-16T10:30:55+01:00</lastmod>
   </url><url>
     <loc>/docs/reference/concepts/working-with/data-sources/supported-data-sources/sql-server/</loc>
-    <lastmod>2022-09-12T16:32:59+01:00</lastmod>
+    <lastmod>2023-02-06T10:31:56+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/data-types/data/sqlserverconnectiondetails/</loc>
     <lastmod>2022-09-12T10:26:10+01:00</lastmod>

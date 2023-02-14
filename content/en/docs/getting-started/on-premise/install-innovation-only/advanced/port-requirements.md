@@ -52,10 +52,10 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 
 Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the ephemeralPorts range.
 
-|Name of Service | Description | Default Port(s) | Protocol(s) | Direction | Program|
-|----------------|-------------|-----------------|-------------|-----------|--------|
-| API Gateway    | The port providing an entry into the API Gateway service. This is used by Cortex Gateway to communicate with the Application Services. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring Cortex Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
-| Flow Execution | The ports providing communication between other services and the stateful Cortex Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
+| Name of Service | Description                                                                    | Default Port(s)                      | Protocol(s) | Direction         | Program |
+|-----------------|--------------------------------------------------------------------------------|--------------------------------------|-------------|-------------------|---------|
+| API Gateway     | {{< section "/headless/port-requirements/description/api-gateway.md" >}} | 8722                                 | TCP, UDP    | Inbound, Outbound | Any     |
+| Execution       | {{< section "/headless/port-requirements/description/execution.md" >}}   | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
 
 ## Cortex Load Balancer Rules
 
@@ -63,9 +63,9 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 
 The load balancer server must be able to retrieve traffic via HTTPS. The following firewall ports are opened by the installer (these rules will all appear in Windows Firewall with names starting with `{CustomerName}`):
 
-|Name in Rule        | Name in Config       | Default Port(s) | Protocol(s) | Direction | Program|
-|--------------------|----------------------|-----------------|-------------|-----------|--------|
-| GoBetweenTlsPort   | loadBalancerTlsPort  | 443             | TCP         | Inbound   | Any    |
+|Name in Rule        | Name in Config       | Default Port(s) | Protocol(s) | Direction | Program |
+|--------------------|----------------------|-----------------|-------------|-----------|---------|
+| GoBetweenTlsPort   | loadBalancerTlsPort  | 443             | TCP         | Inbound   | Any     |
 
 [Dynamic Ports]: {{< url "MSSupport.Troubleshooting.DynamicPorts" >}}
 [Service Fabric reverse proxy]: {{< url "MSDocs.ServiceFabric.ReverseProxy" >}}
