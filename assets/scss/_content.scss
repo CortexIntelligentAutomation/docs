@@ -106,6 +106,18 @@
     > .footnotes {
         font-style: italic;
     }
+
+    > .youtube-video {
+        max-width: 640px;
+        width: 100%;
+        animation: fadeIn 2s;
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 5px;
+        }
+    }
 }
 
 .td-title {
@@ -115,4 +127,9 @@
     @include media-breakpoint-up(sm) {
         font-size: 3rem;
     }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
