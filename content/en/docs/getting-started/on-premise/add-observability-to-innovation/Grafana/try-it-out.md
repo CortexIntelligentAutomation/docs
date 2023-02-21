@@ -21,8 +21,8 @@ This test uses the test flow published as part of testing the Innovation install
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
-    | Username      | The value used for `ApiGatewayBasicAuthUserName` when installing Application Services. See [HA Installation script configuration][] or [Non-HA Installation script configuration][] for the value specified.|
-    | Password      | The value used for `ApiGatewayBasicAuthPwd` when installing Application Services (Unencrypted). See [HA Installation script configuration][] or [Non-HA Installation script configuration][] for the value specified.|
+    | Username      | The value used for `ApiGatewayBasicAuthUsername` when installing Application Services. See [HA Installation script configuration][] or [Non-HA Installation script configuration][] for the value specified.|
+    | Password      | The value used for `ApiGatewayBasicAuthPassword` when installing Application Services (Unencrypted). See [HA Installation script configuration][] or [Non-HA Installation script configuration][] for the value specified.|
 
     {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you may need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 

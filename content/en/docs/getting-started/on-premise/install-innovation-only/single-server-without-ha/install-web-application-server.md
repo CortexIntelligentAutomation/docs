@@ -214,8 +214,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 .\Cortex.Install.FlowDebuggerService.ps1 `
     -FlowDebuggerServicePath "C:\Install\Cortex Innovation {{< version >}} - Flow Debugger Service.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
-    -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
-    -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -FlowDebuggerBasicAuthUsername "BasicAuthUser" `
+    -FlowDebuggerBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -Credential $AppPoolIdentity `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-flow-debugger-service-install-log.txt"
@@ -224,8 +224,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 .\Cortex.Install.FlowDebuggerService.ps1 `
     -FlowDebuggerServicePath "C:\Install\Cortex Innovation {{< version >}} - Flow Debugger Service.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
-    -FlowDebuggerBasicAuthUserName "BasicAuthUser" `
-    -FlowDebuggerBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -FlowDebuggerBasicAuthUsername "BasicAuthUser" `
+    -FlowDebuggerBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -UseSelfSignedCertificates `
     -Credential $AppPoolIdentity `
     -AcceptEULA:$AcceptEula `
@@ -237,8 +237,8 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |----------------------------------------------|-------------|
     |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
-    |`FlowDebuggerBasicAuthUserName`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`FlowDebuggerBasicAuthPwd`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`FlowDebuggerBasicAuthUsername`               | Configure this value with the username that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
+    |`FlowDebuggerBasicAuthPassword`                     | Configure this value with the password that will be used for Basic Authentication when Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
@@ -407,10 +407,10 @@ If the site hosting the Gateway web application is a newly created Cortex site o
     |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the Gateway web.config.|
-    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Server][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthUsername` value in the Gateway web.config.|
+    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Server][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthUsername` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Server][Configure Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthPassword` value in the Gateway web.config.|
     |`DotNetFlowDebuggerEndpoint`                    | Replace `server.domain.com` with the fully qualified domain name of the Web Application Server.<br /><br />This will set the `DotNetFlowDebuggerEndpoint` value in the Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUserName` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `DotNetFlowDebuggerBasicAuthUsername` value in the Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUsername` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `DotNetFlowDebuggerBasicAuthUsername` value in the Gateway web.config.|
     |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [installing the Flow Debugger Service][Configure Debugger Installation Script]; if so, this value must be configured to the one used. It can be [Cortex Encrypted][].<br /><br />This will set the `DotNetFlowDebuggerBasicAuthPassword` value in the Gateway web.config.|
     |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing Gateway and Flow Debugger Service, `$true` if using self-signed certificates.<br /><br />This will set the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the Gateway web.config.|
     |`Test`                                        | This does not need to be changed, it will be set at a later stage. |

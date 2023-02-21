@@ -130,15 +130,15 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
-    -ApiGatewayBasicAuthUserName "BasicAuthUser" `
-    -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthUsername "BasicAuthUser" `
+    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePwd "myPassword" `
+    -ServerCertificatePassword "myPassword" `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePwd "myPassword" `
+    -ClientCertificatePassword "myPassword" `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -147,8 +147,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
-    -ApiGatewayBasicAuthUserName "BasicAuthUser" `
-    -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthUsername "BasicAuthUser" `
+    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
@@ -161,14 +161,14 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
-    -ApiGatewayBasicAuthUserName "BasicAuthUser" `
-    -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthUsername "BasicAuthUser" `
+    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePwd "myPassword" `
+    -ServerCertificatePassword "myPassword" `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePwd "myPassword" `
+    -ClientCertificatePassword "myPassword" `
     -SkipLoadBalancer `
     -Credential $Credential `
     -AcceptEULA:$AcceptEula `
@@ -178,8 +178,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
-    -ApiGatewayBasicAuthUserName "BasicAuthUser" `
-    -ApiGatewayBasicAuthPwd "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthUsername "BasicAuthUser" `
+    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -UseSelfSignedCertificates `
@@ -194,22 +194,22 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
-    |`ApiGatewayBasicAuthUserName`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`ApiGatewayBasicAuthPwd`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUsername`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [Cortex Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
     |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the HA cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul>{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" "update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}|
-    |`ServerCertificatePwd`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
+    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
     |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. This can be the same certificate as the `ServerCertificatePath`. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the [Certificate Requirements][].<br /><br />This certificate will be used for: <ul><li>Securing communication between the load balancer and the nodes on the Application Servers.</li></ul>{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" "update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref "Cortex.ServicePortal.MainDoc" "Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}
-    |`ClientCertificatePwd`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. |
+    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. |
     |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the Application Servers. It must be a domain user that is a member of the local Administrators group on all servers. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
-    The `ApiGatewayBasicAuthUserName` and `ApiGatewayBasicAuthPwd` will be needed [later, when installing Gateway][Install Gateway].
+    The `ApiGatewayBasicAuthUsername` and `ApiGatewayBasicAuthPassword` will be needed [later, when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
 More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigMultipleServer" "Advanced Application Server and Load Balancer Configuration Changes" >}}.

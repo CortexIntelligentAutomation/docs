@@ -47,8 +47,8 @@ Test the platform by creating a new flow and executing it using the following st
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
-    | Username      | The value used for `ApiGatewayBasicAuthUserName` when installing Application Services              |
-    | Password      | The value used for `ApiGatewayBasicAuthPwd` when installing Application Services (Unencrypted) |
+    | Username      | The value used for `ApiGatewayBasicAuthUsername` when installing Application Services              |
+    | Password      | The value used for `ApiGatewayBasicAuthPassword` when installing Application Services (Unencrypted) |
 
     {{% alert title="Note" %}} If you used self-signed certificates when installing the server you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
