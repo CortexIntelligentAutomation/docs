@@ -471,16 +471,16 @@
     <lastmod>2023-02-17T12:16:17+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-grafana/</loc>
     <lastmod>2022-07-01T09:46:20+01:00</lastmod>
@@ -498,10 +498,10 @@
     <lastmod>2022-07-01T09:46:20+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/glossary/p-t/</loc>
     <lastmod>2022-10-28T13:13:10+01:00</lastmod>
@@ -510,10 +510,10 @@
     <lastmod>2022-08-22T10:00:30+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/</loc>
     <lastmod>2022-08-22T10:00:30+01:00</lastmod>
@@ -543,22 +543,22 @@
     <lastmod>2022-09-08T11:44:46+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/try-it-out/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/try-it-out/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/try-it-out/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/add-observability-to-innovation/grafana/advanced/</loc>
     <lastmod>2022-07-01T09:46:20+01:00</lastmod>
@@ -708,7 +708,7 @@
     <lastmod>2022-09-21T18:17:10+01:00</lastmod>
   </url><url>
     <loc>/blog/2022/10/27/2022.9/</loc>
-    <lastmod>2023-02-14T12:07:56+00:00</lastmod>
+    <lastmod>2023-02-22T16:36:20+00:00</lastmod>
   </url><url>
     <loc>/blog/releases/2022.x/</loc>
     <lastmod>2022-10-12T14:55:47+01:00</lastmod>
@@ -1959,7 +1959,7 @@
     <lastmod>2022-10-04T12:09:04+01:00</lastmod>
   </url><url>
     <loc>/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates/</loc>
-    <lastmod>2023-02-21T11:16:50+00:00</lastmod>
+    <lastmod>2023-02-21T11:54:57+00:00</lastmod>
   </url><url>
     <loc>/docs/reference/blocks/flows/run-flow/</loc>
     <lastmod>2022-02-08T14:05:40+00:00</lastmod>
