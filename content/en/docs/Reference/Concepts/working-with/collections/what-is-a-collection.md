@@ -64,6 +64,17 @@ TODO:
 
 ##### Indexes
 
+### Queues
+
+TODO:
+
+- Talk about first-in-first-out
+- Talk about priority and order items in a queue
+- Talk about typed queues
+- Talk about how items can be accessed (e.g. dequeue/peek or get list of items)
+- Link to Data Type
+- Creating a queue
+
 ## Arrays vs Lists
 
 ### Differences

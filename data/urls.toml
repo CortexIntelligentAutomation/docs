@@ -685,6 +685,12 @@
                     MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/"
                     [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript]
                         MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
+            [Cortex.Reference.Blocks.Queues]
+                MainDoc = "/docs/reference/blocks/queues/"
+                [Cortex.Reference.Blocks.Queues.EnqueueItem]
+                    MainDoc = "/docs/reference/blocks/queues/enqueue-item/"
+                    [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock]
+                        MainDoc = "/docs/reference/blocks/queues/enqueue-item/enqueue-item-block-2"
             [Cortex.Reference.Blocks.Ssh]
                 MainDoc = "/docs/reference/blocks/ssh/"
                 [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]
@@ -1044,6 +1050,8 @@
                 MainDoc = "/docs/reference/data-types/collections"
                 [Cortex.Reference.DataTypes.Collections.Array]
                     MainDoc = "/docs/reference/data-types/collections/array"
+                [Cortex.Reference.DataTypes.Collections.IComparer]
+                    MainDoc = "/docs/reference/data-types/collections/icomparer-1"
                 [Cortex.Reference.DataTypes.Collections.IDictionary]
                     MainDoc = "/docs/reference/data-types/collections/idictionary-2"
                 [Cortex.Reference.DataTypes.Collections.Dictionary]
@@ -1060,6 +1068,8 @@
                     MainDoc = "/docs/reference/data-types/collections/list-1"
                     CreateNew = "/docs/reference/data-types/collections/list-1#create-a-listlttitemgt"
                     ConvertToText = "/docs/reference/data-types/collections/list-1#convert-listlttitemgt-to-text"
+                [Cortex.Reference.DataTypes.Collections.QueueWithPriority]
+                    MainDoc = "/docs/reference/data-types/collections/queuewithpriority-2"
                 [Cortex.Reference.DataTypes.Collections.Structure]
                     MainDoc = "/docs/reference/data-types/collections/structure"
                     CreateNew = "/docs/reference/data-types/collections/structure#create-a-structure"
@@ -1384,6 +1394,10 @@
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
+                [Cortex.Reference.DataTypes.Text.StringComparer]
+                    MainDoc = "/docs/reference/data-types/text/stringcomparer"
+                    CreateNew = "/docs/reference/data-types/text/stringcomparer/#create-a-stringcomparer"
+                    ConvertToText = "/docs/reference/data-types/text/stringcomparer/#convert-stringcomparer-to-text"
                 [Cortex.Reference.DataTypes.Text.StringComparison]
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
@@ -1814,6 +1828,9 @@
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.boolean"
             Parse = "https://learn.microsoft.com/en-us/dotnet/api/system.boolean.parse"
             ToString = "https://learn.microsoft.com/en-us/dotnet/api/system.boolean.tostring"
+        [MSDocs.DotNet.Api.System.Comparer]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.comparer-1"
+            Default = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.comparer-1.default"
         [MSDocs.DotNet.Api.System.DateTime]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.datetime"
             InitializingADateTimeObject = "https://learn.microsoft.com/en-us/dotnet/api/system.datetime?#initializing-a-datetime-object"
@@ -1867,6 +1884,8 @@
             ToString = "https://learn.microsoft.com/en-us/dotnet/api/system.enum.tostring"
             InstantiatingAnEnum = "https://learn.microsoft.com/en-us/dotnet/api/system.enum?#instantiating-an-enumeration-type"
             FormattingEnumerationValues = "https://learn.microsoft.com/en-us/dotnet/api/system.enum?#formatting-enumeration-values"
+        [MSDocs.DotNet.Api.System.IComparer]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1"
         [MSDocs.DotNet.Api.System.Int16]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.int16"
             MaxValue = "https://learn.microsoft.com/en-us/dotnet/api/system.int16.maxvalue"
@@ -1896,6 +1915,8 @@
         [MSDocs.DotNet.Api.System.Object]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.object"
             ToString = "https://learn.microsoft.com/en-us/dotnet/api/system.object.tostring"
+        [MSDocs.DotNet.Api.System.PriorityQueue]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2"
         [MSDocs.DotNet.Api.System.Security]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.security"
             [MSDocs.DotNet.Api.System.Security.Cryptography]

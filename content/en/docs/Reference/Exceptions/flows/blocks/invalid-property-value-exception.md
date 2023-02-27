@@ -138,6 +138,8 @@ Currently, only the [PropertyId][] has been included in the exception. In future
   * [Set Items With Value][List Set Items With Value]
 * Loops
   * [For Loop][]
+* Queues
+  * [Enqueue Item][]
 * Text
   * [Convert To Camel Case][]
   * [Convert To Lower Case][]
@@ -188,6 +190,8 @@ None
 [List Set Items With Value]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsWithValue.MainDoc" >}}
 
 [For Loop]: {{< url "Cortex.Reference.Blocks.Loops.For.ForLoop.MainDoc" >}}
+
+[Enqueue Item]: {{< url "Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock.MainDoc" >}}
 
 [Convert To Camel Case]: {{< url "Cortex.Reference.Blocks.Text.ConvertTo.ConvertToCamelCase.MainDoc" >}}
 [Convert To Lower Case]: {{< url "Cortex.Reference.Blocks.Text.ConvertTo.ConvertToLowerCase.MainDoc" >}}
