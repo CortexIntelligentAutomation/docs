@@ -201,9 +201,9 @@ The exceptions thrown by the block can be found below:
 | [PropertyEmptyException][] | Thrown when [Structure][Structure Property] does not contain any items. |
 | [XmlSerializationException][] | Thrown when [Structure][Structure Property] has a key that is an empty string. |
 || Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"` can only accept the following attributes: `"@version"`, `"@encoding"` and `"@standalone"`.) or a document type definition key (e.g. `"!DOCTYPE"` can only accept the following attributes: `"@name"`, `"@public"`, `"@system"` and `"@internalSubset"`). |
-|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"`) with an attribute that has an invalid [Primitive Value][Primitive Values]. (e.g. `Key: "@version", Value: false`, where `"@version"` must be a numeric value). |
-|| Thrown when the [Structure][Structure Property] includes a document type definition key (e.g. `"!DOCTYPE"`) that has an attribute with an invalid [Primitive Value][Primitive Values]. (e.g. `Key: "@name", Value: 22`, where `"@name"` must be a text value). |
-|| Thrown when the [Structure][Structure Property] includes an attribute key with a [Complex Type][] as a value. (e.g. `Key: "@name", Value: new UserCredentials{...}`). |
+|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"`) with an attribute that has an invalid [Basic Data Type][Basic Data Types]. (e.g. `Key: "@version", Value: false`, where `"@version"` must be a numeric value). |
+|| Thrown when the [Structure][Structure Property] includes a document type definition key (e.g. `"!DOCTYPE"`) that has an attribute with an invalid [Basic Data Type][Basic Data Types]. (e.g. `Key: "@name", Value: 22`, where `"@name"` must be a text value). |
+|| Thrown when the [Structure][Structure Property] includes an attribute key with a [Complex Data Type][Complex Data Types] as a value. (e.g. `Key: "@name", Value: new UserCredentials{...}`). |
 
 ## Remarks
 
@@ -228,15 +228,15 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 </node>"
 ```
 
-### Primitive Values within Attribute Keys
+### Basic Data Types within Attribute Keys
 
-Attribute keys may only have [Primitive Values][] as shown in the example below. An [XmlSerializationException][] will be thrown if a [Complex Value][Complex Type] is used as an attribute key.
+Attribute keys may only have [Basic Data Types][] as shown in the example below. An [XmlSerializationException][] will be thrown if [Complex Data Type][Complex Data Types] is used as an attribute key.
 
 ``` json
 {
     "node": {
         "@validAttribute": "Attribute Value",
-        "@invalidAttribute": new ComplexValue("Invalid"),
+        "@invalidAttribute": new ComplexDataType("Invalid"),
     }
 }
 ```
@@ -355,8 +355,8 @@ The [Xml][Xml Property] example above would be converted to the following [Struc
 
 [Keys]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 [Items]: {{< url "Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
-[Complex Type]: {{< url "Cortex.Reference.Concepts.Fundamentals.ComplexTypes.MainDoc" >}}
-[Primitive Values]: {{< url "Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes.MainDoc" >}}
+[Complex Data Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.ComplexDataTypes" >}}
+[Basic Data Types]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.BasicDataTypes" >}}
 
 [Character Sets]: {{< url "W3.CharacterSets" >}}
 [Xml Nodes]: {{< url "W3.XmlNodes" >}}

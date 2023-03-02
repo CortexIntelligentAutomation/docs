@@ -6,7 +6,7 @@ description: "The exception thrown by the ThrowNewFlowException block."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.FlowException)</p>
+<p class="namespace">(Cortex.Exceptions.Flows.FlowException)</p>
 
 The exception thrown by the ThrowNewFlowException block.
 

@@ -175,7 +175,7 @@ If [Help Link][HelpLink Property] is not provided or is set to `null`, it will d
 [Int32]: {{< url "Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [dynamic]: {{< url "Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Exception]: {{< url "Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
-[FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
+[FlowException]: {{< url "Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
 [Nullable]: {{< url "Cortex.Reference.DataTypes.Other.Nullable.MainDoc" >}}
 
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}

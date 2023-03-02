@@ -107,6 +107,4 @@ None
 [InfiniteLoopException: Category]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.Category" >}}
 [InfiniteLoopException: Error Code]: {{< url "Cortex.Reference.Exceptions.Loops.InfiniteLoopException.ErrorCode" >}}
 
-[Exception Data Types]: {{< url "Cortex.Reference.DataTypes.MostCommon.Exceptions" >}}
-
 [Exceptions Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.ExceptionsViewer" >}}

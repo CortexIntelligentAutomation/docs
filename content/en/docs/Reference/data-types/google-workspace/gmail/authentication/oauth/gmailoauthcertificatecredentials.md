@@ -70,14 +70,6 @@ The ClientId is used to define client ID of the client application created to al
 | Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `""` |
 
-## Exceptions
-
-The exceptions thrown by the data type can be found below:
-
-| Name                                 | Description |
-|--------------------------------------|-------------|
-| [UnencryptedTextException][]         |Thrown when the [CertificatePassword][CertificatePassword Property] is not encrypted. |
-
 ## Remarks
 
 ### Create a GmailOAuthCertificateCredentials
@@ -150,8 +142,6 @@ None
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
-
-[UnencryptedTextException]: {{< url "Cortex.Reference.Exceptions.Common.UnencryptedTextException.MainDoc" >}}
 
 [Working with Email]: {{< url "Cortex.Reference.Concepts.WorkingWith.Email.MainDoc" >}}
 [Setting up a Gmail account for OAuth authentication]: {{< url "Cortex.Reference.Concepts.WorkingWith.Email.Authentication.SettingUpOAuthGmail" >}}

@@ -1,11 +1,28 @@
-{{ $url := urls.Parse (index .Site.Data.urls (split (.Get 0) ".")) }}
+<!--
+    Gets the hyperlink for the provided toml path.
+    Missing links can currently only be detected within the docs folder as blogs uses permalinks.
+-->
+{{- $tomlPath := .Get 0}}
+{{- $url := urls.Parse (index .Site.Data.urls (split ($tomlPath) ".")) }}
 {{- $link := (printf "%s://%s%s" $url.Scheme $url.Host $url.Path) }}
-{{- if hasPrefix $url "https://docs.microsoft.com/en-us/dotnet/api/" }}
-    {{ $link = (printf "%s?view=%s" $link .Site.Params.dotNetVersion)}}
-    {{ if ne $url.Fragment ""}}
-        {{ $link = (printf "%s#%s" $link $url.Fragment)}}
-    {{ end }}
-    {{ $link }}
+{{- $mdFilePath := printf "%s%s" (replaceRE "/$" "" (printf "%s%s" $url.Host $url.Path)) ".md" }}
+{{- $indexFilePath := printf "%s%s" (replaceRE "/$" "" (printf "%s%s" $url.Host $url.Path)) "/_index.md" }}
+{{- $page := .Site.GetPage $mdFilePath }}
+{{- $pageIndex := .Site.GetPage $indexFilePath }}
+{{- if eq $link (printf "%s://" $url.Scheme) }} <!-- Check if the URL does not exist -->
+    {{- errorf "No Url found in urls.toml matching with %q" $tomlPath }}
+{{- else if hasPrefix $url "https://docs.microsoft.com/en-us/dotnet/api/" }} <!-- Check if it is an external URL --> 
+    {{- $link = (printf "%s?view=%s" $link .Site.Params.dotNetVersion) }}
+    {{- if ne $url.Fragment "" }}
+        {{- $link = (printf "%s#%s" $link $url.Fragment) }}
+    {{- end }}
+    {{- $link }}
+{{- else if hasPrefix $mdFilePath "/docs/" }} <!-- Check if it is an internal docs URL -->
+    {{- with (or ($page) ($pageIndex)) -}} 
+        {{- $url }}
+    {{- else -}}
+        {{- errorf "Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $tomlPath $mdFilePath $indexFilePath }}
+    {{- end -}}
 {{ else }}
     {{- $url }}
 {{- end }}

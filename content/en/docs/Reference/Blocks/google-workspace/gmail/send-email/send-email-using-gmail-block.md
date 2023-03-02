@@ -521,7 +521,7 @@ As such, the recommended approach for using a [UserCredentials][] as the [Creden
 
 Note the following:
 
-- The value of the [Username][] property may optionally be encrypted, however the [Password][] must be encrypted otherwise an [UnencryptedTextException][] will be thrown when the object is created.
+- The value of the [Username][] property may optionally be encrypted, however the [Password][] should be encrypted.
 - Note that the [UserCredentials][] also contains a [Domain][] property which is ignored by this block.
 
 #### Setting Credentials to GmailOAuthCertificateCredentials
@@ -542,7 +542,7 @@ Once the account has been set up to work with OAuth, a [GmailOAuthCertificateCre
 - [FromAddress][] - The address of the account used to set up the client application
 - [ClientId][] - The Client ID of the client application
 
-Note that the values of the [CertificatePath][] and [ClientId][] properties may optionally be encrypted, however the [CertificatePassword][] must be encrypted otherwise an [UnencryptedTextException][] will be thrown when the object is created
+Note that the values of the [CertificatePath][] and [ClientId][] properties may optionally be encrypted, however the [CertificatePassword][] should be encrypted.
 
 For more detailed information on each of these properties, see [GmailOAuthCertificateCredentials][].
 
@@ -717,7 +717,6 @@ None
 [Property Is Invalid]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.PropertyIsInvalid">}}
 [SmtpCommandException]: {{< url "MimeKit.Docs.SmtpCommandException" >}}
 [UnauthorizedAccessException]: {{< url "MSDocs.DotNet.Api.System.UnauthorizedAccessException" >}}
-[UnencryptedTextException]: {{< url "Cortex.Reference.Exceptions.Common.UnencryptedTextException.MainDoc" >}}
 
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}

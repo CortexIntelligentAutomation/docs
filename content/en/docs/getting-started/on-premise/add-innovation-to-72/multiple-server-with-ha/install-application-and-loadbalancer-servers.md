@@ -290,7 +290,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 1. [Upgrade v7.2 Gateway to Include Innovation][]
 
 [Eula]: {{< url "Cortex.Website.Eula.MainDoc" >}}
-[Install Web Application Server]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallWebApplicationServer" >}}
 [Upgrade v7.2 Gateway to Include Innovation]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServer" >}}
 [Certificate Requirements]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirements" >}}
 [Upgrade Gateway]: {{< url "Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallGateway" >}}

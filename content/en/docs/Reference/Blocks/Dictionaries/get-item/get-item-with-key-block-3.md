@@ -186,7 +186,7 @@ For information about the different types of dictionaries, including those that 
 [TItem]: {{< url "Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [KeyNotPresentException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException.MainDoc" >}}
-[OccurrenceNotPresentException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException.MainDoc" >}}
+[OccurrenceNotPresentException]: {{< url "Cortex.Reference.Exceptions.Collections.OccurrenceNotPresentException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}

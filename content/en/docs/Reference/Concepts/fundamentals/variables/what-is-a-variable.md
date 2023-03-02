@@ -218,7 +218,7 @@ None
 [Exceptions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [Executions]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
-[debugging a flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.Debugging" >}}
+[debugging a flow]: {{< url "Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.MainDoc" >}}
 
 [Flows]: {{< url "Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 
@@ -246,7 +246,7 @@ None
 [Structure]: {{< url "Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [Command]: {{< url "Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 
-[FlowException]: {{< url "Cortex.Reference.Exceptions.FlowException.MainDoc" >}}
+[FlowException]: {{< url "Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
 
 [Cortex Studio]: {{< url "Cortex.Guides.Studio.MainDoc" >}}
 [Variables Viewer]: {{< url "Cortex.Guides.Studio.EastPanel.VariablesViewer" >}}

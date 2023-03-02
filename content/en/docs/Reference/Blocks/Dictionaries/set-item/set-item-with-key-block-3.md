@@ -195,7 +195,7 @@ For information about the different types of dictionaries, including those that 
 [Value Is Invalid]: {{< url "Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
 
 [KeyNotPresentException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException.MainDoc" >}}
-[OccurrenceNotPresentException]: {{< url "Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException.MainDoc" >}}
+[OccurrenceNotPresentException]: {{< url "Cortex.Reference.Exceptions.Collections.OccurrenceNotPresentException.MainDoc" >}}
 [PropertyNullException]: {{< url "Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
 [IDictionary]: {{< url "Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}

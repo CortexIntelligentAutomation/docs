@@ -157,7 +157,7 @@ TODO:
 [RFC1123 ("R", "r") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.RFC1123Format" >}}
 [sortable ("s") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.SortableFormat" >}}
 [universal sortable ("u") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.UniversalSortableFormat" >}}
-[universal full ("U") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.UniversalFormat" >}}
+[universal full ("U") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.UniversalFullFormat" >}}
 [month ("M", "m") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.MonthDayFormat" >}}
 [year month ("Y") format specifier]: {{< url "MSDocs.DotNet.Api.System.DateTimeOffset.YearMonthFormat" >}}
 
