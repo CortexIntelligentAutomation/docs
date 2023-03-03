@@ -728,6 +728,14 @@
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-title-case-block/"
                     [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase]
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-upper-case-block/"
+                [Cortex.Reference.Blocks.Text.EncodeText]
+                    MainDoc = "/docs/reference/blocks/text/encode-text/"
+                    [Cortex.Reference.Blocks.Text.EncodeText.EncodeText]
+                        MainDoc = "/docs/reference/blocks/text/encode-text/encode-text-block"
+                [Cortex.Reference.Blocks.Text.DecodeText]
+                    MainDoc = "/docs/reference/blocks/text/decode-text/"
+                    [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
+                        MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
@@ -1400,6 +1408,15 @@
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
+                    MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
+                [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
+                    MainDoc = "/docs/reference/data-types/text/textencodingformat"
+                    Base64 = "/docs/reference/data-types/text/textencodingformat/#base64"
+                    Hex = "/docs/reference/data-types/text/textencodingformat/#hex"
+                    Html = "/docs/reference/data-types/text/textencodingformat/#html"
+                    Base64URL = "/docs/reference/data-types/text/textencodingformat/#base64url"
+                    URL = "/docs/reference/data-types/text/textencodingformat/#url"
                 [Cortex.Reference.DataTypes.Text.UnicodeEncoding]
                     MainDoc = "/docs/reference/data-types/text/unicodeencoding"
                 [Cortex.Reference.DataTypes.Text.UTF32Encoding]
@@ -1525,6 +1542,13 @@
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
                         MainDoc = "/docs/reference/exceptions/text/regex/regex-parsing-failed-exception/"
+            [Cortex.Reference.Exceptions.Text.Decode]
+                MainDoc = "/docs/reference/exceptions/text/decode/"
+                    [Cortex.Reference.Exceptions.Text.Decode.TextDecodingException]
+                        MainDoc = "/docs/reference/exceptions/text/decode/text-decoding-exception/"
+                        InvalidBase64 = "/docs/reference/exceptions/text/decode/text-decoding-exception/#100"
+                        InvalidHex = "/docs/reference/exceptions/text/decode/text-decoding-exception/#300"
+                        InvalidBase64URL = "/docs/reference/exceptions/text/decode/text-decoding-exception/#600"
             [Cortex.Reference.Exceptions.Ssh]
                 MainDoc = "/docs/reference/exceptions/ssh/"
                 SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
@@ -1602,6 +1626,7 @@
                 Gmail = "/docs/reference/glossary/f-j/#gmail"
                 Heterogenous = "/docs/reference/glossary/f-j/#heterogenous"
                 Homogenous = "/docs/reference/glossary/f-j/#homogenous"
+                HTMLEntity = "/docs/reference/glossary/f-j/#html-entity"
                 Initialised = "/docs/reference/glossary/f-j/#initialised"
                 IMAP = "/docs/reference/glossary/f-j/#imap"
                 Integer = "/docs/reference/glossary/f-j/#integer"
@@ -1991,6 +2016,8 @@
     [VisualStudio.Code]
         MainDoc = "https://code.visualstudio.com/"
         Intellisense = "https://code.visualstudio.com/docs/editor/intellisense"
+[WHATWG]
+    EntityList = "https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references"
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
     Byte = "https://en.wikipedia.org/wiki/Byte"

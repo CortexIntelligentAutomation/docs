@@ -18,6 +18,7 @@ TODO:
     - Encoding encoding = Encoding.GetEncoding(20127);
     - Encoding encoding = new ASCIIEncoding();
     - Encoding encoding = Encoding.ASCII;
+- Talk about encode/decode text blocks including base64/url/hex/html/utf8/base64url
 
 Links:
 

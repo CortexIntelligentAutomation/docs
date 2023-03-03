@@ -88,6 +88,12 @@ Homogenous collections can only contain a single [data type][] (e.g. [List&lt;in
 
 Collections that can contain multiple data types are known as [heterogenous][].
 
+### HTML Entity
+
+An HTML entity is a piece of text that begins with an ampersand (i.e. `&`) and ends with a semicolon (i.e. `;`). Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard.
+
+See [WHATWG][WHATWG entity list] for a full list of HTML4 and HTML5 Entities.
+
 ## I
 
 ### IDE
@@ -249,3 +255,5 @@ See [What is JSON][What is Json (W3)] for more information.
 [What is Json (W3)]: {{< url "W3.WhatIsJson" >}}
 
 [Information Technology (Wikipedia)]: {{< url "Wikipedia.InformationTechnology" >}}
+
+[WHATWG entity list]: {{< url "WHATWG.EntityList" >}}
