@@ -4,7 +4,7 @@ linkTitle: "Execute Data Command"
 description: "Connects to a specific data source and executes a Command, returning any object from the Command's result."
 ---
 
-![Icon](/blocks/data-execute-command-block-icon.png)
+{{< figure src="/blocks/data-execute-command-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
