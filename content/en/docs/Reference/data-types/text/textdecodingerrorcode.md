@@ -6,7 +6,7 @@ description: "Used to represent an error code explaining the reason an `TextDeco
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTypes.Text.Decode.TextDecodingErrorCode)</p>
+<p class="namespace">(Cortex.DataTypes.Text.Encoding.TextDecodingErrorCode)</p>
 
 ## Summary
 
@@ -16,9 +16,9 @@ The `TextDecodingErrorCode` data type is used to represent an error code explain
 
 | | |
 |-|-|
-| **Category:**          | Decode                                                  |
+| **Category:**          | Text                                               |
 | **Name:**              | `TextDecodingErrorCode`                                |
-| **Full Name:**         | `Cortex.DataTypes.Text.Decode.TextDecodingErrorCode`         |
+| **Full Name:**         | `Cortex.DataTypes.Text.Encoding.TextDecodingErrorCode`         |
 | **Alias:**             | N/A                                                    |
 | **Description:**       | Error code explaining the reason a [TextDecodingException][] occurred. |
 | **Default Value:**     | `(TextDecodingErrorCode)0`                             |
@@ -47,13 +47,13 @@ The `TextDecodingErrorCode` data type is used to represent an error code explain
 | **Value:**   | [Int32][] with value `300`                      |
 | **Notes:**   | Used when a [TextDecodingException][] occurred due to the provided text containing an odd number of characters. See [Odd number of characters using Hex][InvalidHex]. |
 
-### Base64URLInvalidCharacter
+### Base64UrlInvalidCharacter
 
 | | |
 |-|-|
-| **Name:**    | Base64URLInvalidCharacter                                    |
+| **Name:**    | Base64UrlInvalidCharacter                                    |
 | **Value:**   | [Int32][] with value `600`                      |
-| **Notes:**   | Used when a [TextDecodingException][] occurred due to the provided text containing one or more invalid characters. See [Invalid Base64URL character][InvalidBase64URL]. |
+| **Notes:**   | Used when a [TextDecodingException][] occurred due to the provided text containing one or more invalid characters. See [Invalid Base64Url character][InvalidBase64Url]. |
 
 ## Remarks
 
@@ -65,16 +65,16 @@ The following table shows some of the ways that `TextDecodingErrorCode` can be c
 |-|-|-|-|-|
 | Use a `TextDecodingErrorCode` expression | `TextDecodingErrorCode.Base64InvalidCharacter` | `TextDecodingErrorCode.Base64InvalidCharacter`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing one or more characters that are invalid in [Base64][] encoded text. |
 | | `TextDecodingErrorCode.HexOddNumberOfCharacters` | `TextDecodingErrorCode.HexOddNumberOfCharacters`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing an odd number of characters which is invalid for [Hex][] encoded text. |
-| | `TextDecodingErrorCode.Base64URLInvalidCharacter` | `TextDecodingErrorCode.Base64URLInvalidCharacter`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing one or more characters that are invalid in [Base64URL][] encoded text. |
+| | `TextDecodingErrorCode.Base64UrlInvalidCharacter` | `TextDecodingErrorCode.Base64UrlInvalidCharacter`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing one or more characters that are invalid in [Base64Url][] encoded text. |
 | Use [Explicit Casting][] | `(TextDecodingErrorCode)100` | `TextDecodingErrorCode.Base64InvalidCharacter`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing one or more characters that are invalid in [Base64][] encoded text. |
 | | `(TextDecodingErrorCode)300` | `TextDecodingErrorCode.HexOddNumberOfCharacters`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing an odd number of characters which is invalid for [Hex][] encoded text. |
-| | `(TextDecodingErrorCode)600` | `TextDecodingErrorCode.Base64URLInvalidCharacter`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing one or more characters that are invalid in [Base64URL][] encoded text. |
+| | `(TextDecodingErrorCode)600` | `TextDecodingErrorCode.Base64UrlInvalidCharacter`| Expression | Indicates a [TextDecodingException][] occurred due to the text provided containing one or more characters that are invalid in [Base64Url][] encoded text. |
 | Use `Enum.Parse` | `(TextDecodingErrorCode)Enum.Parse(typeof(TextDecodingErrorCode), "Base64InvalidCharacter")` | `TextDecodingErrorCode.Base64InvalidCharacter`| Expression | Parses `"Base64InvalidCharacter"` and converts it to `TextDecodingErrorCode.Base64InvalidCharacter`. See [Enum.Parse][] |
 | | `(TextDecodingErrorCode)Enum.Parse(typeof(TextDecodingErrorCode), "HexOddNumberOfCharacters")` | `TextDecodingErrorCode.HexOddNumberOfCharacters`| Expression | Parses `"HexOddNumberOfCharacters"` and converts it to `TextDecodingErrorCode.HexOddNumberOfCharacters`. See [Enum.Parse][] |
-| | `(TextDecodingErrorCode)Enum.Parse(typeof(TextDecodingErrorCode), "Base64URLInvalidCharacter)` | `TextDecodingErrorCode.Base64URLInvalidCharacter`| Expression | Parses `"Base64URLInvalidCharacter"` and converts it to `TextDecodingErrorCode.Base64URLInvalidCharacer`. See [Enum.Parse][] |
+| | `(TextDecodingErrorCode)Enum.Parse(typeof(TextDecodingErrorCode), "Base64UrlInvalidCharacter)` | `TextDecodingErrorCode.Base64UrlInvalidCharacter`| Expression | Parses `"Base64UrlInvalidCharacter"` and converts it to `TextDecodingErrorCode.Base64UrlInvalidCharacer`. See [Enum.Parse][] |
 | Use `Enum.ToObject` | `(TextDecodingErrorCode)Enum.ToObject(typeof(TextDecodingErrorCode), 100)` | `TextDecodingErrorCode.Base64InvalidCharacter`| Expression | Converts `100` to `TextDecodingErrorCode.Base64InvalidCharacter` value. See [Enum.ToObject][] |
 | | `(TextDecodingErrorCode)Enum.ToObject(typeof(TextDecodingErrorCode), 300)` | `TextDecodingErrorCode.HexOddNumberOfCharacters`| Expression | Converts `300` to `TextDecodingErrorCode.HexOddNumberOfCharacters` value. See [Enum.ToObject][] |
-| | `(TextDecodingErrorCode)Enum.ToObject(typeof(TextDecodingErrorCode), 600)` | `TextDecodingErrorCode.Base64URLInvalidCharacter`| Expression | Converts `600` to `TextDecodingErrorCode.Base64URLInvalidCharacter` value. See [Enum.ToObject][] |
+| | `(TextDecodingErrorCode)Enum.ToObject(typeof(TextDecodingErrorCode), 600)` | `TextDecodingErrorCode.Base64UrlInvalidCharacter`| Expression | Converts `600` to `TextDecodingErrorCode.Base64UrlInvalidCharacter` value. See [Enum.ToObject][] |
 
 Please see [Instantiating an enumeration type][] for further information.
 
@@ -86,16 +86,16 @@ The following table shows some of the ways that a `TextDecodingErrorCode` can be
 |-|-|-|-|-|
 | Use `ToString` | `TextDecodingErrorCode.Base64InvalidCharacter.ToString()` | `"Base64InvalidCharacter"` | Expression | Converts `TextDecodingErrorCode.Base64InvalidCharacter` to `"Base64InvalidCharacter"`. See [Enum.ToString][] |
 | | `TextDecodingErrorCode.HexOddNumberOfCharacters.ToString()` | `"HexOddNumberOfCharacters"` | Expression | Converts `TextDecodingErrorCode.HexOddNumberOfCharacters` to `"HexOddNumberOfCharacters"`. See [Enum.ToString][] |
-| | `TextDecodingErrorCode.Base64URLInvalidCharacter.ToString()` | `"Base64URLInvalidCharacter"` | Expression | Converts `TextDecodingErrorCode.Base64URLInvalidCharacter` to `"Base64URLInvalidCharacter"`. See [Enum.ToString][] |
+| | `TextDecodingErrorCode.Base64UrlInvalidCharacter.ToString()` | `"Base64UrlInvalidCharacter"` | Expression | Converts `TextDecodingErrorCode.Base64UrlInvalidCharacter` to `"Base64UrlInvalidCharacter"`. See [Enum.ToString][] |
 | Use `Convert.ToString` | `Convert.ToString(TextDecodingErrorCode.Base64InvalidCharacter)` | `"Base64InvalidCharacter"` | Expression | Converts `TextDecodingErrorCode.Base64InvalidCharacter` to `"Base64InvalidCharacter"`. See [Convert.ToString][] |
 | | `Convert.ToString(TextDecodingErrorCode.HexOddNumberOfCharacters)` | `"HexOddNumberOfCharacters"` | Expression | Converts `TextDecodingErrorCode.HexOddNumberOfCharacters` to `"HexOddNumberOfCharacters"`. See [Convert.ToString][] |
-| | `Convert.ToString(TextDecodingErrorCode.Base64URLInvalidCharacter)` | `"Base64URLInvalidCharacter"` | Expression | Converts `TextDecodingErrorCode.Base64URLInvalidCharacter` to `"Base64URLInvalidCharacter"`. See [Convert.ToString][] |
+| | `Convert.ToString(TextDecodingErrorCode.Base64UrlInvalidCharacter)` | `"Base64UrlInvalidCharacter"` | Expression | Converts `TextDecodingErrorCode.Base64UrlInvalidCharacter` to `"Base64UrlInvalidCharacter"`. See [Convert.ToString][] |
 | Use `Convert Object To Text` block | where `Object` property has a value of `TextDecodingErrorCode.Base64InvalidCharacter` | `"Base64InvalidCharacter"` | N/A  | Converts `TextDecodingErrorCode.Base64InvalidCharacter` to `"Base64InvalidCharacter"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `TextDecodingErrorCode.HexOddNumberOfCharacters` | `"HexOddNumberOfCharacters"` | N/A  | Converts `TextDecodingErrorCode.HexOddNumberOfCharacters` to `"HexOddNumberOfCharacters"`. See [Convert Object To Text][] |
-| | where `Object` property has a value of `TextDecodingErrorCode.Base64URLInvalidCharacter` | `"Base64URLInvalidCharacter"` | N/A  | Converts `TextDecodingErrorCode.Base64URLInvalidCharacter` to `"Base64URLInvalidCharacter"`. See [Convert Object To Text][] |
+| | where `Object` property has a value of `TextDecodingErrorCode.Base64UrlInvalidCharacter` | `"Base64UrlInvalidCharacter"` | N/A  | Converts `TextDecodingErrorCode.Base64UrlInvalidCharacter` to `"Base64UrlInvalidCharacter"`. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block | where `Object` property has a value of `TextDecodingErrorCode.Base64InvalidCharacter` | `"100"` | N/A  | Converts `TextDecodingErrorCode.Base64InvalidCharacter` to `"100"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `TextDecodingErrorCode.HexOddNumberOfCharacters` | `"300"` | N/A  | Converts `TextDecodingErrorCode.HexOddNumberOfCharacters` to `"300"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `TextDecodingErrorCode.Base64URLInvalidCharacter` | `"600"` | N/A  | Converts `TextDecodingErrorCode.Base64URLInvalidCharacter` to `"600"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `TextDecodingErrorCode.Base64UrlInvalidCharacter` | `"600"` | N/A  | Converts `TextDecodingErrorCode.Base64UrlInvalidCharacter` to `"600"`. See [Convert Object To Json][] |
 
 Please see [Formatting enumeration values][] for further information.
 
@@ -107,10 +107,10 @@ The following table shows some of the ways that a `TextDecodingErrorCode` can be
 |-|-|-|-|-|
 | Use [Explicit Casting][]              | `(Int32)TextDecodingErrorCode.Base64InvalidCharacter`   | `100` | Expression | [Casts][Explicit Casting] `TextDecodingErrorCode.Base64InvalidCharacter` to `100` |
 |                                       | `(Int32)TextDecodingErrorCode.HexOddNumberOfCharacters`   | `300` | Expression | [Casts][Explicit Casting] `TextDecodingErrorCode.HexOddNumberOfCharacters` to `300` |
-|                                       | `(Int32)TextDecodingErrorCode.Base64URLInvalidCharacter`   | `600` | Expression | [Casts][Explicit Casting] `TextDecodingErrorCode.Base64URLInvalidCharacter` to `600` |
+|                                       | `(Int32)TextDecodingErrorCode.Base64UrlInvalidCharacter`   | `600` | Expression | [Casts][Explicit Casting] `TextDecodingErrorCode.Base64UrlInvalidCharacter` to `600` |
 | Use `Convert.ToInt32`                 | `Convert.ToInt32(TextDecodingErrorCode.Base64InvalidCharacter)`   | `100` | Expression | Converts `TextDecodingErrorCode.Base64InvalidCharacter` to `100`. See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(TextDecodingErrorCode.HexOddNumberOfCharacters)`   | `300` | Expression | Converts `TextDecodingErrorCode.HexOddNumberOfCharacters` to `300`. See [Convert.ToInt32][] |
-|                                       | `Convert.ToInt32(TextDecodingErrorCode.Base64URLInvalidCharacter)`   | `600` | Expression | Converts `TextDecodingErrorCode.Base64URLInvalidCharacter` to `600`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(TextDecodingErrorCode.Base64UrlInvalidCharacter)`   | `600` | Expression | Converts `TextDecodingErrorCode.Base64UrlInvalidCharacter` to `600`. See [Convert.ToInt32][] |
 
 ### Property Editor Support
 
@@ -143,10 +143,10 @@ None
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
-[TextDecodingException]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.MainDoc" >}}
-[InvalidBase64]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.InvalidBase64" >}}
-[InvalidHex]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.InvalidHex" >}}
-[InvalidBase64URL]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.InvalidBase64URL" >}}
+[TextDecodingException]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.MainDoc" >}}
+[InvalidBase64]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.InvalidBase64" >}}
+[InvalidHex]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.InvalidHex" >}}
+[InvalidBase64Url]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.InvalidBase64Url" >}}
 [Instantiating an enumeration type]: {{< url "MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url "Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -162,6 +162,6 @@ None
 [Enum.ToString]: {{< url "MSDocs.DotNet.Api.System.Enum.ToString" >}}
 [Convert.ToInt32]: {{< url "MSDocs.DotNet.Api.System.Convert.ToInt32" >}}
 [Convert.ToString]: {{< url "MSDocs.DotNet.Api.System.Convert.ToString" >}}
-[Base64]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Base64" >}}
-[Hex]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Hex" >}}
-[Base64URL]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Base64URL" >}}
+[Base64]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64" >}}
+[Hex]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Hex" >}}
+[Base64Url]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64Url" >}}

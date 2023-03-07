@@ -6,7 +6,7 @@ description: "The exception thrown when an error occurs while decoding text."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.Text.Decode.TextDecodingException)</p>
+<p class="namespace">(Cortex.Exceptions.Text.Encoding.TextDecodingException)</p>
 
 ## Description
 
@@ -16,7 +16,7 @@ There are multiple reasons that this exception can be thrown:
 
 - [Invalid Base64 Character][InvalidBase64Character]
 - [Odd number of characters using Hex][OddHexCharacters]
-- [Invalid Base64URL Character][InvalidBase64URLCharacter]
+- [Invalid Base64Url Character][InvalidBase64UrlCharacter]
 
 ## Reasons
 
@@ -50,9 +50,9 @@ Please click the HelpLink for more information on how to fix this."
 
 Provide a [String][] containing an even number of characters.
 
-### Invalid Base64URL character {#600}
+### Invalid Base64Url character {#600}
 
-A [Category][] of `Base64URL` and an [Error Code][] of `600` indicates that the text provided contains one or more characters that are invalid in [Base64URL][] encoded text.
+A [Category][] of `Base64Url` and an [Error Code][] of `600` indicates that the text provided contains one or more characters that are invalid in [Base64Url][] encoded text.
 
 #### Message Format
 
@@ -91,7 +91,7 @@ For `TextDecodingException` there are the following categories:
 
 - `Base64`
 - `Hex`
-- `Base64URL`
+- `Base64Url`
 
 | | |
 |-----------|------------|
@@ -105,7 +105,7 @@ For `TextEncodingException` there are the following error codes:
 
 - [100][InvalidBase64Character] - indicates that the Base64 encoded text provided contains one or more invalid characters
 - [300][OddHexCharacters] - indicates that the Hex encoded text provided contains an odd number of characters, which is invalid
-- [600][InvalidBase64URLCharacter] - indicates that the Base64URL encoded text provided contains one or more invalid characters
+- [600][InvalidBase64UrlCharacter] - indicates that the Base64Url encoded text provided contains one or more invalid characters
 
 | | |
 |-----------|---------------------------|
@@ -148,15 +148,13 @@ None
 [Decode Text]: {{< url "Cortex.Reference.Blocks.Text.DecodeText.DecodeText.MainDoc" >}}
 [InvalidBase64Character]: {{< ref "#100">}}
 [OddHexCharacters]: {{< ref "#300">}}
-[InvalidBase64URLCharacter]: {{< ref "#600">}}
+[InvalidBase64UrlCharacter]: {{< ref "#600">}}
 [Category]: {{< ref "#category">}}
 [Error Code]: {{< ref "#error-code">}}
 
-[HTML]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Html" >}}
-[Base64]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Base64" >}}
-[Hex]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Hex" >}}
-[Base64URL]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Base64URL" >}}
-[URL]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.URL" >}}
+[Base64]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64" >}}
+[Hex]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Hex" >}}
+[Base64URL]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64Url" >}}
 
 [WorkingWithText]: {{< url "Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 

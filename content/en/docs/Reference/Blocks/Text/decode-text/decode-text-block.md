@@ -37,20 +37,20 @@ Decoding `"VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw=="` with t
 
 ***
 
-### Text decoded from URL
+### Text decoded from Url
 
-This example will decode the [URL][] encoded text `"The%20quick%20brown%20fox%20jumps%20over%20the%20lazy%20dog%21"` to `"The quick brown fox jumps over the lazy dog!"`.
+This example will decode the [Url][] encoded text `"The%20quick%20brown%20fox%20jumps%20over%20the%20lazy%20dog%21"` to `"The quick brown fox jumps over the lazy dog!"`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The%20quick%20brown%20fox%20jumps%20over%20the%20lazy%20dog%21"` | `($)Text` is a variable of type [String][] |
-| [Format][Format Property] | `($)Format`, with value `"TextEncodingFormat.URL"` | `($)Format` is a variable of type [TextEncodingFormat][]
+| [Format][Format Property] | `($)Format`, with value `"TextEncodingFormat.Url"` | `($)Format` is a variable of type [TextEncodingFormat][]
 
 #### Result
 
-Decoding `"The%20quick%20brown%20fox%20jumps%20over%20the%20lazy%20dog%21"` with the [Format][Format Property] [URL] will result in the variable `($)Text` being updated to the following:
+Decoding `"The%20quick%20brown%20fox%20jumps%20over%20the%20lazy%20dog%21"` with the [Format][Format Property] [Url] will result in the variable `($)Text` being updated to the following:
 
 ```json
 "The quick brown fox jumps over the lazy dog!"
@@ -79,20 +79,20 @@ Decoding `"54686520717569636B2062726F776E20666F78206A756D7073206F766572207468652
 
 ***
 
-### Text decoded from HTML
+### Text decoded from Html
 
-This example will decode the [HTML][] encoded text `"&lt;p&gt;The quick brown fox jumps over the lazy dog!&lt;/p&gt;"` to `"<p>The quick brown fox jumps over the lazy dog!</p>"`.
+This example will decode the [Html][] encoded text `"&lt;p&gt;The quick brown fox jumps over the lazy dog!&lt;/p&gt;"` to `"<p>The quick brown fox jumps over the lazy dog!</p>"`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"&lt;p&gt;The quick brown fox jumps over the lazy dog!&lt;/p&gt;"` | `($)Text` is a variable of type [String][] |
-| [Format][Format Property] | `($)Format`, with value `"TextEncodingFormat.HTML"` | `($)Format` is a variable of type [TextEncodingFormat][]
+| [Format][Format Property] | `($)Format`, with value `"TextEncodingFormat.Html"` | `($)Format` is a variable of type [TextEncodingFormat][]
 
 #### Result
 
-Decoding `"&lt;p&gt;The quick brown fox jumps over the lazy dog!&lt;/p&gt;"` with the [Format][Format Property] [HTML] will result in the variable `($)Text` being updated to the following:
+Decoding `"&lt;p&gt;The quick brown fox jumps over the lazy dog!&lt;/p&gt;"` with the [Format][Format Property] [Html] will result in the variable `($)Text` being updated to the following:
 
 ```json
 "<p>The quick brown fox jumps over the lazy dog!</p>"
@@ -121,11 +121,11 @@ The [Format][Format Property] used to decode the given [Text][Text Property].
 [Format][Format Property] can be any of the predefined values:
 
 * `TextEncodingFormat.Base64`
-* `TextEncodingFormat.URL`
+* `TextEncodingFormat.Url`
 * `TextEncodingFormat.Hex`
-* `TextEncodingFormat.HTML`
-* `TextEncodingFormat.UTF8`
-* `TextEncodingFormat.Base64URL`
+* `TextEncodingFormat.Html`
+* `TextEncodingFormat.Utf8`
+* `TextEncodingFormat.Base64Url`
 
 | | |
 |--------------------|---------------------------|
@@ -144,7 +144,7 @@ The exceptions thrown by the block can be found below:
 | [ArgumentException][] | Thrown when [Format][Format Property] is not one of the specified [TextEncodingFormat][] types (e.g. `(TextEncodingFormat)10`). |
 | [TextDecodingException][] | Thrown when [Text][Text Property] contains an invalid character for [Base64] decoding. For more information, see [Invalid Base64 Character][InvalidBase64]. |
 ||Thrown when [Text][Text Property] contains an odd number of characters for [Hex] decoding. For more information, see [Odd number of characters using Hex][InvalidHex]. |
-|| Thrown when [Text][Text Property] contains an invalid character for [Base64URL] decoding. For more information, see [Invalid Base64URL Character][InvalidBase64URL]. |
+|| Thrown when [Text][Text Property] contains an invalid character for [Base64Url] decoding. For more information, see [Invalid Base64Url Character][InvalidBase64Url]. |
 
 ## Remarks
 
@@ -154,7 +154,7 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to deco
 
 ### Decoding out of range URL characters
 
-When decoding using the [URL][] [Format][Format Property], characters not in the valid range (i.e.`%00` to `%ff`) will be treated as literal characters (e.g. `"%zzExample%21"` will decode to `"%zzExample!"`).
+When decoding using the [Url][] [Format][Format Property], characters not in the valid range (i.e.`%00` to `%ff`) will be treated as literal characters (e.g. `"%zzExample%21"` will decode to `"%zzExample!"`).
 
 ### Decoding invalid Hex values
 
@@ -170,15 +170,15 @@ When decoding using the [Hex] [Format][Format Property], characters not in the v
 
 ### Decoding invalid HTML entities
 
-When decoding using the [HTML] [Format][Format Property], invalid [HTML Entities][HTMLEntity] will be removed (e.g. `"Example&InvalidEntity;"` will decode to `"Example"`).
+When decoding using the [Html] [Format][Format Property], invalid [HTML Entities][HTMLEntity] will be removed (e.g. `"Example&InvalidEntity;"` will decode to `"Example"`).
 
 ### Decoding HTML ampersand
 
-When decoding using the [HTML] [Format][Format Property], any ampersand that is not part of an [HTML Entity][HTMLEntity] will be removed (e.g. `"Example&Something"` will decode to `"ExampleSomething"`).
+When decoding using the [Html] [Format][Format Property], any ampersand that is not part of an [HTML Entity][HTMLEntity] will be removed (e.g. `"Example&Something"` will decode to `"ExampleSomething"`).
 
 ### Decoding HTML semicolon
 
-When decoding using the [HTML] [Format][Format Property], any semicolon that is not part of an [HTML Entity][HTMLEntity] will be treated as a literal character (e.g. `"ExampleSomething;"` will decode to `"ExampleSomething;"`).
+When decoding using the [Html] [Format][Format Property], any semicolon that is not part of an [HTML Entity][HTMLEntity] will be treated as a literal character (e.g. `"ExampleSomething;"` will decode to `"ExampleSomething;"`).
 
 ### Round-Tripping
 
@@ -192,7 +192,7 @@ To overcome this, this block creates a new [String][] which has the [Text][Text 
 
 ### Known Limitations
 
-When decoding using the [HTML] [Format][Format Property], any HTML5 named [entities][HTMLEntity] (e.g. `"&phi;"`) will be removed.
+When decoding using the [Html] [Format][Format Property], any HTML5 named [entities][HTMLEntity] (e.g. `"&phi;"`) will be removed.
 
 This limitation may be removed in the future.
 
@@ -202,26 +202,26 @@ This limitation may be removed in the future.
 [Input]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[TextEncodingFormat]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.MainDoc" >}}
+[TextEncodingFormat]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.MainDoc" >}}
 
 [ArgumentException]: {{< url "MSDocs.DotNet.Api.System.ArgumentException" >}}
-[TextDecodingException]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.MainDoc" >}}
+[TextDecodingException]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[HTML]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Html" >}}
-[Base64]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Base64" >}}
-[Hex]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Hex" >}}
-[Base64URL]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.Base64URL" >}}
-[URL]: {{< url "Cortex.Reference.DataTypes.Text.TextEncodingFormat.URL" >}}
+[Html]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Html" >}}
+[Base64]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64" >}}
+[Hex]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Hex" >}}
+[Base64Url]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64Url" >}}
+[Url]: {{< url "Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Url" >}}
 
 [Literal]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 
 [Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
-[InvalidBase64]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.InvalidBase64" >}}
-[InvalidHex]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.InvalidHex" >}}
-[InvalidBase64URL]: {{< url "Cortex.Reference.Exceptions.Text.Decode.TextDecodingException.InvalidBase64URL" >}}
+[InvalidBase64]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.InvalidBase64" >}}
+[InvalidHex]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.InvalidHex" >}}
+[InvalidBase64Url]: {{< url "Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException.InvalidBase64Url" >}}
 
 [Encode Text]: {{< url "Cortex.Reference.Blocks.Text.EncodeText.EncodeText.MainDoc" >}}
 [HTMLEntity]: {{< url "Cortex.Reference.Glossary.F-J.HTMLEntity" >}}
