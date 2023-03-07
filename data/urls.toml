@@ -693,6 +693,10 @@
                     MainDoc = "/docs/reference/blocks/queues/enqueue-item/"
                     [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock]
                         MainDoc = "/docs/reference/blocks/queues/enqueue-item/enqueue-item-block-2"
+                [Cortex.Reference.Blocks.Queues.PeekItem]
+                    MainDoc = "/docs/reference/blocks/queues/peek-item/"
+                    [Cortex.Reference.Blocks.Queues.PeekItem.PeekItemBlock]
+                        MainDoc = "/docs/reference/blocks/queues/peek-item/peek-item-block"
             [Cortex.Reference.Blocks.Ssh]
                 MainDoc = "/docs/reference/blocks/ssh/"
                 [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]

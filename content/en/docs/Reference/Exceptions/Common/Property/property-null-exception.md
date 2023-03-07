@@ -204,6 +204,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Convert Object To Text][]
 * Queues
   * [Enqueue Item][]
+  * [Peek Item][]
 * Text
   * [Contains All Text][]
   * [Contains Any Text][]
@@ -337,6 +338,7 @@ None
 [Convert Object To Text]: {{< url "Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 
 [Enqueue Item]: {{< url "Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock.MainDoc" >}}
+[Peek Item]: {{< url "Cortex.Reference.Blocks.Queues.PeekItem.PeekItemBlock.MainDoc" >}}
 
 [Contains All Text]: {{< url "Cortex.Reference.Blocks.Text.ContainsText.ContainsAllText.MainDoc" >}}
 [Contains Any Text]: {{< url "Cortex.Reference.Blocks.Text.ContainsText.ContainsAnyText.MainDoc" >}}
