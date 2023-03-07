@@ -1035,7 +1035,9 @@
                         [Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes]
                             MainDoc = "/docs/reference/concepts/working-with/text/equality/#comparison-types"
                             CurrentCulture = "/docs/reference/concepts/working-with/text/equality/#current-culture"
+                            CurrentCultureIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#current-culture-ignore-case"
                             InvariantCulture = "/docs/reference/concepts/working-with/text/equality/#invariant-culture"
+                            InvariantCultureIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#invariant-culture-ignore-case"
                             Ordinal = "/docs/reference/concepts/working-with/text/equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case"
         [Cortex.Reference.DataTypes]
@@ -1824,6 +1826,7 @@
         Array = "https://learn.microsoft.com/en-us/dotnet/api/system.array"
         FormatException = "https://learn.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
+        StringComparer = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparer"
         StringComparison = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://learn.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
         UnauthorizedAccessException = "https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception"
