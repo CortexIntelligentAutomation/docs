@@ -772,6 +772,10 @@
                         MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-before-index-block/"
                     [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextBetweenIndexes]
                         MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-between-indexes-block/"
+                [Cortex.Reference.Blocks.Text.SplitText]
+                    MainDoc = "/docs/reference/blocks/text/remove-text/"
+                    [Cortex.Reference.Blocks.Text.SplitText.SplitText]
+                        MainDoc = "/docs/reference/blocks/text/split-text/split-text-block/"
             [Cortex.Reference.Blocks.Schedules]
                 MainDoc = "/docs/reference/blocks/schedules/"
                 [Cortex.Reference.Blocks.Schedules.WaitFor]

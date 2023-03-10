@@ -79,10 +79,56 @@ This example will split the text `"1,2,3,,"` into a list of [String][] values, u
 
 #### Result
 
-Splitting `"1,2,3,,"` using a comma separator (i.e. `","`) and keeping the last 2 entries which are empty, results in the variable `($)Values` being updated to the following:
+Splitting `"1,2,3,,"` using a comma separator (i.e. `","`) and keeping the last 2 entries which are empty but trimming, results in the variable `($)Values` being updated to the following:
 
 ```json
 ["1", "2", "3", "", ""]
+```
+
+***
+
+### Split Text into a list of String Values using a comma Separator (keeping empty entries but trimming entries)
+
+This example will split the text `" 1 , 2,3 ,,"` into a list of [String][] values, using the comma separator (i.e. `","`) to determine where to split, and keeping empty entries (i.e. `""`) but trimming whitespaces (i.e. `" 1 "` would become `"1"`).
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `" 1 , 2,3 ,,"` | `($)Text` is a variable of type [String][] |
+| [Separator][Separator Property] | `($)Separator`, with value `","` | `($)Separator` is a variable of type [String][] |
+| [Split Options][SplitOptions Property] | `($)SplitOptions`, with value `StringSplitOptions.TrimEntries` | `($)SplitOptions` is a variable of type [StringSplitOptions][] |
+| [Values][Values Property] | `($)Values`, with no value | `($)Values` is a variable that will be set to an [IList][]&lt;[String][]&gt; |
+
+#### Result
+
+Splitting `" 1 , 2,3 ,,"` using a comma separator (i.e. `","`) and keeping the last 2 entries which are  empty (i.e. `""`) but trimming whitespaces (i.e. `" 1 "`), results in the variable `($)Values` being updated to the following:
+
+```json
+["1", "2", "3", "", ""]
+```
+
+***
+
+### Split Text into a list of String Values using a comma Separator (removing empty entries and trimming entries)
+
+This example will split the text `" 1 , 2,3 ,,"` into a list of [String][] values, using the comma separator (i.e. `","`) to determine where to split, and remove any empty entries (i.e. `""`) and trimming whitespaces (i.e. `" 1 "` would become `"1"`).
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `" 1 , 2,3 ,,"` | `($)Text` is a variable of type [String][] |
+| [Separator][Separator Property] | `($)Separator`, with value `","` | `($)Separator` is a variable of type [String][] |
+| [Split Options][SplitOptions Property] | `($)SplitOptions`, with value `StringSplitOptions.RemoveEmptyEntries \| StringSplitOptions.TrimEntries` | `($)SplitOptions` is a variable of type [StringSplitOptions][] |
+| [Values][Values Property] | `($)Values`, with no value | `($)Values` is a variable that will be set to an [IList][]&lt;[String][]&gt; |
+
+#### Result
+
+Splitting `" 1 , 2,3 ,,"` using a comma separator (i.e. `","`) and removing the last 2 entries which are  empty (i.e. `""`) and trimming whitespaces (i.e. `" 1 "`), results in the variable `($)Values` being updated to the following:
+
+```json
+["1", "2", "3"]
 ```
 
 ***
@@ -123,8 +169,15 @@ The [Separator][Separator Property] is not included in the resultant [Values][Va
 
 Currently supported values for the [Split Options][SplitOptions Property] property are:
 
-* StringSplitOptions.None (Default) - empty entries are included in [Values][Values Property].
-* StringSplitOptions.RemoveEmptyEntries - empty entries are excluded from [Values][Values Property].
+* StringSplitOptions.None (Default) - empty entries and trailing or leading whitespaces (at the start or end of text) are included in [Values][Values Property].
+* StringSplitOptions.RemoveEmptyEntries - empty entries are excluded from [Values][Values Property]; trailing or leading whitespaces (at the start or end of text) are included.
+* StringSplitOptions.TrimEntries - trailing or leading whitespaces (at the start or end of text) are excluded from [Values][Values Property]; empty entries are included.
+
+It's also possible to combine `StringSplitOptions` in the [Expression Editor][Expression]. The example below shows how to remove empty entries and trim entries:
+
+```csharp
+StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries
+```
   
 | | |
 |--------------------|---------------------------|
@@ -188,3 +241,4 @@ If the [Separator][Separator Property] is not found in [Text][Text Property], th
 [Expression]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [Advanced]: {{< url "Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+
