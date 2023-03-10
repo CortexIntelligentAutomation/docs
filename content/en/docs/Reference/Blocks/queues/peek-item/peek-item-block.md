@@ -1,7 +1,7 @@
 ---
 title: "Peek Item"
 linkTitle: "Peek Item"
-description: "Gets the item at the beginning of the queue without removing it."
+description: "Gets the item at the beginning of a queue without removing it."
 ---
 
 {{< figure src="/blocks/queues-peek-block-icon.png" alt="Icon" class="block-icon" >}}
@@ -12,7 +12,7 @@ description: "Gets the item at the beginning of the queue without removing it."
 
 ## Description
 
-Gets the [Item][Item Property] at the beginning of the [Queue][queue property] without removing it.
+Gets the [Item][Item Property] at the beginning of a [Queue][queue property] without removing it.
 
 ## Examples
 
