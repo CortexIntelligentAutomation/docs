@@ -8,7 +8,7 @@ description: "Gets the item at the beginning of a queue without removing it."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.Queues.PeekItem.PeekItemBlock)</p>
+<p class="namespace">(Cortex.Blocks.Queues.PeekItem.PeekItemBlock`2)</p>
 
 ## Description
 

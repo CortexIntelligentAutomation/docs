@@ -689,6 +689,12 @@
                         MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
             [Cortex.Reference.Blocks.Queues]
                 MainDoc = "/docs/reference/blocks/queues/"
+                [Cortex.Reference.Blocks.Queues.DequeueItem]
+                    MainDoc = "/docs/reference/blocks/queues/dequeue-item/"
+                    [Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemBlock]
+                        MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-item-block-2"
+                    [Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-items-block-2"
                 [Cortex.Reference.Blocks.Queues.EnqueueItem]
                     MainDoc = "/docs/reference/blocks/queues/enqueue-item/"
                     [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock]

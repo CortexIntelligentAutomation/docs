@@ -92,6 +92,13 @@ Please click the HelpLink for more information on how to fix this."
 or
 
 ```json
+"`<property-name>` given was <invalid-value>; it must be less than or equal to <maximum-allowed-value>.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
 "'<related-property-name>' given was <related-property-value> and '<property-name>' given was <invalid-value>.
 The '<property-name>' must be less than or equal to <maximum-allowed-value> (<calculation-of-maximum-allowed-value>).
 Please click the HelpLink for more information on how to fix this."
@@ -276,6 +283,8 @@ None
   * [Set Item At Index][]
   * [Set Items At Index][]
   * [Set Items At Indexes][]
+* Queues
+  * [Dequeue Items][]
 * Schedules
   * [Wait For Duration][]
 * Text
@@ -352,5 +361,7 @@ None
 
 [DateTimeOffset]: {{< url "Cortex.Reference.DataTypes.DateAndTime.DateTimeOffset.MainDoc" >}}
 [TimePeriod]: {{< url "Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+
+[Dequeue Items]: {{< url "Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemsBlock.MainDoc" >}}
 
 [String]: {{< url "Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

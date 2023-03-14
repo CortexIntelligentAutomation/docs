@@ -34,7 +34,7 @@ This example will get `2` items at index `0` of `["Some Text", 1, "Some More Tex
 Getting `2` items at index `0` of `["Some Text", 1, "Some More Text", 2]` results in the variable `($)Items` being updated to the following:
 
 ```json
-["Some More", 1]
+["Some Text", 1]
 ```
 
 ***

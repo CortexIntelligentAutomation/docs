@@ -8,7 +8,7 @@ description: "Removes and returns the Item at the beginning of a Queue."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.Queues.DequeueItem.DequeueItemBlock)</p>
+<p class="namespace">(Cortex.Blocks.Queues.DequeueItem.DequeueItemBlock`2)</p>
 
 ## Description
 

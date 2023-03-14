@@ -133,6 +133,8 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Set Items At Index][]
 
 * Queues
+  * [Dequeue Item][]
+  * [Dequeue Items][]
   * [Peek Item][]
 * Xml
   * [Convert Structure To Xml][]
@@ -190,6 +192,8 @@ None
 [Set Items At End]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtEnd.MainDoc" >}}
 [Set Items At Index]: {{< url "Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndex.MainDoc" >}}
 
+[Dequeue Item]: {{< url "Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemBlock.MainDoc" >}}
+[Dequeue Items]: {{< url "Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemsBlock.MainDoc" >}}
 [Peek Item]: {{< url "Cortex.Reference.Blocks.Queues.PeekItem.PeekItemBlock.MainDoc" >}}
 
 [Convert Structure To Xml]: {{< url "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.MainDoc" >}}
