@@ -55,7 +55,7 @@
                     RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
                     AssignCertificateFriendlyName = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#assign-certificate-friendly-name"
-                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server#install-gateway"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
