@@ -105,7 +105,7 @@ You can import the certificate automatically by setting the `ImportCertificate` 
 {{% alert title="Note" %}}If the certificate is being imported manually it is necessary to allocate it a {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" "Friendly Name" >}} after.{{% /alert %}}
 To import the certificate manually follow the below steps:
 
-1. Locate certificate file on the machine and right click on the file.
+1. Locate the certificate file on the machine and right-click on the file.
 1. Select `Install Certificate`.
 1. Follow the Wizard and when prompted, ensure you import it into the `Local Machine` store and not `Current User`.
 
@@ -117,7 +117,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 1. Type `certlm.msc` and press `Enter` to open the Certificate Manager dialog.
 1. Expand `Personal` and select `Certificates`.
 1. You should see your certificate in this store.
-1. Right Click on the certificate and select `Properties`.
+1. Right-click on the certificate and select `Properties`.
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
@@ -275,7 +275,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     1. In the `Advanced Settings` dialog, click on `Identity` and then click the ellipses (`...`).
     1. In the `Application Pool Identity` dialog, select `Built-in account`, then select `NetworkService` from the drop-down, then click `OK`.
     1. Right-click on the `Debugger` application pool and click `Recycle...`.
-1. The Cortex Gateway website will now sbe available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
+1. The Cortex Gateway website will now be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
 
 ## Preserve installation files
 
