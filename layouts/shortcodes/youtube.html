@@ -1,3 +1,15 @@
+{{- $versionPath := "" }}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- if $currentVer }}
+    {{ range where .Site.Params.versions "url" $currentVer }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else }}
+    {{- /*  use latest doc as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $versionPath = .version }}
+    {{ end }}
+{{- end }}
 {{- $pc := .Page.Site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
 {{- $ytHost := cond $pc.PrivacyEnhanced  "www.youtube-nocookie.com" "www.youtube.com" -}}
@@ -5,6 +17,6 @@
   {{- $title := .Get "title" | default "YouTube Video" }}
   <div class="youtube-video">
     <!-- For more player customisation, see https://developers.google.com/youtube/player_parameters -->
-    <iframe src="https://{{ $ytHost }}/embed/{{ $id }}?rel=0{{ with .Get "start" }}{{ if . }}&start={{ . }}{{ end }}{{ end }}{{ with .Get "end" }}{{ if . }}&end={{ . }}{{ end }}{{ end }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="background: url(/images/loading.gif) no-repeat center; " allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+    <iframe src="https://{{ $ytHost }}/embed/{{ $id }}?rel=0{{ with .Get "start" }}{{ if . }}&start={{ . }}{{ end }}{{ end }}{{ with .Get "end" }}{{ if . }}&end={{ . }}{{ end }}{{ end }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="background: url(/{{ $versionPath }}/images/loading.gif) no-repeat center; " allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
   </div>
 {{ end -}}

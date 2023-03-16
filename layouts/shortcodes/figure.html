@@ -1,16 +1,33 @@
+{{- $versionPath := "" }}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $version := .Get "version" }}
+{{- if $version }}
+    {{ range where .Site.Params.versions "url" $version }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else if $currentVer }}
+    {{ range where .Site.Params.versions "url" $currentVer }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else }}
+    {{- /*  use latest doc as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $versionPath = .version }}
+    {{ end }}
+{{- end }}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
-    {{- $image := printf "%s" (.Get "src") | printf "%s%s" "/content/static/" | printf "%s"  -}}
+    {{- $image := printf "%s%s%s" "/content/static/" $versionPath (.Get "src") -}}
     {{- if (os.FileExists $image) -}}
-        <img src="{{ .Get "src" }}"
+        <img src="/{{ $versionPath }}{{ .Get "src" }}"
             {{- if or (.Get "alt") (.Get "caption") }}
             alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
             {{- end -}}
             {{- with .Get "width" }} width="{{ . }}"{{ end -}}
             {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-        /><!-- Closing img tag -->
+        />
         {{- if .Get "link" }}</a>{{ end -}}
         {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
             <figcaption>

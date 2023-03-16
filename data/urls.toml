@@ -272,6 +272,8 @@
                 MainDoc = "/docs/reference/apis/cortex-execution-service/"
             [Cortex.Reference.Apis.FlowDebuggerService]
                 MainDoc = "/docs/reference/apis/cortex-flow-debugger-service/"
+            [Cortex.Reference.Apis.FlowExecutionService]
+                MainDoc = "/docs/reference/apis/cortex-flow-execution-service/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -1436,6 +1438,13 @@
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
                 [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
                     MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
+                [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
+                    MainDoc = "/docs/reference/data-types/text/textencodingformat"
+                    Base64 = "/docs/reference/data-types/text/textencodingformat/#base64"
+                    Hex = "/docs/reference/data-types/text/textencodingformat/#hex"
+                    Html = "/docs/reference/data-types/text/textencodingformat/#html"
+                    Base64URL = "/docs/reference/data-types/text/textencodingformat/#base64url"
+                    URL = "/docs/reference/data-types/text/textencodingformat/#url"
                 [Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat]
                     MainDoc = "/docs/reference/data-types/text/textencodingformat"
                     Base64 = "/docs/reference/data-types/text/textencodingformat/#base64"
@@ -1473,6 +1482,8 @@
                         PropertyIsInvalid = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-is-invalid"
                         PropertyGreaterThanMaximumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-greater-than-maximum-value"
                         PropertyLessThanMinimumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-less-than-minimum-value"
+                    [Cortex.Reference.Exceptions.Common.UnencryptedTextException]
+                        MainDoc = "/docs/reference/exceptions/common/unencrypted-text-exception/"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
@@ -1568,6 +1579,13 @@
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
                         MainDoc = "/docs/reference/exceptions/text/regex/regex-parsing-failed-exception/"
+            [Cortex.Reference.Exceptions.Text.Decode]
+                MainDoc = "/docs/reference/exceptions/text/decode/"
+                    [Cortex.Reference.Exceptions.Text.Decode.TextDecodingException]
+                        MainDoc = "/docs/reference/exceptions/text/decode/text-decoding-exception/"
+                        InvalidBase64 = "/docs/reference/exceptions/text/decode/text-decoding-exception/#100"
+                        InvalidHex = "/docs/reference/exceptions/text/decode/text-decoding-exception/#300"
+                        InvalidBase64URL = "/docs/reference/exceptions/text/decode/text-decoding-exception/#600"
             [Cortex.Reference.Exceptions.Text.Encoding]
                 MainDoc = "/docs/reference/exceptions/text/encoding/"
                     [Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException]

@@ -1,10 +1,10 @@
-<!-- Scratchpad gets populated through call to .Inner -->  
+{{/*  Scratchpad gets populated through call to .Inner  */}}
 {{- .Inner -}}
 
 <ul class="nav nav-tabs" id="tabs-{{- $.Ordinal -}}" role="tablist">
   {{- range $index, $element := $.Scratch.Get "tabs" -}}
     <li class="nav-item">
-      <!-- Generate the IDs for the <a> and the <div> elements -->
+      {{/*  Generate the IDs for the <a> and the <div> elements  */}}
       {{- $tabid := printf "tabs-%v-%v-tab" $.Ordinal $index | anchorize -}}
       {{- $entryid := printf "tabs-%v-%v" $.Ordinal $index | anchorize -}}
       <a class="nav-link{{ if eq $index "0" }} active{{ end }}"

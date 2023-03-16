@@ -1,0 +1,30 @@
+{{- /* Use this shortcode for inline images. */}}
+{{- $versionPath := "" }}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $version := .Get "version" }}
+{{- if $version }}
+    {{ range where .Site.Params.versions "url" $version }}
+        {{ $versionPath = .version }}
+    {{ end }}
+    {{- else if $currentVer }}
+    {{ range where .Site.Params.versions "url" $currentVer }}
+        {{ $versionPath = .version }}
+    {{ end }}
+    {{- else }}
+    {{- /*  use latest doc as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $versionPath = .version }}
+    {{ end }}
+{{- end }}
+{{- $image := printf "%s%s%s" "/content/static/" $versionPath (.Get "src") -}}
+{{- if (os.FileExists $image) -}}
+    <img src="/{{ $versionPath }}{{ .Get "src" }}"
+        {{- $title := .Get "title" }}
+        {{- if $title }}
+        title="{{ $title }}"
+        alt="{{ $title }}"
+        {{- end -}}
+    />
+{{- else -}}
+    {{ errorf "Image at path %q is missing, search for it within the solution then fix the path to point to an existing image, or create the new image at the provided path." $image }}
+{{- end -}}
