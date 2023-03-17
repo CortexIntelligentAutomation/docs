@@ -47,6 +47,23 @@ body {
     
     .mt-4 {
       margin-top: 0px !important;
+
+      &.search-result {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 5px;
+
+        p {
+          margin: auto !important;
+        }
+
+        &:hover {
+          transition-timing-function: ease-in;
+          transition: 0.2s;
+          background: #f6f6f6;
+        }
+      }
     }
   }
 

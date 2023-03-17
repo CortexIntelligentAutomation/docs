@@ -91,6 +91,7 @@ privacy_policy = "https://www.cortex-ia.com/gdpr-privacy-policy/"
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
 version_menu = "Releases"
+version_menu_pagelinks = true
 
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
@@ -100,11 +101,11 @@ archived_version = false
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the 
 # current doc set.
-version = "v2022"
+version = "2023.3"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://latest.docs.cortex-ia.com"
+url_latest_version = "https://docs.cortex-ia.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/CortexIntelligentAutomation/docs_v2022"
@@ -212,25 +213,30 @@ enable = true
 # Additional menu links
 [menu]
 [[menu.main]]
-identifier = 'documentation'
-name = 'Documentation'
-pre = "<i class='fa fa-heart'></i>"
-url = '/docs/'
-weight = 10
+	identifier = 'documentation'
+	name = 'Documentation'
+	url = '/docs/2023.3'
+	weight = 10
 
 [[menu.main]]
-identifier = 'community'
-name = 'Community'
-pre = "<i class='fa fa-heart'></i>"
-url = 'https://community.cortex.co.uk/'
-weight = 30
+	identifier = 'community'
+	name = 'Community'
+	url = 'https://community.cortex.co.uk/'
+	weight = 30
 
 
 # Releases menu
 [[params.versions]]
-  version = "v2022 (latest)"
-  url = "http://v2022.docs.cortex-ia.com/"
+	version = "2023.3"
+	url = "/docs/2023.3/"
+	dotNetVersion = "net-6.0"
+	latest = true
 
 [[params.versions]]
-  version = "v7.2"
-  url = "https://community.cortex.co.uk/"
+	version = "2022.9"
+	url = "/docs/2022.9/"
+	dotNetVersion = "netcore-3.1"
+
+[[params.versions]]
+	version = "7.2"
+	url = "https://community.cortex.co.uk/"

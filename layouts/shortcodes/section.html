@@ -1,11 +1,16 @@
+{{/*
+  Used to reference shared sections.
+  This only works in /docs/ and is per version.
+*/}}
 {{ $filePath := .Get 0 }}
-{{ $page := .Site.GetPage $filePath }}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ with $page }}
   {{ with .Content }}
     {{ . }}
   {{ else }}
-    {{ errorf "File is empty %q, add some content." $filePath }}
+    {{ errorf "File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
   {{ end }}
 {{ else }}
-  {{ errorf "File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." $filePath }}
+  {{ errorf "File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ end }}

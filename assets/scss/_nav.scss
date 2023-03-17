@@ -14,6 +14,10 @@
         width: 100%;
     }
 
+    .dropdown {
+        min-width: auto !important;
+    }
+
     .td-navbar-nav-scroll {
         margin-left: unset !important;
         margin-top: unset !important; // temp
@@ -25,13 +29,17 @@
 
             .nav-item {
                 margin: 0px !important;
-        
+
                 .nav-link {
                     text-transform: none;
                     font-weight: $font-weight-light;
                     color: $ctx-black !important;
                     padding: 0;
                     
+                    &.dropdown-toggle {
+                        padding: 0 0.5rem !important
+                    }
+
                     :hover {
                         background-color: $ctx-blue;
                         color: white !important;
@@ -75,7 +83,7 @@
     }
 
     @include media-breakpoint-down(md) {
-        padding-right: 1.5rem;
+        padding-right: 0.75rem;
         padding-left: .75rem;
 
         .td-navbar-nav-scroll {

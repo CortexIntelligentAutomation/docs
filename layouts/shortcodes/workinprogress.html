@@ -1,0 +1,13 @@
+{{- $versionPath := "" }}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- if $currentVer }}
+    {{ range where .Site.Params.versions "url" $currentVer }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else }}
+    {{- /*  use latest doc as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $versionPath = .version }}
+    {{ end }}
+{{- end }}
+<img src="/{{ $versionPath }}/images/work-in-progress.jpg" class="work-in-progress" />

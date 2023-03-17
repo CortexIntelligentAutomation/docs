@@ -99,7 +99,9 @@
                     RecommendedArchitecture = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/architecture#recommended-architecture"
                     MinimumArchitecture = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/architecture#minimum-architecture"
                     AlternativeArchitectures = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/architecture#alternative-architectures"
+                    AltLoadBalancer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers"
+                    InstallWebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
@@ -272,6 +274,8 @@
                 MainDoc = "/docs/reference/apis/cortex-execution-service/"
             [Cortex.Reference.Apis.FlowDebuggerService]
                 MainDoc = "/docs/reference/apis/cortex-flow-debugger-service/"
+            [Cortex.Reference.Apis.FlowExecutionService]
+                MainDoc = "/docs/reference/apis/cortex-flow-execution-service/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -689,10 +693,30 @@
                         MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
             [Cortex.Reference.Blocks.Queues]
                 MainDoc = "/docs/reference/blocks/queues/"
+                [Cortex.Reference.Blocks.Queues.DequeueItem]
+                    MainDoc = "/docs/reference/blocks/queues/dequeue-item/"
+                    [Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemBlock]
+                        MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-item-block-2"
+                    [Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-items-block-2"
                 [Cortex.Reference.Blocks.Queues.EnqueueItem]
                     MainDoc = "/docs/reference/blocks/queues/enqueue-item/"
                     [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock]
                         MainDoc = "/docs/reference/blocks/queues/enqueue-item/enqueue-item-block-2"
+                    [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/enqueue-item/enqueue-items-block-2"
+                [Cortex.Reference.Blocks.Queues.PeekItem]
+                    MainDoc = "/docs/reference/blocks/queues/peek-item/"
+                    [Cortex.Reference.Blocks.Queues.PeekItem.PeekItemBlock]
+                        MainDoc = "/docs/reference/blocks/queues/peek-item/peek-item-block"
+                [Cortex.Reference.Blocks.Queues.GetCount]
+                    MainDoc = "/docs/reference/blocks/queues/get-count/"
+                    [Cortex.Reference.Blocks.Queues.EnqueueItem.GetCountOfAllItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/get-count/get-count-of-all-items-block-2"
+                [Cortex.Reference.Blocks.Queues.RemoveItem]
+                    MainDoc = "/docs/reference/blocks/queues/remove-item/"
+                    [Cortex.Reference.Blocks.Queues.RemoveItem.RemoveAllItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/remove-item/remove-all-items-block"
             [Cortex.Reference.Blocks.Ssh]
                 MainDoc = "/docs/reference/blocks/ssh/"
                 [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]
@@ -728,6 +752,14 @@
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-title-case-block/"
                     [Cortex.Reference.Blocks.Text.ConvertTo.ConvertToUpperCase]
                         MainDoc = "/docs/reference/blocks/text/convert-to/convert-to-upper-case-block/"
+                [Cortex.Reference.Blocks.Text.EncodeText]
+                    MainDoc = "/docs/reference/blocks/text/encode-text/"
+                    [Cortex.Reference.Blocks.Text.EncodeText.EncodeText]
+                        MainDoc = "/docs/reference/blocks/text/encode-text/encode-text-block"
+                [Cortex.Reference.Blocks.Text.DecodeText]
+                    MainDoc = "/docs/reference/blocks/text/decode-text/"
+                    [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
+                        MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
@@ -760,6 +792,10 @@
                         MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-before-index-block/"
                     [Cortex.Reference.Blocks.Text.RemoveText.RemoveTextBetweenIndexes]
                         MainDoc = "/docs/reference/blocks/text/remove-text/remove-text-between-indexes-block/"
+                [Cortex.Reference.Blocks.Text.SplitText]
+                    MainDoc = "/docs/reference/blocks/text/remove-text/"
+                    [Cortex.Reference.Blocks.Text.SplitText.SplitText]
+                        MainDoc = "/docs/reference/blocks/text/split-text/split-text-block/"
             [Cortex.Reference.Blocks.Schedules]
                 MainDoc = "/docs/reference/blocks/schedules/"
                 [Cortex.Reference.Blocks.Schedules.WaitFor]
@@ -919,10 +955,6 @@
                         NestedWorkspaces = "/docs/reference/concepts/fundamentals/workspaces/what-is-a-workspace/#nested-workspaces"
                     [Cortex.Reference.Concepts.Fundamentals.Workspaces.HandlingExceptionsWithinAWorkspace]
                         MainDoc = "/docs/reference/concepts/fundamentals/workspaces/handling-exceptions-within-a-workspace"
-                [Cortex.Reference.Concepts.Fundamentals.ComplexTypes]
-                    MainDoc = "/docs/reference/concepts/fundamentals/complex-types/"
-                [Cortex.Reference.Concepts.Fundamentals.PrimitiveTypes]
-                    MainDoc = "/docs/reference/concepts/fundamentals/primitive-types/"
             [Cortex.Reference.Concepts.WorkingWith]
                 MainDoc = "/docs/reference/concepts/working-with/"
                 [Cortex.Reference.Concepts.WorkingWith.Collections]
@@ -1031,7 +1063,9 @@
                         [Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes]
                             MainDoc = "/docs/reference/concepts/working-with/text/equality/#comparison-types"
                             CurrentCulture = "/docs/reference/concepts/working-with/text/equality/#current-culture"
+                            CurrentCultureIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#current-culture-ignore-case"
                             InvariantCulture = "/docs/reference/concepts/working-with/text/equality/#invariant-culture"
+                            InvariantCultureIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#invariant-culture-ignore-case"
                             Ordinal = "/docs/reference/concepts/working-with/text/equality/#ordinal"
                             OrdinalIgnoreCase = "/docs/reference/concepts/working-with/text/equality/#ordinal-ignore-case"
         [Cortex.Reference.DataTypes]
@@ -1404,6 +1438,22 @@
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
+                    MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
+                [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
+                    MainDoc = "/docs/reference/data-types/text/textencodingformat"
+                    Base64 = "/docs/reference/data-types/text/textencodingformat/#base64"
+                    Hex = "/docs/reference/data-types/text/textencodingformat/#hex"
+                    Html = "/docs/reference/data-types/text/textencodingformat/#html"
+                    Base64URL = "/docs/reference/data-types/text/textencodingformat/#base64url"
+                    URL = "/docs/reference/data-types/text/textencodingformat/#url"
+                [Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat]
+                    MainDoc = "/docs/reference/data-types/text/textencodingformat"
+                    Base64 = "/docs/reference/data-types/text/textencodingformat/#base64"
+                    Hex = "/docs/reference/data-types/text/textencodingformat/#hex"
+                    Html = "/docs/reference/data-types/text/textencodingformat/#html"
+                    Base64Url = "/docs/reference/data-types/text/textencodingformat/#base64url"
+                    Url = "/docs/reference/data-types/text/textencodingformat/#url"
                 [Cortex.Reference.DataTypes.Text.UnicodeEncoding]
                     MainDoc = "/docs/reference/data-types/text/unicodeencoding"
                 [Cortex.Reference.DataTypes.Text.UTF32Encoding]
@@ -1412,6 +1462,10 @@
                     MainDoc = "/docs/reference/data-types/text/utf8encoding"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
+            [Cortex.Reference.Exceptions.Collections]
+                MainDoc = "/docs/reference/exceptions/collections/"
+                [Cortex.Reference.Exceptions.Collections.OccurrenceNotPresentException]
+                    MainDoc = "/docs/reference/exceptions/collections/occurrence-not-present-exception/"
             [Cortex.Reference.Exceptions.Common]
                 MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
@@ -1431,29 +1485,27 @@
                         PropertyGreaterThanMaximumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-greater-than-maximum-value"
                         PropertyLessThanMinimumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-less-than-minimum-value"
                     [Cortex.Reference.Exceptions.Common.UnencryptedTextException]
-                        MainDoc = "/docs/reference/exceptions/common/unencryptedtextexception/"
+                        MainDoc = "/docs/reference/exceptions/common/unencrypted-text-exception/"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
-                        MainDoc = "/docs/reference/exceptions/data/commandexception/"
+                        MainDoc = "/docs/reference/exceptions/data/command-exception/"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
-                        MainDoc = "/docs/reference/exceptions/data/invalidconnectionstringexception/"
+                        MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
-                        MainDoc = "/docs/reference/exceptions/decisions/propertynotnullableexception/"
+                        MainDoc = "/docs/reference/exceptions/decisions/property-not-nullable-exception/"
             [Cortex.Reference.Exceptions.Dictionaries]
                 MainDoc = "/docs/reference/exceptions/dictionaries/"
                     [Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException]
-                        MainDoc = "/docs/reference/exceptions/dictionaries/cannotmodifyreadonlydictionaryexception/"
+                        MainDoc = "/docs/reference/exceptions/dictionaries/cannot-modify-read-only-dictionary-exception/"
                     [Cortex.Reference.Exceptions.Dictionaries.KeyNotPresentException]
-                        MainDoc = "/docs/reference/exceptions/dictionaries/keynotpresentexception/"
+                        MainDoc = "/docs/reference/exceptions/dictionaries/key-not-present-exception/"
                     [Cortex.Reference.Exceptions.Dictionaries.KeysNotPresentException]
-                        MainDoc = "/docs/reference/exceptions/dictionaries/keysnotpresentexception/"
+                        MainDoc = "/docs/reference/exceptions/dictionaries/keys-not-present-exception/"
                     [Cortex.Reference.Exceptions.Dictionaries.KeyPresentException]
-                        MainDoc = "/docs/reference/exceptions/dictionaries/keypresentexception/"
-                    [Cortex.Reference.Exceptions.Dictionaries.OccurrenceNotPresentException]
-                        MainDoc = "/docs/reference/exceptions/dictionaries/occurrencenotpresentexception/"
+                        MainDoc = "/docs/reference/exceptions/dictionaries/key-present-exception/"
             [Cortex.Reference.Exceptions.Email]
                 MainDoc = "/docs/reference/exceptions/email/"
                     [Cortex.Reference.Exceptions.Email.EmailSessionException]
@@ -1468,14 +1520,14 @@
             [Cortex.Reference.Exceptions.FilesAndFolders]
                 MainDoc = "/docs/reference/exceptions/files-and-folders/"
                 [Cortex.Reference.Exceptions.FilesAndFolders.InvalidFolderNameException]
-                    MainDoc = "/docs/reference/exceptions/files-and-folders/invalidfoldernameexception"
+                    MainDoc = "/docs/reference/exceptions/files-and-folders/invalid-folder-name-exception"
                 [Cortex.Reference.Exceptions.FilesAndFolders.InvalidPathException]
-                    MainDoc = "/docs/reference/exceptions/files-and-folders/invalidpathexception"
+                    MainDoc = "/docs/reference/exceptions/files-and-folders/invalid-path-exception"
                 [Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException]
-                    MainDoc = "/docs/reference/exceptions/files-and-folders/operationfailedexception"
-                    PathExceptions = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#path-exceptions"
-                    IndexesOfDuplicatePaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-duplicate-paths"
-                    IndexesOfNullOrEmptyPaths = "/docs/reference/exceptions/files-and-folders/operationfailedexception/#indexes-of-null-or-empty-paths"
+                    MainDoc = "/docs/reference/exceptions/files-and-folders/operation-failed-exception"
+                    PathExceptions = "/docs/reference/exceptions/files-and-folders/operation-failed-exception/#path-exceptions"
+                    IndexesOfDuplicatePaths = "/docs/reference/exceptions/files-and-folders/operation-failed-exception/#indexes-of-duplicate-paths"
+                    IndexesOfNullOrEmptyPaths = "/docs/reference/exceptions/files-and-folders/operation-failed-exception/#indexes-of-null-or-empty-paths"
             [Cortex.Reference.Exceptions.Flows]
                 MainDoc = "/docs/reference/exceptions/flows/"
                 [Cortex.Reference.Exceptions.Flows.Blocks]
@@ -1490,12 +1542,12 @@
                 [Cortex.Reference.Exceptions.Flows.Execution]
                     MainDoc = "/docs/reference/exceptions/flows/execution/"
                     [Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException]
-                        MainDoc = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/"
-                        MissingInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#missing-input-variables"
-                        ExtraInputVariables = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#extra-input-variables"
-                        InputVariablesOfAnInvalidType = "/docs/reference/exceptions/flows/execution/invalidinputvariablesexception/#input-variables-of-an-invalid-type"
-            [Cortex.Reference.Exceptions.FlowException]
-                MainDoc = "/docs/reference/exceptions/flowexception/"
+                        MainDoc = "/docs/reference/exceptions/flows/execution/invalid-input-variables-exception/"
+                        MissingInputVariables = "/docs/reference/exceptions/flows/execution/invalid-input-variables-exception/#missing-input-variables"
+                        ExtraInputVariables = "/docs/reference/exceptions/flows/execution/invalid-input-variables-exception/#extra-input-variables"
+                        InputVariablesOfAnInvalidType = "/docs/reference/exceptions/flows/execution/invalid-input-variables-exception/#input-variables-of-an-invalid-type"
+                [Cortex.Reference.Exceptions.Flows.FlowException]
+                    MainDoc = "/docs/reference/exceptions/flows/flow-exception/"
             [Cortex.Reference.Exceptions.Http]
                 MainDoc = "/docs/reference/exceptions/http/"
                 [Cortex.Reference.Exceptions.Http.HttpAuthorisationException]
@@ -1507,9 +1559,9 @@
             [Cortex.Reference.Exceptions.Lists]
                 MainDoc = "/docs/reference/exceptions/lists/"
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
-                        MainDoc = "/docs/reference/exceptions/lists/cannotmodifyreadonlylistexception/"
+                        MainDoc = "/docs/reference/exceptions/lists/cannot-modify-read-only-list-exception/"
                     [Cortex.Reference.Exceptions.Lists.DuplicateValueException]
-                        MainDoc = "/docs/reference/exceptions/lists/duplicatevalueexception/"
+                        MainDoc = "/docs/reference/exceptions/lists/duplicate-value-exception/"
             [Cortex.Reference.Exceptions.Loops]
                 MainDoc = "/docs/reference/exceptions/loops/"
                     [Cortex.Reference.Exceptions.Loops.InfiniteLoopException]
@@ -1522,20 +1574,34 @@
             [Cortex.Reference.Exceptions.PowerShell]
                 MainDoc = "/docs/reference/exceptions/powershell/"
                 [Cortex.Reference.Exceptions.PowerShell.PSRemotingException]
-                    MainDoc = "/docs/reference/exceptions/powershell/psremotingexception"
+                    MainDoc = "/docs/reference/exceptions/powershell/ps-remoting-exception"
                 [Cortex.Reference.Exceptions.PowerShell.PSException]
-                    MainDoc = "/docs/reference/exceptions/powershell/psexception"
+                    MainDoc = "/docs/reference/exceptions/powershell/ps-exception"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
-                        MainDoc = "/docs/reference/exceptions/text/regex/regexparsingfailedexception/"
+                        MainDoc = "/docs/reference/exceptions/text/regex/regex-parsing-failed-exception/"
+            [Cortex.Reference.Exceptions.Text.Decode]
+                MainDoc = "/docs/reference/exceptions/text/decode/"
+                    [Cortex.Reference.Exceptions.Text.Decode.TextDecodingException]
+                        MainDoc = "/docs/reference/exceptions/text/decode/text-decoding-exception/"
+                        InvalidBase64 = "/docs/reference/exceptions/text/decode/text-decoding-exception/#100"
+                        InvalidHex = "/docs/reference/exceptions/text/decode/text-decoding-exception/#300"
+                        InvalidBase64URL = "/docs/reference/exceptions/text/decode/text-decoding-exception/#600"
+            [Cortex.Reference.Exceptions.Text.Encoding]
+                MainDoc = "/docs/reference/exceptions/text/encoding/"
+                    [Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException]
+                        MainDoc = "/docs/reference/exceptions/text/encoding/text-decoding-exception/"
+                        InvalidBase64 = "/docs/reference/exceptions/text/encoding/text-decoding-exception/#100"
+                        InvalidHex = "/docs/reference/exceptions/text/encoding/text-decoding-exception/#300"
+                        InvalidBase64Url = "/docs/reference/exceptions/text/encoding/text-decoding-exception/#600"
             [Cortex.Reference.Exceptions.Ssh]
                 MainDoc = "/docs/reference/exceptions/ssh/"
-                SshClientException = "/docs/reference/exceptions/ssh/sshclientexception/"
-                SshResponseException = "/docs/reference/exceptions/ssh/sshresponseexception/"
+                SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
+                SshResponseException = "/docs/reference/exceptions/ssh/ssh-response-exception/"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
-                XmlSerializationException = "/docs/reference/exceptions/xml/xmlserializationexception/"
+                XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"
         [Cortex.Reference.Logs]
             MainDoc = "/docs/reference/logs/"
             [Cortex.Reference.Logs.CortexGateway]
@@ -1606,6 +1672,7 @@
                 Gmail = "/docs/reference/glossary/f-j/#gmail"
                 Heterogenous = "/docs/reference/glossary/f-j/#heterogenous"
                 Homogenous = "/docs/reference/glossary/f-j/#homogenous"
+                HTMLEntity = "/docs/reference/glossary/f-j/#html-entity"
                 Initialised = "/docs/reference/glossary/f-j/#initialised"
                 IMAP = "/docs/reference/glossary/f-j/#imap"
                 Integer = "/docs/reference/glossary/f-j/#integer"
@@ -1803,6 +1870,7 @@
         Array = "https://learn.microsoft.com/en-us/dotnet/api/system.array"
         FormatException = "https://learn.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
+        StringComparer = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparer"
         StringComparison = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://learn.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
         UnauthorizedAccessException = "https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception"
@@ -1858,7 +1926,7 @@
             ShortTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortTime"
             LongDateFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongDate"
             LongTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongTime"
-            FullDateShortTime = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateShortTime"
+            FullDateShortTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateShortTime"
             FullDateLongTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#FullDateLongTime"
             GeneralDateShortTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateShortTime"
             GeneralDateLongTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#GeneralDateLongTime"
@@ -1995,6 +2063,8 @@
     [VisualStudio.Code]
         MainDoc = "https://code.visualstudio.com/"
         Intellisense = "https://code.visualstudio.com/docs/editor/intellisense"
+[WHATWG]
+    EntityList = "https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references"
 [Wikipedia]
     Bit = "https://en.wikipedia.org/wiki/Bit"
     Byte = "https://en.wikipedia.org/wiki/Byte"

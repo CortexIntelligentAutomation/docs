@@ -1,4 +1,15 @@
-{{- $filePath := "/headless/currentVersion.md" -}}
+{{/*  
+    This shortcode provides a single point to version in docs.
+    This only works in files under /docs/.
+*/}}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+    {{/*  use latest doc as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $currentVer = .url }}
+    {{ end }}
+{{- end }}
+{{- $filePath := printf "%s%s" $currentVer "_shared/currentVersion.md" -}}
 {{- $page := .Site.GetPage $filePath -}}
 {{- with $page -}}
     {{- with .Plain -}}
