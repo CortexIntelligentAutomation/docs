@@ -11,7 +11,7 @@ The prerequisites required for each server role (as described in [Architecture][
 ## Hardware Requirements
 
 {{% alert title="Note" %}}
-For production systems it is recommended to {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" "install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" "install on existing hardware" >}}.
+For production systems it is recommended to {{< ahref path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" title="install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" title="install on existing hardware" >}}.
 {{% /alert %}}
 
 ### Option 1: Install on New Hardware
@@ -33,7 +33,7 @@ The table below specifies additional resources that are recommended to be added 
 | Web&nbsp;Application&nbsp;Server<br>(Shared with Cortex Gateway) | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 12+&nbsp;*Recommended*<br>6&nbsp;*Minimum* | 10+&nbsp;*Recommended*<br>5&nbsp;*Minimum*|
 
 {{% alert title="Note" %}}
-The application servers (as described in {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" "Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
+The application servers (as described in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" title="Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
 {{% /alert %}}
 
 ## Software Requirements
@@ -81,7 +81,7 @@ The observability platform requires a range of [firewall ports to be opened][Por
 #### Certificate Requirements
 
 {{% alert title="Note" %}}
-For production systems, it is recommended that X.509 SSL certificates are obtained from a Certificate Authority and used for installation. For non-production systems, self-signed certificates may be used. Details on how to create a self-signed certificate can be found at {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced.CreateSelfSignedCertificates" "Create Self-Signed Certificates">}}.
+For production systems, it is recommended that X.509 SSL certificates are obtained from a Certificate Authority and used for installation. For non-production systems, self-signed certificates may be used. Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.
 {{% / alert %}}
 
 An X.509 SSL certificate (standard, wildcard or self-signed) should be used to secure communication between:

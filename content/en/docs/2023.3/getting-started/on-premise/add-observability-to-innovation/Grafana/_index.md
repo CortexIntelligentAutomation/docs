@@ -6,5 +6,5 @@ weight: 10
 ---
 
 {{% pageinfo %}}
-For instructions on how to set up Grafana and Grafana Loki in the cloud see {{< ahref "Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.MainDoc" "Grafana Cloud" >}}.
+For instructions on how to set up Grafana and Grafana Loki in the cloud see {{< ahref path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.MainDoc" title="Grafana Cloud" >}}.
 {{% /pageinfo %}}

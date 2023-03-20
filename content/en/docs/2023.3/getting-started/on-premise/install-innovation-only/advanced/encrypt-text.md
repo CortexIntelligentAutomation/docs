@@ -30,4 +30,4 @@ To encrypt text using the Cortex Encryptor PowerShell module:
 
     The command will return the encrypted text, beginning with `#_`. This step can be repeated for any texts that need to be encrypted.
 
-    {{< alert title="Note:" >}}The `Import-Module` command will need to be repeated every time a new PowerShell window is used. To install the PowerShell module so that it is always available, follow the instructions laid out {{< ahref "MSDocs.PowerShell.InstallModule" "here" >}}.{{< /alert >}}
+    {{< alert title="Note:" >}}The `Import-Module` command will need to be repeated every time a new PowerShell window is used. To install the PowerShell module so that it is always available, follow the instructions laid out {{< ahref path="MSDocs.PowerShell.InstallModule" title="here" >}}.{{< /alert >}}
