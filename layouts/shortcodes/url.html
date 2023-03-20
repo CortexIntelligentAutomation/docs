@@ -21,6 +21,9 @@
 {{- $indexFilePath := printf "%s%s" (replaceRE "/$" "" (printf "%s%s" $url.Host $urlPath)) "/_index.md" }}
 {{- $page := .Site.GetPage $mdFilePath }}
 {{- $pageIndex := .Site.GetPage $indexFilePath }}
+{{- if ne $url.Fragment "" }}
+    {{- $urlPath = (printf "%s#%s" $urlPath $url.Fragment) }}
+{{- end }}
 {{- if eq $link (printf "%s://" $url.Scheme) }} {{- /*  Check if the URL does not exist  */}}
     {{- errorf "No Url found in urls.toml matching with %q. Stacktrace: %s" $tomlPath . }}
 {{- else if hasPrefix $url "https://learn.microsoft.com/en-us/dotnet/api/" }} {{- /*  Check if it is an external URL  */}}

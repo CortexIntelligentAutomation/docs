@@ -23,14 +23,14 @@
       {{ range .Site.Menus.main -}}
       <li class="nav-item mr-4 mb-2 mb-lg-0">
         {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
-        {{ with .Page }}{{ $active := or $active ( $.IsDescendant .) }}{{ end -}}
+        {{ with .Page }}{{ $active = or $active ( $.IsDescendant .) }}{{ end -}}
         {{ $pre := .Pre -}}
         {{ $post := .Post -}}
         {{ $url := urls.Parse .URL -}}
         {{ $baseurl := urls.Parse $.Site.Params.Baseurl -}}
         <a {{/**/ -}}
           class="nav-link {{- if $active }} active {{- end }}" {{/**/ -}}
-          href="{{ with .Page }}{{ .RelPermalink }}{{ if eq .RelPermalink $docsUrl }}/latest/{{ end }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+          href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
           {{- if ne $url.Host $baseurl.Host }} target="_blank" {{- end -}}
         >
             {{- with .Pre }}{{ $pre }}{{ end -}}
