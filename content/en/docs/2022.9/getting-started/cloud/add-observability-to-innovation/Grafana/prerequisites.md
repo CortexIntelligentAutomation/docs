@@ -10,7 +10,7 @@ The prerequisites required for each server role (as described in [Architecture][
 
 ## Hardware Requirements
 
-The application servers (as described in {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" "Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
+The application servers (as described in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" title="Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
 
 {{% alert title="Note" %}}
 The application servers must have internet access in order to communicate with the Grafana Cloud managed service.

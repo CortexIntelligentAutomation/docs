@@ -6,5 +6,5 @@ weight: 10
 ---
 
 {{% pageinfo %}}
-For instructions on how to set up Grafana and Grafana Loki on-premise see {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.MainDoc" "Grafana on-premise" >}}.
+For instructions on how to set up Grafana and Grafana Loki on-premise see {{< ahref path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.MainDoc" title="Grafana on-premise" >}}.
 {{% /pageinfo %}}

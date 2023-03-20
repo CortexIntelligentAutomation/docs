@@ -19,7 +19,7 @@ weight: 10
 ## Recommended Architecture
 
 {{% alert title="Note" %}}
-For production systems it is recommended to {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" "install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref "Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" "install on existing hardware" >}}.
+For production systems it is recommended to {{< ahref path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnNewHardware" title="install on new hardware" >}}. However, if additional hardware is not available, you can {{< ahref path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallOnExistingHardware" title="install on existing hardware" >}}.
 {{% /alert %}}
 
 The following architecture requires 1 + 1..n servers:

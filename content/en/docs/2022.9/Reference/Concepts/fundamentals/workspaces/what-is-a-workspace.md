@@ -55,7 +55,7 @@ A flow can only contain one Top-Level Workspace, which acts as the entry point f
   * Canvas on which blocks are placed and connected to create the flow logic
 
 {{% alert title="Note" %}}
-The flow should be ended with an {{< ahref "Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" "End Flow">}} block, but it can also be ended using an {{< ahref "Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" "End Workspace">}} block on the [Top-Level Workspace]({{< ref "#top-level-workspace" >}}).
+The flow should be ended with an {{< ahref path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" title="End Flow" >}} block, but it can also be ended using an {{< ahref path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" title="End Workspace" >}} block on the [Top-Level Workspace]({{< ref "#top-level-workspace" >}}).
 {{% /alert %}}
 
 ### Other Workspaces

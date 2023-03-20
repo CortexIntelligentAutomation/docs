@@ -1,6 +1,44 @@
 {{- /* Creates a hyperlink element with the provided link. This is currently not versioned. */}}
-{{ $url := urls.Parse (index .Site.Data.urls (split (.Get 0) ".")) }}{{ $link := (printf "%s://%s%s" $url.Scheme $url.Host $url.Path) }}{{ if hasPrefix $url "https://docs.microsoft.com/en-us/dotnet/api/" }}{{ $link = (printf "%s?view=%s" $link .Site.Params.dotNetVersion)}}{{ if ne $url.Fragment ""}}
-{{ $link = (printf "%s#%s" $link $url.Fragment)}}
-{{ end }}
-<a href="{{ $link }}">{{ .Get 1 }}</a>
-{{ else }}<a href="{{ $url }}">{{ .Get 1 }}</a>{{ end }}
+{{- $tomlPath := .Get "path" }}
+{{- $url := urls.Parse (index .Site.Data.urls (split ($tomlPath) ".")) }}
+{{- $link := (printf "%s://%s%s" $url.Scheme $url.Host $url.Path) }}
+{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $version := .Get "version" }}
+{{- if $version }}
+    {{- range where .Site.Params.versions "version" $version }}
+        {{- $currentVer = .url }}
+    {{- end }}
+{{- else if (not $currentVer) }}
+    {{- range where .Site.Params.versions "latest" true }}
+        {{- $currentVer = .url }}
+    {{- end }}
+{{- end }}
+{{- $urlPath := replaceRE `^/docs/` $currentVer $url.Path }}
+{{- $mdFilePath := printf "%s%s" (replaceRE "/$" "" (printf "%s%s" $url.Host $urlPath)) ".md" }}
+{{- $indexFilePath := printf "%s%s" (replaceRE "/$" "" (printf "%s%s" $url.Host $urlPath)) "/_index.md" }}
+{{- $page := .Site.GetPage $mdFilePath }}
+{{- $pageIndex := .Site.GetPage $indexFilePath }}
+{{- if ne $url.Fragment "" }}
+    {{- $urlPath = (printf "%s#%s" $urlPath $url.Fragment) }}
+{{- end }}
+{{- if eq $link (printf "%s://" $url.Scheme) }} {{- /*  Check if the URL does not exist  */}}
+    {{- errorf "No Url found in urls.toml matching with %q. Stacktrace: %s" $tomlPath . }}
+{{- else if hasPrefix $url "https://learn.microsoft.com/en-us/dotnet/api/" }} {{- /*  Check if it is an external URL  */}}
+    {{- /*  Make the link for the current version  */}}
+    {{- range where .Site.Params.versions "url" $currentVer }}
+        {{- $link = (printf "%s?view=%s" $link .dotNetVersion) }}
+        {{- if ne $url.Fragment "" }}
+            {{- $link = (printf "%s#%s" $link $url.Fragment) }}
+        {{- end }}
+        {{- $link }}
+    {{- end }}
+    <a href="{{ $link }}">{{ .Get "title" }}</a>
+{{- else if hasPrefix $mdFilePath "/docs/" }}
+    {{- /*  Check if it is an internal docs URL  */}}
+    {{- if (not (or ($page) ($pageIndex))) }}
+        {{- errorf "Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
+    {{- end }}
+    <a href="{{ $urlPath }}">{{ .Get "title" }}</a>
+{{- else }}
+    <a href="{{ $url }}">{{ .Get "title" }}</a>
+{{- end }}
