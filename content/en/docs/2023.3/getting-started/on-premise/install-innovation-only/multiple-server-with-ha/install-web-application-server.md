@@ -60,8 +60,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
 ### Get Cortex Gateway Application Pool User
 
-A domain user account is required for the Cortex Gateway application pool and must be created prior to performing the installation
-below.
+A domain user account is required for the Cortex Gateway application pool and must be created prior to performing the installation below.
 
 This user account is required to enable Cortex Gateway to access the Cortex database, with the following roles:
 
@@ -118,7 +117,7 @@ In order to import the Root CA certificate, ensure that the file is in a known l
 
 #### Import Certificate Manually
 
-{{% alert title="Note" %}}If the certificate is being imported manually it is necessary to allocate it a {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" "Friendly Name" >}} after.{{% /alert %}}
+{{% alert title="Note" %}}If the certificate is being imported manually it is necessary to allocate it a {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" title="Friendly Name" >}} after.{{% /alert %}}
 
 To import the certificate manually follow the below steps:
 
@@ -191,7 +190,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
     -GatewayPackagePath "C:\Install\Cortex Innovation {{< version >}} - Gateway.zip" `
-												 
     -ModelDBContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True" `
     -AuthContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True" `
     -SignalRContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True" `
@@ -220,7 +218,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
-    |`ModelDBContextConnectionString`                | If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `ModelDBContextConnectionString` value in the Cortex Gateway web.config.|
+    |`ModelDBContextConnectionString`                | If SQL Server was installed as the default instance, change the `Data Source` in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `ModelDBContextConnectionString` value in the Cortex Gateway web.config.|
     |`AuthContextConnectionString`                   |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `AuthContextConnectionString` value in the Cortex Gateway web.config. |
     |`SignalRContextConnectionString`                |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `SignalRContextConnectionString` value in the Cortex Gateway web.config. |
     |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
