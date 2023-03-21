@@ -64,7 +64,7 @@ The [Value][Value Property] to check evaluates to `true` or `false`.
 
 ## Exceptions
 
-No exceptions are thrown by the block.
+None
 
 ## Remarks
 

@@ -138,7 +138,7 @@ No exceptions are thrown by the block.
 
 ## Remarks
 
-No remarks for the block.
+None
 
 [Text Property]: {{< ref "#text" >}}
 [TextIsNullEmptyOrWhitespace Property]: {{< ref "#text-is-null-empty-or-whitespace" >}}
