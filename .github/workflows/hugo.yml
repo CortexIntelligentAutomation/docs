@@ -34,7 +34,7 @@ jobs:
       HUGO_VERSION: 0.108.0
     steps:
       - name: npm install
-        working-directory: example
+        working-directory: ./
         run: |
           npm install
       - name: Install Hugo CLI
