@@ -36,9 +36,6 @@ jobs:
       - name: npm install
         working-directory: example
         run: |
-          npm install --save-dev autoprefixer
-          npm install --save-dev postcss-cli
-          npm install -D postcss
           npm install
       - name: Install Hugo CLI
         run: |
