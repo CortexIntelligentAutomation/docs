@@ -97,13 +97,29 @@ Both Cortex Gateway and the Flow Debugger Service require an X.509 SSL certifica
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
-Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
+Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][]. If a self-signed is used, the Root Certification Authority (CA) certificate will need to be [imported][Import Root CA] prior to running the installation, otherwise validation of the URL will fail.
 
-You can import the certificate automatically by setting the `ImportCertificate` parameter to `$true` in [Configure Cortex Gateway Installation Script][] or you can import it manually.
+You can import the certificate automatically by setting the `ImportCertificate` parameter to `$true` in [Configure Cortex Gateway Installation Script][] or you can import it [manually][Import Certificate Manually].
+
+#### Import Root CA Certificate
+{{% alert title="Note" %}}This step is only required if using a self-signed certificate.{{% /alert %}}
+
+In order to import the Root CA certificate, ensure that the file is in a known location on this server and complete the following steps:
+
+1. Using Windows File Explorer navigate to the location of the Root CA certificate file.
+1. Double click on the Root CA Certificate file to import the certificate into the Windows Certificate Store. Perform the following steps:
+    1. Select `Local Machine` then click `Next`.
+    1. Click `Next`.
+    1. Enter the Export Password which the certificate was generated with then click `Next`.
+    1. Select `Place all certificates in the following store`.
+    1. Click `Browse…`.
+    1. Select `Trusted Root Certification Authorities`, click `OK` then click `Next`.
+    1. Click `Finish`.
 
 #### Import Certificate Manually
 
 {{% alert title="Note" %}}If the certificate is being imported manually it is necessary to allocate it a {{< ahref "Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" "Friendly Name" >}} after.{{% /alert %}}
+
 To import the certificate manually follow the below steps:
 
 1. Locate the certificate file on the machine and right-click on the file.
@@ -297,6 +313,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Cortex Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
+[Import Root CA]: {{< ref path="#import-root-ca-certificate" >}}
 [Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Setup Cortex Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
