@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/docs"
 title = "Cortex"
 
 enableRobotsTXT = true
