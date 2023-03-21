@@ -71,7 +71,7 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-No remarks for the block.
+None
 
 [Duration Property]: {{< ref "#duration" >}}
 

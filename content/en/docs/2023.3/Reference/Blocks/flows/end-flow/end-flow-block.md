@@ -34,4 +34,4 @@ No exceptions are thrown by the block.
 
 ## Remarks
 
-No remarks for the block.
+None
