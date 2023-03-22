@@ -1,5 +1,6 @@
 {{- $versionPath := "" }}
-{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer := index (findRE `^\/docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replace $currentVer "/docs/docs/" "/docs/" }}
 {{- if $currentVer }}
     {{ range where .Site.Params.versions "url" $currentVer }}
         {{ $versionPath = .version }}

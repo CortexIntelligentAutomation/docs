@@ -1,6 +1,7 @@
 {{- /* Use this shortcode for inline images. */}}
 {{- $versionPath := "" }}
-{{- $currentVer := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer := index (findRE `^\/docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replace $currentVer "/docs/docs/" "/docs/" }}
 {{- $version := .Get "version" }}
 {{- if $version }}
     {{ range where .Site.Params.versions "url" $version }}
