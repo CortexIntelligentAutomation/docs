@@ -5,9 +5,8 @@
 {{- $tomlPath := .Get "path" }}
 {{- $url := urls.Parse (index .Site.Data.urls (split ($tomlPath) ".")) }}
 {{- $link := (printf "%s://%s%s" $url.Scheme $url.Host $url.Path) }}
-{{- $currentVer := index (findRE `^(\/?)docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replace $currentVer "docs/docs/" "/docs/" }}
-{{- $currentVer = replace $currentVer "//" "/" }}
+{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
 {{- $version := .Get "version" }}
 {{- if $version }}
     {{- range where .Site.Params.versions "version" $version }}
@@ -27,7 +26,7 @@
     {{- $urlPath = (printf "%s#%s" $urlPath $url.Fragment) }}
 {{- end }}
 {{- if eq $link (printf "%s://" $url.Scheme) }} {{- /*  Check if the URL does not exist  */}}
-    {{- errorf "No Url found in urls.toml matching with %q. Stacktrace: %s" $tomlPath . }}
+    {{- errorf "url.html: No Url found in urls.toml matching with %q. Stacktrace: %s" $tomlPath . }}
 {{- else if hasPrefix $url "https://learn.microsoft.com/en-us/dotnet/api/" }} {{- /*  Check if it is an external URL  */}}
     {{- /*  Make the link for the current version  */}}
     {{- range where .Site.Params.versions "url" $currentVer }}
@@ -42,7 +41,7 @@
     {{- with (or ($page) ($pageIndex)) }}
         {{ $urlPath }}
     {{- else }}
-        {{- errorf "Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
+        {{- errorf "url.html: Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
     {{- end }}
 {{- else }}
     {{- $url }}

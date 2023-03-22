@@ -2,9 +2,8 @@
     This shortcode provides a single point to version in docs.
     This only works in files under /docs/.
 */}}
-{{- $currentVer := index (findRE `^(\/?)docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replace $currentVer "docs/docs/" "/docs/" }}
-{{- $currentVer = replace $currentVer "//" "/" }}
+{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
 {{- if (not $currentVer) }}
     {{/*  use latest doc as not in a versioned page  */}}
     {{ range where .Site.Params.versions "latest" true }}
@@ -17,8 +16,8 @@
     {{- with .Plain -}}
         {{-  (trim . "\n") -}}
     {{- else -}}
-        {{ errorf "Version file at path %q is empty" $filePath }}
+        {{ errorf "version.html: Version file at path %q is empty" $filePath }}
     {{- end -}}
 {{- else -}}
-    {{ errorf "Version file at path %q is missing" $filePath }}
+    {{ errorf "version.html: Version file at path %q is missing" $filePath }}
 {{- end -}}

@@ -3,16 +3,15 @@
   This only works in /docs/ and is per version.
 */}}
 {{ $filePath := .Get 0 }}
-{{- $currentVer := index (findRE `^(\/?)docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replace $currentVer "docs/docs/" "/docs/" }}
-{{- $currentVer = replace $currentVer "//" "/" }}
+{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
 {{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ with $page }}
   {{ with .Content }}
     {{ . }}
   {{ else }}
-    {{ errorf "File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
+    {{ errorf "section.html: File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
   {{ end }}
 {{ else }}
-  {{ errorf "File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
+  {{ errorf "section.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ end }}

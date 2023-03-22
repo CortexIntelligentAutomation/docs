@@ -3,7 +3,7 @@
 */}}
 {{ with $.Parent }}
 {{- if ne $.Parent.Name "tabpane" -}}
-{{- errorf "tab must be used within a tabpane block" -}}
+{{- errorf "tab.html: tab must be used within a tabpane block" -}}
 {{- end -}}
 {{- end -}}
 

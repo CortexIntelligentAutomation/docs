@@ -1,8 +1,7 @@
 {{- /* Use this shortcode for inline images. */}}
 {{- $versionPath := "" }}
-{{- $currentVer := index (findRE `^(\/?)docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replace $currentVer "docs/docs/" "/docs/" }}
-{{- $currentVer = replace $currentVer "//" "/" }}
+{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
 {{- $version := .Get "version" }}
 {{- if $version }}
     {{ range where .Site.Params.versions "url" $version }}
@@ -28,5 +27,5 @@
         {{- end -}}
     />
 {{- else -}}
-    {{ errorf "Image at path %q is missing, search for it within the solution then fix the path to point to an existing image, or create the new image at the provided path." $image }}
+    {{ errorf "image.html: Image at path %q is missing, search for it within the solution then fix the path to point to an existing image, or create the new image at the provided path." $image }}
 {{- end -}}
