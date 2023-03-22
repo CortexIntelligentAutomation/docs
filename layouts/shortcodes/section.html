@@ -3,8 +3,9 @@
   This only works in /docs/ and is per version.
 */}}
 {{ $filePath := .Get 0 }}
-{{- $currentVer := index (findRE `^\/docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replace $currentVer "/docs/docs/" "/docs/" }}
+{{- $currentVer := index (findRE `^(\/?)docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replace $currentVer "docs/docs/" "/docs/" }}
+{{- $currentVer = replace $currentVer "//" "/" }}
 {{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ with $page }}
   {{ with .Content }}

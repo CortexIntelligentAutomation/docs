@@ -3,8 +3,9 @@
 	It is only used when in /docs/ 
 */}}
 {{- $isRoot := false }}
-{{- $currentVer := index (findRE `^\/docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replace $currentVer "/docs/docs/" "/docs/" }}
+{{- $currentVer := index (findRE `^(\/?)docs\/(docs\/)?[^\/]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer = replace $currentVer "docs/docs/" "/docs/" }}
+{{- $currentVer = replace $currentVer "//" "/" }}
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	{{- range where .Site.Params.versions "url" $currentVer -}}
         {{ $versionName := .version }}
