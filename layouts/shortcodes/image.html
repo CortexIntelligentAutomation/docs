@@ -1,25 +1,38 @@
 {{- /* Use this shortcode for inline images. */}}
 {{- $versionPath := "" }}
-{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
+{{- /* Get the current version, and whether the website is currently nested (has /docs prepended). */}}
+{{- $isNested := false }}
+{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+	{{- if (or $currentVer (index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0)) }}
+		{{- $isNested = true }}
+	{{- end }}
+{{- end }}
+{{- /* Overwrites the current version if the version parameter is provided, or latest if no current version. */}}
 {{- $version := .Get "version" }}
 {{- if $version }}
     {{ range where .Site.Params.versions "url" $version }}
         {{ $versionPath = .version }}
     {{ end }}
-    {{- else if $currentVer }}
+{{- else if $currentVer }}
     {{ range where .Site.Params.versions "url" $currentVer }}
         {{ $versionPath = .version }}
     {{ end }}
-    {{- else }}
-    {{- /*  use latest doc as not in a versioned page  */}}
+{{- else }}
+    {{- /*  use latest as not in a versioned page  */}}
     {{ range where .Site.Params.versions "latest" true }}
         {{- $versionPath = .version }}
     {{ end }}
 {{- end }}
+{{- /*  Generate image html if image exists. */}}
 {{- $image := printf "%s%s%s" "/content/static/" $versionPath (.Get "src") -}}
 {{- if (os.FileExists $image) -}}
-    <img src="/{{ $versionPath }}{{ .Get "src" }}"
+    {{- if $isNested }}
+        {{- $versionPath = printf "%s%s" "docs/" $versionPath }}
+    {{- end }}
+    <img data-type="image" src="/{{ $versionPath }}{{ .Get "src" }}"
         {{- $title := .Get "title" }}
         {{- if $title }}
         title="{{ $title }}"

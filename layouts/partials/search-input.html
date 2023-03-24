@@ -1,7 +1,7 @@
 {{ if or .Site.Params.gcs_engine_id .Site.Params.algolia_docsearch }}
   <input type="search" class="form-control td-search-input" placeholder="&#xf002 {{ T "ui_search" }}" aria-label="{{ T "ui_search" }}" autocomplete="off">
 {{ else if .Site.Params.offlineSearch }}
-  {{- $path := index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0 }}
+  {{- $path := index (findRE `^(?:\/docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
   {{- if  (not $path) }}
     {{ $path = index (findRE `^\/[^\/]*\/` .Page.RelPermalink 1) 0}}
   {{- end }}

@@ -1,6 +1,14 @@
 {{- $versionPath := "" }}
-{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
+{{- /* Get the current version, and whether the website is currently nested (has /docs prepended). */}}
+{{- $isNested := false }}
+{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+	{{- if (or $currentVer (index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0)) }}
+		{{- $isNested = true }}
+	{{- end }}
+{{- end }}
 {{- if $currentVer }}
     {{ range where .Site.Params.versions "url" $currentVer }}
         {{ $versionPath = .version }}
@@ -10,5 +18,8 @@
     {{ range where .Site.Params.versions "latest" true }}
         {{- $versionPath = .version }}
     {{ end }}
+{{- end }}
+{{- if $isNested }}
+    {{- $versionPath = printf "%s%s" "docs/" $versionPath }}
 {{- end }}
 <img src="/{{ $versionPath }}/images/work-in-progress.jpg" class="work-in-progress" />

@@ -2,15 +2,14 @@
 
 {{- $currentVer := "" }}
 {{- range where .Site.Params.versions "latest" true }}
-  {{- $currentVer = .url }}
+  {{- $currentVer = (replace .url "/" "" 1 )}}
 {{- end }}
-{{- $rootPath := .Site.baseURL }}
 
 {{ $icon := .Get "icon" | default "fa-lightbulb" }}
 {{ $url_text := .Get "url_text" }}
 <div class="row cards" >
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 w-100">
-    <a href="{{- $rootPath}}{{- $currentVer }}whats-new/">
+    <a href="{{- $currentVer }}whats-new/">
       <div class="card-container">
         <div class="card-icon"><i class="fas fa-star"></i></div>
         <p class="title">What's New?</p>
@@ -19,7 +18,7 @@
   </a>
   </div>
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 w-100">
-    <a href="{{- $rootPath}}{{- $currentVer }}overview/">
+    <a href="{{- $currentVer }}overview/">
       <div class="card-container">
         <div class="card-icon"><i class="fas fa-list-ol"></i></div>
         <p class="title">Overview</p>
@@ -28,7 +27,7 @@
     </a>
   </div>
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 w-100">
-    <a href="{{- $rootPath}}{{- $currentVer }}getting-started/">
+    <a href="{{- $currentVer }}getting-started/">
       <div class="card-container">
         <div class="card-icon"><i class="fas fa-rocket"></i></div>
         <p class="title">Getting Started</p>
@@ -37,7 +36,7 @@
     </a>
   </div>
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 w-100">
-    <a href="{{- $rootPath}}{{- $currentVer }}guides/">
+    <a href="{{- $currentVer }}guides/">
       <div class="card-container">
         <div class="card-icon"><i class="fas fa-map-signs"></i></div>
         <p class="title">Guides</p>
@@ -46,7 +45,7 @@
     </a>
   </div>
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 w-100">
-    <a href="{{- $rootPath}}{{- $currentVer }}tutorials/">
+    <a href="{{- $currentVer }}tutorials/">
       <div class="card-container">
         <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
         <p class="title">Tutorials</p>
@@ -55,7 +54,7 @@
     </a>
   </div>
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 w-100">
-    <a href="{{- $rootPath}}{{- $currentVer }}reference/">
+    <a href="{{- $currentVer }}reference/">
       <div class="card-container">
         <div class="card-icon"><i class="fas fa-book"></i></div>
         <p class="title">Reference</p>

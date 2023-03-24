@@ -2,13 +2,17 @@
     This shortcode provides a single point to version in docs.
     This only works in files under /docs/.
 */}}
-{{- $currentVer := index (findRE `^(?:docs)?(\/docs\/[0-9\.]*\/)` .Page.RelPermalink 1) 0 }}
-{{- $currentVer = replaceRE `^docs(\/docs\/[0-9\.]*\/)` "$1" $currentVer }}
+{{- /* Get the current version, setting to latest if not in a versioned page. */}}
+{{- $isNested := false }}
+{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
 {{- if (not $currentVer) }}
-    {{/*  use latest doc as not in a versioned page  */}}
-    {{ range where .Site.Params.versions "latest" true }}
-        {{- $currentVer = .url }}
-    {{ end }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+	{{- if (not $currentVer) }}
+        {{ range where .Site.Params.versions "latest" true }}
+            {{- $currentVer = .url }}
+        {{ end }}
+    {{- end }}
 {{- end }}
 {{- $filePath := printf "%s%s" $currentVer "_shared/currentVersion.md" -}}
 {{- $page := .Site.GetPage $filePath -}}

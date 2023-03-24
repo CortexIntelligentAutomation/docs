@@ -46,10 +46,10 @@
         {{ partial "navbar-lang-selector.html" . -}}
       </li>
       {{ end -}}
-      {{ if (and .Site.Params.versions (hasPrefix .Page.RelPermalink $docsUrl )) -}}
-      <li class="nav-item dropdown mr-4 d-lg-block" id="nav-version">
-          {{ partial "navbar-version-selector.html" . -}}
-      </li>
+      {{ if (and .Site.Params.versions (not .Page.IsHome) (findRE  `^(?:\/docs)?\/docs\/` .Page.RelPermalink) (not (findRE `^(?:\/docs)?\/blog` .Page.RelPermalink))) -}}
+        <li class="nav-item dropdown mr-4 d-lg-block" id="nav-version">
+            {{ partial "navbar-version-selector.html" . -}}
+        </li>
       {{ end -}}
     </ul>
   </div>
