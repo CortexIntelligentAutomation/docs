@@ -234,7 +234,7 @@ None
 [implicitly cast]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ImplicitCast" >}}
 [explicitly cast]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 
-[Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
