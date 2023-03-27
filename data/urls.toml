@@ -254,6 +254,14 @@
             MainDoc = "/docs/guides/cortex-flow-debugger-service/"
         [Cortex.Guides.ApiGatewayService]
             MainDoc = "/docs/guides/cortex-api-gateway-service/"
+        [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+        [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
+        [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
+        [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
+            MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
@@ -274,6 +282,10 @@
                 MainDoc = "/docs/reference/apis/cortex-flow-debugger-service/"
             [Cortex.Reference.Apis.FlowExecutionService]
                 MainDoc = "/docs/reference/apis/cortex-flow-execution-service/"
+            [Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService]
+                MainDoc = "/docs/reference/apis/cortex-innovation/core-application/services/api-gateway-service/"
+            [Cortex.Reference.Apis.CortexInnovation.ExecutionApplication.Services.ExecutionService]
+                MainDoc = "/docs/reference/apis/cortex-innovation/core-application/services/api-gateway-service/"
         [Cortex.Reference.Blocks]
             MainDoc = "/docs/reference/blocks/"
             [Cortex.Reference.Blocks.Data]
@@ -1612,6 +1624,8 @@
                 MainDoc = "/docs/reference/logs/cortex-api-gateway-service/"
             [Cortex.Reference.Logs.CortexFlowExecutionService]
                 MainDoc = "/docs/reference/logs/cortex-flow-execution-service/"
+            [Cortex.Reference.Logs.CortexInnovation.CoreApplication.Services.ApiGatewayService]
+                MainDoc = "/docs/reference/logs/cortex-innovation/core-application/services/api-gateway-service/"
         [Cortex.Reference.Messages]
             MainDoc = "/docs/reference/messages/"
             [Cortex.Reference.Messages.Validation]

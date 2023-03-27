@@ -95,6 +95,6 @@ None
 [Cortex Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [Executions Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}
 
-[Cortex Execution Service]: {{< url path="Cortex.Reference.Apis.ExecutionService.MainDoc" >}}
+[Cortex Execution Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
 
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
