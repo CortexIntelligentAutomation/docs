@@ -4,5 +4,3 @@ linkTitle: "Cortex Innovation"
 description: "The Cortex Innovation platform."
 weight: 1
 ---
-
-{{< workinprogress >}}
