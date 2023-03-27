@@ -256,6 +256,8 @@
             MainDoc = "/docs/guides/cortex-api-gateway-service/"
         [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
             MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+        [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
         [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
             MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
         [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]

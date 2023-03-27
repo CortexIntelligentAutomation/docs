@@ -1,5 +1,5 @@
 1. Log on to the server.
-1. Import the certificate, used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your `Current User` certificate store. This can be achieved by double clicking on the certificate .PFX file and following the wizard.
+1. Import the certificate, used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your `Current User` certificate store. This can be achieved by double-clicking on the certificate .PFX file and following the wizard.
 
     If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the `CortexServerCertificate` from the `Personal` store and then importing it to the `Current User` store by double-clicking on it and following the wizard.
 1. Open a web browser.
@@ -28,8 +28,8 @@
 
     If no useful message can be seen here, the service log files may contain more information. These can be found on the server at:
 
-    * `%ProgramData%/Cortex/Cortex API Gateway Service`
-    * `%ProgramData%/Cortex/Cortex Execution Service`
+    * `%ProgramData%/Cortex/API Gateway Service`
+    * `%ProgramData%/Cortex/Execution Service`
 
     If no solution can be found, please contact [Cortex Service Portal][] for further assistance.
 

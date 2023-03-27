@@ -48,7 +48,7 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 | RepairManager Service Process | N/A | The port used by the Service Fabric Repair Manager Service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\RM.Code.Current\\FabricRM.exe | Any | TCP | Inbound, Outbound |
 | Upgrade Orchestration Service Process | N/A | The port used by the Service Fabric Upgrade Orchestration service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\UOS.Code.Current\\FabricUOS.exe | Any | TCP | Inbound, Outbound |
 
-## Cortex Application Service Rules
+## Application Service Rules
 
 Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the ephemeralPorts range.
 
@@ -57,7 +57,7 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 | API Gateway     | {{< section "/port-requirements/description/api-gateway.md" >}} | 8722                                 | TCP, UDP    | Inbound, Outbound | Any     |
 | Execution       | {{< section "/port-requirements/description/execution.md" >}}   | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
 
-## Cortex Load Balancer Rules
+## Load Balancer Rules
 
 {{% alert title="Note" %}}Only applicable for installations with HA.{{% /alert %}}
 
