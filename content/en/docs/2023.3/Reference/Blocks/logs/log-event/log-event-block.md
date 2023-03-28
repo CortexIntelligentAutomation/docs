@@ -152,7 +152,7 @@ The [Event Details][EventDetails Property] to log.
 
 [Event Severity][EventSeverity Property] can also be left blank or set to `null`, in which case it will default to `EventSeverity.Information`.
 
-Logs with an [Event Severity][EventSeverity Property] of `EventSeverity.Information`, have the event severity ommitted from the log that is written to the filesystem. This is to save disk space, as typically the highest volume of logs produced are Information logs. This cannot be changed and is a restriction of the underlying logging system used. All non-Information logs do include the event severity in the log that is written to the filesystem.
+Logs with an [Event Severity][EventSeverity Property] of `EventSeverity.Information`, have the event severity omitted from the log that is written to the filesystem. This is to save disk space, as typically the highest volume of logs produced are Information logs. This cannot be changed and is a restriction of the underlying logging system used. All non-Information logs do include the event severity in the log that is written to the filesystem.
 
 | | |
 |--------------------|---------------------------|
@@ -168,7 +168,7 @@ Logs with an [Event Severity][EventSeverity Property] of `EventSeverity.Informat
 
 Its text representation will be in the [ISO 8601 Standard][] (e.g. `2021-11-05T08:48:08.0307614+00:00`).
 
-If [Started At][StartedAt Property] is left blank or set to `null`, a value of `null`   will be logged.
+If [Started At][StartedAt Property] is left blank or set to `null`, a value of `null` will be logged.
 
 For more information about Date and Time, please see [Working with Date and Time][].
 
@@ -218,7 +218,7 @@ Log settings exist for the following Cortex Innovation Services:
 | `Cortex Debugger Service`  | `<install-location>\appsettings.json` | Debugger Service is used to debug flows when developing them in Cortex Studio                                          |
 | `Execution Service`        | `<install-location>\appsettings.json` | Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production)      |
 
-An example of the log settings can be found below (some settings that do not need to be modified have been ommitted):
+An example of the log settings can be found below (some settings that do not need to be modified have been omitted):
 
 {{< highlight go "linenos=table,hl_lines=5 11-15,linenostart=1" >}}
 {

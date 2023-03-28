@@ -1,1 +1,1 @@
-Application Service that handles licensing of services within the Innovation platform.
+Application Service that validates and distributes licences to services within the Innovation platform.
