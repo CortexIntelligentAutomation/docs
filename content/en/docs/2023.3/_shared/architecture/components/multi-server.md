@@ -18,11 +18,11 @@
 | [gobetween][]                                     | {{< section "/architecture/components/purpose/gobetween.md" >}}                    | Required                    | Load Balancer                              |
 | [NSSM][]                                          | {{< section "/architecture/components/purpose/nssm.md" >}}                         | Required                    | Load Balancer                              |
 
-[Cortex API Gateway Service]: {{< url path="Cortex.Guides.ApiGatewayService.MainDoc" >}}
+[Cortex API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [Cortex Flow Debugger Service]: {{< url path="Cortex.Guides.FlowDebuggerService.MainDoc" >}}
-[Cortex Execution Service]: {{< url path="Cortex.Guides.ExecutionService.MainDoc" >}}
-[Cortex Package Service]: {{< url path="Cortex.Guides.PackageService.MainDoc" >}}
-[Cortex Provisioning Service]: {{< url path="Cortex.Guides.ProvisioningService.MainDoc" >}}
+[Cortex Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
+[Cortex Package Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService.MainDoc" >}}
+[Cortex Provisioning Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService.MainDoc" >}}
 [Gateway Guide]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
 [Studio Guide]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [SQL Server Express]: {{< url path="MSDownload.SqlServerExpress.2016" >}}

@@ -111,11 +111,11 @@ None
 
 [All Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" >}}
 
-[Cortex API Gateway Service: Logs]: {{< url path="Cortex.Reference.Logs.CortexAPIGatewayService.MainDoc" >}}
+[Cortex API Gateway Service: Logs]: {{< url path="Cortex.Reference.Logs.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 
 [Validation]: {{< url path="Cortex.Reference.Messages.Validation.MainDoc" >}}
 
-[Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[API call: Cortex API Gateway]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[HTTP request: Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[HTTP response: Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
+[API call: Cortex API Gateway]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
+[HTTP request: Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
+[HTTP response: Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
