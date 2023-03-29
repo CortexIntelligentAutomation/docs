@@ -254,14 +254,22 @@
             MainDoc = "/docs/guides/cortex-flow-debugger-service/"
         [Cortex.Guides.ApiGatewayService]
             MainDoc = "/docs/guides/cortex-api-gateway-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
-        [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
-            MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
+        [Cortex.Guides.CortexInnovation.CoreApplication]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/"
+            [Cortex.Guides.CortexInnovation.CoreApplication.Services]
+                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
+        [Cortex.Guides.CortexInnovation.ExecutionApplication]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/"
+            [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
+                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
+                    MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
@@ -733,6 +741,7 @@
                     MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
+                        TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]
@@ -770,6 +779,7 @@
                     MainDoc = "/docs/reference/blocks/text/decode-text/"
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
+                        KnownLimitations = "/docs/reference/blocks/text/decode-text/decode-text-block/#known-limitations"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
