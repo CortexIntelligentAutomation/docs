@@ -28,8 +28,8 @@
 
     If no useful message can be seen here, the service log files may contain more information. These can be found on each Application Server at:
 
-    * `%ProgramData%/Cortex/API Gateway Service`
-    * `%ProgramData%/Cortex/Execution Service`
+    * `%ProgramData%/Cortex/API Gateway Service/Logs`
+    * `%ProgramData%/Cortex/Execution Service/Logs`
 
     If no solution can be found, please contact [Cortex Service Portal][] for further assistance.
 
