@@ -7,86 +7,93 @@ weight: 1
 
 ## Summary
 
-2022.9 is the first release of the next generation of Cortex and begins our journey to improve on the previous 7.X generation starting with the following areas:
+2023.3 is the second release of the next generation of Cortex and continues our journey to improve on the previous 7.X generation in the following areas:
 
 - [Performance][]
 - [Availability][]
+- [Scalability][]
 - [Usability][]
-- [Security][]
-- [Observability][]
+- [Capability][]
+- [Documentation][]
 
 ## Improved Performance
 
-This release introduces a [new engine][] to execute automation solutions, and has shown [significant performance improvements][] compared to 7.X, both in our own observations and customers installations. For example, one customer solution that has been migrated to 2022.9 has shown the time taken to run their tests reduce from 210 minutes to 10 minutes.
+This release introduces:
+
+- A re-architected [HA Platform][], to improve performance and reduce the memory footprint of the Innovation Platform.
+- The performance of debugging automation solutions has been improved due to time taken to perform both dependency and git status checks has been reduced.  
+- The memory usage of debugging automation solutions that require input variables has been reduced, and garbage collection of memory that is no longer required has been improved.
 
 ## Improved Availability
 
-This release introduces a new [high availability (HA) architecture][], which provides:
+This release includes a re-architected [HA Platform][], which provides:
 
-- Elimination of single points of failure resulting in reduced downtime
 - The ability to perform zero downtime upgrades
-- Increased processing capacity resulting in increased throughput
+- The ability to host side by side execution of automation solutions
+
+## Improved Scalability
+
+This release includes a re-architected [HA Platform][], which provides:
+
+- Manual scaling and on demand automated scaling
+- Single click deployments and zero downtime upgrades
+- Control of upgrading deployed automation solutions
+- Multi-tenancy, including the ability to choose the level of separation of tenants based on your compliance and hardware constraints
 
 ## Improved Usability
 
 This release introduces:
 
-- A quicker, [simplified installation process][]
-- A new [Package Management][] system that improves the speed and ease of deploying automation solutions into production
-- [180+ new blocks][] to provide equivalent capability with the most used blocks within 7.X.
-- A [new Property Editor][] for configuring [blocks][block], allowing for quicker configuration and better ease of use.
-- [Messages][] which reports issues identified with a flow before it is executed
-- A new online [Product Portal][] that contains materials regarding the release and how to use the product
-- Integration of [Cortex Studio][] with the [Product Portal][]
+- Automatic Dependency Selection in Package Management
+- Renaming of Variables to the Variables Grid
+- Nine [New Blocks][] have been added to [Cortex Block Packages][Blocks], adding new functionality to work with [Queues][], and [encode][Encode Text] and [decode][Decode Text] text to various formats
+- Improvements have been made to the [Execute Ssh Command][] block to improve its usability within flows
 
-## Improved Security
-
-This release introduces the concept of [Encryptable and Encrypted text][], allowing for blocks to identify and interact with sensitive data that should/must be encrypted at rest and during data transfer.
-
-## Improved Observability
+## Improved Capability
 
 This release introduces:
 
-- [Structured logging][] providing a defined JSON format for logs produced by the Innovation Platform
-- [Dashboards][] providing observability of the Innovation Platform in Production; these use [structured logs][Structured logging] as their source
+- A new [Interaction Portal][] has been developed to replace LivePortal in Cortex Innovation Deployments
+- CORS support has been added to the [API Gateway Service][Cortex API Gateway Service] to support single server deployments that include the new [Interaction Portal][]
+
+## Improved Documentation
+
+This release introduces:
+
+- This [Product Portal][] has been updated to reflect the [re-architected HA Platform][HA Platform]
+- [Tutorials][] have been added
+- Multi-version support has been added to allow for easy navigation between different versions of Cortex
 
 ## Other Improvements
 
 This release introduces a number of other improvements, such as:
 
-- [Flow Contracts][] which allow a flow to declare any [Input Variables][] required to run the flow, and what [Output Variables][] will be returned by the flow
-- [Debugging with Input Variables][] which allow [flow developers][] to provide required [Input Variables][] when debugging a flow
-- [Versioned APIs][] which allow our APIs to evolve in future releases without breaking existing automation solutions
+- [Updated Third Party Components][], gaining any associated performance and memory improvements
+- Simplified installation of the web application server
+- A new [Welcome Page][] has added to [Cortex Gateway][Gateway]. It acts as a landing page when logging into [Cortex Gateway][Gateway] and provides the ability to quickly navigate to the last 20 recently edited flows for the signed-in user
 
-For a full list of what has been introduced in this release, please see the [2022.9 Release Notes][]
+For a full list of what has been introduced in this release, please see the [2023.3 Release Notes][]
 
 [Performance]: {{< ref "#improved-performance" >}}
 [Availability]: {{< ref "#improved-availability" >}}
+[Scalability]: {{< ref "#improved-scalability" >}}
 [Usability]: {{< ref "#improved-usability" >}}
-[Security]: {{< ref "#improved-security" >}}
-[Observability]: {{< ref "#improved-observability" >}}
+[Capability]: {{< ref "#improved-capability" >}}
+[Documentation]: {{< ref "#improved-documentation" >}}
 
-[2022.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2022.9.MainDoc" >}}
-[new engine]: {{< url path="Cortex.Blogs.Releases.2022.9.NewEngine" >}}
-[significant performance improvements]: {{< url path="Cortex.Blogs.Releases.2022.9.ImprovedPerformance" >}}
-[high availability (HA) architecture]: {{< url path="Cortex.Blogs.Releases.2022.9.HAArchitecture" >}}
-[simplified installation process]: {{< url path="Cortex.Blogs.Releases.2022.9.SimplifiedInstallation" >}}
-[Package Management]: {{< url path="Cortex.Blogs.Releases.2022.9.PackageManagement" >}}
-[180+ new blocks]: {{< url path="Cortex.Blogs.Releases.2022.9.180NewBlocks" >}}
-[new Property Editor]: {{< url path="Cortex.Blogs.Releases.2022.9.NewPropertyEditor" >}}
-[Messages]: {{< url path="Cortex.Blogs.Releases.2022.9.Messages" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2022.9.ProductPortal" >}}
-[Encryptable and Encrypted text]: {{< url path="Cortex.Blogs.Releases.2022.9.EncryptableAndEncryptedText" >}}
-[Structured logging]: {{< url path="Cortex.Blogs.Releases.2022.9.StructuredLogging" >}}
-[Dashboards]: {{< url path="Cortex.Blogs.Releases.2022.9.GrafanaDashboards" >}}
-[Flow Contracts]: {{< url path="Cortex.Blogs.Releases.2022.9.FlowContract" >}}
-[Debugging with Input Variables]: {{< url path="Cortex.Blogs.Releases.2022.9.DebugWithInputVariables" >}}
-[Versioned APIs]: {{< url path="Cortex.Blogs.Releases.2022.9.VersionedAPIs" >}}
+[Cortex API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" version="2023.3" >}}
 
-[block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
-[Input Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
-[Output Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.OutputVariablesStructure" >}}
+[Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" version="2023.3" >}}
+[Queues]: {{< url path="Cortex.Reference.Blocks.Queues.MainDoc" version="2023.3" >}}
+[Decode Text]: {{< url path="Cortex.Reference.Blocks.Text.DecodeText.DecodeText.MainDoc" version="2023.3" >}}
+[Encode Text]: {{< url path="Cortex.Reference.Blocks.Text.EncodeText.EncodeText.MainDoc" version="2023.3" >}}
+[Execute Ssh Command]: {{< url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand.MainDoc" version="2023.3" >}}
 
-[Cortex Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[2023.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2023.3.MainDoc" >}}
+[HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.3.RearchitectedtheHAPlatform" >}}
+[New Blocks]: {{< url path="Cortex.Blogs.Releases.2023.3.NewBlocks" >}}
+[Interaction Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.NewInteractionPortal" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.NewProductPortal" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.NewProductPortal" >}}
 
-[flow developers]: {{< url path="Cortex.Reference.Glossary.F-J.FlowDeveloper" >}}
+[Tutorials]: {{< url path="Cortex.Tutorials.MainDoc" >}}

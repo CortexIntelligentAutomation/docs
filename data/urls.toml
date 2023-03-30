@@ -6,8 +6,23 @@
             MainDoc = "/blog/news"
         [Cortex.Blogs.Releases]
             MainDoc = "/blog/releases"
+            [Cortex.Blogs.Releases.2023.X]
+                MainDoc = "/blog/releases/2023.x"
+                [Cortex.Blogs.Releases.2023.3]
+                    MainDoc =  "/blog/2022/11/03/2023.3/"
+                    RearchitectedtheHAPlatform = "/blog/2022/11/03/2023.3/#re-architected-the-ha-platform"
+                    NewInteractionPortal = "/blog/2022/11/03/2023.3/#new-interaction-portal"
+                    NewBlocks = "/blog/2022/11/03/2023.3/#new-blocks"
+                    ImprovementsToExistingBlocks = "/blog/2022/11/03/2023.3/#improvements-to-existing-blocks"
+                    NewWelcomePage = "/blog/2022/11/03/2023.3/#new-welcome-page"
+                    AddedRenamingOfVariables = "/blog/2022/11/03/2023.3/#added-renaming-of-variables-to-the-variables-grid"
+                    AddedAutomaticDependencySelection = "/blog/2022/11/03/2023.3/#added-automatic-dependency-selection-in-package-management"
+                    SimplifiedInstallation = "/blog/2022/11/03/2023.3/#simplified-installation-of-the-web-application-server"
+                    ImprovementsToPerformance = "/blog/2022/11/03/2023.3/#improvements-to-performance"
+                    UpdatedThirdPartyComponents = "/blog/2022/11/03/2023.3/#updated-third-party-components"
+                    ProductPortal = "/blog/2022/11/03/2023.3/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
-                MainDoc = "/blog/releases/2022.x"    
+                MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
                     MainDoc =  "/blog/2022/10/27/2022.9/"
                     ImprovedPerformance =  "/blog/2022/10/27/2022.9/#improved-performance-vs-7x"
@@ -260,6 +275,8 @@
                 MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
