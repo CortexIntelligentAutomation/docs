@@ -81,6 +81,7 @@ For a full list of what has been introduced in this release, please see the [202
 [Capability]: {{< ref "#improved-capability" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
+[Gateway]: {{< url path="Cortex.Guides.Gateway.MainDoc" version="2023.3" >}}
 [Cortex API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" version="2023.3" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" version="2023.3" >}}
