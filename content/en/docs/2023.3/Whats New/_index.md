@@ -93,7 +93,7 @@ For a full list of what has been introduced in this release, please see the [202
 [HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.3.RearchitectedtheHAPlatform" >}}
 [New Blocks]: {{< url path="Cortex.Blogs.Releases.2023.3.NewBlocks" >}}
 [Interaction Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.NewInteractionPortal" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.NewProductPortal" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.NewProductPortal" >}}
+[Updated Third Party Components]: {{< url path="Cortex.Blogs.Releases.2023.3.UpdatedThirdPartyComponents" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.3.ProductPortal" >}}
 
 [Tutorials]: {{< url path="Cortex.Tutorials.MainDoc" >}}
