@@ -95,7 +95,6 @@ If using the same certificate you should set the `ImportCertificate` parameter t
 
 {{% alert title="Note" %}}It is necessary to allocate the certificate a {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AssignCertificateFriendlyName" title="Friendly Name" >}} prior to continuing with installation.{{% /alert %}}
 
-
 #### Import Root CA Certificate
 {{% alert title="Note" %}}This step is only required if using a self-signed certificate.{{% /alert %}}
 
@@ -186,9 +185,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
     -GatewayPackagePath "C:\Install\Cortex Innovation {{< version >}} - Gateway.zip" `
-    -ModelDBContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True" `
-    -AuthContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True" `
-    -SignalRContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True" `
     -FeatureFlags "InnovationId" `
     -ServiceFabricApiGatewayEndpoint "https://server.domain.com:8722/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
@@ -201,7 +197,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     -GatewayApplicationPoolUsername "Domain\Username" `
     -WebRootFolder "C:\inetpub\wwwroot" `
     -WebsitePort "443" `
-    -ImportCertificate $true `
+    -ImportCertificate $false `
     -CertificateFilePath "C:\Install\Certificate.pfx" `
     -CertificateFriendlyName "CertificateName" `
     -ConfigureHttpRedirect $true `
@@ -214,9 +210,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
-    |`ModelDBContextConnectionString`                | If SQL Server was installed as the default instance, change the `Data Source` in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `ModelDBContextConnectionString` value in the Gateway web.config.|
-    |`AuthContextConnectionString`                   |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `AuthContextConnectionString` value in the Gateway web.config. |
-    |`SignalRContextConnectionString`                |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `SignalRContextConnectionString` value in the Gateway web.config. |
     |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by Cortex when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [Cortex Service Portal][].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the Gateway web.config.|
@@ -306,6 +299,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Cortex Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Cortex Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
+[Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.LicensingRequirements" >}}
 [Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.SetupGateway" >}}
