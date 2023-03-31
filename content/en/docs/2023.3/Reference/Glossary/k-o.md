@@ -73,6 +73,10 @@ See [Method Expressions][] for information on how methods can be used within the
 
 Non-Null indicates that a [data type][] has been [initialised][] and has a value.
 
+### NServiceBus
+
+NServiceBus is a messaging framework built on top of Azure Service Bus, it is used to abstract messaging infrastructure within [Service Fabric][].
+
 ### Nuget Package
 
 A NuGet package is a ZIP file with the .nupkg extension. It contains compiled code ([DLLs][]), other files related to that code.
@@ -155,6 +159,7 @@ Outlook is a free web-based email service provided by Microsoft.
 [Int64]: {{< url path="Cortex.Reference.Glossary.F-J.Int32" >}}
 [Single]: {{< url path="Cortex.Reference.Glossary.P-T.Single" >}}
 [String]: {{< url path="Cortex.Reference.Glossary.P-T.String" >}}
+[Service Fabric]: {{< url path="Cortex.Reference.Glossary.P-T.ServiceFabric" >}}
 [Structure]: {{< url path="Cortex.Reference.Glossary.P-T.Structure" >}}
 
 [Method Expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MethodExpressions" >}}

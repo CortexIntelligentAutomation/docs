@@ -238,7 +238,8 @@
             [Cortex.Guides.Studio.Navigation]
                 MainDoc = "/docs/guides/cortex-studio/navigation/" 
             [Cortex.Guides.Studio.PackageManagement]
-                MainDoc = "/docs/guides/cortex-studio/package-management/"                   
+                MainDoc = "/docs/guides/cortex-studio/package-management/"
+                AutomaticSelectionOfDependentFlows = "/docs/guides/cortex-studio/package-management/#automatic-selection-of-dependent-flows"
             [Cortex.Guides.Studio.Palettes]
                 MainDoc = "/docs/guides/cortex-studio/palettes/"
             [Cortex.Guides.Studio.SouthPanel]
@@ -250,6 +251,7 @@
                 StoppingAnExecution = "/docs/guides/cortex-studio/south-panel/#stopping-an-execution"
                 MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
                 VariablesGrid = "/docs/guides/cortex-studio/south-panel/#variables-grid" 
+                RenamingVariables = "/docs/guides/cortex-studio/south-panel/#renaming-variables" 
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
                 ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
@@ -1688,6 +1690,7 @@
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
                 CICD = "/docs/reference/glossary/a-e/#cicd"
                 Code = "/docs/reference/glossary/a-e/#code"
+                CORS = "/docs/reference/glossary/a-e/#cors"
                 Cortex = "/docs/reference/glossary/a-e/#cortex"
                 CortexStudio = "/docs/reference/glossary/a-e/#cortex-studio"
                 CRL = "/docs/reference/glossary/a-e/#crl"
@@ -1696,6 +1699,7 @@
                 Dictionary = "/docs/reference/glossary/a-e/#dictionary"
                 DLL = "/docs/reference/glossary/a-e/#dll"
                 DragAndDrop = "/docs/reference/glossary/a-e/#drag-and-drop"
+                DotNet = "/docs/reference/glossary/a-e/#dotnet"
                 Double = "/docs/reference/glossary/a-e/#double"
                 Expression = "/docs/reference/glossary/a-e/#expression"
                 ExpressionEditor = "/docs/reference/glossary/a-e/#expression-editor"
@@ -1703,6 +1707,7 @@
                 ExplicitCast = "/docs/reference/glossary/a-e/#explicit-cast"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
+                FastTrack = "/docs/reference/glossary/f-j/#fast-track"
                 File = "/docs/reference/glossary/f-j/#file"
                 Flow = "/docs/reference/glossary/f-j/#flow"
                 FlowDeveloper = "/docs/reference/glossary/f-j/#flow-developer"
@@ -1712,6 +1717,7 @@
                 Heterogenous = "/docs/reference/glossary/f-j/#heterogenous"
                 Homogenous = "/docs/reference/glossary/f-j/#homogenous"
                 HTMLEntity = "/docs/reference/glossary/f-j/#html-entity"
+                HumanInTheLoop = "/docs/reference/glossary/f-j/#human-in-the-loop"
                 Initialised = "/docs/reference/glossary/f-j/#initialised"
                 IMAP = "/docs/reference/glossary/f-j/#imap"
                 Integer = "/docs/reference/glossary/f-j/#integer"
@@ -1730,6 +1736,7 @@
                 Literal = "/docs/reference/glossary/k-o/#literal"
                 LowerCase = "/docs/reference/glossary/k-o/#lowercase"
                 Method = "/docs/reference/glossary/k-o/#method"
+                NServiceBus = "/docs/reference/glossary/k-o/#nservicebus"
                 NonNull = "/docs/reference/glossary/k-o/#non-null"
                 NuGetPackage = "/docs/reference/glossary/k-o/#nuget-package"
                 Null = "/docs/reference/glossary/k-o/#null"
@@ -1745,6 +1752,7 @@
                 ProgrammingLanguage = "/docs/reference/glossary/p-t/#programming-language"
                 PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
                 PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
+                Release = "/docs/reference/glossary/p-t/#release"
                 Request = "/docs/reference/glossary/p-t/#request"
                 SDK = "/docs/reference/glossary/p-t/#sdk"
                 ServiceFabric = "/docs/reference/glossary/p-t/#service-fabric"

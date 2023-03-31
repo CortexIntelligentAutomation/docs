@@ -31,6 +31,10 @@ TODO: Screenshots, How to create
 
 TODO: Screenshots, Searching/Filtering
 
+### Renaming Variables
+
+TODO: Screenshots, Searching/Filtering
+
 ### Modifying Variables
 
 TODO: Screenshots, How to modify
