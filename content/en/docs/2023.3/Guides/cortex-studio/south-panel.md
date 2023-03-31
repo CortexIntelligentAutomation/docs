@@ -52,7 +52,11 @@ If the variable does not appear in the grid, the most likely reason is the varia
 ### Deleting Variables
 
 TODO: Screenshots, How to delete
- 
+
+### Validating Variables
+
+TODO: Screenshots
+
 ## Messages Grid
 
 ## Remarks

@@ -252,6 +252,7 @@
                 MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
                 VariablesGrid = "/docs/guides/cortex-studio/south-panel/#variables-grid" 
                 RenamingVariables = "/docs/guides/cortex-studio/south-panel/#renaming-variables" 
+                ValidatingVariables = "/docs/guides/cortex-studio/south-panel/#validating-variables" 
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
                 ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
