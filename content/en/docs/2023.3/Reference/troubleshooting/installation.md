@@ -197,7 +197,7 @@ If no solution can be found, please contact [Cortex Service Portal][] for assist
 
 ### Managing RabbitMQ
 
-There may be times when the logs provided by the Cortex Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send messages between services.
+There may be times when the logs provided by Cortex Innovation Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send messages between services.
 
 To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://app-server1.domain.com:15671`, replacing `app-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
 

@@ -1,1 +1,0 @@
-Application Service that routes client requests to the correct distributed Cortex services.

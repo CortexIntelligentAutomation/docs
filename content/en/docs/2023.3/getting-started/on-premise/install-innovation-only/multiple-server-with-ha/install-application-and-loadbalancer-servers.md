@@ -70,7 +70,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press `OK`.
 
     If `-Override 0` has been specified no further steps need to be taken and you can move on to the next section when the servers have restarted.
-1. To use all the recommended settings click `Apply all` to the each `Apply Cortex recommended security best practices` prompt.
+1. To use all the recommended settings click `Apply all` to each `Apply Cortex recommended security best practices` prompt.
 
     To selectively apply each setting select `Choose which to apply`. Each change will then be prompted with a Yes/No confirmation before applying. This will need to be done for each server.
 1. Restart each machine when the script asks. The current machine will be restarted last, the PowerShell script will close at this time.
