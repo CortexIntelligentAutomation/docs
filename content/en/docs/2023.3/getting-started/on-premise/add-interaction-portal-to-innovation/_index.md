@@ -1,7 +1,7 @@
 ---
 title: "Add Interaction Portal to Innovation"
 linkTitle: "Add Interaction Portal to Innovation"
-description: "Information about the installation of the Cortex Interaction Portal for Innovation."
+description: "Information about installing the Cortex Interaction Portal for Innovation."
 weight: 50
 ---
 
