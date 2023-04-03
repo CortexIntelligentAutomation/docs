@@ -81,7 +81,7 @@ Variables must be initialised with data before they can be used in a block.
 If an [Input][] or [InputOutput][] property [uses a variable][] that has not been initialised, a [Message][Messages] will be returned stating `Variable is not initialised`, and the name of the variable will be included within the details of the message. The [Message][Messages] will be:
 
 - Displayed in the [Messages Grid][] when [debugging a flow][] in [Cortex Studio][]
-- Returned as an exception to the caller when a flow is triggered via the [Cortex API Gateway Service][]
+- Returned as an exception to the caller when a flow is triggered via the [API Gateway Service][]
 
 Variables can be initialised in the following ways:
 
@@ -234,7 +234,7 @@ None
 [implicitly cast]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ImplicitCast" >}}
 [explicitly cast]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 
-[Cortex API Gateway Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
+[API Gateway Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 

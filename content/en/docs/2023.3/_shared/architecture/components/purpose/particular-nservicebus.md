@@ -1,1 +1,1 @@
-Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services.
+Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex Innovation services.
