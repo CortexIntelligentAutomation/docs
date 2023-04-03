@@ -1,0 +1,40 @@
+{{- /*  
+    Creates a link to a file, checking whether it is there first.
+*/}}
+{{- $versionPath := "" }}
+{{- /* Get the current version, and whether the website is currently nested (has /docs prepended). */}}
+{{- $isNested := false }}
+{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+	{{- if (or $currentVer (index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0)) }}
+		{{- $isNested = true }}
+	{{- end }}
+{{- end }}
+{{- /* Overwrites the current version if the version parameter is provided, or latest if no current version. */}}
+{{- $version := .Get "version" }}
+{{- if $version }}
+    {{ range where .Site.Params.versions "url" $version }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else if $currentVer }}
+    {{ range where .Site.Params.versions "url" $currentVer }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else }}
+    {{- /*  use latest as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $versionPath = .version }}
+    {{ end }}
+{{- end }}
+{{- $file := printf "%s%s%s" "/content/static/" $versionPath (.Get "src") -}}
+{{- /* Check if the file exists. */}}
+{{- if (os.FileExists $file) -}}
+    {{- if $isNested }}
+        {{- $versionPath = printf "%s%s" "docs/" $versionPath }}
+    {{- end }}
+    <a href="/{{ $versionPath }}{{ .Get "src" }}">{{ .Get "name" }}</a>
+{{- else -}}
+    {{ errorf "filelink.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the new file at the provided path." $file }}
+{{- end -}}
