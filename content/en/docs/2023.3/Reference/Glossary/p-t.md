@@ -79,6 +79,10 @@ See [Block Properties > What is a Block Property][].
 
 Refers to computer files or memory that can be read or used, but not updated or added to in any way.
 
+### Release
+
+A Release follows a longer term release cycle, allowing access to the latest stable version of Cortex and longer term support.
+
 ### Request
 
 A method of communication over a network, in which one computer sends a request to another, which can then respond to the request.

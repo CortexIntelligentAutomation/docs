@@ -31,6 +31,10 @@ TODO: Screenshots, How to create
 
 TODO: Screenshots, Searching/Filtering
 
+### Renaming Variables
+
+TODO: Screenshots, Searching/Filtering
+
 ### Modifying Variables
 
 TODO: Screenshots, How to modify
@@ -48,7 +52,11 @@ If the variable does not appear in the grid, the most likely reason is the varia
 ### Deleting Variables
 
 TODO: Screenshots, How to delete
- 
+
+### Validating Variables
+
+TODO: Screenshots
+
 ## Messages Grid
 
 ## Remarks

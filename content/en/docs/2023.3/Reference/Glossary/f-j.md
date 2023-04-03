@@ -11,6 +11,10 @@ Terms, words and phrases beginning with the letters F through J.
 
 ## F
 
+### Fast Track
+
+A Fast Track release follows a quick release cycle, allowing access to the latest features and functionality of Cortex.
+
 ### File
 
 A file is an object on a computer that stores data.
@@ -93,6 +97,10 @@ Collections that can contain multiple data types are known as [heterogenous][].
 An HTML entity is a piece of text that begins with an ampersand (i.e. `&`) and ends with a semicolon (i.e. `;`). Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard.
 
 See [WHATWG][WHATWG entity list] for a full list of HTML4 and HTML5 Entities.
+
+### Human-in-the-Loop
+
+Human-in-the-Loop or HITL allows people to interact with automated systems and processes, affecting the direction and functionality of the automated systems or process.
 
 ## I
 

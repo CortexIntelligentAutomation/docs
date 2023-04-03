@@ -177,6 +177,10 @@ Continuous Deployment is a software development practice which extends [Continuo
 
 To change something into a different form. E.g. Change some [text][] from [lowercase][] to [UPPERCASE][].
 
+### CORS
+
+Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from a domain outside of the domain from which the first resource was served.
+
 ### Cortex
 
 The name of the new and current generation of the Cortex [automation][] [platform][].
@@ -262,6 +266,10 @@ DLL files are binary files that can contain executable code and resources.
 ### Drag-and-Drop
 
 Functionality that allows a user to select an object and move it to another location.
+
+### DotNet
+
+.NET (DotNet) is an open-source, computer software framework for Windows, Linux, and macOS operating systems developed by Microsoft.
 
 ### Double
 

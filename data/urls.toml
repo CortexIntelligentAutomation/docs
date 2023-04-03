@@ -6,8 +6,23 @@
             MainDoc = "/blog/news"
         [Cortex.Blogs.Releases]
             MainDoc = "/blog/releases"
+            [Cortex.Blogs.Releases.2023.X]
+                MainDoc = "/blog/releases/2023.x"
+                [Cortex.Blogs.Releases.2023.3]
+                    MainDoc =  "/blog/2022/11/03/2023.3/"
+                    RearchitectedtheHAPlatform = "/blog/2022/11/03/2023.3/#re-architected-the-ha-platform"
+                    NewInteractionPortal = "/blog/2022/11/03/2023.3/#new-interaction-portal"
+                    NewBlocks = "/blog/2022/11/03/2023.3/#new-blocks"
+                    ImprovementsToExistingBlocks = "/blog/2022/11/03/2023.3/#improvements-to-existing-blocks"
+                    NewWelcomePage = "/blog/2022/11/03/2023.3/#new-welcome-page"
+                    AddedRenamingOfVariables = "/blog/2022/11/03/2023.3/#added-renaming-of-variables-to-the-variables-grid"
+                    AddedAutomaticDependencySelection = "/blog/2022/11/03/2023.3/#added-automatic-dependency-selection-in-package-management"
+                    SimplifiedInstallation = "/blog/2022/11/03/2023.3/#simplified-installation-of-the-web-application-server"
+                    ImprovementsToPerformance = "/blog/2022/11/03/2023.3/#improvements-to-performance"
+                    UpdatedThirdPartyComponents = "/blog/2022/11/03/2023.3/#updated-third-party-components"
+                    ProductPortal = "/blog/2022/11/03/2023.3/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
-                MainDoc = "/blog/releases/2022.x"    
+                MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
                     MainDoc =  "/blog/2022/10/27/2022.9/"
                     ImprovedPerformance =  "/blog/2022/10/27/2022.9/#improved-performance-vs-7x"
@@ -223,7 +238,8 @@
             [Cortex.Guides.Studio.Navigation]
                 MainDoc = "/docs/guides/cortex-studio/navigation/" 
             [Cortex.Guides.Studio.PackageManagement]
-                MainDoc = "/docs/guides/cortex-studio/package-management/"                   
+                MainDoc = "/docs/guides/cortex-studio/package-management/"
+                AutomaticSelectionOfDependentFlows = "/docs/guides/cortex-studio/package-management/#automatic-selection-of-dependent-flows"
             [Cortex.Guides.Studio.Palettes]
                 MainDoc = "/docs/guides/cortex-studio/palettes/"
             [Cortex.Guides.Studio.SouthPanel]
@@ -235,6 +251,8 @@
                 StoppingAnExecution = "/docs/guides/cortex-studio/south-panel/#stopping-an-execution"
                 MessagesGrid = "/docs/guides/cortex-studio/south-panel/#messages-grid"
                 VariablesGrid = "/docs/guides/cortex-studio/south-panel/#variables-grid" 
+                RenamingVariables = "/docs/guides/cortex-studio/south-panel/#renaming-variables" 
+                ValidatingVariables = "/docs/guides/cortex-studio/south-panel/#validating-variables" 
                 CreatingVariables = "/docs/guides/cortex-studio/south-panel/#creating-variables"
                 ViewingVariables = "/docs/guides/cortex-studio/south-panel/#viewing-variables" 
                 ModifyingVariables = "/docs/guides/cortex-studio/south-panel/#modifying-variables" 
@@ -254,22 +272,34 @@
             MainDoc = "/docs/guides/cortex-flow-debugger-service/"
         [Cortex.Guides.ApiGatewayService]
             MainDoc = "/docs/guides/cortex-api-gateway-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
-        [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
-        [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
-            MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
+        [Cortex.Guides.CortexInteractionPortal]
+            MainDoc = "/docs/guides/cortex-interaction-portal/"
+        [Cortex.Guides.CortexInnovation.CoreApplication]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/"
+            [Cortex.Guides.CortexInnovation.CoreApplication.Services]
+                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
+        [Cortex.Guides.CortexInnovation.ExecutionApplication]
+            MainDoc = "/docs/guides/cortex-innovation/core-application/"
+            [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
+                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
+                    MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
                 [Cortex.Guides.Gateway.Settings.StudioAuthorisation]
                     MainDoc = "/docs/guides/cortex-gateway/settings/studio-authorisation"
+            [Cortex.Guides.Gateway.WelcomePage]
+                MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
@@ -735,6 +765,7 @@
                     MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
+                        TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]
@@ -772,6 +803,7 @@
                     MainDoc = "/docs/reference/blocks/text/decode-text/"
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
+                        KnownLimitations = "/docs/reference/blocks/text/decode-text/decode-text-block/#known-limitations"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
@@ -1663,6 +1695,7 @@
                 CamelCase = "/docs/reference/glossary/a-e/#camelcase"
                 CICD = "/docs/reference/glossary/a-e/#cicd"
                 Code = "/docs/reference/glossary/a-e/#code"
+                CORS = "/docs/reference/glossary/a-e/#cors"
                 Cortex = "/docs/reference/glossary/a-e/#cortex"
                 CortexStudio = "/docs/reference/glossary/a-e/#cortex-studio"
                 CRL = "/docs/reference/glossary/a-e/#crl"
@@ -1671,6 +1704,7 @@
                 Dictionary = "/docs/reference/glossary/a-e/#dictionary"
                 DLL = "/docs/reference/glossary/a-e/#dll"
                 DragAndDrop = "/docs/reference/glossary/a-e/#drag-and-drop"
+                DotNet = "/docs/reference/glossary/a-e/#dotnet"
                 Double = "/docs/reference/glossary/a-e/#double"
                 Expression = "/docs/reference/glossary/a-e/#expression"
                 ExpressionEditor = "/docs/reference/glossary/a-e/#expression-editor"
@@ -1678,6 +1712,7 @@
                 ExplicitCast = "/docs/reference/glossary/a-e/#explicit-cast"
             [Cortex.Reference.Glossary.F-J]
                 MainDoc = "/docs/reference/glossary/f-j/"
+                FastTrack = "/docs/reference/glossary/f-j/#fast-track"
                 File = "/docs/reference/glossary/f-j/#file"
                 Flow = "/docs/reference/glossary/f-j/#flow"
                 FlowDeveloper = "/docs/reference/glossary/f-j/#flow-developer"
@@ -1687,6 +1722,7 @@
                 Heterogenous = "/docs/reference/glossary/f-j/#heterogenous"
                 Homogenous = "/docs/reference/glossary/f-j/#homogenous"
                 HTMLEntity = "/docs/reference/glossary/f-j/#html-entity"
+                HumanInTheLoop = "/docs/reference/glossary/f-j/#human-in-the-loop"
                 Initialised = "/docs/reference/glossary/f-j/#initialised"
                 IMAP = "/docs/reference/glossary/f-j/#imap"
                 Integer = "/docs/reference/glossary/f-j/#integer"
@@ -1705,6 +1741,7 @@
                 Literal = "/docs/reference/glossary/k-o/#literal"
                 LowerCase = "/docs/reference/glossary/k-o/#lowercase"
                 Method = "/docs/reference/glossary/k-o/#method"
+                NServiceBus = "/docs/reference/glossary/k-o/#nservicebus"
                 NonNull = "/docs/reference/glossary/k-o/#non-null"
                 NuGetPackage = "/docs/reference/glossary/k-o/#nuget-package"
                 Null = "/docs/reference/glossary/k-o/#null"
@@ -1720,6 +1757,7 @@
                 ProgrammingLanguage = "/docs/reference/glossary/p-t/#programming-language"
                 PropertyBlock = "/docs/reference/glossary/p-t/#block-property"
                 PropertyCSharp = "/docs/reference/glossary/p-t/#c-property"
+                Release = "/docs/reference/glossary/p-t/#release"
                 Request = "/docs/reference/glossary/p-t/#request"
                 SDK = "/docs/reference/glossary/p-t/#sdk"
                 ServiceFabric = "/docs/reference/glossary/p-t/#service-fabric"
