@@ -1,1 +1,1 @@
-The ports providing communication between other services and the stateful Cortex Execution service. These are dynamic ports managed by Service Fabric.
+The ports providing communication between other services and the Execution service. These are dynamic ports managed by Service Fabric.
