@@ -1829,9 +1829,14 @@
             MainDoc = "https://support.google.com/accounts/answer/6010255"
 [GitHub]
     [GitHub.Cortex.Observability]
-        GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip"
-        PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Promtail.Install.zip"
-        GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.1.0.0]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.1.0.2]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.2/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.2/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v1.0.2/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
