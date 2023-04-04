@@ -60,7 +60,7 @@ To do this, follow these steps for all default Cortex Innovation dashboards impo
 1. [Try it Out][]
 
 [configured]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
-[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.GrafanaDashboardsZip" >}}
+[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.1.0.2.GrafanaDashboardsZip" >}}
 [Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
 [Loki]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Try it Out]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut.MainDoc" >}}
