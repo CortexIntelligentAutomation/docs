@@ -1,0 +1,1 @@
+Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex Innovation services using publish/subscribe mechanism.
