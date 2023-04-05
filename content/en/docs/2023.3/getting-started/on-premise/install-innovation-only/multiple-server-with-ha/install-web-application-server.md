@@ -12,6 +12,7 @@ This guide describes how to install the Web Application Server. Please ensure th
 ## Make Installation Artefacts Available
 
 1. We recommend that the Flow Debugger Service and Cortex Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine:
+
    * Cortex Innovation {{< version >}} - Block Packages.zip
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Flow Debugger Service.zip
@@ -28,6 +29,7 @@ Ensure that a valid Cortex licence file named `Cortex.lic` exists on the Web App
 ### Install SQL Server or SQL Express
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
+
     * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">Cortex Innovation - SQL Server 2019 Installation Guide</a>
     * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">Cortex Innovation - SQL Server 2016 Installation Guide</a>
     * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">Cortex Innovation - SQL Server 2016 Express Installation Guide</a>
@@ -52,6 +54,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 1. Navigate to `Start` -> `Administrative Tools` -> `Local Security Policy`.
 1. In the Local Security Policy dialog, expand the `Local Policies` node then select `User Rights Assignment`.
 1. Take the following steps for the `Log on as a service` and `Log on as a batch job` policies:
+
     1. In the right-hand panel, double-click on the policy.
     1. In the Properties dialog, click on the `Add User or Group` button.
         {{% alert title="Note" %}}It is possible to use the `Advanced…` button to look up names rather than entering them manually. Various filters can be set to find the correct user or group more easily. Multiple users can be selected by holding down `CTRL` while clicking. `OK` adds the selected users or groups into the `Enter the object names to select` text box.{{% /alert %}}
@@ -72,6 +75,7 @@ To add roles to database users take the following steps:
 1. Open SQL Server Management Studio on the Web Application Server and log in.
 1. Expand the server node, then `Security` then `Logins`.
 1. If the user that will run the Cortex Gateway application pool is not in the list of logins, take the following steps, otherwise skip to step 4:
+
     1. Right-click the `Logins` node and click `New Login...`.
     1. Enter the application pool user in the `Login name` box.
     1. On the left pane, click `Server Roles`.
@@ -79,6 +83,7 @@ To add roles to database users take the following steps:
     1. Click `OK`.
 
 1. If the user that will run the Cortex Gateway application pool is in the list of logins, take the following steps:
+
     1. Right-click on the application pool user.
     1. Click `Properties`.
     1. On the left pane, click `Server Roles`.
@@ -243,7 +248,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     |`CertificateFilePath`                           | Replace this with the location and filename for the certificate to be imported.<br /><br />If `ImportCertificate` is set to `$false` this value can remain unchanged but you must [import the Root Certificate][Import Root Certificate] (if necessary), [import the X.509 certificate manually][Import Certificate Manually] and [assign a friendly name][Assign Certificate Friendly Name] prior to running the installation.|
     |`CertificateFriendlyName`                       | Replace this with the friendly name that you would like to be allocated to the certificate.<br /><br />If `ImportCertificate` is set to `$false` this must be [assigned][Assign Certificate Friendly Name] prior to running the installation and the Friendly Name used must be specified to allow the website to use the correct certificate.|
     |`ConfigureHttpRedirect`                         | Change this from `$true` to `$false` if you do not require the HTTP Redirect rule to be implemented as part of the installation process.<br /><br />If the site hosting the Cortex Gateway web application is a newly created Cortex site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the Cortex Gateway web application URL. Creating this rule will implement this.|
-    |`ApplySecurityMeasures`                         | Change this from `$true` to `$false` if you do not require the Recommended [Security Best Practices] to be implemented as part of the installation process.|
+    |`ApplySecurityMeasures`                         | Change this from `$true` to `$false` if you do not require the Recommended [Security Best Practices][] to be implemented as part of the installation process.|
     |`UsingWindowsDefender`                          | Change this from `$true` to `$false` if you are not using the Windows Defender firewall.<br /><br />If Windows Defender is not being used but an alterntive firewall is, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443).|
     |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                      | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
