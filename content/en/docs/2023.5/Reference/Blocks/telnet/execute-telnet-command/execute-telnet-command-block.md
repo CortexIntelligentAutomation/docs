@@ -202,6 +202,11 @@ For information on how to open a session, please see [Opening Sessions][].
 
 Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further input to the Telnet Command to navigate to the end of the prompt.
 
+### Do, Dont, Will and Wont options
+
+Do, Dont, Will and Wont codes are set as a semicolon separated list in the configurationSettings with each as a key (e.g { "Do", "0;24;33" } ).
+For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC].
+
 ### Known Limitations
 
 None
@@ -246,3 +251,5 @@ None
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+
+[TelnetRFC]: {{< url path ="RFC.Docs.Telnet.MainDoc" >}}
