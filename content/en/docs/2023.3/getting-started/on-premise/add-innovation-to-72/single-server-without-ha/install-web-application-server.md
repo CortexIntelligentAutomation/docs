@@ -11,8 +11,8 @@ This guide describes how to upgrade Gateway on v7.2 to include Innovation. Pleas
 
 The steps to add Innovation functionality to 7.2 are:
 
-1. Install Flow Debugger Service
 1. Upgrade Gateway
+1. Install Flow Debugger Service
 
 ## Make Installation Artefacts Available
 
