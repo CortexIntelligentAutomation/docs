@@ -259,7 +259,7 @@ For information on how to open a session, please see [Opening Sessions][].
 
 [SshLogs][] includes a TerminalPromptMatch property that represents any string within the returned logs that matches the TerminalPrompt property within the [SshSessionDetails][].
 
-Some prompts within SSH require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further iput to the Ssh Command to navigate to the end of the prompt.
+Some prompts within SSH require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further input to the Ssh Command to navigate to the end of the prompt.
 
 ### Known Limitations
 
