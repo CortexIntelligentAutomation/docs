@@ -25,14 +25,14 @@ Connects to a host using the [Telnet Session Details][Telnet Session Details Pro
 This example will execute a [Command][Command Property] on the server with the following details:
 
 - Host -  `"localhost"`
-- Port -  `22`
+- Port -  `23`
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
-| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 22, @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
+| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 23, @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
 | [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
@@ -58,7 +58,7 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 
 ```json
 {
-    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224",
+    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2023 from 10.8.0.234",
     "Logs": "[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange.[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange..."
 }
 ```
@@ -72,7 +72,7 @@ Note that more logs are included in this example, but have been omitted from `($
 This example will execute a [Command][Command Property] on the server with the following details:
 
 - Host -  `"localhost"`
-- Port -  `22`
+- Port -  `23`
 - Domain - `"domain"`
 
 The server can be connected to using a valid certificate.
@@ -82,7 +82,7 @@ The server can be connected to using a valid certificate.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
-| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 22, "Credentials": {"Domain": "domain", "Username": "username", "CertificatePath": "C:\\Certificate.pfx", "CertificatePassword": "encryptedCertificatePassword"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 22, new TelnetCertificateCredentials("domain", "username", @"C\Certificate.pfx", "encryptedCertificatePassword"), @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
+| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "Credentials": {"Domain": "domain", "Username": "username", "CertificatePath": "C:\\Certificate.pfx", "CertificatePassword": "encryptedCertificatePassword"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 23, new TelnetCertificateCredentials("domain", "username", @"C\Certificate.pfx", "encryptedCertificatePassword"), @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
 | [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
@@ -108,7 +108,7 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 
 ```json
 {
-    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224",
+    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2023 from 10.8.0.234",
     "Logs": "[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange.[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange..."
 }
 ```
