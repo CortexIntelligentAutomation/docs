@@ -126,7 +126,7 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 new Dictionary<string, dynamic> {
     { "Timeout", 60 },
     { "EndOfLineCharacters", "\r\n" },
-    { "CancelCommand", "\x03" },
+    { "CancelCommand", "CtrlC" },
 }
 ```
 

@@ -181,7 +181,7 @@ new Dictionary<string, dynamic> {
     { "TerminalType", "vt100" },
     { "Timeout", 60 },
     { "EndOfLineCharacters", "\r" },
-    { "CancelCommand", "\x03" },
+    { "CancelCommand", "CtrlC" },
 }
 ```
 
