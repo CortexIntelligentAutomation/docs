@@ -1455,6 +1455,15 @@
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
+             [Cortex.Reference.DataTypes.Telnet]
+                MainDoc = "/docs/reference/data-types/Telnet/"
+                [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetsessiondetails"
+                    Host = "/docs/reference/data-types/telnet/telnetsessiondetails/#host"
+                    Port = "/docs/reference/data-types/telnet/telnetsessiondetails/#port"
+                    TerminalPrompt = "/docs/reference/data-types/telnet/telnetsessiondetails/#terminalprompt"
+                [Cortex.Reference.DataTypes.Telnet.TelnetLogs]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetlogs"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
@@ -1643,6 +1652,10 @@
                 MainDoc = "/docs/reference/exceptions/ssh/"
                 SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
                 SshResponseException = "/docs/reference/exceptions/ssh/ssh-response-exception/"
+            [Cortex.Reference.Exceptions.Telnet]
+                MainDoc = "/docs/reference/exceptions/telnet/"
+                TelnetClientException = "/docs/reference/exceptions/telnet/telnet-client-exception/"
+                TelnetResponseException = "/docs/reference/exceptions/telnet/telnet-response-exception/"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"
