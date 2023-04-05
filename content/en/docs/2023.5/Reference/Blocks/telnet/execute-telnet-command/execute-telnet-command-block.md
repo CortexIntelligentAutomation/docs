@@ -124,10 +124,8 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 
 ```csharp
 new Dictionary<string, dynamic> {
-    { "TerminalWidth", 200 },
-    { "TerminalType", "vt100" },
     { "Timeout", 60 },
-    { "EndOfLineCharacters", "\r" },
+    { "EndOfLineCharacters", "\r\n" },
     { "CancelCommand", "\x03" },
 }
 ```
