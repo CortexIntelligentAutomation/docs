@@ -58,8 +58,8 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 
 ```json
 {
-    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2023 from 10.8.0.234",
-    "Logs": "[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange.[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange..."
+    "WelcomeMessage": "Welcome to Microsoft Telnet Server.",
+    "Logs": "[Info] Connecting to Localhost.\r\n[Info] Connected to LocalHost.\r\n[Info] Welcome message received.\r\n[Info] Command sent.\r\n[Info] Terminal Prompt found.\r\n[Info] Disconnected from Localhost."
 }
 ```
 
