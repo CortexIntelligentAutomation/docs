@@ -2130,6 +2130,10 @@
         MainDoc = "https://www.postman.com/downloads/"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
+[RFC]
+    [RFC.Docs]
+        [RFC.Docs.Telnet]
+        MainDoc = "https://www.rfc-editor.org/rfc/rfc854.html"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]
