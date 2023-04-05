@@ -175,8 +175,6 @@ The exceptions thrown by the block can be found below:
 || Thrown when the specified [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the specified [Port][TelnetSessionDetails Port] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the server host key has not been accepted. |
-|| Thrown when using [UserCredentials][], the specified domain, username or password within [Credentials][TelnetSessionDetails Credentials] is invalid. |
-|| Thrown when using [TelnetCertificateCredentials][], the specified Domain, Username, CertificatePath or CertificatePassword is invalid. |
 || Thrown when the [Host][TelnetSessionDetails Host] exits without using [Close Session][Close Session Property], returning the response received up to the point the host exited the session. |
 | [TelnetResponseException][] | Thrown if the specified [TerminalPrompt][TelnetSessionDetails TerminalPrompt] does not match the terminal prompt on the host causing the execution to timeout or the timeout was too short to allow for data to be received. |
 | [RegexMatchTimeoutException][] | Thrown when the execution time of the regular expression pattern-matching exceeds the time-out interval. |
@@ -204,7 +202,7 @@ For information on how to open a session, please see [Opening Sessions][].
 
 [TelnetLogs][] includes a TerminalPromptMatch property that represents any string within the returned logs that matches the TerminalPrompt property within the [TelnetSessionDetails][].
 
-Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further iput to the Telnet Command to navigate to the end of the prompt.
+Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further input to the Telnet Command to navigate to the end of the prompt.
 
 ### Known Limitations
 
