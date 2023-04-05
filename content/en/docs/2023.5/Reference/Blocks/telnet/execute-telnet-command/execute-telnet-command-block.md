@@ -208,7 +208,7 @@ Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Conf
 
 ```csharp
 new Dictionary<string, dynamic> {
-    { "Do", "0;24;33",},
+    { "Do", "0;24;33"},
 }
 ```
 
