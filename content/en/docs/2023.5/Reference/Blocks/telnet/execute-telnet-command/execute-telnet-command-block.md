@@ -59,6 +59,7 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 ```json
 {
     "WelcomeMessage": "Welcome to Microsoft Telnet Server.",
+    "TerminalPromptMatch": "C:/Users/CortexTelentUser>",
     "Logs": "[Info] Connecting to Localhost.\r\n[Info] Connected to LocalHost.\r\n[Info] Welcome message received.\r\n[Info] Command sent.\r\n[Info] Terminal Prompt found.\r\n[Info] Disconnected from Localhost."
 }
 ```
