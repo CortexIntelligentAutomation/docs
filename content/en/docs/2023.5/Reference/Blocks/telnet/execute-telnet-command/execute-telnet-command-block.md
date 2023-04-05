@@ -204,7 +204,14 @@ Some prompts within Telnet require multiple interactions before reaching the end
 
 ### Do, Dont, Will and Wont options
 
-Do, Dont, Will and Wont codes are set as a semicolon separated list in the configurationSettings with each as a key (e.g { "Do", "0;24;33" } ).
+Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings Property] with each as a key e.g
+
+```csharp
+new Dictionary<string, dynamic> {
+    { "Do", "0;24;33",},
+}
+```
+
 For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC].
 
 ### Known Limitations
@@ -212,11 +219,11 @@ For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC
 None
 
 [Command Property]: {{< ref "#command" >}}
-[Telnet Session Details Property]: {{< ref "#Telnet-session-details" >}}
+[Telnet Session Details Property]: {{< ref "#telnet-session-details" >}}
 [Close Session Property]: {{< ref "#close-session" >}}
 [Configuration Settings Property]: {{< ref "#configuration-settings" >}}
 [Response Property]: {{< ref "#response" >}}
-[Telnet Logs Property]: {{< ref "#Telnet-logs" >}}
+[Telnet Logs Property]: {{< ref "#telnet-logs" >}}
 
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
