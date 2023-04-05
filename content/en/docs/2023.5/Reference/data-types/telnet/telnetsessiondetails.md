@@ -1,28 +1,28 @@
 ---
-title: "SshSessionDetails"
-linkTitle: "SshSessionDetails"
-description: "The data type representing configuration for executing ssh commands on a specified host."
+title: "TelnetSessionDetails"
+linkTitle: "TelnetSessionDetails"
+description: "The data type representing configuration for executing telnet commands on a specified host."
 ---
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTypes.Ssh.SshSessionDetails)</p>
+<p class="namespace">(Cortex.DataTypes.Telnet.TelnetSessionDetails)</p>
 
 {{< workinprogress >}}
 
 ## Summary
 
-The data type representing configuration for executing ssh commands on a specified host.
+The data type representing configuration for executing telnet commands on a specified host.
 
 | | |
 |-|-|
 | **Category:**          | Data |
-| **Name:**              | `SshSessionDetails` |
-| **Full Name:**         | `Cortex.DataTypes.SSH.SshSessionDetails` |
+| **Name:**              | `TelnetSessionDetails` |
+| **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The data type representing configuration for executing ssh commands on a specified host. |
+| **Description:**       | The data type representing configuration for executing telnet commands on a specified host. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `SshSessionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `TelnetSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
@@ -56,26 +56,6 @@ The Port is used to define the port on the server to connect to.
 | Default Editor | [Literal][] |
 | Default Value | [Int32][] with value `22` |
 
-### Credentials
-
-The Credentials are used to configure the [Domain][], [Username][] and [Password][] used to connect to the host.
-
-| | |
-|--------------------|---------------------------|
-| Data Type | [ISshCredentials][] |
-| Is [Advanced][] | `false` |
-| Default Editor | [Literal][] |
-| Default Value | [SshCertificateCredentials][] with value shown below: |
-
-```json
-{ 
-    "Domain": "",
-    "Username": "",
-    "CertificatePath": "",
-    "CertificatePassword": ""
-}
-```
-
 ### TerminalPrompt
 
 The regex used to match the host's terminal prompt.
@@ -89,19 +69,19 @@ The regex used to match the host's terminal prompt.
 
 ## Remarks
 
-### Create a SshSessionDetails
+### Create a TelnetSessionDetails
 
 TODO
 
-### Convert SshSessionDetails to Text
+### Convert TelnetSessionDetails to Text
 
 TODO
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `SshSessionDetails`.
-- The Literal Editor is available for [Input][] properties where the data type is `SshSessionDetails`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `SshSessionDetails`.
+- The Expression Editor is available for [Input][] properties where the data type is `TelnetSessionDetails`.
+- The Literal Editor is available for [Input][] properties where the data type is `TelnetSessionDetails`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `TelnetSessionDetails`.
 
 ### Known limitations
 
@@ -127,14 +107,6 @@ None
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
-
-[UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
-[Domain]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Domain" >}}
-[Username]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Username" >}}
-[Password]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Password" >}}
-
-[ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
-[SshCertificateCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
