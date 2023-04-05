@@ -20,19 +20,19 @@ Connects to a host using the [Telnet Session Details][Telnet Session Details Pro
 
 ## Examples
 
-### Execute a Command using UserCredentials
+### Execute a Command
 
 This example will execute a [Command][Command Property] on the server with the following details:
 
 - Host -  `"localhost"`
-- Port -  `22`
+- Port -  `23`
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
-| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 22, @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
+| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 23, @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
 | [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
@@ -58,58 +58,9 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 
 ```json
 {
-    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224",
-    "Logs": "[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange.[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange..."
-}
-```
-
-Note that more logs are included in this example, but have been omitted from `($)TelnetLogs.Logs`.
-
-***
-
-### Execute a Command using TelnetCertificateCredentials
-
-This example will execute a [Command][Command Property] on the server with the following details:
-
-- Host -  `"localhost"`
-- Port -  `22`
-- Domain - `"domain"`
-
-The server can be connected to using a valid certificate.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
-| [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 22, "Credentials": {"Domain": "domain", "Username": "username", "CertificatePath": "C:\\Certificate.pfx", "CertificatePassword": "encryptedCertificatePassword"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 22, new TelnetCertificateCredentials("domain", "username", @"C\Certificate.pfx", "encryptedCertificatePassword"), @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
-| [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
-| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
-| [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
-| [Telnet Logs][Telnet Logs Property] | `($)TelnetLogs`, with no value | `($)TelnetLogs` will be set to the type [TelnetLogs][] |
-
-#### Result
-
-Running the [Command][Command Property] results in the variable `($)Response` being updated to the following:
-
-```text
-Windows IP Configuration
-
-Ethernet adapter Ethernet 3:
-
-Connection-specific DNS Suffix. : reddog.microsoft.com
-Link-local IPv6 Address. . . . . : fe80::78eb:a051:2b84:e8bd%6
-IPv4 Address. . . . . . . . . . . : 10.3.0.4
-Subnet Mask . . . . . . . . . . . : 255.255.255.0
-Default Gateway . . . . . . . . . : 10.3.0.1
-```
-
-It also results in the variable `($)TelnetLogs` being updated to the following:
-
-```json
-{
-    "WelcomeMessage": "Last login: Tue Mar  1 06:50:23 2022 from 10.8.0.224",
-    "Logs": "[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange.[Info] Sending local version: \"Telnet-2.0-IPWorks Telnet Client 2020\".\r\n[Info] Read remote version string: \"Telnet-2.0-OpenTelnet_4.7p1 Debian-8ubuntu1.2\".\r\n[Info] Beginning key exchange..."
+    "WelcomeMessage": "Welcome to Microsoft Telnet Server.",
+    "TerminalPromptMatch": "C:/Users/CortexTelentUser>",
+    "Logs": "[Info] Connecting to Localhost.\r\n[Info] Connected to LocalHost.\r\n[Info] Welcome message received.\r\n[Info] Command sent.\r\n[Info] Terminal Prompt found.\r\n[Info] Disconnected from Localhost."
 }
 ```
 
@@ -137,7 +88,6 @@ The [Telnet Session Details][Telnet Session Details Property] object that includ
 
 - [Host][TelnetSessionDetails Host]
 - [Port][TelnetSessionDetails Port]
-- [Credentials][TelnetSessionDetails Credentials]
 - [TerminalPrompt][TelnetSessionDetails TerminalPrompt]
 
 |||
@@ -199,6 +149,7 @@ The Telnet [Response][Response Property] that is returned from the execution of 
 The [Telnet Logs][Telnet Logs Property] that is returned from the execution of the [Command][Command Property] on the host specified in the [Telnet Session Details][Telnet Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
 
 - WelcomeMessage
+- TerminalPromptMatch
 - Logs
 
 |||
@@ -218,12 +169,9 @@ The exceptions thrown by the block can be found below:
 | [PropertyNullException][] | Thrown when [Command][Command Property] is `null`. |
 || Thrown when the [Telnet Session Details][Telnet Session Details Property] is `null`. |
 || Thrown when the [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is `null`. |
-|| Thrown when the [Credentials][TelnetSessionDetails Credentials] within the [Telnet Session Details][Telnet Session Details Property] is `null`. |
-|| Thrown when using [TelnetCertificateCredentials][], the CertificatePath in the specified [Credentials][TelnetSessionDetails Credentials] within the [Telnet Session Details][Telnet Session Details Property] is `null`. |
 | [PropertyEmptyException][] | Thrown when the specified [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is empty. |
-|| Thrown when the CertificatePath in the specified [Credentials][TelnetSessionDetails Credentials] within the [Telnet Session Details][Telnet Session Details Property] is empty. |
 | [PropertyValueOutOfRangeException][] | Thrown when the specified [Port][TelnetSessionDetails Port] within the [Telnet Session Details][Telnet Session Details Property] is below 1 or above 65535. |
-| [TelnetClientException][] | Thrown when one or more settings in [Configuration Settings][Configuration Settings Property] are invalid. (includes a dictionary of SettingName: ExceptionMessage from IPWorksTelnetTelnetClientException) |
+| [TelnetClientException][] | Thrown when one or more settings in [Configuration Settings][Configuration Settings Property] are invalid. (includes a dictionary of SettingName: ExceptionMessage from IPWorksTelnetException) |
 || Thrown when the specified [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the specified [Port][TelnetSessionDetails Port] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the server host key has not been accepted. |
