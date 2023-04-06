@@ -204,7 +204,7 @@ Some prompts within Telnet require multiple interactions before reaching the end
 
 ### Do, Dont, Will and Wont options
 
-Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings Property] with each as a key e.g
+Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings][Configuration Settings Property] with each as a key e.g
 
 ```csharp
 new Dictionary<string, dynamic> {
@@ -227,6 +227,7 @@ None
 
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
+[Configuration Settings]: {{< ref "#configuration-settings" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
