@@ -16,7 +16,7 @@ The data type representing configuration for executing ssh commands on a specifi
 |-|-|
 | **Category:**          | Data |
 | **Name:**              | `SshSessionDetails` |
-| **Full Name:**         | `Cortex.DataTypes.SSH.SshSessionDetails` |
+| **Full Name:**         | `Cortex.DataTypes.Ssh.SshSessionDetails` |
 | **Alias:**             | N/A |
 | **Description:**       | The data type representing configuration for executing ssh commands on a specified host. |
 | **Default Value:**     | `null` |

@@ -176,7 +176,7 @@ The [Configuration Settings][Configuration Settings Property] for the SSH connec
 | Default Value | [IDictionary][]&lt;[String][], [dynamic][]&gt; with value shown below: |
 
 ```csharp
-new Dictionary<string, dynamic> {
+new Dictionary<string, EncryptableText> {
     { "TerminalWidth", 200 },
     { "TerminalType", "vt100" },
     { "Timeout", 60 },
