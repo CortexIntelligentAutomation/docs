@@ -144,6 +144,11 @@ The URL for the relevant section of this exception's help page.
 
 None
 
+### Related Data Types
+
+- [TelnetSessionDetails][]
+- [Int32][]
+- [String][]
 
 ### External Documentation
 
