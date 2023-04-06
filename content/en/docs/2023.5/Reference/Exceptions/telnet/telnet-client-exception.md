@@ -130,6 +130,14 @@ For `TelnetClientException` there are the following categories:
 |-----------|------------|
 | Data Type | [String][] |
 
+### Help Link
+
+The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
 ### External Documentation
 
 None
