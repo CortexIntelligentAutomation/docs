@@ -12,20 +12,16 @@ description: "Exception thrown when an error occurs from the Telnet object."
 
 Exception thrown when an error occurs from the Telnet object.
 
-The format of the exception message is as follows:
+There are multiple reasons that this exception can be thrown:
 
-```json
-"TODO.
-Please click the HelpLink for more information on how to fix this."
-```
-
-- [Invalid Configuration]
+- [Invalid Configuration Settings]
 - [Invalid Port]
 - [Invalid Host]
+- [Host Closed The Session]
 
 ## Reasons
 
-### Invalid Configuration
+### Invalid Configuration Settings
 
 A [Category][] of `TelnetClientException` indicates that one or more settings in configurationSettings[TODO add link] are invalid.
 
@@ -62,7 +58,7 @@ Provide a valid [Port][] between the [Int32][] values 1 and 65535 in the [Telnet
 
 ***
 
-## Invalid Host
+### Invalid Host
 
 A [Category][] of `TelnetSessionDetails` indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
 
@@ -79,6 +75,28 @@ where:
 #### How to Fix
 
 Provide a valid [Host][] in the [TelnetSessionDetails][].
+
+***
+
+### Host Closed The Session
+
+A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provided has closed the session without using closeSession [link?]. The response [link?] received up to the point the host exited the session will be returned.
+
+#### Message Format
+
+```json
+"The 'Host' '<host>' has closed the session. Any subsequent commands run on the session will result in a new one being created.\r\nPlease click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+- `<host>` - the address of the telnet server that the telnet session was opened with.
+
+#### How to Fix
+
+Check the [Host] telnet server is running and not configured to exit.....
+
+***
 
 ## Properties
 
@@ -106,6 +124,7 @@ For `TelnetClientException` there are the following categories:
 
 - `TelnetClientException`
 - `TelnetSessionDetails`
+- `TelnetSessionDetails.Host`
 
 | | |
 |-----------|------------|
@@ -115,8 +134,11 @@ For `TelnetClientException` there are the following categories:
 
 
 
-TODO: TelnetSessionDetails.Host
 
+[Invalid Configuration Settings]: {{< ref "#invalid-configuration-settings">}}
+[Invalid Port]: {{< ref "#invalid-port">}}
+[Invalid Host]: {{< ref "#invalid-host">}}
+[Host Closed The Session]: {{< ref "#host-closed-the-session">}}
 
 
 
