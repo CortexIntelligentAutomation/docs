@@ -146,9 +146,9 @@ The Telnet [Response][Response Property] that is returned from the execution of 
 
 The [Telnet Logs][Telnet Logs Property] that is returned from the execution of the [Command][Command Property] on the host specified in the [Telnet Session Details][Telnet Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
 
-- WelcomeMessage
-- TerminalPromptMatch
-- Logs
+- [WelcomeMessage]
+- [TerminalPromptMatch]
+- [Logs]
 
 |||
 |----------|----------|
@@ -366,6 +366,9 @@ None
 [TelnetSessionDetails Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [TelnetSessionDetails TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Logs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.Logs" >}}
+[WelcomeMessage]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.WelcomeMessage" >}}
+[TerminalPromptMatch]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.TerminalPromptMatch" >}}
 
 [TelnetLogs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.MainDoc" >}}
 
