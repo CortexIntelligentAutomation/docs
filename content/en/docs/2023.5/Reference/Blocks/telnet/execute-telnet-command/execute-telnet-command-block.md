@@ -16,7 +16,7 @@ description: "Executes a Telnet command on the specified host."
 
 Connects to a host using the [Telnet Session Details][Telnet Session Details Property], and executes a [Command][Command Property], returning the [Response][Response Property] and [Telnet Logs][Telnet Logs Property].
 
-[Close Session][Close Session Property] can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute Telnet Command blocks.
+[Close Session][Close Session Property] can be specified to choose whether the session on the [Host] is closed or is kept open for use on subsequent Execute Telnet Command blocks.
 
 ## Examples
 
