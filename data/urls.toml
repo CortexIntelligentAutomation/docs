@@ -766,6 +766,9 @@
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
+                        ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
+                        CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
+                        Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
@@ -1899,6 +1902,7 @@
         ApplicationRequestRouting-3_0 = "https://www.iis.net/downloads/microsoft/application-request-routing"
 [IPWorks]
     TelnetErrors = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetErrors"
+    SshErrors = "https://cdn.nsoftware.com/help/IHF/cs/SSHClientConfig.htm"
     TelnetConfigurationSettings = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetConfig"
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
