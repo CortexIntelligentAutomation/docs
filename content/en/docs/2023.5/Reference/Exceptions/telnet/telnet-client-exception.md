@@ -43,13 +43,42 @@ Provide valid configuration setting with the correct name and type.
 
 ### Invalid Port
 
+A [Category][] of `TelnetSessionDetails` indicates that the [Port][] provided in the [TelnetSessionDetails][] is invalid.
 
+#### Message Format
 
+```json
+"The host has returned status code [700] 'Connection failed: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. '<host-ip>':'<port-number>'."
+```
 
+where:
 
+- `<host-ip>` is the ip address of the host the client is attempting to connect to.
+- `<port-number>` is the port which the client is attempting to connect through.
 
+#### How to Fix
 
+Provide a valid [Port][] between the [Int32][] values 1 and 65535 in the [TelnetSessionDetails][] and ensure that the telnet server is up and running without issues and configured to accept connections through the specified port.
 
+***
+
+## Invalid Host
+
+A [Category][] of `TelnetSessionDetails` indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
+
+#### Message Format
+
+```json
+"A connection could not be established between the server where the Cortex Flow Execution Service is running ('<server>') and the host.\r\nPlease click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+- `<server>` is the server where the Cortex Flow Execution Service is running on
+
+#### How to Fix
+
+Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 ## Properties
 
@@ -76,6 +105,7 @@ The category of the exception, which is used to categorise an exception if there
 For `TelnetClientException` there are the following categories:
 
 - `TelnetClientException`
+- `TelnetSessionDetails`
 
 | | |
 |-----------|------------|
@@ -97,3 +127,9 @@ TODO: TelnetSessionDetails.Host
 
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+
+[TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
+[Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
