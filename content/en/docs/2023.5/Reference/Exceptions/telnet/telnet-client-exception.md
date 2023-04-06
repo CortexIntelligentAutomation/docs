@@ -70,7 +70,7 @@ A [Category][] of `TelnetSessionDetails` indicates that the [Host][] provided in
 
 where:
 
-- `<server>` is the server where the Cortex Flow Execution Service is running on
+- `<server>` is the server where the Cortex Flow Execution Service is running on.
 
 #### How to Fix
 
@@ -80,7 +80,7 @@ Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 ### Host Closed The Session
 
-A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provided has closed the session without using closeSession [link?]. The response [link?] received up to the point the host exited the session will be returned.
+A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provided has closed the session without using [CloseSession]. The response [link?] received up to the point the host exited the session will be returned.
 
 #### Message Format
 
@@ -157,3 +157,4 @@ For `TelnetClientException` there are the following categories:
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
+[CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
