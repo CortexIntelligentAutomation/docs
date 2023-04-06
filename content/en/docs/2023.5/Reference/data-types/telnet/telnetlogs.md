@@ -86,9 +86,9 @@ TODO:
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `Records`.
-- The Literal Editor is available for [Input][] properties where the data type is `Records`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Records`.
+- The Expression Editor is available for [Input][] properties where the data type is `TelnetLogs`.
+- The Literal Editor is available for [Input][] properties where the data type is `TelnetLogs`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `TelnetLogs`.
 
 ### Known Limitations
 

@@ -86,9 +86,9 @@ TODO:
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `Records`.
-- The Literal Editor is available for [Input][] properties where the data type is `Records`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Records`.
+- The Expression Editor is available for [Input][] properties where the data type is `SshLogs`.
+- The Literal Editor is available for [Input][] properties where the data type is `SshLogs`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `SshLogs`.
 
 ### Known Limitations
 
