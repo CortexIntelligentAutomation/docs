@@ -8,8 +8,6 @@ description: "The data type representing configuration for executing telnet comm
 
 <p class="namespace">(Cortex.DataTypes.Telnet.TelnetSessionDetails)</p>
 
-{{< workinprogress >}}
-
 ## Summary
 
 The data type representing configuration for executing telnet commands on a specified host.
@@ -71,11 +69,17 @@ The regex used to match the host's terminal prompt.
 
 ### Create a TelnetSessionDetails
 
-TODO
+The following table shows some of the ways that `GmailSessionDetails` can be created.
+
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use a `TelnetSessionDetails` constructor | `new TelnetSessionDetails(host: "localhost", port: 23, terminalPrompt: "(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 465, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}` | Expression | |
 
 ### Convert TelnetSessionDetails to Text
 
-TODO
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 465, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n    \"Port\": 23,\r\n    \"TerminalPrompt\": \"(.*(~(.*[\r\n]?)\$\|>))\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -91,7 +95,7 @@ None
 
 ### Related Data Types
 
-TODO
+- [EncryptableText][]
 
 ### Related Concepts
 
@@ -111,3 +115,5 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}

@@ -1464,6 +1464,10 @@
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcredentials"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials"
+                        Domain = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#domain"
+                        Username = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#domain"
+                        CertificatePath = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepath"
+                        CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
              [Cortex.Reference.DataTypes.Telnet]

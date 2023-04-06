@@ -10,18 +10,7 @@ description: "Exception thrown when an error occurs from the Telnet response."
 
 Exception thrown when an error occurs from the Telnet response.
 
-The format of the exception message is as follows:
-
-```json
-"TODO.
-Please click the HelpLink for more information on how to fix this."
-```
-
-## Description
-
-The exception thrown when an issue occurs while opening a session with a mail server.
-
-There are multiple reasons that this exception can be thrown:
+The reason that this exception can be thrown:
 
 - [Terminal Prompt Match Not Found][TerminalPromptMatchNotFound]
 
@@ -39,6 +28,12 @@ The format of the [Message][] is as follows:
 "The execution has timed-out because either the 'TerminalPrompt' was not found in the response or the timeout was too short to allow for the response to be returned.
 Please click the HelpLink for more information on how to fix this."
 ```
+
+#### How to Fix
+
+Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the host.
+
+***
 
 ## Properties
 
