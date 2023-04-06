@@ -182,6 +182,10 @@ The exceptions thrown by the block can be found below:
 
 ### Empty Command
 
+If the terminalPrompt is null or empty then it default to "(.*(~(.*[\r\n]?)\$|>))" (Windows and Linux friendly default).
+
+### Null or Empty Terminal Prompt
+
 If the command is empty, it will act as an enter command on the terminal.
 
 ### Opening Sessions
