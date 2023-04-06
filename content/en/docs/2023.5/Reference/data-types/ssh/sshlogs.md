@@ -9,7 +9,7 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Ssh.SshLogs)</p>
 
-The `SshLogs` data type is used to represent the 'WelcomeMessage' returned from the host; the 'TeminalPromptMatch' found in the returned response; and the 'Logs' from the ssh execution.
+The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the host; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the ssh execution.
 
 | | |
 |-|-|
@@ -107,6 +107,10 @@ None
 ### External Documentation
 
 None
+
+[Welcome Message Property]: {{< ref "#welcomemessage" >}}
+[Terminal Prompt Match]: {{< ref "#terminalpromptmatch" >}}
+[Logs]: {{< ref "#logs" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
