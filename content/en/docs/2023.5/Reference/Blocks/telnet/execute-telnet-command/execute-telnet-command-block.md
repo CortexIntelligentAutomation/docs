@@ -212,6 +212,12 @@ The Execute Telnet Command block automatically handles creating and opening sess
 
 For information on how to explicitly close a session, please see [Closing Sessions][].
 
+### Closing Sessions
+
+Sessions can be explicitly closed by setting [Close Session][Close Session Property] to `true`. This causes the session to be closed after the [Command][Command Property] has been executed.
+
+For information on how to open a session, please see [Opening Sessions][].
+
 ### Inactivity Timeout
 
 The default inactivity timeout is 60 seconds.
@@ -263,12 +269,6 @@ If TerminalHeight is set but not TerminalWidth, TerminalWidth defaults to 500.
 Depending on the [Host] you are connecting to, the values supported for TerminalWidth and TerminalHeight may differ. If values provided are invalid the host may return a response stating such.
 
 TerminalWidth and TerminalHeight must be positive [Int32] integers and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetClientException] will be thrown.
-
-### Closing Sessions
-
-Sessions can be explicitly closed by setting [Close Session][Close Session Property] to `true`. This causes the session to be closed after the [Command][Command Property] has been executed.
-
-For information on how to open a session, please see [Opening Sessions][].
 
 ### Using the TerminalPromptMatch Within TelnetLogs to Reach the End of a Prompt
 
