@@ -8,7 +8,7 @@ description: "Executes an SSH command on the specified host."
 
 # {{% param title %}}
 
-<p class="namespace">("Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
+<p class="namespace">(Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
 
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future; this will include further examples and remarks.{{% /alert %}}
 
@@ -37,7 +37,7 @@ This example will execute a [Command][Command Property] on the server with the f
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
 | [Ssh Session Details][Ssh Session Details Property] | `($)SshSessionDetails` with value `{"Host": "localhost", "Port": 22, "Credentials": {"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)SshSessionDetails` has been set up using the following [Expression][]:<br><br> `new SshSessionDetails("localhost", 22, new UserCredentials("domain", "username",  "encryptedPassword"), @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)SshSessionDetails` is a variable of type [SshSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
-| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
+| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)ConfigurationSettings` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
 | [Ssh Logs][Ssh Logs Property] | `($)SshLogs`, with no value | `($)SshLogs` will be set to the type [SshLogs][] |
 

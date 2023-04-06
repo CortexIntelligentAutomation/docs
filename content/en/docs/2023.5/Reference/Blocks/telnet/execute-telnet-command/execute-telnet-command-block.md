@@ -8,7 +8,7 @@ description: "Executes a Telnet command on the specified host."
 
 # {{% param title %}}
 
-<p class="namespace">("Cortex.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommandBlock)</p>
+<p class="namespace">(Cortex.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommandBlock)</p>
 
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future; this will include further examples and remarks.{{% /alert %}}
 
@@ -34,7 +34,7 @@ This example will execute a [Command][Command Property] on the server with the f
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
 | [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 23, @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
-| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
+| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)ConfigurationSettings` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
 | [Telnet Logs][Telnet Logs Property] | `($)TelnetLogs`, with no value | `($)TelnetLogs` will be set to the type [TelnetLogs][] |
 
