@@ -773,6 +773,7 @@
                     [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand]
                         MainDoc = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#using-the-terminalpromptmatch-within-telnetlogs-to-reach-the-end-of-a-prompt"
+                        ConfigurationSettings = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#configuration-settings"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]

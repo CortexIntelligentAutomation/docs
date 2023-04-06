@@ -23,7 +23,7 @@ There are multiple reasons that this exception can be thrown:
 
 ### Invalid Configuration Settings
 
-A [Category][] of `TelnetClientException` indicates that one or more settings in configurationSettings[TODO add link] are invalid.
+A [Category][] of `TelnetClientException` indicates that one or more settings in [ConfigurationSettings] are invalid.
 
 #### Message Format
 
@@ -155,3 +155,5 @@ For `TelnetClientException` there are the following categories:
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
 [Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
+
+[ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
