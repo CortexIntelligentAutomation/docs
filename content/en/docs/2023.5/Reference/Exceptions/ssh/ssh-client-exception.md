@@ -118,6 +118,26 @@ Provide a valid [Username][] and [Password][] combination in the [UserCredential
 
 ***
 
+### Invalid Ssh Certificate Credentials
+
+A [Category][] of `SshSessionDetails` indicates that the Ssh Certificate Credentials domain, username, certificatePath or certificatePassword is invalid.
+
+#### Message Format
+
+```json
+"A connection could not be established between the server where the Cortex Flow Execution Service is running ('<server>') and the host.\r\nPlease click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+- `<server>` is the server where the Cortex Flow Execution Service is running on.
+
+#### How to Fix
+
+Provide valid Ssh Certificate Credentials domain, username, certificatePath and certificatePassword.
+
+***
+
 ### Host Closed The Session
 
 A [Category][] of `SshSessionDetails.Host` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
