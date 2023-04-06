@@ -180,6 +180,30 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Empty Command
+
+If the [Command][Command Property] is empty, it will act as an enter command on the terminal.
+
+### Null or Empty Terminal Prompt
+
+If the [TerminalPrompt] is null or empty then it default to "(.*(~(.*[\r\n]?)\$|>))" (Windows and Linux friendly default).
+
+### Terminal Prompt Match
+
+The `terminalPromptMatch` in the [TelnetLogs] will output the exact terminal prompt that was matched by the [TerminalPrompt] regex.
+
+### Telnet Response
+
+The response will contain all output after the [Command][Command Property] and before the next terminal prompt.
+
+Control characters are removed from the response.
+
+For Windows machines before Windows Server 2019 or Windows 10 (build 1809) using Telnet Server, the returned data comes back in an less usable format.
+
+### Default Telnet Port
+
+The default port is 23.
+
 ### Opening Sessions
 
 The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
@@ -196,6 +220,73 @@ Sessions can be explicitly closed by setting [Close Session][Close Session Prope
 
 For information on how to open a session, please see [Opening Sessions][].
 
+### Inactivity Timeout
+
+The default inactivity timeout is 60 seconds.
+
+To change the default inactivity timeout, use the Timeout [Configuration Settings][Configuration Settings Property] e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "Timeout", "10"},
+}
+```
+
+Timeout must be a positive [Int32] integer and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetResponseException] will be thrown.
+
+The inactivity timeout specifies the number of seconds after which to timeout. This is reset every time new data is received.
+
+### Terminal Type
+
+The default terminal type is set by the [Host].
+
+To change the default terminal type, use the TerminalType [Configuration Settings][Configuration Settings Property] e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "TerminalType", "10"},
+}
+```
+
+### Terminal Size
+
+The default TerminalWidth and TerminalHeight is set by the host.
+
+To change the terminal window size, use the TerminalWidth and TerminalHeight [Configuration Settings][Configuration Settings Property] e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "TerminalWidth", "500"},
+    { "TerminalHeight", "50"},
+}
+```
+
+If TerminalWidth is set but not TerminalHeight, TerminalHeight defaults to 50.
+
+If TerminalHeight is set but not TerminalWidth, TerminalWidth defaults to 500.
+
+Depending on the [Host] you are connecting to, the values supported for TerminalWidth and TerminalHeight may differ. If values provided are invalid the host may return a response stating such.
+
+TerminalWidth and TerminalHeight must be positive [Int32] integers and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetClientException] will be thrown.
+
+### End Of Line Characters
+
+The EndOfLineCharacters are appended to the [Command][Command Property]. On certain hosts it is required to send one or more characters e.g '\r or '\r\n'. EndOfLineCharacters can be used to achieve this.
+
+The default EndOfLineCharacters is '\r\n', which on most systems will ensure that the [Command][Command Property] is executed. If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "EndOfLineCharacters" setting e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "EndOfLineCharacters", "\r\n"},
+}
+```
+
+If an invalid value is provided it will not execute the [Command] and timeout.
+
 ### Using the TerminalPromptMatch Within TelnetLogs to Reach the End of a Prompt
 
 [TelnetLogs][] includes a TerminalPromptMatch property that represents any string within the returned logs that matches the TerminalPrompt property within the [TelnetSessionDetails][].
@@ -207,7 +298,7 @@ Some prompts within Telnet require multiple interactions before reaching the end
 Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings][Configuration Settings Property] with each as a key e.g
 
 ```csharp
-new Dictionary<string, dynamic> 
+new Dictionary<string, EncryptableText> 
 {
     { "Do", "0;24;33"},
 }
@@ -223,11 +314,15 @@ For a full list of configuration settings please see [TelnetConfigurationSetting
 
 ### Cancel Command
 
-- The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
-- The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
-- The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
-- If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
-- If CancelCommand is empty then its not sent to the host.
+The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
+
+The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
+
+The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
+
+If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
+
+If CancelCommand is empty then its not sent to the host.
 
 ### Proxies
  Proxies can be set through the configuration settings e.g
@@ -260,6 +355,7 @@ None
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
 [Configuration Settings]: {{< ref "#configuration-settings" >}}
+[Command]: {{< ref "#configuration-settings" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
@@ -276,6 +372,7 @@ None
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
@@ -284,6 +381,7 @@ None
 [TelnetResponseException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetResponseException" >}}
 [RegexMatchTimeoutException]: {{< url path="MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 [RegexParsingFailedException]: {{< url path="Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
+[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
