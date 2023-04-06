@@ -8,8 +8,6 @@ description: "The data type representing configuration for executing ssh command
 
 <p class="namespace">(Cortex.DataTypes.Ssh.SshSessionDetails)</p>
 
-{{< workinprogress >}}
-
 ## Summary
 
 The data type representing configuration for executing ssh commands on a specified host.
