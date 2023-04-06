@@ -336,10 +336,10 @@ If CancelCommand is empty then its not sent to the host.
 ```
 
 Supported Proxy types include:
-- tunneling(1)
-- SOCKS4(2)
-- SOCKS5(3)
-- SOCKS4A(10)
+- 1 (Tunneling)
+- 2 (SOCKS4)
+- 3 (SOCKS)
+- 10 (SOCKS4A)
 
 ### Known Limitations
 
