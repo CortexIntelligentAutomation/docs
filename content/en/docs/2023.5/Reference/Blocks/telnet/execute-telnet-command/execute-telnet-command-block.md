@@ -207,7 +207,8 @@ Some prompts within Telnet require multiple interactions before reaching the end
 Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings][Configuration Settings Property] with each as a key e.g
 
 ```csharp
-new Dictionary<string, dynamic> {
+new Dictionary<string, dynamic> 
+{
     { "Do", "0;24;33"},
 }
 ```
@@ -227,6 +228,23 @@ For a full list of configuration settings please see [TelnetConfigurationSetting
 - The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
 - If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
 - If CancelCommand is empty then its not sent to the host.
+
+### Proxies
+ Proxies can be set through the configuration settings e.g
+```csharp
+ new Dictionary<string, EncryptableText> 
+ {
+   { "FirewallHost", "FirewallHost.com" },
+   { "FirewallType", "3" },
+   { "FirewallPort", "1080" },
+}
+```
+
+Supported Proxy types include:
+- tunneling(1)
+- SOCKS4(2)
+- SOCKS5(3)
+- SOCKS4A(10)
 
 ### Known Limitations
 
