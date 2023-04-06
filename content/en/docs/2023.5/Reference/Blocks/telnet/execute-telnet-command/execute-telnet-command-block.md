@@ -218,7 +218,13 @@ For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC
 
 For a full list of configuration settings please see [TelnetConfigurationSettings].
 
+### Cancel Command
 
+- The CancelCommand is sent to the host by Cortex when an execution times out so the host can stop the execution and allow other commands to be executed on that session.
+- The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
+- The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
+- If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
+- If CancelCommand is empty then its not sent to the host.
 
 ### Known Limitations
 
@@ -268,3 +274,4 @@ None
 
 [TelnetRFC]: {{< url path="RFC.Docs.Telnet.MainDoc" >}}
 [TelnetConfigurationSettings]: {{< url path="IPWorks.TelnetConfigurationSettings" >}}
+[CancelCommands]: {{< url path="CancelCommands.MainDoc" >}}
