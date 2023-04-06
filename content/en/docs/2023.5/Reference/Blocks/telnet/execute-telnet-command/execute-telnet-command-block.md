@@ -192,6 +192,16 @@ If the [TerminalPrompt] is null or empty then it default to "(.*(~(.*[\r\n]?)\$|
 
 The `terminalPromptMatch` in the [TelnetLogs] will output the exact terminal prompt that was matched by the [TerminalPrompt] regex.
 
+### Telnet Response
+
+The response will contain all output after the [Command][Command Property] and before the next terminal prompt.
+
+For Windows machines before Windows Server 2019 or Windows 10 (build 1809) using Telnet Server, the returned data comes back in an less usable format.
+
+### Default Telnet Port
+
+The default port is 23.
+
 ### Opening Sessions
 
 The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
