@@ -29,6 +29,12 @@ The format of the [Message][] is as follows:
 Please click the HelpLink for more information on how to fix this."
 ```
 
+#### How to Fix
+
+Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the host.
+
+***
+
 ## Properties
 
 ### Exception Type
