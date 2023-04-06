@@ -90,7 +90,7 @@ A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provid
 
 where:
 
-- `<host>` - the address of the telnet server that the telnet session was opened with.
+- `<host>` is the address of the telnet server that the telnet session was opened with.
 
 #### How to Fix
 
