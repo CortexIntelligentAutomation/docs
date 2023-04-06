@@ -8,8 +8,6 @@ description: "The data type representing configuration for executing telnet comm
 
 <p class="namespace">(Cortex.DataTypes.Telnet.TelnetSessionDetails)</p>
 
-{{< workinprogress >}}
-
 ## Summary
 
 The data type representing configuration for executing telnet commands on a specified host.
