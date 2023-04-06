@@ -1479,6 +1479,9 @@
                     TerminalPrompt = "/docs/reference/data-types/telnet/telnetsessiondetails/#terminalprompt"
                 [Cortex.Reference.DataTypes.Telnet.TelnetLogs]
                     MainDoc = "/docs/reference/data-types/telnet/telnetlogs"
+                    WelcomeMessage = "/docs/reference/data-types/telnet/telnetlogs/#welcomeMessage"
+                    TerminalPrompt = "/docs/reference/data-types/telnet/telnetlogs/#terminalPromptMatch"
+                    Logs = "/docs/reference/data-types/telnet/telnetlogs/#logs"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
