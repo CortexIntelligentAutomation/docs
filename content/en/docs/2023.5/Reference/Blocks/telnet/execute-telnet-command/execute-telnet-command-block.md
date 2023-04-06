@@ -202,7 +202,6 @@ For Windows machines before Windows Server 2019 or Windows 10 (build 1809) using
 
 The default port is 23.
 
-
 ### Opening Sessions
 
 The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
@@ -217,7 +216,7 @@ For information on how to explicitly close a session, please see [Closing Sessio
 
 The default inactivity timeout is 60 seconds.
 
-To change the default inactivity timeout, use the Timeout configuration setting e.g.
+To change the default inactivity timeout, use the Timeout [Configuration Settings][Configuration Settings Property] e.g.
 
 ```csharp
 new Dictionary<string, EncryptableText> 
@@ -229,6 +228,19 @@ new Dictionary<string, EncryptableText>
 Timeout must be a positive [Int32] integer and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetResponseException] will be thrown.
 
 The inactivity timeout specifies the number of seconds after which to timeout. This is reset every time new data is received.
+
+### Terminal Type
+
+The default terminal type is set by the [Host].
+
+To change the default terminal type, use the TerminalType [Configuration Settings][Configuration Settings Property] e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "TerminalType", ""},
+}
+```
 
 ### Closing Sessions
 
