@@ -216,11 +216,13 @@ For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC
 
 ### Configuration Settings
 
+[Configuration Settings][Configuration Settings Property] are in PascalCase e.g. "CloseStreamAfterTransfer".
+
 For a full list of configuration settings please see [TelnetConfigurationSettings].
 
 ### Cancel Command
 
-- The CancelCommand is sent to the host by Cortex when an execution times out so the host can stop the execution and allow other commands to be executed on that session.
+- The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
 - The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
 - The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
 - If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
@@ -249,6 +251,7 @@ None
 [TelnetSessionDetails Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 [TelnetSessionDetails Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [TelnetSessionDetails TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [TelnetLogs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.MainDoc" >}}
 
