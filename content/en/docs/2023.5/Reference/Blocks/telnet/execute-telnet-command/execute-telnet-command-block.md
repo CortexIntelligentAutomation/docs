@@ -124,7 +124,7 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 
 ```csharp
 new Dictionary<string, EncryptableText> {
-    { "Timeout", 60 },
+    { "Timeout", "60" },
     { "EndOfLineCharacters", "\r\n" },
     { "CancelCommand", "CtrlC" },
 }

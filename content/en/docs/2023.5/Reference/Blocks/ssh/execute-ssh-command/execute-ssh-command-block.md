@@ -177,9 +177,9 @@ The [Configuration Settings][Configuration Settings Property] for the SSH connec
 
 ```csharp
 new Dictionary<string, EncryptableText> {
-    { "TerminalWidth", 200 },
+    { "TerminalWidth", "200" },
     { "TerminalType", "vt100" },
-    { "Timeout", 60 },
+    { "Timeout", "60" },
     { "EndOfLineCharacters", "\r" },
     { "CancelCommand", "CtrlC" },
 }
