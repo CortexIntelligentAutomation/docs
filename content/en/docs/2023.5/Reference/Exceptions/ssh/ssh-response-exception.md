@@ -20,7 +20,7 @@ The reason that this exception can be thrown:
 
 ### Terminal Prompt Match Not Found {#100}
 
-A [Category][] of `TelnetSessionDetails.TerminalPrompt` indicates that the [TerminalPrompt][] provided in the [TelnetSessionDetails][] could not be matched in the response returned from the host.
+A [Category][] of `SshSessionDetails.TerminalPrompt` indicates that the [TerminalPrompt][] provided in the [SshSessionDetails][] could not be matched in the response returned from the host.
 
 #### Message Format
 
@@ -35,7 +35,7 @@ Please click the HelpLink for more information on how to fix this."
 
 ### Exception Type
 
-The type of the exception (i.e. `TelnetResponseException`)
+The type of the exception (i.e. `SshResponseException`)
 
 | | |
 |-----------|------------|
@@ -53,9 +53,9 @@ The exception message, providing information about the exception that occurred.
 
 The category of the exception, which is used to categorise an exception if there are multiple reasons that the exception can occur.
 
-For `TelnetResponseException` there are the following categories:
+For `SshResponseException` there are the following categories:
 
-- `TelnetSessionDetails.TerminalPrompt`
+- `SshSessionDetails.TerminalPrompt`
 
 | | |
 |-----------|------------|
@@ -79,7 +79,7 @@ None
 
 ### Related Data Types
 
-- [TelnetSessionDetails][]
+- [SshSessionDetails][]
 
 ### Related Concepts
 
@@ -87,7 +87,7 @@ None
 
 ### Related Blocks
 
-- [Execute Telnet Command][]
+- [Execute Ssh Command][]
 
 ### External Documentation
 
@@ -99,7 +99,7 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
-[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
+[SshSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.MainDoc" >}}
+[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.TerminalPrompt" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
-[Execute Telnet Command]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
+[Execute Ssh Command]: {{< url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand.MainDoc" >}}
