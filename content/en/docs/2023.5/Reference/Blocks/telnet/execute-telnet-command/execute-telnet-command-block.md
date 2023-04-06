@@ -182,11 +182,15 @@ The exceptions thrown by the block can be found below:
 
 ### Empty Command
 
-If the terminalPrompt is null or empty then it default to "(.*(~(.*[\r\n]?)\$|>))" (Windows and Linux friendly default).
+If the [Command][Command Property] is empty, it will act as an enter command on the terminal.
 
 ### Null or Empty Terminal Prompt
 
-If the command is empty, it will act as an enter command on the terminal.
+If the [TerminalPrompt] is null or empty then it default to "(.*(~(.*[\r\n]?)\$|>))" (Windows and Linux friendly default).
+
+### Terminal Prompt Match
+
+The `terminalPromptMatch` in the [TelnetLogs] will output the exact terminal prompt that was matched by the [TerminalPrompt] regex.
 
 ### Opening Sessions
 
@@ -268,6 +272,7 @@ None
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
 [Configuration Settings]: {{< ref "#configuration-settings" >}}
+[Command]: {{< ref "#configuration-settings" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
@@ -292,6 +297,7 @@ None
 [TelnetResponseException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetResponseException" >}}
 [RegexMatchTimeoutException]: {{< url path="MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 [RegexParsingFailedException]: {{< url path="Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
+[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
