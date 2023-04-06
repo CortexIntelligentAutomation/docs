@@ -111,6 +111,7 @@ None
 [Welcome Message Property]: {{< ref "#welcomemessage" >}}
 [Terminal Prompt Match]: {{< ref "#terminalpromptmatch" >}}
 [Logs]: {{< ref "#logs" >}}
+
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
