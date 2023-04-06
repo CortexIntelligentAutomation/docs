@@ -27,7 +27,7 @@ Please click the HelpLink for more information on how to fix this."
 
 ### Invalid Configuration
 
-Indicates that one or more settings in configurationSettings are invalid.
+A [Category][] of `TelnetClientException` indicates that one or more settings in configurationSettings[TODO add link] are invalid.
 
 #### Message Format
 
@@ -37,10 +37,63 @@ Indicates that one or more settings in configurationSettings are invalid.
 
 #### How to Fix
 
-Provide valid configuration setting with the correct name and type
+Provide valid configuration setting with the correct name and type.
 
 ***
+
+### Invalid Port
+
+
+
+
+
+
+
+
+
+## Properties
+
+### Exception Type
+
+The type of the exception (i.e. `TelnetClientException`)
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Message
+
+The exception message, providing information about the exception that occurred.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Category
+
+The category of the exception, which is used to categorise an exception if there are multiple reasons that the exception can occur.
+
+For `TelnetClientException` there are the following categories:
+
+- `TelnetClientException`
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+
 
 
 
 TODO: TelnetSessionDetails.Host
+
+
+
+
+
+
+
+[Category]: {{< ref "#category" >}}
+
+
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
