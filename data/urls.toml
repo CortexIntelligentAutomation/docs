@@ -1456,6 +1456,9 @@
                     TerminalPrompt = "/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt"
                 [Cortex.Reference.DataTypes.Ssh.SshLogs]
                     MainDoc = "/docs/reference/data-types/ssh/sshlogs"
+                    WelcomeMessage = "/docs/reference/data-types/ssh/sshlogs/#welcomeMessage"
+                    TerminalPrompt = "/docs/reference/data-types/ssh/sshlogs/#terminalPromptMatch"
+                    Logs = "/docs/reference/data-types/ssh/sshlogs/#logs"
                 [Cortex.Reference.DataTypes.Ssh.Authentication]
                     MainDoc = "/docs/reference/data-types/ssh/authentication/"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials]
