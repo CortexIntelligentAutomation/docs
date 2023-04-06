@@ -180,6 +180,10 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Empty Command
+
+If the command is empty, it will act as an enter command on the terminal.
+
 ### Opening Sessions
 
 The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
