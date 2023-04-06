@@ -154,9 +154,13 @@ None
 
 - [Exceptions][]
 
+### Related Blocks
+
+- [Execute Telnet Command Block]
+
 ### External Documentation
 
-None
+- IPWorks Telnet Error Codes: [IpWorksTelnetErrorCodes]
 
 [Invalid Configuration Settings]: {{< ref "#invalid-configuration-settings">}}
 [Invalid Port]: {{< ref "#invalid-port">}}
@@ -176,3 +180,5 @@ None
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
 [CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
 [Response]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.Response" >}}
+[Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
+[IpWorksTelnetErrorCodes]: {{< url path="IPWorks.TelnetErrors" >}}

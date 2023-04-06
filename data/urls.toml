@@ -1885,7 +1885,8 @@
     [IIS.Downloads]
         UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"
         ApplicationRequestRouting-3_0 = "https://www.iis.net/downloads/microsoft/application-request-routing"
-    
+[IPWorks]
+    TelnetErrors = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetErrors"   
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
