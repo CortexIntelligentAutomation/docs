@@ -94,7 +94,7 @@ where:
 
 #### How to Fix
 
-Check the [Host] telnet server is running and not configured to exit.....
+Check the [Host] telnet server configurations and that the telnet server is running.
 
 ***
 
