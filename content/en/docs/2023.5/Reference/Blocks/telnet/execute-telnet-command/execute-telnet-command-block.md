@@ -190,7 +190,7 @@ If the [TerminalPrompt] is null or empty then it default to "(.*(~(.*[\r\n]?)\$|
 
 ### Terminal Prompt Match
 
-The `terminalPromptMatch` in the [TelnetLogs] will output the exact terminal prompt that was matched by the [TerminalPrompt] regex.
+The [TerminalPromptMatch] in the [TelnetLogs] will output the exact terminal prompt that was matched by the [TerminalPrompt] regex.
 
 ### Telnet Response
 
@@ -289,9 +289,9 @@ If an invalid value is provided it will not execute the [Command] and timeout.
 
 ### Using the TerminalPromptMatch Within TelnetLogs to Reach the End of a Prompt
 
-[TelnetLogs][] includes a TerminalPromptMatch property that represents any string within the returned logs that matches the TerminalPrompt property within the [TelnetSessionDetails][].
+[TelnetLogs][] includes a [TerminalPromptMatch] property that represents any string within the returned logs that matches the TerminalPrompt property within the [TelnetSessionDetails][].
 
-Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further input to the Telnet Command to navigate to the end of the prompt.
+Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The [TerminalPromptMatch] can be used to make decisions or loop within a flow sending further input to the Telnet Command to navigate to the end of the prompt.
 
 ### Do, Dont, Will and Wont options
 
