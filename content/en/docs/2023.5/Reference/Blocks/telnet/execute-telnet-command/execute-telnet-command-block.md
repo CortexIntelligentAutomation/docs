@@ -214,6 +214,12 @@ new Dictionary<string, dynamic> {
 
 For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC].
 
+### Configuration Settings
+
+For a full list of configuration settings please see [TelnetConfigurationSettings].
+
+
+
 ### Known Limitations
 
 None
@@ -260,4 +266,5 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[TelnetRFC]: {{< url path ="RFC.Docs.Telnet.MainDoc" >}}
+[TelnetRFC]: {{< url path="RFC.Docs.Telnet.MainDoc" >}}
+[TelnetConfigurationSettings]: {{< url path="IPWorks.TelnetConfigurationSettings" >}}
