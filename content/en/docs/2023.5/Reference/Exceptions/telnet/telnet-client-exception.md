@@ -32,7 +32,7 @@ Indicates that one or more settings in configurationSettings are invalid.
 #### Message Format
 
 ```json
-"'Configuration Settings' contains one or more invalid settings."
+"'Configuration Settings' contains one or more invalid settings. Please click the HelpLink for more information on how to fix this."
 ```
 
 #### How to Fix
