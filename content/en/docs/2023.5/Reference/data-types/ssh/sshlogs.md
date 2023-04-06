@@ -9,7 +9,7 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Ssh.SshLogs)</p>
 
-The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the host; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the ssh execution.
+The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the [Host]; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the ssh execution.
 
 | | |
 |-|-|
@@ -86,9 +86,9 @@ TODO:
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `Records`.
-- The Literal Editor is available for [Input][] properties where the data type is `Records`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Records`.
+- The Expression Editor is available for [Input][] properties where the data type is `SshLogs`.
+- The Literal Editor is available for [Input][] properties where the data type is `SshLogs`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `SshLogs`.
 
 ### Known Limitations
 
@@ -111,6 +111,8 @@ None
 [Welcome Message Property]: {{< ref "#welcomemessage" >}}
 [Terminal Prompt Match]: {{< ref "#terminalpromptmatch" >}}
 [Logs]: {{< ref "#logs" >}}
+
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
