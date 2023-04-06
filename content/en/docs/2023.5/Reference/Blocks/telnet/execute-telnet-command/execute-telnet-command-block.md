@@ -196,6 +196,8 @@ The `terminalPromptMatch` in the [TelnetLogs] will output the exact terminal pro
 
 The response will contain all output after the [Command][Command Property] and before the next terminal prompt.
 
+Control characters are removed from the response.
+
 For Windows machines before Windows Server 2019 or Windows 10 (build 1809) using Telnet Server, the returned data comes back in an less usable format.
 
 ### Default Telnet Port
@@ -269,6 +271,21 @@ If TerminalHeight is set but not TerminalWidth, TerminalWidth defaults to 500.
 Depending on the [Host] you are connecting to, the values supported for TerminalWidth and TerminalHeight may differ. If values provided are invalid the host may return a response stating such.
 
 TerminalWidth and TerminalHeight must be positive [Int32] integers and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetClientException] will be thrown.
+
+### End Of Line Characters
+
+The EndOfLineCharacters are appended to the [Command][Command Property]. On certain hosts it is required to send one or more characters e.g '\r or '\r\n'. EndOfLineCharacters can be used to achieve this.
+
+The default EndOfLineCharacters is '\r\n', which on most systems will ensure that the [Command][Command Property] is executed. If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "EndOfLineCharacters" setting e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "EndOfLineCharacters", "\r\n"},
+}
+```
+
+If an invalid value is provided it will not execute the [Command] and timeout.
 
 ### Using the TerminalPromptMatch Within TelnetLogs to Reach the End of a Prompt
 
