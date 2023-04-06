@@ -24,8 +24,8 @@ Connects to a host using the [Telnet Session Details][Telnet Session Details Pro
 
 This example will execute a [Command][Command Property] on the server with the following details:
 
-- Host -  `"localhost"`
-- Port -  `23`
+- [Host] -  `"localhost"`
+- [Port] -  `23`
 
 #### Properties
 
@@ -59,7 +59,7 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 ```json
 {
     "WelcomeMessage": "Welcome to Microsoft Telnet Server.",
-    "TerminalPromptMatch": "C:/Users/CortexTelentUser>",
+    "TerminalPromptMatch": "C:/Users/TelnetUser>",
     "Logs": "[Info] Connecting to Localhost.\r\n[Info] Connected to LocalHost.\r\n[Info] Welcome message received.\r\n[Info] Command sent.\r\n[Info] Terminal Prompt found.\r\n[Info] Disconnected from Localhost."
 }
 ```
@@ -366,6 +366,7 @@ None
 [TelnetSessionDetails Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [TelnetSessionDetails TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [Logs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.Logs" >}}
 [WelcomeMessage]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.WelcomeMessage" >}}
 [TerminalPromptMatch]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.TerminalPromptMatch" >}}
