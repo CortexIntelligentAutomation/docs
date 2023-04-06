@@ -9,7 +9,7 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Ssh.SshLogs)</p>
 
-The `SshLogs` data type is used to represent the 'WelcomeMessage' returned from the host; the 'TeminalPromptMatch' found in the returned response; and the 'Logs' from the telnet execution.
+The `SshLogs` data type is used to represent the 'WelcomeMessage' returned from the host; the 'TeminalPromptMatch' found in the returned response; and the 'Logs' from the ssh execution.
 
 | | |
 |-|-|
