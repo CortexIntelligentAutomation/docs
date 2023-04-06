@@ -9,7 +9,7 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Telnet.TelnetLogs)</p>
 
-The `TelnetLogs` data type is used to represent the 'WelcomeMessage' returned from the host; the 'TeminalPromptMatch' found in the returned response; and the 'Logs' from the telnet execution.
+The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the host; the 'TeminalPromptMatch' found in the returned response; and the 'Logs' from the telnet execution.
 
 | | |
 |-|-|
@@ -26,7 +26,7 @@ The `TelnetLogs` data type is used to represent the 'WelcomeMessage' returned fr
 
 ### WelcomeMessage
 
-Represents the message retuned when first connecting to the host. It will return everything uptuntil the first termainal prompt match.
+Represents the message returned when first connecting to the host. It will return everything up until the first terminal prompt match.
 
 | | |
 |--------------------|---------------------------|
@@ -48,7 +48,7 @@ Represents the exact terminal prompt found in the response returned from the hos
 
 ### Logs
 
-Represents the details of the operations occuring during Telnet's execution.
+Represents the details of the operations occurring during Telnet's execution.
 
 | | |
 |--------------------|---------------------------|
@@ -107,6 +107,10 @@ None
 ### External Documentation
 
 None
+
+[Welcome Message Property]: {{< ref "#welcome-message" >}}
+
+[WelcomeMessage]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.WelcomeMessage" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
