@@ -316,7 +316,14 @@ For a full list of configuration settings please see [TelnetConfigurationSetting
 
 The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
 
-The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
+The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting e.g.
+
+```csharp
+ new Dictionary<string, EncryptableText> 
+ {
+   { "CancelCommand", "CtrlC" },
+}
+```
 
 The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
 
