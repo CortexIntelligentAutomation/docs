@@ -238,9 +238,31 @@ To change the default terminal type, use the TerminalType [Configuration Setting
 ```csharp
 new Dictionary<string, EncryptableText> 
 {
-    { "TerminalType", ""},
+    { "TerminalType", "10"},
 }
 ```
+
+### Terminal Size
+
+The default TerminalWidth and TerminalHeight is set by the host.
+
+To change the terminal window size, use the TerminalWidth and TerminalHeight [Configuration Settings][Configuration Settings Property] e.g.
+
+```csharp
+new Dictionary<string, EncryptableText> 
+{
+    { "TerminalWidth", "500"},
+    { "TerminalHeight", "50"},
+}
+```
+
+If TerminalWidth is set but not TerminalHeight, TerminalHeight defaults to 50.
+
+If TerminalHeight is set but not TerminalWidth, TerminalWidth defaults to 500.
+
+Depending on the [Host] you are connecting to, the values supported for TerminalWidth and TerminalHeight may differ. If values provided are invalid the host may return a response stating such.
+
+TerminalWidth and TerminalHeight must be positive [Int32] integers and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetClientException] will be thrown.
 
 ### Closing Sessions
 
