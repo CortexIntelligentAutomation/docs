@@ -124,11 +124,9 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 
 ```csharp
 new Dictionary<string, dynamic> {
-    { "TerminalWidth", 200 },
-    { "TerminalType", "vt100" },
     { "Timeout", 60 },
-    { "EndOfLineCharacters", "\r" },
-    { "CancelCommand", "\x03" },
+    { "EndOfLineCharacters", "\r\n" },
+    { "CancelCommand", "CtrlC" },
 }
 ```
 
@@ -175,8 +173,6 @@ The exceptions thrown by the block can be found below:
 || Thrown when the specified [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the specified [Port][TelnetSessionDetails Port] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the server host key has not been accepted. |
-|| Thrown when using [UserCredentials][], the specified domain, username or password within [Credentials][TelnetSessionDetails Credentials] is invalid. |
-|| Thrown when using [TelnetCertificateCredentials][], the specified Domain, Username, CertificatePath or CertificatePassword is invalid. |
 || Thrown when the [Host][TelnetSessionDetails Host] exits without using [Close Session][Close Session Property], returning the response received up to the point the host exited the session. |
 | [TelnetResponseException][] | Thrown if the specified [TerminalPrompt][TelnetSessionDetails TerminalPrompt] does not match the terminal prompt on the host causing the execution to timeout or the timeout was too short to allow for data to be received. |
 | [RegexMatchTimeoutException][] | Thrown when the execution time of the regular expression pattern-matching exceeds the time-out interval. |
@@ -204,18 +200,30 @@ For information on how to open a session, please see [Opening Sessions][].
 
 [TelnetLogs][] includes a TerminalPromptMatch property that represents any string within the returned logs that matches the TerminalPrompt property within the [TelnetSessionDetails][].
 
-Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further iput to the Telnet Command to navigate to the end of the prompt.
+Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further input to the Telnet Command to navigate to the end of the prompt.
+
+### Do, Dont, Will and Wont options
+
+Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings Property] with each as a key e.g
+
+```csharp
+new Dictionary<string, dynamic> {
+    { "Do", "0;24;33"},
+}
+```
+
+For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC].
 
 ### Known Limitations
 
 None
 
 [Command Property]: {{< ref "#command" >}}
-[Telnet Session Details Property]: {{< ref "#Telnet-session-details" >}}
+[Telnet Session Details Property]: {{< ref "#telnet-session-details" >}}
 [Close Session Property]: {{< ref "#close-session" >}}
 [Configuration Settings Property]: {{< ref "#configuration-settings" >}}
 [Response Property]: {{< ref "#response" >}}
-[Telnet Logs Property]: {{< ref "#Telnet-logs" >}}
+[Telnet Logs Property]: {{< ref "#telnet-logs" >}}
 
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
@@ -250,3 +258,5 @@ None
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+
+[TelnetRFC]: {{< url path ="RFC.Docs.Telnet.MainDoc" >}}
