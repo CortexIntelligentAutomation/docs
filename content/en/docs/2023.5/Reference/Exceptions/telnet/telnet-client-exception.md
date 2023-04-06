@@ -80,7 +80,7 @@ Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 ### Host Closed The Session
 
-A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provided has closed the session without using [CloseSession]. The response [link?] received up to the point the host exited the session will be returned.
+A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
 
 #### Message Format
 
@@ -130,27 +130,19 @@ For `TelnetClientException` there are the following categories:
 |-----------|------------|
 | Data Type | [String][] |
 
+### External Documentation
 
-
-
-
+None
 
 [Invalid Configuration Settings]: {{< ref "#invalid-configuration-settings">}}
 [Invalid Port]: {{< ref "#invalid-port">}}
 [Invalid Host]: {{< ref "#invalid-host">}}
 [Host Closed The Session]: {{< ref "#host-closed-the-session">}}
 
-
-
-
-
-
 [Category]: {{< ref "#category" >}}
-
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-
 
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
 [Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
@@ -158,3 +150,4 @@ For `TelnetClientException` there are the following categories:
 
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
 [CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
+[Response]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.Response" >}}
