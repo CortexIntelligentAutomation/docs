@@ -19,7 +19,7 @@ The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Mes
 | **Alias:**             | N/A                                                    |
 | **Description:**       | `The TelnetLogs that is returned and contains the welcomeMessage, terminalPromptMatch and logs.` |
 | **Default Value:**     | null                                                   |
-| **Can be used as:**    | `TODO`, `Object`, `dynamic`                 |
+| **Can be used as:**    | `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
 ## Properties
