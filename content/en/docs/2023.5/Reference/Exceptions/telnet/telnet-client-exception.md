@@ -138,6 +138,13 @@ The URL for the relevant section of this exception's help page.
 |-----------|------------|
 | Data Type | [String][] |
 
+## Remarks
+
+### Known Limitations
+
+None
+
+
 ### External Documentation
 
 None
