@@ -116,14 +116,14 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 
 |||
 |----------|----------|
-| Data Type | [IDictionary][]&lt;[String][], [dynamic][]&gt; |
+| Data Type | [IDictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
-| Default Value | [IDictionary][]&lt;[String][], [dynamic][]&gt; with value shown below: |
+| Default Value | [IDictionary][]&lt;[String][], [EncryptableText][]&gt; with value shown below: |
 
 ```csharp
-new Dictionary<string, dynamic> {
+new Dictionary<string, EncryptableText> {
     { "Timeout", 60 },
     { "EndOfLineCharacters", "\r\n" },
     { "CancelCommand", "CtrlC" },
@@ -373,7 +373,6 @@ None
 [TelnetLogs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.MainDoc" >}}
 
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
-[dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
