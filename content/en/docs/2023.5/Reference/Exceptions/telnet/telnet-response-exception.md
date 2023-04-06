@@ -10,18 +10,7 @@ description: "Exception thrown when an error occurs from the Telnet response."
 
 Exception thrown when an error occurs from the Telnet response.
 
-The format of the exception message is as follows:
-
-```json
-"TODO.
-Please click the HelpLink for more information on how to fix this."
-```
-
-## Description
-
-The exception thrown when an issue occurs while opening a session with a mail server.
-
-There are multiple reasons that this exception can be thrown:
+The reason that this exception can be thrown:
 
 - [Terminal Prompt Match Not Found][TerminalPromptMatchNotFound]
 
