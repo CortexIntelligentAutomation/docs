@@ -1456,8 +1456,8 @@
                     TerminalPrompt = "/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt"
                 [Cortex.Reference.DataTypes.Ssh.SshLogs]
                     MainDoc = "/docs/reference/data-types/ssh/sshlogs"
-                    WelcomeMessage = "/docs/reference/data-types/ssh/sshlogs/#welcomeMessage"
-                    TerminalPrompt = "/docs/reference/data-types/ssh/sshlogs/#terminalPromptMatch"
+                    WelcomeMessage = "/docs/reference/data-types/ssh/sshlogs/#welcomemessage"
+                    TerminalPromptMatch = "/docs/reference/data-types/ssh/sshlogs/#terminalpromptmatch"
                     Logs = "/docs/reference/data-types/ssh/sshlogs/#logs"
                 [Cortex.Reference.DataTypes.Ssh.Authentication]
                     MainDoc = "/docs/reference/data-types/ssh/authentication/"
@@ -1482,8 +1482,8 @@
                     TerminalPrompt = "/docs/reference/data-types/telnet/telnetsessiondetails/#terminalprompt"
                 [Cortex.Reference.DataTypes.Telnet.TelnetLogs]
                     MainDoc = "/docs/reference/data-types/telnet/telnetlogs"
-                    WelcomeMessage = "/docs/reference/data-types/telnet/telnetlogs/#welcomeMessage"
-                    TerminalPromptMatch = "/docs/reference/data-types/telnet/telnetlogs/#terminalPromptMatch"
+                    WelcomeMessage = "/docs/reference/data-types/telnet/telnetlogs/#welcomemessage"
+                    TerminalPromptMatch = "/docs/reference/data-types/telnet/telnetlogs/#terminalpromptmatch"
                     Logs = "/docs/reference/data-types/telnet/telnetlogs/#logs"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
