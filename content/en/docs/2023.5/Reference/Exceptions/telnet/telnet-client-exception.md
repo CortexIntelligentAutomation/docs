@@ -33,7 +33,7 @@ A [Category][] of `TelnetClientException` indicates that one or more settings in
 
 #### How to Fix
 
-Provide valid configuration setting with the correct name and type.
+Provide valid [ConfigurationSettings] with the correct name and type.
 
 ***
 
