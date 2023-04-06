@@ -16,7 +16,7 @@ description: "Executes a Telnet command on the specified host."
 
 Connects to a host using the [Telnet Session Details][Telnet Session Details Property], and executes a [Command][Command Property], returning the [Response][Response Property] and [Telnet Logs][Telnet Logs Property].
 
-[Close Session][Close Session Property] can be specified to choose whether the session on the host is closed or is kept open for use on subsequent Execute Telnet Command blocks.
+[Close Session][Close Session Property] can be specified to choose whether the session on the [Host] is closed or is kept open for use on subsequent Execute Telnet Command blocks.
 
 ## Examples
 
@@ -24,8 +24,8 @@ Connects to a host using the [Telnet Session Details][Telnet Session Details Pro
 
 This example will execute a [Command][Command Property] on the server with the following details:
 
-- Host -  `"localhost"`
-- Port -  `23`
+- [Host] -  `"localhost"`
+- [Port] -  `23`
 
 #### Properties
 
@@ -59,7 +59,7 @@ It also results in the variable `($)TelnetLogs` being updated to the following:
 ```json
 {
     "WelcomeMessage": "Welcome to Microsoft Telnet Server.",
-    "TerminalPromptMatch": "C:/Users/CortexTelentUser>",
+    "TerminalPromptMatch": "C:/Users/TelnetUser>",
     "Logs": "[Info] Connecting to Localhost.\r\n[Info] Connected to LocalHost.\r\n[Info] Welcome message received.\r\n[Info] Command sent.\r\n[Info] Terminal Prompt found.\r\n[Info] Disconnected from Localhost."
 }
 ```
@@ -116,14 +116,14 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 
 |||
 |----------|----------|
-| Data Type | [IDictionary][]&lt;[String][], [dynamic][]&gt; |
+| Data Type | [IDictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
-| Default Value | [IDictionary][]&lt;[String][], [dynamic][]&gt; with value shown below: |
+| Default Value | [IDictionary][]&lt;[String][], [EncryptableText][]&gt; with value shown below: |
 
 ```csharp
-new Dictionary<string, dynamic> {
+new Dictionary<string, EncryptableText> {
     { "Timeout", 60 },
     { "EndOfLineCharacters", "\r\n" },
     { "CancelCommand", "CtrlC" },
@@ -316,7 +316,14 @@ For a full list of configuration settings please see [TelnetConfigurationSetting
 
 The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
 
-The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
+The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting e.g.
+
+```csharp
+ new Dictionary<string, EncryptableText> 
+ {
+   { "CancelCommand", "CtrlC" },
+}
+```
 
 The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
 
@@ -366,6 +373,7 @@ None
 [TelnetSessionDetails Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [TelnetSessionDetails TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [Logs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.Logs" >}}
 [WelcomeMessage]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.WelcomeMessage" >}}
 [TerminalPromptMatch]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.TerminalPromptMatch" >}}
@@ -373,7 +381,6 @@ None
 [TelnetLogs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.MainDoc" >}}
 
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
-[dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
