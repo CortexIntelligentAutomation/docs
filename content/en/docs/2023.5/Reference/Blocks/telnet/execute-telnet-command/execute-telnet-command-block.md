@@ -202,6 +202,17 @@ For Windows machines before Windows Server 2019 or Windows 10 (build 1809) using
 
 The default port is 23.
 
+
+### Opening Sessions
+
+The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
+
+- If a session does not exist, a new session will be created, opened and used when the block runs.
+- If a session already exists but is closed, the session will be opened and used when the block runs.
+- If a session already exists and is open, the session will used the block runs.
+
+For information on how to explicitly close a session, please see [Closing Sessions][].
+
 ### Inactivity Timeout
 
 The default inactivity timeout is 60 seconds.
@@ -218,16 +229,6 @@ new Dictionary<string, EncryptableText>
 Timeout must be a positive [Int32] integer and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetResponseException] will be thrown.
 
 The inactivity timeout specifies the number of seconds after which to timeout. This is reset every time new data is received.
-
-### Opening Sessions
-
-The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
-
-- If a session does not exist, a new session will be created, opened and used when the block runs.
-- If a session already exists but is closed, the session will be opened and used when the block runs.
-- If a session already exists and is open, the session will used the block runs.
-
-For information on how to explicitly close a session, please see [Closing Sessions][].
 
 ### Closing Sessions
 
