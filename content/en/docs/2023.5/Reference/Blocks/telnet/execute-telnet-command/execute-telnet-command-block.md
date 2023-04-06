@@ -204,15 +204,47 @@ Some prompts within Telnet require multiple interactions before reaching the end
 
 ### Do, Dont, Will and Wont options
 
-Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings Property] with each as a key e.g
+Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings][Configuration Settings Property] with each as a key e.g
 
 ```csharp
-new Dictionary<string, dynamic> {
+new Dictionary<string, dynamic> 
+{
     { "Do", "0;24;33"},
 }
 ```
 
 For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC].
+
+### Configuration Settings
+
+[Configuration Settings][Configuration Settings Property] are in PascalCase e.g. "CloseStreamAfterTransfer".
+
+For a full list of configuration settings please see [TelnetConfigurationSettings].
+
+### Cancel Command
+
+- The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
+- The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting.
+- The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
+- If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
+- If CancelCommand is empty then its not sent to the host.
+
+### Proxies
+ Proxies can be set through the configuration settings e.g
+```csharp
+ new Dictionary<string, EncryptableText> 
+ {
+   { "FirewallHost", "FirewallHost.com" },
+   { "FirewallType", "3" },
+   { "FirewallPort", "1080" },
+}
+```
+
+Supported Proxy types include:
+- tunneling(1)
+- SOCKS4(2)
+- SOCKS5(3)
+- SOCKS4A(10)
 
 ### Known Limitations
 
@@ -227,6 +259,7 @@ None
 
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
+[Configuration Settings]: {{< ref "#configuration-settings" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
@@ -236,6 +269,7 @@ None
 [TelnetSessionDetails Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 [TelnetSessionDetails Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [TelnetSessionDetails TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [TelnetLogs]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetLogs.MainDoc" >}}
 
@@ -259,4 +293,6 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[TelnetRFC]: {{< url path ="RFC.Docs.Telnet.MainDoc" >}}
+[TelnetRFC]: {{< url path="RFC.Docs.Telnet.MainDoc" >}}
+[TelnetConfigurationSettings]: {{< url path="IPWorks.TelnetConfigurationSettings" >}}
+[CancelCommands]: {{< url path="CancelCommands.MainDoc" >}}
