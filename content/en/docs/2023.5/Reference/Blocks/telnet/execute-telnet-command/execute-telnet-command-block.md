@@ -144,7 +144,7 @@ The Telnet [Response][Response Property] that is returned from the execution of 
 
 ### Telnet Logs
 
-The [Telnet Logs][Telnet Logs Property] that is returned from the execution of the [Command][Command Property] on the host specified in the [Telnet Session Details][Telnet Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
+The [Telnet Logs][Telnet Logs Property] that are returned from the execution of the [Command][Command Property] on the host specified in the [Telnet Session Details][Telnet Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
 
 - [WelcomeMessage]
 - [TerminalPromptMatch]
@@ -172,7 +172,6 @@ The exceptions thrown by the block can be found below:
 | [TelnetClientException][] | Thrown when one or more settings in [Configuration Settings][Configuration Settings Property] are invalid. (includes a dictionary of SettingName: ExceptionMessage from IPWorksTelnetException) |
 || Thrown when the specified [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the specified [Port][TelnetSessionDetails Port] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
-|| Thrown when the server host key has not been accepted. |
 || Thrown when the [Host][TelnetSessionDetails Host] exits without using [Close Session][Close Session Property], returning the response received up to the point the host exited the session. |
 | [TelnetResponseException][] | Thrown if the specified [TerminalPrompt][TelnetSessionDetails TerminalPrompt] does not match the terminal prompt on the host causing the execution to timeout or the timeout was too short to allow for data to be received. |
 | [RegexMatchTimeoutException][] | Thrown when the execution time of the regular expression pattern-matching exceeds the time-out interval. |

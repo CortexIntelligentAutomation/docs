@@ -199,7 +199,7 @@ The SSH [Response][Response Property] that is returned from the execution of the
 
 ### Ssh Logs
 
-The [Ssh Logs][Ssh Logs Property] that is returned from the execution of the [Command][Command Property] on the host specified in the [Ssh Session Details][Ssh Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
+The [Ssh Logs][Ssh Logs Property] that are returned from the execution of the [Command][Command Property] on the host specified in the [Ssh Session Details][Ssh Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
 
 - WelcomeMessage
 - Logs

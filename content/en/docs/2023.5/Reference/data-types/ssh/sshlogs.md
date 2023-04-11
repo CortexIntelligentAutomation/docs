@@ -112,7 +112,7 @@ None
 [Terminal Prompt Match]: {{< ref "#terminalpromptmatch" >}}
 [Logs]: {{< ref "#logs" >}}
 
-[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Host]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.Host" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
