@@ -185,7 +185,7 @@ If the [Command][Command Property] is empty, it will act as an enter command on 
 
 ### Null or Empty Terminal Prompt
 
-If the [TerminalPrompt] is null or empty then it default to "(.*(~(.*[\r\n]?)\$|>))" (Windows and Linux friendly default).
+If the [TerminalPrompt] is null or empty then it default to `(.*(~(.*[\r\n]?)\$|>))` (Windows and Linux friendly default).
 
 ### Terminal Prompt Match
 
