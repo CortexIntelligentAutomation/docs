@@ -241,11 +241,11 @@ The exceptions thrown by the block can be found below:
 
 ### Opening Sessions
 
-The Execute Ssh Command block automatically handles creating and opening session for the specified [Ssh Session Details][Ssh Session Details Property] using the following rules:
+The Execute Ssh Command block automatically handles creating and opening a session for the specified [Ssh Session Details][Ssh Session Details Property] using the following rules:
 
 - If a session does not exist, a new session will be created, opened and used when the block runs.
 - If a session already exists but is closed, the session will be opened and used when the block runs.
-- If a session already exists and is open, the session will used the block runs.
+- If a session already exists and is open, the session will be used when the block runs.
 
 For information on how to explicitly close a session, please see [Closing Sessions][].
 
