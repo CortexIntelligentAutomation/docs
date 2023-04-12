@@ -324,7 +324,7 @@ The default cancel command is `Ctrl-C`. If the default does not work it can be s
 }
 ```
 
-The supported cancel commands are: `CtrlA`, `CtrlB`....TODO: finish 
+The supported cancel commands are: `CtrlA`, `CtrlB`, `CtrlC`,`CtrlD`,`CtrlE`,`CtrlF`,`CtrlG`,`CtrlH`,`CtrlI`,`CtrlJ`,`CtrlK`,`CtrlL`,`CtrlM`,`CtrlN`,`CtrlO`,`CtrlP`,`CtrlQ`,`CtrlR`,`CtrlS`,`CtrlT`,`CtrlU`,`CtrlV`,`CtrlW`,`CtrlX`,`CtrlY`,`CtrlZ`,`Ctrl[`,`Ctrl\`,`Ctrl]`,`Ctrl^`,`Ctrl_`,
 
 The above commands are also case insensitive and can be in various formats (e.g. `CtrlA` can also be specified as `ctrlA`, `Ctrl-A`, `Ctrl+A`).
 
