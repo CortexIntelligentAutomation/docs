@@ -1905,6 +1905,10 @@
     SshErrors = "https://cdn.nsoftware.com/help/IHF/cs/SSHClientConfig.htm"
     TelnetConfigurationSettings = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetConfig"
     TelnetFirewallTypes = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallType"
+    TelnetFirewallHost =  "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallHost"
+    TelnetFirewallPort = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallPort"
+    TelnetFirewallUser = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallUser"
+    TelnetFirewallPassword = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallPassword"
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
