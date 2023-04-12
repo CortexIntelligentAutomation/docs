@@ -324,14 +324,20 @@ The default cancel command is `Ctrl-C`. If the default does not work it can be s
 }
 ```
 
-The supported cancel commands are: `CtrlA`, `CtrlB`, `CtrlC`,`CtrlD`,`CtrlE`,`CtrlF`,`CtrlG`,`CtrlH`,`CtrlI`,`CtrlJ`,`CtrlK`,`CtrlL`,`CtrlM`,`CtrlN`,`CtrlO`,`CtrlP`,`CtrlQ`,`CtrlR`,`CtrlS`,`CtrlT`,`CtrlU`,`CtrlV`,`CtrlW`,`CtrlX`,`CtrlY`,`CtrlZ`,`Ctrl[`,`Ctrl\`,`Ctrl]`,`Ctrl^`,`Ctrl_`,
+The supported cancel commands are: `CtrlA`, `CtrlB`, `CtrlC`,`CtrlD`,`CtrlE`,`CtrlF`,`CtrlG`,`CtrlH`,`CtrlI`,`CtrlJ`,`CtrlK`,`CtrlL`,`CtrlM`,`CtrlN`,`CtrlO`,`CtrlP`,`CtrlQ`,`CtrlR`,`CtrlS`,`CtrlT`,`CtrlU`,`CtrlV`,`CtrlW`,`CtrlX`,`CtrlY`,`CtrlZ`,`Ctrl[`,`Ctrl\`,`Ctrl]`,`Ctrl^`,`Ctrl_`.
 
 The above commands are also case insensitive and can be in various formats (e.g. `CtrlA` can also be specified as `ctrlA`, `Ctrl-A`, `Ctrl+A`).
 
 If `CancelCommand` is empty then its not sent to the host.
 
 ### Proxies
+
+Communication via a proxy 
+
+The default port used to communicate is 1080.
+
  Proxies can be set through the configuration settings e.g
+
 ```csharp
  new Dictionary<string, EncryptableText> 
  {
@@ -341,11 +347,9 @@ If `CancelCommand` is empty then its not sent to the host.
 }
 ```
 
-Supported Proxy types include:
-- 1 (Tunneling)
-- 2 (SOCKS4)
-- 3 (SOCKS)
-- 10 (SOCKS4A)
+The above example shows how to connect through a `3` (SOCKS5) proxy hosted on `FirewallHost.com` and on port `1080` .
+
+For a full list of `FirewallTypes` please see [TelnetFirewallTypes][]
 
 ### Known Limitations
 
@@ -407,4 +411,5 @@ None
 [echo option]: {{< url path="RFC.Docs.Telnet.Options.Echo" >}}
 [binary transmission option]: {{< url path="RFC.Docs.Telnet.Options.BinaryTransmission" >}}
 [TelnetConfigurationSettings]: {{< url path="IPWorks.TelnetConfigurationSettings" >}}
+[TelnetFirewallTypes]: {{< url path="IPWorks.TelnetFirewallTypes" >}}
 [CancelCommands]: {{< url path="CancelCommands.MainDoc" >}}
