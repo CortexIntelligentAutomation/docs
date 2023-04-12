@@ -2153,9 +2153,10 @@
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
 [RFC]
-    [RFC.Docs]
-        [RFC.Docs.Telnet]
-        MainDoc = "https://www.rfc-editor.org/rfc/rfc854.html"
+    [RFC.Docs.Telnet.Options]
+    MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
+    Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
+    BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]

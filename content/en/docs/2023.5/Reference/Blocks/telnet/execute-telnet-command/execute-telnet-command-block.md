@@ -8,7 +8,7 @@ description: "Executes a Telnet command on the specified host."
 
 # {{% param title %}}
 
-<p class="namespace">("Cortex.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommandBlock)</p>
+<p class="namespace">(Cortex.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommandBlock)</p>
 
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future; this will include further examples and remarks.{{% /alert %}}
 
@@ -34,7 +34,7 @@ This example will execute a [Command][Command Property] on the server with the f
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
 | [Telnet Session Details][Telnet Session Details Property] | `($)TelnetSessionDetails` with value `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}`<br><br>In this example `($)TelnetSessionDetails` has been set up using the following [Expression][]:<br><br> `new TelnetSessionDetails("localhost", 23, @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)TelnetSessionDetails` is a variable of type [TelnetSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
-| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
+| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)ConfigurationSettings` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
 | [Telnet Logs][Telnet Logs Property] | `($)TelnetLogs`, with no value | `($)TelnetLogs` will be set to the type [TelnetLogs][] |
 
@@ -124,7 +124,7 @@ The [Configuration Settings][Configuration Settings Property] for the Telnet con
 
 ```csharp
 new Dictionary<string, EncryptableText> {
-    { "Timeout", 60 },
+    { "Timeout", "60" },
     { "EndOfLineCharacters", "\r\n" },
     { "CancelCommand", "CtrlC" },
 }
@@ -144,7 +144,7 @@ The Telnet [Response][Response Property] that is returned from the execution of 
 
 ### Telnet Logs
 
-The [Telnet Logs][Telnet Logs Property] that is returned from the execution of the [Command][Command Property] on the host specified in the [Telnet Session Details][Telnet Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
+The [Telnet Logs][Telnet Logs Property] that are returned from the execution of the [Command][Command Property] on the host specified in the [Telnet Session Details][Telnet Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
 
 - [WelcomeMessage]
 - [TerminalPromptMatch]
@@ -172,7 +172,6 @@ The exceptions thrown by the block can be found below:
 | [TelnetClientException][] | Thrown when one or more settings in [Configuration Settings][Configuration Settings Property] are invalid. (includes a dictionary of SettingName: ExceptionMessage from IPWorksTelnetException) |
 || Thrown when the specified [Host][TelnetSessionDetails Host] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
 || Thrown when the specified [Port][TelnetSessionDetails Port] within the [Telnet Session Details][Telnet Session Details Property] is invalid. |
-|| Thrown when the server host key has not been accepted. |
 || Thrown when the [Host][TelnetSessionDetails Host] exits without using [Close Session][Close Session Property], returning the response received up to the point the host exited the session. |
 | [TelnetResponseException][] | Thrown if the specified [TerminalPrompt][TelnetSessionDetails TerminalPrompt] does not match the terminal prompt on the host causing the execution to timeout or the timeout was too short to allow for data to be received. |
 | [RegexMatchTimeoutException][] | Thrown when the execution time of the regular expression pattern-matching exceeds the time-out interval. |
@@ -186,7 +185,7 @@ If the [Command][Command Property] is empty, it will act as an enter command on 
 
 ### Null or Empty Terminal Prompt
 
-If the [TerminalPrompt] is null or empty then it default to "(.*(~(.*[\r\n]?)\$|>))" (Windows and Linux friendly default).
+If the [TerminalPrompt] is null or empty then it defaults to `(.*(~(.*[\r\n]?)\$|>))` (Windows and Linux friendly default).
 
 ### Terminal Prompt Match
 
@@ -206,11 +205,11 @@ The default port is 23.
 
 ### Opening Sessions
 
-The Execute Telnet Command block automatically handles creating and opening session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
+The Execute Telnet Command block automatically handles creating and opening a session for the specified [Telnet Session Details][Telnet Session Details Property] using the following rules:
 
 - If a session does not exist, a new session will be created, opened and used when the block runs.
 - If a session already exists but is closed, the session will be opened and used when the block runs.
-- If a session already exists and is open, the session will used the block runs.
+- If a session already exists and is open, the session will be used when the block runs.
 
 For information on how to explicitly close a session, please see [Closing Sessions][].
 
@@ -222,9 +221,13 @@ For information on how to open a session, please see [Opening Sessions][].
 
 ### Inactivity Timeout
 
+The inactivity timeout specifies the number of seconds after which to timeout. This is reset every time new data is received.
+
+Timeout must be a positive [Int32] integer and smaller or equal to [Int32.MaxValue][] (`2147483647`), otherwise a [TelnetResponseException] will be thrown.
+
 The default inactivity timeout is 60 seconds.
 
-To change the default inactivity timeout, use the Timeout [Configuration Settings][Configuration Settings Property] e.g.
+To change the default inactivity timeout, use the `Timeout` [Configuration Settings][Configuration Settings Property] e.g.
 
 ```csharp
 new Dictionary<string, EncryptableText> 
@@ -233,28 +236,24 @@ new Dictionary<string, EncryptableText>
 }
 ```
 
-Timeout must be a positive [Int32] integer and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetResponseException] will be thrown.
-
-The inactivity timeout specifies the number of seconds after which to timeout. This is reset every time new data is received.
-
 ### Terminal Type
 
 The default terminal type is set by the [Host].
 
-To change the default terminal type, use the TerminalType [Configuration Settings][Configuration Settings Property] e.g.
+To change the default terminal type, use the `TerminalType` [Configuration Settings][Configuration Settings Property] e.g.
 
 ```csharp
 new Dictionary<string, EncryptableText> 
 {
-    { "TerminalType", "10"},
+    { "TerminalType", "vt100"},
 }
 ```
 
-### Terminal Size
+### Terminal Window Size
 
-The default TerminalWidth and TerminalHeight is set by the host.
+The default terminal window size is set by the [Host].
 
-To change the terminal window size, use the TerminalWidth and TerminalHeight [Configuration Settings][Configuration Settings Property] e.g.
+To change the terminal window size, use the `TerminalWidth` and `TerminalHeight` [Configuration Settings][Configuration Settings Property] e.g.
 
 ```csharp
 new Dictionary<string, EncryptableText> 
@@ -264,19 +263,19 @@ new Dictionary<string, EncryptableText>
 }
 ```
 
-If TerminalWidth is set but not TerminalHeight, TerminalHeight defaults to 50.
+If `TerminalWidth` is set but not `TerminalHeight`, `TerminalHeight` defaults to 50.
 
-If TerminalHeight is set but not TerminalWidth, TerminalWidth defaults to 500.
+If `TerminalHeight` is set but not `TerminalWidth`, `TerminalWidth` defaults to 500.
 
-Depending on the [Host] you are connecting to, the values supported for TerminalWidth and TerminalHeight may differ. If values provided are invalid the host may return a response stating such.
+Depending on the [Host] you are connecting to, the values supported for `TerminalWidth` and `TerminalHeight` may differ. If values provided are invalid the host may return a response stating such.
 
-TerminalWidth and TerminalHeight must be positive [Int32] integers and smaller or equal to [Int32].MaxValue (2147483647). Otherwise a [TelnetClientException] will be thrown.
+`TerminalWidth` and `TerminalHeight` must be positive [Int32] integers and smaller or equal to [Int32.MaxValue][] (`2147483647`), otherwise a [TelnetClientException] will be thrown.
 
 ### End Of Line Characters
 
-The EndOfLineCharacters are appended to the [Command][Command Property]. On certain hosts it is required to send one or more characters e.g '\r or '\r\n'. EndOfLineCharacters can be used to achieve this.
+On certain hosts it is required to send one or more characters e.g. `\r` or `\r\n` after each command. End of line characters can be used to achieve this and are automatically appended to the [Command][Command Property].
 
-The default EndOfLineCharacters is '\r\n', which on most systems will ensure that the [Command][Command Property] is executed. If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "EndOfLineCharacters" setting e.g.
+The default end of line characters are `\r\n`, which on most systems will ensure that the [Command][Command Property] is executed. If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the `EndOfLineCharacters` setting e.g.
 
 ```csharp
 new Dictionary<string, EncryptableText> 
@@ -285,51 +284,51 @@ new Dictionary<string, EncryptableText>
 }
 ```
 
-If an invalid value is provided it will not execute the [Command] and timeout.
+If an invalid value is provided the [Command][Command Property] will not be executed and will timeout after the [Inactivity Timeout][] has been reached.
 
-### Using the TerminalPromptMatch Within TelnetLogs to Reach the End of a Prompt
+### Handling Commands That Return Interactive Prompts
 
-[TelnetLogs][] includes a [TerminalPromptMatch] property that represents any string within the returned logs that matches the TerminalPrompt property within the [TelnetSessionDetails][].
+Some commands can return interactive prompts (e.g. `press enter for more...`). In these cases, you must set the [TerminalPrompt][] within [SessionDetails][Telnet Session Details Property] to match the prompt which requires interaction, as well as the end of response prompt (e.g `press enter for more\.\.\.|(.*(~(.*[\r\n]?)\$|>))`). The [TerminalPromptMatch][] within the [TelnetLogs][] can then be used to determine whether the full response has been returned or not; if not, further commands need to be sent to continue receiving the response.
 
-Some prompts within Telnet require multiple interactions before reaching the end of the prompt. The [TerminalPromptMatch] can be used to make decisions or loop within a flow sending further input to the Telnet Command to navigate to the end of the prompt.
+### Do, Dont, Will and Wont Options
 
-### Do, Dont, Will and Wont options
+Do, Dont, Will and Wont codes allows negotiation between the client and the telnet server of options for the telnet connection.
 
-Do, Dont, Will and Wont codes are set as a semicolon separated list in the [Configuration Settings][Configuration Settings Property] with each as a key e.g
+They are set as a semicolon separated list in the [Configuration Settings][Configuration Settings Property] with each as a key e.g
 
 ```csharp
 new Dictionary<string, EncryptableText> 
 {
-    { "Do", "0;24;33"},
+    { "Do", "0;1"},
 }
 ```
 
-For a list of Do, Dont, Will and Wont codes please see the Telnet RFC [TelnetRFC].
+The above example shows how to enable the [echo option][] and [binary transmission option][]. For a full list of Do, Dont, Will and Wont codes please see [Telnet Options][].
 
 ### Configuration Settings
 
-[Configuration Settings][Configuration Settings Property] are in PascalCase e.g. "CloseStreamAfterTransfer".
+[Configuration Settings][Configuration Settings Property] are in PascalCase (e.g. `CloseStreamAfterTransfer`).
 
-For a full list of configuration settings please see [TelnetConfigurationSettings].
+For a full list of configuration settings please see [TelnetConfigurationSettings][].
 
 ### Cancel Command
 
-The CancelCommand is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
+The cancel command is sent to the [Host][TelnetSessionDetails Host] by Cortex when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
 
-The default CancelCommand is "Ctrl-C". If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the "CancelCommand" setting e.g.
+The default cancel command is `Ctrl-C`. If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the `CancelCommand` setting e.g.
 
 ```csharp
  new Dictionary<string, EncryptableText> 
- {
+{
    { "CancelCommand", "CtrlC" },
 }
 ```
 
-The CancelCommand is case insensitive and can be in various formats: "CtrlC", "Ctrl-C", "Ctrl+C".
+The supported cancel commands are: `CtrlA`, `CtrlB`, `CtrlC`,`CtrlD`,`CtrlE`,`CtrlF`,`CtrlG`,`CtrlH`,`CtrlI`,`CtrlJ`,`CtrlK`,`CtrlL`,`CtrlM`,`CtrlN`,`CtrlO`,`CtrlP`,`CtrlQ`,`CtrlR`,`CtrlS`,`CtrlT`,`CtrlU`,`CtrlV`,`CtrlW`,`CtrlX`,`CtrlY`,`CtrlZ`,`Ctrl[`,`Ctrl\`,`Ctrl]`,`Ctrl^`,`Ctrl_`,
 
-If the CancelCommands is a non-printable character please see [CancelCommands] for a full list of non-printable characters.
+The above commands are also case insensitive and can be in various formats (e.g. `CtrlA` can also be specified as `ctrlA`, `Ctrl-A`, `Ctrl+A`).
 
-If CancelCommand is empty then its not sent to the host.
+If `CancelCommand` is empty then its not sent to the host.
 
 ### Proxies
  Proxies can be set through the configuration settings e.g
@@ -362,6 +361,8 @@ None
 [Opening Sessions]: {{< ref "#opening-sessions" >}}
 [Closing Sessions]: {{< ref "#closing-sessions" >}}
 [Configuration Settings]: {{< ref "#configuration-settings" >}}
+[Inactivity Timeout]: {{< ref "#inactivity-timeout" >}}
+[Terminal Type]: {{< ref "#terminal-type" >}}
 [Command]: {{< ref "#configuration-settings" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
@@ -383,6 +384,7 @@ None
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Int32.MaxValue]: {{< url path="MSDocs.DotNet.Api.System.Int32.MaxValue" >}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
@@ -393,7 +395,7 @@ None
 [RegexParsingFailedException]: {{< url path="Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
 [TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 
-[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
+[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
@@ -401,6 +403,8 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[TelnetRFC]: {{< url path="RFC.Docs.Telnet.MainDoc" >}}
+[Telnet Options]: {{< url path="RFC.Docs.Telnet.Options.MainDoc" >}}
+[echo option]: {{< url path="RFC.Docs.Telnet.Options.Echo" >}}
+[binary transmission option]: {{< url path="RFC.Docs.Telnet.Options.BinaryTransmission" >}}
 [TelnetConfigurationSettings]: {{< url path="IPWorks.TelnetConfigurationSettings" >}}
 [CancelCommands]: {{< url path="CancelCommands.MainDoc" >}}
