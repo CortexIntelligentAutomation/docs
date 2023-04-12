@@ -332,11 +332,15 @@ If `CancelCommand` is empty then its not sent to the host.
 
 ### Proxies
 
-Communication via a proxy 
+Communication via a proxy can be achieved through the following  [Configuration Settings][Configuration Settings Property]:
 
-The default port used to communicate is 1080.
+- [FirewallType][TelnetFirewallTypes] - The type of proxy to connect through (required).
+- [FirewallHost][TelnetFirewallHost] - The name or IP address of the proxy (required).
+- [FirewallPort][TelnetFirewallPort] - The TCP port of the proxy (optional). The default depends on the [FirewallType][TelnetFirewallTypes] specified.
+- [FirewallUser][TelnetFirewallUser] - The username to use if the proxy requires authentication (optional).
+- [FirewallPassword][TelnetFirewallPassword] - The password to use if the proxy requires authentication (optional).
 
- Proxies can be set through the configuration settings e.g
+The below example shows how to connect through a SOCKS5 proxy (`3`) hosted on `FirewallHost.com` and on port `1080`.
 
 ```csharp
  new Dictionary<string, EncryptableText> 
@@ -346,10 +350,6 @@ The default port used to communicate is 1080.
    { "FirewallPort", "1080" },
 }
 ```
-
-The above example shows how to connect through a `3` (SOCKS5) proxy hosted on `FirewallHost.com` and on port `1080` .
-
-For a full list of `FirewallTypes` please see [TelnetFirewallTypes][]
 
 ### Known Limitations
 
@@ -412,4 +412,7 @@ None
 [binary transmission option]: {{< url path="RFC.Docs.Telnet.Options.BinaryTransmission" >}}
 [TelnetConfigurationSettings]: {{< url path="IPWorks.TelnetConfigurationSettings" >}}
 [TelnetFirewallTypes]: {{< url path="IPWorks.TelnetFirewallTypes" >}}
-[CancelCommands]: {{< url path="CancelCommands.MainDoc" >}}
+[TelnetFirewallHost]: {{< url path="IPWorks.TelnetFirewallHost" >}}
+[TelnetFirewallPort]: {{< url path="IPWorks.TelnetFirewallPort" >}}
+[TelnetFirewallUser]: {{< url path="IPWorks.TelnetFirewallUser" >}}
+[TelnetFirewallPassword]: {{< url path="IPWorks.TelnetFirewallPassword" >}}
