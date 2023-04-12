@@ -9,7 +9,7 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Telnet.TelnetLogs)</p>
 
-The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the [Host]; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the telnet execution.
+The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the [Host][]; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the telnet execution.
 
 | | |
 |-|-|
@@ -17,7 +17,7 @@ The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Mes
 | **Name:**              | `TelnetLogs`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetLogs`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | `The TelnetLogs that is returned and contains the welcomeMessage, terminalPromptMatch and logs.` |
+| **Description:**       | `The TelnetLogs that is returned and contains the WelcomeMessage, TerminalPromptMatch and Logs.` |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
@@ -26,24 +26,24 @@ The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Mes
 
 ### WelcomeMessage
 
-Represents the message returned when first connecting to the [Host]. It will return everything up until the first terminal prompt match.
+Represents the message returned when first connecting to the [Host][]. It will return everything up until the first terminal prompt match.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
-| Default Editor | [Expression][] |
+| Default Editor | [Literal][] |
 | Default Value | [String][] with no value |
 
 ### TerminalPromptMatch
 
-Represents the exact terminal prompt found in the response returned from the [Host] that was matched by the terminalPrompt regex.
+Represents the exact terminal prompt found in the response returned from the [Host][] that was matched by the [TerminalPrompt][] regex.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
-| Default Editor | [Expression][] |
+| Default Editor | [Literal][] |
 | Default Value | [String][] with no value |
 
 ### Logs
@@ -54,7 +54,7 @@ Represents the details of the operations occurring during Telnet's execution.
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
-| Default Editor | [Expression][] |
+| Default Editor | [Literal][] |
 | Default Value | [String][] with no value |
 
 ## Exceptions
@@ -69,20 +69,13 @@ The following table shows some of the ways that `TelnetLogs` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `TelnetLogs` constructor | `new TelnetLogs(welcomeMessage: "Welcome to Microsoft Telnet Server.", terminalPromptMatched: "C:/Users/CortexTelnetUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received."` | `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatched": "C:/Users/CortexTelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
-
-A `TelnetLogs` can also be created using the Literal Editor by filling in the necessary values for the following properties:
-
-TODO:
-
-| Property | Data Type | Example | Notes |
-|-|-|-|-|
+| Use a `TelnetLogs` constructor | `new TelnetLogs(welcomeMessage: "Welcome to Microsoft Telnet Server.", terminalPromptMatch: "C:/Users/CortexTelnetUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatch": "C:/Users/CortexTelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
 
 ### Convert TelnetLogs to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatched": "C:/Users/CortexTelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | `"{\r\n  \"WelcomeMessage\": \"Welcome to Microsoft Telnet Server.\",\r\n    \"TerminalPromptMatched\": \"C:/Users/CortexTelnetUser>\",\r\n    \"Logs\": \"[Info] Connecting to Localhost. \n[Info] Welcome message received.\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatch": "C:/Users/CortexTelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | `"{\r\n  \"WelcomeMessage\": \"Welcome to Microsoft Telnet Server.\",\r\n    \"TerminalPromptMatch\": \"C:/Users/CortexTelnetUser>\",\r\n    \"Logs\": \"[Info] Connecting to Localhost. \n[Info] Welcome message received.\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -98,7 +91,8 @@ None
 
 ### Related Data Types
 
-None
+- [String][]
+- [TelnetSessionDetails][]
 
 ### Related Concepts
 
@@ -118,7 +112,11 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+
+[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
+[TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
