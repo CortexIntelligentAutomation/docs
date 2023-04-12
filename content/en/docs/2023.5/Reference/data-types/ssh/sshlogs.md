@@ -17,7 +17,7 @@ The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Messag
 | **Name:**              | `SshLogs`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Ssh.SshLogs`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | `The SshLogs that is returned and contains the welcomeMessage, terminalPromptMatch and logs.` |
+| **Description:**       | `The SshLogs that is returned and contains the WelcomeMessage, TerminalPromptMatch and Logs.` |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
@@ -69,7 +69,7 @@ The following table shows some of the ways that `SshLogs` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `SshLogs` constructor | `new SshLogs(welcomeMessage: "Welcome to Microsoft Ssh Server.", terminalPromptMatched: "C:/Users/CortexSshUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received."` | `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatched": "C:/Users/CortexSshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
+| Use a `SshLogs` constructor | `new SshLogs(welcomeMessage: "Welcome to Microsoft Ssh Server.", terminalPromptMatch: "C:/Users/CortexSshUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatched": "C:/Users/CortexSshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
 
 A `SshLogs` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
