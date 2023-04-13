@@ -16,7 +16,7 @@ The reason that this exception can be thrown:
 
 ## Reasons
 
-### Terminal Prompt Match Not Found {#100}
+### Terminal Prompt Match Not Found {#telnetsessiondetailsterminalprompt}
 
 A [Category][] of `TelnetSessionDetails.TerminalPrompt` indicates that the [TerminalPrompt][] provided in the [TelnetSessionDetails][] could not be matched in the response returned from the host.
 
