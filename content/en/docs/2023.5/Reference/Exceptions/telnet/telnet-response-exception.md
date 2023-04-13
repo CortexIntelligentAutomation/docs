@@ -84,6 +84,7 @@ None
 ### Related Data Types
 
 - [TelnetSessionDetails][]
+- [String][]
 
 ### Related Concepts
 
