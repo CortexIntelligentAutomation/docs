@@ -23,7 +23,7 @@ There are multiple reasons that this exception can be thrown:
 
 ### Invalid Configuration Settings
 
-A [Category][] of `TelnetClientException` indicates that one or more settings in [ConfigurationSettings] are invalid.
+A [Category][] of `ConfigurationSettings` indicates that one or more settings in [ConfigurationSettings] are invalid.
 
 #### Message Format
 
@@ -122,7 +122,7 @@ The category of the exception, which is used to categorise an exception if there
 
 For `TelnetClientException` there are the following categories:
 
-- `TelnetClientException`
+- `ConfigurationSettings`
 - `TelnetSessionDetails`
 - `TelnetSessionDetails.Host`
 
