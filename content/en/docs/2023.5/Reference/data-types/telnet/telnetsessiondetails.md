@@ -31,17 +31,17 @@ The Host is used to define the address of the server to connect to. The value of
 
 A server address can typically be represented in one of the following formats:
 
-- Fully Qualified Domain Name (e.g. `"machine.domain.com"`)
-- Machine name (e.g. `"server1"`)
-- IP address (e.g. `"127.0.0.1"`)
-- Localhost (e.g. `"localhost"`)
+- Fully Qualified Domain Name (e.g. `machine.domain.com`)
+- Machine name (e.g. `server1`)
+- IP address (e.g. `127.0.0.1`)
+- Localhost (e.g. `localhost`)
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [EncryptableText][] with value `""` |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### Port
 
@@ -63,7 +63,7 @@ The regex used to match the host's terminal prompt.
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [String][] with value `"(.*(~(.*[\r\n]?)\$|>))"`: |
+| Default Value | [String][] with value `$@"(.*(~(.*[\r\n]?)\$|>))"`: |
 
 ## Remarks
 
@@ -73,13 +73,13 @@ The following table shows some of the ways that `TelnetSessionDetails` can be cr
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `TelnetSessionDetails` constructor | `new TelnetSessionDetails(host: "localhost", port: 23, terminalPrompt: "(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 465, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}` | N/A  | See [Convert Object To Json][] |
+| Use a `TelnetSessionDetails` constructor | `new TelnetSessionDetails(host: "localhost", port: 23, terminalPrompt: $@"(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 465, "TerminalPrompt": $@"(.*(~(.*[\r\n]?)\$\|>))"}` | N/A  | See [Convert Object To Json][] |
 
 ### Convert TelnetSessionDetails to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 465, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n    \"Port\": 23,\r\n    \"TerminalPrompt\": \"(.*(~(.*[\r\n]?)\$\|>))\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 465, "TerminalPrompt": $@"(.*(~(.*[\r\n]?)\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n    \"Port\": 23,\r\n    \"TerminalPrompt\": $@\"(.*(~(.*[\r\n]?)\$\|>))\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -96,6 +96,8 @@ None
 ### Related Data Types
 
 - [EncryptableText][]
+- [String][]
+- [Int32][]
 
 ### Related Concepts
 
