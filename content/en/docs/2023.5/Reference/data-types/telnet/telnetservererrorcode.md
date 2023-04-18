@@ -53,7 +53,7 @@ The following table shows some of the ways that `TelnetServerErrorCode` can be c
 | Use `Enum.Parse` | `(TelnetServerErrorCode)Enum.Parse(typeof(TelnetServerErrorCode), "HostDisconnect")` | `TelnetServerErrorCode.HostDisconnect`| Expression | Parses `"HostDisconnect"` and converts it to `TelnetServerErrorCode.InvalidPort`. See [Enum.Parse][] |
 | Use `Enum.ToObject` | `(TelnetServerErrorCode)Enum.ToObject(typeof(TelnetServerErrorCode), 100)` | `TelnetServerErrorCode.HostDisconnect`| Expression | Converts `100` to `TelnetServerErrorCode.HostDisconnect` value. See [Enum.ToObject][] |
 
-Please see [Instantiating an enumeration type][] for further information.
+Please see [Instantiating an enumeration type][] for further information. 
 
 ### Convert TelnetServerErrorCode to Text
 
@@ -65,6 +65,7 @@ The following table shows some of the ways that an `TelnetServerErrorCode` can b
 | Use `Convert.ToString` | `Convert.ToString(TelnetServerErrorCode.HostDisconnect)` | `"HostDisconnect"` | Expression | Converts `TelnetServerErrorCode.HostDisconnect` to `"HostDisconnect"`. See [Convert.ToString][] |
 | Use `Convert Object To Text` block | where `Object` property has a value of `TelnetServerErrorCode.HostDisconnect` | `"HostDisconnect"` | N/A  | Converts `TelnetServerErrorCode.HostDisconnect` to `"HostDisconnect"`. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block | where `Object` property has a value of `TelnetServerErrorCode.HostDisconnect` | `"100"` | N/A  | Converts `TelnetServerErrorCode.HostDisconnect` to `"100"`. See [Convert Object To Json][] |
+
 Please see [Formatting enumeration values][] for further information.
 
 
