@@ -48,15 +48,28 @@ The following table shows some of the ways that `TelnetServerErrorCode` can be c
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `EmailSessionErrorCode` expression | `TelnetServerErrorCode.HostDisconnect` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] ||
+| Use an `EmailSessionErrorCode` expression | `TelnetServerErrorCode.HostDisconnect` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] |
+| Use [Explicit Casting][] | `(TelnetServerErrorCode)100` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] |
+| Use `Enum.Parse` | `(TelnetServerErrorCode)Enum.Parse(typeof(TelnetServerErrorCode), "HostDisconnect")` | `TelnetServerErrorCode.HostDisconnect`| Expression | Parses `"HostDisconnect"` and converts it to `EmailSessionErrorCode.InvalidPort`. See [Enum.Parse][] |
+| Use `Enum.ToObject` | `(TelnetServerErrorCode)Enum.ToObject(typeof(TelnetServerErrorCode), 100)` | `TelnetServerErrorCode.HostDisconnect`| Expression | Converts `100` to `TelnetServerErrorCode.HostDisconnect` value. See [Enum.ToObject][] |
 
 Please see [Instantiating an enumeration type][] for further information.
 
 
-
+[Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
+[Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
+[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+[Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
+[Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
 
+[Enum.Parse]: {{< url path="MSDocs.DotNet.Api.System.Enum.Parse" >}}
+[Enum.ToObject]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToObject" >}}
+[Enum.ToString]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToString" >}}
+[Convert.ToInt32]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToInt32" >}}
+[Convert.ToString]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToString" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [TelnetServerException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException" >}}
