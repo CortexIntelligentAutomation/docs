@@ -30,9 +30,18 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 |                        | `Single` (e.g. `(Single)TelnetServerErrorCode.HostDisconnect` or `(System.Single)TelnetServerErrorCode.HostDisconnect` or `(float)TelnetServerErrorCode.HostDisconnect`)  |
 |                        | `Double` (e.g. `(Double)TelnetServerErrorCode.HostDisconnect` or `(System.Double)TelnetServerErrorCode.HostDisconnect` or `(double)TelnetServerErrorCode.HostDisconnect`)  |
 
+## Values
+
+### HostDisconnect
+
+| | |
+|-|-|
+| **Name:**    | HostDisconnect                                     |
+| **Value:**   | [Int32][] with value `100`                      |
+| **Notes:**   | Used when an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession]|
 
 
-
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
