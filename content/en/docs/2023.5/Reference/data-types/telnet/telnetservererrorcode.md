@@ -68,6 +68,15 @@ The following table shows some of the ways that an `TelnetServerErrorCode` can b
 
 Please see [Formatting enumeration values][] for further information.
 
+### Convert TelnetServerErrorCode to a Number
+
+The following table shows some of the ways that an `EmailSessionErrorCode` can be converted to a number.
+
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use [Explicit Casting][]              | `(Int32)TelnetServerErrorCode.HostDisconnect`   | `100` | Expression | [Casts][Explicit Casting] `TelnetServerErrorCode.HostDisconnect` to `100` |
+| Use `Convert.ToInt32`                 | `Convert.ToInt32(TelnetServerErrorCode.HostDisconnect)`   | `100` | Expression | Converts `TelnetServerErrorCode.HostDisconnect` to `100`. See [Convert.ToInt32][] |
+
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 [Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
