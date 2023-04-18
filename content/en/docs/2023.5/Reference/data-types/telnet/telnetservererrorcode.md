@@ -40,6 +40,20 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 | **Value:**   | [Int32][] with value `100`                      |
 | **Notes:**   | Used when an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession]|
 
+## Remarks
+
+### Create an TelnetServerErrorCode
+
+The following table shows some of the ways that `TelnetServerErrorCode` can be created.
+
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use an `EmailSessionErrorCode` expression | `TelnetServerErrorCode.HostDisconnect` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] ||
+
+Please see [Instantiating an enumeration type][] for further information.
+
+
+
 
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
