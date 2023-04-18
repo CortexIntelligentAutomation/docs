@@ -1,7 +1,7 @@
 ---
 title: "TelnetSessionDetails"
 linkTitle: "TelnetSessionDetails"
-description: "The data type representing configuration for executing telnet commands on a specified host."
+description: "Used to represent configuration for executing telnet commands on a specified host."
 ---
 
 # {{% param title %}}
@@ -10,15 +10,15 @@ description: "The data type representing configuration for executing telnet comm
 
 ## Summary
 
-The data type representing configuration for executing telnet commands on a specified host.
+The `TelnetSessionDetails` data type is used to represent configuration for executing telnet commands on a specified host.
 
 | | |
 |-|-|
-| **Category:**          | Data |
+| **Category:**          | Telnet |
 | **Name:**              | `TelnetSessionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The data type representing configuration for executing telnet commands on a specified host. |
+| **Description:**       | Configuration for executing telnet commands on a specified host. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `TelnetSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -31,17 +31,17 @@ The Host is used to define the address of the server to connect to. The value of
 
 A server address can typically be represented in one of the following formats:
 
-- Fully Qualified Domain Name (e.g. `machine.domain.com`)
-- Machine name (e.g. `server1`)
-- IP address (e.g. `127.0.0.1`)
-- Localhost (e.g. `localhost`)
+- Fully Qualified Domain Name (e.g. `"machine.domain.com"`)
+- Machine name (e.g. `"server1"`)
+- IP address (e.g. `"127.0.0.1"`)
+- Localhost (e.g. `"localhost"`)
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [EncryptableText][] with value `$@""` |
+| Default Value | [EncryptableText][] with value `""` |
 
 ### Port
 
@@ -52,7 +52,7 @@ The Port is used to define the port on the server to connect to.
 | Data Type | [Int32][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [Int32][] with value `22` |
+| Default Value | [Int32][] with value `23` |
 
 ### TerminalPrompt
 
@@ -61,9 +61,9 @@ The regex used to match the host's terminal prompt.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Is [Advanced][] | `false` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | [String][] with value `$@"(.*(~(.*[\r\n]?)\$|>))"`: |
+| Default Value | [String][] with value `(.*(~(.*[\r\n]?)\$\|>))` |
 
 ## Remarks
 
@@ -73,13 +73,21 @@ The following table shows some of the ways that `TelnetSessionDetails` can be cr
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `TelnetSessionDetails` constructor | `new TelnetSessionDetails(host: "localhost", port: 23, terminalPrompt: $@"(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 465, "TerminalPrompt": $@"(.*(~(.*[\r\n]?)\$\|>))"}` | N/A  | See [Convert Object To Json][] |
+| Use a `TelnetSessionDetails` constructor | `new TelnetSessionDetails(host: "localhost", port: 23, terminalPrompt: $@"(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}` | Expression  |
+
+A `TelnetSessionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `Host` | `EncryptableText` | `"localhost"` | [Host][] defines the address of the server to connect to. |
+| `Port` | `Int32` | `23` | [Port][] defines the port on the server to connect to. |
+| `TerminalPrompt` | `String` | `(.*(~(.*[\r\n]?)\$\|>))` | [TerminalPrompt][] defines the regex used to match the host's terminal prompt. |
 
 ### Convert TelnetSessionDetails to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 465, "TerminalPrompt": $@"(.*(~(.*[\r\n]?)\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n    \"Port\": 23,\r\n    \"TerminalPrompt\": $@\"(.*(~(.*[\r\n]?)\$\|>))\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n  \"Port\": 23,\r\n  \"TerminalPrompt\": \"(.*(~(.*[\\\\r\\\\n]?)\\\\$\|>))\"\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -106,6 +114,10 @@ None
 ### External Documentation
 
 None
+
+[Host]: {{< ref "#host" >}}
+[Port]: {{< ref "#port" >}}
+[TerminalPrompt]: {{< ref "#TerminalPrompt" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}

@@ -1,16 +1,18 @@
 ---
 title: "TelnetResponseException"
 linkTitle: "TelnetResponseException"
-description: "Exception thrown when an error occurs from the Telnet response."
+description: "The exception thrown when an issue occurs returning the response from a telnet command."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Telnet.TelnetResponseException)</p>
 
-Exception thrown when an error occurs from the Telnet response.
+## Description
 
-The reason that this exception can be thrown:
+The exception thrown when an issue occurs returning the response from a telnet command.
+
+There is one reason that this exception can be thrown:
 
 - [Terminal Prompt Match Not Found][TerminalPromptMatchNotFound]
 
@@ -18,7 +20,7 @@ The reason that this exception can be thrown:
 
 ### Terminal Prompt Match Not Found {#telnetsessiondetailsterminalprompt}
 
-A [Category][] of `TelnetSessionDetails.TerminalPrompt` indicates that the [TerminalPrompt][] provided in the [TelnetSessionDetails][] could not be matched in the response returned from the host.
+A [Category][] of `TelnetSessionDetails.TerminalPrompt` indicates that the [TerminalPrompt][] provided in the [TelnetSessionDetails][] could not be matched in the response returned from the [Host][].
 
 #### Message Format
 
@@ -31,7 +33,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to Fix
 
-Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the host.
+Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the [Host][].
 
 ***
 
@@ -98,11 +100,12 @@ None
 
 None
 
-[TerminalPromptMatchNotFound]: {{< ref "#100">}}
+[TerminalPromptMatchNotFound]: {{< ref "#telnetsessiondetailsterminalprompt">}}
 [Message]: {{< ref "#message" >}}
 [Category]: {{< ref "#category" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
 [TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}

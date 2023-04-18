@@ -1,7 +1,7 @@
 ---
 title: "TelnetLogs"
 linkTitle: "TelnetLogs"
-description: "Used to represent logs returned by an Telnet Command."
+description: "Used to represent logs returned by a telnet command."
 weight: 1
 ---
 

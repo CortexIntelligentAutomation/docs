@@ -1,7 +1,7 @@
 ---
 title: "TelnetClientException"
 linkTitle: "TelnetClientException"
-description: "Exception thrown when an error occurs from the Telnet object."
+description: "The exception thrown when an issue occurs from the Telnet object."
 ---
 
 # {{% param title %}}
@@ -14,26 +14,30 @@ Exception thrown when an error occurs from the Telnet object.
 
 There are multiple reasons that this exception can be thrown:
 
-- [Invalid Configuration Settings]
-- [Invalid Port]
 - [Invalid Host]
+- [Invalid Port]
+- [Invalid Configuration Settings]
 - [Host Closed The Session]
 
 ## Reasons
 
-### Invalid Configuration Settings
+### Invalid Host
 
-A [Category][] of `ConfigurationSettings` indicates that one or more settings in [ConfigurationSettings] are invalid.
+A [Category][] of `TelnetSessionDetails` indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
 
 #### Message Format
 
 ```json
-"'Configuration Settings' contains one or more invalid settings. Please click the HelpLink for more information on how to fix this."
+"A connection could not be established between the server where the Cortex Flow Execution Service is running ('<server>') and the host.\r\nPlease click the HelpLink for more information on how to fix this."
 ```
+
+where:
+
+- `<server>` is the server where the Cortex Flow Execution Service is running on.
 
 #### How to Fix
 
-Provide valid [ConfigurationSettings] with the correct name and value.
+Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 ***
 
@@ -58,23 +62,19 @@ Provide a valid [Port][] between the [Int32][] values 1 and 65535 in the [Telnet
 
 ***
 
-### Invalid Host
+### Invalid Configuration Settings
 
-A [Category][] of `TelnetSessionDetails` indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
+A [Category][] of `ConfigurationSettings` indicates that one or more settings in [ConfigurationSettings] are invalid.
 
 #### Message Format
 
 ```json
-"A connection could not be established between the server where the Cortex Flow Execution Service is running ('<server>') and the host.\r\nPlease click the HelpLink for more information on how to fix this."
+"'Configuration Settings' contains one or more invalid settings. Please click the HelpLink for more information on how to fix this."
 ```
-
-where:
-
-- `<server>` is the server where the Cortex Flow Execution Service is running on.
 
 #### How to Fix
 
-Provide a valid [Host][] in the [TelnetSessionDetails][].
+Provide valid [ConfigurationSettings] with the correct name and value.
 
 ***
 

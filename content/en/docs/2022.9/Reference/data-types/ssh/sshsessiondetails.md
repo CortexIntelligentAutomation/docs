@@ -81,9 +81,9 @@ The regex used to match the host's terminal prompt.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Is [Advanced][] | `false` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | [String][] with value `"(.*(~(.*[\r\n]?)\$|>))"`: |
+| Default Value | [String][] with value `(.*(~(.*[\r\n]?)\$\|>))` |
 
 ## Remarks
 
