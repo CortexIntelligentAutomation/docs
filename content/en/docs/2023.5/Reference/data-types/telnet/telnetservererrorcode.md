@@ -34,5 +34,7 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 
 
 
-
-[TelnetResponseException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[TelnetServerException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException" >}}
+[System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
