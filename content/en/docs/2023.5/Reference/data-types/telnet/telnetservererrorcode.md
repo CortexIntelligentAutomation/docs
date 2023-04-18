@@ -70,21 +70,50 @@ Please see [Formatting enumeration values][] for further information.
 
 ### Convert TelnetServerErrorCode to a Number
 
-The following table shows some of the ways that an `EmailSessionErrorCode` can be converted to a number.
+The following table shows some of the ways that an `TelnetServerErrorCode` can be converted to a number.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use [Explicit Casting][]              | `(Int32)TelnetServerErrorCode.HostDisconnect`   | `100` | Expression | [Casts][Explicit Casting] `TelnetServerErrorCode.HostDisconnect` to `100` |
 | Use `Convert.ToInt32`                 | `Convert.ToInt32(TelnetServerErrorCode.HostDisconnect)`   | `100` | Expression | Converts `TelnetServerErrorCode.HostDisconnect` to `100`. See [Convert.ToInt32][] |
 
+### Property Editor Support
+
+- The Expression Editor is available for [Input][] properties where the data type is `TelnetServerErrorCode`.
+- The Literal Editor is available for [Input][] properties where the data type is `TelnetServerErrorCode`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `TelnetServerErrorCode`.
+
+### Known Limitations
+
+None
+
+## See Also
+
+### Related Data Types
+
+- [TelnetServerException][]
+- [Int32][]
+- [String][]
+
+### Related Concepts
+
+- [Explicit Casting][]
+- [Working with Enums][]
+
+### External Documentation
+
+- [System.Enum][]
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 [Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
-[Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
 [Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
+
+[Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
 [CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
