@@ -1680,6 +1680,7 @@
                 MainDoc = "/docs/reference/exceptions/telnet/"
                 TelnetClientException = "/docs/reference/exceptions/telnet/telnet-client-exception/"
                 TelnetResponseException = "/docs/reference/exceptions/telnet/telnet-response-exception/"
+                TelnetServerException = "/docs/reference/exceptions/telnet/telnet-server-exception/"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"

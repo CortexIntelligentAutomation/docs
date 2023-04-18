@@ -6,7 +6,7 @@ description: "Used to represent an error code explaining the reason an `TelnetSe
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTypes.Email.TelnetServerErrorCode)</p>
+<p class="namespace">(Cortex.DataTypes.Telnet.TelnetServerErrorCode)</p>
 
 ## Summary
 
@@ -16,16 +16,23 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 
 | | |
 |-|-|
-| **Category:**          | Email                                                  |
+| **Category:**          | Telnet                                                  |
 | **Name:**              | `TelnetServerErrorCode`                                |
-| **Full Name:**         | `Cortex.DataTypes.Email.TelnetServerErrorCode`         |
+| **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetServerErrorCode`         |
 | **Alias:**             | N/A                                                    |
 | **Description:**       | Error code explaining the reason an [TelnetServerException][] occurred. |
 | **Size:**              | `4` bytes                                              |
 | **Default Value:**     | `(TelnetServerErrorCode)0`                             |
 | **Can be used as:**    | `TelnetServerErrorCode`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)TelnetServerErrorCode.InvalidPort` or `(System.Int16)TelnetServerErrorCode.InvalidPort` or `(short)TelnetServerErrorCode.InvalidPort`)  |
-|                        | `Int32` (e.g. `(Int32)TelnetServerErrorCode.InvalidPort` or `(System.Int32)TelnetServerErrorCode.InvalidPort` or `(int)TelnetServerErrorCode.InvalidPort`)  |
-|                        | `Int64` (e.g. `(Int64)TelnetServerErrorCode.InvalidPort` or `(System.Int64)TelnetServerErrorCode.InvalidPort` or `(long)TelnetServerErrorCode.InvalidPort`)  |
-|                        | `Single` (e.g. `(Single)TelnetServerErrorCode.InvalidPort` or `(System.Single)TelnetServerErrorCode.InvalidPort` or `(float)TelnetServerErrorCode.InvalidPort`)  |
-|                        | `Double` (e.g. `(Double)TelnetServerErrorCode.InvalidPort` or `(System.Double)TelnetServerErrorCode.InvalidPort` or `(double)TelnetServerErrorCode.InvalidPort`)  |
+| **Can be cast to:**    | `Int16` (e.g. `(Int16)TelnetServerErrorCode.HostDisconnect` or `(System.Int16)TelnetServerErrorCode.HostDisconnect` or `(short)TelnetServerErrorCode.HostDisconnect`)  |
+|                        | `Int32` (e.g. `(Int32)TelnetServerErrorCode.HostDisconnect` or `(System.Int32)TelnetServerErrorCode.HostDisconnect` or `(int)TelnetServerErrorCode.HostDisconnect`)  |
+|                        | `Int64` (e.g. `(Int64)TelnetServerErrorCode.HostDisconnect` or `(System.Int64)TelnetServerErrorCode.HostDisconnect` or `(long)TelnetServerErrorCode.HostDisconnect`)  |
+|                        | `Single` (e.g. `(Single)TelnetServerErrorCode.HostDisconnect` or `(System.Single)TelnetServerErrorCode.HostDisconnect` or `(float)TelnetServerErrorCode.HostDisconnect`)  |
+|                        | `Double` (e.g. `(Double)TelnetServerErrorCode.HostDisconnect` or `(System.Double)TelnetServerErrorCode.HostDisconnect` or `(double)TelnetServerErrorCode.HostDisconnect`)  |
+
+
+
+
+
+
+[TelnetResponseException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException" >}}
