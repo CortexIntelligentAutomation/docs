@@ -414,4 +414,4 @@ None
 [TelnetFirewallPort]: {{< url path="IPWorks.TelnetFirewallPort" >}}
 [TelnetFirewallUser]: {{< url path="IPWorks.TelnetFirewallUser" >}}
 [TelnetFirewallPassword]: {{< url path="IPWorks.TelnetFirewallPassword" >}}
-[TelnetServerException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException" >}}
+[TelnetServerException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException.MainDoc" >}}

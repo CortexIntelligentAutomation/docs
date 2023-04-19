@@ -1681,7 +1681,11 @@
             [Cortex.Reference.Exceptions.Telnet]
                 MainDoc = "/docs/reference/exceptions/telnet/"
                 TelnetClientException = "/docs/reference/exceptions/telnet/telnet-client-exception/"
-                TelnetServerException = "/docs/reference/exceptions/telnet/telnet-server-exception/"
+                [Cortex.Reference.Exceptions.Telnet.TelnetServerException]
+                MainDoc = "/docs/reference/exceptions/telnet/telnet-server-exception/#100"
+                InvalidHost = "/docs/reference/exceptions/telnet/telnet-server-exception/#101"
+                InvalidPort = "/docs/reference/exceptions/telnet/telnet-server-exception/#102"
+                InvalidConfigurationSettings = "/docs/reference/exceptions/telnet/telnet-server-exception/#100"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"
