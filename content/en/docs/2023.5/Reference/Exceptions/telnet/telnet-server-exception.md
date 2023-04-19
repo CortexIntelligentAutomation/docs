@@ -74,7 +74,7 @@ The error code for the exception, which is used to indicate the reason that the 
 
 For `EmailSessionException` there are the following error codes:
 
-- [100][HostExitedTheSession] - indicates that the [Host][] provided has closed the session without using [CloseSession].
+- [100][HostDisconnected] - indicates that the [Host][] provided has closed the session without using [CloseSession].
 
 | | |
 |-----------|---------------------------|
@@ -119,6 +119,8 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Response]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.Response" >}}
+
 
 [CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
