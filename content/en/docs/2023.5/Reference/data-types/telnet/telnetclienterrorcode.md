@@ -38,7 +38,31 @@ The `TelnetClientErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | InvalidHost                                     |
 | **Value:**   | [Int32][] with value `100`                      |
-| **Notes:**   | Used when an [TelnetClientException][] occurred due to the [Host][] provided exiting the session without using [CloseSession]. See [InvalidHost][]|
+| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid [Host][] provided in the [TelnetSessionDetails][]. See [InvalidHost][]|
+
+### InvalidPort
+
+| | |
+|-|-|
+| **Name:**    | InvalidPort                                    |
+| **Value:**   | [Int32][] with value `101`                      |
+| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid [Port][] provided in the [TelnetSessionDetails][]. See [InvalidPort][]|
+
+### InvalidTerminalPrompt
+
+| | |
+|-|-|
+| **Name:**    | InvalidTerminalPrompt                                    |
+| **Value:**   | [Int32][] with value `102`                      |
+| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid [TerminalPrompt][] provided in the [TelnetSessionDetails][]. See [InvalidTerminalPrompt][]|
+
+### InvalidSetting
+
+| | |
+|-|-|
+| **Name:**    | InvalidSettings                                    |
+| **Value:**   | [Int32][] with value `200`                      |
+| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid setting provided in the [ConfigurationSettings][]. See [InvalidSettings][]|
 
 ## Remarks
 
@@ -126,6 +150,12 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
+
+[TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
+[Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
+[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
+[ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
+
 
 [TelnetClientException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.MainDoc" >}}
 [InvalidHost]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.InvalidHost" >}}
