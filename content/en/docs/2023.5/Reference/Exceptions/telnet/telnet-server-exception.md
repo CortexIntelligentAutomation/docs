@@ -14,11 +14,11 @@ The exception thrown when an issue occurs running commands on the telnet server.
 
 There is one reason that this exception can be thrown:
 
-- [Host Exited The Session][HostExitedTheSession]
+- [Host Disconnected][HostDisconnected]
 
 ## Reasons
 
-### Host Exited The Session {#100}
+### Host Disconnected {#100}
 
 A [Category][] of `TelnetSession` and an [ErrorCode][] of `100` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
 
@@ -113,7 +113,7 @@ None
 
 None
 
-[HostExitedTheSession]: {{< ref "#100">}}
+[HostDisconnected]: {{< ref "#100">}}
 [ErrorCode]: {{< ref "#error-code" >}}
 [Category]: {{< ref "#category" >}}
 
