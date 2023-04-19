@@ -38,7 +38,7 @@ The `TelnetClientErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | InvalidHost                                     |
 | **Value:**   | [Int32][] with value `100`                      |
-| **Notes:**   | Used when an [TelnetClientException][] occurred due to the [Host][] provided exiting the session without using [CloseSession]|
+| **Notes:**   | Used when an [TelnetClientException][] occurred due to the [Host][] provided exiting the session without using [CloseSession]. See [InvalidHost][]|
 
 ## Remarks
 
@@ -127,7 +127,8 @@ None
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
 
-[TelnetClientException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
-[InvalidHost]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
-[InvalidPort]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
-[InvalidPort]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
+[TelnetClientException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.MainDoc" >}}
+[InvalidHost]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.InvalidHost" >}}
+[InvalidPort]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.InvalidPort" >}}
+[InvalidTerminalPrompt]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.InvalidTerminalPrompt" >}}
+[InvalidSettings]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.InvalidSettings" >}}
