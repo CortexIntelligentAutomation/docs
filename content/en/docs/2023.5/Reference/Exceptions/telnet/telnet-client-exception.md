@@ -16,14 +16,14 @@ There are multiple reasons that this exception can be thrown:
 
 - [Invalid Host]
 - [Invalid Port]
+- [Invalid Terminal Prompt]
 - [Invalid Configuration Settings]
-- [Host Closed The Session]
 
 ## Reasons
 
-### Invalid Host
+### Invalid Host {#100}
 
-A [Category][] of `TelnetSessionDetails` indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
+A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `100` indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
 
 #### Message Format
 
@@ -41,9 +41,9 @@ Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 ***
 
-### Invalid Port
+### Invalid Port {#101}
 
-A [Category][] of `TelnetSessionDetails` indicates that the [Port][] provided in the [TelnetSessionDetails][] is invalid.
+A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `101` indicates that the [Port][] provided in the [TelnetSessionDetails][] is invalid.
 
 #### Message Format
 
@@ -62,9 +62,26 @@ Provide a valid [Port][] between the [Int32][] values 1 and 65535 in the [Telnet
 
 ***
 
-### Invalid Configuration Settings
+### Invalid Terminal Prompt {#102}
 
-A [Category][] of `ConfigurationSettings` indicates that one or more settings in [ConfigurationSettings] are invalid.
+A [Category][] of `TelnetSessionDetails`and an [ErrorCode][] of `102` indicates that the [TerminalPrompt][] provided in the [TelnetSessionDetails][] could not be matched in the response returned from the [Host][].
+
+#### Message Format
+
+```json
+"The execution has timed-out because either the 'TerminalPrompt' was not found in the response or the timeout was too short to allow for the response to be returned.
+Please click the HelpLink for more information on how to fix this."
+```
+
+#### How to Fix
+
+Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the [Host][].
+
+***
+
+### Invalid Configuration Settings {#200}
+
+A [Category][] of `ConfigurationSettings`and an [ErrorCode][] of `200` indicates that one or more settings in [ConfigurationSettings] are invalid.
 
 #### Message Format
 
@@ -75,26 +92,6 @@ A [Category][] of `ConfigurationSettings` indicates that one or more settings in
 #### How to Fix
 
 Provide valid [ConfigurationSettings] with the correct name and value.
-
-***
-
-### Host Closed The Session
-
-A [Category][] of `TelnetSessionDetails.Host` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
-
-#### Message Format
-
-```json
-"The 'Host' '<host>' has closed the session. Any subsequent commands run on the session will result in a new one being created.\r\nPlease click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-- `<host>` is the address of the telnet server that the telnet session was opened with.
-
-#### How to Fix
-
-Check the [Host] telnet server configurations and that the telnet server is running.
 
 ***
 
@@ -122,9 +119,23 @@ The category of the exception, which is used to categorise an exception if there
 
 For `TelnetClientException` there are the following categories:
 
-- `ConfigurationSettings`
 - `TelnetSessionDetails`
-- `TelnetSessionDetails.Host`
+- `ConfigurationSettings`
+
+### Error Code
+
+The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.
+
+For `TelnetClientException` there are the following error codes:
+
+- [100][Invalid Host] - indicates that the [Host][] provided in the [TelnetSessionDetails][] is invalid.
+- [101][Invalid Port] - indicates that the [Port][] provided in the [TelnetSessionDetails][] is invalid.
+- [102][Invalid Terminal Prompt] - indicates that the [TerminalPrompt][] provided in the [TelnetSessionDetails][] could not be matched in the response returned from the [Host][].
+- [200][Invalid Configuration Settings] - indicates that one or more settings in [ConfigurationSettings] are invalid.
+
+| | |
+|-----------|---------------------------|
+| Data Type | [TelnetClientErrorCode][] |
 
 | | |
 |-----------|------------|
@@ -147,6 +158,7 @@ None
 ### Related Data Types
 
 - [TelnetSessionDetails][]
+- [TelnetClientErrorCode][]
 - [Int32][]
 - [String][]
 
@@ -162,23 +174,23 @@ None
 
 - IPWorks Telnet Error Codes: [IpWorksTelnetErrorCodes]
 
-[Invalid Configuration Settings]: {{< ref "#invalid-configuration-settings">}}
-[Invalid Port]: {{< ref "#invalid-port">}}
-[Invalid Host]: {{< ref "#invalid-host">}}
-[Host Closed The Session]: {{< ref "#host-closed-the-session">}}
+[Invalid Configuration Settings]: {{< ref "#200">}}
+[Invalid Terminal Prompt]: {{< ref "#102">}}
+[Invalid Port]: {{< ref "#101">}}
+[Invalid Host]: {{< ref "#100">}}
 
 [Category]: {{< ref "#category" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
-[Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
-[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
-
+[ErrorCode]: {{< ref "#error-code" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[Host]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Host" >}}
+[Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
+[TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
+[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
-[CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
-[Response]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.Response" >}}
 [Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
 [IpWorksTelnetErrorCodes]: {{< url path="IPWorks.TelnetErrors" >}}
