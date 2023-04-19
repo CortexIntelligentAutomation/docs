@@ -10,7 +10,7 @@ description: "The exception thrown when an issue occurs when running commands on
 
 ## Description
 
-The exception thrown when an issue occurs when running commands on the telnet server..
+The exception thrown when an issue occurs running commands on the telnet server.
 
 There is one reason that this exception can be thrown:
 
@@ -20,7 +20,7 @@ There is one reason that this exception can be thrown:
 
 ### Host Exited The Session {#100}
 
-A [Category][] of `TelnetSession` and an [Error Code][] of `100` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
+A [Category][] of `TelnetSession` and an [ErrorCode][] of `100` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
 
 #### Message Format
 
@@ -78,7 +78,7 @@ For `EmailSessionException` there are the following error codes:
 
 | | |
 |-----------|---------------------------|
-| Data Type | [EmailSessionErrorCode][] |
+| Data Type | [TelnetServerErrorCode][] |
 
 ### Help Link
 
@@ -122,6 +122,6 @@ None
 
 [CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
-[TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
+[TelnetServerErrorCode]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode.MainDoc" >}}
