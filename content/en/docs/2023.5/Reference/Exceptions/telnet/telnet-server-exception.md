@@ -1,7 +1,7 @@
 ---
 title: "TelnetServerException"
 linkTitle: "TelnetServerException"
-description: "The exception thrown when an issue occurs when running commands on the telnet server."
+description: "The exception thrown when an issue occurs on the telnet server."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "The exception thrown when an issue occurs when running commands on
 
 ## Description
 
-The exception thrown when an issue occurs running commands on the telnet server.
+The exception thrown when an issue occurs on the telnet server.
 
 There is one reason that this exception can be thrown:
 
