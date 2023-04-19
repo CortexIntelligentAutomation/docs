@@ -125,5 +125,9 @@ None
 [Convert.ToString]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToString" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[TelnetClientException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
+
+[TelnetClientException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
+[InvalidHost]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
+[InvalidPort]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
+[InvalidPort]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException" >}}
