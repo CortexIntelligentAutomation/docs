@@ -38,7 +38,7 @@ The `TelnetClientErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | InvalidHost                                     |
 | **Value:**   | [Int32][] with value `100`                      |
-| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid [Host][] provided in the [TelnetSessionDetails][]. See [InvalidHost][]|
+| **Notes:**   | Used when a [TelnetClientException][] occurred due to an invalid [Host][] provided in the [TelnetSessionDetails][]. See [InvalidHost][]|
 
 ### InvalidPort
 
@@ -46,7 +46,7 @@ The `TelnetClientErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | InvalidPort                                    |
 | **Value:**   | [Int32][] with value `101`                      |
-| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid [Port][] provided in the [TelnetSessionDetails][]. See [InvalidPort][]|
+| **Notes:**   | Used when a [TelnetClientException][] occurred due to an invalid [Port][] provided in the [TelnetSessionDetails][]. See [InvalidPort][]|
 
 ### InvalidTerminalPrompt
 
@@ -54,7 +54,7 @@ The `TelnetClientErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | InvalidTerminalPrompt                                    |
 | **Value:**   | [Int32][] with value `102`                      |
-| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid [TerminalPrompt][] provided in the [TelnetSessionDetails][]. See [InvalidTerminalPrompt][]|
+| **Notes:**   | Used when a [TelnetClientException][] occurred due to an invalid [TerminalPrompt][] provided in the [TelnetSessionDetails][]. See [InvalidTerminalPrompt][]|
 
 ### InvalidSetting
 
@@ -62,7 +62,7 @@ The `TelnetClientErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | InvalidSettings                                    |
 | **Value:**   | [Int32][] with value `200`                      |
-| **Notes:**   | Used when an [TelnetClientException][] occurred due to an invalid setting provided in the [ConfigurationSettings][]. See [InvalidSettings][]|
+| **Notes:**   | Used when a [TelnetClientException][] occurred due to an invalid setting provided in the [ConfigurationSettings][]. See [InvalidSettings][]|
 
 ## Remarks
 
@@ -72,7 +72,10 @@ The following table shows some of the ways that `TelnetClientErrorCode` can be c
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `TelnetClientErrorCode` expression | `TelnetClientErrorCode.InvalidHost` | `TelnetClientErrorCode.InvalidHost`| Expression | Indicates an [TelnetClientException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] |
+| Use an `TelnetClientErrorCode` expression | `TelnetClientErrorCode.InvalidHost` | `TelnetClientErrorCode.InvalidHost`| Expression | Indicates a [TelnetClientException][] occurred due to an invalid [Host][] provided in the [TelnetSessionDetails][] |
+|| `TelnetClientErrorCode.InvalidPort` | `TelnetClientErrorCode.InvalidPort`| Expression | Indicates a [TelnetClientException][] occurred due to an invalid [Port][] provided in the [TelnetSessionDetails][] |
+|| `TelnetClientErrorCode.InvalidTerminalPrompt` | `TelnetClientErrorCode.InvalidTerminalPrompt`| Expression | a [TelnetClientException][] occurred due to an invalid [TerminalPrompt][] provided in the [TelnetSessionDetails][] |
+|| `TelnetClientErrorCode.InvalidSettings` | `TelnetClientErrorCode.InvalidSettings`| Expression | Indicates a [TelnetClientException][] occurred due to an invalid setting provided in the [ConfigurationSettings][] |
 | Use [Explicit Casting][] | `(TelnetClientErrorCode)100` | `TelnetClientErrorCode.InvalidHost`| Expression | Indicates an [TelnetClientException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] |
 | Use `Enum.Parse` | `(TelnetClientErrorCode)Enum.Parse(typeof(TelnetClientErrorCode), "InvalidHost")` | `TelnetClientErrorCode.InvalidHost`| Expression | Parses `"InvalidHost"` and converts it to `TelnetClientErrorCode.InvalidPort`. See [Enum.Parse][] |
 | Use `Enum.ToObject` | `(TelnetClientErrorCode)Enum.ToObject(typeof(TelnetClientErrorCode), 100)` | `TelnetClientErrorCode.InvalidHost`| Expression | Converts `100` to `TelnetClientErrorCode.InvalidHost` value. See [Enum.ToObject][] |
