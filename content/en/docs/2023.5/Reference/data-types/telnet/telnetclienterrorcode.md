@@ -111,7 +111,9 @@ The following table shows some of the ways that an `TelnetClientErrorCode` can b
 || where `Object` property has a value of `TelnetClientErrorCode.InvalidTerminalPrompt` | `"InvalidTerminalPrompt"` | N/A  | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"InvalidPort"`. See [Convert Object To Text][] |
 || where `Object` property has a value of `TelnetClientErrorCode.InvalidSettings` | `"InvalidSettings"` | N/A  | Converts `TelnetClientErrorCode.InvalidSettings` to `"InvalidSettings"`. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"100"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"100"`. See [Convert Object To Json][] |
-
+|| where `Object` property has a value of `TelnetClientErrorCode.InvalidPort` | `"101"` | N/A  | Converts `TelnetClientErrorCode.InvalidPort` to `"101"`. See [Convert Object To Json][] |
+|| where `Object` property has a value of `TelnetClientErrorCode.InvalidTerminalPrompt` | `"102"` | N/A  | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"102"`. See [Convert Object To Json][] |
+|| where `Object` property has a value of `TelnetClientErrorCode.InvalidSettings` | `"200"` | N/A  | Converts `TelnetClientErrorCode.InvalidSettings` to `"200"`. See [Convert Object To Json][] |
 Please see [Formatting enumeration values][] for further information.
 
 ### Convert TelnetClientErrorCode to a Number
