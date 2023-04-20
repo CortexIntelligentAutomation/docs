@@ -123,7 +123,13 @@ The following table shows some of the ways that an `TelnetClientErrorCode` can b
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use [Explicit Casting][]              | `(Int32)TelnetClientErrorCode.InvalidHost`   | `100` | Expression | [Casts][Explicit Casting] `TelnetClientErrorCode.InvalidHost` to `100` |
+|| `(Int32)TelnetClientErrorCode.InvalidPort`   | `101` | Expression | [Casts][Explicit Casting] `TelnetClientErrorCode.InvalidPort` to `101` |
+|| `(Int32)TelnetClientErrorCode.InvalidTerminalPrompt`   | `102` | Expression | [Casts][Explicit Casting] `TelnetClientErrorCode.InvalidTerminalPrompt` to `102` |
+|| `(Int32)TelnetClientErrorCode.InvalidSettings`   | `200` | Expression | [Casts][Explicit Casting] `TelnetClientErrorCode.InvalidSettings` to `200` |
 | Use `Convert.ToInt32`                 | `Convert.ToInt32(TelnetClientErrorCode.InvalidHost)`   | `100` | Expression | Converts `TelnetClientErrorCode.InvalidHost` to `100`. See [Convert.ToInt32][] |
+|| `Convert.ToInt32(TelnetClientErrorCode.InvalidPort)`   | `101` | Expression | Converts `TelnetClientErrorCode.InvalidPort` to `101`. See [Convert.ToInt32][] |
+|| `Convert.ToInt32(TelnetClientErrorCode.InvalidTerminalPrompt)`   | `102` | Expression | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `102`. See [Convert.ToInt32][] |
+|| `Convert.ToInt32(TelnetClientErrorCode.InvalidSettings)`   | `200` | Expression | Converts `TelnetClientErrorCode.InvalidSettings` to `200`. See [Convert.ToInt32][] |
 
 ### Property Editor Support
 
@@ -140,6 +146,7 @@ None
 ### Related Data Types
 
 - [TelnetClientException][]
+- [TelnetSessionDetails][]
 - [Int32][]
 - [String][]
 
@@ -179,7 +186,6 @@ None
 [Port]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.Port" >}}
 [TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
-
 
 [TelnetClientException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.MainDoc" >}}
 [InvalidHost]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetClientException.InvalidHost" >}}
