@@ -20,12 +20,13 @@ There is one reason that this exception can be thrown:
 
 ### Host Disconnected {#100}
 
-A [Category][] of `TelnetSession` and an [ErrorCode][] of `100` indicates that the [Host][] provided has closed the session without using [CloseSession]. The [Response] received up to the point the host exited the session will be returned.
+A [Category][] of `TelnetSession` and an [ErrorCode][] of `100` indicates that the [Host][] provided has disconnected from the session without using [CloseSession]. The [Response] received up to the point the [Host][] disconnected the session will be returned.
 
 #### Message Format
 
 ```json
-"The 'Host' '<host>' has closed the session. Any subsequent commands run on the session will result in a new one being created.\r\nPlease click the HelpLink for more information on how to fix this."
+"The 'Host' \"<host>\" has closed the session. Any subsequent commands run on the session will result in a new one being created. 
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
@@ -34,7 +35,7 @@ where:
 
 #### How to Fix
 
-Check the [Host] telnet server configurations and that the telnet server is running.
+Check the [Host] telnet server is running. If it is running please check you haven't sent it an `exit` command, as this will cause the exception. If the exception persists please troubleshoot common reasons for telnet servers disconnecting.
 
 ***
 
@@ -58,9 +59,9 @@ The exception message, providing information about the exception that occurred.
 
 ### Category
 
-The category of the exception, which is used to categorise an exception if there are multiple reasons that the exception can occur.
+The category of the exception, which is used to categorise an exception.
 
-For `TelnetServerException` there are the following categories:
+For `TelnetServerException` there is the following category:
 
 - `TelnetSession`
 
@@ -70,11 +71,11 @@ For `TelnetServerException` there are the following categories:
 
 ### Error Code
 
-The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.
+The error code for the exception, which is used to indicate the reason that the exception occurred.
 
-For `EmailSessionException` there are the following error codes:
+For `EmailSessionException` there is the following error code:
 
-- [100][HostDisconnected] - indicates that the [Host][] provided has closed the session without using [CloseSession].
+- [100][HostDisconnected] - indicates that the [Host][] provided has disconnected from the session without using [CloseSession].
 
 | | |
 |-----------|---------------------------|
@@ -99,6 +100,7 @@ None
 ### Related Data Types
 
 - [TelnetSessionDetails][]
+- [TelnetServerErrorCode][]
 - [String][]
 
 ### Related Concepts
@@ -107,11 +109,11 @@ None
 
 ### Related Blocks
 
-- [Execute Telnet Command Block][]
+- [Execute Telnet Command][]
 
 ### External Documentation
 
-- IPWorks Telnet Error Codes: [IpWorksTelnetErrorCodes]
+None
 
 [HostDisconnected]: {{< ref "#100">}}
 [ErrorCode]: {{< ref "#error-code" >}}
@@ -124,7 +126,7 @@ None
 [CloseSession]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.CloseSession" >}}
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
-[Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
+[Execute Telnet Command]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
 [TelnetServerErrorCode]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode.MainDoc" >}}
 
 [IpWorksTelnetErrorCodes]: {{< url path="IPWorks.TelnetErrors" >}}
