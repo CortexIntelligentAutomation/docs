@@ -193,4 +193,6 @@ None
 [TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
 [Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
+[TelnetClientErrorCode]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetClientErrorCode.MainDoc" >}}
+
 [IpWorksTelnetErrorCodes]: {{< url path="IPWorks.TelnetErrors" >}}

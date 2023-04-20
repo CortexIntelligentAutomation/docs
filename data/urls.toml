@@ -1488,8 +1488,10 @@
                     WelcomeMessage = "/docs/reference/data-types/telnet/telnetlogs/#welcomemessage"
                     TerminalPromptMatch = "/docs/reference/data-types/telnet/telnetlogs/#terminalpromptmatch"
                     Logs = "/docs/reference/data-types/telnet/telnetlogs/#logs"
-                 [Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode]
+                [Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode]
                     MainDoc = "/docs/reference/data-types/telnet/telnetservererrorcode"
+                [Cortex.Reference.DataTypes.Telnet.TelnetClientErrorCode]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetclienterrorcode"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
