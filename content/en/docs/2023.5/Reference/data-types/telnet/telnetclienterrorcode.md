@@ -80,7 +80,10 @@ The following table shows some of the ways that `TelnetClientErrorCode` can be c
 || `(TelnetClientErrorCode)101` | `TelnetClientErrorCode.InvalidPort`| Expression | Indicates a [TelnetClientException][] occurred due to an invalid [Port][] provided in the [TelnetSessionDetails][] |
 || `(TelnetClientErrorCode)102` | `TelnetClientErrorCode.InvalidTerminalPrompt`| Expression | Indicates a [TelnetClientException][] occurred due to an invalid [TerminalPrompt][] provided in the [TelnetSessionDetails][]|
 || `(TelnetClientErrorCode)200` | `TelnetClientErrorCode.InvalidSettings`| Expression | Indicates a [TelnetClientException][] occurred due to an invalid setting provided in the [ConfigurationSettings][]|
-| Use `Enum.Parse` | `(TelnetClientErrorCode)Enum.Parse(typeof(TelnetClientErrorCode), "InvalidHost")` | `TelnetClientErrorCode.InvalidHost`| Expression | Parses `"InvalidHost"` and converts it to `TelnetClientErrorCode.InvalidPort`. See [Enum.Parse][] |
+| Use `Enum.Parse` | `(TelnetClientErrorCode)Enum.Parse(typeof(TelnetClientErrorCode), "InvalidHost")` | `TelnetClientErrorCode.InvalidHost`| Expression | Parses `"InvalidHost"` and converts it to `TelnetClientErrorCode.InvalidHost`. See [Enum.Parse][] |
+|| `(TelnetClientErrorCode)Enum.Parse(typeof(TelnetClientErrorCode), "InvalidPort")` | `TelnetClientErrorCode.InvalidPort`| Expression | Parses `"InvalidPort"` and converts it to `TelnetClientErrorCode.InvalidPort`. See [Enum.Parse][] |
+|| `(TelnetClientErrorCode)Enum.Parse(typeof(TelnetClientErrorCode), "InvalidTerminalPrompt")` | `TelnetClientErrorCode.InvalidTerminalPrompt`| Expression | Parses `"InvalidTerminalPrompt"` and converts it to `TelnetClientErrorCode.InvalidTerminalPrompt`. See [Enum.Parse][] |
+|| `(TelnetClientErrorCode)Enum.Parse(typeof(TelnetClientErrorCode), "InvalidSettings")` | `TelnetClientErrorCode.InvalidSettings`| Expression | Parses `"InvalidSettings"` and converts it to `TelnetClientErrorCode.InvalidSettings`. See [Enum.Parse][] |
 | Use `Enum.ToObject` | `(TelnetClientErrorCode)Enum.ToObject(typeof(TelnetClientErrorCode), 100)` | `TelnetClientErrorCode.InvalidHost`| Expression | Converts `100` to `TelnetClientErrorCode.InvalidHost` value. See [Enum.ToObject][] |
 
 Please see [Instantiating an enumeration type][] for further information. 
