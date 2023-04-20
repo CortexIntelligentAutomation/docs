@@ -111,7 +111,7 @@ None
 
 ### External Documentation
 
-None
+- IPWorks Telnet Error Codes: [IpWorksTelnetErrorCodes]
 
 [HostDisconnected]: {{< ref "#100">}}
 [ErrorCode]: {{< ref "#error-code" >}}
@@ -126,3 +126,5 @@ None
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
 [TelnetServerErrorCode]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode.MainDoc" >}}
+
+[IpWorksTelnetErrorCodes]: {{< url path="IPWorks.TelnetErrors" >}}
