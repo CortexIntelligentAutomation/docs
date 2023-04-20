@@ -1690,6 +1690,7 @@
                     InvalidSettings = "/docs/reference/exceptions/telnet/telnet-client-exception/#200"
                 [Cortex.Reference.Exceptions.Telnet.TelnetServerException]
                     MainDoc = "/docs/reference/exceptions/telnet/telnet-server-exception/"
+                    HostDisconnected = "/docs/reference/exceptions/telnet/telnet-server-exception/#100"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"

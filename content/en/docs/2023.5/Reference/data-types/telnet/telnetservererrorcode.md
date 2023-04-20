@@ -38,7 +38,7 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | HostDisconnect                                     |
 | **Value:**   | [Int32][] with value `100`                      |
-| **Notes:**   | Used when an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession]. See []|
+| **Notes:**   | Used when an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession]. See [HostDisconnected][]|
 
 ## Remarks
 
@@ -126,4 +126,5 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [TelnetServerException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException.MainDoc" >}}
+[HostDisconnected]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException.HostDisconnected" >}}
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
