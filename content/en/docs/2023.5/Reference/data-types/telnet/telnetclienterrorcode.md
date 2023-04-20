@@ -107,6 +107,9 @@ The following table shows some of the ways that an `TelnetClientErrorCode` can b
 || `Convert.ToString(TelnetClientErrorCode.InvalidTerminalPrompt)` | `"InvalidTerminalPrompt"` | Expression | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"InvalidTerminalPrompt"`. See [Convert.ToString][] |
 || `Convert.ToString(TelnetClientErrorCode.InvalidSettings)` | `"InvalidSettings"` | Expression | Converts `TelnetClientErrorCode.InvalidSettings` to `"InvalidSettings"`. See [Convert.ToString][] |
 | Use `Convert Object To Text` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"InvalidHost"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"InvalidHost"`. See [Convert Object To Text][] |
+|| where `Object` property has a value of `TelnetClientErrorCode.InvalidPort` | `"InvalidPort"` | N/A  | Converts `TelnetClientErrorCode.InvalidPort` to `"InvalidPort"`. See [Convert Object To Text][] |
+|| where `Object` property has a value of `TelnetClientErrorCode.InvalidTerminalPrompt` | `"InvalidTerminalPrompt"` | N/A  | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"InvalidPort"`. See [Convert Object To Text][] |
+|| where `Object` property has a value of `TelnetClientErrorCode.InvalidSettings` | `"InvalidSettings"` | N/A  | Converts `TelnetClientErrorCode.InvalidSettings` to `"InvalidSettings"`. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"100"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"100"`. See [Convert Object To Json][] |
 
 Please see [Formatting enumeration values][] for further information.
