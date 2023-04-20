@@ -103,6 +103,9 @@ The following table shows some of the ways that an `TelnetClientErrorCode` can b
 || `TelnetClientErrorCode.InvalidTerminalPrompt.ToString()` | `"InvalidTerminalPrompt"` | Expression | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"InvalidTerminalPrompt"`. See [Enum.ToString][] |
 || `TelnetClientErrorCode.InvalidSettings.ToString()` | `"InvalidSettings"` | Expression | Converts `TelnetClientErrorCode.InvalidSettings` to `"InvalidSettings"`. See [Enum.ToString][] |
 | Use `Convert.ToString` | `Convert.ToString(TelnetClientErrorCode.InvalidHost)` | `"InvalidHost"` | Expression | Converts `TelnetClientErrorCode.InvalidHost` to `"InvalidHost"`. See [Convert.ToString][] |
+|| `Convert.ToString(TelnetClientErrorCode.InvalidPort)` | `"InvalidPort"` | Expression | Converts `TelnetClientErrorCode.InvalidPort` to `"InvalidPort"`. See [Convert.ToString][] |
+|| `Convert.ToString(TelnetClientErrorCode.InvalidTerminalPrompt)` | `"InvalidTerminalPrompt"` | Expression | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"InvalidTerminalPrompt"`. See [Convert.ToString][] |
+|| `Convert.ToString(TelnetClientErrorCode.InvalidSettings)` | `"InvalidSettings"` | Expression | Converts `TelnetClientErrorCode.InvalidSettings` to `"InvalidSettings"`. See [Convert.ToString][] |
 | Use `Convert Object To Text` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"InvalidHost"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"InvalidHost"`. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"100"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"100"`. See [Convert Object To Json][] |
 
