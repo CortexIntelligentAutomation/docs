@@ -90,7 +90,6 @@ The following table shows some of the ways that `TelnetClientErrorCode` can be c
 || `(TelnetClientErrorCode)Enum.ToObject(typeof(TelnetClientErrorCode), 200)` | `TelnetClientErrorCode.InvalidSettings`| Expression | Converts `200` to `TelnetClientErrorCode.InvalidSettings` value. See [Enum.ToObject][] |
 
 
-
 Please see [Instantiating an enumeration type][] for further information. 
 
 ### Convert TelnetClientErrorCode to Text
@@ -100,6 +99,9 @@ The following table shows some of the ways that an `TelnetClientErrorCode` can b
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use `ToString` | `TelnetClientErrorCode.InvalidHost.ToString()` | `"InvalidHost"` | Expression | Converts `TelnetClientErrorCode.InvalidHost` to `"InvalidHost"`. See [Enum.ToString][] |
+|| `TelnetClientErrorCode.InvalidPort.ToString()` | `"InvalidPort"` | Expression | Converts `TelnetClientErrorCode.InvalidPort` to `"InvalidPort"`. See [Enum.ToString][] |
+|| `TelnetClientErrorCode.InvalidTerminalPrompt.ToString()` | `"InvalidTerminalPrompt"` | Expression | Converts `TelnetClientErrorCode.InvalidTerminalPrompt` to `"InvalidTerminalPrompt"`. See [Enum.ToString][] |
+|| `TelnetClientErrorCode.InvalidSettings.ToString()` | `"InvalidSettings"` | Expression | Converts `TelnetClientErrorCode.InvalidSettings` to `"InvalidSettings"`. See [Enum.ToString][] |
 | Use `Convert.ToString` | `Convert.ToString(TelnetClientErrorCode.InvalidHost)` | `"InvalidHost"` | Expression | Converts `TelnetClientErrorCode.InvalidHost` to `"InvalidHost"`. See [Convert.ToString][] |
 | Use `Convert Object To Text` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"InvalidHost"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"InvalidHost"`. See [Convert Object To Text][] |
 | Use `Convert Object To Json` block | where `Object` property has a value of `TelnetClientErrorCode.InvalidHost` | `"100"` | N/A  | Converts `TelnetClientErrorCode.InvalidHost` to `"100"`. See [Convert Object To Json][] |
