@@ -38,7 +38,7 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 |-|-|
 | **Name:**    | HostDisconnect                                     |
 | **Value:**   | [Int32][] with value `100`                      |
-| **Notes:**   | Used when an [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession]. See [HostDisconnected][]|
+| **Notes:**   | Used when a [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession]. See [HostDisconnected][]|
 
 ## Remarks
 
@@ -48,9 +48,9 @@ The following table shows some of the ways that `TelnetServerErrorCode` can be c
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `TelnetServerErrorCode` expression | `TelnetServerErrorCode.HostDisconnect` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] |
-| Use [Explicit Casting][] | `(TelnetServerErrorCode)100` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates an [TelnetServerException][] occurred due to the [Host][] provided has closed the session without using [CloseSession] |
-| Use `Enum.Parse` | `(TelnetServerErrorCode)Enum.Parse(typeof(TelnetServerErrorCode), "HostDisconnect")` | `TelnetServerErrorCode.HostDisconnect`| Expression | Parses `"HostDisconnect"` and converts it to `TelnetServerErrorCode.InvalidPort`. See [Enum.Parse][] |
+| Use an `TelnetServerErrorCode` expression | `TelnetServerErrorCode.HostDisconnect` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates a [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession] |
+| Use [Explicit Casting][] | `(TelnetServerErrorCode)100` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates a [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession][] |
+| Use `Enum.Parse` | `(TelnetServerErrorCode)Enum.Parse(typeof(TelnetServerErrorCode), "HostDisconnect")` | `TelnetServerErrorCode.HostDisconnect`| Expression | Parses `"HostDisconnect"` and converts it to `TelnetServerErrorCode.HostDisconnect`. See [Enum.Parse][] |
 | Use `Enum.ToObject` | `(TelnetServerErrorCode)Enum.ToObject(typeof(TelnetServerErrorCode), 100)` | `TelnetServerErrorCode.HostDisconnect`| Expression | Converts `100` to `TelnetServerErrorCode.HostDisconnect` value. See [Enum.ToObject][] |
 
 Please see [Instantiating an enumeration type][] for further information. 
