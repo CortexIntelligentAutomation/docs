@@ -1,7 +1,7 @@
 ---
 title: "TelnetClientException"
 linkTitle: "TelnetClientException"
-description: "The exception thrown when an issue occurs from the Telnet object."
+description: "The exception thrown when an issue occurs from the Telnet Client configurations."
 ---
 
 # {{% param title %}}
@@ -28,7 +28,8 @@ A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `100` indicates
 #### Message Format
 
 ```json
-"A connection could not be established between the server where the Cortex Flow Execution Service is running ('<server>') and the host.\r\nPlease click the HelpLink for more information on how to fix this."
+"A connection could not be established between the server where the Cortex Flow Execution Service is running (\"<server>\") and the host.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
@@ -45,16 +46,16 @@ Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `101` indicates that the [Port][] provided in the [TelnetSessionDetails][] is invalid.
 
-#### Message Format
+### Message Format
 
 ```json
-"The host has returned status code [700] 'Connection failed: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. '<host-ip>':'<port-number>'."
+"A connection could not be established between the server where the Cortex Flow Execution Service is running (\"<server>\") and the host.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-- `<host-ip>` is the ip address of the host the client is attempting to connect to.
-- `<port-number>` is the port which the client is attempting to connect through.
+- `<server>` is the server where the Cortex Flow Execution Service is running on.
 
 #### How to Fix
 
@@ -86,7 +87,8 @@ A [Category][] of `ConfigurationSettings`and an [ErrorCode][] of `200` indicates
 #### Message Format
 
 ```json
-"'Configuration Settings' contains one or more invalid settings. Please click the HelpLink for more information on how to fix this."
+"'Configuration Settings' contains one or more invalid settings.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 #### How to Fix
