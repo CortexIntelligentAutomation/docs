@@ -1,7 +1,7 @@
 ---
 title: "TelnetServerErrorCode"
 linkTitle: "TelnetServerErrorCode"
-description: "Used to represent an error code explaining the reason an `TelnetServerException` occurred."
+description: "Used to represent an error code explaining the reason a `TelnetServerException` occurred."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to represent an error code explaining the reason an `TelnetSe
 
 ## Summary
 
-The `TelnetServerErrorCode` data type is used to represent an error code explaining the reason an [TelnetServerException][] occurred. For more information on the exception itself, see [TelnetServerException][].
+The `TelnetServerErrorCode` data type is used to represent an error code explaining the reason a [TelnetServerException][] occurred. For more information on the exception itself, see [TelnetServerException][].
 
 `TelnetServerErrorCode` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -20,62 +20,62 @@ The `TelnetServerErrorCode` data type is used to represent an error code explain
 | **Name:**              | `TelnetServerErrorCode`                                |
 | **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetServerErrorCode`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Error code explaining the reason an [TelnetServerException][] occurred. |
+| **Description:**       | Error code explaining the reason a [TelnetServerException][] occurred. |
 | **Size:**              | `4` bytes                                              |
 | **Default Value:**     | `(TelnetServerErrorCode)0`                             |
 | **Can be used as:**    | `TelnetServerErrorCode`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)TelnetServerErrorCode.HostDisconnect` or `(System.Int16)TelnetServerErrorCode.HostDisconnect` or `(short)TelnetServerErrorCode.HostDisconnect`)  |
-|                        | `Int32` (e.g. `(Int32)TelnetServerErrorCode.HostDisconnect` or `(System.Int32)TelnetServerErrorCode.HostDisconnect` or `(int)TelnetServerErrorCode.HostDisconnect`)  |
-|                        | `Int64` (e.g. `(Int64)TelnetServerErrorCode.HostDisconnect` or `(System.Int64)TelnetServerErrorCode.HostDisconnect` or `(long)TelnetServerErrorCode.HostDisconnect`)  |
-|                        | `Single` (e.g. `(Single)TelnetServerErrorCode.HostDisconnect` or `(System.Single)TelnetServerErrorCode.HostDisconnect` or `(float)TelnetServerErrorCode.HostDisconnect`)  |
-|                        | `Double` (e.g. `(Double)TelnetServerErrorCode.HostDisconnect` or `(System.Double)TelnetServerErrorCode.HostDisconnect` or `(double)TelnetServerErrorCode.HostDisconnect`)  |
+| **Can be cast to:**    | `Int16` (e.g. `(Int16)TelnetServerErrorCode.HostDisconnected` or `(System.Int16)TelnetServerErrorCode.HostDisconnected` or `(short)TelnetServerErrorCode.HostDisconnected`)  |
+|                        | `Int32` (e.g. `(Int32)TelnetServerErrorCode.HostDisconnected` or `(System.Int32)TelnetServerErrorCode.HostDisconnected` or `(int)TelnetServerErrorCode.HostDisconnected`)  |
+|                        | `Int64` (e.g. `(Int64)TelnetServerErrorCode.HostDisconnected` or `(System.Int64)TelnetServerErrorCode.HostDisconnected` or `(long)TelnetServerErrorCode.HostDisconnected`)  |
+|                        | `Single` (e.g. `(Single)TelnetServerErrorCode.HostDisconnected` or `(System.Single)TelnetServerErrorCode.HostDisconnected` or `(float)TelnetServerErrorCode.HostDisconnected`)  |
+|                        | `Double` (e.g. `(Double)TelnetServerErrorCode.HostDisconnected` or `(System.Double)TelnetServerErrorCode.HostDisconnected` or `(double)TelnetServerErrorCode.HostDisconnected`)  |
 
 ## Values
 
-### HostDisconnect
+### HostDisconnected
 
 | | |
 |-|-|
-| **Name:**    | HostDisconnect                                     |
+| **Name:**    | HostDisconnected                                     |
 | **Value:**   | [Int32][] with value `100`                      |
-| **Notes:**   | Used when a [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession]. See [HostDisconnected][]|
+| **Notes:**   | Used when a [TelnetServerException][] occurred due the [Host][] provided disconnecting from the session without using [CloseSession]. See [Host Disconnected][]|
 
 ## Remarks
 
-### Create an TelnetServerErrorCode
+### Create a TelnetServerErrorCode
 
-The following table shows some of the ways that `TelnetServerErrorCode` can be created.
+The following table shows some of the ways that a `TelnetServerErrorCode` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `TelnetServerErrorCode` expression | `TelnetServerErrorCode.HostDisconnect` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates a [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession] |
-| Use [Explicit Casting][] | `(TelnetServerErrorCode)100` | `TelnetServerErrorCode.HostDisconnect`| Expression | Indicates a [TelnetServerException][] occurred due to the [Host][] provided exiting the session without using [CloseSession][] |
-| Use `Enum.Parse` | `(TelnetServerErrorCode)Enum.Parse(typeof(TelnetServerErrorCode), "HostDisconnect")` | `TelnetServerErrorCode.HostDisconnect`| Expression | Parses `"HostDisconnect"` and converts it to `TelnetServerErrorCode.HostDisconnect`. See [Enum.Parse][] |
-| Use `Enum.ToObject` | `(TelnetServerErrorCode)Enum.ToObject(typeof(TelnetServerErrorCode), 100)` | `TelnetServerErrorCode.HostDisconnect`| Expression | Converts `100` to `TelnetServerErrorCode.HostDisconnect` value. See [Enum.ToObject][] |
+| Use a `TelnetServerErrorCode` expression | `TelnetServerErrorCode.HostDisconnected` | `TelnetServerErrorCode.HostDisconnected`| Expression | Indicates a [TelnetServerException][] occurred due the [Host][] provided disconnecting from the session without using [CloseSession] |
+| Use [Explicit Casting][] | `(TelnetServerErrorCode)100` | `TelnetServerErrorCode.HostDisconnected`| Expression | Indicates a [TelnetServerException][] occurred due the [Host][] provided disconnecting from the session without using [CloseSession] |
+| Use `Enum.Parse` | `(TelnetServerErrorCode)Enum.Parse(typeof(TelnetServerErrorCode), "HostDisconnected")` | `TelnetServerErrorCode.HostDisconnected`| Expression | Parses `"HostDisconnected"` and converts it to `TelnetServerErrorCode.HostDisconnected`. See [Enum.Parse][] |
+| Use `Enum.ToObject` | `(TelnetServerErrorCode)Enum.ToObject(typeof(TelnetServerErrorCode), 100)` | `TelnetServerErrorCode.HostDisconnected`| Expression | Converts `100` to `TelnetServerErrorCode.HostDisconnected` value. See [Enum.ToObject][] |
 
 Please see [Instantiating an enumeration type][] for further information. 
 
-### Convert TelnetServerErrorCode to Text
+### Convert a TelnetServerErrorCode to Text
 
-The following table shows some of the ways that an `TelnetServerErrorCode` can be converted to text.
+The following table shows some of the ways that a `TelnetServerErrorCode` can be converted to text.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `ToString` | `TelnetServerErrorCode.HostDisconnect.ToString()` | `"HostDisconnect"` | Expression | Converts `TelnetServerErrorCode.HostDisconnect` to `"HostDisconnect"`. See [Enum.ToString][] |
-| Use `Convert.ToString` | `Convert.ToString(TelnetServerErrorCode.HostDisconnect)` | `"HostDisconnect"` | Expression | Converts `TelnetServerErrorCode.HostDisconnect` to `"HostDisconnect"`. See [Convert.ToString][] |
-| Use `Convert Object To Text` block | where `Object` property has a value of `TelnetServerErrorCode.HostDisconnect` | `"HostDisconnect"` | N/A  | Converts `TelnetServerErrorCode.HostDisconnect` to `"HostDisconnect"`. See [Convert Object To Text][] |
-| Use `Convert Object To Json` block | where `Object` property has a value of `TelnetServerErrorCode.HostDisconnect` | `"100"` | N/A  | Converts `TelnetServerErrorCode.HostDisconnect` to `"100"`. See [Convert Object To Json][] |
+| Use `ToString` | `TelnetServerErrorCode.HostDisconnected.ToString()` | `"HostDisconnected"` | Expression | Converts `TelnetServerErrorCode.HostDisconnected` to `"HostDisconnected"`. See [Enum.ToString][] |
+| Use `Convert.ToString` | `Convert.ToString(TelnetServerErrorCode.HostDisconnected)` | `"HostDisconnected"` | Expression | Converts `TelnetServerErrorCode.HostDisconnected` to `"HostDisconnected"`. See [Convert.ToString][] |
+| Use `Convert Object To Text` block | where `Object` property has a value of `TelnetServerErrorCode.HostDisconnected` | `"HostDisconnected"` | N/A  | Converts `TelnetServerErrorCode.HostDisconnected` to `"HostDisconnected"`. See [Convert Object To Text][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `TelnetServerErrorCode.HostDisconnected` | `"100"` | N/A  | Converts `TelnetServerErrorCode.HostDisconnected` to `"100"`. See [Convert Object To Json][] |
 
 Please see [Formatting enumeration values][] for further information.
 
-### Convert TelnetServerErrorCode to a Number
+### Convert a TelnetServerErrorCode to a Number
 
-The following table shows some of the ways that an `TelnetServerErrorCode` can be converted to a number.
+The following table shows some of the ways that a `TelnetServerErrorCode` can be converted to a number.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use [Explicit Casting][]              | `(Int32)TelnetServerErrorCode.HostDisconnect`   | `100` | Expression | [Casts][Explicit Casting] `TelnetServerErrorCode.HostDisconnect` to `100` |
-| Use `Convert.ToInt32`                 | `Convert.ToInt32(TelnetServerErrorCode.HostDisconnect)`   | `100` | Expression | Converts `TelnetServerErrorCode.HostDisconnect` to `100`. See [Convert.ToInt32][] |
+| Use [Explicit Casting][]              | `(Int32)TelnetServerErrorCode.HostDisconnected`   | `100` | Expression | [Casts][Explicit Casting] `TelnetServerErrorCode.HostDisconnected` to `100` |
+| Use `Convert.ToInt32`                 | `Convert.ToInt32(TelnetServerErrorCode.HostDisconnected)`   | `100` | Expression | Converts `TelnetServerErrorCode.HostDisconnected` to `100`. See [Convert.ToInt32][] |
 
 ### Property Editor Support
 
@@ -126,5 +126,5 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [TelnetServerException]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException.MainDoc" >}}
-[HostDisconnected]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException.HostDisconnected" >}}
+[Host Disconnected]: {{< url path="Cortex.Reference.Exceptions.Telnet.TelnetServerException.HostDisconnected" >}}
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
