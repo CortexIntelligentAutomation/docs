@@ -779,6 +779,7 @@
                         ConfigurationSettings = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#close-session"
                         Response = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#response"
+                        InactivityTimeout = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#inactivity-timeout"
 
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"

@@ -114,6 +114,8 @@ The [Telnet Session Details][Telnet Session Details Property] object that includ
 
 The [Configuration Settings][Configuration Settings Property] for the Telnet connection and execution.
 
+For a full list of configuration settings please see [TelnetConfigurationSettings][].
+
 |||
 |----------|----------|
 | Data Type | [IDictionary][]&lt;[String][], [EncryptableText][]&gt; |

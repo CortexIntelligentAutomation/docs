@@ -1,7 +1,7 @@
 ---
 title: "TelnetClientException"
 linkTitle: "TelnetClientException"
-description: "The exception thrown when an issue occurs from the Telnet Client configurations."
+description: "The exception thrown when a Telnet Client (e.g. Execute Telnet Command Block) is incorrectly configured."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "The exception thrown when an issue occurs from the Telnet Client c
 
 ## Description
 
-Exception thrown when an error occurs from the Telnet object.
+The exception thrown when a Telnet Client (e.g. [Execute Telnet Command][]) is incorrectly configured.
 
 There are multiple reasons that this exception can be thrown:
 
@@ -28,17 +28,17 @@ A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `100` indicates
 #### Message Format
 
 ```json
-"A connection could not be established between the server where the Cortex Flow Execution Service is running (\"<server>\") and the host.
+"A connection could not be established between the server where the Cortex Execution Service is running (\"<server>\") and the host.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-- `<server>` is the server where the Cortex Flow Execution Service is running on.
+- `<server>` is the server where the Cortex Execution Service is running on.
 
 #### How to Fix
 
-Provide a valid [Host][] in the [TelnetSessionDetails][].
+Provide a valid [Host][] in the [TelnetSessionDetails][] and ensure that the telnet server is up and running without issues.
 
 ***
 
@@ -46,16 +46,16 @@ Provide a valid [Host][] in the [TelnetSessionDetails][].
 
 A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `101` indicates that the [Port][] provided in the [TelnetSessionDetails][] is invalid.
 
-### Message Format
+#### Message Format
 
 ```json
-"A connection could not be established between the server where the Cortex Flow Execution Service is running (\"<server>\") and the host.
+"A connection could not be established between the server where the Cortex Execution Service is running (\"<server>\") and the host.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-- `<server>` is the server where the Cortex Flow Execution Service is running on.
+- `<server>` is the server where the Cortex Execution Service is running on.
 
 #### How to Fix
 
@@ -76,7 +76,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to Fix
 
-Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the [Host][].
+Provide a [TerminalPrompt][] regex that will match the terminal prompt returned in the response from the [Host][] and ensure that the [Inactivity Timeout][] is long enough for the response to be returned.
 
 ***
 
@@ -93,7 +93,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to Fix
 
-Provide valid [ConfigurationSettings] with the correct name and value.
+Ensure each setting within [ConfigurationSettings] has the correct name and value.
 
 ***
 
@@ -124,6 +124,10 @@ For `TelnetClientException` there are the following categories:
 - `TelnetSessionDetails`
 - `ConfigurationSettings`
 
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
 ### Error Code
 
 The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.
@@ -139,9 +143,6 @@ For `TelnetClientException` there are the following error codes:
 |-----------|---------------------------|
 | Data Type | [TelnetClientErrorCode][] |
 
-| | |
-|-----------|------------|
-| Data Type | [String][] |
 
 ### Help Link
 
@@ -170,7 +171,7 @@ None
 
 ### Related Blocks
 
-- [Execute Telnet Command Block]
+- [Execute Telnet Command]
 
 ### External Documentation
 
@@ -194,7 +195,9 @@ None
 [TelnetSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.MainDoc" >}}
 [TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails.TerminalPrompt" >}}
 [ConfigurationSettings]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.ConfigurationSettings" >}}
-[Execute Telnet Command Block]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
+[Execute Telnet Command]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.MainDoc" >}}
 [TelnetClientErrorCode]: {{< url path="Cortex.Reference.DataTypes.Telnet.TelnetClientErrorCode.MainDoc" >}}
+
+[Inactivity Timeout]: {{< url path="Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand.InactivityTimeout" >}}
 
 [IpWorksTelnetErrorCodes]: {{< url path="IPWorks.TelnetErrors" >}}
