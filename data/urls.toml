@@ -9,18 +9,18 @@
             [Cortex.Blogs.Releases.2023.X]
                 MainDoc = "/blog/releases/2023.x"
                 [Cortex.Blogs.Releases.2023.3]
-                    MainDoc =  "/blog/2022/11/03/2023.3/"
-                    RearchitectedtheHAPlatform = "/blog/2022/11/03/2023.3/#re-architected-the-ha-platform"
-                    NewInteractionPortal = "/blog/2022/11/03/2023.3/#new-interaction-portal"
-                    NewBlocks = "/blog/2022/11/03/2023.3/#new-blocks"
-                    ImprovementsToExistingBlocks = "/blog/2022/11/03/2023.3/#improvements-to-existing-blocks"
-                    NewWelcomePage = "/blog/2022/11/03/2023.3/#new-welcome-page"
-                    AddedRenamingOfVariables = "/blog/2022/11/03/2023.3/#added-renaming-of-variables-to-the-variables-grid"
-                    AddedAutomaticDependencySelection = "/blog/2022/11/03/2023.3/#added-automatic-dependency-selection-in-package-management"
-                    SimplifiedInstallation = "/blog/2022/11/03/2023.3/#simplified-installation-of-the-web-application-server"
-                    ImprovementsToPerformance = "/blog/2022/11/03/2023.3/#improvements-to-performance"
-                    UpdatedThirdPartyComponents = "/blog/2022/11/03/2023.3/#updated-third-party-components"
-                    ProductPortal = "/blog/2022/11/03/2023.3/#product-portal"
+                    MainDoc =  "/blog/2023/04/11/2023.3/"
+                    RearchitectedtheHAPlatform = "/blog/2023/04/11/2023.3/#re-architected-the-ha-platform"
+                    NewInteractionPortal = "/blog/2023/04/11/2023.3/#new-interaction-portal"
+                    NewBlocks = "/blog/2023/04/11/2023.3/#new-blocks"
+                    ImprovementsToExistingBlocks = "/blog/2023/04/11/2023.3/#improvements-to-existing-blocks"
+                    NewWelcomePage = "/blog/2023/04/11/2023.3/#new-welcome-page"
+                    AddedRenamingOfVariables = "/blog/2023/04/11/2023.3/#added-renaming-of-variables-to-the-variables-grid"
+                    AddedAutomaticDependencySelection = "/blog/2023/04/11/2023.3/#added-automatic-dependency-selection-in-package-management"
+                    SimplifiedInstallation = "/blog/2023/04/11/2023.3/#simplified-installation-of-the-web-application-server"
+                    ImprovementsToPerformance = "/blog/2023/04/11/2023.3/#improvements-to-performance"
+                    UpdatedThirdPartyComponents = "/blog/2023/04/11/2023.3/#updated-third-party-components"
+                    ProductPortal = "/blog/2023/04/11/2023.3/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -67,9 +67,13 @@
                     MakeInstallationArtefactsAvailable = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/#make-installation-artefacts-available"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server#install-gateway"
+                    AssignCertificateFriendlyName = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#assign-certificate-friendly-name"
+                    ImportCertificateManually = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#import-certificate-manually"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#install-gateway"
+                    PerformInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
@@ -84,9 +88,13 @@
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture"
                     InstallApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server#configure-installation-script"
+                    ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-application-server#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server#install-gateway"
+                    AssignCertificateFriendlyName = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/#assign-certificate-friendly-name"
+                    ImportCertificateManually = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/#import-certificate-manually"
+                    InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/#install-gateway"
+                    PerformInstallation = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#web-browser-requirements"
@@ -106,6 +114,7 @@
                         SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/advanced/ssl-best-practices"
             [Cortex.GettingStarted.OnPremise.AddInnovationTo72]
                 MainDoc = "/docs/getting-started/on-premise/add-innovation-to-72/"
+                
                 [Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/"       
                     Architecture = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/architecture"
@@ -115,10 +124,12 @@
                     AltLoadBalancer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
+                    ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server#upgrade-gateway"
+                    InstallGateway = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#install-gateway"
+                    PerformInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites"
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#web-browser-requirements"
@@ -132,9 +143,11 @@
                     Architecture = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/architecture"
                     InstallApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server#configure-installation-script"
+                    ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server#upgrade-gateway"
+                    InstallGateway = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#install-gateway"
+                    PerformInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites"
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#web-browser-requirements"
@@ -766,6 +779,21 @@
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
+                        ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
+                        CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
+                        Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
+            [Cortex.Reference.Blocks.Telnet]
+                MainDoc = "/docs/reference/blocks/telnet/"
+                [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
+                    MainDoc = "/docs/reference/blocks/telnet/execute-telnet-command"
+                    [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand]
+                        MainDoc = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block"
+                        TerminalPromptMatchRemark = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#using-the-terminalpromptmatch-within-telnetlogs-to-reach-the-end-of-a-prompt"
+                        ConfigurationSettings = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#configuration-settings"
+                        CloseSession = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#close-session"
+                        Response = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#response"
+                        InactivityTimeout = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#inactivity-timeout"
+
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]
@@ -1445,6 +1473,9 @@
                     TerminalPrompt = "/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt"
                 [Cortex.Reference.DataTypes.Ssh.SshLogs]
                     MainDoc = "/docs/reference/data-types/ssh/sshlogs"
+                    WelcomeMessage = "/docs/reference/data-types/ssh/sshlogs/#welcomemessage"
+                    TerminalPromptMatch = "/docs/reference/data-types/ssh/sshlogs/#terminalpromptmatch"
+                    Logs = "/docs/reference/data-types/ssh/sshlogs/#logs"
                 [Cortex.Reference.DataTypes.Ssh.Authentication]
                     MainDoc = "/docs/reference/data-types/ssh/authentication/"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials]
@@ -1453,8 +1484,28 @@
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcredentials"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials"
+                        Domain = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#domain"
+                        Username = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#domain"
+                        CertificatePath = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepath"
+                        CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
+             [Cortex.Reference.DataTypes.Telnet]
+                MainDoc = "/docs/reference/data-types/Telnet/"
+                [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetsessiondetails"
+                    Host = "/docs/reference/data-types/telnet/telnetsessiondetails/#host"
+                    Port = "/docs/reference/data-types/telnet/telnetsessiondetails/#port"
+                    TerminalPrompt = "/docs/reference/data-types/telnet/telnetsessiondetails/#terminalprompt"
+                [Cortex.Reference.DataTypes.Telnet.TelnetLogs]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetlogs"
+                    WelcomeMessage = "/docs/reference/data-types/telnet/telnetlogs/#welcomemessage"
+                    TerminalPromptMatch = "/docs/reference/data-types/telnet/telnetlogs/#terminalpromptmatch"
+                    Logs = "/docs/reference/data-types/telnet/telnetlogs/#logs"
+                [Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetservererrorcode"
+                [Cortex.Reference.DataTypes.Telnet.TelnetClientErrorCode]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetclienterrorcode"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
@@ -1643,6 +1694,17 @@
                 MainDoc = "/docs/reference/exceptions/ssh/"
                 SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
                 SshResponseException = "/docs/reference/exceptions/ssh/ssh-response-exception/"
+            [Cortex.Reference.Exceptions.Telnet]
+                MainDoc = "/docs/reference/exceptions/telnet/"
+                [Cortex.Reference.Exceptions.Telnet.TelnetClientException]
+                    MainDoc = "/docs/reference/exceptions/telnet/telnet-client-exception/"
+                    InvalidHost = "/docs/reference/exceptions/telnet/telnet-client-exception/#100"
+                    InvalidPort = "/docs/reference/exceptions/telnet/telnet-client-exception/#101"
+                    InvalidTerminalPrompt = "/docs/reference/exceptions/telnet/telnet-client-exception/#102"
+                    InvalidSettings = "/docs/reference/exceptions/telnet/telnet-client-exception/#200"
+                [Cortex.Reference.Exceptions.Telnet.TelnetServerException]
+                    MainDoc = "/docs/reference/exceptions/telnet/telnet-server-exception/"
+                    HostDisconnected = "/docs/reference/exceptions/telnet/telnet-server-exception/#100"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"
@@ -1814,6 +1876,8 @@
 # External links
 [Anycast]
     MainDoc = "https://en.wikipedia.org/wiki/Anycast"
+[CancelCommands]
+    MainDoc = "https://www.physics.udel.edu/~watson/scen103/ascii.html"
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
     SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
@@ -1861,7 +1925,15 @@
     [IIS.Downloads]
         UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"
         ApplicationRequestRouting-3_0 = "https://www.iis.net/downloads/microsoft/application-request-routing"
-    
+[IPWorks]
+    TelnetErrors = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetErrors"
+    SshErrors = "https://cdn.nsoftware.com/help/IHF/cs/SSHClientConfig.htm"
+    TelnetConfigurationSettings = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetConfig"
+    TelnetFirewallTypes = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallType"
+    TelnetFirewallHost =  "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallHost"
+    TelnetFirewallPort = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallPort"
+    TelnetFirewallUser = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallUser"
+    TelnetFirewallPassword = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallPassword"
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
@@ -2110,6 +2182,11 @@
         MainDoc = "https://www.postman.com/downloads/"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
+[RFC]
+    [RFC.Docs.Telnet.Options]
+    MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
+    Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
+    BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]

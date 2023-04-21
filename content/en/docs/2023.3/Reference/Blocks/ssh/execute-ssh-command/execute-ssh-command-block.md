@@ -8,7 +8,7 @@ description: "Executes an SSH command on the specified host."
 
 # {{% param title %}}
 
-<p class="namespace">("Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
+<p class="namespace">(Cortex.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock)</p>
 
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future; this will include further examples and remarks.{{% /alert %}}
 
@@ -37,7 +37,7 @@ This example will execute a [Command][Command Property] on the server with the f
 | [Command][Command Property] | `($)Command` with value `"ipconfig"` | `($)Command` is a variable of type [EncryptableText][] |
 | [Ssh Session Details][Ssh Session Details Property] | `($)SshSessionDetails` with value `{"Host": "localhost", "Port": 22, "Credentials": {"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}`<br><br>In this example `($)SshSessionDetails` has been set up using the following [Expression][]:<br><br> `new SshSessionDetails("localhost", 22, new UserCredentials("domain", "username",  "encryptedPassword"), @"(.*(~(.*[\r\n]?)\$\|>))")`  |  `($)SshSessionDetails` is a variable of type [SshSessionDetails][] |
 | [Close Session][Close Session Property] | `($)CloseSession` with value `true` | `($)CloseSession` is a variable of type [Boolean][] |
-| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)CloseSession` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
+| [Configuration Settings][Configuration Settings Property] | `($)ConfigurationSettings`, with no value | `($)ConfigurationSettings` is a variable of type [Dictionary][]&lt;[String][], [EncryptableText][]&gt; |
 | [Response][Response Property] | `($)Response`, with no value | `($)Response` will be set to the type [String][] |
 | [Ssh Logs][Ssh Logs Property] | `($)SshLogs`, with no value | `($)SshLogs` will be set to the type [SshLogs][] |
 
@@ -176,12 +176,12 @@ The [Configuration Settings][Configuration Settings Property] for the SSH connec
 | Default Value | [IDictionary][]&lt;[String][], [dynamic][]&gt; with value shown below: |
 
 ```csharp
-new Dictionary<string, dynamic> {
-    { "TerminalWidth", 200 },
+new Dictionary<string, EncryptableText> {
+    { "TerminalWidth", "200" },
     { "TerminalType", "vt100" },
-    { "Timeout", 60 },
+    { "Timeout", "60" },
     { "EndOfLineCharacters", "\r" },
-    { "CancelCommand", "\x03" },
+    { "CancelCommand", "CtrlC" },
 }
 ```
 
@@ -199,10 +199,11 @@ The SSH [Response][Response Property] that is returned from the execution of the
 
 ### Ssh Logs
 
-The [Ssh Logs][Ssh Logs Property] that is returned from the execution of the [Command][Command Property] on the host specified in the [Ssh Session Details][Ssh Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
+The [Ssh Logs][Ssh Logs Property] that are returned from the execution of the [Command][Command Property] on the host specified in the [Ssh Session Details][Ssh Session Details Property]. This property contains all of the information in relation to the logs returned by the [Command][Command Property], these are:
 
-- WelcomeMessage
-- Logs
+- [WelcomeMessage][]
+- [TerminalPromptMatch][]
+- [Logs][]
 
 |||
 |----------|----------|
@@ -241,11 +242,11 @@ The exceptions thrown by the block can be found below:
 
 ### Opening Sessions
 
-The Execute Ssh Command block automatically handles creating and opening session for the specified [Ssh Session Details][Ssh Session Details Property] using the following rules:
+The Execute Ssh Command block automatically handles creating and opening a session for the specified [Ssh Session Details][Ssh Session Details Property] using the following rules:
 
 - If a session does not exist, a new session will be created, opened and used when the block runs.
 - If a session already exists but is closed, the session will be opened and used when the block runs.
-- If a session already exists and is open, the session will used the block runs.
+- If a session already exists and is open, the session will be used when the block runs.
 
 For information on how to explicitly close a session, please see [Closing Sessions][].
 
@@ -259,7 +260,7 @@ For information on how to open a session, please see [Opening Sessions][].
 
 [SshLogs][] includes a TerminalPromptMatch property that represents any string within the returned logs that matches the TerminalPrompt property within the [SshSessionDetails][].
 
-Some prompts within SSH require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further iput to the Ssh Command to navigate to the end of the prompt.
+Some prompts within SSH require multiple interactions before reaching the end of the prompt. The TerminalPromptMatch can be used to make decisions or loop within a flow sending further input to the Ssh Command to navigate to the end of the prompt.
 
 ### Known Limitations
 
@@ -286,6 +287,9 @@ None
 [SshSessionDetails Port]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.Port" >}}
 [SshSessionDetails Credentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.Credentials" >}}
 [SshSessionDetails TerminalPrompt]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.TerminalPrompt" >}}
+[Logs]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshLogs.Logs" >}}
+[WelcomeMessage]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshLogs.WelcomeMessage" >}}
+[TerminalPromptMatch]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshLogs.TerminalPromptMatch" >}}
 
 [SshLogs]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshLogs.MainDoc" >}}
 
@@ -302,7 +306,7 @@ None
 [RegexMatchTimeoutException]: {{< url path="MSDocs.DotNet.Api.System.Text.RegularExpressions.RegexMatchTimeoutException" >}}
 [RegexParsingFailedException]: {{< url path="Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException.MainDoc" >}}
 
-[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
+[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
