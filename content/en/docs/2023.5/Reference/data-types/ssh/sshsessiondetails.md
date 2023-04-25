@@ -10,7 +10,7 @@ description: "Used to represent configuration for executing ssh commands on a sp
 
 ## Summary
 
-The `SshSessionDetails` data type is used to represent configuration for executing Ssh commands on a specified host.
+The `SshSessionDetails` data type is used to represent configuration for executing ssh commands on a specified host.
 
 | | |
 |-|-|
@@ -107,7 +107,7 @@ A `SshSessionDetails` can also be created using the Literal Editor by filling in
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 22, "Credentials": { "Domain": "domain", "Username": "user", "Password": "password"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n  \"Port\": 22,\r\n  \"Credentials\": {\r\n    \"Domain\": \"domain\",\r\n    \"Username\": \"username\",\r\n    \"Password\": \"password\",\r\n},\r\n  \"TerminalPrompt\": \"(.*(~(.*[\\\\r\\\\n]?)\\\\$\|>))\"\r\n}"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 22, "Credentials": { "Domain": "domain", "Username": "user", "Password": "password"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n  \"Port\": 22,\r\n  \"Credentials\": {\r\n    \"Domain\": \"domain\",\r\n    \"Username\": \"username\",\r\n    \"Password\": \"## REDACTED ## - This value has been redacted as it contains text that should be encrypted, but is not.\",\r\n},\r\n  \"TerminalPrompt\": \"(.*(~(.*[\\\\r\\\\n]?)\\\\$\|>))\"\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -126,7 +126,9 @@ None
 - [EncryptableText][]
 - [String][]
 - [Int32][]
-- [SshCertificateCredentials][]
+- [ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
+- [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
+
 
 ### Related Concepts
 
@@ -142,7 +144,6 @@ None
 [TerminalPrompt]: {{< ref "#terminalprompt" >}}
 
 [ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
-[SshCertificateCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials.MainDoc" >}}
 
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
 [Domain]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Domain" >}}
@@ -158,7 +159,6 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
-[EncryptedText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
