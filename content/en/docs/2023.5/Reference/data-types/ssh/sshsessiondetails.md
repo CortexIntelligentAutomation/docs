@@ -1,28 +1,26 @@
 ---
 title: "SshSessionDetails"
 linkTitle: "SshSessionDetails"
-description: "The data type representing configuration for executing ssh commands on a specified host."
+description: "Used to represent configuration for executing Ssh commands on a specified host."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Ssh.SshSessionDetails)</p>
 
-{{< workinprogress >}}
-
 ## Summary
 
-The data type representing configuration for executing ssh commands on a specified host.
+The `SshSessionDetails` data type is used to represent configuration for executing Ssh commands on a specified host.
 
 | | |
 |-|-|
-| **Category:**          | Data |
+| **Category:**          | Ssh |
 | **Name:**              | `SshSessionDetails` |
-| **Full Name:**         | `Cortex.DataTypes.PowerShell.SshSessionDetails` |
+| **Full Name:**         | `Cortex.DataTypes.Ssh.SshSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The data type representing configuration for executing ssh commands on a specified host. |
+| **Description:**       | Configuration for executing Ssh commands on a specified host. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `PowerShellSessionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `SshSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
@@ -54,27 +52,7 @@ The Port is used to define the port on the server to connect to.
 | Data Type | [Int32][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [Int32][] with value `22` |
-
-### Credentials
-
-The Credentials are used to configure the [Domain][], [Username][] and [Password][] used to connect to the host.
-
-| | |
-|--------------------|---------------------------|
-| Data Type | [ISshCredentials][] |
-| Is [Advanced][] | `false` |
-| Default Editor | [Literal][] |
-| Default Value | [SshCertificateCredentials][] with value shown below: |
-
-```json
-{ 
-    "Domain": "",
-    "Username": "",
-    "CertificatePath": "",
-    "CertificatePassword": ""
-}
-```
+| Default Value | [Int32][] with value `23` |
 
 ### TerminalPrompt
 
@@ -83,19 +61,33 @@ The regex used to match the host's terminal prompt.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Is [Advanced][] | `false` |
+| Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | [String][] with value `"(.*(~(.*[\r\n]?)\$|>))"`: |
+| Default Value | [String][] with value `(.*(~(.*[\r\n]?)\$\|>))` |
 
 ## Remarks
 
 ### Create a SshSessionDetails
 
-TODO
+The following table shows some of the ways that `SshSessionDetails` can be created.
+
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use a `SshSessionDetails` constructor | `new SshSessionDetails(host: "localhost", port: 23, terminalPrompt: $@"(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\r\n]?)\$\|>))"}` | Expression  |
+
+A `SshSessionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `Host` | `EncryptableText` | `"localhost"` | [Host][] defines the address of the server to connect to. |
+| `Port` | `Int32` | `23` | [Port][] defines the port on the server to connect to. |
+| `TerminalPrompt` | `String` | `(.*(~(.*[\r\n]?)\$\|>))` | [TerminalPrompt][] defines the regex used to match the host's terminal prompt. |
 
 ### Convert SshSessionDetails to Text
 
-TODO
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 23, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n  \"Port\": 23,\r\n  \"TerminalPrompt\": \"(.*(~(.*[\\\\r\\\\n]?)\\\\$\|>))\"\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -111,7 +103,9 @@ None
 
 ### Related Data Types
 
-TODO
+- [EncryptableText][]
+- [String][]
+- [Int32][]
 
 ### Related Concepts
 
@@ -121,6 +115,10 @@ None
 
 None
 
+[Host]: {{< ref "#host" >}}
+[Port]: {{< ref "#port" >}}
+[TerminalPrompt]: {{< ref "#TerminalPrompt" >}}
+
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
@@ -128,14 +126,8 @@ None
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
-[UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
-[Domain]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Domain" >}}
-[Username]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Username" >}}
-[Password]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Password" >}}
-
-[ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
-[SshCertificateCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials.MainDoc" >}}
-
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
