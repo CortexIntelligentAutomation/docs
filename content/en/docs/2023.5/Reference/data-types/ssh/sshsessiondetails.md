@@ -126,9 +126,8 @@ None
 - [EncryptableText][]
 - [String][]
 - [Int32][]
-- [ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
-- [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
-
+- [ISshCredentials]
+- [UserCredentials]
 
 ### Related Concepts
 
