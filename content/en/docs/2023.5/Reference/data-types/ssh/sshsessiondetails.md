@@ -1,7 +1,7 @@
 ---
 title: "SshSessionDetails"
 linkTitle: "SshSessionDetails"
-description: "The data type representing configuration for executing ssh commands on a specified host."
+description: "The data type representing configuration for executing SSH commands on a specified host."
 ---
 
 # {{% param title %}}
@@ -12,7 +12,7 @@ description: "The data type representing configuration for executing ssh command
 
 ## Summary
 
-The data type representing configuration for executing ssh commands on a specified host.
+The data type representing configuration for executing SSH commands on a specified host.
 
 | | |
 |-|-|
@@ -20,7 +20,7 @@ The data type representing configuration for executing ssh commands on a specifi
 | **Name:**              | `SshSessionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.PowerShell.SshSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The data type representing configuration for executing ssh commands on a specified host. |
+| **Description:**       | The data type representing configuration for executing SSH commands on a specified host. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `PowerShellSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |

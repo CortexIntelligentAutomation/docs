@@ -1,7 +1,7 @@
 ---
 title: "SshLogs"
 linkTitle: "SshLogs"
-description: "Used to represent logs returned by a ssh command."
+description: "Used to represent logs returned by an SSH command."
 weight: 1
 ---
 
@@ -9,7 +9,7 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Ssh.SshLogs)</p>
 
-The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the [Host][]; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the Ssh execution.
+The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Message Property] returned from the [Host][]; the [TerminalPromptMatch][Terminal Prompt Match] found in the returned response; and the [Logs][Logs] from the SSH execution.
 
 | | |
 |-|-|
@@ -17,9 +17,9 @@ The `SshLogs` data type is used to represent the [WelcomeMessage][Welcome Messag
 | **Name:**              | `SshLogs`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Ssh.SshLogs`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | `The SshLogs that is returned and contains the WelcomeMessage, TerminalPromptMatch and Logs.` |
+| **Description:**       | `The SshLogs returned, containing the WelcomeMessage, TerminalPromptMatch and Logs.` |
 | **Default Value:**     | null                                                   |
-| **Can be used as:**    | `Object`, `dynamic`                 |
+| **Can be used as:**    | `SshLogs`,`Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
 ## Properties
@@ -33,7 +33,7 @@ Represents the message returned when first connecting to the [Host][]. It will r
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [String][] with with value `$@""` |
+| Default Value | [String][] with value `$@""` |
 
 ### TerminalPromptMatch
 
@@ -44,7 +44,7 @@ Represents the exact terminal prompt found in the response returned from the [Ho
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [String][] with with value `$@""`|
+| Default Value | [String][] with value `$@""`|
 
 ### Logs
 
@@ -63,13 +63,13 @@ None
 
 ## Remarks
 
-### Create a SshLogs
+### Create an SshLogs
 
-The following table shows some of the ways that `SshLogs` can be created.
+The following table shows some of the ways that an `SshLogs` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `SshLogs` constructor | `new SshLogs(welcomeMessage: "Welcome to Microsoft Ssh Server.", terminalPromptMatch: "C:/Users/CortexSshUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatch": "C:/Users/CortexSshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
+| Use an `SshLogs` constructor | `new SshLogs(welcomeMessage: "Welcome to Microsoft Ssh Server.", terminalPromptMatch: "C:/Users/CortexSshUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatch": "C:/Users/CortexSshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
 
 ### Convert SshLogs to Text
 
