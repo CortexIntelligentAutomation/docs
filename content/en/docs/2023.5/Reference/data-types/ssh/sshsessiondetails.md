@@ -1,7 +1,7 @@
 ---
 title: "SshSessionDetails"
 linkTitle: "SshSessionDetails"
-description: "Used to represent configuration for executing ssh commands on a specified host."
+description: "Used to represent configuration for executing SSH commands on a specified host."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to represent configuration for executing ssh commands on a sp
 
 ## Summary
 
-The `SshSessionDetails` data type is used to represent configuration for executing ssh commands on a specified host.
+The `SshSessionDetails` data type is used to represent configuration for executing SSH commands on a specified host.
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ The `SshSessionDetails` data type is used to represent configuration for executi
 | **Name:**              | `SshSessionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.Ssh.SshSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | Configuration for executing ssh commands on a specified host. |
+| **Description:**       | Configuration for executing SSH commands on a specified host. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `SshSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |

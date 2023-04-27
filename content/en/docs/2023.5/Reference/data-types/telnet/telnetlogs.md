@@ -17,9 +17,9 @@ The `TelnetLogs` data type is used to represent the [WelcomeMessage][Welcome Mes
 | **Name:**              | `TelnetLogs`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetLogs`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | `The TelnetLogs that is returned and contains the WelcomeMessage, TerminalPromptMatch and Logs.` |
+| **Description:**       | `The TelnetLogs returned, containing the WelcomeMessage, TerminalPromptMatch and Logs.` |
 | **Default Value:**     | null                                                   |
-| **Can be used as:**    | `Object`, `dynamic`                 |
+| **Can be used as:**    |  `TelnetLogs`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
 ## Properties
@@ -111,7 +111,6 @@ None
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
-[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
