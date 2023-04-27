@@ -12,48 +12,29 @@ description: "Waits for a Task to be complete."
 
 ## Description
 
-Adds an [Item][Item Property] at the beginning of a [List][List Property].
+Waits for the specified [Task][Task Property] to finish and returns the [Result][Result Property] from the [Task][Task Property].
 
 ## Examples
 
-### Add an Item at the beginning of an empty List
+### Wait for a Task that is currently executing
 
-This example will add `"New Item"` at the beginning of `[]`.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [List][List Property] | `($)List`, with value `[]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-| [Item][Item Property] | `($)Item`, with value `"New Item"` | `($)Item` is a variable of type [String][] |
-
-#### Result
-
-Adding `"New Item"` at the beginning of `[]` results in the variable `($)List` being updated to the following:
-
-```json
-["New Item"]
-```
-
-***
-
-### Add an Item at the beginning of a List
-
-This example will add `"New Item"` at the beginning of `["Some Text", 1]`.
+This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 1 second after the asynchronous flow is started.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [List][List Property] | `($)List`, with value `["Some Text", 1]` | `($)List` is a variable of type [IList][]&lt;[dynamic][]&gt; |
-| [Item][Item Property] | `($)Item`, with value `"New Item"` | `($)Item` is a variable of type [String][] |
+| [Task][Task Property] | `($)Task`, with value that represents the asynchronous execution of another flow | `($)Task` is a variable of type [IExecutionTask][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` is a variable of type [Structure][] |
 
 #### Result
 
-Adding `"New Item"` at the beginning of `["Some Text", 1]` results in the variable `($)List` being updated to the following:
+Waiting for an [IExecutionTask][], that represents the asynchronous execution of another flow, 1 second after the asynchronous flow is started results the execution containing the [WaitForTask][] block to pause for 4 seconds and then the variable `($)Result` being updated to the following:
 
 ```json
-["New Item", "Some Text", 1]
+{
+    "ResultVariable": "ResultValue"
+}
 ```
 
 ***
@@ -72,7 +53,7 @@ The [Task][Task Property] being waited for.
 | Default Editor | [Variable][] |
 | Default Value | `($)Task` with no value |
 
-### Item
+### Result
 
 The [Result][Result Property] of the [Task][Task Property] being waited for.
 
@@ -118,6 +99,7 @@ For information about the different types of lists, including those that can con
 
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
