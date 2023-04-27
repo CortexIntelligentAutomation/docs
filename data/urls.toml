@@ -782,6 +782,12 @@
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
+            [Cortex.Reference.Blocks.Tasks]
+                MainDoc = "/docs/reference/blocks/tasks/"
+                [Cortex.Reference.Blocks.Tasks.WaitForTask]
+                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
@@ -1490,7 +1496,13 @@
                         CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
-             [Cortex.Reference.DataTypes.Telnet]
+            [Cortex.Reference.DataTypes.Tasks]
+                MainDoc = "/docs/reference/data-types/tasks/"
+                [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
+                    MainDoc = "/docs/reference/data-types/tasks/iexecutiontask/"
+                [Cortex.Reference.DataTypes.Tasks.ITask]
+                    MainDoc = "/docs/reference/data-types/tasks/itask/"
+            [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
                     MainDoc = "/docs/reference/data-types/telnet/telnetsessiondetails"
