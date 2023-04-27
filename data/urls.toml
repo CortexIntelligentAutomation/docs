@@ -1490,7 +1490,13 @@
                         CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
-             [Cortex.Reference.DataTypes.Telnet]
+            [Coretex.Reference.DataTypes.Tasks]
+                MainDoc = "/docs/reference/data-types/tasks/"
+                [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
+                    MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
+                [Cortex.Reference.DataTypes.Tasks.ITask]
+                MainDoc = "/docs/reference/data-types/tasks/itask-1"
+            [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
                     MainDoc = "/docs/reference/data-types/telnet/telnetsessiondetails"
