@@ -39,6 +39,29 @@ Waiting for an [IExecutionTask][], that represents the asynchronous execution of
 
 ***
 
+### Wait for a Task that has finished executing
+
+This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 6 seconds after the asynchronous flow is started, therefore starting after the execution has already completed.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Task][Task Property] | `($)Task`, with value that represents the asynchronous execution of another flow | `($)Task` is a variable of type [IExecutionTask][] |
+| [Result][Result Property] | `($)Result`, with no value | `($)Result` is a variable of type [Structure][] |
+
+#### Result
+
+Waiting for an [IExecutionTask][], that represents the asynchronous execution of another flow, 6 second after the asynchronous flow is started results the execution containing the [WaitForTask][] block not pausing and the variable `($)Result` being immediately updated to the following:
+
+```json
+{
+    "ResultVariable": "ResultValue"
+}
+```
+
+***
+
 ## Properties
 
 ### Task
