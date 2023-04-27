@@ -94,23 +94,13 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [CannotModifyReadOnlyListException][] | Thrown when [List][List Property] is read-only. |
-| [InvalidPropertyValueException][] | Thrown when [Item][Item Property] is `null` and [List][List Property] only accepts non-nullable value types. See [Value Is Invalid][]. |
-| [PropertyNullException][] | Thrown when [List][List Property] is `null`. |
+| [PropertyNullException][] | Thrown when [Task][Task Property] is `null`. |
 
 ## Remarks
 
-### Defining lists using literal syntax
+### Task throws an exception
 
-For information about how to define lists using literal syntax, see [Create a List&lt;TItem&gt;][].
-
-### Defining lists using expression syntax
-
-For information about how to define lists using expression syntax, see [Create a List&lt;TItem&gt;][].
-
-### Lists containing items of a single data type vs multiple data types
-
-For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
+If the [Task][Task Property] being waited on throws an exception during execution, this block will re-throw the exception.
 
 [Task Property]: {{< ref "#task" >}}
 [Result Property]: {{< ref "#result" >}}
