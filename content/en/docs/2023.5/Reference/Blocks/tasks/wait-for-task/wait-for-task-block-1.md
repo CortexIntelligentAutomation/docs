@@ -60,31 +60,29 @@ Adding `"New Item"` at the beginning of `["Some Text", 1]` results in the variab
 
 ## Properties
 
-### List
+### Task
 
-The [List][List Property] where the [Item][Item Property] is added.  
-
-[List][List Property] can be any [IList][]&lt;[TItem][]&gt;, where [TItem][] represents the type of items that can be added to the [List][List Property].
+The [Task][Task Property] being waited for.  
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [IList][]&lt;[TItem][]&gt; |
-| Property Type | [InputOutput][] |
+| Data Type | [ITask][]&lt;[TResult][]&gt; |
+| Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
-| Default Value | `($)List` with no value |
+| Default Value | `($)Task` with no value |
 
 ### Item
 
-The [Item][Item Property] to be added at the beginning of the [List][List Property].
+The [Result][Result Property] of the [Task][Task Property] being waited for.
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [TItem][] |
-| Property Type | [Input][] |
+| Data Type | [TResult][] |
+| Property Type | [Output][] |
 | Is [Advanced][] | `false` |
-| Default Editor | [Expression][] |
-| Default Value | No value (defaults to `null`) |
+| Default Editor | [Variable][] |
+| Default Value | `($)Result` with no value |
 
 ## Exceptions
 
@@ -110,23 +108,14 @@ For information about how to define lists using expression syntax, see [Create a
 
 For information about the different types of lists, including those that can contain only a single type of item, and those that can contain multiple types of item, see [Lists][].
 
-[List Property]: {{< ref "#list" >}}
-[Item Property]: {{< ref "#item" >}}
+[Task Property]: {{< ref "#task" >}}
+[Result Property]: {{< ref "#result" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
-[InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
-[Create a List&lt;TItem&gt;]: {{< url path="Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
-[Lists]: {{< url path="Cortex.Reference.DataTypes.MostCommon.Lists" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[TItem]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[TResult]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
-[CannotModifyReadOnlyListException]: {{< url path="Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException.MainDoc" >}}
-[PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-
-[InvalidPropertyValueException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.MainDoc" >}}
-[Value Is Invalid]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidPropertyValueException.ValueIsInvalid" >}}
-
-[IList]: {{< url path="Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
