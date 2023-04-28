@@ -16,9 +16,9 @@ Cancels the execution of the specified [Task][Task Property].
 
 ## Examples
 
-### Cancel a Task that takes 5 seconds to execute then returns a result
+### Cancel a Task that is running
 
-This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 1 second after the asynchronous flow is started.
+This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 1 second after the asynchronous flow has started.
 
 #### Properties
 
@@ -50,7 +50,7 @@ Cancelling the [IExecutionTask][] that represents the asynchronous execution of 
 
 ***
 
-### Cancel a Task that takes 5 seconds to execute then returns a result
+### Cancel a Task that has finished running
 
 This example will cancel an [IExecutionTask][] that represents the complete asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 6 second after the asynchronous flow is started.
 
