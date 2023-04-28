@@ -1571,6 +1571,8 @@
                 MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
                     MainDoc = "/docs/reference/exceptions/common/property/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException]
+                        MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-item-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
                         MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/"
                         ValueContainsNullOrEmptyItem = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/#value-contains-null-or-empty-item"

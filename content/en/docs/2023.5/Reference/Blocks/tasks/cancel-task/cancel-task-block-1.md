@@ -28,12 +28,12 @@ This example will cancel an [IExecutionTask][] that represents the asynchronous 
 
 #### Result
 
-Cancelling the [IExecutionTask][] that represents the asynchronous execution of another flow 1 second after it starts results in the [IExecutionTask][] being cancelled and its properties being updated to the following:
+Cancelling the [IExecutionTask][] 1 second after it has started results in the [IExecutionTask][] being cancelled and its properties being updated to the following:
 
 ```json
 {
-  "ExecutionId": "1773fb5d-40c6-4b8f-82a2-1188b6a8b036",
-  "Id": "1bc7f082-38ed-4cb5-962a-de12964a9f4e",
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
   "IsCancelled": true,
   "IsCompleted": true,
   "IsCompletedSuccessfully": false,
@@ -42,8 +42,8 @@ Cancelling the [IExecutionTask][] that represents the asynchronous execution of 
   "Exception": {
     "Exception Type": "FlowExecutionStoppedException",
     "Message": "Flow execution has been stopped!",
-    "FlowId": "00fb1536-1a41-4ae5-b128-d338fe5f0450",
-    "ExecutionId": "1773fb5d-40c6-4b8f-82a2-1188b6a8b036"
+    "FlowId": "00000000-0000-0000-0000-000000000000",
+    "ExecutionId": "00000000-0000-0000-0000-000000000000"
   }
 }
 ```
@@ -62,12 +62,12 @@ This example will cancel an [IExecutionTask][] that represents the complete asyn
 
 #### Result
 
-Cancelling the [IExecutionTask][] that represents the asynchronous execution of another flow 1 second after its finished results in the [IExecutionTask][] being unaffected and its properties being updated to the following:
+Cancelling the [IExecutionTask][] 1 second after it has finished results in the [IExecutionTask][] being unaffected and its properties being updated to the following:
 
 ```json
 {
-  "ExecutionId": "1773fb5d-40c6-4b8f-82a2-1188b6a8b036",
-  "Id": "1bc7f082-38ed-4cb5-962a-de12964a9f4e",
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
   "IsCancelled": false,
   "IsCompleted": true,
   "IsCompletedSuccessfully": true,
@@ -110,7 +110,6 @@ None
 [TResult]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
-[PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
