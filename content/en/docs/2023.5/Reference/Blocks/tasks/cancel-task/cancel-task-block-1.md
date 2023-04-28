@@ -16,9 +16,24 @@ Cancels the execution of the specified [Task][Task Property].
 
 ## Examples
 
-### Cancel a Task that is running
+### Cancel a running Task
 
 This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 1 second after the asynchronous flow has started.
+
+The [IExecutionTask][] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+```
 
 #### Properties
 
@@ -28,7 +43,7 @@ This example will cancel an [IExecutionTask][] that represents the asynchronous 
 
 #### Result
 
-Cancelling the [IExecutionTask][] 1 second after it has started results in the [IExecutionTask][] being cancelled and its properties being updated to the following:
+Cancelling the [IExecutionTask][] 1 second after it has started results in the variable `($)Task` being cancelled and its properties being updated to the following:
 
 ```json
 {
@@ -50,9 +65,24 @@ Cancelling the [IExecutionTask][] 1 second after it has started results in the [
 
 ***
 
-### Cancel a Task that has finished running
+### Cancel a completed Task
 
-This example will cancel an [IExecutionTask][] that represents the complete asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 6 second after the asynchronous flow is started.
+This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 6 seconds after the asynchronous flow is started.
+
+The [IExecutionTask][] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+```
 
 #### Properties
 
@@ -62,7 +92,7 @@ This example will cancel an [IExecutionTask][] that represents the complete asyn
 
 #### Result
 
-Cancelling the [IExecutionTask][] 1 second after it has finished results in the [IExecutionTask][] being unaffected and its properties being updated to the following:
+Cancelling the [IExecutionTask][] 1 second after it has finished results in the variable `($)Task` being unaffected and its properties being updated to the following:
 
 ```json
 {

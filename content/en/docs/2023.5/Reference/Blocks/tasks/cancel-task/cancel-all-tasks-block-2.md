@@ -1,7 +1,7 @@
 ---
 title: "Cancel All Tasks"
 linkTitle: "Cancel All Tasks"
-description: "Cancels a list of Tasks."
+description: "Cancels all Tasks in a list."
 ---
 
 {{< figure src="/blocks/tasks-cancel-task-block.png" alt="Icon" class="block-icon" >}}
@@ -12,13 +12,28 @@ description: "Cancels a list of Tasks."
 
 ## Description
 
-Cancels the execution of each task in a specified list.
+Cancels the execution of all [Tasks][Tasks Property] in a specified list.
 
 ## Examples
 
-### Cancel a list of Tasks that are running
+### Cancel a list of running Tasks
 
-This example will cancel a list containing two [IExecutionTask][] that represent asynchronous executions of another flow. The flow these [IExecutionTasks][IExecutionTask] represent waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 1 second after the asynchronous flows have started.
+This example will cancel the executions of all [Tasks][Tasks Property] in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent the asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 1 second after the asynchronous flows have started.
+
+The [IExecutionTasks][IExecutionTask] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+```
 
 #### Properties
 
@@ -28,7 +43,7 @@ This example will cancel a list containing two [IExecutionTask][] that represent
 
 #### Result
 
-Cancelling the list of [IExecutionTasks][IExecutionTask] results in the [IExecutionTasks][IExecutionTask] being cancelled and their properties being updated to the following:
+Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in each [IExecutionTask][] in the variable `($)Tasks` being cancelled and their properties being updated to the following:
 
 ```json
 {
@@ -50,9 +65,24 @@ Cancelling the list of [IExecutionTasks][IExecutionTask] results in the [IExecut
 
 ***
 
-### Cancel a list of Tasks that have finished running
+### Cancel a list of completed Tasks
 
-This example will cancel a list containing two [IExecutionTask][] that represent asynchronous executions of another flow. The flow these [IExecutionTasks][IExecutionTask] represent waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 6 second after the asynchronous flow has started.
+This example will cancel the executions of all [Tasks][Tasks Property] in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent the asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 6 seconds after the asynchronous flows have started.
+
+The [IExecutionTasks][IExecutionTask] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+```
 
 #### Properties
 
@@ -62,7 +92,7 @@ This example will cancel a list containing two [IExecutionTask][] that represent
 
 #### Result
 
-Cancelling the list of [IExecutionTasks][IExecutionTask] 1 second after they have finished results in the [IExecutionTasks][IExecutionTask] being unaffected and their properties being updated to the following:
+Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in each [IExecutionTask][] in the variable `($)Tasks` being unaffected and their properties being updated to the following:
 
 ```json
 {
@@ -83,6 +113,8 @@ Cancelling the list of [IExecutionTasks][IExecutionTask] 1 second after they hav
 
 The list of Tasks to cancel.
 
+TODO Constraints of TTask
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[TTask][]&gt; |
@@ -97,7 +129,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyContainsNullItemException][] | Thrown when [Tasks][Tasks Property] contains a `null` item.|
+| [PropertyContainsNullItemException][] | Thrown when any Task in [Tasks][Tasks Property] is `null`.|
 | [PropertyEmptyException][] | Thrown when [Tasks][Tasks Property] contains no items.|
 | [PropertyNullException][] | Thrown when [Tasks][Tasks Property] is `null`.|
 
