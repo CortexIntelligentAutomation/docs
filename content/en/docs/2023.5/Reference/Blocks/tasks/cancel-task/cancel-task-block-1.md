@@ -39,7 +39,7 @@ The [IExecutionTask][] will have the following properties:
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Task][Task Property] | `($)Task`, with a value that represent the asynchronous execution of another flow | `($)Task` is a variable of type [IExecutionTask][] |
+| [Task][Task Property] | `($)Task`, with a value that represents the asynchronous execution of another flow | `($)Task` is a variable of type [IExecutionTask][] |
 
 #### Result
 
@@ -88,7 +88,7 @@ The [IExecutionTask][] will have the following properties:
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Task][Task Property] | `($)Task`, with a value that represent the asynchronous execution of another flow | `($)Task` is a variable of type [IExecutionTask][] |
+| [Task][Task Property] | `($)Task`, with a value that represents the asynchronous execution of another flow | `($)Task` is a variable of type [IExecutionTask][] |
 
 #### Result
 
@@ -133,6 +133,12 @@ The exceptions thrown by the block can be found below:
 
 None
 
+## See Also
+
+### Related Blocks
+
+* [Run Flow Async Block][RunFlowAsync]
+
 [Task Property]: {{< ref "#task" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
@@ -146,6 +152,7 @@ None
 [IExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.MainDoc" >}}
 [ITask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ITask.MainDoc" >}}
 [CancelTask]: {{< ref "#cancel-task" >}}
+[RunFlowAsync]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
 
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
