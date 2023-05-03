@@ -45,7 +45,7 @@ When the [WaitForTask][] block begins, the [IExecutionTask][] will have the foll
 
 #### Result
 
-Waiting for the [IExecutionTask][], that represents the asynchronous execution of another flow, 1 second after the asynchronous flow is started, results in the execution containing the [WaitForTask][] block to wait for the task to complete, pausing for 4 seconds and then the variable `($)Result` being updated to the following:
+Waiting for the [IExecutionTask][] 1 second after it is started, results in the execution containing the [WaitForTask][] block to wait for the task to complete, pausing for 4 seconds and then the variable `($)Result` being updated to the following:
 
 ```json
 {
@@ -99,7 +99,7 @@ When the [WaitForTask][] block begins, the [IExecutionTask][] will have the foll
 
 #### Result
 
-Waiting for the [IExecutionTask][], that represents the asynchronous execution of another flow, 6 second after the asynchronous flow is started, results in the execution containing the [WaitForTask][] block to not pause and the variable `($)Result` being immediately updated to the following:
+Waiting for the [IExecutionTask][] 6 second after it is started, results in the execution containing the [WaitForTask][] block to not pause and the variable `($)Result` being immediately updated to the following:
 
 ```json
 {
