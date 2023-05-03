@@ -18,9 +18,9 @@ Cancels the execution of the specified [Task][Task Property].
 
 ### Cancel a running Task
 
-This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 1 second after the asynchronous flow has started.
+This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets an output variable `ResultVariable` to `"ResultValue"`. The [Cancel Task Block][CancelTask] begins execution 1 second after the asynchronous flow has started, so the flow gets cancelled before `ResultVariable` is set.
 
-The [IExecutionTask][] will have the following properties:
+When the [Cancel Task Block][CancelTask] begins, the [IExecutionTask][] will have the following properties:
 
 ```json
 {
@@ -43,7 +43,7 @@ The [IExecutionTask][] will have the following properties:
 
 #### Result
 
-Cancelling the [IExecutionTask][] 1 second after it has started results in the variable `($)Task` being cancelled and its properties being updated to the following:
+Cancelling the [IExecutionTask][] 1 second after it has started, results in the flow it represents being cancelled and the properties of `($)Task` being updated to the following:
 
 ```json
 {
@@ -67,19 +67,19 @@ Cancelling the [IExecutionTask][] 1 second after it has started results in the v
 
 ### Cancel a completed Task
 
-This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelTask][] block begins execution 6 seconds after the asynchronous flow is started.
+This example will cancel an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [Cancel Task Block][CancelTask] begins execution 6 seconds after the asynchronous flow has started, so the flow completes and sets `ResultVariable` before it could be cancelled.
 
-The [IExecutionTask][] will have the following properties:
+When the [Cancel Task Block][CancelTask] begins, the [IExecutionTask][] will have the following properties:
 
 ```json
 {
   "ExecutionId": "00000000-0000-0000-0000-000000000000",
   "Id": "00000000-0000-0000-0000-000000000000",
   "IsCancelled": false,
-  "IsCompleted": false,
-  "IsCompletedSuccessfully": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
   "IsFaulted": false,
-  "Status": "Running",
+  "Status": "RanToCompletion",
   "Exception": null
 }
 ```
@@ -92,7 +92,7 @@ The [IExecutionTask][] will have the following properties:
 
 #### Result
 
-Cancelling the [IExecutionTask][] 1 second after it has finished results in the variable `($)Task` being unaffected and its properties being updated to the following:
+Cancelling the [IExecutionTask][] has no effect as the flow it represents was completed and its properties remain unchanged.
 
 ```json
 {
@@ -131,7 +131,17 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-None
+### Cancelling a Task that has already been cancelled
+
+If the [Task][Task Property] being cancelled has already been cancelled, this block will do nothing and the status of the [Task][Task Property] will remain `"Cancelled"`.
+
+### Cancelling a Task that has thrown an exception
+
+If the [Task][Task Property] being cancelled has thrown an exception during execution, this block will do nothing and the status of the [Task][Task Property] will remain `"Faulted"`.
+
+### Cancelling a Task that has been completed
+
+If the [Task][Task Property] being cancelled has already been completed, this block will do nothing and the status of the [Task][Task Property] will remain `"RanToCompletion"`.
 
 ## See Also
 

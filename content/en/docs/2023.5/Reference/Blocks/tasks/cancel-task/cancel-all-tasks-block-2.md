@@ -18,9 +18,9 @@ Cancels the execution of all [Tasks][Tasks Property] in a specified list.
 
 ### Cancel a list of running Tasks
 
-This example will cancel the executions of all [Tasks][Tasks Property] in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent the asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 1 second after the asynchronous flows have started.
+This example will cancel the executions of all [Tasks][Tasks Property] in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent the asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 1 second after the asynchronous flows have started, so the flows get cancelled before the `ResultVariable` are set.
 
-The [IExecutionTasks][IExecutionTask] will have the following properties:
+When the [Cancel All Tasks Block][CancelAllTasks] begins, the [IExecutionTasks][IExecutionTask] will have the following properties:
 
 ```json
 {
@@ -43,7 +43,7 @@ The [IExecutionTasks][IExecutionTask] will have the following properties:
 
 #### Result
 
-Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in each [IExecutionTask][] in the variable `($)Tasks` being cancelled and their properties being updated to the following:
+Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in each [IExecutionTask][], that represent the asynchronous execution of another flow, in the variable `($)Tasks` being cancelled and their properties being updated to the following:
 
 ```json
 {
@@ -69,7 +69,7 @@ Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in eac
 
 This example will cancel the executions of all [Tasks][Tasks Property] in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent the asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets the output variable `ResultVariable` to `"ResultValue"`. The [CancelAllTasks][] block begins execution 6 seconds after the asynchronous flows have started.
 
-The [IExecutionTasks][IExecutionTask] will have the following properties:
+When the [Cancel All Tasks Block][CancelAllTasks] begins, the [IExecutionTasks][IExecutionTask] will have the following properties:
 
 ```json
 {
@@ -92,7 +92,7 @@ The [IExecutionTasks][IExecutionTask] will have the following properties:
 
 #### Result
 
-Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in each [IExecutionTask][] in the variable `($)Tasks` being unaffected and their properties being updated to the following:
+Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in each [IExecutionTask][], that represent the asynchronous execution of another flow, in the variable `($)Tasks` being unaffected and their properties being updated to the following:
 
 ```json
 {
@@ -117,7 +117,7 @@ TODO Constraints of TTask
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [IList][]&lt;[TTask][]&gt; |
+| Data Type | [IList][]&lt;[ITask][]&lt;[TResult][]&gt;&gt; |
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
@@ -135,7 +135,17 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-None
+### Cancelling a Task that has already been cancelled
+
+If the Task being cancelled has already been cancelled, this block will do nothing and the status of the Task will remain `"Cancelled"`.
+
+### Cancelling a Task that has thrown an exception
+
+If the Task being cancelled has thrown an exception during execution, this block will do nothing and the status of the Task will remain `"Faulted"`.
+
+### Cancelling a Task that has been completed
+
+If the Task being cancelled has already been completed, this block will do nothing and the status of the Task will remain `"RanToCompletion"`.
 
 ## See Also
 
@@ -148,6 +158,7 @@ None
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [TTask]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[TResult]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 [IList]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
