@@ -1,7 +1,7 @@
 ---
 title: "Wait For Task"
 linkTitle: "Wait For Task"
-description: "Waits for a Task to be complete."
+description: "Waits for a Task to complete and returns the Result."
 ---
 
 {{< figure src="/blocks/tasks-wait-for-task-block-icon.png" alt="Icon" class="block-icon" >}}
@@ -16,9 +16,25 @@ Waits for the specified [Task][Task Property] to finish and returns the [Result]
 
 ## Examples
 
-### Wait for a Task that is currently executing
+### Wait for a running Task
 
-This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 1 second after the asynchronous flow is started.
+This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 1 second after the asynchronous flow is started. 
+
+When the [WaitForTask][] block begins, the [IExecutionTask][] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+
+```
 
 #### Properties
 
@@ -29,19 +45,50 @@ This example will wait for an [IExecutionTask][] that represents the asynchronou
 
 #### Result
 
-Waiting for an [IExecutionTask][], that represents the asynchronous execution of another flow, 1 second after the asynchronous flow is started results in the execution containing the [WaitForTask][] block to pause for 4 seconds and then the variable `($)Result` being updated to the following:
+Waiting for the [IExecutionTask][], that represents the asynchronous execution of another flow, 1 second after the asynchronous flow is started, results in the execution containing the [WaitForTask][] block to wait for the task to complete, pausing for 4 seconds and then the variable `($)Result` being updated to the following:
 
 ```json
 {
     "ResultVariable": "ResultValue"
+}
+```
+
+After the [WaitForTask][] block finishs, the `($)Task` will be in the following state:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
 }
 ```
 
 ***
 
-### Wait for a Task that has finished executing
+### Wait for a completed Task
 
 This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 6 seconds after the asynchronous flow is started, therefore starting after the execution has already completed.
+
+When the [WaitForTask][] block begins, the [IExecutionTask][] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
+}
+
+```
 
 #### Properties
 
@@ -52,13 +99,15 @@ This example will wait for an [IExecutionTask][] that represents the asynchronou
 
 #### Result
 
-Waiting for an [IExecutionTask][], that represents the asynchronous execution of another flow, 6 second after the asynchronous flow is started results in the execution containing the [WaitForTask][] block to not pause and the variable `($)Result` being immediately updated to the following:
+Waiting for the [IExecutionTask][], that represents the asynchronous execution of another flow, 6 second after the asynchronous flow is started, results in the execution containing the [WaitForTask][] block to not pause and the variable `($)Result` being immediately updated to the following:
 
 ```json
 {
     "ResultVariable": "ResultValue"
 }
 ```
+
+After the [WaitForTask][] block finishs, the `($)Task` will not change state.
 
 ***
 
@@ -98,9 +147,13 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Task throws an exception
+### Waiting for a Task that has been cancelled
 
-If the [Task][Task Property] being waited on throws an exception during execution, this block will re-throw the exception.
+If the [Task][Task Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will re-throw the cancellation exception.
+
+### Waiting for a Task that has thrown an exception
+
+If the [Task][Task Property] being waited on has already thrown an exception during execution or throws an exception whilst being waited on, this block will re-throw the exception.
 
 [Task Property]: {{< ref "#task" >}}
 [Result Property]: {{< ref "#result" >}}
