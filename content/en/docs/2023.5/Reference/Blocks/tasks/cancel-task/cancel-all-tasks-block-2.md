@@ -39,7 +39,7 @@ When the [Cancel All Tasks Block][CancelAllTasks] begins, the [IExecutionTasks][
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Tasks][Tasks Property] | `($)Tasks`, with value `[($)ExecutionTask1, ($)ExecutionTask2]` | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
+| [Tasks][Tasks Property] | `($)Tasks`, with value `[($)ExecutionTask1, ($)ExecutionTask2]` | `($)Tasks` is a variable of type [List][]&lt;[IExecutionTask][]&gt; |
 
 #### Result
 
@@ -113,8 +113,6 @@ Cancelling the execution of all [IExecutionTasks][IExecutionTask] results in eac
 
 The list of Tasks to cancel.
 
-TODO Constraints of TTask
-
 | | |
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[ITask][]&lt;[TResult][]&gt;&gt; |
@@ -139,13 +137,13 @@ The exceptions thrown by the block can be found below:
 
 If the Task being cancelled has already been cancelled, this block will do nothing and the status of the Task will remain `"Cancelled"`.
 
-### Cancelling a Task that has thrown an exception
-
-If the Task being cancelled has thrown an exception during execution, this block will do nothing and the status of the Task will remain `"Faulted"`.
-
 ### Cancelling a Task that has been completed
 
 If the Task being cancelled has already been completed, this block will do nothing and the status of the Task will remain `"RanToCompletion"`.
+
+### Cancelling a Task that has thrown an exception
+
+If the Task being cancelled has thrown an exception during execution, this block will do nothing and the status of the Task will remain `"Faulted"`.
 
 ## See Also
 

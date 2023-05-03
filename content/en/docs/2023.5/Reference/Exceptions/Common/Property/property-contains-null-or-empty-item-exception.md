@@ -23,7 +23,6 @@ A `null` or empty item is contained in the value that was provided for the [prop
 The format of the [Message][] is as follows:
 
 ```json
-
 "'<property-name>' contains at least one null or empty value; it must only contain values that are not null or empty.
 Please click the HelpLink for more information on how to fix this."
 ```

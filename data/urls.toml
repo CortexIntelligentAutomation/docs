@@ -784,6 +784,14 @@
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
+            [Cortex.Reference.Blocks.Tasks]
+                MainDoc = "/docs/reference/blocks/tasks/"
+                [Cortex.Reference.Blocks.Tasks.CancelTask]
+                    MainDoc = "/docs/reference/blocks/tasks/cancel-task"
+                    [Cortex.Reference.Blocks.Tasks.CancelTask.CancelTaskBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-task-block-1"
+                    [Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-all-tasks-block-2"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
@@ -795,7 +803,6 @@
                         CloseSession = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#close-session"
                         Response = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#response"
                         InactivityTimeout = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#inactivity-timeout"
-
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]

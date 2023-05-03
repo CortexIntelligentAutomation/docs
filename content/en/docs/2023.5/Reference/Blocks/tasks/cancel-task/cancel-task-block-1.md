@@ -135,13 +135,13 @@ The exceptions thrown by the block can be found below:
 
 If the [Task][Task Property] being cancelled has already been cancelled, this block will do nothing and the status of the [Task][Task Property] will remain `"Cancelled"`.
 
-### Cancelling a Task that has thrown an exception
-
-If the [Task][Task Property] being cancelled has thrown an exception during execution, this block will do nothing and the status of the [Task][Task Property] will remain `"Faulted"`.
-
 ### Cancelling a Task that has been completed
 
 If the [Task][Task Property] being cancelled has already been completed, this block will do nothing and the status of the [Task][Task Property] will remain `"RanToCompletion"`.
+
+### Cancelling a Task that has thrown an exception
+
+If the [Task][Task Property] being cancelled has thrown an exception during execution, this block will do nothing and the status of the [Task][Task Property] will remain `"Faulted"`.
 
 ## See Also
 
