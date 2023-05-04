@@ -1490,7 +1490,13 @@
                         CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
-             [Cortex.Reference.DataTypes.Telnet]
+            [Cortex.Reference.DataTypes.Tasks]
+                MainDoc = "/docs/reference/data-types/tasks/"
+                [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
+                    MainDoc = "/docs/reference/data-types/tasks/iexecutiontask/"
+                [Cortex.Reference.DataTypes.Tasks.ITask]
+                    MainDoc = "/docs/reference/data-types/tasks/itask/"
+            [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
                     MainDoc = "/docs/reference/data-types/telnet/telnetsessiondetails"
@@ -1567,6 +1573,8 @@
                     MainDoc = "/docs/reference/exceptions/common/property/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
                         MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException]
+                        MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-item-exception/"
                         ValueContainsNullOrEmptyItem = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/#value-contains-null-or-empty-item"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException]
                         MainDoc = "/docs/reference/exceptions/common/property/property-empty-exception/"
@@ -1694,6 +1702,10 @@
                 MainDoc = "/docs/reference/exceptions/ssh/"
                 SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
                 SshResponseException = "/docs/reference/exceptions/ssh/ssh-response-exception/"
+            [Cortex.Reference.Exceptions.Tasks]
+                MainDoc = "/docs/reference/exceptions/tasks/"
+                [Cortex.Reference.Exceptions.Tasks.AggregateTaskException]
+                    MainDoc = "/docs/reference/exceptions/tasks/aggregate-task-exception/"
             [Cortex.Reference.Exceptions.Telnet]
                 MainDoc = "/docs/reference/exceptions/telnet/"
                 [Cortex.Reference.Exceptions.Telnet.TelnetClientException]
