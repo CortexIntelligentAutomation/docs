@@ -220,7 +220,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     -ImportCertificate $false `
     -CertificateFilePath "C:\Install\Certificate.pfx" `
     -CertificateFriendlyName "CertificateName" `
-    -ConfigureHttpRedirect $true `
+    -ConfigureSiteRedirect $true `
     -ApplySecurityMeasures $true `
     -UsingWindowsDefender $false `
     -AcceptEULA:$AcceptEula `
@@ -245,7 +245,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     |`ImportCertificate`                             | Change this from `$true` to `$false` if you do not require the certificate to be imported as part of the installation process.<br /><br />Note that if this is changed to `$false` you must [import the Root Certificate][Import Root Certificate] (if necessary), [import the X.509 certificate manually][Import Certificate Manually] and [assign a friendly name][Assign Certificate Friendly Name] prior to running the installation.|
     |`CertificateFilePath`                           | Replace this with the location and filename for the certificate to be imported.<br /><br />If `ImportCertificate` is set to `$false` this value can remain unchanged but you must [import the Root Certificate][Import Root Certificate] (if necessary), [import the X.509 certificate manually][Import Certificate Manually] and [assign a friendly name][Assign Certificate Friendly Name] prior to running the installation.|
     |`CertificateFriendlyName`                       | Replace this with the friendly name that you would like to be allocated to the certificate.<br /><br />If `ImportCertificate` is set to `$false` this must be [assigned][Assign Certificate Friendly Name] prior to running the installation and the Friendly Name used must be specified to allow the website to use the correct certificate.|
-    |`ConfigureHttpRedirect`                         | Change this from `$true` to `$false` if you do not require the HTTP Redirect rule to be implemented as part of the installation process.<br /><br />If the site hosting the Cortex Gateway web application is a newly created Cortex site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the Cortex Gateway web application URL. Creating this rule will implement this.|
+    |`ConfigureSiteRedirect`                         | If the site hosting the Cortex Gateway web application is a newly created Cortex site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the Cortex Gateway web application URL. The default behaviour of the script is to create a URL Rewrite redirect rule to achieve this.<br /><br />To skip this rule creation change the value to `$false`.|
     |`ApplySecurityMeasures`                         | Change this from `$true` to `$false` if you do not require the Recommended [Security Best Practices][] to be implemented as part of the installation process.|
     |`UsingWindowsDefender`                          | Change this from `$true` to `$false` if you are not using the Windows Defender firewall.<br /><br />If Windows Defender is not being used but an alterntive firewall is, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443).|
     |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
