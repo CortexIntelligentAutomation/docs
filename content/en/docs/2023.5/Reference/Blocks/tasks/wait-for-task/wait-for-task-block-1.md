@@ -18,9 +18,9 @@ Waits for the specified [Task][Task Property] to finish and returns the [Result]
 
 ### Wait for a running Task
 
-This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 1 second after the asynchronous flow is started. 
+This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [Wait For Task][] block begins execution 1 second after the asynchronous flow is started. 
 
-When the [WaitForTask][] block begins, the [IExecutionTask][] will have the following properties:
+When the [Wait For Task][] block begins, the [IExecutionTask][] will have the following properties:
 
 ```json
 {
@@ -45,7 +45,7 @@ When the [WaitForTask][] block begins, the [IExecutionTask][] will have the foll
 
 #### Result
 
-Waiting for the [IExecutionTask][] 1 second after it is started, results in the execution containing the [WaitForTask][] block to wait for the task to complete, pausing for 4 seconds and then the variable `($)Result` being updated to the following:
+Waiting for the [IExecutionTask][] 1 second after it is started, results in the execution containing the [Wait For Task][] block to wait for the task to complete, pausing for 4 seconds and then the variable `($)Result` being updated to the following:
 
 ```json
 {
@@ -53,7 +53,7 @@ Waiting for the [IExecutionTask][] 1 second after it is started, results in the 
 }
 ```
 
-After the [WaitForTask][] block finishs, the `($)Task` will be in the following state:
+After the [Wait For Task][] block finishs, the `($)Task` will be in the following state:
 
 ```json
 {
@@ -72,9 +72,9 @@ After the [WaitForTask][] block finishs, the `($)Task` will be in the following 
 
 ### Wait for a completed Task
 
-This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [WaitForTask][] block begins execution 6 seconds after the asynchronous flow is started, therefore starting after the execution has already completed.
+This example will wait for an [IExecutionTask][] that represents the asynchronous execution of another flow. The flow this [IExecutionTask][] represents waits for 5 seconds and then sets the output variable `ResultVariable` to `"ResultValue"`. The [Wait For Task][] block begins execution 6 seconds after the asynchronous flow is started, therefore starting after the execution has already completed.
 
-When the [WaitForTask][] block begins, the [IExecutionTask][] will have the following properties:
+When the [Wait For Task][] block begins, the [IExecutionTask][] will have the following properties:
 
 ```json
 {
@@ -99,7 +99,7 @@ When the [WaitForTask][] block begins, the [IExecutionTask][] will have the foll
 
 #### Result
 
-Waiting for the [IExecutionTask][] 6 second after it is started, results in the execution containing the [WaitForTask][] block to not pause and the variable `($)Result` being immediately updated to the following:
+Waiting for the [IExecutionTask][] 6 second after it is started, results in the execution containing the [Wait For Task][] block to not pause and the variable `($)Result` being immediately updated to the following:
 
 ```json
 {
@@ -107,7 +107,7 @@ Waiting for the [IExecutionTask][] 6 second after it is started, results in the 
 }
 ```
 
-After the [WaitForTask][] block finishs, the `($)Task` will not change state.
+After the [Wait For Task][] block finishs, the `($)Task` will not change state.
 
 ***
 
@@ -165,7 +165,7 @@ If the [Task][Task Property] being waited on has already thrown an exception dur
 
 [IExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.MainDoc" >}}
 [ITask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ITask.MainDoc" >}}
-[WaitForTask]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask.MainDoc" >}}
+[Wait For Task]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask.MainDoc" >}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 

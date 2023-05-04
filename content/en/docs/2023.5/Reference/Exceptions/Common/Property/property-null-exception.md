@@ -210,6 +210,8 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Get Count Of All Items][Queues Get Count Of All Items]
   * [Peek Item][]
   * [Remove All Items][Q Remove All Items]
+* Tasks
+  * [Wait For Task][]
 * Text
   * [Contains All Text][]
   * [Contains Any Text][]
@@ -349,6 +351,8 @@ None
 [Queues Get Count Of All Items]: {{< url path="Cortex.Reference.Blocks.Queues.EnqueueItem.GetCountOfAllItemsBlock.MainDoc" >}}
 [Peek Item]: {{< url path="Cortex.Reference.Blocks.Queues.PeekItem.PeekItemBlock.MainDoc" >}}
 [Q Remove All Items]: {{< url path="Cortex.Reference.Blocks.Queues.RemoveItem.RemoveAllItemsBlock.MainDoc" >}}
+
+[Wait For Task]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask.MainDoc" >}}
 
 [Contains All Text]: {{< url path="Cortex.Reference.Blocks.Text.ContainsText.ContainsAllText.MainDoc" >}}
 [Contains Any Text]: {{< url path="Cortex.Reference.Blocks.Text.ContainsText.ContainsAnyText.MainDoc" >}}
