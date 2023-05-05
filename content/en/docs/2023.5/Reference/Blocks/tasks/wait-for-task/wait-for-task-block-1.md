@@ -53,7 +53,7 @@ Waiting for the [IExecutionTask][] 1 second after it is started, results in the 
 }
 ```
 
-After the [Wait For Task][] block finishs, the `($)Task` will be in the following state:
+After the [Wait For Task][] block finishes, the `($)Task` will be in the following state:
 
 ```json
 {
@@ -87,7 +87,6 @@ When the [Wait For Task][] block begins, the [IExecutionTask][] will have the fo
   "Status": "RanToCompletion",
   "Exception": null
 }
-
 ```
 
 #### Properties
@@ -99,7 +98,7 @@ When the [Wait For Task][] block begins, the [IExecutionTask][] will have the fo
 
 #### Result
 
-Waiting for the [IExecutionTask][] 6 second after it is started, results in the execution containing the [Wait For Task][] block to not pause and the variable `($)Result` being immediately updated to the following:
+Waiting for the [IExecutionTask][] 6 seconds after it is started, results in the execution containing the [Wait For Task][] block to not wait and the variable `($)Result` being immediately updated to the following:
 
 ```json
 {
@@ -107,7 +106,20 @@ Waiting for the [IExecutionTask][] 6 second after it is started, results in the 
 }
 ```
 
-After the [Wait For Task][] block finishs, the `($)Task` will not change state.
+After the [Wait For Task][] block finishes, the `($)Task` will remain unchanged:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
+}
+```
 
 ***
 
@@ -151,12 +163,16 @@ The exceptions thrown by the block can be found below:
 
 If the [Task][Task Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will re-throw the cancellation exception.
 
+### Waiting for a Task that has been completed
+
+If the [Task][Task Property] being waited on has completed, this block will not wait and immediately return the [Task][Task Property]'s result.
+
 ### Waiting for a Task that has thrown an exception
 
 If the [Task][Task Property] being waited on has already thrown an exception during execution or throws an exception whilst being waited on, this block will re-throw the exception.
 
 [Task Property]: {{< ref "#task" >}}
-[Result Property]: {{< ref "#result" >}}
+[Result Property]: {{< ref "#result-2" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
