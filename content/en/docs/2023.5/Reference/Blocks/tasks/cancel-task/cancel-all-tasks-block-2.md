@@ -18,9 +18,9 @@ Cancels the execution of all [Tasks][Tasks Property] in a specified list.
 
 ### Cancel a list of running Tasks
 
-This example will cancel the executions of all tasks in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets an output variable `ResultVariable` to `"ResultValue"`. The [Cancel All Tasks Block][CancelAllTasks] block begins execution 1 second after the asynchronous flows have started, so the flows get cancelled before the `ResultVariable` are set.
+This example will cancel the executions of all tasks in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent asynchronous executions of other flows. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets an output variable `ResultVariable` to `"ResultValue"`. The [Cancel All Tasks][CancelAllTasks] block begins execution 1 second after the asynchronous flows have started, so the flows get cancelled before each `ResultVariable` is set.
 
-When the [Cancel All Tasks Block][CancelAllTasks] begins, the [IExecutionTasks][IExecutionTask] will have the following properties:
+When the [Cancel All Tasks][CancelAllTasks] block begins, the [IExecutionTasks][IExecutionTask] will have the following properties:
 
 ```json
 {
@@ -67,9 +67,9 @@ Cancelling all [IExecutionTasks][IExecutionTask] 1 second after they have starte
 
 ### Cancel a list of completed Tasks
 
-This example will cancel the executions of all tasks in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent asynchronous executions of another flow. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets an output variable `ResultVariable` to `"ResultValue"`. The [Cancel All Tasks Block][CancelAllTasks] begins execution 6 seconds after the asynchronous flows have started, so the flow completes and sets `ResultVariable` before they could be cancelled.
+This example will cancel the executions of all tasks in a list; the list contains two [IExecutionTasks][IExecutionTask] that represent asynchronous executions of other flows. Both [IExecutionTasks][IExecutionTask] represent a flow that waits for 5 seconds then sets an output variable `ResultVariable` to `"ResultValue"`. The [Cancel All Tasks][CancelAllTasks] block begins execution 6 seconds after the asynchronous flows have started, so the flows complete and set their `ResultVariable` before they could be cancelled.
 
-When the [Cancel All Tasks Block][CancelAllTasks] begins, the [IExecutionTasks][IExecutionTask] will have the following properties:
+When the [Cancel All Tasks][CancelAllTasks] block begins, the [IExecutionTasks][IExecutionTask] will have the following properties:
 
 ```json
 {
@@ -145,19 +145,13 @@ If the Task being cancelled has already been completed, this block will do nothi
 
 If the Task being cancelled has thrown an exception during execution, this block will do nothing and the status of the Task will remain `"Faulted"`.
 
-## See Also
-
-### Related Blocks
-
-* [Run Flow Async Block][RunFlowAsync]
-
 [Tasks Property]: {{< ref "#tasks" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [TTask]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 [TResult]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
-[IList]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[IList]: {{< url path="Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
 [List]: {{< url path="Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}

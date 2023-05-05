@@ -143,12 +143,6 @@ If the [Task][Task Property] being cancelled has already been completed, this bl
 
 If the [Task][Task Property] being cancelled has thrown an exception during execution, this block will do nothing and the status of the [Task][Task Property] will remain `"Faulted"`.
 
-## See Also
-
-### Related Blocks
-
-* [Run Flow Async Block][RunFlowAsync]
-
 [Task Property]: {{< ref "#task" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
