@@ -1499,7 +1499,7 @@
                         CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
-            [Coretex.Reference.DataTypes.Tasks]
+            [Cortex.Reference.DataTypes.Tasks]
                 MainDoc = "/docs/reference/data-types/tasks/"
                 [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
                     MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
