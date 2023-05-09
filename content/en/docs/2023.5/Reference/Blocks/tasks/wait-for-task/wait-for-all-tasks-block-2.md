@@ -107,7 +107,7 @@ When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have
 
 ### Result
 
-Wait for the [IExecutionTask][]'s 7 sercond after they have started, results in the execution containing the [Wait For All Tasks][] block to not wait and the variable `($)Results` being immediately updated to the following:
+Wait for the [IExecutionTask][]'s 7 second after they have started, results in the execution containing the [Wait For All Tasks][] block to not wait and the variable `($)Results` being immediately updated to the following:
 
 ```json
 [
@@ -177,8 +177,41 @@ The exceptions thrown by the block can be found below:
 | [PropertyContainsNullItemException][] | Thrown when one or more items in the list of [Tasks][Tasks Property] is `null`. |
 | [AggregateTaskException][] | Thrown when one or more items in [Tasks][Tasks Property] throws an exception. |
 
+## Remarks
+
+### Waiting for Tasks that have been cancelled
+
+If one or more tasks in the [Tasks][Tasks Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will throw an [AggregateTaskException][] with the cancellation exception. Please see [Waiting for a Task that has thrown an exception][WaitingException Remark] for more details.
+
+### Waiting for a Task that has been completed
+
+If one or more tasks in the [Tasks][Tasks Property] being waited on has completed, this block will not wait and immediately return the [Tasks][Tasks Property] results.
+
+### Waiting for a Task that has thrown an exception
+
+If one or more tasks in the [Tasks][Tasks Property] being waited has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][]. The [AggregateTaskException][] has the property [TaskExceptions][] of type [Structure][]&lt;[int][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of a task threw it.
+
+Below is an example of the value of [TaskExceptions][] after the first and third tasks both throw a [FlowException][]:
+```json
+{
+    "0": {
+        "Exception Type": "FlowException",
+        "Message": "This flow threw an exception.",
+        "HelpLink": "https://docs.wearecortex.com/docs/2023.5/reference/exceptions/flows/flow-exception"
+    },
+    "2": {
+        "Exception Type": "FlowException",
+        "Message": "This flow threw an exception.",
+        "HelpLink": "https://docs.wearecortex.com/docs/2023.5/reference/exceptions/flows/flow-exception"
+    }
+}
+```
+
+To get the results of the tasks that did not throw an exception, you would need to use another [Wait For All Tasks][] block to wait on only the tasks that didn't throw an exception. Below is example showing the simplist method of doing so:
+
 [Tasks Property]: {{< ref "#tasks" >}}
 [Results Property]: {{< ref "#results" >}}
+[WaitingException Remark]: {{< ref "#waiting-for-a-task-that-has-thrown-an-exception" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
