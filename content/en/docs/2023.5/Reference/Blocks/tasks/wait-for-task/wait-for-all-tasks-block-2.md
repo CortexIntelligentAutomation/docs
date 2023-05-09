@@ -16,7 +16,129 @@ Waits for all of the specified [Tasks][Tasks Property] to finish and returns a l
 
 ## Examples
 
-TODO
+### Wait for multiple running Tasks
+
+This example will wait for three instances of an [IExecutionTask][] that represent an asynchronous execution of another flow. The flows that the [IExecutionTask][]'s represents waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 1 second after the asynchronous flows are started.
+
+When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have the following properties:
+
+```json
+
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+
+```
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Tasks][Tasks Property] | `($)Tasks`, with value that represents a list of multiple asynchronous execution of another flow | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
+| [Results][Results Property] | `($)Results`, with no value | `($)Results` is a variable of type [IList][]&lt;[Structure][]&gt; |
+
+#### Result
+
+Wait for the [IExecutionTask][]'s 1 sercond after they have started, results in the execution containing the [Wait For All Tasks][] block to wait for all tasks to complete, pausing for 5 seconds and then the variable `($)Results` being updated to the following:
+
+```json
+[
+    {
+        "TimeWaited": 2
+    },
+    {
+        "TimeWaited": 4
+    },
+    {
+        "TimeWaited": 6
+    }
+]
+```
+
+After the [Wait For All Tasks][] block finishes, the tasks in `($)Tasks` will be in the following state:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
+}
+```
+
+***
+
+### Wait for multiple completed Tasks
+
+This example will wait for three instances of an [IExecutionTask][] that represent an asynchronous execution of another flow. The flows that the [IExecutionTask][]'s represents waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 7 second after the asynchronous flows are started, therefore starting after all the executions have already completed.
+
+When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
+}
+```
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Tasks][Tasks Property] | `($)Tasks`, with value that represents a list of multiple asynchronous execution of another flow | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
+| [Results][Results Property] | `($)Results`, with no value | `($)Results` is a variable of type [IList][]&lt;[Structure][]&gt; |
+
+### Result
+
+Wait for the [IExecutionTask][]'s 7 sercond after they have started, results in the execution containing the [Wait For All Tasks][] block to not wait and the variable `($)Results` being immediately updated to the following:
+
+```json
+[
+    {
+        "TimeWaited": 2
+    },
+    {
+        "TimeWaited": 4
+    },
+    {
+        "TimeWaited": 6
+    }
+]
+```
+
+After the [Wait For All Tasks][] block finishes, the tasks in `($)Tasks` will remain unchanged:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
+}
+```
+
+***
 
 ## Properties
 
