@@ -213,6 +213,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 * Tasks
   * [Cancel Task]
   * [Cancel All Tasks]
+  * [Wait For Task][]
 * Text
   * [Contains All Text][]
   * [Contains Any Text][]
@@ -355,6 +356,7 @@ None
 
 [Cancel Task]: {{< url path="Cortex.Reference.Blocks.Tasks.CancelTask.CancelTaskBlock.MainDoc" >}}
 [Cancel All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock.MainDoc" >}}
+[Wait For Task]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask.MainDoc" >}}
 
 [Contains All Text]: {{< url path="Cortex.Reference.Blocks.Text.ContainsText.ContainsAllText.MainDoc" >}}
 [Contains Any Text]: {{< url path="Cortex.Reference.Blocks.Text.ContainsText.ContainsAnyText.MainDoc" >}}

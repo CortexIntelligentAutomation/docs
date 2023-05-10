@@ -792,6 +792,10 @@
                         MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-task-block-1"
                     [Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock]
                         MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-all-tasks-block-2"
+                [Cortex.Reference.Blocks.Tasks.WaitForTask]
+                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
@@ -1504,7 +1508,7 @@
                 [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
                     MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
                 [Cortex.Reference.DataTypes.Tasks.ITask]
-                MainDoc = "/docs/reference/data-types/tasks/itask-1"
+                    MainDoc = "/docs/reference/data-types/tasks/itask-1"
             [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
