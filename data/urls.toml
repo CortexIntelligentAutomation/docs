@@ -577,6 +577,8 @@
                         RunningAFlow = "/docs/reference/blocks/flows/run-flow/run-flow-block/#running-a-flow"
                         FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
                         InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
+                [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
+                    MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
@@ -786,8 +788,16 @@
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
             [Cortex.Reference.Blocks.Tasks]
                 MainDoc = "/docs/reference/blocks/tasks/"
+                [Cortex.Reference.Blocks.Tasks.CancelTask]
+                    MainDoc = "/docs/reference/blocks/tasks/cancel-task"
+                    [Cortex.Reference.Blocks.Tasks.CancelTask.CancelTaskBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-task-block-1"
+                    [Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-all-tasks-block-2"
                 [Cortex.Reference.Blocks.Tasks.WaitForTask]
-                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task/"
+                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
                     [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasks]
                         MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2"
             [Cortex.Reference.Blocks.Telnet]
@@ -801,7 +811,6 @@
                         CloseSession = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#close-session"
                         Response = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#response"
                         InactivityTimeout = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#inactivity-timeout"
-
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]
@@ -1501,9 +1510,9 @@
             [Cortex.Reference.DataTypes.Tasks]
                 MainDoc = "/docs/reference/data-types/tasks/"
                 [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
-                    MainDoc = "/docs/reference/data-types/tasks/iexecutiontask/"
+                    MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
                 [Cortex.Reference.DataTypes.Tasks.ITask]
-                    MainDoc = "/docs/reference/data-types/tasks/itask/"
+                    MainDoc = "/docs/reference/data-types/tasks/itask-1"
             [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
@@ -1579,6 +1588,8 @@
                 MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
                     MainDoc = "/docs/reference/exceptions/common/property/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException]
+                        MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-item-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
                         MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException]
