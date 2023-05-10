@@ -15,8 +15,8 @@ Any data type representing an asynchronous task.
 | | |
 |-|-|
 | **Category:**          | Tasks |
-| **Name:**              | `ITask` |
-| **Full Name:**         | `Cortex.DataTypes.Tasks.ITask` |
+| **Name:**              | `ITask<TResult>` |
+| **Full Name:**         | `Cortex.DataTypes.Tasks.ITask<TResult>` |
 | **Alias:**             | N/A |
 | **Description:**       | Any data type representing an asynchronous task. |
 | **Default Value:**     | `null` |
