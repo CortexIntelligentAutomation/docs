@@ -247,7 +247,7 @@ To get the results of the tasks that did not throw an exception, you would need 
 
 [TResult]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
-[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasks.MainDoc" >}}
+[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.MainDoc" >}}
 [Handle Block Exception]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
 [Remove Items At Indexes]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.MainDoc" >}}
 [Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.MainDoc" >}}
