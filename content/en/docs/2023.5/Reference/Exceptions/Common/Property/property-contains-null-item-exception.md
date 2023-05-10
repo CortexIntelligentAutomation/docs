@@ -1,29 +1,29 @@
 ---
-title: "PropertyContainsNullOrEmptyItemException"
-linkTitle: "PropertyContainsNullOrEmptyItemException"
-description: "The exception thrown when a property is provided with a value that contains at least one item that is either `null` or empty, but the item is required to have a value."
+title: "PropertyContainsNullItemException"
+linkTitle: "PropertyContainsNullItemException"
+description: "The exception thrown when a property is provided with a value that contains at least one item that is `null`."
 ---
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException)</p>
+<p class="namespace">(Cortex.Exceptions.Common.Property.PropertyContainsNullItemException)</p>
 
 ## Description
 
-The exception thrown when a [property][] is provided with a value that contains at least one item that is either `null` or empty, but the item is required to have a value.
+The exception thrown when a [property][] is provided with a value that contains at least one item that is `null`.
 
 ## Reasons
 
-### Value Contains `null` or empty item
+### Value Contains `null` item
 
-A `null` or empty item is contained in the value that was provided for the [property][].
+A `null` item is contained in the value that was provided for the [property][].
 
 #### Message Format
 
 The format of the [Message][] is as follows:
 
 ```json
-"'<property-name>' contains at least one null or empty value; it must only contain values that are not null or empty.
+"'<property-name>' contains at least one null value; it must only contain values that are not null.
 Please click the HelpLink for more information on how to fix this."
 ```
 
@@ -33,13 +33,13 @@ where:
 
 #### How to fix
 
-Ensure the value provided for the [property][] named `<property-name>` does not contain items that are either `null` or empty.
+Ensure the value provided for the [property][] named `<property-name>` does not contain items that are `null`.
 
 ## Properties
 
 ### Exception Type
 
-The type of the exception (i.e. `PropertyContainsNullOrEmptyItemException`).
+The type of the exception (i.e. `PropertyContainsNullItemException`).
 
 | | |
 |-----------|------------|
@@ -85,8 +85,8 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 
 ### Related Blocks
 
-* Exceptions
-  * [Handle Block Exception Matching Type Names][]
+* Tasks
+  * [Cancel All Tasks][]
   
 ### External Documentation
 
@@ -94,7 +94,7 @@ None
 
 [Message]: {{< ref "#message" >}}
 
-[Handle Block Exception Matching Type Names]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockExceptionMatchingTypeNames.MainDoc" >}}
+[Cancel All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
