@@ -25,10 +25,6 @@ Any data type representing an asynchronous execution of a flow.
 
 ## Properties
 
-{{% pageinfo %}}
-These properties are retrieved from the execution and cannot be set.
-{{% /pageinfo %}}
-
 ### ExecutionId
 
 The unique Id of the execution of a flow.
@@ -36,9 +32,6 @@ The unique Id of the execution of a flow.
 | | |
 |--------------------|---------------------------|
 | Data Type | [Guid][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### Id
 
@@ -47,31 +40,22 @@ The unique Id of the task.
 | | |
 |--------------------|---------------------------|
 | Data Type | [Guid][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### IsCancelled
 
-This property returns true if the execution has been cancelled, and false otherwise.
+This property returns true if the execution of the task has been cancelled, and false otherwise.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### IsCompleted
 
-This property returns true if the execution is not running, and false otherwise.
+This property returns true if the execution of the task has completed, and false otherwise.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### IsCompletedSuccessfully
 
@@ -80,42 +64,30 @@ This property returns true if [IsCompleted][] is true and [IsFaulted][] is false
 | | |
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### IsFaulted
 
-This property return true if the execution has thrown an exception, and false otherwise.
+This property return true if the execution of the task has thrown an exception, and false otherwise.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Boolean][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### Status
 
-This property returns the state of the execution (e.g. `"Running"`, `"RanToCompletion"`)
+This property returns the state of the execution of the task (e.g. `"Running"`, `"RanToCompletion"`)
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ### Exception
 
-This property returns the [Exception][] of the execution if [IsFaulted][] is true, and `null` otherwise.
+This property returns the [Exception][] of the execution of the task if [IsFaulted][] is true, and `null` otherwise.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Exception][] |
-| Is [Advanced][] | N/A |
-| Default Editor | N/A |
-| Default Value | N/A |
 
 ## Remarks
 
