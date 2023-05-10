@@ -1,7 +1,7 @@
 ---
 title: "Run Flow Async"
 linkTitle: "Run Flow Async"
-description: "Runs a chosen Flow asynchronously, returning its Task."
+description: "Runs a chosen Flow asynchronously, returning a Task representing its execution."
 ---
 
 {{< figure src="/blocks/flows-run-flow-block-icon.png" alt="Icon" class="block-icon" >}}
@@ -37,13 +37,13 @@ The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)N
 
 ```json
 {
-  "ExecutionId": "2dc95633-62dd-4643-8638-0bf1cbd84ae7",
-  "Id": "4a85858b-5615-4637-9d18-67d95966634e",
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
   "IsCancelled": false,
-  "IsCompleted": true,
-  "IsCompletedSuccessfully": true,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
   "IsFaulted": false,
-  "Status": "RanToCompletion",
+  "Status": "Running",
   "Exception": null
 }
 ```
@@ -82,9 +82,9 @@ It is recommended to use the [Literal Editor][] for this property as it detects 
 
 ### Execution Task
 
-The Execution task referring to an instance of the [Flow][Flow Property].
+The [Execution Task][] referring to an instance of the [Flow][Flow Property].
 
-The newly created task will be saved to a variable of type [IExecutionTask][] , where the key is the name of the variable and the item is the value of the variable.
+The newly created task will be saved to a variable of type [IExecutionTask][], a task that represents the execution of an asynchronous flow.
 
 | | |
 |--------------------|---------------------------|
@@ -121,19 +121,6 @@ If an [Input Variable][] has a default value, then this default value will be us
 Also, if an [Input Variable][] has a default value, and the corresponding value in the [Inputs Property][] is not of the same type, a [Validation Error][] will be raised when the flow is validated.
 
 For more information see [Input Variables][Input Variable].
-
-### Exceptions Thrown by a Child Flow
-
-If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then it will not be thrown by the Run Flow Async block.
-
-If an exception thrown by a block is not handled by any connected [Handle Block Exception blocks][], it will be passed to the [Handle Workspace Exception][] block on the same workspace.
-
-This process repeats until:
-
-- The exception is handled, or
-- The exception reaches the flow's top-level workspace, is not handled by any [Handle Block Exception blocks][] and the top-level workspace does not contain a [Handle Workspace Exception][] block. At this stage, the exception is handled by the flow's [Handle Flow Exception][] block.
-
-For more information see [Handling Exceptions][].
 
 ### Syncing the Inputs Property with the Flow Contract
 
