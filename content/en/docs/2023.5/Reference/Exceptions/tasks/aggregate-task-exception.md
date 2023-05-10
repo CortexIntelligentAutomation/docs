@@ -12,7 +12,22 @@ description: "The exception thrown when one or more tasks being waited on throw 
 
 The exception thrown when one or more tasks being waited on throw an exception.
 
-## How to fix
+## Reasons
+
+### A task has thrown an exception
+
+One or more tasks being waited on has thrown an exception.
+
+#### Message Format
+
+The format of the [Message][] is as follows:
+
+```json
+"One or more tasks that were being waited on threw an exception. Details of the exceptions can be found in the TaskExceptions property.
+Please click the HelpLink for more information on how to fix this."
+```
+
+#### How to fix
 
 Ensure that all tasks being waited on cannot throw any unhandled exceptions.
 
@@ -20,9 +35,29 @@ For more information on how to get the results of the successful tasks, see [Wai
 
 ## Properties
 
+### Exception Type
+
+The type of the exception (i.e. `AggregateTaskException`).
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Message
+
+The exception message, providing information about the exception that occurred.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
 ### TaskExceptions
 
 The [TaskExceptions][TaskExceptions Property] property is a [Structure][] of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of the task that threw it.
+
+| | |
+|-----------|------------|
+| Data Type | [Structure][]&lt;[Int32][],[Exception][]&gt; |
 
 Below is an example of the value of [TaskExceptions][TaskExceptions Property] after the first and third tasks both throw a [FlowException][]:
 ```json
@@ -40,6 +75,14 @@ Below is an example of the value of [TaskExceptions][TaskExceptions Property] af
 }
 ```
 
+### Help Link
+
+The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
 ## See Also
 
 ### Related Blocks
@@ -49,6 +92,8 @@ Below is an example of the value of [TaskExceptions][TaskExceptions Property] af
 ### External Documentation
 
 None
+
+[Message]: {{< ref "#message" >}}
 
 [TaskExceptions Property]: {{< ref "#taskexceptions" >}}
 
@@ -60,3 +105,5 @@ None
 
 [Exception]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
+
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

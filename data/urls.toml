@@ -1724,6 +1724,7 @@
                 MainDoc = "/docs/reference/exceptions/tasks/"
                 [Cortex.Reference.Exceptions.Tasks.AggregateTaskException]
                     MainDoc = "/docs/reference/exceptions/tasks/aggregate-task-exception/"
+                    TaskExceptions = "/docs/reference/exceptions/tasks/aggregate-task-exception/#taskexceptions"
             [Cortex.Reference.Exceptions.Telnet]
                 MainDoc = "/docs/reference/exceptions/telnet/"
                 [Cortex.Reference.Exceptions.Telnet.TelnetClientException]

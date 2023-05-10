@@ -46,7 +46,7 @@ When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have
 
 #### Result
 
-Wait for the [IExecutionTask][]'s 1 sercond after they have started, results in the execution containing the [Wait For All Tasks][] block to wait for all tasks to complete, pausing for 5 seconds and then the variable `($)Results` being updated to the following:
+Waiting for the [IExecutionTask][]'s 1 second after they have started, results in the execution containing the [Wait For All Tasks][] block to wait for all tasks to complete, pausing for 5 seconds and then the variable `($)Results` being updated to the following:
 
 ```json
 [
@@ -81,7 +81,7 @@ After the [Wait For All Tasks][] block finishes, the tasks in `($)Tasks` will be
 
 ### Wait for multiple completed Tasks
 
-This example will wait for three instances of an [IExecutionTask][] that represent an asynchronous execution of another flow. The flows that the [IExecutionTask][]'s represents waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 7 second after the asynchronous flows are started, therefore starting after all the executions have already completed.
+This example will wait for three instances of an [IExecutionTask][] that represent an asynchronous execution of another flow. The flows that the [IExecutionTask][]'s represents waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 7 seconds after the asynchronous flows are started, therefore starting after all the executions have already completed.
 
 When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have the following properties:
 
@@ -107,7 +107,7 @@ When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have
 
 ### Result
 
-Wait for the [IExecutionTask][]'s 7 second after they have started, results in the execution containing the [Wait For All Tasks][] block to not wait and the variable `($)Results` being immediately updated to the following:
+Waiting for the [IExecutionTask][]'s 7 seconds after they have started, results in the execution containing the [Wait For All Tasks][] block to not wait and the variable `($)Results` being immediately updated to the following:
 
 ```json
 [
@@ -219,7 +219,7 @@ To get the results of the tasks that did not throw an exception, you would need 
 
 2. Handle Block Exception Block
     * This block handles the [AggregateTaskException][].
-    * It saves the exception in the variable `AggregateTaskException`.
+    * It saves the exception to the variable `AggregateTaskException`.
     * See [Handle Block Exception][] block.
 
 3. Remove Items At Indexes Block
@@ -263,6 +263,8 @@ To get the results of the tasks that did not throw an exception, you would need 
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyContainsNullItemException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException.MainDoc" >}}
 [AggregateTaskException]: {{< url path="Cortex.Reference.Exceptions.Tasks.AggregateTaskException.MainDoc" >}}
+
+[TaskExceptions]: {{< url path="Cortex.Reference.Exceptions.Tasks.AggregateTaskException.TaskExceptions" >}}
 
 [Exception]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
