@@ -1,26 +1,26 @@
 ---
-title: "ITask<TResult>"
-linkTitle: "ITask<TResult>"
-description: "Any data type representing an asynchronous execution of a task."
+title: "ExecutionTask"
+linkTitle: "ExecutionTask"
+description: "Used to represent the asynchronous execution of a flow."
 ---
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTpes.Tasks.ITask&lt;TResult&gt;)</p>
+<p class="namespace">(Cortex.DataTpes.Tasks.IExecutionTask)</p>
 
 ## Summary
 
-Any data type representing an asynchronous execution of a task.
+Used to represent the asynchronous execution of a flow started by the [Run Flow Async][] block.
 
 | | |
 |-|-|
 | **Category:**          | Tasks |
-| **Name:**              | `ITask` |
-| **Full Name:**         | `Cortex.DataTypes.Tasks.ITask` |
+| **Name:**              | `ExecutionTask` |
+| **Full Name:**         | `Cortex.DataTypes.Tasks.ExecutionTask` |
 | **Alias:**             | N/A |
-| **Description:**       | Any data type representing an asynchronous execution of a task. |
+| **Description:**       | Used to represent the asynchronous execution of a flow started by the [Run Flow Async][] block. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `ITask<TResult>`, `Object`, `dynamic` |
+| **Can be used as:**    | `ExecutionTask`, `IExecutionTask`, `ITask<TResult>`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                           |
 
 ## Properties
@@ -28,6 +28,17 @@ Any data type representing an asynchronous execution of a task.
 {{% pageinfo %}}
 These properties are retrieved from the execution and cannot be set.
 {{% /pageinfo %}}
+
+### ExecutionId
+
+The unique Id of the execution of a flow.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [Guid][] |
+| Is [Advanced][] | N/A |
+| Default Editor | N/A |
+| Default Value | N/A |
 
 ### Id
 
@@ -108,25 +119,19 @@ This property returns the [Exception][] of the execution if [IsFaulted][] is tru
 
 ## Remarks
 
-### Most Common ITask&lt;TResult&gt; Data Types
+### Convert ExecutionTask to Text
 
-Any of the following data types can be used where an `ITask<TResult>` is required:
+The following table shows some of the ways that an `ExecutionTask` can be converted to text.
 
-* [IExecutionTask][]
-* [ExecutionTask][]
-
-### Convert ITask&lt;TResult&gt; to Text
-
-For some of the ways that an `ITask<TResult>` can be converted to text see each of the `ITask<TResult>` data types:
-
-* [IExecutionTask][ConvertIExecutionTask]
-* [ExecutionTask][ConvertExecutionTask]
+| Method | Example | Result | Editor&nbsp;Support | Notes |
+|-|-|-|-|-|
+| Use `Convert Object To Json` block    | where `Object` property has an `ExecutionTask` value of `{"ExecutionId": "00000000-0000-0000-0000-000000000000", "Id": "00000000-0000-0000-0000-000000000000", "IsCancelled": false, "IsCompleted": false, "IsCompletedSuccessfully": false, "IsFaulted": false, "Status": "Running", "Exception": null}` | `"{\r\n  \"ExecutionId\": \"00000000-0000-0000-0000-000000000000\",\r\n  \"Id\": \"00000000-0000-0000-0000-000000000000\",\r\n  \"IsCancelled\": false,\r\n  \"IsCompleted\": false,\r\n  \"IsCompletedSuccessfully\": false,\r\n  \"IsFaulted\": false,\r\n  \"Status\": \"Running\",\r\n  \"Exception\": null\r\n}"` | N/A | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
-* The Expression Editor is available for [Input][] properties where the data type is `ITask<TResult>`.
-* The Literal Editor is not available for [Input][] properties where the data type is `ITask<TResult>`.
-* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `ITask<TResult>`.
+* The Expression Editor is available for [Input][] properties where the data type is `ExecutionTask`.
+* The Literal Editor is not available for [Input][] properties where the data type is `ExecutionTask`.
+* The Variable Editor is available for [InputOutput][] and [Output][] properties where the data type is `ExecutionTask`.
 
 ### Known Limitations
 
@@ -136,20 +141,20 @@ None
 
 ### Related Data Types
 
+* [ITask&lt;TResult&gt;][ITask]
 * [IExecutionTask][]
-* [ExecutionTask][]
 
 [IsFaulted]: {{< ref "#isfaulted" >}}
 [IsCompleted]: {{< ref "#iscompleted" >}}
+[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Guid]: {{< url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
+[Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
+[ITask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ITask.MainDoc" >}}
 [IExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.MainDoc" >}}
-[ConvertIExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.Convert" >}}
-[ConvertExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.Convert" >}}
-[ExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.MainDoc" >}}
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}

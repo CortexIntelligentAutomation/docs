@@ -1,7 +1,7 @@
 ---
 title: "IExecutionTask"
 linkTitle: "IExecutionTask"
-description: "Used to represent the asynchronous execution of a flow."
+description: "Any data type representing an asynchronous execution of a flow."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to represent the asynchronous execution of a flow."
 
 ## Summary
 
-The `IExecutionTask` data type is used to represent an asynchronous execution of a flow started by the [Run Flow Async Block][].
+Any data type representing an asynchronous execution of a flow.
 
 | | |
 |-|-|
@@ -18,12 +18,16 @@ The `IExecutionTask` data type is used to represent an asynchronous execution of
 | **Name:**              | `IExecutionTask` |
 | **Full Name:**         | `Cortex.DataTypes.Tasks.IExecutionTask` |
 | **Alias:**             | N/A |
-| **Description:**       | A task which represents the execution of a flow started by the [Run Flow Async Block][] |
+| **Description:**       | Any data type representing an asynchronous execution of a flow. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `IExecutionTask`, `ITask<TResult>`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                           |
 
 ## Properties
+
+{{% pageinfo %}}
+These properties are retrieved from the execution and cannot be set.
+{{% /pageinfo %}}
 
 ### ExecutionId
 
@@ -115,13 +119,17 @@ This property returns the [Exception][] of the execution if [IsFaulted][] is tru
 
 ## Remarks
 
+### Most Common IExecutionTask Data Types
+
+Any of the following data types can be used where an `IExecutionTask` is required:
+
+* [ExecutionTask][]
+
 ### Convert IExecutionTask to Text
 
-The following table shows some of the ways that a `IExecutionTask` can be converted to text.
+For some of the ways that an `IExecutionTask` can be converted to text see each of the `IExecutionTask` data types:
 
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use `Convert Object To Json` block    | where `Object` property has a `IExecutionTask` value of `{"ExecutionId": "00000000-0000-0000-0000-000000000000", "Id": "00000000-0000-0000-0000-000000000000", "IsCancelled": false, "IsCompleted": false, "IsCompletedSuccessfully": false, "IsFaulted": false, "Status": "Running", "Exception": null}` | `"{\r\n  \"ExecutionId\": \"00000000-0000-0000-0000-000000000000\",\r\n  \"Id\": \"00000000-0000-0000-0000-000000000000\",\r\n  \"IsCancelled\": false,\r\n  \"IsCompleted\": false,\r\n  \"IsCompletedSuccessfully\": false,\r\n  \"IsFaulted\": false,\r\n  \"Status\": \"Running\",\r\n  \"Exception\": null\r\n}"` | N/A | See [Convert Object To Json][] |
+* [ExecutionTask][ConvertExecutionTask]
 
 ### Property Editor Support
 
@@ -138,16 +146,17 @@ None
 ### Related Data Types
 
 * [ITask&lt;TResult&gt;][ITask]
+* [ExecutionTask][]
 
 [IsFaulted]: {{< ref "#isfaulted" >}}
 [IsCompleted]: {{< ref "#iscompleted" >}}
-[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+[ExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.MainDoc" >}}
+[ConvertExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.Convert" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Guid]: {{< url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
-[Run Flow Async Block]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
 [ITask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ITask.MainDoc" >}}
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
