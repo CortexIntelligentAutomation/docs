@@ -189,7 +189,7 @@ If one or more tasks in the [Tasks][Tasks Property] being waited on has complete
 
 ### Waiting for a Task that has thrown an exception
 
-If one or more tasks in the [Tasks][Tasks Property] being waited has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][]. The [AggregateTaskException][] has the property [TaskExceptions][] of type [Structure][]&lt;[Int32][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of a task threw it.
+If one or more tasks in the [Tasks][Tasks Property] being waited has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][]. The [AggregateTaskException][] has the property [TaskExceptions][] of type [Structure][]&lt;[Int32][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of the task that threw it.
 
 Below is an example of the value of [TaskExceptions][] after the first and third tasks both throw a [FlowException][]:
 ```json

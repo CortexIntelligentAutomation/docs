@@ -800,6 +800,7 @@
                         MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
                     [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasks]
                         MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2"
+                        GetSuccessfulResults = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2/#waiting-for-a-task-that-has-thrown-an-exception"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
