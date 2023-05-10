@@ -686,6 +686,8 @@
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2"
+                        List = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2/#list"
+                        Indexes = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2/#indexes"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-with-value-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValues]
@@ -782,6 +784,12 @@
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
+            [Cortex.Reference.Blocks.Tasks]
+                MainDoc = "/docs/reference/blocks/tasks/"
+                [Cortex.Reference.Blocks.Tasks.WaitForTask]
+                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task/"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasks]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]

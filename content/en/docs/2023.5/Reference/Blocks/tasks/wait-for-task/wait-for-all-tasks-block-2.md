@@ -189,7 +189,7 @@ If one or more tasks in the [Tasks][Tasks Property] being waited on has complete
 
 ### Waiting for a Task that has thrown an exception
 
-If one or more tasks in the [Tasks][Tasks Property] being waited has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][]. The [AggregateTaskException][] has the property [TaskExceptions][] of type [Structure][]&lt;[int][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of a task threw it.
+If one or more tasks in the [Tasks][Tasks Property] being waited has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][]. The [AggregateTaskException][] has the property [TaskExceptions][] of type [Structure][]&lt;[Int32][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of a task threw it.
 
 Below is an example of the value of [TaskExceptions][] after the first and third tasks both throw a [FlowException][]:
 ```json
@@ -209,6 +209,35 @@ Below is an example of the value of [TaskExceptions][] after the first and third
 
 To get the results of the tasks that did not throw an exception, you would need to use another [Wait For All Tasks][] block to wait on only the tasks that didn't throw an exception. Below is example showing the simplist method of doing so:
 
+{{< figure src="/images/WaitForAllTasksExample.png" title="Example Flow For Getting Only Successful Results" >}}
+
+1. Wait For All Tasks Block
+    * This block waits for three execution tasks in the variable `Tasks` to complete.
+    * The first and third execution throw an exception.
+    * The block throws an [AggregateTaskException][].
+    * See [Wait For All Tasks][] block.
+
+2. Handle Block Exception Block
+    * This block handles the [AggregateTaskException][].
+    * It saves the exception in the variable `AggregateTaskException`.
+    * See [Handle Block Exception][] block.
+
+3. Remove Items At Indexes Block
+    * This block removes all items of specific indexes from a list.
+    * The indexes to be removed are the indexes of the tasks that threw an exception.
+    * The [List][] property is set to `Tasks`.
+    * The [Indexes][] property is set to `AggregateTaskException.TaskExceptions.Keys`.
+    * See [Remove Items At Indexes] block.
+
+4. Wait For All Tasks Block
+    * This block waits on the new list of [Tasks][Tasks Property].
+    * The list now only contains only one task, the previously second task, as it did not throw an exception.
+    * See [Wait For All Tasks][] block.
+
+5. Workspace Block
+    * This workspace then uses the successful results for something.
+    * See [Workspace][] block.
+
 [Tasks Property]: {{< ref "#tasks" >}}
 [Results Property]: {{< ref "#results" >}}
 [WaitingException Remark]: {{< ref "#waiting-for-a-task-that-has-thrown-an-exception" >}}
@@ -217,6 +246,14 @@ To get the results of the tasks that did not throw an exception, you would need 
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [TResult]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+
+[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasks.MainDoc" >}}
+[Handle Block Exception]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
+[Remove Items At Indexes]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.MainDoc" >}}
+[Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.MainDoc" >}}
+
+[List]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.List" >}}
+[Indexes]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.Indexes" >}}
 
 [IExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.MainDoc" >}}
 [ITask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ITask.MainDoc" >}}
@@ -227,9 +264,13 @@ To get the results of the tasks that did not throw an exception, you would need 
 [PropertyContainsNullItemException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException.MainDoc" >}}
 [AggregateTaskException]: {{< url path="Cortex.Reference.Exceptions.Tasks.AggregateTaskException.MainDoc" >}}
 
+[Exception]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
+[FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
+
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
