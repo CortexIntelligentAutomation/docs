@@ -1,6 +1,6 @@
 ---
-title: "ITask"
-linkTitle: "ITask"
+title: "ITask<TResult>"
+linkTitle: "ITask<TResult>"
 description: "."
 ---
 
