@@ -12,15 +12,15 @@ description: "Runs a chosen Flow asynchronously, returning a Task representing i
 
 ## Description
 
-Runs a chosen [Flow][Flow Property] asynchronously using the [Inputs][Inputs Property] provided, assigning the task to the [Execution Task][Execution Task Property] variable.
+Runs a chosen [Flow][Flow Property] asynchronously using the [Inputs][Inputs Property] provided, returning an [IExecutionTask][] that represents the execution of the [Flow][Flow Property] in the [Execution Task][Execution Task Property] variable.
 
 ## Examples
 
 ### Running a Flow Asynchronously
 
-This example will run the [Flow][Flow Property] `add-database-entry` assigning the task to `($)ExecutionTask`.
+This example will run the [Flow][Flow Property] `add-database-entry` assigning the task representing the execution of the [Flow][Flow Property] to `($)ExecutionTask`.
 
-The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)NewData`, which is then added to a database by the [Flow][Flow Property]. The flow containing the [Run Flow Async][] block will then continue executing to rest of its blocks.
+The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)NewData`, which is then added to a database by the [Flow][Flow Property]. The flow containing the [Run Flow Async][] block will then continue executing the rest of its blocks.
 
 #### Properties
 
@@ -33,7 +33,9 @@ The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)N
 
 #### Result
 
-`SomeNewDataToAddToDatabase` is passed into the [Input Variable][] `($)NewData` for the [Flow][Flow Property] `add-database-entry`, which results in the flow starting to add that data as a new entry to a database. After the flow has started running, the [Execution Task][Execution Task Property] will have the following properties:
+`SomeNewDataToAddToDatabase` is passed into the [Input Variable][] `($)NewData` for the [Flow][Flow Property] `add-database-entry`, which results in the [Flow][Flow Property] starting its execution. The flow containing the [Run Flow Async][] block continues executing without waiting for it to complete.
+
+After the [Flow][Flow Property] has started running, the [Execution Task][Execution Task Property] will have the following properties:
 
 ```json
 {
@@ -62,8 +64,6 @@ Once the [Flow][Flow Property] has added the database entry and has completed su
   "Exception": null
 }
 ```
-
-The flow containing the [Run Flow Async][] block continues executing without waiting for the [Flow][Flow Property] to complete.
 
 ***
 
@@ -99,9 +99,7 @@ It is recommended to use the [Literal Editor][] for this property as it detects 
 
 ### Execution Task
 
-The [Execution Task][Execution Task Property] referring to an instance of the [Flow][Flow Property].
-
-The newly created task will be saved to a variable of type [IExecutionTask][], a task that represents the execution of an asynchronous flow.
+The [Execution Task][Execution Task Property] representing the asynchronous execution of the [Flow][Flow Property].
 
 | | |
 |--------------------|---------------------------|
@@ -141,13 +139,13 @@ For more information see [Input Variables][Input Variable].
 
 ### Parent Flow Ending Before Child Flow
 
-If the flow containing the [Run Flow Async][] block ends before the [Flow][Flow Property], the [Flow][Flow Property] will continue running to completion.
+If the parent flow containing the [Run Flow Async][] block ends before the child [Flow][Flow Property], the child [Flow][Flow Property] will continue running to completion.
 
 ### Exceptions Thrown by a Child Flow
 
-If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then the exception is saved to the [Execution Task][Execution Task Property]. The execution containing the [Run Flow Async][] block will not pause when the exception is thrown unless the [Flow][Flow Property] is being waited on by a wait block.
+If the child [Flow][Flow Property] run by the [Run Flow Async][] block throws an exception that is unhandled then the exception is saved to the [Execution Task][Execution Task Property]. The parent flow containing the [Run Flow Async][] block will not pause when the exception is thrown unless the [Flow][Flow Property] is being waited on by a [Wait For][] block.
 
-See [Wait For Task] block or [Wait For All Tasks] block for more details.
+See [Wait For Task][] block or [Wait For All Tasks][] block for more details.
 
 ### Syncing the Inputs Property with the Flow Contract
 
