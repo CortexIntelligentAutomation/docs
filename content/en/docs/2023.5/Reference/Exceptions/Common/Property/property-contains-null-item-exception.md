@@ -87,6 +87,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
 
 * Tasks
   * [Cancel All Tasks][]
+  * [Wait For All Tasks][]
   
 ### External Documentation
 
@@ -95,6 +96,7 @@ None
 [Message]: {{< ref "#message" >}}
 
 [Cancel All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock.MainDoc" >}}
+[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
