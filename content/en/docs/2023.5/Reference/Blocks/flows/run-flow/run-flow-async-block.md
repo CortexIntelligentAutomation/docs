@@ -206,6 +206,10 @@ In future this limitation may be removed.
 
 [Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
 
+[Wait For]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.MainDoc" >}}
+[Wait For Task]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask.TaskHasThrown" >}}
+[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.GetSuccessfulResults" >}}
+
 [InvalidInputVariablesException]: {{< url path="Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MainDoc" >}}
 [Missing Input Variables]: {{< url path="Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MissingInputVariables" >}}
 [Extra Input Variables]: {{< url path="Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.ExtraInputVariables" >}}
