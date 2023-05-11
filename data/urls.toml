@@ -688,6 +688,8 @@
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2"
+                        List = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2/#list"
+                        Indexes = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2/#indexes"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-with-value-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValues]
@@ -792,6 +794,13 @@
                         MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-task-block-1"
                     [Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock]
                         MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-all-tasks-block-2"
+                [Cortex.Reference.Blocks.Tasks.WaitForTask]
+                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2"
+                        GetSuccessfulResults = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2/#waiting-for-a-task-that-has-thrown-an-exception"
             [Cortex.Reference.Blocks.Telnet]
                 MainDoc = "/docs/reference/blocks/telnet/"
                 [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
@@ -1504,7 +1513,7 @@
                 [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
                     MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
                 [Cortex.Reference.DataTypes.Tasks.ITask]
-                MainDoc = "/docs/reference/data-types/tasks/itask-1"
+                    MainDoc = "/docs/reference/data-types/tasks/itask-1"
             [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
@@ -1711,6 +1720,11 @@
                 MainDoc = "/docs/reference/exceptions/ssh/"
                 SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
                 SshResponseException = "/docs/reference/exceptions/ssh/ssh-response-exception/"
+            [Cortex.Reference.Exceptions.Tasks]
+                MainDoc = "/docs/reference/exceptions/tasks/"
+                [Cortex.Reference.Exceptions.Tasks.AggregateTaskException]
+                    MainDoc = "/docs/reference/exceptions/tasks/aggregate-task-exception/"
+                    TaskExceptions = "/docs/reference/exceptions/tasks/aggregate-task-exception/#taskexceptions"
             [Cortex.Reference.Exceptions.Telnet]
                 MainDoc = "/docs/reference/exceptions/telnet/"
                 [Cortex.Reference.Exceptions.Telnet.TelnetClientException]
