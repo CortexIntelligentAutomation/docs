@@ -577,8 +577,8 @@
                         RunningAFlow = "/docs/reference/blocks/flows/run-flow/run-flow-block/#running-a-flow"
                         FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
                         InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
-                [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
-                    MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
+                    [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
+                        MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]

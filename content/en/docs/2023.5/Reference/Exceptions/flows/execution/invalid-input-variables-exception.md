@@ -118,6 +118,7 @@ None
 
 * Flows
   * [Run Flow][]
+  * [Run Flow Async][]
   
 ### External Documentation
 
@@ -127,6 +128,7 @@ None
 [InvalidVariableErrors]: {{< ref "#invalidvariableerrors" >}}
 
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
+[Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
 
 [List]: {{< url path="Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

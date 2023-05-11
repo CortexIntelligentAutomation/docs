@@ -48,6 +48,8 @@ The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)N
 }
 ```
 
+The flow containing the [Run Flow Async][] block continues executing without waiting for the [Flow][Flow Property] to complete.
+
 ***
 
 ## Properties
@@ -82,7 +84,7 @@ It is recommended to use the [Literal Editor][] for this property as it detects 
 
 ### Execution Task
 
-The [Execution Task][] referring to an instance of the [Flow][Flow Property].
+The [Execution Task][Execution Task Property] referring to an instance of the [Flow][Flow Property].
 
 The newly created task will be saved to a variable of type [IExecutionTask][], a task that represents the execution of an asynchronous flow.
 
@@ -121,6 +123,16 @@ If an [Input Variable][] has a default value, then this default value will be us
 Also, if an [Input Variable][] has a default value, and the corresponding value in the [Inputs Property][] is not of the same type, a [Validation Error][] will be raised when the flow is validated.
 
 For more information see [Input Variables][Input Variable].
+
+### Exceptions Thrown by a Child Flow
+
+If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then the exception is saved to the [Execution Task][Execution Task Property]. The execution containing the [Run Flow Async][] block will not pause when the exception is thrown unless the [Flow][Flow Property] is being waited on by a wait block.
+
+See [Wait For Task] block or [Wait For All Tasks] block for more details.
+
+### Parent Flow ending before Child Flow
+
+If the flow containing the [Run Flow Async][] block ends before the [Flow][Flow Property], the [Flow][Flow Property] will continue running to completion.
 
 ### Syncing the Inputs Property with the Flow Contract
 
@@ -177,6 +189,8 @@ In future this limitation may be removed.
 [InputVariables]: {{< url path="Cortex.Reference.DataTypes.Flows.InputVariables.MainDoc" >}}
 [Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [IExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.MainDoc" >}}
+
+[Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
 
 [InvalidInputVariablesException]: {{< url path="Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MainDoc" >}}
 [Missing Input Variables]: {{< url path="Cortex.Reference.Exceptions.Flows.Execution.InvalidInputVariablesException.MissingInputVariables" >}}
