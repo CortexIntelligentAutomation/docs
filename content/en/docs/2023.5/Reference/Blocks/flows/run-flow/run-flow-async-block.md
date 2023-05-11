@@ -18,22 +18,22 @@ Runs a chosen [Flow][Flow Property] asynchronously using the [Inputs][Inputs Pro
 
 ### Running a Flow Asynchronously
 
-This example will run the [Flow][Flow Property] `square-number-flow` assigning the task to `($)ExecutionTask`.
+This example will run the [Flow][Flow Property] `add-database-entry` assigning the task to `($)ExecutionTask`.
 
-The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)NumberToSquare`, which is then multiplied by itself and saved to the [Output Variable][] `($)SquaredNumber`. If no value is given for `($)NumberToSquare` the default value `10` is used. The flow contains a block that checks that the [Input Variable][] `($)NumberToSquare` is larger than `0`, an exception is thrown by `square-number-flow` if `($)NumberToSquare` is not larger than `0`.
+The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)NewData`, which is then added to a database by the [Flow][Flow Property]. The flow containing the [Run Flow Async][] block will then continue executing to rest of its blocks.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Flow][Flow Property] | [Flow][Flow Property], with value `square-number-flow` | [Flow][Flow Property] is of type [FlowReference][] |
+| [Flow][Flow Property] | [Flow][Flow Property], with value `add-database-entry` | [Flow][Flow Property] is of type [FlowReference][] |
 | [Inputs][Inputs Property] |  | [Inputs][Inputs Property] is of type [InputVariables][] |
-| &nbsp; &nbsp; > NumberToSquare | `($)NumberToSquare`, with value `5` | `($)NumberToSquare` is of type [Int32][] |
+| &nbsp; &nbsp; > NewData | `($)NewData`, with value `SomeNewDataToAddToDatabase` | `($)NewData` is of type [String][] |
 | [Execution Task][Execution Task Property] | `($)ExecutionTask`, with no value | `($)ExecutionTask` is a variable of type [IExecutionTask][] |
 
 #### Result
 
-`5` is passed into the [Input Variable][] `($)NumberToSquare` for the [Flow][Flow Property] `square-number-flow`, which results in `25` being saved to the [Output Variable][] `($)SquaredNumber`. This results in the variable `($)ExecutionTask` being updated to the following:
+`SomeNewDataToAddToDatabase` is passed into the [Input Variable][] `($)NewData` for the [Flow][Flow Property] `add-database-entry`, which results in the flow starting to add that data as a new entry to a database. After the flow has started running, the [Execution Task][Execution Task Property] will have the following properties:
 
 ```json
 {
@@ -44,6 +44,21 @@ The [Flow][Flow Property] `square-number-flow` takes an [Input Variable][] `($)N
   "IsCompletedSuccessfully": false,
   "IsFaulted": false,
   "Status": "Running",
+  "Exception": null
+}
+```
+
+Once the [Flow][Flow Property] has added the database entry and has completed successfully, the [Execution Task][Execution Task Property]'s properties will be updated to the following:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
   "Exception": null
 }
 ```
@@ -186,6 +201,7 @@ In future this limitation may be removed.
 
 [FlowReference]: {{< url path="Cortex.Reference.DataTypes.Flows.FlowReference.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [InputVariables]: {{< url path="Cortex.Reference.DataTypes.Flows.InputVariables.MainDoc" >}}
 [Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [IExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.IExecutionTask.MainDoc" >}}
