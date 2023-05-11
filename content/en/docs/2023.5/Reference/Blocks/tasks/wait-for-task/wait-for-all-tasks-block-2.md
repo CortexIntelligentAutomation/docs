@@ -18,7 +18,7 @@ Waits for all of the specified [Tasks][Tasks Property] to finish and returns a l
 
 ### Wait for multiple running Tasks
 
-This example will wait for three instances of an [IExecutionTask][] that represent an asynchronous execution of another flow. The flows that the [IExecutionTask][]'s represents waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 1 second after the asynchronous flows are started.
+This example will wait for three instances of an [IExecutionTask][] that represent asynchronous executions of other flows. The flows that the [IExecutionTask][]'s represent waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 1 second after the asynchronous flows are started.
 
 When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have the following properties:
 
@@ -41,7 +41,7 @@ When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Tasks][Tasks Property] | `($)Tasks`, with value that represents a list of multiple asynchronous execution of another flow | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
+| [Tasks][Tasks Property] | `($)Tasks`, with value that represents a list of asynchronous executions of another flow | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
 | [Results][Results Property] | `($)Results`, with no value | `($)Results` is a variable of type [IList][]&lt;[Structure][]&gt; |
 
 #### Result
@@ -81,7 +81,7 @@ After the [Wait For All Tasks][] block finishes, the tasks in `($)Tasks` will be
 
 ### Wait for multiple completed Tasks
 
-This example will wait for three instances of an [IExecutionTask][] that represent an asynchronous execution of another flow. The flows that the [IExecutionTask][]'s represents waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 7 seconds after the asynchronous flows are started, therefore starting after all the executions have already completed.
+This example will wait for three instances of an [IExecutionTask][] that represent asynchronous executions of other flows. The flows that the [IExecutionTask][]'s represent waits for 2 seconds, 4 seconds and 6 seconds respectively and then sets the output variable `TimeWaited` equal to the amount of seconds the flow waited. The [Wait For All Tasks][] block begins execution 7 seconds after the asynchronous flows are started, therefore starting after all the executions have already completed.
 
 When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have the following properties:
 
@@ -102,10 +102,10 @@ When the [Wait For All Tasks][] block begins, the [IExecutionTask][]'s will have
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Tasks][Tasks Property] | `($)Tasks`, with value that represents a list of multiple asynchronous execution of another flow | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
+| [Tasks][Tasks Property] | `($)Tasks`, with value that represents a list of asynchronous executions of another flow | `($)Tasks` is a variable of type [IList][]&lt;[IExecutionTask][]&gt; |
 | [Results][Results Property] | `($)Results`, with no value | `($)Results` is a variable of type [IList][]&lt;[Structure][]&gt; |
 
-### Result
+#### Result
 
 Waiting for the [IExecutionTask][]'s 7 seconds after they have started, results in the execution containing the [Wait For All Tasks][] block to not wait and the variable `($)Results` being immediately updated to the following:
 
@@ -157,6 +157,8 @@ The list of [Tasks][Tasks Property] being waited for.
 ### Results
 
 The list of [Results][Results Property] of all the [Tasks][Tasks Property] being waited for.
+
+The order of the [Results][Results Property] in the list will match the order of the [Tasks][Tasks Property] (ie. The Result of the Task at index 0, will also be at index 0).
   
 | | |
 |--------------------|---------------------------|
@@ -181,15 +183,17 @@ The exceptions thrown by the block can be found below:
 
 ### Waiting for Tasks that have been cancelled
 
-If one or more tasks in the [Tasks][Tasks Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will throw an [AggregateTaskException][] with the cancellation exception. Please see [Waiting for a Task that has thrown an exception][WaitingException Remark] for more details.
+If one or more tasks in the [Tasks][Tasks Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will throw an [AggregateTaskException][] containing the cancellation exception(s). Please see [Waiting for a Task that has thrown an exception][WaitingException Remark] for more details.
 
 ### Waiting for a Task that has been completed
 
-If one or more tasks in the [Tasks][Tasks Property] being waited on has completed, this block will not wait and immediately return the [Tasks][Tasks Property] results.
+If one or more tasks in the [Tasks][Tasks Property] being waited on has completed, this block will not wait and immediately return the [Results][Results Property].
 
 ### Waiting for a Task that has thrown an exception
 
-If one or more tasks in the [Tasks][Tasks Property] being waited has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][]. The [AggregateTaskException][] has the property [TaskExceptions][] of type [Structure][]&lt;[Int32][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of the task that threw it.
+If one or more tasks in the [Tasks][Tasks Property] being waited on has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][].
+
+The [AggregateTaskException][] has the property [TaskExceptions][] of type [IDictionary][]&lt;[Int32][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to the index of the task that threw it.
 
 Below is an example of the value of [TaskExceptions][] after the first and third tasks both throw a [FlowException][]:
 ```json
@@ -207,7 +211,7 @@ Below is an example of the value of [TaskExceptions][] after the first and third
 }
 ```
 
-To get the results of the tasks that did not throw an exception, you would need to use another [Wait For All Tasks][] block to wait on only the tasks that didn't throw an exception. Below is example showing the simplist method of doing so:
+To get the [Results][Results Property] of the [Tasks][Tasks Property] that did not throw an exception, you would need to use another [Wait For All Tasks][] block to wait on only the tasks that didn't throw an exception. Below is example showing the simplist method of doing so:
 
 {{< figure src="/images/WaitForAllTasksExample.png" title="Example Flow For Getting Only Successful Results" >}}
 
@@ -216,24 +220,20 @@ To get the results of the tasks that did not throw an exception, you would need 
     * The first and third execution throw an exception.
     * The block throws an [AggregateTaskException][].
     * See [Wait For All Tasks][] block.
-
 2. Handle Block Exception Block
     * This block handles the [AggregateTaskException][].
     * It saves the exception to the variable `AggregateTaskException`.
     * See [Handle Block Exception][] block.
-
 3. Remove Items At Indexes Block
-    * This block removes all items of specific indexes from a list.
+    * This block removes all items at specific indexes from a list.
     * The indexes to be removed are the indexes of the tasks that threw an exception.
     * The [List][] property is set to `Tasks`.
     * The [Indexes][] property is set to `AggregateTaskException.TaskExceptions.Keys`.
     * See [Remove Items At Indexes] block.
-
 4. Wait For All Tasks Block
     * This block waits on the new list of [Tasks][Tasks Property].
     * The list now only contains only one task, the previously second task, as it did not throw an exception.
     * See [Wait For All Tasks][] block.
-
 5. Workspace Block
     * This workspace then uses the successful results for something.
     * See [Workspace][] block.
@@ -250,7 +250,7 @@ To get the results of the tasks that did not throw an exception, you would need 
 [Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.MainDoc" >}}
 [Handle Block Exception]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleBlock.HandleBlockException.MainDoc" >}}
 [Remove Items At Indexes]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.MainDoc" >}}
-[Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.MainDoc" >}}
+[Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}
 
 [List]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.List" >}}
 [Indexes]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes.Indexes" >}}
@@ -266,12 +266,13 @@ To get the results of the tasks that did not throw an exception, you would need 
 
 [TaskExceptions]: {{< url path="Cortex.Reference.Exceptions.Tasks.AggregateTaskException.TaskExceptions" >}}
 
-[Exception]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
+[Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
 
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}

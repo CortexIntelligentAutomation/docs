@@ -53,11 +53,11 @@ The exception message, providing information about the exception that occurred.
 
 ### TaskExceptions
 
-The [TaskExceptions][TaskExceptions Property] property is a [Structure][] of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to which index of the task that threw it.
+The [TaskExceptions][TaskExceptions Property] property is an [IDictionary][]&lt;[Int32][],[Exception][]&gt; of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to the index of the task that threw it.
 
 | | |
 |-----------|------------|
-| Data Type | [Structure][]&lt;[Int32][],[Exception][]&gt; |
+| Data Type | [IDictionary][]&lt;[Int32][],[Exception][]&gt; |
 
 Below is an example of the value of [TaskExceptions][TaskExceptions Property] after the first and third tasks both throw a [FlowException][]:
 ```json
@@ -85,6 +85,18 @@ The URL for the relevant section of this exception's help page.
 
 ## See Also
 
+### Related Data Types
+
+* [Exception][]
+* [FlowException][]
+* [IDictionary<TKey, TItem>][IDictionary]
+* [Int32][]
+* [String][]
+
+### Related Concepts
+
+* [Exceptions][]
+
 ### Related Blocks
 
 * [Wait For All Tasks][]
@@ -97,13 +109,15 @@ None
 
 [TaskExceptions Property]: {{< ref "#taskexceptions" >}}
 
-[Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.MainDoc" >}}
 [Waiting for a Task that has thrown an exception]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.GetSuccessfulResults" >}}
 
-[Exception]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
+[Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
+
+[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
