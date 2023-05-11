@@ -6,7 +6,7 @@ description: "Any data type representing an asynchronous task."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTpes.Tasks.ITask&lt;TResult&gt;)</p>
+<p class="namespace">(Cortex.DataTypes.Tasks.ITask&lt;TResult&gt;)</p>
 
 ## Summary
 

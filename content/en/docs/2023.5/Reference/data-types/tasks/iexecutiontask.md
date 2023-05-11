@@ -6,7 +6,7 @@ description: "Any data type representing an asynchronous execution of a flow."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTpes.Tasks.IExecutionTask)</p>
+<p class="namespace">(Cortex.DataTypes.Tasks.IExecutionTask)</p>
 
 ## Summary
 
