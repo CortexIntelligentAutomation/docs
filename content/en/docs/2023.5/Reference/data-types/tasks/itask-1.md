@@ -35,7 +35,7 @@ The unique Id of the task.
 
 ### IsCancelled
 
-This property returns true if the execution of the task has been cancelled, and false otherwise.
+This property returns `true` if the execution of the task has been cancelled, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -43,7 +43,7 @@ This property returns true if the execution of the task has been cancelled, and 
 
 ### IsCompleted
 
-This property returns true if the execution of the task has completed, and false otherwise.
+This property returns `true` if the execution of the task has completed, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +51,7 @@ This property returns true if the execution of the task has completed, and false
 
 ### IsCompletedSuccessfully
 
-This property returns true if [IsCompleted][] is true and [IsFaulted][] is false, and false otherwise.
+This property returns `true` if [IsCompleted][] is `true` and [IsFaulted][] is `false`, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -59,7 +59,7 @@ This property returns true if [IsCompleted][] is true and [IsFaulted][] is false
 
 ### IsFaulted
 
-This property return true if the execution of the task has thrown an exception, and false otherwise.
+This property returns `true` if the execution of the task has thrown an exception, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -67,7 +67,7 @@ This property return true if the execution of the task has thrown an exception, 
 
 ### Status
 
-This property returns the state of the execution of the task (e.g. `"Running"`, `"RanToCompletion"`)
+This property returns the state of the execution of the task (e.g. `"Cancelled"`, `"Faulted"`, `"RanToCompletion"`, `"Running"`)
 
 | | |
 |--------------------|---------------------------|
@@ -75,7 +75,7 @@ This property returns the state of the execution of the task (e.g. `"Running"`, 
 
 ### Exception
 
-This property returns the [Exception][] of the execution of the task if [IsFaulted][] is true, and `null` otherwise.
+This property returns the [Exception][] if thrown by the execution of the task, and `null` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -89,6 +89,12 @@ Any of the following data types can be used where an `ITask<TResult>` is require
 
 * [IExecutionTask][]
 * [ExecutionTask][]
+
+### Create an ITask<TResult>
+
+For some of the ways that an `ITask<TResult>` can be created, please see each of the `ITask<TResult>` data types:
+
+* [ExecutionTask][CreateExecutionTask]
 
 ### Convert ITask&lt;TResult&gt; to Text
 
@@ -111,12 +117,25 @@ None
 
 ### Related Data Types
 
-* [IExecutionTask][]
+* [Boolean]
+* [Exception][]
+* [Guid][]
 * [ExecutionTask][]
+* [IExecutionTask][]
+* [String][]
 
+### Related Concepts
+
+* [Working With Tasks][]
+
+### External Documentation
+
+None
+
+[Working With Tasks]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Tasks.MainDoc" >}}
+[CreateExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.Create" >}}
 [IsFaulted]: {{< ref "#isfaulted" >}}
 [IsCompleted]: {{< ref "#iscompleted" >}}
-[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

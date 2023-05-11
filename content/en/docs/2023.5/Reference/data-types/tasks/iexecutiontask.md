@@ -20,7 +20,7 @@ Any data type representing an asynchronous execution of a flow.
 | **Alias:**             | N/A |
 | **Description:**       | Any data type representing an asynchronous execution of a flow. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `IExecutionTask`, `ITask<TResult>`, `Object`, `dynamic` |
+| **Can be used as:**    | `IExecutionTask`, `ITask<Structure>`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                           |
 
 ## Properties
@@ -43,7 +43,7 @@ The unique Id of the task.
 
 ### IsCancelled
 
-This property returns true if the execution of the task has been cancelled, and false otherwise.
+This property returns `true` if the execution of the task has been cancelled, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +51,7 @@ This property returns true if the execution of the task has been cancelled, and 
 
 ### IsCompleted
 
-This property returns true if the execution of the task has completed, and false otherwise.
+This property returns `true` if the execution of the task has completed, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -59,7 +59,7 @@ This property returns true if the execution of the task has completed, and false
 
 ### IsCompletedSuccessfully
 
-This property returns true if [IsCompleted][] is true and [IsFaulted][] is false, and false otherwise.
+This property returns `true` if [IsCompleted][] is `true` and [IsFaulted][] is `false`, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -67,7 +67,7 @@ This property returns true if [IsCompleted][] is true and [IsFaulted][] is false
 
 ### IsFaulted
 
-This property return true if the execution of the task has thrown an exception, and false otherwise.
+This property returns `true` if the execution of the task has thrown an exception, and `false` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -75,7 +75,7 @@ This property return true if the execution of the task has thrown an exception, 
 
 ### Status
 
-This property returns the state of the execution of the task (e.g. `"Running"`, `"RanToCompletion"`)
+This property returns the state of the execution of the task (e.g. `"Cancelled"`, `"Faulted"`, `"RanToCompletion"`, `"Running"`)
 
 | | |
 |--------------------|---------------------------|
@@ -83,7 +83,7 @@ This property returns the state of the execution of the task (e.g. `"Running"`, 
 
 ### Exception
 
-This property returns the [Exception][] of the execution of the task if [IsFaulted][] is true, and `null` otherwise.
+This property returns the [Exception][] if thrown by the execution of the task, and `null` otherwise.
 
 | | |
 |--------------------|---------------------------|
@@ -97,11 +97,23 @@ Any of the following data types can be used where an `IExecutionTask` is require
 
 * [ExecutionTask][]
 
+### Create an IExecutionTask
+
+For some of the ways that an `IExecutionTask` can be created, please see each of the `IExecutionTask` data types:
+
+* [ExecutionTask][CreateExecutionTask]
+
 ### Convert IExecutionTask to Text
 
 For some of the ways that an `IExecutionTask` can be converted to text see each of the `IExecutionTask` data types:
 
 * [ExecutionTask][ConvertExecutionTask]
+
+### Retrieving the Results of an IExecutionTask
+
+Results (i.e. [Structure][] containing the [Output Variables][] of the flow) can be retrieved from any `IExecutionTask` whose status is `RanToCompletion` using the following blocks:
+* [Wait For Task][]
+* [Wait For All Tasks][]
 
 ### Property Editor Support
 
@@ -117,15 +129,31 @@ None
 
 ### Related Data Types
 
-* [ITask&lt;TResult&gt;][ITask]
+* [Boolean]
+* [Exception][]
 * [ExecutionTask][]
+* [Guid][]
+* [ITask&lt;TResult&gt;][ITask]
+* [String][]
+* [Structure][]
 
+### Related Concepts
+
+* [Working With Tasks][]
+
+### External Documentation
+
+None
+
+[Working With Tasks]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Tasks.MainDoc" >}}
 [IsFaulted]: {{< ref "#isfaulted" >}}
+[CreateExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.Create" >}}
 [IsCompleted]: {{< ref "#iscompleted" >}}
 [ExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.MainDoc" >}}
+[Output Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.OutputVariablesStructure" >}}
 [ConvertExecutionTask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ExecutionTask.Convert" >}}
-[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
+[Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Guid]: {{< url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
