@@ -124,15 +124,15 @@ Also, if an [Input Variable][] has a default value, and the corresponding value 
 
 For more information see [Input Variables][Input Variable].
 
+### Parent Flow Ending Before Child Flow
+
+If the flow containing the [Run Flow Async][] block ends before the [Flow][Flow Property], the [Flow][Flow Property] will continue running to completion.
+
 ### Exceptions Thrown by a Child Flow
 
 If the [Flow][Flow Property] run by the Run Flow block throws an exception that is unhandled then the exception is saved to the [Execution Task][Execution Task Property]. The execution containing the [Run Flow Async][] block will not pause when the exception is thrown unless the [Flow][Flow Property] is being waited on by a wait block.
 
 See [Wait For Task] block or [Wait For All Tasks] block for more details.
-
-### Parent Flow ending before Child Flow
-
-If the flow containing the [Run Flow Async][] block ends before the [Flow][Flow Property], the [Flow][Flow Property] will continue running to completion.
 
 ### Syncing the Inputs Property with the Flow Contract
 
