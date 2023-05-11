@@ -131,15 +131,15 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Cancelling a Task that has already been cancelled
+### Cancelling a Task That Has Already Been Cancelled
 
 If the [Task][Task Property] being cancelled has already been cancelled, this block will do nothing and the status of the [Task][Task Property] will remain `"Cancelled"`.
 
-### Cancelling a Task that has been completed
+### Cancelling a Task That Has Been Completed
 
 If the [Task][Task Property] being cancelled has already been completed, this block will do nothing and the status of the [Task][Task Property] will remain `"RanToCompletion"`.
 
-### Cancelling a Task that has thrown an exception
+### Cancelling a Task That Has Thrown an Exception
 
 If the [Task][Task Property] being cancelled has thrown an exception during execution, this block will do nothing and the status of the [Task][Task Property] will remain `"Faulted"`.
 
@@ -157,7 +157,6 @@ If the [Task][Task Property] being cancelled has thrown an exception during exec
 [ITask]: {{< url path="Cortex.Reference.DataTypes.Tasks.ITask.MainDoc" >}}
 [CancelTask]: {{< ref "#cancel-task" >}}
 [RunFlowAsync]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
-
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 

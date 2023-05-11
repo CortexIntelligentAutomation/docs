@@ -577,8 +577,8 @@
                         RunningAFlow = "/docs/reference/blocks/flows/run-flow/run-flow-block/#running-a-flow"
                         FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
                         InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
-                [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
-                    MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
+                    [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
+                        MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
@@ -798,6 +798,7 @@
                     MainDoc = "/docs/reference/blocks/tasks/wait-for-task"
                     [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask]
                         MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
+                        TaskHasThrown = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1/#waiting-for-a-task-that-has-thrown-an-exception"
                     [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock]
                         MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2"
                         GetSuccessfulResults = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2/#waiting-for-a-task-that-has-thrown-an-exception"
