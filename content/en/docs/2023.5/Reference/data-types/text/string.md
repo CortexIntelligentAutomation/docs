@@ -74,6 +74,7 @@ None
 [System.String]: {{< url path="MSDocs.DotNet.Api.System.String.MainDoc" >}}
 [String.Concat]: {{< url path="MSDocs.DotNet.Api.System.String.Concat" >}}
 [String Concatenation Operator]: {{< url path="MSDocs.DotNet.Api.System.String.ConcatOperator" >}}
+[String Interpolation]: {{< url path="MSDocs.DotNet.Api.System.String.StringInterpolation" >}}
 [String.Format]: {{< url path="MSDocs.DotNet.Api.System.String.Format" >}}
 [String.Insert]: {{< url path="MSDocs.DotNet.Api.System.String.Insert" >}}
 [String.Join]: {{< url path="MSDocs.DotNet.Api.System.String.Join" >}}

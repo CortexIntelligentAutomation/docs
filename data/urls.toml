@@ -1125,6 +1125,8 @@
                             ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
                         [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
                             MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
+                [Cortex.Reference.Concepts.WorkingWith.Tasks]
+                    MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
@@ -1511,8 +1513,13 @@
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
             [Cortex.Reference.DataTypes.Tasks]
                 MainDoc = "/docs/reference/data-types/tasks/"
+                [Cortex.Reference.DataTypes.Tasks.ExecutionTask]
+                    MainDoc = "/docs/reference/data-types/tasks/executiontask"
+                    Convert = "/docs/reference/data-types/tasks/executiontask/#convert-executiontask-to-text"
+                    Create = "/docs/reference/data-types/tasks/executiontask/#create-an-executiontask"
                 [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
                     MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
+                    Convert = "/docs/reference/data-types/tasks/iexecutiontask/#convert-iexecutiontask-to-text"
                 [Cortex.Reference.DataTypes.Tasks.ITask]
                     MainDoc = "/docs/reference/data-types/tasks/itask-1"
             [Cortex.Reference.DataTypes.Telnet]
@@ -2165,6 +2172,7 @@
             Concat = "https://learn.microsoft.com/en-us/dotnet/api/system.string.concat"
             ConcatGuide = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings"
             ConcatOperator = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
+            StringInterpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#string-interpolation"
             Format = "https://learn.microsoft.com/en-us/dotnet/api/system.string.format"
             Insert = "https://learn.microsoft.com/en-us/dotnet/api/system.string.insert"
             Join = "https://learn.microsoft.com/en-us/dotnet/api/system.string.join"
