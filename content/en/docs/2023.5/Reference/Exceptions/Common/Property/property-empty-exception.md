@@ -137,6 +137,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Peek Item][]
 * Tasks
   * [Cancel All Tasks][]
+  * [Wait For All Tasks][]
 * Xml
   * [Convert Structure To Xml][]
   * [Convert Xml To Structure][]
@@ -201,6 +202,7 @@ None
 [Convert Xml To Structure]: {{< url path="Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.MainDoc" >}}
 
 [Cancel All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock.MainDoc" >}}
+[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.MainDoc" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}

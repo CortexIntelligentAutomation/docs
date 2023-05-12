@@ -32,7 +32,7 @@ This release includes a [re-architected HA Platform][], which provides:
 
 ## Improved Scalability
 
-This release includes a [re-architected HA Platform][], which provides:
+This release includes a [re-architected HA Platform][], which lays the foundations for future releases to provide:
 
 - Manual and on-demand automated scaling
 - Single click deployments and zero downtime upgrades

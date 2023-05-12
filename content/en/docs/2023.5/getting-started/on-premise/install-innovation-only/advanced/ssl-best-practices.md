@@ -6,6 +6,10 @@ description: "Information about the recommended security settings for Innovation
 
 # {{% param title %}}
 
+These are non-compulsory security measures, recommended to be applied to the servers, in order to prevent potential attacks that exploit known industry security vulnerabilities.
+
+Applying these measures may impact other applications running on your server. Therefore, it is your responsibility to ensure that other applications and their clients will not be affected by the changes.
+
 A collection of registry settings can be applied during installation to guarantee your server is only using the recommended encryption algorithms and TLS protocols:
 
 | Type                  |   Name                                  |   Enabled   |

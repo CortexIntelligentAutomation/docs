@@ -133,15 +133,15 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Cancelling a Task that has already been cancelled
+### Cancelling a Task That Has Already Been Cancelled
 
 If the Task being cancelled has already been cancelled, this block will do nothing and the status of the Task will remain `"Cancelled"`.
 
-### Cancelling a Task that has been completed
+### Cancelling a Task That Has Been Completed
 
 If the Task being cancelled has already been completed, this block will do nothing and the status of the Task will remain `"RanToCompletion"`.
 
-### Cancelling a Task that has thrown an exception
+### Cancelling a Task That Has Thrown an Exception
 
 If the Task being cancelled has thrown an exception during execution, this block will do nothing and the status of the Task will remain `"Faulted"`.
 
