@@ -100,7 +100,6 @@ For some of the ways that an `ITask<TResult>` can be created, please see each of
 
 For some of the ways that an `ITask<TResult>` can be converted to text see each of the `ITask<TResult>` data types:
 
-* [IExecutionTask][ConvertIExecutionTask]
 * [ExecutionTask][ConvertExecutionTask]
 
 ### Property Editor Support
