@@ -1521,7 +1521,7 @@
                     MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
                     Convert = "/docs/reference/data-types/tasks/iexecutiontask/#convert-iexecutiontask-to-text"
                 [Cortex.Reference.DataTypes.Tasks.ITask]
-                MainDoc = "/docs/reference/data-types/tasks/itask-1"
+                    MainDoc = "/docs/reference/data-types/tasks/itask-1"
             [Cortex.Reference.DataTypes.Telnet]
                 MainDoc = "/docs/reference/data-types/Telnet/"
                 [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
