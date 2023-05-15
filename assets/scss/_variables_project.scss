@@ -3,7 +3,7 @@
 Add styles or override variables from the theme here.
 
 */
-$ctx-green: #a0c326;
+$ctx-green: #7ac300;
 $ctx-blue: #282864;
 $ctx-black: rgba(0, 0, 0, 0.7);
 $ctx-orange: #ff6600;
@@ -40,10 +40,21 @@ body {
 
   .slogan {
     color: white;
+    font-weight: bold;
 
+    &::before {
+      content: '“'
+    }
+
+    &::after {
+      content: '”'
+    }
+    
     &::before, &::after {
-      content: '"';
+      font-weight: lighter;
       color: #7ac300;
+      font-family: arial !important;
+      font-weight: bold !important;
     }
   }
 
