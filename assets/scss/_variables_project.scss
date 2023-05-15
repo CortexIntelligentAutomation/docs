@@ -59,7 +59,7 @@ body {
   }
 
   .landing-title {
-    color: white;
+    color: $white;
   }
 
   .popover-body {
@@ -299,6 +299,14 @@ main {
 footer {
   font-size: 0.8rem !important;
   padding-top: 1rem !important;
+  
+  &.bg-dark {
+    background-color: $white !important;
+  }
+
+  .text-white {
+    color: $ctx-text-black !important;
+  }
 
   div.copyright-container {
     padding: 1rem;
@@ -307,7 +315,7 @@ footer {
   }
 
   a:hover {
-    color: $ctx-green  !important;
+    color: $ctx-green !important;
   }
 }
 
