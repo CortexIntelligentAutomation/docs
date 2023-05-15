@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Cortex"
+title = "CORTEX"
 
 enableRobotsTXT = true
 
@@ -59,7 +59,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Cortex"
+title = "CORTEX"
 description = "Product documentation for the Cortex automation platform, including guides, tutorials and reference documentation."
 languageName ="English"
 # Weight used for sorting.
