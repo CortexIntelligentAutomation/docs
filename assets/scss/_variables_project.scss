@@ -8,6 +8,7 @@ $ctx-blue: #282864;
 $ctx-black: rgba(0, 0, 0, 0.7);
 $ctx-orange: #ff6600;
 $ctx-text-black: #495057;
+$ctx-primary-blue: #282864;
 
 $primary: #282864 !default;
 $secondary: #ff6600 !default;
@@ -33,14 +34,21 @@ body {
   text-align: left;
   background-color: #fff;
 
-  .slogan::before {
-    content: '"';
-    color: #7ac300;
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $ctx-primary-blue;
   }
 
-  .slogan::after {
-    content: '"';
-    color: #7ac300;
+  .slogan {
+    color: white;
+
+    &::before, &::after {
+      content: '"';
+      color: #7ac300;
+    }
+  }
+
+  .landing-title {
+    color: white;
   }
 
   .popover-body {
