@@ -76,7 +76,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid CORTEX licence file and CORTEX Innovation with v7.2 feature identifier must be procured from Cortex. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+A valid CORTEX licence file and CORTEX Innovation with v7.2 feature identifier must be procured from CORTEX. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
 
 To get a licence file and feature identifier take the following steps:
 

@@ -258,7 +258,7 @@ Please note that if the appsetting.json file cannot be found for one of the serv
 
 ### Anatomy of a Log
 
-The format of the logs written by this block are the same as the logs written by the rest of the CORTEX Innovation Services. This is to ensure logging is consistent and done one way within Cortex. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
+The format of the logs written by this block are the same as the logs written by the rest of the CORTEX Innovation Services. This is to ensure logging is consistent and done one way within CORTEX. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
 
 An example log can be found below:
 

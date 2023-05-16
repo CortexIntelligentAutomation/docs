@@ -40,7 +40,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid CORTEX licence file and CORTEX Innovation feature identifier must be procured from Cortex. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
+A valid CORTEX licence file and CORTEX Innovation feature identifier must be procured from CORTEX. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
 
 To get a licence file and feature identifier take the following steps:
 
