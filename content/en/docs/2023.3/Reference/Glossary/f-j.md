@@ -31,7 +31,7 @@ For more detailed information about flows, see [Fundamentals > Flows][].
 
 A flow developer is a user that has been granted permissions to develop [flows][] in [{{< ctx >}} Studio][CORTEX Studio].
 
-For more detailed information about granting permissions to develop [flows][], see [{{< ctx >}} Studio > Authorisation][].
+For more detailed information about granting permissions to develop [flows][], see [{{< ctx >}} Studio > Authorisation][CORTEX Studio > Authorisation].
 
 ### Folder
 

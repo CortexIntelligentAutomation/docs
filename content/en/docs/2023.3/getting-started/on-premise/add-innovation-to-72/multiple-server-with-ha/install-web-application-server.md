@@ -64,7 +64,7 @@ In order to ensure that the correct certificate is used during the upgrade of {{
 
 #### Assign Certificate Friendly Name
 
-A Friendly Name should be assigned to the certificate being used for the Cortex Website. This will be used in the [Configure {{< ctx >}} Gateway Installation Script][] to assign the correct certificate to the site:
+A Friendly Name should be assigned to the certificate being used for the Cortex Website. This will be used in the [Configure {{< ctx >}} Gateway Installation Script][Configure CORTEX Gateway Installation Script] to assign the correct certificate to the site:
 
 1. Click the Windows button (`Start`).
 1. Type `certlm.msc` and press `Enter` to open the Certificate Manager dialog.

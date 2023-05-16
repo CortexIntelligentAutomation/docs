@@ -235,7 +235,7 @@ For a complete list of available data types, see [Reference > Data Types][].
 
 The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [{{< ctx >}} Studio][CORTEX Studio], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
 
-For more detailed information about debugging in {{< ctx >}} Studio, see [{{< ctx >}} Studio > Debugging][].
+For more detailed information about debugging in {{< ctx >}} Studio, see [{{< ctx >}} Studio > Debugging][CORTEX Studio > Debugging].
 
 ### Default Value
 
@@ -309,7 +309,7 @@ When a [request][] to start a [flow][] is received by the [{{< ctx >}}][CORTEX] 
 
 There can be multiple executions of a flow running [concurrently][concurrent].
 
-For more detailed information about executions, see [{{< ctx >}} Studio > Debugging][].
+For more detailed information about executions, see [{{< ctx >}} Studio > Debugging][CORTEX Studio > Debugging].
 
 ### Explicit Cast
 
@@ -344,7 +344,7 @@ It is based on the [Monaco Editor][] used by [VS Code][], and includes a rich se
 * [Snippets][]
 * [Intellisense][]
 
-For more detailed information about the Expression Editor, see [{{< ctx >}} Studio > Expression Editor][].
+For more detailed information about the Expression Editor, see [{{< ctx >}} Studio > Expression Editor][CORTEX Studio > Expression Editor].
 
 [Automate]: {{< ref "#automate" >}}
 [Automation]: {{< ref "#automation" >}}

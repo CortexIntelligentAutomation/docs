@@ -105,7 +105,7 @@ Wildcard certificates and self-signed certificates can also be used. However, se
 
 The certificate that was used when [installing the Application Server][Configure Installation Script] can be used. If self-signed certificates were used, this will have the subject CN=CortexServerCertificate
 
-If using the same certificate you should set the `ImportCertificate` parameter to `$false` in [Configure {{< ctx >}} Gateway Installation Script][] to prevent overwriting.
+If using the same certificate you should set the `ImportCertificate` parameter to `$false` in [Configure {{< ctx >}} Gateway Installation Script][Configure CORTEX Gateway Installation Script] to prevent overwriting.
 
 To ensure that the certificate can be used by the {{< ctx >}} Gateway website the following sections should be completed:
 
@@ -142,7 +142,7 @@ To import the certificate manually follow the below steps:
 
 #### Assign Certificate Friendly Name
 
-Once the certificate has been imported, a `Friendly Name` should be assigned which will be used in the [Configure {{< ctx >}} Gateway Installation Script][] to enable the installation script to identify the certificate to be used for the website:
+Once the certificate has been imported, a `Friendly Name` should be assigned which will be used in the [Configure {{< ctx >}} Gateway Installation Script][Configure CORTEX Gateway Installation Script] to enable the installation script to identify the certificate to be used for the website:
 
 1. Click the Windows button (`Start`).
 1. Type `certlm.msc` and press `Enter` to open the Certificate Manager dialog.
@@ -239,7 +239,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUsername` when [Configuring the Flow Debugger Installation Script][Configure Flow Debugger Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `DotNetFlowDebuggerBasicAuthUsername` value in the {{< ctx >}} Gateway web.config.|
     |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [Configuring the Flow Debugger Installation Script][Configure Flow Debugger Installation Script]; if so, this value must be configured to the one used. It can be [{{< ctx >}} Encrypted][CORTEX Encrypted].<br /><br />This will set the `DotNetFlowDebuggerBasicAuthPassword` value in the {{< ctx >}} Gateway web.config.|
     |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing {{< ctx >}} Gateway and Flow Debugger Service, `$true` if using self-signed certificates.<br /><br />This will set the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the {{< ctx >}} Gateway web.config.|
-    |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that should be used to run the {{< ctx >}} Gateway application pool as configured in [Get {{< ctx >}} Gateway Application Pool User][].|
+    |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that should be used to run the {{< ctx >}} Gateway application pool as configured in [Get {{< ctx >}} Gateway Application Pool User][Get CORTEX Gateway Application Pool User].|
     |`WebRootFolder`                                 | Replace this with the correct path for the Web Root Folder on the server. Typically this will be  `C:\inetpub\wwwroot`.|
     |`WebsitePort`                                   | Replace this with the port that you wish the website to use. Typically this will be `443`.|
     |`ImportCertificate`                             | Change this from `$true` to `$false` if you do not require the certificate to be imported as part of the installation process.<br /><br />Note that if this is changed to `$false` you must [import the Root Certificate][Import Root Certificate] (if necessary), [import the X.509 certificate manually][Import Certificate Manually] and [assign a friendly name][Assign Certificate Friendly Name] prior to running the installation.|
@@ -339,7 +339,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 ## Next Steps?
 
-1. [Setup {{< ctx >}} Gateway][]
+1. [Setup {{< ctx >}} Gateway][Setup CORTEX Gateway]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
