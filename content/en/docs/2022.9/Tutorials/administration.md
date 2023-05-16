@@ -1,7 +1,7 @@
 ---
 title: "Administration"
 linkTitle: "Administration"
-description: "This section includes tutorials about administering the Cortex Innovation platform."
+description: "This section includes tutorials about administering the CORTEX Innovation platform."
 weight: 40
 ---
 

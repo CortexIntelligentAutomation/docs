@@ -57,10 +57,10 @@ To import the CA certificate:
 If the specified path to the folder for the `positions.yaml` file doesn't exists, the file will not get created on Promtail startup.
 {{% /alert %}}
 
-### Set the Path to the Cortex API Gateway Service Log Files
+### Set the Path to the CORTEX API Gateway Service Log Files
 
 1. Open the `promtail-local-config.yaml` configuration file, which is located in the folder alongside the `promtail-windows-amd64.exe` file.
-1. Set the `__path__` in the `static_configs` > `targets` > `labels` section to the path of the `Logs` folder specified in the `appSettings.json` file during installation of the Cortex API Gateway Service, e.g. `"C:/ProgramData/Cortex/Cortex API Gateway Service/Logs/*.json"`.
+1. Set the `__path__` in the `static_configs` > `targets` > `labels` section to the path of the `Logs` folder specified in the `appSettings.json` file during installation of the CORTEX API Gateway Service, e.g. `"C:/ProgramData/Cortex/Cortex API Gateway Service/Logs/*.json"`.
 1. Save the file.
 
 ### Start Promtail

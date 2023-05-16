@@ -81,7 +81,7 @@ Refers to computer files or memory that can be read or used, but not updated or 
 
 ### Release
 
-A Release follows a longer term release cycle, allowing access to the latest stable version of Cortex and longer term support.
+A Release follows a longer term release cycle, allowing access to the latest stable version of CORTEX and longer term support.
 
 ### Request
 

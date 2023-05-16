@@ -1,7 +1,7 @@
 ---
-title: "Cortex Gateway Management"
-linkTitle: "Cortex Gateway Management"
-description: "Cortex Gateway and Studio Management tools and settings"
+title: "CORTEX Gateway Management"
+linkTitle: "CORTEX Gateway Management"
+description: "CORTEX Gateway and Studio Management tools and settings"
 ---
 
 {{< workinprogress >}}

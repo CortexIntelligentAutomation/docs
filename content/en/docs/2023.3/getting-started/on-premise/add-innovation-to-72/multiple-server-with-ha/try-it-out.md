@@ -1,7 +1,7 @@
 ---
 title: "Try it out"
 linkTitle: "Try it out"
-description: "Information about trying out Cortex Innovation for the first time."
+description: "Information about trying out CORTEX Innovation for the first time."
 weight: 60
 ---
 
@@ -53,7 +53,7 @@ Test the platform by creating a new flow and executing it using the following st
     {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
 1. The request should return a JSON object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
-1. Cortex Innovation has now been verified and is ready to use.
+1. CORTEX Innovation has now been verified and is ready to use.
 
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Troubleshooting No Innovation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoInnovation" >}}

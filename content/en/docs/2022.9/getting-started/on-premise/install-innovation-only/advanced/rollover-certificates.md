@@ -1,13 +1,13 @@
 ---
 title: "Rollover CA certificates"
 linkTitle: "Rollover CA certificates"
-description: "Information about updating the certificates on a single or multi-server Cortex platform which uses CA certificates."
+description: "Information about updating the certificates on a single or multi-server CORTEX platform which uses CA certificates."
 ---
 
 # {{% param title %}}
 
 {{% pageinfo %}}
-This process MUST be undertaken before certificates expire, otherwise your system will become unusable. If certificates have already expired, contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="Cortex Service Portal" >}} at the earliest opportunity.
+This process MUST be undertaken before certificates expire, otherwise your system will become unusable. If certificates have already expired, contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} at the earliest opportunity.
 
 Only platforms which use CA certificates can have their certificates updated using this mechanism. Systems using self-signed certificates must be reinstalled.
 
@@ -91,7 +91,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
     If there are no errors, continue to the next section; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
 
-    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [Cortex Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file in the script location, showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
+    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [CORTEX Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file in the script location, showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
 
 ### Run Update Certificates Script
 
@@ -107,7 +107,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
     If there are any errors, then please follow any instructions given within them to rectify the situation.
 
-    If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [Cortex Service Portal][] for assistance.
+    If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [CORTEX Service Portal][] for assistance.
 
 ### Check Application Services
 
@@ -157,4 +157,4 @@ If using a single server and using the same certificates for both the Applicatio
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Configure Update Certificates Script]:  {{< ref "#configure-update-certificates-script" >}}
-[Cortex Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}

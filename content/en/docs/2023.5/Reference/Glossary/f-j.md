@@ -23,15 +23,15 @@ Different files can store different types of data (i.e. a text file, `.txt`, sto
 
 ### Flow
 
-A flow is an object in [Cortex Studio][] that contains the logic and actions (in the form of [blocks][]) that the [Cortex][] [platform][] is able to execute for the [flow developers][].
+A flow is an object in [CORTEX Studio][] that contains the logic and actions (in the form of [blocks][]) that the [CORTEX][] [platform][] is able to execute for the [flow developers][].
 
 For more detailed information about flows, see [Fundamentals > Flows][].
 
 ### Flow Developer
 
-A flow developer is a user that has been granted permissions to develop [flows][] in [Cortex Studio][].
+A flow developer is a user that has been granted permissions to develop [flows][] in [CORTEX Studio][].
 
-For more detailed information about granting permissions to develop [flows][], see [Cortex Studio > Authorisation][].
+For more detailed information about granting permissions to develop [flows][], see [CORTEX Studio > Authorisation][].
 
 ### Folder
 
@@ -106,9 +106,9 @@ Human-in-the-Loop or HITL allows people to interact with automated systems and p
 
 ### IDE
 
-IDE or Integrated Development Environment is a software application such as [Cortex Studio][], that allows users to create a program or application.
+IDE or Integrated Development Environment is a software application such as [CORTEX Studio][], that allows users to create a program or application.
 
-In [Cortex Studio][], the users are called [flow developers][], and the programs are called [flows][].
+In [CORTEX Studio][], the users are called [flow developers][], and the programs are called [flows][].
 
 Some common and popular examples of IDE's include:
 
@@ -139,7 +139,7 @@ Int32 ThirtyTwoBitInteger = SixteenBitInteger;
 
 See [Explicit Cast][] for an example of where data loss would occur during conversion, and would therefore require an explicit instruction from the developer.
 
-See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [Cortex][] [platform][] for writing simple [expressions][] and more complex [code][].
+See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [CORTEX][] [platform][] for writing simple [expressions][] and more complex [code][].
 
 ### Index
 
@@ -221,8 +221,8 @@ See [What is JSON][What is Json (W3)] for more information.
 [32-Bit]: {{< url path="Cortex.Reference.Glossary.0-9.32Bit" >}}
 [blocks]: {{< url path="Cortex.Reference.Glossary.A-E.Block" >}}
 [code]: {{< url path="Cortex.Reference.Glossary.A-E.Code" >}}
-[Cortex]: {{< url path="Cortex.Reference.Glossary.A-E.Cortex" >}}
-[Cortex Studio]: {{< url path="Cortex.Reference.Glossary.A-E.CortexStudio" >}}
+[CORTEX]: {{< url path="Cortex.Reference.Glossary.A-E.Cortex" >}}
+[CORTEX Studio]: {{< url path="Cortex.Reference.Glossary.A-E.CortexStudio" >}}
 [C#]: {{< url path="Cortex.Reference.Glossary.A-E.CSharp" >}}
 [data type]: {{< url path="Cortex.Reference.Glossary.A-E.DataType" >}}
 [Explicit Cast]: {{< url path="Cortex.Reference.Glossary.A-E.ExplicitCast" >}}
@@ -252,7 +252,7 @@ See [What is JSON][What is Json (W3)] for more information.
 
 [collection]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
 [Collections > Indexes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
-[Cortex Studio > Authorisation]: {{< url path="Cortex.Guides.Gateway.Settings.StudioAuthorisation.MainDoc" >}}
+[CORTEX Studio > Authorisation]: {{< url path="Cortex.Guides.Gateway.Settings.StudioAuthorisation.MainDoc" >}}
 
 [Int16]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

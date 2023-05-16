@@ -1,1 +1,1 @@
-Application Service that routes client requests to the correct distributed Cortex Innovation services.
+Application Service that routes client requests to the correct distributed CORTEX Innovation services.

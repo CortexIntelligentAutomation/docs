@@ -1,1 +1,1 @@
-A set of files that contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Execution Service.
+A set of files that contain the blocks that users can use to build flows. Used by the CORTEX Flow Debugger Service and the Execution Service.

@@ -53,7 +53,7 @@ See [Wikipedia][Bit (Wikipedia)] for more information.
 
 ### Block
 
-Blocks (or [functional blocks][]) expose the logic and actions that the [Cortex][] [platform][] is able to execute for the [flow developers][]; alongside [flows][Flow] they are one of the main components used to define how to automate [tasks][] and [processes][].
+Blocks (or [functional blocks][]) expose the logic and actions that the [CORTEX][] [platform][] is able to execute for the [flow developers][]; alongside [flows][Flow] they are one of the main components used to define how to automate [tasks][] and [processes][].
 
 For more detailed information about blocks, see [Fundamentals > Blocks][].
 
@@ -83,7 +83,7 @@ See [Wikipedia][Byte (Wikipedia)] for more information.
 
 C# (pronounced "see sharp") is a [programming language][] developed by Microsoft.
 
-It is natively supported by the [Cortex][] [platform][] for using simple [expressions][Expression] (i.e. `1 + 1`) and more complex [code][] (i.e. `DateTime.Now.AddDays(1)`) within [flows][Flow].
+It is natively supported by the [CORTEX][] [platform][] for using simple [expressions][Expression] (i.e. `1 + 1`) and more complex [code][] (i.e. `DateTime.Now.AddDays(1)`) within [flows][Flow].
 
 C# expressions and code can be entered as the values for [Fundamentals > Block Properties][Block Property] using the [Expression Editor][].
 
@@ -109,7 +109,7 @@ If something is case-sensitive, it means it considers differences in case (i.e. 
 
 The process of explicitly converting one [data type][] to another.
 
-See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [Cortex][] [platform][] for writing simple [expressions][Expression] and more complex [code][].
+See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [CORTEX][] [platform][] for writing simple [expressions][Expression] and more complex [code][].
 
 Also see [Explicit Cast][] for more information.
 
@@ -181,19 +181,19 @@ To change something into a different form. E.g. Change some [text][] from [lower
 
 Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from a domain outside of the domain from which the first resource was served.
 
-### Cortex
+### CORTEX
 
-The name of the new and current generation of the Cortex [automation][] [platform][].
+The name of the new and current generation of the CORTEX [automation][] [platform][].
 
-### Cortex Gateway
+### CORTEX Gateway
 
-The centralised web-based [portal][] for accessing all user applications and tooling in the [Cortex][] [platform][].
+The centralised web-based [portal][] for accessing all user applications and tooling in the [CORTEX][] [platform][].
 
-### Cortex Studio
+### CORTEX Studio
 
 The web-based integrated development environment ([IDE][]) for creating, editing, [debugging][], testing and managing [flows][Flow] that define the logic and actions required to capture and automate a [task][tasks] or [process][Processes].
 
-For more detailed information about Cortex Studio, see [Guides > Cortex Studio][].
+For more detailed information about CORTEX Studio, see [Guides > CORTEX Studio][].
 
 ### Culture
 
@@ -237,9 +237,9 @@ For a complete list of available data types, see [Reference > Data Types][].
 
 ### Debug
 
-The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [Cortex Studio][], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
+The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [CORTEX Studio][], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
 
-For more detailed information about debugging in Cortex Studio, see [Cortex Studio > Debugging][].
+For more detailed information about debugging in CORTEX Studio, see [CORTEX Studio > Debugging][].
 
 ### Default Value
 
@@ -313,11 +313,11 @@ For a complete list of exceptions, see [Reference > Exceptions][].
 
 ### Execution
 
-When a [request][] to start a [flow][] is received by the [Cortex][] [platform][], an execution is created that represents that instance of the executing flow.
+When a [request][] to start a [flow][] is received by the [CORTEX][] [platform][], an execution is created that represents that instance of the executing flow.
 
 There can be multiple executions of a flow running [concurrently][concurrent].
 
-For more detailed information about executions, see [Cortex Studio > Debugging][].
+For more detailed information about executions, see [CORTEX Studio > Debugging][].
 
 ### Explicit Cast
 
@@ -336,7 +336,7 @@ Also see [Cast][] for more information.
 
 ### Expression
 
-An expression is a combination of [operands][] (i.e. [variables][], [literals][], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that can be evaluated by the [Cortex][] [platform][] to a single value.
+An expression is a combination of [operands][] (i.e. [variables][], [literals][], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that can be evaluated by the [CORTEX][] [platform][] to a single value.
 
 Expressions use the syntax of the [C#][] [programming language][].
 
@@ -352,7 +352,7 @@ It is based on the [Monaco Editor][] used by [VS Code][], and includes a rich se
 * [Snippets][]
 * [Intellisense][]
 
-For more detailed information about the Expression Editor, see [Cortex Studio > Expression Editor][].
+For more detailed information about the Expression Editor, see [CORTEX Studio > Expression Editor][].
 
 [Automate]: {{< ref "#automate" >}}
 [Automation]: {{< ref "#automation" >}}
@@ -367,8 +367,8 @@ For more detailed information about the Expression Editor, see [Cortex Studio > 
 [Continuous Integration]: {{< ref "#continuous-integration" >}}
 [Continuous Delivery]: {{< ref "#continuous-delivery" >}}
 [Continuous Deployment]: {{< ref "#continuous-deployment" >}}
-[Cortex]: {{< ref "#cortex" >}}
-[Cortex Studio]: {{< ref "#cortex-studio" >}}
+[CORTEX]: {{< ref "#cortex" >}}
+[CORTEX Studio]: {{< ref "#cortex-studio" >}}
 [Data Type]: {{< ref "#data-type" >}}
 [Debugging]: {{< ref "#debug" >}}
 [Errors]: {{< ref "#error" >}}
@@ -435,9 +435,9 @@ For more detailed information about the Expression Editor, see [Cortex Studio > 
 [32-bit]: {{< url path="Cortex.Reference.Glossary.0-9.32Bit" >}}
 [data type]: {{< url path="Cortex.Reference.Glossary.A-E.DataType" >}}
 
-[Guides > Cortex Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[Cortex Studio > Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
-[Cortex Studio > Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
+[Guides > CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[CORTEX Studio > Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
+[CORTEX Studio > Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 
 [Fundamentals > Expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 

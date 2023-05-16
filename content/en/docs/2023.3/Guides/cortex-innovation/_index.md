@@ -1,6 +1,6 @@
 ---
-title: "Cortex Innovation"
-linkTitle: "Cortex Innovation"
-description: "The Cortex Innovation platform."
+title: "CORTEX Innovation"
+linkTitle: "CORTEX Innovation"
+description: "The CORTEX Innovation platform."
 weight: 300
 ---

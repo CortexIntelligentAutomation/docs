@@ -1,7 +1,7 @@
 ---
-title: "Cortex Flow Debugger Service"
-linkTitle: "Cortex Flow Debugger Service"
-description: "The Cortex Flow Debugger Service."
+title: "CORTEX Flow Debugger Service"
+linkTitle: "CORTEX Flow Debugger Service"
+description: "The CORTEX Flow Debugger Service."
 ---
 
 {{< workinprogress >}}

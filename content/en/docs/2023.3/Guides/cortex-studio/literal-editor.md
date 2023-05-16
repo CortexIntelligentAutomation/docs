@@ -1,6 +1,6 @@
 ---
-title: "Cortex Studio - Literal Editor"
-linkTitle: "Cortex Studio - Literal Editor"
+title: "CORTEX Studio - Literal Editor"
+linkTitle: "CORTEX Studio - Literal Editor"
 description: "A guide on how to use the Literal Editor"
 weight: 0
 ---

@@ -1,1 +1,1 @@
-Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information.
+Web application that allows flows to be debugged and executed. Used by CORTEX Studio to debug flows and provide block information.

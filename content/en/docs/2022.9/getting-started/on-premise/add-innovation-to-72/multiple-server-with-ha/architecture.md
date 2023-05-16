@@ -11,29 +11,29 @@ weight: 10
 
 | Component | Purpose | Required/Optional |Server Role |
 |-----------|---------|----------|------------|
-| [Cortex&nbsp;Gateway][Gateway Guide]| Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
-| [Cortex&nbsp;Studio][Studio Guide] | Application hosted in Cortex Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions. | Required | Web&nbsp;Application&nbsp;Server |
-| Cortex&nbsp;Flow&nbsp;Debugger&nbsp;Service | Web application that allows flows to be debugged and executed. Used by Cortex Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
-| Cortex&nbsp;API&nbsp;Gateway&nbsp;Service | Application Service that routes client requests to the correct distributed Cortex services. | Required | Application&nbsp;Server |
-| Cortex&nbsp;Flow&nbsp;Execution&nbsp;Service | Application Service that executes automation flows. | Required | Application&nbsp;Server |
-| Cortex&nbsp;Block&nbsp;Packages | A set of files which contain the blocks that users can use to build flows. Used by the Cortex Flow Debugger Service and the Cortex Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
-| Cortex&nbsp;Gateway&nbsp;Databases | A set of databases created automatically by Gateway which are used for storing data related to user roles, flows, etc. Hopefully, we can remove the need for Gateway Databases in the next release.  | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
-| [SQL&nbsp;Server&nbsp;Express][] or [SQL&nbsp;Server&nbsp;Standard][] | Required by Cortex Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
-| [Microsoft&nbsp;Service&nbsp;Fabric][] | Distributed systems platform that hosts the Cortex services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
+| [CORTEX&nbsp;Gateway][Gateway Guide]| Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
+| [CORTEX&nbsp;Studio][Studio Guide] | Application hosted in CORTEX Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions. | Required | Web&nbsp;Application&nbsp;Server |
+| CORTEX&nbsp;Flow&nbsp;Debugger&nbsp;Service | Web application that allows flows to be debugged and executed. Used by CORTEX Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
+| CORTEX&nbsp;API&nbsp;Gateway&nbsp;Service | Application Service that routes client requests to the correct distributed CORTEX services. | Required | Application&nbsp;Server |
+| CORTEX&nbsp;Flow&nbsp;Execution&nbsp;Service | Application Service that executes automation flows. | Required | Application&nbsp;Server |
+| CORTEX&nbsp;Block&nbsp;Packages | A set of files which contain the blocks that users can use to build flows. Used by the CORTEX Flow Debugger Service and the CORTEX Flow Execution Service. | Required | Web&nbsp;Application&nbsp;Server, Application&nbsp;Server |
+| CORTEX&nbsp;Gateway&nbsp;Databases | A set of databases created automatically by Gateway which are used for storing data related to user roles, flows, etc. Hopefully, we can remove the need for Gateway Databases in the next release.  | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
+| [SQL&nbsp;Server&nbsp;Express][] or [SQL&nbsp;Server&nbsp;Standard][] | Required by CORTEX Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release. | Required<br />(End of life) | Web&nbsp;Application&nbsp;Server |
+| [Microsoft&nbsp;Service&nbsp;Fabric][] | Distributed systems platform that hosts the CORTEX services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering. | Required | Application&nbsp;Server |
 | [Microsoft&nbsp;Service&nbsp;Fabric&nbsp;Explorer][] | Web portal for monitoring and managing the Service Fabric instance that automation solutions are deployed to. | Required | Application&nbsp;Server |
-| [Particular&nbsp;NServiceBus][] | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed Cortex services. | Required | Application&nbsp;Server |
-| [Pivotal&nbsp;RabbitMQ][] | Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed Cortex services using publish/subscribe mechanism. | Required | Application&nbsp;Server |
+| [Particular&nbsp;NServiceBus][] | Messaging platform enabling scalable, reliable and flexible asynchronous messaging between distributed CORTEX services. | Required | Application&nbsp;Server |
+| [Pivotal&nbsp;RabbitMQ][] | Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed CORTEX services using publish/subscribe mechanism. | Required | Application&nbsp;Server |
 | [Erlang&nbsp;OTP][] | Erlang run-time required by the RabbitMQ message broker. | Required | Application&nbsp;Server |
-| [gobetween][] | L4 load balancer and reverse proxy used to load balance requests between clustered instances of Cortex services. | Required | Load&nbsp;Balancer |
+| [gobetween][] | L4 load balancer and reverse proxy used to load balance requests between clustered instances of CORTEX services. | Required | Load&nbsp;Balancer |
 | [NSSM][] | Windows Service Manager that hosts the gobetween load balancer application as a Windows Service. | Required | Load&nbsp;Balancer |
 
 {{% alert title="Note" %}}
-Cortex v7.2 component descriptions are not covered in this guide. See separate v7.2 documentation for more information.
+CORTEX v7.2 component descriptions are not covered in this guide. See separate v7.2 documentation for more information.
 {{% /alert %}}
 
 ## Possible Architectures
 
-Cortex Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation by using the existing hardware containing v7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
+CORTEX Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation by using the existing hardware containing v7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
 
 The installation process is the same, regardless of which architecture is used; [Recommended][], [Minimum][] or [Alternative][]. The only difference is the [Hardware Requirements][], which will be greater for existing machines as they need more resources to run more components.
 

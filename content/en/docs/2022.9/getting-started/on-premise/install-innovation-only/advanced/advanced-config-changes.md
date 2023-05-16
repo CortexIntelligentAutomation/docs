@@ -1,7 +1,7 @@
 ---
 title: "Advanced Application Server and Load Balancer Configuration Changes"
 linkTitle: "Advanced Application Server and Load Balancer Configuration Changes"
-description: "Information about installing Cortex Innovation with non-default installation values."
+description: "Information about installing CORTEX Innovation with non-default installation values."
 ---
 
 # {{% param title %}}

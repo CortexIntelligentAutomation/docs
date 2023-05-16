@@ -1,13 +1,13 @@
 ---
 title: "What's New?"
 linkTitle: "What's New?"
-description: "Discover what's new in the Cortex Innovation platform."
+description: "Discover what's new in the CORTEX Innovation platform."
 weight: 1
 ---
 
 ## Summary
 
-2023.3 is the second release of the next generation of Cortex and continues our journey to improve on the previous 7.X generation in the following areas:
+2023.3 is the second release of the next generation of CORTEX and continues our journey to improve on the previous 7.X generation in the following areas:
 
 - [Performance][]
 - [Availability][]
@@ -50,8 +50,8 @@ This release introduces:
 
 This release introduces:
 
-- A new web application called [Interaction Portal][] - to support [Human-in-the-Loop][] automation in Cortex Innovation deployments
-- [CORS][] support for the [API Gateway Service][Cortex API Gateway Service] - required by single server deployments that use the new [Interaction Portal][]
+- A new web application called [Interaction Portal][] - to support [Human-in-the-Loop][] automation in CORTEX Innovation deployments
+- [CORS][] support for the [API Gateway Service][CORTEX API Gateway Service] - required by single server deployments that use the new [Interaction Portal][]
 - Nine [new Blocks][New Blocks] - adding new functionality to work with [Queues][], and [encode][Encode Text] and [decode][Decode Text] text to various formats
 - Improvements to the [Execute Ssh Command][] block - to support paged responses
 
@@ -80,7 +80,7 @@ For a full list of what has been introduced in this release, please see the [202
 [Capability]: {{< ref "#improved-capability" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[Cortex API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" version="2023.3" >}}
+[CORTEX API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" version="2023.3" >}}
 
 [Queues]: {{< url path="Cortex.Reference.Blocks.Queues.MainDoc" version="2023.3" >}}
 [Decode Text]: {{< url path="Cortex.Reference.Blocks.Text.DecodeText.DecodeText.MainDoc" version="2023.3" >}}

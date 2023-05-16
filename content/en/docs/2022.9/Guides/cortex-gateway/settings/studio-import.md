@@ -1,7 +1,7 @@
 ---
 title: "Studio Import"
 linkTitle: "Studio Import"
-description: "Import Cortex Studio Packages."
+description: "Import CORTEX Studio Packages."
 ---
 
 {{< workinprogress >}}

@@ -26,7 +26,7 @@ TODO: notes about value equality and a worked through example
 
 TODO: notes about reference equality and a worked through example
 
-## How Cortex compares objects for equality
+## How CORTEX compares objects for equality
 
 TODO: notes about how cortex compares and a worked through example
 

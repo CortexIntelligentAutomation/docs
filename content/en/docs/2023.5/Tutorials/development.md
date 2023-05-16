@@ -1,7 +1,7 @@
 ---
 title: "Development"
 linkTitle: "Development"
-description: "This section includes tutorials about developing automation using the Cortex Innovation platform."
+description: "This section includes tutorials about developing automation using the CORTEX Innovation platform."
 weight: 30
 ---
 
@@ -11,13 +11,13 @@ weight: 30
 
 ## Signing in and out of Gateway
 
-Shows how to sign in and out of Cortex Gateway.
+Shows how to sign in and out of CORTEX Gateway.
 
 {{< youtube id="DlgFfkE2LOY" >}}
 
 ## Overview of Gateway
 
-Shows a high-level overview of Cortex Gateway.
+Shows a high-level overview of CORTEX Gateway.
 
 {{< youtube id="EZoUUiv3EpM" >}}
 

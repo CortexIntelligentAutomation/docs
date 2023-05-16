@@ -1,7 +1,7 @@
 ---
 title: "Multiple Server - With HA (Recommended)"
 linkTitle: "Multiple Server - With HA"
-description: "Information about installing Cortex Innovation across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, prerequisites and installation instructions."
+description: "Information about installing CORTEX Innovation across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, prerequisites and installation instructions."
 weight: 10
 ---
 
