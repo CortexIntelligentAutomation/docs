@@ -1,6 +1,6 @@
 ---
-title: "CORTEX Studio - Navigation"
-linkTitle: "CORTEX Studio - Navigation"
+title: "{{< ctx >}} Studio - Navigation"
+linkTitle: "{{< ctx >}} Studio - Navigation"
 description: "How to navigate between and in flows"
 weight: 1
 ---

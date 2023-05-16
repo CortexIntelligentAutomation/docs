@@ -314,7 +314,7 @@ For a full list of configuration settings please see [TelnetConfigurationSetting
 
 ### Cancel Command
 
-The cancel command is sent to the [Host][TelnetSessionDetails Host] by CORTEX when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
+The cancel command is sent to the [Host][TelnetSessionDetails Host] by {{< ctx >}} when an execution times out so the [Host][TelnetSessionDetails Host] can stop the execution and allow other commands to be executed on that session.
 
 The default cancel command is `Ctrl-C`. If the default does not work it can be set through the [Configuration Settings][Configuration Settings Property] using the `CancelCommand` setting e.g.
 

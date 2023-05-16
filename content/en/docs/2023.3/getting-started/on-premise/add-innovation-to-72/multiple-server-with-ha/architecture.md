@@ -12,12 +12,12 @@ weight: 10
 {{< section "/architecture/components/multi-server.md" >}}
 
 {{% alert title="Note" %}}
-CORTEX v7.2 component descriptions are not covered in this guide. See separate v7.2 documentation for more information.
+{{< ctx >}} v7.2 component descriptions are not covered in this guide. See separate v7.2 documentation for more information.
 {{% /alert %}}
 
 ## Possible Architectures
 
-CORTEX Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation by using the existing hardware containing v7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
+{{< ctx >}} Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation by using the existing hardware containing v7.2 components, using new hardware or a combination of the two. The only components shared by both Innovation and v7.2 are Gateway and its databases.
 
 The installation process is the same, regardless of which architecture is used; [Recommended][], [Minimum][] or [Alternative][]. The only difference is the [Hardware Requirements][], which will be greater for existing machines as they need more resources to run more components.
 

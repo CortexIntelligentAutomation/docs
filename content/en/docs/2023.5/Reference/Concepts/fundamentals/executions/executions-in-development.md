@@ -11,7 +11,7 @@ weight: 100
 
 Whilst debugging a flow, each execution is represented by a [token][] that moves through the [flow][], showing which [block][] is currently being executed.
 
-A [flow][] can be debugged in [{{< ctx >}} Studio][CORTEX Studio] by clicking the [Start an execution][] button or by making an [API call][API call: CORTEX Studio] to [{{< ctx >}} Studio][CORTEX Studio], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] a   nd then begin an execution.
+A [flow][] can be debugged in [{{< ctx >}} Studio][CORTEX Studio] by clicking the [Start an execution][] button or by making an [API call][API call: {{< ctx >}} Studio] to [{{< ctx >}} Studio][CORTEX Studio], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] a   nd then begin an execution.
 
 The following parameters can be specified:
 
@@ -23,17 +23,17 @@ The following parameters can be specified:
 Any flow that has [Input Variables][] defined requires them to be provided when debugging, these may be provided to a flow in the following ways:
 
 - From [{{< ctx >}} Studio][CORTEX Studio] using the [Inputs Property][] in the [Settings Editor][]
-- From an [HTTP request][HTTP request: CORTEX Studio] using the inputVariables in the body of the request
+- From an [HTTP request][HTTP request: {{< ctx >}} Studio] using the inputVariables in the body of the request
 
 ## Retrieving Output Variables
 
-Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the outputVariables in the body of the [HTTP response][HTTP response: CORTEX Studio].
+Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the outputVariables in the body of the [HTTP response][HTTP response: {{< ctx >}} Studio].
 
 ## Validating a Flow
 
 The [flow][] is validated before it's debugged, if this is successful an execution will begin.
 
-If there are any issues with the flow then the execution will not start and details of what needs to be resolved will be returned. If the flow was debugged by clicking the [Start an execution][] button, then entries will be displayed in the [Messages Grid][]; if it was debugged by making an [HTTP request][HTTP request: CORTEX Studio] to [{{< ctx >}} Studio][CORTEX Studio], then a 400 Bad Request is returned.
+If there are any issues with the flow then the execution will not start and details of what needs to be resolved will be returned. If the flow was debugged by clicking the [Start an execution][] button, then entries will be displayed in the [Messages Grid][]; if it was debugged by making an [HTTP request][HTTP request: {{< ctx >}} Studio] to [{{< ctx >}} Studio][CORTEX Studio], then a 400 Bad Request is returned.
 
 For a complete list see [Validation][] messages.
 
@@ -202,9 +202,9 @@ None
 
 [All Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" >}}
 
-[API call: CORTEX Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
-[HTTP request: CORTEX Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
-[HTTP response: CORTEX Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
+[API call: {{< ctx >}} Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
+[HTTP request: {{< ctx >}} Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
+[HTTP response: {{< ctx >}} Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
 
 [CORTEX Flow Debugger Service]: {{< url path="Cortex.Reference.Logs.CortexFlowDebuggerService.MainDoc" >}}
 

@@ -8,8 +8,8 @@
 | [Licence Management Service][]                    | {{< section "/architecture/components/purpose/licence-management-service.md" >}}   | Required                    | Application Server                         |
 | [Package Management Service][]                    | {{< section "/architecture/components/purpose/package-management-service.md" >}}   | Required                    | Application Server                         |
 | [Provisioning Service][]                          | {{< section "/architecture/components/purpose/provisioning-service.md" >}}         | Required                    | Application Server                         |
-| CORTEX Block Packages                             | {{< section "/architecture/components/purpose/cortex-block-packages.md" >}}        | Required                    | Web Application Server, Application Server |
-| CORTEX Gateway Databases                          | {{< section "/architecture/components/purpose/cortex-gateway-databases.md" >}}     | Required<br />(End of life) | Web Application Server                     |
+| {{< ctx >}} Block Packages                             | {{< section "/architecture/components/purpose/cortex-block-packages.md" >}}        | Required                    | Web Application Server, Application Server |
+| {{< ctx >}} Gateway Databases                          | {{< section "/architecture/components/purpose/cortex-gateway-databases.md" >}}     | Required<br />(End of life) | Web Application Server                     |
 | [SQL Server Express][] or [SQL Server Standard][] | {{< section "/architecture/components/purpose/ms-sql-server.md" >}}                | Required<br />(End of life) | Web Application Server                     |
 | [Microsoft Service Fabric][]                      | {{< section "/architecture/components/purpose/ms-service-fabric.md" >}}            | Required                    | Application Server                         |
 | [Microsoft Service Fabric Explorer][]             | {{< section "/architecture/components/purpose/ms-service-fabric-explorer.md" >}}   | Required                    | Application Server                         |

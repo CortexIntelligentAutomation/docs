@@ -11,12 +11,12 @@ This guide describes how to upgrade Gateway on v7.2 to include Innovation. Pleas
 
 The steps to add Innovation functionality to 7.2 are:
 
-1. Upgrade CORTEX Gateway
+1. Upgrade {{< ctx >}} Gateway
 1. Install Flow Debugger Service
 
 ## Make Installation Artefacts Available
 
-1. We recommend that the Flow Debugger Service and CORTEX Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine:
+1. We recommend that the Flow Debugger Service and {{< ctx >}} Gateway are installed on the same Web Application Server. Copy the following artefacts to a folder on the machine:
 
    * Cortex Innovation {{< version >}} - Block Packages.zip
    * Cortex Innovation {{< version >}} - Gateway.zip
@@ -29,7 +29,7 @@ The steps to add Innovation functionality to 7.2 are:
 
 ### Licensing
 
-Ensure that a valid CORTEX licence file named `Cortex.lic` exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
+Ensure that a valid {{< ctx >}} licence file named `Cortex.lic` exists on the Web Application server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
 ### Get Flow Debugger Application Pool User
 
@@ -60,11 +60,11 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
 ### Certificate Requirements
 
-In order to ensure that the correct certificate is used during the upgrade of CORTEX Gateway, it is necessary to [assign a friendly name][Assign Certificate Friendly Name] to the certificate that is currently being used for CORTEX Gateway. It is important to set the `ImportCertificate` parameter to `$false` when [configuring the CORTEX Gateway installation script][Configure CORTEX Gateway Installation Script].
+In order to ensure that the correct certificate is used during the upgrade of {{< ctx >}} Gateway, it is necessary to [assign a friendly name][Assign Certificate Friendly Name] to the certificate that is currently being used for {{< ctx >}} Gateway. It is important to set the `ImportCertificate` parameter to `$false` when [configuring the {{< ctx >}} Gateway installation script][Configure {{< ctx >}} Gateway Installation Script].
 
 #### Assign Certificate Friendly Name
 
-A Friendly Name should be assigned to the certificate being used for the Cortex Website. This will be used in the [Configure CORTEX Gateway Installation Script][] to assign the correct certificate to the site:
+A Friendly Name should be assigned to the certificate being used for the Cortex Website. This will be used in the [Configure {{< ctx >}} Gateway Installation Script][] to assign the correct certificate to the site:
 
 1. Click the Windows button (`Start`).
 1. Type `certlm.msc` and press `Enter` to open the Certificate Manager dialog.
@@ -110,16 +110,16 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     |----------------------------------------------|-------------|
     |`FlowDebuggerServicePath`                     | Configure this value with the location of the Flow Debugger Service zip file on the Web Application Server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Web Application Server. |
-    |`FlowDebuggerBasicAuthUsername`               | Configure this value with the username that will be used for Basic Authentication when CORTEX Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed later, when [configuring the CORTEX Gateway installation script][Configure CORTEX Gateway Installation Script]. |
-    |`FlowDebuggerBasicAuthPassword`                     | Configure this value with the password that will be used for Basic Authentication when CORTEX Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [{{< ctx >}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed later, when [configuring the CORTEX Gateway installation script][Configure CORTEX Gateway Installation Script].|
-    |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with CORTEX Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
+    |`FlowDebuggerBasicAuthUsername`               | Configure this value with the username that will be used for Basic Authentication when {{< ctx >}} Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed later, when [configuring the {{< ctx >}} Gateway installation script][Configure {{< ctx >}} Gateway Installation Script]. |
+    |`FlowDebuggerBasicAuthPassword`                     | Configure this value with the password that will be used for Basic Authentication when {{< ctx >}} Gateway makes HTTPS requests to the Flow Debugger Service. <br /><br />This password should be [{{< ctx >}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed.<br /><br />This value will be needed later, when [configuring the {{< ctx >}} Gateway installation script][Configure {{< ctx >}} Gateway Installation Script].|
+    |`UseSelfSignedCertificates`                    | Enables Flow Debugger Service to communicate with {{< ctx >}} Gateway using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`Credential`                                  | The credentials of the user that will be used to run the `Debugger` application pool in IIS. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
 
-### Configure CORTEX Gateway Installation Script
+### Configure {{< ctx >}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
@@ -152,22 +152,22 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
-    |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by CORTEX when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{< ctx >}} Service Portal][CORTEX Service Portal].<br /><br />This will overwrite the `FeatureFlags` value in the Gateway web.config.|
-    |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://server.domain.com/` or `https://server.domain.com:8722/`.<br /><br />This will overwrite the `ServiceFabricApiGatewayEndpoint` value in the CORTEX Gateway web.config.|
-    |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Servers][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will overwrite the `ServiceFabricUsingSelfSignedCertificates` value in the CORTEX Gateway web.config.|
-    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the CORTEX Gateway web.config.|
-    |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [{{< ctx >}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthPassword` value in the CORTEX Gateway web.config.|
-    |`DotNetFlowDebuggerEndpoint`                    | Replace `server.domain.com` with the fully qualified domain name of the Web Application Server.<br /><br />This will overwrite the `DotNetFlowDebuggerEndpoint` value in the CORTEX Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUsername` when [configuring the Flow Debugger installation script][Configure Flow Debugger Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthUsername` value in the CORTEX Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [configuring the Flow Debugger installation script][Configure Flow Debugger Installation Script]; if so, this value must be configured to the one used. It can be [{{< ctx >}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthPassword` value in the CORTEX Gateway web.config.|
-    |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing CORTEX Gateway and Flow Debugger Service, `$true` if using self-signed certificates.<br /><br />This will overwrite the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the CORTEX Gateway web.config.|
-    |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that is used to run the CORTEX Gateway application pool currently.|
+    |`FeatureFlags`                                  | Replace `InnovationId` with the Cortex Innovation feature identifier, which should have been provided by {{< ctx >}} when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{< ctx >}} Service Portal][CORTEX Service Portal].<br /><br />This will overwrite the `FeatureFlags` value in the Gateway web.config.|
+    |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://server.domain.com/` or `https://server.domain.com:8722/`.<br /><br />This will overwrite the `ServiceFabricApiGatewayEndpoint` value in the {{< ctx >}} Gateway web.config.|
+    |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Servers][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will overwrite the `ServiceFabricUsingSelfSignedCertificates` value in the {{< ctx >}} Gateway web.config.|
+    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the {{< ctx >}} Gateway web.config.|
+    |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [{{< ctx >}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthPassword` value in the {{< ctx >}} Gateway web.config.|
+    |`DotNetFlowDebuggerEndpoint`                    | Replace `server.domain.com` with the fully qualified domain name of the Web Application Server.<br /><br />This will overwrite the `DotNetFlowDebuggerEndpoint` value in the {{< ctx >}} Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUsername` when [configuring the Flow Debugger installation script][Configure Flow Debugger Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthUsername` value in the {{< ctx >}} Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword` when [configuring the Flow Debugger installation script][Configure Flow Debugger Installation Script]; if so, this value must be configured to the one used. It can be [{{< ctx >}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthPassword` value in the {{< ctx >}} Gateway web.config.|
+    |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing {{< ctx >}} Gateway and Flow Debugger Service, `$true` if using self-signed certificates.<br /><br />This will overwrite the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the {{< ctx >}} Gateway web.config.|
+    |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that is used to run the {{< ctx >}} Gateway application pool currently.|
     |`WebRootFolder`                                 | Replace this with the correct path for the Web Root Folder on the server. Typically this will be  `C:\inetpub\wwwroot`.|
     |`WebsitePort`                                   | Replace this with the port that you wish the website to use. Typically this will be `443`.|
     |`ImportCertificate`                             | This should be set to `$false` if the certificate is already imported.<br /><br />Note that prior to installation the certificate must be [assigned a friendly name][Assign Certificate Friendly Name].
     |`CertificateFilePath`                           | Replace this with the location and filename for the certificate to be imported.<br /><br />If `ImportCertificate` is set to `$false` this value can remain unchanged.|
     |`CertificateFriendlyName`                       | Replace this with the friendly name that you would like to be allocated to the certificate.<br /><br />If `ImportCertificate` is set to `$false`, this must be [assigned][Assign Certificate Friendly Name] prior to running the installation and the Friendly Name used must be specified to allow the website to use the correct certificate.|
-    |`ConfigureHttpRedirect`                         | Change this from `$true` to `$false` if you do not require the HTTP Redirect rule to be implemented as part of the installation process.<br /><br />If the site hosting the CORTEX Gateway web application is a newly created CORTEX site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the CORTEX Gateway web application URL. Creating this rule will implement this.|
+    |`ConfigureHttpRedirect`                         | Change this from `$true` to `$false` if you do not require the HTTP Redirect rule to be implemented as part of the installation process.<br /><br />If the site hosting the {{< ctx >}} Gateway web application is a newly created {{< ctx >}} site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the {{< ctx >}} Gateway web application URL. Creating this rule will implement this.|
     |`ApplySecurityMeasures`                         | Change this from `$true` to `$false` if you do not require the Recommended [Security Best Practices][] to be implemented as part of the installation process.|
     |`UsingWindowsDefender`                          | Change this from `$true` to `$false` if you are not using the Windows Defender firewall.<br /><br />If Windows Defender is not being used but an alterntive firewall is, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443).|
     |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
@@ -175,7 +175,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
-### Upgrade CORTEX Gateway
+### Upgrade {{< ctx >}} Gateway
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
@@ -196,7 +196,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
     ```
 
-1. Run the PowerShell command to upgrade CORTEX Gateway.
+1. Run the PowerShell command to upgrade {{< ctx >}} Gateway.
 1. If `ImportCertificate` is set to $true, and the file is of type `.pfx`, a prompt will appear for the certificate password. This should be entered, and then hit `Enter`.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
@@ -205,7 +205,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     If the errors do not give any instructions on how to rectify, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for further assistance.
 
 1. Once the PowerShell script execution has completed, a prompt will appear to restart the machine.  You can choose to restart now (`N`) or later (`L`).
-1. The CORTEX Gateway website will now be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
+1. The {{< ctx >}} Gateway website will now be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
 
 ### Install Flow Debugger
 
@@ -264,7 +264,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
+[Configure {{< ctx >}} Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
 [Configure Flow Debugger Installation Script]: {{< ref "#configure-flow-debugger-installation-script" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}

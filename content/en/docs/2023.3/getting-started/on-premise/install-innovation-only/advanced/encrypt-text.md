@@ -6,7 +6,7 @@ description: "Information about encrypting text using the CORTEX Encryptor."
 
 # {{% param title %}}
 
-To encrypt text using the CORTEX Encryptor PowerShell module:
+To encrypt text using the {{< ctx >}} Encryptor PowerShell module:
 
 1. Extract the `Cortex Innovation {{< version >}} - Encryptor.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator.

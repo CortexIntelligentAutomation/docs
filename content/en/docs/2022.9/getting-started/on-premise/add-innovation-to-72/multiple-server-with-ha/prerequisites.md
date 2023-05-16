@@ -76,7 +76,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid CORTEX licence file and CORTEX Innovation with v7.2 feature identifier must be procured from CORTEX. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+A valid {{< ctx >}} licence file and {{< ctx >}} Innovation with v7.2 feature identifier must be procured from {{< ctx >}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
 
 To get a licence file and feature identifier take the following steps:
 
@@ -99,7 +99,7 @@ To get a licence file and feature identifier take the following steps:
     MachineID: 
     Fingerprint: 
 
-    Please also include a suitable CORTEX Innovation with v7.2 feature identifier.
+    Please also include a suitable {{< ctx >}} Innovation with v7.2 feature identifier.
     ```
 
 1. Extract `Cortex Innovation 2022.9 - Licence Fingerprint Generator.zip`.
@@ -183,7 +183,7 @@ The following Windows Services must be running on all Application Servers:
 
 #### Installation User
 
-A domain user which is a member of the Local Administrators group on all Application Servers and Load Balancer Server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that CORTEX Innovation is built upon.
+A domain user which is a member of the Local Administrators group on all Application Servers and Load Balancer Server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{< ctx >}} Innovation is built upon.
 
 #### Antivirus Exclusions
 
@@ -216,7 +216,7 @@ If adding the exclusions manually, the Process Exclusions should be done before 
 
 #### Port Requirements
 
-CORTEX Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
+{{< ctx >}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
 
 If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
 
@@ -277,15 +277,15 @@ Supported versions of Active Directory are listed below:
 
 | Version                    | Verified?      | Supported From | Supported Until  |  
 |----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2003 R2     |                | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2008        |                | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2012        |                | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2016        |      ✓        | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2019        |                | CORTEX v2022.9 | To be evaluated  |
-| Windows Server 2022        |                | CORTEX v2022.9 | To be evaluated  |
+| Windows Server 2003        |      ✓        | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | {{< ctx >}} v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | {{< ctx >}} v2022.9 | To be evaluated  |
 
 #### Certificate Requirements
 

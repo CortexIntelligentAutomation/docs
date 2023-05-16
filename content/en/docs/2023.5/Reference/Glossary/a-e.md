@@ -183,17 +183,17 @@ Cross-origin resource sharing (CORS) is a mechanism that allows restricted resou
 
 ### Cortex
 
-The name of the new and current generation of the CORTEX [automation][] [platform][].
+The name of the new and current generation of the {{< ctx >}} [automation][] [platform][].
 
-### CORTEX Gateway
+### {{< ctx >}} Gateway
 
 The centralised web-based [portal][] for accessing all user applications and tooling in the [{{< ctx >}}][] [platform][].
 
-### CORTEX Studio
+### {{< ctx >}} Studio
 
 The web-based integrated development environment ([IDE][]) for creating, editing, [debugging][], testing and managing [flows][Flow] that define the logic and actions required to capture and automate a [task][tasks] or [process][Processes].
 
-For more detailed information about CORTEX Studio, see [Guides > CORTEX Studio][].
+For more detailed information about {{< ctx >}} Studio, see [Guides > {{< ctx >}} Studio][].
 
 ### Culture
 
@@ -239,7 +239,7 @@ For a complete list of available data types, see [Reference > Data Types][].
 
 The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [{{< ctx >}} Studio][CORTEX Studio], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
 
-For more detailed information about debugging in CORTEX Studio, see [{{< ctx >}} Studio > Debugging][].
+For more detailed information about debugging in {{< ctx >}} Studio, see [{{< ctx >}} Studio > Debugging][].
 
 ### Default Value
 
@@ -435,7 +435,7 @@ For more detailed information about the Expression Editor, see [{{< ctx >}} Stud
 [32-bit]: {{< url path="Cortex.Reference.Glossary.0-9.32Bit" >}}
 [data type]: {{< url path="Cortex.Reference.Glossary.A-E.DataType" >}}
 
-[Guides > CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[Guides > {{< ctx >}} Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [CORTEX Studio > Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
 [CORTEX Studio > Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 

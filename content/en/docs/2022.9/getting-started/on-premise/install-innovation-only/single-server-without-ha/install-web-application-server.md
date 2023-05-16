@@ -23,14 +23,14 @@ This guide describes how to install the Web Application Server components on the
 
 ### Licensing
 
-Ensure that a valid CORTEX licence file named `Cortex.lic` exists on the server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
+Ensure that a valid {{< ctx >}} licence file named `Cortex.lic` exists on the server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
 ### Install SQL Server or SQL Express
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">CORTEX Innovation - SQL Server 2019 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">CORTEX Innovation - SQL Server 2016 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">CORTEX Innovation - SQL Server 2016 Express Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{< ctx >}} Innovation - SQL Server 2019 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{< ctx >}} Innovation - SQL Server 2016 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">{{< ctx >}} Innovation - SQL Server 2016 Express Installation Guide</a>
 
 ### Install Microsoft .NET Framework 4.7.1
 
@@ -300,7 +300,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 A domain user account is required for the Gateway web application pool and must be created prior to performing the installation
 below.
 
-This user account is required to enable Gateway to access the CORTEX database, with the following roles:
+This user account is required to enable Gateway to access the {{< ctx >}} database, with the following roles:
 
 * dbcreator
 * public
@@ -362,7 +362,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
 ### Configure IIS Site Redirect to the Specified Web Application (Optional)
 
-If the site hosting the Gateway web application is a newly created CORTEX site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the `gateway` web application URL, e.g. `https://FullyQualifiedDomainName` to `https://FullyQualifiedDomainName/gateway`.
+If the site hosting the Gateway web application is a newly created {{< ctx >}} site or an existing site that doesn’t have its own content, it is recommended to redirect the site URL to the `gateway` web application URL, e.g. `https://FullyQualifiedDomainName` to `https://FullyQualifiedDomainName/gateway`.
 
 1. Open Internet Information Services (IIS) Manager.
 1. Select the site hosting the `gateway` web application and from IIS settings double-click the `HTTP Redirect` icon.
@@ -404,7 +404,7 @@ If the site hosting the Gateway web application is a newly created CORTEX site o
     |`ModelDBContextConnectionString`                | If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `ModelDBContextConnectionString` value in the Gateway web.config.|
     |`AuthContextConnectionString`                   |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `AuthContextConnectionString` value in the Gateway web.config. |
     |`SignalRContextConnectionString`                |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost`.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance. <br /><br />This will set the `SignalRContextConnectionString` value in the Gateway web.config. |
-    |`FeatureFlags`                                  | Replace `InnovationId` with the CORTEX Innovation feature identifier, which should have been provided by CORTEX when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{< ctx >}} Service Portal][CORTEX Service Portal].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
+    |`FeatureFlags`                                  | Replace `InnovationId` with the {{< ctx >}} Innovation feature identifier, which should have been provided by {{< ctx >}} when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{< ctx >}} Service Portal][CORTEX Service Portal].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Server][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthUsername` value in the Gateway web.config.|

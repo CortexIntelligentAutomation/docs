@@ -1,6 +1,6 @@
 ---
-title: "CORTEX Studio - Main Display Area"
-linkTitle: "CORTEX Studio - Main Display Area"
+title: "{{< ctx >}} Studio - Main Display Area"
+linkTitle: "{{< ctx >}} Studio - Main Display Area"
 description: "The Main Display Area for developing and managing a flow"
 weight: 1
 ---

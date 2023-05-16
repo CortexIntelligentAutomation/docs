@@ -7,7 +7,7 @@ weight: 1
 
 ## Summary
 
-2022.9 is the first release of the next generation of CORTEX and begins our journey to improve on the previous 7.X generation starting with the following areas:
+2022.9 is the first release of the next generation of {{< ctx >}} and begins our journey to improve on the previous 7.X generation starting with the following areas:
 
 - [Performance][]
 - [Availability][]

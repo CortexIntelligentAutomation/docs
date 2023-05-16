@@ -1,6 +1,6 @@
 ---
-title: "CORTEX Studio - East Panel (TBC)"
-linkTitle: "CORTEX Studio - East Panel (TBC)"
+title: "{{< ctx >}} Studio - East Panel (TBC)"
+linkTitle: "{{< ctx >}} Studio - East Panel (TBC)"
 description: "Eastern panel for Property Editor, Execution Viewer and Exceptions"
 weight: 1
 ---

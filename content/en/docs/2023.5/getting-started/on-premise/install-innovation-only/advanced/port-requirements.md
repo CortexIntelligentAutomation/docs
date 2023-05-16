@@ -6,9 +6,9 @@ description: "Information about the ports opened when installing CORTEX Innovati
 
 # {{% param title %}}
 
-CORTEX Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
+{{< ctx >}} Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
-## CORTEX Innovation Ports
+## {{< ctx >}} Innovation Ports
 
 | Name | Description | Default Port(s) | Protocol | Direction |
 |------|-------------|-----------------|----------|-----------|
@@ -40,7 +40,7 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 | FaultAnalysis Service Process | N/A | The port used by the Service Fabric Fault Analysis service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\FAS.Code.Current\\FabricFAS.exe | Any | TCP | Inbound, Outbound |
 | FileStore Service Process | N/A | The port used by the Service Fabric File Store service, which manages the application file store and image store. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\FileStoreService.Code.Current\\ FileStoreService.exe | Any | TCP | Inbound, Outbound |
 | GatewayResource Manager Process | N/A | The port used by the Service Fabric Gateway Resource Manager, which provides APIs to manage the Application Services and other resources. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\GRM.Code.Current\\FabricGRM.exe | Any | TCP | Inbound, Outbound |
-| HTTP App Gateway | reverse Proxy Endpoint Port | **This port cannot be changed at the current time. If it is already in use, please contact CORTEX for assistance.** The reverse proxy endpoint. For more information, see **[Service Fabric reverse proxy][]**. <br /> <br /> **Program:** Any | 9081 | TCP | Inbound, Outbound |
+| HTTP App Gateway | reverse Proxy Endpoint Port | **This port cannot be changed at the current time. If it is already in use, please contact {{< ctx >}} for assistance.** The reverse proxy endpoint. For more information, see **[Service Fabric reverse proxy][]**. <br /> <br /> **Program:** Any | 9081 | TCP | Inbound, Outbound |
 | Http Gateway | http Gateway Endpoint Port | The port used by Service Fabric Explorer to connect to the cluster. **This changes the port used to connect to the Service Fabric management portal as part of the post-install checks.** <br /> <br /> **Program:** Any | 9080 | TCP | Inbound, Outbound |
 | Infrastructure Service Process | N/A | The port used by the Service Fabric Infrastructure Service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\IS.Code.Current\\FabricIS.exe | Any | TCP | Inbound, Outbound |
 | Lease Driver | lease Driver Endpoint Port | The port used by the cluster lease driver to find out if the nodes are still active. <br /> <br /> **Program:** Any | 9002 | TCP | Inbound, Outbound |

@@ -27,7 +27,7 @@ The steps to add Innovation functionality to 7.2 are:
 
 ### Licensing
 
-Ensure that a valid CORTEX licence file named `Cortex.lic` exists on the server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
+Ensure that a valid {{< ctx >}} licence file named `Cortex.lic` exists on the server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
 ## Install Flow Debugger Service
 
@@ -177,7 +177,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation 2022.9 - Gateway.zip` file on the installation server. |
     |`GatewayApplicationIISPath`                     | Change to the correct `Site Name/Application` if either was modified from the defaults (`Cortex/gateway`) when creating the website or application. |
-    |`FeatureFlags`                                  | Replace `InnovationId` with the CORTEX Innovation feature identifier, which should have been provided by CORTEX when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{< ctx >}} Service Portal][CORTEX Service Portal].</br></br>This will overwrite the `FeatureFlags` value in the Gateway web.config.|
+    |`FeatureFlags`                                  | Replace `InnovationId` with the {{< ctx >}} Innovation feature identifier, which should have been provided by {{< ctx >}} when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{< ctx >}} Service Portal][CORTEX Service Portal].</br></br>This will overwrite the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will overwrite the `ServiceFabricApiGatewayEndpoint` value in the Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will overwrite the `ServiceFabricUsingSelfSignedCertificates` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUserName` when [installing the Application Server][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the Gateway web.config.|

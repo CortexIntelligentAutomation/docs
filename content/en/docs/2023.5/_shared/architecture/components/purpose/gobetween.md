@@ -1,1 +1,1 @@
-L4 load balancer and reverse proxy used to load balance requests between clustered instances of CORTEX Innovation services.
+L4 load balancer and reverse proxy used to load balance requests between clustered instances of {{< ctx >}} Innovation services.

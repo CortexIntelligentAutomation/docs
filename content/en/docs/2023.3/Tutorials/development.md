@@ -11,13 +11,13 @@ weight: 30
 
 ## Signing in and out of Gateway
 
-Shows how to sign in and out of CORTEX Gateway.
+Shows how to sign in and out of {{< ctx >}} Gateway.
 
 {{< youtube id="DlgFfkE2LOY" >}}
 
 ## Overview of Gateway
 
-Shows a high-level overview of CORTEX Gateway.
+Shows a high-level overview of {{< ctx >}} Gateway.
 
 {{< youtube id="EZoUUiv3EpM" >}}
 

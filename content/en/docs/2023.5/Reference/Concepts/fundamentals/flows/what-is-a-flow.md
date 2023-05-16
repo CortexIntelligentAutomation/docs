@@ -9,7 +9,7 @@ weight: 1
 
 ## Summary
 
-A flow is an object in [{{< ctx >}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a CORTEX Innovation platform.
+A flow is an object in [{{< ctx >}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{< ctx >}} Innovation platform.
 
 ## Anatomy of a Flow
 
