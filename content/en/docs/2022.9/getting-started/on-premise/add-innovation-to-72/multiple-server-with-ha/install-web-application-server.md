@@ -222,7 +222,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
     1. Click `Application Pools` to display a list of the Application Pools.
-    1. Right-click the `CORTEX Gateway` application pool and select `Stop`.
+    1. Right-click the `Cortex Gateway` application pool and select `Stop`.
 
     {{% alert title="Note" %}}Failure to stop the application pool will result in a permissions error when installing Gateway.{{% /alert %}}
 
@@ -244,7 +244,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
     1. Click `Application Pools` to display a list of the Application Pools.
-    1. Right-click the `CORTEX Gateway` application pool and select `Start`.
+    1. Right-click the `Cortex Gateway` application pool and select `Start`.
 1. Once the application pool has been started, the site will be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
     {{% alert title="Note" %}} If the application pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
 

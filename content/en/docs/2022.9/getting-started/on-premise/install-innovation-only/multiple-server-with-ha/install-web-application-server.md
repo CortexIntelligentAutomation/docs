@@ -400,7 +400,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 
 1. Open Internet Information Services (IIS) Manager.
 1. Select and right-click the `Application Pools` node under the server and select `Add Application Pool…`
-1. Set `Name` to `CORTEX Gateway`.
+1. Set `Name` to `Cortex Gateway`.
 1. Ensure that the `.NET CLR version` is set to `.NET CLR Version v4.0.30319` (This may be configured by default).
 1. Ensure that the `Managed pipeline mode` is set to `Integrated` (This may be configured by default).
 1. Click `OK`
@@ -416,7 +416,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
 1. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
 1. Right-click on the [site][Create Web Site] the application should be installed under and select `Add Application…`
 1. Set the `Alias` to `gateway`. This must be lowercase.
-1. Click `Select…` and from the Application pool dropdown select the `CORTEX Gateway` application pool and click `OK`.
+1. Click `Select…` and from the Application pool dropdown select the `Cortex Gateway` application pool and click `OK`.
 1. Set the `Physical path` to `C:\inetpub\wwwroot\Cortex\Gateway` by clicking on the ellipses `…` and selecting the appropriate directory. Create the `C:\inetpub\wwwroot\Cortex\Gateway` directory if it does not already exist.
 1. Click `OK`.
 
@@ -508,7 +508,7 @@ If the site hosting the Gateway web application is a newly created CORTEX site o
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
     1. Click `Application Pools` to display a list of the Application Pools.
-    1. Right-click the `CORTEX Gateway` application pool and select `Stop`.
+    1. Right-click the `Cortex Gateway` application pool and select `Stop`.
 
     {{% alert title="Note" %}}Failure to stop the application pool will result in a permissions error when installing Gateway.{{% /alert %}}
 
@@ -541,7 +541,7 @@ If the site hosting the Gateway web application is a newly created CORTEX site o
     1. Open Internet Information Service (IIS) Manager.
     1. In the left pane, expand the server node.
     1. Click `Application Pools` to display a list of the Application Pools.
-    1. Right-click the `CORTEX Gateway` application pool and select `Start`.
+    1. Right-click the `Cortex Gateway` application pool and select `Start`.
 1. Once the application pool has been started, the site will be available on `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`.
     {{% alert title="Note" %}} If the application pool does not stay started, ensure that the user it runs as has `Log on as a service` and `Log on as a batch job` permissions or belongs to a group that has those permissions.{{% /alert %}}
 
