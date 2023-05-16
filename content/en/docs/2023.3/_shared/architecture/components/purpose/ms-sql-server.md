@@ -1,1 +1,1 @@
-Required by {{< ctx >}} Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release.
+Required by {{% ctx %}} Gateway for creating and storing the Gateway Databases. Hopefully, we can remove the need for SQL Server in the next release.

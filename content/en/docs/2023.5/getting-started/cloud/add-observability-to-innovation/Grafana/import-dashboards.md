@@ -7,13 +7,13 @@ weight: 60
 
 # {{% param title %}}
 
-This guide describes where to get the default {{< ctx >}} Innovation Dashboards from and how to import them for use in Grafana Cloud.
+This guide describes where to get the default {{% ctx %}} Innovation Dashboards from and how to import them for use in Grafana Cloud.
 
 Please ensure that the set up for [Grafana][] and [Loki][] have been completed before starting this section.
 
 ## Download the {{% ctx %}} Innovation Default Dashboards
 
-1. Download [Grafana.Dashboards.zip] archive containing the {{< ctx >}} Innovation default dashboards.
+1. Download [Grafana.Dashboards.zip] archive containing the {{% ctx %}} Innovation default dashboards.
 1. Extract the content of the downloaded archive to a suitable location.
 
 ## Create Folder for Dashboards
@@ -39,7 +39,7 @@ Please ensure that the set up for [Grafana][] and [Loki][] have been completed b
 
 It is necessary to update the Custom Filter inside the dashboards to use the correct data source.
 
-To do this, follow these steps for all default {{< ctx >}} Innovation dashboards imported:
+To do this, follow these steps for all default {{% ctx %}} Innovation dashboards imported:
 
 1. Log in to Grafana Cloud with a user that has the *Admin* role.
 1. To open a dashboard:

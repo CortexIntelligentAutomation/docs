@@ -24,13 +24,13 @@ The following hardware requirements are recommended for production systems:
 
 ### Option 2: Install on Existing Hardware
 
-If additional hardware is not available, it is possible to install to the same Web Application server that hosts {{< ctx >}} Gateway.
+If additional hardware is not available, it is possible to install to the same Web Application server that hosts {{% ctx %}} Gateway.
 
 The table below specifies additional resources that are recommended to be added to the existing Web Application server:
 
 | Server&nbsp;Role | Additional&nbsp;CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | Additional&nbsp;RAM&nbsp;(GB) | Additional&nbsp;Disk&nbsp;(GB) |  
 |------------------|-----------------------------------|---------------|----------------------|
-| Web&nbsp;Application&nbsp;Server<br>(Shared with {{< ctx >}} Gateway) | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 12+&nbsp;*Recommended*<br>6&nbsp;*Minimum* | 10+&nbsp;*Recommended*<br>5&nbsp;*Minimum*|
+| Web&nbsp;Application&nbsp;Server<br>(Shared with {{% ctx %}} Gateway) | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 12+&nbsp;*Recommended*<br>6&nbsp;*Minimum* | 10+&nbsp;*Recommended*<br>5&nbsp;*Minimum*|
 
 {{% alert title="Note" %}}
 The application servers (as described in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" title="Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.

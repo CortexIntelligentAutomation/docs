@@ -6,7 +6,7 @@ description: "Information about creating and installing self-signed certificates
 
 # {{% param title %}}
 
-Self-signed certificates should be generated using OpenSSL which is bundled in the {{< ctx >}} Web Application Server Installation Scripts:
+Self-signed certificates should be generated using OpenSSL which is bundled in the {{% ctx %}} Web Application Server Installation Scripts:
 
 ## Setup OpenSSL in PowerShell
 

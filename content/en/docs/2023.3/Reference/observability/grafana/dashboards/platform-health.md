@@ -9,7 +9,7 @@ weight: 20
 
 ## Description
 
-This dashboard provides the information required to analyse the health of the {{< ctx >}} Innovation platform. It will display data based on the [Time Range][] that has been specified.
+This dashboard provides the information required to analyse the health of the {{% ctx %}} Innovation platform. It will display data based on the [Time Range][] that has been specified.
 
 At the top of the page there is a dashboard description. This provides information about what the dashboard is reporting and what each of the filters are. The description is always collapsed by default.
 
@@ -118,13 +118,13 @@ This tile displays the mean duration for requests during the specified [time ran
 
 ## Availability Section
 
-This section displays the availability of the {{< ctx >}} Innovation platform and consists of 1 panel.
+This section displays the availability of the {{% ctx %}} Innovation platform and consists of 1 panel.
 
 {{< figure src="/images/editable/Platform Health - Availability.png">}}
 
 ### Availability
 
-This graph displays the availability of the {{< ctx >}} Innovation Platform during the specified [time range][] by calculating successful requests / total requests. Successful requests are all requests that do not result in an unknown or 5xx HTTP response. 4xx responses are considered successful in this scenario.
+This graph displays the availability of the {{% ctx %}} Innovation Platform during the specified [time range][] by calculating successful requests / total requests. Successful requests are all requests that do not result in an unknown or 5xx HTTP response. 4xx responses are considered successful in this scenario.
 
 Each data point value is calculated by aggregating requests based on the Interval filter. If there is no data for the previous interval, the line will be [broken](#breaks-in-graph-lines) as the availability is not known at the time.
 
@@ -140,7 +140,7 @@ This graph is configured to start the availability axis at 80%. However, if the 
 
 ## Requests Section
 
-This section provides information regarding the history of the requests processed by the {{< ctx >}} Innovation platform for the specified [time range][] and consists of 2 panels.
+This section provides information regarding the history of the requests processed by the {{% ctx %}} Innovation platform for the specified [time range][] and consists of 2 panels.
 
 {{< figure src="/images/editable/Platform Health - Requests.png">}}
 

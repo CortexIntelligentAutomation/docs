@@ -53,7 +53,7 @@ See [Wikipedia][Bit (Wikipedia)] for more information.
 
 ### Block
 
-Blocks (or [functional blocks][]) expose the logic and actions that the [{{< ctx >}}][CORTEX] [platform][] is able to execute for the [flow developers][]; alongside [flows][Flow] they are one of the main components used to define how to automate [tasks][] and [processes][].
+Blocks (or [functional blocks][]) expose the logic and actions that the [{{% ctx %}}][CORTEX] [platform][] is able to execute for the [flow developers][]; alongside [flows][Flow] they are one of the main components used to define how to automate [tasks][] and [processes][].
 
 For more detailed information about blocks, see [Fundamentals > Blocks][].
 
@@ -83,7 +83,7 @@ See [Wikipedia][Byte (Wikipedia)] for more information.
 
 C# (pronounced "see sharp") is a [programming language][] developed by Microsoft.
 
-It is natively supported by the [{{< ctx >}}][CORTEX] [platform][] for using simple [expressions][Expression] (i.e. `1 + 1`) and more complex [code][] (i.e. `DateTime.Now.AddDays(1)`) within [flows][Flow].
+It is natively supported by the [{{% ctx %}}][CORTEX] [platform][] for using simple [expressions][Expression] (i.e. `1 + 1`) and more complex [code][] (i.e. `DateTime.Now.AddDays(1)`) within [flows][Flow].
 
 C# expressions and code can be entered as the values for [Fundamentals > Block Properties][Block Property] using the [Expression Editor][].
 
@@ -109,7 +109,7 @@ If something is case-sensitive, it means it considers differences in case (i.e. 
 
 The process of explicitly converting one [data type][] to another.
 
-See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [{{< ctx >}}][CORTEX] [platform][] for writing simple [expressions][Expression] and more complex [code][].
+See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [{{% ctx %}}][CORTEX] [platform][] for writing simple [expressions][Expression] and more complex [code][].
 
 Also see [Explicit Cast][] for more information.
 
@@ -179,17 +179,17 @@ To change something into a different form. E.g. Change some [text][] from [lower
 
 ### Cortex
 
-The name of the new and current generation of the {{< ctx >}} [automation][] [platform][].
+The name of the new and current generation of the {{% ctx %}} [automation][] [platform][].
 
 ### {{% ctx %}} Gateway
 
-The centralised web-based [portal][] for accessing all user applications and tooling in the [{{< ctx >}}][CORTEX] [platform][].
+The centralised web-based [portal][] for accessing all user applications and tooling in the [{{% ctx %}}][CORTEX] [platform][].
 
 ### {{% ctx %}} Studio
 
 The web-based integrated development environment ([IDE][]) for creating, editing, [debugging][], testing and managing [flows][Flow] that define the logic and actions required to capture and automate a [task][tasks] or [process][Processes].
 
-For more detailed information about {{< ctx >}} Studio, see [Guides > {{< ctx >}} Studio][Guides > CORTEX Studio].
+For more detailed information about {{% ctx %}} Studio, see [Guides > {{% ctx %}} Studio][Guides > CORTEX Studio].
 
 ### Culture
 
@@ -233,9 +233,9 @@ For a complete list of available data types, see [Reference > Data Types][].
 
 ### Debug
 
-The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [{{< ctx >}} Studio][CORTEX Studio], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
+The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [{{% ctx %}} Studio][CORTEX Studio], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
 
-For more detailed information about debugging in {{< ctx >}} Studio, see [{{< ctx >}} Studio > Debugging][CORTEX Studio > Debugging].
+For more detailed information about debugging in {{% ctx %}} Studio, see [{{% ctx %}} Studio > Debugging][CORTEX Studio > Debugging].
 
 ### Default Value
 
@@ -305,11 +305,11 @@ For a complete list of exceptions, see [Reference > Exceptions][].
 
 ### Execution
 
-When a [request][] to start a [flow][] is received by the [{{< ctx >}}][CORTEX] [platform][], an execution is created that represents that instance of the executing flow.
+When a [request][] to start a [flow][] is received by the [{{% ctx %}}][CORTEX] [platform][], an execution is created that represents that instance of the executing flow.
 
 There can be multiple executions of a flow running [concurrently][concurrent].
 
-For more detailed information about executions, see [{{< ctx >}} Studio > Debugging][CORTEX Studio > Debugging].
+For more detailed information about executions, see [{{% ctx %}} Studio > Debugging][CORTEX Studio > Debugging].
 
 ### Explicit Cast
 
@@ -328,7 +328,7 @@ Also see [Cast][] for more information.
 
 ### Expression
 
-An expression is a combination of [operands][] (i.e. [variables][], [literals][], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that can be evaluated by the [{{< ctx >}}][CORTEX] [platform][] to a single value.
+An expression is a combination of [operands][] (i.e. [variables][], [literals][], calls to [methods][] and [properties][PropertiesC#] exposed on [data types][Data Type]) and [operators][] (i.e. =, +, -, *, /) that can be evaluated by the [{{% ctx %}}][CORTEX] [platform][] to a single value.
 
 Expressions use the syntax of the [C#][] [programming language][].
 
@@ -344,7 +344,7 @@ It is based on the [Monaco Editor][] used by [VS Code][], and includes a rich se
 * [Snippets][]
 * [Intellisense][]
 
-For more detailed information about the Expression Editor, see [{{< ctx >}} Studio > Expression Editor][CORTEX Studio > Expression Editor].
+For more detailed information about the Expression Editor, see [{{% ctx %}} Studio > Expression Editor][CORTEX Studio > Expression Editor].
 
 [Automate]: {{< ref "#automate" >}}
 [Automation]: {{< ref "#automation" >}}

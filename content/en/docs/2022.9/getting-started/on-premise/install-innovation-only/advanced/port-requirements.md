@@ -1,12 +1,12 @@
 ---
 title: "Port Requirements for Application Servers and Load Balancer"
 linkTitle: "Port Requirements for Application Servers and Load Balancer"
-description: "Information about the ports opened when installing CORTEX Innovation."
+description: "Information about the ports opened when installing {{% ctx %}} Innovation."
 ---
 
 # {{% param title %}}
 
-{{< ctx >}} Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
+{{% ctx %}} Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
 ## {{% ctx %}} Innovation Ports
 
@@ -40,7 +40,7 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 | FaultAnalysis Service Process | N/A | The port used by the Service Fabric Fault Analysis service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\FAS.Code.Current\\FabricFAS.exe | Any | TCP | Inbound, Outbound |
 | FileStore Service Process | N/A | The port used by the Service Fabric File Store service, which manages the application file store and image store. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\FileStoreService.Code.Current\\ FileStoreService.exe | Any | TCP | Inbound, Outbound |
 | GatewayResource Manager Process | N/A | The port used by the Service Fabric Gateway Resource Manager, which provides APIs to manage the Application Services and other resources. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\GRM.Code.Current\\FabricGRM.exe | Any | TCP | Inbound, Outbound |
-| HTTP App Gateway | reverse Proxy Endpoint Port | **This port cannot be changed at the current time. If it is already in use, please contact {{< ctx >}} for assistance.** The reverse proxy endpoint. For more information, see **[Service Fabric reverse proxy][]**. <br /> <br /> **Program:** Any | 9081 | TCP | Inbound, Outbound |
+| HTTP App Gateway | reverse Proxy Endpoint Port | **This port cannot be changed at the current time. If it is already in use, please contact {{% ctx %}} for assistance.** The reverse proxy endpoint. For more information, see **[Service Fabric reverse proxy][]**. <br /> <br /> **Program:** Any | 9081 | TCP | Inbound, Outbound |
 | Http Gateway | http Gateway Endpoint Port | The port used by Service Fabric Explorer to connect to the cluster. **This changes the port used to connect to the Service Fabric management portal as part of the post-install checks.** <br /> <br /> **Program:** Any | 9080 | TCP | Inbound, Outbound |
 | Infrastructure Service Process | N/A | The port used by the Service Fabric Infrastructure Service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\IS.Code.Current\\FabricIS.exe | Any | TCP | Inbound, Outbound |
 | Lease Driver | lease Driver Endpoint Port | The port used by the cluster lease driver to find out if the nodes are still active. <br /> <br /> **Program:** Any | 9002 | TCP | Inbound, Outbound |
@@ -54,8 +54,8 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 
 |Name of Service | Description | Default Port(s) | Protocol(s) | Direction | Program|
 |----------------|-------------|-----------------|-------------|-----------|--------|
-| API Gateway    | The port providing an entry into the API Gateway service. This is used by {{< ctx >}} Gateway to communicate with the Application Services. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring {{< ctx >}} Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
-| Flow Execution | The ports providing communication between other services and the stateful {{< ctx >}} Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
+| API Gateway    | The port providing an entry into the API Gateway service. This is used by {{% ctx %}} Gateway to communicate with the Application Services. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring {{% ctx %}} Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
+| Flow Execution | The ports providing communication between other services and the stateful {{% ctx %}} Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
 
 ## {{% ctx %}} Load Balancer Rules
 

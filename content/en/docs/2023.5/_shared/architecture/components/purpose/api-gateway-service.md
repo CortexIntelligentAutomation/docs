@@ -1,1 +1,1 @@
-Application Service that routes client requests to the correct distributed {{< ctx >}} Innovation services.
+Application Service that routes client requests to the correct distributed {{% ctx %}} Innovation services.

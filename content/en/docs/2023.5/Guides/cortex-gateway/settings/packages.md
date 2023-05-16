@@ -1,7 +1,7 @@
 ---
 title: "Packages"
 linkTitle: "Packages"
-description: "Create and Manage CORTEX Innovation Packages"
+description: "Create and Manage {{% ctx %}} Innovation Packages"
 ---
 
 {{< workinprogress >}}

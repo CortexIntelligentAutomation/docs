@@ -13,7 +13,7 @@ Terms, words and phrases beginning with the letters K through O.
 
 ### Kickstarter
 
-Free two/three day workshop that enables the rapid configuration of a cloud-based {{< ctx >}} platform to prototype, and demonstrate automation in context.
+Free two/three day workshop that enables the rapid configuration of a cloud-based {{% ctx %}} platform to prototype, and demonstrate automation in context.
 
 See [Kickstarter][].
 

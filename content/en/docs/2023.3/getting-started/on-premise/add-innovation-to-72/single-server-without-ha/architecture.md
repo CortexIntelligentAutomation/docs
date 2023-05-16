@@ -13,7 +13,7 @@ weight: 10
 
 ## Single Server Architecture
 
-{{< ctx >}} Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a {{< ctx >}} v7.2 installation by using the existing hardware. The only components shared by both Innovation and v7.2 are Gateway and its databases.
+{{% ctx %}} Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a {{% ctx %}} v7.2 installation by using the existing hardware. The only components shared by both Innovation and v7.2 are Gateway and its databases.
 
 The minimum architecture for adding Innovation to a v7.2 Single Site, Single Server system is as follows:
 

@@ -9,7 +9,7 @@ weight: 1
 
 ## Summary
 
-A flow is an object in [{{< ctx >}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{< ctx >}} Innovation platform.
+A flow is an object in [{{% ctx %}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{% ctx %}} Innovation platform.
 
 ## Anatomy of a Flow
 
@@ -63,7 +63,7 @@ For further information about [workspaces][workspace], see [Workspaces][workspac
 
 A [flow execution][flow execution] may be started by:
 
-* [Debugging][] a flow in [{{< ctx >}} Studio][CORTEX Studio]
+* [Debugging][] a flow in [{{% ctx %}} Studio][CORTEX Studio]
 * Triggering it by making an HTTP request from an external source (e.g. a web application or web hooks)
 * Triggering it using the [Run Flow][] block
 * Triggering it using predefined events (future) (e.g. on receipt of an email)

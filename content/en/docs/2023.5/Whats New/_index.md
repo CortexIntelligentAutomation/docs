@@ -1,13 +1,13 @@
 ---
 title: "What's New?"
 linkTitle: "What's New?"
-description: "Discover what's new in the CORTEX Innovation platform."
+description: "Discover what's new in the {{% ctx %}} Innovation platform."
 weight: 1
 ---
 
 ## Summary
 
-2023.3 is the second release of the next generation of {{< ctx >}} and continues our journey to improve on the previous 7.X generation in the following areas:
+2023.3 is the second release of the next generation of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
 
 - [Performance][]
 - [Availability][]
@@ -50,7 +50,7 @@ This release introduces:
 
 This release introduces:
 
-- A new web application called [Interaction Portal][] - to support [Human-in-the-Loop][] automation in {{< ctx >}} Innovation deployments
+- A new web application called [Interaction Portal][] - to support [Human-in-the-Loop][] automation in {{% ctx %}} Innovation deployments
 - [CORS][] support for the [API Gateway Service][CORTEX API Gateway Service] - required by single server deployments that use the new [Interaction Portal][]
 - Nine [new Blocks][New Blocks] - adding new functionality to work with [Queues][], and [encode][Encode Text] and [decode][Decode Text] text to various formats
 - Improvements to the [Execute Ssh Command][] block - to support paged responses

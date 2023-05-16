@@ -118,7 +118,7 @@ Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attemp
 Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt 20
 ```
 
-It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [{{< ctx >}} Service Portal][CORTEX Service Portal].
+It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [{{% ctx %}} Service Portal][CORTEX Service Portal].
 
 To work around this error, either uninstall the platform and reinstall it using a different certificate, otherwise disable peer-to-peer verification in RabbitMQ by carrying out the following steps:
 
@@ -158,13 +158,13 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 ### {{% ctx %}} Innovation features not visible in {{% ctx %}} Gateway {#ts-no-innovation}
 
-Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{< ctx >}} Gateway is correct. If it is not, update it and reinstall {{< ctx >}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
+Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
 ### {{% ctx %}} Innovation blocks not visible in {{% ctx %}} Studio {#ts-no-blocks}
 
-Check that the `Dot NET flow debugger Endpoint` URL in the `CortexGateway.SetParameters.xml` file used for installing {{< ctx >}} Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall {{< ctx >}} Gateway or update the value in the `web.config` file and restart the website.
+Check that the `Dot NET flow debugger Endpoint` URL in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website.
 
-Ensure that the Flow Debugger Service is running. Open IIS, click on `Application Pools`and ensure there is a `debugger` application pool which is showing that it is associated with 1 application. If not, go back to the {{< ctx >}} Flow Debugger Service installation steps and ensure that all steps were followed correctly.
+Ensure that the Flow Debugger Service is running. Open IIS, click on `Application Pools`and ensure there is a `debugger` application pool which is showing that it is associated with 1 application. If not, go back to the {{% ctx %}} Flow Debugger Service installation steps and ensure that all steps were followed correctly.
 
 If no misconfiguration can be found, the service log files may contain more information. These can be found on the Web Application Server at:
 
@@ -173,11 +173,11 @@ If no misconfiguration can be found, the service log files may contain more info
 
 Restart the Cortex website. Open IIS, In the `Connection` pane, browse to `Sites`. Select the `Cortex` website and click `Restart` in the `Manage Website` pane.
 
-If the issues cannot be resolved, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
+If the issues cannot be resolved, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
 ### Cannot publish a package {#ts-no-publish}
 
-Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing {{< ctx >}} Gateway are correct. If any of them are not, update them and reinstall {{< ctx >}} Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
+Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway are correct. If any of them are not, update them and reinstall {{% ctx %}} Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
 Ensure that the Application Services are healthy by following these steps:
 
@@ -193,11 +193,11 @@ Ensure that the Application Services are healthy by following these steps:
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
     If no useful message can be seen here, the service log files may contain more information.
 
-If no solution can be found, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
+If no solution can be found, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
 ### Managing RabbitMQ
 
-There may be times when the logs provided by the {{< ctx >}} Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send messages between services.
+There may be times when the logs provided by the {{% ctx %}} Services and the errors displayed in Service Fabric Explorer are not enough to debug an issue that is occurring on the system. This can be due to RabbitMQ being a state where it can’t send messages between services.
 
 To check that RabbitMQ is working as expected, remote desktop to an Application Server and navigate to `https://app-server1.domain.com:15671`, replacing `app-server1.domain.com` with the FQDN of one of the Application Servers. Sign in with username 'administrator' and the RabbitMQ password provided during the Application Server installation. The following should be displayed in the overview tab for a healthy cluster:
 
