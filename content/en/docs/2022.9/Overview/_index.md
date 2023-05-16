@@ -5,7 +5,7 @@ description: "Find out what the CORTEX platform is, what it can do, and how you 
 weight: 2
 ---
 
-## What is {{< ctx >}}?
+## What is {{% ctx %}}?
 
 ### Low-code automation
 

@@ -119,7 +119,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
 
-### Configure {{< ctx >}} Gateway Installation Script
+### Configure {{% ctx %}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
 
@@ -176,7 +176,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
-### Upgrade {{< ctx >}} Gateway
+### Upgrade {{% ctx %}} Gateway
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:

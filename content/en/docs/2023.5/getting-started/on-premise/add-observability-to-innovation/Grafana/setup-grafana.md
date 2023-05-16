@@ -28,7 +28,7 @@ Please ensure that the Installations for [Grafana][] and [Loki][] have been comp
 1. Click *Save and Test*.
 1. *Data source connected and labels found.* message should be displayed above the *Save and Test*
 
-## Download the {{< ctx >}} Innovation Default Dashboards
+## Download the {{% ctx %}} Innovation Default Dashboards
 
 1. Download [Grafana.Dashboards.zip] archive containing the {{< ctx >}} Innovation default dashboards.
 1. Extract the content of the downloaded archive to a suitable location.

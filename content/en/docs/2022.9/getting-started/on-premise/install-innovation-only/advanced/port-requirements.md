@@ -8,7 +8,7 @@ description: "Information about the ports opened when installing CORTEX Innovati
 
 {{< ctx >}} Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
-## {{< ctx >}} Innovation Ports
+## {{% ctx %}} Innovation Ports
 
 | Name | Description | Default Port(s) | Protocol | Direction |
 |------|-------------|-----------------|----------|-----------|
@@ -48,7 +48,7 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 | RepairManager Service Process | N/A | The port used by the Service Fabric Repair Manager Service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\RM.Code.Current\\FabricRM.exe | Any | TCP | Inbound, Outbound |
 | Upgrade Orchestration Service Process | N/A | The port used by the Service Fabric Upgrade Orchestration service. <br /> <br /> **Program:** %ProgramData%\\SF\\<CustomerName>.<Node Name>\\Fabric\\work\\Applications\\ \_\_FabricSystem\_App*\\UOS.Code.Current\\FabricUOS.exe | Any | TCP | Inbound, Outbound |
 
-## {{< ctx >}} Application Service Rules
+## {{% ctx %}} Application Service Rules
 
 Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the ephemeralPorts range.
 
@@ -57,7 +57,7 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 | API Gateway    | The port providing an entry into the API Gateway service. This is used by {{< ctx >}} Gateway to communicate with the Application Services. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring {{< ctx >}} Gateway later in this document.** | 8722 | TCP, UDP | Inbound, Outbound | Any |
 | Flow Execution | The ports providing communication between other services and the stateful {{< ctx >}} Flow Execution service. These are dynamic ports managed by Service Fabric. | Dynamic – Uses the application ports | N/A | N/A | N/A |
 
-## {{< ctx >}} Load Balancer Rules
+## {{% ctx %}} Load Balancer Rules
 
 {{% alert title="Note" %}}Only applicable for installations with HA.{{% /alert %}}
 

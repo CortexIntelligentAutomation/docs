@@ -11,7 +11,7 @@ This guide describes where to get the default {{< ctx >}} Innovation Dashboards 
 
 Please ensure that the set up for [Grafana][] and [Loki][] have been completed before starting this section.
 
-## Download the {{< ctx >}} Innovation Default Dashboards
+## Download the {{% ctx %}} Innovation Default Dashboards
 
 1. Download [Grafana.Dashboards.zip] archive containing the {{< ctx >}} Innovation default dashboards.
 1. Extract the content of the downloaded archive to a suitable location.

@@ -61,7 +61,7 @@ The user must be given `Log on as a service` and `Log on as a batch job` permiss
     1. Type the name of the application pool user account into the `Enter the object names to select` text box. Click the `Check Names` button to confirm that the user exists.
     1. Click `OK` on the Select Users dialog, and then confirm the user is correct by clicking `OK` on the Properties dialog.
 
-### Get {{< ctx >}} Gateway Application Pool User
+### Get {{% ctx %}} Gateway Application Pool User
 
 A domain user account is required for the {{< ctx >}} Gateway application pool and must be created prior to performing the installation below.
 
@@ -193,7 +193,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 
 1. Save and close `Cortex.Innovation.Install.FlowDebuggerService.ps1`.
 
-### Configure {{< ctx >}} Gateway Installation Script
+### Configure {{% ctx %}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
@@ -255,7 +255,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
-### Install {{< ctx >}} Gateway
+### Install {{% ctx %}} Gateway
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:

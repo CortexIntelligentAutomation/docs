@@ -156,11 +156,11 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 ## Troubleshooting issues after installation {#ts-after-installation}
 
-### {{< ctx >}} Innovation features not visible in {{< ctx >}} Gateway {#ts-no-innovation}
+### {{% ctx %}} Innovation features not visible in {{% ctx %}} Gateway {#ts-no-innovation}
 
 Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{< ctx >}} Gateway is correct. If it is not, update it and reinstall {{< ctx >}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
 
-### {{< ctx >}} Innovation blocks not visible in {{< ctx >}} Studio {#ts-no-blocks}
+### {{% ctx %}} Innovation blocks not visible in {{% ctx %}} Studio {#ts-no-blocks}
 
 Check that the `Dot NET flow debugger Endpoint` URL in the `CortexGateway.SetParameters.xml` file used for installing {{< ctx >}} Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall {{< ctx >}} Gateway or update the value in the `web.config` file and restart the website.
 

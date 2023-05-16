@@ -185,11 +185,11 @@ Cross-origin resource sharing (CORS) is a mechanism that allows restricted resou
 
 The name of the new and current generation of the {{< ctx >}} [automation][] [platform][].
 
-### {{< ctx >}} Gateway
+### {{% ctx %}} Gateway
 
 The centralised web-based [portal][] for accessing all user applications and tooling in the [{{< ctx >}}][CORTEX] [platform][].
 
-### {{< ctx >}} Studio
+### {{% ctx %}} Studio
 
 The web-based integrated development environment ([IDE][]) for creating, editing, [debugging][], testing and managing [flows][Flow] that define the logic and actions required to capture and automate a [task][tasks] or [process][Processes].
 
