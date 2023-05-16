@@ -116,6 +116,6 @@ None
 [Validation]: {{< url path="Cortex.Reference.Messages.Validation.MainDoc" >}}
 
 [CORTEX API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[API call: {{< ctx >}} API Gateway]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[HTTP request: {{< ctx >}} API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
-[HTTP response: {{< ctx >}} API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[API call: CORTEX API Gateway]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[HTTP request: CORTEX API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}
+[HTTP response: CORTEX API Gateway Service]: {{< url path="Cortex.Reference.Apis.ApiGatewayService.MainDoc" >}}

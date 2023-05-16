@@ -265,7 +265,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Configure {{< ctx >}} Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
+[Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
 [Configure Flow Debugger Installation Script]: {{< ref "#configure-flow-debugger-installation-script" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}

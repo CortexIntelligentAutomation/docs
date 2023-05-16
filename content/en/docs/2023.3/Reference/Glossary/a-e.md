@@ -435,7 +435,7 @@ For more detailed information about the Expression Editor, see [{{< ctx >}} Stud
 [32-bit]: {{< url path="Cortex.Reference.Glossary.0-9.32Bit" >}}
 [data type]: {{< url path="Cortex.Reference.Glossary.A-E.DataType" >}}
 
-[Guides > {{< ctx >}} Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[Guides > CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [CORTEX Studio > Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
 [CORTEX Studio > Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 

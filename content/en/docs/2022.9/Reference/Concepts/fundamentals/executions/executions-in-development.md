@@ -11,7 +11,7 @@ weight: 100
 
 Whilst debugging a flow, each execution is represented by a [token][] that moves through the [flow][], showing which [block][] is currently being executed.
 
-A [flow][] can be debugged in [{{< ctx >}} Studio][CORTEX Studio] by clicking the [Start an execution][] button or by making an [API call][API call: {{< ctx >}} Studio] to [{{< ctx >}} Studio][CORTEX Studio], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] a   nd then begin an execution.
+A [flow][] can be debugged in [{{< ctx >}} Studio][CORTEX Studio] by clicking the [Start an execution][] button or by making an [API call][API call: {{< ctx >}} Studio] to [{{< ctx >}} Studio][CORTEX Studio], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] and then begin an execution.
 
 The following parameters can be specified:
 
@@ -202,9 +202,9 @@ None
 
 [All Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" >}}
 
-[API call: {{< ctx >}} Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
-[HTTP request: {{< ctx >}} Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
-[HTTP response: {{< ctx >}} Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
+[API call: CORTEX Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
+[HTTP request: CORTEX Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
+[HTTP response: CORTEX Studio]: {{< url path="Cortex.Reference.Apis.Studio.MainDoc" >}}
 
 [CORTEX Flow Debugger Service]: {{< url path="Cortex.Reference.Logs.CortexFlowDebuggerService.MainDoc" >}}
 
