@@ -9,21 +9,21 @@ weight: 200
 
 ## Summary
 
-A [flow][] can be started in Production by making an [API call][API call: {{< ctx >}} API Gateway] to the [{{< ctx >}} API Gateway Service][CORTEX API Gateway Service], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] and then begin an execution.
+A [flow][] can be started in Production by making an [API call][API call: CORTEX API Gateway] to the [{{< ctx >}} API Gateway Service][CORTEX API Gateway Service], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] and then begin an execution.
 
 ## Providing Input Variables
 
-Any flow that has [Input Variables][] defined can have those variables provided by using the inputVariables in the body of the [HTTP request][HTTP request: {{< ctx >}} API Gateway Service].
+Any flow that has [Input Variables][] defined can have those variables provided by using the inputVariables in the body of the [HTTP request][HTTP request: CORTEX API Gateway Service].
 
 ## Retrieving Output Variables
 
-Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the outputVariables in the body of the [HTTP response][HTTP response: {{< ctx >}} API Gateway Service]
+Any flow that has [Output Variables][] defined can have those variables retrieved after the execution has completed by using the outputVariables in the body of the [HTTP response][HTTP response: CORTEX API Gateway Service]
 
 ## Validating a Flow
 
 The [flow][] is validated before it's started, if this is successful an execution will begin.
 
-If there are any issues with the flow then the execution will not start and details of what needs to be resolved will be returned. If the flow was started by making an [HTTP request][HTTP request: {{< ctx >}} API Gateway Service] to the [{{< ctx >}} API Gateway Service][CORTEX API Gateway Service], then a 400 Bad Request is returned.
+If there are any issues with the flow then the execution will not start and details of what needs to be resolved will be returned. If the flow was started by making an [HTTP request][HTTP request: CORTEX API Gateway Service] to the [{{< ctx >}} API Gateway Service][CORTEX API Gateway Service], then a 400 Bad Request is returned.
 
 For a complete list see [Validation][] messages.
 
