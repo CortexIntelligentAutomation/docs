@@ -65,12 +65,12 @@ Below is an example of the value of [TaskExceptions][TaskExceptions Property] af
     "0": {
         "Exception Type": "FlowException",
         "Message": "This flow threw an exception.",
-        "HelpLink": "https://docs.weare{{% ctx %}}.com/docs/2023.5/reference/exceptions/flows/flow-exception"
+        "HelpLink": "https://docs.wearecortex.com/docs/2023.5/reference/exceptions/flows/flow-exception"
     },
     "2": {
         "Exception Type": "FlowException",
         "Message": "This flow threw an exception.",
-        "HelpLink": "https://docs.weare{{% ctx %}}.com/docs/2023.5/reference/exceptions/flows/flow-exception"
+        "HelpLink": "https://docs.wearecortex.com/docs/2023.5/reference/exceptions/flows/flow-exception"
     }
 }
 ```
