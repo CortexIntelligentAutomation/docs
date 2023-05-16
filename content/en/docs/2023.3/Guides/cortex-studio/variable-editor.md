@@ -1,6 +1,6 @@
 ---
-title: "{{% ctx %}} Studio - Variable Editor"
-linkTitle: "{{% ctx %}} Studio - Variable Editor"
+title: "CORTEX Studio - Variable Editor"
+linkTitle: "CORTEX Studio - Variable Editor"
 description: "A guide on how to use the Variable Editor"
 weight: 0
 ---

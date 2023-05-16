@@ -1,6 +1,6 @@
 ---
-title: "{{% ctx %}} Studio - Expression Editor"
-linkTitle: "{{% ctx %}} Studio - Expression Editor"
+title: "CORTEX Studio - Expression Editor"
+linkTitle: "CORTEX Studio - Expression Editor"
 description: "A guide on how to use the Expression Editor"
 weight: 0
 ---
