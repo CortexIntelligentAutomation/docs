@@ -1,8 +1,7 @@
 ---
 title: "Installation"
 linkTitle: "Installation"
-description: >
-    Information on troubleshooting CORTEX Innovation installations.
+description: "Information on troubleshooting {{% ctx %}} Innovation installations."
 ---
 
 # {{% param title %}}
