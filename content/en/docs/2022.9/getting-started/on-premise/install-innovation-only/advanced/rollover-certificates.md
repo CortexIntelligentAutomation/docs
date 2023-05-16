@@ -7,7 +7,7 @@ description: "Information about updating the certificates on a single or multi-s
 # {{% param title %}}
 
 {{% pageinfo %}}
-This process MUST be undertaken before certificates expire, otherwise your system will become unusable. If certificates have already expired, contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="{{< ctx >}} Service Portal" >}} at the earliest opportunity.
+This process MUST be undertaken before certificates expire, otherwise your system will become unusable. If certificates have already expired, contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} at the earliest opportunity.
 
 Only platforms which use CA certificates can have their certificates updated using this mechanism. Systems using self-signed certificates must be reinstalled.
 

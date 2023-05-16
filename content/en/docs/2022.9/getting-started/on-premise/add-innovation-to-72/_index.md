@@ -1,7 +1,7 @@
 ---
 title: "Add Innovation to a 7.2 Installation"
 linkTitle: "Add Innovation to a 7.2 Installation"
-description: "Information about adding {{< ctx >}} Innovation to an existing CORTEX 7.2 platform."
+description: "Information about adding CORTEX Innovation to an existing CORTEX 7.2 platform."
 weight: 20
 ---
 
