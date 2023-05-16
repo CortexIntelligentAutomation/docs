@@ -231,7 +231,7 @@ An example of the log settings can be found below (some settings that do not nee
       {
         "Name": "File",
         "Args": {
-          "path": "%ProgramData%/{{% ctx %}}/Logging/LogEventBlock-.json",
+          "path": "%ProgramData%/Cortex/Logging/LogEventBlock-.json",
           "rollingInterval": "Day",
           "fileSizeLimitBytes": 50000000,
           "rollOnFileSizeLimit": true,
