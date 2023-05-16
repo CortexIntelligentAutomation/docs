@@ -11,8 +11,8 @@ weight: 10
 
 | Component | Purpose | Required/Optional |Server Role |
 |-----------|---------|----------|------------|
-| [CORTEX&nbsp;Gateway][Gateway Guide]| Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
-| [CORTEX&nbsp;Studio][Studio Guide] | Application hosted in CORTEX Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions. | Required | Web&nbsp;Application&nbsp;Server |
+| [{{< ctx >}}&nbsp;Gateway][Gateway Guide]| Web portal that hosts applications for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life. | Required | Web&nbsp;Application&nbsp;Server |
+| [{{< ctx >}}&nbsp;Studio][Studio Guide] | Application hosted in CORTEX Gateway that provides the graphical, low-code environment for developing, testing, versioning, publishing and managing the full life-cycle of automation solutions. | Required | Web&nbsp;Application&nbsp;Server |
 | CORTEX&nbsp;Flow&nbsp;Debugger&nbsp;Service | Web application that allows flows to be debugged and executed. Used by CORTEX Studio to debug flows and provide block information. | Required | Web&nbsp;Application&nbsp;Server |
 | CORTEX&nbsp;API&nbsp;Gateway&nbsp;Service | Application Service that routes client requests to the correct distributed CORTEX services. | Required | Application&nbsp;Server |
 | CORTEX&nbsp;Flow&nbsp;Execution&nbsp;Service | Application Service that executes automation flows. | Required | Application&nbsp;Server |

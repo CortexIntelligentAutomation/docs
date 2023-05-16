@@ -31,7 +31,7 @@
     * `%ProgramData%/Cortex/API Gateway Service/Logs`
     * `%ProgramData%/Cortex/Execution Service/Logs`
 
-    If no solution can be found, please contact [CORTEX Service Portal][] for further assistance.
+    If no solution can be found, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for further assistance.
 
 [Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}

@@ -195,7 +195,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
     |`ApiGatewayBasicAuthUsername`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway]. |
-    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [CORTEX Encrypted][]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway].|
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [{{< ctx >}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when upgrading Gateway][Upgrade Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
@@ -246,7 +246,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If there are no errors, continue to the next section; otherwise, check if the errors have any instructions for rectifying the issue and follow them.
 
-    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [CORTEX Service Portal][] for further assistance. The `WhatIf` script will have created a temporary version of the config file in the script location, showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
+    If there are no useful instructions, check that all previous steps have been followed correctly and, if not, rectify it and run the command again. <br /><br />If this does not work, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for further assistance. The `WhatIf` script will have created a temporary version of the config file in the script location, showing what changes would be made to it when the script runs. The name is appended with `-WhatIf` (e.g. `Cortex.Innovation.Install.Config-WhatIf.json`). This file can be provided when obtaining support.
 
 ## Run Installation Script
 
@@ -263,7 +263,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 1. Run the PowerShell command to install HA Services and the required infrastructure.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all servers (Application and Load Balancer) and press OK.
-1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ. This should be entered carefully and recorded as it may be needed if seeking support from [CORTEX Service Portal][]. Press OK.
+1. A password prompt will appear. Enter a password which will be used to create a user in RabbitMQ. This should be entered carefully and recorded as it may be needed if seeking support from [{{< ctx >}} Service Portal][CORTEX Service Portal]. Press OK.
 1. Wait for the script to finish running. This should take approximately 10 minutes.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
@@ -275,7 +275,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     .\Cortex.Innovation.Uninstall.ps1
     ```
 
-    If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [CORTEX Service Portal][] for assistance.
+    If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
 
 ## Check Application Services
 

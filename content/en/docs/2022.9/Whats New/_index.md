@@ -37,7 +37,7 @@ This release introduces:
 - A [new Property Editor][] for configuring [blocks][block], allowing for quicker configuration and better ease of use.
 - [Messages][] which reports issues identified with a flow before it is executed
 - A new online [Product Portal][] that contains materials regarding the release and how to use the product
-- Integration of [CORTEX Studio][] with the [Product Portal][]
+- Integration of [{{< ctx >}} Studio][CORTEX Studio] with the [Product Portal][]
 
 ## Improved Security
 

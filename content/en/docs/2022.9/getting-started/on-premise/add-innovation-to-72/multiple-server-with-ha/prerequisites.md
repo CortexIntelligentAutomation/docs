@@ -122,7 +122,7 @@ To get a licence file and feature identifier take the following steps:
         ```
 
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. Request a licence and feature identifier by raising a case in the [CORTEX Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. Request a licence and feature identifier by raising a case in the [{{< ctx >}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
 
 ## Web Browser Requirements

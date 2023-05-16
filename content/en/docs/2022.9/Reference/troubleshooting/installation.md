@@ -118,7 +118,7 @@ Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attemp
 Retry rabbitmqctl start_app --erlang-cookie $ErlangCookie --longnames  .  Attempt 20
 ```
 
-It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [CORTEX Service Portal][].
+It means there is probably something wrong with the certificate verification with RabbitMQ. Please report issues like this to [{{< ctx >}} Service Portal][CORTEX Service Portal].
 
 To work around this error, either uninstall the platform and reinstall it using a different certificate, otherwise disable peer-to-peer verification in RabbitMQ by carrying out the following steps:
 
@@ -158,7 +158,7 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 ### CORTEX Innovation features not visible in CORTEX Gateway {#ts-no-innovation}
 
-Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing CORTEX Gateway is correct. If it is not, update it and reinstall CORTEX Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [CORTEX Service Portal][] for assistance.
+Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing CORTEX Gateway is correct. If it is not, update it and reinstall CORTEX Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
 
 ### CORTEX Innovation blocks not visible in CORTEX Studio {#ts-no-blocks}
 
@@ -173,11 +173,11 @@ If no misconfiguration can be found, the service log files may contain more info
 
 Restart the Cortex website. Open IIS, In the `Connection` pane, browse to `Sites`. Select the `Cortex` website and click `Restart` in the `Manage Website` pane.
 
-If the issues cannot be resolved, please contact [CORTEX Service Portal][] for assistance.
+If the issues cannot be resolved, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
 
 ### Cannot publish a package {#ts-no-publish}
 
-Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing CORTEX Gateway are correct. If any of them are not, update them and reinstall CORTEX Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [CORTEX Service Portal][] for assistance.
+Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing CORTEX Gateway are correct. If any of them are not, update them and reinstall CORTEX Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
 
 Ensure that the Application Services are healthy by following these steps:
 
@@ -193,7 +193,7 @@ Ensure that the Application Services are healthy by following these steps:
     If any warning triangles appear, wait for 5 minutes or so as the cluster may still be starting up. If the cluster looks OK, ignore the rest of this step. If the warnings persist or anything on the screen goes red, use the filter buttons to find the individual elements which have errors or warnings. Warnings should not be ignored as they can indicate that the service can’t start but is still in the retry phase.
     If no useful message can be seen here, the service log files may contain more information.
 
-If no solution can be found, please contact [CORTEX Service Portal][] for assistance.
+If no solution can be found, please contact [{{< ctx >}} Service Portal][CORTEX Service Portal] for assistance.
 
 ### Managing RabbitMQ
 

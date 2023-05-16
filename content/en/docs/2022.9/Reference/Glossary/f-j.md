@@ -19,15 +19,15 @@ Different files can store different types of data (i.e. a text file, `.txt`, sto
 
 ### Flow
 
-A flow is an object in [CORTEX Studio][] that contains the logic and actions (in the form of [blocks][]) that the [CORTEX][] [platform][] is able to execute for the [flow developers][].
+A flow is an object in [{{< ctx >}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][]) that the [{{< ctx >}}][] [platform][] is able to execute for the [flow developers][].
 
 For more detailed information about flows, see [Fundamentals > Flows][].
 
 ### Flow Developer
 
-A flow developer is a user that has been granted permissions to develop [flows][] in [CORTEX Studio][].
+A flow developer is a user that has been granted permissions to develop [flows][] in [{{< ctx >}} Studio][CORTEX Studio].
 
-For more detailed information about granting permissions to develop [flows][], see [CORTEX Studio > Authorisation][].
+For more detailed information about granting permissions to develop [flows][], see [{{< ctx >}} Studio > Authorisation][].
 
 ### Folder
 
@@ -92,9 +92,9 @@ Collections that can contain multiple data types are known as [heterogenous][].
 
 ### IDE
 
-IDE or Integrated Development Environment is a software application such as [CORTEX Studio][], that allows users to create a program or application.
+IDE or Integrated Development Environment is a software application such as [{{< ctx >}} Studio][CORTEX Studio], that allows users to create a program or application.
 
-In [CORTEX Studio][], the users are called [flow developers][], and the programs are called [flows][].
+In [{{< ctx >}} Studio][CORTEX Studio], the users are called [flow developers][], and the programs are called [flows][].
 
 Some common and popular examples of IDE's include:
 
@@ -125,7 +125,7 @@ Int32 ThirtyTwoBitInteger = SixteenBitInteger;
 
 See [Explicit Cast][] for an example of where data loss would occur during conversion, and would therefore require an explicit instruction from the developer.
 
-See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [CORTEX][] [platform][] for writing simple [expressions][] and more complex [code][].
+See [Casting and type conversions (C# Programming Guide)][] for a detailed technical explanation of casting in [C#][], the [programming language][] natively supported by the [{{< ctx >}}][] [platform][] for writing simple [expressions][] and more complex [code][].
 
 ### Index
 
