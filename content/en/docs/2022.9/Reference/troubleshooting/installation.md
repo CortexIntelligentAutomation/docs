@@ -2,7 +2,7 @@
 title: "Installation"
 linkTitle: "Installation"
 description: >
-    Information on troubleshooting {{< ctx >}} Innovation installations.
+    Information on troubleshooting CORTEX Innovation installations.
 ---
 
 # {{% param title %}}
