@@ -8,9 +8,8 @@ $ctx-blue: #282864;
 $ctx-black: rgba(0, 0, 0, 0.7);
 $ctx-orange: #ff6600;
 $ctx-text-black: #495057;
-$ctx-primary-blue: #282864;
 
-$primary: #282864 !default;
+$primary: $ctx-blue !default;
 $secondary: #ff6600 !default;
 $white: #fff !default;
 $dark: #252525 !default;
@@ -22,7 +21,7 @@ $h2-font-size: $font-size-base * 1.4 !default;
 $h3-font-size: $font-size-base * 1.2 !default;
 $h4-font-size: $font-size-base * 1.0 !default;
 $h5-font-size: $font-size-base * 1.0 !default;
-$h6-font-size: $font-size-base  !default;
+$h6-font-size: $font-size-base !default;
 
 body {
   margin: 0;
@@ -32,10 +31,10 @@ body {
   line-height: 1.5 !important;
   color: $ctx-text-black;
   text-align: left;
-  background-color: #fff;
+  background-color: $white;
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: $ctx-primary-blue;
+    color: $ctx-blue;
   }
 
   .slogan {
@@ -52,7 +51,7 @@ body {
     
     &::before, &::after {
       font-weight: lighter;
-      color: #7ac300;
+      color: $ctx-green;
       font-family: arial !important;
       font-weight: bold !important;
     }
@@ -299,13 +298,13 @@ main {
 footer {
   font-size: 0.8rem !important;
   padding-top: 1rem !important;
-  border-top: 1px $ctx-primary-blue solid;
+  border-top: 1px $ctx-blue solid;
   
-  &.bg-dark {
+  &.bg-light {
     background-color: $white !important;
   }
 
-  .text-white {
+  .text-black {
     color: $ctx-text-black !important;
   }
 
