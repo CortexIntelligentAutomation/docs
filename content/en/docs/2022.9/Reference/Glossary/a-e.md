@@ -177,7 +177,7 @@ Continuous Deployment is a software development practice which extends [Continuo
 
 To change something into a different form. E.g. Change some [text][] from [lowercase][] to [UPPERCASE][].
 
-### Cortex
+### {{% ctx %}}
 
 The name of the new and current generation of the {{% ctx %}} [automation][] [platform][].
 

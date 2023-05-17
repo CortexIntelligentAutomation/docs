@@ -61,7 +61,7 @@ This release introduces:
 
 - [Product Portal][] updates - to reflect the [re-architected HA Platform][]
 - [Tutorials][]
-- Multi-version support - to allow for easy switching between documentation for different versions of Cortex
+- Multi-version support - to allow for easy switching between documentation for different versions of {{% ctx %}}
 
 ## Other Improvements
 

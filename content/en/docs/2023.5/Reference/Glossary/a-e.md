@@ -181,7 +181,7 @@ To change something into a different form. E.g. Change some [text][] from [lower
 
 Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from a domain outside of the domain from which the first resource was served.
 
-### Cortex
+### {{% ctx %}}
 
 The name of the new and current generation of the {{% ctx %}} [automation][] [platform][].
 
