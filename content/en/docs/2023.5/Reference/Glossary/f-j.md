@@ -13,7 +13,7 @@ Terms, words and phrases beginning with the letters F through J.
 
 ### Fast Track
 
-A Fast Track release follows a quick release cycle, allowing access to the latest features and functionality of Cortex.
+A Fast Track release follows a quick release cycle, allowing access to the latest features and functionality of {{% ctx %}}.
 
 ### File
 
