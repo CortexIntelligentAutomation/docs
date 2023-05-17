@@ -69,13 +69,13 @@ The following table shows some of the ways that an `SshLogs` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `SshLogs` constructor | `new SshLogs(welcomeMessage: "Welcome to Microsoft Ssh Server.", terminalPromptMatch: "C:/Users/{{% ctx %}}SshUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatch": "C:/Users/{{% ctx %}}SshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
+| Use an `SshLogs` constructor | `new SshLogs(welcomeMessage: "Welcome to Microsoft Ssh Server.", terminalPromptMatch: "C:/Users/CortexSshUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatch": "C:/Users/CortexSshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
 
 ### Convert SshLogs to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatch": "C:/Users/{{% ctx %}}SshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | `"{\r\n  \"WelcomeMessage\": \"Welcome to Microsoft Ssh Server.\",\r\n    \"TerminalPromptMatch\": \"C:/Users/CortexSshUser>\",\r\n    \"Logs\": \"[Info] Connecting to Localhost. \n[Info] Welcome message received.\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"WelcomeMessage": "Welcome to Microsoft Ssh Server.", "TerminalPromptMatch": "C:/Users/CortexSshUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | `"{\r\n  \"WelcomeMessage\": \"Welcome to Microsoft Ssh Server.\",\r\n    \"TerminalPromptMatch\": \"C:/Users/CortexSshUser>\",\r\n    \"Logs\": \"[Info] Connecting to Localhost. \n[Info] Welcome message received.\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 

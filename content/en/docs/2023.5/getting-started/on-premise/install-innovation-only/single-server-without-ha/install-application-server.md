@@ -96,7 +96,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 1. To check all necessary ports are free, follow these steps.
     1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `v Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+    1. Navigate PowerShell to inside the `{{% ctx %}} Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
         ```powershell
         cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
