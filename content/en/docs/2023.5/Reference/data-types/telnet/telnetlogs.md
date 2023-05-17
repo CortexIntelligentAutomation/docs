@@ -69,13 +69,13 @@ The following table shows some of the ways that `TelnetLogs` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `TelnetLogs` constructor | `new TelnetLogs(welcomeMessage: "Welcome to Microsoft Telnet Server.", terminalPromptMatch: "C:/Users/{{% ctx %}}TelnetUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatch": "C:/Users/{{% ctx %}}TelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
+| Use a `TelnetLogs` constructor | `new TelnetLogs(welcomeMessage: "Welcome to Microsoft Telnet Server.", terminalPromptMatch: "C:/Users/CortexTelnetUser>", logs: "[Info] Connecting to Localhost. \n[Info] Welcome message received.")` | `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatch": "C:/Users/CortexTelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | Expression |  |
 
 ### Convert TelnetLogs to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatch": "C:/Users/{{% ctx %}}TelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | `"{\r\n  \"WelcomeMessage\": \"Welcome to Microsoft Telnet Server.\",\r\n    \"TerminalPromptMatch\": \"C:/Users/CortexTelnetUser>\",\r\n    \"Logs\": \"[Info] Connecting to Localhost. \n[Info] Welcome message received.\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"WelcomeMessage": "Welcome to Microsoft Telnet Server.", "TerminalPromptMatch": "C:/Users/CortexTelnetUser>", "Logs": "[Info] Connecting to Localhost. \n[Info] Welcome message received."}` | `"{\r\n  \"WelcomeMessage\": \"Welcome to Microsoft Telnet Server.\",\r\n    \"TerminalPromptMatch\": \"C:/Users/CortexTelnetUser>\",\r\n    \"Logs\": \"[Info] Connecting to Localhost. \n[Info] Welcome message received.\"\r\n  }"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
