@@ -1890,9 +1890,9 @@
         MainDoc = "/docs/tutorials/"
     [Cortex.Website]
         [Cortex.Website.Customers]
-            MainDoc = "https://www.cortex-ia.com/customer-success-stories/"
+            MainDoc = "https://www.wearecortex.com/about/customer-success/"
         [Cortex.Website.EngageWithUs]
-            MainDoc = "https://www.cortex-ia.com/contact-form/"
+            MainDoc = "https://www.wearecortex.com/contact/"
             AccelerationProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program"
             DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
             Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
