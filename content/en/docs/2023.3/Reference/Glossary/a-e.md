@@ -11,10 +11,6 @@ Terms, words and phrases beginning with the letters A through E.
 
 ## A
 
-### Acceleration Program
-
-See [Acceleration Program][].
-
 ### API
 
 An API (Application Programming Interface) is a set of functions that allows applications to access data from and interact with external systems, services or applications.
@@ -245,10 +241,6 @@ For more detailed information about debugging in {{% ctx %}} Studio, see [{{% ct
 
 The default that is assigned as the value of a [block property][] when a new [block][] is added to a [flow][].
 
-### Design Sprint
-
-See [Design Sprint][]
-
 ### Developer
 
 A developer is an individual that builds and creates software and applications.
@@ -440,9 +432,6 @@ For more detailed information about the Expression Editor, see [{{% ctx %}} Stud
 [CORTEX Studio > Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 
 [Fundamentals > Expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
-
-[Acceleration Program]: {{< url path="Cortex.Website.EngageWithUs.AccelerationProgram" >}}
-[Design Sprint]: {{< url path="Cortex.Website.EngageWithUs.DesignSprint" >}}
 
 [Casting and type conversions (C# Programming Guide)]: {{< url path="MSDocs.CSharp.Casting" >}}
 [Cast expression (C# Reference)]: {{< url path="MSDocs.CSharp.CastExpression" >}}

@@ -11,19 +11,7 @@ Terms, words and phrases beginning with the letters K through O.
 
 ## K
 
-### Kickstarter
-
-Free two/three day workshop that enables the rapid configuration of a cloud-based {{% ctx %}} platform to prototype, and demonstrate automation in context.
-
-See [Kickstarter][].
-
 ## L
-
-### Launch Program
-
-A twelve week program which takes your team through the phases of mobilisation, design of automation, trial testing and sign-off to production.
-
-See [Launch Program][].
 
 ### Linux
 
@@ -172,6 +160,3 @@ Outlook is a free web-based email service provided by Microsoft.
 [Collections > Occurrences]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences.MainDoc" >}}
 
 [C# operators and expressions]: {{< url path="MSDocs.CSharp.OperatorsAndExpressions" >}}
-
-[Kickstarter]: {{< url path="Cortex.Website.EngageWithUs.Kickstarter" >}}
-[Launch Program]: {{< url path="Cortex.Website.EngageWithUs.LaunchProgram" >}}
