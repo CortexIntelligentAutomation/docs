@@ -2,3 +2,7 @@ DirectoryPath: "dist"
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreInternalEmptyHash: true
 IgnoreEmptyHref: true
+IgnoreAltMissing: true
+IgnoreAltEmpty: true
+IgnoreURLs:
+- "https://www.linkedin.com/company/10975051"
