@@ -26,7 +26,7 @@ This example will rethrow the following handled [Exception][] thrown by an [Add 
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Exception][Exception Property] | `($)Exception`, with value of`{"Exception Type": "PropertyNullException","Message": "'List' is null; it must be provided with a non-null value.\r\nPlease click the HelpLink for more information on how to fix this.","HelpLink": "https://docs.wearecortex.com/docs/2023.3/reference/exceptions/common/property/property-null-exception/"}` | `($)Exception` is a variable of type [PropertyNullException][] |
+| [Exception][Exception Property] | `($)Exception`, with value of`{"Exception Type": "PropertyNullException","Message": "'List' is null; it must be provided with a non-null value.\r\nPlease click the HelpLink for more information on how to fix this.","HelpLink": "https://docs.wearecortex.com/docs/2023.5/reference/exceptions/common/property/property-null-exception/"}` | `($)Exception` is a variable of type [PropertyNullException][] |
 
 #### Result
 
