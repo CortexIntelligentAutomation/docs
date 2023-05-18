@@ -1893,10 +1893,6 @@
             MainDoc = "https://www.wearecortex.com/about/customer-success/"
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
-            AccelerationProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program"
-            DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
-            Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
-            LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
         [Cortex.Website.Eula]
             MainDoc = "https://www.wearecortex.com/eula-standard-terms/"
         [Cortex.Website.UseCases]
