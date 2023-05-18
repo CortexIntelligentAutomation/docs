@@ -7,3 +7,5 @@ IgnoreAltEmpty: true
 IgnoreURLs:
 - "https://twitter.com/.*"
 - "https://www.linkedin.com/company/10975051"
+IgnoreDirs:
+- "docs/.*/_print/"
