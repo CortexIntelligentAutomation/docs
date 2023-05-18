@@ -12,4 +12,4 @@ IgnoreURLs:
 - "https://js/swagger-ui-bundle.js"
 - "https://js/swagger-ui-standalone-preset.js"
 IgnoreDirs:
-- "docs/.*/_print/"
+- "docs/?.*/_print/"
