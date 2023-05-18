@@ -29,19 +29,6 @@ With a **[comprehensive set of functionality][Blocks]** and interfaces with **3r
 
 Using {{% ctx %}}, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
 
-### Across multiple sectors, industries and markets
-
-{{% ctx %}} has been deployed in **small**, **medium** and **large enterprises** from different **[sectors, industries and markets][Industries]**, including:
-
-* **[Telecommunication services][Telco]**
-* **[IT services][IT]**
-* **[Banking, Financial Services and Insurance][BFSI]**
-* Chemicals
-* Paper and Forest products
-* Food products
-* Government
-* Media
-
 ### For diverse sets of use cases
 
 {{% ctx %}} has been deployed for a diverse set of **[use cases][]**, including:
@@ -78,7 +65,6 @@ Wherever you are on your automation journey and whatever you are trying to achie
 |**[Reference][]**|Browse through the reference documentation, including details about APIs, blocks, data types, exceptions.|
 |**[FAQs][]**|Find the answers to your questions.|
 |**[Videos][]**|View a range of videos about the {{% ctx %}} platform, automation, strategies and methodologies, as well as industry specific content.|
-|**[Webinars][]**|Watch a selection of automation related webinars.|
 |**[Engage&nbsp;With&nbsp;Us][Engage With Us]**|Let us help you to get started by reaching out to us.|
 
 [FAQs]: {{< url path="Cortex.Faqs.MainDoc" >}}
@@ -98,12 +84,6 @@ Wherever you are on your automation journey and whatever you are trying to achie
 
 [Engage With Us]: {{< url path="Cortex.Website.EngageWithUs.MainDoc" >}}
 
-[Industries]: {{< url path="Cortex.Website.Industries.MainDoc" >}}
-[BFSI]: {{< url path="Cortex.Website.Industries.Bfsi" >}}
-[IT]: {{< url path="Cortex.Website.Industries.It" >}}
-[Telco]: {{< url path="Cortex.Website.Industries.Telco" >}}
-
 [use cases]: {{< url path="Cortex.Website.UseCases.MainDoc" >}}
 
 [Videos]: {{< url path="Cortex.YouTube.MainDoc" >}}
-[Webinars]: {{< url path="Cortex.YouTube.Webinars.MainDoc" >}}
