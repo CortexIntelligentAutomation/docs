@@ -164,18 +164,6 @@ enable = true
 [params.links]
 # Social media relevant links. These will show up in the center of footer.
 [[params.links.social]]
-	name ="Twitter"
-	url = "https://twitter.com/cortex_software"
-	icon = "fab fa-twitter"
-[[params.links.social]]
-	name ="Facebook"
-	url = "https://www.facebook.com/cortexintelligentautomation/"
-	icon = "fab fa-facebook"
-[[params.links.social]]
-	name ="Vimeo"
-	url = "https://vimeo.com/cortexautomationsoftware"
-	icon = "fab fa-vimeo"
-[[params.links.social]]
 	name ="LinkedIn"
 	url = "https://www.linkedin.com/company/10975051"
 	icon = "fab fa-linkedin"
