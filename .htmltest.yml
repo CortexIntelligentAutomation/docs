@@ -10,4 +10,4 @@ IgnoreURLs:
 - "https://github.com/CortexIntelligentAutomation/docs/edit/.*"
 - "https://github.com/CortexIntelligentAutomation/docs/new/.*"
 - "https://github.com/CortexIntelligentAutomation/docs/issues/.*"
-- ".*/_print/index.html"
+- ".*/_print/.*"
