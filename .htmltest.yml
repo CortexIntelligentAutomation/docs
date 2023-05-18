@@ -5,4 +5,5 @@ IgnoreEmptyHref: true
 IgnoreAltMissing: true
 IgnoreAltEmpty: true
 IgnoreURLs:
+- "https://twitter.com/.*"
 - "https://www.linkedin.com/company/10975051"
