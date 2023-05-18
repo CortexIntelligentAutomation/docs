@@ -181,7 +181,7 @@ enable = true
 	icon = "fab fa-linkedin"
 [[params.links.social]]
 	name ="YouTube"
-	url = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
+	url = "https://www.youtube.com/@WeAreCORTEX"
 	icon = "fab fa-youtube"
 
 # Legal info relevant links. These will show up on left side of footer.
