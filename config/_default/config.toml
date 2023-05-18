@@ -203,13 +203,6 @@ enable = true
 	url = '/docs/2023.5'
 	weight = 10
 
-[[menu.main]]
-	identifier = 'community'
-	name = 'Community'
-	url = 'https://community.cortex.co.uk/'
-	weight = 30
-
-
 # Releases menu
 [[params.versions]]
 	version = "2023.5"
@@ -226,7 +219,4 @@ enable = true
 	version = "2022.9"
 	url = "/docs/2022.9/"
 	dotNetVersion = "netcore-3.1"
-
-[[params.versions]]
-	version = "7.2"
-	url = "https://community.cortex.co.uk/"
+	
