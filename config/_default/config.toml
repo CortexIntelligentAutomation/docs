@@ -219,4 +219,3 @@ enable = true
 	version = "2022.9"
 	url = "/docs/2022.9/"
 	dotNetVersion = "netcore-3.1"
-	

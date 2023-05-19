@@ -28,13 +28,13 @@ A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `100` indicates
 #### Message Format
 
 ```json
-"A connection could not be established between the server where the Cortex Execution Service is running (\"<server>\") and the host.
+"A connection could not be established between the server where the {{% ctx %}} Execution Service is running (\"<server>\") and the host.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-- `<server>` is the server where the Cortex Execution Service is running on.
+- `<server>` is the server where the {{% ctx %}} Execution Service is running on.
 
 #### How to Fix
 
@@ -49,13 +49,13 @@ A [Category][] of `TelnetSessionDetails` and an [ErrorCode][] of `101` indicates
 #### Message Format
 
 ```json
-"A connection could not be established between the server where the Cortex Execution Service is running (\"<server>\") and the host.
+"A connection could not be established between the server where the {{% ctx %}} Execution Service is running (\"<server>\") and the host.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-- `<server>` is the server where the Cortex Execution Service is running on.
+- `<server>` is the server where the {{% ctx %}} Execution Service is running on.
 
 #### How to Fix
 

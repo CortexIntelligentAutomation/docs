@@ -1,6 +1,6 @@
 ---
-title: "Cortex Studio - South Panel (TBC)"
-linkTitle: "Cortex Studio - South Panel (TBC)"
+title: "CORTEX Studio - South Panel (TBC)"
+linkTitle: "CORTEX Studio - South Panel (TBC)"
 description: "Southern panel for Executions, Messages, and Variables"
 weight: 1
 ---

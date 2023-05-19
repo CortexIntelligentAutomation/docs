@@ -211,12 +211,12 @@ The exceptions thrown by the block can be found below:
 
 ### Configuring Logging
 
-Log settings exist for the following Cortex Services:
+Log settings exist for the following {{% ctx %}} Services:
 
 | Service                       | Default File Location                 | Description                       |
 |-------------------------------|---------------------------------------|-----------------------------------|
-| `Cortex Debugger Service`     | `<install-location>\appsettings.json` | Debugger Service is used to debug flows when developing them in Cortex Studio |
-| `Cortex Flow Execution Service`| `<install-location>\appsettings.json` | Flow Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production) |
+| `{{% ctx %}} Debugger Service`     | `<install-location>\appsettings.json` | Debugger Service is used to debug flows when developing them in {{% ctx %}} Studio |
+| `{{% ctx %}} Flow Execution Service`| `<install-location>\appsettings.json` | Flow Execution Service is used to execute published flows in a runtime environment (e.g. Development, UAT, Production) |
 
 An example of the log settings can be found below (some settings that do not need to be modified have been ommitted):
 
@@ -258,7 +258,7 @@ Please note that if the appsetting.json file cannot be found for one of the serv
 
 ### Anatomy of a Log
 
-The format of the logs written by this block are the same as the logs written by the rest of the Cortex Services. This is to ensure logging is consistent and done one way within Cortex. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
+The format of the logs written by this block are the same as the logs written by the rest of the {{% ctx %}} Services. This is to ensure logging is consistent and done one way within {{% ctx %}}. Hopefully this will make it easier to work with logging, and also make it easier to gain a holistic picture into what has happened to a flow execution throughout its entire lifecycle (i.e. from initial request to returning the response to the caller), rather than just what happens inside of the flow.
 
 An example log can be found below:
 
@@ -331,14 +331,14 @@ A list of each of the log's properties and an accompanying description can be fo
 | `Event.Duration.InMs`             | The duration of the event in milliseconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
 | `Event.Duration.$type`            | The .Net data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.Details`                   | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
-| `Event.Correlation`               | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple Cortex Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Correlation`               | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple {{% ctx %}} Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
 | `Event.Correlation.TraceId`       | ID common to all related logs, so they can be easily correlated together. |
 | `Event.Correlation.SpanId`        | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
 | `Event.Correlation.ParentSpanId`  | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
 | `Event.Correlation.$type`  | The .Net data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Service`            | Contains details of the Cortex Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Service.Type`       | The type of the Cortex Service that logged this event. |
-| `Event.Service.IpAddressOrFqdn`   | The IP address or fully qualified domain name of the Cortex Service that logged this event. |
+| `Event.Service`            | Contains details of the {{% ctx %}} Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Service.Type`       | The type of the {{% ctx %}} Service that logged this event. |
+| `Event.Service.IpAddressOrFqdn`   | The IP address or fully qualified domain name of the {{% ctx %}} Service that logged this event. |
 | `Event.Service.$type`      | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
 | `Event.$type`              | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
 

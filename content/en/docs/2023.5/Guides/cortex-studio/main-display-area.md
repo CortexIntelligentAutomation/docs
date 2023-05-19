@@ -1,6 +1,6 @@
 ---
-title: "Cortex Studio - Main Display Area"
-linkTitle: "Cortex Studio - Main Display Area"
+title: "CORTEX Studio - Main Display Area"
+linkTitle: "CORTEX Studio - Main Display Area"
 description: "The Main Display Area for developing and managing a flow"
 weight: 1
 ---

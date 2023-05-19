@@ -16,7 +16,7 @@ A [flow][] may trigger the execution of another [flow][].
 A [flow][] can be called from another [flow][] in the following ways:
 
 - Using the [Run Flow][] block to trigger the execution of another flow directly
-- Using the [Execute HTTP Request][] block to trigger a flow through the API Gateway service (this should only be used to call [flows][flow] published in a separate Cortex Innovation platform)
+- Using the [Execute HTTP Request][] block to trigger a flow through the API Gateway service (this should only be used to call [flows][flow] published in a separate {{% ctx %}} Innovation platform)
 
 ### Input Variables
 

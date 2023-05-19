@@ -1,13 +1,13 @@
 ---
 title: "What's New?"
 linkTitle: "What's New?"
-description: "Discover what's new in the Cortex Innovation platform."
+description: "Discover what's new in the {{% ctx %}} Innovation platform."
 weight: 1
 ---
 
 ## Summary
 
-2022.9 is the first release of the next generation of Cortex and begins our journey to improve on the previous 7.X generation starting with the following areas:
+2022.9 is the first release of the next generation of {{% ctx %}} and begins our journey to improve on the previous 7.X generation starting with the following areas:
 
 - [Performance][]
 - [Availability][]
@@ -37,7 +37,7 @@ This release introduces:
 - A [new Property Editor][] for configuring [blocks][block], allowing for quicker configuration and better ease of use.
 - [Messages][] which reports issues identified with a flow before it is executed
 - A new online [Product Portal][] that contains materials regarding the release and how to use the product
-- Integration of [Cortex Studio][] with the [Product Portal][]
+- Integration of [{{% ctx %}} Studio][CORTEX Studio] with the [Product Portal][]
 
 ## Improved Security
 
@@ -87,6 +87,6 @@ For a full list of what has been introduced in this release, please see the [202
 [Input Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
 [Output Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.OutputVariablesStructure" >}}
 
-[Cortex Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 
 [flow developers]: {{< url path="Cortex.Reference.Glossary.F-J.FlowDeveloper" >}}

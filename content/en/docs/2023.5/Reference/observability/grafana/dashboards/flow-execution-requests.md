@@ -9,7 +9,7 @@ weight: 10
 
 ## Description
 
-This dashboard provides the information required to analyse the flow execution requests within the Cortex Innovation platform. It will display data based on the [Time Range][] that has been specified.
+This dashboard provides the information required to analyse the flow execution requests within the {{% ctx %}} Innovation platform. It will display data based on the [Time Range][] that has been specified.
 
 At the top of the page there is a dashboard description. This provides information about what the dashboard is reporting and what each of the filters are. The description is always collapsed by default.
 
