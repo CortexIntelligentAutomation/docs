@@ -29,19 +29,6 @@ With a **[comprehensive set of functionality][Blocks]** and interfaces with **3r
 
 Using {{% ctx %}}, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
 
-### Across multiple sectors, industries and markets
-
-{{% ctx %}} has been deployed in **small**, **medium** and **large enterprises** from different **[sectors, industries and markets][Industries]**, including:
-
-* **[Telecommunication services][Telco]**
-* **[IT services][IT]**
-* **[Banking, Financial Services and Insurance][BFSI]**
-* Chemicals
-* Paper and Forest products
-* Food products
-* Government
-* Media
-
 ### For diverse sets of use cases
 
 {{% ctx %}} has been deployed for a diverse set of **[use cases][]**, including:
