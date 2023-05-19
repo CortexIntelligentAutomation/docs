@@ -203,7 +203,6 @@ enable = true
 	url = '/docs/2023.5'
 	weight = 10
 
-
 # Releases menu
 [[params.versions]]
 	version = "2023.5"
