@@ -17,7 +17,7 @@ Evolved from process and control engineering for mission-critical environments, 
 
 ### Built for everyone
 
-Our vision is **a world where everyone can automate**, and {{% ctx %}} is being **built for everyone**, not just software developers, with the goal of **removing barriers** to entry and putting your people at the heart of your automation.
+{{% ctx %}} is being **built for everyone**, not just software developers, with the goal of **removing barriers** to entry and putting your people at the heart of your automation.
 
 ### Comprehensive functionality
 
