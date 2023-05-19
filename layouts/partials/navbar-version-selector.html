@@ -13,7 +13,7 @@
 		{{- $isNested = true }}
 	{{- end }}
 {{- end }}
-<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-proofer-ignore>
 	{{- range where .Site.Params.versions "url" $currentVer -}}
         {{ $versionName := .version }}
         {{- if .latest }}
@@ -48,6 +48,6 @@
 				{{- $dropdownLink = printf "%s%s" "/docs" $dropdownLink }}
 			{{- end }}
         {{- end }}
-		<a class="dropdown-item" href="{{ $dropdownLink }}">{{ $versionName }}</a>
+		<a class="dropdown-item" href="{{ $dropdownLink }}" data-proofer-ignore>{{ $versionName }}</a>
 	{{- end }}
 </div>

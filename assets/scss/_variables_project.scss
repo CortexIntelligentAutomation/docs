@@ -3,13 +3,13 @@
 Add styles or override variables from the theme here.
 
 */
-$ctx-green: #a0c326;
-$ctx-blue: #398FCD;
+$ctx-green: #7ac300;
+$ctx-blue: #282864;
 $ctx-black: rgba(0, 0, 0, 0.7);
 $ctx-orange: #ff6600;
 $ctx-text-black: #495057;
 
-$primary: #398FCD !default;
+$primary: $ctx-blue !default;
 $secondary: #ff6600 !default;
 $white: #fff !default;
 $dark: #252525 !default;
@@ -25,26 +25,55 @@ $h6-font-size: $font-size-base !default;
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Poppins", "Arial" !important;
   font-size: 0.9rem !important;
   font-weight: 400;
   line-height: 1.5 !important;
   color: $ctx-text-black;
   text-align: left;
-  background-color: #fff;
+  background-color: $white;
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $ctx-blue;
+  }
+
+  .slogan {
+    color: white;
+    font-weight: bold;
+
+    &::before {
+      content: '“'
+    }
+
+    &::after {
+      content: '”'
+    }
+    
+    &::before, &::after {
+      font-weight: lighter;
+      color: $ctx-green;
+      font-family: arial !important;
+      font-weight: bold !important;
+    }
+  }
+
+  .landing-title {
+    color: $white;
+  }
 
   .popover-body {
     font-size: .9rem;
     padding: 0.5rem 0.75rem;
     color: $ctx-text-black;
   }
-  
+
   .popover.offline-search-result {
     max-width: 460px;
+
     p {
       margin-right: 12px;
     }
-    
+
     .mt-4 {
       margin-top: 0px !important;
 
@@ -76,6 +105,7 @@ body {
 
 .td-main {
   color: $ctx-black;
+
   .breadcrumb {
     padding-top: 0.8rem;
     margin-bottom: 0rem;
@@ -83,17 +113,17 @@ body {
     .breadcrumb-item {
       padding-left: 0.3rem;
 
-      + .breadcrumb-item::before {
+      +.breadcrumb-item::before {
         padding-right: 0.3rem;
       }
     }
   }
-  
-  .breadcrumb > .breadcrumb-item {
+
+  .breadcrumb>.breadcrumb-item {
     padding-left: 0px;
   }
 
-  .breadcrumb > .breadcrumb-item ~ .breadcrumb-item{
+  .breadcrumb>.breadcrumb-item~.breadcrumb-item {
     padding-left: 3px;
   }
 
@@ -103,50 +133,50 @@ body {
 }
 
 .td-content {
-  ::before{
+  ::before {
     display: block !important;
   }
 
   color: $ctx-text-black;
-  
+
   h1 {
     font-size: $h1-font-size;
   }
-  
+
   h2 {
     font-size: $h2-font-size;
-    font-weight:600 !important;
+    font-weight: 600 !important;
     margin: 2rem 0rem 0.5rem 0rem !important;
     max-width: 100% !important;
-    
+
   }
 
   h3 {
     font-size: $h3-font-size;
-    font-weight:400 !important;
+    font-weight: 400 !important;
     margin: 1rem 0rem 0rem 0rem !important;
     padding-bottom: 0.5rem;
   }
- 
+
   h4 {
     font-size: $h4-font-size;
-    font-weight:400 !important;
+    font-weight: 400 !important;
     margin: 1rem 0rem 0.5rem 0rem !important;
   }
-  
+
   p.namespace {
-      font-size: 10pt;
-      margin-top: -14px;
-    }
-  
+    font-size: 10pt;
+    margin-top: -14px;
+  }
+
   th {
     color: $ctx-text-black;
   }
-  
+
   td {
     color: $ctx-text-black;
   }
-  
+
   table {
     display: inline-block !important;
 
@@ -159,7 +189,7 @@ body {
       background-color: transparent !important;
     }
   }
-  
+
   .highlight {
     margin: 1rem 0 !important;
     padding: 0;
@@ -186,7 +216,7 @@ body {
       margin-right: auto;
     }
   }
-  
+
   figcaption {
     h4 {
       text-align: center;
@@ -197,23 +227,24 @@ body {
   }
 
   // Add external link icon.
-  a[href^="https://" i], a[href^="http://" i] {
+  a[href^="https://" i],
+  a[href^="http://" i] {
     &:after {
-        vertical-align: super;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        font-size: 60%;
-        content: "\00a0\f35d";
+      vertical-align: super;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 60%;
+      content: "\00a0\f35d";
     }
   }
 }
 
 main {
-  
+
   a {
     color: $primary;
   }
-  
+
   .btn {
     a {
       color: $white;
@@ -235,14 +266,14 @@ main {
       font-size: 4rem;
       line-height: 5rem;
     }
-    
+
     .title {
       color: $ctx-text-black;
       font-size: 1.75rem;
       font-weight: 500;
       margin: .5rem 0rem 0.25rem 0rem;
     }
-    
+
     .description {
       color: $ctx-text-black;
       font-size: 1rem;
@@ -250,15 +281,15 @@ main {
       margin-bottom: 0px;
     }
   }
-  
-  .card-container:hover{
+
+  .card-container:hover {
     transform: scale(1.01);
   }
-  
+
   a {
     color: white;
   }
-  
+
   a:hover {
     color: white;
   }
@@ -267,13 +298,22 @@ main {
 footer {
   font-size: 0.8rem !important;
   padding-top: 1rem !important;
+  border-top: 1px $ctx-blue solid;
+  
+  &.bg-light {
+    background-color: $white !important;
+  }
+
+  .text-black {
+    color: $ctx-text-black !important;
+  }
 
   div.copyright-container {
     padding: 1rem;
     border-top: solid 1px #676767;
     color: #676767;
   }
-  
+
   a:hover {
     color: $ctx-green !important;
   }
@@ -283,11 +323,13 @@ footer {
 
 .popover.offline-search-result {
   max-width: 90%;
+
   p {
     font-size: .9rem;
     color: $ctx-text-black;
     margin-right: 12px;
   }
+
   .mt-4 {
     margin-top: 0px !important;
   }

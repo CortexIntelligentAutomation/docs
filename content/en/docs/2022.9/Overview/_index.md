@@ -29,19 +29,6 @@ With a **[comprehensive set of functionality][Blocks]** and interfaces with **3r
 
 Using Cortex, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
 
-### Across multiple sectors, industries and markets
-
-Cortex has been deployed in **small**, **medium** and **large enterprises** from different **[sectors, industries and markets][Industries]**, including:
-
-* **[Telecommunication services][Telco]**
-* **[IT services][IT]**
-* **[Banking, Financial Services and Insurance][BFSI]**
-* Chemicals
-* Paper and Forest products
-* Food products
-* Government
-* Media
-
 ### For diverse sets of use cases
 
 Cortex has been deployed for a diverse set of **[use cases][]**, including:
@@ -78,12 +65,7 @@ Wherever you are on your automation journey and whatever you are trying to achie
 |**[Reference][]**|Browse through the reference documentation, including details about APIs, blocks, data types, exceptions.|
 |**[FAQs][]**|Find the answers to your questions.|
 |**[Videos][]**|View a range of videos about the Cortex platform, automation, strategies and methodologies, as well as industry specific content.|
-|**[Webinars][]**|Watch a selection of automation related webinars.|
-|**[Engage&nbsp;With&nbsp;Us][Engage With Us]**|Let us help you to get started by participating in one of our enablement pathway programs:
-||1. [Kickstarter][] - Free two/three day workshop that enables the rapid configuration of a cloud-based Cortex platform to prototype, and demonstrate automation in context.|
-||2. [Design Sprint][] - A two week formalised approach to automation based on our 300+ man years of knowledge and experience. Facilitated by Cortex, the Automation Design Sprint works through the required stages of automation, from vision and objectives to prototype and feedback.|
-||3. [Launch Program][] - A twelve week program which takes your team through the phases of mobilisation, design of automation, trial testing and sign-off to production.|
-||4. [Acceleration Program][] - A three, six or nine month program that delivers the framework for organisations to effectively and efficiently accelerate their team in the design, development, and delivery of automation using the Cortex platform.|
+|**[Engage&nbsp;With&nbsp;Us][Engage With Us]**|Let us help you to get started by reaching out to us.|
 
 [FAQs]: {{< url path="Cortex.Faqs.MainDoc" >}}
 
@@ -101,17 +83,7 @@ Wherever you are on your automation journey and whatever you are trying to achie
 [Customers]: {{< url path="Cortex.Website.Customers.MainDoc" >}}
 
 [Engage With Us]: {{< url path="Cortex.Website.EngageWithUs.MainDoc" >}}
-[Acceleration Program]: {{< url path="Cortex.Website.EngageWithUs.AccelerationProgram" >}}
-[Design Sprint]: {{< url path="Cortex.Website.EngageWithUs.DesignSprint" >}}
-[Kickstarter]: {{< url path="Cortex.Website.EngageWithUs.Kickstarter" >}}
-[Launch Program]: {{< url path="Cortex.Website.EngageWithUs.LaunchProgram" >}}
-
-[Industries]: {{< url path="Cortex.Website.Industries.MainDoc" >}}
-[BFSI]: {{< url path="Cortex.Website.Industries.Bfsi" >}}
-[IT]: {{< url path="Cortex.Website.Industries.It" >}}
-[Telco]: {{< url path="Cortex.Website.Industries.Telco" >}}
 
 [use cases]: {{< url path="Cortex.Website.UseCases.MainDoc" >}}
 
 [Videos]: {{< url path="Cortex.YouTube.MainDoc" >}}
-[Webinars]: {{< url path="Cortex.YouTube.Webinars.MainDoc" >}}

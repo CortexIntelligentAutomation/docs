@@ -23,7 +23,7 @@ All properties are optional, and if not supplied will be set to the following de
 | [Error Code][ErrorCode Property] | `null` |
 | [Details][Details Property] | `null`|
 | [InnerException][InnerException Property] | `null` |
-| [HelpLink][HelpLink Property] | `https://v2022.docs.cortex-ia.com/docs/reference/exceptions/flows/flow-exception` |
+| [HelpLink][HelpLink Property] | `https://docs.wearecortex.com/docs/2023.3/reference/exceptions/flows/flow-exception/` |
 
 ## Examples
 

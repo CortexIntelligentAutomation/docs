@@ -1,10 +1,10 @@
-# Cortex Product Portal
+# CORTEX Product Portal
 
-Welcome to the Cortex Product Portal repository. This is the source for [https://docs.WeAreCORTEX.com/](https://docs.wearecortex.com/).
+Welcome to the CORTEX Product Portal repository. This is the source for [https://docs.WeAreCORTEX.com/](https://docs.wearecortex.com/).
 
 ## Contributions and Feedback
 
-If you'd like to contribute to the [Cortex Product Portal](https://docs.wearecortex.com/), found an issue, would like to provide feedback or suggest an improvement, please contact [Cortex Support](https://support.wearecortex.com/).
+If you'd like to contribute to the [CORTEX Product Portal](https://docs.wearecortex.com/), found an issue, would like to provide feedback or suggest an improvement, please contact [CORTEX Support](https://support.wearecortex.com/).
 
 ## Copyright and license
 
