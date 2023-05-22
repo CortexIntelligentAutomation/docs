@@ -79,7 +79,7 @@ The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)N
 |--------------------|---------------------------|------------------------------------------|
 | [Flow][Flow Property] | [Flow][Flow Property], with value `add-database-entry` | [Flow][Flow Property] is of type [FlowReference][] |
 | [Inputs][Inputs Property] |  | [Inputs][Inputs Property] is of type [InputVariables][] |
-| &nbsp; &nbsp; > NewData | No value (default to `DefaultNewDataValue`) | `($)NewData` is of type [String][] |
+| &nbsp; &nbsp; > NewData | No value (defaults to `DefaultNewDataValue`) | `($)NewData` is of type [String][] |
 | [Execution Task][Execution Task Property] | `($)ExecutionTask`, with no value | `($)ExecutionTask` is a variable of type [IExecutionTask][] |
 
 #### Result
