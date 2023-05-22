@@ -14,7 +14,7 @@ description: "Executes an HTTP request and returns a response."
 
 ## Description
 
-Executes an [HTTP Request][Http Request Property] using the specified [Http Credentials][Http Credentials Property] and returns the [Http Response][Http Response Property].
+Executes an [Http Request][Http Request Property] using the specified [Http Credentials][Http Credentials Property] and returns the [Http Response][Http Response Property].
 
 ## Examples
 
