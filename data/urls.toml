@@ -1134,7 +1134,6 @@
                         StringInterpolation = "/docs/reference/concepts/working-with/text/converting-objects-to-text/#string-interpolation"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
                         MainDoc = "/docs/reference/concepts/working-with/text/formatting/"
-                        FormatParameters = "/docs/reference/concepts/working-with/text/formatting/#format-parameters"
                         FormatSpecifiers = "/docs/reference/concepts/working-with/text/formatting/#format-specifiers"
                         FormatTemplates = "/docs/reference/concepts/working-with/text/formatting/#format-templates"
                     [Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax]
