@@ -45,7 +45,7 @@ TODO:
 
 Links:
 
-- [Overview: the four different loops of the C# programming language][]
+- [Overview: the four different loops of the C# programming language][What is a loop]
 
 ## Remarks
 
@@ -71,4 +71,4 @@ TODO
 
 TODO
 
-[]: {{< url path="Kodify.WhatIsALoop" >}}
+[What is a loop]: {{< url path="Kodify.WhatIsALoop" >}}
