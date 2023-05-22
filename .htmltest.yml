@@ -15,3 +15,4 @@ IgnoreURLs:
 - "https://grafana.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
+- "docs/?.*/_shared/"
