@@ -20,7 +20,7 @@ Runs a chosen [Flow][Flow Property] asynchronously using the [Inputs][Inputs Pro
 
 This example will run the [Flow][Flow Property] `add-database-entry` assigning the task representing the execution of the [Flow][Flow Property] to `($)ExecutionTask`.
 
-The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)NewData`, which is then added to a database by the [Flow][Flow Property]. The flow containing the [Run Flow Async][] block will then continue executing the rest of its blocks.
+The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)NewData`, which is then added to a database by the [Flow][Flow Property]. If no value is given for `($)NewData` the default value `DefaultNewDataValue` is used. The flow containing the [Run Flow Async][] block will then continue executing the rest of its blocks.
 
 #### Properties
 
@@ -34,6 +34,57 @@ The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)N
 #### Result
 
 `SomeNewDataToAddToDatabase` is passed into the [Input Variable][] `($)NewData` for the [Flow][Flow Property] `add-database-entry`, which results in the [Flow][Flow Property] starting its execution. The flow containing the [Run Flow Async][] block continues executing without waiting for it to complete.
+
+After the [Flow][Flow Property] has started running, the [Execution Task][Execution Task Property] will have the following properties:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": false,
+  "IsCompletedSuccessfully": false,
+  "IsFaulted": false,
+  "Status": "Running",
+  "Exception": null
+}
+```
+
+Once the [Flow][Flow Property] has added the database entry and has completed successfully, the [Execution Task][Execution Task Property]'s properties will be updated to the following:
+
+```json
+{
+  "ExecutionId": "00000000-0000-0000-0000-000000000000",
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "IsCancelled": false,
+  "IsCompleted": true,
+  "IsCompletedSuccessfully": true,
+  "IsFaulted": false,
+  "Status": "RanToCompletion",
+  "Exception": null
+}
+```
+
+***
+
+### Running a Flow Asynchronously with Default Input Variables
+
+This example will run the [Flow][Flow Property] `add-database-entry` assigning the task representing the execution of the [Flow][Flow Property] to `($)ExecutionTask`.
+
+The [Flow][Flow Property] `add-database-entry` takes an [Input Variable][] `($)NewData`, which is then added to a database by the [Flow][Flow Property]. If no value is given for `($)NewData` the default value `DefaultNewDataValue` is used. The flow containing the [Run Flow Async][] block will then continue executing the rest of its blocks.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Flow][Flow Property] | [Flow][Flow Property], with value `add-database-entry` | [Flow][Flow Property] is of type [FlowReference][] |
+| [Inputs][Inputs Property] |  | [Inputs][Inputs Property] is of type [InputVariables][] |
+| &nbsp; &nbsp; > NewData | No value (default to `DefaultNewDataValue`) | `($)NewData` is of type [String][] |
+| [Execution Task][Execution Task Property] | `($)ExecutionTask`, with no value | `($)ExecutionTask` is a variable of type [IExecutionTask][] |
+
+#### Result
+
+As no value is passed into the [Input Variable][] `($)NewData` for the [Flow][Flow Property] `add-database-entry` the default of `DefaultNewDataValue` is used, which results in the [Flow][Flow Property] starting its execution. The flow containing the [Run Flow Async][] block continues executing without waiting for it to complete.
 
 After the [Flow][Flow Property] has started running, the [Execution Task][Execution Task Property] will have the following properties:
 
@@ -181,8 +232,7 @@ In future this limitation may be removed.
 [Execution Task Property]: {{< ref "#execution-task" >}}
 [Syncing the Inputs Property with the Flow Contract]: {{< ref "#syncing-the-inputs-property-with-the-flow-contract" >}}
 [Selecting a Flow]: {{< ref "#selecting-a-flow" >}}
-[Running a Flow that Throws an Exception]: {{< ref "#running-a-flow-that-throws-an-exception" >}}
-[Running a Flow with Default Input Variables]: {{< ref "#running-a-flow-with-default-input-variables" >}}
+[Running a Flow with Default Input Variables]: {{< ref "#running-a-flow-asynchronously-with-default-input-variables" >}}
 [Default Values]: {{< ref "#default-values" >}}
 [Exceptions Thrown by a Child Flow]: {{< ref "#exceptions-thrown-by-a-child-flow" >}}
 
