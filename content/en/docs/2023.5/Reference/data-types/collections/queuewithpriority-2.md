@@ -90,7 +90,7 @@ None
 
 * [System.Collections.Generic.PriorityQueue&lt;TElement,TPriority>][PriorityQueue]
 
-[PriorityComparer Property]: {{< ref "#PriorityComparer" >}}
+[PriorityComparer Property]: {{< ref "#prioritycomparer" >}}
 
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
 [ArgumentNullException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentNullException" >}}

@@ -728,7 +728,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Connection Strings]: {{< ref "#connection-strings">}}
 [Parameterised Commands]: {{< ref "#parameterised-commands">}}
 [Complex Commands]: {{< ref "#complex-commands">}}
-[Opening Connections]: {{< ref "#keeping-connections-open">}}
+[Opening Connections]: {{< ref "#opening-connections">}}
 [Closing Connections]: {{< ref "#closing-connections">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}

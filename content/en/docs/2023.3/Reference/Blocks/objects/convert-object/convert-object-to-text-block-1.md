@@ -236,7 +236,7 @@ Currently the block does not support indexing into properties (i.e. `ListPropert
 [Converting Objects To Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText.MainDoc" >}}
 [Invariant Culture rules]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture.MainDoc" >}}
 [Text Formatting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Formatting.MainDoc" >}}
-[Valid Format Parameter]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatParameters" >}}
+[Valid Format Parameter]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatTemplates" >}}
 
 [TObject]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
