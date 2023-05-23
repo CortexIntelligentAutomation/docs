@@ -25,19 +25,17 @@
     {{ end }}
     {{ $navRoot := cond (and (ne .Params.toc_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection }}
     {{ $ulNr := 0 }}
-    {{ $ulShow := cond (isset .Site.Params.ui "ul_show") .Site.Params.ui.ul_show 1 }}
     <ul class="td-sidebar-nav__section pr-md-3  ul-{{ $ulNr }}">
-      {{ template "tree-nav-section" (dict "page" . "section" $navRoot "delayActive" $shouldDelayActive "ulNr" $ulNr "ulShow" (add $ulShow 1)) }}
+      {{ template "tree-nav-section" (dict "page" . "section" $navRoot "delayActive" $shouldDelayActive "ulNr" $ulNr) }}
     </ul>
   </nav>
 </div>
 
 {{ define "tree-nav-section" }}
-  {{ $show := or (and (not .page.Site.Params.ui.sidebar_menu_compact) (.page.IsAncestor .section)) (.page.IsDescendant .section) }}
+  {{ $show := or (and (not .page.Site.Params.ui.sidebar_menu_compact) (.page.IsAncestor .section)) (.page.IsDescendant .section) (and (eq (add .ulNr 1) (.section.Ancestors | len)) (eq .page.CurrentSection .section)) }}
   {{ $isDocs := hasPrefix .page.RelPermalink "/docs" }}
   {{ $activePath := and (not .delayActive) (or (eq .page .section) (.page.IsDescendant .section)) }}
   {{ $hidden := and (not $activePath) (eq .ulNr 1) }}
-  
   {{ if $isDocs }}
     {{ if not $hidden }}
       {{ template "tree-nav-section-details" (dict "show" $show "page" .page "section" .section "delayActive" .delayActive "ulNr" .ulNr "Params" .Params) }}
@@ -53,8 +51,10 @@
   {{ $p := .page }}
   {{ $ulNr := .ulNr }}
   {{ $delayActive := .delayActive}}
-  {{ $active := eq $p.CurrentSection $s }}
+  {{ $active := eq .page.CurrentSection .section }}
+  {{ $childActive := (and (eq .ulNr (.section.Ancestors | len)) (eq .page.CurrentSection .section)) }}
   {{ $sid := $s.RelPermalink | anchorize }}
+
   <li class="td-sidebar-nav__section-title">
     <a  href="{{ $s.RelPermalink }}" class="align-left pl-0 pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ $s.LinkTitle }}</a>
   </li>
@@ -67,7 +67,7 @@
           {{ if .IsPage }}
             {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
             {{ $active := eq . $p }}
-            <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $delayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $delayActive) $childActive }}active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
           {{ else }}
             {{ $ulNr := add $ulNr 1 }}
             <ul class="td-sidebar-nav__section pr-md-3  ul-{{ $ulNr }}">
