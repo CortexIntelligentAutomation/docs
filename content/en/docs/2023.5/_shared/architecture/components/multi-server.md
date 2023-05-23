@@ -4,7 +4,11 @@
 | [{{% ctx %}} Studio][Studio Guide]                     | {{< section "/architecture/components/purpose/cortex-studio.md" >}}                | Required                    | Web Application Server                     |
 | [{{% ctx %}} Flow Debugger Service][CORTEX Flow Debugger Service]                  | {{< section "/architecture/components/purpose/cortex-flow-debugger-service.md" >}} | Required                    | Web Application Server                     |
 | [API Gateway Service][]                           | {{< section "/architecture/components/purpose/api-gateway-service.md" >}}          | Required                    | Application Server                         |
+| [Authorisation Service][]                           | {{< section "/architecture/components/purpose/authorisation-service.md" >}}          | Required                    | Application Server                         |
+| [Configuration Management Service][]          | {{< section "/architecture/components/purpose/configuration-management-service.md" >}}          | Required                    | Application Server                         |
+| [Data Storage Service][]                           | {{< section "/architecture/components/purpose/data-storage-service.md" >}}          | Required                    | Application Server                         |
 | [Execution Service][]                             | {{< section "/architecture/components/purpose/execution-service.md" >}}            | Required                    | Application Server                         |
+| [Execution Management Service][]            | {{< section "/architecture/components/purpose/execution-management-service.md" >}}          | Required                    | Application Server                         |
 | [Licence Management Service][]                    | {{< section "/architecture/components/purpose/licence-management-service.md" >}}   | Required                    | Application Server                         |
 | [Package Management Service][]                    | {{< section "/architecture/components/purpose/package-management-service.md" >}}   | Required                    | Application Server                         |
 | [Provisioning Service][]                          | {{< section "/architecture/components/purpose/provisioning-service.md" >}}         | Required                    | Application Server                         |
@@ -21,6 +25,10 @@
 
 [API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [CORTEX Flow Debugger Service]: {{< url path="Cortex.Guides.FlowDebuggerService.MainDoc" >}}
+[Authorisation Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService.MainDoc" >}}
+[Configuration Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService.MainDoc" >}}
+[Data Storage Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc" >}}
+[Execution Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ExecutionManagementService.MainDoc" >}}
 [Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
 [Licence Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService.MainDoc" >}}
 [Package Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService.MainDoc" >}}
