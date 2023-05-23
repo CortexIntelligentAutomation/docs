@@ -52,13 +52,7 @@
   {{ $ulNr := .ulNr }}
   {{ $delayActive := .delayActive}}
   {{ $active := eq .page.CurrentSection .section }}
-
-  {{ $ancestors := 0 }}
-  {{ with $s }}
-    {{ $ancestors = .Ancestors | len}}
-  {{ end }}
-
-  {{ $childActive := (and (eq .ulNr $ancestors) (eq .page.CurrentSection $s)) }}
+  {{ $childActive := (and (eq .ulNr ($s.Ancestors | len)) (eq .page.CurrentSection $s)) }}
   {{ $sid := $s.RelPermalink | anchorize }}
 
   <li class="td-sidebar-nav__section-title">
