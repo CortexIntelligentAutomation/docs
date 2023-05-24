@@ -137,7 +137,7 @@ To overcome this, this block creates a new [String][] which has the text removed
 [StartIndex Property]: {{< ref "#start-index" >}}
 [EndIndex Property]: {{< ref "#end-index" >}}
 
-[StartIndexGreaterThanEndIndex Example]: {{< ref "#get-text-where-start-index-is-greater-than-end-index" >}}
+[StartIndexGreaterThanEndIndex Example]: {{< ref "#remove-text-where-start-index-is-greater-than-end-index" >}}
 
 [Indexes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}

@@ -117,7 +117,7 @@ None
 
 [Host]: {{< ref "#host" >}}
 [Port]: {{< ref "#port" >}}
-[TerminalPrompt]: {{< ref "#TerminalPrompt" >}}
+[TerminalPrompt]: {{< ref "#terminalprompt" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
