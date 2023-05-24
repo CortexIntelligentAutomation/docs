@@ -1,1 +1,1 @@
-application service that handles the creation and deletion of Tenant Systems.
+Application Service that handles the creation and deletion of Tenant Systems.
