@@ -1,1 +1,1 @@
-Application Service that handles the creation and management of reliable collections.
+For future use.
