@@ -1,6 +1,6 @@
 ---
 title: "Configuration Management Service"
-linkTitle: "configuration Management Service"
+linkTitle: "Configuration Management Service"
 description: "The Configuration Management Service."
 ---
 
