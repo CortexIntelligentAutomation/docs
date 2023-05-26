@@ -30,7 +30,7 @@ The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Ser
 * 1x New Load Balancer Server for Innovation.
 * 3x New Application Servers for Innovation.
 
-{{< figure src="/images/editable/Cortex Innovation and v7.2 Best Architecture.png" class="centre" title="8 Server, Recommended Architecture Diagram" >}}.
+{{< figure src="/images/editable/Cortex Innovation and v7.2 Best Architecture.png" class="centre" title="8 Server, Recommended Architecture Diagram" >}}
 
 ### Minimum Architecture
 
@@ -40,7 +40,7 @@ The minimum architecture requires only the 4 existing servers:
 * 1x Database Server for v7.2, which will also host the remaining Application Server for Innovation.
 * 1x Database Server for v7.2, which will also host the Load Balancer for Innovation.
 
-{{< figure src="/images/editable/Cortex Innovation and v7.2 Min Architecture.png" class="centre" title="4 Server, Minimum Architecture Diagram" >}}.
+{{< figure src="/images/editable/Cortex Innovation and v7.2 Min Architecture.png" class="centre" title="4 Server, Minimum Architecture Diagram" >}}
 
 ### Alternative Architectures
 

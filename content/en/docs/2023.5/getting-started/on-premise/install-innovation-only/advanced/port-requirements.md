@@ -52,13 +52,17 @@ These rules will all appear in Windows Firewall with names starting with ‘{Cus
 
 Each service has an endpoint which is used to communicate with Service Fabric and the RabbitMQ message broker. These are configured in the ServiceManifest.xml file within each package in the ApplicationPackages\Cortex directory of the installation media. These ports cannot be used by any other program. If they do clash with another program, they may be changed but additional configuration changes may be necessary, as described in the description of each port. The Application ports must not lie in the `ephemeralPorts` range.
 
-| Name of Service    | Description                                                                    | Default Port(s)                      | Protocol(s) | Direction         | Program |
-|--------------------|--------------------------------------------------------------------------------|--------------------------------------|-------------|-------------------|---------|
-| API Gateway        | {{< section "/port-requirements/description/api-gateway.md" >}}                | 8722                                 | TCP, UDP    | Inbound, Outbound | Any     |
-| Execution          | {{< section "/port-requirements/description/execution.md" >}}                  | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Licence Management | {{< section "/port-requirements/description/licence-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Package Management | {{< section "/port-requirements/description/package-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Provisioning       | {{< section "/port-requirements/description/provisioning.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Name of Service          | Description                                                                    | Default Port(s)                      | Protocol(s) | Direction         | Program |
+|--------------------------|--------------------------------------------------------------------------------|--------------------------------------|-------------|-------------------|---------|
+| API Gateway              | {{< section "/port-requirements/description/api-gateway.md" >}}                | 8722                                 | TCP, UDP    | Inbound, Outbound | Any     |
+| Authorisation            | {{< section "/port-requirements/description/authorisation.md" >}}              | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Configuration Management | {{< section "/port-requirements/description/configuration-management.md" >}}   | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Data Storage             | {{< section "/port-requirements/description/data-storage.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Execution                | {{< section "/port-requirements/description/execution.md" >}}                  | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Execution Management     | {{< section "/port-requirements/description/execution-management.md" >}}       | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Licence Management       | {{< section "/port-requirements/description/licence-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Package Management       | {{< section "/port-requirements/description/package-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Provisioning             | {{< section "/port-requirements/description/provisioning.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
 
 ## Load Balancer Rules
 

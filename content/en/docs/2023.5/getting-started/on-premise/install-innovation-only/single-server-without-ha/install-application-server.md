@@ -136,6 +136,12 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -ServerCertificatePassword "myPassword" `
     -SkipLoadBalancer `
     -Credential $Credential `
+    -LdapConnectionDetails @{
+	    Host= "LDAP://ldapserver.fqdn.com:389"
+	    UseSsl= $false
+        Username= "someUserName"
+	    Password= "somePassword"
+    } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-app-install-log.txt"
         {{< /tab >}}
@@ -150,6 +156,12 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -UseSelfSignedCertificates `
     -SkipLoadBalancer `
     -Credential $Credential `
+    -LdapConnectionDetails @{
+	    Host= "LDAP://ldapserver.fqdn.com:389"
+	    UseSsl= $false
+        Username= "someUserName"
+	    Password= "somePassword"
+    } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-app-install-log.txt"
         {{< /tab >}}
@@ -168,6 +180,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
+    |`LdapConnectionDetails`                        | The connection details to the LDAP server. <br /><br />This must be configured with a valid `Host`, `Username`, `Password`, and whether the LDAP server uses SSL using `UseSsl`. {{< alert type="note" title="Note" >}}All fields but `UseSsl` can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
     

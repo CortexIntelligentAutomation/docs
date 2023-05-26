@@ -293,6 +293,14 @@
                 MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/authorisation-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/configuration-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/data-storage-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ExecutionManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/execution-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
