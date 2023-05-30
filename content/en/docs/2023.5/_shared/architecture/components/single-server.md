@@ -26,7 +26,7 @@
 # ALTERNATIVE
 ==============================================================================
 ==============================================================================
-| Component                                                                            | Purpose                                                                                | Required/Optional           | Server Role                                |
+| Component                                                                            | Purpose                                                                                       | Required/Optional           | Server Role                                |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|--------------------------------------------|
 | [{{% ctx %}} Gateway][Gateway Guide]                                                 | {{< section "/architecture/components/purpose/cortex-gateway.md">}}                           | Required                    | Web Application Server                     |
 | [{{% ctx %}} Studio][Studio Guide]                                                   | {{< section "/architecture/components/purpose/cortex-studio.md" >}}                           | Required                    | Web Application Server                     |
