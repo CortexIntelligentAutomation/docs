@@ -56,8 +56,11 @@
 | [gobetween][]                                                                        | {{< section "/architecture/components/purpose/gobetween.md" >}}                               | Required                    | Load Balancer                              |
 | [NSSM][]                                                                             | {{< section "/architecture/components/purpose/nssm.md" >}}                                    | Required                    | Load Balancer                              |
 
-[API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
+[Innovation Core Application]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.MainDoc" >}}
+[Innovation Execution Application]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.MainDoc" >}}
+
 [CORTEX Flow Debugger Service]: {{< url path="Cortex.Guides.FlowDebuggerService.MainDoc" >}}
+[API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [Authorisation Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService.MainDoc" >}}
 [Configuration Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService.MainDoc" >}}
 [Data Storage Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc" >}}
