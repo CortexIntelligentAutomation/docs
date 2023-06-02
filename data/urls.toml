@@ -319,6 +319,8 @@
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
                 [Cortex.Guides.Gateway.Settings.StudioAuthorisation]
                     MainDoc = "/docs/guides/cortex-gateway/settings/studio-authorisation"
+                [Cortex.Guides.Gateway.Settings.Packages]
+                    MainDoc = "/docs/guides/cortex-gateway/settings/packages"
             [Cortex.Guides.Gateway.WelcomePage]
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
     [Cortex.Reference]
