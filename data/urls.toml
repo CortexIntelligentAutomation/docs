@@ -587,6 +587,7 @@
                         InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
                     [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
                         MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
+                        KnownLimitations = "/docs/reference/blocks/flows/run-flow/run-flow-async-block/#known-limitations"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
