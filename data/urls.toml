@@ -2228,6 +2228,7 @@
     MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
     Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
     BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
+    ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]
