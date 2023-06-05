@@ -21,6 +21,17 @@
                     ImprovementsToPerformance = "/blog/2023/04/11/2023.3/#improvements-to-performance"
                     UpdatedThirdPartyComponents = "/blog/2023/04/11/2023.3/#updated-third-party-components"
                     ProductPortal = "/blog/2023/04/11/2023.3/#product-portal"
+                [Cortex.Blogs.Releases.2023.5]
+                    MainDoc =  "/blog/2023/06/05/2023.5/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/06/05/2023.5/#expansion-of-the-ha-platform"
+                    NewConfigurationManagementService = "/blog/2023/06/05/2023.5/#new-configuration-management-service"
+                    NewDataStorageService = "/blog/2023/06/05/2023.5/#new-data-storage-service"
+                    NewAuthorisationService = "/blog/2023/06/05/2023.5/#new-authorisation-service"
+                    IntroducedOAuth2Authorisation = "/blog/2023/06/05/2023.5/#introduced-oauth2-authorisation-for-running-flows-in-published-packages"
+                    NewBlocks = "/blog/2023/06/05/2023.5/#new-blocks"
+                    ImprovedInteractionPortal = "/blog/2023/06/05/2023.5/#improved-interaction-portal"
+                    ImprovedInstallationProcess = "/blog/2023/06/05/2023.5/#improved-installation-process"
+                    ProductPortal = "/blog/2023/06/05/2023.5/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]

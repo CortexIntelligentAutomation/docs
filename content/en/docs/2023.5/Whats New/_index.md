@@ -18,7 +18,7 @@ weight: 1
 
 This release introduces:
 
-* Improvements to the [Interaction Portal][].
+* [Improvements to the Interaction Portal][].
 
 ## Improved Capability
 
@@ -28,7 +28,7 @@ This release introduces:
   * [Configuration Management Service][]
   * [Data Storage Service][]
   * [Authorisation Service][]
-* Six [new Blocks][New Blocks] have been added to the [{{% ctx %}} Block Packages][Blocks], adding new functionality to work with:
+* Six [new Blocks][New Blocks] have been added to the {{% ctx %}} Block Packages, adding new functionality to work with:
   * [Flows][]
   * [Tasks][]
   * [Telnet][]
@@ -56,3 +56,20 @@ This release introduces a number of other improvements, such as:
 * [Improvements to installation process of the HA Platform][]
 
 For a full list of what has been introduced in this release, please see the [2023.5 Release Notes][]
+
+[Improvements to the Interaction Portal]: {{< url path="Cortex.Blogs.Releases.2023.5.ImprovedInteractionPortal" version="2023.5" >}}
+[HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.5.ExpansionOfTheHAPlatform" version="2023.5" >}}
+[Configuration Management Service]: {{< url path="Cortex.Blogs.Releases.2023.5.NewConfigurationManagementService" version="2023.5" >}}
+[Data Storage Service]: {{< url path="Cortex.Blogs.Releases.2023.5.NewDataStorageService" version="2023.5" >}}
+[Authorisation Service]: {{< url path="Cortex.Blogs.Releases.2023.5.NewAuthorisationService" version="2023.5" >}}
+[New Blocks]: {{< url path="Cortex.Blogs.Releases.2023.5.NewBlocks" version="2023.5" >}}
+[OAuth2 authorisation for running flows in published packages]: {{< url path="Cortex.Blogs.Releases.2023.5.IntroducedOAuth2Authorisation" version="2023.5" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.5.ProductPortal" version="2023.5" >}}
+[Improvements to installation process of the HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.5.ImprovedInstallationProcess" version="2023.5" >}}
+[2023.5 Release Notes]: {{< url path="Cortex.Blogs.Releases.2023.5.MainDoc" version="2023.5" >}}
+
+[Flows]: {{< url path="Cortex.Reference.Blocks.Flows.MainDoc" version="2023.5" >}}
+[Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.MainDoc" version="2023.5" >}}
+[Telnet]: {{< url path="Cortex.Reference.Blocks.Telnet.MainDoc" version="2023.5" >}}
+
+[SSH data types]: {{< url path="Cortex.Reference.DataTypes.Ssh.MainDoc" version="2023.5" >}}
