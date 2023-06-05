@@ -7,7 +7,7 @@ weight: 1
 
 ## Summary
 
-{{% version %}} is the third release of the next generation of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
+{{% version %}} is the third [Fast Track][] release of the next generation of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
 
 * [Usability][]
 * [Capability][]
@@ -24,7 +24,7 @@ This release introduces:
 
 This release introduces:
 
-* New services within the [HA Platform][]:
+* Three new services within the [HA Platform][]:
   * [Configuration Management Service][]
   * [Data Storage Service][]
   * [Authorisation Service][]
@@ -53,7 +53,7 @@ This release introduces:
 
 ## Other Improvements
 
-This release introduces a number of other improvements, such as:
+This release additionally introduces:
 
 * [Improvements to installation process of the HA Platform][]
 
@@ -80,3 +80,5 @@ For a full list of what has been introduced in this release, please see the [202
 [Telnet]: {{< url path="Cortex.Reference.Blocks.Telnet.MainDoc" version="2023.5" >}}
 
 [SSH data types]: {{< url path="Cortex.Reference.DataTypes.Ssh.MainDoc" version="2023.5" >}}
+
+[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" >}}
