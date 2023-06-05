@@ -14,14 +14,14 @@ $tertiary: #1767c6 !default;
 $white: #fff !default;
 $dark: #252525 !default;
 
-$font-size-base: 1rem !default;
+$font-size-base: 0.9rem !default;
 
-$h1-font-size: $font-size-base * 1.6 !default;
-$h2-font-size: $font-size-base * 1.4 !default;
-$h3-font-size: $font-size-base * 1.2 !default;
-$h4-font-size: $font-size-base * 1.0 !default;
-$h5-font-size: $font-size-base * 1.0 !default;
-$h6-font-size: $font-size-base !default;
+$h1-font-size: $font-size-base * 2.0 !default;
+$h2-font-size: $font-size-base * 1.8 !default;
+$h3-font-size: $font-size-base * 1.6 !default;
+$h4-font-size: $font-size-base * 1.4 !default;
+$h5-font-size: $font-size-base * 1.2 !default;
+$h6-font-size: $font-size-base * 1.1 !default;
 
 body {
   margin: 0;
@@ -103,6 +103,16 @@ body {
   }
 }
 
+.td-blog {
+  h1 {
+    margin-top: 10px;
+  }
+
+  h2 {
+    margin-top: 10px;
+  }
+}
+
 .td-main {
   color: $ctx-black;
 
@@ -140,11 +150,11 @@ body {
   color: $ctx-text-black;
 
   h1 {
-    font-size: $h1-font-size;
+    font-size: $h1-font-size !important;
   }
 
   h2 {
-    font-size: $h2-font-size;
+    font-size: $h2-font-size !important;
     font-weight: 600 !important;
     margin: 2rem 0rem 0.5rem 0rem !important;
     max-width: 100% !important;
@@ -152,16 +162,24 @@ body {
   }
 
   h3 {
-    font-size: $h3-font-size;
-    font-weight: 400 !important;
+    font-size: $h3-font-size !important;
+    font-weight: 600 !important;
     margin: 1rem 0rem 0rem 0rem !important;
     padding-bottom: 0.5rem;
   }
 
   h4 {
-    font-size: $h4-font-size;
+    font-size: $h4-font-size !important;
     font-weight: 400 !important;
     margin: 1rem 0rem 0.5rem 0rem !important;
+  }
+
+  h5 {
+    font-size: $h5-font-size !important;
+  }
+
+  h6 {
+    font-size: $h6-font-size !important;
   }
 
   p.namespace {

@@ -21,6 +21,17 @@
                     ImprovementsToPerformance = "/blog/2023/04/11/2023.3/#improvements-to-performance"
                     UpdatedThirdPartyComponents = "/blog/2023/04/11/2023.3/#updated-third-party-components"
                     ProductPortal = "/blog/2023/04/11/2023.3/#product-portal"
+                [Cortex.Blogs.Releases.2023.5]
+                    MainDoc =  "/blog/2023/06/05/2023.5/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/06/05/2023.5/#expansion-of-the-ha-platform"
+                    NewConfigurationManagementService = "/blog/2023/06/05/2023.5/#new-configuration-management-service"
+                    NewDataStorageService = "/blog/2023/06/05/2023.5/#new-data-storage-service"
+                    NewAuthorisationService = "/blog/2023/06/05/2023.5/#new-authorisation-service"
+                    IntroducedOAuth2Authorisation = "/blog/2023/06/05/2023.5/#introduced-oauth2-authorisation-for-running-flows-in-published-packages"
+                    NewBlocks = "/blog/2023/06/05/2023.5/#new-blocks"
+                    ImprovedInteractionPortal = "/blog/2023/06/05/2023.5/#improved-interaction-portal"
+                    ImprovedInstallationProcess = "/blog/2023/06/05/2023.5/#improved-installation-process"
+                    ProductPortal = "/blog/2023/06/05/2023.5/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -319,6 +330,8 @@
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
                 [Cortex.Guides.Gateway.Settings.StudioAuthorisation]
                     MainDoc = "/docs/guides/cortex-gateway/settings/studio-authorisation"
+                [Cortex.Guides.Gateway.Settings.Packages]
+                    MainDoc = "/docs/guides/cortex-gateway/settings/packages"
             [Cortex.Guides.Gateway.WelcomePage]
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
     [Cortex.Reference]
@@ -587,6 +600,7 @@
                         InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
                     [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
                         MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
+                        KnownLimitations = "/docs/reference/blocks/flows/run-flow/run-flow-async-block/#known-limitations"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
@@ -2225,6 +2239,7 @@
     MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
     Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
     BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
+    ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]
