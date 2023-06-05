@@ -9,10 +9,10 @@ weight: 1
 
 {{% version %}} is the third release of the next generation of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
 
-* Usability
-* Capability
-* Security
-* Documentation
+* [Usability][]
+* [Capability][]
+* [Security][]
+* [Documentation][]
 
 ## Improved Usability
 
@@ -44,7 +44,7 @@ This release introduces:
 This release introduces:
 
 * [Product Portal][] changes, including:
-  * Rebranding to follow We Are CORTEX branding guidelines
+  * Rebranding to follow We Are {{% ctx %}} branding guidelines
   * Documentation has been updated to reflect the [new and upcoming services][HA Platform]
   * Reference documentation has been added for the [new blocks][New Blocks]
   * Reference documentation to the existing [SSH data types][] has been improved
@@ -56,6 +56,11 @@ This release introduces a number of other improvements, such as:
 * [Improvements to installation process of the HA Platform][]
 
 For a full list of what has been introduced in this release, please see the [2023.5 Release Notes][]
+
+[Usability]: {{< ref "#improved-usability" >}}
+[Capability]: {{< ref "#improved-capability" >}}
+[Security]: {{< ref "#improved-security" >}}
+[Documentation]: {{< ref "#improved-documentation" >}}
 
 [Improvements to the Interaction Portal]: {{< url path="Cortex.Blogs.Releases.2023.5.ImprovedInteractionPortal" version="2023.5" >}}
 [HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.5.ExpansionOfTheHAPlatform" version="2023.5" >}}
