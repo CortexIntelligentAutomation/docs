@@ -24,11 +24,11 @@ This release introduces:
 
 This release introduces:
 
-* The following new services have been added to the [HA Platform][]:
+* New services within the [HA Platform][]:
   * [Configuration Management Service][]
   * [Data Storage Service][]
   * [Authorisation Service][]
-* Six [new Blocks][New Blocks] have been added to the {{% ctx %}} Block Packages, adding new functionality to work with:
+* Six [new Blocks][New Blocks], adding new functionality to work with:
   * [Flows][]
   * [Tasks][]
   * [Telnet][]
@@ -38,6 +38,8 @@ This release introduces:
 This release introduces:
 
 * [OAuth2 authorisation for running flows in published packages][]. The [HA Platform][] can be configured to authenticate against a single Active Directory server, allowing authorised users to start a flow execution. Package Management within Gateway can be used to modify access control to any version of a package.
+
+Note: OAuth2 support is currently only available for the execution of flows in published packages, but will be expanded in future releases.
 
 ## Improved Documentation
 
