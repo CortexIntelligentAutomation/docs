@@ -6,7 +6,7 @@ weight: 40
 ---
 
 # {{% param title %}}
-
+ 
 This guide describes how to install the Web Application Server components on the server. Please ensure that [Install Application Server][] has been completed before starting this installation.
 
 ## Make Installation Artefacts Available
