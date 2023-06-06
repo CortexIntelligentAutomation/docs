@@ -1,0 +1,19 @@
+DirectoryPath: "dist"
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreInternalEmptyHash: true
+IgnoreEmptyHref: true
+IgnoreAltMissing: true
+IgnoreAltEmpty: true
+IgnoreURLs:
+- "https://twitter.com/.*"
+- "https://www.linkedin.com/company/10975051"
+- "(https|http)://www.microsoft.com/.*"
+- "https://azure.microsoft.com/.*"
+- "https://css/swagger-ui.css"
+- "https://js/swagger-ui-bundle.js"
+- "https://js/swagger-ui-standalone-preset.js"
+- "https://kodify.net/.*"
+- "https://grafana.com/.*"
+IgnoreDirs:
+- "docs/?.*/_print/"
+- "docs/?.*/_shared/"

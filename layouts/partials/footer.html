@@ -1,6 +1,6 @@
 {{ $links := .Site.Params.links }}
 {{ $companyInfo := .Site.Params.company.info }}
-<footer class="bg-dark row d-print-none">
+<footer class="bg-light row d-print-none">
   <div class="container-fluid mx-sm-5">
     <div class="row">
       <div class="col-12 col-sm-12 text-center py-3">
@@ -46,7 +46,7 @@
 <ul class="list-unstyled">
   {{ range . }}
   <li data-toggle="tooltip" data-placement="top" aria-label="{{ .name }}">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="{{ .url }}">
+    <a class="text-black" target="_blank" rel="noopener noreferrer" href="{{ .url }}">
       {{ .name }}
     </a>
   </li>
@@ -55,7 +55,7 @@
 {{ end }}
 
 {{ define "footer-company-info" }}
-  <li class="text-white" data-toggle="tooltip" data-placement="top" aria-label="{{ . }}">
+  <li class="text-black" data-toggle="tooltip" data-placement="top" aria-label="{{ . }}">
       {{ . }}
   </li>
 {{ end }}
@@ -64,7 +64,7 @@
 <ul class="list-inline mb-0">
   {{ range . }}
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="{{ .name }}" aria-label="{{ .name }}">
-    <a class="text-white" target="_blank" rel="noopener noreferrer" href="{{ .url }}">
+    <a class="text-black" target="_blank" rel="noopener noreferrer" href="{{ .url }}">
       <i class="{{ .icon }}"></i>
     </a>
   </li>

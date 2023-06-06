@@ -1,5 +1,5 @@
 ---
-title: "News About Cortex"
+title: "News About CORTEX"
 linkTitle: "News"
 weight: 20
 ---

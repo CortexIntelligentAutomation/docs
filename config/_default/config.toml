@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Cortex"
+title = "CORTEX"
 
 enableRobotsTXT = true
 
@@ -59,8 +59,8 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Cortex"
-description = "Product documentation for the Cortex automation platform, including guides, tutorials and reference documentation."
+title = "CORTEX"
+description = "Product documentation for the CORTEX automation platform, including guides, tutorials and reference documentation."
 languageName ="English"
 # Weight used for sorting.
 weight = 1
@@ -82,8 +82,8 @@ weight = 1
 section = ["HTML", "print"]
 
 [params]
-copyright = "Cortex Limited"
-privacy_policy = "https://www.cortex-ia.com/gdpr-privacy-policy/"
+copyright = "We Are CORTEX is registered as CORTEX LTD"
+privacy_policy = "https://www.wearecortex.com/policies/external-data-policy/"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -101,11 +101,11 @@ archived_version = false
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the 
 # current doc set.
-version = "2023.3"
+version = "2023.5"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://docs.cortex-ia.com"
+url_latest_version = "https://docs.wearecortex.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/CortexIntelligentAutomation/docs"
@@ -164,36 +164,21 @@ enable = true
 [params.links]
 # Social media relevant links. These will show up in the center of footer.
 [[params.links.social]]
-	name ="Twitter"
-	url = "https://twitter.com/cortex_software"
-	icon = "fab fa-twitter"
-[[params.links.social]]
-	name ="Facebook"
-	url = "https://www.facebook.com/cortexintelligentautomation/"
-	icon = "fab fa-facebook"
-[[params.links.social]]
-	name ="Vimeo"
-	url = "https://vimeo.com/cortexautomationsoftware"
-	icon = "fab fa-vimeo"
-[[params.links.social]]
 	name ="LinkedIn"
 	url = "https://www.linkedin.com/company/10975051"
 	icon = "fab fa-linkedin"
 [[params.links.social]]
 	name ="YouTube"
-	url = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
+	url = "https://www.youtube.com/@WeAreCORTEX"
 	icon = "fab fa-youtube"
 
 # Legal info relevant links. These will show up on left side of footer.
 [[params.links.legal]]
 	name = "Privacy Policy"
-	url = "https://www.cortex-ia.com/gdpr-privacy-policy/"
+	url = "https://www.wearecortex.com/policies/external-data-policy/"
 [[params.links.legal]]
 	name = "Terms and Conditions"
-	url = "https://www.cortex-ia.com/terms-conditions/"
-[[params.links.legal]]
-	name = "Disclaimer"
-	url = "https://www.cortex-ia.com/disclaimer/"
+	url = "https://www.wearecortex.com/policies/website-terms-and-conditions/"
 [[params.links.legal]]
 	name = "Registration Number: 05023238"
 	url = "https://find-and-update.company-information.service.gov.uk/company/05023238"
@@ -208,35 +193,29 @@ enable = true
 	city = "Southampton"
 	postcode = "SO15 2AT"
 	phone = "+44 23 8254 8990"
-	email = "info@cortex-ia.com"
+	email = "Hello@WeAreCORTEX.com"
 
 # Additional menu links
 [menu]
 [[menu.main]]
 	identifier = 'documentation'
 	name = 'Documentation'
-	url = '/docs/2023.3'
+	url = '/docs/2023.5'
 	weight = 10
 
-[[menu.main]]
-	identifier = 'community'
-	name = 'Community'
-	url = 'https://community.cortex.co.uk/'
-	weight = 30
-
-
 # Releases menu
+[[params.versions]]
+	version = "2023.5"
+	url = "/docs/2023.5/"
+	dotNetVersion = "net-6.0"
+	latest = true
+
 [[params.versions]]
 	version = "2023.3"
 	url = "/docs/2023.3/"
 	dotNetVersion = "net-6.0"
-	latest = true
 
 [[params.versions]]
 	version = "2022.9"
 	url = "/docs/2022.9/"
 	dotNetVersion = "netcore-3.1"
-
-[[params.versions]]
-	version = "7.2"
-	url = "https://community.cortex.co.uk/"

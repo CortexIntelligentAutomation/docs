@@ -1,23 +1,23 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "Find out what the Cortex platform is, what it can do, and how you can get started?"
+description: "Find out what the {{% ctx %}} platform is, what it can do, and how you can get started?"
 weight: 2
 ---
 
-## What is Cortex?
+## What is {{% ctx %}}?
 
 ### Low-code automation
 
-Cortex is a **[low-code][Studio]**, **automation and orchestration platform**, that enables organisations to graphically **capture** and **automate** anything from simple **tasks**, to interactive **workflows**, to complex IT and business **processes** that span the entire organisation.
+{{% ctx %}} is a **[low-code][Studio]**, **automation and orchestration platform**, that enables organisations to graphically **capture** and **automate** anything from simple **tasks**, to interactive **workflows**, to complex IT and business **processes** that span the entire organisation.
 
 ### Enterprise-grade
 
-Evolved from process and control engineering for mission-critical environments, Cortex provides **enterprise-grade** functionality to cover the **full automation lifecycle**; enabling **rapid delivery** of automation **[on-premise][]** or in the **cloud**, from inception to production, **without** the need for **software development experience**.
+Evolved from process and control engineering for mission-critical environments, {{% ctx %}} provides **enterprise-grade** functionality to cover the **full automation lifecycle**; enabling **rapid delivery** of automation **[on-premise][]** or in the **cloud**, from inception to production, **without** the need for **software development experience**.
 
 ### Built for everyone
 
-Our vision is **a world where everyone can automate**, and Cortex is being **built for everyone**, not just software developers, with the goal of **removing barriers** to entry and putting your people at the heart of your automation.
+{{% ctx %}} is being **built for everyone**, not just software developers, with the goal of **removing barriers** to entry and putting your people at the heart of your automation.
 
 ### Comprehensive functionality
 
@@ -27,24 +27,11 @@ With a **[comprehensive set of functionality][Blocks]** and interfaces with **3r
 
 ### Deliver quickly
 
-Using Cortex, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
-
-### Across multiple sectors, industries and markets
-
-Cortex has been deployed in **small**, **medium** and **large enterprises** from different **[sectors, industries and markets][Industries]**, including:
-
-* **[Telecommunication services][Telco]**
-* **[IT services][IT]**
-* **[Banking, Financial Services and Insurance][BFSI]**
-* Chemicals
-* Paper and Forest products
-* Food products
-* Government
-* Media
+Using {{% ctx %}}, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
 
 ### For diverse sets of use cases
 
-Cortex has been deployed for a diverse set of **[use cases][]**, including:
+{{% ctx %}} has been deployed for a diverse set of **[use cases][]**, including:
 
 * Lights out **monitoring** and **management** of fixed-line telephony networks
 * Data center **provisioning**
@@ -56,7 +43,7 @@ Cortex has been deployed for a diverse set of **[use cases][]**, including:
 
 ### Resulting in successful outcomes
 
-Cortex has resulted in many successful **outcomes**, including:
+{{% ctx %}} has resulted in many successful **outcomes**, including:
 
 * Increased **revenue**
 * Increased **profit**
@@ -66,24 +53,19 @@ Cortex has resulted in many successful **outcomes**, including:
 
 ### Accelerate your digital transformation
 
-Wherever you are on your automation journey and whatever you are trying to achieve, small or large, simple or complex, Cortex can help **accelerate a successful transformation of your operations**.
+Wherever you are on your automation journey and whatever you are trying to achieve, small or large, simple or complex, {{% ctx %}} can help **accelerate a successful transformation of your operations**.
 
 ## How do I get started?
 
 |||
 |-----------|-------------|
-|**[Getting&nbsp;Started][Getting Started]**|Install Cortex and start your automation journey today.|
-|**[Guides][]**|Learn how to use the various components that make up the Cortex platform.|
-|**[Tutorials][]**|Explore all of the tutorials for the Cortex platform.|
+|**[Getting&nbsp;Started][Getting Started]**|Install {{% ctx %}} and start your automation journey today.|
+|**[Guides][]**|Learn how to use the various components that make up the {{% ctx %}} platform.|
+|**[Tutorials][]**|Explore all of the tutorials for the {{% ctx %}} platform.|
 |**[Reference][]**|Browse through the reference documentation, including details about APIs, blocks, data types, exceptions.|
 |**[FAQs][]**|Find the answers to your questions.|
-|**[Videos][]**|View a range of videos about the Cortex platform, automation, strategies and methodologies, as well as industry specific content.|
-|**[Webinars][]**|Watch a selection of automation related webinars.|
-|**[Engage&nbsp;With&nbsp;Us][Engage With Us]**|Let us help you to get started by participating in one of our enablement pathway programs:
-||1. [Kickstarter][] - Free two/three day workshop that enables the rapid configuration of a cloud-based Cortex platform to prototype, and demonstrate automation in context.|
-||2. [Design Sprint][] - A two week formalised approach to automation based on our 300+ man years of knowledge and experience. Facilitated by Cortex, the Automation Design Sprint works through the required stages of automation, from vision and objectives to prototype and feedback.|
-||3. [Launch Program][] - A twelve week program which takes your team through the phases of mobilisation, design of automation, trial testing and sign-off to production.|
-||4. [Acceleration Program][] - A three, six or nine month program that delivers the framework for organisations to effectively and efficiently accelerate their team in the design, development, and delivery of automation using the Cortex platform.|
+|**[Videos][]**|View a range of videos about the {{% ctx %}} platform, automation, strategies and methodologies, as well as industry specific content.|
+|**[Engage&nbsp;With&nbsp;Us][Engage With Us]**|Let us help you to get started by reaching out to us.|
 
 [FAQs]: {{< url path="Cortex.Faqs.MainDoc" >}}
 
@@ -101,17 +83,7 @@ Wherever you are on your automation journey and whatever you are trying to achie
 [Customers]: {{< url path="Cortex.Website.Customers.MainDoc" >}}
 
 [Engage With Us]: {{< url path="Cortex.Website.EngageWithUs.MainDoc" >}}
-[Acceleration Program]: {{< url path="Cortex.Website.EngageWithUs.AccelerationProgram" >}}
-[Design Sprint]: {{< url path="Cortex.Website.EngageWithUs.DesignSprint" >}}
-[Kickstarter]: {{< url path="Cortex.Website.EngageWithUs.Kickstarter" >}}
-[Launch Program]: {{< url path="Cortex.Website.EngageWithUs.LaunchProgram" >}}
-
-[Industries]: {{< url path="Cortex.Website.Industries.MainDoc" >}}
-[BFSI]: {{< url path="Cortex.Website.Industries.Bfsi" >}}
-[IT]: {{< url path="Cortex.Website.Industries.It" >}}
-[Telco]: {{< url path="Cortex.Website.Industries.Telco" >}}
 
 [use cases]: {{< url path="Cortex.Website.UseCases.MainDoc" >}}
 
 [Videos]: {{< url path="Cortex.YouTube.MainDoc" >}}
-[Webinars]: {{< url path="Cortex.YouTube.Webinars.MainDoc" >}}

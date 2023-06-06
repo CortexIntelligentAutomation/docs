@@ -7,7 +7,7 @@ weight: 60
 
 # {{% param title %}}
 
-This guide describes where to get the default Cortex Innovation Dashboards from and how to import them for use in Grafana.
+This guide describes where to get the default {{% ctx %}} Innovation Dashboards from and how to import them for use in Grafana.
 
 Please ensure that the Installations for [Grafana][] and [Loki][] have been completed before starting this section.
 
@@ -28,9 +28,9 @@ Please ensure that the Installations for [Grafana][] and [Loki][] have been comp
 1. Click *Save and Test*.
 1. *Data source connected and labels found.* message should be displayed above the *Save and Test*
 
-## Download the Cortex Innovation Default Dashboards
+## Download the {{% ctx %}} Innovation Default Dashboards
 
-1. Download [Grafana.Dashboards.zip] archive containing the Cortex Innovation default dashboards.
+1. Download [Grafana.Dashboards.zip] archive containing the {{% ctx %}} Innovation default dashboards.
 1. Extract the content of the downloaded archive to a suitable location.
 
 ## Create Folder for Dashboards
@@ -59,7 +59,7 @@ Please ensure that the Installations for [Grafana][] and [Loki][] have been comp
 
 It is necessary to update the Custom Filter inside the dashboards to use the correct data source.
 
-To do this, follow these steps for all default Cortex Innovation dashboards imported:
+To do this, follow these steps for all default {{% ctx %}} Innovation dashboards imported:
 
 1. Log in to your configured Grafana with a user that has the *Admin* role.
 1. To open a dashboard:

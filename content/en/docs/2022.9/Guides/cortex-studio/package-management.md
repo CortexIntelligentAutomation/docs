@@ -1,6 +1,6 @@
 ---
-title: "Cortex Studio - Package Management (TBC)"
-linkTitle: "Cortex Studio - Package Management (TBC)"
+title: "CORTEX Studio - Package Management (TBC)"
+linkTitle: "CORTEX Studio - Package Management (TBC)"
 description: "Package Management"
 weight: 1
 ---

@@ -14,7 +14,7 @@ description: "Executes an HTTP request and returns a response."
 
 ## Description
 
-Executes an [HTTP Request][Http Request Property] using the specified [Http Credentials][Http Credentials Property] and returns the [Http Response][Http Response Property].
+Executes an [Http Request][Http Request Property] using the specified [Http Credentials][Http Credentials Property] and returns the [Http Response][Http Response Property].
 
 ## Examples
 
@@ -265,6 +265,12 @@ Note that as the [Headers][Headers Response] contains a key of `Content-Type` wi
 
 ***
 
+### Calling another Flow
+
+TODO
+
+***
+
 ## Properties
 
 ### Http Request
@@ -453,7 +459,7 @@ None
 [InvalidRequestException]: {{< url path="Cortex.Reference.Exceptions.Http.InvalidRequestException.MainDoc" >}}
 
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
-[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables.MainDoc" >}}
+[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}

@@ -11,8 +11,8 @@ weight: 1
 
 An execution represents a running instance of a [flow][], the execution moves through the flow sequentially executing each [block][] saving any outputs to [variables][variable]. A flow can have one or more executions running at any time, each with their own variables.
 
-- See [Executions in Development][] for more information regarding working with executions in [Cortex Studio][].
-- See [Executions in Production][] for more information regarding running executions in the [Cortex Flow Execution Service][].
+- See [Executions in Development][] for more information regarding working with executions in [{{% ctx %}} Studio][CORTEX Studio].
+- See [Executions in Production][] for more information regarding running executions in the [{{% ctx %}} Flow Execution Service][CORTEX Flow Execution Service].
 
 ## Anatomy of an Execution
 
@@ -92,9 +92,9 @@ None
 
 [All Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" >}}
 
-[Cortex Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [Executions Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}
 
-[Cortex Flow Execution Service]: {{< url path="Cortex.Reference.Apis.FlowExecutionService.MainDoc" >}}
+[CORTEX Flow Execution Service]: {{< url path="Cortex.Reference.Apis.FlowExecutionService.MainDoc" >}}
 
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}

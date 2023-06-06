@@ -21,6 +21,17 @@
                     ImprovementsToPerformance = "/blog/2023/04/11/2023.3/#improvements-to-performance"
                     UpdatedThirdPartyComponents = "/blog/2023/04/11/2023.3/#updated-third-party-components"
                     ProductPortal = "/blog/2023/04/11/2023.3/#product-portal"
+                [Cortex.Blogs.Releases.2023.5]
+                    MainDoc =  "/blog/2023/06/05/2023.5/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/06/05/2023.5/#expansion-of-the-ha-platform"
+                    NewConfigurationManagementService = "/blog/2023/06/05/2023.5/#new-configuration-management-service"
+                    NewDataStorageService = "/blog/2023/06/05/2023.5/#new-data-storage-service"
+                    NewAuthorisationService = "/blog/2023/06/05/2023.5/#new-authorisation-service"
+                    IntroducedOAuth2Authorisation = "/blog/2023/06/05/2023.5/#introduced-oauth2-authorisation-for-running-flows-in-published-packages"
+                    NewBlocks = "/blog/2023/06/05/2023.5/#new-blocks"
+                    ImprovedInteractionPortal = "/blog/2023/06/05/2023.5/#improved-interaction-portal"
+                    ImprovedInstallationProcess = "/blog/2023/06/05/2023.5/#improved-installation-process"
+                    ProductPortal = "/blog/2023/06/05/2023.5/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -128,7 +139,7 @@
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#install-gateway"
+                    UpgradeGateway = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#upgrade-gateway"
                     PerformInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites"
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#certificate-requirements"
@@ -146,7 +157,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-application-server#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server"
-                    InstallGateway = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#install-gateway"
+                    UpgradeGateway = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#upgrade-gateway"
                     PerformInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/install-web-application-server/#perform-installation"
                     Prerequisites = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites"
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#certificate-requirements"
@@ -293,6 +304,14 @@
                 MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/authorisation-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/configuration-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/data-storage-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ExecutionManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/execution-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
@@ -311,6 +330,8 @@
                 MainDoc = "/docs/guides/cortex-gateway/settings/"
                 [Cortex.Guides.Gateway.Settings.StudioAuthorisation]
                     MainDoc = "/docs/guides/cortex-gateway/settings/studio-authorisation"
+                [Cortex.Guides.Gateway.Settings.Packages]
+                    MainDoc = "/docs/guides/cortex-gateway/settings/packages"
             [Cortex.Guides.Gateway.WelcomePage]
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
     [Cortex.Reference]
@@ -577,6 +598,9 @@
                         RunningAFlow = "/docs/reference/blocks/flows/run-flow/run-flow-block/#running-a-flow"
                         FlowProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#flow"
                         InputsProperty = "/docs/reference/blocks/flows/run-flow/run-flow-block/#inputs"
+                    [Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync]
+                        MainDoc = "/docs/reference/blocks/flows/run-flow/run-flow-async-block"
+                        KnownLimitations = "/docs/reference/blocks/flows/run-flow/run-flow-async-block/#known-limitations"
                 [Cortex.Reference.Blocks.Flows.StartFlow]
                     MainDoc = "/docs/reference/blocks/flows/start-flow"
                     [Cortex.Reference.Blocks.Flows.StartFlow.StartFlow]
@@ -686,6 +710,8 @@
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsAtIndexes]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2"
+                        List = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2/#list"
+                        Indexes = "/docs/reference/blocks/lists/remove-item/remove-items-at-indexes-block-2/#indexes"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValue]
                         MainDoc = "/docs/reference/blocks/lists/remove-item/remove-items-with-value-block-2"
                     [Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemsWithValues]
@@ -779,6 +805,36 @@
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
+                        ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
+                        CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
+                        Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
+            [Cortex.Reference.Blocks.Tasks]
+                MainDoc = "/docs/reference/blocks/tasks/"
+                [Cortex.Reference.Blocks.Tasks.CancelTask]
+                    MainDoc = "/docs/reference/blocks/tasks/cancel-task"
+                    [Cortex.Reference.Blocks.Tasks.CancelTask.CancelTaskBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-task-block-1"
+                    [Cortex.Reference.Blocks.Tasks.CancelTask.CancelAllTasksBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/cancel-task/cancel-all-tasks-block-2"
+                [Cortex.Reference.Blocks.Tasks.WaitForTask]
+                    MainDoc = "/docs/reference/blocks/tasks/wait-for-task"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForTask]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1"
+                        TaskHasThrown = "/docs/reference/blocks/tasks/wait-for-task/wait-for-task-block-1/#waiting-for-a-task-that-has-thrown-an-exception"
+                    [Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock]
+                        MainDoc = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2"
+                        GetSuccessfulResults = "/docs/reference/blocks/tasks/wait-for-task/wait-for-all-tasks-block-2/#waiting-for-a-task-that-has-thrown-an-exception"
+            [Cortex.Reference.Blocks.Telnet]
+                MainDoc = "/docs/reference/blocks/telnet/"
+                [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand]
+                    MainDoc = "/docs/reference/blocks/telnet/execute-telnet-command"
+                    [Cortex.Reference.Blocks.Telnet.ExecuteTelnetCommand.ExecuteTelnetCommand]
+                        MainDoc = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block"
+                        TerminalPromptMatchRemark = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#using-the-terminalpromptmatch-within-telnetlogs-to-reach-the-end-of-a-prompt"
+                        ConfigurationSettings = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#configuration-settings"
+                        CloseSession = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#close-session"
+                        Response = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#response"
+                        InactivityTimeout = "/docs/reference/blocks/telnet/execute-telnet-command/execute-telnet-command-block/#inactivity-timeout"
             [Cortex.Reference.Blocks.Text]
                 MainDoc = "/docs/reference/blocks/text/"
                 [Cortex.Reference.Blocks.Text.AddText]
@@ -1091,6 +1147,8 @@
                             ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
                         [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
                             MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
+                [Cortex.Reference.Concepts.WorkingWith.Tasks]
+                    MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
@@ -1098,7 +1156,6 @@
                         StringInterpolation = "/docs/reference/concepts/working-with/text/converting-objects-to-text/#string-interpolation"
                     [Cortex.Reference.Concepts.WorkingWith.Text.Formatting]
                         MainDoc = "/docs/reference/concepts/working-with/text/formatting/"
-                        FormatParameters = "/docs/reference/concepts/working-with/text/formatting/#format-parameters"
                         FormatSpecifiers = "/docs/reference/concepts/working-with/text/formatting/#format-specifiers"
                         FormatTemplates = "/docs/reference/concepts/working-with/text/formatting/#format-templates"
                     [Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax]
@@ -1458,6 +1515,9 @@
                     TerminalPrompt = "/docs/reference/data-types/ssh/sshsessiondetails/#terminalprompt"
                 [Cortex.Reference.DataTypes.Ssh.SshLogs]
                     MainDoc = "/docs/reference/data-types/ssh/sshlogs"
+                    WelcomeMessage = "/docs/reference/data-types/ssh/sshlogs/#welcomemessage"
+                    TerminalPromptMatch = "/docs/reference/data-types/ssh/sshlogs/#terminalpromptmatch"
+                    Logs = "/docs/reference/data-types/ssh/sshlogs/#logs"
                 [Cortex.Reference.DataTypes.Ssh.Authentication]
                     MainDoc = "/docs/reference/data-types/ssh/authentication/"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials]
@@ -1466,8 +1526,39 @@
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcredentials"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials"
+                        Domain = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#domain"
+                        Username = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#domain"
+                        CertificatePath = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepath"
+                        CertificatePassword = "/docs/reference/data-types/ssh/authentication/sshcertificatecredentials/#certificatepassword"
                     [Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials]
                         MainDoc = "/docs/reference/data-types/ssh/authentication/sshusercredentials"
+            [Cortex.Reference.DataTypes.Tasks]
+                MainDoc = "/docs/reference/data-types/tasks/"
+                [Cortex.Reference.DataTypes.Tasks.ExecutionTask]
+                    MainDoc = "/docs/reference/data-types/tasks/executiontask"
+                    Convert = "/docs/reference/data-types/tasks/executiontask/#convert-executiontask-to-text"
+                    Create = "/docs/reference/data-types/tasks/executiontask/#create-an-executiontask"
+                [Cortex.Reference.DataTypes.Tasks.IExecutionTask]
+                    MainDoc = "/docs/reference/data-types/tasks/iexecutiontask"
+                    Convert = "/docs/reference/data-types/tasks/iexecutiontask/#convert-iexecutiontask-to-text"
+                [Cortex.Reference.DataTypes.Tasks.ITask]
+                    MainDoc = "/docs/reference/data-types/tasks/itask-1"
+            [Cortex.Reference.DataTypes.Telnet]
+                MainDoc = "/docs/reference/data-types/Telnet/"
+                [Cortex.Reference.DataTypes.Telnet.TelnetSessionDetails]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetsessiondetails"
+                    Host = "/docs/reference/data-types/telnet/telnetsessiondetails/#host"
+                    Port = "/docs/reference/data-types/telnet/telnetsessiondetails/#port"
+                    TerminalPrompt = "/docs/reference/data-types/telnet/telnetsessiondetails/#terminalprompt"
+                [Cortex.Reference.DataTypes.Telnet.TelnetLogs]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetlogs"
+                    WelcomeMessage = "/docs/reference/data-types/telnet/telnetlogs/#welcomemessage"
+                    TerminalPromptMatch = "/docs/reference/data-types/telnet/telnetlogs/#terminalpromptmatch"
+                    Logs = "/docs/reference/data-types/telnet/telnetlogs/#logs"
+                [Cortex.Reference.DataTypes.Telnet.TelnetServerErrorCode]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetservererrorcode"
+                [Cortex.Reference.DataTypes.Telnet.TelnetClientErrorCode]
+                    MainDoc = "/docs/reference/data-types/telnet/telnetclienterrorcode"
             [Cortex.Reference.DataTypes.Text]
                 MainDoc = "/docs/reference/data-types/text/"
                 [Cortex.Reference.DataTypes.Text.Char]
@@ -1527,6 +1618,8 @@
                 MainDoc = "/docs/reference/exceptions/common/"
                 [Cortex.Reference.Exceptions.Common.Property]
                     MainDoc = "/docs/reference/exceptions/common/property/"
+                    [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullItemException]
+                        MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-item-exception/"
                     [Cortex.Reference.Exceptions.Common.Property.PropertyContainsNullOrEmptyItemException]
                         MainDoc = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/"
                         ValueContainsNullOrEmptyItem = "/docs/reference/exceptions/common/property/property-contains-null-or-empty-item-exception/#value-contains-null-or-empty-item"
@@ -1656,6 +1749,22 @@
                 MainDoc = "/docs/reference/exceptions/ssh/"
                 SshClientException = "/docs/reference/exceptions/ssh/ssh-client-exception/"
                 SshResponseException = "/docs/reference/exceptions/ssh/ssh-response-exception/"
+            [Cortex.Reference.Exceptions.Tasks]
+                MainDoc = "/docs/reference/exceptions/tasks/"
+                [Cortex.Reference.Exceptions.Tasks.AggregateTaskException]
+                    MainDoc = "/docs/reference/exceptions/tasks/aggregate-task-exception/"
+                    TaskExceptions = "/docs/reference/exceptions/tasks/aggregate-task-exception/#taskexceptions"
+            [Cortex.Reference.Exceptions.Telnet]
+                MainDoc = "/docs/reference/exceptions/telnet/"
+                [Cortex.Reference.Exceptions.Telnet.TelnetClientException]
+                    MainDoc = "/docs/reference/exceptions/telnet/telnet-client-exception/"
+                    InvalidHost = "/docs/reference/exceptions/telnet/telnet-client-exception/#100"
+                    InvalidPort = "/docs/reference/exceptions/telnet/telnet-client-exception/#101"
+                    InvalidTerminalPrompt = "/docs/reference/exceptions/telnet/telnet-client-exception/#102"
+                    InvalidSettings = "/docs/reference/exceptions/telnet/telnet-client-exception/#200"
+                [Cortex.Reference.Exceptions.Telnet.TelnetServerException]
+                    MainDoc = "/docs/reference/exceptions/telnet/telnet-server-exception/"
+                    HostDisconnected = "/docs/reference/exceptions/telnet/telnet-server-exception/#100"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"
@@ -1802,31 +1911,22 @@
         MainDoc = "/docs/tutorials/"
     [Cortex.Website]
         [Cortex.Website.Customers]
-            MainDoc = "https://www.cortex-ia.com/customer-success-stories/"
+            MainDoc = "https://www.wearecortex.com/about/customer-success/"
         [Cortex.Website.EngageWithUs]
-            MainDoc = "https://www.cortex-ia.com/contact-form/"
-            AccelerationProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-acceleration-program"
-            DesignSprint = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-design-sprint"
-            Kickstarter = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-kickstarter"
-            LaunchProgram = "https://resources.cortex-ia.com/download-cortex-intelligent-automation-launch-program"
+            MainDoc = "https://www.wearecortex.com/contact/"
         [Cortex.Website.Eula]
-            MainDoc = "https://www.cortex-ia.com/end-user-licence-agreement/"
-        [Cortex.Website.Industries]
-            MainDoc = "https://www.cortex-ia.com/intelligent-automation-solutions/"
-            Bfsi = "https://www.cortex-ia.com/bfsi-intelligent-automation/"
-            It = "https://www.cortex-ia.com/itops-aiops-enterprise-services-automation/"
-            Telco = "https://www.cortex-ia.com/telecommunications-automation/"
+            MainDoc = "https://www.wearecortex.com/eula-standard-terms/"
         [Cortex.Website.UseCases]
-            MainDoc = "https://www.cortex-ia.com/download-centre/"
+            MainDoc = "https://www.wearecortex.com/use-cases/"
     [Cortex.ServicePortal]
-        MainDoc = "https://support.cortex.co.uk/"
+        MainDoc = "https://www.wearecortex.com/service-desk-support/"
     [Cortex.YouTube]
-        MainDoc = "https://www.youtube.com/channel/UCZwlagVEozhAjmUySYx8YlA"
-        [Cortex.YouTube.Webinars]
-            MainDoc = "https://www.youtube.com/playlist?list=PLPBEMXlXxB_oFKNwxwrXtXzU-WBvgAgz7"
+        MainDoc = "https://www.youtube.com/@WeAreCORTEX"
 # External links
 [Anycast]
     MainDoc = "https://en.wikipedia.org/wiki/Anycast"
+[CancelCommands]
+    MainDoc = "https://www.physics.udel.edu/~watson/scen103/ascii.html"
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
     SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
@@ -1874,11 +1974,21 @@
     [IIS.Downloads]
         UrlRewrite-2_1 = "https://www.iis.net/downloads/microsoft/url-rewrite"
         ApplicationRequestRouting-3_0 = "https://www.iis.net/downloads/microsoft/application-request-routing"
-    
+[IPWorks]
+    TelnetErrors = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetErrors"
+    SshErrors = "https://cdn.nsoftware.com/help/IHF/cs/SSHClientConfig.htm"
+    TelnetConfigurationSettings = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#TelnetConfig"
+    TelnetFirewallTypes = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallType"
+    TelnetFirewallHost =  "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallHost"
+    TelnetFirewallPort = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallPort"
+    TelnetFirewallUser = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallUser"
+    TelnetFirewallPassword = "https://cdn.nsoftware.com/help/IPH/cs/Telnet.htm#FirewallPassword"
 [JsonDotNet]
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
     JsonSerializerSettings = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializerSettings.htm"
+[Kodify]
+    WhatIsALoop = "https://kodify.net/csharp/loop/overview-loops/"
 [LetsEncrypt]
     MainDoc = "https://letsencrypt.org/"
 [Microsoft]
@@ -2074,6 +2184,7 @@
             Concat = "https://learn.microsoft.com/en-us/dotnet/api/system.string.concat"
             ConcatGuide = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings"
             ConcatOperator = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
+            StringInterpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#string-interpolation"
             Format = "https://learn.microsoft.com/en-us/dotnet/api/system.string.format"
             Insert = "https://learn.microsoft.com/en-us/dotnet/api/system.string.insert"
             Join = "https://learn.microsoft.com/en-us/dotnet/api/system.string.join"
@@ -2123,6 +2234,12 @@
         MainDoc = "https://www.postman.com/downloads/"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
+[RFC]
+    [RFC.Docs.Telnet.Options]
+    MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
+    Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
+    BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
+    ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]

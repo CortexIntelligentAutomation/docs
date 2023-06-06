@@ -40,7 +40,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid Cortex licence file and Cortex Innovation feature identifier must be procured from Cortex. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
+A valid {{% ctx %}} licence file and {{% ctx %}} Innovation feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
 
 To get a licence file and feature identifier take the following steps:
 
@@ -51,7 +51,7 @@ To get a licence file and feature identifier take the following steps:
     MachineID: 
     Fingerprint: 
 
-    Please also include a suitable Cortex Innovation feature identifier.
+    Please also include a suitable {{% ctx %}} Innovation feature identifier.
     ```
 
 1. Extract `Cortex Innovation 2022.9 - Licence Fingerprint Generator.zip`.
@@ -64,7 +64,7 @@ To get a licence file and feature identifier take the following steps:
     ```
 
 1. Copy the output (machine identifier and fingerprint) to the `Web Application/Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string.
-1. Request a licence and feature identifier by raising a case in the [Cortex Service Portal][], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
+1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
 
 ## Web Browser Requirements
@@ -104,7 +104,7 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 
 This file should be placed in a known location on the server. This location will be required when running the Application Server installation script.
 
-{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="Cortex Service Portal" >}} must be contacted for support.{{< /alert >}}
+{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
 
 ## TLS Requirements
 
@@ -133,7 +133,7 @@ The following Windows Services must be running on the server:
 
 #### Installation User
 
-A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that Cortex Innovation is built upon.
+A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that {{% ctx %}} Innovation is built upon.
 
 #### Antivirus Exclusions
 
@@ -166,7 +166,7 @@ If adding the exclusions manually, the Process Exclusions should be done before 
 
 #### Port Requirements
 
-Cortex Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
+{{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
 
 If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
 
@@ -190,15 +190,15 @@ Supported versions of Active Directory are listed below:
 
 | Version                    | Verified?      | Supported From | Supported Until  |  
 |----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2003 R2     |                | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2008        |                | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2012        |                | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2016        |      ✓        | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2019        |                | Cortex v2022.9 | To be evaluated  |
-| Windows Server 2022        |                | Cortex v2022.9 | To be evaluated  |
+| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
 
 ## Next Steps?
 
@@ -210,7 +210,7 @@ Supported versions of Active Directory are listed below:
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Cortex Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [NET Framework 471]: {{< url path="MSDotNet.Framework471.MainDoc" >}}
