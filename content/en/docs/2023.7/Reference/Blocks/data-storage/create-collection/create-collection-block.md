@@ -1,0 +1,103 @@
+---
+title: "Create Collection"
+linkTitle: "Create Collection"
+description: "Creates a data storage collection."
+---
+todo this
+figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon"
+
+# {{% param title %}}
+
+<p class="namespace">(Cortex.Blocks.DataStorage.Create.CreateCollectionBLock)</p>
+
+## Description
+
+Creates a data storage collection.
+
+## Examples
+
+### Create a Data Storage Collection
+
+This example will create a new data storage collection.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Scope][Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.All, System: ScopeOptions.All)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection name][Collection Name Property] | `($)CollectionName` with value "data storage collection" | `($)CollectionName` is a variable of type [String][] |
+
+#### Result
+
+This creates a new data storage collection which an be referenced by the [Collection Name][Collection Name Property].
+
+## Properties
+
+### Scope
+
+The [Scope][Scope Property] to create the collection on.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [Scope] |
+| Property Type | [Input][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | [Scope][Scope Property] with value show below |
+
+```json
+{
+    "Tenant": "ScopeOptions.Current",
+    "System": "ScopeOptions.Current"
+}
+
+```
+
+### Collection Name
+
+The [Collection Name][Collection Name Property] to create.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [String][] |
+| Property Type | [Input][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)CollectionName` with no value |
+
+## Exceptions
+
+The exceptions thrown by the block can be found below:
+
+| Name     | Description |
+|----------|----------|
+| [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty.|
+| [PropertyNullException][] | Thrown when the [Collection Name][Collection Name Property] `null`. |
+| | Thrown when the [Scope][Scope Property] is `null` |
+| [ ArgumentException][] | Thrown when the Tenant or System [ScopeOptions] within the [Scope][Scope Property] aren't configured correctly |
+| [ServiceUnavailableException][] | Thrown when the data storage service doesn't exist or isn't healthy |
+
+## Remarks
+
+None
+
+[Scope Property]: {{< ref "#scope" >}}
+[Collection Name Property]: {{< ref "#collection-name" >}}
+
+[Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+
+[TItem]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[TPriority]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+
+[QueueWithPriority]: {{< url path="Cortex.Reference.DataTypes.Collections.QueueWithPriority.MainDoc" >}}
+
+[PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
+
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
