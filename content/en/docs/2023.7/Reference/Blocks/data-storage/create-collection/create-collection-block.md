@@ -24,7 +24,7 @@ This example will create a new data storage collection.
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Scope][Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.All, System: ScopeOptions.All)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.All, System: ScopeOptions.All)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value "data storage collection" | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
@@ -33,9 +33,9 @@ This creates a new data storage collection which an be referenced by the [Collec
 
 ## Properties
 
-### Scope
+### Collection Scope
 
-The [Scope][Scope Property] to create the collection on.
+The [Collection Scope][Collection Scope Property] to create the collection on.
   
 | | |
 |--------------------|---------------------------|
@@ -43,7 +43,7 @@ The [Scope][Scope Property] to create the collection on.
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [Scope][Scope Property] with value show below |
+| Default Value | [Collection Scope][Collection Scope Property] with value show below |
 
 ```json
 {
@@ -73,15 +73,15 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty.|
 | [PropertyNullException][] | Thrown when the [Collection Name][Collection Name Property] `null`. |
-| | Thrown when the [Scope][Scope Property] is `null` |
-| [ ArgumentException][] | Thrown when the Tenant or System [ScopeOptions] within the [Scope][Scope Property] aren't configured correctly |
+| | Thrown when the [Collection Scope][Collection Scope Property] is `null` |
+| [ ArgumentException][] | Thrown when the Tenant or System [ScopeOptions] within the [Collection Scope][Collection Scope Property] aren't configured correctly |
 | [ServiceUnavailableException][] | Thrown when the data storage service doesn't exist or isn't healthy |
 
 ## Remarks
 
 None
 
-[Scope Property]: {{< ref "#scope" >}}
+[Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
