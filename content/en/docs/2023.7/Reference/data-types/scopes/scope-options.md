@@ -91,8 +91,7 @@ None
 
 ### Related Data Types
 
-- [Int32][]
-- [String][]
+None
 
 ### Related Concepts
 
