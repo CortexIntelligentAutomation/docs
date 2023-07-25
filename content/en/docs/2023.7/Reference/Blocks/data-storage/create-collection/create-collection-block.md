@@ -79,7 +79,7 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-None
+When trying to create a collection that already exists, no operation is performed.
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
