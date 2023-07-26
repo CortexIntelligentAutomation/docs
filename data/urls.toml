@@ -367,6 +367,12 @@
                         Statements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#statement-types"
                         NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#non-query-statements"
                         QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
+            [Cortex.Reference.Blocks.DataStorage]
+                MainDoc = "/docs/reference/blocks/data-storage"
+                [Cortex.Reference.Blocks.DataStorage.CreateCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/create-collection-block"
+                    [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
+                        MainDog = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
@@ -1505,6 +1511,12 @@
                     Host = "/docs/reference/data-types/session-details/serverdetails/#host"
                     Port = "/docs/reference/data-types/session-details/serverdetails/#port"
                     UseSsl = "/docs/reference/data-types/session-details/serverdetails/#usessl"
+            [Cortex.Reference.DataTypes.Scopes]
+                MainDoc = "/docs/reference/data-types/scopes/"
+                [Cortex.Reference.DataTypes.Scopes.scope]
+                    MainDoc = "/docs/reference/data-types/scopes/scope"
+                [Cortex.Reference.DataTypes.Scopes.ScopeOptions]
+                    MainDox = "/docs/reference/data-types/scopes/scope-options"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
                 [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]
@@ -1642,6 +1654,10 @@
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
+            [Cortex.Reference.Exceptions.DataStorage]
+                MainDoc = "/docs/reference/exceptions/data-storage/"
+                    [Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException]
+                        MainDoc = "/docs/reference/exceptions/data-storage/service-unavailable-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
