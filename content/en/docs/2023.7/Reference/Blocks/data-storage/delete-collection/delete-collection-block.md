@@ -3,12 +3,12 @@ title: "Delete Collection"
 linkTitle: "Delete Collection"
 description: "Deletes a data storage collection."
 ---
-todo this
-figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon"
+
+{{<figure src="/blocks/data-storage-delete-collection-block.png" alt="Icon" class="block-icon">}}
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.DataStorage.Delete.DeleteCollectionBLock)</p>
+<p class="namespace">(Cortex.Blocks.DataStorage.Delete.DeleteCollectionBlock)</p>
 
 ## Description
 
