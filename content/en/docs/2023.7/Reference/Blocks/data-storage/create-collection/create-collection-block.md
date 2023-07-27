@@ -7,7 +7,7 @@ description: "Creates a data storage collection."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.DataStorage.Create.CreateCollectionBLock)</p>
+<p class="namespace">(Cortex.Blocks.DataStorage.Create.CreateCollectionBlock)</p>
 
 ## Description
 
@@ -28,7 +28,7 @@ This example will create a new data storage collection.
 
 #### Result
 
-This creates a new data storage collection which an be referenced by the [Collection Name][Collection Name Property].
+This creates a new data storage collection on the [Collection Scope][Colletion Scope Property] referenced by the [Collection Name][Collection Name Property].
 
 ## Properties
 
