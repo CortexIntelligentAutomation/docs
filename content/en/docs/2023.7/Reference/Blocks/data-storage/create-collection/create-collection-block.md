@@ -3,8 +3,7 @@ title: "Create Collection"
 linkTitle: "Create Collection"
 description: "Creates a data storage collection."
 ---
-todo this
-figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon"
+{{<figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon">}}
 
 # {{% param title %}}
 
