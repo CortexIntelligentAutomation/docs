@@ -12,10 +12,17 @@ description: "Used to define the area in which an action takes place."
 
 The `Scope` data type is used to define the area in which an action takes place. 
 
-The `Scope` is restricted by a number of properties:
+The `Scope` is restricted by a number of levels:
 
 - [Tenant][Tenant Property]
 - [System][System Property]
+
+Additional levels will be added in future releases, including:
+
+- Environment
+- PackageName
+- PackageVersion
+- Flow
 
 | | |
 |-|-|
@@ -36,10 +43,10 @@ The [Tenant][Tenant Property] is used to define the scope of the action at the t
 
 | | |
 |-|-|
-| Data Type | [ScopeOptions][] |
+| Data Type | [ScopeOption][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | `ScopeOptions.Current` |
+| Default Value | `ScopeOption.Current` |
 
 ### System
 
@@ -47,27 +54,27 @@ The [System][System Property] is used to define the scope of the action at the s
 
 | | |
 |-|-|
-| Data Type | [ScopeOptions][] |
+| Data Type | [ScopeOption][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | `ScopeOptions.Current` |
+| Default Value | `ScopeOption.Current` |
 
 ## Remarks
 
-### Creating a Scope
+### Create a Scope
 
 The following table shows some of the ways that `Scope` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-|Use a `Scope` constructor | `new Scope(Tenant: ScopeOptions.Current, System: ScopeOptions.Current)` | `"{\r\n "Tenant": "ScopeOptions.Current",\r\n "System": "ScopeOptions.Current"\r\n }"`| Expression | |
+|Use a `Scope` constructor | `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)` | `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`| Expression | Creates a new `Scope` that can be used to restrict an action to the current Tenant and System. |
 
 A `Scope` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Tenant` | `ScopeOptions` | `ScopeOptions.Current` | Used to define the action of the scope at the tenant level. |
-| `System` | `ScopeOptions` | `ScopeOptions.Current` | Used to define the action of the scope at the system level. |
+| `Tenant` | `ScopeOption` | `ScopeOption.Current` | [Tenant][Tenant Property] defines the scope of the action at the tenant level. |
+| `System` | `ScopeOption` | `ScopeOption.Current` | [System][System Property] defines the scope of the action at the system level. |
 
 ### Convert Scope to Text
 
@@ -75,7 +82,7 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `"{\r\n "Tenant": "ScopeOptions.Current",\r\n "System": "ScopeOptions.Current"\r\n }"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": ScopeOption.Current, "System": ScopeOption.Current }` | `"{\r\n "Tenant": "ScopeOption.Current",\r\n "System": "ScopeOption.Current"\r\n}"`  | N/A |See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -87,7 +94,7 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 #### ScopeOption only has ScopeOption.Current
 
-Currently [ScopeOption] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` may be added in a future release.
+Currently [ScopeOption] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` will be added in a future release.
 
 ## See Also
 
@@ -97,7 +104,7 @@ Currently [ScopeOption] only allows `ScopeOption.Current` to be selected, `Scope
 
 ### Related Concepts
 
-None
+- [Working with Scopes][]
 
 ### External Documentation
 
@@ -115,6 +122,7 @@ None
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 [working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
+[Working with Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc">}}
 [Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 [Enum.Parse]: {{< url path="MSDocs.DotNet.Api.System.Enum.Parse" >}}
 [Enum.ToObject]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToObject" >}}

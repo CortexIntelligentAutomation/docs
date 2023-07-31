@@ -321,7 +321,7 @@
         [Cortex.Guides.CortexInnovation.ExecutionApplication]
             MainDoc = "/docs/guides/cortex-innovation/core-application/"
             [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
-                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                MainDoc = "/docs/guides/cortex-innovation/execution-application/services/"
                 [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
                     MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
         [Cortex.Guides.Gateway]
@@ -1154,6 +1154,10 @@
                             ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
                         [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
                             MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
+                [Cortex.Reference.Concepts.WorkingWith.Scopes]
+                    MainDoc = "/docs/reference/concepts/working-with/scopes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Scopes.WhatIsAScope]
+                        MainDoc = "/docs/reference/concepts/working-with/scopes/what-is-a-scope/"
                 [Cortex.Reference.Concepts.WorkingWith.Tasks]
                     MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
@@ -1660,7 +1664,7 @@
             [Cortex.Reference.Exceptions.DataStorage]
                 MainDoc = "/docs/reference/exceptions/data-storage/"
                     [Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException]
-                        MainDoc = "/docs/reference/exceptions/data-storage/service-unavailable-exception/"
+                        MainDoc = "/docs/reference/exceptions/services/service-unavailable-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
