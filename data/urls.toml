@@ -372,7 +372,7 @@
                 [Cortex.Reference.Blocks.DataStorage.CreateCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/create-collection-block"
                     [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
-                        MainDog = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
+                        MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
@@ -1080,6 +1080,7 @@
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
                         MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection/"
+                        DataStorage = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#data-storage-collection"
                         Dictionaries = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#dictionaries"
                         DictionariesIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes"
                         Structures = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#structures"
@@ -1513,10 +1514,12 @@
                     UseSsl = "/docs/reference/data-types/session-details/serverdetails/#usessl"
             [Cortex.Reference.DataTypes.Scopes]
                 MainDoc = "/docs/reference/data-types/scopes/"
-                [Cortex.Reference.DataTypes.Scopes.scope]
+                [Cortex.Reference.DataTypes.Scopes.Scope]
                     MainDoc = "/docs/reference/data-types/scopes/scope"
-                [Cortex.Reference.DataTypes.Scopes.ScopeOptions]
-                    MainDox = "/docs/reference/data-types/scopes/scope-options"
+                    Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
+                    System = "/docs/reference/data-types/scopes/scope/#system"
+                [Cortex.Reference.DataTypes.Scopes.ScopeOption]
+                    MainDoc = "/docs/reference/data-types/scopes/scope-option"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
                 [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]

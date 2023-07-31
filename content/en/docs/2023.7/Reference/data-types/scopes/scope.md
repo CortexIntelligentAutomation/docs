@@ -1,7 +1,7 @@
 ---
 title: "Scope"
 linkTitle: "Scope"
-description: "Used to represent the scope in to restrict the effects of actions."
+description: "Used to define the area in which an action takes place."
 ---
 
 # {{% param title %}}
@@ -10,48 +10,51 @@ description: "Used to represent the scope in to restrict the effects of actions.
 
 ## Summary
 
-The `Scope` data type is used to represent the scope in to restrict the effects of actions.
+The `Scope` data type is used to define the area in which an action takes place. 
 
-`Scope` is a collection of [ScopeOptions][] which are all [enums][Working with Enums]. The [enum][Working with Enums] data type has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
+The `Scope` is restricted by a number of properties:
+
+- [Tenant][Tenant Property]
+- [System][System Property]
 
 | | |
 |-|-|
-| **Category:**          | Data Storage                                                  |
+| **Category:**          | Scopes                                                  |
 | **Name:**              | `Scope`                                |
 | **Full Name:**         | `Cortex.DataTypes.Scopes.Scope`         |
 | **Alias:**             | N/A                                              |
-| **Description:**       | The encoding format used while encoding/decoding text. |
+| **Description:**       | Used to define the area in which an action takes place.|
 | **Default Value:**     | `null`                             |
 | **Can be used as:**    | `Scope`, `Object`, `dynamic`           |
 | **Can be cast to:**    | N/A |
 
-## Properies
+## Properties
 
 ### Tenant
 
-The [Tenant][Tenant Property] to restrict the effects of an action.
+The [Tenant][Tenant Property] is used to define the scope of the action at the tenant level.
 
 | | |
 |-|-|
-| Data Type | [Scope Options][] |
+| Data Type | [ScopeOptions][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `ScopeOptions.Current` |
 
 ### System
 
-The [System][System Property] to restrict the effects of an action.
+The [System][System Property] is used to define the scope of the action at the system level.
 
 | | |
 |-|-|
-| Data Type | [Scope Options][] |
+| Data Type | [ScopeOptions][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `ScopeOptions.Current` |
 
 ## Remarks
 
-### Creating a TextEncodingFormat
+### Creating a Scope
 
 The following table shows some of the ways that `Scope` can be created.
 
@@ -63,10 +66,10 @@ A `Scope` can also be created using the Literal Editor by filling in the necessa
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Tenant` | `ScopeOptions` | `ScopeOptions.Current` | The tenant to restrict the scope to |
-| `System` | `ScopeOptions` | `ScopeOptions.Current` | The system to restrict the scope to |
+| `Tenant` | `ScopeOptions` | `ScopeOptions.Current` | Used to define the action of the scope at the tenant level. |
+| `System` | `ScopeOptions` | `ScopeOptions.Current` | Used to define the action of the scope at the system level. |
 
-### Convert TextEncodingFormat to Text
+### Convert Scope to Text
 
 The following table shows some of the ways that a `Scope` can be converted to text.
 
@@ -82,13 +85,15 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 ### Known Limitations
 
-None
+#### ScopeOption only has ScopeOption.Current
+
+Currently [ScopeOption] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` may be added in a future release.
 
 ## See Also
 
 ### Related Data Types
 
-- [ScopeOptions][]
+- [ScopeOption][]
 
 ### Related Concepts
 
@@ -97,6 +102,9 @@ None
 ### External Documentation
 
 None
+
+[Tenant Property]: {{< ref "#tenant">}}
+[System Property]: {{< ref "#system">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -115,7 +123,11 @@ None
 [Convert.ToString]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToString" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[ScopeOptions]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOptions.MainDox">}}
+[ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
+
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
