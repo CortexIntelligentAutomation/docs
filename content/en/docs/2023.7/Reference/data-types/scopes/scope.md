@@ -1,7 +1,7 @@
 ---
 title: "Scope"
 linkTitle: "Scope"
-description: "Used to represent the scope in order to restrict the effects of actions."
+description: "Used to define the area in which an action takes place."
 ---
 
 # {{% param title %}}
@@ -10,17 +10,12 @@ description: "Used to represent the scope in order to restrict the effects of ac
 
 ## Summary
 
-The `Scope` data type is used to represent the [Tenant][Tenant Property] and [System][System Property] in order to restrict the effects of an action.
+The `Scope` data type is used to define the area in which an action takes place. 
 
-The `Scope` data type is used to provide a [Tenant][Tenant Property] and [System][System Property] context to an action.
+The `Scope` is restricted by a number of properties:
 
-The `Scope` data type is used to (restrict the effects of/scope) an action to a [Tenant][Tenant Property] and [System][System Property].
-
-The `Scope` data type is used to limit the accessibilty of an action to the [Tenant][Tenant Property] and [System][System Property] provided.
-
-The `Scope` data type is used to define the location of an action.
-
-The `Scope` data type is used to link the effects/consequences of an action to a [Tenant][Tenant Property] and [System][System Property].
+- [Tenant][Tenant Property]
+- [System][System Property]
 
 | | |
 |-|-|
@@ -28,7 +23,7 @@ The `Scope` data type is used to link the effects/consequences of an action to a
 | **Name:**              | `Scope`                                |
 | **Full Name:**         | `Cortex.DataTypes.Scopes.Scope`         |
 | **Alias:**             | N/A                                              |
-| **Description:**       | Used to represent the [Tenant][Tenant Property] and [System][System Property] in order to restrict the effects of actions.|
+| **Description:**       | Used to define the area in which an action takes place.|
 | **Default Value:**     | `null`                             |
 | **Can be used as:**    | `Scope`, `Object`, `dynamic`           |
 | **Can be cast to:**    | N/A |
@@ -37,7 +32,7 @@ The `Scope` data type is used to link the effects/consequences of an action to a
 
 ### Tenant
 
-The [Tenant][Tenant Property] to restrict the effects of an action.
+The [Tenant][Tenant Property] is used to define the scope of the action at the tenant level.
 
 | | |
 |-|-|
@@ -48,7 +43,7 @@ The [Tenant][Tenant Property] to restrict the effects of an action.
 
 ### System
 
-The [System][System Property] to restrict the effects of an action.
+The [System][System Property] is used to define the scope of the action at the system level.
 
 | | |
 |-|-|
@@ -71,8 +66,8 @@ A `Scope` can also be created using the Literal Editor by filling in the necessa
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Tenant` | `ScopeOptions` | `ScopeOptions.Current` | The tenant to restrict the scope to |
-| `System` | `ScopeOptions` | `ScopeOptions.Current` | The system to restrict the scope to |
+| `Tenant` | `ScopeOptions` | `ScopeOptions.Current` | Used to define the action of the scope at the tenant level. |
+| `System` | `ScopeOptions` | `ScopeOptions.Current` | Used to define the action of the scope at the system level. |
 
 ### Convert Scope to Text
 
@@ -90,13 +85,15 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 ### Known Limitations
 
-Currently only one tenant/system is usable so only the current option is available.
+#### ScopeOption only has ScopeOption.Current
+
+Currently [ScopeOption] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` may be added in a future release.
 
 ## See Also
 
 ### Related Data Types
 
-- [ScopeOptions][]
+- [ScopeOption][]
 
 ### Related Concepts
 
@@ -126,7 +123,7 @@ None
 [Convert.ToString]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToString" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[ScopeOptions]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOptions.MainDox">}}
+[ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}

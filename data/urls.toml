@@ -1518,8 +1518,8 @@
                     MainDoc = "/docs/reference/data-types/scopes/scope"
                     Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
                     System = "/docs/reference/data-types/scopes/scope/#system"
-                [Cortex.Reference.DataTypes.Scopes.ScopeOptions]
-                    MainDox = "/docs/reference/data-types/scopes/scope-option"
+                [Cortex.Reference.DataTypes.Scopes.ScopeOption]
+                    MainDoc = "/docs/reference/data-types/scopes/scope-option"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
                 [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]

@@ -1,5 +1,5 @@
 ---
-title: "Data Storage"
-linkTitle: "Data Storage"
+title: "Services"
+linkTitle: "Services"
 description: "Exceptions related to Services"
 ---

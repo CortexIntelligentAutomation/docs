@@ -1,7 +1,7 @@
 ---
 title: "ScopeOption"
 linkTitle: "ScopeOption"
-description: "Used to provide properties to Scope."
+description: "Used to represent how each level of Scope is defined."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to provide properties to Scope."
 
 ## Summary
 
-The `ScopeOption` data type is used to provide properties to [Scope].
+The `ScopeOption` data type is used to represent how each level of [Scope] is defined.
 
 `ScopeOption` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -20,7 +20,7 @@ The `ScopeOption` data type is used to provide properties to [Scope].
 | **Name:**              | `ScopeOption`                                |
 | **Full Name:**         | `Cortex.DataTypes.Scopes.ScopeOption`         |
 | **Alias:**             | N/A|
-| **Description:**       | The data type used to represent formats to restrict scope. |
+| **Description:**       | The data type used to represent how each level of [Scope] is defined. |
 | **Default Value:**     | `(ScopeOption)0`                             |
 | **Can be used as:**    | `ScopeOption`, `Object`, `dynamic`           |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)ScopeOption.Current` or `(System.Int16)ScopeOption.Current` or `(short)ScopeOption.Current`)  |
@@ -37,13 +37,13 @@ The `ScopeOption` data type is used to provide properties to [Scope].
 |-|-|
 | **Name:**    | Current                                         |
 | **Value:**   | [Int32][] with value `0`                       |
-| **Notes:**   | Restricts scope to the current value |
+| **Notes:**   | Defines [Scope] to the current value |
 
 ## Remarks
 
 ### Creating a ScopeOption
 
-The following table shows some of the ways that `TextEncodingFormat` can be created.
+The following table shows some of the ways that `ScopeOption` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
@@ -55,9 +55,9 @@ The following table shows some of the ways that `TextEncodingFormat` can be crea
 
 Please see [Instantiating an enumeration type][] for further information.
 
-### Convert TextEncodingFormat to Text
+### Convert ScopeOption to Text
 
-The following table shows some of the ways that a `TextEncodingFormat` can be converted to text.
+The following table shows some of the ways that a `ScopeOption` can be converted to text.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
@@ -85,13 +85,15 @@ The following table shows some of the ways that a `ScopeOption` can be converted
 
 ### Known Limitations
 
-None
+#### ScopeOption only has ScopeOption.Current
+
+Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` may be added in a future release.
 
 ## See Also
 
 ### Related Data Types
 
-None
+- [Scope][]
 
 ### Related Concepts
 
