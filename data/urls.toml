@@ -1080,6 +1080,7 @@
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
                         MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection/"
+                        DataStorage = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#data-storage-collection"
                         Dictionaries = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#dictionaries"
                         DictionariesIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes"
                         Structures = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#structures"
@@ -1515,6 +1516,8 @@
                 MainDoc = "/docs/reference/data-types/scopes/"
                 [Cortex.Reference.DataTypes.Scopes.scope]
                     MainDoc = "/docs/reference/data-types/scopes/scope"
+                    Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
+                    System = "/docs/reference/data-types/scopes/scope/#system"
                 [Cortex.Reference.DataTypes.Scopes.ScopeOptions]
                     MainDox = "/docs/reference/data-types/scopes/scope-options"
             [Cortex.Reference.DataTypes.Ssh]

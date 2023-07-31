@@ -1,7 +1,7 @@
 ---
 title: "Create Collection"
 linkTitle: "Create Collection"
-description: "Creates a data storage collection."
+description: "Create a data storage collection."
 ---
 {{<figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon">}}
 
@@ -11,20 +11,20 @@ description: "Creates a data storage collection."
 
 ## Description
 
-Creates a [Data Storage Collection] within the [Collection Scope][Collection Scope Property].
+Create a [Data Storage Collection] within the [Collection Scope][Collection Scope Property].
 
 ## Examples
 
 ### Create a Data Storage Collection
 
-This example will attempt to create a new [Data Storage Collection]. No collection named `"users"` exists within the [Collection Scope][Collection Scope Property].
+This example will attempt to create a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.Current, System: ScopeOptions.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
@@ -32,18 +32,19 @@ This creates a new [Data Storage Collection] within the [Collection Scope][Colle
 
 ### Create a Data Storage Collection that Already Exists
 
-This example will attempt to create a new [Data Storage Collection]. A collection named `"users"`already exists within the [Collection Scope][Collection Scope Property].
+This example will attempt to create a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+In this example `"users"` already exists.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.Current, System: ScopeOptions.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
-Attempting to create a [Data Storage Collection] with the name `"users"` within the [Collection Scope][Colection Scope Property] results in no operation, as the [Data Storage Collection] already exists.
+Attempting to create a [Data Storage Collection] with the name `"users"` within the [Collection Scope][Collection Scope Property] results in no operation, as the [Data Storage Collection] already exists.
 
 ## Properties
 
@@ -85,22 +86,23 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
+| [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
-| [PropertyNullException][] | Thrown when the [Collection Name][Collection Name Property] is `null`. |
-| | Thrown when the [Collection Scope][Collection Scope Property] is `null` |
-| [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOptions][] types (e.g. `(ScopeOptions)100`). |
-| [ArgumentException][] | Thrown when [System][] is not one of the specified [ScopeOptions][] types (e.g. `(ScopeOptions)100`). |
-| [ServiceUnavailableException][] | Thrown when the data storage service doesn't exist or isn't healthy |
+| [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
+| | Thrown when the [Collection Name][Collection Name Property] is `null`. |
+| [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] does not exist. |
+| | Thrown when the [Data Storage Service][] is not healthy. |
 
 ## Remarks
 
 ### Creating a collection that already exists
 
-When trying to create a collection that already exists, no operation is performed, see [Collection Already Exists][].
+When trying to create a collection that already exists, no operation is performed; see example [Create a Data Storage Collection that Already Exists][Collection Already Exists].
 
 ### Case Sensitivity
 
-Collection name is case insensitive. E.g. 'Collection' is the same as 'collection' so trying to create a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` already exists would have no effect ( see [Collection Already Exists][] ).
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to create a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` already exists would have no effect; see example [Create a Data Storage Collection that Already Exists][Collection Already Exists].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
@@ -110,7 +112,7 @@ Collection name is case insensitive. E.g. 'Collection' is the same as 'collectio
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.MainDoc">}}
-[ScopeOptions]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOptions.MainDox">}}
+[ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOptions.MainDox">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.System">}}
 
@@ -119,6 +121,7 @@ Collection name is case insensitive. E.g. 'Collection' is the same as 'collectio
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
 [ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException.MainDoc">}}
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
+[Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
