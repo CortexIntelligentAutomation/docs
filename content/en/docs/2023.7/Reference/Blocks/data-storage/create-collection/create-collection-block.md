@@ -111,10 +111,10 @@ When trying to create a collection that already exists, no operation is performe
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.MainDoc">}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOptions.MainDox">}}
-[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.Tenant">}}
-[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.System">}}
+[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
+[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System">}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}

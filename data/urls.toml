@@ -372,7 +372,7 @@
                 [Cortex.Reference.Blocks.DataStorage.CreateCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/create-collection-block"
                     [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
-                        MainDog = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
+                        MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
@@ -1514,12 +1514,12 @@
                     UseSsl = "/docs/reference/data-types/session-details/serverdetails/#usessl"
             [Cortex.Reference.DataTypes.Scopes]
                 MainDoc = "/docs/reference/data-types/scopes/"
-                [Cortex.Reference.DataTypes.Scopes.scope]
+                [Cortex.Reference.DataTypes.Scopes.Scope]
                     MainDoc = "/docs/reference/data-types/scopes/scope"
                     Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
                     System = "/docs/reference/data-types/scopes/scope/#system"
                 [Cortex.Reference.DataTypes.Scopes.ScopeOptions]
-                    MainDox = "/docs/reference/data-types/scopes/scope-options"
+                    MainDox = "/docs/reference/data-types/scopes/scope-option"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
                 [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]

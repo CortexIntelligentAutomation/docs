@@ -6,7 +6,7 @@ description: "The exception thrown when a service is unavailable."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.DataStorage.ServiceUnavailableException)</p>
+<p class="namespace">(Cortex.Exceptions.Services.ServiceUnavailableException)</p>
 
 ## Description
 
@@ -19,7 +19,7 @@ There are multiple reasons that this exception can be thrown:
 
 ## Reasons
 
-### Service is unhealthy or Service does not exist
+### Service is Unhealthy or Service does not Exist
 
 This exception indicates that there is an issue with the service.
 
@@ -48,14 +48,6 @@ The type of the exception (i.e. `ServiceUnavailableException`)
 ### Message
 
 The exception message, providing information about the exception that occurred.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Tenant
-
-The tenant 
 
 | | |
 |-----------|------------|
@@ -95,7 +87,8 @@ None
 
 ### Related Blocks
 
-* [Create Collection Block][]
+* Data Storage
+    * [Create Collection Block][]
 
 ### External Documentation
 
@@ -113,7 +106,7 @@ None
 [Hex]: {{< url path="Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Hex" >}}
 [Base64URL]: {{< url path="Cortex.Reference.DataTypes.Text.Encoding.TextEncodingFormat.Base64Url" >}}
 
-[Create Collection Block]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDog">}}
+[Create Collection Block]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
 
 [WorkingWithText]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
@@ -122,3 +115,6 @@ None
 [TextDecodingErrorCode]: {{< url path="Cortex.Reference.DataTypes.Text.TextDecodingErrorCode.MainDoc" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[Tenant]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
+[System]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.System">}}

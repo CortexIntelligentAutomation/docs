@@ -1,7 +1,7 @@
 ---
 title: "Scope"
 linkTitle: "Scope"
-description: "Used to represent the scope in to restrict the effects of actions."
+description: "Used to represent the scope in order to restrict the effects of actions."
 ---
 
 # {{% param title %}}
@@ -10,22 +10,30 @@ description: "Used to represent the scope in to restrict the effects of actions.
 
 ## Summary
 
-The `Scope` data type is used to represent the scope in to restrict the effects of actions.
+The `Scope` data type is used to represent the [Tenant][Tenant Property] and [System][System Property] in order to restrict the effects of an action.
 
-`Scope` is a collection of [ScopeOptions][] which are all [enums][Working with Enums]. The [enum][Working with Enums] data type has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
+The `Scope` data type is used to provide a [Tenant][Tenant Property] and [System][System Property] context to an action.
+
+The `Scope` data type is used to (restrict the effects of/scope) an action to a [Tenant][Tenant Property] and [System][System Property].
+
+The `Scope` data type is used to limit the accessibilty of an action to the [Tenant][Tenant Property] and [System][System Property] provided.
+
+The `Scope` data type is used to define the location of an action.
+
+The `Scope` data type is used to link the effects/consequences of an action to a [Tenant][Tenant Property] and [System][System Property].
 
 | | |
 |-|-|
-| **Category:**          | Data Storage                                                  |
+| **Category:**          | Scopes                                                  |
 | **Name:**              | `Scope`                                |
 | **Full Name:**         | `Cortex.DataTypes.Scopes.Scope`         |
 | **Alias:**             | N/A                                              |
-| **Description:**       | The encoding format used while encoding/decoding text. |
+| **Description:**       | Used to represent the [Tenant][Tenant Property] and [System][System Property] in order to restrict the effects of actions.|
 | **Default Value:**     | `null`                             |
 | **Can be used as:**    | `Scope`, `Object`, `dynamic`           |
 | **Can be cast to:**    | N/A |
 
-## Properies
+## Properties
 
 ### Tenant
 
@@ -33,7 +41,7 @@ The [Tenant][Tenant Property] to restrict the effects of an action.
 
 | | |
 |-|-|
-| Data Type | [Scope Options][] |
+| Data Type | [ScopeOptions][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `ScopeOptions.Current` |
@@ -44,14 +52,14 @@ The [System][System Property] to restrict the effects of an action.
 
 | | |
 |-|-|
-| Data Type | [Scope Options][] |
+| Data Type | [ScopeOptions][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | `ScopeOptions.Current` |
 
 ## Remarks
 
-### Creating a TextEncodingFormat
+### Creating a Scope
 
 The following table shows some of the ways that `Scope` can be created.
 
@@ -66,7 +74,7 @@ A `Scope` can also be created using the Literal Editor by filling in the necessa
 | `Tenant` | `ScopeOptions` | `ScopeOptions.Current` | The tenant to restrict the scope to |
 | `System` | `ScopeOptions` | `ScopeOptions.Current` | The system to restrict the scope to |
 
-### Convert TextEncodingFormat to Text
+### Convert Scope to Text
 
 The following table shows some of the ways that a `Scope` can be converted to text.
 
@@ -82,7 +90,7 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 ### Known Limitations
 
-None
+Currently only one tenant/system is usable so only the current option is available.
 
 ## See Also
 
@@ -97,6 +105,9 @@ None
 ### External Documentation
 
 None
+
+[Tenant Property]: {{< ref "#tenant">}}
+[System Property]: {{< ref "#system">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -119,3 +130,7 @@ None
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
+
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
