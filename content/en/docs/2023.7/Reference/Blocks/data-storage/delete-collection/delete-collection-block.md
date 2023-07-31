@@ -12,24 +12,26 @@ description: "Deletes a data storage collection."
 
 ## Description
 
-Deletes a data storage collection.
+Delete a [Data Storage Collection] within the [Collection Scope][Collection Scope Property].
 
 ## Examples
 
 ### Delete a Data Storage Collection
 
-This example will Delete a data storage collection.
+This example will attempt to delete a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.All, System: ScopeOptions.All)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.Current, System: ScopeOptions.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value "data storage collection" | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
 This Delete a data storage collection.
+
+This deletes the [Data Storage Collection] within the [Collection Scope][Collection Scope Property] with [Collection Name][Collection Name Property] `"users"`.
 
 ## Properties
 
