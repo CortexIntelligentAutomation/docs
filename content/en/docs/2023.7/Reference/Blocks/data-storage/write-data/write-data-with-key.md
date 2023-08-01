@@ -3,8 +3,7 @@ title: "Write Data With Key"
 linkTitle: "Write Data With Key"
 description: "Writes data to a data storage collection with a key"
 ---
-todo
-figure src="/blocks/data-storage-write-data-with-key-block.png" alt="Icon" class="block-icon"
+{{<figure src="/blocks/data-storage-write-data-with-key-block.png" alt="Icon" class="block-icon">}}
 
 # {{% param title %}}
 
