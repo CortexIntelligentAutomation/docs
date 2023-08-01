@@ -1,0 +1,103 @@
+---
+title: "ServiceUnavailableException"
+linkTitle: "ServiceUnavailableException"
+description: "The exception thrown when a service is unavailable."
+---
+
+# {{% param title %}}
+
+<p class="namespace">(Cortex.Exceptions.Services.ServiceUnavailableException)</p>
+
+## Description
+
+The exception thrown when either a [Core Service][] or [Execution Service][] is unavailable.
+
+## Reasons
+
+### Service is Unavailable
+
+The service is either unhealthy, not running or does not exist.
+
+#### Message Format
+
+```json
+"The <service-name> service was unavailable."
+```
+
+where:
+- `<service-name>` will be the name of the service in Service Fabric Explorer (e.g. fabric:/Core/Services/DataStorage).
+
+#### How to fix
+
+Ensure the specified service exists, is running and is healthy.
+
+## Properties
+
+### Exception Type
+
+The type of the exception (i.e. `ServiceUnavailableException`)
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Message
+
+The exception message, providing information about the exception that occurred.
+
+For this exception:
+- `<service-name>` will be replaced with the name of the service.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Service Name
+
+The name of the service that does not exist, is not running or is not healthy.
+
+| | |
+|-----------|---------------------------|
+| Data Type | [String][] |
+
+### Help Link
+
+The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+## Remarks
+
+### Known Limitations
+
+None
+
+## See Also
+
+### Related Data Types
+
+* [String][]
+
+### Related Concepts
+
+* [Exceptions][]
+
+### Related Blocks
+
+* Data Storage
+    * [Create Collection][]
+
+### External Documentation
+
+None
+
+[Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
+
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[Core Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MainDoc">}}
+[Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.MainDoc">}}

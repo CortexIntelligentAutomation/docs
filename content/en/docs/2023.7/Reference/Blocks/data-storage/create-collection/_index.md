@@ -1,5 +1,5 @@
 ---
 title: "Create Collection"
 linkTitle: "Create Collection"
-description: "Creates a data storage collection."
+description: "Create a data storage collection."
 ---

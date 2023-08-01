@@ -1,5 +1,6 @@
 ---
 title: "Scopes"
 linkTitle: "Scopes"
-description: "Data types related to working with scope."
+description: "Data types used for working with Scopes."
+weight: 1
 ---

@@ -321,7 +321,7 @@
         [Cortex.Guides.CortexInnovation.ExecutionApplication]
             MainDoc = "/docs/guides/cortex-innovation/core-application/"
             [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
-                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                MainDoc = "/docs/guides/cortex-innovation/execution-application/services/"
                 [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
                     MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
         [Cortex.Guides.Gateway]
@@ -372,7 +372,7 @@
                 [Cortex.Reference.Blocks.DataStorage.CreateCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/create-collection-block"
                     [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
-                        MainDog = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
+                        MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
@@ -1080,6 +1080,7 @@
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
                         MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection/"
+                        DataStorage = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#data-storage-collection"
                         Dictionaries = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#dictionaries"
                         DictionariesIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes"
                         Structures = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#structures"
@@ -1153,6 +1154,10 @@
                             ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
                         [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
                             MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
+                [Cortex.Reference.Concepts.WorkingWith.Scopes]
+                    MainDoc = "/docs/reference/concepts/working-with/scopes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Scopes.WhatIsAScope]
+                        MainDoc = "/docs/reference/concepts/working-with/scopes/what-is-a-scope/"
                 [Cortex.Reference.Concepts.WorkingWith.Tasks]
                     MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
@@ -1513,10 +1518,12 @@
                     UseSsl = "/docs/reference/data-types/session-details/serverdetails/#usessl"
             [Cortex.Reference.DataTypes.Scopes]
                 MainDoc = "/docs/reference/data-types/scopes/"
-                [Cortex.Reference.DataTypes.Scopes.scope]
+                [Cortex.Reference.DataTypes.Scopes.Scope]
                     MainDoc = "/docs/reference/data-types/scopes/scope"
-                [Cortex.Reference.DataTypes.Scopes.ScopeOptions]
-                    MainDox = "/docs/reference/data-types/scopes/scope-options"
+                    Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
+                    System = "/docs/reference/data-types/scopes/scope/#system"
+                [Cortex.Reference.DataTypes.Scopes.ScopeOption]
+                    MainDoc = "/docs/reference/data-types/scopes/scope-option"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
                 [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]
@@ -1657,7 +1664,7 @@
             [Cortex.Reference.Exceptions.DataStorage]
                 MainDoc = "/docs/reference/exceptions/data-storage/"
                     [Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException]
-                        MainDoc = "/docs/reference/exceptions/data-storage/service-unavailable-exception/"
+                        MainDoc = "/docs/reference/exceptions/services/service-unavailable-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
