@@ -1657,10 +1657,6 @@
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
-            [Cortex.Reference.Exceptions.DataStorage]
-                MainDoc = "/docs/reference/exceptions/data-storage/"
-                    [Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException]
-                        MainDoc = "/docs/reference/exceptions/data-storage/service-unavailable-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
@@ -1746,6 +1742,10 @@
                     MainDoc = "/docs/reference/exceptions/powershell/ps-remoting-exception"
                 [Cortex.Reference.Exceptions.PowerShell.PSException]
                     MainDoc = "/docs/reference/exceptions/powershell/ps-exception"
+            [Cortex.Reference.Exceptions.Services]
+                MainDoc = "/docs/reference/exceptions/services/"
+                    [Cortex.Reference.Exceptions.Services.ServiceUnavailableException]
+                        MainDoc = "/docs/reference/exceptions/services/service-unavailable-exception/"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]

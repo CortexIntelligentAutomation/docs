@@ -8,23 +8,24 @@ description: "Deletes a data storage collection."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.DataStorage.Delete.DeleteCollectionBlock)</p>
+<p class="namespace">(Cortex.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock)</p>
 
 ## Description
 
-Delete a [Data Storage Collection] within the [Collection Scope][Collection Scope Property].
+Delete a [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
 
 ## Examples
 
 ### Delete a Data Storage Collection
 
 This example will attempt to delete a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+In this example `"users"` already exists.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOptions.Current, System: ScopeOptions.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value "data storage collection" | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
@@ -33,13 +34,28 @@ This Delete a data storage collection.
 
 This deletes the [Data Storage Collection] within the [Collection Scope][Collection Scope Property] with [Collection Name][Collection Name Property] `"users"`.
 
+### Create a Data Storage Collection that Does Not Exist
+
+This example will attempt to delete a [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+In this example `"users"` does not exist.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+
+#### Result
+
+Attempting to delete a [Data Storage Collection] with the name `"users"` within the [Collection Scope][Collection Scope Property] results in no operation, as the [Data Storage Collection] does not exist.
 ## Properties
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to Delete the collection from.
+The [Collection Scope][Collection Scope Property] to Delete the [Data Storage Collection] from.
   
-| | | 
+| | |
 |--------------------|---------------------------|
 | Data Type | [Scope] |
 | Property Type | [Input][] |
@@ -49,15 +65,15 @@ The [Collection Scope][Collection Scope Property] to Delete the collection from.
 
 ```json
 {
-    "Tenant": "ScopeOptions.Current",
-    "System": "ScopeOptions.Current"
+    "Tenant": "ScopeOption.Current",
+    "System": "ScopeOption.Current"
 }
 
 ```
 
 ### Collection Name
 
-The name of the collection to delete.
+The name of the [Data Storage Collection] to delete.
 
 | | |
 |--------------------|---------------------------|
@@ -73,34 +89,47 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty.|
-| [PropertyNullException][] | Thrown when the [Collection Name][Collection Name Property] `null`. |
-| | Thrown when the [Collection Scope][Collection Scope Property] is `null` |
-| [ArgumentException][] | Thrown when the Tenant or System [ScopeOptions] within the [Collection Scope][Collection Scope Property] aren't configured correctly |
-| [ServiceUnavailableException][] | Thrown when the data storage service doesn't exist or isn't healthy |
+| [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
+| [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
+| | Thrown when the [Collection Name][Collection Name Property] is `null`. |
+| [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] does not exist. |
+| | Thrown when the [Data Storage Service][] is not healthy. |
 
 ## Remarks
 
-When trying to delete a collection that doesn't exists, no operation is performed.
+When trying to create a collection that does not exist, no operation is performed; see example [Delete a Data Storage Collection that Does Not Exist][Delete Collection that Does Not Exist].
 
-Collection name is case insensitive. E.g. 'Collection' is the same as 'collection'.
+### Case Sensitivity
+
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to delete a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` exists would delete `"COLLECTION"`; see example [Delete a Data Storage Collection][Delete Collection].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
 
+[Delete Collection]: {{< ref "#delete-a-data-storage-collection">}}
+[Delete Collection that Does Not Exist]: {{< ref "#delete-a-data-storage-collection-that-does-not-exist" >}}
+
+[Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
+[Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}
+
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
-[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.scope.MainDoc">}}
-[ScopeOptions]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOptions.MainDox">}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
+[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
+[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System">}}
+
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
-[ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException.MainDoc">}}
+[ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceUnavailableException.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
-
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
