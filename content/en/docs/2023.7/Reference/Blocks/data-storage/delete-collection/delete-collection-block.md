@@ -18,42 +18,45 @@ Delete a [Data Storage Collection][] within the [Collection Scope][Collection Sc
 
 ### Delete a Data Storage Collection
 
-This example will attempt to delete a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+This example will attempt to delete [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection name][Collection Name Property] | `($)CollectionName` with value "data storage collection" | `($)CollectionName` is a variable of type [String][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
-This Delete a data storage collection.
-
 This deletes the [Data Storage Collection] within the [Collection Scope][Collection Scope Property] with [Collection Name][Collection Name Property] `"users"`.
 
-### Create a Data Storage Collection that Does Not Exist
+***
 
-This example will attempt to delete a [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+### Delete a Data Storage Collection that Does Not Exist
+
+This example will attempt to delete a [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` does not exist.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
 Attempting to delete a [Data Storage Collection] with the name `"users"` within the [Collection Scope][Collection Scope Property] results in no operation, as the [Data Storage Collection] does not exist.
+
+***
+
 ## Properties
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to Delete the [Data Storage Collection] from.
+The [Collection Scope][Collection Scope Property] to delete the [Data Storage Collection] from.
   
 | | |
 |--------------------|---------------------------|
@@ -99,6 +102,7 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Deleting a Collection that Does Not Exist
 When trying to create a collection that does not exist, no operation is performed; see example [Delete a Data Storage Collection that Does Not Exist][Delete Collection that Does Not Exist].
 
 ### Case Sensitivity
