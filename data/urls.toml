@@ -1661,6 +1661,12 @@
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
+            [Cortex.Reference.Exception.DataStorage]
+                MainDoc = "/dcos/reference/exceptions/data-storage/"
+                    [Cortex.Reference.Exceptions.DataStorage.DataStorageCollectionNotFoundException]
+                        MainDoc = "/docs/reference/exceptions/data-storage/data-storage-collection-not-found-exception/"
+                    [Cortex.Reference.Exceptions.DataStorage.KeyInDataStorageCollectionNotFoundException]
+                        MainDoc = "/docs/reference/exceptions/data-storage/key-in-data-storage-collection-not-found-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]

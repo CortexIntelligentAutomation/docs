@@ -1,5 +1,5 @@
 ---
-title: "Delete Data With Key"
-linkTitle: "Delete Data With Key"
-description: "Delete data from a data storage collection using a key."
+title: "Delete Data"
+linkTitle: "Delete Data"
+description: "Delete data from a data storage collection."
 ---

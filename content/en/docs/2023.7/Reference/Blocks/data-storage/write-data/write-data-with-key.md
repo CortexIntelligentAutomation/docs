@@ -16,7 +16,7 @@ Writes data to a data storage collection with a key.
 
 ## Examples
 
-### Write to a data storage collection
+### Write to a Data Storage Collection
 
 This example will write `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` of type [UserCredentials][] to an existing [Data Storage Collection][] named `"users"` with a key of `"username"`.
 
@@ -35,7 +35,7 @@ This adds the pair of `"username" : {"Domain": "domain", "Username": "username",
 
 ***
 
-### Write to a data storage collection with a key that already exists
+### Write to a Data Storage Collection with a Key that Already Exists
 
 This example will write `{"Domain": "domain", "Username": "newUsername", "Password": "encryptedPassword"}` of type [UserCredentials][] with key `"username "`to an existing [Data Storage Collection][] named `"users"`.
 
@@ -135,7 +135,7 @@ The exceptions thrown by the block can be found below:
 
 ### Writing with a key that is already present
 
-When trying to write to a key that is already present on the [Data Storag Collection] provided, the value of the key is overwritten; see example [Write to a Data Storage Collection but the Key Already Exists][]
+When trying to write to a key that is already present on the [Data Storage Collection][] provided, the value of the key is overwritten; see example [Write to a Data Storage Collection with a Key that Already Exists][Write Existing Key]
 
 ### Case Sensitivity
 
@@ -147,17 +147,21 @@ When trying to write to a key that is already present on the [Data Storag Collec
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Key Property]: {{< ref "#key" >}}
 [Data Property]: {{< ref "#data" >}}
+[Write Existing Key]: {{< ref "#write-to-a-data-storage-collection-with-a-key-that-already-exists">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
+[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
+[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System">}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
-[ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.ServiceUnavailableException.MainDoc">}}
+[ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceUnavailableException.MainDoc">}}
+[DataStorageCollectionNotFoundException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.DataStorageCollectionNotFoundException.MainDoc">}}
 
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 [Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}
