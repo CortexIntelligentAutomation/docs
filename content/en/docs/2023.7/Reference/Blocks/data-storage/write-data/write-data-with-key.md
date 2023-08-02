@@ -11,7 +11,7 @@ description: "Writes data to a data storage collection with a key"
 
 ## Description
 
-Writes data with a key to a [Data Storage Collection][].
+Writes [Data][Data Property] to a [Data Storage Collection][] with the specified [Key][Key Property].
 
 ## Examples
 
@@ -23,7 +23,7 @@ This example will write `{"Domain": "domain", "Username": "username", "Password"
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}`. In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "username", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
@@ -36,13 +36,13 @@ This adds the pair of `"username" : {"Domain": "domain", "Username": "username",
 
 ### Write to a Data Storage Collection with a Key that Already Exists
 
-This example will write `{"Domain": "domain", "Username": "newUsername", "Password": "encryptedPassword"}` of type [UserCredentials][] with key `"username "`to an existing [Data Storage Collection][] named `"users"`.
+This example will write `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` of type [UserCredentials][] to an existing [Data Storage Collection][] named `"users"` with key `"username"`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "newUsername", "Password": "encryptedPassword"}`. In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "newUsername", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |

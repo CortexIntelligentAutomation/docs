@@ -18,13 +18,13 @@ Reads data with a key from a [Data Storage Collection][].
 
 ### Read from a Data Storage Collection
 
-This example will read from a [Data Storage Collection][] named `"users"` with key `"username"` of type [String][].
+This example will read from a [Data Storage Collection][] named `"users"` with key `"username"` which contains `"username"` with the data `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}`
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [Object][] |
@@ -39,7 +39,7 @@ This reads `"username"` from the [Data Storage Collection][] which updates the v
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to read from the [Data Storage Collection] within.
+The [Collection Scope][Collection Scope Property] the [Data Storage Collection] is within.
   
 | | |
 |--------------------|---------------------------|
@@ -104,12 +104,12 @@ The exceptions thrown by the block can be found below:
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found on the specified [Collection Scope][Collection Scope property].
+| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] could not be found on the provided [Data Storage Collection] within the [Collection Scope][Collection Scope Property] |
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
 | | Thrown when the [Key][Key Property] is `null` |
 | [ServiceUnavailableException][] | Thrown when the [Data Storage Service] is not healthy |
-| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] could not be found on the provided [Data Storage Collection] within the [Collection Scope][Collection Scope Property] |
 
 ## Remarks
 
