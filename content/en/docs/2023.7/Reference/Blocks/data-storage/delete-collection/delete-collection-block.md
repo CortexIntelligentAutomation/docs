@@ -1,76 +1,82 @@
 ---
-title: "Create Collection"
-linkTitle: "Create Collection"
-description: "Create a data storage collection."
+title: "Delete Collection"
+linkTitle: "Delete Collection"
+description: "Deletes a data storage collection."
 ---
-{{<figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon">}}
+
+{{<figure src="/blocks/data-storage-delete-collection-block.png" alt="Icon" class="block-icon">}}
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.DataStorage.CreateCollection.CreateCollectionBlock)</p>
+<p class="namespace">(Cortex.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock)</p>
 
 ## Description
 
-Create a [Data Storage Collection] within the [Collection Scope][Collection Scope Property].
+Delete a [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
 
 ## Examples
 
-### Create a Data Storage Collection
+### Delete a Data Storage Collection
 
-This example will attempt to create a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOptions.Current, system: ScopeOptions.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
-
-#### Result
-
-This creates a new [Data Storage Collection] within the [Collection Scope][Collection Scope Property] with [Collection Name][Collection Name Property] `"users"`.
-
-### Create a Data Storage Collection that Already Exists
-
-This example will attempt to create a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+This example will attempt to delete a [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOptions.Current", "System": "ScopeOptions.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOptions.Current, system: ScopeOptions.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
-Attempting to create a [Data Storage Collection] with the name `"users"` within the [Collection Scope][Collection Scope Property] results in no operation, as the [Data Storage Collection] already exists.
+This deletes the [Data Storage Collection] within the [Collection Scope][Collection Scope Property] with [Collection Name][Collection Name Property] `"users"`.
+
+***
+
+### Delete a Data Storage Collection that Does Not Exist
+
+This example will attempt to delete a [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+In this example `"users"` does not exist.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+
+#### Result
+
+Attempting to delete a [Data Storage Collection] with the name `"users"` within the [Collection Scope][Collection Scope Property] results in no operation, as the [Data Storage Collection] does not exist.
+
+***
 
 ## Properties
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to create the [Data Storage Collection] within.
-
+The [Collection Scope][Collection Scope Property] to delete the [Data Storage Collection] from.
+  
 | | |
 |--------------------|---------------------------|
 | Data Type | [Scope] |
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [Collection Scope][Collection Scope Property] with the value shown below: |
+| Default Value | [Collection Scope][Collection Scope Property] with value show below |
 
 ```json
 {
-    "Tenant": "ScopeOptions.Current",
-    "System": "ScopeOptions.Current"
+    "Tenant": "ScopeOption.Current",
+    "System": "ScopeOption.Current"
 }
 
 ```
 
 ### Collection Name
 
-The name of the [Data Storage Collection] to create.
+The name of the [Data Storage Collection] to delete.
 
 | | |
 |--------------------|---------------------------|
@@ -96,17 +102,21 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Creating a Collection that Already Exists
-
-When trying to create a collection that already exists, no operation is performed; see example [Create a Data Storage Collection that Already Exists][Collection Already Exists].
+### Deleting a Collection that Does Not Exist
+When trying to delete a collection that does not exist, no operation is performed; see example [Delete a Data Storage Collection that Does Not Exist][Delete Collection that Does Not Exist].
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to create a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` already exists would have no effect; see example [Create a Data Storage Collection that Already Exists][Collection Already Exists].
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to delete a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` exists would delete `"COLLECTION"`; see example [Delete a Data Storage Collection][Delete Collection].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
-[Collection Already Exists]: {{< ref "#create-a-data-storage-collection-that-already-exists">}}
+
+[Delete Collection]: {{< ref "#delete-a-data-storage-collection">}}
+[Delete Collection that Does Not Exist]: {{< ref "#delete-a-data-storage-collection-that-does-not-exist" >}}
+
+[Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
+[Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -120,11 +130,8 @@ When trying to create a collection that already exists, no operation is performe
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
 [ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceUnavailableException.MainDoc">}}
-[Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
-[Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}

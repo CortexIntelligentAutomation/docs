@@ -88,12 +88,14 @@ None
 
 * Data Storage
     * [Create Collection][]
+    * [Delete COllection][]
 
 ### External Documentation
 
 None
 
 [Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
+[Delete Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 

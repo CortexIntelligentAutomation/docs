@@ -373,6 +373,10 @@
                     MainDoc = "/docs/reference/blocks/data-storage/create-collection-block"
                     [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
                         MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
+                [Cortex.Reference.Blocks.DataStorage.DeleteCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/delete-collection-block"
+                    [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock]
+                        MainDoc = "/docs/reference/blocks/data-storage/delete-collection/delete-collection-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]

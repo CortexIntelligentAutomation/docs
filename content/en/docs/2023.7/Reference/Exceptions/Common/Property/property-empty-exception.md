@@ -89,6 +89,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Execute Data Command][]
 * Data Storage
   * [Create Collection][]
+  * [Delete Collection][]
 * Date & Time
   * [Convert Text To Date Time][]
 * Email
@@ -155,6 +156,7 @@ None
 [Convert Text To Date Time]: {{< url path="Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime.MainDoc" >}}
 
 [Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
+[Delete Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock.MainDoc">}}
 
 [Send Email Using SMTP Server]: {{< url path="Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.MainDoc" >}}
 
