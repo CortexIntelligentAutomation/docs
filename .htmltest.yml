@@ -14,6 +14,7 @@ IgnoreURLs:
 - "https://js/swagger-ui-standalone-preset.js"
 - "https://kodify.net/.*"
 - "https://grafana.com/.*"
+- "https://learn.microsoft.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
