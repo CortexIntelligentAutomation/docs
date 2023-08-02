@@ -1,42 +1,24 @@
 ---
-title: "Write Data With Key"
-linkTitle: "Write Data With Key"
-description: "Writes data to a data storage collection with a key"
+title: "Read Data With Key"
+linkTitle: "Read Data With Key"
+description: "Reads data from a data storage collection with a key"
 ---
-{{<figure src="/blocks/data-storage-write-data-with-key-block.png" alt="Icon" class="block-icon">}}
+todo
+figure src="/blocks/data-storage-read-data-with-key-block.png" alt="Icon" class="block-icon"
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock)</p>
+<p class="namespace">(Cortex.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock)</p>
 
 ## Description
 
-Writes data with a key to a [Data Storage Collection][].
+Reads data with a key from a [Data Storage Collection][].
 
 ## Examples
 
-### Write to a Data Storage Collection
+### Read from a Data Storage Collection
 
-This example will write `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` of type [UserCredentials][] to an existing [Data Storage Collection][] named `"users"` with key `"username"`.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
-| [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}`. In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "username", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
-
-#### Result
-
-This adds the pair of `"username" : {"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` to the [Data Storage Collection][] named `"users"`.
-
-***
-
-### Write to a Data Storage Collection with a Key that Already Exists
-
-This example will write `{"Domain": "domain", "Username": "newUsername", "Password": "encryptedPassword"}` of type [UserCredentials][] with key `"username "`to an existing [Data Storage Collection][] named `"users"`.
+This example will read from a [Data Storage Collection][] named `"users"` with key `"username"` of type [String][].
 
 #### Properties
 
@@ -45,11 +27,11 @@ This example will write `{"Domain": "domain", "Username": "newUsername", "Passwo
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "newUsername", "Password": "encryptedPassword"}`. In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "newUsername", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
+| [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [Object][] |
 
 #### Result
 
-This example will update the key `"username"` to `{"Domain": "domain", "Username": "newUsername", "Password": "encryptedPassword"}` of type [UserCredentials][] in the [Data Storage Collection][] named `"users"`.
+This reads `"username"` from the [Data Storage Collection][] which updates the value of `($)Data` to: `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}`.
 
 ***
 
@@ -57,7 +39,7 @@ This example will update the key `"username"` to `{"Domain": "domain", "Username
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to write the [Data Storage Collection] within.
+The [Collection Scope][Collection Scope Property] to read from the [Data Storage Collection] within.
   
 | | |
 |--------------------|---------------------------|
@@ -77,7 +59,7 @@ The [Collection Scope][Collection Scope Property] to write the [Data Storage Col
 
 ### Collection Name
 
-The name of the [Data Storage Collection][] to write to.
+The name of the [Data Storage Collection][] to read from.
 
 | | |
 |--------------------|---------------------------|
@@ -89,9 +71,7 @@ The name of the [Data Storage Collection][] to write to.
 
 ### Key
 
-The [Key][Key Property] to add the [Data][Data Property] with.
-
-The [Key][Key Property] can't be `null` and must be unique within each [Data Storage Collection][].
+The [Key][Key Property] to read the [Data][Data Property] with.
 
 For more information about what a key is, please see [Keys].
 
@@ -105,7 +85,7 @@ For more information about what a key is, please see [Keys].
 
 ### Data
 
-The [Data][Data Property] to be added to the [Data Storage Collection] with the [Key][Key Property].
+The [Data][Data Property] that is read from the [Data Storage Collection] with the matching [Key][Key Property].
 
 | | |
 |--------------------|---------------------------|
@@ -123,22 +103,19 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found on the specified [Collection Scope][Collection Scope property].
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
 | | Thrown when the [Key][Key Property] is `null` |
 | [ServiceUnavailableException][] | Thrown when the [Data Storage Service] is not healthy |
-| [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found on the specified [Collection Scope][Collection Scope property].
+| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] could not be found on the provided [Data Storage Collection] within the [Collection Scope][Collection Scope Property] |
 
 ## Remarks
 
-### Writing with a key that is already present
-
-When trying to write to a key that is already present on the [Data Storage Collection][] provided, the value of the key is overwritten; see example [Write to a Data Storage Collection with a Key that Already Exists][Write Existing Key]
-
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to write to a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` already exists would write to `"COLLECTION"`.
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to read from a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` already exists would read from `"COLLECTION"`.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 
