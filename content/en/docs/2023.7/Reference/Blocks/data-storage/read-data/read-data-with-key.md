@@ -1,10 +1,9 @@
 ---
 title: "Read Data With Key"
 linkTitle: "Read Data With Key"
-description: "Reads data from a data storage collection with a key"
+description: "Reads data from a data storage collection with the specified key."
 ---
-todo
-figure src="/blocks/data-storage-read-data-with-key-block.png" alt="Icon" class="block-icon"
+{{< figure src="/blocks/data-storage-read-data-with-key-block.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -18,14 +17,19 @@ Reads data with a key from a [Data Storage Collection][].
 
 ### Read from a Data Storage Collection
 
-This example will read from a [Data Storage Collection][] named `"users"` with key `"username"` which contains `"username"` with the data `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}`
+This example will read from a [Data Storage Collection][] named `"users"` with key `"user2"` which contains the following [Keys][Key Property] and [Data][]:
+
+|Key | Data |
+-------------|--------------|
+|`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
+|`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [Object][] |
 
@@ -138,6 +142,7 @@ The exceptions thrown by the block can be found below:
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
 [ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceUnavailableException.MainDoc">}}
 [DataStorageCollectionNotFoundException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.DataStorageCollectionNotFoundException.MainDoc">}}
+[KeyInDataStorageCollectionNotFoundException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.KeyInDataStorageCollectionNotFoundException.MainDoc">}}
 
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 [Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}

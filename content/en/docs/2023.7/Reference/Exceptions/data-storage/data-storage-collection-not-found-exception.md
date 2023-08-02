@@ -10,7 +10,7 @@ description: "The exception thrown when a data storage collection could not be f
 
 ## Description
 
-The exception thrown when a [Data Storage Collection][] could not be found.
+The exception thrown when an operation attempts to retrieve a [Data Storage Collection][] from a [Scope][] that does not exist in that [Scope][].
 
 ## Reasons
 
@@ -106,8 +106,11 @@ None
 [Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 
 [Core Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MainDoc">}}
 [Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.MainDoc">}}
