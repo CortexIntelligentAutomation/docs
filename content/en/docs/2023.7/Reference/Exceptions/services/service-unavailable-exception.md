@@ -86,9 +86,12 @@ None
 
 ### Related Blocks
 
-* Data Storage
-    * [Create Collection][]
-    * [Delete COllection][]
+- Data Storage
+    - [Create Collection][]
+    - [Delete Collection][]
+    - [Delete Data With Key][]
+    - [Read Data With Key][]
+    - [Write Data With Key][]
 
 ### External Documentation
 
@@ -96,6 +99,9 @@ None
 
 [Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
 [Delete Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock.MainDoc">}}
+[Delete Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc">}}
+[Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
+[Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 

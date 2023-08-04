@@ -104,14 +104,14 @@ None
 
 ### Related Blocks
 
-* Data Storage
-    * [Create Collection][]
+- Data Storage
+    - [Read Data With Key][]
 
 ### External Documentation
 
 None
 
-[Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
+[Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
