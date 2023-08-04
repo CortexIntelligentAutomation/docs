@@ -11,18 +11,20 @@ description: "Reads data from a data storage collection with the specified key."
 
 ## Description
 
-Reads data with a key from a [Data Storage Collection][].
+Reads data from a [Data Storage Collection][] with the specified [Key][Key Property].
 
 ## Examples
 
 ### Read from a Data Storage Collection
 
-This example will read from a [Data Storage Collection][] named `"users"` with key `"user2"` which contains the following [Keys][Key Property] and [Data][]:
+This example will attempt to read [Data][Data Property] from a [Data Storage Collection] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and [Data][Data Property]:
 
 |Key | Data |
 -------------|--------------|
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
+
+The example will read the [Key][Key Property] `"user2"` and store the retrieved [Data][Data Property] to `($)Data`.
 
 #### Properties
 
@@ -30,12 +32,12 @@ This example will read from a [Data Storage Collection][] named `"users"` with k
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
-| [Key][Key Property] | `($)Key` with value `"username"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [Object][] |
+| [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
+| [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [dynamic][] |
 
 #### Result
 
-This reads `"username"` from the [Data Storage Collection][] which updates the value of `($)Data` to: `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}`.
+This reads `"user2"` from the [Data Storage Collection][] which updates the value of `($)Data` to: `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.
 
 ***
 
@@ -43,7 +45,7 @@ This reads `"username"` from the [Data Storage Collection][] which updates the v
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] the [Data Storage Collection] is within.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection] to read from.
   
 | | |
 |--------------------|---------------------------|
@@ -51,7 +53,7 @@ The [Collection Scope][Collection Scope Property] the [Data Storage Collection] 
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [Collection Scope][Collection Scope Property] with value show below |
+| Default Value | [Collection Scope][Collection Scope Property] with value shown below |
 
 ```json
 {
@@ -75,7 +77,7 @@ The name of the [Data Storage Collection][] to read from.
 
 ### Key
 
-The [Key][Key Property] to read the [Data][Data Property] with.
+The [Key][Key Property] the [Data][Data Property] to read must have.
 
 For more information about what a key is, please see [Keys].
 
@@ -93,8 +95,8 @@ The [Data][Data Property] that is read from the [Data Storage Collection] with t
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [Object][] |
-| Property Type | [Input][] |
+| Data Type | [dynamic][] |
+| Property Type | [Output][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Data` with no value |
@@ -107,13 +109,14 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
-| [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found on the specified [Collection Scope][Collection Scope property].
-| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] could not be found on the provided [Data Storage Collection] within the [Collection Scope][Collection Scope Property] |
+| [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found within the specified [Collection Scope][Collection Scope property].
+| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] could not be found in the [Data Storage Collection] within the specified [Collection Scope][Collection Scope Property] |
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
 | | Thrown when the [Key][Key Property] is `null` |
-| [ServiceUnavailableException][] | Thrown when the [Data Storage Service] is not healthy |
+| [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] does not exist. |
+| | Thrown when the [Data Storage Service][] is not healthy. |
 
 ## Remarks
 
@@ -151,6 +154,7 @@ The exceptions thrown by the block can be found below:
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc">}}
+[dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 

@@ -370,13 +370,25 @@
             [Cortex.Reference.Blocks.DataStorage]
                 MainDoc = "/docs/reference/blocks/data-storage"
                 [Cortex.Reference.Blocks.DataStorage.CreateCollection]
-                    MainDoc = "/docs/reference/blocks/data-storage/create-collection-block"
+                    MainDoc = "/docs/reference/blocks/data-storage/create-collection"
                     [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
                         MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
                 [Cortex.Reference.Blocks.DataStorage.DeleteCollection]
-                    MainDoc = "/docs/reference/blocks/data-storage/delete-collection-block"
+                    MainDoc = "/docs/reference/blocks/data-storage/delete-collection"
                     [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock]
                         MainDoc = "/docs/reference/blocks/data-storage/delete-collection/delete-collection-block"
+                [Cortex.Reference.Blocks.DataStorage.DeleteData]
+                    MainDoc = "/docs/reference/blocks/data-storage/delete-data"
+                    [Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/delete-data/delete-data-with-key-block"
+                [Cortex.Reference.Blocks.DataStorage.ReadData]
+                    MainDoc = "/docs/reference/blocks/data-storage/read-data"
+                    [Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/read-data/read-data-with-key-block"
+                [Cortex.Reference.Blocks.DataStorage.WriteData]
+                    MainDoc = "/docs/reference/blocks/data-storage/write-data"
+                    [Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/write-data/write-data-with-key-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
