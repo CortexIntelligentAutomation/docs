@@ -16,12 +16,13 @@ The exception thrown when an operation attempts to retrieve a [Data Storage Coll
 
 ### Data Storage Collection Could Not Be Found
 
-The provided [Data Storage Collection][] could not be found.
+The key could not be found on the provided [Data Storage Collection][] could not be found.
 
 #### Message Format
 
 ```json
-"The '<collection-name>' collection was not found. \r\nPlease click the HelpLink for more information on how to fix this."
+"The '<collection-name>' collection was not found. 
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
@@ -30,7 +31,7 @@ where:
 
 #### How to fix
 
-Ensure the provided [Data Storage Collection][] exists.
+Ensure the provided [Data Storage Collection][] exists. A [Data Storage Collection][] can be created using the [Create Collection][] block.
 
 ## Properties
 
@@ -116,6 +117,7 @@ None
 [Tenant Property]: {{< ref "#tenant" >}}
 [System Property]: {{< ref "#system" >}}
 
+[Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
 [Delete Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc">}}
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
 [Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
