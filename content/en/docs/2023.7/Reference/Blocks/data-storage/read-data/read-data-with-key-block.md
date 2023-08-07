@@ -37,7 +37,11 @@ The example will read the [Key][Key Property] `"user2"` and store the retrieved 
 
 #### Result
 
-This reads `"user2"` from the [Data Storage Collection][] which updates the value of `($)Data` to: `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.
+This reads `"user2"` from the [Data Storage Collection][] `"users"` which results in the variable `($)Data` being updated to the following:
+
+```json
+{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}
+```
 
 ***
 
@@ -110,11 +114,11 @@ The exceptions thrown by the block can be found below:
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found within the specified [Collection Scope][Collection Scope property].
-| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] could not be found in the [Data Storage Collection] within the specified [Collection Scope][Collection Scope Property] |
+| [KeyInDataStorageCollectionNotFoundException][] | Thrown when the given [Key][Key Property] can not be found in the [Data Storage Collection] within the specified [Collection Scope][Collection Scope Property]. |
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
-| | Thrown when the [Key][Key Property] is `null` |
+| | Thrown when the [Key][Key Property] is `null`. |
 | [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] does not exist. |
 | | Thrown when the [Data Storage Service][] is not healthy. |
 

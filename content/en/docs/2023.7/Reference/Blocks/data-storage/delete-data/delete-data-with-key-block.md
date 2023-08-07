@@ -53,7 +53,7 @@ This example will attempt to delete data from a [Data Storage Collection] named 
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
 
-The example will delete the [Key][Key Property] `"user3"` and the associated data.
+The example will attempt to delete the [Key][Key Property] `"user3"` and any associated data.
 
 #### Properties
 
@@ -129,11 +129,14 @@ The exceptions thrown by the block can be found below:
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
-| | Thrown when the [Key][Key Property] is `null` |
+| | Thrown when the [Key][Key Property] is `null`. |
 | [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] does not exist. |
 | | Thrown when the [Data Storage Service][] is not healthy. |
 
 ## Remarks
+
+### Deleting from a Collection with a Key that Does Not Exist
+When trying to delete from a collection with a [Key][Key Property] that does not exist, no operation is performed; see example [Delete from a Data Storage Collection with a Key that Does Not Exist][Delete Missing Key].
 
 ### Case Sensitivity
 
@@ -145,7 +148,7 @@ The exceptions thrown by the block can be found below:
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Key Property]: {{< ref "#key" >}}
 [Data Property]: {{< ref "#data" >}}
-[Write Existing Key]: {{< ref "#write-to-a-data-storage-collection-with-a-key-that-already-exists">}}
+[Delete Missing Key]: {{< ref "#delete-from-a-data-storage-collection-with-a-key-that-does-not-exist">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
