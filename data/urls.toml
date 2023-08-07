@@ -1772,6 +1772,8 @@
                 MainDoc = "/docs/reference/exceptions/data-storage/"
                     [Cortex.Reference.Exceptions.Services.ServiceUnavailableException]
                         MainDoc = "/docs/reference/exceptions/services/service-unavailable-exception/"
+                    [Cortex.Reference.Exceptions.Services.ServiceDoesNotExistException]
+                        MainDoc = "/docs/reference/exceptions/services/service-does-not-exist-exception/"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]

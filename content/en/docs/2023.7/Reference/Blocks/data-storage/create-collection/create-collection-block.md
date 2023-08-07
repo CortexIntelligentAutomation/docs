@@ -91,8 +91,8 @@ The exceptions thrown by the block can be found below:
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
-| [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] does not exist. |
-| | Thrown when the [Data Storage Service][] is not healthy. |
+| [ServiceDoesNotExistException][] | Thrown when the [Data Storage Service][] does not exist. |
+| [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] is not healthy. |
 
 ## Remarks
 

@@ -1,27 +1,27 @@
 ---
-title: "ServiceUnavailableException"
-linkTitle: "ServiceUnavailableException"
-description: "The exception thrown when a service is unavailable."
+title: "ServiceDoesNotExistException"
+linkTitle: "ServiceDoesNotExistException"
+description: "The exception thrown when a service does not exist."
 ---
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.Services.ServiceUnavailableException)</p>
+<p class="namespace">(Cortex.Exceptions.Services.ServiceDoesNotExistException)</p>
 
 ## Description
 
-The exception thrown when either a [Core Service][] or [Execution Service][] is unavailable.
+The exception thrown when either a [Core Service][] or [Execution Service][] does not exist.
 
 ## Reasons
 
 ### Service is Unavailable
 
-The service is either not running or unhealthy.
+The service is does not exist.
 
 #### Message Format
 
 ```json
-"The <service-name> service was unavailable."
+"The <service-name> service does not exist."
 ```
 
 where:
@@ -29,13 +29,13 @@ where:
 
 #### How to fix
 
-Ensure the specified service is running and is healthy.
+Ensure the specified service exists.
 
 ## Properties
 
 ### Exception Type
 
-The type of the exception (i.e. `ServiceUnavailableException`)
+The type of the exception (i.e. `ServiceDoesNotExistsException`)
 
 | | |
 |-----------|------------|
@@ -70,7 +70,7 @@ The system specified on the [Scope][] provided.
 
 ### Service Name
 
-The name of the service that is not running or is unhealthy.
+The name of the service that does not exist.
 
 | | |
 |-----------|---------------------------|
