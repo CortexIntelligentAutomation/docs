@@ -119,6 +119,7 @@ When trying to create a collection that already exists, no operation is performe
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
+[ServiceDoesNotExistException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceDoesNotExistException.MainDoc">}}
 [ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceUnavailableException.MainDoc">}}
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 [Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}

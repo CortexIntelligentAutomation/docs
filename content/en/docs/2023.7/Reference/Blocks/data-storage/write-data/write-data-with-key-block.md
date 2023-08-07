@@ -185,6 +185,7 @@ When trying to write to a key that already exists in the [Data Storage Collectio
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
+[ServiceDoesNotExistException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceDoesNotExistException.MainDoc">}}
 [ServiceUnavailableException]: {{< url path = "Cortex.Reference.Exceptions.Services.ServiceUnavailableException.MainDoc">}}
 [DataStorageCollectionNotFoundException]: {{< url path = "Cortex.Reference.Exceptions.DataStorage.DataStorageCollectionNotFoundException.MainDoc">}}
 

@@ -14,9 +14,9 @@ The exception thrown when either a [Core Service][] or [Execution Service][] doe
 
 ## Reasons
 
-### Service is Unavailable
+### Service is Does Not Exist
 
-The service is does not exist.
+The service does not exist.
 
 #### Message Format
 
@@ -35,7 +35,7 @@ Ensure the specified service exists.
 
 ### Exception Type
 
-The type of the exception (i.e. `ServiceDoesNotExistsException`)
+The type of the exception (i.e. `ServiceDoesNotExistException`)
 
 | | |
 |-----------|------------|
