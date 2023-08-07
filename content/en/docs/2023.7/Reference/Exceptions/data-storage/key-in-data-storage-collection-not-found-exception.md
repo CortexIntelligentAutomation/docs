@@ -21,8 +21,13 @@ The provided [Data Storage Collection][] could not be found.
 #### Message Format
 
 ```json
-"The key could not be found for this data storage collection."
+"The key `<key-name>` is not present in in '`<collection-name>`', so cannot be retrieved.\r\nPlease click the HelpLink for more information on how to fix this."
 ```
+
+where:
+
+- `<key-name>` will be the name of the key that could not be found (e.g. `"user1"`)
+- `<collection-name>` will be the name of the collection that the key could not be found on (e.g. `"users"`).
 
 #### How to fix
 
@@ -33,6 +38,19 @@ Ensure the provided [Data Storage Collection][] exists.
 ### Exception Type
 
 The type of the exception (i.e. `KeyInDataStorageCollectionNotFoundException`)
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Message
+
+The exception message, providing information about the exception that occurred.
+
+For this exception:
+
+- `<key>` will be replaced with the specified key.
+- `<collection-name>` will be replaced with the name of the collection.
 
 | | |
 |-----------|------------|
@@ -56,7 +74,7 @@ The system specified on the [Scope][] provided.
 
 ### CollectionName
 
-The name of the collection the [Key][] was attempted to retrieve from.
+The name of the collection the [Key][Key Property] was attempted to retrieve from.
 
 | | |
 |-----------|---------------------------|
@@ -68,14 +86,6 @@ The key that could not be found on the [Data Storage Collection][].
 
 | | |
 |-----------|---------------------------|
-| Data Type | [String][] |
-
-### Message
-
-The exception message, providing information about the exception that occurred.
-
-| | |
-|-----------|------------|
 | Data Type | [String][] |
 
 ### Help Link
@@ -96,6 +106,7 @@ None
 
 ### Related Data Types
 
+* [Scope][]
 * [String][]
 
 ### Related Concepts
@@ -111,11 +122,12 @@ None
 
 None
 
+[Key Property]: {{< ref "#key">}}
+
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
-
-[Core Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MainDoc">}}
-[Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.MainDoc">}}

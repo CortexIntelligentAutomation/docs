@@ -21,8 +21,12 @@ The provided [Data Storage Collection][] could not be found.
 #### Message Format
 
 ```json
-"Collection was not found."
+"The '<collection-name>' collection was not found. \r\nPlease click the HelpLink for more information on how to fix this."
 ```
+
+where:
+
+- `<collection-name>` will be the name of the collection that could not be found (e.g. `"users"`).
 
 #### How to fix
 
@@ -33,6 +37,17 @@ Ensure the provided [Data Storage Collection][] exists.
 ### Exception Type
 
 The type of the exception (i.e. `DataStorageCollectionNotFoundException`)
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
+### Message
+
+The exception message, providing information about the exception that occurred.
+
+For this exception:
+- `<collection-name>` will be replaced with the name of the collection.
 
 | | |
 |-----------|------------|
@@ -54,17 +69,9 @@ The system specified on the [Scope][] provided.
 |-----------|---------------------------|
 | Data Type | [String][] |
 
-### Message
-
-The exception message, providing information about the exception that occurred.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
 ### CollectionName
 
-The name of the collection that could not be found.
+The name of the collection that could not be found within the [Tenant][Tenant Property] and [System][System Property] provided.
 
 | | |
 |-----------|---------------------------|
@@ -88,6 +95,7 @@ None
 
 ### Related Data Types
 
+* [Scope][]
 * [String][]
 
 ### Related Concepts
@@ -105,6 +113,9 @@ None
 
 None
 
+[Tenant Property]: {{< ref "#tenant" >}}
+[System Property]: {{< ref "#system" >}}
+
 [Delete Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc">}}
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
 [Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
@@ -115,6 +126,3 @@ None
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
-
-[Core Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MainDoc">}}
-[Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.MainDoc">}}

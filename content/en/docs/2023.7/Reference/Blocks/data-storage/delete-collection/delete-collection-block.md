@@ -18,7 +18,7 @@ Delete a [Data Storage Collection][] within the [Collection Scope][Collection Sc
 
 ### Delete a Data Storage Collection
 
-This example will attempt to delete a [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+This example will attempt to delete [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists.
 
 #### Properties
@@ -26,7 +26,7 @@ In this example `"users"` already exists.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+| [Collection name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
@@ -103,7 +103,7 @@ The exceptions thrown by the block can be found below:
 ## Remarks
 
 ### Deleting a Collection that Does Not Exist
-When trying to delete a collection that does not exist, no operation is performed; see example [Delete a Data Storage Collection that Does Not Exist][Delete Collection that Does Not Exist].
+When trying to create a collection that does not exist, no operation is performed; see example [Delete a Data Storage Collection that Does Not Exist][Delete Collection that Does Not Exist].
 
 ### Case Sensitivity
 
