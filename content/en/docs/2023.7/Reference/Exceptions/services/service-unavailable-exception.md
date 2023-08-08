@@ -21,7 +21,7 @@ The service is either not running or unhealthy.
 #### Message Format
 
 ```json
-"The <service-name> service was unavailable."
+"The '<service-name>' service was unavailable."
 ```
 
 where:
@@ -29,7 +29,7 @@ where:
 
 #### How to fix
 
-Ensure the specified service is running and is healthy.
+Ensure the specified service is running and healthy.
 
 ## Properties
 
@@ -121,6 +121,7 @@ None
 [Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 

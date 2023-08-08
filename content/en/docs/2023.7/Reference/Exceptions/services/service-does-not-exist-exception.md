@@ -14,14 +14,14 @@ The exception thrown when either a [Core Service][] or [Execution Service][] doe
 
 ## Reasons
 
-### Service is Does Not Exist
+### Service Does Not Exist
 
 The service does not exist.
 
 #### Message Format
 
 ```json
-"The <service-name> service does not exist."
+"The '<service-name>' service does not exist."
 ```
 
 where:
@@ -121,6 +121,7 @@ None
 [Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
