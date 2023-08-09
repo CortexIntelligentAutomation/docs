@@ -159,21 +159,6 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
-### {{% ctx %}} Innovation blocks not visible in {{% ctx %}} Studio {#ts-no-blocks}
-
-Check that the `Dot NET flow debugger Endpoint` URL in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct pay particular attention to the protocol - it should usually be `https`. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website.
-
-Ensure that the Flow Debugger Service is running. Open IIS, click on `Application Pools`and ensure there is a `debugger` application pool which is showing that it is associated with 1 application. If not, go back to the {{% ctx %}} Flow Debugger Service installation steps and ensure that all steps were followed correctly.
-
-If no misconfiguration can be found, the service log files may contain more information. These can be found on the Web Application Server at:
-
-* %ProgramData%\Cortex\Cortex Flow Debugger
-* C:\temp\Cortex.Gateway.log
-
-Restart the Cortex website. Open IIS, In the `Connection` pane, browse to `Sites`. Select the `Cortex` website and click `Restart` in the `Manage Website` pane.
-
-If the issues cannot be resolved, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
-
 ### Cannot publish a package {#ts-no-publish}
 
 Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway are correct. If any of them are not, update them and reinstall {{% ctx %}} Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.

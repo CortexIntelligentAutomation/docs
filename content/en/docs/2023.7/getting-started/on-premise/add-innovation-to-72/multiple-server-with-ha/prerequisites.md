@@ -265,9 +265,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 #### Installation User
 
-Domain users must be available to run the Application Pools for Gateway and Flow Debugger Service. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
-
-For Flow Debugger Service, the `NETWORK SERVICE` user can also be used.
+A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
 #### Domain Requirements
 
@@ -289,7 +287,7 @@ Supported versions of Active Directory are listed below:
 
 #### Certificate Requirements
 
-Both Gateway and the Flow Debugger Service require an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
+Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
 
 * Enhanced Key Usage: `Server Authentication` and `Client Authentication`
 * Subject Alternative Names (SAN): At minimum the FQDN of the Server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1

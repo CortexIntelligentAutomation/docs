@@ -25,7 +25,7 @@ The installation process is the same, regardless of which architecture is used; 
 
 The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Server system requires 8 servers in total; the 4 existing servers, plus 4 new servers:
 
-* 2x Existing Application Servers for v7.2, one of these will also act as the Web Application Server for Innovation. For Innovation, the existing Gateway will be upgraded and a new Flow Debugger Service will be added.
+* 2x Existing Application Servers for v7.2, one of these will also act as the Web Application Server for Innovation. For Innovation, the existing Gateway will be upgraded.
 * 2x Existing Database Servers, used for v7.2 and Gateway databases.
 * 1x New Load Balancer Server for Innovation.
 * 3x New Application Servers for Innovation.
