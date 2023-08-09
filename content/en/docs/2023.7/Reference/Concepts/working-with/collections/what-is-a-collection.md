@@ -75,6 +75,17 @@ TODO:
 - Link to Data Type
 - Creating a queue
 
+### Data Storage Collection
+
+TODO:
+
+- Talk about persistence
+- Talk about about heterogenous property (takes any data type and can not be restricted)
+- Talk about keys and uniqueness of keys (link to keys page)
+- Items can only be accessed via key
+- Mention high availability?
+- Mention api access?
+
 ## Arrays vs Lists
 
 ### Differences

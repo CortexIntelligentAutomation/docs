@@ -178,7 +178,7 @@ enable = true
 	url = "https://www.wearecortex.com/policies/external-data-policy/"
 [[params.links.legal]]
 	name = "Terms and Conditions"
-	url = "https://www.wearecortex.com/policies/website-terms-and-conditions/"
+	url = "https://www.wearecortex.com/terms/"
 [[params.links.legal]]
 	name = "Registration Number: 05023238"
 	url = "https://find-and-update.company-information.service.gov.uk/company/05023238"
