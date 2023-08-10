@@ -1843,6 +1843,7 @@
                 TroubleshootingDuringInstallation= "/docs/reference/troubleshooting/installation#ts-during-installation"
                 TroubleshootingNoInnovation = "/docs/reference/troubleshooting/installation#ts-no-innovation"
                 TroubleshootingAfterInstallation= "/docs/reference/troubleshooting/installation#ts-after-installation"
+                TroubleshootingNoBlocks = "/docs/reference/troubleshooting/installation#ts-no-blocks"
                 TroubleshootingNoPublish = "/docs/reference/troubleshooting/installation#ts-no-publish"
                 TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/installation#ts-no-root-certificate"
         [Cortex.Reference.Glossary]
