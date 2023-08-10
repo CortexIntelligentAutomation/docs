@@ -20,15 +20,14 @@ Test the platform by creating a new flow and executing it using the following st
 1. Enter a name for the flow, configure the `Permission Groups` and click `OK` to create the flow.
 1. The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
     {{< figure src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
-    If the blocks in the flow do not display or the palettes are not visible, see [Troubleshooting][Troubleshooting No Blocks] for more information.
-1. Add a `Set Variable` block and connect it between the start and end blocks.
-1. Click the `Set Variable` block to open the Property Editor.
-1. Set the `Value` property to the expression `DateTimeOffset.Now`.
-1. Type `Result` into the `Variable` property and click `Create Result`.
-1. In the Variable Editor, set `Is Output Variable?` to `true` for the new `Result` variable.
-1. Set a breakpoint on the end block and start the flow. An execution token should appear, the `Result` variable should show the current time. If the token does not appear, try refreshing the page.
-1. Continue or stop the execution.
-1. Commit the flow.
+2. Add a `Set Variable` block and connect it between the start and end blocks.
+3. Click the `Set Variable` block to open the Property Editor.
+4. Set the `Value` property to the expression `DateTimeOffset.Now`.
+5. Type `Result` into the `Variable` property and click `Create Result`.
+6. In the Variable Editor, set `Is Output Variable?` to `true` for the new `Result` variable.
+7. Set a breakpoint on the end block and start the flow. An execution token should appear, the `Result` variable should show the current time. If the token does not appear, try refreshing the page.
+8. Continue or stop the execution.
+9. Commit the flow.
 
 ## Test Publishing Production Flows
 
@@ -57,7 +56,6 @@ Test the platform by creating a new flow and executing it using the following st
 
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Troubleshooting No Innovation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoInnovation" >}}
-[Troubleshooting No Blocks]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoBlocks" >}}
 [Troubleshooting No Publish]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
 [Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
