@@ -21,7 +21,7 @@ The steps to add Innovation functionality to 7.2 are:
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
 
-2. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
@@ -102,7 +102,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                      | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
-2. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
+1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
 ### Upgrade {{% ctx %}} Gateway
 

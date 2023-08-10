@@ -16,7 +16,7 @@ This guide describes how to install the Application Servers and Load Balancer Se
    * Cortex Innovation {{< version >}} - App Services.zip
    * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
 
-2. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
+1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 
 ## Install Microsoft .NET Framework 4.7.1
 

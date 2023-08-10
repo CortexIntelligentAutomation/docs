@@ -17,7 +17,7 @@ This guide describes how to install the Web Application Server components on the
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
 
-2. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
@@ -186,7 +186,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     |`AcceptEULA`                                    | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                      | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
-2. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
+1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
 ### Install {{% ctx %}} Gateway
 

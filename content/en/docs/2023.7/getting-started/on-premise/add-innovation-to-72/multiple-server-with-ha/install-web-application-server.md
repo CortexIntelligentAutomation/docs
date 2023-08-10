@@ -21,7 +21,7 @@ The steps to add Innovation functionality to 7.2 are:
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
 
-2. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Install Prerequisites
 
