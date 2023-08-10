@@ -87,7 +87,6 @@ An X.509 SSL certificate (standard or wildcard) should be used to:
 * Prevent unauthorised nodes from joining the single node cluster.
 * Connect to Service Fabric Explorer from the Application Server.
 * Connect to Gateway.
-* Allow Gateway to connect to the Flow Debugger Service.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
@@ -178,9 +177,7 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 
 #### Installation User
 
-Domain users must be available to run the Application Pools for Gateway and Flow Debugger Service. These users must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
-
-For Flow Debugger Service, the `NETWORK SERVICE` user can also be used.
+A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
 #### Domain Requirements
 
