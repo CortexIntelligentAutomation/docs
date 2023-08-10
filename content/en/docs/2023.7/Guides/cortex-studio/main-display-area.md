@@ -33,8 +33,8 @@ TODO:
 
 - Should this be called 'starting an execution' or 'debugging an execution'
 - Start execution via API or Studio
-  - describe the steps of starting from API (API call is made to Gateway, Authentication and Authorisation is performed, Gateway proxied called to debugger service, etc)
-  - describe the steps of starting from Studio (User clicks button, call is made to Gateway, Authentication and Authorisation is performed, Gateway proxied called to debugger service, etc)
+  - describe the steps of starting from API (API call is made to Gateway, Authentication and Authorisation is performed, etc)
+  - describe the steps of starting from Studio (User clicks button, call is made to Gateway, Authentication and Authorisation is performed, etc)
 - Image of button and token after button was pressed
 - Executions are private and only displayed to the user that requested them (Check this is true, look at the APIs).
 - link debugging in this page to glossary
