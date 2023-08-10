@@ -61,7 +61,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
     -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
-    -DotNetFlowDebuggerEndpoint "https://server.domain.com/api/" `
+    -DotNetFlowDebuggerEndpoint "https://server.domain.com:8722/api/" `
     -DotNetFlowDebuggerBasicAuthUsername "BasicAuthUser" `
     -DotNetFlowDebuggerBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -DotNetFlowDebuggerUsingSelfSignedCertificates $false `

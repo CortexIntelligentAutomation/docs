@@ -45,6 +45,8 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
+## Perform Installation
+
 ### Configure {{% ctx %}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
@@ -58,7 +60,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
     -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
-    -DotNetFlowDebuggerEndpoint "https://server.domain.com/api/" `
+    -DotNetFlowDebuggerEndpoint "https://server.domain.com:8722/api/" `
     -DotNetFlowDebuggerBasicAuthUsername "BasicAuthUser" `
     -DotNetFlowDebuggerBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
     -DotNetFlowDebuggerUsingSelfSignedCertificates $false `
