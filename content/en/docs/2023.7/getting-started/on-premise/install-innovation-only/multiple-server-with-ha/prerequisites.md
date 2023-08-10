@@ -260,7 +260,7 @@ Supported versions of Active Directory are listed below:
 
 #### Certificate Requirements
 
-Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
+{{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
 
 * Enhanced Key Usage: `Server Authentication` and `Client Authentication`
 * Subject Alternative Names (SAN): At minimum the FQDN of the Server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1
