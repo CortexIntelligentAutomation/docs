@@ -158,7 +158,7 @@ A domain user which is a member of the Local Administrators group on all Applica
 
 #### Antivirus Exclusions
 
-It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on each Application Server to reduce antivirus processing on Service Fabric artefacts:
+It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on the Web Application Server and each Application Server to reduce antivirus processing on Service Fabric artefacts:
 
 Folder Exclusions:
 
