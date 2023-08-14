@@ -1113,6 +1113,10 @@
                         MainDoc = "/docs/reference/concepts/working-with/collections/keys/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
                         MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
+                [Cortex.Reference.Concepts.WorkingWith.Concurrency]
+                    MainDoc = "/docs/reference/concepts/working-with/concurrency/"
+                    [Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore]
+                        MainDoc = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/"
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
