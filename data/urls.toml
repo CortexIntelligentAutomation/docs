@@ -1255,6 +1255,14 @@
                     MainDoc = "/docs/reference/data-types/collections/structure"
                     CreateNew = "/docs/reference/data-types/collections/structure#create-a-structure"
                     ConvertToText = "/docs/reference/data-types/collections/structure#convert-structure-to-text"
+            [Cortex.Reference.DataTypes.Concurrency]
+                MainDoc = "/docs/reference/data-types/concurrency/"
+                [Cortex.Reference.DataTypes.Concurrency.Semaphores]
+                    MainDoc = "/docs/reference/data-types/concurrency/semaphores/"
+                    [Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings]
+                        MainDoc = "/docs/reference/data-types/concurrency/semaphores/queue-settings/"
+                    [Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings]
+                        MainDoc = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/"
             [Cortex.Reference.DataTypes.ConditionalLogic]
                 MainDoc = "/docs/reference/data-types/conditional-logic/"
                 [Cortex.Reference.DataTypes.ConditionalLogic.Boolean]

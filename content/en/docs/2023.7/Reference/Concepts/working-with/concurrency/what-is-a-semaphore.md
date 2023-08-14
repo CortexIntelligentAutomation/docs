@@ -13,11 +13,9 @@ weight: 1
 
 TODO:
 
-## Managing Connections to a Mail Server
+## Remarks
 
 TODO:
-
-## Remarks
 
 ### Known Limitations
 

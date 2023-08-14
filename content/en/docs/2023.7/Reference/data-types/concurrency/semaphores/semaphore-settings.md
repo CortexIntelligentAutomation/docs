@@ -12,121 +12,143 @@ description: "A datatype that represent the settings used for configuring a sema
 
 The `SemaphoreSettings` data type represent the settings used to configure a [Semaphore].
 
-`ScopeOption` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
-
 | | |
 |-|-|
-| **Category:**          | Scopes                                                  |
-| **Name:**              | `ScopeOption`                                |
-| **Full Name:**         | `Cortex.DataTypes.Scopes.ScopeOption`         |
+| **Category:**          | Concurrency                                                  |
+| **Name:**              | `SemaphoreSettings`                                |
+| **Full Name:**         | `Cortex.DataTypes.Concurrency.Semaphores.SemaphoreSettings`         |
 | **Alias:**             | N/A|
-| **Description:**       | The data type used to represent how each level of [Scope] is defined. |
-| **Default Value:**     | `(ScopeOption)0`                             |
-| **Can be used as:**    | `ScopeOption`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)ScopeOption.Current` or `(System.Int16)ScopeOption.Current` or `(short)ScopeOption.Current`)  |
-|                        | `Int32` (e.g. `(Int32)ScopeOption.Current` or `(System.Int32)ScopeOption.Current` or `(int)ScopeOption.Current`)  |
-|                        | `Int64` (e.g. `(Int64)ScopeOption.Current` or `(System.Int64)ScopeOption.Current` or `(long)ScopeOption.Current`)  |
-|                        | `Single` (e.g. `(Single)ScopeOption.Current` or `(System.Single)ScopeOption.Current` or `(float)ScopeOption.Current`)  |
-|                        | `Double` (e.g. `(Double)ScopeOption.Current` or `(System.Double)ScopeOption.Current` or `(double)ScopeOption.Current`)  |
+| **Description:**       | The data type used to represent the settings used for configuring a [Semaphore]. |
+| **Default Value:**     | `null`                             |
+| **Can be used as:**    | `SemaphoreSettings`, `Object`, `dynamic`           |
+| **Can be cast to:**    | N/A |
 
-## Values
+## Properties
 
-### Current
+### Scope
+
+The [Scope][Scope Property] used to define the area in which the [Semaphore] will operate.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [Scope] |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal] |
+| Default Value | [Scope] with value shown below |
+
+```json
+{
+    "Tenant": "ScopeOption.Current",
+    "System": "ScopeOption.Current"
+}
+```
+
+### Name
+
+The [Name][Name Property] used to identify the [Semaphore].
 
 | | |
-|-|-|
-| **Name:**    | Current                              |
-| **Value:**   | [Int32][] with value `0`             |
-| **Notes:**   | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
+|--------------------|---------------------------|
+| Data Type | [String] |
+| Is [Advanced] | `true` |
+| Default Editor | [Expression] |
+| Default Value | `null` |
+
+### ConcurrencyLimit
+
+The [ConcurrencyLimit][ConcurrencyLimit Property] used to define the maximum number of executions that can be in the [Semaphore].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [Int32] |
+| Is [Advanced] | `true` |
+| Default Editor | [Expression] |
+| Default Value | `0` |
+
+### Queue
+
+The [Queue][Queue Property] that configures how the [Semaphore]s queue should operate.
+If this property is set to `null`, then the [Semaphore] will function as a branching [Semaphore].
+If given a value, the [Semaphore] will function as a queuing [Semaphore].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [QueueSettings] |
+| Is [Advanced] | `true` |
+| Default Editor | [Expression] |
+| Default Value | `null` |
 
 ## Remarks
 
-### Create a ScopeOption
+### Create a SemaphoreSettings
 
-The following table shows some of the ways that `ScopeOption` can be created.
-
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Declare a `ScopeOption` literal | `Current` | `ScopeOption.Current`| Literal | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
-| Use a `ScopeOption` expression    | `ScopeOption.Current` | `ScopeOption.Current` | Expression | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
-| Use [Explicit Casting][]  | `(ScopeOption)0` | `ScopeOption.Current` | Expression | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
-| Use `Enum.Parse`  | `(ScopeOption)Enum.Parse(typeof(ScopeOption), "Current")` | `ScopeOption.Current` | Expression | Parses `"Current"` and converts it to `ScopeOption.Current`. See [Enum.Parse][] |
-| Use `Enum.ToObject`   | `(ScopeOption)Enum.ToObject(typeof(ScopeOption), 0)` | `ScopeOption.Current`| Expression | Converts `0` to `ScopeOption.Current` value. See [Enum.ToObject][] |
-
-Please see [Instantiating an enumeration type][] for further information.
-
-### Convert ScopeOption to Text
-
-The following table shows some of the ways that a `ScopeOption` can be converted to text.
+The following table shows some of the ways that `SemaphoreSettings` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `ToString`    | `ScopeOption.Current.ToString()` | `"Current"` | Expression | Converts `ScopeOption.Current` to `"Current"`. See [Enum.ToString][] |
-| Use `Convert.ToString`    | `Convert.ToString(ScopeOption.Current)` | `"Current"` | Expression | Converts `ScopeOption.Current` to `"Current"`. See [Convert.ToString][] |
-| Use `Convert Object To Text` block    | where `Object` property has a value of `ScopeOption.Current` | `"Current"` | N/A  | Converts `ScopeOption.Current` to `"Current"`. See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `ScopeOption.Current` | `"0"` | N/A  | Converts `ScopeOption.Current` to `"0"`. See [Convert Object To Json][] |
+| Use a `SemaphoreSettings` constructor | `new SemaphoreSettings(new Scope(ScopeOption.Current, ScopeOption.Current), "SemaphoreA", 1, null)` | `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }`| Expression | Creates a new [SemaphoreSettings] that can be used to configure the functions of a [Semaphore]. |
 
-Please see [Formatting enumeration values][] for further information.
+A [SemaphoreSettings] can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-### Convert ScopeOption to a Number
+| Property | Data Type | Example | Notes |
+|-|-|-|-|
+| `Scope` | `Scope` | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope of the [Semaphore] will operate. |
+| `Name` | `String` | `"SemaphoreA"` | [Name][Name Property] defines the name of the [Semaphore]. |
+| `ConcurrencyLimit` | `Int32` | `1` | [ConcurrencyLimit][ConcurrencyLimit Property] defines the maximum number of executions that can be inside the [Semaphore] at one time. |
+| `Queue` | `QueueSettings` | `null` | [Queue][Queue Property] defines the behaviour of the [Semaphore]s queue. |
 
-The following table shows some of the ways that a `ScopeOption` can be converted to a number.
+### Convert SemaphoreSettings to Text
+
+The following table shows some of the ways that a `SemaphoreSettings` can be converted to text.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use [Explicit Casting][]  | `(Int32)ScopeOption.Current`   | `0` | Expression | [Casts][Explicit Casting] `ScopeOption.Current` to `0` |
-| Use `Convert.ToInt32`     | `Convert.ToInt32(ScopeOption.Current)`   | `0` | Expression | Converts `ScopeOption.Current` to `0`. See [Convert.ToInt32][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | `"{\r\n  "Scope": {\r\n    "Tenant": 0,\r\n    "System": 0\r\n  },\r\n  "Name": "SemaphoreA",\r\n  "ConcurrencyLimit": 1,\r\n  "Queue": null\r\n}"`  | N/A |See [Convert Object To Json] |
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `ScopeOption`.
-- The Literal Editor is available for [Input][] properties where the data type is `ScopeOption`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `ScopeOption`.
+- The Expression Editor is available for [Input] properties where the data type is `SemaphoreSettings`.
+- The Literal Editor is available for [Input] properties where the data type is `SemaphoreSettings`.
+- The Variable Editor is available for [Input], [InputOutput] and [Output] properties where the data type is `SemaphoreSettings`.
 
 ### Known Limitations
 
-#### ScopeOption only has ScopeOption.Current
-
-Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` will be added in a future release.
+None
 
 ## See Also
 
 ### Related Data Types
 
-- [Scope][]
-- [Int32][]
-- [String][]
+- [QueueSettings]
+- [Scope]
 
 ### Related Concepts
 
-- [Explicit Casting][]
-- [Working with Enums][]
-- [Working with Scopes][]
+- [What is a Semaphore?][Semaphore]
 
 ### External Documentation
 
-- [System.Enum][]
+None
+
+[Scope Property]: {{< ref "#scope" >}}
+[Name Property]: {{< ref "#name" >}}
+[ConcurrencyLimit Property]: {{< ref "#concurrencylimit" >}}
+[Queue Property]: {{< ref "#queue" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
-[Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
-[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
-[Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
-[Working with Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc">}}
-[Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
-[Enum.Parse]: {{< url path="MSDocs.DotNet.Api.System.Enum.Parse" >}}
-[Enum.ToObject]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToObject" >}}
-[Enum.ToString]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToString" >}}
-[Convert.ToInt32]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToInt32" >}}
-[Convert.ToString]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToString" >}}
+[Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
+[SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
+[QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
+
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+
+[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
 [Scope]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
-[ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
-
-[Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
-[Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
