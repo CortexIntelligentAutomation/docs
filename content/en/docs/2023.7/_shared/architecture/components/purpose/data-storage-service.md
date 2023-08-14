@@ -1,1 +1,1 @@
-For future use.
+Application Service that can be used to store and retreive data for executions within in the Innovation platform.
