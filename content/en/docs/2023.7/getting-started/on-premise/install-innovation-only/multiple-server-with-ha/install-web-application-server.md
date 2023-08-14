@@ -11,8 +11,11 @@ This guide describes how to install the Web Application Server. Please ensure th
 
 ## Make Installation Artefacts Available
 
-1. Copy the following artefacts to a folder on the machine:
+{{% alert title="Note" %}}
+We recommend that the single-node Service Fabric instance, used by {{% ctx %}} Gateway as a Debugger instance, and {{% ctx %}} Gateway are installed on the same Web Application Server.
+{{% /alert %}}
 
+1. Copy the following artefacts to a folder on the machine:
    * Cortex Innovation {{< version >}} - Block Packages.zip
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
@@ -120,7 +123,11 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
-## Perform Installation
+## Perform Debugger Installation
+
+
+
+## Perform Gateway Installation
 
 ### Configure {{% ctx %}} Gateway Installation Script
 
