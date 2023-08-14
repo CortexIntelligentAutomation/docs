@@ -125,9 +125,9 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 
 ## Perform Debugger Installation
 
-A Single Server installation of the Cortex Applications needs to be performed to enable debugging of flows from {{< ctx >}} Gateway.
+A Single Server installation of the {{< ctx >}} Innovation Platform needs to be performed to enable debugging of flows from {{< ctx >}} Gateway.
 
-Follow the steps used to install a [Single Server without HA][Single Server without HA].
+Follow the [Install Application Server][Install Application Server] steps to setup debugging.
 
 ## Perform Gateway Installation
 
@@ -248,4 +248,4 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Setup CORTEX Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
-[Single Server without HA]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
