@@ -5,12 +5,14 @@
 | [{{% ctx %}} Innovation Core Application][Innovation Core Application]               | {{< section "/architecture/components/purpose/cortex-innovation-core-application.md" >}}      | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [API Gateway Service][API Gateway Service]                           | {{< section "/architecture/components/purpose/api-gateway-service.md" >}}                     | -                           | -                                          |
 | &nbsp; &nbsp; > [Authorisation Service][Authorisation Service]                       | {{< section "/architecture/components/purpose/authorisation-service.md" >}}                   | -                           | -                                          |
+| &nbsp; &nbsp; > [Concurrency Management Service][Concurrency Management Service]     | {{< section "/architecture/components/purpose/concurrency-management-service.md" >}}          | -                           | -                                          |
 | &nbsp; &nbsp; > [Configuration Management Service][Configuration Management Service] | {{< section "/architecture/components/purpose/configuration-management-service.md" >}}        | -                           | -                                          |
 | &nbsp; &nbsp; > [Data Storage Service][Data Storage Service]                         | {{< section "/architecture/components/purpose/data-storage-service.md" >}}                    | -                           | -                                          |
 | &nbsp; &nbsp; > [Execution Management Service][Execution Management Service]         | {{< section "/architecture/components/purpose/execution-management-service.md">}}             | -                           | -                                          |
 | &nbsp; &nbsp; > [Licence Management Service][Licence Management Service]             | {{< section "/architecture/components/purpose/licence-management-service.md" >}}              | -                           | -                                          |
 | &nbsp; &nbsp; > [Package Management Service][Package Management Service]             | {{< section "/architecture/components/purpose/package-management-service.md" >}}              | -                           | -                                          |
 | &nbsp; &nbsp; > [Provisioning Service][Provisioning Service]                         | {{< section "/architecture/components/purpose/provisioning-service.md" >}}                    | -                           | -                                          |
+| &nbsp; &nbsp; > [Scheduling Service][Scheduling Service]                             | {{< section "/architecture/components/purpose/scheduling-service.md" >}}                      | -                           | -                                          |
 | [{{% ctx %}} Innovation Execution Application][Innovation Execution Application]     | {{< section "/architecture/components/purpose/cortex-innovation-execution-application.md" >}} | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [Execution Service][Execution Service]                               | {{< section "/architecture/components/purpose/execution-service.md" >}}                       | -                           | -                                          |
 | {{% ctx %}} Block Packages                                                           | {{< section "/architecture/components/purpose/cortex-block-packages.md" >}}                   | Required                    | Web Application Server, Application Server |
@@ -27,6 +29,7 @@
 
 [API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [Authorisation Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService.MainDoc" >}}
+[Concurrency Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ConcurrencyManagementService.MainDoc" >}}
 [Configuration Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService.MainDoc" >}}
 [Data Storage Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc" >}}
 [Execution Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ExecutionManagementService.MainDoc" >}}
@@ -34,6 +37,7 @@
 [Licence Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService.MainDoc" >}}
 [Package Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService.MainDoc" >}}
 [Provisioning Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService.MainDoc" >}}
+[Scheduling Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService.MainDoc" >}}
 [Gateway Guide]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
 [Studio Guide]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [SQL Server Express]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
