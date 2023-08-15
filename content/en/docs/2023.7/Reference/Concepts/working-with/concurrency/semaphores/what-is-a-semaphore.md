@@ -13,7 +13,7 @@ weight: 1
 
 A semaphore is a mechanism that limits the number of concurrent executions that can be in a block or workspace.
 
-The [semaphore property][SemaphoreProperty] is an [advanced property][AdvancedProperties] added to all blocks to allow any part of a flow to be concurrency limited. The [semaphore property][SemaphoreProperty] has a [Scope] that defines the area in which the semaphore will operate, a [Name] to identify the semaphore, a [ConcurrencyLimit] that defines the maximum amount of concurrent execution that can enter the semaphore at once and a [Queue] property that defines whether the semaphore is a [queuing semaphore] or a [non-queuing semaphore].
+The [semaphore property][SemaphoreProperty] is an [advanced property][AdvancedProperties] added to all blocks to allow any part of a flow to be concurrency limited. The [semaphore property][SemaphoreProperty] has a [Scope] that defines the area in which the semaphore will operate, a [Name] to identify the semaphore, a [ConcurrencyLimit] that defines the maximum number of concurrent execution that can enter the semaphore at once and a [Queue] property that defines whether the execution should [queue][queuing semaphore] or [not queue][non-queuing semaphore] for the semaphore.
 
 ## Anatomy of a Semaphore
 
@@ -21,23 +21,23 @@ TODO
 
 ### Non-Queuing Semaphore
 
-A [Non-Queuing Semaphore] refers to a semaphore that does not queue when attempting to acquire a semaphore that has reached its concurrency limit. Instead, it throws a [SemaphoreCouldNotBeAcquiredException] with the [Queued] property set to `false` to indicate that it did not queue.
+A [Non-Queuing Semaphore] refers to a semaphore where executions do not queue when attempting to acquire a semaphore that has reached its concurrency limit. Instead, it throws a [SemaphoreCouldNotBeAcquiredException] with the [Queued] property set to `false` to indicate that it did not queue.
 
 ### Queuing Semaphore
 
-A [Queuing Semaphore] refers to a semaphore that queues when attempting to acquire a semaphore that has reached its concurrency limit. It will join the queue with the [Priority] specified in the [QueueSettings] and wait to enter the semaphore when it has reached the front of the queue and there is space inside. The queue functions as a [QueueWithPriority]. See [QueueWithPriority] or [QueueSettings] for more information.
+A [Queuing Semaphore] refers to a semaphore where executions queue when attempting to acquire a semaphore that has reached its concurrency limit. It will join the queue with the [Priority] specified in the [Queue] and wait to enter the semaphore. When it has reached the front of the queue and there is space inside, it will be removed from the queue and enter the semaphore. The queue functions as a [QueueWithPriority]. See [QueueWithPriority] or [QueueSettings] for more information.
 
-If an execution spends more time in the queue than the [QueueTimeout] specified in the [QueueSettings], it will exit the queue and throw a [SemaphoreCouldNotBeAcquiredException] with the [Queued] property set to `true` to indicate that it attempted to queue.
+If an execution spends more time in the queue than the [QueueTimeout] specified in the [Queue], it will exit the queue and throw a [SemaphoreCouldNotBeAcquiredException] with the [Queued] property set to `true` to indicate that it attempted to queue.
 
 ## Remarks
 
 ### Automatic Management
 
-The semaphores are managed automatically, without the need to define and manage the semaphores seperately. When a block attempts to acquire a semaphore that does not exist, the semaphore will automatically be created and configured with the defined [ConcurrencyLimit]. When a semaphore is emptied for whatever reason (final execution exits the semaphore or is stopped from executing while inside), the semaphore is automatically deleted.
+The semaphores are managed automatically, without the need to define and manage the semaphores seperately. When a block attempts to acquire a semaphore that does not exist, the semaphore will automatically be created and configured with the defined [ConcurrencyLimit]. When the last execution in a semaphore is released (last execution exits the semaphore or is stopped from executing while inside), the semaphore is automatically deleted.
 
 ### Multiple ConcurrencyLimits
 
-If two blocks try to create the same semaphore (using the same [Scope] and same [Name]) with different [ConcurrencyLimits][ConcurrencyLimit], the semaphore's [ConcurrencyLimit] will be set equal to the value specified in the first block to be used. The other block will respect the [ConcurrencyLimit] already set until the semaphore is empty and is automatically deleted. The semaphore is then able to be recreated with the new [ConcurrencyLimit].
+If a block tries to use a semaphore that already exists (using the same [Scope] and same [Name]) but it specifies a different [ConcurrencyLimit], the semaphore will continue respecting the [ConcurrencyLimit] of when it was created. The block will respect the [ConcurrencyLimit] already set until the semaphore is emptied and is automatically deleted. The semaphore is then able to be recreated with the new [ConcurrencyLimit].
 
 ### Known Limitations
 
