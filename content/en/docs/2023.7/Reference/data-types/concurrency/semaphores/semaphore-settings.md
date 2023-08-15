@@ -67,9 +67,9 @@ The [ConcurrencyLimit][ConcurrencyLimit Property] used to define the maximum num
 
 ### Queue
 
-The [Queue][Queue Property] that configures how the [Semaphore]s queue should operate.
-If this property is set to `null`, then the [Semaphore] will function as a branching [Semaphore].
-If given a value, the [Semaphore] will function as a queuing [Semaphore].
+The [Queue][Queue Property] that configures how the [Semaphore's][Semaphore] queue should operate.
+If this property is set to `null`, then the [Semaphore] will function as a [branching semaphore][Branching].
+If given a value, the [Semaphore] will function as a [queuing semaphore][Queuing].
 
 | | |
 |--------------------|---------------------------|
@@ -92,10 +92,10 @@ A [SemaphoreSettings] can also be created using the Literal Editor by filling in
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Scope` | `Scope` | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope of the [Semaphore] will operate. |
+| `Scope` | `Scope` | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope that the [Semaphore] will operate in. |
 | `Name` | `String` | `"SemaphoreA"` | [Name][Name Property] defines the name of the [Semaphore]. |
 | `ConcurrencyLimit` | `Int32` | `1` | [ConcurrencyLimit][ConcurrencyLimit Property] defines the maximum number of executions that can be inside the [Semaphore] at one time. |
-| `Queue` | `QueueSettings` | `null` | [Queue][Queue Property] defines the behaviour of the [Semaphore]s queue. |
+| `Queue` | `QueueSettings` | `null` | [Queue][Queue Property] defines the behaviour of the [Semaphore's][Semaphore] queue. |
 
 ### Convert SemaphoreSettings to Text
 
@@ -140,6 +140,8 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
+[Branching]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.Branching" >}}
+[Queuing]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.Queuing" >}}
 [SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
 [QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
 

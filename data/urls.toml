@@ -1117,6 +1117,8 @@
                     MainDoc = "/docs/reference/concepts/working-with/concurrency/"
                     [Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore]
                         MainDoc = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/"
+                        Branching = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#branching-semaphore"
+                        Queuing = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#queuing-semaphore"
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]

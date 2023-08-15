@@ -15,6 +15,12 @@ TODO:
 
 ## Remarks
 
+### Branching Semaphore
+
+TODO:
+
+### Queuing Semaphore
+
 TODO:
 
 ### Known Limitations
