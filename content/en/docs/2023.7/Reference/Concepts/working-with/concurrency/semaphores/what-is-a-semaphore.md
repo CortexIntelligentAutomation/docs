@@ -33,9 +33,11 @@ If an execution spends more time in the queue than the [QueueTimeout] specified 
 
 ### Automatic Management
 
+The semaphores are managed automatically, without the need to define and manage semaphores seperately. When a block attempts to acquire a semaphore that does not exist, the semaphore will automatically be created
+
 ### Multiple ConcurrencyLimits
 
-If two blocks try to create the same semaphore
+If two blocks try to create the same semaphore (using the same [Scope] and same [Name]) with different [ConcurrencyLimits][ConcurrencyLimit], the semaphore's [ConcurrencyLimit] will be set equal to the value specified in the first block to be used. The other block will respect the [ConcurrencyLimit] already set until the semaphore is empty and is automatically deleted. The semaphore is then able to be recreated with the new [ConcurrencyLimit].
 
 ### Known Limitations
 
@@ -49,7 +51,9 @@ TODO
 
 ### Related Data Types
 
-TODO
+- [QueueSettings]
+- [Scope][ScopeDatatype]
+- [SemaphoreSettings]
 
 ### Related Blocks
 
@@ -68,6 +72,7 @@ TODO
 [SemaphoreProperty]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.SemaphoreProperty" >}}
 [AdvancedProperties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
+[SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
 [QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
 [Priority]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.Priority" >}}
 [QueueTimeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
@@ -76,3 +81,5 @@ TODO
 [Name]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Name" >}}
 [ConcurrencyLimit]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.ConcurrencyLimit" >}}
 [Queue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
+
+[ScopeDatatype]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
