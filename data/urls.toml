@@ -1747,6 +1747,10 @@
                     MainDoc = "/docs/reference/exceptions/http/invalid-request-exception"
                 [Cortex.Reference.Exceptions.Http.InvalidResponseException]
                     MainDoc = "/docs/reference/exceptions/http/invalid-response-exception"
+            [Cortex.Reference.Exceptions.Impersonation]
+                MainDoc = "/docs/reference/exceptions/impersonation/"
+                [Cortex.Reference.Exceptions.Impersonation.RunAsException]
+                    MainDoc = "/docs/reference/exceptions/impersonation/run-as-exception"
             [Cortex.Reference.Exceptions.Lists]
                 MainDoc = "/docs/reference/exceptions/lists/"
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
