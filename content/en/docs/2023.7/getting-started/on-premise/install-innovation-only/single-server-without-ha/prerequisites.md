@@ -34,6 +34,24 @@ The prerequisites required for a single server (as described in [Architecture][]
 
 The server must be on a domain and cannot be a domain controller.
 
+## Active Directory Requirements
+
+For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
+
+Supported versions of Active Directory are listed below:
+
+| Version                    | Verified?      | Supported From | Supported Until  |  
+|----------------------------|----------------|----------------|------------------|
+| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+
 ## DNS Requirements
 
 The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured  on the DNS server for the server.
@@ -75,7 +93,64 @@ Gateway supports the latest versions of the following browsers:
 * Edge
 * Firefox
 
-## Certificate Requirements
+## Filesystem Requirements
+
+The server must use an NTFS filesystem.
+
+## Service Requirements
+
+The following Windows Services must be running on the server:
+
+* Remote Registry
+* Windows Event Log
+* Performance Logs & Alerts
+
+## Security Requirements
+
+### Installation User
+
+A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that {{% ctx %}} Innovation is built upon.
+
+For Gateway, a domain user must be available to run the Application Pools. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
+
+### Antivirus Exclusions
+
+It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on the server to reduce antivirus processing on Service Fabric artefacts:
+
+Folder Exclusions:
+
+* %ProgramFiles%\Microsoft Service Fabric
+* %ProgramData%\SF
+* %ProgramData%\SF\Logs
+
+Process Exclusions:
+
+* Fabric.exe
+* FabricHost.exe
+* FabricInstallerService.exe
+* FabricSetup.exe
+* FabricDeployer.exe
+* ImageBuilder.exe
+* FabricGateway.exe
+* FabricDCA.exe
+* FabricFAS.exe
+* FabricUOS.exe
+* FabricRM.exe
+* FileStoreService.exe
+
+A script is provided during installation to add these exclusions for Windows Defender. If any other antivirus software is running, these will need to be added manually.
+
+If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
+
+### Port Requirements
+
+{{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
+
+If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
+
+The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
+
+### Certificate Requirements
 
 {{% alert title="Note" %}}
 For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
@@ -105,7 +180,7 @@ This file should be placed in a known location on the server. This location will
 
 {{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
 
-## TLS Requirements
+### TLS Requirements
 
 There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
 
@@ -113,89 +188,6 @@ There is a set of non-compulsory security measures, recommended to be applied to
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
 See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
-
-## Additional Application Server Requirements
-
-### Filesystem Requirements
-
-The server must use an NTFS filesystem.
-
-### Service Requirements
-
-The following Windows Services must be running on the server:
-
-* Remote Registry
-* Windows Event Log
-* Performance Logs & Alerts
-
-### Security Requirements
-
-#### Installation User
-
-A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that {{% ctx %}} Innovation is built upon.
-
-#### Antivirus Exclusions
-
-It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on the server to reduce antivirus processing on Service Fabric artefacts:
-
-Folder Exclusions:
-
-* %ProgramFiles%\Microsoft Service Fabric
-* %ProgramData%\SF
-* %ProgramData%\SF\Logs
-
-Process Exclusions:
-
-* Fabric.exe
-* FabricHost.exe
-* FabricInstallerService.exe
-* FabricSetup.exe
-* FabricDeployer.exe
-* ImageBuilder.exe
-* FabricGateway.exe
-* FabricDCA.exe
-* FabricFAS.exe
-* FabricUOS.exe
-* FabricRM.exe
-* FileStoreService.exe
-
-A script is provided during installation to add these exclusions for Windows Defender. If any other antivirus software is running, these will need to be added manually.
-
-If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
-
-#### Port Requirements
-
-{{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
-
-If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
-
-The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
-
-## Additional Web Application Server Requirements
-
-### Security Requirements
-
-#### Installation User
-
-A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
-
-#### Domain Requirements
-
-For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
-
-Supported versions of Active Directory are listed below:
-
-| Version                    | Verified?      | Supported From | Supported Until  |  
-|----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
 
 ## Next Steps?
 
