@@ -999,6 +999,7 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/"
+                            SemaphoreProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#semaphore-property"
                             BlockTimeoutProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#block-timeout-property"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
@@ -1119,6 +1120,10 @@
                         MainDoc = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/"
                         Branching = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#branching-semaphore"
                         Queuing = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#queuing-semaphore"
+                        [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores]
+                            MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/"
+                            [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore]
+                                MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/"
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]

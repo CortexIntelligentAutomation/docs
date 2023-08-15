@@ -14,6 +14,7 @@ There are a number of properties that are common across all or most [blocks][All
 These properties include:
 
 - [Description Property][]
+- [Semaphore Property]
 - [Block Timeout Property][]
 
 ## Description Property
@@ -24,19 +25,19 @@ The Description property is available on all [blocks][All Blocks]. It defaults t
 
 ## Semaphore Property
 
-The Semaphore property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to restrict the number of executions that can execute the block at any one time.
+The Semaphore property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to restrict the number of [executions] that can execute the [block][WhatIsBlock] at any one time.
 
-The default value of `null` indicates that there is no semaphore.
+The default value of `null` indicates that there is no [semaphore].
 
-The semaphore [property] has the following sub-properties:
+The Semaphore property has the following sub-properties:
 * [Scope][SemaphoreScope], which defaults to:
     * [Tenant] : `ScopeOption.Current`.
     * [System] : `ScopeOption.Current`.
 * [Name][SemaphoreName], which defaults to an empty string (i.e. `""`).
-* [Concurrency Limit][SemaphoreConcurrencyLimit], which defaults to 0.
+* [ConcurrencyLimit][SemaphoreConcurrencyLimit], which defaults to 0.
 * [Queue][SemaphoreQueue], which defaults to `null`.
     * [Priority][QueuePriority], which defaults to 0.
-    * [Queue Timeout][QueueTimeout], which defaults to `null`.
+    * [QueueTimeout], which defaults to `null`.
 
 {{< figure src="/images/workspace/workspace-block-semaphore.svg" >}}
 
@@ -85,6 +86,7 @@ None
 
 [Description Property]: {{< ref "#description-property" >}}
 [Block Timeout Property]: {{< ref "#block-timeout-property" >}}
+[Semaphore Property]: {{< ref "#semaphore-property" >}}
 
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
@@ -101,6 +103,8 @@ None
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant" >}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System" >}}
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
+[Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
+[WhatIsBlock]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 

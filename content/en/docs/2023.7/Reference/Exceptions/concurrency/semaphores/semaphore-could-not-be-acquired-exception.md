@@ -10,13 +10,13 @@ description: "The exception thrown when a block is unable to acquire a semaphore
 
 ## Description
 
-The exception thrown when a block is unable to acquire a [Semaphore].
+The exception thrown when a block is unable to acquire a [Semaphore][SemaphoreWhatIs].
 
 ## Reasons
 
 ### Concurrency Limit reached
 
-This exception is thrown when the specified [Semaphore's][Semaphore] concurrency limit has been reached, when the [Queue][SemaphoreQueue] [property][] is set to `null`.
+This exception is thrown when the specified semaphore's [Concurrency Limit][SemaphoreConcurrencyLimit] has been reached, when the [Queue][SemaphoreQueue] property is set to `null`.
 
 #### Message Format
 
@@ -29,17 +29,17 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<tenant>` is the tenant defined in the [Scope] of the [Semaphore].
-* `<system>` is the system defined in the [Scope] of the [Semaphore].
-* `<semaphore-name>` is the name of the semaphore [property][].
+* `<tenant>` is the tenant defined in the [Scope][SemaphoreScope] the semaphore operates in.
+* `<system>` is the system defined in the [Scope][SemaphoreScope] the semaphore operates in.
+* `<semaphore-name>` is the [Name][SemaphoreName] of the semaphore.
 
 #### How to fix
 
-Try to acquire the semaphore again at a later point in the flow or provide a queue in the queue [property][].
+Try to acquire the semaphore again or provide a queue in the [Queue][SemaphoreQueue].
 
 ### Queue Timeout reached
 
-This exception is thrown when queuing for the specified [Semaphore], and the queue timeout is reached before the semaphore is acquired.
+This exception is thrown when queueing for the specified semaphore, and the [Queue Timeout] is reached before the semaphore is acquired.
 
 #### Message Format
 
@@ -52,13 +52,13 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<tenant>` is the tenant defined in the [Scope] of the [Semaphore].
-* `<system>` is the system defined in the [Scope] of the [Semaphore].
-* `<semaphore-name>` is the name of the semaphore [property][].
+* `<tenant>` is the tenant defined in the [Scope][SemaphoreScope] the semaphore operates in.
+* `<system>` is the system defined in the [Scope][SemaphoreScope] the semaphore operates in.
+* `<semaphore-name>` is the [Name][SemaphoreName] of the semaphore.
 
 #### How to fix
 
-Try to queue to acquire the semaphore again or provide a longer queue timeout.
+Try to acquire the semaphore again or provide a longer [Queue Timeout].
 
 ## Properties
 
@@ -80,7 +80,7 @@ The exception message, providing information about the exception that occurred.
 
 ### Tenant
 
-The tenant specified on the [Scope][] provided.
+The tenant specified on the [Scope][SemaphoreScope] provided.
 
 | | |
 |-----------|---------------------------|
@@ -88,7 +88,7 @@ The tenant specified on the [Scope][] provided.
 
 ### System
 
-The system specified on the [Scope][] provided.
+The system specified on the [Scope][SemaphoreScope] provided.
 
 | | |
 |-----------|---------------------------|
@@ -96,7 +96,7 @@ The system specified on the [Scope][] provided.
 
 ### Semaphore Name
 
-The name of the semaphore that was attempted to be acquired.
+The [Name][SemaphoreName] of the semaphore that was attempted to be acquired.
 
 | | |
 |-----------|------------|
@@ -141,14 +141,13 @@ The URL for the relevant section of this exception's help page.
 * [Boolean]
 * [Int32][]
 * [Scope][]
-* [Semaphore][]
 * [String][]
 * [TimePeriod][]
 
 ### Related Concepts
 
-* [Block Properties]
 * [Exceptions]
+* [Scopes]
 * [Semaphores][Semaphore]
 
 ### Related Blocks
@@ -182,19 +181,25 @@ None
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
 
 [Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
-[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
+[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
-[Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
+[Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.MainDoc" >}}
+[SemaphoreWhatIs]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MainDoc" >}}
+
 [property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
+[SemaphoreConcurrencyLimit]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.ConcurrencyLimit" >}}
 [SemaphoreQueue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
+[Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc" >}}
+[SemaphoreScope]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Scope" >}}
+[SemaphoreName]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Name" >}}
+[Queue Timeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
 
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
 [Handle Flow Exception]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [Wait For Duration]: {{< url path="Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration.MainDoc" >}}
-
