@@ -1116,14 +1116,12 @@
                         MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
                 [Cortex.Reference.Concepts.WorkingWith.Concurrency]
                     MainDoc = "/docs/reference/concepts/working-with/concurrency/"
-                    [Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore]
-                        MainDoc = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/"
-                        Non-Queuing = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#non-queuing-semaphore"
-                        Queuing = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#queuing-semaphore"
-                        [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores]
-                            MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/"
-                            [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore]
-                                MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/"
+                    [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores]
+                        MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/"
+                        [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore]
+                            MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/"
+                            Non-Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#non-queuing-semaphore"
+                            Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#queuing-semaphore"          
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
@@ -1701,8 +1699,8 @@
                 [Cortex.Reference.Exceptions.Concurrency.Semaphores]
                     MainDoc = "/docs/reference/exceptions/concurrency/semaphores/"
                     [Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException]
-                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired/"
-                        Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired/#queued"
+                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/"
+                        Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queued"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
