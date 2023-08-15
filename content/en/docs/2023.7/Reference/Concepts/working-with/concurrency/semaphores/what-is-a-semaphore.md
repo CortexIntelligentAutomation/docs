@@ -25,7 +25,7 @@ A [Non-Queuing Semaphore] refers to a semaphore that does not queue when attempt
 
 ### Queuing Semaphore
 
-A [Queuing Semaphore] refers to a semaphore that queues when attempting to acquire a semaphore that has reached its concurrency limit. It will join the queue with the [Priority] specified in the [QueueSettings] and wait to enter the semaphore when it has reached the front of the queue and there is space inside.
+A [Queuing Semaphore] refers to a semaphore that queues when attempting to acquire a semaphore that has reached its concurrency limit. It will join the queue with the [Priority] specified in the [QueueSettings] and wait to enter the semaphore when it has reached the front of the queue and there is space inside. The queue functions as a [QueueWithPriority]. See [QueueWithPriority] or [QueueSettings] for more information.
 
 If an execution spends more time in the queue than the [QueueTimeout] specified in the [QueueSettings], it will exit the queue and throw a [SemaphoreCouldNotBeAcquiredException] with the [Queued] property set to `true` to indicate that it attempted to queue.
 
@@ -33,7 +33,7 @@ If an execution spends more time in the queue than the [QueueTimeout] specified 
 
 ### Automatic Management
 
-The semaphores are managed automatically, without the need to define and manage semaphores seperately. When a block attempts to acquire a semaphore that does not exist, the semaphore will automatically be created
+The semaphores are managed automatically, without the need to define and manage the semaphores seperately. When a block attempts to acquire a semaphore that does not exist, the semaphore will automatically be created and configured with the defined [ConcurrencyLimit]. When a semaphore is emptied for whatever reason (final execution exits the semaphore or is stopped from executing while inside), the semaphore is automatically deleted.
 
 ### Multiple ConcurrencyLimits
 
@@ -52,6 +52,7 @@ TODO
 ### Related Data Types
 
 - [QueueSettings]
+- [QueueWithPriority]
 - [Scope][ScopeDatatype]
 - [SemaphoreSettings]
 
@@ -82,4 +83,5 @@ TODO
 [ConcurrencyLimit]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.ConcurrencyLimit" >}}
 [Queue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
 
+[QueueWithPriority]: {{< url path="Cortex.Reference.DataTypes.Collections.QueueWithPriority.MainDoc" >}}
 [ScopeDatatype]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
