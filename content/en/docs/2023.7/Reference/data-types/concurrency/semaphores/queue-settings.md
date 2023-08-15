@@ -1,7 +1,7 @@
 ---
 title: "QueueSettings"
 linkTitle: "QueueSettings"
-description: "A datatype that represent the settings used for configuring a semaphores queue."
+description: "Used to represent the configuration settings of a semaphore's queue."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "A datatype that represent the settings used for configuring a sema
 
 ## Summary
 
-The `QueueSettings` data type represent the settings used to configure a [Semaphore's][Semaphore] queue.
+The `QueueSettings` data type represents the settings used to configure a [Semaphore's][Semaphore] queue.
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ The `QueueSettings` data type represent the settings used to configure a [Semaph
 | **Name:**              | `QueueSettings`                                |
 | **Full Name:**         | `Cortex.DataTypes.Concurrency.Semaphores.QueueSettings`         |
 | **Alias:**             | N/A|
-| **Description:**       | The data type used to represent the settings used for configuring a [Semaphore's][Semaphore] queue. |
+| **Description:**       | Represents the settings used for configuring a [Semaphore's][Semaphore] queue. |
 | **Default Value:**     | `null`                             |
 | **Can be used as:**    | `QueueSettings`, `Object`, `dynamic`           |
 | **Can be cast to:**    | N/A |
@@ -28,18 +28,18 @@ The `QueueSettings` data type represent the settings used to configure a [Semaph
 ### Priority
 
 The [Priority][Priority Property] of the executions joining the queue.
-The queue is ordered by minimal value, so the element with the lowest [Priority][Priority Property] will be dequeued first.
+The queue is ordered by minimal value, so the item with the lowest [Priority][Priority Property] will be dequeued first.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Int32] |
 | Is [Advanced] | `true` |
-| Default Editor | [Expression] |
+| Default Editor | [Literal] |
 | Default Value | `0` |
 
 ### QueueTimeout
 
-The [QueueTimeout][QueueTimeout Property] used to set a duration for the maximum amount of time an execution can spend in the queue.
+The [QueueTimeout][QueueTimeout Property] is used to set a duration for the maximum amount of time an execution can spend in the queue.
 A value of `null` will allow an execution to queue indefinitely.
 
 | | |
@@ -63,7 +63,7 @@ A [QueueSettings] can also be created using the Literal Editor by filling in the
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Priority` | `Int32` | `0` | [Priority][Priority Property] defines the priority executions will enter the queue with. |
+| `Priority` | `Int32` | `0` | [Priority][Priority Property] defines the priority that executions will enter the queue with. |
 | `QueueTimeout` | `TimePeriod` | `null` | [QueueTimeout][QueueTimeout Property] defines the maximum amount of time an execution can spend in the queue. |
 
 ### Convert QueueSettings to Text
@@ -72,7 +72,7 @@ The following table shows some of the ways that a `QueueSettings` can be convert
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Priority": 0, "QueueTimeout": null }` | `"{\r\n  "Priority\": 0,\r\n  "QueueTimeout": null\r\n}"`  | N/A |See [Convert Object To Json] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Priority": 0, "QueueTimeout": null }` | `"{\r\n  \"Priority\": 0,\r\n  \"QueueTimeout\": null\r\n}"`  | N/A |See [Convert Object To Json] |
 
 ### Property Editor Support
 
@@ -88,6 +88,7 @@ None
 
 ### Related Data Types
 
+- [Int32]
 - [SemaphoreSettings]
 - [TimePeriod]
 

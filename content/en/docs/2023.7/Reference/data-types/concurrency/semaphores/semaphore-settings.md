@@ -1,7 +1,7 @@
 ---
 title: "SemaphoreSettings"
 linkTitle: "SemaphoreSettings"
-description: "A datatype that represent the settings used for configuring a semaphore."
+description: "Used to represent the configuration settings of a semaphore."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "A datatype that represent the settings used for configuring a sema
 
 ## Summary
 
-The `SemaphoreSettings` data type represent the settings used to configure a [Semaphore].
+The `SemaphoreSettings` data type represents the settings used to configure a [Semaphore].
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ The `SemaphoreSettings` data type represent the settings used to configure a [Se
 | **Name:**              | `SemaphoreSettings`                                |
 | **Full Name:**         | `Cortex.DataTypes.Concurrency.Semaphores.SemaphoreSettings`         |
 | **Alias:**             | N/A|
-| **Description:**       | The data type used to represent the settings used for configuring a [Semaphore]. |
+| **Description:**       | Represents the settings used for configuring a [Semaphore]. |
 | **Default Value:**     | `null`                             |
 | **Can be used as:**    | `SemaphoreSettings`, `Object`, `dynamic`           |
 | **Can be cast to:**    | N/A |
@@ -27,7 +27,7 @@ The `SemaphoreSettings` data type represent the settings used to configure a [Se
 
 ### Scope
 
-The [Scope][Scope Property] used to define the area in which the [Semaphore] will operate.
+The [Scope][Scope Property] is used to define the area in which the [Semaphore] will operate.
   
 | | |
 |--------------------|---------------------------|
@@ -45,31 +45,32 @@ The [Scope][Scope Property] used to define the area in which the [Semaphore] wil
 
 ### Name
 
-The [Name][Name Property] used to identify the [Semaphore].
+The [Name][Name Property] is used to identify the [Semaphore].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [String] |
 | Is [Advanced] | `true` |
-| Default Editor | [Expression] |
-| Default Value | `null` |
+| Default Editor | [Literal] |
+| Default Value | [String] with value `""` |
 
 ### ConcurrencyLimit
 
-The [ConcurrencyLimit][ConcurrencyLimit Property] used to define the maximum number of executions that can be in the [Semaphore].
+The [ConcurrencyLimit][ConcurrencyLimit Property] is used to define the maximum number of executions that can be in the [Semaphore].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Int32] |
 | Is [Advanced] | `true` |
-| Default Editor | [Expression] |
+| Default Editor | [Literal] |
 | Default Value | `0` |
 
 ### Queue
 
-The [Queue][Queue Property] that configures how the [Semaphore's][Semaphore] queue should operate.
+The [Queue][Queue Property] is used to define whether the [Semaphore] functions as a [queuing semaphore][Queuing] or a [non-queuing semaphore][Non-Queuing].
+
 If this property is set to `null`, then the [Semaphore] will function as a [non-queuing semaphore][Non-Queuing].
-If given a value, the [Semaphore] will function as a [queuing semaphore][Queuing].
+If given a value, the [Semaphore] will function as a [queuing semaphore][Queuing] and configures how the [Semaphore's][Semaphore] queue should operate.
 
 | | |
 |--------------------|---------------------------|
@@ -103,7 +104,7 @@ The following table shows some of the ways that a `SemaphoreSettings` can be con
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | `"{\r\n  "Scope": {\r\n    "Tenant": 0,\r\n    "System": 0\r\n  },\r\n  "Name": "SemaphoreA",\r\n  "ConcurrencyLimit": 1,\r\n  "Queue": null\r\n}"`  | N/A |See [Convert Object To Json] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | `"{\r\n  \"Scope\": {\r\n    \"Tenant\": 0,\r\n    \"System\": 0\r\n  },\r\n  \"Name\": \"SemaphoreA\",\r\n  \"ConcurrencyLimit\": 1,\r\n  \"Queue\": null\r\n}"`  | N/A |See [Convert Object To Json] |
 
 ### Property Editor Support
 
@@ -119,8 +120,10 @@ None
 
 ### Related Data Types
 
+- [Int32]
 - [QueueSettings]
 - [Scope]
+- [String]
 
 ### Related Concepts
 

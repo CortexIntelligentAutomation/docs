@@ -82,7 +82,7 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current" }` | `"{\r\n "Tenant": "ScopeOption.Current",\r\n "System": "ScopeOption.Current"\r\n}"`  | N/A |See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current" }` | `"{\r\n \"Tenant\": \"ScopeOption.Current\",\r\n \"System\": \"ScopeOption.Current\"\r\n}"`  | N/A |See [Convert Object To Json][] |
 
 ### Property Editor Support
 
