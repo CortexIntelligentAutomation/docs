@@ -10,7 +10,7 @@ description: "A datatype that represent the settings used for configuring a sema
 
 ## Summary
 
-The `QueueSettings` data type represent the settings used to configure a [Semaphore]s queue.
+The `QueueSettings` data type represent the settings used to configure a [Semaphore's][Semaphore] queue.
 
 | | |
 |-|-|
@@ -18,7 +18,7 @@ The `QueueSettings` data type represent the settings used to configure a [Semaph
 | **Name:**              | `QueueSettings`                                |
 | **Full Name:**         | `Cortex.DataTypes.Concurrency.Semaphores.QueueSettings`         |
 | **Alias:**             | N/A|
-| **Description:**       | The data type used to represent the settings used for configuring a [Semaphore]s queue. |
+| **Description:**       | The data type used to represent the settings used for configuring a [Semaphore's][Semaphore] queue. |
 | **Default Value:**     | `null`                             |
 | **Can be used as:**    | `QueueSettings`, `Object`, `dynamic`           |
 | **Can be cast to:**    | N/A |
@@ -56,7 +56,7 @@ The following table shows some of the ways that `QueueSettings` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `QueueSettings` constructor | `new QueueSettings(0, null)` | `{ "Priority": 0, "QueueTimeout": null }`| Expression | Creates a new [QueueSettings] that can be used to configure the functions of a [Semaphore]s queue. |
+| Use a `QueueSettings` constructor | `new QueueSettings(0, null)` | `{ "Priority": 0, "QueueTimeout": null }`| Expression | Creates a new [QueueSettings] that can be used to configure the functions of a [Semaphore's][Semaphore] queue. |
 
 A [QueueSettings] can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
@@ -88,7 +88,6 @@ None
 ### Related Data Types
 
 - [SemaphoreSettings]
-- [Scope]
 - [TimePeriod]
 
 ### Related Concepts
@@ -118,5 +117,3 @@ None
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
-
-[Scope]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}

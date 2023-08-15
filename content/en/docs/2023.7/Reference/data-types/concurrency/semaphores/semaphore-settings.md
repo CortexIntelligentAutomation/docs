@@ -67,7 +67,7 @@ The [ConcurrencyLimit][ConcurrencyLimit Property] used to define the maximum num
 
 ### Queue
 
-The [Queue][Queue Property] that configures how the [Semaphore]s queue should operate.
+The [Queue][Queue Property] that configures how the [Semaphore's][Semaphore] queue should operate.
 If this property is set to `null`, then the [Semaphore] will function as a branching [Semaphore].
 If given a value, the [Semaphore] will function as a queuing [Semaphore].
 
@@ -95,7 +95,7 @@ A [SemaphoreSettings] can also be created using the Literal Editor by filling in
 | `Scope` | `Scope` | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope of the [Semaphore] will operate. |
 | `Name` | `String` | `"SemaphoreA"` | [Name][Name Property] defines the name of the [Semaphore]. |
 | `ConcurrencyLimit` | `Int32` | `1` | [ConcurrencyLimit][ConcurrencyLimit Property] defines the maximum number of executions that can be inside the [Semaphore] at one time. |
-| `Queue` | `QueueSettings` | `null` | [Queue][Queue Property] defines the behaviour of the [Semaphore]s queue. |
+| `Queue` | `QueueSettings` | `null` | [Queue][Queue Property] defines the behaviour of the [Semaphore's][Semaphore] queue. |
 
 ### Convert SemaphoreSettings to Text
 
