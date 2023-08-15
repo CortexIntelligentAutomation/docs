@@ -40,7 +40,7 @@ The queue is ordered by minimal value, so the element with the lowest [Priority]
 ### QueueTimeout
 
 The [QueueTimeout][QueueTimeout Property] used to set a duration for the maximum amount of time an execution can spend in the queue.
-A value of `null` will allow an execution queue indefinitely.
+A value of `null` will allow an execution to queue indefinitely.
 
 | | |
 |--------------------|---------------------------|

@@ -92,7 +92,7 @@ A [SemaphoreSettings] can also be created using the Literal Editor by filling in
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Scope` | `Scope` | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope of the [Semaphore] will operate. |
+| `Scope` | `Scope` | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope that the [Semaphore] will operate in. |
 | `Name` | `String` | `"SemaphoreA"` | [Name][Name Property] defines the name of the [Semaphore]. |
 | `ConcurrencyLimit` | `Int32` | `1` | [ConcurrencyLimit][ConcurrencyLimit Property] defines the maximum number of executions that can be inside the [Semaphore] at one time. |
 | `Queue` | `QueueSettings` | `null` | [Queue][Queue Property] defines the behaviour of the [Semaphore's][Semaphore] queue. |
