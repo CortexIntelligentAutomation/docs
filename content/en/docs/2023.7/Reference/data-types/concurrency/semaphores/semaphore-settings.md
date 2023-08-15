@@ -58,6 +58,8 @@ The [Name][Name Property] is used to identify the [Semaphore].
 
 The [ConcurrencyLimit][ConcurrencyLimit Property] is used to define the maximum number of executions that can be in the [Semaphore].
 
+The specified value for the [ConcurrencyLimit][ConcurrencyLimit Property] may not be used if a [Semaphore] with the same [Scope][Scope Property] and [Name][Name Property] already exists, see [Multiple Concurrency Limits][MultipleConcurrencyLimits] for more information.
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [Int32] |
@@ -147,6 +149,7 @@ None
 [Queuing]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.Queuing" >}}
 [SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
 [QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
+[MultipleConcurrencyLimits]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MultipleConcurrencyLimits" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
