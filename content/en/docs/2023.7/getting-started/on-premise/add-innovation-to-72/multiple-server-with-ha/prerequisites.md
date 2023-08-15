@@ -173,7 +173,7 @@ Network Discovery and File Sharing should be enabled on each Application Server:
 
 ### Service Requirements
 
-The following Windows Services must be running on all Application Servers:
+The following Windows Services must be running on all servers:
 
 * Remote Registry
 * Windows Event Log
