@@ -21,6 +21,8 @@ The following architecture requires 5 servers:
 
 {{< figure src="/images/editable/Cortex Innovation Overview.png" class="centre" title="5 Server Architecture Diagram" >}}
 
+{{< section "/architecture/components/node-details.md" >}}
+
 ## Next Steps?
 
 1. [Prerequisites][]

@@ -19,6 +19,8 @@ The minimum architecture for adding Innovation to a v7.2 Single Site, Single Ser
 
 {{< figure src="/images/editable/Cortex Innovation v7.2 Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
 
+{{< section "/architecture/components/node-details.md" >}}
+
 {{% alert type="warning" title="Warning" %}} This architecture is not recommended for production platforms that are required to scale and support HA. Additionally, upgrades require application redeployment with downtime rather than using rolling upgrades. {{%/alert %}}
 
 ## Next Steps?
