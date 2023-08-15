@@ -1261,8 +1261,14 @@
                     MainDoc = "/docs/reference/data-types/concurrency/semaphores/"
                     [Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings]
                         MainDoc = "/docs/reference/data-types/concurrency/semaphores/queue-settings/"
+                        Priority = "/docs/reference/data-types/concurrency/semaphores/queue-settings/#priority"
+                        QueueTimeout = "/docs/reference/data-types/concurrency/semaphores/queue-settings/#queuetimeout"
                     [Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings]
                         MainDoc = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/"
+                        Scope = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#scope"
+                        Name = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#name"
+                        ConcurrencyLimit = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#concurrencylimit"
+                        Queue = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#queue"
             [Cortex.Reference.DataTypes.ConditionalLogic]
                 MainDoc = "/docs/reference/data-types/conditional-logic/"
                 [Cortex.Reference.DataTypes.ConditionalLogic.Boolean]

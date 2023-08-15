@@ -10,7 +10,7 @@ description: "The exception thrown when a block is unable to acquire a semaphore
 
 ## Description
 
-The exception thrown when a block is unable (failed) to acquire a [Semaphore].
+The exception thrown when a block is unable to acquire a [Semaphore].
 
 ## Reasons
 
@@ -18,12 +18,6 @@ The exception thrown when a block is unable (failed) to acquire a [Semaphore].
 
 This exception is thrown when the specified [Semaphore's][Semaphore] concurrency limit has been reached when the queue [property][] is set to `null`.
 
-
-This exception is thrown when attempting to acquire a full [Semaphore] when the queue [property][] is set to `null`.
-
-
-This exception is thrown when attempting to acquire a [Semaphore] whose concurrency limit has been reached when the queue [property][] is set to `null`.
-
 #### Message Format
 
 The format of the [Message][] is as follows:
@@ -41,11 +35,11 @@ where:
 
 #### How to fix
 
-Provide a queue in the queue [property][] or provide a different semaphore name. (?)
+Try to acquire the semaphore again at a later point in the flow or provide a queue in the queue [property][].
 
 ### Queue Timeout reached
 
-This exception is thrown when when the specified queue timeout is reached while queueing for the specified [Semaphore].
+This exception is thrown when queuing for the specified [Semaphore], and the queue timeout is reached before the semaphore is acquired.
 
 #### Message Format
 
@@ -64,7 +58,7 @@ where:
 
 #### How to fix
 
-Provide a longer queue timeout or provide a different semaphore name. (?)
+Try to queue to acquire the semaphore again or provide a longer queue timeout.
 
 ## Properties
 
@@ -155,10 +149,20 @@ The URL for the relevant section of this exception's help page.
 
 * [Block Properties]
 * [Exceptions]
-* [Working With Semaphores] (?)
+* [Semaphores][Semaphore]
 
 ### Related Blocks
-?
+
+- [All Blocks][]
+
+
+Except:
+- [End Flow]
+- [End Workspace]
+- [Handle Flow Exception]
+- [Start Flow]
+- [Wait For Duration]
+
 ### External Documentation
 
 None
@@ -166,6 +170,7 @@ None
 [Message]: {{< ref "#message" >}}
 
 [TaskExceptions Property]: {{< ref "#taskexceptions" >}}
+[All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
@@ -185,3 +190,10 @@ None
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
 [property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
+
+[End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
+[End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+[Handle Flow Exception]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
+[Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
+[Wait For Duration]: {{< url path="Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration.MainDoc" >}}
+
