@@ -41,9 +41,27 @@ The prerequisites required for each server role (as described in [Architecture][
 
 All servers must be on the same domain and cannot be domain controllers.
 
+## Active Directory Requirements
+
+For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
+
+Supported versions of Active Directory are listed below:
+
+| Version                    | Verified?      | Supported From | Supported Until  |  
+|----------------------------|----------------|----------------|------------------|
+| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+
 ## DNS Requirements
 
-The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured  on the DNS server for all of your servers (Web, Application and Load Balancer).
+The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured on the DNS server for all of your servers (Web, Application and Load Balancer).
 
 ## Licensing Requirements
 
@@ -126,13 +144,13 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 * Must be able to access each of the Application Servers via HTTPS.
 * Ideally it should be highly available to avoid a single point of failure in the system.
 
-## Additional Application Server Requirements
+## Additional Web Application Server and Application Server Requirements
 
 ### Filesystem Requirements
 
-All Application Servers must use an NTFS filesystem.
+The Web Application Server and each Application Server must use an NTFS filesystem.
 
-Network Discovery and File Sharing should be enabled on each Application Server:
+Network Discovery and File Sharing should be enabled on each server:
 
 1. Open File Explorer.
 1. Click `Network` on the left.
@@ -144,7 +162,7 @@ Network Discovery and File Sharing should be enabled on each Application Server:
 
 ### Service Requirements
 
-The following Windows Services must be running on all servers:
+The following Windows Services must be running on Web Application Server and each Application Server:
 
 * Remote Registry
 * Windows Event Log
@@ -154,7 +172,9 @@ The following Windows Services must be running on all servers:
 
 #### Installation User
 
-A domain user which is a member of the Local Administrators group on all Application Servers and Load Balancer Server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
+A domain user which is a member of the Local Administrators group on all Application Servers, Web Application Server and Load Balancer Server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
+
+A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
 #### Antivirus Exclusions
 
@@ -191,7 +211,7 @@ If adding the exclusions manually, the Process Exclusions should be done before 
 
 If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
 
-The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on each Application Server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
+The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the Web Application Server and each Application Server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
 #### Certificate Requirements
 
@@ -199,13 +219,15 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
+##### Application Servers
+
 An X.509 SSL wildcard certificate should be used to:
 
 * Secure communication between the load balancer and the nodes on the Application Servers.
 * Secure communication between the Application Services.
 * Allow Application Services to identify themselves to clients such as Gateway.
 * Prevent unauthorised nodes from joining the HA cluster.
-* Connect to Service Fabric Explorer from each of the Application Servers.
+* Connect to Service Fabric Explorer from the Web Application Server and each Application Server.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
@@ -217,48 +239,13 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 * Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
 * Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
-This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.
+This file should be placed in a known location on the Web Application Server the Application Server where the installation scripts will be run. This location will be required when running the installation script.
 
 If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
 {{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
 
-#### TLS Requirements
-
-There is a set of non-compulsory security measures, recommended to be applied to the Application Servers, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:
-
-* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the Application Servers.
-
-## Additional Web Application Server Requirements
-
-### Security Requirements
-
-#### Installation User
-
-A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
-
-#### Domain Requirements
-
-For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
-
-Supported versions of Active Directory are listed below:
-
-| Version                    | Verified?      | Supported From | Supported Until  |  
-|----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-
-#### Certificate Requirements
+##### Web Application Servers
 
 {{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
 
@@ -275,12 +262,17 @@ More information about importing the certificate is given during installation.
 
 #### TLS Requirements
 
-There is a set of non-compulsory security measures, recommended to be applied to the Web Application Server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:
+There is a set of non-compulsory security measures, recommended to be applied to the Web Application Server and each Application Server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:
 
 * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the Web Application Server.
+See [SSL Best Practices][] for a full list of the security changes which will be applied.
+
+A script is provided during installation to apply these security changes:
+
+* For the Application servers: `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1`
+* For the Web Application Server: `Cortex.Innovation.Install.SSLBestPractices.ps1`
 
 ## Next Steps?
 
