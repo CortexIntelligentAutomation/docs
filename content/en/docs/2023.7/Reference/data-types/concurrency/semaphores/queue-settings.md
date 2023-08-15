@@ -28,6 +28,7 @@ The `QueueSettings` data type represent the settings used to configure a [Semaph
 ### Priority
 
 The [Priority][Priority Property] of the executions joining the queue.
+The queue is ordered by minimal value, so the element with the lowest [Priority][Priority Property] will be dequeued first.
 
 | | |
 |--------------------|---------------------------|
