@@ -39,7 +39,7 @@ The Run As property is an [advanced property][Advanced Properties] available on 
 
 The default value of `null`, indicates that no user is impersonated.
 
-When the Run As property is set on a [block][] that has a parent [block][] (e.g. Workspace or Run Flow blocks) with the Run As property set too, then the child [block][] Run As property will be used instead of the parents. If no impersonation is set on a [block][], then it will use the next parent in the stack with impersonation present.
+When the Run As property is set on a [block][] that has a parent [block][] (e.g. Workspace or Run Flow blocks) with the Run As property set too, then the child [block][] Run As property will be used instead of the parents. If no impersonation is set on a [block][], then it will use the next parent block in the impersonation stack.
 
 When using an invalid domain, username or password, this will cause a [RunAsException][] to be raised when the [block][] is executed.
 If the username or password provided is `null`, this will cause a [PropertyNullException][] to be raised when the [block][] is executed.
@@ -104,4 +104,4 @@ None
 [InvalidBlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}
 
 [RunAsException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}
-[PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}
+[PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
