@@ -122,35 +122,11 @@ Gateway supports the latest versions of the following browsers:
 * Edge
 * Firefox
 
-## Additional Load Balancer Server Requirements
-
-### Filesystem Requirements
-If using the included [gobetween][] load balancer, Network Discovery and File Sharing must be enabled on the Load Balancer Server:
-
-1. Open File Explorer.
-1. Click `Network` on the left.
-1. A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
-    {{< figure src="/images/Network Discovery 1.png" title="Network and File Discovery Disabled" >}}
-1. Click the banner.
-1. Click `Turn on network discovery and file sharing`:
-    {{< figure src="/images/Network Discovery 2.png" title="Enable Network and File Discovery" >}}
-    
-### Alternative Load Balancer Requirements
-
-Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
-
-* Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
-* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation {{< version >}} - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
-* Must be able to access each of the Application Servers via HTTPS.
-* Ideally it should be highly available to avoid a single point of failure in the system.
-
-## Additional Web Application Server and Application Server Requirements
-
-### Filesystem Requirements
+## Filesystem Requirements
 
 The Web Application Server and each Application Server must use an NTFS filesystem.
 
-Network Discovery and File Sharing should be enabled on each server:
+Network Discovery and File Sharing must be enabled on the Load Balancer Server:
 
 1. Open File Explorer.
 1. Click `Network` on the left.
@@ -160,23 +136,23 @@ Network Discovery and File Sharing should be enabled on each server:
 1. Click `Turn on network discovery and file sharing`:
     {{< figure src="/images/Network Discovery 2.png" title="Enable Network and File Discovery" >}}
 
-### Service Requirements
+## Service Requirements
 
-The following Windows Services must be running on Web Application Server and each Application Server:
+On the Web Application Server and each Application Server, the following Windows Services must be running:
 
 * Remote Registry
 * Windows Event Log
 * Performance Logs & Alerts
 
-### Security Requirements
+## Security Requirements
 
-#### Installation User
+### Installation User
 
-A domain user which is a member of the Local Administrators group on all Application Servers, Web Application Server and Load Balancer Server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
+On all Application Servers, Web Application Server and Load Balancer Server, a domain user, which is a member of the Local Administrators group, must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
 
-A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
+For Gateway, a domain user must be available to run the Application Pools. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
 
-#### Antivirus Exclusions
+### Antivirus Exclusions
 
 It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on the Web Application Server and each Application Server to reduce antivirus processing on Service Fabric artefacts:
 
@@ -205,7 +181,7 @@ A script is provided during installation to add these exclusions for Windows Def
 
 If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
 
-#### Port Requirements
+### Port Requirements
 
 {{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
 
@@ -213,13 +189,13 @@ If you are using Windows Firewall, some ports are opened during installation and
 
 The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the Web Application Server and each Application Server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
-#### Certificate Requirements
+### Certificate Requirements
 
 {{% alert title="Note" %}}
 For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
-##### Application Servers
+#### Application Servers
 
 An X.509 SSL wildcard certificate should be used to:
 
@@ -245,7 +221,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
 {{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
 
-##### Web Application Servers
+#### Web Application Servers
 
 {{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
 
@@ -260,7 +236,7 @@ The certificate may be the same one used for the Application Server installation
 
 More information about importing the certificate is given during installation.
 
-#### TLS Requirements
+### TLS Requirements
 
 There is a set of non-compulsory security measures, recommended to be applied to the Web Application Server and each Application Server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2. And disabling all cipher suites apart from the following:
 
@@ -273,6 +249,15 @@ A script is provided during installation to apply these security changes:
 
 * For the Application servers: `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1`
 * For the Web Application Server: `Cortex.Innovation.Install.SSLBestPractices.ps1`
+
+## Alternative Load Balancer Requirements
+
+Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
+
+* Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
+* Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation {{< version >}} - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
+* Must be able to access each of the Application Servers via HTTPS.
+* Ideally it should be highly available to avoid a single point of failure in the system.
 
 ## Next Steps?
 
