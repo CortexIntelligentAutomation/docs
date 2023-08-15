@@ -325,3 +325,4 @@ Ensure that the installation files are backed up or kept on the server, especial
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[NET Framework 471]: {{< url path="MSDotNet.Framework471.MainDoc" >}}
