@@ -31,7 +31,11 @@ If an execution spends more time in the queue than the [QueueTimeout] specified 
 
 ## Remarks
 
-TODO
+### Automatic Management
+
+### Multiple ConcurrencyLimits
+
+If two blocks try to create the same semaphore
 
 ### Known Limitations
 
