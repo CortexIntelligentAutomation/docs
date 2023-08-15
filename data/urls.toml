@@ -1117,7 +1117,7 @@
                     MainDoc = "/docs/reference/concepts/working-with/concurrency/"
                     [Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore]
                         MainDoc = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/"
-                        Branching = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#branching-semaphore"
+                        Non-Queuing = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#non-queuing-semaphore"
                         Queuing = "/docs/reference/concepts/working-with/concurrency/what-is-a-semaphore/#queuing-semaphore"
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
@@ -1691,6 +1691,13 @@
                         PropertyLessThanMinimumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-less-than-minimum-value"
                     [Cortex.Reference.Exceptions.Common.UnencryptedTextException]
                         MainDoc = "/docs/reference/exceptions/common/unencrypted-text-exception/"
+            [Cortex.Reference.Exceptions.Concurrency]
+                MainDoc = "/docs/reference/exceptions/concurrency/"
+                [Cortex.Reference.Exceptions.Concurrency.Semaphores]
+                    MainDoc = "/docs/reference/exceptions/concurrency/semaphores/"
+                    [Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException]
+                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired/"
+                        Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired/#queued"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
