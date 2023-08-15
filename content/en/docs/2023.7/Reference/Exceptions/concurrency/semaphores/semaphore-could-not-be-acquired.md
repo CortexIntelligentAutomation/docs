@@ -16,7 +16,7 @@ The exception thrown when a block is unable to acquire a [Semaphore].
 
 ### Concurrency Limit reached
 
-This exception is thrown when the specified [Semaphore's][Semaphore] concurrency limit has been reached when the queue [property][] is set to `null`.
+This exception is thrown when the specified [Semaphore's][Semaphore] concurrency limit has been reached, when the [Queue][SemaphoreQueue] [property][] is set to `null`.
 
 #### Message Format
 
@@ -190,6 +190,7 @@ None
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
 [property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
+[SemaphoreQueue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
 
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}

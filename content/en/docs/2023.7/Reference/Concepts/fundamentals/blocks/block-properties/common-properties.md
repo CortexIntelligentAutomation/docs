@@ -24,19 +24,19 @@ The Description property is available on all [blocks][All Blocks]. It defaults t
 
 ## Semaphore Property
 
-The Semaphore property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to restrict the number of executions that can execute the [block] at any one time.
+The Semaphore property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to restrict the number of executions that can execute the block at any one time.
 
 The default value of `null` indicates that there is no semaphore.
 
 The semaphore [property] has the following sub-properties:
 * [Scope][SemaphoreScope], which defaults to:
-    * Tenant: current.
-    * System: current.
-* [Name][SemaphoreName], which defaults to empty.
+    * [Tenant] : `ScopeOption.Current`.
+    * [System] : `ScopeOption.Current`.
+* [Name][SemaphoreName], which defaults to an empty string (i.e. `""`).
 * [Concurrency Limit][SemaphoreConcurrencyLimit], which defaults to 0.
-* [Queue][SemaphoreQueue], which defaults to null.
+* [Queue][SemaphoreQueue], which defaults to `null`.
     * [Priority][QueuePriority], which defaults to 0.
-    * [Queue Timeout][QueueTimeout], which defaults to null.
+    * [Queue Timeout][QueueTimeout], which defaults to `null`.
 
 {{< figure src="/images/workspace/workspace-block-semaphore.svg" >}}
 
@@ -98,6 +98,9 @@ None
 [QueueTimeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
 [QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
 [SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
+[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant" >}}
+[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System" >}}
+[Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
