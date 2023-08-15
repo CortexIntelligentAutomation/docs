@@ -68,7 +68,7 @@ The [ConcurrencyLimit][ConcurrencyLimit Property] used to define the maximum num
 ### Queue
 
 The [Queue][Queue Property] that configures how the [Semaphore's][Semaphore] queue should operate.
-If this property is set to `null`, then the [Semaphore] will function as a [branching semaphore][Branching].
+If this property is set to `null`, then the [Semaphore] will function as a [non-queuing semaphore][Non-Queuing].
 If given a value, the [Semaphore] will function as a [queuing semaphore][Queuing].
 
 | | |
@@ -140,7 +140,7 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.MainDoc" >}}
-[Branching]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.Branching" >}}
+[Non-Queuing]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.Non-Queuing" >}}
 [Queuing]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.WhatIsASemaphore.Queuing" >}}
 [SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
 [QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
