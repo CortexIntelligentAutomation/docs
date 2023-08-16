@@ -79,8 +79,8 @@ None
 
 - [BlockTimeoutException][]
 - [InvalidBlockTimeoutException][]
-- [RunAsException][]
 - [PropertyNullException][]
+- [RunAsException][]
 
 ### External Documentation
 
@@ -109,5 +109,5 @@ None
 [BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}
 [InvalidBlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}
 
-[RunAsException]: {{< url path="Cortex.Reference.Exceptions.Impersonation.RunAsException.MainDoc" >}}
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[RunAsException]: {{< url path="Cortex.Reference.Exceptions.Impersonation.RunAsException.MainDoc" >}}
