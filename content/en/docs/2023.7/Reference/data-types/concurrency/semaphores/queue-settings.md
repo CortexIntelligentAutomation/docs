@@ -12,16 +12,16 @@ description: "Used to represent the configuration settings of a semaphore's queu
 
 The `QueueSettings` data type represents the settings used to configure a [Semaphore's][Semaphore] queue.
 
-| | |
-|-|-|
-| **Category:**          | Concurrency                                                  |
-| **Name:**              | `QueueSettings`                                |
-| **Full Name:**         | `Cortex.DataTypes.Concurrency.Semaphores.QueueSettings`         |
-| **Alias:**             | N/A|
-| **Description:**       | Represents the settings used for configuring a [Semaphore's][Semaphore] queue. |
-| **Default Value:**     | `null`                             |
-| **Can be used as:**    | `QueueSettings`, `Object`, `dynamic`           |
-| **Can be cast to:**    | N/A |
+|                     |                                                                                |
+|---------------------|--------------------------------------------------------------------------------|
+| **Category:**       | Concurrency                                                                    |
+| **Name:**           | `QueueSettings`                                                                |
+| **Full Name:**      | `Cortex.DataTypes.Concurrency.Semaphores.QueueSettings`                        |
+| **Alias:**          | N/A                                                                            |
+| **Description:**    | Represents the settings used for configuring a [Semaphore's][Semaphore] queue. |
+| **Default Value:**  | `null`                                                                         |
+| **Can be used as:** | `QueueSettings`, `Object`, `dynamic`                                           |
+| **Can be cast to:** | N/A                                                                            |
 
 ## Properties
 
@@ -30,24 +30,24 @@ The `QueueSettings` data type represents the settings used to configure a [Semap
 The [Priority][Priority Property] of the executions joining the queue.
 The queue is ordered by minimal value, so the item with the lowest [Priority][Priority Property] will be dequeued first.
 
-| | |
-|--------------------|---------------------------|
-| Data Type | [Int32] |
-| Is [Advanced] | `true` |
-| Default Editor | [Literal] |
-| Default Value | `0` |
+|                 |             |
+|-----------------|-------------|
+| Data Type       | [Int32][]   |
+| Is [Advanced][] | `true`      |
+| Default Editor  | [Literal][] |
+| Default Value   | `0`         |
 
 ### QueueTimeout
 
 The [QueueTimeout][QueueTimeout Property] is used to set a duration for the maximum amount of time an execution can spend in the queue.
 A value of `null` will allow an execution to queue indefinitely.
 
-| | |
-|--------------------|---------------------------|
-| Data Type | [TimePeriod] |
-| Is [Advanced] | `true` |
-| Default Editor | [Expression] |
-| Default Value | `null` |
+|                 |                |
+|-----------------|----------------|
+| Data Type       | [TimePeriod][] |
+| Is [Advanced][] | `true`         |
+| Default Editor  | [Expression][] |
+| Default Value   | `null`         |
 
 ## Remarks
 
@@ -55,30 +55,30 @@ A value of `null` will allow an execution to queue indefinitely.
 
 The following table shows some of the ways that `QueueSettings` can be created.
 
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use a `QueueSettings` constructor | `new QueueSettings(0, null)` | `{ "Priority": 0, "QueueTimeout": null }`| Expression | Creates a new [QueueSettings] that can be used to configure the functions of a [Semaphore's][Semaphore] queue. |
+| Method                            | Example                      | Result                                    | Editor&nbsp;Support | Notes                                                                                                            |
+|-----------------------------------|------------------------------|-------------------------------------------|---------------------|------------------------------------------------------------------------------------------------------------------|
+| Use a `QueueSettings` constructor | `new QueueSettings(0, null)` | `{ "Priority": 0, "QueueTimeout": null }` | Expression          | Creates a new [QueueSettings][] that can be used to configure the functions of a [Semaphore's][Semaphore] queue. |
 
-A [QueueSettings] can also be created using the Literal Editor by filling in the necessary values for the following properties:
+A [QueueSettings][] can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-| Property | Data Type | Example | Notes |
-|-|-|-|-|
-| `Priority` | `Int32` | `0` | [Priority][Priority Property] defines the priority that executions will enter the queue with. |
-| `QueueTimeout` | `TimePeriod` | `null` | [QueueTimeout][QueueTimeout Property] defines the maximum amount of time an execution can spend in the queue. |
+| Property       | Data Type    | Example | Notes                                                                                                         |
+|----------------|--------------|---------|---------------------------------------------------------------------------------------------------------------|
+| `Priority`     | `Int32`      | `0`     | [Priority][Priority Property] defines the priority that executions will enter the queue with.                 |
+| `QueueTimeout` | `TimePeriod` | `null`  | [QueueTimeout][QueueTimeout Property] defines the maximum amount of time an execution can spend in the queue. |
 
 ### Convert QueueSettings to Text
 
 The following table shows some of the ways that a `QueueSettings` can be converted to text.
 
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Priority": 0, "QueueTimeout": null }` | `"{\r\n  \"Priority\": 0,\r\n  \"QueueTimeout\": null\r\n}"`  | N/A |See [Convert Object To Json] |
+| Method                             | Example                                                                          | Result                                                       | Editor&nbsp;Support | Notes                          |
+|------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------------------------|---------------------|--------------------------------|
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Priority": 0, "QueueTimeout": null }` | `"{\r\n  \"Priority\": 0,\r\n  \"QueueTimeout\": null\r\n}"` | N/A                 | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input] properties where the data type is `QueueSettings`.
-- The Literal Editor is available for [Input] properties where the data type is `QueueSettings`.
-- The Variable Editor is available for [Input], [InputOutput] and [Output] properties where the data type is `QueueSettings`.
+- The Expression Editor is available for [Input][] properties where the data type is `QueueSettings`.
+- The Literal Editor is available for [Input][] properties where the data type is `QueueSettings`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `QueueSettings`.
 
 ### Known Limitations
 
@@ -88,9 +88,9 @@ None
 
 ### Related Data Types
 
-- [Int32]
-- [SemaphoreSettings]
-- [TimePeriod]
+- [Int32][]
+- [SemaphoreSettings][]
+- [TimePeriod][]
 
 ### Related Concepts
 
@@ -111,7 +111,6 @@ None
 [SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
 [QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
 
-[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}

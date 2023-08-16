@@ -66,7 +66,7 @@ Try to acquire the semaphore again or provide a longer [Queue Timeout].
 
 The type of the exception (i.e. `SemaphoreCouldNotBeAcquiredException`).
 
-| | |
+|           |            |
 |-----------|------------|
 | Data Type | [String][] |
 
@@ -74,7 +74,7 @@ The type of the exception (i.e. `SemaphoreCouldNotBeAcquiredException`).
 
 The exception message, providing information about the exception that occurred.
 
-| | |
+|           |            |
 |-----------|------------|
 | Data Type | [String][] |
 
@@ -82,23 +82,23 @@ The exception message, providing information about the exception that occurred.
 
 The tenant specified on the [Scope][SemaphoreScope] provided.
 
-| | |
-|-----------|---------------------------|
+|           |            |
+|-----------|------------|
 | Data Type | [String][] |
 
 ### System
 
 The system specified on the [Scope][SemaphoreScope] provided.
 
-| | |
-|-----------|---------------------------|
+|           |            |
+|-----------|------------|
 | Data Type | [String][] |
 
 ### Semaphore Name
 
 The [Name][SemaphoreName] of the semaphore that was attempted to be acquired.
 
-| | |
+|           |            |
 |-----------|------------|
 | Data Type | [String][] |
 
@@ -108,31 +108,31 @@ The number of executions allowed in the semaphore that was attempted to be acqui
 
 This is the concurrency limit set when the semaphore was created, which may be different from the specified concurrency limit, see [Multiple Concurrency Limits][MultipleConcurrencyLimits] for more information.
 
-| | |
-|-----------|------------|
+|           |           |
+|-----------|-----------|
 | Data Type | [Int32][] |
 
 ### Queued
 
 Whether or not the execution attempted to queue.
 
-| | |
-|-----------|------------|
+|           |             |
+|-----------|-------------|
 | Data Type | [Boolean][] |
 
 ### Queue Timeout
 
 The length of time the execution queued.
 
-| | |
-|-----------|------------|
+|           |                |
+|-----------|----------------|
 | Data Type | [TimePeriod][] |
 
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
 
-| | |
+|           |            |
 |-----------|------------|
 | Data Type | [String][] |
 
@@ -140,7 +140,7 @@ The URL for the relevant section of this exception's help page.
 
 ### Related Data Types
 
-* [Boolean]
+* [Boolean][]
 * [Int32][]
 * [Scope][]
 * [String][]
@@ -148,21 +148,21 @@ The URL for the relevant section of this exception's help page.
 
 ### Related Concepts
 
-* [Exceptions]
-* [Scopes]
+* [Exceptions][]
+* [Scopes][]
 * [Semaphores][Semaphore]
 
 ### Related Blocks
 
-- [All Blocks][]
-
+* [All Blocks][]
 
 Except:
-- [End Flow]
-- [End Workspace]
-- [Handle Flow Exception]
-- [Start Flow]
-- [Wait For Duration]
+
+* [End Flow][]
+* [End Workspace][]
+* [Handle Flow Exception][]
+* [Start Flow][]
+* [Wait For Duration][]
 
 ### External Documentation
 
@@ -170,19 +170,10 @@ None
 
 [Message]: {{< ref "#message" >}}
 
-[TaskExceptions Property]: {{< ref "#taskexceptions" >}}
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
-[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[Wait For All Tasks]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.MainDoc" >}}
-[Waiting for a Task that has thrown an exception]: {{< url path="Cortex.Reference.Blocks.Tasks.WaitForTask.WaitForAllTasksBlock.GetSuccessfulResults" >}}
-
-[Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
-[FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
-
-[Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
@@ -192,7 +183,6 @@ None
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.MainDoc" >}}
 [SemaphoreWhatIs]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MainDoc" >}}
 
-[property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [SemaphoreConcurrencyLimit]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.ConcurrencyLimit" >}}
 [SemaphoreQueue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
 [Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc" >}}

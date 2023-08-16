@@ -14,7 +14,7 @@ There are a number of properties that are common across all or most [blocks][All
 These properties include:
 
 - [Description Property][]
-- [Semaphore Property]
+- [Semaphore Property][]
 - [Run As Property][]
 - [Block Timeout Property][]
 
@@ -26,19 +26,20 @@ The Description property is available on all [blocks][All Blocks]. It defaults t
 
 ## Semaphore Property
 
-The Semaphore property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to restrict the number of [executions] that can execute the [block][WhatIsBlock] at any one time.
+The Semaphore property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to restrict the number of [executions][] that can execute the [block][WhatIsBlock] at any one time.
 
-The default value of `null` indicates that there is no [semaphore].
+The default value of `null` indicates that there is no [semaphore][].
 
 The Semaphore property has the following sub-properties:
-* [Scope][SemaphoreScope], which defaults to:
-    * [Tenant] : `ScopeOption.Current`.
-    * [System] : `ScopeOption.Current`.
-* [Name][SemaphoreName], which defaults to an empty string (i.e. `""`).
-* [ConcurrencyLimit][SemaphoreConcurrencyLimit], which defaults to 0.
-* [Queue][SemaphoreQueue], which defaults to `null`.
-    * [Priority][QueuePriority], which defaults to 0.
-    * [QueueTimeout], which defaults to `null`.
+
+- [Scope][SemaphoreScope], which defaults to:
+  - [Tenant][]: `ScopeOption.Current`.
+  - [System][]: `ScopeOption.Current`.
+- [Name][SemaphoreName], which defaults to an empty string (i.e. `""`).
+- [ConcurrencyLimit][SemaphoreConcurrencyLimit], which defaults to 0.
+- [Queue][SemaphoreQueue], which defaults to `null`.
+  - [Priority][QueuePriority], which defaults to 0.
+  - [QueueTimeout][], which defaults to `null`.
 
 {{< figure src="/images/workspace/workspace-block-semaphore.svg" >}}
 
@@ -113,15 +114,12 @@ None
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Advanced Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
-[property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [SemaphoreScope]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Scope" >}}
 [SemaphoreName]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Name" >}}
 [SemaphoreConcurrencyLimit]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.ConcurrencyLimit" >}}
 [SemaphoreQueue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
 [QueuePriority]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.Priority" >}}
 [QueueTimeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
-[QueueSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.MainDoc" >}}
-[SemaphoreSettings]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.MainDoc" >}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant" >}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System" >}}
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MainDoc" >}}
