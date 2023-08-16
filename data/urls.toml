@@ -1122,7 +1122,7 @@
                             MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/"
                             Non-Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#non-queuing-semaphore"
                             Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#queuing-semaphore"
-                            MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrencylimits"        
+                            MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrency-limits"        
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
