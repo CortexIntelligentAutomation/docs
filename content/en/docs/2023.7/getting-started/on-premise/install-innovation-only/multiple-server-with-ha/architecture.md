@@ -15,7 +15,7 @@ weight: 10
 
 The following architecture requires 5 servers:
 
-* 1x Web Application Server which contains Gateway, Flow Debugger Service and Databases
+* 1x Web Application Server which contains Gateway and Databases
 * 1x Load Balancer Server
 * 3x Application Servers
 

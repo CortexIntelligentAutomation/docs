@@ -2,7 +2,6 @@
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|--------------------------------------------|
 | [{{% ctx %}} Gateway][Gateway Guide]                                                 | {{< section "/architecture/components/purpose/cortex-gateway.md" >}}                          | Required                    | Web Application Server                     |
 | [{{% ctx %}} Studio][Studio Guide]                                                   | {{< section "/architecture/components/purpose/cortex-studio.md" >}}                           | Required                    | Web Application Server                     |
-| [{{% ctx %}} Flow Debugger Service][CORTEX Flow Debugger Service]                    | {{< section "/architecture/components/purpose/cortex-flow-debugger-service.md" >}}            | Required                    | Web Application Server                     |
 | [{{% ctx %}} Innovation Core Application][Innovation Core Application]               | {{< section "/architecture/components/purpose/cortex-innovation-core-application.md" >}}      | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [API Gateway Service][API Gateway Service]                           | {{< section "/architecture/components/purpose/api-gateway-service.md" >}}                     | -                           | -                                          |
 | &nbsp; &nbsp; > [Authorisation Service][Authorisation Service]                       | {{< section "/architecture/components/purpose/authorisation-service.md" >}}                   | -                           | -                                          |
@@ -28,7 +27,6 @@
 [Innovation Core Application]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.MainDoc" >}}
 [Innovation Execution Application]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.MainDoc" >}}
 
-[CORTEX Flow Debugger Service]: {{< url path="Cortex.Guides.FlowDebuggerService.MainDoc" >}}
 [API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [Authorisation Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService.MainDoc" >}}
 [Configuration Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService.MainDoc" >}}

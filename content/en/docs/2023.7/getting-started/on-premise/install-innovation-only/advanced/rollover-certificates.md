@@ -146,7 +146,7 @@ If using a single server and using the same certificates for both the Applicatio
 
 1. Open Internet Information Services (IIS) Manager.
 1. In the left-hand pane of Internet Information Service (IIS) Manager, expand the server node.
-1. Right-click on the Site node (usually `Cortex`) which contains the Debugger and Gateway.
+1. Right-click on the Site node (usually `Cortex`) which contains Gateway.
 1. Click `Edit Bindings...`
 1. Click on the `https` binding and click `Edit...`.
 1. Click the SSL Certificate `Select...` button and select the new certificate from the table. Click `OK` to close the dialog.

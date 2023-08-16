@@ -15,6 +15,7 @@ These properties include:
 
 - [Description Property][]
 - [Semaphore Property]
+- [Run As Property][]
 - [Block Timeout Property][]
 
 ## Description Property
@@ -40,6 +41,24 @@ The Semaphore property has the following sub-properties:
     * [QueueTimeout], which defaults to `null`.
 
 {{< figure src="/images/workspace/workspace-block-semaphore.svg" >}}
+
+## Run As Property
+
+The Run As property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to execute the [block][] as a specified user (using a [UserCredentials][]), honouring the user's permissions and other user settings. This is required if an action needs to be performed as a particular user (e.g. reading/writing files that only that user has access to).
+
+Once the [block][] has finished executing, the next block to execute will run as:
+
+- The user specified in it's Run As property, if set.
+- Otherwise, the user specified in it's closest ancestor block with the Run As property set.
+- Otherwise, the user the [Execution Service][] is running as; typically this is Network Service.
+
+The default value of `null` also results in the [block][] executing as the user the [Execution Service][] is running as.
+
+If [UserCredentials][] has an invalid domain, username or password, a [RunAsException][] will be thrown when the [block][] is executed.
+
+If [UserCredentials][] has a `null` username or password, a [PropertyNullException][] will be thrown when the [block][] is executed.
+
+{{< figure src="/images/set-variable/set-variable-run-as.svg" >}}
 
 ## Block Timeout Property
 
@@ -79,6 +98,8 @@ None
 
 - [BlockTimeoutException][]
 - [InvalidBlockTimeoutException][]
+- [PropertyNullException][]
+- [RunAsException][]
 
 ### External Documentation
 
@@ -87,6 +108,7 @@ None
 [Description Property]: {{< ref "#description-property" >}}
 [Block Timeout Property]: {{< ref "#block-timeout-property" >}}
 [Semaphore Property]: {{< ref "#semaphore-property" >}}
+[Run As Property]: {{< ref "#run-as-property" >}}
 
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
@@ -105,6 +127,7 @@ None
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MainDoc" >}}
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [WhatIsBlock]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
@@ -115,6 +138,10 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+[UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
 
 [BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}
 [InvalidBlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}
+
+[PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+[RunAsException]: {{< url path="Cortex.Reference.Exceptions.Impersonation.RunAsException.MainDoc" >}}
