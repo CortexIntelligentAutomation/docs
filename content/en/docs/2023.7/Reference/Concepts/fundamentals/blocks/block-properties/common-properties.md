@@ -28,9 +28,10 @@ The Description property is available on all [blocks][All Blocks]. It defaults t
 The Run As property is an [advanced property][Advanced Properties] available on most [blocks][All Blocks]. It is used to execute the [block][] as a specified user (using a [UserCredentials][]), honouring the user's permissions and other user settings. This is required if an action needs to be performed as a particular user (e.g. reading/writing files that only that user has access to).
 
 Once the [block][] has finished executing, the next block to execute will run as:
- - The user specified in it's Run As property, if set.
- - Otherwise, the user specified in it's closest ancestor block with the Run As property set.
- - Otherwise, the user the [Execution Service][] is running as; typically this is Network Service.
+
+- The user specified in it's Run As property, if set.
+- Otherwise, the user specified in it's closest ancestor block with the Run As property set.
+- Otherwise, the user the [Execution Service][] is running as; typically this is Network Service.
 
 The default value of `null` also results in the [block][] executing as the user the [Execution Service][] is running as.
 
