@@ -106,6 +106,8 @@ The [Name][SemaphoreName] of the semaphore that was attempted to be acquired.
 
 The number of executions allowed in the semaphore that was attempted to be acquired.
 
+This is the concurrency limit set when the semaphore was created, which may be different from the specified concurrency limit, see [Multiple Concurrency Limits][MultipleConcurrencyLimits] for more information.
+
 | | |
 |-----------|------------|
 | Data Type | [Int32][] |
@@ -197,6 +199,8 @@ None
 [SemaphoreScope]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Scope" >}}
 [SemaphoreName]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Name" >}}
 [Queue Timeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
+
+[MultipleConcurrencyLimits]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MultipleConcurrencyLimits" >}}
 
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 [End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
