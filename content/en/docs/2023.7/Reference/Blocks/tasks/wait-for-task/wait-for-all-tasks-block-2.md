@@ -183,19 +183,19 @@ The exceptions thrown by the block can be found below:
 
 ### Waiting for Tasks that have been cancelled
 
-If one or more tasks in the [Tasks][Tasks Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will throw an [AggregateTaskException][] containing the cancellation exception(s). Please see [Waiting for a Task that has thrown an exception][WaitingException Remark] for more details.
+If one or more tasks in the [Tasks][Tasks Property] being waited on has already been cancelled or is cancelled whilst being waited on, this block will wait until all [Tasks][Tasks Property] are complete, then throw an [AggregateTaskException][] containing the cancellation exception(s). Please see [Waiting for a Task that has thrown an exception][WaitingException Remark] for more details.
 
 ### Waiting for a Task that has been completed
 
-If one or more tasks in the [Tasks][Tasks Property] being waited on has completed, this block will not wait and immediately return the [Results][Results Property].
+If one or more tasks in the [Tasks][Tasks Property] being waited on has completed, this block will wait for all [Tasks][Tasks Property] to complete before returning the [Results][Results Property].
 
 ### Waiting for a Task that has thrown an exception
 
-If one or more tasks in the [Tasks][Tasks Property] being waited on has already thrown an exception during execution or throws an exception whilst being waited on, this block will throw an [AggregateTaskException][].
+If one or more tasks in the [Tasks][Tasks Property] being waited on has already thrown an exception during execution or throws an exception whilst being waited on, this block will wait until all [Tasks][Tasks Property] are complete, then throw an [AggregateTaskException][].
 
 The [AggregateTaskException][] has the property [TaskExceptions][] of type [IDictionary][]&lt;[Int32][],[Exception][]&gt;. This property contains a list of all exceptions thrown by the tasks as index/exception pairs, mapping the exception thrown to the index of the task that threw it.
 
-Below is an example of the value of [TaskExceptions][] after the first and third tasks both throw a [FlowException][]:
+Below is an example of the value of [TaskExceptions][] after the first and third tasks both threw a [FlowException][]:
 ```json
 {
     "0": {
