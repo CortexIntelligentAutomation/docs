@@ -73,15 +73,14 @@ In line with best practices, this account should not be given administrator righ
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
-Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
-
-The certificate that was used when [installing the Application Server][Configure Installation Script] can be used. If self-signed certificates were used, this will have the subject CN=CortexServerCertificate
-
-If using the same certificate you should set the `ImportCertificate` parameter to `$false` in [Configure {{% ctx %}} Gateway Installation Script][Configure CORTEX Gateway Installation Script] to prevent overwriting.
-
-To ensure that the certificate can be used by the {{% ctx %}} Gateway website the following sections should be completed:
-
-{{% alert title="Note" %}}Some sections may not require any action depending on your system requirements however more information can be found in the relevant sections{{% /alert %}}
+{{% alert title="Important" color="warning" %}}
+Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
+<br />
+Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
+<br />
+It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="installing the Application Server" >}}, as long as it is not an auto-generated self-signed certificate; If doing so, you should set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}} step to prevent overwriting.
+{{% /alert %}}
 
 #### Import Root Certificate
 
@@ -235,7 +234,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Get CORTEX Gateway Application Pool User]: {{< ref "#get-cortex-gateway-application-pool-user" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}

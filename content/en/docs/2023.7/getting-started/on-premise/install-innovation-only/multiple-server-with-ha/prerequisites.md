@@ -124,16 +124,18 @@ Gateway supports the latest versions of the following browsers:
 
 ## Filesystem Requirements
 
-The Web Application Server and each Application Server must use an NTFS filesystem.
+The Web Application Server, each Application Server and [gobetween][] Load Balancer Server (if used) must:
 
-Network Discovery and File Sharing must be enabled on the Load Balancer Server:
+* use an NTFS filesystem.
+* enable Network Discovery and File Sharing
 
+To enable  Network Discovery and File Sharing:
 1. Open File Explorer.
-1. Click `Network` on the left.
-1. A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
+2. Click `Network` on the left.
+3. A banner similar to the following will appear if Network Discovery and File Sharing is turned off:
     {{< figure src="/images/Network Discovery 1.png" title="Network and File Discovery Disabled" >}}
-1. Click the banner.
-1. Click `Turn on network discovery and file sharing`:
+4. Click the banner.
+5. Click `Turn on network discovery and file sharing`:
     {{< figure src="/images/Network Discovery 2.png" title="Enable Network and File Discovery" >}}
 
 ## Service Requirements
@@ -150,7 +152,9 @@ On the Web Application Server and each Application Server, the following Windows
 
 On all Application Servers, Web Application Server and Load Balancer Server, a domain user, which is a member of the Local Administrators group, must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
 
-For Gateway, a domain user must be available to run the Application Pools. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
+### IIS Application Pool User
+
+For Gateway, a domain user must be available to run the IIS Application Pool. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pool will not be able to run. Information about how to do this will be given during installation.
 
 ### Antivirus Exclusions
 
@@ -191,11 +195,13 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 
 ### Certificate Requirements
 
+{{< alert title="Important" color="warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
+
+#### Application Servers
+
 {{% alert title="Note" %}}
 For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
-
-#### Application Servers
 
 An X.509 SSL wildcard certificate should be used to:
 
@@ -203,7 +209,7 @@ An X.509 SSL wildcard certificate should be used to:
 * Secure communication between the Application Services.
 * Allow Application Services to identify themselves to clients such as Gateway.
 * Prevent unauthorised nodes from joining the HA cluster.
-* Connect to Service Fabric Explorer from the Web Application Server and each Application Server.
+* Connect to Service Fabric Explorer from each of the Application Servers.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
@@ -215,13 +221,11 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 * Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
 * Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
-This file should be placed in a known location on the Web Application Server the Application Server where the installation scripts will be run. This location will be required when running the installation script.
+This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.
 
 If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
-{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
-
-#### Web Application Servers
+#### Web Application Server
 
 {{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
 
@@ -230,9 +234,12 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
-Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
-
-The certificate may be the same one used for the Application Server installation.
+{{% alert title="Important" color="warning" %}}
+Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
+<br />
+Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.
+{{% /alert %}}
 
 More information about importing the certificate is given during installation.
 
