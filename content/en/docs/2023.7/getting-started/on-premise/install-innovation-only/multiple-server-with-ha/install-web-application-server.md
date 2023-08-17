@@ -129,7 +129,9 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 A Single Server installation of the {{< ctx >}} Innovation Platform needs to be performed to enable debugging of flows from {{< ctx >}} Gateway.
 {{% /alert %}}
 
-Follow the [Install Application Server][Install Application Server] steps to setup debugging on the Web Application Server.
+### Install Single Server Application
+
+To enable debugging, follow the steps on the Web Application Server to [Install the Innovation Application][Install Application Server].
 
 ## Perform Gateway Installation
 

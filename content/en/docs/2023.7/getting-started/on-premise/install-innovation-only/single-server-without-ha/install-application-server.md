@@ -256,6 +256,23 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 {{< section "/install-application-server/check-application-services/single-server.md">}}
 
+## Add Read and Execute access to Windows Crypto folder  
+
+Service Fabric requires access to the `C:\ProgramData\Microsoft\Crypto\` folder for the `Network Service` users.
+
+Grant access to the `Network Service` user following these instructions:
+
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Run the following command:
+
+```bash
+icacls "C:\ProgramData\Microsoft\Crypto\*" /grant *S-1-5-20:RX /t
+```
+
+{{% alert title="Note" %}}
+Some files might fail to be processed with `Access is denied`. This can be ignored.
+{{% /alert %}}
+
 ## Preserve installation files
 
 Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.
