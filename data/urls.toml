@@ -1004,6 +1004,7 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/"
+                            SemaphoreProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#semaphore-property"
                             BlockTimeoutProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#block-timeout-property"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
@@ -1118,6 +1119,15 @@
                         MainDoc = "/docs/reference/concepts/working-with/collections/keys/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
                         MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
+                [Cortex.Reference.Concepts.WorkingWith.Concurrency]
+                    MainDoc = "/docs/reference/concepts/working-with/concurrency/"
+                    [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores]
+                        MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/"
+                        [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore]
+                            MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/"
+                            Non-Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#non-queuing-semaphore"
+                            Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#queuing-semaphore"
+                            MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrency-limits"        
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
@@ -1256,6 +1266,20 @@
                     MainDoc = "/docs/reference/data-types/collections/structure"
                     CreateNew = "/docs/reference/data-types/collections/structure#create-a-structure"
                     ConvertToText = "/docs/reference/data-types/collections/structure#convert-structure-to-text"
+            [Cortex.Reference.DataTypes.Concurrency]
+                MainDoc = "/docs/reference/data-types/concurrency/"
+                [Cortex.Reference.DataTypes.Concurrency.Semaphores]
+                    MainDoc = "/docs/reference/data-types/concurrency/semaphores/"
+                    [Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings]
+                        MainDoc = "/docs/reference/data-types/concurrency/semaphores/queue-settings/"
+                        Priority = "/docs/reference/data-types/concurrency/semaphores/queue-settings/#priority"
+                        QueueTimeout = "/docs/reference/data-types/concurrency/semaphores/queue-settings/#queuetimeout"
+                    [Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings]
+                        MainDoc = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/"
+                        Scope = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#scope"
+                        Name = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#name"
+                        ConcurrencyLimit = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#concurrencylimit"
+                        Queue = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#queue"
             [Cortex.Reference.DataTypes.ConditionalLogic]
                 MainDoc = "/docs/reference/data-types/conditional-logic/"
                 [Cortex.Reference.DataTypes.ConditionalLogic.Boolean]
@@ -1676,6 +1700,15 @@
                         PropertyLessThanMinimumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-less-than-minimum-value"
                     [Cortex.Reference.Exceptions.Common.UnencryptedTextException]
                         MainDoc = "/docs/reference/exceptions/common/unencrypted-text-exception/"
+            [Cortex.Reference.Exceptions.Concurrency]
+                MainDoc = "/docs/reference/exceptions/concurrency/"
+                [Cortex.Reference.Exceptions.Concurrency.Semaphores]
+                    MainDoc = "/docs/reference/exceptions/concurrency/semaphores/"
+                    [Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException]
+                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/"
+                        ConcurrencyLimitReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#concurrency-limit-reached"
+                        QueueTimeoutReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queue-timeout-reached"
+                        Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queued"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
@@ -1752,6 +1785,10 @@
                     MainDoc = "/docs/reference/exceptions/http/invalid-request-exception"
                 [Cortex.Reference.Exceptions.Http.InvalidResponseException]
                     MainDoc = "/docs/reference/exceptions/http/invalid-response-exception"
+            [Cortex.Reference.Exceptions.Impersonation]
+                MainDoc = "/docs/reference/exceptions/impersonation/"
+                [Cortex.Reference.Exceptions.Impersonation.RunAsException]
+                    MainDoc = "/docs/reference/exceptions/impersonation/run-as-exception"
             [Cortex.Reference.Exceptions.Lists]
                 MainDoc = "/docs/reference/exceptions/lists/"
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
