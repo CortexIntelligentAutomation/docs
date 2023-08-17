@@ -20,7 +20,7 @@ This guide describes how to install the Application Server components on the ser
 
 ## Install Microsoft .NET Framework 4.7.1
 
-Microsoft Service Fabric requires a minimum of Microsoft .NET Framework 4.7.1 to be installed on each Application Server.
+Microsoft Service Fabric requires a minimum of Microsoft .NET Framework 4.7.1 to be installed on the server.
 
 To find the version of the framework that is installed:
 
