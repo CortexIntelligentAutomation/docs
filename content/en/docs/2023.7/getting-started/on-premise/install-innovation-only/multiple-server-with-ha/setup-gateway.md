@@ -13,7 +13,7 @@ This guide describes how to setup Gateway. Please ensure that [Install Web Appli
 
 Log on to Gateway and run through the setup wizard:
 
-1. Open a [supported web browser][] and navigate to `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://server.domaine.com/gateway`.
+1. Open a [supported web browser][] and navigate to `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://server.domain.com/gateway`.
 
     If an error message is displayed in the browser, wait a few minutes and refresh the page as it is possible that the website was still starting.
 1. Log on using the default credentials that Gateway deploys with:
