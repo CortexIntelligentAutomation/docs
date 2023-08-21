@@ -18,20 +18,21 @@ weight: 1
 This release introduces:
 
 * [API Gateway Consolidation][]
-* [Improvements to the Interaction Portal][].
 
 ## Improved Capability
 
 This release introduces:
 
-* Three new services within the [HA Platform][]:
+* Two new services within the [HA Platform][]:
   * [Concurrency Management Service][]
   * [Scheduling Service][]
+* Debugging has been moved to the Execution Service, and the [Flow Debugging Service has been removed][Removed Flow Debugger Service]
 * Five [new Blocks][New Blocks], adding new functionality to work with:
   * [Data Storage][]
-* Two [new Common Properties][New Common Properties] have been added to most blocks, adding new functionality to work with:
+* Two [new Common Properties][New Common Properties] have been added to most blocks:
   * [Semaphore][Semaphore Property]
   * [Run As][Run As Property]
+* [Improvements to the Interaction Portal][]
 
 ## Improved Documentation
 
@@ -63,6 +64,7 @@ For a full list of what has been introduced in this release, please see the [202
 [New Common Properties]: {{< url path="Cortex.Blogs.Releases.2023.7.NewCommonBlockProperties" version="2023.7" >}}
 [Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.7.ProductPortal" version="2023.7" >}}
 [Improvements to installation process of the HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.7.ImprovedInstallationProcess" version="2023.7" >}}
+[Removed Flow Debugger Service]: {{< url path="Cortex.Blogs.Releases.2023.7.RemovedFlowDebuggerService" version="2023.7" >}}
 [2023.7 Release Notes]: {{< url path="Cortex.Blogs.Releases.2023.7.MainDoc" version="2023.7" >}}
 
 [Semaphore Property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.SemaphoreProperty" version="2023.7" >}}
