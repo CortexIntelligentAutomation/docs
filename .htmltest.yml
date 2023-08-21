@@ -20,5 +20,6 @@ IgnoreURLs:
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
+- "docs/2022.9/?.*/"
 - "docs/2023.3/?.*/"
 - "docs/2023.5/?.*/"
