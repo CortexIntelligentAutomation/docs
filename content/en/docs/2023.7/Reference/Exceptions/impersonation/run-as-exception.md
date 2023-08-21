@@ -1,7 +1,7 @@
 ---
 title: "RunAsException"
 linkTitle: "RunAsException"
-description: "Exception thrown when the provided UserCredentials has an invalid domain, username or password."
+description: "The exception thrown when the provided UserCredentials has an invalid domain, username or password."
 ---
 
 # {{% param title %}}
@@ -10,26 +10,30 @@ description: "Exception thrown when the provided UserCredentials has an invalid 
 
 ## Description
 
-Exception thrown when the provided [UserCredentials][] is invalid.
+The exception thrown when the provided [UserCredentials][] is invalid.
 
 ## Reasons
 
-### Invalid Domain, Username Or Password
+### Invalid Domain, Username Or Password {#1326}
 
-This exception is thrown when RunAs property has been provided a [UserCredentials][] object that has an invalid domain, username or password.
+The [Run As Property][] has been provided a [UserCredentials][] object that has an invalid domain, username or password.
 
 #### Message Format
 
 The format of the [Message][] is as follows:
 
 ```json
-"Impersonation failed with Win32 error code: 1326, see the inner exception for more information.
+"Impersonation failed with Win32 error code: <error-code>, see the inner exception for more information.
 Please click the HelpLink for more information on how to fix this."
 ```
 
+where:
+
+* `<error-code>` is the native error code present in the [Win32Exception][] inner-exception.
+
 #### How to fix
 
-Make sure the correct domain (if applicable), username and password are provided in the [UserCredentials][].
+Make sure that the provided domain, username and password in the [UserCredentials][] are correct.
 
 ## Properties
 
@@ -49,9 +53,21 @@ The exception message, providing information about the exception that occurred.
 |-----------|------------|
 | Data Type | [String][] |
 
+### Error Code
+
+The error code for the exception, which is used to indicate the reason that the exception occurred.
+
+For `RunAsException` there are the following error codes:
+
+- [1326][InvalidCredentialsProvided] - indicates that the domain, user name or password is incorrect.
+
+| | |
+|-----------|---------------------------|
+| Data Type | [Int32][] |
+
 ### Inner Exception
 
-The Inner Exception property can be used to include another [Exception][] within the thrown exception (e.g. If the [RunAsException][] has been thrown as a result of handling another [Exception][], then the handled [Exception][] can be included within the [RunAsException][] to add traceability).
+The Inner Exception is the [Exception][] instance that caused the current [Exception][], and contains specific details about the problem.
 
 |           |            |
 |-----------|------------|
@@ -71,11 +87,11 @@ The URL for the relevant section of this exception's help page.
 
 * [UserCredentials][]
 * [String][]
+* [Int32][]
 
 ### Related Concepts
 
 * [Exceptions][]
-* [Scopes][]
 * [Common Properties][]
 
 ### Related Blocks
@@ -95,6 +111,7 @@ Except:
 * [Win32Exception][]
 
 [Message]: {{< ref "#message" >}}
+[InvalidCredentialsProvided]: {{< ref "#1326">}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
@@ -104,9 +121,10 @@ Except:
 [RunAsException]: {{< url path="Cortex.Reference.Exceptions.Impersonation.RunAsException.MainDoc" >}}
 [Win32Exception]: {{< url path="MSDocs.DotNet.Api.System.ComponentModel.Win32Exception" >}}
 [Common Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.MainDoc" >}}
+[Run As Property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.RunAsProperty" >}}
 
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
 
 [Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc" >}}
