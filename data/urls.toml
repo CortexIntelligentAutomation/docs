@@ -32,6 +32,17 @@
                     ImprovedInteractionPortal = "/blog/2023/06/05/2023.5/#improved-interaction-portal"
                     ImprovedInstallationProcess = "/blog/2023/06/05/2023.5/#improved-installation-process"
                     ProductPortal = "/blog/2023/06/05/2023.5/#product-portal"
+                [Cortex.Blogs.Releases.2023.7]
+                    MainDoc =  "/blog/2023/08/21/2023.7/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/08/21/2023.7/#expansion-of-the-ha-platform"
+                    NewConcurrencyManagementService = "/blog/2023/08/21/2023.7/#new-concurrency-management-service"
+                    NewSchedulingService = "/blog/2023/08/21/2023.7/#new-scheduling-service"
+                    APIGatewayConsolidation = "/blog/2023/08/21/2023.7/#api-gateway-consolidation"
+                    NewBlocks = "/blog/2023/08/21/2023.7/#new-blocks"
+                    NewCommonBlockProperties = "/blog/2023/08/21/2023.7/#new-common-block-properties"
+                    ImprovedInteractionPortal = "/blog/2023/08/21/2023.7/#improved-interaction-portal"
+                    ImprovedInstallationProcess = "/blog/2023/08/21/2023.7/#improved-installation-process"
+                    ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
