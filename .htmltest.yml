@@ -6,6 +6,8 @@ IgnoreAltMissing: true
 IgnoreAltEmpty: true
 IgnoreURLs:
 - "https://twitter.com/.*"
+- "https://twitter.com/.*"
+- "https://twitter.com/.*"
 - "https://www.linkedin.com/company/10975051"
 - "(https|http)://www.microsoft.com/.*"
 - "https://azure.microsoft.com/.*"
@@ -14,6 +16,10 @@ IgnoreURLs:
 - "https://js/swagger-ui-standalone-preset.js"
 - "https://kodify.net/.*"
 - "https://grafana.com/.*"
+- "https://learn.microsoft.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
+- "docs/2022.9/?.*/"
+- "docs/2023.3/?.*/"
+- "docs/2023.5/?.*/"

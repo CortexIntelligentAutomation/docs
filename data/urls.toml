@@ -32,6 +32,18 @@
                     ImprovedInteractionPortal = "/blog/2023/06/05/2023.5/#improved-interaction-portal"
                     ImprovedInstallationProcess = "/blog/2023/06/05/2023.5/#improved-installation-process"
                     ProductPortal = "/blog/2023/06/05/2023.5/#product-portal"
+                [Cortex.Blogs.Releases.2023.7]
+                    MainDoc =  "/blog/2023/08/21/2023.7/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/08/21/2023.7/#expansion-of-the-ha-platform"
+                    NewConcurrencyManagementService = "/blog/2023/08/21/2023.7/#new-concurrency-management-service"
+                    NewSchedulingService = "/blog/2023/08/21/2023.7/#new-scheduling-service"
+                    APIGatewayConsolidation = "/blog/2023/08/21/2023.7/#api-gateway-consolidation"
+                    NewBlocks = "/blog/2023/08/21/2023.7/#new-blocks"
+                    NewCommonBlockProperties = "/blog/2023/08/21/2023.7/#new-common-block-properties"
+                    ImprovedInteractionPortal = "/blog/2023/08/21/2023.7/#improved-interaction-portal"
+                    ImprovedInstallationProcess = "/blog/2023/08/21/2023.7/#improved-installation-process"
+                    RemovedFlowDebuggerService = "/blog/2023/08/21/2023.7/#removed-flow-debugger-service"
+                    ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -85,6 +97,7 @@
                     ImportCertificateManually = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#import-certificate-manually"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#install-gateway"
                     PerformInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-installation"
+                    PerformDebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-debugger-installation"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
@@ -306,6 +319,8 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/authorisation-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ConcurrencyManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/concurrency-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/configuration-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService]
@@ -318,10 +333,12 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/scheduling-service/"
         [Cortex.Guides.CortexInnovation.ExecutionApplication]
             MainDoc = "/docs/guides/cortex-innovation/core-application/"
             [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
-                MainDoc = "/docs/guides/cortex-innovation/core-application/services/"
+                MainDoc = "/docs/guides/cortex-innovation/execution-application/services/"
                 [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
                     MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
         [Cortex.Guides.Gateway]
@@ -367,6 +384,28 @@
                         Statements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#statement-types"
                         NonQueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#non-query-statements"
                         QueryStatements = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#query-statements"
+            [Cortex.Reference.Blocks.DataStorage]
+                MainDoc = "/docs/reference/blocks/data-storage"
+                [Cortex.Reference.Blocks.DataStorage.CreateCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/create-collection"
+                    [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
+                        MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
+                [Cortex.Reference.Blocks.DataStorage.DeleteCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/delete-collection"
+                    [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock]
+                        MainDoc = "/docs/reference/blocks/data-storage/delete-collection/delete-collection-block"
+                [Cortex.Reference.Blocks.DataStorage.DeleteData]
+                    MainDoc = "/docs/reference/blocks/data-storage/delete-data"
+                    [Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/delete-data/delete-data-with-key-block"
+                [Cortex.Reference.Blocks.DataStorage.ReadData]
+                    MainDoc = "/docs/reference/blocks/data-storage/read-data"
+                    [Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/read-data/read-data-with-key-block"
+                [Cortex.Reference.Blocks.DataStorage.WriteData]
+                    MainDoc = "/docs/reference/blocks/data-storage/write-data"
+                    [Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/write-data/write-data-with-key-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
@@ -977,6 +1016,8 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/"
+                            SemaphoreProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#semaphore-property"
+                            RunAsProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#run-as-property"
                             BlockTimeoutProperty = "/docs/reference/concepts/fundamentals/blocks/block-properties/common-properties/#block-timeout-property"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
@@ -1074,6 +1115,7 @@
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
                         MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection/"
+                        DataStorage = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#data-storage-collection"
                         Dictionaries = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#dictionaries"
                         DictionariesIndexes = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#indexes"
                         Structures = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#structures"
@@ -1090,6 +1132,15 @@
                         MainDoc = "/docs/reference/concepts/working-with/collections/keys/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
                         MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
+                [Cortex.Reference.Concepts.WorkingWith.Concurrency]
+                    MainDoc = "/docs/reference/concepts/working-with/concurrency/"
+                    [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores]
+                        MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/"
+                        [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore]
+                            MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/"
+                            Non-Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#non-queuing-semaphore"
+                            Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#queuing-semaphore"
+                            MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrency-limits"        
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
@@ -1147,6 +1198,10 @@
                             ReferenceTypeEquality = "/docs/reference/concepts/working-with/objects/object-equality/#reference-type-equality"
                         [Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.HowCortexComparesObjectsForEquality]
                             MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/#how-cortex-compares-objects-for-equality"
+                [Cortex.Reference.Concepts.WorkingWith.Scopes]
+                    MainDoc = "/docs/reference/concepts/working-with/scopes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Scopes.WhatIsAScope]
+                        MainDoc = "/docs/reference/concepts/working-with/scopes/what-is-a-scope/"
                 [Cortex.Reference.Concepts.WorkingWith.Tasks]
                     MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
@@ -1224,6 +1279,20 @@
                     MainDoc = "/docs/reference/data-types/collections/structure"
                     CreateNew = "/docs/reference/data-types/collections/structure#create-a-structure"
                     ConvertToText = "/docs/reference/data-types/collections/structure#convert-structure-to-text"
+            [Cortex.Reference.DataTypes.Concurrency]
+                MainDoc = "/docs/reference/data-types/concurrency/"
+                [Cortex.Reference.DataTypes.Concurrency.Semaphores]
+                    MainDoc = "/docs/reference/data-types/concurrency/semaphores/"
+                    [Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings]
+                        MainDoc = "/docs/reference/data-types/concurrency/semaphores/queue-settings/"
+                        Priority = "/docs/reference/data-types/concurrency/semaphores/queue-settings/#priority"
+                        QueueTimeout = "/docs/reference/data-types/concurrency/semaphores/queue-settings/#queuetimeout"
+                    [Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings]
+                        MainDoc = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/"
+                        Scope = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#scope"
+                        Name = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#name"
+                        ConcurrencyLimit = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#concurrencylimit"
+                        Queue = "/docs/reference/data-types/concurrency/semaphores/semaphore-settings/#queue"
             [Cortex.Reference.DataTypes.ConditionalLogic]
                 MainDoc = "/docs/reference/data-types/conditional-logic/"
                 [Cortex.Reference.DataTypes.ConditionalLogic.Boolean]
@@ -1505,6 +1574,14 @@
                     Host = "/docs/reference/data-types/session-details/serverdetails/#host"
                     Port = "/docs/reference/data-types/session-details/serverdetails/#port"
                     UseSsl = "/docs/reference/data-types/session-details/serverdetails/#usessl"
+            [Cortex.Reference.DataTypes.Scopes]
+                MainDoc = "/docs/reference/data-types/scopes/"
+                [Cortex.Reference.DataTypes.Scopes.Scope]
+                    MainDoc = "/docs/reference/data-types/scopes/scope"
+                    Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
+                    System = "/docs/reference/data-types/scopes/scope/#system"
+                [Cortex.Reference.DataTypes.Scopes.ScopeOption]
+                    MainDoc = "/docs/reference/data-types/scopes/scope-option"
             [Cortex.Reference.DataTypes.Ssh]
                 MainDoc = "/docs/reference/data-types/ssh/"
                 [Cortex.Reference.DataTypes.Ssh.SshSessionDetails]
@@ -1636,12 +1713,27 @@
                         PropertyLessThanMinimumValue = "/docs/reference/exceptions/common/property/property-value-out-of-range-exception/#property-less-than-minimum-value"
                     [Cortex.Reference.Exceptions.Common.UnencryptedTextException]
                         MainDoc = "/docs/reference/exceptions/common/unencrypted-text-exception/"
+            [Cortex.Reference.Exceptions.Concurrency]
+                MainDoc = "/docs/reference/exceptions/concurrency/"
+                [Cortex.Reference.Exceptions.Concurrency.Semaphores]
+                    MainDoc = "/docs/reference/exceptions/concurrency/semaphores/"
+                    [Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException]
+                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/"
+                        ConcurrencyLimitReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#concurrency-limit-reached"
+                        QueueTimeoutReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queue-timeout-reached"
+                        Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queued"
             [Cortex.Reference.Exceptions.Data]
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
+            [Cortex.Reference.Exception.DataStorage]
+                MainDoc = "/dcos/reference/exceptions/data-storage/"
+                    [Cortex.Reference.Exceptions.DataStorage.DataStorageCollectionNotFoundException]
+                        MainDoc = "/docs/reference/exceptions/data-storage/data-storage-collection-not-found-exception/"
+                    [Cortex.Reference.Exceptions.DataStorage.KeyInDataStorageCollectionNotFoundException]
+                        MainDoc = "/docs/reference/exceptions/data-storage/key-in-data-storage-collection-not-found-exception/"
             [Cortex.Reference.Exceptions.Decisions]
                 MainDoc = "/docs/reference/exceptions/decisions/"
                     [Cortex.Reference.Exceptions.Decisions.PropertyNotNullableException]
@@ -1706,6 +1798,10 @@
                     MainDoc = "/docs/reference/exceptions/http/invalid-request-exception"
                 [Cortex.Reference.Exceptions.Http.InvalidResponseException]
                     MainDoc = "/docs/reference/exceptions/http/invalid-response-exception"
+            [Cortex.Reference.Exceptions.Impersonation]
+                MainDoc = "/docs/reference/exceptions/impersonation/"
+                [Cortex.Reference.Exceptions.Impersonation.RunAsException]
+                    MainDoc = "/docs/reference/exceptions/impersonation/run-as-exception"
             [Cortex.Reference.Exceptions.Lists]
                 MainDoc = "/docs/reference/exceptions/lists/"
                     [Cortex.Reference.Exceptions.Lists.CannotModifyReadOnlyListException]
@@ -1727,6 +1823,12 @@
                     MainDoc = "/docs/reference/exceptions/powershell/ps-remoting-exception"
                 [Cortex.Reference.Exceptions.PowerShell.PSException]
                     MainDoc = "/docs/reference/exceptions/powershell/ps-exception"
+            [Cortex.Reference.Exceptions.Services]
+                MainDoc = "/docs/reference/exceptions/data-storage/"
+                    [Cortex.Reference.Exceptions.Services.ServiceUnavailableException]
+                        MainDoc = "/docs/reference/exceptions/services/service-unavailable-exception/"
+                    [Cortex.Reference.Exceptions.Services.ServiceDoesNotExistException]
+                        MainDoc = "/docs/reference/exceptions/services/service-does-not-exist-exception/"
             [Cortex.Reference.Exceptions.Text.Regex]
                 MainDoc = "/docs/reference/exceptions/text/regex/"
                     [Cortex.Reference.Exceptions.Text.Regex.RegexParsingFailedException]
@@ -1780,6 +1882,8 @@
                 MainDoc = "/docs/reference/logs/cortex-api-gateway-service/"
             [Cortex.Reference.Logs.CortexFlowExecutionService]
                 MainDoc = "/docs/reference/logs/cortex-flow-execution-service/"
+            [Cortex.Reference.Logs.CortexExecutionService]
+                MainDoc = "/docs/reference/logs/cortex-innovation/execution-application/services/execution-service/"
             [Cortex.Reference.Logs.CortexInnovation.CoreApplication.Services.ApiGatewayService]
                 MainDoc = "/docs/reference/logs/cortex-innovation/core-application/services/api-gateway-service/"
         [Cortex.Reference.Messages]
@@ -2081,6 +2185,9 @@
         [MSDocs.DotNet.Api.System.Comparer]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.comparer-1"
             Default = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.comparer-1.default"
+        [MSDocs.DotNet.Api.System.ComponentModel]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel"
+            Win32Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.win32exception"
         [MSDocs.DotNet.Api.System.DateTime]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.datetime"
             InitializingADateTimeObject = "https://learn.microsoft.com/en-us/dotnet/api/system.datetime?#initializing-a-datetime-object"

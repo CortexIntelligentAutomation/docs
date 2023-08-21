@@ -178,7 +178,7 @@ enable = true
 	url = "https://www.wearecortex.com/policies/external-data-policy/"
 [[params.links.legal]]
 	name = "Terms and Conditions"
-	url = "https://www.wearecortex.com/policies/website-terms-and-conditions/"
+	url = "https://www.wearecortex.com/terms/"
 [[params.links.legal]]
 	name = "Registration Number: 05023238"
 	url = "https://find-and-update.company-information.service.gov.uk/company/05023238"
@@ -200,15 +200,20 @@ enable = true
 [[menu.main]]
 	identifier = 'documentation'
 	name = 'Documentation'
-	url = '/docs/2023.5'
+	url = '/docs/2023.7'
 	weight = 10
 
 # Releases menu
 [[params.versions]]
+	version = "2023.7"
+	url = "/docs/2023.7/"
+	dotNetVersion = "net-6.0"
+	latest = true
+
+[[params.versions]]
 	version = "2023.5"
 	url = "/docs/2023.5/"
 	dotNetVersion = "net-6.0"
-	latest = true
 
 [[params.versions]]
 	version = "2023.3"
