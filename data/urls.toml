@@ -2185,6 +2185,9 @@
         [MSDocs.DotNet.Api.System.Comparer]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.comparer-1"
             Default = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.comparer-1.default"
+        [MSDocs.DotNet.Api.System.ComponentModel]
+            MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel"
+            Win32Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.win32exception"
         [MSDocs.DotNet.Api.System.DateTime]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.datetime"
             InitializingADateTimeObject = "https://learn.microsoft.com/en-us/dotnet/api/system.datetime?#initializing-a-datetime-object"

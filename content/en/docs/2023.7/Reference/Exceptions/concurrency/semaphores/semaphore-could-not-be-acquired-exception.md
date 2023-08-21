@@ -16,7 +16,7 @@ The exception thrown when a block is unable to acquire a [Semaphore][SemaphoreWh
 
 ### Concurrency Limit reached
 
-This exception is thrown when the specified semaphore's [Concurrency Limit][SemaphoreConcurrencyLimit] has been reached, when the [Queue][SemaphoreQueue] property is set to `null`.
+The specified semaphore's [Concurrency Limit][SemaphoreConcurrencyLimit] has been reached, when the [Queue][SemaphoreQueue] property is set to `null`.
 
 #### Message Format
 
@@ -39,7 +39,7 @@ Try to acquire the semaphore again or provide a queue in the [Queue][SemaphoreQu
 
 ### Queue Timeout reached
 
-This exception is thrown when queueing for the specified semaphore, and the [Queue Timeout] is reached before the semaphore is acquired.
+When queueing for the specified semaphore, the [Queue Timeout] is reached before the semaphore is acquired.
 
 #### Message Format
 
