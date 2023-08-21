@@ -15,11 +15,13 @@ weight: 10
 
 The following architecture requires 5 servers:
 
-* 1x Web Application Server which contains Gateway and Databases
+* 1x Web Application Server which contains Gateway, Debug Node and Databases
 * 1x Load Balancer Server
 * 3x Application Servers
 
 {{< figure src="/images/editable/Cortex Innovation Overview.png" class="centre" title="5 Server Architecture Diagram" >}}
+
+{{< section "/architecture/components/node-details.md" >}}
 
 ## Next Steps?
 

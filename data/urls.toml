@@ -32,6 +32,18 @@
                     ImprovedInteractionPortal = "/blog/2023/06/05/2023.5/#improved-interaction-portal"
                     ImprovedInstallationProcess = "/blog/2023/06/05/2023.5/#improved-installation-process"
                     ProductPortal = "/blog/2023/06/05/2023.5/#product-portal"
+                [Cortex.Blogs.Releases.2023.7]
+                    MainDoc =  "/blog/2023/08/21/2023.7/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/08/21/2023.7/#expansion-of-the-ha-platform"
+                    NewConcurrencyManagementService = "/blog/2023/08/21/2023.7/#new-concurrency-management-service"
+                    NewSchedulingService = "/blog/2023/08/21/2023.7/#new-scheduling-service"
+                    APIGatewayConsolidation = "/blog/2023/08/21/2023.7/#api-gateway-consolidation"
+                    NewBlocks = "/blog/2023/08/21/2023.7/#new-blocks"
+                    NewCommonBlockProperties = "/blog/2023/08/21/2023.7/#new-common-block-properties"
+                    ImprovedInteractionPortal = "/blog/2023/08/21/2023.7/#improved-interaction-portal"
+                    ImprovedInstallationProcess = "/blog/2023/08/21/2023.7/#improved-installation-process"
+                    RemovedFlowDebuggerService = "/blog/2023/08/21/2023.7/#removed-flow-debugger-service"
+                    ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -85,6 +97,7 @@
                     ImportCertificateManually = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#import-certificate-manually"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#install-gateway"
                     PerformInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-installation"
+                    PerformDebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-debugger-installation"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
@@ -306,6 +319,8 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/api-gateway-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/authorisation-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ConcurrencyManagementService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/concurrency-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ConfigurationManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/configuration-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService]
@@ -318,6 +333,8 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/scheduling-service/"
         [Cortex.Guides.CortexInnovation.ExecutionApplication]
             MainDoc = "/docs/guides/cortex-innovation/core-application/"
             [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]

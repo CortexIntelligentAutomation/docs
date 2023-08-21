@@ -34,6 +34,24 @@ The prerequisites required for a single server (as described in [Architecture][]
 
 The server must be on a domain and cannot be a domain controller.
 
+## Active Directory Requirements
+
+For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
+
+Supported versions of Active Directory are listed below:
+
+| Version                    | Verified?      | Supported From | Supported Until  |  
+|----------------------------|----------------|----------------|------------------|
+| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+
 ## DNS Requirements
 
 The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured  on the DNS server for the server.
@@ -75,52 +93,11 @@ Gateway supports the latest versions of the following browsers:
 * Edge
 * Firefox
 
-## Certificate Requirements
-
-{{% alert title="Note" %}}
-For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
-{{% / alert %}}
-
-An X.509 SSL certificate (standard or wildcard) should be used to:
-
-* Allow Application Services to identify themselves to clients such as Gateway.
-* Prevent unauthorised nodes from joining the single node cluster.
-* Connect to Service Fabric Explorer from the Application Server.
-* Connect to Gateway.
-
-The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
-
-* Subject field must be in one of the following formats, depending on the certificate type:
-  * Standard certificates must use the standard format (e.g. `CN=host.domain.com`).
-  * Wildcard certificates must use the wildcard format, pertaining to the domain of the server (e.g. `CN=*.domain.com`).
-* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
-* Subject Alternative Names (SAN): At minimum the FQDN of the server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1. It must include any additional host names that should be able to be used to access the API Gateway Service.
-* Certificate file must be in a .PFX file format, with a known password.
-* Certificate file must contain the full chain of certificates.
-* Certificate file must include the private key.
-* Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
-* Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
-
-This file should be placed in a known location on the server. This location will be required when running the Application Server installation script.
-
-{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
-
-## TLS Requirements
-
-There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
-
-* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-
-See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
-
-## Additional Application Server Requirements
-
-### Filesystem Requirements
+## Filesystem Requirements
 
 The server must use an NTFS filesystem.
 
-### Service Requirements
+## Service Requirements
 
 The following Windows Services must be running on the server:
 
@@ -128,13 +105,17 @@ The following Windows Services must be running on the server:
 * Windows Event Log
 * Performance Logs & Alerts
 
-### Security Requirements
+## Security Requirements
 
-#### Installation User
+### Installation User
 
 A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that {{% ctx %}} Innovation is built upon.
 
-#### Antivirus Exclusions
+### IIS Application Pool User
+
+For Gateway, a domain user must be available to run the IIS Application Pool. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pool will not be able to run. Information about how to do this will be given during installation.
+
+### Antivirus Exclusions
 
 It is advised (by Microsoft Service Fabric) that the following antivirus exclusions are created on the server to reduce antivirus processing on Service Fabric artefacts:
 
@@ -163,7 +144,7 @@ A script is provided during installation to add these exclusions for Windows Def
 
 If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
 
-#### Port Requirements
+### Port Requirements
 
 {{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
 
@@ -171,31 +152,66 @@ If you are using Windows Firewall, some ports are opened during installation and
 
 The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installation to test the ports on the server and make sure they do not overlap with any other programs; most ports may be altered if this is the case, the description will say if this is not possible.
 
-## Additional Web Application Server Requirements
+### Certificate Requirements
 
-### Security Requirements
+{{< alert title="Important" color="warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
 
-#### Installation User
+#### Application Servers
 
-A domain user must be available to run the Application Pools for Gateway. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pools will not be able to run. Information about how to do this will be given during installation.
+{{% alert title="Note" %}}
+For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+{{% / alert %}}
 
-#### Domain Requirements
+An X.509 SSL certificate (standard or wildcard) should be used to:
 
-For Gateway, only Windows domains with an Active Directory domain controller running Active Directory Domain Services are supported.
+* Allow Application Services to identify themselves to clients such as Gateway.
+* Prevent unauthorised nodes from joining the single node cluster.
+* Connect to Service Fabric Explorer from the Application Server.
+* Connect to Gateway.
 
-Supported versions of Active Directory are listed below:
+The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
-| Version                    | Verified?      | Supported From | Supported Until  |  
-|----------------------------|----------------|----------------|------------------|
-| Windows Server 2003        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2003 R2     |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2008        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2008 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2012        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2012 R2     |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2016        |      ✓        | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2019        |                | {{% ctx %}} v2022.9 | To be evaluated  |
-| Windows Server 2022        |                | {{% ctx %}} v2022.9 | To be evaluated  |
+* Subject field must be in one of the following formats, depending on the certificate type:
+  * Standard certificates must use the standard format (e.g. `CN=host.domain.com`).
+  * Wildcard certificates must use the wildcard format, pertaining to the domain of the server (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Subject Alternative Names (SAN): At minimum the FQDN of the server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1. It must include any additional host names that should be able to be used to access the API Gateway Service.
+* Certificate file must be in a .PFX file format, with a known password.
+* Certificate file must contain the full chain of certificates.
+* Certificate file must include the private key.
+* Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
+* Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
+
+This file should be placed in a known location on the server. This location will be required when running the Application Server installation script.
+
+#### Web Application Server
+
+{{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
+
+* Enhanced Key Usage: `Server Authentication` and `Client Authentication`
+* Subject Alternative Names (SAN): At minimum the FQDN of the Server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1
+
+If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
+
+{{% alert title="Important" color="warning" %}}
+Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
+<br />
+Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
+<br />
+It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="installing the Application Server" >}}, as long as it is not an auto-generated self-signed certificate; If doing so, you should set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}} step to prevent overwriting.
+{{% /alert %}}
+
+More information about importing the certificate is given during installation.
+
+### TLS Requirements
+
+There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
+
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+
+See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
 
 ## Next Steps?
 

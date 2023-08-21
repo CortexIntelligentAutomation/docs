@@ -11,8 +11,11 @@ This guide describes how to install the Web Application Server. Please ensure th
 
 ## Make Installation Artefacts Available
 
-1. Copy the following artefacts to a folder on the machine:
+{{% alert title="Note" %}}
+We recommend that the single-node Service Fabric instance, used by {{% ctx %}} Gateway as a Debugger instance, and {{% ctx %}} Gateway are installed on the same Web Application Server.
+{{% /alert %}}
 
+1. Copy the following artefacts to a folder on the machine:
    * Cortex Innovation {{< version >}} - Block Packages.zip
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
@@ -73,11 +76,12 @@ In line with best practices, this account should not be given administrator righ
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
-Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
-
-To ensure that the certificate can be used by the {{% ctx %}} Gateway website the following sections should be completed:
-
-{{% alert title="Note" %}}Some sections may not require any action depending on your system requirements however more information can be found in the relevant sections{{% /alert %}}
+{{% alert title="Important" color="warning" %}}
+Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
+<br />
+Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.
+{{% /alert %}}
 
 #### Import Root Certificate
 
@@ -99,7 +103,7 @@ This step must be carried out prior to the installation otherwise the URL valida
 
 #### Import Certificate Manually
 
-{{% alert title="Note" %}}The certificate can be imported automatically by setting the `ImportCertificate` parameter to `$true` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}}. If importing the certificate automatically proceed to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PerformInstallation" title="Perform Installation" >}} <br /><br /> If the certificate has previously been imported you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" title="assign a friendly name" >}}.{{% /alert %}}
+{{% alert title="Note" %}}The certificate can be imported automatically by setting the `ImportCertificate` parameter to `$true` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}}. If importing the certificate automatically proceed to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PerformDebuggerInstallation" title="Perform Installation" >}} <br /><br /> If the certificate has previously been imported you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" title="assign a friendly name" >}}.{{% /alert %}}
 
 To import the certificate manually follow the below steps:
 
@@ -120,7 +124,18 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
-## Perform Installation
+## Perform Debugger Installation
+
+{{% alert title="Important" color="warning" %}}
+{{< ctx >}} Gateway requires a local instance of the Application Server components to enable the debugging of flows.
+{{% /alert %}}
+
+### Install Debugger
+
+
+To install the components required for debugging, perform the steps detailed in [Install Application Server][] on the Web Application Server.
+
+## Perform Gateway Installation
 
 ### Configure {{% ctx %}} Gateway Installation Script
 
@@ -231,7 +246,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Get CORTEX Gateway Application Pool User]: {{< ref "#get-cortex-gateway-application-pool-user" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
@@ -239,3 +253,4 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Setup CORTEX Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
