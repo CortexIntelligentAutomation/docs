@@ -76,11 +76,12 @@ In line with best practices, this account should not be given administrator righ
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
-Wildcard certificates and self-signed certificates can also be used. However, self-signed certificates are not recommended for production instances. Details on how to create a self-signed certificate can be found at [Create Self-Signed Certificates][].
-
-To ensure that the certificate can be used by the {{% ctx %}} Gateway website the following sections should be completed:
-
-{{% alert title="Note" %}}Some sections may not require any action depending on your system requirements however more information can be found in the relevant sections{{% /alert %}}
+{{% alert title="Important" color="warning" %}}
+Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
+<br />
+Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.
+{{% /alert %}}
 
 #### Import Root Certificate
 
@@ -126,12 +127,13 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 ## Perform Debugger Installation
 
 {{% alert title="Important" color="warning" %}}
-A Single Server installation of the {{< ctx >}} Innovation Platform needs to be performed to enable debugging of flows from {{< ctx >}} Gateway.
+{{< ctx >}} Gateway requires a local instance of the Application Server components to enable the debugging of flows.
 {{% /alert %}}
 
-### Install Single Server Application
+### Install Debugger
 
-To enable debugging, follow the steps on the Web Application Server to [Install the Innovation Application][Install Application Server].
+
+To install the components required for debugging, perform the steps detailed in [Install Application Server][] on the Web Application Server.
 
 ## Perform Gateway Installation
 
@@ -244,7 +246,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [Get CORTEX Gateway Application Pool User]: {{< ref "#get-cortex-gateway-application-pool-user" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
