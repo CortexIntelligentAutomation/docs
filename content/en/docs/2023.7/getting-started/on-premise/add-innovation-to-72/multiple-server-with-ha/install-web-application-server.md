@@ -11,9 +11,14 @@ This guide describes how to upgrade Gateway on v7.2 to include Innovation. Pleas
 
 The steps to add Innovation functionality to 7.2 are:
 
+1. Install local instance of the Application Server components
 1. Upgrade {{% ctx %}} Gateway
 
 ## Make Installation Artefacts Available
+
+{{% alert title="Note" %}}
+We recommend that the single-node Service Fabric instance, used by {{% ctx %}} Gateway as a Debugger instance, and {{% ctx %}} Gateway are installed on the same Web Application Server.
+{{% /alert %}}
 
 1. Copy the following artefacts to a folder on the machine:
 
@@ -45,7 +50,17 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
-## Perform Installation
+## Perform Debugger Installation
+
+{{% alert title="Important" color="warning" %}}
+{{< ctx >}} Gateway requires a local instance of the Application Server components to enable the debugging of flows.
+{{% /alert %}}
+
+### Install Debugger
+
+To install the components required for debugging, perform the steps detailed in [Install Application Server][] on the Web Application Server.
+
+## Perform Gateway Installation
 
 ### Configure {{% ctx %}} Gateway Installation Script
 
@@ -153,3 +168,4 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.TryItOut" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}

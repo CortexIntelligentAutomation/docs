@@ -25,10 +25,10 @@ The installation process is the same, regardless of which architecture is used; 
 
 The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Server system requires 8 servers in total; the 4 existing servers, plus 4 new servers:
 
-* 2x Existing Application Servers for v7.2, one of these will also act as the Web Application Server for Innovation. For Innovation, the existing Gateway will be upgraded.
-* 2x Existing Database Servers, used for v7.2 and Gateway databases.
-* 1x New Load Balancer Server for Innovation.
-* 3x New Application Servers for Innovation.
+* 2x Existing Application Servers for v7.2, one of these will also act as the Web Application Server for Innovation. For Innovation, the existing Gateway will be upgraded
+* 2x Existing Database Servers, used for v7.2 and Gateway databases
+* 1x New Load Balancer Server for Innovation
+* 3x New Application Servers for Innovation
 
 {{< figure src="/images/editable/Cortex Innovation and v7.2 Best Architecture.png" class="centre" title="8 Server, Recommended Architecture Diagram" >}}
 
@@ -36,11 +36,12 @@ The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Ser
 
 ### Minimum Architecture
 
-The minimum architecture requires only the 4 existing servers:
+The minimum architecture requires 5 servers:
 
-* 2x Application Servers for v7.2, each of these will also host one of the three Application Servers for Innovation.
-* 1x Database Server for v7.2, which will also host the remaining Application Server for Innovation.
-* 1x Database Server for v7.2, which will also host the Load Balancer for Innovation.
+* 1x Web Application Server, which contains Gateway and will contain a Debug Node. For Innovation, the existing Gateway will be upgraded
+* 2x Application Servers for v7.2, each of these will also host one of the three Application Servers for Innovation
+* 1x Database Server for v7.2, which will also host the remaining Application Server for Innovation
+* 1x Database Server for v7.2, which will also host the Load Balancer for Innovation
 
 {{< figure src="/images/editable/Cortex Innovation and v7.2 Min Architecture.png" class="centre" title="4 Server, Minimum Architecture Diagram" >}}
 
