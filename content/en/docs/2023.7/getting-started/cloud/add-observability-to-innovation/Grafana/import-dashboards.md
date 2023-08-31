@@ -35,7 +35,7 @@ Please ensure that the set up for [Grafana][] and [Loki][] have been completed b
 1. Locate the `Flow Execution Requests.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
 1. Select the file and click *Open*.
 1. Select the folder in Grafana you wish the dashboard to be saved in, e.g. *Cortex*.
-1. Select your configured Loki data source from the dropdown menu, e.g. *grafanacloud-cortexinnovation-logs*.
+1. Select your [configured] Loki data source from the dropdown menu, e.g. *grafanacloud-cortexinnovation-logs*.
 1. Click *Import*.
 1. Repeat steps 2 - 10 for the `Platform Health.json` file.
 
@@ -54,7 +54,7 @@ To do this, follow these steps for all default {{% ctx %}} Innovation dashboards
 1. Open the Dashboard Settings menu via the cog icon next to the time range filter on the dashboard.
 1. Click *Variables* on the left-hand side of the page.
 1. Click *Custom Filter* in the *Variables* list.
-1. Select your configured Loki data source in the *Adhoc Options* > *Data source* drop-down menu, e.g. *grafanacloud-cortexinnovation-logs*.
+1. Select your [configured] Loki data source in the *Adhoc Options* > *Data source* drop-down menu, e.g. *grafanacloud-cortexinnovation-logs*.
 1. Click *Apply*.
 1. Click the dashboard name in the breadcrumb at the top left corner of the page to go back to the dashboard.
 1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Promtail there will be no options available for selection.
