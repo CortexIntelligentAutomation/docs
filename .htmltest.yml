@@ -17,6 +17,8 @@ IgnoreURLs:
 - "https://kodify.net/.*"
 - "https://grafana.com/.*"
 - "https://learn.microsoft.com/.*"
+- "https://fonts.googleapis.com.*"
+- "https://fonts.gstatic.com.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"

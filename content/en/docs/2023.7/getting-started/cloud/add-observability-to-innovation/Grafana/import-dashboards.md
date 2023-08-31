@@ -19,21 +19,25 @@ Please ensure that the set up for [Grafana][] and [Loki][] have been completed b
 ## Create Folder for Dashboards
 
 1. Log in to Grafana Cloud with a user that has the *Admin* role.
-1. Hover over the Dashboards icon {{< image src="/images/DashboardsIcon.png" title="Dashboards Icon" >}} in the side menu, and then click *+ New folder*.
+1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
+1. Click the Dashboards menu item {{< image src="/images/Grafana Cloud - Dashboards Link.png" title="Dashboards menu item" >}}.
+1. Click the *New* dropdown and select *New folder*.
 1. Enter a folder name, e.g. `Cortex`.
 1. Click *Create*.
 
 ## Import Dashboards
 
 1. Log in to Grafana Cloud with a user that has the *Admin* role.
-1. Hover over the Dashboards icon {{< image src="/images/DashboardsIcon.png" title="Dashboards Icon" >}} in the side menu, and then click *Import*.
-1. Click the *Upload JSON file* button.
+1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
+1. Click the Dashboards menu item {{< image src="/images/Grafana Cloud - Dashboards Link.png" title="Dashboards menu item" >}}.
+1. Click the *New* dropdown and select *Import*.
+1. Click on *Upload dashboard JSON file*.
 1. Locate the `Flow Execution Requests.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
 1. Select the file and click *Open*.
 1. Select the folder in Grafana you wish the dashboard to be saved in, e.g. *Cortex*.
-1. Select your configured Loki data source from the dropdown menu.
+1. Select your [configured] Loki data source from the dropdown menu, e.g. *grafanacloud-cortexinnovation-logs*.
 1. Click *Import*.
-1. Repeat steps 2 - 8 for the `Platform Health.json` file.
+1. Repeat steps 2 - 10 for the `Platform Health.json` file.
 
 ## Configure Data Sources
 
@@ -43,24 +47,25 @@ To do this, follow these steps for all default {{% ctx %}} Innovation dashboards
 
 1. Log in to Grafana Cloud with a user that has the *Admin* role.
 1. To open a dashboard:
-    1. Hover over the Dashboards icon {{< image src="/images/DashboardsIcon.png" title="Dashboards Icon" >}} in the side menu, and then click *Browse*.
+    1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
+    1. Click the Dashboards menu item {{< image src="/images/Grafana Cloud - Dashboards Link.png" title="Dashboards menu item" >}}.
     1. Click the folder name that the dashboards were imported to.
-    1. Click the *Flow Execution Requests* dashboard to open it.
-1. Open the Dashboard Settings menu via the cog icon in the top right side of the dashboard.
+    1. Click the first dashboard to open.
+1. Open the Dashboard Settings menu via the cog icon next to the time range filter on the dashboard.
 1. Click *Variables* on the left-hand side of the page.
 1. Click *Custom Filter* in the *Variables* list.
-1. Select your configured Loki data source in the *Options* > *Data source* drop-down menu.
-1. Click *Update*.
-1. Click the back button on the top left corner of the page to go back to the dashboard.
+1. Select your [configured] Loki data source in the *Adhoc Options* > *Data source* drop-down menu, e.g. *grafanacloud-cortexinnovation-logs*.
+1. Click *Apply*.
+1. Click the dashboard name in the breadcrumb at the top left corner of the page to go back to the dashboard.
 1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Promtail there will be no options available for selection.
-1. Repeat steps 2 - 9 for the *Platform Health* dashboard.
+1. Repeat steps 2 - 9 for all additional default dashboards.
 
 ## Next Steps?
 
 1. [Try it Out][]
 
 [configured]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
-[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.1.0.2.GrafanaDashboardsZip" >}}
+[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.2.0.0.GrafanaDashboardsZip" >}}
 [Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
 [Loki]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Try it Out]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut.MainDoc" >}}

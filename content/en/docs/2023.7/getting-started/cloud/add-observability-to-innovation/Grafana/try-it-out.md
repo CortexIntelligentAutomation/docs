@@ -27,15 +27,17 @@ This test uses the test flow published as part of testing the Innovation install
     {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you may need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
 1. Once the request has completed, using a web browser, log in to your configured Grafana.
-1. Click the Dashboards icon {{< image src="/images/DashboardsIcon.png" title="Dashboards Icon" >}} in the side menu, and then click *Browse*.
-1. Click the folder name that the dashboards were imported to.
+1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
+1. Click the Dashboards menu item {{< image src="/images/Grafana Cloud - Dashboards Link.png" title="Dashboards menu item" >}}.
+1. Click the folder name that the dashboards were imported to, if not already expanded.
 1. Click the *Flow Execution Requests* dashboard to open it.
 1. The request made at step 1 should be visible on the dashboard.
 {{% alert title="Note" %}}
 If other requests have been made then there may be more than one request visible on the dashboard.
 {{% / alert %}}
-1. Click the Dashboards icon {{< image src="/images/DashboardsIcon.png" title="Dashboards Icon" >}} in the side menu, and then click *Browse*.
-1. Click the folder name that the dashboards were imported to.
+1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
+1. Click the Dashboards menu item {{< image src="/images/Grafana Cloud - Dashboards Link.png" title="Dashboards menu item" >}}.
+1. Click the folder name that the dashboards were imported to, if not already expanded.
 1. Click the *Platform Health* dashboard to open it.
 1. The request made at step 1 should be visible on the dashboard.
 {{% alert title="Note" %}}

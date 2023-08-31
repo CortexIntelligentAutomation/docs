@@ -20,6 +20,7 @@ weight: 30
 
    * Enter an appropriate `Team URL` which will be used as a customised link to access the Grafana Cloud.
    * Select the `Deployment region` which is where the service will be deployed to. This should be preferably close to the High Availability nodes.
+   * Click `Finish setup`.
 
 1. Wait for Grafana Cloud to load
 
