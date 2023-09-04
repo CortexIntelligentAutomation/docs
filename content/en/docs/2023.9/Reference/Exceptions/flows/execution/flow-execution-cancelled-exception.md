@@ -77,7 +77,7 @@ Id of the execution which has been cancelled.
 
 ### Related Blocks
 
-* [RunAs Async][]
+* [RunFlowAsync][]
 
 [Message]: {{< ref "#message" >}}
 
@@ -86,3 +86,5 @@ Id of the execution which has been cancelled.
 
 [Guid]: {{< url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[RunFlowAsync]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}
