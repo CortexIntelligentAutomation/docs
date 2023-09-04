@@ -10,13 +10,13 @@ description: "The exception thrown when the child execution has been cancelled b
 
 ## Description
 
-The exception thrown when the child execution has been cancelled before execution has been completed.
+The exception thrown when the child execution has been cancelled before the execution has been completed.
 
 ## Reasons
 
 ### The Child Execution Has Been Cancelled
 
-The child execution has been cancelled before the execution has finished.
+The child execution has been cancelled before the execution has completed.
 
 #### Message Format
 
@@ -28,7 +28,7 @@ The format of the [Message][] is as follows:
 
 #### How to fix
 
-Make sure that the execution has been completed.
+Allow the execution to fully complete.
 
 ## Properties
 
@@ -50,7 +50,7 @@ The exception message, providing information about the exception that occurred.
 
 ### Flow Id
 
-Id of the flow which execution has been cancelled.
+The id of the flow where the execution has been cancelled.
 
 |           |            |
 |-----------|------------|
@@ -58,7 +58,7 @@ Id of the flow which execution has been cancelled.
 
 ### Execution Id
 
-Id of the execution which has been cancelled.
+The id of the execution where the execution has been cancelled.
 
 |           |            |
 |-----------|------------|
