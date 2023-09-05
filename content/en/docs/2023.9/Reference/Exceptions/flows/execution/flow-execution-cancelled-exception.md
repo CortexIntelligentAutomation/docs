@@ -58,7 +58,7 @@ The id of the flow where the execution has been cancelled.
 
 ### Execution Id
 
-The id of the execution where the execution has been cancelled.
+The id of the execution that has been cancelled.
 
 |           |            |
 |-----------|------------|
@@ -74,14 +74,23 @@ The id of the execution where the execution has been cancelled.
 ### Related Concepts
 
 * [Exceptions][]
+* [Executions][]
+* [Flows][]
 
 ### Related Blocks
 
 * [RunFlowAsync][]
 
+### External Documentation
+
+None
+
 [Message]: {{< ref "#message" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
+
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 
 [Guid]: {{< url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc" >}}
