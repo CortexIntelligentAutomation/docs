@@ -159,6 +159,36 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
+### Flow not starting in {{< ctx >}} Gateway {#ts-flow-not-starting}
+
+#### Application Pool user does not have rights to the Repo folder
+
+Check that the `Application Pool` user has rights to the `Repo` folder using the following steps:
+
+1. Check where the `Repo` folder is located
+   1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+   1. Open the `web.config` file.
+   1. Find the value of the `connectionString` named `CortexRepositories`
+1. Navigate to the `Repo` folder, not opening it.
+1. Right-click on the `Repo` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+
+If the `Application Pool` user for Gateway it is not listed:
+
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+
+If the `Application Pool` user for Gateway is listed but does not have permissions:
+
+   1. Click the `Edit...` button.
+   1. Select the `Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+
 ### Cannot publish a package {#ts-no-publish}
 
 Check that the `Service Fabric Api Gateway Endpoint`, `Service Fabric Using Self Signed Certificates`, `Service Fabric ApiGateway Basic Auth Username` and `Service Fabric ApiGateway Basic Auth Password` in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway are correct. If any of them are not, update them and reinstall {{% ctx %}} Gateway or update the value in the "web.config" file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
