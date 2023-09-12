@@ -159,6 +159,68 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
+### {{% ctx %}} Innovation blocks not visible in {{% ctx %}} Studio {#ts-no-blocks}
+
+#### Application Pool user does not have Read & execute rights to the NuGet folder
+
+The `NuGet` folder used may differ depending on the installations, so we first need to identify which `NuGet` is used.
+##### Identify which NuGet folder is used
+
+Check the currently used `NuGet` folder using the following steps:
+
+1. Navigate to `C:\Windows\System32\config\systemprofile\AppData\Roaming\NuGet`.
+1. If the folder exists, and it contains a `NuGet.Config` file, skip to the [add rights to the folder][add rights to nuget folder].
+1. If the folder does not exist, or does not contain a `NuGet.Config` file, navigate to `C:\Windows\SysWOW64\config\systemprofile\AppData\Roaming\NuGet`.
+1. The folder should contain a `NuGet.Config` file.
+
+##### Add Read & execute rights to the folder {#ts-add-rights-to-nuget-folder}
+
+Check that the `Application Pool` user has rights to the `NuGet` folder using the following steps:
+
+1. Navigate to the `NuGet` containing the `NuGet.Config` file, not opening it.
+1. Right-click on the `NuGet` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Read & execute` permissions.
+
+If the `Application Pool` user for Gateway is not listed:
+
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Read & execute`.
+   1. Click `OK`.
+
+If the `Application Pool` user for Gateway is listed but does not have permissions:
+
+   1. Click the `Edit...` button.
+   1. Select the `Application Pool` user.
+   1. Check `Read & execute`.
+   1. Click `OK`.
+
+#### Application Pool user does not have rights to the Cortex Blocks Provider Host folder
+
+Check that the `Application Pool` user has rights to the system32's `Cortex Blocks Provider Host` folder using the following steps:
+
+1. Navigate to `C:\ProgramData\Cortex`
+1. Right-click on the `Cortex Blocks Provider Host` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+
+If the `Application Pool` user for Gateway is not listed:
+
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+
+If the `Application Pool` user for Gateway is listed but does not have permissions:
+
+   1. Click the `Edit...` button.
+   1. Select the `Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+
 ### Flow not starting in {{< ctx >}} Gateway {#ts-flow-not-starting}
 
 #### Application Pool user does not have rights to the Repo folder
@@ -174,7 +236,7 @@ Check that the `Application Pool` user has rights to the `Repo` folder using the
 1. In the dialog, click the `Security` tab.
 1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
 
-If the `Application Pool` user for Gateway it is not listed:
+If the `Application Pool` user for Gateway is not listed:
 
    1. Click the `Edit...` button.
    1. Click the `Add...` button.
@@ -284,3 +346,4 @@ If this occurs on your server it is important to update your certificates as soo
 
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Rollover Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" >}}
+[add rights to nuget folder]: {{< ref "#ts-add-rights-to-nuget-folder" >}}
