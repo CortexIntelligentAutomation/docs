@@ -92,6 +92,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Delete Collection][]
   * [Delete Data With Key][]
   * [Read Data With Key][]
+  * [Wait For Key In Collection To Exist][]
   * [Wait For Key In Collection To Not Exist][]
   * [Write Data With Key][]
 * Date & Time
@@ -163,6 +164,7 @@ None
 [Delete Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock.MainDoc">}}
 [Delete Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc">}}
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
+[Wait For Key In Collection To Exist]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToExistBlock.MainDoc">}}
 [Wait For Key In Collection To Not Exist]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToNotExistBlock.MainDoc">}}
 [Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
 

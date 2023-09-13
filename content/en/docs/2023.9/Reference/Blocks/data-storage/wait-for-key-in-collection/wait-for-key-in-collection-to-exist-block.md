@@ -18,13 +18,14 @@ Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storag
 
 ### Wait For A Key To Exist in a Data Storage Collection 
 
-This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
+This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
 
 |Key | Data |
 -------------|--------------|
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
+|`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
 
-The example will see that the [Key][Key Property] `"user2"` does not currently exist in `"users"` and wait until another flow with access to the [Data Storage Collection][] `"users"` [writes Data][Write Data With Key Block] with a key `"key2"` to `"users"`.
+The example will see that the [Key][Key Property] `"user3"` does not currently exist in `"users"` and wait until another flow with access to the [Data Storage Collection][] `"users"` [writes Data][Write Data With Key Block] with a key `"user3"` to `"users"`.
 
 #### Properties
 
@@ -37,8 +38,7 @@ The example will see that the [Key][Key Property] `"user2"` does not currently e
 
 #### Result
 
-This checks that `"user2"` exists as a key in the [Data Storage Collection][] `"users"` and finds that `"user2"` does not currently exist in `"users"`, which results in the execution of the flow containing this block being paused.
-
+Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the execution waiting as `"user3"` is not contained within the [Data Storage Collection][]. The execution will wait for 60 seconds by default or until the [Key][Key Property] is added to the [Data Storage Collection][] `"users"`.
 
 ### Wait For A Key To Exist in a Data Storage Collection With a Key That Already Exists
 
@@ -57,12 +57,14 @@ The example will see that the [Key][Key Property] `"user2"` already exists in `"
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
-| [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
+| [Key][Key Property] | `($)Key` with value `"user3"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [dynamic][] |
 
 #### Result
 
-This checks that `"user2"` exists as a key in the [Data Storage Collection][] `"users"` and finds that `"user2"` already existed in `"users"`, which results in this block being successfully executed and moving to the next step in the flow which contains this block.
+Waiting for `"user2"` to exist in the [Data Storage Collection][] results in the execution progressing as `"user2"` is contained within the [Data Storage Collection][]. 
+
+***
 
 ## Properties
 
@@ -132,7 +134,7 @@ The exceptions thrown by the block can be found below:
 
 ### Waiting For a Key to Exist in a Collection That Doesn't Exist
 
-When trying to wait for a key to exist, in a collection that doesn't exist, execution of the flow containing this block pauses; see example [Wait For A Key To Exist in a Data Storage Collection][Wait For Missing Key].
+When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see example [Wait For A Key To Exist in a Data Storage Collection][Key does not exist].
 
 ### Case Sensitivity
 
