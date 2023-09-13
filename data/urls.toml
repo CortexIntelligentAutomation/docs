@@ -406,6 +406,10 @@
                     MainDoc = "/docs/reference/blocks/data-storage/write-data"
                     [Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/write-data/write-data-with-key-block"
+                [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection"
+                    [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToNotExistBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-not-exist-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
