@@ -160,8 +160,8 @@ None
 
 [Convert Text To Date Time]: {{< url path="Cortex.Reference.Blocks.DateAndTime.ConvertDateTime.ConvertTextToDateTime.MainDoc" >}}
 
-[Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock.MainDoc">}}
-[Delete Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock.MainDoc">}}
+[Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBlock.MainDoc">}}
+[Delete Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock.MainDoc">}}
 [Delete Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc">}}
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
 [Wait For Key In Collection To Exist]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToExistBlock.MainDoc">}}
