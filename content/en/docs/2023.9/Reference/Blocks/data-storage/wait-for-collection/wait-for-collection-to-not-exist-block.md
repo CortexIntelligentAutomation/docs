@@ -17,7 +17,7 @@ Waits for a specified [Data Storage Collection][] to not exist in the [Data Stor
 
 ### Wait For a Data Storage Collection to not exist
 
-This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property] to not exist. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
+This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property] to not exist. In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
@@ -106,7 +106,6 @@ The exceptions thrown by the block can be found below:
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
-[Key Property]: {{< ref "#key" >}}
 [Data Property]: {{< ref "#data" >}}
 [Wait For Missing Key]: {{< ref "#wait-for-a-key-to-exist-in-a-data-storage-collection">}}
 
