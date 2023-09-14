@@ -3,8 +3,7 @@ title: "Wait For Key In Collection to Exist"
 linkTitle: "Wait For Key In Collection to Exist"
 description: "Waits for a key in a collection to exist."
 ---
-TODO
-{{< figure src="/blocks/data-storage-read-data-with-key-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/data-storage-wait-for-key-in-collection-block.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -18,14 +17,14 @@ Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storag
 
 ### Wait For A Key To Exist in a Data Storage Collection 
 
-This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
+This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
 
 |Key | Data |
 -------------|--------------|
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
 
-The example will see that the [Key][Key Property] `"user3"` does not currently exist in `"users"` and wait until another flow with access to the [Data Storage Collection][] `"users"` [writes Data][Write Data With Key Block] with a key `"user3"` to `"users"`.
+The example will see that the [Key][Key Property] `"user3"` does not currently exist in `"users"` and wait until another flow with access to the [Data Storage Collection][] `"users"` [writes Data][Write Data With Key] with a key `"user3"` to `"users"`.
 
 #### Properties
 
@@ -42,7 +41,7 @@ Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the
 
 ### Wait For A Key To Exist in a Data Storage Collection With a Key That Already Exists
 
-This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
+This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
 
 |Key | Data |
 -------------|--------------|
@@ -124,7 +123,6 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
-| [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found within the specified [Collection Scope][Collection Scope property].
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
@@ -134,11 +132,11 @@ The exceptions thrown by the block can be found below:
 
 ### Waiting For a Key to Exist in a Collection That Doesn't Exist
 
-When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see example [Wait For A Key To Exist in a Data Storage Collection][Key does not exist].
+When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see example [Wait For A Key To Exist in a Data Storage Collection][Wait For Missing Key].
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to write to a [Data Storage Collection] named `"Collection"` while `"COLLECTION"` already exists would write to `"COLLECTION"`.
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to wait for a key `"users"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"users"` in the [Data Storage Collection][] `"COLLECTION"`.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 
@@ -176,3 +174,4 @@ When trying to wait for a key to exist, in a collection that doesn't exist, it i
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Keys]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 
+[Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
