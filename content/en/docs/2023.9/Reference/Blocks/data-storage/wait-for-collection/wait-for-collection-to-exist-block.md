@@ -3,8 +3,7 @@ title: "Wait For Collection To Exist"
 linkTitle: "Wait For Collection To Exist"
 description: "Waits for a data storage collection to exist."
 ---
-TODO WIP
-{{< figure src="/blocks/data-storage-read-data-with-key-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/data-storage-wait-for-collection-block.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
@@ -12,7 +11,7 @@ TODO WIP
 
 ## Description
 
-Waits for a specified [Data Storage Collection][] to exist in the accessible scope.
+Waits for a specified [Data Storage Collection][] to exist in the [Data Storage Service][].
 
 ## Examples
 
@@ -101,7 +100,7 @@ The exceptions thrown by the block can be found below:
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to wait for a [Data Storage Collection] named `"Collection"` to exist while `"COLLECTION"` already exists would progress as in this example: [Wait For a Data Storage Collection That Already Exists to Exist][Collection Already Exists].
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to wait for a [Data Storage Collection] named `"Collection"` to exist while `"COLLECTION"` already exists would cause the execution to progress as in this example: [Wait For a Data Storage Collection That Already Exists to Exist][Collection Already Exists].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
