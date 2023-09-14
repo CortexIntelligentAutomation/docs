@@ -1,7 +1,7 @@
 ---
 title: "Wait For Collection to Not Exist"
 linkTitle: "Wait For Collection to Not Exist"
-description: "Waits for a collection to not exist."
+description: "Waits for a data storage collection to not exist."
 ---
 {{< figure src="/blocks/data-storage-wait-for-collection-block.png" alt="Icon" class="block-icon" >}}
 
