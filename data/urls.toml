@@ -388,11 +388,11 @@
                 MainDoc = "/docs/reference/blocks/data-storage"
                 [Cortex.Reference.Blocks.DataStorage.CreateCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/create-collection"
-                    [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
+                    [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
                 [Cortex.Reference.Blocks.DataStorage.DeleteCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/delete-collection"
-                    [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock]
+                    [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/delete-collection/delete-collection-block"
                 [Cortex.Reference.Blocks.DataStorage.DeleteData]
                     MainDoc = "/docs/reference/blocks/data-storage/delete-data"
