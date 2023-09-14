@@ -17,7 +17,7 @@ Create a [Data Storage Collection] within the [Collection Scope][Collection Scop
 
 ### Create a Data Storage Collection
 
-This example will attempt to create a new [Data Storage Collection] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+This example will attempt to create a new [Data Storage Collection] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 
 #### Properties
 
