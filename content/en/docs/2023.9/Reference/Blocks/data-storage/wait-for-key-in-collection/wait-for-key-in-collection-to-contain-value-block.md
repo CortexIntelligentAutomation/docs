@@ -17,8 +17,8 @@ Wait for a specified [Key][Key Property] to contain the specified [Value][Value 
 
 ### Wait for a Key in a Data Storage Collection to contain Value
 
-This example will wait for a [Key][Key Property] `"user2"` to contain the specified [Value][Value Property] in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following keys and values.
+This example will wait for a [Key][Key Property] `"user2"` to contain the [Value][Value Property] `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}` in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
@@ -43,7 +43,7 @@ Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "
 ### Wait for a Key in a Data Storage Collection to contain Value which it already contains
 
 This example will wait for a [Key][Key Property] `"user2"` to contain the [Value][Value Property] `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant][] and [System][] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following keys and values.
+In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
