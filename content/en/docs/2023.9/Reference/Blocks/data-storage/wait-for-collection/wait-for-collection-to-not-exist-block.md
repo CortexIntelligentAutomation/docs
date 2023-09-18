@@ -17,7 +17,7 @@ Waits for a specified [Data Storage Collection][] to not exist within a [Collect
 
 ### Wait for a Data Storage Collection to not exist
 
-This example will wait for a [Data Storage Collection][] named `"users"`, that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property], to not exist. In this example `"users"` already exists and contains the following keys and data:
+This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property], to not exist. In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
@@ -33,24 +33,24 @@ This example will wait for a [Data Storage Collection][] named `"users"`, that i
 
 #### Result
 
-Waiting for the [Data Storage Collection][] named `"users"` to not exist results in the execution waiting as the `"users"` [Data Storage Collection][] exists; see [Delete Collection][Deleted].
+Waiting for the `"users"` [Data Storage Collection][] to not exist results in the execution waiting until the desired [Collection][Collection Name Property] does not exist; see [Delete Collection][Deleted].
 
 ***
 
 ### Wait for a Data Storage Collection to not exist when it does not already exist
 
-This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property] to not exist. In this example there is no [Data Storage Collection][] named `"users"`.
+This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property], to not exist. In this example `"users"` does not already exist.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. <br><br>In this example `($)Scope` has been set up using the following [Expression][]: <br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
-Waiting for the [Data Storage Collection][] named `"users"` to not exist results in the execution progressing.
+Waiting for the `"users"` [Data Storage Collection][] to not exist results results in the execution progressing as the collection `"users"` already does not exist.
 
 ***
 
