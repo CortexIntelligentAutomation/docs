@@ -45,7 +45,7 @@ This writes the [Data][Data Property]  `{"Domain": "domain", "Username": "user2"
 
 ***
 
-### Write to a Data Storage Collection with a Key that Already Exists
+### Write to a Data Storage Collection with a Key that already exists
 
 This example will attempt to write [Data][Data Property] to a [Data Storage Collection] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and [Data][Data Property]:
 
