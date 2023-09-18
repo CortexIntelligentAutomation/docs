@@ -18,7 +18,7 @@ Wait for a specified [Key][Key Property] to not exist in the specified [Data Sto
 ### Wait For a Key in a Data Storage Collection to not exist
 
 This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following [Keys][Key Property].
+In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
@@ -42,7 +42,7 @@ Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in
 ### Wait for a Key in a Data Storage Collection to not exist with a Key that already does not exist
 
 This example will wait for a [Key][Key Property] `"user3"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following [Keys][Key Property].
+In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|

@@ -17,7 +17,7 @@ Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storag
 
 ### Wait for a Key to exist in a Data Storage Collection
 
-This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
+This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following following keys and data:
 
 |Key | Data |
 -------------|--------------|
