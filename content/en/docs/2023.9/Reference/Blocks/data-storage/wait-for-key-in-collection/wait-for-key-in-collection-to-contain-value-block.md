@@ -152,11 +152,11 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Waiting For a Key in a Collection That Does Not Exist to Contain a Value
 
-When trying to wait for a [Key][Key Property] to contain a value and the specified [Data Storage Collection][] does not exist, it is treated the same as when a key does not have a matching value; see example [Waiting For a Key To Contain Value When A Different Value Is Contained][Waiting For Key Value When Different].
+When trying to wait for a [Key][Key Property] to contain a value and the specified [Data Storage Collection][] does not exist, it is treated the same as when a key does not have a matching value; see [Wait for a Key in a Data Storage Collection to contain Value][Waiting For Key Value When Different].
 
 ### Waiting For a Key That Does Not Exist in a Collection To Contain a Value
 
-When trying to wait for a [Key][Key Property] that does not exist, in a collection that does exist, to contain a value, it is treated the same as when a key does not have a matching value; see example [Waiting For a Key To Contain Value When a Different Value is Contained][Waiting For Key Value When Different].
+When trying to wait for a [Key][Key Property] that does not exist, in a collection that does exist, to contain a value, it is treated the same as when a key does not have a matching value; see [Wait for a Key in a Data Storage Collection to contain Value][Waiting For Key Value When Different].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}

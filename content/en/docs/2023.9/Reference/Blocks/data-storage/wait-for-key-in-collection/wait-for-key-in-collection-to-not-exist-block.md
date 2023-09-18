@@ -15,7 +15,7 @@ Wait for a specified [Key][Key Property] to not exist in the specified [Data Sto
 
 ## Examples
 
-### Wait For a Key in a Data Storage Collection to not exist
+### Wait for a Key in a Data Storage Collection to not exist
 
 This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following [Keys][Key Property].
@@ -128,7 +128,7 @@ The exceptions thrown by the block can be found below:
 
 ### Waiting For a Key in a Collection That Does Not Exist
 
-When trying to wait for a [Key][Key Property] contained in a collection that does not exist, it is treated the same as when a key does not exist in a collection; see example [Wait For Key To Not Exist][Wait For Key To Not Exist].
+When trying to wait for a [Key][Key Property] contained in a collection that does not exist, it is treated the same as when a key does not exist in a collection; see [Wait for a Key in a Data Storage Collection to not exist][Wait For Key To Not Exist].
 
 ### Case Sensitivity
 

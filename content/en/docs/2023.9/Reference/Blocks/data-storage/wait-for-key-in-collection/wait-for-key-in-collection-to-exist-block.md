@@ -142,7 +142,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Waiting For a Key to Exist in a Collection That Doesn't Exist
 
-When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see example [Wait For A Key To Exist in a Data Storage Collection][Wait For Missing Key].
+When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see [Wait for a Key to exist in a Data Storage Collection][Wait For Missing Key].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
