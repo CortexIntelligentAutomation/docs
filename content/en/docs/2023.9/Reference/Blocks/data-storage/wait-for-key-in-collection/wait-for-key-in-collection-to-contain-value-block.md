@@ -140,15 +140,15 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Block Timeout
+
+This block has a default [Block Timeout][] of 60 seconds. If the execution waits for longer than 60 seconds the block will throw a [BlockTimeoutException][].
+
 ### Case Sensitivity
 
 [Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so waiting for a [Key][Key Property] `"key"` in a [Data Storage Collection] named `"Collection"` to contain a [Value][Value Property] while `"COLLECTION"` already exists would delete from `"COLLECTION"`.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
-
-### Block Timeout
-
-This block has a default [Block Timeout][] of 60 seconds. If the execution waits for longer than 60 seconds the block will throw a [BlockTimeoutException][]
 
 ### Waiting For a Key in a Collection That Does Not Exist to Contain a Value
 
