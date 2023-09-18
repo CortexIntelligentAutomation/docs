@@ -15,7 +15,7 @@ Waits for a specified [Data Storage Collection][] to exist in the [Data Storage 
 
 ## Examples
 
-### Wait For a Data Storage Collection To Exist
+### Wait for a Data Storage Collection to exist
 
 This example will wait for a [Data Storage Collection][] `"users"` to exist that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [CollectionScope][Collection Scope Property]. In this example `"users"` does not already exist.
 
@@ -30,7 +30,7 @@ This example will wait for a [Data Storage Collection][] `"users"` to exist that
 
 Waiting for the `"users"` [Data Storage Collection][] to exist in the [CollectionScope][Collection Scope Property] defined results in the execution waiting as `"users"` does not exist within the scope accessible by this flow; see [Create Collection][].
 
-### Wait For a Data Storage Collection That Already Exists to Exist
+### Wait for a Data Storage Collection that already exists to exist
 
 This example will wait for a [Data Storage Collection][] `"users"` to exist that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [CollectionScope][Collection Scope Property]. In this example `"users"` already exists and contains the following keys and data:
 
