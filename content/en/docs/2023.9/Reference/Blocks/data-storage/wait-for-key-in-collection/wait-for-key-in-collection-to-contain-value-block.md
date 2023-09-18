@@ -15,7 +15,7 @@ Wait for a specified [Key][Key Property] to contain the specified [Value][Value 
 
 ## Examples
 
-### Waiting For a Key To Contain Value
+### Wait For a Key to contain Value
 
 This example will wait for a [Key][Key Property] `"user2"` to contain the specified [Value][Value Property] in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following [Keys][Key Property].
@@ -40,7 +40,7 @@ Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "
 
 ***
 
-### Wait for Key to contain Value which it already contains
+### Wait for a Key to contain Value which it already contains
 
 This example will wait for a [Key][Key Property] `"user2"` to contain the [Value][Value Property] `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant][] and [System][] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following [Keys][Key Property].
@@ -157,8 +157,6 @@ When trying to wait for a [Key][Key Property]  to contain a value and the [Data 
 ### Waiting For a Key That Does Not Exist in a Collection To Contain a Value
 
 When trying to wait for a [Key][Key Property] that does not exist, in a collection that does exist, to contain a value, it is treated the same as when a key does not have a matching value; see example [Waiting For a Key To Contain Value When a Different Value is Contained][Waiting For Key Value When Different].
-
-
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
