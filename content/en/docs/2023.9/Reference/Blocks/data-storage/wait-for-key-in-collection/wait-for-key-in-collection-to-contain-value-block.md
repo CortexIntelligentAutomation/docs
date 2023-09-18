@@ -69,7 +69,7 @@ Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Pas
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to wait for.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] containing the [Key][Key Property] and [Value][Value Property] to wait for.
   
 | | |
 |--------------------|---------------------------|
