@@ -15,7 +15,31 @@ Wait for a specified [Key][Key Property] to not exist in the specified [Data Sto
 
 ## Examples
 
-### Wait For Key To Not Exist
+### Waiting For a Key to Not Exist
+
+This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+In this example `"users"` already exists and contains the following [Keys][Key Property].
+
+|Key | Data |
+-------------|--------------|
+|`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
+|`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
+| [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
+
+#### Result
+
+Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in the execution waiting as `"user2"` is contained within the [Data Storage Collection][]; see [Delete Data With Key][].
+
+***
+
+### Waiting For Key To Not Exist With a Key That Already Does Not Exist
 
 This example will wait for a [Key][Key Property] `"user3"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following [Keys][Key Property].
@@ -39,35 +63,11 @@ Waiting for `"user3"` to not exist in the [Data Storage Collection][] results in
 
 ***
 
-### Waiting For a Key To Not Exist with a key That Does Exist
-
-This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following [Keys][Key Property].
-
-|Key | Data |
--------------|--------------|
-|`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
-|`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
-| [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
-| [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
-
-#### Result
-
-Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in the execution waiting as `"user2"` is contained within the [Data Storage Collection][]; see [Delete Data With Key][]. The execution will wait for 60 seconds by default or until the [Key][Key Property] is removed from the [Data Storage Collection][] `"users"`.
-
-***
-
 ## Properties
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection] containing the [Key][Key Property] to check existence of.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] containing the [Key][Key Property] to wait for.
   
 | | |
 |--------------------|---------------------------|
@@ -87,7 +87,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
 
 ### Collection Name
 
-The name of the [Data Storage Collection][] containing the [Key][Key Property] to check the existence of.
+The name of the [Data Storage Collection][] containing the [Key][Key Property] to wait for.
 
 | | |
 |--------------------|---------------------------|
@@ -99,7 +99,7 @@ The name of the [Data Storage Collection][] containing the [Key][Key Property] t
 
 ### Key
 
-The [Key][Key Property] to check the existence of.
+The [Key][Key Property] to wait for.
 
 For more information about what a key is, please see [Keys].
 
