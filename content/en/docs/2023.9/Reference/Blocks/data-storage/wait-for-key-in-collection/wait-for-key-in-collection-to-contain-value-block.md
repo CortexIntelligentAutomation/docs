@@ -11,7 +11,7 @@ description: "Waits for a key in a collection to contain the specified value."
 
 ## Description
 
-Wait for a specified [Key][Key Property] to contain the specified [Value][Value Property] in the specified [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
+Waits for a specified [Key][Key Property] to contain the specified [Value][Value Property] in the specified [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
 
 ## Examples
 
