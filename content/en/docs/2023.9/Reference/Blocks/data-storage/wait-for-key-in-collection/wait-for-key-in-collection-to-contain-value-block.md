@@ -1,6 +1,6 @@
 ---
-title: "Wait For Key In Collection to Contain Value"
-linkTitle: "Wait For Key In Collection to Contain Value"
+title: "Wait For Key In Collection To Contain Value"
+linkTitle: "Wait For Key In Collection To Contain Value"
 description: "Waits for a key in a collection to contain the specified value."
 ---
 {{< figure src="/blocks/data-storage-wait-for-key-in-collection-block.png" alt="Icon" class="block-icon" >}}
@@ -11,7 +11,7 @@ description: "Waits for a key in a collection to contain the specified value."
 
 ## Description
 
-Waits for a specified [Key][Key Property] to contain the specified [Value][Value Property] in the specified [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
+Waits for a given [Key][Key Property] to contain the specified [Value][Value Property] in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property].
 
 ## Examples
 
@@ -29,10 +29,10 @@ In this example `"users"` already exists and contains the following keys and dat
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
-| [Value][Value Property] | `($)Value` with value `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}`.<br><br>In this example `($)Value` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Value` is a variable of type [UserCredentials][] |
+| [Value][Value Property] | `($)Value` with value `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}`.<br><br>In this example `($)Value` has been set up using the following [Expression][]:<br><br>`new UserCredentials(domain: "domain", username: "admin", password: "encryptedPassword")` | `($)Value` is a variable of type [UserCredentials][] |
 
 #### Result
 
@@ -54,10 +54,10 @@ In this example `"users"` already exists and contains the following keys and dat
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
-| [Value][Value Property] | `($)Value` with value `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Value` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Value` is a variable of type [UserCredentials][] |
+| [Value][Value Property] | `($)Value` with value `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Value` has been set up using the following [Expression][]:<br><br>`new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Value` is a variable of type [UserCredentials][] |
 
 #### Result
 
@@ -146,7 +146,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` in a [Data Storage Collection] named `"Collection"` to contain a [Value][Value Property] while `"COLLECTION"` already exists would delete from `"COLLECTION"`.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` in a [Data Storage Collection] named `"Collection"` to contain a [Value][Value Property] while `"COLLECTION"` already contains `"key"` will cause the execution to progress.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 
@@ -162,7 +162,7 @@ When trying to wait for a [Key][Key Property] that does not exist, in a collecti
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Key Property]: {{< ref "#key" >}}
 [Value Property]: {{< ref "#value" >}}
-[Waiting For Key Value When Different]: {{< ref "#wait-for-a-key-to-contain-value">}}
+[Waiting For Key Value When Different]: {{< ref "#wait-for-a-key-in-a-data-storage-collection-to-contain-value">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 

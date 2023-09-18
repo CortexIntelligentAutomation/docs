@@ -11,7 +11,7 @@ description: "Waits for a data storage collection to exist."
 
 ## Description
 
-Waits for a specified [Data Storage Collection][] to exist in the [Data Storage Service][].
+Waits for a specified [Data Storage Collection][] to exist within a [Collection Scope][Collection Scope Property].
 
 ## Examples
 
@@ -23,12 +23,12 @@ This example will wait for a [Data Storage Collection][] `"users"` to exist that
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
-Waiting for the `"users"` [Data Storage Collection][] to exist in the [CollectionScope][Collection Scope Property] defined results in the execution waiting as `"users"` does not exist within the scope accessible by this flow; see [Create Collection][].
+Waiting for the `"users"` [Data Storage Collection][] to exist results in the execution waiting until the desired [Collection][Collection Name Property] exists; see [Create Collection][].
 
 ### Wait for a Data Storage Collection that already exists to exist
 
@@ -43,12 +43,12 @@ This example will wait for a [Data Storage Collection][] `"users"` to exist that
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
 
-Waiting for the `"users"` [Data Storage Collection][] to exist in the [CollectionScope][Collection Scope Property] defined results in the execution progressing as `"users"` exists within the scope accessible by this flow.
+Waiting for the `"users"` [Data Storage Collection][] to exist results in the execution progressing as the collection `"users"` already exists.
 
 ## Properties
 

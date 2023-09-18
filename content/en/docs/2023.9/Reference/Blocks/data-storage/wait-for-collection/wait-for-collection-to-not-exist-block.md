@@ -1,6 +1,6 @@
 ---
-title: "Wait For Collection to Not Exist"
-linkTitle: "Wait For Collection to Not Exist"
+title: "Wait For Collection To Not Exist"
+linkTitle: "Wait For Collection To Not Exist"
 description: "Waits for a data storage collection to not exist."
 ---
 {{< figure src="/blocks/data-storage-wait-for-collection-block.png" alt="Icon" class="block-icon" >}}
@@ -11,7 +11,7 @@ description: "Waits for a data storage collection to not exist."
 
 ## Description
 
-Waits for a specified [Data Storage Collection][] to not exist in the [Data Storage Service][].
+Waits for a specified [Data Storage Collection][] to not exist within a [Collection Scope][Collection Scope Property].
 
 ## Examples
 
@@ -28,7 +28,7 @@ This example will wait for a [Data Storage Collection][] named `"users"`, that i
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. <br><br>In this example `($)Scope` has been set up using the following [Expression][]: <br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
@@ -45,7 +45,7 @@ This example will wait for a [Data Storage Collection][] named `"users"` that is
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. <br><br>In this example `($)Scope` has been set up using the following [Expression][]: <br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
