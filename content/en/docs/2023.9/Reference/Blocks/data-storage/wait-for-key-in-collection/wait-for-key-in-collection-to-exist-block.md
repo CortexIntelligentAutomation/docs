@@ -130,15 +130,19 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Waiting For a Key to Exist in a Collection That Doesn't Exist
+### Block Timeout
 
-When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see example [Wait For A Key To Exist in a Data Storage Collection][Wait For Missing Key].
+This block has a default [Block Timeout][] of 60 seconds. If the execution waits for longer than 60 seconds the block will throw a [BlockTimeoutException][].
 
 ### Case Sensitivity
 
 [Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to wait for a key `"users"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"users"` in the [Data Storage Collection][] `"COLLECTION"`.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
+
+### Waiting For a Key to Exist in a Collection That Doesn't Exist
+
+When trying to wait for a key to exist, in a collection that doesn't exist, it is treated the same as when a key does not exist in a collection that does exist; see example [Wait For A Key To Exist in a Data Storage Collection][Wait For Missing Key].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
@@ -154,7 +158,9 @@ When trying to wait for a key to exist, in a collection that doesn't exist, it i
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System">}}
+[Block Timeout]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty" >}}
 
+[BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
