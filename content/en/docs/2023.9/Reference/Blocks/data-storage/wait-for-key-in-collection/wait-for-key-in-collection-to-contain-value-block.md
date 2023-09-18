@@ -18,7 +18,7 @@ Wait for a specified [Key][Key Property] to contain the specified [Value][Value 
 ### Wait For a Key to contain Value
 
 This example will wait for a [Key][Key Property] `"user2"` to contain the specified [Value][Value Property] in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following [Keys][Key Property].
+In this example `"users"` already exists and contains the following keys and values.
 
 |Key | Data |
 -------------|--------------|
@@ -43,7 +43,7 @@ Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "
 ### Wait for a Key to contain Value which it already contains
 
 This example will wait for a [Key][Key Property] `"user2"` to contain the [Value][Value Property] `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant][] and [System][] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and contains the following [Keys][Key Property].
+In this example `"users"` already exists and contains the following keys and values.
 
 |Key | Data |
 -------------|--------------|
@@ -152,7 +152,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Waiting For a Key in a Collection That Does Not Exist to Contain a Value
 
-When trying to wait for a [Key][Key Property]  to contain a value and the [Data Storage Collection][] specified does not exist, , it is treated the same as when a key does not have a matching value; see example [Waiting For a Key To Contain Value When A Different Value Is Contained][Waiting For Key Value When Different].
+When trying to wait for a [Key][Key Property] to contain a value and the specified [Data Storage Collection][] does not exist, it is treated the same as when a key does not have a matching value; see example [Waiting For a Key To Contain Value When A Different Value Is Contained][Waiting For Key Value When Different].
 
 ### Waiting For a Key That Does Not Exist in a Collection To Contain a Value
 
