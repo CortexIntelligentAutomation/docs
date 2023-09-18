@@ -36,7 +36,7 @@ In this example `"users"` already exists and contains the following keys and val
 
 #### Result
 
-Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in the execution waiting until the the key `"user2"` contains [Value][Value Property].
+Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in the execution waiting until the the key `"user2"` contains the desired [Value][Value Property]; see [Write Data With Key][Write Data With Key].
 
 ***
 
@@ -61,7 +61,7 @@ In this example `"users"` already exists and contains the following keys and val
 
 #### Result
 
-Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in the execution progressing as the key `"user2"` already contains [Value][Value Property].
+Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in the execution progressing as the key `"user2"` already contains the desired [Value][Value Property].
 
 ***
 
@@ -69,7 +69,7 @@ Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Pas
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection] to wait for.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to wait for.
   
 | | |
 |--------------------|---------------------------|
@@ -101,7 +101,7 @@ The name of the [Data Storage Collection][] containing the [Key][Key Property] a
 
 ### Key
 
-The [Key][Key Property] to wait for.
+The [Key][Key Property] to wait for, containing the [Value][Value Property] to match.
 
 For more information about what a key is, please see [Keys].
 
@@ -178,6 +178,7 @@ When trying to wait for a [Key][Key Property] that does not exist, in a collecti
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
 
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
+[Write Data With Key]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc">}}
