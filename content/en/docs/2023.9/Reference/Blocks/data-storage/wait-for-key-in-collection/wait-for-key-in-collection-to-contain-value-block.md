@@ -162,8 +162,7 @@ When trying to wait for a [Key][Key Property] that does not exist, in a collecti
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Key Property]: {{< ref "#key" >}}
 [Value Property]: {{< ref "#value" >}}
-[Waiting For Key Value When Different]: {{< ref
-"#waiting-for-a-key-to-contain-value-when-a-different-value-is-contained">}}
+[Waiting For Key Value When Different]: {{< ref "#wait-for-a-key-to-contain-value">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
