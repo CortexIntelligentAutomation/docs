@@ -54,7 +54,7 @@ Waiting for the `"users"` [Data Storage Collection][] to exist results in the ex
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to wait for the [Data Storage Collection][] in.
+The [Collection Scope][Collection Scope Property] to wait for the [Data Storage Collection][] to exist in.
   
 | | |
 |--------------------|---------------------------|

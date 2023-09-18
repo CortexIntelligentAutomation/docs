@@ -11,7 +11,7 @@ description: "Waits for a key in a collection to exist."
 
 ## Description
 
-Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property].
+Waits for a specified [Key][Key Property] to exist in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property].
 
 ## Examples
 
@@ -31,13 +31,12 @@ This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data S
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user3"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [dynamic][] |
 
 #### Result
 
 Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the execution waiting until `"users"` contains the desired [Key][Key Property]; see [Write Data With Key][Write Data With Key].
 
-### Wait for a Key to exist in a Data Storage Collection with a Key that already exists
+### Wait for a Key to exist in a Data Storage Collection where the Key already exists
 
 This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following keys and data:
 
@@ -53,7 +52,6 @@ This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data S
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [dynamic][] |
 
 #### Result
 
@@ -130,7 +128,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property]`"key"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already contains a key `"key"` will cause the execution to progress.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already contains a key `"key"` will cause the execution to progress.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 

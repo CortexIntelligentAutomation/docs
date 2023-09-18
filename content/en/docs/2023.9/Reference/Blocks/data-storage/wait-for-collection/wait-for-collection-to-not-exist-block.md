@@ -50,7 +50,7 @@ This example will wait for a [Data Storage Collection][] named `"users"` that is
 
 #### Result
 
-Waiting for the `"users"` [Data Storage Collection][] to not exist results results in the execution progressing as the collection `"users"` already does not exist.
+Waiting for the `"users"` [Data Storage Collection][] to not exist results in the execution progressing as the collection `"users"` does not exist.
 
 ***
 
@@ -58,7 +58,7 @@ Waiting for the `"users"` [Data Storage Collection][] to not exist results resul
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] to wait for the [Data Storage Collection][] in.
+The [Collection Scope][Collection Scope Property] to wait for the [Data Storage Collection][] to not exist in.
   
 | | |
 |--------------------|---------------------------|
@@ -66,7 +66,7 @@ The [Collection Scope][Collection Scope Property] to wait for the [Data Storage 
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | [Collection Scope][Collection Scope Property] with value:|
+| Default Value | [Collection Scope][Collection Scope Property] with value|
 
 ```json
 {

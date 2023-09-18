@@ -11,13 +11,13 @@ description: "Waits for a key in a collection to not exist."
 
 ## Description
 
-Waits for a specified [Key][Key Property] to not exist in the specified [Data Storage Collection][] within a [Collection Scope][Collection Scope Property].
+Waits for a specified [Key][Key Property] to not exist in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property].
 
 ## Examples
 
 ### Wait for a Key in a Data Storage Collection to not exist
 
-This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
@@ -29,19 +29,19 @@ In this example `"users"` already exists and contains the following keys and dat
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
 
 #### Result
 
-Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in the execution waiting as `"user2"` is contained within the [Data Storage Collection][]; see [Delete Data With Key][].
+Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in the execution waiting until `"users"` does not contain the desired [Key][Key Property]; see [Delete Data With Key][].
 
 ***
 
-### Wait for a Key in a Data Storage Collection to not exist with a Key that already does not exist
+### Wait for a Key in a Data Storage Collection to not exist where the Key does not already exist
 
-This example will wait for a [Key][Key Property] `"user3"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
+This example will wait for a [Key][Key Property] `"user3"` to exist in the [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
@@ -53,13 +53,13 @@ In this example `"users"` already exists and contains the following keys and dat
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user3"` | `($)Key` is a variable of type [String][] |
 
 #### Result
 
-Waiting for `"user3"` to not exist in the [Data Storage Collection][] results in the execution progressing as `"user3"` is not contained within the [Data Storage Collection][].
+Waiting for `"user3"` to not exist in the [Data Storage Collection][] results in the execution progressing as `"users"` does not contain the desired [Key][Key Property].
 
 ***
 
@@ -67,7 +67,7 @@ Waiting for `"user3"` to not exist in the [Data Storage Collection][] results in
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] containing the [Key][Key Property] to wait for.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to wait for.
   
 | | |
 |--------------------|---------------------------|
@@ -126,20 +126,24 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
-### Waiting For a Key in a Collection That Does Not Exist
+### Block Timeout
 
-When trying to wait for a [Key][Key Property] contained in a collection that does not exist, it is treated the same as when a key does not exist in a collection; see [Wait for a Key in a Data Storage Collection to not exist][Wait For Key To Not Exist].
+This block has a default [Block Timeout][] of 60 seconds. If the execution waits for longer than 60 seconds the block will throw a [BlockTimeoutException][].
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so trying to wait for a key `"users"` to not exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"users"` in the [Data Storage Collection][] `"COLLECTION"`.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so trying to wait for a key `"key"` to not exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"key"` to not exist in the [Data Storage Collection][] `"COLLECTION"`.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
+
+### Waiting For a Key in a Collection That Does Not Exist
+
+When trying to wait for a [Key][Key Property] contained in a collection that does not exist, it is treated the same as when a key does not exist in a collection; see [Wait for a Key in a Data Storage Collection to not exist where the Key does not already exist][Wait For Key To Not Exist].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Key Property]: {{< ref "#key" >}}
-[Wait For Key To Not Exist]: {{< ref "#wait-for-key-to-not-exist" >}}
+[Wait For Key To Not Exist]: {{< ref "#wait-for-a-key-in-a-data-storage-collection-to-not-exist-where-the-key-does-not-already-exist" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
@@ -147,7 +151,9 @@ When trying to wait for a [Key][Key Property] contained in a collection that doe
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System">}}
+[Block Timeout]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty" >}}
 
+[BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
