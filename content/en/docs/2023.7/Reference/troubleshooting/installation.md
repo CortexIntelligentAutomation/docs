@@ -176,7 +176,6 @@ For each `Roaming` location, perform the following steps:
 1. Right-click on the `Roaming` folder and click `Properties`.
 1. In the dialog, click the `Security` tab.
 1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
-
 1. If the `Application Pool` user for Gateway is not listed:
    1. Click the `Edit...` button.
    1. Click the `Add...` button.
@@ -231,7 +230,6 @@ Check that the `Application Pool` user has rights to the `Repo` folder using the
 1. Right-click on the `Repo` folder and click `Properties`.
 1. In the dialog, click the `Security` tab.
 1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
-
 1. If the `Application Pool` user for Gateway is not listed:
    1. Click the `Edit...` button.
    1. Click the `Add...` button.
