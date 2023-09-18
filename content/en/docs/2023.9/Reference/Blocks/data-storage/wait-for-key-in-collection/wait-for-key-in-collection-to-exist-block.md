@@ -41,7 +41,7 @@ Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the
 
 ### Wait For A Key To Exist in a Data Storage Collection With a Key That Already Exists
 
-This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
+This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
@@ -56,7 +56,7 @@ The example will see that the [Key][Key Property] `"user2"` already exists in `"
 |--------------------|---------------------------|------------------------------------------|
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
-| [Key][Key Property] | `($)Key` with value `"user3"` | `($)Key` is a variable of type [String][] |
+| [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data`, with no value | `($)Data` is a variable that will be of type [dynamic][] |
 
 #### Result
@@ -69,7 +69,7 @@ Waiting for `"user2"` to exist in the [Data Storage Collection][] results in the
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to write to.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] being checked for the existence of the [Key][Key Property].
   
 | | |
 |--------------------|---------------------------|
@@ -89,7 +89,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
 
 ### Collection Name
 
-The name of the [Data Storage Collection][] to write to.
+The name of the [Data Storage Collection][] containing the [Key][Key Property] to check the existence of.
 
 | | |
 |--------------------|---------------------------|
@@ -101,7 +101,7 @@ The name of the [Data Storage Collection][] to write to.
 
 ### Key
 
-The [Key][Key Property] to add the [Data][Data Property] with.
+The [Key][Key Property] to check the existence of.
 
 The [Key][Key Property] can't be `null` and must be unique within each [Data Storage Collection][].
 
