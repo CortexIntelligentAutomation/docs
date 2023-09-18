@@ -15,7 +15,7 @@ Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storag
 
 ## Examples
 
-### Wait For A Key To Exist in a Data Storage Collection 
+### Wait For A Key To Exist in a Data Storage Collection
 
 This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following [Keys][Key Property] and data:
 
@@ -37,7 +37,7 @@ The example will see that the [Key][Key Property] `"user3"` does not currently e
 
 #### Result
 
-Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the execution waiting as `"user3"` is not contained within the [Data Storage Collection][]. The execution will wait for 60 seconds by default or until the [Key][Key Property] is added to the [Data Storage Collection][] `"users"`.
+Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the execution waiting as `"user3"` is not contained within the [Data Storage Collection][]; see [Write Data With Key][Write Data With Key].
 
 ### Wait For A Key To Exist in a Data Storage Collection With a Key That Already Exists
 
@@ -161,6 +161,7 @@ When trying to wait for a key to exist, in a collection that doesn't exist, it i
 
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 [Data Storage Service]: {{< url path = "Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc">}}
+[Write Data With Key]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
