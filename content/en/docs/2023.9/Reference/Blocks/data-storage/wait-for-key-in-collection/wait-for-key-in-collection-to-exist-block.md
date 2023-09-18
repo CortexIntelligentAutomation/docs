@@ -11,20 +11,18 @@ description: "Waits for a key in a collection to exist."
 
 ## Description
 
-Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storage Collection][].
+Waits for a specified [Key][Key Property] to exist as an entry in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property].
 
 ## Examples
 
 ### Wait for a Key to exist in a Data Storage Collection
 
-This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].In this example `"users"` already exists and contains the following following keys and data:
+This example will wait for a [Key][Key Property] `"user3"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following following keys and data:
 
 |Key | Data |
 -------------|--------------|
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
-
-The example will see that the [Key][Key Property] `"user3"` does not currently exist in `"users"` and wait until another flow with access to the [Data Storage Collection][] `"users"` [writes Data][Write Data With Key] with a key `"user3"` to `"users"`.
 
 #### Properties
 
@@ -37,18 +35,16 @@ The example will see that the [Key][Key Property] `"user3"` does not currently e
 
 #### Result
 
-Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the execution waiting as `"user3"` is not contained within the [Data Storage Collection][]; see [Write Data With Key][Write Data With Key].
+Waiting for `"user3"` to exist in the [Data Storage Collection][] results in the execution waiting until `"users"` contains the desired [Key][Key Property]; see [Write Data With Key][Write Data With Key].
 
 ### Wait for a Key to exist in a Data Storage Collection with a Key that already exists
 
-This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are coped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following keys and data:
+This example will wait for a [Key][Key Property] `"user2"` to exist in a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property]. In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
-
-The example will see that the [Key][Key Property] `"user2"` already exists in `"users"` and continue the execution of the flow containing this block.
 
 #### Properties
 
@@ -61,7 +57,7 @@ The example will see that the [Key][Key Property] `"user2"` already exists in `"
 
 #### Result
 
-Waiting for `"user2"` to exist in the [Data Storage Collection][] results in the execution progressing as `"user2"` is contained within the [Data Storage Collection][].
+Waiting for `"user2"` to exist in the [Data Storage Collection][] results in the execution progressing as `"users"` already contains the desired [Key][Key Property].
 
 ***
 
@@ -69,7 +65,7 @@ Waiting for `"user2"` to exist in the [Data Storage Collection][] results in the
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] being checked for the existence of the [Key][Key Property].
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to wait for.
   
 | | |
 |--------------------|---------------------------|
@@ -89,7 +85,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
 
 ### Collection Name
 
-The name of the [Data Storage Collection][] containing the [Key][Key Property] to check the existence of.
+The name of the [Data Storage Collection][] containing the [Key][Key Property] to wait for.
 
 | | |
 |--------------------|---------------------------|
@@ -101,9 +97,7 @@ The name of the [Data Storage Collection][] containing the [Key][Key Property] t
 
 ### Key
 
-The [Key][Key Property] to check the existence of.
-
-The [Key][Key Property] can't be `null` and must be unique within each [Data Storage Collection][].
+The [Key][Key Property] to wait for.
 
 For more information about what a key is, please see [Keys].
 
@@ -136,7 +130,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so trying to wait for a key `"users"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"users"` in the [Data Storage Collection][] `"COLLECTION"`.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property]`"key"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already contains a key `"key"` will cause the execution to progress.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 

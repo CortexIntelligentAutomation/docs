@@ -69,7 +69,7 @@ Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Pas
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] containing the [Key][Key Property] and [Value][Value Property] to wait for.
+The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to wait for.
   
 | | |
 |--------------------|---------------------------|
@@ -146,7 +146,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` in a [Data Storage Collection] named `"Collection"` to contain a [Value][Value Property] while `"COLLECTION"` already contains `"key"` will cause the execution to progress.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` in a [Data Storage Collection][] named `"Collection"` to contain a [Value][Value Property] while `"COLLECTION"` already contains `"key"` will cause the execution to progress.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 
