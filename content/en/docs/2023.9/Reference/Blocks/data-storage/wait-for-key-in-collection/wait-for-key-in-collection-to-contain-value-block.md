@@ -101,7 +101,7 @@ The name of the [Data Storage Collection][] containing the [Key][Key Property] a
 
 ### Key
 
-The [Key][Key Property] to wait for, containing the [Value][Value Property] to match.
+The [Key][Key Property] containing the [Value][Value Property] to match.
 
 For more information about what a key is, please see [Keys].
 
