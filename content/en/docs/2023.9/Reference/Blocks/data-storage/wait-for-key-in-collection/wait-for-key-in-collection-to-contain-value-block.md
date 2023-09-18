@@ -11,7 +11,7 @@ description: "Waits for a key in a collection to contain the specified value."
 
 ## Description
 
-Wait for a specified [Key][] to contain the specified [Value][Value Property] in the specified [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
+Wait for a specified [Key][Key Property] to contain the specified [Value][Value Property] in the specified [Data Storage Collection][] within the [Collection Scope][Collection Scope Property].
 
 ## Examples
 
@@ -36,7 +36,7 @@ In this example `"users"` already exists and contains the following [Keys][Key P
 
 #### Result
 
-Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in  the execution progressing as the [Value][ValueProperty] of `"user2"` matches the desired value.
+Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in  the execution progressing as the [Value][Value Property] of `"user2"` matches the desired value.
 
 
 ***
@@ -176,6 +176,7 @@ When trying to wait for a [Key][Key Property] that does not exist, in a collecti
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc">}}
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
