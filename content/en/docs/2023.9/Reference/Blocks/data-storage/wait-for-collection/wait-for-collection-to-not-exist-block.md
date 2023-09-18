@@ -15,9 +15,9 @@ Waits for a specified [Data Storage Collection][] to not exist in the [Data Stor
 
 ## Examples
 
-### Wait For a Data Storage Collection to not exist
+### Wait For a Data Storage Collection to Not Exist
 
-This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property] to not exist. In this example `"users"` already exists and contains the following keys and data:
+This example will wait for a [Data Storage Collection][] named `"users"`, that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property], to not exist. In this example `"users"` already exists and contains the following keys and data:
 
 |Key | Data |
 -------------|--------------|
@@ -37,7 +37,7 @@ Waiting for the [Data Storage Collection][] named `"users"` to not exist results
 
 ***
 
-### Wait For a Data Storage Collection to not exist when it already does not exist
+### Wait For a Data Storage Collection to Not Exist When it Does Not Already Exist
 
 This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property] to not exist. In this example there is no [Data Storage Collection][] named `"users"`.
 
@@ -102,11 +102,12 @@ The exceptions thrown by the block can be found below:
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so waiting for a [Data Storage Collection] named `"Collection"` to not exist while `"COLLECTION"` exists will cause the block to wait.
+[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so waiting for a [Data Storage Collection] named `"Collection"` to not exist while `"COLLECTION"` exists will cause the execution to wait as in this example: [Wait For a Data Storage Collection To Not Exist][Wait For Collection To Not Exist].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Data Property]: {{< ref "#data" >}}
+[Wait For Collection To Not Exist]: {{< ref "#wait-for-a-data-storage-collection-to-not-exist" >}}
 [Wait For Missing Key]: {{< ref "#wait-for-a-key-to-exist-in-a-data-storage-collection">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
@@ -117,7 +118,7 @@ The exceptions thrown by the block can be found below:
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System">}}
 
-[Deleted]: {{< url path="Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBlock.MainDoc">}}
+[Deleted]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock.MainDoc">}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
