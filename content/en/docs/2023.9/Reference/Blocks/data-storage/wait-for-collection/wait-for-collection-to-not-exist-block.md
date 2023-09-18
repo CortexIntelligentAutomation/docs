@@ -37,7 +37,7 @@ Waiting for the [Data Storage Collection][] named `"users"` to not exist results
 
 ***
 
-### Wait for a Data Storage Collection to not exist when it already does not exist
+### Wait for a Data Storage Collection to not exist when it does not already exist
 
 This example will wait for a [Data Storage Collection][] named `"users"` that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property] to not exist. In this example there is no [Data Storage Collection][] named `"users"`.
 
