@@ -22,7 +22,6 @@ This example will attempt to write [Data][Data Property] to a [Data Storage Coll
  |Key | Data |
 -------------|--------------|
  |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
- 
 
 The example will write the [Data][Data Property] `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` of type [UserCredentials][] with the [Key][Key Property] `"user2"`.
 
@@ -30,10 +29,10 @@ The example will write the [Data][Data Property] `{"Domain": "domain", "Username
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`. In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
+| [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
 
 #### Result
 
@@ -61,10 +60,10 @@ The example will write the [Data][Data Property] `{"Domain": "domain", "Username
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
-| [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "new user2", "Password": "encryptedPassword"}`. In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "new user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
+| [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "new user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "new user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
 
 #### Result
 
@@ -154,7 +153,6 @@ The exceptions thrown by the block can be found below:
 | | Thrown when the [Key][Key Property] is `null` |
 | [ServiceDoesNotExistException][] | Thrown when the [Data Storage Service][] does not exist. |
 | [ServiceUnavailableException][] | Thrown when the [Data Storage Service][] is not healthy. |
-
 
 ## Remarks
 
