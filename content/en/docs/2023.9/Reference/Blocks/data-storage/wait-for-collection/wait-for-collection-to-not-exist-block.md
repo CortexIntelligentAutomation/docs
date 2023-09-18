@@ -67,6 +67,7 @@ The [Collection Scope][Collection Scope Property] to wait for the [Data Storage 
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
 | Default Value | [Collection Scope][Collection Scope Property] with value:|
+
 ```json
 {
     "Tenant": "ScopeOption.Current",
@@ -106,7 +107,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so waiting for a [Data Storage Collection] named `"Collection"` to not exist while `"COLLECTION"` exists will cause the execution to wait; see [Wait for a Data Storage Collection to not exist][Wait For Collection To Not Exist].
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Data Storage Collection] named `"Collection"` to not exist while `"COLLECTION"` exists will cause the execution to wait; see [Wait for a Data Storage Collection to not exist][Wait For Collection To Not Exist].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
