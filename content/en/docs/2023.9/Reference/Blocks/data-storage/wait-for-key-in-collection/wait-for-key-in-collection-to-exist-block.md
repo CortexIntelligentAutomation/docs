@@ -136,7 +136,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. 'Collection' is the same as 'collection'), so trying to wait for a key `"users"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"users"` in the [Data Storage Collection][] `"COLLECTION"`.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so trying to wait for a key `"users"` to exist in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already exists would wait for `"users"` in the [Data Storage Collection][] `"COLLECTION"`.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 
