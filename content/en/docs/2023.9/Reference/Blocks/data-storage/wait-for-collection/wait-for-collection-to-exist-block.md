@@ -54,7 +54,7 @@ Waiting for the `"users"` [Data Storage Collection][] to exist in the [Collectio
 
 ### Collection Scope
 
-The [Collection Scope][Collection Scope Property] containing the [Data Storage Collection][] to check the existence of.
+The [Collection Scope][Collection Scope Property] to wait for the [Data Storage Collection][] in.
   
 | | |
 |--------------------|---------------------------|
@@ -74,7 +74,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
 
 ### Collection Name
 
-The name of the [Data Storage Collection][] to check the existence of.
+The name of the [Data Storage Collection][] to wait for.
 
 | | |
 |--------------------|---------------------------|
