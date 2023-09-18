@@ -41,7 +41,7 @@ Waiting for `"user2"` to contain `{"Domain": "domain", "Username": "user2", "Pas
 
 ***
 
-### Waiting For a Key To Contain Value When A Different Value Is Contained
+### Waiting For a Key To Contain Value When a Different Value is Contained
 
 This example will wait for a [Key][Key Property] `"user2"` to contain the specified [Value][Value Property] in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
 In this example `"users"` already exists and contains the following [Keys][Key Property].

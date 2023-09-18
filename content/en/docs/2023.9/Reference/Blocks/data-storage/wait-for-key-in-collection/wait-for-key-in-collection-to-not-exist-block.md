@@ -3,7 +3,6 @@ title: "Wait For Key In Collection to Not Exist"
 linkTitle: "Wait For Key In Collection to Not Exist"
 description: "Waits for a key in a collection to not exist."
 ---
-TODO
 {{< figure src="/blocks/data-storage-wait-for-key-in-collection-block.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
@@ -129,7 +128,7 @@ The exceptions thrown by the block can be found below:
 
 ### Waiting For a Key in a Collection That Does Not Exist
 
-When trying to wait for a [Key][Key Property] contained in a collection that does not exist, it is treated the same as when a key does not exist in a collection; see example [Wait For Key To Not Exist][Key does not exist].
+When trying to wait for a [Key][Key Property] contained in a collection that does not exist, it is treated the same as when a key does not exist in a collection; see example [Wait For Key To Not Exist][Wait For Key To Not Exist].
 
 ### Case Sensitivity
 
@@ -140,6 +139,7 @@ When trying to wait for a [Key][Key Property] contained in a collection that doe
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
 [Key Property]: {{< ref "#key" >}}
+[Wait For Key To Not Exist]: {{< ref "#wait-for-key-to-not-exist" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
