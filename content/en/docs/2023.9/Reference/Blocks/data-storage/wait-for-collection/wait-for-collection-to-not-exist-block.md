@@ -33,7 +33,7 @@ This example will wait for a [Data Storage Collection][] named `"users"`, that i
 
 #### Result
 
-Waiting for the [Data Storage Collection][] named `"users"` to not exist results in the execution waiting as the `"users"` [Data Storage Collection][] exists. The execution will wait for 60 seconds by default or until the `"users"` [Data Storage Collection][] is [Deleted][].
+Waiting for the [Data Storage Collection][] named `"users"` to not exist results in the execution waiting as the `"users"` [Data Storage Collection][] exists; see [Delete Collection][Deleted].
 
 ***
 

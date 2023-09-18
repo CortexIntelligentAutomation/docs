@@ -28,7 +28,7 @@ This example will wait for a [Data Storage Collection][] `"users"` to exist that
 
 #### Result
 
-Waiting for the `"users"` [Data Storage Collection][] to exist in the [CollectionScope][Collection Scope Property] defined results in the execution waiting as `"users"` does not exist within the scope accessible by this flow. The execution will wait for 60 seconds by default or until the [Data Storage Collection][] `"users"` is created in an accessible scope; see [Create Collection][].
+Waiting for the `"users"` [Data Storage Collection][] to exist in the [CollectionScope][Collection Scope Property] defined results in the execution waiting as `"users"` does not exist within the scope accessible by this flow; see [Create Collection][].
 
 ### Wait For a Data Storage Collection That Already Exists to Exist
 

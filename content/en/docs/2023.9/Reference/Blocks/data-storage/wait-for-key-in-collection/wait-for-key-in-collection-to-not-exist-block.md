@@ -18,7 +18,7 @@ Wait for a specified [Key][Key Property] to not exist in the specified [Data Sto
 ### Wait For Key To Not Exist
 
 This example will wait for a [Key][Key Property] `"user3"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and containes the following [Keys][Key Property].
+In this example `"users"` already exists and contains the following [Keys][Key Property].
 
 |Key | Data |
 -------------|--------------|
@@ -42,7 +42,7 @@ Waiting for `"user3"` to not exist in the [Data Storage Collection][] results in
 ### Waiting For a Key To Not Exist with a key That Does Exist
 
 This example will wait for a [Key][Key Property] `"user2"` to exist in the [Data Storage Collection][] named `"users"`that is only accessible by flows that are scoped to the same [Tenant] and [System] specified by the [Collection Scope][Collection Scope Property].
-In this example `"users"` already exists and containes the following [Keys][Key Property].
+In this example `"users"` already exists and contains the following [Keys][Key Property].
 
 |Key | Data |
 -------------|--------------|
@@ -59,7 +59,7 @@ In this example `"users"` already exists and containes the following [Keys][Key 
 
 #### Result
 
-Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in the execution waiting as `"user2"` is contained within the [Data Storage Collection][]. The execution will wait for 60 seconds by default or until the [Key][Key Property] is removed from the [Data Storage Collection][] `"users"`.
+Waiting for `"user2"` to not exist in the [Data Storage Collection][] results in the execution waiting as `"user2"` is contained within the [Data Storage Collection][]; see [Delete Data With Key][]. The execution will wait for 60 seconds by default or until the [Key][Key Property] is removed from the [Data Storage Collection][] `"users"`.
 
 ***
 
@@ -153,6 +153,7 @@ When trying to wait for a [Key][Key Property] contained in a collection that doe
 [ArgumentException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentException" >}}
 
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
+[Delete Data With Key]: {{< url path = "Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
