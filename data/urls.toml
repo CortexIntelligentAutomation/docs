@@ -388,11 +388,11 @@
                 MainDoc = "/docs/reference/blocks/data-storage"
                 [Cortex.Reference.Blocks.DataStorage.CreateCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/create-collection"
-                    [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBLock]
+                    [Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/create-collection/create-collection-block"
                 [Cortex.Reference.Blocks.DataStorage.DeleteCollection]
                     MainDoc = "/docs/reference/blocks/data-storage/delete-collection"
-                    [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBLock]
+                    [Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/delete-collection/delete-collection-block"
                 [Cortex.Reference.Blocks.DataStorage.DeleteData]
                     MainDoc = "/docs/reference/blocks/data-storage/delete-data"
@@ -406,6 +406,20 @@
                     MainDoc = "/docs/reference/blocks/data-storage/write-data"
                     [Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/write-data/write-data-with-key-block"
+                [Cortex.Reference.Blocks.DataStorage.WaitForCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/wait-for-collection"                
+                    [Cortex.Reference.Blocks.DataStorage.WaitForCollection.WaitForCollectionToExistBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-collection/wait-for-collection-to-exist-block"
+                    [Cortex.Reference.Blocks.DataStorage.WaitForCollection.WaitForCollectionToNotExistBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-collection/wait-for-collection-to-not-exist-block"
+                [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection]
+                    MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection"                
+                    [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToExistBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-exist-block"
+                    [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToNotExistBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-not-exist-block"
+                    [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToContainValueBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-contain-value-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]
