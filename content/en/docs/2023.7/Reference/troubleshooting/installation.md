@@ -163,14 +163,12 @@ Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` fil
 
 #### Application Pool user does not have Modify rights to the Roaming folder
 
-The `Roaming` folder requires `Modify` permission to allow creating the `NuGet` folders and its `NuGet.Config` file within.
+The following folders require `Modify` permission to allow creating the `NuGet` folders and its `NuGet.Config` file within:
 
-There are 2 locations where the `Roaming` folders needs `Modify` rights:
+* `C:\Windows\System32\config\systemprofile\AppData\Roaming`
+* `C:\Windows\SysWOW64\config\systemprofile\AppData\Roaming`
 
-* `C:\Windows\System32\config\systemprofile\AppData`
-* `C:\Windows\SysWOW64\config\systemprofile\AppData`
-
-For each `Roaming` location, perform the following steps:
+For each folder, perform the following steps:
 
 1. Navigate to the `AppData` folder.
 1. Right-click on the `Roaming` folder and click `Properties`.
