@@ -18,7 +18,7 @@ Test the platform by creating a new flow and executing it using the following st
 1. Click on the group to open it (refresh the page if it does not appear).
 1. Inside the group, click the `+` button again and click on `Flow` to open a dialog. If the menu item is not present, it means that the `FeatureFlags` in the `CortexGateway.SetParameters.xml` file was not set properly when installing Gateway. See [Troubleshooting][Troubleshooting No Innovation] for more information.
 1. Enter a name for the flow, configure the `Permission Groups` and click `OK` to create the flow.
-1. The flow should be displayed with a start flow block and end flow block. A list of block palettes should be displayed down the left hand side:
+1. The flow should be displayed with a start flow block and end flow block, if those blocks are not displayed see [Troubleshooting][Troubleshooting Flow No Blocks]. A list of block palettes should be displayed down the left hand side:
     {{< figure src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
 1. Add a `Set Variable` block and connect it between the start and end blocks.
 1. Click the `Set Variable` block to open the Property Editor.
@@ -56,6 +56,7 @@ Test the platform by creating a new flow and executing it using the following st
 
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Troubleshooting Flow Not Starting]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNotStarting" >}}
+[Troubleshooting Flow No Blocks]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNoBlocks" >}}
 [Troubleshooting No Innovation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoInnovation" >}}
 [Troubleshooting No Publish]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
