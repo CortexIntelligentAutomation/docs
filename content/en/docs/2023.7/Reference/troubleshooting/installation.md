@@ -171,22 +171,22 @@ The following folders require `Modify` permission to allow creating the `NuGet` 
 For each folder, perform the following steps:
 
 1. Navigate to the `AppData` folder.
-2. Right-click on the `Roaming` folder and click `Properties`.
-3. In the dialog, click the `Security` tab.
-4. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
-5. If the `Application Pool` user for Gateway is not listed:
+1. Right-click on the `Roaming` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+1. If the `Application Pool` user for Gateway is not listed:
    1. Click the `Edit...` button.
-   2. Click the `Add...` button.
-   3. Enter the username of the application pool user and click `OK`.
-   4. In the `Permissions` section at the bottom, check `Modify`.
-   5. Click `OK`.
-   6. Click `Yes` to change the permission to the folder.
-6. If the `Application Pool` user for Gateway is listed but does not have permissions:
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+   1. Click `Yes` to change the permission to the folder.
+1. If the `Application Pool` user for Gateway is listed but does not have permissions:
    1. Click the `Edit...` button.
-   2. Select the `Application Pool` user.
-   3. Check `Modify`.
-   4. Click `OK`.
-   5. Click `Yes` to change the permission to the folder.
+   1. Select the `Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+   1. Click `Yes` to change the permission to the folder.
 
 #### Application Pool user does not have rights to the Cortex Blocks Provider Host folder
 
