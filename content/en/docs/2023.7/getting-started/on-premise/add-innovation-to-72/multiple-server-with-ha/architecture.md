@@ -38,7 +38,7 @@ The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Ser
 
 The minimum architecture requires 5 servers:
 
-* 1x Web Application Server, which contains Gateway. For Innovation, the existing Gateway will be upgraded a new Debug Node will be added
+* 1x Web Application Server, which contains Gateway. For Innovation, the existing Gateway will be upgraded and a new Debug Node will be added
 * 2x Application Servers for v7.2, each of these will also host one of the three Application Servers for Innovation
 * 1x Database Server for v7.2, which will also host the remaining Application Server for Innovation
 * 1x Database Server for v7.2, which will also host the Load Balancer for Innovation
