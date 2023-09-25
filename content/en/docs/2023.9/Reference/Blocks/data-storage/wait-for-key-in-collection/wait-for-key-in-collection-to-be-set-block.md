@@ -173,7 +173,7 @@ When trying to wait for a key to be set, in a collection that doesn't exist, it 
 
 ### Waiting for a Key to Be Set in a Collection That is Deleted Before Being Recreated and Set
 
-When trying to wait for a key that exists, to be set, in a collection that exists, that is then deleted before a [Write Data][Write Data With Key] is 
+When trying to wait for a key that exists, to be set, in a collection that exists, that is then deleted (e.g. with a [Delete Collection][Delete Collection] block) before then being created and having a [Write Data][Write Data With Key] act upon it, it will act as in [Wait for a Key to be set in a Data Storage Collection where the Key does not already exist][Wait For Missing Key] - i.e. [Old Value][Old Value Property] will have a value of `null`.
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
@@ -214,4 +214,5 @@ When trying to wait for a key that exists, to be set, in a collection that exist
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Keys]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 
-[Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
+[Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc" >}}
+[Delete Collection]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock.MainDoc" >}}
