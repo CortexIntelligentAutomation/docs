@@ -11,7 +11,7 @@ description: "Waits for a key in a collection to be set."
 
 ## Description
 
-Waits for a specified [Key][Key Property] in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property] to be set to a value, and outputs the old and new values to two [output properties][Output].
+Waits for a specified [Key][Key Property] in a [Data Storage Collection][] within a [Collection Scope][Collection Scope Property] to be set to a value and returns the [old][Old Value Property] and [new][New Value Property] values.
 
 ## Examples
 
@@ -23,6 +23,11 @@ This example will wait for a [Key][Key Property] `"user1"` to be set in a [Data 
 -------------|--------------|
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
+
+In this example a separate flow with access to `"users"` has a [Write Data With Key][Write Data With Key] bloack that will act on users to add the following key and data:
+|Key | Data |
+-------------|--------------|
+|`"user1"` | `{"Domain": "newDomain", "Username": "newUser1", "Password": "encryptedPassword"}` |
 
 #### Properties
 
@@ -37,7 +42,7 @@ This example will wait for a [Key][Key Property] `"user1"` to be set in a [Data 
 #### Result
 
 Waiting for `"user1"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user1"` is updated to have any value; see [Write Data With Key][Write Data With Key].
-On the update to the value of `"user1"`, [Old Value][Old Value Property] will have the value `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}`. [New Value][New Value Property] will have whichever value is later written into the key `"user1"`.
+On the update to the value of `"user1"`, [Old Value][Old Value Property] will have the value `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}`. [New Value][New Value Property] will have the value `{"Domain": "newDomain", "Username": "newUser1", "Password": "encryptedPassword"}`.
 
 ***
 
@@ -113,15 +118,14 @@ For more information about what a key is, please see [Keys].
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Property Type | [Output][] |
+| Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Key` with no value |
 
 ### Old Value
 
-The [Old Value][Old Value Property] associated with the key in the [Data Storage Collection][], i.e. before setting a value. This is an [Output Property][Output].
-
+The [Old Value][Old Value Property] associated with the key in the [Data Storage Collection][], i.e. before setting a value.
 | | |
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
@@ -132,7 +136,7 @@ The [Old Value][Old Value Property] associated with the key in the [Data Storage
 
 ### New Value
 
-The [New Value][New Value Property] associated with the key in the [Data Storage Collection][], i.e. after setting a value. This is an [Output Property][Output]. [New Value][New Value Property] can have the same value as [Old Value][Old Value Property].
+The [New Value][New Value Property] associated with the key in the [Data Storage Collection][], i.e. after setting a value. [New Value][New Value Property] can have the same value as [Old Value][Old Value Property].
 
 | | |
 |--------------------|---------------------------|
@@ -180,7 +184,7 @@ When trying to wait for a key that exists, to be set, in a collection that exist
 [Key Property]: {{< ref "#key" >}}
 [Data Property]: {{< ref "#data" >}}
 [Wait For Missing Key]: {{< ref
-"#wait-for-a-key-to-be-set-in-a-data-storage-collection-where-that-key-does-not-already-exist">}}
+"#wait-for-a-key-to-be-set-in-a-data-storage-collection-where-the-key-does-not-already-exist">}}
 [Old Value Property]: {{< ref "#old-value" >}}
 [New Value Property]: {{< ref "#new-value" >}}
 
