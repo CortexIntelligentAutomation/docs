@@ -37,7 +37,7 @@ This example will wait for a [Key][Key Property] `"user1"` to be set in a [Data 
 #### Result
 
 Waiting for `"user1"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user1"` is updated to have any value; see [Write Data With Key][Write Data With Key].
-On the update to the value of `"user1"`, the [Old Value][Old Value Property] will have the value `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}`. The [New Value][New Value Property] will have whichever value is later written into the key `"user1"`.
+On the update to the value of `"user1"`, [Old Value][Old Value Property] will have the value `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}`. [New Value][New Value Property] will have whichever value is later written into the key `"user1"`.
 
 ***
 
@@ -65,8 +65,8 @@ In this example [Write Data With Key][Write Data With Key] block in a separate f
 #### Result
 
 Waiting for `"user3"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user1"` is created; see [Write Data With Key][Write Data With Key].
-On the creation of `"user3"` the [Old Value][Old Value Property] will have the value `null`, as the key did not exist before being set to a value.
-The [New Value][New Value Property] will have the value `{"Domain": "domain", "Username": "user3", "Password": "encryptedPassword"}`.
+On the creation of `"user3"` [Old Value][Old Value Property] will have the value `null`, as the key did not exist before being set to a value.
+[New Value][New Value Property] will have the value `{"Domain": "domain", "Username": "user3", "Password": "encryptedPassword"}`.
 
 ***
 
