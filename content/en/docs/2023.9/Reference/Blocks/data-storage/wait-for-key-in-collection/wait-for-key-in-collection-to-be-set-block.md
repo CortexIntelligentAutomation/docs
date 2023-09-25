@@ -24,7 +24,7 @@ This example will wait for a [Key][Key Property] `"user1"` to be set in a [Data 
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
 
-In this example a separate flow with access to `"users"` has a [Write Data With Key][Write Data With Key] bloack that will act on users to add the following key and data:
+In this example a separate flow with access to `"users"` has a [Write Data With Key][Write Data With Key] block that will act on `"users"` to update the following key and data:
 |Key | Data |
 -------------|--------------|
 |`"user1"` | `{"Domain": "newDomain", "Username": "newUser1", "Password": "encryptedPassword"}` |
@@ -36,12 +36,12 @@ In this example a separate flow with access to `"users"` has a [Write Data With 
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user1"` | `($)Key` is a variable of type [String][] |
-| [Old Value][Old Value Property] | `($)OldValue` with value `""` | `($)OldValue` is a variable of type [dynamic][] |
-| [New Value][New Value Property] | `($)NewValue` with value `""` | `($)NewValue` is a variable of type [dynamic][] |
+| [Old Value][Old Value Property] | `($)OldValue`, with no value | `($)OldValue` is a variable of type [dynamic][] |
+| [New Value][New Value Property] | `($)NewValue`, with no value | `($)NewValue` is a variable of type [dynamic][] |
 
 #### Result
 
-Waiting for `"user1"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user1"` is updated to have any value; see [Write Data With Key][Write Data With Key].
+Waiting for `"user1"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user1"` is updated to have any value; see [Write Data With Key][Write Data With Key].  
 On the update to the value of `"user1"`, [Old Value][Old Value Property] will have the value `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}`. [New Value][New Value Property] will have the value `{"Domain": "newDomain", "Username": "newUser1", "Password": "encryptedPassword"}`.
 
 ***
@@ -55,7 +55,10 @@ This example will wait for a [Key][Key Property] `"user3"` to be set in a [Data 
 |`"user1"` | `{"Domain": "domain", "Username": "user1", "Password": "encryptedPassword"}` |
 |`"user2"` | `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}` |
 
-In this example [Write Data With Key][Write Data With Key] block in a separate flow that is scoped to the same [Collection Scope][Collection Scope Property] will, at an undefined future point, write to `"user3"` in `"users"` the following value: `{"Domain": "domain", "Username": "user3", "Password": "encryptedPassword"}`.
+In this example a separate flow with access to `"users"` has a [Write Data With Key][Write Data With Key] block that will act on `"users"` to add the following key and data:
+|Key | Data |
+-------------|--------------|
+|`"user3"` | `{"Domain": "domain", "Username": "user3", "Password": "encryptedPassword"}` |
 
 #### Properties
 
@@ -64,12 +67,12 @@ In this example [Write Data With Key][Write Data With Key] block in a separate f
 | [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [Scope][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user3"` | `($)Key` is a variable of type [String][] |
-| [Old Value][Old Value Property] | `($)OldValue` with value `""` | `($)OldValue` is a variable of type [dynamic][] |
-| [New Value][New Value Property] | `($)NewValue` with value `""` | `($)NewValue` is a variable of type [dynamic][] |
+| [Old Value][Old Value Property] | `($)OldValue`, with no value | `($)OldValue` is a variable of type [dynamic][] |
+| [New Value][New Value Property] | `($)NewValue`, with no value | `($)NewValue` is a variable of type [dynamic][] |
 
 #### Result
 
-Waiting for `"user3"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user1"` is created; see [Write Data With Key][Write Data With Key].
+Waiting for `"user3"` to be set in the [Data Storage Collection][] results in the execution waiting until the [Key][Key Property] `"user3"` is created; see [Write Data With Key][Write Data With Key].  
 On the creation of `"user3"` [Old Value][Old Value Property] will have the value `null`, as the key did not exist before being set to a value.
 [New Value][New Value Property] will have the value `{"Domain": "domain", "Username": "user3", "Password": "encryptedPassword"}`.
 
@@ -167,17 +170,13 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 
 ### Case Sensitivity
 
-[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` to be set in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already contains a key `"key"` will cause the execution to progress if any [Key][Key Property] `"key"` in the [Collection Scope][Collection Scope Property] is set.
+[Collection Name][Collection Name Property] is case insensitive (e.g. `"Collection"` is the same as `"collection"`), so waiting for a [Key][Key Property] `"key"` to be set in a [Data Storage Collection][] named `"Collection"` while `"COLLECTION"` already contains a key `"key"` will cause the execution to progress if the [Key][Key Property] `"key"` in the [Collection Scope][Collection Scope Property] is set.
 
 [Key][Key Property] is case sensitive (e.g. `"user"` is not the same as `"USER"`).
 
 ### Waiting for a Key to Be Set in a Collection That Does Not Exist
 
-When trying to wait for a key to be set, in a collection that doesn't exist, it is treated the same as when waiting for a key that does not exist in a collection that does exist to be set; see [Wait for a Key to be set in a Data Storage Collection where the Key does not already exist][Wait For Missing Key].
-
-### Waiting for a Key to Be Set in a Collection That is Deleted Before Being Recreated and Set
-
-When trying to wait for a key that exists, to be set, in a collection that exists, that is then deleted (e.g. with a [Delete Collection][Delete Collection] block) before then being created and having a [Write Data][Write Data With Key] act upon it, it will act as in [Wait for a Key to be set in a Data Storage Collection where the Key does not already exist][Wait For Missing Key] - i.e. [Old Value][Old Value Property] will have a value of `null`.
+Waiting for a key to be set, in a collection that doesn't exist, it is treated the same as when waiting for a key that does not exist to be set; see [Wait for a Key to be set in a Data Storage Collection where the Key does not already exist][Wait For Missing Key].
 
 [Collection Scope Property]: {{< ref "#collection-scope" >}}
 [Collection Name Property]: {{< ref "#collection-name" >}}
