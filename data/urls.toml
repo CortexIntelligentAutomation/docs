@@ -420,6 +420,8 @@
                         MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-not-exist-block"
                     [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToContainValueBlock]
                         MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-contain-value-block"
+                    [Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToBeSetBlock]
+                        MainDoc = "/docs/reference/blocks/data-storage/wait-for-key-in-collection/wait-for-key-in-collection-to-be-set-block"
             [Cortex.Reference.Blocks.DateAndTime]
                 MainDoc = "/docs/reference/blocks/date-and-time"
                 [Cortex.Reference.Blocks.DateAndTime.AddTimePeriod]

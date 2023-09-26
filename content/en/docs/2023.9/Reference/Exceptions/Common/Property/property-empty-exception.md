@@ -94,6 +94,7 @@ Currently, only the `<property-name>` has been included in the exception. In fut
   * [Read Data With Key][]
   * [Wait For Collection To Exist][]
   * [Wait For Collection To Not Exist][]
+  * [Wait For Key In Collection To Be Set][]
   * [Wait For Key In Collection To Contain Value][]
   * [Wait For Key In Collection To Exist][]
   * [Wait For Key In Collection To Not Exist][]
@@ -169,6 +170,7 @@ None
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
 [Wait For Collection To Exist]: {{< url path="Cortex.Reference.Blocks.DataStorage.WaitForCollection.WaitForCollectionToExistBlock.MainDoc">}}
 [Wait For Collection To Not Exist]: {{< url path="Cortex.Reference.Blocks.DataStorage.WaitForCollection.WaitForCollectionToNotExistBlock.MainDoc">}}
+[Wait For Key In Collection To Be Set]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToBeSetBlock.MainDoc">}}
 [Wait For Key In Collection To Contain Value]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToContainValueBlock.MainDoc">}}
 [Wait For Key In Collection To Exist]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToExistBlock.MainDoc">}}
 [Wait For Key In Collection To Not Exist]: {{< url path = "Cortex.Reference.Blocks.DataStorage.WaitForKeyInCollection.WaitForKeyInCollectionToNotExistBlock.MainDoc">}}
