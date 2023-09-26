@@ -11,9 +11,14 @@ This guide describes how to upgrade Gateway on v7.2 to include Innovation. Pleas
 
 The steps to add Innovation functionality to 7.2 are:
 
+1. Install local instance of the Application Server components
 1. Upgrade {{% ctx %}} Gateway
 
 ## Make Installation Artefacts Available
+
+{{% alert title="Note" %}}
+We recommend that the single-node Service Fabric instance, used by {{% ctx %}} Gateway as a Debugger instance, and {{% ctx %}} Gateway are installed on the same Web Application Server.
+{{% /alert %}}
 
 1. Copy the following artefacts to a folder on the machine:
 
@@ -45,7 +50,17 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
-## Perform Installation
+## Perform Debugger Installation
+
+{{% alert title="Important" color="warning" %}}
+{{< ctx >}} Gateway requires a local instance of the Application Server components to enable the debugging of flows.
+{{% /alert %}}
+
+### Install Debugger
+
+To install the components required for debugging, perform the steps detailed in [Install Application Server][] on the Web Application Server.
+
+## Perform Gateway Installation
 
 ### Configure {{% ctx %}} Gateway Installation Script
 
@@ -86,9 +101,9 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.|
     |`DotNetFlowDebuggerEndpoint`                    | Replace `server.domain.com` with the fully qualified domain name of the Web Application Server.<br /><br />This will overwrite the `DotNetFlowDebuggerEndpoint` value in the {{% ctx %}} Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthUsername`; if so, this value must be configured to the one used.<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `FlowDebuggerBasicAuthPassword`; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.|
-    |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the site containing {{% ctx %}} Gateway, `$true` if using self-signed certificates.<br /><br />This will overwrite the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Debugger on the Web Application Server][Install Application Server]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Debugger on the Web Application Server][Install Application Server]; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will overwrite the `DotNetFlowDebuggerBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.|
+    |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the communication between {{% ctx %}} Gateway and the Debugger, `$true` if using self-signed certificates.<br /><br />This will overwrite the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
     |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that is used to run the {{% ctx %}} Gateway application pool currently.|
     |`WebRootFolder`                                 | Replace this with the correct path for the Web Root Folder on the server. Typically this will be  `C:\inetpub\wwwroot`.|
     |`WebsitePort`                                   | Replace this with the port that you wish the website to use. Typically this will be `443`.|
@@ -153,3 +168,4 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.TryItOut" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
