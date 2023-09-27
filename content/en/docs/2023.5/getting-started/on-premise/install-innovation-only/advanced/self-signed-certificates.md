@@ -85,8 +85,8 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         stateOrProvinceName_default     = Hampshire
         localityName_default            = Southampton
         0.organizationName_default      = Cortex Ltd
-        organizationalUnitName_default	= Cortex 
-        emailAddress_default			= info@cortex.co.uk
+        organizationalUnitName_default  = We Are CORTEX 
+        emailAddress_default            = Hello@WeAreCORTEX.com
         [ v3_ca ]
         # Extensions for a typical CA (`man x509v3_config`).
         subjectKeyIdentifier = hash
@@ -176,8 +176,8 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         stateOrProvinceName_default     = Hampshire
         localityName_default            = Southampton
         0.organizationName_default      = Cortex Ltd
-        organizationalUnitName_default  = Cortex 
-        emailAddress_default	       = info@cortex.co.uk
+        organizationalUnitName_default  = We Are CORTEX 
+        emailAddress_default            = Hello@WeAreCORTEX.com
         [ v3_req ]
         basicConstraints = CA:FALSE
         keyUsage = nonRepudiation, digitalSignature, keyEncipherment
