@@ -195,8 +195,8 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
     Each DNS name or IP address entry must be suffixed with `.N` where `N` is the unique index of the DNS name or IP address entry; see below for examples:
     | Resource URL                          | Configuration to add              |
     |---------------------------------------|-----------------------------------|
-    | `https://cortex.co.uk/gateway`        | `DNS.1 = cortex.co.uk`              |
-    | `https://internal.cortex.co.uk/gateway` | `DNS.2 = internal.cortex.co.uk`     |
+    | `https://wearecortex.com/gateway`        | `DNS.1 = wearecortex.com`              |
+    | `https://internal.wearecortex.com/gateway` | `DNS.2 = internal.wearecortex.com`     |
     | `https://10.0.0.0/gateway`              | `IP.1 = 10.0.0.0`                   |
     | `https://192.168.1.100/gateway`         | `IP.2 = 192.168.1.100`              |
 
