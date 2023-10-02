@@ -67,7 +67,7 @@ The following table shows some of the ways that `Scope` can be created.
 
 | Method                    | Example                                                               | Result                                                               | Editor&nbsp;Support | Notes                                                                                          |
 |---------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------------|
-| Use a `Scope` constructor | `new Scope(Tenant: ScopeOption.Current, System: ScopeOption.Current)` | `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}` | Expression          | Creates a new `Scope` that can be used to restrict an action to the current Tenant and System. |
+| Use a `Scope` constructor | `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)` | `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}` | Expression          | Creates a new `Scope` that can be used to restrict an action to the current Tenant and System. |
 
 A `Scope` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
