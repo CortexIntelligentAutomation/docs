@@ -267,7 +267,49 @@ Note that as the [Headers][Headers Response] contains a key of `Content-Type` wi
 
 ### Calling another Flow
 
-TODO
+Note: This example does not follow the base [Uri][] or [API][] as specified [above][Examples Base]; but instead uses the [Uri][] of the [Cortex API Gateway][]. The [Uri][] to send this HTTP request to has the following form: `https://<server>:8722/api/<tenant>/<system>/flows/<flowName>/executions/`.
+
+<br>
+
+This example will send a [POST][] request to the [Uri][] of a [Flow][] within a [published package][Publish Package] using [HTTP 1.1][HTTP11] and run the [Flow][], using Basic authentication which requires [Http Credentials][Http Credentials Property] to be a [UserCredentials][]. This example is similar in functionality to the [Run Flow][] block.
+
+<br>
+
+The flow being run is `ExampleFlow`. This flow sets the value of an [Output][] variable `ExampleOutput` to `"I love We Are CORTEX"`. This flow is in a published, non-default package `ExamplePackage`.
+
+<br>
+
+This example will send this request to `https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions?packageName=ExamplePackage`, where `server.domain.com` is the FQDN of the server hosting an Innovation install.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Http Request][Http Request Property] | `($)HttpRequest`, with value `{"QueryStringParameters": {"packageName": "ExamplePackage"}, "Verb": "RequestVerb.POST", "ContentType": "application/json", "Body": {}, "Uri": "https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions", "Headers": null, "HttpVersion": "HttpRequestVersion.HTTP11"}`<br><br>In this example `($)HttpRequest` has been set up using the following [Expression][]:<br><br>`new HttpRequest(uri: "https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions", queryParameters: new Dictionary<string,string>({"packageName","ExamplePackage"}), verb: RequestVerb.POST, contentType: "application/json", headers: null, body: "{}", httpVersion: HttpRequestVersion.HTTP11)` | `($)HttpRequest` is a variable of type [HttpRequest][]<br><br> In this example, the `queryParameters` [Advanced][] property is an [IDictionary<string, string>][IDictionary] with three valid keys, `"packageName"`, `"packageVersion"` and `"async"`. `"packageName"` must be specified as the package of the published flow if it is not the default package.`"packageVersion"` may be included to refer to a specific version of a published package if it is not the default version. `"async"` is by default `"false"`, and if set to `"true"` will cause the flow execution to run asynchronously; similar to the [Run Flow Async][] block. |
+| [Http Credentials][Http Credentials Property] | `($)HttpCredentials`, with value `{"Username": "username", "Password":"encryptedPassword"}`<br><br>In this example, `($)HttpCredentials` has been set up using the following [Expression][]:<br><br>`new UserCredentials(username: "username", password: "encryptedPassword")` | `($)HttpCredentials` is a variable of type [UserCredentials][]<br><br>The [Password][] property in the [UserCredentials][] must be encrypted, for more information on how to encrypt the [password][Password], see [EncryptedText][]. |
+| [Http Response][Http Response Property] | `($)HttpResponse`, with no value | `($)HttpResponse` will be set to the type [HttpResponse][] |
+
+#### Results
+
+Executing a [POST][] [HttpRequest][] to `https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions?packageName=ExamplePackage` results in the variable `($)HttpResponse` being updated to the following:
+```json
+{
+    "ResponseBody": {
+        "ExampleOutput": "I love We Are CORTEX"
+    },
+    "ErrorMessage": null,
+    "Headers": {
+        "Date": "2023-10-04T14:17:40+00:00",
+        "Server": "Kestrel",
+        "Cache-Control": "no-store, must-revalidate, no-cache",
+        "X-Content-Type-Options": "nosniff",
+        "api-supported-versions": "1.0",
+        "Content-Length": 36,
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "StatusCode": "HttpStatusCode.OK (200)"
+}
+```
 
 ***
 
@@ -398,10 +440,12 @@ The exceptions thrown by the block can be found below:
 
 None
 
+[Examples Base]: {{< ref "#examples" >}}
 [Http Request Property]: {{< ref "#http-request" >}}
 [Http Credentials Property]: {{< ref "#http-credentials" >}}
 [Http Response Property]: {{< ref "#http-response" >}}
 
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
 [Username]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Username" >}}
 [Password]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.Password" >}}
@@ -438,7 +482,6 @@ None
 [DELETE]: {{< url path="Cortex.Reference.DataTypes.Http.RequestVerb.DELETE" >}}
 [PATCH]: {{< url path="Cortex.Reference.DataTypes.Http.RequestVerb.PATCH" >}}
 [HEAD]: {{< url path="Cortex.Reference.DataTypes.Http.RequestVerb.HEAD" >}}
-
 [HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}
 [HTTP10]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.HTTP10" >}}
 [HTTP11]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.HTTP11" >}}
@@ -467,3 +510,9 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [API]: {{< url path="Cortex.Reference.Glossary.A-E.API" >}}
+[Flow]:{{< url path="Cortex.Reference.Glossary.F-J.Flow">}}
+
+[Cortex API Gateway]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
+[Publish Package]: {{< url path="Cortex.Guides.Gateway.Settings.Packages.MainDoc" >}}
+[Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc">}}
+[Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc">}}
