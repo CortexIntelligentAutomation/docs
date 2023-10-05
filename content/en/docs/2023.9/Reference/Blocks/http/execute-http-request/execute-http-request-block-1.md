@@ -267,7 +267,7 @@ Note that as the [Headers][Headers Response] contains a key of `Content-Type` wi
 
 ### Calling another Flow
 
-Note: This example does not follow the base [Uri][] or [API][] as specified [above][Examples Base], but the [Cortex API Gateway][]; see [this][SingleServerNoHA]. The [Uri][] to send this HTTP request to has the following form: `https://<server>:8722/api/<tenant>/<system>/flows/<flowName>/executions/`.
+Note: This example does not follow the base [Uri][] or [API][] as specified [above][Examples Base]; but instead uses the [Uri][] of the [Cortex API Gateway][]. The [Uri][] to send this HTTP request to has the following form: `https://<server>:8722/api/<tenant>/<system>/flows/<flowName>/executions/`.
 
 <br>
 
@@ -275,19 +275,17 @@ This example will send a [POST][] request to the [Uri][] of a [Flow][] within a 
 
 <br>
 
-This example will send this request to `https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions?packageName=ExamplePackage`, where `server.domain.com` is the FQDN of the server hosing and Innovation install; see [this][SingleServerNoHA].
+This example will send this request to `https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions?packageName=ExamplePackage`, where `server.domain.com` is the FQDN of the server hosting an Innovation install.
 
 <br>
 
-The flow being run is `ExampleFlow`. This flow contains a single action block, which is a [Set Variable][] block which sets the value of an [Output][] variable `ExampleOutput` to `"I love We Are CORTEX"`.
-
-***
+The flow being run is `ExampleFlow`. This flow sets the value of an [Output][] variable `ExampleOutput` to `"I love We Are CORTEX"`.
 
 #### Properties
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Http Request][Http Request Property] | `($)HttpRequest`, with value `{"QueryStringParameters": {"packageName": "newPackage", "packageVersion": null}, "Verb": "RequestVerb.POST", "ContentType": "application/json", "Body": {}, "Uri": "https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions", "Headers": null, "HttpVersion": "HttpRequestVersion.HTTP11"}`<br><br>In this example `($)HttpRequest` has been set up using the following [Expression][]:<br><br>`new HttpRequest(uri: "https://server.domain.com:8722/api/default/default/flows/NewFlow/executions", queryParameters: new Dictionary<string,string>({"packageName","ExamplePackage"}), verb: RequestVerb.POST, contentType: "application/json", headers: null, body: "{}", httpVersion: HttpRequestVersion.HTTP11)` | `($)HttpRequest` is a variable of type [HttpRequest][]<br><br> In this example, the `queryParameters` [Advanced][] property is an [IDictionary<string,string>][IDictionary] with two valid keys, `packageName` and `packageVersion`. `packageName` must be specified as the package of the published flow, while `packageVersion` may be included to refer to a specific version of a published package. |
+| [Http Request][Http Request Property] | `($)HttpRequest`, with value `{"QueryStringParameters": {"packageName": "newPackage", "packageVersion": null, "async": false}, "Verb": "RequestVerb.POST", "ContentType": "application/json", "Body": {}, "Uri": "https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions", "Headers": null, "HttpVersion": "HttpRequestVersion.HTTP11"}`<br><br>In this example `($)HttpRequest` has been set up using the following [Expression][]:<br><br>`new HttpRequest(uri: "https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions", queryParameters: new Dictionary<string,string>({"packageName","ExamplePackage"}), verb: RequestVerb.POST, contentType: "application/json", headers: null, body: "{}", httpVersion: HttpRequestVersion.HTTP11)` | `($)HttpRequest` is a variable of type [HttpRequest][]<br><br> In this example, the `queryParameters` [Advanced][] property is an [IDictionary<string, string>][IDictionary] with three valid keys, `packageName`, `packageVersion` and `async`. `packageName` must be specified as the package of the published flow if it is not the default package.`packageVersion` may be included to refer to a specific version of a published package if it is not the default version. `async` is by default `false`, and if specified as `true` will cause the flow execution to run asynchronously; see [Run Flow Async][]. |
 | [Http Credentials][Http Credentials Property] | `($)HttpCredentials`, with value `{"Username": "username", "Password":"encryptedPassword}`<br><br>In this example, `($)HttpCredentials` has been set up using the following [Expression][]:<br><br>`new UserCredentials(username: "username", password: "encryptedPassword")` | `($)HttpCredentials` is a variable of type [UserCredentials][]<br><br>The [Password][] property in the [UserCredentials][] must be encrypted, for more information on how to encrypt the [password][Password], see [EncryptedText][]. |
 | [Http Response][Http Response Property] | `($)HttpResponse`, with no value | `($)HttpResponse` will be set to the type [HttpResponse][] |
 
@@ -485,7 +483,6 @@ None
 [DELETE]: {{< url path="Cortex.Reference.DataTypes.Http.RequestVerb.DELETE" >}}
 [PATCH]: {{< url path="Cortex.Reference.DataTypes.Http.RequestVerb.PATCH" >}}
 [HEAD]: {{< url path="Cortex.Reference.DataTypes.Http.RequestVerb.HEAD" >}}
-
 [HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}
 [HTTP10]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.HTTP10" >}}
 [HTTP11]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.HTTP11" >}}
@@ -519,6 +516,5 @@ None
 [Cortex API Gateway]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [Publish Package]: {{< url path="Cortex.Guides.Gateway.Settings.Packages.MainDoc" >}}
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc">}}
+[Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc">}}
 [Set Variable]: {{< url path="Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
-
-[SingleServerNoHA]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOut">}}
