@@ -276,6 +276,8 @@ None
   * [Set Item At Index][]
   * [Set Items At Index][]
   * [Set Items At Indexes][]
+* PowerShell
+  * [Execute PowerShell Script][]
 * Schedules
   * [Wait For Duration][]
 * Text
@@ -323,6 +325,8 @@ None
 [Set Item At Index]: {{< url path="Cortex.Reference.Blocks.Lists.SetItem.SetItemAtIndex.MainDoc" >}}
 [Set Items At Index]: {{< url path="Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndex.MainDoc" >}}
 [Set Items At Indexes]: {{< url path="Cortex.Reference.Blocks.Lists.SetItem.SetItemsAtIndexes.MainDoc" >}}
+
+[Execute PowerShell Script]: {{< url path="Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript.MainDoc" >}}
 
 [Wait For Duration]: {{< url path="Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration.MainDoc" >}}
 
