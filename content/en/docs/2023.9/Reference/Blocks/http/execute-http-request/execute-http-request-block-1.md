@@ -516,4 +516,3 @@ None
 [Publish Package]: {{< url path="Cortex.Guides.Gateway.Settings.Packages.MainDoc" >}}
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc">}}
 [Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc">}}
-[Set Variable]: {{< url path="Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
