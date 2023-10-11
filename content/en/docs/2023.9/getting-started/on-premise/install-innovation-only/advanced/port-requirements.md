@@ -63,6 +63,7 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 | Licence Management       | {{< section "/port-requirements/description/licence-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
 | Package Management       | {{< section "/port-requirements/description/package-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
 | Provisioning             | {{< section "/port-requirements/description/provisioning.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
+| Triggers (SNMP)          | {{< section "/port-requirements/description/triggers-snmp.md" >}}              | 10001                                | UDP         | Inbound         | Any     |
 
 ## Load Balancer Rules
 
@@ -72,6 +73,7 @@ The load balancer server must be able to retrieve traffic via HTTPS. The followi
 
 |Name in Rule        | Name in Config       | Default Port(s) | Protocol(s) | Direction | Program |
 |--------------------|----------------------|-----------------|-------------|-----------|---------|
+| GoBetweenTlsPort   | loadBalancerSnmpPort | 162             | UDP         | Inbound   | Any     |
 | GoBetweenTlsPort   | loadBalancerTlsPort  | 443             | TCP         | Inbound   | Any     |
 
 [Dynamic Ports]: {{< url path="MSSupport.Troubleshooting.DynamicPorts" >}}
