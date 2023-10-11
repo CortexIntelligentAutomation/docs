@@ -335,6 +335,8 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/provisioning-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/scheduling-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/triggers-service/"
         [Cortex.Guides.CortexInnovation.ExecutionApplication]
             MainDoc = "/docs/guides/cortex-innovation/core-application/"
             [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
@@ -2336,6 +2338,8 @@
 [MSDotNet]
     [MSDotNet.Framework471]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
+    [MSDotNet.Framework472]
+        MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472"
 [MSDownload]
     WebDeploy = "https://www.microsoft.com/en-gb/download/details.aspx?id=43717"
     [MSDownload.CPlusPlusRedistributable]

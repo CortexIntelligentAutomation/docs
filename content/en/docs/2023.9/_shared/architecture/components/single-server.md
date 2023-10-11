@@ -13,6 +13,7 @@
 | &nbsp; &nbsp; > [Package Management Service][Package Management Service]             | {{< section "/architecture/components/purpose/package-management-service.md" >}}              | -                           | -                                          |
 | &nbsp; &nbsp; > [Provisioning Service][Provisioning Service]                         | {{< section "/architecture/components/purpose/provisioning-service.md" >}}                    | -                           | -                                          |
 | &nbsp; &nbsp; > [Scheduling Service][Scheduling Service]                             | {{< section "/architecture/components/purpose/scheduling-service.md" >}}                      | -                           | -                                          |
+| &nbsp; &nbsp; > [Triggers Service][Triggers Service]                             | {{< section "/architecture/components/purpose/triggers-service.md" >}}                      | -                           | -                                          |
 | [{{% ctx %}} Innovation Execution Application][Innovation Execution Application]     | {{< section "/architecture/components/purpose/cortex-innovation-execution-application.md" >}} | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [Execution Service][Execution Service]                               | {{< section "/architecture/components/purpose/execution-service.md" >}}                       | -                           | -                                          |
 | {{% ctx %}} Block Packages                                                           | {{< section "/architecture/components/purpose/cortex-block-packages.md" >}}                   | Required                    | Web Application Server, Application Server |
@@ -38,6 +39,7 @@
 [Package Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService.MainDoc" >}}
 [Provisioning Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService.MainDoc" >}}
 [Scheduling Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService.MainDoc" >}}
+[Triggers Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [Gateway Guide]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
 [Studio Guide]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [SQL Server Express]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
