@@ -16,7 +16,7 @@ weight: 1
 
 This release introduces:
 
-* Two new services within the [HA Platform][]:
+* One new service within the [HA Platform][]:
   * [Triggers Service][]
 * Six [New Blocks][] have been added to the Innovation platform to work with:
   * [Data Storage][] - Allowing for communication using the shared Data Storage within the HA Platform
