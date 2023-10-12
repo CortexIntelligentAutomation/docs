@@ -264,6 +264,7 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
 * Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation {{< version >}} - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
 * Must be able to access each of the Application Servers via HTTPS.
+* Ideally it should support UDP to use the SNMP functionality of the [Triggers Service][TriggersService].
 * Ideally it should be highly available to avoid a single point of failure in the system.
 
 ## Next Steps?
@@ -276,6 +277,7 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
