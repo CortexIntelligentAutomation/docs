@@ -317,7 +317,7 @@ The exceptions thrown by the block can be found below:
 | | Thrown when the [Host][ServerDetails Host] within the [ServerDetails][] within the [PowerShell Session Details][PowerShell Session Details Property] is empty. |
 | | Thrown when the [Username][UserCredentials Username] in the [Credentials][] within the [PowerShell Session Details][PowerShell Session Details Property] is empty. |
 | | Thrown when the [Password][UserCredentials Password] in the [Credentials][] within the [PowerShell Session Details][PowerShell Session Details Property] is empty. |
-| [PropertyEmptyException][] | Thrown when the [Port][ServerDetails Port] within the [ServerDetails][] within the [PowerShell Session Details][PowerShell Session Details Property] is below `1` or above `65535`. |
+| [PropertyValueOutOfRangeException][] | Thrown when the [Port][ServerDetails Port] within the [ServerDetails][] within the [PowerShell Session Details][PowerShell Session Details Property] is below `1` or above `65535`. |
 
 ## Remarks
 
@@ -381,6 +381,7 @@ None
 [PSRemotingException]: {{< url path="Cortex.Reference.Exceptions.PowerShell.PSRemotingException.MainDoc" >}}
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
+[PropertyValueOutOfRangeException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyValueOutOfRangeException.MainDoc" >}}
 
 [Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
