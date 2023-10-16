@@ -152,10 +152,10 @@ To install the components required for debugging, perform the steps detailed in 
     -ServiceFabricApiGatewayEndpoint "https://server.domain.com/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ServiceFabricApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -DotNetFlowDebuggerEndpoint "https://server.domain.com:8722/api/" `
     -DotNetFlowDebuggerBasicAuthUsername "BasicAuthUser" `
-    -DotNetFlowDebuggerBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -DotNetFlowDebuggerBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -DotNetFlowDebuggerUsingSelfSignedCertificates $false `
     -GatewayApplicationPoolUsername "Domain\Username" `
     -WebRootFolder "C:\inetpub\wwwroot" `
