@@ -45,13 +45,13 @@
                     RemovedFlowDebuggerService = "/blog/2023/08/21/2023.7/#removed-flow-debugger-service"
                     ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
                 [Cortex.Blogs.Releases.2023.9]
-                    MainDoc =  "/blog/2023/09/10/2023.9/"
-                    ExpansionOfTheHAPlatform = "/blog/2023/09/10/2023.9/#expansion-of-the-ha-platform"
-                    NewTriggersService = "/blog/2023/09/10/2023.9/#new-triggers-service"
-                    NewBlocks = "/blog/2023/09/10/2023.9/#new-blocks"
-                    CORTEXGatewayRebranding = "/blog/2023/09/10/2023.9/#cortex-gateway-rebranding"
-                    WindowsServer2022Support = "/blog/2023/09/10/2023.9/#windows-server-2022-support"
-                    ProductPortal = "/blog/2023/09/10/2023.9/#product-portal"
+                    MainDoc =  "/blog/2023/10/16/2023.9/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/10/16/2023.9/#expansion-of-the-ha-platform"
+                    NewTriggersService = "/blog/2023/10/16/2023.9/#new-triggers-service"
+                    NewBlocks = "/blog/2023/10/16/2023.9/#new-blocks"
+                    CORTEXGatewayRebranding = "/blog/2023/10/16/2023.9/#cortex-gateway-rebranding"
+                    WindowsServer2022Support = "/blog/2023/10/16/2023.9/#windows-server-2022-support"
+                    ProductPortal = "/blog/2023/10/16/2023.9/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
