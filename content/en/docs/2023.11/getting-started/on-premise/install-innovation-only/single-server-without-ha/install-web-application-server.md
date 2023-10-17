@@ -140,10 +140,10 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     -ServiceFabricApiGatewayEndpoint "https://server.domain.com:8722/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ServiceFabricApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
-    -DotNetFlowDebuggerEndpoint "https://server.domain.com:8722/api/" `
+    -ServiceFabricApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
+    -DotNetFlowDebuggerEndpoint 'https://server.domain.com:8722/api/' `
     -DotNetFlowDebuggerBasicAuthUsername "BasicAuthUser" `
-    -DotNetFlowDebuggerBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -DotNetFlowDebuggerBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -DotNetFlowDebuggerUsingSelfSignedCertificates $false `
     -GatewayApplicationPoolUsername "Domain\Username" `
     -WebRootFolder "C:\inetpub\wwwroot" `
