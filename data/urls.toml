@@ -2133,6 +2133,7 @@
     MainDoc = "https://letsencrypt.org/"
 [Microsoft]
     [Microsoft.Downloads.Windows]
+        Server2022 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2022?filetype=ISO"
         Server2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
         Server2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
 [MimeKit]
@@ -2360,6 +2361,7 @@
         2016 = "https://www.microsoft.com/en-us/download/details.aspx?id=103447"
 [MSEval]
     [MSEval.WindowsServer]
+        2022 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2022?filetype=ISO"
         2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
         2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
     [MSEval.SQLServer]

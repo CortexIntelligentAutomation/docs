@@ -40,7 +40,7 @@ The application servers (as described in {{< ahref path="Cortex.GettingStarted.O
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | IIS[^2] | Other&nbsp;Software |
 |------------------|-------------------------|---------|----------|
-| Web Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | 10.0.17763[^3]<br>10.0.14393[^4]<br>IIS Basic Authentication[^5]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
+| Web Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | 10.0.17763[^3]<br>10.0.14393[^4]<br>IIS Basic Authentication[^5]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
 | Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | | [Promtail 2.5.0][]|
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
@@ -152,8 +152,8 @@ A domain user which is a member of the Local Administrators group on all Applica
 
 1. [Install Grafana][]
 
-[2016 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2016" >}}
 [2019 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2019" >}}
+[2022 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2022" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Architecture" >}}
 [configuring Grafana to use HTTPS]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.ConfigureHTTPS" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced.CreateSelfSignedCertificates" >}}
