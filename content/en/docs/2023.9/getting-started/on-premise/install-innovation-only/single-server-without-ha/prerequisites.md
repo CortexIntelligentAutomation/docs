@@ -21,14 +21,14 @@ The prerequisites required for a single server (as described in [Architecture][]
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | SQL&nbsp;Server[^2] | .Net | PowerShell[^3] | IIS[^4] | Other Software |
 |------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^5]<br>10.0.14393[^6]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.20348[^5]<br>10.0.17763[^6]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^2]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported. Note that [Transparent Data Encryption][] is not supported on SQL Server Express.
-[^3]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
+[^3]: PowerShell 5.1 ships with Windows Server 2019 and 2022.
 [^4]: IIS is supported; other web servers, including IIS Express are not supported.
-[^5]: Ships as a windows role within Windows Server 2019.
-[^6]: Ships as a windows role within Windows Server 2016.
+[^5]: Ships as a windows role within Windows Server 2022.
+[^6]: Ships as a windows role within Windows Server 2019.
 
 ## Domain Requirements
 

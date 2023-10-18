@@ -40,13 +40,13 @@ The application servers (as described in {{< ahref path="Cortex.GettingStarted.O
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | IIS[^2] | Other&nbsp;Software |
 |------------------|-------------------------|---------|----------|
-| Web Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | 10.0.17763[^3]<br>10.0.14393[^4]<br>IIS Basic Authentication[^5]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
-| Application Server | [2019 (x64)][] *Recommended*<br>[2016 (x64)][] | | [Promtail 2.5.0][]|
+| Web Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | 10.0.20348[^3]<br>10.0.17763[^4]<br>IIS Basic Authentication[^5]<br>[URL Rewrite module 2.1][] | [Grafana 8.5.4][] *Enterprise Edition*<br>[Grafana Loki 2.5.0][]|
+| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | | [Promtail 2.5.0][]|
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^2]: IIS is supported; other web servers, including IIS Express are not supported.
-[^3]: Ships as a windows role within Windows Server 2019.
-[^4]: Ships as a windows role within Windows Server 2016.
+[^3]: Ships as a windows role within Windows Server 2022.
+[^4]: Ships as a windows role within Windows Server 2019.
 [^5]: Installed during the [Install IIS Basic Authentication][] configuration steps.
 
 ## Domain Requirements
