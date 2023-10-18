@@ -12,9 +12,9 @@ This guide describes how to install the Application Server components on the ser
 ## Make Installation Artefacts Available
 
 1. Copy the following artefacts to a folder on the server:
-   * Cortex Innovation {{< version >}} - Block Packages.zip
-   * Cortex Innovation {{< version >}} - App Services.zip
    * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
+   * Cortex Innovation {{< version >}} - App Services.zip
+   * Cortex Innovation {{< version >}} - Block Packages.zip
 
 1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 
@@ -253,10 +253,6 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
-## Check Application Services
-
-{{< section "/install-application-server/check-application-services/single-server.md">}}
-
 ## Add Read and Execute access to Windows Crypto folder  
 
 Service Fabric requires access to the `C:\ProgramData\Microsoft\Crypto\` folder for the `Network Service` users.
@@ -273,6 +269,10 @@ icacls "C:\ProgramData\Microsoft\Crypto\*" /grant *S-1-5-20:RX /t
 {{% alert title="Note" %}}
 Some files might fail to be processed with `Access is denied`. This can be ignored.
 {{% /alert %}}
+
+## Check Application Services
+
+{{< section "/install-application-server/check-application-services/single-server.md">}}
 
 ## Preserve installation files
 

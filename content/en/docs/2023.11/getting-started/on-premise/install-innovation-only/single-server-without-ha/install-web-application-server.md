@@ -29,9 +29,9 @@ Ensure that a valid {{% ctx %}} licence file named `Cortex.lic` exists on the se
 
 1. Use one of the following installation guides to install SQL Server or SQL Server Express:
 
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2019 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Installation Guide</a>
     * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Express Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Installation Guide</a>
+    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2019 Installation Guide</a>
 
 ### Get {{% ctx %}} Gateway Application Pool User
 

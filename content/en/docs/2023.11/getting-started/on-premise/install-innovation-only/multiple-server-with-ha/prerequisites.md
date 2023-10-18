@@ -142,9 +142,9 @@ To enable  Network Discovery and File Sharing:
 
 On the Web Application Server and each Application Server, the following Windows Services must be running:
 
+* Performance Logs & Alerts
 * Remote Registry
 * Windows Event Log
-* Performance Logs & Alerts
 
 ## Security Requirements
 

@@ -101,9 +101,9 @@ The server must use an NTFS filesystem.
 
 The following Windows Services must be running on the server:
 
+* Performance Logs & Alerts
 * Remote Registry
 * Windows Event Log
-* Performance Logs & Alerts
 
 ## Security Requirements
 

@@ -12,9 +12,9 @@ This guide describes how to install the Application Servers and Load Balancer Se
 ## Make Installation Artefacts Available
 
 1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it:
-   * Cortex Innovation {{< version >}} - Block Packages.zip
-   * Cortex Innovation {{< version >}} - App Services.zip
    * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
+   * Cortex Innovation {{< version >}} - App Services.zip
+   * Cortex Innovation {{< version >}} - Block Packages.zip
 
 1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 
