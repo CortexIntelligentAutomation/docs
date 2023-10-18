@@ -5,10 +5,6 @@ description: "This section includes tutorials about administering the {{% ctx %}
 weight: 40
 ---
 
-# {{< param title >}}
-
-{{< param description >}}
-
 ## Managing role-based access control
 
 Shows how to manage role-based access control within Gateway, including assigning access and flow permissions.
