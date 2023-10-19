@@ -26,16 +26,16 @@ The prerequisites required for each server role (as described in [Architecture][
 
 | Server&nbsp;Role | Windows&nbsp;Server[^3] | SQL&nbsp;Server[^4] | .Net | PowerShell[^5] | IIS[^6] | Other Software |
 |------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Load&nbsp;Balancer | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^7]<br>10.0.14393[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Load&nbsp;Balancer | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
+| Application&nbsp;Server | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
+| Web&nbsp;Application&nbsp;Server | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.20348[^7]<br>10.0.17763[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^4]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported. Note that [Transparent Data Encryption][] is not supported on SQL Server Express.
-[^5]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
+[^5]: PowerShell 5.1 ships with Windows Server 2019 and 2022.
 [^6]: IIS is supported; other web servers, including IIS Express are not supported.
-[^7]: Ships as a windows role within Windows Server 2019.
-[^8]: Ships as a windows role within Windows Server 2016.
+[^7]: Ships as a windows role within Windows Server 2022.
+[^8]: Ships as a windows role within Windows Server 2019.
 
 ## Domain Requirements
 
@@ -142,9 +142,9 @@ To enable  Network Discovery and File Sharing:
 
 On the Web Application Server and each Application Server, the following Windows Services must be running:
 
+* Performance Logs & Alerts
 * Remote Registry
 * Windows Event Log
-* Performance Logs & Alerts
 
 ## Security Requirements
 
@@ -264,6 +264,7 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
 * Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation {{< version >}} - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.
 * Must be able to access each of the Application Servers via HTTPS.
+* Ideally it should support UDP to use the SNMP functionality of the [Triggers Service][TriggersService].
 * Ideally it should be highly available to avoid a single point of failure in the system.
 
 ## Next Steps?
@@ -276,12 +277,13 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
-[Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
+[Microsoft Server 2022]: {{< url path="MSEval.WindowsServer.2022" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
 [Microsoft SQL Server 2019]: {{< url path="MSEval.SQLServer.2019" >}}
 [Microsoft SQL Server 2016]: {{< url path="MSEval.SQLServer.2016" >}}

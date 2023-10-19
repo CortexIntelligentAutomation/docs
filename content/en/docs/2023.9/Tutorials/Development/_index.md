@@ -5,10 +5,6 @@ description: "This section includes tutorials about developing automation using 
 weight: 30
 ---
 
-# {{< param title >}}
-
-{{< param description >}}
-
 ## Signing in and out of Gateway
 
 Shows how to sign in and out of {{% ctx %}} Gateway.
