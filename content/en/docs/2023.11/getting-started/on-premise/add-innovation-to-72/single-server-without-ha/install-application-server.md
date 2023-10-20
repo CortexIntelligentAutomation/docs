@@ -41,10 +41,6 @@ This guide describes how to install the Application Server components on the ser
 
 {{< section "/install-application-server/single-server/run-installation-script.md">}}
 
-## Check Application Services
-
-{{< section "/install-application-server/check-application-services/single-server.md">}}
-
 ## Add Read and Execute access to Windows Crypto folder  
 
 {{< section "/install-application-server/single-server/add-permissions-to-crypto-folder.md">}}
