@@ -105,10 +105,15 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         ```
 
     1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
-
-        ```powershell
-        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "app-server4"
-        ```
+    1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
+    {{< tabpane lang="powershell" >}}
+        {{< tab header="Built-in Load Balancer">}}
+.\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "app-server4"
+         {{< /tab >}}
+        {{< tab header="Alternative Load Balancer" >}}
+.\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
+        {{< /tab >}}
+    {{< /tabpane >}}
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
 
