@@ -44,6 +44,14 @@
                     ImprovedInstallationProcess = "/blog/2023/08/21/2023.7/#improved-installation-process"
                     RemovedFlowDebuggerService = "/blog/2023/08/21/2023.7/#removed-flow-debugger-service"
                     ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
+                [Cortex.Blogs.Releases.2023.9]
+                    MainDoc =  "/blog/2023/10/16/2023.9/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/10/16/2023.9/#expansion-of-the-ha-platform"
+                    NewTriggersService = "/blog/2023/10/16/2023.9/#new-triggers-service"
+                    NewBlocks = "/blog/2023/10/16/2023.9/#new-blocks"
+                    CORTEXGatewayRebranding = "/blog/2023/10/16/2023.9/#cortex-gateway-rebranding"
+                    WindowsServer2022Support = "/blog/2023/10/16/2023.9/#windows-server-2022-support"
+                    ProductPortal = "/blog/2023/10/16/2023.9/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -2078,6 +2086,10 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.0.1]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -2121,6 +2133,7 @@
     MainDoc = "https://letsencrypt.org/"
 [Microsoft]
     [Microsoft.Downloads.Windows]
+        Server2022 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2022?filetype=ISO"
         Server2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
         Server2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
 [MimeKit]
@@ -2348,6 +2361,7 @@
         2016 = "https://www.microsoft.com/en-us/download/details.aspx?id=103447"
 [MSEval]
     [MSEval.WindowsServer]
+        2022 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2022?filetype=ISO"
         2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
         2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
     [MSEval.SQLServer]

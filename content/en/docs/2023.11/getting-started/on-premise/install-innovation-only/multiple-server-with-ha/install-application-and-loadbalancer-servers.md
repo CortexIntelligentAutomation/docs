@@ -12,9 +12,9 @@ This guide describes how to install the Application Servers and Load Balancer Se
 ## Make Installation Artefacts Available
 
 1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it:
-   * Cortex Innovation {{< version >}} - Block Packages.zip
-   * Cortex Innovation {{< version >}} - App Services.zip
    * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
+   * Cortex Innovation {{< version >}} - App Services.zip
+   * Cortex Innovation {{< version >}} - Block Packages.zip
 
 1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 
@@ -131,20 +131,20 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword 'myPassword' `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "myPassword" `
+    -ClientCertificatePassword 'myPassword' `
     -Credential $Credential `
     -LdapConnectionDetails @{
 	    Host= "LDAP://ldapserver.fqdn.com:389"
 	    UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+	    Password= 'somePassword'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -154,7 +154,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
@@ -164,7 +164,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 	    Host= "LDAP://ldapserver.fqdn.com:389"
 	    UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+	    Password= 'somePassword'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -174,20 +174,20 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword 'myPassword' `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "myPassword" `
+    -ClientCertificatePassword 'myPassword' `
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
 	    Host= "LDAP://ldapserver.fqdn.com:389"
 	    UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+	    Password= 'somePassword'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -197,7 +197,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -UseSelfSignedCertificates `
@@ -207,7 +207,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 	    Host= "LDAP://ldapserver.fqdn.com:389"
 	    UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+	    Password= 'somePassword'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -218,8 +218,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
-    |`ApiGatewayBasicAuthUsername`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.|
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
