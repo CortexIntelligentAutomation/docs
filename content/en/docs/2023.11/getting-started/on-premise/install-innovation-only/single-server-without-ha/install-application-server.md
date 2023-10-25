@@ -155,18 +155,18 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1") `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword 'myPassword' `
+    -ServerCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
 	    Host= "LDAP://ldapserver.fqdn.com:389"
 	    UseSsl= $false
         Username= "someUserName"
-	    Password= 'somePassword'
+	    Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-app-install-log.txt"
@@ -176,7 +176,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1") `
     -UseSelfSignedCertificates `
@@ -186,7 +186,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 	    Host= "LDAP://ldapserver.fqdn.com:389"
 	    UseSsl= $false
         Username= "someUserName"
-	    Password= 'somePassword'
+	    Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-app-install-log.txt"
