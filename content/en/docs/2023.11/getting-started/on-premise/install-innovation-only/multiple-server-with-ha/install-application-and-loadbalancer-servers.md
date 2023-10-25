@@ -108,7 +108,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
     {{< tabpane lang="powershell" >}}
         {{< tab header="Built-in Load Balancer">}}
-.\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "app-server4"
+.\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
          {{< /tab >}}
         {{< tab header="Alternative Load Balancer" >}}
 .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
