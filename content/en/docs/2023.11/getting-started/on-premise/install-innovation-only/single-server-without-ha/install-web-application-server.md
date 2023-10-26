@@ -171,7 +171,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
      | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Web Application Server. |
-    |`EncryptionKey`                           | Configure this value with the encryption key that will be used by the Cortex Encryptor. This must be match the `EncryptionKey` used when [adding encryption key][Add Encryption Key]. |
+    |`EncryptionKey`                           | Configure this value with the encryption key that will be used by the Cortex Encryptor. This must be match the `EncryptionKey` used when [adding encryption key][Add Encryption Key] in [install application server][Install Application Server]. |
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Web Application Server and press OK.
     1. A message will indicate that the script has completed successfully.
