@@ -168,7 +168,7 @@ To install the components required for debugging, perform the steps detailed in 
 
 ## Add Encryption Key
 
-1. To add an ecryption key to each of the Application Servers, follow these steps.
+1. To add an encryption key to each of the Application Servers, follow these steps.
     1. Open a Windows PowerShell (x64) window as administrator.
     1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
@@ -190,8 +190,7 @@ To install the components required for debugging, perform the steps detailed in 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Web Application Server and press OK.
     1. A message will indicate that the script has completed successfully.
 
-    {{< alert type="note" title="Note" >}} The fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure Cortex Gateway Installation Script" >}} must be created on a server that has the `EncryptionKey` added.{{< /alert >}}
-
+    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure Cortex Gateway Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
 
 ### Configure {{% ctx %}} Gateway Installation Script
 
