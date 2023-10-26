@@ -166,6 +166,33 @@ To install the components required for debugging, perform the steps detailed in 
 
 ## Perform Gateway Installation
 
+## Add Encryption Key
+
+1. To add an ecryption key to each of the Application Servers, follow these steps.
+    1. Open a Windows PowerShell (x64) window as administrator.
+    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+
+        ```powershell
+        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
+        ```
+
+    1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
+
+        ```powershell
+        .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("webapp-server") -EncryptionKey 'hsd80h$32opKd0=9ud$J6hfD@09djJd8dD'
+        ```
+
+     | Name                                         | Description |
+    |----------------------------------------------|-------------|
+    |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Web Application Server. |
+    |`EncryptionKey`                           | Configure this value with the encryption key that will be used by the Cortex Encryptor. This must be match the `EncryptionKey` used when [adding encryption key][Add Encryption Key]. |
+
+    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Web Application Server and press OK.
+    1. A message will indicate that the script has completed successfully.
+
+    {{< alert type="note" title="Note" >}} The fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure Cortex Gateway Installation Script" >}} must be created on a server that has the `EncryptionKey` added.{{< /alert >}}
+
+
 ### Configure {{% ctx %}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
@@ -181,10 +208,10 @@ To install the components required for debugging, perform the steps detailed in 
     -ServiceFabricApiGatewayEndpoint "https://server.domain.com/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
     -ServiceFabricApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ServiceFabricApiGatewayBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
+    -ServiceFabricApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -DotNetFlowDebuggerEndpoint "https://server.domain.com:8722/api/" `
     -DotNetFlowDebuggerBasicAuthUsername "BasicAuthUser" `
-    -DotNetFlowDebuggerBasicAuthPassword 'ADA9883B11BD4CDC908B8131B57944A4' `
+    -DotNetFlowDebuggerBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -DotNetFlowDebuggerUsingSelfSignedCertificates $false `
     -GatewayApplicationPoolUsername "Domain\Username" `
     -WebRootFolder "C:\inetpub\wwwroot" `
@@ -208,11 +235,11 @@ To install the components required for debugging, perform the steps detailed in 
     |`FeatureFlags`                                  | Replace `InnovationId` with the {{% ctx %}} Innovation feature identifier, which should have been provided by {{% ctx %}} when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{% ctx %}} Service Portal][CORTEX Service Portal].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://server.domain.com/` or `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Servers][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
-    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.|
-    |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.|
+    |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.{{< alert type="note" title="Note" >}} This field can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
+    |`ServiceFabricApiGatewayBasicAuthPassword`      | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will set the `ServiceFabricApiGatewayBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`DotNetFlowDebuggerEndpoint`                    | Replace `server.domain.com` with the fully qualified domain name of the Web Application Server.<br /><br />This will set the `DotNetFlowDebuggerEndpoint` value in the {{% ctx %}} Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Debugger on the Web Application Server][Install Application Server]; if so, this value must be configured to the one used.<br /><br />This will set the `DotNetFlowDebuggerBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.|
-    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Debugger on the Web Application Server][Install Application Server]; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will set the `DotNetFlowDebuggerBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.|
+    |`DotNetFlowDebuggerBasicAuthUsername`           | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Debugger on the Web Application Server][Install Application Server]; if so, this value must be configured to the one used.<br /><br />This will set the `DotNetFlowDebuggerBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.{{< alert type="note" title="Note" >}} This field can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
+    |`DotNetFlowDebuggerBasicAuthPassword`           | This must be changed if you used a non-default `ApiGatewayBasicAuthPassword` when [installing the Debugger on the Web Application Server][Install Application Server]; if so, this value must be configured to the one used. It can be [{{% ctx %}} Encrypted][CORTEX Encrypted].<br /><br />This will set the `DotNetFlowDebuggerBasicAuthPassword` value in the {{% ctx %}} Gateway web.config.{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`DotNetFlowDebuggerUsingSelfSignedCertificates` | Configure the value as `$false` if you are using valid CA certificates to secure the communication between {{% ctx %}} Gateway and the Debugger, `$true` if using self-signed certificates.<br /><br />This will set the `DotNetFlowDebuggerUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
     |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that should be used to run the {{% ctx %}} Gateway application pool as configured in [Get {{% ctx %}} Gateway Application Pool User][Get CORTEX Gateway Application Pool User].|
     |`WebRootFolder`                                 | Replace this with the correct path for the Web Root Folder on the server. Typically this will be  `C:\inetpub\wwwroot`.|
@@ -324,6 +351,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
+[Add Encryption Key]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AddEncryptionKey" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
