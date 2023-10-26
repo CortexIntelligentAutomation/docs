@@ -141,8 +141,9 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
     1. A message will indicate that the script has completed successfully.
+    1. The `EncryptionKey` will be needed [later, when installing Gateway][Install Gateway]
 
-    {{< alert type="note" title="Note" >}} The fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in [Configure Installation Script][] must be created on a server that has the `EncryptionKey` added.{{< /alert >}}
+    {{< alert type="note" title="Note" >}} The fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="Configure Installation Script" >}} must be created on a server that has the `EncryptionKey` added.{{< /alert >}}
 
 ## Configure Installation Script
 
@@ -311,6 +312,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusions" >}}
