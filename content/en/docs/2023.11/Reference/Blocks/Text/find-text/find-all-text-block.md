@@ -4,7 +4,7 @@ linkTitle: "Find All Text"
 description: "Finds all occurrences of text in a given text."
 ---
 WIP
-{{< figure src="/blocks/text-find-and-replace-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/text-find-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Find Text"
 description: "Finds the specified occurrence of text in a given text."
 ---
 WIP
-{{< figure src="/blocks/text-find-and-replace-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/text-find-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
