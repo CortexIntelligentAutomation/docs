@@ -938,6 +938,24 @@
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
                         KnownLimitations = "/docs/reference/blocks/text/decode-text/decode-text-block/#known-limitations"
+                [Cortex.Reference.Blocks.Text.FindText]
+                    MainDoc = "/docs/reference/blocks/text/find-text/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-text-block/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block/"
+                [Cortex.Reference.Blocks.Text.FindAndRemoveText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-all-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndReplaceText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-replace-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-all-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
