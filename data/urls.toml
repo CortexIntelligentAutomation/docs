@@ -1711,6 +1711,11 @@
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.TextToFind]
+                    MainDoc = "/docs/reference/data-types/text/texttofind"
+                    StartsWith = "/docs/reference/data-types/text/texttofind/#starts-with"
+                    Contains = "/docs/reference/data-types/text/texttofind/#contains"
+                    EndsWith = "/docs/reference/data-types/text/texttofind/#ends-with"
                 [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
                     MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
                 [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
