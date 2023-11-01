@@ -3,11 +3,11 @@ title: "Find All Text"
 linkTitle: "Find All Text"
 description: "Finds all occurrences of text in a given text."
 ---
-WIP
 {{< figure src="/blocks/text-find-block-icon.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
+{{< workinprogress >}}
 <p class="namespace">(Cortex.Blocks.Text.FindText.FindAllTextBlock)</p>
 
 ## Description
@@ -453,6 +453,18 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
 | Default Value | `Ordinal` |
+
+### Matches
+
+The [List][]<[Match][]> containing all valid matches found for the [Text To Find][TextToFind Property] search query.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [List][]<[Match][]> |
+| Property Type | [Output][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Matches` with no value |
 
 ## Exceptions
 
