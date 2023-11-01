@@ -1694,6 +1694,10 @@
                     MainDoc = "/docs/reference/data-types/text/encryptedtext"
                 [Cortex.Reference.DataTypes.Text.IFormatProvider]
                     MainDoc = "/docs/reference/data-types/text/iformatprovider"
+                [Cortex.Reference.DataTypes.Text.Regex]
+                    MainDoc = "/docs/reference/data-types/text/regex"
+                    [Cortex.Reference.DataTypes.Text.Regex.Match]
+                        MainDoc = "/docs/reference/data-types/text/regex/match"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
