@@ -14,7 +14,7 @@ description: "Finds all occurrences of a text in a given text."
 
 Finds all occurrences of [Text To Find][TextToFind Property] in a given [Text][Text Property].
 
-[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to find the [Text To Find][TextToFind Property].
+[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to match the [Text To Find][TextToFind Property] input.
 
 ## Examples
 
@@ -384,7 +384,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ### Find all occurrences that start with and end with a Text To Find in Text (Null contains)
 
-This example will find all occurrences of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."`.
+This example will find all occurrences of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."`. To clarify, this [Text To Find][TextToFind Property] input is searching for matches of `"Thejumps"` exactly in [Text][Text Property].
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -412,7 +412,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ### Text
 
-The [Text][Text Property] to findall occurrences of [Text To Find][TextToFind Property] in.
+The [Text][Text Property] to find all occurrences of [Text To Find][TextToFind Property] in.
 
 | | |
 |--------------------|---------------------------|

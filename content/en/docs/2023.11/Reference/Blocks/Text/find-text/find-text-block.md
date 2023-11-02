@@ -13,7 +13,7 @@ description: "Finds the specified occurrence of a text in a given text."
 
 Finds the nth of [Text To Find][TextToFind Property] in a given [Text][Text Property].
 
-[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to find the [Text To Find][TextToFind Property].
+[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to match the [Text To Find][TextToFind Property] input.
 
 ## Examples
 
@@ -400,7 +400,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ### Find the nth occurrence that starts with and ends with a Text To Find in Text (Null contains)
 
-This example will find the first occurrence of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
+This example will find the first occurrence of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`. To clarify, this [Text To Find][TextToFind Property] input is searching for matches of `"Thejumps"` exactly in [Text][Text Property].
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
