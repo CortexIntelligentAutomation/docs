@@ -938,6 +938,24 @@
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
                         KnownLimitations = "/docs/reference/blocks/text/decode-text/decode-text-block/#known-limitations"
+                [Cortex.Reference.Blocks.Text.FindText]
+                    MainDoc = "/docs/reference/blocks/text/find-text/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-text-block/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block/"
+                [Cortex.Reference.Blocks.Text.FindAndRemoveText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-all-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndReplaceText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-replace-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-all-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
@@ -1676,6 +1694,14 @@
                     MainDoc = "/docs/reference/data-types/text/encryptedtext"
                 [Cortex.Reference.DataTypes.Text.IFormatProvider]
                     MainDoc = "/docs/reference/data-types/text/iformatprovider"
+                [Cortex.Reference.DataTypes.Text.Regex]
+                    MainDoc = "/docs/reference/data-types/text/regex"
+                    [Cortex.Reference.DataTypes.Text.Regex.Match]
+                        MainDoc = "/docs/reference/data-types/text/regex/match"
+                    [Cortex.Reference.DataTypes.Text.Regex.Group]
+                        MainDoc = "/docs/reference/data-types/text/regex/group"
+                    [Cortex.Reference.DataTypes.Text.Regex.CaptureDetails]
+                        MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
@@ -1689,6 +1715,11 @@
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.TextToFind]
+                    MainDoc = "/docs/reference/data-types/text/texttofind"
+                    StartsWith = "/docs/reference/data-types/text/texttofind/#starts-with"
+                    Contains = "/docs/reference/data-types/text/texttofind/#contains"
+                    EndsWith = "/docs/reference/data-types/text/texttofind/#ends-with"
                 [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
                     MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
                 [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
