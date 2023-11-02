@@ -1,7 +1,7 @@
 ---
 title: "Find Text"
 linkTitle: "Find Text"
-description: "Finds the nth occurrence of text in a given text."
+description: "Finds the specified occurrence of a text in a given text."
 ---
 {{< figure src="/blocks/text-find-block-icon.png" alt="Icon" class="block-icon" >}}
 

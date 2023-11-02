@@ -1,7 +1,7 @@
 ---
 title: "Find All Text"
 linkTitle: "Find All Text"
-description: "Finds all occurrences of text in a given text."
+description: "Finds all occurrences of a text in a given text."
 ---
 {{< figure src="/blocks/text-find-block-icon.png" alt="Icon" class="block-icon" >}}
 
