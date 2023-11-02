@@ -77,48 +77,50 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 ## Add Antivirus Exclusions
 
-1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        ```
+1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
-    1. A message will indicate that the script has completed successfully.
+    ```powershell
+    .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
+    ```
+
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+1. A message will indicate that the script has completed successfully.
 
 ## Check Port Usage
 
-1. To check all necessary ports are free, follow these steps.
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+To check all necessary ports are free, follow these steps.
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        ```
+1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+    ```powershell
+    .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
+    ```
 
-    1. If all ports are free, the script will report the following for each Application Server:
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
 
-        `All ports required by Cortex Innovation are free`
+1. If all ports are free, the script will report the following for each Application Server:
 
-        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+    `All ports required by Cortex Innovation are free`
 
-        The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
+    If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+
+    The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
 ## Configure Installation Script
 
@@ -218,8 +220,8 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
-    |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.|
-    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed later, [when installing the Flow Debugger][Install Debugger] and [when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.|
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed later, [when installing the Flow Debugger][Install Debugger] and [when installing Gateway][Install Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
@@ -308,21 +310,22 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Preserve installation files
 
-Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.
+{{< section "/preserve-installation-files.md">}}
 
 ## Next Steps?
 
 1. [Install Web Application Server][]
 
-[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
-[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
-[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
-[Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
-[Prerequisites for installing Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
 [alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancer" >}}
-[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
+[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
+[Install Debugger]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureFlowDebuggerInstallationScript" >}}
+[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
+[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[Prerequisites for installing Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
+[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}

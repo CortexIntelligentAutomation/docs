@@ -47,7 +47,7 @@ This guide describes how to install the Application Server components on the ser
 
 ## Check Application Services
 
-{{< section "/install-application-server/check-application-services/single-server.md">}}
+{{< section "/install-application-server/single-server/check-application-services.md">}}
 
 ## Preserve installation files
 
