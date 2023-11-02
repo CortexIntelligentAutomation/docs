@@ -3,7 +3,7 @@ title: "TextToFind"
 linkTitle: "TextToFind"
 description: "Used to represent a search query for FindText blocks."
 ---
-WIP
+
 # {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.Text.TextToFind)</p>

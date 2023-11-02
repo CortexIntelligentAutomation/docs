@@ -7,7 +7,6 @@ description: "Finds all occurrences of a text in a given text."
 
 # {{% param title %}}
 
-{{< workinprogress >}}
 <p class="namespace">(Cortex.Blocks.Text.FindText.FindAllTextBlock)</p>
 
 ## Description
