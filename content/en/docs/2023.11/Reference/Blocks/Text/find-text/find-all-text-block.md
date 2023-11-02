@@ -517,8 +517,6 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to find
 
 If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`) there is nothing to find, so no operation is performed, and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
 
-Similarly
-
 ### Null or empty property of Text To Find
 
 If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a text in Text To Find][].
