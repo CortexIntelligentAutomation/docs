@@ -312,7 +312,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
-### Find all occurrences that start with and end with a text in Text To Find
+### Find all occurrences that start with and end with a Text To Find in Text
 
 This example will find all occurrences of text that start with `"The"` and end with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
 
@@ -382,7 +382,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
-### Find all occurrences that start with and end with a text in Text To Find (Null contains)
+### Find all occurrences that start with and end with a Text To Find in Text (Null contains)
 
 This example will find all occurrences of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."`.
 
@@ -520,16 +520,16 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a text in Text To Find][].
+If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a Text To Find in Text][].
 There exist two special cases involving the Contains nested property of [Text To Find][TextToFind Property]; see below.
 
 #### Empty contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including and regardless of any content between the two; see [Find all occurrences that start with and end with a text in Text To Find][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including and regardless of any content between the two; see [Find all occurrences that start with and end with a Text To Find in Text][].
 
 #### Null contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only; see [Find all occurrences that start with and end with a text in Text To Find (Null contains)][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only; see [Find all occurrences that start with and end with a Text To Find in Text (Null contains)][].
 
 ### Known Limitations
 
@@ -540,8 +540,8 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [TextToFind Property]: {{< ref "#text-to-find" >}}
 [SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
-[Find all occurrences that start with and end with a text in Text To Find]: {{< ref "#find-all-occurrences-that-start-with-and-end-with-a-text-in-text-to-find" >}}
-[Find all occurrences that start with and end with a text in Text To Find (Null contains)]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-text-in-text-to-find-null-contains">}}
+[Find all occurrences that start with and end with a Text To Find in Text]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-text-to-find-in-text" >}}
+[Find all occurrences that start with and end with a Text To Find in Text (Null contains)]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-text-to-find-in-text-null-contains">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}

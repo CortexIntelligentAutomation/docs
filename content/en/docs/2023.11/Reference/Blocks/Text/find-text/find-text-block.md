@@ -7,7 +7,6 @@ description: "Finds the nth occurrence of text in a given text."
 
 # {{% param title %}}
 
-{{< workinprogress >}}
 <p class="namespace">(Cortex.Blocks.Text.FindText.FindTextBlock)</p>
 
 ## Description
@@ -40,7 +39,37 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text, `"The quick brown fox jumps over the lazy dog"` only contains the text `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
-
+{
+  "Value": "The",
+  "Index": 0,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
 ```
 
 ***
@@ -67,7 +96,37 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
-
+{
+  "Value": "the",
+  "Index": 31,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
 ```
 
 ***
@@ -94,7 +153,37 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. As we are looking for [Occurrence][Occurrence Property] `-1`, we choose the last occurrence, and therefore, the variable `($)Match` will be set to the following:
 
 ```json
-
+{
+  "Value": "the",
+  "Index": 31,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
 ```
 
 ***
@@ -148,7 +237,37 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 `"The quick brown fox jumps over the lazy dog"` contains `"The"` and `"the"` that matches the pattern `"?he"`. Of these, `"The"` is found first in the [Text][Text Property]. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
-
+{
+  "Value": "The",
+  "Index": 0,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
 ```
 
 ***
@@ -175,12 +294,42 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 `"The quick brown fox jumps over the lazy dog"` contains `"The"` at the start of the sentence that matches the regex `"^The"`. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
-
+{
+  "Value": "The",
+  "Index": 0,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
 ```
 
 ***
 
-### Find the nth occurrence that starts with and ends with a text in Text To Find
+### Find the nth occurrence that starts with and ends with a Text To Find in Text
 
 This example will find the first occurrence of text that starts with `"The"` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
 
@@ -202,12 +351,54 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 `"The quick brown fox jumps over the lazy dog"` contains 1 sequence starting with `"The"` and ending with `"jumps"`, which is `"The quick brown fox jumps"` Therefore, the variable `($)Match` will be set to the following:
 
 ```json
-
+{
+  "Value": "The quick brown fox jumps",
+  "Index": 0,
+  "Length": 25,
+  "Groups": {
+    "0": {
+      "Value": "The quick brown fox jumps",
+      "Index": 0,
+      "Length": 25,
+      "Captures": [
+        {
+          "Value": "The quick brown fox jumps",
+          "Index": 0,
+          "Length": 25
+        }
+      ]
+    },
+    "startsWith": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    },
+    "endsWith": {
+      "Value": "jumps",
+      "Index": 20,
+      "Length": 5,
+      "Captures": [
+        {
+          "Value": "jumps",
+          "Index": 20,
+          "Length": 5
+        }
+      ]
+    }
+  }
+}
 ```
 
 ***
 
-### Find the nth occurrence that starts with and ends with a text in Text To Find (Null contains)
+### Find the nth occurrence that starts with and ends with a Text To Find in Text (Null contains)
 
 This example will find the first occurrence of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
 
@@ -226,7 +417,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` has 0 sequences starting with `"The"` and ending with `"jumps"`, as [Contains][] being `null` will require an exact match for [Text to Find][TextToFind Property] in [Text][Text Property]. Therefore, the variable `($)Match` will be set to the following:
+`"The quick brown fox jumps over the lazy dog."` has 0 sequences starting with `"The"` and ending with `"jumps"`, as [Contains][] being `null` will require an exact match for [Text to Find][TextToFind Property] in [Text][Text Property]. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
 null
@@ -361,16 +552,16 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a text in Text To Find][].
-There exist two special cases involving the Contains nested property of [Text To Find][TextToFind Property]; see below.
+If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find the nth occurrence that starts with and ends with a Text To Find in Text][].
+There exist two special cases involving the [Contains][] nested property of [Text To Find][TextToFind Property]; see below.
 
 #### Empty contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including and regardless of any content between the two; see [Find all occurrences that start with and end with a text in Text To Find][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including and regardless of any content between the two; see [Find the nth occurrence that starts with and ends with a Text To Find in Text][].
 
 #### Null contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only; see [Find all occurrences that start with and end with a text in Text To Find (Null contains)][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only; see [Find the nth occurrence that starts with and ends with a Text To Find in Text (Null contains)][].
 
 ### Known Limitations
 
@@ -382,8 +573,8 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [TextToFind Property]: {{< ref "#text-to-find" >}}
 [SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
-[Find all occurrences that start with and end with a text in Text To Find]: {{< ref "#find-all-occurrences-that-start-with-and-end-with-a-text-in-text-to-find" >}}
-[Find all occurrences that start with and end with a text in Text To Find (Null contains)]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-text-in-text-to-find-null-contains">}}
+[Find the nth occurrence that starts with and ends with a Text To Find in Text]: {{<ref "#find-the-nth-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text">}}
+[Find the nth occurrence that starts with and ends with a Text To Find in Text (Null contains)]: {{<ref "#find-the-nth-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text-null-contains">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
