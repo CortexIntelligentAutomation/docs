@@ -329,7 +329,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog"` contains 1 sequence starting with `"The"` and ending with `"jumps"`, which is `"The quick brown fox jumps"` Therefore, the variable `($)Matches` will be set to the following:
+`"The quick brown fox jumps over the lazy dog"` contains 1 occurrence starting with `"The"` and ending with `"jumps"`, which is `"The quick brown fox jumps"` Therefore, the variable `($)Matches` will be set to the following:
 
 ```json
 [
@@ -399,7 +399,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` has 0 sequences starting with `"The"` and ending with `"jumps"`, as [Contains][] being `null` will require an exact match for [Text to Find][TextToFind Property] in [Text][Text Property]. Therefore, the variable `($)Matches` will be set to the following:
+`"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` has 0 occurrences starting with `"The"` and ending with `"jumps"`, as [Contains][] being `null` will require an exact match for [Text to Find][TextToFind Property] in [Text][Text Property]. Therefore, the variable `($)Matches` will be set to the following:
 
 ```json
 []
@@ -520,15 +520,15 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 ### Null or empty property of Text To Find
 
 If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a Text To Find in Text][].
-There exist two special cases involving the Contains nested property of [Text To Find][TextToFind Property]; see below.
+There exist two special cases involving the [Contains][] nested property of [Text To Find][TextToFind Property]; see below.
 
 #### Empty contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including and regardless of any content between the two; see [Find all occurrences that start with and end with a Text To Find in Text][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including of any content between the two groups; see [Find all occurrences that start with and end with a Text To Find in Text][].
 
 #### Null contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only; see [Find all occurrences that start with and end with a Text To Find in Text (Null contains)][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content between the two groups, i.e. an exact match only; see [Find all occurrences that start with and end with a Text To Find in Text (Null contains)][].
 
 ### Known Limitations
 

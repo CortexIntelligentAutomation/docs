@@ -1,7 +1,7 @@
 ---
 title: "TextToFind"
 linkTitle: "TextToFind"
-description: "Used to represent a search query for FindText blocks."
+description: "Used to represent a search query for finding text."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to represent a search query for FindText blocks."
 
 ## Summary
 
-The `TextToFind` data type is used to represent a search query for finding text in another body of text. It specifies what a valid [match][Match] should start, contain and end with.
+The `TextToFind` data type is used to represent a search query for finding text.<br><br>It specifies what a valid [match][Match] should start, contain and end with.
 
 | | |
 |-|-|
@@ -27,9 +27,7 @@ The `TextToFind` data type is used to represent a search query for finding text 
 
 ### Starts With
 
-[Starts With][StartsWith Property] is used to define the string a valid match should start with.
-
-This property is not required.
+[Starts With][StartsWith Property] is used to define the [String][] a valid match should start with.
 
 | | |
 |--------------------|---------------------------|
@@ -40,9 +38,7 @@ This property is not required.
 
 ### Contains
 
-[Contains][Contains Property] is used to define the string a valid match should contain.
-
-This property is not required.
+[Contains][Contains Property] is used to define the [String][] a valid match should contains between [Starts With][StartsWith Property] and [Ends With][EndsWith Property].
 
 | | |
 |--------------------|---------------------------|
@@ -53,9 +49,7 @@ This property is not required.
 
 ### Ends With
 
-[Ends With][EndsWith Property] is used to define the string a valid match should end with.
-
-This property is not required.
+[Ends With][EndsWith Property] is used to define the [String][] a valid match should end with.
 
 | | |
 |--------------------|---------------------------|
@@ -72,17 +66,17 @@ The following table shows some of the ways that a `TextToFind` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `TextToFind` constructor | `new TextToFind(startsWith: "the", contains: "quick", endsWith: "fox")`| `{"StartsWith":"the", "Contains":"quick", "EndsWith":"fox"}` | Expression | All fields specified ||
+| Use a `TextToFind` constructor | `new TextToFind(startsWith: "the", contains: "quick", endsWith: "fox")`| `{"StartsWith":"the", "Contains":"quick", "EndsWith":"fox"}` | Expression | ||
 
 A `TextToFind` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Starts With` | `String` | `"the"` | [Starts With][StartsWith Property] defines the string a valid match should start with. |
+| `StartsWith` | `String` | `"the"` | [Starts With][StartsWith Property] defines the string a valid match should start with. |
 | `Contains` | `String` | `"quick"` | [Contains][Contains Property] defines the string a valid match should contain. |
-| `Ends With` | `String` | `"fox"` | [Ends With][EndsWith Property] defines the string a valid match should end with. |
+| `EndsWith` | `String` | `"fox"` | [Ends With][EndsWith Property] defines the string a valid match should end with. |
 
-### Convert EmailAddress to Text
+### Convert TextToFind to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
@@ -102,7 +96,7 @@ None
 
 ### Related Data Types
 
-None
+* [String][]
 
 ### Related Concepts
 

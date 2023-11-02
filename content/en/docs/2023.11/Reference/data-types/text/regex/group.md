@@ -1,7 +1,7 @@
 ---
 title: "Group"
 linkTitle: "Group"
-description: "Used to represent a group within a match for a text search performed by the Find Text and Find All Text sets of blocks."
+description: "Used to represent a regex match group. It contains all of the captures for a given group pattern."
 ---
 
 # {{% param title %}}

@@ -1,7 +1,7 @@
 ---
 title: "CaptureDetails"
 linkTitle: "CaptureDetails"
-description: "Used to represent a capture within a group within a match for a text search performed by the Find Text and Find All Text sets of blocks."
+description: "Used to represent a single capture for a given group"
 ---
 
 # {{% param title %}}

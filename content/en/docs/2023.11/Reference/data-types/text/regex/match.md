@@ -1,7 +1,7 @@
 ---
 title: "Match"
 linkTitle: "Match"
-description: "Used to represent a text matching a text search performed by the Find Text and Find All Text sets of blocks"
+description: "Used to represent a regex match. It contains all of the groups found in the regex pattern."
 ---
 
 # {{% param title %}}
