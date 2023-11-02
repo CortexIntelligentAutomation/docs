@@ -1698,6 +1698,10 @@
                     MainDoc = "/docs/reference/data-types/text/regex"
                     [Cortex.Reference.DataTypes.Text.Regex.Match]
                         MainDoc = "/docs/reference/data-types/text/regex/match"
+                    [Cortex.Reference.DataTypes.Text.Regex.Group]
+                        MainDoc = "/docs/reference/data-types/text/regex/group"
+                    [Cortex.Reference.DataTypes.Text.Regex.CaptureDetails]
+                        MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]

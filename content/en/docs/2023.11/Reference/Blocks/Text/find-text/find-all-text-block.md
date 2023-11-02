@@ -381,6 +381,32 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
+### Find all occurrences that start with and end with a text in Text To Find (Null contains)
+
+This example will find all occurrences of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."`.
+
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` | `($)Text` is a variable of type [String][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": null, "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: null, endsWith:"jumps")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` has 0 sequences starting with `"The"` and ending with `"jumps"`, as [Contains][] being `null` will require an exact match for [Text to Find][TextToFind Property] in [Text][Text Property]. Therefore, the variable `($)Matches` will be set to the following:
+
+```json
+[]
+```
+
+***
+
 ## Properties
 
 ### Text
@@ -504,7 +530,7 @@ If the [Contains][] nested property of [Text To Find][TextToFind Property] is em
 
 #### Null contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only.
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are properly defined, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content allowed between the two, i.e. an exact match only; see [Find all occurrences that start with and end with a text in Text To Find (Null contains)][].
 
 ### Known Limitations
 
@@ -516,9 +542,11 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Find all occurrences that start with and end with a text in Text To Find]: {{< ref "#find-all-occurrences-that-start-with-and-end-with-a-text-in-text-to-find" >}}
+[Find all occurrences that start with and end with a text in Text To Find (Null contains)]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-text-in-text-to-find-null-contains">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Equality]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc" >}}
 [ComparisonTypes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Equality.ComparisonTypes.MainDoc" >}}
@@ -534,6 +562,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 
 [List]: {{< url path="Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Match]: {{< url path="Cortex.Reference.DataTypes.Text.Regex.Match.MainDoc" >}}
+[Group]: {{< url path="Cortex.Reference.DataTypes.Text.Regex.Group.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [StringComparison]: {{< url path="Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [SearchOptions]: {{< url path="Cortex.Reference.DataTypes.Text.SearchOptions.MainDoc" >}}
