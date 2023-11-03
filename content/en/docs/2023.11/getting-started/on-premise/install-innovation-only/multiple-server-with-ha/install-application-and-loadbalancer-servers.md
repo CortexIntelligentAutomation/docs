@@ -220,8 +220,8 @@ To check all necessary ports are free, follow these steps.
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
-    |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed later, [when installing the Flow Debugger][Install Debugger] and [when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.|
-    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed later, [when installing the Flow Debugger][Install Debugger] and [when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed later, [when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.|
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed later, [when installing Gateway][Install Gateway].|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
@@ -236,7 +236,7 @@ To check all necessary ports are free, follow these steps.
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
-    The `ApiGatewayBasicAuthUsername` and `ApiGatewayBasicAuthPassword` will be needed [later, when installing Gateway][Install Gateway].
+    The `ApiGatewayBasicAuthUsername` and `ApiGatewayBasicAuthPassword` will be needed later, [when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
 More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigMultipleServer" title="Advanced Application Server and Load Balancer Configuration Changes" >}}.
@@ -322,7 +322,6 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Install Debugger]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureFlowDebuggerInstallationScript" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}

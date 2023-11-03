@@ -8,4 +8,4 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 1. On the `General` tab in the `Friendly Name` text box, enter a name to be used for the certificate.
 1. Click `OK`.
 
-[Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
+[Configure CORTEX Gateway Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}

@@ -38,7 +38,7 @@ In order to ensure that the correct certificate is used during the upgrade of {{
 
 #### Assign Certificate Friendly Name
 
-{{< section "/install-web-application-server/assign-certificate-friendly-name.md">}}
+{{< section "/install-web-application-server/add-innovation-to-7.2/assign-certificate-friendly-name.md">}}
 
 ## Perform Debugger Installation
 

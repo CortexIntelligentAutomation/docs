@@ -2,12 +2,12 @@
 title: "Perform Gateway Installation"
 linkTitle: "Perform Gateway Installation"
 description: "Information about installing {{% ctx %}} Gateway."
-weight: 20
+weight: 30
 ---
 
 # {{% param title %}}
 
-This guide describes how to install the Web Application Server. Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation.
+This guide describes how to install {{% ctx %}} Gateway on the Web Application Server. Please ensure that the [Flow Debugger installation][] has been completed before starting this installation.
 
 ## Perform Gateway Installation
 
@@ -112,17 +112,18 @@ This guide describes how to install the Web Application Server. Please ensure th
 
 ## Next Steps?
 
-1. [Perform Debugger Installation][]
+1. [Setup {{% ctx %}} Gateway][Setup CORTEX Gateway]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Flow Debugger installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallation" >}}
 [Get CORTEX Gateway Application Pool User]: {{< ref "#get-cortex-gateway-application-pool-user" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
 [Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Perform Debugger Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallation" >}}
+[Setup CORTEX Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}

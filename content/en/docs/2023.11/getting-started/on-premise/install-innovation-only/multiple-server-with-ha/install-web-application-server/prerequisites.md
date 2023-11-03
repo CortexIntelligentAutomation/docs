@@ -23,11 +23,11 @@ We recommend that the single-node Service Fabric instance, used by {{% ctx %}} G
 
 ## Install SQL Server or SQL Express
 
-1. Use one of the following installation guides to install SQL Server or SQL Server Express:
+Use one of the following installation guides to install SQL Server or SQL Server Express:
 
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Express Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2019 Installation Guide</a>
+* <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Express Installation Guide</a>
+* <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Installation Guide</a>
+* <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2019 Installation Guide</a>
 
 ## Get {{% ctx %}} Gateway Application Pool User
 
@@ -79,12 +79,12 @@ Do not reuse any auto-generated self-signed certificates as they do not meet the
 Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
 Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
 <br />
-It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PerformDebuggerInstallation" title="installing the Debugger" >}}, as long as it is not an auto-generated self-signed certificate; If doing so, you should {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" title="Assign a Certificate Friendly Name" >}} and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
+It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallation" title="installing the Debugger" >}}, as long as it is not an auto-generated self-signed certificate; If doing so, you should {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="Assign a Certificate Friendly Name" >}} and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
 {{% /alert %}}
 
 ### Import Root Certificate
 
-{{% alert title="Note" %}}This step is only required if using a self-signed certificate signed by your own Root Certificate e.g. OpenSSL. If this is not the case proceed to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportCertificateManually" title="Import Certificate Manually" >}} {{% /alert %}}
+{{% alert title="Note" %}}This step is only required if using a self-signed certificate signed by your own Root Certificate e.g. OpenSSL. If this is not the case proceed to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportCertificateManuallyNew" title="Import Certificate Manually" >}} {{% /alert %}}
 
 This step must be carried out prior to the installation otherwise the URL validation will fail. In order to import the Root Certificate, ensure that the file is in a known location on this server and complete the following steps:
 
@@ -102,7 +102,7 @@ This step must be carried out prior to the installation otherwise the URL valida
 
 ### Import Certificate Manually
 
-{{% alert title="Note" %}}The certificate can be imported automatically by setting the `ImportCertificate` parameter to `$true` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}}. If importing the certificate automatically proceed to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PerformDebuggerInstallation" title="Perform Installation" >}} <br /><br /> If the certificate has previously been imported you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyName" title="assign a friendly name" >}}.{{% /alert %}}
+{{% alert title="Note" %}}The certificate can be imported automatically by setting the `ImportCertificate` parameter to `$true` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}}. If importing the certificate automatically proceed to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallation" title="Perform {{% ctx %}} Gateway Installation" >}} <br /><br /> If the certificate has previously been imported you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="assign a friendly name" >}}.{{% /alert %}}
 
 To import the certificate manually follow the below steps:
 
@@ -113,14 +113,13 @@ To import the certificate manually follow the below steps:
 
 ### Assign Certificate Friendly Name
 
-{{< section "/install-web-application-server/assign-certificate-friendly-name.md">}}
+{{< section "/install-web-application-server/add-innovation-only/assign-certificate-friendly-name.md">}}
 
 ## Next Steps?
 
-1. [Perform Gateway Installation][]
+1. [Perform Flow Debugger Installation][]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Perform Gateway Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallation" >}}
-[Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Perform Flow Debugger Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallation" >}}
