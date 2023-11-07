@@ -85,11 +85,21 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
         ```
 
-    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command. 
+    1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
+        {{< tabpane lang="powershell" >}}
+            {{< tab header="Built-in Load Balancer">}}
+    .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
+            {{< /tab >}}
+            {{< tab header="Alternative Load Balancer" >}}
+    .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
+            {{< /tab >}}
+        {{< /tabpane >}}
 
-        ```powershell
-        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        ```
+        | Name                                         | Description |
+        |----------------------------------------------|-------------|
+        |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
+        |`LoadBalancerServer`                           | Configure this value with the the NETBIOS names or fully qualified domain name of the Load Balancer Servers. |
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
     1. A message will indicate that the script has completed successfully.
@@ -115,10 +125,10 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
         {{< /tab >}}
     {{< /tabpane >}}
 
-     | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
-    |`LoadBalancerServer`                           | Configure this value with the the NETBIOS names or fully qualified domain name of the Load Balancer Servers. |
+        | Name                                         | Description |
+        |----------------------------------------------|-------------|
+        |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
+        |`LoadBalancerServer`                           | Configure this value with the the NETBIOS names or fully qualified domain name of the Load Balancer Servers. |
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
 
