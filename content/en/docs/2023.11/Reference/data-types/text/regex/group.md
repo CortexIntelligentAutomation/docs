@@ -79,7 +79,7 @@ The following table shows some of the ways that a `Group` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Construct `Match` | `new Group{Value = "", Index = 0, Length = 0, Captures = new List<CaptureDetails>()}`  | `{"Value": "","Index": 0,"Length": 0,"Captures": []}` | Expression | No proper constructor exists for this data type. |
+| Construct `Group` | `new Group{Value = "", Index = 0, Length = 0, Captures = new List<CaptureDetails>()}`  | `{"Value": "","Index": 0,"Length": 0,"Captures": []}` | Expression | No proper constructor exists for this data type. |
 
 ### Convert a Group to Text
 
