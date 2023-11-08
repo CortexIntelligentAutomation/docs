@@ -47,7 +47,7 @@ The index in the source text at which the regex match starts.
 | Data Type | [Int32][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | [Int32][] with value `0` |
 
 ### Length
 
@@ -58,18 +58,18 @@ The length of this regex match's value.
 | Data Type | [Int32][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | [Int32][] with value `0` |
 
 ### Groups
 
-The dictionary of [Groups][Group] in this match. The default group `0` is always included for a valid match, and contains the whole [Value][Value Property] as its value.
+The dictionary of [Groups][Group] in this match. The key [String][] is the [Group][] name. The default group `0` is always included for a valid match, and contains the whole [Value][Value Property] as its value.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [Dictionary][]<[String][], [Group][]> |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | [Dictionary][]<[String][], [Group][]> with value `{}` |
 
 ## Remarks
 
