@@ -131,3 +131,5 @@ None
 [Group]: {{<url path="Cortex.Reference.DataTypes.Text.Regex.Group.MainDoc">}}
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+
+[Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}

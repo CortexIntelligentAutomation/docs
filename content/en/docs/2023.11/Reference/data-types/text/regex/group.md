@@ -12,7 +12,7 @@ description: "Used to represent a regex match group. It contains all of the capt
 
 ## Summary
 
-The `Group` data type is used to represent a regex match group. It contains all of the [Captures][CaptureDetails] for a given group pattern.
+The `Group` data type is used to represent a [regex match][Match] group. It contains all of the [Captures][CaptureDetails] for a given group pattern.
 
 | | |
 |-|-|
@@ -126,6 +126,9 @@ None
 [CaptureDetails]: {{<url path="Cortex.Reference.DataTypes.Text.Regex.CaptureDetails.MainDoc">}}
 [Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [Int32]: {{<url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc">}}
+[Match]: {{<url path="Cortex.Reference.DataTypes.Text.Regex.Match.MainDoc">}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+
+[Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
