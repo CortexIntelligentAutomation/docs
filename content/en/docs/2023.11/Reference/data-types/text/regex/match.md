@@ -34,7 +34,7 @@ The value of the full match.
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | [String][] with no value |
 
 ### Index
 
@@ -112,7 +112,7 @@ None
 
 * [System.Text.RegularExpressions.Match][]
 
-[Value Property]: {{#ref "#value"}}
+[Value Property]: {{<ref "#value">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}

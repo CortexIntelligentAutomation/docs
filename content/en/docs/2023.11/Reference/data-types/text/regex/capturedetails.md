@@ -34,7 +34,7 @@ The value of this capture.
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | [String][] with no value |
 
 ### Index
 

@@ -34,7 +34,7 @@ The Value is the value of the last [capture][CaptureDetails] for this group.
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | [String][] with no value. |
 
 ### Index
 
@@ -67,7 +67,7 @@ The list of [captures][CaptureDetails] found for this regex match group. If ther
 | Data Type | IReadOnlyList<[CaptureDetails][]> |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `null` |
+| Default Value | IReadOnlyList<[CaptureDetails][]> with no value |
 
 ## Remarks
 
