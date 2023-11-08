@@ -181,6 +181,13 @@ Process Exclusions:
 * FabricRM.exe
 * FileStoreService.exe
 
+If you are using a built-in load balancer, it is advised that the following antivirus exclusions are created on the Load Balancer Server to reduce antivirus processing on service health checks:
+
+Process Exclusions:
+
+* gobetween.exe
+* Cortex.Installation.HealthCheck.exe
+
 A script is provided during installation to add these exclusions for Windows Defender. If any other antivirus software is running, these will need to be added manually.
 
 If adding the exclusions manually, the Process Exclusions should be done before installation occurs, as the processes will be used during installation of the application and antivirus software can cause the installation to fail or timeout. Folder Exclusions may need to be added after installation has occurred as some antivirus software needs the folders to exist.
