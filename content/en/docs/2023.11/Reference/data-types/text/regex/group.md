@@ -89,9 +89,9 @@ The following table shows some of the ways that a `Group` can be created.
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `Match`.
-- The Literal Editor is available for [Input][] properties where the data type is `Match`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Match`.
+- The Expression Editor is available for [Input][] properties where the data type is `Group`.
+- The Literal Editor is available for [Input][] properties where the data type is `Group`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Group`.
 
 ### Known Limitations
 
