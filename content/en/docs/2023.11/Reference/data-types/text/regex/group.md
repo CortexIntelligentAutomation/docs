@@ -104,6 +104,7 @@ None
 * [CaptureDetails][]
 * IReadOnlyList
 * [Int32][]
+* [Match][]
 * [String][]
 
 ### Related Concepts
