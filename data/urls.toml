@@ -2369,6 +2369,9 @@
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
+            Capture = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.capture"
+            Group = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.group"
+            Match = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.match"
             RegexMatchTimeoutException = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
         [MSDocs.DotNet.Api.System.Net]
             NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
