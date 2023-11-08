@@ -79,17 +79,18 @@ The following table shows some of the ways that a `Match` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Construct `Match` | `new Match{Value = "", Index = 0, Length = 0, Groups = {}}`  | `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | Expression | No constructor exists for this data type. |
+| Construct `Match` | `new Match{Value = "", Index = 0, Length = 0, Groups = {}}`  | `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | Expression | |
 
 ### Convert Match to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object to Json` block | where `Object` property has a value of `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | N/A | See [Convert Object to Json] |
+| Use `Convert Object to Json` block | where `Object` property has a value of `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | `"{\r\n  \"Value\": \"\",\r\n  \"Index\": 0,\r\n  \"Length\": 0,\r\n  \"Groups\": {}\r\n}"` | N/A | See [Convert Object to Json][] |
 
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `Match`.
+- The Literal Editor is available for [Input][] properties where the data type is `Match`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Match`.
 
 ### Known Limitations
