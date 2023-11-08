@@ -434,7 +434,7 @@ The [Text][Text Property] to find the specified occurrence of [Text To Find][Tex
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Property Type | [InputOutput][] |
+| Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Variable][] |
 | Default Value | `($)Text` with no value |
@@ -475,7 +475,7 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | `0` |
+| Default Value | `1` |
 
 
 ### Search Options
