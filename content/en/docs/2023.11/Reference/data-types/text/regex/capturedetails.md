@@ -8,8 +8,6 @@ description: "Used to represent a single capture for a given group"
 
 <p class="namespace">(Cortex.DataTypes.Text.Regex.CaptureDetails)</p>
 
-{{< workinprogress >}}
-
 ## Summary
 
 The `CaptureDetails` data type is used to represent a single capture for a given [Group][].

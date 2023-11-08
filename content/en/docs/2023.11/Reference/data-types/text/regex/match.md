@@ -8,8 +8,6 @@ description: "Used to represent a regex match. It contains all of the groups fou
 
 <p class="namespace">(Cortex.DataTypes.Text.Regex.Match)</p>
 
-{{<workinprogress>}}
-
 ## Summary
 
 The `Match` data type is used to represent a regex match. It contains all of the [Groups][Group] found in the regex pattern.

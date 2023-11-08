@@ -8,8 +8,6 @@ description: "Used to represent a regex match group. It contains all of the capt
 
 <p class="namespace">(Cortex.DataTypes.Text.Regex.Group)</p>
 
-{{< workinprogress >}}
-
 ## Summary
 
 The `Group` data type is used to represent a [regex match][Match] group. It contains all of the [Captures][CaptureDetails] for a given group pattern.
