@@ -29,7 +29,7 @@ The `Group` data type is used to represent a regex match group. It contains all 
 
 ### Value
 
-The Value is the matched [String][] of the regex match group.
+The Value is the value of the last [capture][CaptureDetails] for this group.
 
 | | |
 |--------------------|---------------------------|
@@ -40,7 +40,7 @@ The Value is the matched [String][] of the regex match group.
 
 ### Index
 
-The index in the source text at which the regex match group starts.
+The starting index of the first [capture][CaptureDetails] for this group in the input text.
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +51,7 @@ The index in the source text at which the regex match group starts.
 
 ### Length
 
-The length of this regex match's value.
+The length of the matched group text.
 
 | | |
 |--------------------|---------------------------|
@@ -62,7 +62,7 @@ The length of this regex match's value.
 
 ### Captures
 
-The list of [Captures][CaptureDetails] for this regex match group.
+The list of [captures][CaptureDetails] found for this regex match group. If there were no captures, this is an empty list.
 
 | | |
 |--------------------|---------------------------|

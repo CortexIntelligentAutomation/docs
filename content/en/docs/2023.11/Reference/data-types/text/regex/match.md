@@ -29,7 +29,7 @@ The `Match` data type is used to represent a regex match. It contains all of the
 
 ### Value
 
-The Value is the matched [String][] of the regex match.
+The value of the full match.
 
 | | |
 |--------------------|---------------------------|
@@ -40,7 +40,7 @@ The Value is the matched [String][] of the regex match.
 
 ### Index
 
-The index in the source text at which the regex match starts.
+The starting index of the regex match in the input text.
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +51,7 @@ The index in the source text at which the regex match starts.
 
 ### Length
 
-The length of this regex match's value.
+The length of this regex match.
 
 | | |
 |--------------------|---------------------------|
@@ -62,7 +62,7 @@ The length of this regex match's value.
 
 ### Groups
 
-The dictionary of [Groups][Group] in this match. The key [String][] is the [Group][] name. The default group `0` is always included for a valid match, and contains the whole [Value][Value Property] as its value.
+The dictionary of [Groups][Group] in this match. The key [String][] is the [Group][] name. The default group `0` is always included for a valid match, and contains the whole [Value][Value Property] as its value. Unnamed groups will have keys starting from `"1"`, `"2"`, etc.
 
 | | |
 |--------------------|---------------------------|
