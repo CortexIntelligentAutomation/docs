@@ -106,14 +106,7 @@ To check all necessary ports are free, follow these steps:
     cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
     ```
 
-<<<<<<< HEAD
-     | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
-    |`LoadBalancerServer`                           | Configure this value with the NETBIOS names or fully qualified domain name of the Load Balancer Servers. |
-=======
 1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
->>>>>>> origin/2023.11
 
     ```powershell
     .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
@@ -131,31 +124,32 @@ To check all necessary ports are free, follow these steps:
 
 ## Add Encryption Key
 
-1. To add an encryption key to each of the Application Servers, follow these steps.
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+To add an encryption key to each of the Application Servers, follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -EncryptionKey 'hsd80h$32opKd0=9ud$J6hfD@09djJd8dD'
-        ```
+1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
 
-     | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
-    |`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. |
+    ```powershell
+    .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -EncryptionKey 'hsd80h$32opKd0=9ud$J6hfD@09djJd8dD'
+    ```
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
-    1. A message will indicate that the script has completed successfully.
+    | Name                                         | Description |
+|----------------------------------------------|-------------|
+|`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
+|`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. |
 
-    The `EncryptionKey` will be needed [later, when upgrading Gateway][Upgrade Gateway]
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+1. A message will indicate that the script has completed successfully.
 
-    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScript" title="Configure Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
+The `EncryptionKey` will be needed [later, when upgrading Gateway][Upgrade Gateway]
+
+{{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScript" title="Configure Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
 
 ## Configure Installation Script
 

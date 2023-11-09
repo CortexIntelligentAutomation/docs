@@ -122,31 +122,32 @@ To check all necessary ports are free, follow these steps:
 
 ## Add Encryption Key
 
-1. To add an encryption key to each of the Application Servers, follow these steps.
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+To add an encryption key to each of the Application Servers, follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1") -EncryptionKey 'hsd80h$32opKd0=9ud$J6hfD@09djJd8dD'
-        ```
+1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
 
-     | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Application Server. |
-    |`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. |
+    ```powershell
+    .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1") -EncryptionKey 'hsd80h$32opKd0=9ud$J6hfD@09djJd8dD'
+    ```
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Application Server and press OK.
-    1. A message will indicate that the script has completed successfully.
+    | Name                                         | Description |
+|----------------------------------------------|-------------|
+|`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Application Server. |
+|`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. |
 
-    The `EncryptionKey` will be needed [later, when installing Gateway][Install Gateway]
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Application Server and press OK.
+1. A message will indicate that the script has completed successfully.
 
-    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="Configure Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
+The `EncryptionKey` will be needed [later, when installing Gateway][Install Gateway]
+
+{{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="Configure Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
 
 ## Configure Installation Script
 
