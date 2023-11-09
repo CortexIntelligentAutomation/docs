@@ -136,7 +136,7 @@ To add an encryption key to each of the Application Servers, follow these steps:
 1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
 
     ```powershell
-    .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -EncryptionKey 'hsd80h$32opKd0=9ud$J6hfD@09djJd8dD'
+    .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -EncryptionKey 'generated-key'
     ```
 
     | Name                                         | Description |
