@@ -87,7 +87,9 @@ To get a licence file and feature identifier take the following steps:
 
 ## Encryption Key Requirements
 
-example text
+A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be used when configuring the installation scripts and the Gateway installation. The encryption key is needed when installing the Application server and Web Application server and it should ****NEEDED Generating key info****.
+
+To get an encryption key take the following steps:
 
 ## Web Browser Requirements
 

@@ -116,7 +116,9 @@ To get a licence file and feature identifier take the following steps:
 
 ## Encryption Key Requirements
 
-Example text
+A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be used when configuring the installation scripts and the Gateway installation. The encryption key is needed when installing the Application servers and Web Application server and it should ****NEEDED Generating key info****.
+
+To get an encryption key take the following steps:
 
 ## Web Browser Requirements
 
@@ -284,6 +286,7 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Add Encryption Key]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AddEncryptionKey" >}}
 [Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
