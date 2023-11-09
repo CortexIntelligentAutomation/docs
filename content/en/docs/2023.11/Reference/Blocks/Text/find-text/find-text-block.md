@@ -552,16 +552,16 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find the specified Occurrence that starts with and ends with a Text To Find in Text][].
+If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find the first Occurrence that starts with and ends with a Text To Find in Text][].
 There exist two special cases involving the [Contains][] nested property of [Text To Find][TextToFind Property]; see below.
 
 #### Empty contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including any content between the two groups; see [Find the specified Occurrence that starts with and ends with a Text To Find in Text][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including any content between the two groups; see [Find the first Occurrence that starts with and ends with a Text To Find in Text][].
 
 #### Null contains property of Text To Find
 
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content between the two groups, i.e. an exact match only; see [Find the specified Occurrence that starts with and ends with a Text To Find in Text (Null contains)][].
+If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content between the two groups, i.e. an exact match only; see [Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)][].
 
 ### Known Limitations
 
@@ -573,8 +573,8 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [TextToFind Property]: {{< ref "#text-to-find" >}}
 [SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
-[Find the specified Occurrence that starts with and ends with a Text To Find in Text]: {{<ref "#find-the-specified-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text">}}
-[Find the specified Occurrence that starts with and ends with a Text To Find in Text (Null contains)]: {{<ref "#find-the-specified-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text-null-contains">}}
+[Find the first Occurrence that starts with and ends with a Text To Find in Text]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text">}}
+[Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text-null-contains">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
