@@ -77,58 +77,50 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 ## Add Antivirus Exclusions
 
-1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        ```
+1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
-    1. A message will indicate that the script has completed successfully.
+    ```powershell
+    .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
+    ```
+
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+1. A message will indicate that the script has completed successfully.
 
 ## Check Port Usage
 
-1. To check all necessary ports are free, follow these steps.
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+To check all necessary ports are free, follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command:
-    1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
-    {{< tabpane lang="powershell" >}}
-        {{< tab header="Built-in Load Balancer">}}
-.\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
-         {{< /tab >}}
-        {{< tab header="Alternative Load Balancer" >}}
-.\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        {{< /tab >}}
-    {{< /tabpane >}}
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
+    ```
 
-     | Name                                         | Description |
-    |----------------------------------------------|-------------|
-    |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain names of the Application Servers. |
-    |`LoadBalancerServer`                           | Configure this value with the the NETBIOS names or fully qualified domain name of the Load Balancer Servers. |
+1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+    ```powershell
+    .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
+    ```
 
-    1. If all ports are free, the script will report the following for each Application Server:
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
 
-        `All ports required by Cortex Innovation are free`
+1. If all ports are free, the script will report the following for each Application Server:
 
-        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+    `All ports required by Cortex Innovation are free`
 
-        The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
+    If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+
+    The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
 ## Add Encryption Key
 
