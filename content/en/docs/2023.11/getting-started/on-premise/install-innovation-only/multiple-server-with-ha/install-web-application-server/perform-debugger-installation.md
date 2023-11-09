@@ -13,7 +13,13 @@ This guide describes how to install the Flow Debugger on the Web Application Ser
 {{< ctx >}} Gateway requires a local instance of the Application Server components to enable the debugging of flows.
 {{% /alert %}}
 
+## Install Microsoft .NET Framework 4.7.2
+
+{{< section "/install-application-server/install-dot-net-framework.md">}}
+
 ## Add Antivirus Exclusions
+
+If Windows Defender is not running on the server, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on the server and continue to the next section, otherwise follow these steps:
 
 {{< section "/install-application-server/single-server/add-antivirus-exclusions.md">}}
 
@@ -23,7 +29,7 @@ This guide describes how to install the Flow Debugger on the Web Application Ser
 
 ## Configure Installation Script
 
-{{< section "/install-application-server/single-server/add-innovation-only/configure-installation-script.md">}}
+{{< section "/install-web-application-server/add-innovation-only/configure-debugger-installation-script.md">}}
 
 ## Test Installation Script
 
@@ -49,6 +55,7 @@ This guide describes how to install the Flow Debugger on the Web Application Ser
 
 1. [Perform Gateway Installation][]
 
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}

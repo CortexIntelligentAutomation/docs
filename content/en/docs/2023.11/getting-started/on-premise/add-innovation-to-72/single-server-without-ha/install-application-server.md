@@ -23,6 +23,8 @@ This guide describes how to install the Application Server components on the ser
 
 ## Add Antivirus Exclusions
 
+If Windows Defender is not running on the server, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on the server and continue to the next section, otherwise follow these steps:
+
 {{< section "/install-application-server/single-server/add-antivirus-exclusions.md">}}
 
 ## Check Port Usage
@@ -57,5 +59,6 @@ This guide describes how to install the Application Server components on the ser
 
 1. [Install Web Application Server][]
 
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AntivirusExclusions" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServer" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Prerequisites" >}}
