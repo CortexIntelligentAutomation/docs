@@ -66,20 +66,32 @@ In line with best practices, this account should not be given administrator righ
 
 ## Certificate Requirements
 
-{{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
+The Flow Debugger and {{% ctx %}} Gateway require an X.509 SSL certificate to be installed on the Web Application Server.
+<br/>  
+For {{% ctx %}} Gateway, the certificate must have the following properties:
 
 * Enhanced Key Usage: `Server Authentication` and `Client Authentication`
 * Subject Alternative Names (SAN): At minimum the FQDN of the server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1
 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
+<br/>  
+For the Flow Debugger, the certificate must have the following properties:
+
+* Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Certificate file must be in a .PFX file format, with a known password.
+* Certificate file must contain the full chain of certificates.
+* Certificate file must include the private key.
+* Key Usage extension must have a value of `Digital Signature, Key Encipherment (a0)`.
+* Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
 {{% alert title="Important" color="warning" %}}
-Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
+Do not reuse any auto-generated self-signed certificates for {{% ctx %}} Gateway as they do not meet the requirements.  
 <br />
 Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
 Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
 <br />
-It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallation" title="installing the Debugger" >}}, as long as it is not an auto-generated self-signed certificate; If doing so, you should {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="Assign a Certificate Friendly Name" >}} and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
+It is possible to reuse the Flow Debugger certificate for {{% ctx %}} Gateway, as long as it is not an auto-generated self-signed certificate; If doing so, you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="Assign a Certificate Friendly Name" >}} after the debugger has been installed and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
 {{% /alert %}}
 
 ### Import Root Certificate
