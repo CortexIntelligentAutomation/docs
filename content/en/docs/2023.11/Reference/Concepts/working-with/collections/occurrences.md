@@ -15,6 +15,7 @@ TODO
 - How are they accessed?
   - Positive or Negative int properties on blocks that operate on single items
 - Difference between occurrence and indexes
+- specified occurrence
 
 ## Positive Occurrences
 
