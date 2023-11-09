@@ -170,7 +170,7 @@ To install the components required for debugging, perform the steps detailed in 
 To add an encryption key to each of the Application Servers, follow these steps:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Encryption` folder within the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
     cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"

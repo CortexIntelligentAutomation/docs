@@ -157,7 +157,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 To add an encryption key to each of the Application Servers, follow these steps:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Encryption` folder within the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
     cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
