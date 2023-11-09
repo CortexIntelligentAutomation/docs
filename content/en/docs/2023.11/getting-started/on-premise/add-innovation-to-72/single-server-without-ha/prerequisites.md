@@ -85,6 +85,10 @@ To get a licence file and feature identifier take the following steps:
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
 
+## Encryption Key Requirements
+
+example text
+
 ## Web Browser Requirements
 
 Gateway supports the latest versions of the following browsers:

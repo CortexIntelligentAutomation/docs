@@ -137,7 +137,7 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
      | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Application Server. |
-    |`EncryptionKey`                           | Configure this value with the encryption key that will be used by the Cortex Encryptor. |
+    |`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. |
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Application Server and press OK.
     1. A message will indicate that the script has completed successfully.
@@ -313,6 +313,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServer" >}}
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.CertificateRequirements" >}}
+[Encryption Key Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionKeyRequirements" >}}
 [Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
 [Add Encryption Key]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddEncryptionKey" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}

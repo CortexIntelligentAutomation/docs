@@ -108,7 +108,7 @@ To install the components required for debugging, perform the steps detailed in 
      | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Web Application Server. |
-    |`EncryptionKey`                           | Configure this value with the encryption key that will be used by the Cortex Encryptor. This must be match the `EncryptionKey` used when [adding encryption key][Add Encryption Key] in [install application servers and load balancer][Install Application Servers and Load Balancer]. |
+    |`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. {{< alert type="note" title="Note" >}}This must be match the `EncryptionKey` used in {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddEncryptionKey" title="Add Encryption Key" >}} from {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" title="Install Application Servers" >}}.{{< /alert >}}  |
 
     1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Web Application Server and press OK.
     1. A message will indicate that the script has completed successfully.
@@ -272,6 +272,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.LicensingRequirements" >}}
+[Encryption Key Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionKeyRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.TryItOut" >}}
 [Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
