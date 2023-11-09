@@ -14,11 +14,11 @@ The `Match` data type is used to represent a regex match. It contains all of the
 
 | | |
 |-|-|
-| **Category:**          | Regex                                            |
+| **Category:**          | Text                                            |
 | **Name:**              | `Match`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Text.Regex.Match`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | A regex match. |
+| **Description:**       | A `Match` represents a regex match. It contains all of the [Groups][Group] found in the regex pattern. |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `Match`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
@@ -27,7 +27,7 @@ The `Match` data type is used to represent a regex match. It contains all of the
 
 ### Value
 
-The value of the full match.
+The value of the text that was matched
 
 | | |
 |--------------------|---------------------------|
@@ -38,7 +38,7 @@ The value of the full match.
 
 ### Index
 
-The starting index of the regex match in the input text.
+The starting index of the regex match.
 
 | | |
 |--------------------|---------------------------|
@@ -49,7 +49,7 @@ The starting index of the regex match in the input text.
 
 ### Length
 
-The length of this regex match.
+The length of [Value][Value Property].
 
 | | |
 |--------------------|---------------------------|
@@ -60,7 +60,9 @@ The length of this regex match.
 
 ### Groups
 
-The dictionary of [Groups][Group] in this match. The key [String][] is the [Group][] name. The default group `0` is always included for a valid match, and contains the whole [Value][Value Property] as its value. Unnamed groups will have keys starting from `"1"`, `"2"`, etc.
+The dictionary of [Groups][Group] in the match.<br><br>Each key in [Groups][Groups Property] represents the name of the [Group][], if a group does not have a name provided they will increment from `"1"`
+
+[Groups][Groups Property] always contains a default [Group][] representing the full match, the name of this [Group][] is always `"0"`.
 
 | | |
 |--------------------|---------------------------|
@@ -77,23 +79,29 @@ The following table shows some of the ways that a `Match` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Construct `Match` | `new Match{Value = "", Index = 0, Length = 0, Groups = {}}`  | `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | Expression | |
+| Use a `Match` constructor with object initialisation | `new Match{Value = "", Index = 0, Length = 0, Groups = new Dictionary<String,Group>()}`  | `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | Expression | |
 
 ### Convert Match to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
+| Use `ToString` | `($)Match.ToString()` | `"Cortex.DataTypes.Text.Regex.Match"` | Expression | ToString will return the Full Name of the `Match` Data Type |
+| Use `Convert Object to Text` block | where `Object` property has a value of `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | `"Cortex.DataTypes.Text.Regex.Match"` | N/A | See [Convert Object to Text][] |
 | Use `Convert Object to Json` block | where `Object` property has a value of `{"Value": "","Index": 0,"Length": 0,"Groups": {}}` | `"{\r\n  \"Value\": \"\",\r\n  \"Index\": 0,\r\n  \"Length\": 0,\r\n  \"Groups\": {}\r\n}"` | N/A | See [Convert Object to Json][] |
 
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `Match`.
-- The Literal Editor is available for [Input][] properties where the data type is `Match`.
+- The Literal Editor is not available for [Input][] properties where the data type is `Match`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Match`.
 
 ### Known Limitations
 
-None
+#### ToString Method always returns the Full Name
+
+Currently, if the `ToString()` method is used on a `Match`, then its Full Name will be returned; instead of a representation of the data within the `Match`.
+
+In future this limitation may be removed.
 
 ## See Also
 
@@ -110,8 +118,9 @@ None
 
 ### External Documentation
 
-* [System.Text.RegularExpressions.Match][]
+None
 
+[Groups Property]: {{<ref "#groups">}}
 [Value Property]: {{<ref "#value">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
@@ -129,5 +138,6 @@ None
 [Group]: {{<url path="Cortex.Reference.DataTypes.Text.Regex.Group.MainDoc">}}
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+[Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 
 [Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}

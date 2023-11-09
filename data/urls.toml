@@ -1313,6 +1313,8 @@
                     MainDoc = "/docs/reference/data-types/collections/ienumerable-1"
                 [Cortex.Reference.DataTypes.Collections.IList]
                     MainDoc = "/docs/reference/data-types/collections/ilist-1"
+                [Cortex.Reference.DataTypes.Collections.IReadOnlyList]
+                    MainDoc = "/docs/reference/data-types/collections/ireadonlylist-1"
                 [Cortex.Reference.DataTypes.Collections.List]
                     MainDoc = "/docs/reference/data-types/collections/list-1"
                     CreateNew = "/docs/reference/data-types/collections/list-1#create-a-listlttitemgt"

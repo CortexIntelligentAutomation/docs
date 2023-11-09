@@ -17,7 +17,7 @@ Finds the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFi
 
 ## Examples
 
-### Find the specified Occurrence of Text To Find (Ordinal)
+### Find the first Occurrence of Text To Find (Ordinal)
 
 This example will find the first occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
 
@@ -29,7 +29,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `0` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
@@ -74,7 +74,7 @@ As this example is performing a [case-sensitive, culture-insensitive][Ordinal] c
 
 ***
 
-### Find the specified Occurrence of Text To Find (Ordinal Ignore Case)
+### Find the second Occurrence of Text To Find (Ordinal Ignore Case)
 
 This example will find the second occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
 
@@ -86,7 +86,7 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `2` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
@@ -131,7 +131,7 @@ As this example is performing a [case-insensitive, culture-insensitive][OrdinalI
 
 ***
 
-### Find the last occurrence of Text To Find
+### Find the last Occurrence of Text To Find
 
 This example will find the last occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
 
@@ -150,7 +150,7 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 
 #### Result
 
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. As we are looking for [Occurrence][Occurrence Property] `-1`, we choose the last occurrence, and therefore, the variable `($)Match` will be set to the following:
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. The second occurrence is the last occurrence, and therefore, the variable `($)Match` will be set to the following:
 
 ```json
 {
@@ -188,9 +188,9 @@ As this example is performing a [case-insensitive, culture-insensitive][OrdinalI
 
 ***
 
-### Find an invalid occurrence of Text To Find
+### Find an invalid Occurrence of Text To Find
 
-This example will find the third occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
+This example will find the third occurrence of `"The"`, which is not present, in `"The quick brown fox jumps over the lazy dog"`.
 
 It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
 
@@ -200,14 +200,14 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `2` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `3` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
 
 #### Result
 
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. As we are looking for [Occurrence][Occurrence Property] `2`, and there are only 2 matches, there is not a valid match. Therefore, the variable `($)Match` will be set to the following:
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. There is no match for the third [Occurrence][Occurrence Property]. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
 null
@@ -215,7 +215,7 @@ null
 
 ***
 
-### Find the specified Occurrence that matches the pattern in Text To Find
+### Find the first Occurrence that matches the pattern in Text To Find
 
 This example will find the first occurrence of text that match a pattern containing `"?he"` in `"The quick brown fox jumps over the lazy dog"`.
 
@@ -227,7 +227,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "?he", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "?he", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `0` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.PatternMatching` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
@@ -272,7 +272,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
-### Find the specified Occurrence that matches the regex in Text To Find
+### Find the first Occurrence that matches the regex in Text To Find
 
 This example will find the first occurrence of text that match the regex `"^The"` from `"The quick brown fox jumps over the lazy dog"`.
 
@@ -284,7 +284,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "^The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "^The", endsWith:"")` |  `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `0` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.Regex` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
@@ -329,7 +329,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
-### Find the specified Occurrence that starts with and ends with a Text To Find in Text
+### Find the first Occurrence that starts with and ends with a Text To Find in Text
 
 This example will find the first occurrence of text that starts with `"The"` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
 
@@ -341,14 +341,14 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": "", "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: "", endsWith:"jumps")` |  `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `0` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog"` contains 1 occurrence starting with `"The"` and ending with `"jumps"`, which is `"The quick brown fox jumps"` Therefore, the variable `($)Match` will be set to the following:
+`"The quick brown fox jumps over the lazy dog"` contains one occurrence starting with `"The"` and ending with `"jumps"`, which is `"The quick brown fox jumps"` Therefore, the variable `($)Match` will be set to the following:
 
 ```json
 {
@@ -398,7 +398,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
-### Find the specified Occurrence that starts with and ends with a Text To Find in Text (Null contains)
+### Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)
 
 This example will find the first occurrence of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`. To clarify, this [Text To Find][TextToFind Property] input is searching for matches of `"Thejumps"` exactly in [Text][Text Property].
 
@@ -410,7 +410,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": null, "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: null, endsWith:"jumps")` |  `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `0` | `($)Occurrence` is a variable of type [Int32][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
