@@ -67,7 +67,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
-### Install {{% ctx %}} Gateway
+### Upgrade {{% ctx %}} Gateway
 
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
@@ -90,7 +90,6 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 
 1. Run the PowerShell command to install {{% ctx %}} Gateway.
 1. If `ImportCertificate` is set to $true, and the file is of type `.pfx`, a prompt will appear for the certificate password. This should be entered, and then hit `Enter`.
-1. A prompt will appear to enter the password for the user specified to run the {{% ctx %}} Gateway Application Pool.  This should be entered, and then hit `Enter`.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
     If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
@@ -104,9 +103,13 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 
 {{< section "/install-web-application-server/grant-gateway-user-additional-folder-permissions.md">}}
 
+# Preserve installation files
+
+{{< section "/preserve-installation-files.md">}}
+
 ## Next Steps?
 
-1. [Setup {{% ctx %}} Gateway][Setup CORTEX Gateway]
+1. [Try it out][]
 
 [Assign Certificate Friendly Name]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AssignCertificateFriendlyNameNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
@@ -114,6 +117,6 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Flow Debugger installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.DebuggerInstallation" >}}
-[Get CORTEX Gateway Application Pool User]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.GetGatewayAppPoolUser" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.TryItOut" >}}

@@ -110,6 +110,10 @@ This guide describes how to install {{% ctx %}} Gateway on the Web Application S
 
 {{< section "/install-web-application-server/grant-gateway-user-additional-folder-permissions.md">}}
 
+# Preserve installation files
+
+{{< section "/preserve-installation-files.md">}}
+
 ## Next Steps?
 
 1. [Setup {{% ctx %}} Gateway][Setup CORTEX Gateway]
