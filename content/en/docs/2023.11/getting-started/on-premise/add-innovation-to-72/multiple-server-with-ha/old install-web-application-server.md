@@ -1,6 +1,6 @@
 ---
-title: "Upgrade v7.2 Gateway to Include Innovation"
-linkTitle: "Upgrade v7.2 Gateway to Include Innovation"
+title: "Upgrade v7.2 Gateway to Include Innovation Old"
+linkTitle: "Upgrade v7.2 Gateway to Include Innovation Old"
 description: "Information about upgrading v7.2 Gateway with Innovation functionality."
 weight: 40
 ---
