@@ -145,9 +145,28 @@ To get a licence file and feature identifier take the following steps:
 
 ## Encryption Key Requirements
 
-A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be used when configuring the installation scripts and the Gateway installation. The encryption key is needed when installing the Application servers and Web Application server and it should ****NEEDED Generating key info****.
+A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be added to each Application Server and the Web Application Server. This will be used by the Cortex Encryptor to encrypt values to [CORTEX Encrypted][].
+
+Choose one of the Application Servers to be used for installation, and copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
 
 To get an encryption key take the following steps:
+
+1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - Generate Encryption Key"
+    ```
+
+1. Run the `Cortex.Encryption.KeyGeneration.exe` script using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Servers and Web Application Server:
+
+    ```powershell
+    .\Cortex.Encryption.KeyGeneration.exe "app-server1, app-server2, app-server3, webapp-server"
+    ```
+
+1. A message will indicate that the script has completed successfully.
+{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up.{{< /alert >}}
 
 ## Web Browser Requirements
 
@@ -331,6 +350,7 @@ Application Servers and Load Balancer server are installed in the same way regar
 [Microsoft SQL Express 2016]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
 [IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}
+[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [Requirements For Recommended Architecture]: {{< ref "#recommended-architecture" >}}
 [Requirements For Alternative Architectures]: {{< ref "#alternative-architectures" >}}

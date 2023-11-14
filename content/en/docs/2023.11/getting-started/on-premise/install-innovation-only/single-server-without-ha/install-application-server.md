@@ -120,35 +120,6 @@ To check all necessary ports are free, follow these steps:
 
     The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
-## Add Encryption Key
-
-To add an encryption key to each of the Application Servers, follow these steps:
-
-1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Encryption` folder within the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
-
-    ```powershell
-    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
-    ```
-
-1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
-
-    ```powershell
-    .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("app-server1") -EncryptionKey 'generated-key'
-    ```
-
-    | Name                                         | Description |
-|----------------------------------------------|-------------|
-|`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Application Server. |
-|`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. |
-
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Application Server and press OK.
-1. A message will indicate that the script has completed successfully.
-
-The `EncryptionKey` will be needed [later, when installing Gateway][Install Gateway]
-
-{{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="Configure Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
-
 ## Configure Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.ps1` script and open it with a text editor.
@@ -198,12 +169,14 @@ The `EncryptionKey` will be needed [later, when installing Gateway][Install Gate
         {{< /tab >}}
     {{< /tabpane >}}
 
+    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be created on a server that has the `Encryption Key` added from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+
     | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the App Services zip file on the server. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the server. |
     |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
-    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />For security reasons it is recommended that the default encrypted value should be changed to an encrypted value that has been [CORTEX Encrypted][] using the `EncryptionKey` from [Add Encryption Key][]. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway].{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 address of the server.|
     |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the server. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the single node cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul>{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}|
@@ -317,7 +290,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.CertificateRequirements" >}}
 [Encryption Key Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
-[Add Encryption Key]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AddEncryptionKey" >}}
 [Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}

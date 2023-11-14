@@ -87,7 +87,28 @@ To get a licence file and feature identifier take the following steps:
 
 ## Encryption Key Requirements
 
-A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be used when configuring the installation scripts and the Gateway installation. The encryption key is needed when installing the Application server and Web Application server and it should ****NEEDED Generating key info****.
+A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be added to the Application Server and the Web Application Server. This will be used by the Cortex Encryptor to encrypt values to [CORTEX Encrypted][].
+
+On the Application Server to be used for installation, copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
+
+To get an encryption key take the following steps:
+
+1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - Generate Encryption Key"
+    ```
+
+1. Run the `Cortex.Encryption.KeyGeneration.exe` script using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Server and Web Application Server:
+
+    ```powershell
+    .\Cortex.Encryption.KeyGeneration.exe "app-server, webapp-server"
+    ```
+
+1. A message will indicate that the script has completed successfully.
+{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up.{{< /alert >}}
 
 To get an encryption key take the following steps:
 

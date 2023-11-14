@@ -152,33 +152,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 
 ## Perform Installation
 
-## Add Encryption Key
-
-To add an encryption key to each of the Application Servers, follow these steps:
-
-1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Encryption` folder within the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
-
-    ```powershell
-    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Encryption"
-    ```
-
-1. Run the `Cortex.Innovation.Install.Encryption.ps1` script using the following command, changing the parameters according to the details given below:
-
-    ```powershell
-    .\Cortex.Innovation.Install.Encryption.ps1 -ApplicationServers @("webapp-server") -EncryptionKey 'generated-key'
-    ```
-
-    | Name                                         | Description |
-|----------------------------------------------|-------------|
-|`ApplicationServers`                              | Configure this value with the NETBIOS names or fully qualified domain name of the Web Application Server. |
-|`EncryptionKey`                           | Configure this value with the encryption key generated from the [Encryption Key Requirements][]. {{< alert type="note" title="Note" >}}This must be match the `EncryptionKey` used in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AddEncryptionKey" title="Add Encryption Key" >}} from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" title="Install Application Servers and Load Balancer" >}}.{{< /alert >}}  |
-
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the Web Application Server and press OK.
-1. A message will indicate that the script has completed successfully.
-
-{{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure Cortex Gateway Installation Script" >}} should be created on a server that has the `EncryptionKey` added.{{< /alert >}}
-
 ### Configure {{% ctx %}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
@@ -211,6 +184,7 @@ To add an encryption key to each of the Application Servers, follow these steps:
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
+    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be created on a server that has the `Encryption Key` added from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
@@ -337,7 +311,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
-[Add Encryption Key]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AddEncryptionKey" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
