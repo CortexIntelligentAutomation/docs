@@ -1,6 +1,6 @@
 ---
-title: "Perform Flow Debugger Installation"
-linkTitle: "Perform Flow Debugger Installation"
+title: "Install Flow Debugger"
+linkTitle: "Install Flow Debugger"
 description: "Information about installing the Flow Debugger."
 weight: 20
 ---

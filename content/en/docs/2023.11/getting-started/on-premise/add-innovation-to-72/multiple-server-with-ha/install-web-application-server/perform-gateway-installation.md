@@ -1,6 +1,6 @@
 ---
-title: "Perform Gateway Installation"
-linkTitle: "Perform Gateway Installation"
+title: "Upgrade Gateway"
+linkTitle: "Upgrade Gateway"
 description: "Information about upgrading v7.2 {{% ctx %}} Gateway to include Innovation."
 weight: 30
 ---

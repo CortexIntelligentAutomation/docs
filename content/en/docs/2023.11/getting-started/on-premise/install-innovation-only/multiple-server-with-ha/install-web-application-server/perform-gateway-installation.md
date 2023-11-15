@@ -1,6 +1,6 @@
 ---
-title: "Perform Gateway Installation"
-linkTitle: "Perform Gateway Installation"
+title: "Install Gateway"
+linkTitle: "Install Gateway"
 description: "Information about installing {{% ctx %}} Gateway."
 weight: 30
 ---
