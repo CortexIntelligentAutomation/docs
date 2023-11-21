@@ -87,14 +87,14 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
       "serverCertificates": {
         "serverCert": {
           "pfxCertificatePath": "C:\\Certificates\\wildCardCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
+          "pfxCertificatePassword": "#_121004188127116!133150189159197057145221234081254~237141201182240!228132117152122101166250091035249#",
           "pemRootCertificatePath": ""
         }
       },
       "adminCertificates": {
         "loadBalancerCert": {
           "pfxCertificatePath": "C:\\Certificates\\lbCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
+          "pfxCertificatePassword": "#_121004188127116!133150189159197057145221234081254~237141201182240!228132117152122101166250091035249#",
           "pemRootCertificatePath": ""
         }
       }
@@ -120,7 +120,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |75    |The password used to secure the .PFX file.|
     |76    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
     |81    |This is the local path of a .PFX certificate file on the first Application Server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |82    |The password used to secure the .PFX file.|
+    |82    |The password used to secure the .PFX file.{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |83    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.
@@ -179,7 +179,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
       "serverCertificates": {
         "serverCert": {
           "pfxCertificatePath": "C:\\Certificates\\wildCardCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
+          "pfxCertificatePassword": "#_121004188127116!133150189159197057145221234081254~237141201182240!228132117152122101166250091035249#",
           "pemRootCertificatePath": ""
         }
       }
@@ -195,7 +195,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |27    | The name of a certificate entry in the serverCertificates section. If this line is removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.|
     |48-50 | Skip configuring these lines if self-signed certificates are being used. |
     |48    |This is the local path of a .PFX certificate file on the server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |49    |The password used to secure the .PFX file.|
+    |49    |The password used to secure the .PFX file. {{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |50    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.

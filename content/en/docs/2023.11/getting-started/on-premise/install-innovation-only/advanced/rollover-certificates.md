@@ -47,26 +47,28 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
         {{< tab header="Multiple Servers with HA" >}}
 .\Cortex.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword "#_173143083161001!153134111116076231173085078170111~219102086228187!128017006016134019248042194172107#" `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "myPassword" `
+    -ClientCertificatePassword "#_173143083161001!153134111116076231173085078170111~219102086228187!128017006016134019248042194172107#" `
     -Credential $Credential
         {{< /tab >}}
         {{< tab header="Single Server without HA" >}}
 .\Cortex.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword "#_173143083161001!153134111116076231173085078170111~219102086228187!128017006016134019248042194172107#" `
     -SkipLoadBalancer `
     -Credential $Credential
         {{< /tab >}}
     {{< /tabpane >}}
 
+    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be created on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+
     | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`ServerCertificatePath`                       | The local path of a new, valid .PFX certificate file on the server. Environment variables cannot be used. <br /><br />The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the single node cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul> |
-    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`.|
+    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`.{{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. This can be the same certificate as the `ServerCertificatePath`. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the [Certificate Requirements][].<br /><br />This certificate will be used for: <ul><li>Securing communication between the load balancer and the nodes on the Application Servers.</li></ul>|
-    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if using the Built-In Load Balancer. |
+    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if using the Built-In Load Balancer. {{< alert type="note" title="Note" >}} This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`SkipLoadBalancer`                             | Updates certificates without updating a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 
