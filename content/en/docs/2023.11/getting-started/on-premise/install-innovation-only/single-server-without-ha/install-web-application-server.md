@@ -184,7 +184,7 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
-    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be created on a server that has the `Encryption Key` added from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+    {{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be encrypted on a server that has the `Encryption Key` added from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|

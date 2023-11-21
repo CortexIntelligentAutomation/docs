@@ -86,11 +86,14 @@ If the installation fails with `Root certificate verification failed as no root 
       "serverCertificates": {
         "serverCert": {
           "pfxCertificatePath": "C:\\Certificates\\wildCardCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
+          "pfxCertificatePassword": "#_121004188127116!133150189159197057145221234081254~237141201182240!228132117152122101166250091035249#",
           "pemRootCertificatePath": "C:\\Certificates\\rootCert.pem"
         }
       }
     ```
+
+    {{< alert type="note" title="Note" >}} The `pfxCertificatePassword` field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
+    <br /><br />For security reasons, this value should be encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}{{< /alert >}}
 
 1. If a load balancer is being used (not single server), modify the installation configuration file to include the .pem file as the `pemRootCertificatePath` in the `adminCertificates` like so:
 
@@ -98,11 +101,14 @@ If the installation fails with `Root certificate verification failed as no root 
       "adminCertificates": {
         "loadBalancerCert": {
           "pfxCertificatePath": "C:\\Certificates\\lbCert.pfx",
-          "pfxCertificatePassword": "pfxPassword",
+          "pfxCertificatePassword": "#_121004188127116!133150189159197057145221234081254~237141201182240!228132117152122101166250091035249#",
           "pemRootCertificatePath": "C:\\Certificates\\lbRootCert.pem"
         }
       }
     ```
+
+    {{< alert type="note" title="Note" >}} The `pfxCertificatePassword` field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
+    <br /><br />For security reasons, this value should be encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}{{< /alert >}}
 
 1. Run the installation script again.
 

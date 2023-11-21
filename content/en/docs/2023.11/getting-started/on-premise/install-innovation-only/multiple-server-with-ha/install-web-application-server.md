@@ -198,7 +198,7 @@ To install the components required for debugging, perform the steps detailed in 
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
-{{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be created on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+{{< alert type="note" title="Note" >}}For security reasons the fields that are required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} should be encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
