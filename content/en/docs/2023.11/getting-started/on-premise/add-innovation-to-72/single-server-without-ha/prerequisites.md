@@ -89,19 +89,19 @@ To get a licence file and feature identifier take the following steps:
 
 A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be added to the Application Server and the Web Application Server. This will be used by the Cortex Encryptor to encrypt values to [CORTEX Encrypted][].
 
-On the Application Server to be used for installation, copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
+Choose either the Application Server or the Web Application Server, copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
 
-To get an encryption key take the following steps:
+To generate and set an encryption key take the following steps:
 
 1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
-1. Open a Windows PowerShell (x64) window as administrator. The user must be a domain user that is a member of the local Administrators group on the Application Server and Web Application Server.
+1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Application Server and Web Application Server.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
 
     ```powershell
     cd "C:\Install\Cortex Innovation {{< version >}} - Generate Encryption Key"
     ```
 
-1. Run the `Cortex.Encryption.KeyGeneration.exe` script using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Servers and Web Application Server:
+1. Run the `Cortex.Encryption.KeyGeneration.exe` script using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Server and Web Application Server:
 
     ```powershell
     .\Cortex.Encryption.KeyGeneration.exe "app-server, webapp-server"
@@ -222,6 +222,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}

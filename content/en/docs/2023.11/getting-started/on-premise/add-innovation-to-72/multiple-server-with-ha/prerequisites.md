@@ -147,12 +147,12 @@ To get a licence file and feature identifier take the following steps:
 
 A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be added to each Application Server and the Web Application Server. This will be used by the Cortex Encryptor to encrypt values to [CORTEX Encrypted][].
 
-Choose one of the Application Servers to be used for installation, and copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
+Choose either one of the Application Server or the Web Application Server, and copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
 
-To get an encryption key take the following steps:
+To generate and set an encryption key take the following steps:
 
 1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
-1. Open a Windows PowerShell (x64) window as administrator. The user must be a domain user that is a member of the local Administrators group on each of the Application Server and Web Application Server.
+1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Application Server and Web Application Server.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
 
     ```powershell
@@ -166,7 +166,7 @@ To get an encryption key take the following steps:
     ```
 
 1. A message will indicate that the script has completed successfully.
-{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up. If any keys were overwritten then they must be backed up too.{{< /alert >}}
+{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up. If any keys are overwritten then they must be backed up too.{{< /alert >}}
 
 ## Web Browser Requirements
 
@@ -340,6 +340,7 @@ Application Servers and Load Balancer server are installed in the same way regar
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
