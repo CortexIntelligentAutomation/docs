@@ -187,7 +187,7 @@ To check all necessary ports are free, follow these steps:
     |`LdapConnectionDetails`                        | The connection details to the LDAP server. <br /><br />This must be configured with a valid `Host`, `Username`, `Password`, and whether the LDAP server uses SSL using `UseSsl`. {{< alert type="note" title="Note" >}}The fields `Host` and `Username` can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}. The field `Password` must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
-    
+
     The `ApiGatewayBasicAuthUsername` and `ApiGatewayBasicAuthPassword` will be needed [later, when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}

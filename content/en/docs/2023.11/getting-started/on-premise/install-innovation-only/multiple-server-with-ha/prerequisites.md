@@ -123,7 +123,7 @@ Choose one of the Application Servers to be used for installation, and copy the 
 To get an encryption key take the following steps:
 
 1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
-1. Open a Windows PowerShell (x64) window as administrator.
+1. Open a Windows PowerShell (x64) window as administrator. The user must be a domain user that is a member of the local Administrators group on each of the Application Servers and Web Application Server.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
 
     ```powershell
@@ -137,7 +137,7 @@ To get an encryption key take the following steps:
     ```
 
 1. A message will indicate that the script has completed successfully.
-{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up.{{< /alert >}}
+{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up. If any keys were overwritten then they must be backed up too.{{< /alert >}}
 
 ## Web Browser Requirements
 
