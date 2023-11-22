@@ -158,7 +158,7 @@
                     AltLoadBalancer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
-                    ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"  
+                    ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
