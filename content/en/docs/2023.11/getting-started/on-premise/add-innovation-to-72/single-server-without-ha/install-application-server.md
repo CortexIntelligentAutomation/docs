@@ -169,7 +169,7 @@ To check all necessary ports are free, follow these steps:
         {{< /tab >}}
     {{< /tabpane >}}
 
-    {{< alert type="note" title="Note" >}}For security reasons, its recommended that the fields required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} are encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|

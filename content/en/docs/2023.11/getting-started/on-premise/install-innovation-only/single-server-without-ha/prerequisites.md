@@ -85,33 +85,6 @@ To get a licence file and feature identifier take the following steps:
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
 
-## Encryption Key Requirements
-
-A valid {{% ctx %}} encryption key must be procured from {{% ctx %}}. The encryption key is a 32 byte hash which will be added to the Application Server and the Web Application Server. This will be used by the Cortex Encryptor to encrypt values to [CORTEX Encrypted][].
-
-Choose either the Application Server or the Web Application Server, copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it.
-
-To generate and set an encryption key take the following steps:
-
-1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
-1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Application Server and Web Application Server.
-1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
-
-    ```powershell
-    cd "C:\Install\Cortex Innovation {{< version >}} - Generate Encryption Key"
-    ```
-
-1. Run the `Cortex.Encryption.KeyGeneration.exe` script using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Server and Web Application Server:
-
-    ```powershell
-    .\Cortex.Encryption.KeyGeneration.exe "app-server, webapp-server"
-    ```
-
-1. A message will indicate that the script has completed successfully.
-{{< alert type="note" title="Note" >}}For security reasons the outputted `Encryption Key` should be backed up. If any keys were overwritten then they must be backed up too.{{< /alert >}}
-
-To get an encryption key take the following steps:
-
 ## Web Browser Requirements
 
 Gateway supports the latest versions of the following browsers:
@@ -239,6 +212,40 @@ There is a set of non-compulsory security measures, recommended to be applied to
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
 See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
+
+### Encryption Requirements
+
+Certain sensitive parameters required during installation (e.g. passwords) must be encrypted; other potentially sensitive parameters (e.g. usernames) can be encrypted using the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module, which uses AES256. Details of whether a parameter must or can be encrypted are specified during the installation steps.
+
+Before encrypting parameters, it is required to generate a private key that will be used by the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module using the following steps:
+
+Choose either the Application Servers or the Web Application Server, and copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it:
+
+1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
+1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Application Servers and Web Application Server.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - Generate Encryption Key"
+    ```
+
+1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Server and Web Application Server:
+
+    ```powershell
+    .\Cortex.Encryption.KeyGeneration.exe "app-server, webapp-server"
+    ```
+
+1. A message similar to the following will indicate that the application has completed successfully:
+
+    ```text
+    app-server1: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
+    Encryption key set on app-server1
+    webapp-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
+    Encryption key set on webapp-server
+    Encryption Key: 284BADF55BDDC93A47D7DE8FC2C4DC9B
+    ```
+
+{{% alert title="Important" color="warning" %}}For security reasons the outputted `Encryption Key` should be backed up. If any keys were overwritten then they must be backed up too.{{% /alert %}}
 
 ## Next Steps?
 
