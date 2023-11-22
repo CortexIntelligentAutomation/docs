@@ -12,6 +12,8 @@ description: "Information on troubleshooting {{% ctx %}} Innovation installation
 
 If the installation fails with `Root certificate verification failed as no root certificate has been specified.` it means that Windows has not got the trusted root installed for the provided X.509 certificate. This can be rectified by providing the path to a .pem file containing the root certificate in the `pemRootCertificatePath` property for each certificate in the `serverCertificates` and/or `adminCertificates` section of the configuration file. After adding this, the installation script can be re-run. The following steps can be taken to create a .pem file and re-run the installation (these instructions may differ slightly depending on the Certificate Authority):
 
+  {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+
 1. In order to find out the issuer of the certificate, if not already known, the following script can be used, replacing the password for the pfx file and certificate path as necessary:
 
     ```powershell
@@ -92,8 +94,7 @@ If the installation fails with `Root certificate verification failed as no root 
       }
     ```
 
-    {{< alert type="note" title="Note" >}} The `pfxCertificatePassword` parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
-    <br /><br />For security reasons, it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+    {{< alert type="note" title="Note" >}} The `pfxCertificatePassword` parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}
 
 1. If a load balancer is being used (not single server), modify the installation configuration file to include the .pem file as the `pemRootCertificatePath` in the `adminCertificates` like so:
 
@@ -107,8 +108,7 @@ If the installation fails with `Root certificate verification failed as no root 
       }
     ```
 
-    {{< alert type="note" title="Note" >}} The `pfxCertificatePassword` parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
-    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+    {{< alert type="note" title="Note" >}} The `pfxCertificatePassword` parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}
 
 1. Run the installation script again.
 

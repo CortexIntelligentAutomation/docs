@@ -101,6 +101,8 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     }
     {{< / highlight >}}
 
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+
     | Line | Description |
     |------|-------------|
     |4     | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
@@ -120,8 +122,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |75    |The password used to secure the .PFX file.|
     |76    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
     |81    |This is the local path of a .PFX certificate file on the first Application Server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |82    |The password used to secure the .PFX file.<br /><br />{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
-    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}|
+    |82    |The password used to secure the .PFX file.<br /><br />{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |83    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.
@@ -187,6 +188,8 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     }
     {{< / highlight >}}
 
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+
     | Line | Description |
     |------|-------------|
     |4     | A name identifying the platform being installed. This should have no spaces or symbols. It will be appended to the node names that are displayed in the Service Fabric management tool. |
@@ -196,8 +199,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |27    | The name of a certificate entry in the serverCertificates section. If this line is removed, an auto-generated self-signed certificate will be used. Self-signed certificates are not recommended for production systems.|
     |48-50 | Skip configuring these lines if self-signed certificates are being used. |
     |48    |This is the local path of a .PFX certificate file on the server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
-    |49    |The password used to secure the .PFX file. <br /><br />{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
-    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}|
+    |49    |The password used to secure the .PFX file. <br /><br />{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |50    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.

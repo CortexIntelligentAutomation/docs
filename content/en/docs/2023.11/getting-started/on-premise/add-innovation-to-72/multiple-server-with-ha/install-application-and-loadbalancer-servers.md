@@ -321,7 +321,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Upgrade v7.2 Gateway to Include Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServer" >}}
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirements" >}}
-[Encryption Key Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirements" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirements" >}}
 [Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}

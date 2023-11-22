@@ -61,7 +61,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
         {{< /tab >}}
     {{< /tabpane >}}
 
-    {{< alert type="note" title="Note" >}}For security reasons, its recommended that the fields required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} are encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}
+    {{< alert type="note" title="Note" >}}For security reasons, its recommended that the fields required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} are encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Requirements" >}}.{{< /alert >}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|

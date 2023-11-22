@@ -321,7 +321,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
-[Encryption Key Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirements" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirements" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
