@@ -319,7 +319,6 @@ Application Servers and Load Balancer server are installed in the same way regar
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}

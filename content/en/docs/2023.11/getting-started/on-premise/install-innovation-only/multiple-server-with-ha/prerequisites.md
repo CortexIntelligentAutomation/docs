@@ -291,7 +291,6 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
