@@ -121,7 +121,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |76    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
     |81    |This is the local path of a .PFX certificate file on the first Application Server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
     |82    |The password used to secure the .PFX file.<br /><br />{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
-    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}|
+    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}|
     |83    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.
@@ -197,7 +197,7 @@ Advanced configuration (such as port changes) can be undertaken by taking the fo
     |48-50 | Skip configuring these lines if self-signed certificates are being used. |
     |48    |This is the local path of a .PFX certificate file on the server, containing a full chain certificate with private key. Ensure that all backslashes are escaped with another backslash. Environment variables cannot be used. |
     |49    |The password used to secure the .PFX file. <br /><br />{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.
-    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionKeyRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}|
+    <br /><br />For security reasons it is recommended that this value is encrypted on a server that has the `Encryption Key` set from {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Key Requirements" >}}.{{< /alert >}}|
     |50    |This only needs to be used if the installation has failed due to a missing root certificate. See [Troubleshooting Root Certificate Error] for information.|
 
 1. Save and close the config file.
