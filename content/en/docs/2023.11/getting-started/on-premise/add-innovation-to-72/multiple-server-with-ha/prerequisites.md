@@ -290,6 +290,10 @@ A script is provided during installation to apply these security changes:
 * For the Application servers: `Cortex.Innovation.Install.Multiple.SSLBestPractices.ps1`
 * For the Web Application Server: `Cortex.Innovation.Install.SSLBestPractices.ps1`
 
+### Encryption Requirements
+
+{{< section "/prerequisites/multi-server/encryption-requirements.md">}}
+
 ## Alternative Load Balancer Requirements
 
 Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
@@ -325,6 +329,7 @@ Application Servers and Load Balancer server are installed in the same way regar
 [Microsoft SQL Express 2016]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
 [IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}
+[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [Requirements For Recommended Architecture]: {{< ref "#recommended-architecture" >}}
 [Requirements For Alternative Architectures]: {{< ref "#alternative-architectures" >}}

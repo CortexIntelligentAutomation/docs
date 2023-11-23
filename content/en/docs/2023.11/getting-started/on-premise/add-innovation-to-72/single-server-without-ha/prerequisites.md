@@ -178,7 +178,7 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 
 This file should be placed in a known location on the server. This location will be required when running the Application Server installation script.
 
-## TLS Requirements
+### TLS Requirements
 
 There is a set of non-compulsory security measures, recommended to be applied to the server, in order to prevent potential attacks that exploit known industry security vulnerabilities. This includes disabling all versions of SSL and TLS apart from TLS 1.2, and disabling all cipher suites apart from the following:
 
@@ -186,6 +186,10 @@ There is a set of non-compulsory security measures, recommended to be applied to
 * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
 See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
+
+### Encryption Requirements
+
+{{< section "/prerequisites/single-server/encryption-requirements.md">}}
 
 ## Next Steps?
 

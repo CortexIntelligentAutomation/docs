@@ -213,6 +213,10 @@ There is a set of non-compulsory security measures, recommended to be applied to
 
 See [SSL Best Practices][] for a full list of the security changes which will be applied. The `Cortex.Innovation.Install.SSLBestPractices.ps1` script is provided during installation to apply these security changes to the server.
 
+### Encryption Requirements
+
+{{< section "/prerequisites/single-server/encryption-requirements.md">}}
+
 ## Next Steps?
 
 1. [Install Application Server][]
