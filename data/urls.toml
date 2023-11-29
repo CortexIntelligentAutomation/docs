@@ -121,6 +121,7 @@
                     WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#web-browser-requirements"
                     AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#encryption-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
                     TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/#test-publishing-production-flows"
@@ -140,6 +141,7 @@
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#encryption-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
                     TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out/#test-publishing-production-flows"
@@ -179,6 +181,7 @@
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#encryption-requirements"
                     TryItOut= "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/try-it-out"
                     AntivirusExclusions = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     HardwareRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#hardware-requirements"
@@ -199,6 +202,7 @@
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#encryption-requirements"
                     TryItOut= "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/try-it-out"
                     AntivirusExclusions = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#antivirus-exclusions"
                     HardwareRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#hardware-requirements"
@@ -953,6 +957,24 @@
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
                         KnownLimitations = "/docs/reference/blocks/text/decode-text/decode-text-block/#known-limitations"
+                [Cortex.Reference.Blocks.Text.FindText]
+                    MainDoc = "/docs/reference/blocks/text/find-text/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-text-block/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block/"
+                [Cortex.Reference.Blocks.Text.FindAndRemoveText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-all-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndReplaceText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-replace-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-all-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
@@ -1310,6 +1332,8 @@
                     MainDoc = "/docs/reference/data-types/collections/ienumerable-1"
                 [Cortex.Reference.DataTypes.Collections.IList]
                     MainDoc = "/docs/reference/data-types/collections/ilist-1"
+                [Cortex.Reference.DataTypes.Collections.IReadOnlyList]
+                    MainDoc = "/docs/reference/data-types/collections/ireadonlylist-1"
                 [Cortex.Reference.DataTypes.Collections.List]
                     MainDoc = "/docs/reference/data-types/collections/list-1"
                     CreateNew = "/docs/reference/data-types/collections/list-1#create-a-listlttitemgt"
@@ -1691,6 +1715,14 @@
                     MainDoc = "/docs/reference/data-types/text/encryptedtext"
                 [Cortex.Reference.DataTypes.Text.IFormatProvider]
                     MainDoc = "/docs/reference/data-types/text/iformatprovider"
+                [Cortex.Reference.DataTypes.Text.Regex]
+                    MainDoc = "/docs/reference/data-types/text/regex"
+                    [Cortex.Reference.DataTypes.Text.Regex.Match]
+                        MainDoc = "/docs/reference/data-types/text/regex/match"
+                    [Cortex.Reference.DataTypes.Text.Regex.Group]
+                        MainDoc = "/docs/reference/data-types/text/regex/group"
+                    [Cortex.Reference.DataTypes.Text.Regex.CaptureDetails]
+                        MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
@@ -1704,6 +1736,11 @@
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.TextToFind]
+                    MainDoc = "/docs/reference/data-types/text/texttofind"
+                    StartsWith = "/docs/reference/data-types/text/texttofind/#starts-with"
+                    Contains = "/docs/reference/data-types/text/texttofind/#contains"
+                    EndsWith = "/docs/reference/data-types/text/texttofind/#ends-with"
                 [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
                     MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
                 [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
@@ -2353,6 +2390,9 @@
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
+            Capture = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.capture"
+            Group = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.group"
+            Match = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.match"
             RegexMatchTimeoutException = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
         [MSDocs.DotNet.Api.System.Net]
             NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
