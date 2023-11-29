@@ -489,7 +489,7 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.NET Regex Syntax][Regex Syntax].
 
-Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` but not `"aa"` at index `1`). 
 
 | | |
 |--------------------|---------------------------|
