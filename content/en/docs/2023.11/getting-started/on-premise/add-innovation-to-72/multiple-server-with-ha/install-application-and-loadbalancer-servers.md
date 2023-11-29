@@ -143,10 +143,10 @@ To check all necessary ports are free, follow these steps:
     -ClientCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -163,10 +163,10 @@ To check all necessary ports are free, follow these steps:
     -UseSelfSignedCertificates `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -186,10 +186,10 @@ To check all necessary ports are free, follow these steps:
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -206,10 +206,10 @@ To check all necessary ports are free, follow these steps:
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -284,6 +284,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     ```powershell
     .\Cortex.Innovation.Install.ps1
     ```
+
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
