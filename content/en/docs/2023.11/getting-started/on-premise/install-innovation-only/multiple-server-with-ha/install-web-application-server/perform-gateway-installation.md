@@ -11,6 +11,10 @@ This guide describes how to install {{% ctx %}} Gateway on the Web Application S
 
 ## Perform Gateway Installation
 
+### Certificate Requirements
+
+It is possible for {{% ctx %}} Gateway to reuse the certificate used when [installing the Flow Debugger][Flow Debugger installation], as long as it was not an auto-generated self-signed certificate; If doing so, you must [Assign a Certificate Friendly Name][Assign Certificate Friendly Name] and set the `ImportCertificate` parameter to `$false` when [configuring the {{% ctx %}} Gateway Installation Script][Install Gateway] to ensure use of the correct certificate and to prevent it from being overwritten.
+
 ### Configure {{% ctx %}} Gateway Installation Script
 
 1. In the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
@@ -127,6 +131,7 @@ This guide describes how to install {{% ctx %}} Gateway on the Web Application S
 [Get CORTEX Gateway Application Pool User]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GetGatewayAppPoolUser" >}}
 [Import Certificate Manually]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportCertificateManuallyNew" >}}
 [Import Root Certificate]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportRootCertificate" >}}
+[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Setup CORTEX Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}

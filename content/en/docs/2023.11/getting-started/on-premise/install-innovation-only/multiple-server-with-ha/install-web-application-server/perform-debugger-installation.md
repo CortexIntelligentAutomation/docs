@@ -56,16 +56,6 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 1. [Perform Gateway Installation][]
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
-[Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
-[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
-[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
-[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Get CORTEX Gateway Application Pool User]: {{< ref "#get-cortex-gateway-application-pool-user" >}}
-[Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
-[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
 [Perform Gateway Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallation" >}}
-[Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [web application server prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebApplicationServerPrerequisites" >}}
