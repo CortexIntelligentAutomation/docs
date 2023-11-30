@@ -282,24 +282,24 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 
 1. [Install Application Servers and Load Balancer][]
 
-[Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
-[Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
-[Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
-[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
-[gobetween]: {{< url path="GoBetween.MainDoc" >}}
-[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Anycast]: {{< url path="Anycast.MainDoc" >}}
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
+[Anycast]: {{< url path="Anycast.MainDoc" >}}
+[Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
+[C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
+[Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
+[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[gobetween]: {{< url path="GoBetween.MainDoc" >}}
+[IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
+[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2022]: {{< url path="MSEval.WindowsServer.2022" >}}
-[NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
-[Microsoft SQL Server 2019]: {{< url path="MSEval.SQLServer.2019" >}}
-[Microsoft SQL Server 2016]: {{< url path="MSEval.SQLServer.2016" >}}
 [Microsoft SQL Express 2016]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
-[IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
-[Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}
-[C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
+[Microsoft SQL Server 2016]: {{< url path="MSEval.SQLServer.2016" >}}
+[Microsoft SQL Server 2019]: {{< url path="MSEval.SQLServer.2019" >}}
+[NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
+[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Transparent Data Encryption]: {{< url path="MSDocs.SqlServer.TransparentDataEncryption" >}}
+[TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
+[Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}

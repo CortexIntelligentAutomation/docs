@@ -1,25 +1,21 @@
 ---
-title: "Install Application Server"
-linkTitle: "Install Application Server"
-description: "Information about installing the Application Server."
-weight: 30
+title: "Install Flow Debugger"
+linkTitle: "Install Flow Debugger"
+description: "Information about installing the Flow Debugger."
+weight: 20
 ---
 
 # {{% param title %}}
 
-This guide describes how to install the Application Server components on the server. Please ensure that the [Prerequisites][] have been read before starting this installation.
+This guide describes how to install the Flow Debugger on the Web Application Server. Please ensure that the [web application server prerequisites][] have been completed before starting this installation.
 
-## Make Installation Artefacts Available
-
-{{< section "/install-application-server/make-installation-artefacts-available.md">}}
+{{% alert title="Important" color="warning" %}}
+{{< ctx >}} Gateway requires a local instance of the Application Server components to enable the debugging of flows.
+{{% /alert %}}
 
 ## Install Microsoft .NET Framework 4.7.2
 
 {{< section "/install-application-server/install-dot-net-framework.md">}}
-
-## Apply Recommended Security Measures
-
-{{< section "/install-application-server/apply-recommended-security-measures.md">}}
 
 ## Add Antivirus Exclusions
 
@@ -33,7 +29,7 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 ## Configure Installation Script
 
-{{< section "/install-application-server/single-server/add-innovation-only/configure-installation-script.md">}}
+{{< section "/install-web-application-server/add-innovation-to-7.2/configure-debugger-installation-script.md">}}
 
 ## Test Installation Script
 
@@ -51,14 +47,14 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 {{< section "/install-application-server/single-server/check-application-services.md">}}
 
-## Preserve installation files
+# Preserve installation files
 
 {{< section "/preserve-installation-files.md">}}
 
 ## Next Steps?
 
-1. [Install Web Application Server][]
+1. [Upgrade Gateway][]
 
-[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusions" >}}
-[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
-[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}
+[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.GatewayInstallation" >}}
+[web application server prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.WebApplicationServerPrerequisites" >}}
