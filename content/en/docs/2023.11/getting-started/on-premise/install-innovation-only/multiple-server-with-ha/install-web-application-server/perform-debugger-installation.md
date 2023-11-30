@@ -53,9 +53,9 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 ## Next Steps?
 
-1. [Perform Gateway Installation][]
+1. [Install Gateway][]
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
-[Perform Gateway Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallation" >}}
+[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallation" >}}
 [web application server prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebApplicationServerPrerequisites" >}}

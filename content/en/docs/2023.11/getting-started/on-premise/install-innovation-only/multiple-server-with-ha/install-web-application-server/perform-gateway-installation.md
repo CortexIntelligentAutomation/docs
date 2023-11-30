@@ -122,7 +122,7 @@ It is possible for {{% ctx %}} Gateway to reuse the certificate used when [insta
 
 ## Next Steps?
 
-1. [Setup {{% ctx %}} Gateway][Setup CORTEX Gateway]
+1. [Setup Gateway][]
 
 [Assign Certificate Friendly Name]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
@@ -136,4 +136,4 @@ It is possible for {{% ctx %}} Gateway to reuse the certificate used when [insta
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Setup CORTEX Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
+[Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
