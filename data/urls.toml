@@ -2142,6 +2142,10 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.0.2]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
