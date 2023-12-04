@@ -63,13 +63,13 @@ The following table shows some of the ways that `SearchOptions` can be created u
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Declare a `SearchOptions` literal | `SearchOptions.ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search, see [String Equality][]. |
+| Declare a `SearchOptions` literal | `SearchOptions.ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search. |
 | | `SearchOptions.Regex` | `SearchOptions.Regex` | Literal | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching` | Literal | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
-| Use a `SearchOptions` expression | `SearchOptions.ContainsText` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search, see [String Equality][].|
+| Use a `SearchOptions` expression | `SearchOptions.ContainsText` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search.|
 | | `SearchOptions.Regex` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
-| Use [Explicit Casting][] | `(SearchOptions)0` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search, see [String Equality][]. |
+| Use [Explicit Casting][] | `(SearchOptions)0` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search. |
 | | `(SearchOptions)1` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `(SearchOptions)2` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
 | Use `Enum.Parse` | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "ContainsText")` | `SearchOptions.ContainsText`| Expression | Parses `"ContainsText"` and converts it to `SearchOptions.ContainsText`. See [Enum.Parse][] |
