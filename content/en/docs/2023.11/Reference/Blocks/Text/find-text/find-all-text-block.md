@@ -313,7 +313,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ### Find all occurrences that start with and end with a regex Text To Find in Text
 
-This example will find the first occurrence of text that matches a regex that starts with `"The"`, contains `.*?` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
+This example will find all occurrences of text that matches a regex that starts with `"The"`, contains `.*?` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
