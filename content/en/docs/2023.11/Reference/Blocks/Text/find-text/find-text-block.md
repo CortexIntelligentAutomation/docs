@@ -513,7 +513,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog."` has 4 occurrences starting with `"o"` and ending with the wildcard regex `".+?"`. The first of these is `"o"`. Therefore the variable `($)Match` will be set to the following:
+`"The quick brown fox jumps over the lazy dog."` has 4 occurrences starting with `"o"` and ending with the wildcard regex `".+?"`. The first of these is `"ow"`. Therefore the variable `($)Match` will be set to the following:
 
 ```json
 {
