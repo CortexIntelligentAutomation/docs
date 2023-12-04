@@ -392,7 +392,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": null, "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: null, endsWith:"jumps")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": "", "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: null, endsWith:"jumps")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
