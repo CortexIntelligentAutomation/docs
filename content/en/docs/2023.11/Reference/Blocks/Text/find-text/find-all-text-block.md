@@ -407,9 +407,9 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 ***
 
-### Find all occurrences that starts with a wildcard and ends with a regex Text To Find in Text
+### Find all occurrences that start with a wildcard and end with a regex Text To Find in Text
 
-This example will find all occurrences of text that start with the wildcard regex `".*?"` and end with `"o"` from `"The quick brown fox jumps over the lazy dog."`. 
+This example will find all occurrences of text that start with a wildcard regex `".*?"` and end with `"o"` from `"The quick brown fox jumps over the lazy dog."`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -417,7 +417,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog. The dog woke up and tried to bite the fox. The fox jumps to get away."` | `($)Text` is a variable of type [String][] |
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": ".*?", "contains": "", "endsWith": "o"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: ".*?", contains: null, endsWith:"o")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.Regex` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
@@ -425,7 +425,206 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog."` has 4 occurrences starting with `"o"` and ending with the wildcard regex `".+?"`. Therefore the variable `($)Matches` will be set to the following:
+`"The quick brown fox jumps over the lazy dog."` has 4 occurrences starting with the wildcard regex `".*?"` and ending with `"o"`. Therefore the variable `($)Matches` will be set to the following:
+
+```json
+[
+  {
+    "Value": "The quick bro",
+    "Index": 0,
+    "Length": 13,
+    "Groups": {
+      "0": {
+        "Value": "The quick bro",
+        "Index": 0,
+        "Length": 13,
+        "Captures": [
+          {
+            "Value": "The quick bro",
+            "Index": 0,
+            "Length": 13
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "The quick br",
+        "Index": 0,
+        "Length": 12,
+        "Captures": [
+          {
+            "Value": "The quick br",
+            "Index": 0,
+            "Length": 12
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "o",
+        "Index": 12,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 12,
+            "Length": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Value": "wn fo",
+    "Index": 13,
+    "Length": 5,
+    "Groups": {
+      "0": {
+        "Value": "wn fo",
+        "Index": 13,
+        "Length": 5,
+        "Captures": [
+          {
+            "Value": "wn fo",
+            "Index": 13,
+            "Length": 5
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "wn f",
+        "Index": 13,
+        "Length": 4,
+        "Captures": [
+          {
+            "Value": "wn f",
+            "Index": 13,
+            "Length": 4
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "o",
+        "Index": 17,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 17,
+            "Length": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Value": "x jumps o",
+    "Index": 18,
+    "Length": 9,
+    "Groups": {
+      "0": {
+        "Value": "x jumps o",
+        "Index": 18,
+        "Length": 9,
+        "Captures": [
+          {
+            "Value": "x jumps o",
+            "Index": 18,
+            "Length": 9
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "x jumps ",
+        "Index": 18,
+        "Length": 8,
+        "Captures": [
+          {
+            "Value": "x jumps ",
+            "Index": 18,
+            "Length": 8
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "o",
+        "Index": 26,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 26,
+            "Length": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Value": "ver the lazy do",
+    "Index": 27,
+    "Length": 15,
+    "Groups": {
+      "0": {
+        "Value": "ver the lazy do",
+        "Index": 27,
+        "Length": 15,
+        "Captures": [
+          {
+            "Value": "ver the lazy do",
+            "Index": 27,
+            "Length": 15
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "ver the lazy d",
+        "Index": 27,
+        "Length": 14,
+        "Captures": [
+          {
+            "Value": "ver the lazy d",
+            "Index": 27,
+            "Length": 14
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "o",
+        "Index": 41,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 41,
+            "Length": 1
+          }
+        ]
+      }
+    }
+  }
+]
+```
+
+***
+
+### Find all occurrences that start with a regex and end with a wildcard Text to Find in Text
+
+This example will find all occurrences of text that start with `"o"` and end with a wildcard regex `".+?"` from `"The quick brown fox jumps over the lazy dog."`.
+
+It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "o", "contains": "", "endsWith": ".+?"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "o", contains: null, endsWith:".+?")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.Regex` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
+
+#### Result
+
+`"The quick brown fox jumps over the lazy dog."` has 4 occurrences starting with `"o"` and ending with `".+?"`. Therefore the variable `($)Matches` will be set to the following:
 
 ```json
 [
@@ -471,11 +670,138 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
         ]
       }
     }
+  },
+  {
+    "Value": "ox",
+    "Index": 17,
+    "Length": 2,
+    "Groups": {
+      "0": {
+        "Value": "ox",
+        "Index": 17,
+        "Length": 2,
+        "Captures": [
+          {
+            "Value": "ox",
+            "Index": 17,
+            "Length": 2
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "o",
+        "Index": 17,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 17,
+            "Length": 1
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "x",
+        "Index": 18,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "x",
+            "Index": 18,
+            "Length": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Value": "ov",
+    "Index": 26,
+    "Length": 2,
+    "Groups": {
+      "0": {
+        "Value": "ov",
+        "Index": 26,
+        "Length": 2,
+        "Captures": [
+          {
+            "Value": "ov",
+            "Index": 26,
+            "Length": 2
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "o",
+        "Index": 26,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 26,
+            "Length": 1
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "v",
+        "Index": 27,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "v",
+            "Index": 27,
+            "Length": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Value": "og",
+    "Index": 41,
+    "Length": 2,
+    "Groups": {
+      "0": {
+        "Value": "og",
+        "Index": 41,
+        "Length": 2,
+        "Captures": [
+          {
+            "Value": "og",
+            "Index": 41,
+            "Length": 2
+          }
+        ]
+      },
+      "startsWith": {
+        "Value": "o",
+        "Index": 41,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "o",
+            "Index": 41,
+            "Length": 1
+          }
+        ]
+      },
+      "endsWith": {
+        "Value": "g",
+        "Index": 42,
+        "Length": 1,
+        "Captures": [
+          {
+            "Value": "g",
+            "Index": 42,
+            "Length": 1
+          }
+        ]
+      }
+    }
   }
 ]
 ```
-
-***
 
 ## Properties
 
