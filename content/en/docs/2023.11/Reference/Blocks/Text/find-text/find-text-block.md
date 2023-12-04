@@ -703,7 +703,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Find the first Occurrence that starts with and ends with a regex Text To Find in Text]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-regex-text-to-find-in-text">}}
 [Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text-null-contains">}}
-[Find the first Occurrence that starts with a wildcard and ends with a regex Text To Find in Text]: {{<ref "#find-the--first-occurrence-that-starts-with-a-wildcard-and-ends-with-a-regex-text-to-find-in-text">}}
+[Find the first Occurrence that starts with a wildcard and ends with a regex Text To Find in Text]: {{<ref "#find-the-first-occurrence-that-starts-with-a-wildcard-and-ends-with-a-regex-text-to-find-in-text">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
