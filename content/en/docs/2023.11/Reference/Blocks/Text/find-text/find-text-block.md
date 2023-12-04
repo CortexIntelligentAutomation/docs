@@ -689,7 +689,7 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not included as a specific [Group][] in the returned [Match][]; see [Find the first Occurrence that starts with and ends with a Text To Find in Text][].
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not included as a specific [Group][] in the returned [Match][]; see [Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)][].
 
 ### Known Limitations
 
@@ -701,7 +701,7 @@ If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `
 [TextToFind Property]: {{< ref "#text-to-find" >}}
 [SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
-[Find the first Occurrence that starts with and ends with a Text To Find in Text]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text">}}
+[Find the first Occurrence that starts with and ends with a regex Text To Find in Text]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-regex-text-to-find-in-text">}}
 [Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text-null-contains">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
