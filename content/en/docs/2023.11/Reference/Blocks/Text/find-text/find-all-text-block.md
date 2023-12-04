@@ -915,7 +915,7 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not  included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a Text To Find in Text (Null contains)][].
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not  included as a specific [Group][] in the returned [Match][]; see [Find all occurrences that start with and end with a Text To Find in Text (Null contains)][] and [Find all occurrences that start with a wildcard and end with a regex Text To Find in Text][].
 
 ### Known Limitations
 
@@ -928,6 +928,7 @@ If [Comparison Type][ComparisonType Property] is set to `StringComparison.Curren
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Find all occurrences that start with and end with a regex Text To Find in Text]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-regex-text-to-find-in-text" >}}
 [Find all occurrences that start with and end with a Text To Find in Text (Null contains)]: {{<ref "#find-all-occurrences-that-start-with-and-end-with-a-text-to-find-in-text-null-contains">}}
+[Find all occurrences that start with a wildcard and end with a regex Text To Find in Text]: {{<ref "#find-all-occurrences-that-start-with-a-regex-and-end-with-a-wildcard-text-to-find-in-text">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
