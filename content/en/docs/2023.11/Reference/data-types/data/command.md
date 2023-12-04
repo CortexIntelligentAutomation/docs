@@ -93,6 +93,8 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 ### Known limitations
 
+* When setting the Connection Details property to the [OracleConnectionDetails][] type, only SQL statements will be accepted. Using an [OracleBlockStatement][] will throw a [CommandException][] with an IncompatibleStatementType category.
+
 #### ToString Method always returns the Full Name
 
 Currently, if the `ToString()` method is used on a `Command`, then its Full Name will be returned; instead of a representation of the data within the `Command`.

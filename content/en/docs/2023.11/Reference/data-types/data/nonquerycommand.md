@@ -99,6 +99,10 @@ Currently, if the `ToString()` method is used on a `NonQueryCommand`, then its F
 
 In future this limitation may be removed.
 
+#### Multiple SQL Commands (Oracle Only)
+
+To execute multiple commands in the Commands property, as Oracle uses PL/SQL, you must use the block statement syntax, otherwise an OracleException will be thrown. See [OracleBlockStatement][] for more.
+
 ## See Also
 
 ### Related Data Types
@@ -141,4 +145,5 @@ In future this limitation may be removed.
 [Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [QueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 
+[OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}
