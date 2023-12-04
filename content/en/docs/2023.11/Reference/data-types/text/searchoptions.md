@@ -45,7 +45,7 @@ Used to define how text searches determine whether text matches the search (i.e.
 |-|-|
 | **Name:**    | Regex                                                                                |
 | **Value:**   | [Int32][] with value `1`                                                                   |
-| **Notes:**   | Matches text that matches the [Regex][Regex Syntax] provided.  |
+| **Notes:**   | Matches text that matches the [regex][Regex Syntax] provided.  |
 
 ### PatternMatching
 
@@ -53,7 +53,7 @@ Used to define how text searches determine whether text matches the search (i.e.
 |-|-|
 | **Name:**    | PatternMatching                                                                                |
 | **Value:**   | [Int32][] with value `2`                                                                   |
-| **Notes:**   | Matches text that matches the [Pattern Matching Syntax][] provided. |
+| **Notes:**   | Matches text that matches the [pattern][Pattern Matching Syntax] provided. |
 
 ## Remarks
 
@@ -63,15 +63,15 @@ The following table shows some of the ways that `SearchOptions` can be created u
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Declare a `SearchOptions` literal | `SearchOptions.ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search. |
-| | `SearchOptions.Regex` | `SearchOptions.Regex` | Literal | Matches text that matches the regex provided. |
-| | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching` | Literal | Matches text that matches the regex provided, see [Regex Syntax][]. |
-| Use a `SearchOptions` expression | `SearchOptions.ContainsText` | `SearchOptions.ContainsText`| Expression | Empty entries are not removed.|
-| | `SearchOptions.Regex` | `SearchOptions.Regex`| Expression | Empty entries are removed. |
-| | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
-| Use [Explicit Casting][] | `(SearchOptions)0` | `SearchOptions.ContainsText`| Expression | Empty entries are not removed. |
-| | `(SearchOptions)1` | `SearchOptions.Regex`| Expression | Empty entries are removed. |
-| | `(SearchOptions)2` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
+| Declare a `SearchOptions` literal | `SearchOptions.ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search, see [String Equality][]. |
+| | `SearchOptions.Regex` | `SearchOptions.Regex` | Literal | Matches text that matches the regex provided, see [Regex Syntax][]. |
+| | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching` | Literal | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
+| Use a `SearchOptions` expression | `SearchOptions.ContainsText` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search, see [String Equality][].|
+| | `SearchOptions.Regex` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
+| | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
+| Use [Explicit Casting][] | `(SearchOptions)0` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search, see [String Equality][]. |
+| | `(SearchOptions)1` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
+| | `(SearchOptions)2` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
 | Use `Enum.Parse` | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "ContainsText")` | `SearchOptions.ContainsText`| Expression | Parses `"ContainsText"` and converts it to `SearchOptions.ContainsText`. See [Enum.Parse][] |
 | | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "Regex")` | `SearchOptions.Regex`| Expression | Parses `"Regex"` and converts it to `SearchOptions.Regex`. See [Enum.Parse][] |
 | | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "PatternMatching")` | `SearchOptions.PatternMatching`| Expression | Parses `"PatternMatching"` and converts it to `SearchOptions.PatternMatching`. See [Enum.Parse][] |
@@ -157,8 +157,9 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[Regex Syntax]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax.MainDoc">}}
 [Pattern Matching Syntax]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Text.PatternMatchingSyntax.MainDoc">}}
+[Regex Syntax]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Text.RegexSyntax.MainDoc">}}
+[String Equality]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc">}}
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
