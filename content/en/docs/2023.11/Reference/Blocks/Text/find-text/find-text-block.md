@@ -17,7 +17,7 @@ Finds the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFi
 
 ## Examples
 
-**TODO EDIT THIS (FOR EXAMPLES OF HOW TO USE CONTAINSTEXT,ETC, PLEASE SEE)**
+The below are basic examples of how to use this block. For more detail of how to use [Search Options][SearchOptions Property] to use [Pattern Matching][Pattern Matching Syntax] or [Regex][Regex Syntax], or how [Text To Find][TextToFind Property] fields affect this blocks' behaviour, please see [Advanced Examples][].
 
 ### Find the first Occurrence of text
 
@@ -345,6 +345,7 @@ The other properties are defined elsewhere in the sections below.
 
 These sections contain tables for the examples. The columns of these tables are explained below:
 | Column Name | Explanation |
+|-------------|-------------|
 | TextToFind.StartsWith | Value used to define the StartsWith property of [Text To Find][TextToFind Property]. |
 | TextToFind.Contains | Value used to define the Contains property of [Text To Find][TextToFind Property]. |
 | TextToFind.EndsWith | Value used to define the EndsWith property of [Text To Find][TextToFind Property]. |
@@ -372,7 +373,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
-| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Result.Value | Result.Groups["startsWith"].Value | Result.Groups["contains"].Value | Result.Groups["endsWith"].Value |
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The"` | `"quick"` | `"brown"` |
 | `"The"` | `"quick"` | `""` | `"The quick"` | `"The"` | `"quick"` | N/A |
@@ -406,7 +407,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
-| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Result.Value | Result.Groups["startsWith"].Value | Result.Groups["contains"].Value | Result.Groups["endsWith"].Value |
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The"` | `"quick"` | `"brown"` |
 | `"The"` | `"quick"` | `""` | `"The quick"` | `"The"` | `"quick"` | N/A |
@@ -450,12 +451,13 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not included as a specific [Group][] in the returned [Match][]; see [Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)][] and [Find the first Occurrence that starts with a wildcard and ends with a regex Text To Find in Text][].
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not included as a specific [Group][] in the returned [Match][]; see [Advanced Examples][].
 
 ### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
+If [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
+[Advanced Examples]: {{<ref "#advanced-examples">}}
 [Match Property]: {{< ref "#match" >}}
 [Occurrence Property]:{{<ref "#occurrence">}}
 [Text Property]: {{< ref "#text" >}}
