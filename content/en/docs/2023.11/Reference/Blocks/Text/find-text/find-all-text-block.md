@@ -320,13 +320,13 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches.Value | Matches.Groups["startsWith"].Value | Matches.Groups["contains"].Value | Matches.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
-| `"The"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The"` | `"quick"` | `"brown"` |
-| `"The"` | `"quick"` | `""` | `"The quick"` | `"The"` | `"quick"` | N/A |
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
 | `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
-| `"The"` | `""` | `""` | `"The"` | `"The"` | N/A | N/A |
-| `""` | `"quick"` | `"brown"` | `"quick brown"` | N/A | `"quick"` | `"brown"` |
-| `""` | `"quick"` | `""` | `"quick"` | N/A | `"quick"` | N/A |
-| `""` | `""` | `"brown"` | `"brown"` | N/A | N/A | `"brown"` |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
 | `""` | `""` | `""` | No Match | N/A | N/A | N/A |
 
 #### SearchOptions.PatternMatching
@@ -335,33 +335,33 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches.Value | Matches.Groups["startsWith"].Value | Matches.Groups["contains"].Value | Matches.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
-| `"The"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The"` | `"quick"` | `"brown"` |
-| `"The"` | `"quick"` | `""` | `"The quick"` | `"The"` | `"quick"` | N/A |
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
 | `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
-| `"The"` | `""` | `""` | `"The"` | `"The"` | N/A | N/A |
-| `""` | `"quick"` | `"brown"` | `"quick brown"` | N/A | `"quick"` | `"brown"` |
-| `""` | `"quick"` | `""` | `"quick"` | N/A | `"quick"` | N/A |
-| `""` | `""` | `"brown"` | `"brown"` | N/A | N/A | `"brown"` |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
 | `""` | `""` | `""` | No Match | N/A | N/A | N/A |
-| `"The"` | `"quick"` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | `"quick"` | `" brown fox jumps over the lazy dog."` |
-| `"The"` | `"*"` | `"brown"` | `"The quick brown"` | `"The"` | `" quick "` | `"brown"` |
-| `"The"` | `"*"` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | `" quick brown fox jumps over the lazy dog."` | `""` |
-| `"The"` | `"*"` | `""` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | `" quick brown fox jumps over the lazy dog."` | N/A |
-| `"The"` | `""` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | N/A | `" quick brown fox jumps over the lazy dog."` |
-| `"*"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The "` | `"quick"` | `"brown"` |
-| `"*"` | `"quick"` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | `"The "` | `"quick"` | `" brown fox jumps over the lazy dog."` |
-| `"*"` | `"quick"` | `""` | `"The quick"` | `"The "` | `"quick"` | N/A |
-| `"*"` | `"*"` | `"brown"` | `"The quick brown"` | `"The quick "` | `""` | `"brown"` |
-| `"*"` | `""` | `"brown"` | `"The quick brown"` | `"The quick "` | N/A | `"brown"` |
-| `"*"` | `"*"` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | `""` | `""` |
-| `"*"` | `"*"` | `""` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | `""` | N/A |
-| `"*"` | `""` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | N/A | `""` |
-| `"*"` | `""` | `""` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | N/A | N/A |
-| `""` | `"quick"` | `"*"` | `"quick brown fox jumps over the lazy dog."` | N/A | `"quick"` | `" brown fox jumps over the lazy dog."` |
-| `""` | `"*"` | `"brown"` | `"The quick brown"` | N/A | `"The quick "` | `"brown"` |
-| `""` | `"*"` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | N/A | `"The quick brown fox jumps over the lazy dog."` | `""` |
-| `""` | `"*"` | `""` | `"The quick brown fox jumps over the lazy dog."` | N/A | `"The quick brown fox jumps over the lazy dog."` | N/A |
-| `""` | `""` | `"*"` | `"The quick brown fox jumps over the lazy dog."` | N/A | N/A | `"The quick brown fox jumps over the lazy dog."` |
+| `"The"` | `"quick"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `"The"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `"The"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | N/A | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"*"` | `"quick"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `"*"` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | <nobr>`""`</nobr> | <nobr>`"brown"`</nobr> |
+| `"*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | N/A | <nobr>`"brown"`</nobr> |
+| `"*"` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | <nobr>`""`</nobr> |
+| `"*"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | N/A |
+| `"*"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`""`</nobr> |
+| `"*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | N/A | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `""` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `""` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
 
 #### SearchOptions.Regex
 
@@ -369,33 +369,33 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches.Value | Matches.Groups["startsWith"].Value | Matches.Groups["contains"].Value | Matches.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
-| `"The"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The"` | `"quick"` | `"brown"` |
-| `"The"` | `"quick"` | `""` | `"The quick"` | `"The"` | `"quick"` | N/A |
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
 | `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
-| `"The"` | `""` | `""` | `"The"` | `"The"` | N/A | N/A |
-| `""` | `"quick"` | `"brown"` | `"quick brown"` | N/A | `"quick"` | `"brown"` |
-| `""` | `"quick"` | `""` | `"quick"` | N/A | `"quick"` | N/A |
-| `""` | `""` | `"brown"` | `"brown"` | N/A | N/A | `"brown"` |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
 | `""` | `""` | `""` | No Match | N/A | N/A | N/A |
-| `"The"` | `"quick"` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | `"quick"` | `" brown fox jumps over the lazy dog."` |
-| `"The"` | `".*"` | `"brown"` | `"The quick brown"` | `"The"` | `" quick "` | `"brown"` |
-| `"The"` | `".*"` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | `" quick brown fox jumps over the lazy dog."` | `""` |
-| `"The"` | `".*"` | `""` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | `" quick brown fox jumps over the lazy dog."` | N/A |
-| `"The"` | `""` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | `"The"` | N/A | `" quick brown fox jumps over the lazy dog."` |
-| `".*"` | `"quick"` | `"brown"` | `"The quick brown"` | `"The "` | `"quick"` | `"brown"` |
-| `".*"` | `"quick"` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | `"The "` | `"quick"` | `" brown fox jumps over the lazy dog."` |
-| `".*"` | `"quick"` | `""` | `"The quick"` | `"The "` | `"quick"` | N/A |
-| `".*"` | `".*"` | `"brown"` | `"The quick brown"` | `"The quick "` | `""` | `"brown"` |
-| `".*"` | `""` | `"brown"` | `"The quick brown"` | `"The quick "` | N/A | `"brown"` |
-| `".*"` | `".*"` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | `""` | `""` |
-| `".*"` | `".*"` | `""` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | `""` | N/A |
-| `".*"` | `""` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | N/A | `""` |
-| `".*"` | `""` | `""` | `"The quick brown fox jumps over the lazy dog."` | `"The quick brown fox jumps over the lazy dog."` | N/A | N/A |
-| `""` | `"quick"` | `".*"` | `"quick brown fox jumps over the lazy dog."` | N/A | `"quick"` | `" brown fox jumps over the lazy dog."` |
-| `""` | `".*"` | `"brown"` | `"The quick brown"` | N/A | `"The quick "` | `"brown"` |
-| `""` | `".*"` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | N/A | `"The quick brown fox jumps over the lazy dog."` | `""` |
-| `""` | `".*"` | `""` | `"The quick brown fox jumps over the lazy dog."` | N/A | `"The quick brown fox jumps over the lazy dog."` | N/A |
-| `""` | `""` | `".*"` | `"The quick brown fox jumps over the lazy dog."` | N/A | N/A | `"The quick brown fox jumps over the lazy dog."` |
+| `"The"` | `"quick"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `"The"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `"The"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | N/A | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `".*"` | `"quick"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `".*"` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | <nobr>`""`</nobr> | <nobr>`"brown"`</nobr> |
+| `".*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | N/A | <nobr>`"brown"`</nobr> |
+| `".*"` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | <nobr>`""`</nobr> |
+| `".*"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | N/A |
+| `".*"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`""`</nobr> |
+| `".*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `".*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | N/A | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `""` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `""` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
 
 ### Comparison Types
 
