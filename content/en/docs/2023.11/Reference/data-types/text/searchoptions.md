@@ -1,7 +1,7 @@
 ---
 title: "SearchOptions"
 linkTitle: "SearchOptions"
-description: "Used to define how text searches determine whether text matches the search (i.e. text contains the searched for text or matches the specified regex or pattern)."
+description: "Used to specify how text is matched when performing a search (i.e. text matches the specified literal text, regex or pattern)."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to define how text searches determine whether text matches th
 
 ## Summary
 
-Used to define how text searches determine whether text matches the search (i.e. text contains the searched for text or matches the specified regex or pattern).
+The `SearchOptions` are used to specify how text is matched when performing a search (i.e. text matches the specified literal text, regex or pattern).
 
 `SearchOptions` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -20,7 +20,7 @@ Used to define how text searches determine whether text matches the search (i.e.
 | **Name:**              | `SearchOptions`                                     |
 | **Full Name:**         | `Cortex.DataTypes.Text.SearchOptions`                              |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to define how text searches determine whether text matches the search (i.e. text contains the searched for text or matches the specified regex or pattern). |
+| **Description:**       | Specifies how text is matched when performing a search (i.e. text matches the specified literal text, regex or pattern). |
 | **Default Value:**     | `(SearchOptions)0`                             |
 | **Can be used as:**    | `SearchOptions`, `Object`, `dynamic`           |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)SearchOptions.ContainsText` or `(System.Int16)SearchOptions.ContainsText` or `(short)SearchOptions.ContainsText`)  |
@@ -63,9 +63,9 @@ The following table shows some of the ways that `SearchOptions` can be created u
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Declare a `SearchOptions` literal | `SearchOptions.ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search. |
-| | `SearchOptions.Regex` | `SearchOptions.Regex` | Literal | Matches text that matches the regex provided, see [Regex Syntax][]. |
-| | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching` | Literal | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
+| Declare a `SearchOptions` literal | `ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search. |
+| | `Regex` | `SearchOptions.Regex` | Literal | Matches text that matches the regex provided, see [Regex Syntax][]. |
+| | `PatternMatching` | `SearchOptions.PatternMatching` | Literal | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
 | Use a `SearchOptions` expression | `SearchOptions.ContainsText` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search.|
 | | `SearchOptions.Regex` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
