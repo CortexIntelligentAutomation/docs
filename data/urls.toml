@@ -387,6 +387,8 @@
                     MainDoc = "/docs/reference/blocks/data/execute-data-command"
                     [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
                         MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        CommandProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#command"
+                        ConnectionDetailsProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#connection-details"
                         ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
                         ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
                         ParameterisedCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#parameterised-commands"
@@ -1754,6 +1756,8 @@
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
+                        IncompatibleStatementType = "/docs/reference/exceptions/data/command-exception/#incompatiblestatementtype"
+                        Runtime = "/docs/reference/exceptions/data/command-exception/#runtime"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
             [Cortex.Reference.Exception.DataStorage]
@@ -2065,6 +2069,7 @@
     MainDoc = "https://www.connectionstrings.com/"
     SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
     OracleConnection = "https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/"
+    OracleConnectionIntegratedSecurity = "https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/using-integrated-security/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
 [ErlangOTP]

@@ -93,13 +93,15 @@ For more information see [Parameterised Commands][Block: Parameterised Commands]
 
 ### Known limitations
 
-* When setting the Connection Details property to the [OracleConnectionDetails][] type, only SQL statements will be accepted. Using an [OracleBlockStatement][] will throw a [CommandException][] with an IncompatibleStatementType category.
-
 #### ToString Method always returns the Full Name
 
 Currently, if the `ToString()` method is used on a `Command`, then its Full Name will be returned; instead of a representation of the data within the `Command`.
 
 In future this limitation may be removed.
+
+#### Block Statements Incompatible (Oracle Only)
+
+Using an [OracleBlockStatement][] in the [CommandText][] will throw a [Command Exception][CommandExceptionIncompatibleStatementType]. You must use either a [QueryCommand][] or [NonQueryCommand][] instead.
 
 ## See Also
 
@@ -116,6 +118,7 @@ In future this limitation may be removed.
 
 ### External Documentation
 
+* [OracleBlockStatement][]
 * [SQL Injection][]
 
 [CommandText]: {{< ref "#command-text" >}}
@@ -130,6 +133,7 @@ In future this limitation may be removed.
 [Executing Multiple Commands (Unsafe)]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
 [Block: Parameterised Commands]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
 [Statements]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.Statements" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 
 [Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -142,5 +146,11 @@ In future this limitation may be removed.
 [Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [QueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [NonQueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+[CommandException]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
+[CommandExceptionIncompatibleStatementType]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.IncompatibleStatementType" >}}
+[ConnectionDetailsProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ConnectionDetailsProperty" >}}
+[CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
+[Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 
+[OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}

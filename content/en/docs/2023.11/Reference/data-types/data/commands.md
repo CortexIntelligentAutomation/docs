@@ -99,6 +99,10 @@ Currently, if the `ToString()` method is used on a `Commands`, then its Full Nam
 
 In future this limitation may be removed.
 
+#### Block Statements Incompatible (Oracle Only)
+
+Using an [OracleBlockStatement][] in the [CommandText][] will throw a [Command Exception][CommandExceptionIncompatibleStatementType]. You must use either a [QueryCommand][] or [NonQueryCommand][] instead.
+
 ## See Also
 
 ### Related Data Types
@@ -114,6 +118,7 @@ In future this limitation may be removed.
 
 ### External Documentation
 
+* [OracleBlockStatement][]
 * [SQL Injection][]
 
 [CommandText]: {{< ref "#command-text" >}}
@@ -128,6 +133,7 @@ In future this limitation may be removed.
 [Executing Multiple Commands (Unsafe)]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ExecutingMultipleCommandsUnsafe" >}}
 [Block: Parameterised Commands]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ParameterisedCommands" >}}
 [Statements]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.QueryStatements" >}}
+[Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 
 [Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
@@ -140,5 +146,11 @@ In future this limitation may be removed.
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [QueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [NonQueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+[ConnectionDetailsProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ConnectionDetailsProperty" >}}
+[CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
+[CommandException]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
+[CommandExceptionIncompatibleStatementType]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.IncompatibleStatementType" >}}
 
+[OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}

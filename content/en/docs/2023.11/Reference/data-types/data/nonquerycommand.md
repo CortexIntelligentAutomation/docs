@@ -101,7 +101,7 @@ In future this limitation may be removed.
 
 #### Multiple SQL Commands (Oracle Only)
 
-To execute multiple commands in the Commands property, as Oracle uses PL/SQL, you must use the block statement syntax, otherwise an OracleException will be thrown. See [OracleBlockStatement][] for more.
+For Oracle you must use [block statement syntax][OracleBlockStatement] to execute multiple commands, otherwise a [CommandException][CommandExceptionRuntime] will be thrown.
 
 ## See Also
 
@@ -118,6 +118,7 @@ To execute multiple commands in the Commands property, as Oracle uses PL/SQL, yo
 
 ### External Documentation
 
+* [OracleBlockStatement][]
 * [SQL Injection][]
 
 [CommandText]: {{< ref "#command-text" >}}
@@ -144,6 +145,8 @@ To execute multiple commands in the Commands property, as Oracle uses PL/SQL, yo
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [QueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
+[CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
+[CommandExceptionRuntime]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.Runtime" >}}
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}

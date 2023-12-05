@@ -10,12 +10,11 @@ description: "Exception thrown when any command execution has resulted in an exc
 
 ## Description
 
-The exception thrown when any command execution has resulted in an exception being thrown.
-This exception wraps any [Exception][] that occurred during execution, which are stored in the [StatementExceptions][] property.
+Exception thrown when any command execution has resulted in an exception being thrown.
 
 ## Reasons
 
-### Connection Failed
+### Connection Failed {#connection}
 
 The connection to the data source failed.
 
@@ -24,62 +23,72 @@ The connection to the data source failed.
 The format of the [Message][] is as follows:
 
 ```json
-"Failed to open the Oracle connection."
+"Failed to open the '<database-type>' connection.
+Please click the HelpLink for more information on how to fix this."
 ```
+
+where:
+
+- `<database-type>` is the type of the database (e.g. SqlServer, Oracle).
 
 #### How to fix
 
-Make sure that the [Execute Data Command Block][Execute Data Command] ConnectionString property has been given a valid connection string, and that the data source is active and accepting connections.
+Make sure that the [Connection Details Property][ConnectionDetailsProperty] has been given a valid connection string, and that the data source is active.
 
-### Incompatible Datatype (Oracle Only)
+More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [InnerException][].
 
-The datatype passed in is incompatible.
+### Incompatible Statement Type (Oracle Only) {#incompatiblestatementtype}
+
+An [OracleBlockStatement][] has been used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type.
 
 #### Message Format
 
 The format of the [Message][] is as follows:
 
 ```json
-"'CommandText' contains a block statement; it must be provided with a non-block statement."
+"'CommandText' contains a block statement; it must be provided with a non-block statement.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 #### How to fix
 
-This only occurs when providing an [OracleBlockStatement][] to the [Command][] or [Commands][] datatype, so to fix use a [QueryCommand][] or [NonQueryCommand][] datatype.
+Use a [QueryCommand][] or [NonQueryCommand][] data type.
 
-### Multiple Statements
+### Multiple Statements {#multiplestatements}
 
-Multiple statements have been passed into the [Execute Data Command Block][Execute Data Command] Command property using an incorrect type.
+Multiple statements have been passed into the [Command Property][CommandProperty] when using a [Command][] data type.
 
 #### Message Format
 
 The format of the [Message][] is as follows:
 
 ```json
-"'CommandText' contains multiple statements; it must be provided with a single statement."
+"'CommandText' contains multiple statements; it must be provided with a single statement.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 #### How to fix
 
-This only occurs when using the [Command][] datatype for the [Execute Data Command Block][Execute Data Command] Command property. Change the datatype to be [Commands][] instead.
+Use a [Commands][] data type.
 
-### Runtime
+### Runtime {#runtime}
 
-An error has occurred during runtime.
+An error has occurred during either parsing or execution of the statement(s).
 
 #### Message Format
 
 The format of the [Message][] is as follows:
 
 ```json
-"An error occurred whilst trying to execute the command provided. Please see the 'StatementExceptions' property for more details."
+"An error occurred whilst trying to execute the command provided. Please see the 'StatementExceptions' property for more details.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 #### How to fix
 
-This occurs when there is an error during either parsing or execution of the statement(s). Try to make sure that the statement(s) are valid.
+Try to make sure that the statement(s) are valid.
 
-More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message(s) of the [StatementExceptions][].
+More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [StatementExceptions][].
 
 ## Properties
 
@@ -95,38 +104,48 @@ The type of the exception (i.e. `CommandException`).
 
 The exception message, providing information about the exception that occurred.
 
-For this exception, the message will always be the same. More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the message(s) of the [StatementExceptions][].
-
 | | |
 |-----------|------------|
 | Data Type | [String][] |
 
 ### Category
 
-The category of the exception (i.e. `MultipleStatements`).
+The category of the exception, which is used to categorise an exception if there are multiple reasons that the exception can occur.
+
+For `CommandException` there are the following categories:
+
+- `Connection`
+- `IncompatibleStatementType`
+- `MultipleStatements`
+- `Runtime`
 
 | | |
 |-----------|------------|
 | Data Type | [String][] |
 
-### StatementExceptions
+### InnerException
 
-A list of the exception(s) that occurred.
-
-This may contain more information on why the exception has occurred, or instruction on how to fix the issue.
+An optional property that may contain the exception that caused the current exception.
 
 | | |
 |-----------|---------------|
 | Data Type | [Exception][] |
 
-## Categories
+### StatementExceptions
 
-| Category                           | Notes                                       |
-|------------------------------------|---------------------------------------------|
-| Connection                         | A command exception with this category is thrown when the connection fails. |
-| IncompatibleDatatype (Oracle Only) | A command exception with this category is thrown when an [OracleBlockStatement][] is inputted into the Command property  with the [Command][] or [Commands][] datatype. |                                          |
-| MultipleStatements   | A command exception with this category is thrown when [Command][] has more than one statement inputted. |                                         |
-| Runtime              | A command exception with this category is thrown when an error occurs during either parsing or execution of the statements(s). |
+An optional property that may contain a list of exception(s) relating to the execution of one or more of the statements specified in the [Command Property][CommandProperty].
+
+| | |
+|-----------|---------------|
+| Data Type | [List][]&lt;[Exception][]&gt; |
+
+### Help Link
+
+The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
 
 ## Remarks
 
@@ -138,29 +157,33 @@ None
 
 ### Related Data Types
 
-* [String][]
-* [Exception][]
-* [Command][]
-* [Commands][]
-* [QueryCommand][]
-* [NonQueryCommand][]
+- [Command][]
+- [Commands][]
+- [ConnectionDetails][]
+- [Exception][]
+- [NonQueryCommand][]
+- [OdbcConnectionDetails][]
+- [OracleConnectionDetails][]
+- [QueryCommand][]
+- [SqlServerConnectionDetails][]
+- [String][]
 
 ### Related Concepts
 
-* [Blocks][]
-* [Block Properties][]
-* [Exceptions][]
+- [Exceptions][]
+- [Working With Data Sources][]
 
 ### Related Blocks
 
-* Data
-  * [Execute Data Command][]
+- Data
+  - [Execute Data Command][]
 
 ### External Documentation
 
 [OracleBlockStatement][]
 
 [Message]: {{< ref "#message" >}}
+[InnerException]: {{< ref "#innerexception" >}}
 [StatementExceptions]: {{< ref "#statementexceptions" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
@@ -180,7 +203,6 @@ None
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
 [Execute Data Command]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.MainDoc" >}}
-[Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 
 [TConnectionDetails]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 
@@ -192,6 +214,8 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 
+[CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
+[ConnectionDetailsProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ConnectionDetailsProperty" >}}
 [DataCommand]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [DataCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.CommandText" >}}
 
@@ -217,7 +241,6 @@ None
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Object Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
-[Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}

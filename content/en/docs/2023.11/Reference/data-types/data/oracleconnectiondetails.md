@@ -40,13 +40,13 @@ The Connection String that is used to connect to an Oracle data source.
 
 ### Create an OracleConnectionDetails
 
-The following table shows some of the ways that a `OracleConnectionDetails` can be created.
+The following table shows some of the ways that an `OracleConnectionDetails` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use an `OracleConnectionDetails` constructor | `new OracleConnectionDetails("Data Source=Connection String;")` | `{connectionString: $@"Data Source=Connection String;"}` | Expression |  |
 
-A `OracleConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+An `OracleConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
@@ -54,7 +54,7 @@ A `OracleConnectionDetails` can also be created using the Literal Editor by fill
 
 ### Connection Strings
 
-A [Connection String][] must be provided in order to connect to an Oracle data source. The [Connection String][] can be formatted differently. See [ConnectionStrings.com][] for a list of Oracle connection strings.
+A [Connection String][] must be provided in order to connect to an Oracle data source. The [Connection String][] can be formatted differently depending on the way the connection will be created and maintained (e.g. Windows user authentication vs TNS). See [ConnectionStrings.com][] for a list of Oracle connection strings.
 
 Please see [Working with Data Sources][] for a list of other supported data sources (e.g. SQL Server) and how to construct valid connection strings for them.
 
@@ -66,7 +66,9 @@ Please see [Working with Data Sources][] for a list of other supported data sour
 
 ### Known limitations
 
-* To execute multiple commands in the Commands property (using the QueryCommand Or NonQueryCommand datatype), as Oracle uses PL/SQL, you must use the block statement syntax. See [OracleBlockStatement][] for more.
+* When using the [OracleConnectionDetails][] to execute multiple commands in the [Command Property][CommandProperty] (using the [QueryCommand][] or [NonQueryCommand][] datatype), as Oracle uses PL/SQL, you must use the block statement syntax. See [OracleBlockStatement][] for more.
+
+* The [Integrated Security][OracleIntegratedSecurityConnectionString] connection string format is not supported.
 
 ## See Also
 
@@ -83,6 +85,7 @@ Please see [Working with Data Sources][] for a list of other supported data sour
 ### External Documentation
 
 * [ConnectionStrings.com][]
+* [OracleBlockStatement][]
 
 [Connection String]: {{< ref "#connection-string" >}}
 
@@ -91,13 +94,21 @@ Please see [Working with Data Sources][] for a list of other supported data sour
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
+[CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
 [ConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
+
+[QueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
+[QueryCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.CommandText" >}}
+[NonQueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+[NonQueryCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 
 [Working with Data Sources]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.MainDoc" >}}
 
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 
 [ConnectionStrings.com]: {{< url path="ConnectionStrings.OracleConnection" >}}
+[OracleIntegratedSecurityConnectionString]: {{< url path="ConnectionStrings.OracleConnectionIntegratedSecurity" >}}
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
