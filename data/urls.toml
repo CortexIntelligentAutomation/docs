@@ -44,6 +44,17 @@
                     ImprovedInstallationProcess = "/blog/2023/08/21/2023.7/#improved-installation-process"
                     RemovedFlowDebuggerService = "/blog/2023/08/21/2023.7/#removed-flow-debugger-service"
                     ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
+                [Cortex.Blogs.Releases.2023.11]
+                    MainDoc =  "/blog/2023/12/04/2023.11/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/12/04/2023.11/#expansion-of-the-ha-platform"
+                    NewBlocks = "/blog/2023/12/04/2023.11/#new-blocks"
+                    OracleSupport = "/blog/2023/12/04/2023.11/#oracle-support-added-for-the-execute-data-command-block"
+                    EncryptedHeaders = "/blog/2023/12/04/2023.11/#encrypted-headers-are-supported-in-the-execute-http-request-block"
+                    ImprovedInstallation = "/blog/2023/12/04/2023.11/#improved-installation"
+                    TriggersServiceSnmpV3 = "/blog/2023/12/04/2023.11/#trigger-service-supports-snmpv3"
+                    ImprovedLogging = "/blog/2023/12/04/2023.11/#oracle-support-added-for-the-execute-data-command-block"
+                    CORTEXGatewayRebranding = "/blog/2023/12/04/2023.11/#cortex-gateway-rebranding"
+                    ProductPortal = "/blog/2023/12/04/2023.11/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
