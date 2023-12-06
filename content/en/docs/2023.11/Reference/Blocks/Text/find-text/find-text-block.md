@@ -349,10 +349,10 @@ These sections contain tables for the examples. The columns of these tables are 
 | TextToFind.StartsWith | Value used to define the StartsWith property of [Text To Find][TextToFind Property]. |
 | TextToFind.Contains | Value used to define the Contains property of [Text To Find][TextToFind Property]. |
 | TextToFind.EndsWith | Value used to define the EndsWith property of [Text To Find][TextToFind Property]. |
-| Match.Value | Output [Match][] returned from the operation. This is `No Match` in the case of no valid match found. |
-| Match.Groups["startsWith"].Value | The value of the "startsWith" Group within the output [Match][]. This is N/A in the case that this group is not returned in the output [Match][]. |
-| Match.Groups["contains"].Value | The value of the "contains" Group within the output [Match][]. This is N/A in the case that this group is not returned in the output [Match][]. |
-| Match.Groups["endsWith"].Value | The value of the "endsWith" Group within the output [Match][]. This is N/A in the case that this group is not returned in the output [Match][]. |
+| Match.Value | Output [Match][Match Property] returned from the operation. This is `No Match` in the case of no valid match found. |
+| Match.Groups["startsWith"].Value | The value of the "startsWith" Group within the output [Match][Match Property]. This is N/A in the case that this group is not returned in the output [Match][Match Property]. |
+| Match.Groups["contains"].Value | The value of the "contains" Group within the output [Match][Match Property]. This is N/A in the case that this group is not returned in the output [Match][Match Property]. |
+| Match.Groups["endsWith"].Value | The value of the "endsWith" Group within the output [Match][Match Property]. This is N/A in the case that this group is not returned in the output [Match][Match Property]. |
 
 #### SearchOptions.ContainsText
 

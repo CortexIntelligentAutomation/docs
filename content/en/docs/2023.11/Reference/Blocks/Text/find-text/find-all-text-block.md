@@ -237,7 +237,7 @@ The [Text To Find][TextToFind Property] search query to find all occurrences of 
   * `*` wildcard character can be used to match `0` or more characters.
   * `?` wildcard character can be used to match `0` or `1` character.
   * All other characters are treated as a literal character.
-* `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
+* `SearchOptions.Regex` allows regex text matching using [.NET Regex Syntax][Regex Syntax].
 
 Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` but not `"aa"` at index `1`).
 
@@ -307,10 +307,10 @@ These sections contain tables for the examples. The columns of these tables are 
 | TextToFind.StartsWith | Value used to define the StartsWith property of [Text To Find][TextToFind Property]. |
 | TextToFind.Contains | Value used to define the Contains property of [Text To Find][TextToFind Property]. |
 | TextToFind.EndsWith | Value used to define the EndsWith property of [Text To Find][TextToFind Property]. |
-| Matches[0].Value | Output [Matches][Matches Property] returned from the operation. This is `No Match` in the case of no valid match found. |
-| Matches[0].Groups["startsWith"].Value | The value of the "startsWith" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is `No Match` in the case of no valid match existing. |
-| Matches[0].Groups["contains"].Value | The value of the "contains" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is `No Match` in the case of no valid match existing. |
-| Matches[0].Groups["endsWith"].Value | The value of the "endsWith" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is `No Match` in the case of no valid match existing. |
+| Matches[0].Value | Output [Matches][Matches Property] returned from the operation. This is No Match in the case of no valid match existing. |
+| Matches[0].Groups["startsWith"].Value | The value of the "startsWith" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is No Match in the case of no valid match existing. |
+| Matches[0].Groups["contains"].Value | The value of the "contains" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is No Match in the case of no valid match existing. |
+| Matches[0].Groups["endsWith"].Value | The value of the "endsWith" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is No Match in the case of no valid match existing. |
 
 Please note that these examples all perform a search which has at most 1 valid match in the text.
 
@@ -318,7 +318,7 @@ Please note that these examples all perform a search which has at most 1 valid m
 
 These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `ContainsText` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
-| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches.Value | Matches.Groups["startsWith"].Value | Matches.Groups["contains"].Value | Matches.Groups["endsWith"].Value |
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
 | `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
@@ -333,7 +333,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
-| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches.Value | Matches.Groups["startsWith"].Value | Matches.Groups["contains"].Value | Matches.Groups["endsWith"].Value |
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
 | `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
@@ -367,7 +367,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
-| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches.Value | Matches.Groups["startsWith"].Value | Matches.Groups["contains"].Value | Matches.Groups["endsWith"].Value |
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
 | `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
