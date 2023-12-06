@@ -32,7 +32,7 @@ The `TextToFind` data type is used to represent a search query for finding text.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Is [Advanced][] | `true` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | [String][] with value `$@""` |
 
@@ -54,7 +54,7 @@ The `TextToFind` data type is used to represent a search query for finding text.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
-| Is [Advanced][] | `true` |
+| Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | [String][] with value `$@""` |
 

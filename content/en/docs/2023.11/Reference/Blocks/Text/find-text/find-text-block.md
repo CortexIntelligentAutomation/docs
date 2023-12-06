@@ -17,390 +17,11 @@ Finds the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFi
 
 ## Examples
 
-### Find the first Occurrence of Text To Find (Ordinal)
+The below are basic examples of how to use this block. For more detail of how to use [Search Options][SearchOptions Property] to use [Pattern Matching][Pattern Matching Syntax] or [Regex][Regex Syntax], or how [Text To Find][TextToFind Property] fields affect this blocks' behaviour, please see [Advanced Examples][].
 
-This example will find the first occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
+### Find the first Occurrence of text
 
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text, `"The quick brown fox jumps over the lazy dog"` only contains the text `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Match` will be set to the following:
-
-```json
-{
-  "Value": "The",
-  "Index": 0,
-  "Length": 3,
-  "Groups": {
-    "0": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    },
-    "contains": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    }
-  }
-}
-```
-
-***
-
-### Find the second Occurrence of Text To Find (Ordinal Ignore Case)
-
-This example will find the second occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
-
-It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `2` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Match` will be set to the following:
-
-```json
-{
-  "Value": "the",
-  "Index": 31,
-  "Length": 3,
-  "Groups": {
-    "0": {
-      "Value": "the",
-      "Index": 31,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "the",
-          "Index": 31,
-          "Length": 3
-        }
-      ]
-    },
-    "contains": {
-      "Value": "the",
-      "Index": 31,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "the",
-          "Index": 31,
-          "Length": 3
-        }
-      ]
-    }
-  }
-}
-```
-
-***
-
-### Find the last Occurrence of Text To Find
-
-This example will find the last occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog"`.
-
-It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `-1` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. The second occurrence is the last occurrence, and therefore, the variable `($)Match` will be set to the following:
-
-```json
-{
-  "Value": "the",
-  "Index": 31,
-  "Length": 3,
-  "Groups": {
-    "0": {
-      "Value": "the",
-      "Index": 31,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "the",
-          "Index": 31,
-          "Length": 3
-        }
-      ]
-    },
-    "contains": {
-      "Value": "the",
-      "Index": 31,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "the",
-          "Index": 31,
-          "Length": 3
-        }
-      ]
-    }
-  }
-}
-```
-
-***
-
-### Find an invalid Occurrence of Text To Find
-
-This example will find the third occurrence of `"The"`, which is not present, in `"The quick brown fox jumps over the lazy dog"`.
-
-It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `3` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog"` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. There is no match for the third [Occurrence][Occurrence Property]. Therefore, the variable `($)Match` will be set to the following:
-
-```json
-null
-```
-
-***
-
-### Find the first Occurrence that matches the pattern in Text To Find
-
-This example will find the first occurrence of text that match a pattern containing `"?he"` in `"The quick brown fox jumps over the lazy dog"`.
-
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "?he", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "?he", endsWith:"")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.PatternMatching` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` contains `"The"` and `"the"` that matches the pattern `"?he"`. Of these, `"The"` is found first in the [Text][Text Property]. Therefore, the variable `($)Match` will be set to the following:
-
-```json
-{
-  "Value": "The",
-  "Index": 0,
-  "Length": 3,
-  "Groups": {
-    "0": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    },
-    "contains": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    }
-  }
-}
-```
-
-***
-
-### Find the first Occurrence that matches the regex in Text To Find
-
-This example will find the first occurrence of text that match the regex `"^The"` from `"The quick brown fox jumps over the lazy dog"`.
-
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "^The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "^The", endsWith:"")` |  `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.Regex` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` contains `"The"` at the start of the sentence that matches the regex `"^The"`. Therefore, the variable `($)Match` will be set to the following:
-
-```json
-{
-  "Value": "The",
-  "Index": 0,
-  "Length": 3,
-  "Groups": {
-    "0": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    },
-    "contains": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    }
-  }
-}
-```
-
-***
-
-### Find the first Occurrence that starts with and ends with a Text To Find in Text
-
-This example will find the first occurrence of text that starts with `"The"` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`.
-
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
-
-#### Properties
-
-| Property           | Value                     | Notes                                    |
-|--------------------|---------------------------|------------------------------------------|
-| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": "", "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: "", endsWith:"jumps")` |  `($)TextToFind` is a variable of type [TextToFind][] |
-| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
-| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
-
-#### Result
-
-`"The quick brown fox jumps over the lazy dog"` contains one occurrence starting with `"The"` and ending with `"jumps"`, which is `"The quick brown fox jumps"` Therefore, the variable `($)Match` will be set to the following:
-
-```json
-{
-  "Value": "The quick brown fox jumps",
-  "Index": 0,
-  "Length": 25,
-  "Groups": {
-    "0": {
-      "Value": "The quick brown fox jumps",
-      "Index": 0,
-      "Length": 25,
-      "Captures": [
-        {
-          "Value": "The quick brown fox jumps",
-          "Index": 0,
-          "Length": 25
-        }
-      ]
-    },
-    "startsWith": {
-      "Value": "The",
-      "Index": 0,
-      "Length": 3,
-      "Captures": [
-        {
-          "Value": "The",
-          "Index": 0,
-          "Length": 3
-        }
-      ]
-    },
-    "endsWith": {
-      "Value": "jumps",
-      "Index": 20,
-      "Length": 5,
-      "Captures": [
-        {
-          "Value": "jumps",
-          "Index": 20,
-          "Length": 5
-        }
-      ]
-    }
-  }
-}
-```
-
-***
-
-### Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)
-
-This example will find the first occurrence of text that start with `"The"`, contains `null` and ends with `"jumps"` from `"The quick brown fox jumps over the lazy dog."`. To clarify, this [Text To Find][TextToFind Property] input is searching for matches of `"Thejumps"` exactly in [Text][Text Property].
+This example will find the first occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -409,7 +30,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "The", "contains": null, "endsWith": "jumps"}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "The", contains: null, endsWith:"jumps")` |  `($)TextToFind` is a variable of type [TextToFind][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
@@ -417,7 +38,178 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-`"The quick brown fox jumps over the lazy dog."` has 0 occurrences starting with `"The"` and ending with `"jumps"`, as [Contains][] being `null` will require an exact match for [Text to Find][TextToFind Property] in [Text][Text Property]. Therefore, the variable `($)Match` will be set to the following:
+As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text, `"The quick brown fox jumps over the lazy dog."` only contains the text `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Match` will be set to the following:
+
+```json
+{
+  "Value": "The",
+  "Index": 0,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "The",
+      "Index": 0,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "The",
+          "Index": 0,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
+```
+
+***
+
+### Find the second Occurrence of text
+
+This example will find the second occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
+
+It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `2` | `($)Occurrence` is a variable of type [Int32][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
+
+#### Result
+
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog."` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Match` will be set to the following:
+
+```json
+{
+  "Value": "the",
+  "Index": 31,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
+```
+
+***
+
+### Find the last Occurrence of text
+
+This example will find the last occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
+
+It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `-1` | `($)Occurrence` is a variable of type [Int32][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
+
+#### Result
+
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog."` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. The second occurrence is the last occurrence, and therefore, the variable `($)Match` will be set to the following:
+
+```json
+{
+  "Value": "the",
+  "Index": 31,
+  "Length": 3,
+  "Groups": {
+    "0": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    },
+    "contains": {
+      "Value": "the",
+      "Index": 31,
+      "Length": 3,
+      "Captures": [
+        {
+          "Value": "the",
+          "Index": 31,
+          "Length": 3
+        }
+      ]
+    }
+  }
+}
+```
+
+***
+
+### Find an invalid Occurrence of text
+
+This example will find the third occurrence of `"The"`, which is not present, in `"The quick brown fox jumps over the lazy dog."`.
+
+It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Occurrence][Occurrence Property] | `($)Occurrence`, with value `3` | `($)Occurrence` is a variable of type [Int32][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Match][Match Property] | `($)Match`, with no value | `($)Match` is a variable that will be set to an [Match][] value |
+
+#### Result
+
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog."` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. There is no match for the third [Occurrence][Occurrence Property]. Therefore, the variable `($)Match` will be set to the following:
 
 ```json
 null
@@ -477,7 +269,6 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
 | Default Editor | [Literal][] |
 | Default Value | `1` |
 
-
 ### Search Options
 
 [Search Options][SearchOptions Property] can be specified to choose whether [Text To Find][TextToFind Property] should be interpreted as a ContainsText, PatternMatching or Regex search:
@@ -489,7 +280,7 @@ For information about [supported values][Occurrences] for the [Occurrence][Occur
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.NET Regex Syntax][Regex Syntax].
 
-Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` but not `"aa"` at index `1`).
 
 | | |
 |--------------------|---------------------------|
@@ -538,6 +329,114 @@ The exceptions thrown by the block can be found below:
 
 ## Remarks
 
+### Advanced Examples
+
+The following sections will show examples for each of the [SearchOptions][].
+
+In these examples, the following properties are common and will be configured as follows:
+| Property | Value |
+|----------|-------|
+| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
+| [Occurrence][Occurrence Property] | `1` |
+| [Comparison Type][ComparisonType Property] | `Ordinal` |
+| [Match][] | `($)Match` with no value |
+
+The other properties are defined elsewhere in the sections below.
+
+These sections contain tables for the examples. The columns of these tables are explained below:
+| Column Name | Explanation |
+|-------------|-------------|
+| TextToFind.StartsWith | Value used to define the StartsWith property of [Text To Find][TextToFind Property]. |
+| TextToFind.Contains | Value used to define the Contains property of [Text To Find][TextToFind Property]. |
+| TextToFind.EndsWith | Value used to define the EndsWith property of [Text To Find][TextToFind Property]. |
+| Match.Value | Output [Match][Match Property] returned from the operation. This is `No Match` in the case of no valid match found. |
+| Match.Groups["startsWith"].Value | The value of the "startsWith" Group within the output [Match][Match Property]. This is N/A in the case that this group is not returned in the output [Match][Match Property]. |
+| Match.Groups["contains"].Value | The value of the "contains" Group within the output [Match][Match Property]. This is N/A in the case that this group is not returned in the output [Match][Match Property]. |
+| Match.Groups["endsWith"].Value | The value of the "endsWith" Group within the output [Match][Match Property]. This is N/A in the case that this group is not returned in the output [Match][Match Property]. |
+
+#### SearchOptions.ContainsText
+
+These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `ContainsText` using a [case-sensitive, culture-insensitive][Ordinal] search.
+
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
+|------------|----------|----------|--------------|------------------|----------------|----------------|
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
+| `""` | `""` | `""` | No Match | N/A | N/A | N/A |
+
+#### SearchOptions.PatternMatching
+
+These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
+
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
+|------------|----------|----------|--------------|------------------|----------------|----------------|
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
+| `""` | `""` | `""` | No Match | N/A | N/A | N/A |
+| `"The"` | `"quick"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `"The"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `"The"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | N/A | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"*"` | `"quick"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `"*"` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | <nobr>`""`</nobr> | <nobr>`"brown"`</nobr> |
+| `"*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | N/A | <nobr>`"brown"`</nobr> |
+| `"*"` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | <nobr>`""`</nobr> |
+| `"*"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | N/A |
+| `"*"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`""`</nobr> |
+| `"*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | N/A | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `""` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `""` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
+
+#### SearchOptions.Regex
+
+These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
+
+| TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
+|------------|----------|----------|--------------|------------------|----------------|----------------|
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
+| `""` | `""` | `""` | No Match | N/A | N/A | N/A |
+| `"The"` | `"quick"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `"The"` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `"The"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `"The"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | N/A | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `".*"` | `"quick"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `".*"` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | <nobr>`""`</nobr> | <nobr>`"brown"`</nobr> |
+| `".*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | N/A | <nobr>`"brown"`</nobr> |
+| `".*"` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | <nobr>`""`</nobr> |
+| `".*"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | N/A |
+| `".*"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`""`</nobr> |
+| `".*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A |
+| `""` | `"quick"` | `".*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | N/A | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `""` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A |
+| `""` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
+
 ### Comparison Types
 
 For information about the [supported values][ComparisonTypes] for the [Comparison Type][ComparisonType Property] property and examples of how it is determined whether two pieces of text match, please see [Equality][].
@@ -552,29 +451,19 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If at least one, but not all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), then that section of the query is not included as a specific [Group][] in the returned [Match][]; see [Find the first Occurrence that starts with and ends with a Text To Find in Text][].
-There exist two special cases involving the [Contains][] nested property of [Text To Find][TextToFind Property]; see below.
-
-#### Empty contains property of Text To Find
-
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is empty (i.e. `""`), and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], including any content between the two groups; see [Find the first Occurrence that starts with and ends with a Text To Find in Text][].
-
-#### Null contains property of Text To Find
-
-If the [Contains][] nested property of [Text To Find][TextToFind Property] is `null`, and both the [StartsWith][] and [EndsWith][] nested properties are not null, then a valid match will be one starting with [StartsWith][], and ending with [EndsWith][], with no content between the two groups, i.e. an exact match only; see [Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)][].
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not included as a specific [Group][] in the returned [Match][]; see [Advanced Examples][].
 
 ### Known Limitations
 
-If [Search Options][SearchOptions Property] is set to `SearchOptions.Regex` or `SearchOptions.PatternMatching` and [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
+If [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
+[Advanced Examples]: {{<ref "#advanced-examples">}}
 [Match Property]: {{< ref "#match" >}}
 [Occurrence Property]:{{<ref "#occurrence">}}
 [Text Property]: {{< ref "#text" >}}
 [TextToFind Property]: {{< ref "#text-to-find" >}}
 [SearchOptions Property]: {{< ref "#search-options" >}}
 [ComparisonType Property]: {{< ref "#comparison-type" >}}
-[Find the first Occurrence that starts with and ends with a Text To Find in Text]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text">}}
-[Find the first Occurrence that starts with and ends with a Text To Find in Text (Null contains)]: {{<ref "#find-the-first-occurrence-that-starts-with-and-ends-with-a-text-to-find-in-text-null-contains">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
