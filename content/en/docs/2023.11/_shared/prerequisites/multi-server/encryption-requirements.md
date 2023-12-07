@@ -2,14 +2,14 @@ Certain sensitive parameters required during installation (e.g. passwords) must 
 
 Before encrypting parameters, it is required to generate a private key that will be used by the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module using the following steps:
 
-Choose either one of the Application Servers or the Web Application Server, and copy the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` artefacts to a folder on it:
+Choose either one of the Application Servers or the Web Application Server, and copy the `Cortex Innovation {{< version >}} - Encryption Key Generator.zip` artefacts to a folder on it:
 
-1. Extract the `Cortex Innovation {{< version >}} - Generate Encryption Key.zip` file to a folder with the same name.
+1. Extract the `Cortex Innovation {{< version >}} - Encryption Key Generator.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Application Servers and Web Application Server.
-1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Generate Encryption Key` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Encryption Key Generator` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation {{< version >}} - Generate Encryption Key"
+    cd "C:\Install\Cortex Innovation {{< version >}} - Encryption Key Generator"
     ```
 
 1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Servers and Web Application Server:

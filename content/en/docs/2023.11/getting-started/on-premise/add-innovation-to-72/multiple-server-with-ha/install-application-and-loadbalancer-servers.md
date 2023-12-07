@@ -133,20 +133,20 @@ To check all necessary ports are free, follow these steps:
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#" `
+    -ServerCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#" `
+    -ClientCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -156,17 +156,17 @@ To check all necessary ports are free, follow these steps:
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -UseSelfSignedCertificates `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -176,20 +176,20 @@ To check all necessary ports are free, follow these steps:
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#" `
+    -ServerCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#" `
+    -ClientCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -199,17 +199,17 @@ To check all necessary ports are free, follow these steps:
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -UseSelfSignedCertificates `
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -284,6 +284,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     ```powershell
     .\Cortex.Innovation.Install.ps1
     ```
+
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
@@ -308,27 +309,27 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Check Application Services
 
-{{< section "/install-application-server/check-application-services/multi-server.md">}}
+{{< section "/install-application-server/multi-server/check-application-services.md">}}
 
 ## Preserve installation files
 
-Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.
+{{< section "/preserve-installation-files.md">}}
 
 ## Next Steps?
 
-1. [Upgrade v7.2 Gateway to Include Innovation][]
+1. [Upgrade the Web Application Server][]
 
-[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Upgrade v7.2 Gateway to Include Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServer" >}}
-[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirements" >}}
-[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirements" >}}
-[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
-[Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}
-[Prerequisites for adding Innovation to v7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
 [alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AltLoadBalancer" >}}
-[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}
+[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirements" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScript" >}}
+[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirements" >}}
+[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[Prerequisites for adding Innovation to v7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
+[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
+[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
+[Upgrade the Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServer" >}}

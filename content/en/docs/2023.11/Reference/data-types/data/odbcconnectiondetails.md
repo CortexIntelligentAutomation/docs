@@ -73,6 +73,7 @@ Please see [Working with Data Sources][] for a list of other supported data sour
 ### Related Data Types
 
 * [ConnectionDetails][]
+* [OracleConnectionDetails][]
 * [SqlServerConnectionDetails][]
 
 ### Related Concepts
@@ -91,6 +92,7 @@ Please see [Working with Data Sources][] for a list of other supported data sour
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [ConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.MainDoc" >}}
