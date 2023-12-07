@@ -17,9 +17,7 @@ Finds all occurrences of [Text To Find][TextToFind Property] in a given [Text][T
 
 ## Examples
 
-The below are basic examples of how to use this block. For more detail of how to use [Search Options][SearchOptions Property] to use [Pattern Matching][Pattern Matching Syntax] or [Regex][Regex Syntax], or how [Text To Find][TextToFind Property] fields affect this blocks' behaviour, please see [Advanced Examples][].
-
-### Find all occurrences of text
+### Find All Occurrences when there are multiple matches
 
 This example will find all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -30,14 +28,14 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "o", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "o", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
 
 #### Result
 
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text, `"The quick brown fox jumps over the lazy dog."` contains the text `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Matches` will be updated to the following:
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Matches` will be updated to the following:
 
 ```json
 [
@@ -106,7 +104,11 @@ As this example is performing a [case-insensitive, culture-insensitive][OrdinalI
 ]
 ```
 
-### Find all occurrences of text (1 valid match)
+For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
+
+***
+
+### Find All occurrences when there is a single match
 
 This example will find all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -124,7 +126,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
 #### Result
 
-As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text, `"The quick brown fox jumps over the lazy dog."` only contains the text `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Matches` will be set to the following:
+As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Matches` will be set to the following:
 
 ```json
 [
@@ -162,11 +164,13 @@ As this example is performing a [case-sensitive, culture-insensitive][Ordinal] c
 ]
 ```
 
+For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
+
 ***
 
-### Find all occurrences of text (0 valid matches)
+### Find All occurrences when there are no matches
 
-This example will find all occurrences of `"banana"` in `"The quick brown fox jumps over the lazy dog."`.
+This example will find all occurrences of `"cat"` in `"The quick brown fox jumps over the lazy dog."`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -175,18 +179,20 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
-| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "banana", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "banana", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
+| [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "cat", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "cat", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
 
 #### Results
 
-`"The quick brown fox jumps over the lazy dog."` does not contain an occurrence of `"banana"`. Therefore, `($)Matches` will be set to the following:
+`"The quick brown fox jumps over the lazy dog."` does not contain an occurrence of `"cat"`. Therefore, `($)Matches` will be set to the following:
 
 ```json
 []
 ```
+
+For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
 
 ***
 
@@ -290,29 +296,32 @@ The exceptions thrown by the block can be found below:
 
 ### Advanced Examples
 
-The following sections will show examples for each of the [SearchOptions][].
+The following sections will show examples for each possible value of [Search Options][SearchOptions Property].
 
-In these examples, the following properties are common and will be configured as follows:
+In these examples, the following properties are common:
+
 | Property | Value |
 |----------|-------|
 | [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
+| [Occurrence][Occurrence Property] | `1` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
 | [Matches][Matches Property] | `($)Matches` with no value |
 
-The other properties are defined elsewhere in the sections below.
-
 These sections contain tables for the examples. The columns of these tables are explained below:
+
 | Column Name | Explanation |
 |-------------|-------------|
 | TextToFind.StartsWith | Value used to define the StartsWith property of [Text To Find][TextToFind Property]. |
 | TextToFind.Contains | Value used to define the Contains property of [Text To Find][TextToFind Property]. |
 | TextToFind.EndsWith | Value used to define the EndsWith property of [Text To Find][TextToFind Property]. |
-| Matches[0].Value | Output [Matches][Matches Property] returned from the operation. This is No Match in the case of no valid match existing. |
-| Matches[0].Groups["startsWith"].Value | The value of the "startsWith" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is No Match in the case of no valid match existing. |
-| Matches[0].Groups["contains"].Value | The value of the "contains" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is No Match in the case of no valid match existing. |
-| Matches[0].Groups["endsWith"].Value | The value of the "endsWith" Group within the first match in the output [Matches][Matches Property]. This is N/A in the case that this group is not returned for this match. This is No Match in the case of no valid match existing. |
+| Matches[0].Value | The Value property of the first match of the [Matches][Matches Property] returned. \* |
+| Matches[0].Groups["startsWith"].Value | The value of the "startsWith" Group within the first match of the [Matches][Matches Property]. \* |
+| Matches[0].Groups["contains"].Value | The value of the "contains" Group within the first match of the [Matches][Matches Property]. \* |
+| Matches[0].Groups["endsWith"].Value | The value of the "endsWith" Group within the first match of the [Matches][Matches Property]. \* |
 
-Please note that these examples all perform a search which has at most 1 valid match in the text.
+\* *No Match* indicates that no match was found and *N/A* indicates that the group is not returned as part of the [Matches][Matches Property].
+
+Please note that these examples all perform a search which has at most one valid match in the text.
 
 #### SearchOptions.ContainsText
 
@@ -321,13 +330,13 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
-| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
-| `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
-| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
-| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
-| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
-| `""` | `""` | `""` | No Match | N/A | N/A | N/A |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | *N/A* |
+| `"The"` | `""` | `"brown"` | *No Match* | *No Match* | *N/A* | *No Match* |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | *N/A* | *N/A* |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | *N/A* |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | *N/A* | *N/A* | <nobr>`"brown"`</nobr> |
+| `""` | `""` | `""` | *No Match* | *N/A* | *N/A* | *N/A* |
 
 #### SearchOptions.PatternMatching
 
@@ -336,32 +345,32 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
-| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
-| `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
-| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
-| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
-| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
-| `""` | `""` | `""` | No Match | N/A | N/A | N/A |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | *N/A* |
+| `"The"` | `""` | `"brown"` | *No Match* | *No Match* | *N/A* | *No Match* |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | *N/A* | *N/A* |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | *N/A* |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | *N/A* | *N/A* | <nobr>`"brown"`</nobr> |
+| `""` | `""` | `""` | *No Match* | *N/A* | *N/A* | *N/A* |
 | `"The"` | `"quick"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick "`</nobr> | <nobr>`"brown"`</nobr> |
 | `"The"` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
-| `"The"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | N/A |
-| `"The"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | N/A | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | *N/A* |
+| `"The"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | *N/A* | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
 | `"*"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
 | `"*"` | `"quick"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
-| `"*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `"*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | *N/A* |
 | `"*"` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | <nobr>`""`</nobr> | <nobr>`"brown"`</nobr> |
-| `"*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | N/A | <nobr>`"brown"`</nobr> |
+| `"*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | *N/A* | <nobr>`"brown"`</nobr> |
 | `"*"` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | <nobr>`""`</nobr> |
-| `"*"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | N/A |
-| `"*"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`""`</nobr> |
-| `"*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A |
-| `""` | `"quick"` | `"*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | N/A | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
-| `""` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
-| `""` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A |
-| `""` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | *N/A* |
+| `"*"` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`""`</nobr> |
+| `"*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | *N/A* |
+| `""` | `"quick"` | `"*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `"*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | *N/A* | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"*"` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `""` | `"*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* |
+| `""` | `""` | `"*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | *N/A* | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
 
 #### SearchOptions.Regex
 
@@ -370,32 +379,32 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
 | `"The"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
-| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | N/A |
-| `"The"` | `""` | `"brown"` | No Match | No Match | N/A | No Match |
-| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | N/A | N/A |
-| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | N/A | <nobr>`"quick"`</nobr> | N/A |
-| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | N/A | N/A | <nobr>`"brown"`</nobr> |
-| `""` | `""` | `""` | No Match | N/A | N/A | N/A |
+| `"The"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | *N/A* |
+| `"The"` | `""` | `"brown"` | *No Match* | *No Match* | *N/A* | *No Match* |
+| `"The"` | `""` | `""` | <nobr>`"The"`</nobr> | <nobr>`"The"`</nobr> | *N/A* | *N/A* |
+| `""` | `"quick"` | `"brown"` | <nobr>`"quick brown"`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"quick"`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | *N/A* |
+| `""` | `""` | `"brown"` | <nobr>`"brown"`</nobr> | *N/A* | *N/A* | <nobr>`"brown"`</nobr> |
+| `""` | `""` | `""` | *No Match* | *N/A* | *N/A* | *N/A* |
 | `"The"` | `"quick"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick "`</nobr> | <nobr>`"brown"`</nobr> |
 | `"The"` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
-| `"The"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | N/A |
-| `"The"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | N/A | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> | *N/A* |
+| `"The"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The"`</nobr> | *N/A* | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
 | `".*"` | `"quick"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`"brown"`</nobr> |
 | `".*"` | `"quick"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
-| `".*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | N/A |
+| `".*"` | `"quick"` | `""` | <nobr>`"The quick"`</nobr> | <nobr>`"The "`</nobr> | <nobr>`"quick"`</nobr> | *N/A* |
 | `".*"` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | <nobr>`""`</nobr> | <nobr>`"brown"`</nobr> |
-| `".*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | N/A | <nobr>`"brown"`</nobr> |
+| `".*"` | `""` | `"brown"` | <nobr>`"The quick brown"`</nobr> | <nobr>`"The quick "`</nobr> | *N/A* | <nobr>`"brown"`</nobr> |
 | `".*"` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | <nobr>`""`</nobr> |
-| `".*"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | N/A |
-| `".*"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`""`</nobr> |
-| `".*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A |
-| `""` | `"quick"` | `".*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | N/A | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
-| `""` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
-| `""` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A |
-| `""` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | N/A | N/A | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> | *N/A* |
+| `".*"` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`""`</nobr> |
+| `".*"` | `""` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | *N/A* |
+| `""` | `"quick"` | `".*"` | <nobr>`"quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`"quick"`</nobr> | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `".*"` | `"brown"` | <nobr>`"The quick brown"`</nobr> | *N/A* | <nobr>`"The quick "`</nobr> | <nobr>`"brown"`</nobr> |
+| `""` | `".*"` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | <nobr>`""`</nobr> |
+| `""` | `".*"` | `""` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* |
+| `""` | `""` | `".*"` | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> | *N/A* | *N/A* | <nobr>`"The quick brown fox jumps over the lazy dog."`</nobr> |
 
 ### Comparison Types
 
@@ -403,15 +412,15 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to find in, so no operation is performed.
+If [Text][Text Property] is `null` or empty (i.e. `""`) no operation is performed and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
 
 ### Null or empty Text To Find
 
-If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`) there is nothing to find, so no operation is performed, and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
+If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`) no operation is performed and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then that section of the query is not considered for a valid match and is not  included as a specific [Group][] in the returned [Match][]; see [Advanced Examples][].
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not included as a specific [Group][] for any [Match][] within the returned [Matches][Matches Property]; see [Advanced Examples][].
 
 ### Known Limitations
 
