@@ -974,8 +974,10 @@
                     MainDoc = "/docs/reference/blocks/text/find-text/"
                     [Cortex.Reference.Blocks.Text.FindText.FindTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-text/find-text-block/"
+                        KnownLimitations = "/docs/reference/blocks/text/find-text/find-text-block/#known-limitations"
                     [Cortex.Reference.Blocks.Text.FindText.FindAllTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block/"
+                        KnownLimitations = "/docs/reference/blocks/text/find-text/find-all-text-block/#known-limitations"
                 [Cortex.Reference.Blocks.Text.FindAndRemoveText]
                     MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
                     [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
