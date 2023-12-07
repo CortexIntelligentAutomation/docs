@@ -52,6 +52,17 @@
                     CORTEXGatewayRebranding = "/blog/2023/10/16/2023.9/#cortex-gateway-rebranding"
                     WindowsServer2022Support = "/blog/2023/10/16/2023.9/#windows-server-2022-support"
                     ProductPortal = "/blog/2023/10/16/2023.9/#product-portal"
+                [Cortex.Blogs.Releases.2023.11]
+                    MainDoc =  "/blog/2023/12/04/2023.11/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/12/04/2023.11/#expansion-of-the-ha-platform"
+                    NewBlocks = "/blog/2023/12/04/2023.11/#new-blocks"
+                    OracleSupport = "/blog/2023/12/04/2023.11/#oracle-support-added-for-the-execute-data-command-block"
+                    EncryptedHeaders = "/blog/2023/12/04/2023.11/#encrypted-headers-are-supported-in-the-execute-http-request-block"
+                    ImprovedInstallation = "/blog/2023/12/04/2023.11/#improved-installation"
+                    TriggersServiceSnmpV3 = "/blog/2023/12/04/2023.11/#trigger-service-supports-snmpv3"
+                    ImprovedLogging = "/blog/2023/12/04/2023.11/#oracle-support-added-for-the-execute-data-command-block"
+                    CORTEXGatewayRebranding = "/blog/2023/12/04/2023.11/#cortex-gateway-rebranding"
+                    ProductPortal = "/blog/2023/12/04/2023.11/#product-portal"
             [Cortex.Blogs.Releases.2022.X]
                 MainDoc = "/blog/releases/2022.x"
                 [Cortex.Blogs.Releases.2022.9]
@@ -963,8 +974,10 @@
                     MainDoc = "/docs/reference/blocks/text/find-text/"
                     [Cortex.Reference.Blocks.Text.FindText.FindTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-text/find-text-block/"
+                        KnownLimitations = "/docs/reference/blocks/text/find-text/find-text-block/#known-limitations"
                     [Cortex.Reference.Blocks.Text.FindText.FindAllTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block/"
+                        KnownLimitations = "/docs/reference/blocks/text/find-text/find-all-text-block/#known-limitations"
                 [Cortex.Reference.Blocks.Text.FindAndRemoveText]
                     MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
                     [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
@@ -1394,6 +1407,7 @@
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
                 [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
+                    KnownLimitations = "/docs/reference/data-types/data/oracleconnectiondetails/#known-limitations"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]
