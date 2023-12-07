@@ -12,9 +12,9 @@ This guide describes how to install the Application Servers and Load Balancer Se
 ## Make Installation Artefacts Available
 
 1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it:
-   * Cortex Innovation {{< version >}} - Block Packages.zip
-   * Cortex Innovation {{< version >}} - App Services.zip
    * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
+   * Cortex Innovation {{< version >}} - App Services.zip
+   * Cortex Innovation {{< version >}} - Block Packages.zip
 
 1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 
@@ -77,48 +77,50 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 
 ## Add Antivirus Exclusions
 
-1. If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        ```
+1. Run the `Cortex.Innovation.Add.WindowsDefenderExclusions.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
-    1. A message will indicate that the script has completed successfully.
+    ```powershell
+    .\Cortex.Innovation.Add.WindowsDefenderExclusions.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
+    ```
+
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+1. A message will indicate that the script has completed successfully.
 
 ## Check Port Usage
 
-1. To check all necessary ports are free, follow these steps.
-    1. Open a Windows PowerShell (x64) window as administrator.
-    1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
+To check all necessary ports are free, follow these steps:
 
-        ```powershell
-        cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
-        ```
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
-    1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers:
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
+    ```
 
-        ```powershell
-        .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3")
-        ```
+1. Run the `Cortex.Innovation.Test.PortUsage.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers and the `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
 
-    1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
+    ```powershell
+    .\Cortex.Innovation.Test.PortUsage.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -LoadBalancerServer "lb-server"
+    ```
 
-    1. If all ports are free, the script will report the following for each Application Server:
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on all Application Servers and press OK.
 
-        `All ports required by Cortex Innovation are free`
+1. If all ports are free, the script will report the following for each Application Server:
 
-        If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+    `All ports required by Cortex Innovation are free`
 
-        The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
+    If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
+
+    The `Cortex.Innovation.Test.PortUsage.ps1` script cannot currently re-check modified ports in the configuration file so these need to be manually checked to see that they are free.
 
 ## Configure Installation Script
 
@@ -131,20 +133,20 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "myPassword" `
+    -ClientCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -154,17 +156,17 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -UseSelfSignedCertificates `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -174,20 +176,20 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "myPassword" `
+    -ClientCertificatePassword '#_186224203199039!168155035100255155162114088105027~037077176064169!055142133197216213014226219148063#' `
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
@@ -197,44 +199,46 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
     -ApiGatewayBasicAuthUsername "BasicAuthUser" `
-    -ApiGatewayBasicAuthPassword "ADA9883B11BD4CDC908B8131B57944A4" `
+    -ApiGatewayBasicAuthPassword '#_065077199197085!212123173135087074174142102155007175102029143220132038175026114248243207204119030125106032237087162060168108135168241247037070081~187087056217118!069132229129134129097089241180163#' `
     -CustomerName "Customer1" `
     -ApplicationServerIPv4Addresses @("192.168.1.1", "192.168.1.2", "192.168.1.3") `
     -UseSelfSignedCertificates `
     -SkipLoadBalancer `
     -Credential $Credential `
     -LdapConnectionDetails @{
-	    Host= "LDAP://ldapserver.fqdn.com:389"
-	    UseSsl= $false
+        Host= "LDAP://ldapserver.fqdn.com:389"
+        UseSsl= $false
         Username= "someUserName"
-	    Password= "somePassword"
+        Password= '#_156218162004047!225018081008117174092221250099053~110194001237006!035122107175168133055021013201167#'
     } `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
     {{< /tabpane >}}
 
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+
     | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`AppServicesPath`                              | Configure this value with the location of the Application Services zip file on the Application Server used for installation. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server used for installation. |
-    |`ApiGatewayBasicAuthUsername`                     | Configure this value with the username that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows).<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />Currently only Basic Authentication using a single user is supported, OAuth2 will be supported in a future release.<br /><br />This value will be needed [later, when installing Gateway][Install Gateway]. |
-    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password that will be used for Basic Authentication when making HTTPS requests to the API Gateway Service (e.g. starting production flows). <br /><br />This password should be [{{% ctx %}} Encrypted][CORTEX Encrypted]. For security reasons it is recommended that the default value `ADA9883B11BD4CDC908B8131B57944A4` should be changed. <br /><br />This value will be needed [later, when installing Gateway][Install Gateway].|
+    |`ApiGatewayBasicAuthUsername`                     | Configure this value with a username that can be used to make HTTPS requests to the API Gateway Service using Basic Authentication (e.g. starting flows). This username will be used by Gateway for all HTTPS requests to the API Gateway Service.<br /><br />For security reasons it is recommended that the default value `BasicAuthUser` should be changed.<br /><br />This value will be needed later, [when installing Gateway][Install Gateway].<br /><br /> This username can also be used by external services for HTTPS requests to the API Gateway Service but is not recommended; these requests should use an OAuth2 session for an authorised Active Directory user.{{< alert type="note" title="Note" >}} This parameter can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
+    |`ApiGatewayBasicAuthPassword`                      | Configure this value with the password for the username specified for `ApiGatewayBasicAuthUsername`.<br /><br />For security reasons it is recommended that the default value should be changed.<br /><br />This value will be needed later, [when installing Gateway][Install Gateway].{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`CustomerName`                                | A name identifying the platform being installed. This must have no spaces or symbols. It will be appended to the node names that are displayed in Service Fabric Explorer. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 addresses of the Application Servers. The first of these must be the Application Server used for installation. |
     |`LoadBalancerServerIPv4Address`               | The IPv4 address of the Load Balancer Server. This is only needed if using the built-in load balancer. |
     |`ServerCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended). The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the HA cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul>{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}|
-    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended). |
+    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended).{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} |
     |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. This can be the same certificate as the `ServerCertificatePath`. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the [Certificate Requirements][].<br /><br />This certificate will be used for: <ul><li>Securing communication between the load balancer and the nodes on the Application Servers.</li></ul>{{< alert type="warning" title="Warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
-    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. |
+    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer.{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} |
     |`UseSelfSignedCertificates`                    | Installs Application Services and required infrastructure using generated Self-Signed Certificates rather than CA Certificates.  <br /><br /> Not recommended for production use.  |
     |`SkipLoadBalancer`                             | Installs Application Services and required infrastructure without installing a load balancer. Use when using an alternative load balancer or no load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the Application Servers. It must be a domain user that is a member of the local Administrators group on all servers. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
-    |`LdapConnectionDetails`                        | The connection details to the LDAP server. <br /><br />This must be configured with a valid `Host`, `Username`, `Password`, and whether the LDAP server uses SSL using `UseSsl`. {{< alert type="note" title="Note" >}}All fields but `UseSsl` can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} |
+    |`LdapConnectionDetails`                        | The connection details to the LDAP server. <br /><br />This must be configured with a valid `Host`, `Username`, `Password`, and whether the LDAP server uses SSL using `UseSsl`. {{< alert type="note" title="Note" >}}The parameters `Host` and `Username` can be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}. The parameter `Password` must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} |
     |`AcceptEULA`                                   | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                   | The filename that installation logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
-    The `ApiGatewayBasicAuthUsername` and `ApiGatewayBasicAuthPassword` will be needed [later, when installing Gateway][Install Gateway].
+    The `ApiGatewayBasicAuthUsername` and `ApiGatewayBasicAuthPassword` will be needed later, [when installing Gateway][Install Gateway].
 
     {{% alert title="Note" %}}
 More advanced configuration (such as changing ports) can be undertaken by modifying the `Cortex.Innovation.Install.Config.json` file but this shouldn't be required for most installations. More information about this can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.AdvancedConfigMultipleServer" title="Advanced Application Server and Load Balancer Configuration Changes" >}}.
@@ -280,6 +284,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
     ```powershell
     .\Cortex.Innovation.Install.ps1
     ```
+
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
@@ -304,25 +309,26 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Check Application Services
 
-{{< section "/install-application-server/check-application-services/multi-server.md">}}
+{{< section "/install-application-server/multi-server/check-application-services.md">}}
 
 ## Preserve installation files
 
-Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as troubleshooting, certificate rollover, uninstallation, reinstallation and updates.
+{{< section "/preserve-installation-files.md">}}
 
 ## Next Steps?
 
 1. [Install Web Application Server][]
 
-[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
-[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
-[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScript" >}}
-[Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
-[Prerequisites for installing Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
 [alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancer" >}}
-[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusions" >}}
+[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirements" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirements" >}}
+[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
+[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
+[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServer" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[Prerequisites for installing Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
+[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}

@@ -509,11 +509,12 @@ The exceptions thrown by the block can be found below:
 | [CommandException][] | Thrown when the data source was not found or was not accessible. |
 | | Thrown when an error occurs whilst trying to open a new connection. |
 | | Thrown when a connection is successfully established but an error occurred during the login process. |
-| | Thrown when the [Command][Command Property] contains syntax errors. The error will contain a nested [SqlException][] with a corresponding [SqlException Error Code][SqlException Error Codes]. |
+| | Thrown when the [Command][Command Property] contains syntax errors. The error will contain either a nested [SqlException][] with a corresponding [SqlException Error Code][SqlException Error Codes], or a nested [ParserException][] (Oracle Only). |
 | | Thrown when the [Command][Command Property] is invalid for the table specified. |
 | | Thrown when the [Command][Command Property] references a non-existent stored procedure. |
 | | Thrown when parameters derives from [Array][] or [IEnumerable][] when a [Query Statement][Query Statements] is executed. |
 | | Thrown when an [Command][] contains multiple statements. |
+| | Thrown when a [Command][] or [Commands][] contains an [OracleBlockStatement][] statements. (Oracle Only)|
 
 ## Remarks
 
@@ -585,7 +586,7 @@ For a [Non Query Statement][Non Query Statements] (e.g. insert, update, delete, 
 
 | [Result][Result Property] will be set to &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| when |
 |-|-|
-| `null` | always, as [Non Query Statements][] do not return data |
+| `[]` | always, as [Non Query Statements][] do not return data |
 
 Note use a [QueryCommand][] for commands that have dependency between their statements (e.g. Cursors and Variables) and return data from the data source. Please see [Complex Commands][] for more information.
 
@@ -742,6 +743,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 
 [ConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
@@ -783,4 +785,5 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
+[OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}

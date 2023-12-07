@@ -26,7 +26,7 @@ A new, valid X.509 certificate needs to be obtained to update the certificates.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
-* Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject parameter must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
 * Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
@@ -36,7 +36,7 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 
 This file should be placed in a known location on the Application Server where the certificate update script will be run. This location will be required when running the update script.
 
-If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
+If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject parameter can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
 
 ### Configure Update Certificates Script
 
@@ -47,26 +47,28 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
         {{< tab header="Multiple Servers with HA" >}}
 .\Cortex.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword "#_173143083161001!153134111116076231173085078170111~219102086228187!128017006016134019248042194172107#" `
     -ClientCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ClientCertificatePassword "myPassword" `
+    -ClientCertificatePassword "#_173143083161001!153134111116076231173085078170111~219102086228187!128017006016134019248042194172107#" `
     -Credential $Credential
         {{< /tab >}}
         {{< tab header="Single Server without HA" >}}
 .\Cortex.Update.Certificates.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -ServerCertificatePath "C:\Install\Certificates\cert.pfx" `
-    -ServerCertificatePassword "myPassword" `
+    -ServerCertificatePassword "#_173143083161001!153134111116076231173085078170111~219102086228187!128017006016134019248042194172107#" `
     -SkipLoadBalancer `
     -Credential $Credential
         {{< /tab >}}
     {{< /tabpane >}}
 
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+
     | Name                                         | Description |
     |----------------------------------------------|-------------|
     |`ServerCertificatePath`                       | The local path of a new, valid .PFX certificate file on the server. Environment variables cannot be used. <br /><br />The certificate should meet the [Certificate Requirements][]. <br /><br />This certificate will be used for: <ul><li>Securing communication between the Application Services.</li><li>Allowing Application Services to identify themselves to clients such as Gateway.</li><li>Preventing unauthorised nodes from joining the single node cluster.</li><li>Connecting to Service Fabric Explorer from each of the Application Servers.</li></ul> |
-    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`.|
+    |`ServerCertificatePassword`                        | The password for the .PFX certificate file specified in `ServerCertificatePath`.{{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`ClientCertificatePath`                       | The local path of a .PFX certificate file on the first Application Server in the `ApplicationServerIPv4Addresses` list. This can be the same certificate as the `ServerCertificatePath`. Environment variables cannot be used. <br /><br />This is only needed if installing with CA Certificates (Recommended) and using the Built-In Load Balancer. The certificate should meet the [Certificate Requirements][].<br /><br />This certificate will be used for: <ul><li>Securing communication between the load balancer and the nodes on the Application Servers.</li></ul>|
-    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if using the Built-In Load Balancer. |
+    |`ClientCertificatePassword`                         | The password for the .PFX certificate file specified in `ClientCertificatePath`. <br /><br /> This is only needed if using the Built-In Load Balancer. {{< alert type="note" title="Note" >}} This parameter must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
     |`SkipLoadBalancer`                             | Updates certificates without updating a load balancer. |
     |`Credential`                                   | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run. |
 

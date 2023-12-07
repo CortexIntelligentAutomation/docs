@@ -74,6 +74,7 @@ None
 
 * [ConnectionDetails][]
 * [OdbcConnectionDetails][]
+* [OracleConnectionDetails][]
 
 ### Related Concepts
 
@@ -92,6 +93,7 @@ None
 
 [ConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 
 [Working with Data Sources]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.MainDoc" >}}
 

@@ -69,11 +69,11 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 
 {{% alert title="Note" %}}Only applicable for installations with HA.{{% /alert %}}
 
-The load balancer server must be able to retrieve traffic via HTTPS. The following firewall ports are opened by the installer (these rules will all appear in Windows Firewall with names starting with `{CustomerName}`):
+The following firewall ports are opened by the installer (these rules will all appear in Windows Firewall with names starting with `{CustomerName}`):
 
 |Name in Rule        | Name in Config       | Default Port(s) | Protocol(s) | Direction | Program |
 |--------------------|----------------------|-----------------|-------------|-----------|---------|
-| GoBetweenTlsPort   | loadBalancerSnmpPort | 162             | UDP         | Inbound   | Any     |
+| GoBetweenSnmpPort  | loadBalancerSnmpPort | 162             | UDP         | Inbound   | Any     |
 | GoBetweenTlsPort   | loadBalancerTlsPort  | 443             | TCP         | Inbound   | Any     |
 
 [Dynamic Ports]: {{< url path="MSSupport.Troubleshooting.DynamicPorts" >}}

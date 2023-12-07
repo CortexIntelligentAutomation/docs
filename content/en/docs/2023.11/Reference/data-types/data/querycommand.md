@@ -99,6 +99,10 @@ Currently, if the `ToString()` method is used on a `QueryCommand`, then its Full
 
 In future this limitation may be removed.
 
+#### Multiple SQL Commands (Oracle Only)
+
+For Oracle you must use [block statement syntax][OracleBlockStatement] to execute multiple commands, otherwise a [CommandException][CommandExceptionRuntime] will be thrown.
+
 ## See Also
 
 ### Related Data Types
@@ -114,6 +118,7 @@ In future this limitation may be removed.
 
 ### External Documentation
 
+* [OracleBlockStatement][]
 * [SQL Injection][]
 
 [CommandText]: {{< ref "#command-text" >}}
@@ -140,5 +145,8 @@ In future this limitation may be removed.
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [NonQueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
+[CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
+[CommandExceptionRuntime]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.Runtime" >}}
 
+[OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}

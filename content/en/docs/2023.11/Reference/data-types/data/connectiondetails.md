@@ -29,22 +29,25 @@ Any data type representing configuration for establishing and maintaining a conn
 
 Any of the following data types can be used where a `ConnectionDetails` is required:
 
-- [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
+- [OracleConnectionDetails][]
+- [SqlServerConnectionDetails][]
 
 ### Create a ConnectionDetails
 
 For some of the ways that a `ConnectionDetails` can be created, please see each of the `ConnectionDetails` data types:
 
-- [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
+- [OracleConnectionDetails][]
+- [SqlServerConnectionDetails][]
 
 ### Convert ConnectionDetails to Text
 
 For some of the ways that a `ConnectionDetails` can be converted to text, please see each of the `ConnectionDetails` data types:
 
-- [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
+- [OracleConnectionDetails][]
+- [SqlServerConnectionDetails][]
 
 ### Known limitations
 
@@ -54,8 +57,9 @@ None
 
 ### Related Data Types
 
-- [SqlServerConnectionDetails][]
 - [OdbcConnectionDetails][]
+- [OracleConnectionDetails][]
+- [SqlServerConnectionDetails][]
 
 ### Related Concepts
 
@@ -69,3 +73,4 @@ None
 
 [SqlServerConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}

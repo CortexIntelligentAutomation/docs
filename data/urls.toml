@@ -44,6 +44,14 @@
                     ImprovedInstallationProcess = "/blog/2023/08/21/2023.7/#improved-installation-process"
                     RemovedFlowDebuggerService = "/blog/2023/08/21/2023.7/#removed-flow-debugger-service"
                     ProductPortal = "/blog/2023/08/21/2023.7/#product-portal"
+                [Cortex.Blogs.Releases.2023.9]
+                    MainDoc =  "/blog/2023/10/16/2023.9/"
+                    ExpansionOfTheHAPlatform = "/blog/2023/10/16/2023.9/#expansion-of-the-ha-platform"
+                    NewTriggersService = "/blog/2023/10/16/2023.9/#new-triggers-service"
+                    NewBlocks = "/blog/2023/10/16/2023.9/#new-blocks"
+                    CORTEXGatewayRebranding = "/blog/2023/10/16/2023.9/#cortex-gateway-rebranding"
+                    WindowsServer2022Support = "/blog/2023/10/16/2023.9/#windows-server-2022-support"
+                    ProductPortal = "/blog/2023/10/16/2023.9/#product-portal"
                 [Cortex.Blogs.Releases.2023.11]
                     MainDoc =  "/blog/2023/12/04/2023.11/"
                     ExpansionOfTheHAPlatform = "/blog/2023/12/04/2023.11/#expansion-of-the-ha-platform"
@@ -102,19 +110,29 @@
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
+                    ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureFlowDebuggerInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     RunInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server"
                     AssignCertificateFriendlyName = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#assign-certificate-friendly-name"
+                    AssignCertificateFriendlyNameNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/prerequisites/#assign-certificate-friendly-name"
+                    GetGatewayAppPoolUser = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/prerequisites/#get-cortex-gateway-application-pool-user"
                     ImportCertificateManually = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#import-certificate-manually"
+                    ImportCertificateManuallyNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/prerequisites/#import-certificate-manually"
+                    ImportRootCertificate = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/prerequisites/#import-root-certificate"
                     InstallGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#install-gateway"
                     PerformInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-installation"
                     PerformDebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-debugger-installation"
+                    DebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
+                    GatewayInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-gateway-installation"
                     Prerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#certificate-requirements"
+                    WebApplicationServerPrerequisites = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/prerequisites"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#web-browser-requirements"
                     AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#encryption-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
                     TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/#test-publishing-production-flows"
@@ -134,6 +152,7 @@
                     CertificateRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#encryption-requirements"
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out"
                     TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/try-it-out/#test-publishing-production-flows"
@@ -160,7 +179,11 @@
                     InstallApplicationAndLoadBalancerServers = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers"
                     InstallWebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
+                    ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
+                    DebuggerInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
+                    GatewayInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-gateway-installation"
+                    GetGatewayAppPoolUser = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/prerequisites/#get-cortex-gateway-application-pool-user"
                     RunInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#run-installation-script"
                     AddInnovationTo72WebApplicationServer = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server"
                     UpgradeGateway = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#upgrade-gateway"
@@ -169,10 +192,13 @@
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#encryption-requirements"
                     TryItOut= "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/try-it-out"
                     AntivirusExclusions = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#antivirus-exclusions"
                     HardwareRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#hardware-requirements"
                     HardwareRequirementsAlternativeArchitecture = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/prerequisites#alternative-architectures"
+                    AssignCertificateFriendlyNameNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/prerequisites/#assign-certificate-friendly-name"
+                    WebApplicationServerPrerequisites = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/prerequisites"
                 [Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA]
                     MainDoc = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/"       
                     Architecture = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/architecture"
@@ -187,6 +213,7 @@
                     CertificateRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#certificate-requirements"
                     WebBrowserRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#web-browser-requirements"
                     LicensingRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#licensing-requirements"
+                    EncryptionRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#encryption-requirements"
                     TryItOut= "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/try-it-out"
                     AntivirusExclusions = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#antivirus-exclusions"
                     HardwareRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#hardware-requirements"
@@ -390,6 +417,8 @@
                     MainDoc = "/docs/reference/blocks/data/execute-data-command"
                     [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
                         MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        CommandProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#command"
+                        ConnectionDetailsProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#connection-details"
                         ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
                         ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
                         ParameterisedCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#parameterised-commands"
@@ -941,6 +970,24 @@
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
                         KnownLimitations = "/docs/reference/blocks/text/decode-text/decode-text-block/#known-limitations"
+                [Cortex.Reference.Blocks.Text.FindText]
+                    MainDoc = "/docs/reference/blocks/text/find-text/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-text-block/"
+                    [Cortex.Reference.Blocks.Text.FindText.FindAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block/"
+                [Cortex.Reference.Blocks.Text.FindAndRemoveText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-all-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndReplaceText]
+                    MainDoc = "/docs/reference/blocks/text/find-and-replace-text/"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-all-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
@@ -1298,6 +1345,8 @@
                     MainDoc = "/docs/reference/data-types/collections/ienumerable-1"
                 [Cortex.Reference.DataTypes.Collections.IList]
                     MainDoc = "/docs/reference/data-types/collections/ilist-1"
+                [Cortex.Reference.DataTypes.Collections.IReadOnlyList]
+                    MainDoc = "/docs/reference/data-types/collections/ireadonlylist-1"
                 [Cortex.Reference.DataTypes.Collections.List]
                     MainDoc = "/docs/reference/data-types/collections/list-1"
                     CreateNew = "/docs/reference/data-types/collections/list-1#create-a-listlttitemgt"
@@ -1354,6 +1403,8 @@
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
                 [Cortex.Reference.DataTypes.Data.OdbcConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
+                [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
+                    MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]
@@ -1679,6 +1730,14 @@
                     MainDoc = "/docs/reference/data-types/text/encryptedtext"
                 [Cortex.Reference.DataTypes.Text.IFormatProvider]
                     MainDoc = "/docs/reference/data-types/text/iformatprovider"
+                [Cortex.Reference.DataTypes.Text.Regex]
+                    MainDoc = "/docs/reference/data-types/text/regex"
+                    [Cortex.Reference.DataTypes.Text.Regex.Match]
+                        MainDoc = "/docs/reference/data-types/text/regex/match"
+                    [Cortex.Reference.DataTypes.Text.Regex.Group]
+                        MainDoc = "/docs/reference/data-types/text/regex/group"
+                    [Cortex.Reference.DataTypes.Text.Regex.CaptureDetails]
+                        MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
                 [Cortex.Reference.DataTypes.Text.String]
@@ -1692,6 +1751,11 @@
                     MainDoc = "/docs/reference/data-types/text/stringcomparison"
                 [Cortex.Reference.DataTypes.Text.StringSplitOptions]
                     MainDoc = "/docs/reference/data-types/text/stringsplitoptions"
+                [Cortex.Reference.DataTypes.Text.TextToFind]
+                    MainDoc = "/docs/reference/data-types/text/texttofind"
+                    StartsWith = "/docs/reference/data-types/text/texttofind/#starts-with"
+                    Contains = "/docs/reference/data-types/text/texttofind/#contains"
+                    EndsWith = "/docs/reference/data-types/text/texttofind/#ends-with"
                 [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
                     MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
                 [Cortex.Reference.DataTypes.Text.TextEncodingFormat]
@@ -1755,6 +1819,8 @@
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
+                        IncompatibleStatementType = "/docs/reference/exceptions/data/command-exception/#incompatiblestatementtype"
+                        Runtime = "/docs/reference/exceptions/data/command-exception/#runtime"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
             [Cortex.Reference.Exception.DataStorage]
@@ -2065,6 +2131,8 @@
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
     SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
+    OracleConnection = "https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/"
+    OracleConnectionIntegratedSecurity = "https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/using-integrated-security/"
 [ElasticSearch]
     MainDoc = "https://www.elastic.co/"
 [ErlangOTP]
@@ -2089,6 +2157,14 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.0.1]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.1/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.0.2]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -2132,6 +2208,7 @@
     MainDoc = "https://letsencrypt.org/"
 [Microsoft]
     [Microsoft.Downloads.Windows]
+        Server2022 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2022?filetype=ISO"
         Server2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
         Server2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
 [MimeKit]
@@ -2336,6 +2413,9 @@
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
+            Capture = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.capture"
+            Group = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.group"
+            Match = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.match"
             RegexMatchTimeoutException = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
         [MSDocs.DotNet.Api.System.Net]
             NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
@@ -2359,6 +2439,7 @@
         2016 = "https://www.microsoft.com/en-us/download/details.aspx?id=103447"
 [MSEval]
     [MSEval.WindowsServer]
+        2022 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2022?filetype=ISO"
         2019 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO"
         2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
     [MSEval.SQLServer]
@@ -2370,6 +2451,9 @@
 [MSSupport]
     [MSSupport.Troubleshooting]
         DynamicPorts = "https://support.microsoft.com/kb/929851"
+[Oracle]
+    [Oracle.PL-SQL]
+        BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"
