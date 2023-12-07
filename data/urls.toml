@@ -1407,6 +1407,7 @@
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
                 [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
+                    KnownLimitations = "/docs/reference/data-types/data/oracleconnectiondetails/#known-limitations"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]
