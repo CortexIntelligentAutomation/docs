@@ -9,8 +9,6 @@ weight: 1
 
 2023.11 is the sixth [Fast Track][] release of the next generation of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
 
-TODO:
-
 * [Capability][]
 * [Security][]
 * [Documentation][]
@@ -22,7 +20,7 @@ This release introduces:
 * The [Triggers][Triggers Service SnmpV3] service has been has been expanded to allow the triggering executions of flows within the {{% ctx %}} Innovation platform when specific SNMPV3 Traps are received
 * A number of services have had [improved logging introduced][]
 * Dependency on SQL Server has been removed for a number of components within th {{% ctx %}} Innovation Platform
-* Two [new Blocks][New Blocks] have been added, adding new functionality to work with:
+* Two [new Blocks][New Blocks] have been added, introducing new functionality to work with:
   * [Text][] - Allowing for searching for values within text, using a number of methods e.g. Contains, Pattern Matching, and Regex
 * [Support for Oracle Data Connections has been added for the Execute Data Command Block][Support for Oracle Data Connections]
 
@@ -38,9 +36,9 @@ This release introduces:
 This release introduces:
 
 * [Product Portal][] changes, including:
-  * Documentation has been updated to reflect the [new services][HA Platform]
   * Reference documentation has been added for the [new blocks][New Blocks]
-  * Reference documentation has been added for the [Oracle Data Connection support][Support for Oracle Data Connections]
+  * Reference documentation has been added for [Oracle Data Connection support][Support for Oracle Data Connections]
+  * Reference documentation has been added for [encrypted headers in the Execute HTTP Request block][Encrypted Headers are Supported in the Execute HTTP Request Block]
   * Documentation has been updated to reflect the [improved installation][]
 
 ## Other Improvements
@@ -55,7 +53,6 @@ For a full list of what has been introduced in this release, please see the [202
 [Security]: {{< ref "#improved-security" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.11.ExpansionOfTheHAPlatform" version="2023.11" >}}
 [Triggers Service SnmpV3]: {{< url path="Cortex.Blogs.Releases.2023.11.TriggersServiceSnmpV3" version="2023.11" >}}
 [improved logging introduced]: {{< url path="Cortex.Blogs.Releases.2023.11.ImprovedLogging" version="2023.11" >}}
 [New Blocks]: {{< url path="Cortex.Blogs.Releases.2023.11.NewBlocks" version="2023.11" >}}
