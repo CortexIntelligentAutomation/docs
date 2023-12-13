@@ -34,7 +34,7 @@ The Connection String that is used to connect to an ODBC data source.
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [EncryptableText][] with value `$@"Dsn=DSN Name;Driver=Driver Name;"` |
+| Default Value | [EncryptableText][] with value `$@"Dsn=YourDSN;Driver=YourDriver;"` |
 
 ## Remarks
 
