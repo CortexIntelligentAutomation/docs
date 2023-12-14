@@ -44,13 +44,13 @@ The following table shows some of the ways that a `OdbcConnectionDetails` can be
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `OdbcConnectionDetails` constructor | `new OdbcConnectionDetails("DSN=LocalHost;Driver={ODBC Driver Version}")` | `{"ConnectionString": "DSN=LocalHost;Driver={ODBC Driver Version}"}` | Expression |  |
+| Use an `OdbcConnectionDetails` constructor | `new OdbcConnectionDetails("Dsn=LocalHost;Driver={ODBC Driver Version}")` | `{"ConnectionString": "Dsn=LocalHost;Driver={ODBC Driver Version}"}` | Expression |  |
 
 A `OdbcConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Connection String`| `EncryptableText`| `$@"DSN=LocalHost;Driver={ODBC Driver Version}"` | The Connection String that is used to connect to an ODBC data source. |
+| `Connection String`| `EncryptableText`| `$@"Dsn=LocalHost;Driver={ODBC Driver Version}"` | The Connection String that is used to connect to an ODBC data source. |
 
 ### Connection Strings
 
