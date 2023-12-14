@@ -34,7 +34,7 @@ The Connection String that is used to connect to an Oracle data source.
 | Data Type | [EncryptableText][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [EncryptableText][] with value `$@"Data Source=Connection String;"` |
+| Default Value | [EncryptableText][] with value `$@"Data Source=YourDataSource;User Id=YourUsername;Password=YourPassword;"` |
 
 ## Remarks
 
@@ -44,13 +44,13 @@ The following table shows some of the ways that an `OracleConnectionDetails` can
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `OracleConnectionDetails` constructor | `new OracleConnectionDetails("Data Source=Connection String;")` | `{connectionString: $@"Data Source=Connection String;"}` | Expression |  |
+| Use an `OracleConnectionDetails` constructor | `new OracleConnectionDetails("Data Source=TNSDataSource;User Id=Username;Password=Password;")` | `{connectionString: $@"Data Source=TNSDataSource;User Id=Username;Password=Password;"}` | Expression |  |
 
 An `OracleConnectionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
 | Property | Data Type | Example | Notes |
 |-|-|-|-|
-| `Connection String`| `EncryptableText`| `$@"Data Source=Connection String;"` | The Connection String that is used to connect to an Oracle database. |
+| `Connection String`| `EncryptableText`| `$@"Data Source=TNSDataSource;User Id=Username;Password=Password;"` | The Connection String that is used to connect to an Oracle database. |
 
 ### Connection Strings
 
