@@ -86,12 +86,10 @@ For the Flow Debugger, the certificate must have the following properties:
 * Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
 {{% alert title="Important" color="warning" %}}
-Do not reuse any auto-generated self-signed certificates for {{% ctx %}} Gateway as they do not meet the requirements.  
-<br />
-Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Certificates, wildcard certificates, auto-generated self-signed certificates and manually created self-signed certificates can be used. However, self-signed certificates are not recommended for production instances.
 Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
 <br />
-It is possible to reuse the Flow Debugger certificate for {{% ctx %}} Gateway, as long as it is not an auto-generated self-signed certificate; If doing so, you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="Assign a Certificate Friendly Name" >}} after the debugger has been installed and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
+It is possible to reuse the Flow Debugger certificate for {{% ctx %}} Gateway; If doing so, you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="Assign a Certificate Friendly Name" >}} after the debugger has been installed and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
 {{% /alert %}}
 
 ### Import Root Certificate

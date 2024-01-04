@@ -242,9 +242,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
 {{% alert title="Important" color="warning" %}}
-Do not reuse any auto-generated self-signed certificates as they do not meet the requirements for Gateway.  
-<br />
-Certificates, wildcard certificates and manually created self-signed certificates can be used. However, the latter are not recommended for production instances.  
+Certificates, wildcard certificates, auto-generated self-signed certificates and manually created self-signed certificates can be used. However, self-signed certificates are not recommended for production instances.  
 Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.
 {{% /alert %}}
 
