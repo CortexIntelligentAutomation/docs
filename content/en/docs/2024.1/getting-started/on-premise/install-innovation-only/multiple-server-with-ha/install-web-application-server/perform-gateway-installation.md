@@ -13,7 +13,7 @@ This guide describes how to install {{% ctx %}} Gateway on the Web Application S
 
 ### Certificate Requirements
 
-It is possible for {{% ctx %}} Gateway to reuse the certificate used when [installing the Flow Debugger][Flow Debugger installation], as long as it was not an auto-generated self-signed certificate; If doing so, you must [Assign a Certificate Friendly Name][Assign Certificate Friendly Name] and set the `ImportCertificate` parameter to `$false` when [configuring the {{% ctx %}} Gateway Installation Script][Install Gateway] to ensure use of the correct certificate and to prevent it from being overwritten.
+It is possible for {{% ctx %}} Gateway to reuse the certificate used when [installing the Flow Debugger][Flow Debugger installation]; If doing so, you must [Assign a Certificate Friendly Name][Assign Certificate Friendly Name] and set the `ImportCertificate` parameter to `$false` when [configuring the {{% ctx %}} Gateway Installation Script][Install Gateway] to ensure use of the correct certificate and to prevent it from being overwritten.
 
 ### Configure {{% ctx %}} Gateway Installation Script
 

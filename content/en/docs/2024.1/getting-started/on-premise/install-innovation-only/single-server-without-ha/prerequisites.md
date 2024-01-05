@@ -197,7 +197,7 @@ If the user tries to navigate to an address not in the SAN list, then they will 
 Certificates, wildcard certificates, auto-generated self-signed certificates and manually created self-signed certificates can be used. However, self-signed certificates are not recommended for production instances.  
 Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
 <br />
-It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="installing the Application Server" >}}, as long as it is not an auto-generated self-signed certificate; If doing so, you should set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}} step to prevent overwriting.
+It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="installing the Application Server" >}}; If doing so, you should set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}} step to prevent overwriting.
 {{% /alert %}}
 
 More information about importing the certificate is given during installation.
