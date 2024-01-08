@@ -102,7 +102,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         openssl req -sha256 -x509 -new -nodes -key cortexCA.key -days 3650 -out cortexCA.pem -config ca.cnf
         ```
 
-    1. Press `Enter` for all parameters except the Common Name. For this enter `Cortex CA`.
+    1. Press `Enter` for all parameters except the Common Name. For this enter `CortexServerCertificate`.
 
 1. Package your public and private key in a pkcs12 encrypted file (to install with certmgr on windows) by running the following command:
 
