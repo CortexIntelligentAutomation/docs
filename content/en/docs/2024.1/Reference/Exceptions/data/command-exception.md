@@ -14,7 +14,7 @@ Exception thrown when any command execution has resulted in an exception being t
 
 ## Reasons
 
-### Connection Failed {#connection}
+### Connection Failed {#1000}
 
 The connection to the data source failed.
 
@@ -37,7 +37,26 @@ Make sure that the [Connection Details Property][ConnectionDetailsProperty] has 
 
 More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [InnerException][].
 
-### Incompatible Statement Type (Oracle Only) {#incompatiblestatementtype}
+### Statement {#2000}
+
+The statement(s) used could not be parsed.
+
+#### Message Format
+
+The format of the [Message][] is as follows:
+
+```json
+"An error occurred whilst trying to execute the command provided. Please see the 'StatementExceptions' property for more details.
+Please click the HelpLink for more information on how to fix this."
+```
+
+#### How to fix
+
+Make sure that the statement(s) inputted into the [Command Property][CommandProperty] have the correct syntax.
+
+More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [StatementExceptions][].
+
+### Incompatible Statement Type (Oracle Only) {#2001}
 
 An [OracleBlockStatement][] has been used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type.
 
@@ -54,7 +73,7 @@ Please click the HelpLink for more information on how to fix this."
 
 Use a [QueryCommand][] or [NonQueryCommand][] data type.
 
-### Multiple Statements {#multiplestatements}
+### Multiple Statements {#2002}
 
 Multiple statements have been passed into the [Command Property][CommandProperty] when using a [Command][] data type.
 
@@ -71,7 +90,7 @@ Please click the HelpLink for more information on how to fix this."
 
 Use a [Commands][] data type.
 
-### Runtime {#runtime}
+### Runtime {#3000}
 
 An error has occurred during either parsing or execution of the statement(s).
 
@@ -114,14 +133,53 @@ The category of the exception, which is used to categorise an exception if there
 
 For `CommandException` there are the following categories:
 
-- `Connection`
-- `IncompatibleStatementType`
-- `MultipleStatements`
-- `Runtime`
+- `ODBC`
+- `Oracle`
+- `SQL`
 
 | | |
 |-----------|------------|
 | Data Type | [String][] |
+
+### Error Code
+
+The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.
+
+For `CommandException` there are the following error codes:
+
+- [1000][Connection] - indicates that a [Connection][] error has occurred during the connection process (All Categories)
+- [2000][Statement] - indicates that a [Statement][] error has occurred during the parsing process (All Categories)
+- [2001][IncompatibleStatementType] - indicates that a [IncompatibleStatementType][] error has occured due to an [OracleBlockStatement][] being used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type (Oracle Category Only)
+- [2002][MultipleStatements] - indicates that a [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype (All Categories)
+- [3000][Runtime] - indicates that a [Runtime][] error has occurred during the runtime process (All Categories)
+
+### Error Code
+
+The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.
+
+An error code of 1000 indicates:
+ - A [Connection][] error has occurred during the connection process
+ - This error code is thrown for all categories
+
+An error code of 2000 indicates:
+ - A [Statement][] error has occurred during the parsing process
+ - This error code is thrown for all categories
+
+An error code of 2001 indicates:
+ - An [IncompatibleStatementType][] error has occured due to an [OracleBlockStatement][] being used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type
+ - This error code is only thrown with the `Oracle` category
+
+An error code of 2002 indicates:
+ - A [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype
+ - This error code is thrown for all categories
+
+An error code of 3000 indicates:
+ - A [Runtime][] error has occurred during the runtime process
+ - This error code is thrown for all categories
+
+| | |
+|-----------|---------------------------|
+| Data Type | [DataCommandErrorCode][] |
 
 ### InnerException
 
@@ -160,6 +218,7 @@ None
 - [Command][]
 - [Commands][]
 - [ConnectionDetails][]
+- [DataCommandErrorCode][]
 - [Exception][]
 - [NonQueryCommand][]
 - [OdbcConnectionDetails][]
@@ -182,6 +241,11 @@ None
 
 [OracleBlockStatement][]
 
+[Connection]: {{< ref "#1000">}}
+[Statement]: {{< ref "#2000">}}
+[IncompatibleStatementType]: {{< ref "#2001">}}
+[MultipleStatements]: {{< ref "#2002">}}
+[Runtime]: {{< ref "#3000">}}
 [Message]: {{< ref "#message" >}}
 [InnerException]: {{< ref "#innerexception" >}}
 [StatementExceptions]: {{< ref "#statementexceptions" >}}
@@ -199,6 +263,7 @@ None
 [SqlServerConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}
 [OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 [OdbcConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OdbcConnectionDetails.MainDoc" >}}
+[DataCommandErrorCode]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommandErrorCode.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 
@@ -221,13 +286,10 @@ None
 
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Command.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.Command.CommandText" >}}
-
 [Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [Commands.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.CommandText" >}}
-
 [QueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.MainDoc" >}}
 [QueryCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.QueryCommand.CommandText" >}}
-
 [NonQueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
 [NonQueryCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.CommandText" >}}
 

@@ -1389,6 +1389,8 @@
                 [Cortex.Reference.DataTypes.Data.DataCommand]
                     MainDoc = "/docs/reference/data-types/data/datacommand/"
                     CommandText = "/docs/reference/data-types/data/datacommand/#command-text"
+                [Cortex.Reference.DataTypes.Data.DataCommandErrorCode]
+                    MainDoc = "/docs/reference/data-types/data/datacommanderrorcode/"
                 [Cortex.Reference.DataTypes.Data.Command]
                     MainDoc = "/docs/reference/data-types/data/command/"
                     CommandText = "/docs/reference/data-types/data/command/#command-text"
