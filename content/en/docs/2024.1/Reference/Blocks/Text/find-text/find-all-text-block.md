@@ -30,7 +30,7 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
 
 #### Result
@@ -303,7 +303,6 @@ In these examples, the following properties are common:
 | Property | Value |
 |----------|-------|
 | [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
-| [Occurrence][Occurrence Property] | `1` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
 | [Matches][Matches Property] | `($)Matches` with no value |
 
@@ -416,7 +415,7 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) no operation is performe
 
 ### Null or empty Text To Find
 
-If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`) no operation is performed and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
+If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), or [Text To Find][TextToFind Property] is `null`; no operation is performed and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
 
 ### Null or empty property of Text To Find
 
@@ -427,11 +426,11 @@ If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `"
 If [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that are equivalent to `ae` may not evaluate as equal.
 
 [Advanced Examples]: {{<ref "#advanced-examples">}}
+[ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Matches Property]: {{< ref "#matches" >}}
+[SearchOptions Property]: {{< ref "#search-options" >}}
 [Text Property]: {{< ref "#text" >}}
 [TextToFind Property]: {{< ref "#text-to-find" >}}
-[SearchOptions Property]: {{< ref "#search-options" >}}
-[ComparisonType Property]: {{< ref "#comparison-type" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
