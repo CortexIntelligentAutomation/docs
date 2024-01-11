@@ -1824,7 +1824,9 @@
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
+                        IncompatibleStatementTypeOld = "/docs/reference/exceptions/data/command-exception/#incompatiblestatementtype"
                         IncompatibleStatementType = "/docs/reference/exceptions/data/command-exception/#2001"
+                        RuntimeOld = "/docs/reference/exceptions/data/command-exception/#runtime"
                         Runtime = "/docs/reference/exceptions/data/command-exception/#3000"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"

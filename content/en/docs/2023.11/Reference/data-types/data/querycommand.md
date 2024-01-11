@@ -146,7 +146,7 @@ For Oracle you must use [block statement syntax][OracleBlockStatement] to execut
 [Commands]: {{< url path="Cortex.Reference.DataTypes.Data.Commands.MainDoc" >}}
 [NonQueryCommand]: {{< url path="Cortex.Reference.DataTypes.Data.NonQueryCommand.MainDoc" >}}
 [CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
-[CommandExceptionRuntime]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.Runtime" >}}
+[CommandExceptionRuntimeOld]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.Runtime" >}}
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}

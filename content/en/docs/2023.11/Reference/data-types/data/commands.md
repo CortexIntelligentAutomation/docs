@@ -150,7 +150,7 @@ Using an [OracleBlockStatement][] in the [CommandText][] will throw a [Command E
 [CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
 [OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 [CommandException]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
-[CommandExceptionIncompatibleStatementType]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.IncompatibleStatementType" >}}
+[CommandExceptionIncompatibleStatementTypeOld]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.IncompatibleStatementType" >}}
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}
