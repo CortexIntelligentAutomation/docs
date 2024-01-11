@@ -101,7 +101,7 @@ In future this limitation may be removed.
 
 #### Block Statements Incompatible (Oracle Only)
 
-Using an [OracleBlockStatement][] in the [CommandText][] will throw a [Command Exception][CommandExceptionIncompatibleStatementType]. You must use either a [QueryCommand][] or [NonQueryCommand][] instead.
+Using an [OracleBlockStatement][] in the [CommandText][] will throw a [Command Exception][CommandExceptionIncompatibleStatementTypeOld]. You must use either a [QueryCommand][] or [NonQueryCommand][] instead.
 
 ## See Also
 
@@ -150,7 +150,7 @@ Using an [OracleBlockStatement][] in the [CommandText][] will throw a [Command E
 [CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
 [OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 [CommandException]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.MainDoc" >}}
-[CommandExceptionIncompatibleStatementTypeOld]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.IncompatibleStatementType" >}}
+[CommandExceptionIncompatibleStatementTypeOld]: {{< url path="Cortex.Reference.Exceptions.Data.CommandException.IncompatibleStatementTypeOld" >}}
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}
