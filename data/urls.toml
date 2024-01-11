@@ -1389,6 +1389,8 @@
                 [Cortex.Reference.DataTypes.Data.DataCommand]
                     MainDoc = "/docs/reference/data-types/data/datacommand/"
                     CommandText = "/docs/reference/data-types/data/datacommand/#command-text"
+                [Cortex.Reference.DataTypes.Data.DataCommandErrorCode]
+                    MainDoc = "/docs/reference/data-types/data/datacommanderrorcode/"
                 [Cortex.Reference.DataTypes.Data.Command]
                     MainDoc = "/docs/reference/data-types/data/command/"
                     CommandText = "/docs/reference/data-types/data/command/#command-text"
@@ -1822,8 +1824,10 @@
                 MainDoc = "/docs/reference/exceptions/data/"
                     [Cortex.Reference.Exceptions.Data.CommandException]
                         MainDoc = "/docs/reference/exceptions/data/command-exception/"
-                        IncompatibleStatementType = "/docs/reference/exceptions/data/command-exception/#incompatiblestatementtype"
-                        Runtime = "/docs/reference/exceptions/data/command-exception/#runtime"
+                        IncompatibleStatementTypeOld = "/docs/reference/exceptions/data/command-exception/#incompatiblestatementtype"
+                        IncompatibleStatementType = "/docs/reference/exceptions/data/command-exception/#2001"
+                        RuntimeOld = "/docs/reference/exceptions/data/command-exception/#runtime"
+                        Runtime = "/docs/reference/exceptions/data/command-exception/#3000"
                     [Cortex.Reference.Exceptions.Data.InvalidConnectionStringException]
                         MainDoc = "/docs/reference/exceptions/data/invalid-connection-string-exception/"
             [Cortex.Reference.Exception.DataStorage]
