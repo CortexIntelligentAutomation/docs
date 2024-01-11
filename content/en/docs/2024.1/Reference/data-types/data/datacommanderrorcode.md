@@ -74,13 +74,13 @@ The `DataCommandErrorCode` data type is used to represent an error code explaini
 
 ## Remarks
 
-### Create an DataCommandErrorCode
+### Create a DataCommandErrorCode
 
 The following table shows some of the ways that `DataCommandErrorCode` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `DataCommandErrorCode` expression | `DataCommandErrorCode.Connection` | `DataCommandErrorCode.Connection`| Expression | Indicates a [CommandException][] occured when the connection to the data source failed |
+| Use a `DataCommandErrorCode` expression | `DataCommandErrorCode.Connection` | `DataCommandErrorCode.Connection`| Expression | Indicates a [CommandException][] occured when the connection to the data source failed |
 | | `DataCommandErrorCode.Statement` | `DataCommandErrorCode.Statement`| Expression | Indicates a [CommandException][] occured due to the statement(s) being passed into the [Command Property][CommandProperty] could not be parsed |
 | | `DataCommandErrorCode.IncompatibleStatementType` | `DataCommandErrorCode.IncompatibleStatementType`| Expression | Indicates a [CommandException][] occured due to an [OracleBlockStatement][] being passed into the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type |
 | | `DataCommandErrorCode.MultipleStatements` | `DataCommandErrorCode.MultipleStatements`| Expression | Indicates a [CommandException][] occured due to multiple statements being passed into the [Command Property][CommandProperty] when using a [Command][] data type |
@@ -94,7 +94,7 @@ The following table shows some of the ways that `DataCommandErrorCode` can be cr
 | | `(DataCommandErrorCode)Enum.Parse(typeof(DataCommandErrorCode), "Statement")` | `DataCommandErrorCode.Statement`| Expression | Parses `"Statement"` and converts it to `DataCommandErrorCode.Statement`. See [Enum.Parse][] |
 | | `(DataCommandErrorCode)Enum.Parse(typeof(DataCommandErrorCode), "IncompatibleStatementType")` | `DataCommandErrorCode.IncompatibleStatementType`| Expression | Parses `"IncompatibleStatementType"` and converts it to `DataCommandErrorCode.IncompatibleStatementType`. See [Enum.Parse][] |
 | | `(DataCommandErrorCode)Enum.Parse(typeof(DataCommandErrorCode), "MultipleStatements")` | `DataCommandErrorCode.MultipleStatements`| Expression | Parses `"MultipleStatements"` and converts it to `DataCommandErrorCode.MultipleStatements`. See [Enum.Parse][] |
-| | `(DataCommandErrorCode)Enum.Parse(typeof(DataCommandErrorCode), "Runtime")` | `DataCommandErrorCode.Runtime`| Expression | Parses `"InvalidUserCredentials"` and converts it to `DataCommandErrorCode.Runtime`. See [Enum.Parse][] |
+| | `(DataCommandErrorCode)Enum.Parse(typeof(DataCommandErrorCode), "Runtime")` | `DataCommandErrorCode.Runtime`| Expression | Parses `"Runtime"` and converts it to `DataCommandErrorCode.Runtime`. See [Enum.Parse][] |
 | Use `Enum.ToObject` | `(DataCommandErrorCode)Enum.ToObject(typeof(DataCommandErrorCode), 1000)` | `DataCommandErrorCode.Connection`| Expression | Converts `1000` to `DataCommandErrorCode.Connection` value. See [Enum.ToObject][] |
 | | `(DataCommandErrorCode)Enum.ToObject(typeof(DataCommandErrorCode), 2000)` | `DataCommandErrorCode.Statement`| Expression | Converts `2000` to `DataCommandErrorCode.Statement` value. See [Enum.ToObject][] |
 | | `(DataCommandErrorCode)Enum.ToObject(typeof(DataCommandErrorCode), 2001)` | `DataCommandErrorCode.IncompatibleStatementType`| Expression | Converts `2001` to `DataCommandErrorCode.IncompatibleStatementType` value. See [Enum.ToObject][] |
@@ -105,7 +105,7 @@ Please see [Instantiating an enumeration type][] for further information.
 
 ### Convert DataCommandErrorCode to Text
 
-The following table shows some of the ways that an `DataCommandErrorCode` can be converted to text.
+The following table shows some of the ways that a `DataCommandErrorCode` can be converted to text.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
@@ -134,7 +134,7 @@ Please see [Formatting enumeration values][] for further information.
 
 ### Convert DataCommandErrorCode to a Number
 
-The following table shows some of the ways that an `DataCommandErrorCode` can be converted to a number.
+The following table shows some of the ways that a `DataCommandErrorCode` can be converted to a number.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
@@ -166,6 +166,10 @@ Currently when using either [OdbcConnectionDetails][] or [SqlServerConnectionDet
 - [CommandException][]
 - [Int32][]
 - [String][]
+- [ConnectionDetails][]
+- [SqlServerConnectionDetails][]
+- [OracleConnectionDetails][]
+- [OdbcConnectionDetails][]
 
 ### Related Concepts
 

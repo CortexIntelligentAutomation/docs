@@ -23,13 +23,13 @@ The connection to the data source failed.
 The format of the [Message][] is as follows:
 
 ```json
-"Failed to open the '<database-type>' connection.
+"Failed to open the '<data-source-type>' connection.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-- `<database-type>` is the type of the database (e.g. SqlServer, Oracle).
+- `<data-source-type>` is the type of the data source (e.g. SqlServer, Oracle).
 
 #### How to fix
 
@@ -129,7 +129,7 @@ The exception message, providing information about the exception that occurred.
 
 ### Category
 
-The category of the exception, which is used to categorise an exception if there are multiple reasons that the exception can occur.
+The category of the exception, which is used to categorise an exception based on the type of data source used.
 
 For `CommandException` there are the following categories:
 
@@ -148,34 +148,10 @@ The error code for the exception, which is used to indicate the reason that the 
 For `CommandException` there are the following error codes:
 
 - [1000][Connection] - indicates that a [Connection][] error has occurred during the connection process (All Categories)
-- [2000][Statement] - indicates that a [Statement][] error has occurred during the parsing process (All Categories)
+- [2000][Statement] - indicates that a [Statement][] error has occurred during the parsing process (Oracle Category Only)
 - [2001][IncompatibleStatementType] - indicates that a [IncompatibleStatementType][] error has occured due to an [OracleBlockStatement][] being used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type (Oracle Category Only)
 - [2002][MultipleStatements] - indicates that a [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype (All Categories)
 - [3000][Runtime] - indicates that a [Runtime][] error has occurred during the runtime process (All Categories)
-
-### Error Code
-
-The error code for the exception, which is used to indicate the reason that the exception occurred, if there are multiple reasons that the exception can occur.
-
-An error code of 1000 indicates:
- - A [Connection][] error has occurred during the connection process
- - This error code is thrown for all categories
-
-An error code of 2000 indicates:
- - A [Statement][] error has occurred during the parsing process
- - This error code is thrown for all categories
-
-An error code of 2001 indicates:
- - An [IncompatibleStatementType][] error has occured due to an [OracleBlockStatement][] being used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type
- - This error code is only thrown with the `Oracle` category
-
-An error code of 2002 indicates:
- - A [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype
- - This error code is thrown for all categories
-
-An error code of 3000 indicates:
- - A [Runtime][] error has occurred during the runtime process
- - This error code is thrown for all categories
 
 | | |
 |-----------|---------------------------|
@@ -239,7 +215,7 @@ None
 
 ### External Documentation
 
-[OracleBlockStatement][]
+- [OracleBlockStatement][]
 
 [Connection]: {{< ref "#1000">}}
 [Statement]: {{< ref "#2000">}}
