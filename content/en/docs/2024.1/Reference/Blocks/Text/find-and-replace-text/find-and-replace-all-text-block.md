@@ -79,7 +79,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "cat", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "cat", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
 | [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"CORTEX"`| `($)ReplacementText` is a variable of type [String][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 
 #### Results
@@ -224,7 +224,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 | `"The"` | `""` | `""` | <nobr>`"CORTEX quick brown fox jumps over the lazy dog."`</nobr> |
 | `""` | `"quick"` | `"brown"` | <nobr>`"The CORTEX fox jumps over the lazy dog."`</nobr> |
 | `""` | `"quick"` | `""` | <nobr>`"The CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | `"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 
 #### SearchOptions.PatternMatching
@@ -239,7 +239,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 | `"The"` | `""` | `""` | <nobr>`"CORTEX quick brown fox jumps over the lazy dog."`</nobr> |
 | `""` | `"quick"` | `"brown"` | <nobr>`"The CORTEX fox jumps over the lazy dog."`</nobr> |
 | `""` | `"quick"` | `""` | <nobr>`"The CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | `"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 | `"The"` | `"quick"` | `"*"` | <nobr>`"CORTEX"`</nobr> |
 | `"The"` | `"*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
@@ -273,7 +273,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 | `"The"` | `""` | `""` | <nobr>`"CORTEX quick brown fox jumps over the lazy dog."`</nobr> |
 | `""` | `"quick"` | `"brown"` | <nobr>`"The CORTEX fox jumps over the lazy dog."`</nobr> |
 | `""` | `"quick"` | `""` | <nobr>`"The CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | `"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 | `"The"` | `"quick"` | `".*"` | <nobr>`"CORTEX"`</nobr> |
 | `"The"` | `".*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
