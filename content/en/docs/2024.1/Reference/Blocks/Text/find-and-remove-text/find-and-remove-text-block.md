@@ -118,7 +118,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ### Text
 
-The [Text][Text Property] to find and replace the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in.
+The [Text][Text Property] to find and remove the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in.
 
 | | |
 |--------------------|---------------------------|
@@ -234,7 +234,7 @@ These sections contain tables for the examples. The columns of these tables are 
 | TextToFind.Contains | Value used to define the Contains property of [Text To Find][TextToFind Property]. |
 | TextToFind.EndsWith | Value used to define the EndsWith property of [Text To Find][TextToFind Property]. |
 | Output Text | The value of the [Text][Text Property] after executing the block. \* |
-\* *DEFAULT* indicates that nothing has been found and replaced in [Text][Text Property], and that [Text][Text Property] is the same as was initially provided.
+\* *DEFAULT* indicates that nothing has been found and removed in [Text][Text Property], and that [Text][Text Property] is the same as was initially provided.
 
 Please note that these examples all perform a search which has at most one valid match in the text.
 
@@ -327,7 +327,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to replace in, so no operation is performed.
+If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to remove in, so no operation is performed.
 
 ### Null or empty Text To Find
 
@@ -335,21 +335,17 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to replace.
-
-### Null or empty Replacement Text
-
-If [Replacement Text][ReplacementText Property] is `null` or empty (i.e. `""`) all occurrences of [Text To Find][TextToFind Property] are replaced with an empty text (i.e. `""`).
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to remove.
 
 ### Text To Find is not present
 
-If [Text To Find][TextToFind Property] is not present there is nothing to replace, so no operation is performed.
+If [Text To Find][TextToFind Property] is not present there is nothing to remove, so no operation is performed.
 
 ### Immutable String data type
 
 The [String][] data type used to represent [Text][Text Property] is immutable, which means it is read-only and cannot be changed once created.
 
-To overcome this, this block creates a new [String][] with all occurrences of [Text To Find][TextToFind Property] replaced and re-assigns it to the variable specified in the [Text][Text Property] property.
+To overcome this, this block creates a new [String][] with all occurrences of [Text To Find][TextToFind Property] removed and re-assigns it to the variable specified in the [Text][Text Property] property.
 
 ### Known Limitations
 
