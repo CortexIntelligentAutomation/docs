@@ -373,12 +373,12 @@ To overcome this, this block creates a new [String][] with all occurrences of [T
 If [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that is equivalent to `ae` may not evaluate as equal.
 
 [Advanced Examples]: {{<ref "#advanced-examples">}}
-[Text Property]: {{< ref "#text" >}}
-[TextToFind Property]: {{< ref "#text-to-find" >}}
-[ReplacementText Property]: {{< ref "#replacement-text" >}}
-[Occurrence Property]: {{< ref "#occurrence" >}}
-[SearchOptions Property]: {{< ref "#search-options" >}}
-[ComparisonType Property]: {{< ref "#comparison-type" >}}
+[Text Property]: {{<ref "#text">}}
+[TextToFind Property]: {{<ref "#text-to-find">}}
+[ReplacementText Property]: {{<ref "#replacement-text">}}
+[Occurrence Property]: {{<ref "#occurrence">}}
+[SearchOptions Property]: {{<ref "#search-options">}}
+[ComparisonType Property]: {{<ref "#comparison-type">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
