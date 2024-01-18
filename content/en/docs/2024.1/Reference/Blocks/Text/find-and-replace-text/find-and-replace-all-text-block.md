@@ -22,7 +22,7 @@ Finds and replaces all occurrences of [Text To Find][TextToFind Property] with t
 
 This example will find and replace all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"CORTEX"`.
 
-It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
+It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
 
 #### Properties
 
