@@ -167,7 +167,7 @@ Please note that with `SearchOptions.LiteralText` overlapping matches are detect
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | `ContainsText` |
+| Default Value | `LiteralText` |
 
 ### Comparison Type
 
