@@ -23,19 +23,19 @@ The `SearchOptions` are used to specify how text is matched when performing a se
 | **Description:**       | Specifies how text is matched when performing a search (i.e. text matches the specified literal text, regex or pattern). |
 | **Default Value:**     | `(SearchOptions)0`                             |
 | **Can be used as:**    | `SearchOptions`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)SearchOptions.ContainsText` or `(System.Int16)SearchOptions.ContainsText` or `(short)SearchOptions.ContainsText`)  |
-|                        | `Int32` (e.g. `(Int32)SearchOptions.ContainsText` or `(System.Int32)SearchOptions.ContainsText` or `(int)SearchOptions.ContainsText`)  |
-|                        | `Int64` (e.g. `(Int64)SearchOptions.ContainsText` or `(System.Int64)SearchOptions.ContainsText` or `(long)SearchOptions.ContainsText`)  |
-|                        | `Single` (e.g. `(Single)SearchOptions.ContainsText` or `(System.Single)SearchOptions.ContainsText` or `(float)SearchOptions.ContainsText`)  |
-|                        | `Double` (e.g. `(Double)SearchOptions.ContainsText` or `(System.Double)SearchOptions.ContainsText` or `(double)SearchOptions.ContainsText`)  |
+| **Can be cast to:**    | `Int16` (e.g. `(Int16)SearchOptions.LiteralText` or `(System.Int16)SearchOptions.LiteralText` or `(short)SearchOptions.LiteralText`)  |
+|                        | `Int32` (e.g. `(Int32)SearchOptions.LiteralText` or `(System.Int32)SearchOptions.LiteralText` or `(int)SearchOptions.LiteralText`)  |
+|                        | `Int64` (e.g. `(Int64)SearchOptions.LiteralText` or `(System.Int64)SearchOptions.LiteralText` or `(long)SearchOptions.LiteralText`)  |
+|                        | `Single` (e.g. `(Single)SearchOptions.LiteralText` or `(System.Single)SearchOptions.LiteralText` or `(float)SearchOptions.LiteralText`)  |
+|                        | `Double` (e.g. `(Double)SearchOptions.LiteralText` or `(System.Double)SearchOptions.LiteralText` or `(double)SearchOptions.LiteralText`)  |
 
 ## Values
 
-### ContainsText
+### LiteralText
 
 | | |
 |-|-|
-| **Name:**    | ContainsText                                         |
+| **Name:**    | LiteralText                                         |
 | **Value:**   | [Int32][] with value `0`                                   |
 | **Notes:**   | Matches text exactly with a literal character search. |
 
@@ -63,19 +63,19 @@ The following table shows some of the ways that `SearchOptions` can be created u
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Declare a `SearchOptions` literal | `ContainsText` | `SearchOptions.ContainsText` | Literal | Matches text exactly with a literal character search. |
+| Declare a `SearchOptions` literal | `LiteralText` | `SearchOptions.LiteralText` | Literal | Matches text exactly with a literal character search. |
 | | `Regex` | `SearchOptions.Regex` | Literal | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `PatternMatching` | `SearchOptions.PatternMatching` | Literal | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
-| Use a `SearchOptions` expression | `SearchOptions.ContainsText` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search.|
+| Use a `SearchOptions` expression | `SearchOptions.LiteralText` | `SearchOptions.LiteralText`| Expression | Matches text exactly with a literal character search.|
 | | `SearchOptions.Regex` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `SearchOptions.PatternMatching` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
-| Use [Explicit Casting][] | `(SearchOptions)0` | `SearchOptions.ContainsText`| Expression | Matches text exactly with a literal character search. |
+| Use [Explicit Casting][] | `(SearchOptions)0` | `SearchOptions.LiteralText`| Expression | Matches text exactly with a literal character search. |
 | | `(SearchOptions)1` | `SearchOptions.Regex`| Expression | Matches text that matches the regex provided, see [Regex Syntax][]. |
 | | `(SearchOptions)2` | `SearchOptions.PatternMatching`| Expression | Matches text that matches the pattern provided, see [Pattern Matching Syntax][]. |
-| Use `Enum.Parse` | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "ContainsText")` | `SearchOptions.ContainsText`| Expression | Parses `"ContainsText"` and converts it to `SearchOptions.ContainsText`. See [Enum.Parse][] |
+| Use `Enum.Parse` | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "LiteralText")` | `SearchOptions.LiteralText`| Expression | Parses `"LiteralText"` and converts it to `SearchOptions.LiteralText`. See [Enum.Parse][] |
 | | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "Regex")` | `SearchOptions.Regex`| Expression | Parses `"Regex"` and converts it to `SearchOptions.Regex`. See [Enum.Parse][] |
 | | `(SearchOptions)Enum.Parse(typeof(SearchOptions), "PatternMatching")` | `SearchOptions.PatternMatching`| Expression | Parses `"PatternMatching"` and converts it to `SearchOptions.PatternMatching`. See [Enum.Parse][] |
-| Use `Enum.ToObject` | `(SearchOptions)Enum.ToObject(typeof(SearchOptions), 0)` | `SearchOptions.ContainsText`| Expression | Converts `0` to `SearchOptions.ContainsText` value. See [Enum.ToObject][] |
+| Use `Enum.ToObject` | `(SearchOptions)Enum.ToObject(typeof(SearchOptions), 0)` | `SearchOptions.LiteralText`| Expression | Converts `0` to `SearchOptions.LiteralText` value. See [Enum.ToObject][] |
 | | `(SearchOptions)Enum.ToObject(typeof(SearchOptions), 1)` | `SearchOptions.Regex`| Expression | Converts `1` to `SearchOptions.Regex` value. See [Enum.ToObject][] |
 | | `(SearchOptions)Enum.ToObject(typeof(SearchOptions), 2)` | `SearchOptions.PatternMatching`| Expression | Converts `2` to `SearchOptions.PatternMatching` value. See [Enum.ToObject][] |
 
@@ -87,16 +87,16 @@ The following table shows some of the ways that a `SearchOptions` can be convert
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `ToString` | `SearchOptions.ContainsText.ToString()` | `"ContainsText"` | Expression | Converts `SearchOptions.ContainsText` to `"ContainsText"`. See [Enum.ToString][] |
+| Use `ToString` | `SearchOptions.LiteralText.ToString()` | `"LiteralText"` | Expression | Converts `SearchOptions.LiteralText` to `"LiteralText"`. See [Enum.ToString][] |
 | | `SearchOptions.Regex.ToString()` | `"Regex"` | Expression | Converts `SearchOptions.Regex` to `"Regex"`. See [Enum.ToString][] |
 | | `SearchOptions.PatternMatching.ToString()` | `"PatternMatching"` | Expression | Converts `SearchOptions.PatternMatching` to `"PatternMatching"`. See [Enum.ToString][] |
-| Use `Convert.ToString` | `Convert.ToString(SearchOptions.ContainsText)` | `"ContainsText"` | Expression | Converts `SearchOptions.ContainsText` to `"ContainsText"`. See [Convert.ToString][] |
+| Use `Convert.ToString` | `Convert.ToString(SearchOptions.LiteralText)` | `"LiteralText"` | Expression | Converts `SearchOptions.LiteralText` to `"LiteralText"`. See [Convert.ToString][] |
 | | `Convert.ToString(SearchOptions.Regex)` | `"Regex"` | Expression | Converts `SearchOptions.Regex` to `"Regex"`. See [Convert.ToString][] |
 | | `Convert.ToString(SearchOptions.PatternMatching)` | `"PatternMatching"` | Expression | Converts `SearchOptions.PatternMatching` to `"PatternMatching"`. See [Convert.ToString][] |
-| Use `Convert Object To Text` block | where `Object` property has a value of `SearchOptions.ContainsText` | `"ContainsText"` | N/A  | Converts `SearchOptions.ContainsText` to `"ContainsText"`. See [Convert Object To Text][] |
+| Use `Convert Object To Text` block | where `Object` property has a value of `SearchOptions.LiteralText` | `"LiteralText"` | N/A  | Converts `SearchOptions.LiteralText` to `"LiteralText"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `SearchOptions.Regex` | `"Regex"` | N/A  | Converts `SearchOptions.Regex` to `"Regex"`. See [Convert Object To Text][] || | where `Object` property has a value of `SearchOptions.Regex` | `"Regex"` | N/A  | |Converts `SearchOptions.Regex` to `"Regex"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `SearchOptions.PatternMatching` | `"PatternMatching"` | N/A  | Converts `SearchOptions.PatternMatching` to `"PatternMatching"`. See [Convert Object To Text][] |
-| Use `Convert Object To Json` block | where `Object` property has a value of `SearchOptions.ContainsText` | `"0"` | N/A  | Converts `SearchOptions.ContainsText` to `"0"`. See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `SearchOptions.LiteralText` | `"0"` | N/A  | Converts `SearchOptions.LiteralText` to `"0"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `SearchOptions.Regex` | `"1"` | N/A  | Converts `SearchOptions.Regex` to `"1"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `SearchOptions.PatternMatching` | `"2"` | N/A  | Converts `SearchOptions.PatternMatching` to `"2"`. See [Convert Object To Json][] |
 
@@ -108,10 +108,10 @@ The following table shows some of the ways that a `SearchOptions` can be convert
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use [Explicit Casting][]              | `(Int32)SearchOptions.ContainsText`   | `0` | Expression | [Casts][Explicit Casting] `SearchOptions.ContainsText` to `0` |
+| Use [Explicit Casting][]              | `(Int32)SearchOptions.LiteralText`   | `0` | Expression | [Casts][Explicit Casting] `SearchOptions.LiteralText` to `0` |
 |                                       | `(Int32)SearchOptions.Regex`   | `1` | Expression | [Casts][Explicit Casting] `SearchOptions.Regex` to `1` |
 |                                       | `(Int32)SearchOptions.PatternMatching`   | `2` | Expression | [Casts][Explicit Casting] `SearchOptions.PatternMatching` to `2` |
-| Use `Convert.ToInt32`                 | `Convert.ToInt32(SearchOptions.ContainsText)`   | `0` | Expression | Converts `SearchOptions.ContainsText` to `0`. See [Convert.ToInt32][] |
+| Use `Convert.ToInt32`                 | `Convert.ToInt32(SearchOptions.LiteralText)`   | `0` | Expression | Converts `SearchOptions.LiteralText` to `0`. See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(SearchOptions.Regex)`   | `1` | Expression | Converts `SearchOptions.Regex` to `1`. See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(SearchOptions.PatternMatching)`   | `2` | Expression | Converts `SearchOptions.PatternMatching` to `2`. See [Convert.ToInt32][] |
 
