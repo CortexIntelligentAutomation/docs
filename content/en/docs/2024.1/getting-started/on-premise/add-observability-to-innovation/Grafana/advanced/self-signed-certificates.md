@@ -188,7 +188,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         [ alt_names ]
         # Specify all DNS and/or IP addresses that clients can use to access the secured resource.
         DNS.1 = MACHINE-NAME 
-        DNS.2 = FULLY QUALIFIED MACHINE NAME
+        DNS.2 = FULLY QUALIFIED MACHINE NAME / WILDCARD DOMAIN
         DNS.3 = localhost 
         IP.1 = IP ADDRESS
         IP.2 = 127.0.0.1 
@@ -199,7 +199,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
     | Resource URL                          | Configuration to add              |
     |---------------------------------------|-----------------------------------|
     | `https://wearecortex.com/gateway`        | `DNS.1 = wearecortex.com`              |
-    | `https://internal.wearecortex.com/gateway` | `DNS.2 = internal.wearecortex.com`     |
+    | `https://internal.wearecortex.com/gateway` | `DNS.2 = internal.wearecortex.com`<br>  `or` <br> `DNS.2 = *.wearecortex.com`    |
     | `https://10.0.0.0/gateway`              | `IP.1 = 10.0.0.0`                   |
     | `https://192.168.1.100/gateway`         | `IP.2 = 192.168.1.100`              |
 
