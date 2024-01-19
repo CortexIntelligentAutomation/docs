@@ -24,18 +24,17 @@ The prerequisites required for each server role (as described in [Architecture][
 
 ## Software Requirements
 
-| Server&nbsp;Role | Windows&nbsp;Server[^3] | SQL&nbsp;Server[^4] | .Net | PowerShell[^5] | IIS[^6] | Other Software |
-|------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Load&nbsp;Balancer | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Application&nbsp;Server | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Web&nbsp;Application&nbsp;Server | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.20348[^7]<br>10.0.17763[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Server&nbsp;Role | Windows&nbsp;Server[^3] | .Net | PowerShell[^4] | IIS[^5] | Other Software |
+|------------------|-------------------------|------|------------|---------|----------|
+| Load&nbsp;Balancer | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
+| Application&nbsp;Server | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
+| Web&nbsp;Application&nbsp;Server | [2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.20348[^6]<br>10.0.17763[^7]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^4]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported. Note that [Transparent Data Encryption][] is not supported on SQL Server Express.
-[^5]: PowerShell 5.1 ships with Windows Server 2019 and 2022.
-[^6]: IIS is supported; other web servers, including IIS Express are not supported.
-[^7]: Ships as a windows role within Windows Server 2022.
-[^8]: Ships as a windows role within Windows Server 2019.
+[^4]: PowerShell 5.1 ships with Windows Server 2019 and 2022.
+[^5]: IIS is supported; other web servers, including IIS Express are not supported.
+[^6]: Ships as a windows role within Windows Server 2022.
+[^7]: Ships as a windows role within Windows Server 2019.
 
 ## Domain Requirements
 
@@ -292,12 +291,8 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2022]: {{< url path="MSEval.WindowsServer.2022" >}}
-[Microsoft SQL Express 2016]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
-[Microsoft SQL Server 2016]: {{< url path="MSEval.SQLServer.2016" >}}
-[Microsoft SQL Server 2019]: {{< url path="MSEval.SQLServer.2019" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Transparent Data Encryption]: {{< url path="MSDocs.SqlServer.TransparentDataEncryption" >}}
 [TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}

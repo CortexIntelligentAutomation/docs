@@ -25,42 +25,9 @@ This guide describes how to install the Web Application Server components on the
 
 Ensure that a valid {{% ctx %}} licence file named `Cortex.lic` exists on the server, in the location `%ProgramData%\Cortex\Licences`. If it does not, follow the instructions located at [Licensing Requirements][].
 
-### Install SQL Server or SQL Express
-
-1. Use one of the following installation guides to install SQL Server or SQL Server Express:
-
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Express Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Installation Guide</a>
-    * <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2019 Installation Guide</a>
-
 ### Get {{% ctx %}} Gateway Application Pool User
 
 A domain user account is required for the {{% ctx %}} Gateway application pool and must be created prior to performing the installation below.
-
-This user account is required to enable {{% ctx %}} Gateway to access the {{% ctx %}} database, with the following roles:
-
-* dbcreator
-* public
-
-To add roles to database users take the following steps:
-
-1. Open SQL Server Management Studio on the server and log in.
-1. Expand the server node, then `Security` then `Logins`.
-1. If the user that will run the {{% ctx %}} Gateway application pool is not in the list of logins, take the following steps, otherwise skip to step 4:
-
-    1. Right-click the `Logins` node and click `New Login...`.
-    1. Enter the application pool user in the `Login name` box.
-    1. On the left pane, click `Server Roles`.
-    1. Check `public` and `dbcreator`
-    1. Click `OK`.
-
-1. If the user that will run the {{% ctx %}} Gateway application pool is in the list of logins, take the following steps:
-
-    1. Right-click on the application pool user.
-    1. Click `Properties`.
-    1. On the left pane, click `Server Roles`.
-    1. Check `public` and `dbcreator`.
-    1. Click `OK`.
 
 In line with best practices, this account should not be given administrator rights, nor should it be used for any purposes other than those specified for {{% ctx %}} Gateway.
 
@@ -158,9 +125,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
     -GatewayPackagePath "C:\Install\Cortex Innovation {{< version >}} - Gateway.zip" `
-    -ModelDBContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb;Integrated Security=True;MultipleActiveResultSets=True" `
-    -AuthContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.Auth;Integrated Security=True;MultipleActiveResultSets=True" `
-    -SignalRContextConnectionString "Data Source=localhost;Initial Catalog=CortexWeb.SignalR;Integrated Security=True;MultipleActiveResultSets=True" `
     -FeatureFlags "InnovationId" `
     -ServiceFabricApiGatewayEndpoint "https://server.domain.com:8722/" `
     -ServiceFabricUsingSelfSignedCertificates $false `
@@ -188,9 +152,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
-     |`ModelDBContextConnectionString`                | If SQL Server was installed as the default instance, change the `Data Source` in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `ModelDBContextConnectionString` value in the {{% ctx %}} Gateway web.config.|
-    |`AuthContextConnectionString`                   |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `AuthContextConnectionString` value in the {{% ctx %}} Gateway web.config. |
-    |`SignalRContextConnectionString`                |  If SQL Server was installed as the default instance, change the `Data Source`in the connection string to `localhost` or, if it was installed on another machine, change it to the machine name.<br /><br />If SQL Server was installed as a named instance, change it to `.\{instanceName}` replacing `{instanceName}` with the name of the instance or, if SQL Server was installed on a different machine, change it to `{machineName}\{instanceName}` replacing `{machineName}` with the machine name and `{instanceName}` with the name of the instance. <br /><br />This will set the `SignalRContextConnectionString` value in the {{% ctx %}} Gateway web.config. |
     |`FeatureFlags`                                  | Replace `InnovationId` with the {{% ctx %}} Innovation feature identifier, which should have been provided by {{% ctx %}} when fulfilling the [Licensing Requirements][], if it wasn't it should be requested using [{{% ctx %}} Service Portal][CORTEX Service Portal].<br /><br />This will set the `FeatureFlags` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
@@ -308,16 +269,16 @@ Ensure that the installation files are backed up or kept on the server, especial
 1. [Setup Gateway][]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
-[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" >}}
+[Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Get CORTEX Gateway Application Pool User]: {{< ref "#get-cortex-gateway-application-pool-user" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
 [Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.LicensingRequirements" >}}
-[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.EncryptionRequirements" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.SetupGateway" >}}
