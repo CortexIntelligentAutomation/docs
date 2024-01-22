@@ -35,7 +35,7 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 
 #### Result
 
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Text` will be updated to `" quick brown fox jumps over  lazy dog."`.
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence is `"the"`. Therefore, the variable `($)Text` will be updated to `" quick brown fox jumps over{{% nbsp %}}{{% nbsp %}}lazy dog."`.
 
 For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
 
@@ -138,7 +138,7 @@ See [Advanced Examples][] for more information on how to use these sub-propertie
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
-Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` but not `"aa"` at index `1`).
+Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"` at index `0` but not `"aa"` at index `1`).
 
 | | |
 |--------------------|---------------------------|
@@ -208,9 +208,9 @@ These examples find and remove all occurrences in [Text][Text Property] with [Se
 | `"The"` | `"quick"` | `""` | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `""` | `"brown"` | *DEFAULT* |
 | `"The"` | `""` | `""` | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `"brown"` | <nobr>`"The  fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"The  brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | <nobr>`"The quick  fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `"brown"` | <nobr>`"The{{% nbsp %}}{{% nbsp %}}fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"The{{% nbsp %}}{{% nbsp %}}brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick{{% nbsp %}}{{% nbsp %}}fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 
 #### SearchOptions.PatternMatching
@@ -223,9 +223,9 @@ These examples find and remove all occurrences in [Text][Text Property] with [Se
 | `"The"` | `"quick"` | `""` | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `""` | `"brown"` | *DEFAULT* |
 | `"The"` | `""` | `""` | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `"brown"` | <nobr>`"The  fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"The  brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | <nobr>`"The quick  fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `"brown"` | <nobr>`"The{{% nbsp %}}{{% nbsp %}}fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"The{{% nbsp %}}{{% nbsp %}}brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick{{% nbsp %}}{{% nbsp %}}fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 | `"The"` | `"quick"` | `"*"` | <nobr>`""`</nobr> |
 | `"The"` | `"*"` | `"brown"` | <nobr>`" fox jumps over the lazy dog."`</nobr> |
@@ -257,9 +257,9 @@ These examples find and remove all occurrences in [Text][Text Property] with [Se
 | `"The"` | `"quick"` | `""` | <nobr>`" brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `""` | `"brown"` | *DEFAULT* |
 | `"The"` | `""` | `""` | <nobr>`" quick brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `"brown"` | <nobr>`"The  fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"The  brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | <nobr>`"The quick  fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `"brown"` | <nobr>`"The{{% nbsp %}}{{% nbsp %}}fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"The{{% nbsp %}}{{% nbsp %}}brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick{{% nbsp %}}{{% nbsp %}}fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 | `"The"` | `"quick"` | `".*"` | <nobr>`""`</nobr> |
 | `"The"` | `".*"` | `"brown"` | <nobr>`" fox jumps over the lazy dog."`</nobr> |

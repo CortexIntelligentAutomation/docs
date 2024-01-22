@@ -153,7 +153,7 @@ The [Replacement Text][ReplacementText Property] used to replace all occurrences
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
-Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` but not `"aa"` at index `1`).
+Please note that overlapping matches are not detected (i.e. searching for `"aa"` in `"aaa"` matches `"aa"` at index `0` but not `"aa"` at index `1`).
 
 | | |
 |--------------------|---------------------------|
