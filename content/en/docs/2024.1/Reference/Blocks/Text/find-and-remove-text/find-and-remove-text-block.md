@@ -118,7 +118,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ### Text
 
-The [Text][Text Property] to find and remove the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] in.
+The [Text][Text Property] to find and remove the specified [Occurrence][Occurrence Property] of [Text To Find][TextToFind Property] from.
 
 | | |
 |--------------------|---------------------------|
@@ -130,11 +130,13 @@ The [Text][Text Property] to find and remove the specified [Occurrence][Occurren
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] search query to find the specified occurrence of in [Text][Text Property]. This property contains all of the information in relation to the conditions for a valid match; these are:
+The [Text To Find][TextToFind Property] search query used to find and remove the specified matching occurrence from [Text][Text Property]. This property contains the following sub-properties:
 
 * [Starts With][StartsWith]
 * [Contains][Contains]
 * [Ends With][EndsWith]
+
+See [Advanced Examples][] for more information on how to use these sub-properties.
 
 | | |
 |--------------------|---------------------------|
@@ -209,7 +211,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
 | | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
-| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find all occurrences of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
+| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find the specific occurrence of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
 | [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and [TextToFind][TextToFind Property] has a property which is not a valid regex (e.g. `(`). |
 
 ## Remarks
@@ -222,7 +224,7 @@ In these examples, the following properties are common:
 
 | Property | Value |
 |----------|-------|
-| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."`. |
+| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
 | [Occurrence][Occurrence Property] | `1` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
 
@@ -240,7 +242,7 @@ Please note that these examples all perform a search which has at most one valid
 
 #### SearchOptions.LiteralText
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and remove the first occurrence from [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
@@ -255,7 +257,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 #### SearchOptions.PatternMatching
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and remove the first occurrence from [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
@@ -289,7 +291,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 #### SearchOptions.Regex
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and remove the first occurrence from [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
@@ -327,7 +329,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to remove in, so no operation is performed.
+If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to remove from, so no operation is performed.
 
 ### Null or empty Text To Find
 
@@ -335,7 +337,7 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to remove.
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to remove; see [Advanced Examples][].
 
 ### Text To Find is not present
 

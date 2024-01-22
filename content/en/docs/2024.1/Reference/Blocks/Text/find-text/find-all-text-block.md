@@ -17,7 +17,7 @@ Finds all occurrences of [Text To Find][TextToFind Property] in a given [Text][T
 
 ## Examples
 
-### Find All Occurrences when there are multiple matches
+### Find all occurrences when there are multiple matches
 
 This example will find all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -108,7 +108,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ***
 
-### Find All occurrences when there is a single match
+### Find all occurrences when there is a single match
 
 This example will find all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -168,7 +168,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ***
 
-### Find All occurrences when there are no matches
+### Find all occurrences when there are no matches
 
 This example will find all occurrences of `"cat"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -212,11 +212,13 @@ The [Text][Text Property] to find all occurrences of [Text To Find][TextToFind P
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] search query to find all occurrences of in [Text][Text Property]. This property contains all of the information in relation to the conditions for a valid match; these are:
+The [Text To Find][TextToFind Property] search query used to find all matching occurrences in [Text][Text Property].  This property contains the following sub-properties:
 
 * [Starts With][StartsWith]
 * [Contains][Contains]
 * [Ends With][EndsWith]
+
+See [Advanced Examples][] for more information on how to use these sub-properties.
 
 | | |
 |--------------------|---------------------------|
@@ -289,7 +291,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
 | | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
-| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to populate the [Matches][Matches Property] property exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
+| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find all occurrences of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
 | [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and [TextToFind][TextToFind Property] has a property which is not a valid regex (e.g. `(`). |
 
 ## Remarks

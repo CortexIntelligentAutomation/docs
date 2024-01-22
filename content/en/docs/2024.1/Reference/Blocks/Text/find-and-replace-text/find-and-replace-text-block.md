@@ -20,7 +20,7 @@ Finds and replaces the specified [Occurrence][Occurrence Property] of [Text To F
 
 ### Replace the first Occurrence of text
 
-This example will find and replace the first occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"CORTEX"`.
+This example will find and replace the first occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"a"`.
 
 It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 
@@ -30,14 +30,14 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"CORTEX"`| `($)ReplacementText` is a variable of type [String][] |
+| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"a"`| `($)ReplacementText` is a variable of type [String][] |
 | [Occurrence][Occurrence Property] | `($)Occurrence`, with value `1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 
 #### Result
 
-As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Text` will be updated to `"CORTEX quick brown fox jumps over the lazy dog."`.
+As this example is performing a [case-sensitive, culture-insensitive][Ordinal] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` once; `"the"` has a different case so does not match. Therefore, the variable `($)Text` will be updated to `"a quick brown fox jumps over the lazy dog."`.
 
 For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
 
@@ -45,7 +45,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ### Replace the second Occurrence of text
 
-This example will find and replace the second occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"CORTEX"`.
+This example will find and replace the second occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"a"`.
 
 It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
 
@@ -55,14 +55,14 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"CORTEX"`| `($)ReplacementText` is a variable of type [String][] |
+| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"a"`| `($)ReplacementText` is a variable of type [String][] |
 | [Occurrence][Occurrence Property] | `($)Occurrence`, with value `2` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 
 #### Result
 
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence `"the"`. Therefore, the variable `($)Text` will be updated to `"The quick brown fox jumps over CORTEX lazy dog."`.
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence `"the"`. Therefore, the variable `($)Text` will be updated to `"The quick brown fox jumps over a lazy dog."`.
 
 For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
 
@@ -70,7 +70,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ### Replace the last Occurrence of text
 
-This example will find and replace the last occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"CORTEX"`.
+This example will find and replace the last occurrence of `"The"` in `"The quick brown fox jumps over the lazy dog."` with `"a"`.
 
 It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
 
@@ -80,14 +80,14 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"CORTEX"`| `($)ReplacementText` is a variable of type [String][] |
+| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"a"`| `($)ReplacementText` is a variable of type [String][] |
 | [Occurrence][Occurrence Property] | `($)Occurrence`, with value `-1` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 
 #### Result
 
-As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence `"the"`. The second occurrence is also the last occurrence, and therefore, the variable `($)Text` will be updated to `"The quick brown fox jumps over CORTEX lazy dog."`.
+As this example is performing a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text (`"The quick brown fox jumps over the lazy dog."`), the text contains `"The"` twice; the first occurrence is `"The"` and the second occurrence `"the"`. The second occurrence is also the last occurrence, and therefore, the variable `($)Text` will be updated to `"The quick brown fox jumps over a lazy dog."`.
 
 For more information on using [SearchOptions][SearchOptions Property] and [Text To Find][TextToFind Property] see [Advanced Examples][].
 
@@ -95,7 +95,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ### Replace an invalid Occurrence of text
 
-This example will find and replace the third occurrence of `"The"`, which is not present, in `"The quick brown fox jumps over the lazy dog."` with `"CORTEX"`.
+This example will find and replace the third occurrence of `"The"`, which is not present, in `"The quick brown fox jumps over the lazy dog."` with `"a"`.
 
 It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] comparison of text.
 
@@ -105,7 +105,7 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"CORTEX"`| `($)ReplacementText` is a variable of type [String][] |
+| [Replacement Text][ReplacementText Property] | `($)ReplacementText` with value `"a"`| `($)ReplacementText` is a variable of type [String][] |
 | [Occurrence][Occurrence Property] | `($)Occurrence`, with value `3` | `($)Occurrence` is a variable of type [Int32][] |
 | [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
@@ -134,11 +134,13 @@ The [Text][Text Property] to find and replace the specified [Occurrence][Occurre
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] search query to find the specified occurrence of in [Text][Text Property]. This property contains all of the information in relation to the conditions for a valid match; these are:
+The [Text To Find][TextToFind Property] search query used to find and replace the specified matching occurrence in [Text][Text Property]. This property contains the following sub-properties:
 
 * [Starts With][StartsWith]
 * [Contains][Contains]
 * [Ends With][EndsWith]
+
+See [Advanced Examples][] for more information on how to use these sub-properties.
 
 | | |
 |--------------------|---------------------------|
@@ -225,7 +227,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
 | | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
-| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find all occurrences of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
+| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find the specific occurrence of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
 | [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and [TextToFind][TextToFind Property] has a property which is not a valid regex (e.g. `(`). |
 
 ## Remarks
@@ -238,10 +240,10 @@ In these examples, the following properties are common:
 
 | Property | Value |
 |----------|-------|
-| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."`. |
+| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
 | [Occurrence][Occurrence Property] | `1` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
-| [Replacement Text][ReplacementText Property] | `"CORTEX"` |
+| [Replacement Text][ReplacementText Property] | `"ReplacementText"` |
 
 These sections contain tables for the examples. The columns of these tables are explained below:
 
@@ -257,86 +259,86 @@ Please note that these examples all perform a search which has at most one valid
 
 #### SearchOptions.LiteralText
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and replace the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
-| `"The"` | `"quick"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"The"` | `"quick"` | `""` | <nobr>`"CORTEX brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"ReplacementText brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `""` | `"brown"` | *DEFAULT* |
-| `"The"` | `""` | `""` | <nobr>`"CORTEX quick brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `"brown"` | <nobr>`"The CORTEX fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"The CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | <nobr>`"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `""` | `""` | <nobr>`"ReplacementText quick brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `"brown"` | <nobr>`"The ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"The ReplacementText brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick ReplacementText fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
 
 #### SearchOptions.PatternMatching
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and replace the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
-| `"The"` | `"quick"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"The"` | `"quick"` | `""` | <nobr>`"CORTEX brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"ReplacementText brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `""` | `"brown"` | *DEFAULT* |
-| `"The"` | `""` | `""` | <nobr>`"CORTEX quick brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `"brown"` | <nobr>`"The CORTEX fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"The CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | <nobr>`"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `""` | `""` | <nobr>`"ReplacementText quick brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `"brown"` | <nobr>`"The ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"The ReplacementText brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | <nobr>`"The quick ReplacementText fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
-| `"The"` | `"quick"` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `"The"` | `"*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"The"` | `"*"` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `"The"` | `"*"` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `"The"` | `""` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `"*"` | `"quick"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"*"` | `"quick"` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `"*"` | `"quick"` | `""` | <nobr>`"CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `"*"` | `"*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"*"` | `""` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"*"` | `"*"` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `"*"` | `"*"` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `"*"` | `""` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `"*"` | `""` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `""` | `"quick"` | `"*"` | <nobr>`"The CORTEX"`</nobr> |
-| `""` | `"*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `""` | `"*"` | `"*"` | <nobr>`"CORTEX"`</nobr> |
-| `""` | `"*"` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `""` | `""` | `"*"` | <nobr>`"CORTEX"`</nobr> |
+| `"The"` | `"quick"` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"The"` | `"*"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"*"` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"The"` | `"*"` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `"The"` | `""` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"*"` | `"quick"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"quick"` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"*"` | `"quick"` | `""` | <nobr>`"ReplacementText brown fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"*"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `""` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"*"` | `"*"` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"*"` | `"*"` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `"*"` | `""` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"*"` | `""` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `""` | `"quick"` | `"*"` | <nobr>`"The ReplacementText"`</nobr> |
+| `""` | `"*"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `""` | `"*"` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
+| `""` | `"*"` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `""` | `""` | `"*"` | <nobr>`"ReplacementText"`</nobr> |
 
 #### SearchOptions.Regex
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and replace the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
-| `"The"` | `"quick"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"The"` | `"quick"` | `""` | <nobr>`"CORTEX brown fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"quick"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `"quick"` | `""` | <nobr>`"ReplacementText brown fox jumps over the lazy dog."`</nobr> |
 | `"The"` | `""` | `"brown"` | *DEFAULT* |
-| `"The"` | `""` | `""` | <nobr>`"CORTEX quick brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `"brown"` | <nobr>`"The CORTEX fox jumps over the lazy dog."`</nobr> |
-| `""` | `"quick"` | `""` | <nobr>`"The CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `""` | `""` | `"brown"` | `"The quick CORTEX fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `""` | `""` | <nobr>`"ReplacementText quick brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `"brown"` | <nobr>`"The ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `""` | `"quick"` | `""` | <nobr>`"The ReplacementText brown fox jumps over the lazy dog."`</nobr> |
+| `""` | `""` | `"brown"` | `"The quick ReplacementText fox jumps over the lazy dog."`</nobr> |
 | `""` | `""` | `""` | *DEFAULT* |
-| `"The"` | `"quick"` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `"The"` | `".*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `"The"` | `".*"` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `"The"` | `".*"` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `"The"` | `""` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `".*"` | `"quick"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `".*"` | `"quick"` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `".*"` | `"quick"` | `""` | <nobr>`"CORTEX brown fox jumps over the lazy dog."`</nobr> |
-| `".*"` | `".*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `".*"` | `""` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `".*"` | `".*"` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `".*"` | `".*"` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `".*"` | `""` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `".*"` | `""` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `""` | `"quick"` | `".*"` | <nobr>`"The CORTEX"`</nobr> |
-| `""` | `".*"` | `"brown"` | <nobr>`"CORTEX fox jumps over the lazy dog."`</nobr> |
-| `""` | `".*"` | `".*"` | <nobr>`"CORTEX"`</nobr> |
-| `""` | `".*"` | `""` | <nobr>`"CORTEX"`</nobr> |
-| `""` | `""` | `".*"` | <nobr>`"CORTEX"`</nobr> |
+| `"The"` | `"quick"` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"The"` | `".*"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `"The"` | `".*"` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `"The"` | `".*"` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `"The"` | `""` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `".*"` | `"quick"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `"quick"` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `".*"` | `"quick"` | `""` | <nobr>`"ReplacementText brown fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `".*"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `""` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `".*"` | `".*"` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `".*"` | `".*"` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `".*"` | `""` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `".*"` | `""` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `""` | `"quick"` | `".*"` | <nobr>`"The ReplacementText"`</nobr> |
+| `""` | `".*"` | `"brown"` | <nobr>`"ReplacementText fox jumps over the lazy dog."`</nobr> |
+| `""` | `".*"` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
+| `""` | `".*"` | `""` | <nobr>`"ReplacementText"`</nobr> |
+| `""` | `""` | `".*"` | <nobr>`"ReplacementText"`</nobr> |
 
 ### Comparison Types
 
@@ -352,7 +354,7 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to replace.
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to replace; see [Advanced Examples][].
 
 ### Null or empty Replacement Text
 

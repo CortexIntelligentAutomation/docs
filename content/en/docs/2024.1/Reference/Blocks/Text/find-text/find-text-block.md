@@ -239,11 +239,13 @@ The [Text][Text Property] to find the specified occurrence of [Text To Find][Tex
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] search query to find the specified occurrence of in [Text][Text Property]. This property contains all of the information in relation to the conditions for a valid match; these are:
+The [Text To Find][TextToFind Property] search query used to find the specified matching occurrence in [Text][Text Property]. This property contains the following sub-properties:
 
 * [Starts With][StartsWith]
 * [Contains][Contains]
 * [Ends With][EndsWith]
+
+See [Advanced Examples][] for more information on how to use these sub-properties.
 
 | | |
 |--------------------|---------------------------|
@@ -330,7 +332,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
 | | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
-| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to populate the [Match][Match Property] property exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
+| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find the specific occurrence of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
 | [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and [TextToFind][TextToFind Property] has a property which is not a valid regex (e.g. `(`). |
 
 ## Remarks
@@ -364,7 +366,7 @@ These sections contain tables for the examples. The columns of these tables are 
 
 #### SearchOptions.LiteralText
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText`.
+These examples find and remove the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText`.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
@@ -379,7 +381,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 #### SearchOptions.PatternMatching
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching`.
+These examples find and remove the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching`.
 
 | <nobr>TextToFind.StartsWith</nobr> | TextToFind.Contains | TextToFind.EndsWith | <nobr>Match.Value</nobr> | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
@@ -413,7 +415,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 #### SearchOptions.Regex
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex`.
+These examples find and remove the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex`.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Match.Value | Match.Groups["startsWith"].Value | Match.Groups["contains"].Value | Match.Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|

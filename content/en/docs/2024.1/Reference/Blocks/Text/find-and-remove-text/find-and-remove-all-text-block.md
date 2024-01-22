@@ -18,7 +18,7 @@ Finds and removes all occurrences of [Text To Find][TextToFind Property] from a 
 
 ## Examples
 
-### Remove All Occurrences when there are multiple matches
+### Remove all occurrences when there are multiple matches
 
 This example will find and remove all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -41,7 +41,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ***
 
-### Remove All occurrences when there is a single match
+### Remove all occurrences when there is a single match
 
 This example will find and remove all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -64,7 +64,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ***
 
-### Remove All occurrences when there are no matches
+### Remove all occurrences when there are no matches
 
 This example will find and remove all occurrences of `"cat"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -91,7 +91,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ### Text
 
-The [Text][Text Property] to find and remove all occurrences of [Text To Find][TextToFind Property] in.
+The [Text][Text Property] to find and remove all occurrences of [Text To Find][TextToFind Property] from.
 
 | | |
 |--------------------|---------------------------|
@@ -103,11 +103,13 @@ The [Text][Text Property] to find and remove all occurrences of [Text To Find][T
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] search query to find and remove all occurrences of in [Text][Text Property]. This property contains all of the information in relation to the conditions for a valid match; these are:
+The [Text To Find][TextToFind Property] search query used to find and remove all matching occurrences from [Text][Text Property]. This property contains the following sub-properties:
 
 * [Starts With][StartsWith]
 * [Contains][Contains]
 * [Ends With][EndsWith]
+
+See [Advanced Examples][] for more information on how to use these sub-properties.
 
 | | |
 |--------------------|---------------------------|
@@ -181,7 +183,7 @@ In these examples, the following properties are common:
 
 | Property | Value |
 |----------|-------|
-| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."`. |
+| [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
 
 These sections contain tables for the examples. The columns of these tables are explained below:
@@ -198,7 +200,7 @@ Please note that these examples all perform a search which has at most one valid
 
 #### SearchOptions.LiteralText
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and remove all occurrences in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
@@ -213,7 +215,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 #### SearchOptions.PatternMatching
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and remove all occurrences in [Text][Text Property] with [Search Options][SearchOptions Property] set to `PatternMatching` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
@@ -247,7 +249,7 @@ These examples find the first occurrence in [Text][Text Property] with [Search O
 
 #### SearchOptions.Regex
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find and remove all occurrences in [Text][Text Property] with [Search Options][SearchOptions Property] set to `Regex` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Output Text |
 |-----------------------|---------------------|---------------------|-------------|
@@ -285,7 +287,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to remove in, so no operation is performed.
+If [Text][Text Property] is `null` or empty (i.e. `""`) there is nothing to remove from, so no operation is performed.
 
 ### Null or empty Text To Find
 
@@ -293,7 +295,7 @@ If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.
 
 ### Null or empty property of Text To Find
 
-If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to remove.
+If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `""`), then it is not considered as part of the matches for [Text to Find][TextToFind Property] when determining what to remove; see [Advanced Examples][].
 
 ### Text To Find is not present
 
