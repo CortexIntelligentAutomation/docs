@@ -18,7 +18,7 @@ Results are returned as [Matches][Matches Property].
 
 Additional options can be specified:
 
-* [Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search.
+* [Search Options][SearchOptions Property] can be specified to choose whether to use a LiteralText, PatternMatching or Regex search.
 * [Encoding][Encoding Property] can be specified if needed to explicitly state the encoding that should be used to read and search the files.
 * A [Comparison Type][ComparisonType Property] option can specified to choose how it is determined whether text matches the [Search Pattern][SearchPattern Property] (e.g. whether the search is case-sensitive or case-insensitive).
 
@@ -56,7 +56,7 @@ Information: Uptime is 6 hours.
 |--------------------|---------------------------|------------------------------------------|
 | [File Paths][FilePaths Property] | `($)FilePaths`, with value `[@"C:\Source\File1.txt", @"C:\Source\File2.txt"]` | `($)FilePaths` is a variable of type [IEnumerable]&lt;[String][]&gt; |
 | [Search Pattern][SearchPattern Property] | `($)SearchPattern`, with value `"error"` | `($)SearchPattern` is a variable of type [String][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Encoding][Encoding Property] | `($)Encoding`, with value `null` | `($)Encoding` is a variable of type [Encoding][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [IDictionary][]&lt;[String][], [IList][]&lt;[FileMatch][]&gt;&gt; value |
@@ -334,16 +334,16 @@ A `null` or empty (i.e. `""`) [Search Pattern][SearchPattern Property] means mat
 
 ### Search Options
 
-[Search Options][SearchOptions Property] can be specified to choose whether [Search Pattern][SearchPattern Property] should be interpreted as a ContainsText, PatternMatching or Regex search:
+[Search Options][SearchOptions Property] can be specified to choose whether [Search Pattern][SearchPattern Property] should be interpreted as a LiteralText, PatternMatching or Regex search:
 
-* `SearchOptions.ContainsText` matches text exactly.
+* `SearchOptions.LiteralText` matches text exactly.
 * `SearchOptions.PatternMatching` allows wildcard text matching using [Pattern Matching Syntax][]:
   * `*` wildcard character can be used to match `0` or more characters.
   * `?` wildcard character can be used to match `0` or `1` character.
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
-Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+Please note that with `SearchOptions.LiteralText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
 
 | | |
 |--------------------|---------------------------|
@@ -351,7 +351,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | `ContainsText` |
+| Default Value | `LiteralText` |
 
 ### Encoding
 

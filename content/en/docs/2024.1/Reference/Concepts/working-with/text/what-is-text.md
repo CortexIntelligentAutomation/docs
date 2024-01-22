@@ -25,8 +25,8 @@ TODO:
     - Invariant Culture
     - Current Culture
   - https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings
-  - ContainsText vs Regex vs PatternMatching
-    - Links to ContainsText
+  - LiteralText vs Regex vs PatternMatching
+    - Links to LiteralText
     - Links to Regex
     - Links to PatternMatching
 - Parsing text to a number
