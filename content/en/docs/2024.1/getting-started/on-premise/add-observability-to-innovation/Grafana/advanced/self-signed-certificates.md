@@ -86,6 +86,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         localityName_default            = Southampton
         0.organizationName_default      = Cortex Ltd
         organizationalUnitName_default  = We Are CORTEX 
+        commonName_default              = Cortex CA
         emailAddress_default            = Hello@WeAreCORTEX.com
         [ v3_ca ]
         # Extensions for a typical CA (`man x509v3_config`).
@@ -180,6 +181,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         localityName_default            = Southampton
         0.organizationName_default      = Cortex Ltd
         organizationalUnitName_default  = We Are CORTEX 
+        commonName_default              = CortexServerCertificate 
         emailAddress_default            = Hello@WeAreCORTEX.com
         [ v3_req ]
         basicConstraints = CA:FALSE
