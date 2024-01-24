@@ -86,6 +86,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         localityName_default            = Southampton
         0.organizationName_default      = Cortex Ltd
         organizationalUnitName_default  = We Are CORTEX 
+        commonName_default              = Cortex CA
         emailAddress_default            = Hello@WeAreCORTEX.com
         [ v3_ca ]
         # Extensions for a typical CA (`man x509v3_config`).
@@ -102,7 +103,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         openssl req -sha256 -x509 -new -nodes -key cortexCA.key -days 3650 -out cortexCA.pem -config ca.cnf
         ```
 
-    1. Press `Enter` for all parameters except the Common Name. For this enter `CortexServerCertificate`.
+    1. Press `Enter` for all parameters except the Common Name. For this enter `Cortex CA`.
 
 1. Package your public and private key in a pkcs12 encrypted file (to install with certmgr on windows) by running the following command:
 
@@ -177,6 +178,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         localityName_default            = Southampton
         0.organizationName_default      = Cortex Ltd
         organizationalUnitName_default  = We Are CORTEX 
+        commonName_default              = CortexServerCertificate
         emailAddress_default            = Hello@WeAreCORTEX.com
         [ v3_req ]
         basicConstraints = CA:FALSE
@@ -185,7 +187,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         [ alt_names ]
         # Specify all DNS and/or IP addresses that clients can use to access the secured resource.
         DNS.1 = MACHINE-NAME 
-        DNS.2 = FULLY QUALIFIED MACHINE NAME
+        DNS.2 = FULLY QUALIFIED MACHINE NAME / WILDCARD DOMAIN NAME
         DNS.3 = localhost 
         IP.1 = IP ADDRESS
         IP.2 = 127.0.0.1 
@@ -196,7 +198,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
     | Resource URL                          | Configuration to add              |
     |---------------------------------------|-----------------------------------|
     | `https://wearecortex.com/gateway`        | `DNS.1 = wearecortex.com`              |
-    | `https://internal.wearecortex.com/gateway` | `DNS.2 = internal.wearecortex.com`     |
+    | `https://internal.wearecortex.com/gateway` | `DNS.2 = internal.wearecortex.com` <br>  `or` <br> `DNS.2 = *.wearecortex.com`    |
     | `https://10.0.0.0/gateway`              | `IP.1 = 10.0.0.0`                   |
     | `https://192.168.1.100/gateway`         | `IP.2 = 192.168.1.100`              |
 
@@ -207,7 +209,7 @@ Self-signed certificates should be generated using OpenSSL which is bundled in t
         openssl req -new -sha256 -key cortex.key -out cortex.req -extensions v3_req -config san.cnf
         ```
 
-    1. Press `Enter` for everything except the Common Name. For this enter `Cortex`.
+    1. Press `Enter` for everything. The Common Name must stay as `CortexServerCertificate`.
     1. Sign the request with a previously generated Root CA by running the following command:
 
         ```powershell

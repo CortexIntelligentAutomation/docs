@@ -1,7 +1,7 @@
 1. Log on to one of the Application Servers.
 1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. This can be achieved by double-clicking on the client certificate .PFX file and following the wizard.
 
-    If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the `CortexServerCertificate` from the `Personal` store and then importing it to the `Current User` store by double-clicking on it and following the wizard.
+    If using self-signed certificates, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the `CortexServerCertificate` from the `Personal` store as a pfx file and then importing it to the `Current User` store by double-clicking on it and following the wizard. The certificate must also be imported to `Trusted Root Certification Authorities` in the `Local Computer` store.
 1. Open a web browser.
 1. Navigate to `https://app-server.domain.com:9080/Explorer`, where `app-server.domain.com` is the fully qualified domain name of any Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration.
 
