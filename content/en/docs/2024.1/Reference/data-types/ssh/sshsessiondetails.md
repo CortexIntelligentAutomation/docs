@@ -82,7 +82,7 @@ The regex used to match the host's terminal prompt.
 | Data Type | [String][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | [String][] with value `(.*(~(.*[\r\n]?)\$\|>))` |
+| Default Value | [String][] with value `.*[>\|\$\|#]` |
 
 ## Remarks
 
@@ -92,7 +92,7 @@ The following table shows some of the ways that `SshSessionDetails` can be creat
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `SshSessionDetails` constructor | `new SshSessionDetails(host: "localhost", port: 22, credentials: new UserCredentials(domain: "domain", username: "user", password: "password"), terminalPrompt: $@"(.*(~(.*[\r\n]?)\$\|>))")` | `{"Host": "localhost", "Port": 22, "Credentials": { "Domain": "domain", "Username": "user", "Password": "## REDACTED ## - This value has been redacted as it contains text that should be encrypted, but is not."}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))" }` | Expression  |
+| Use a `SshSessionDetails` constructor | `new SshSessionDetails(host: "localhost", port: 22, credentials: new UserCredentials(domain: "domain", username: "user", password: "password"), terminalPrompt: $@".*[>\|\$\|#]")` | `{"Host": "localhost", "Port": 22, "Credentials": { "Domain": "domain", "Username": "user", "Password": "## REDACTED ## - This value has been redacted as it contains text that should be encrypted, but is not."}, "TerminalPrompt": ".*[>\|\\$\|#]" }` | Expression  |
 
 A `SshSessionDetails` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
@@ -101,13 +101,13 @@ A `SshSessionDetails` can also be created using the Literal Editor by filling in
 | `Host` | `EncryptableText` | `"localhost"` | [Host][] defines the address of the server to connect to. |
 | `Port` | `Int32` | `22` | [Port][] defines the port on the server to connect to. |
 | `Credentials` | `ISshCredentials` | `new UserCredentials(domain: "domain", username: "user", password: "password")` | [Credentials][] defines the credentials used to authenticate the connection to the server. |
-| `TerminalPrompt` | `Int32` | `(.*(~(.*[\r\n]?)\$\|>))` | [TerminalPrompt][] defines the regex used to match the host's terminal prompt. |
+| `TerminalPrompt` | `Int32` | `.*[>\|\$\|#]` | [TerminalPrompt][] defines the regex used to match the host's terminal prompt. |
 
 ### Convert SshSessionDetails to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 22, "Credentials": { "Domain": "domain", "Username": "user", "Password": "password"}, "TerminalPrompt": "(.*(~(.*[\\r\\n]?)\\$\|>))"}` | `"{\r\n  \"Host\": \"localhost\",\r\n  \"Port\": 22,\r\n  \"Credentials\": {\r\n    \"Domain\": \"domain\",\r\n    \"Username\": \"username\",\r\n    \"Password\": \"## REDACTED ## - This value has been redacted as it contains text that should be encrypted, but is not.\",\r\n},\r\n  \"TerminalPrompt\": \"(.*(~(.*[\\\\r\\\\n]?)\\\\$\|>))\"\r\n}"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Host": "localhost", "Port": 22, "Credentials": { "Domain": "domain", "Username": "user", "Password": "password"}, "TerminalPrompt": $@".*[>\|\\$\|#]"}` | `"{\r\n  \"Host\": \"localhost\",\r\n  \"Port\": 22,\r\n  \"Credentials\": {\r\n    \"Domain\": \"domain\",\r\n    \"Username\": \"username\",\r\n    \"Password\": \"## REDACTED ## - This value has been redacted as it contains text that should be encrypted, but is not.\",\r\n},\r\n  \"TerminalPrompt\": \".*[>\|\\\\$\|#]\"\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
