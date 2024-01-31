@@ -19,6 +19,7 @@ IgnoreURLs:
 - "https://learn.microsoft.com/.*"
 - "https://fonts.googleapis.com.*"
 - "https://fonts.gstatic.com.*"
+- "http://www.mimekit.net/docs/.*"
 - "https://nssm.cc/"
 IgnoreDirs:
 - "docs/?.*/_print/"
