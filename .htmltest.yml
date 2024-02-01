@@ -21,6 +21,7 @@ IgnoreURLs:
 - "https://fonts.gstatic.com.*"
 - "http://www.mimekit.net/docs/.*"
 - "https://nssm.cc/"
+- "https://code.visualstudio.com/"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
