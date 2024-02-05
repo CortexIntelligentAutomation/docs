@@ -263,7 +263,7 @@ A script is provided during installation to apply these security changes:
 
 ### Encryption Requirements
 
-{{< section "/prerequisites/multi-server/encryption-requirements.md">}}
+{{< section "/prerequisites/install-innovation-only/multi-server/encryption-requirements.md">}}
 
 ## Alternative Load Balancer Requirements
 

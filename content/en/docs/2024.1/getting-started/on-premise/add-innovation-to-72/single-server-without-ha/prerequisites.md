@@ -189,7 +189,7 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 ### Encryption Requirements
 
-{{< section "/prerequisites/single-server/encryption-requirements.md">}}
+{{< section "/prerequisites/add-innovation-to-7.2/encryption-requirements.md">}}
 
 ## Next Steps?
 
