@@ -303,7 +303,6 @@ In these examples, the following properties are common:
 | Property | Value |
 |----------|-------|
 | [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
-| [Occurrence][Occurrence Property] | `1` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
 | [Matches][Matches Property] | `($)Matches` with no value |
 

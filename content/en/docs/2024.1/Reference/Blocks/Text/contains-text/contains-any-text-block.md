@@ -14,7 +14,7 @@ description: "Checks if text contains any of the texts in a given set of texts."
 
 Checks if [Text][Text Property] contains any of the texts in a given set of [Texts To Find][TextsToFind Property].
 
-[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to perform the check.
+[Search Options][SearchOptions Property] can be specified to choose whether to use a LiteralText, PatternMatching or Regex search to perform the check.
 
 ## Examples
 
@@ -30,7 +30,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["The", "fast", "red", "fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains Any Text][ContainsAnyText Property] | `($)ContainsAnyText`, with no value | `($)ContainsAnyText` is a variable that will be set to a [Boolean][] value |
 
@@ -56,7 +56,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog"` | `($)Text` is a variable of type [String][] |
 | [Texts To Find][TextsToFind Property] | `($)TextsToFind`, with value `["the", "slow", "red", "Fox"]` | `($)TextsToFind` is a variable of type [IEnumerable][]&lt;[String][]&gt; |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Contains Any Text][ContainsAnyText Property] | `($)ContainsAnyText`, with no value | `($)ContainsAnyText` is a variable that will be set to a [Boolean][] value |
 
@@ -150,16 +150,16 @@ The set of [Texts To Find][TextsToFind Property] to check any are contained in [
 
 ### Search Options
 
-[Search Options][SearchOptions Property] can be specified to choose whether items in [Texts To Find][TextsToFind Property] should be interpreted as a ContainsText, PatternMatching or Regex search:
+[Search Options][SearchOptions Property] can be specified to choose whether items in [Texts To Find][TextsToFind Property] should be interpreted as a LiteralText, PatternMatching or Regex search:
 
-* `SearchOptions.ContainsText` matches text exactly; as long as the [Text][Text Property] contains the text specified in [Texts To Find][TextsToFind Property] it will be considered a match.
+* `SearchOptions.LiteralText` matches text exactly; as long as the [Text][Text Property] contains the text specified in [Texts To Find][TextsToFind Property] it will be considered a match.
 * `SearchOptions.PatternMatching` allows wildcard text matching using [Pattern Matching Syntax][]:
   * `*` wildcard character can be used to match `0` or more characters.
   * `?` wildcard character can be used to match `0` or `1` character.
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
-Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+Please note that with `SearchOptions.LiteralText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
 
 | | |
 |--------------------|---------------------------|
@@ -167,7 +167,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | `ContainsText` |
+| Default Value | `LiteralText` |
 
 ### Comparison Type
 

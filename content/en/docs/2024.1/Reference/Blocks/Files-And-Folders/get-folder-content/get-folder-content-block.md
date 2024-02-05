@@ -18,7 +18,7 @@ The returned [Paths][Paths Property] can then be used in other file and folder b
 
 Additional options can be specified:
 
-* [Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search.
+* [Search Options][SearchOptions Property] can be specified to choose whether to use a LiteralText, PatternMatching or Regex search.
 * [Content Options][ContentOptions Property] can be specified to choose whether to search for files or folders.
 * A [Recursive][Recursive Property] option can specified to choose whether to search only in the specified [Folder Path][FolderPath Property], or include all subfolders.
 * A [Comparison Type][ComparisonType Property] option can specified to choose how it is determined whether the file or folder name matches the [Search Pattern][SearchPattern Property] (e.g. whether the search is case-sensitive or case-insensitive).
@@ -45,7 +45,7 @@ In this example assume `"C:\Source\Folder"` contains:
 |--------------------|---------------------------|------------------------------------------|
 | [Folder Path][FolderPath Property] | `($)FolderPath`, with value `@"C:\Source\Folder"` | `($)FolderPath` is a variable of type [String][] |
 | [Search Pattern][SearchPattern Property] | `($)SearchPattern`, with value `"file"` | `($)SearchPattern` is a variable of type [String][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Content Options][ContentOptions Property] | `($)ContentOptions`, with value `ContentOptions.Files` | `($)ContentOptions` is a variable of type [ContentOptions][] |
 | [Recursive][Recursive Property] | `($)Recursive`, with value `false` | `($)Recursive` is a variable of type [Boolean][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
@@ -84,7 +84,7 @@ In this example assume `"C:\Source\Folder"` contains:
 |--------------------|---------------------------|------------------------------------------|
 | [Folder Path][FolderPath Property] | `($)FolderPath`, with value `@"C:\Source\Folder"` | `($)FolderPath` is a variable of type [String][] |
 | [Search Pattern][SearchPattern Property] | `($)SearchPattern`, with value `"File"` | `($)SearchPattern` is a variable of type [String][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Content Options][ContentOptions Property] | `($)ContentOptions`, with value `ContentOptions.Files` | `($)ContentOptions` is a variable of type [ContentOptions][] |
 | [Recursive][Recursive Property] | `($)Recursive`, with value `true` | `($)Recursive` is a variable of type [Boolean][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
@@ -220,16 +220,16 @@ A [Search Pattern][SearchPattern Property] of `null` or empty (i.e. `""`) means 
 
 ### Search Options
 
-[Search Options][SearchOptions Property] can be specified to choose whether [Search Pattern][SearchPattern Property] should be interpreted as a ContainsText, PatternMatching or Regex search:
+[Search Options][SearchOptions Property] can be specified to choose whether [Search Pattern][SearchPattern Property] should be interpreted as a LiteralText, PatternMatching or Regex search:
 
-* `SearchOptions.ContainsText` matches text exactly; as long as the file or folder name contains the text specified in [Search Pattern][SearchPattern Property] it will be considered a match.
+* `SearchOptions.LiteralText` matches text exactly; as long as the file or folder name contains the text specified in [Search Pattern][SearchPattern Property] it will be considered a match.
 * `SearchOptions.PatternMatching` allows wildcard text matching using [Pattern Matching Syntax][]:
   * `*` wildcard character can be used to match `0` or more characters.
   * `?` wildcard character can be used to match `0` or `1` character.
   * All other characters are treated as a literal character.
 * `SearchOptions.Regex` allows regex text matching using [.Net Regex Syntax][Regex Syntax].
 
-Please note that with `SearchOptions.ContainsText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
+Please note that with `SearchOptions.LiteralText` overlapping matches are detected (e.g. searching for `"aa"` in `"aaa"` matches `"aa"`  at index `0` and `"aa"` at index `1`). With `SearchOptions.Regex` only `"aa"` at index `0` will be matched.
 
 | | |
 |--------------------|---------------------------|
@@ -237,7 +237,7 @@ Please note that with `SearchOptions.ContainsText` overlapping matches are detec
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | `ContainsText` |
+| Default Value | `LiteralText` |
 
 ### Content Options
 

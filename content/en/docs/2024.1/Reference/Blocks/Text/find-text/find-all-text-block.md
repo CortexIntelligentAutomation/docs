@@ -13,11 +13,11 @@ description: "Finds all occurrences of a text in a given text."
 
 Finds all occurrences of [Text To Find][TextToFind Property] in a given [Text][Text Property].
 
-[Search Options][SearchOptions Property] can be specified to choose whether to use a ContainsText, PatternMatching or Regex search to match the [Text To Find][TextToFind Property] input.
+[Search Options][SearchOptions Property] can be specified to choose whether to use a LiteralText, PatternMatching or Regex search to match the [Text To Find][TextToFind Property] input.
 
 ## Examples
 
-### Find All Occurrences when there are multiple matches
+### Find all occurrences when there are multiple matches
 
 This example will find all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -29,8 +29,8 @@ It performs a [case-insensitive, culture-insensitive][OrdinalIgnoreCase] compari
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
-| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.OrdinalIgnoreCase` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
 
 #### Result
@@ -108,7 +108,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ***
 
-### Find All occurrences when there is a single match
+### Find all occurrences when there is a single match
 
 This example will find all occurrences of `"The"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -120,7 +120,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "The", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "The", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
 
@@ -168,7 +168,7 @@ For more information on using [SearchOptions][SearchOptions Property] and [Text 
 
 ***
 
-### Find All occurrences when there are no matches
+### Find all occurrences when there are no matches
 
 This example will find all occurrences of `"cat"` in `"The quick brown fox jumps over the lazy dog."`.
 
@@ -180,7 +180,7 @@ It performs a [case-sensitive, culture-insensitive][Ordinal] comparison of text.
 |--------------------|---------------------------|------------------------------------------|
 | [Text][Text Property] | `($)Text`, with value `"The quick brown fox jumps over the lazy dog."` | `($)Text` is a variable of type [String][] |
 | [Text To Find][TextToFind Property] | `($)TextToFind`, with value `{"startsWith": "", "contains": "cat", "endsWith": ""}`<br><br>In this example `($)TextToFind` has been set up using the following [Expression][]:<br><br>`new TextToFind(startsWith: "", contains: "cat", endsWith: "")` | `($)TextToFind` is a variable of type [TextToFind][] |
-| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.ContainsText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
+| [Search Options][SearchOptions Property] | `($)SearchOptions`, with value `SearchOptions.LiteralText` | `($)SearchOptions` is a variable of type [SearchOptions][] |
 | [Comparison Type][ComparisonType Property] | `($)ComparisonType`, with value `StringComparison.Ordinal` | `($)ComparisonType` is a variable of type [StringComparison][] |
 | [Matches][Matches Property] | `($)Matches`, with no value | `($)Matches` is a variable that will be set to an [List][]<[Match][]> value |
 
@@ -212,11 +212,13 @@ The [Text][Text Property] to find all occurrences of [Text To Find][TextToFind P
 
 ### Text To Find
 
-The [Text To Find][TextToFind Property] search query to find all occurrences of in [Text][Text Property]. This property contains all of the information in relation to the conditions for a valid match; these are:
+The [Text To Find][TextToFind Property] search query used to find all matching occurrences in [Text][Text Property].  This property contains the following sub-properties:
 
 * [Starts With][StartsWith]
 * [Contains][Contains]
 * [Ends With][EndsWith]
+
+See [Advanced Examples][] for more information on how to use these sub-properties.
 
 | | |
 |--------------------|---------------------------|
@@ -236,9 +238,9 @@ The [Text To Find][TextToFind Property] search query to find all occurrences of 
 
 ### Search Options
 
-[Search Options][SearchOptions Property] can be specified to choose whether [Text To Find][TextToFind Property] should be interpreted as a ContainsText, PatternMatching or Regex search:
+[Search Options][SearchOptions Property] can be specified to choose whether [Text To Find][TextToFind Property] should be interpreted as a LiteralText, PatternMatching or Regex search:
 
-* `SearchOptions.ContainsText` matches text exactly; as long as the [Text][Text Property] contains the text specified in [Text To Find][TextToFind Property] it will be considered a match.
+* `SearchOptions.LiteralText` matches text exactly; as long as the [Text][Text Property] contains the text specified in [Text To Find][TextToFind Property] it will be considered a match.
 * `SearchOptions.PatternMatching` allows wildcard text matching using [Pattern Matching Syntax][]:
   * `*` wildcard character can be used to match `0` or more characters.
   * `?` wildcard character can be used to match `0` or `1` character.
@@ -253,7 +255,7 @@ Please note that overlapping matches are not detected (i.e. searching for `"aa"`
 | Property Type | [Input][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | `ContainsText` |
+| Default Value | `LiteralText` |
 
 ### Comparison Type
 
@@ -289,7 +291,7 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Comparison Type][ComparisonType Property] is not one of the specified [StringComparison][] types (e.g. `(StringComparison)10`). |
 | | Thrown when [Search Options][SearchOptions Property] is not one of the specified [SearchOptions][] types (e.g. `(SearchOptions)10`). |
-| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to populate the [Matches][Matches Property] property exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
+| [RegexMatchTimeoutException][] | Thrown when the execution time of any search done to find all occurrences of [Text to Find][TextToFind Property] exceeds the [BlockTimeout][], or `60` seconds if that is undefined. |
 | [RegexParsingFailedException][] | Thrown when [Search Options][SearchOptions Property] is `SearchOptions.Regex` and [TextToFind][TextToFind Property] has a property which is not a valid regex (e.g. `(`). |
 
 ## Remarks
@@ -303,7 +305,6 @@ In these examples, the following properties are common:
 | Property | Value |
 |----------|-------|
 | [Text][Text Property] | `"The quick brown fox jumps over the lazy dog."` |
-| [Occurrence][Occurrence Property] | `1` |
 | [Comparison Type][ComparisonType Property] | `Ordinal` |
 | [Matches][Matches Property] | `($)Matches` with no value |
 
@@ -323,9 +324,9 @@ These sections contain tables for the examples. The columns of these tables are 
 
 Please note that these examples all perform a search which has at most one valid match in the text.
 
-#### SearchOptions.ContainsText
+#### SearchOptions.LiteralText
 
-These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `ContainsText` using a [case-sensitive, culture-insensitive][Ordinal] search.
+These examples find the first occurrence in [Text][Text Property] with [Search Options][SearchOptions Property] set to `LiteralText` using a [case-sensitive, culture-insensitive][Ordinal] search.
 
 | TextToFind.StartsWith | TextToFind.Contains | TextToFind.EndsWith | Matches[0].Value | Matches[0].Groups["startsWith"].Value | Matches[0].Groups["contains"].Value | Matches[0].Groups["endsWith"].Value |
 |------------|----------|----------|--------------|------------------|----------------|----------------|
@@ -416,7 +417,7 @@ If [Text][Text Property] is `null` or empty (i.e. `""`) no operation is performe
 
 ### Null or empty Text To Find
 
-If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`) no operation is performed and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
+If all properties of [Text To Find][TextToFind Property] are `null` or empty (i.e. `""`), or [Text To Find][TextToFind Property] is `null`; no operation is performed and [Matches][Matches Property] is set to an empty [List][]<[Match][]>.
 
 ### Null or empty property of Text To Find
 
@@ -427,11 +428,11 @@ If a property of [Text To Find][TextToFind Property] is `null` or empty (i.e. `"
 If [Comparison Type][ComparisonType Property] is set to `StringComparison.CurrentCulture`, some characters such as `æ` that are equivalent to `ae` may not evaluate as equal.
 
 [Advanced Examples]: {{<ref "#advanced-examples">}}
+[ComparisonType Property]: {{< ref "#comparison-type" >}}
 [Matches Property]: {{< ref "#matches" >}}
+[SearchOptions Property]: {{< ref "#search-options" >}}
 [Text Property]: {{< ref "#text" >}}
 [TextToFind Property]: {{< ref "#text-to-find" >}}
-[SearchOptions Property]: {{< ref "#search-options" >}}
-[ComparisonType Property]: {{< ref "#comparison-type" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
