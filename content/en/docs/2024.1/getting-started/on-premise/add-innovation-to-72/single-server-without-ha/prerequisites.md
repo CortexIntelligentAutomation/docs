@@ -85,6 +85,38 @@ To get a licence file and feature identifier take the following steps:
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
 
+## Ensure correct owner of {{% ctx %}} Gateway Repo and Website folders
+
+In order for the upgrade to run smoothly, it is necessary to ensure that the owner and permissions of the Repo and Website folders are set correctly:
+
+1. If you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+  1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+  1. Open the `web.config` file.
+  1. Find the value of the `connectionString` named `CortexRepositories`
+1. Navigate to the `Repo` folder, not opening it.
+1. Right-click on the `Repo` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Click `Advanced` at the bottom of the dialog.
+1. Check that the `Owner` is stated as the user that runs the {{% ctx %}} Gateway Application pool. If not change it:
+  1. Next to the name of the current Owner, click `Change`.
+  1. In the dialog enter the username of the user that runs the {{% ctx %}} Gateway Application pool.
+  1. Click `Check Names` and ensure that the user is validated.
+  1. Click `OK` on the Select User dialog.
+  1. Click `OK` on the Advanced Security Settings dialog.
+1. Check the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+1. If the `Application Pool` user for Gateway is not listed:
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+1. If the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed but does not have permissions:
+   1. Click the `Edit...` button.
+   1. Select the `{{% ctx %}} Gateway Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+1. Repeat these steps for the `Cortex` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex`, e.g. `C:\inetpub\wwwroot\Cortex`)
+
 ## Web Browser Requirements
 
 Gateway supports the latest versions of the following browsers:
