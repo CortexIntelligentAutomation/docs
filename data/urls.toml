@@ -2256,6 +2256,7 @@
         ErrorCodes = "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
         TransparentDataEncryption = "https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15"
+        CreateFullDbBackup = "https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server"
     [MSDocs.DotNet.Api.Microsoft]
         MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft"
         [MSDocs.DotNet.Api.Microsoft.Identity.Client]

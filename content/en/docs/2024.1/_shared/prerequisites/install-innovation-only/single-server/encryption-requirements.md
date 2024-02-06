@@ -1,8 +1,8 @@
-Certain sensitive parameters required during installation (e.g. passwords) must be encrypted; other potentially sensitive parameters (e.g. usernames) can be encrypted using the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module, which uses AES256. Details of whether a parameter must or can be encrypted are specified during the installation steps.
+Certain sensitive parameters required during installation (e.g. passwords) must be encrypted; other potentially sensitive parameters (e.g. usernames) can be encrypted using the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module, which uses AES256. Details of whether a parameter must or should be encrypted are specified during the installation steps.
 
 Before encrypting parameters, it is required to generate a private key that will be used by the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module using the following steps:
 
-Choose either the Application Server or the Web Application Server, and copy the `Cortex Innovation {{< version >}} - Encryption Key Generator.zip` artefacts to a folder on it:
+Copy the `Cortex Innovation {{< version >}} - Encryption Key Generator.zip` artefacts to a folder on the server:
 
 1. Extract the `Cortex Innovation {{< version >}} - Encryption Key Generator.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Application Server and Web Application Server.

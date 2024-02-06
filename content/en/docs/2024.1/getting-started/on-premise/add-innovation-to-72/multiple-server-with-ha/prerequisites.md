@@ -15,11 +15,6 @@ All server roles (e.g. Load Balancer, Application Server, Web Application Server
 
 ## Hardware Requirements
 
-Hardware requirements differ for each server role depending on whether it is being installed on new hardware or hardware which already contains v7.2 components. The minimum requirements for existing hardware will be greater than those for new hardware. The requirements for using the [Recommended Architecture][] can be found [here][Requirements For Recommended Architecture]. Requirements for using the [Minimum Architecture][] can be found [here][Requirements For Recommended Architecture]. [This table][Requirements For Alternative Architectures] is also provided to help calculate requirements for [Alternative Architectures][].
-
-### Recommended Architecture
-
-Use these hardware requirements if using the [Recommended Architecture][].
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
@@ -27,44 +22,41 @@ Use these hardware requirements if using the [Recommended Architecture][].
 | New Innovation Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
 | Existing V7.2 Application Server with Gateway<br>+ Upgrade to Innovation Web Application Server | 1 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 160+&nbsp;*Recommended*<br>135&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive  |
 
-### Minimum Architecture
-
-Use these hardware requirements if using the [Minimum Architecture][] and installing on existing v7.2 hardware.
-
-| Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
-|------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| Existing V7.2 Database Server <br>+ Innovation Load Balancer| 1[^1] | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 300+&nbsp;*Recommended*<br>70&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-| Existing V7.2 Database Server <br>+ Innovation Application Server | 1 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 300+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive|
-| Existing V7.2 Application Server <br>+ Innovation Application Server | 2 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 120+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive|
-| Existing V7.2 Web Application Server<br>+ Innovation Application Server<br>+ Upgrade to Innovation Web Application Server | 1 | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 150+&nbsp;*Recommended*<br>100&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
-
 [^1]: A software-based load balancer called [gobetween][] is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast][Anycast]; however, this has not been verified yet. It is possible to use an [alternative load balancer][] to the one provided.
 [^2]: Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
 
-### Alternative Architectures
-
-This table displays the additional resources required when adding an Innovation Server Role to an existing server using [Alternative Architectures][]. It can be used to calculate how many additional resources are needed to install Innovation by adding the numbers in the table to fully utilised resource usage on a given server.
-
-| Server&nbsp;Role | Minimum Additional CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | Minimum Additional RAM&nbsp;(GB) | Minimum Additional Disk&nbsp;(GB) |  
-|------------------|-----------------------------------|---------------|----------------------|
-| Load&nbsp;Balancer | 2 | 2 | 10&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-| Application&nbsp;Server | 2 | 8 | 40&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
-| Web&nbsp;Application&nbsp;Server | 2 | 4 | 30&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-
 ## Software Requirements
 
-| Server&nbsp;Role | Windows&nbsp;Server[^3] | SQL&nbsp;Server[^4] | .Net | PowerShell[^5] | IIS[^6] | Other Software |
-|------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Load&nbsp;Balancer | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^7]<br>10.0.14393[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Server&nbsp;Role | Windows&nbsp;Server[^1] | .Net | PowerShell[^2] | IIS[^3] | Other Software |
+|------------------|-------------------------|------|------------|---------|----------|
+| Load&nbsp;Balancer | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
+| Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
+| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^4]<br>10.0.14393[^5]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
-[^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^4]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported. Note that [Transparent Data Encryption][] is not supported on SQL Server Express.
-[^5]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
-[^6]: IIS is supported; other web servers, including IIS Express are not supported.
-[^7]: Ships as a windows role within Windows Server 2019.
-[^8]: Ships as a windows role within Windows Server 2016.
+[^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
+[^2]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
+[^3]: IIS is supported; other web servers, including IIS Express are not supported.
+[^4]: Ships as a windows role within Windows Server 2019.
+[^5]: Ships as a windows role within Windows Server 2016.
+
+## Backup Requirements
+
+It is important to ensure that there are relevant backups in place to be able to restore the platform in the event of a failed installation. The recommended approach would be to snapshot or backup the Virtual Machine(s) that host Cortex Gateway and SQL Server if this is possible. If this is not possible then the following steps should be taken:
+
+### Backup Git Repositories
+
+1. On the Web Application Server, if you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+    1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+    1. Open the `web.config` file.
+    1. Find the value of the `connectionString` named `CortexRepositories`
+1. In File Explorer, navigate to the Repo Folder.
+1. Copy the Repo folder to another location.
+
+### Backup SQL Server Databases
+
+Ensure that there are recent full backups of both the CortexWeb and CortexWeb.Auth Databases. For information on generating a full backup see Microsoft's guidance [here][Create Full DB Backup].
+
+In the event of a failed installation contact [{{% ctx %}} Service Portal][CORTEX Service Portal] who will be able to assist with resolving the problems or with restoring the platform.
 
 ## Domain Requirements
 
@@ -142,6 +134,39 @@ To get a licence file and feature identifier take the following steps:
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
+
+## Ensure correct owner of {{% ctx %}} Gateway Repo and Website folders
+
+In order for the upgrade to run smoothly, it is necessary to ensure that the owner and permissions of the Repo and Website folders are set correctly:
+
+1. If you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+    1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+    1. Open the `web.config` file.
+    1. Find the value of the `connectionString` named `CortexRepositories`
+1. Navigate to the `Repo` folder, not opening it.
+1. Right-click on the `Repo` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Click `Advanced` at the bottom of the dialog.
+1. Check that the `Owner` is stated as the user that runs the {{% ctx %}} Gateway Application pool. If not change it:
+    1. Next to the name of the current Owner, click `Change`.
+    1. In the dialog enter the username of the user that runs the {{% ctx %}} Gateway Application pool.
+    1. Click `Check Names` and ensure that the user is validated.
+    1. Click `OK` on the Select User dialog.
+    1. Select to `Replace owner on subcontainers and objects`.
+    1. Click `OK` on the Advanced Security Settings dialog.
+1. Check the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+1. If the `Application Pool` user for Gateway is not listed:
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+1. If the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed but does not have permissions:
+   1. Click the `Edit...` button.
+   1. Select the `{{% ctx %}} Gateway Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+1. Repeat these steps for the `Cortex` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex`, e.g. `C:\inetpub\wwwroot\Cortex`)
 
 ## Web Browser Requirements
 
@@ -233,7 +258,7 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 #### Application Servers
 
 {{% alert title="Note" %}}
-For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+For production platforms it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production platforms, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
 An X.509 SSL wildcard certificate should be used to:
@@ -290,7 +315,7 @@ A script is provided during installation to apply these security changes:
 
 ### Encryption Requirements
 
-{{< section "/prerequisites/multi-server/encryption-requirements.md">}}
+{{< section "/prerequisites/add-innovation-to-7.2/encryption-requirements.md">}}
 
 ## Alternative Load Balancer Requirements
 
@@ -303,32 +328,21 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 
 ## Next Steps?
 
-Application Servers and Load Balancer server are installed in the same way regardless of whether new or existing hardware is being used:
-
 1. [Install Application Servers and Load Balancer][]
 
-[Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
-[Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Architecture" >}}
-[Recommended Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.RecommendedArchitecture" >}}
-[Minimum Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.MinimumArchitecture" >}}
-[Alternative Architectures]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AlternativeArchitectures" >}}
-[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[gobetween]: {{< url path="GoBetween.MainDoc" >}}
-[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Anycast]: {{< url path="Anycast.MainDoc" >}}
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
-[Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
-[Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
-[NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
-[Microsoft SQL Server 2019]: {{< url path="MSEval.SQLServer.2019" >}}
-[Microsoft SQL Server 2016]: {{< url path="MSEval.SQLServer.2016" >}}
-[Microsoft SQL Express 2016]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
-[IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
-[Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}
-[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
+[Anycast]: {{< url path="Anycast.MainDoc" >}}
+[Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Architecture" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
-[Requirements For Recommended Architecture]: {{< ref "#recommended-architecture" >}}
-[Requirements For Alternative Architectures]: {{< ref "#alternative-architectures" >}}
-[Transparent Data Encryption]: {{< url path="MSDocs.SqlServer.TransparentDataEncryption" >}}
+[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[gobetween]: {{< url path="GoBetween.MainDoc" >}}
+[IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
+[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
+[Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
+[NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
+[Recommended Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.RecommendedArchitecture" >}}
+[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
+[Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}

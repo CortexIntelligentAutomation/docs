@@ -25,7 +25,7 @@ To encrypt text using the {{% ctx %}} Encryptor PowerShell module:
 1. In the Windows PowerShell (x64) window, run the following command to encrypt text, replacing `text to encrypt` with the text that you want to encrypt:
 
     ```powershell
-    ConvertTo-EncryptedText -Text "text to encrypt"
+    ConvertTo-EncryptedText -Text 'text to encrypt'
     ```
 
     The command will return the encrypted text, beginning with `#_`. This step can be repeated for any texts that need to be encrypted.
