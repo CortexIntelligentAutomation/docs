@@ -102,6 +102,7 @@ In order for the upgrade to run smoothly, it is necessary to ensure that the own
   1. In the dialog enter the username of the user that runs the {{% ctx %}} Gateway Application pool.
   1. Click `Check Names` and ensure that the user is validated.
   1. Click `OK` on the Select User dialog.
+  1. Select to `Replace owner on subcontainers and objects`.
   1. Click `OK` on the Advanced Security Settings dialog.
 1. Check the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
 1. If the `Application Pool` user for Gateway is not listed:
