@@ -44,7 +44,7 @@ It is important to ensure that there are relevant backups in place to be able to
 
 ### Backup SQL Server Databases
 
-1. Ensure that there are recent full backups of both the CortexWeb and CortexWeb.Auth Databases. For information on generating a full backup see Microsoft's guidance [here][Create Full DB Backup].
+Ensure that there are recent full backups of both the CortexWeb and CortexWeb.Auth Databases. For information on generating a full backup see Microsoft's guidance [here][Create Full DB Backup].
 
 In the event of a failed installation contact [{{% ctx %}} Service Portal][CORTEX Service Portal] who will be able to assist with resolving the problems or with restoring the platform.
 
