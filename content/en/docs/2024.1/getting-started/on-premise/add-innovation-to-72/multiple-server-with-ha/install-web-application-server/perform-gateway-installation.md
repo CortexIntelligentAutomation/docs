@@ -99,11 +99,12 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
     If the errors do not give any instructions on how to rectify, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for further assistance.
 
 1. Once the PowerShell script execution has completed, a prompt will appear to restart the machine.  You can choose to restart now (`N`) or later (`L`).
-1. In a browser, navigate to the {{% ctx %}} Gateway website, available at `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway` and wait for the login page to load.
+{{< alert type="note" title="Note" >}} It is recommended to choose to restart later after the final step of this section has completed to ensure that no issues occur.{{< /alert >}}
+1. In a browser, navigate to the {{% ctx %}} Gateway website, available at `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway` and wait for the login page to load. This may take a few minutes.
 
 ### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
 
-{{< section "/install-web-application-server/grant-gateway-user-additional-folder-permissions.md">}}
+{{< section "/install-web-application-server/add-innovation-to-7.2/grant-gateway-user-additional-folder-permissions.md">}}
 
 # Preserve installation files
 

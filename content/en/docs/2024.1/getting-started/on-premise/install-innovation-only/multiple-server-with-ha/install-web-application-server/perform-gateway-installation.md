@@ -108,7 +108,7 @@ It is possible for {{% ctx %}} Gateway to reuse the certificate used when [insta
 
 ### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
 
-{{< section "/install-web-application-server/grant-gateway-user-additional-folder-permissions.md">}}
+{{< section "/install-web-application-server/add-innovation-only/grant-gateway-user-additional-folder-permissions.md">}}
 
 ## Preserve installation files
 

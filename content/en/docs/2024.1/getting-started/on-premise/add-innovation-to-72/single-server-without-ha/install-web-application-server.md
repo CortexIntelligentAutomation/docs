@@ -169,36 +169,20 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 
 ### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
 
-Check that the {{% ctx %}} Gateway `Application Pool` user has rights to the `Cortex Blocks Provider Host folder` folder using the following steps:
-
-1. Navigate to `C:\ProgramData\Cortex`
-1. Right-click on the `Cortex Blocks Provider Host` folder and click `Properties`.
-1. In the dialog, click the `Security` tab.
-1. Check the `Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
-1. If the `Application Pool` user for Gateway is not listed:
-   1. Click the `Edit...` button.
-   1. Click the `Add...` button.
-   1. Enter the username of the application pool user and click `OK`.
-   1. In the `Permissions` section at the bottom, check `Modify`.
-   1. Click `OK`.
-1. If the `Application Pool` user for Gateway is listed but does not have permissions:
-   1. Click the `Edit...` button.
-   1. Select the `Application Pool` user.
-   1. Check `Modify`.
-   1. Click `OK`.
+{{< section "/install-web-application-server/add-innovation-to-7.2/grant-gateway-user-additional-folder-permissions.md">}}
 
 ## Update Datasources and remove obsolete Database
 
-If the system is not using LiveView or Reporting then there are some final steps to complete to clean the system up after upgrade.
+With effect from 2024.1 {{% ctx %}} Gateway no longer requires its own database unless the system is using LiveView or Reporting. If LiveView and Reporting are not used, some final steps are required to remove the obsolete database.
 
-To find out if any users could be using LiveView or Reporting:
+To find out if LiveView or Reporting are used:
 
 1. In a browser navigate to the {{% ctx %}} Gateway website, available at `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway`, and log in as a user with administrative privileges.
 1. Click on `Settings`.
 1. In the submenu, click on `LDAP Authorisation`.
 1. If any users have been granted permission to the LiveView or Reporting roles there will be a tick in the box.
 
-If no users are assigned permission to LiveView and Reporting roles:
+If no users are granted permission to the LiveView and Reporting roles:
 
 1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
 1. Open the `web.config` file.
@@ -210,7 +194,7 @@ If no users are assigned permission to LiveView and Reporting roles:
 1. Expand the Server Name Node.
 1. Expand the `Databases` Node.
 1. Right Click on `CortexWeb` and select `Delete`.
-1. In the `Delete Object` dialog box, select the checkbox to `Close Existing Connections` and click OK.
+1. In the `Delete Object` dialog box, select the checkbox to `Close Existing Connections` and click `OK`.
 
 ## Preserve installation files
 
