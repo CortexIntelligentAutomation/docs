@@ -2172,6 +2172,10 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.0.2/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.1.0]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -2256,6 +2260,7 @@
         ErrorCodes = "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
         TransparentDataEncryption = "https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15"
+        CreateFullDbBackup = "https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server"
     [MSDocs.DotNet.Api.Microsoft]
         MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft"
         [MSDocs.DotNet.Api.Microsoft.Identity.Client]

@@ -27,17 +27,36 @@ All server roles (e.g. Load Balancer, Application Server, Web Application Server
 
 ## Software Requirements
 
-| Server&nbsp;Role | Windows&nbsp;Server[^3] | .Net | PowerShell[^4] | IIS[^5] | Other Software |
+| Server&nbsp;Role | Windows&nbsp;Server[^1] | .Net | PowerShell[^2] | IIS[^3] | Other Software |
 |------------------|-------------------------|------|------------|---------|----------|
 | Load&nbsp;Balancer | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
 | Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^6]<br>10.0.14393[^7]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Web&nbsp;Application&nbsp;Server | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^4]<br>10.0.14393[^5]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
-[^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^4]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
-[^5]: IIS is supported; other web servers, including IIS Express are not supported.
-[^6]: Ships as a windows role within Windows Server 2019.
-[^7]: Ships as a windows role within Windows Server 2016.
+[^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
+[^2]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
+[^3]: IIS is supported; other web servers, including IIS Express are not supported.
+[^4]: Ships as a windows role within Windows Server 2019.
+[^5]: Ships as a windows role within Windows Server 2016.
+
+## Backup Requirements
+
+It is important to ensure that there are relevant backups in place to be able to restore the platform in the event of a failed installation. The recommended approach would be to snapshot or backup the Virtual Machine(s) that host Cortex Gateway and SQL Server if this is possible. If this is not possible then the following steps should be taken:
+
+### Backup Git Repositories
+
+1. On the Web Application Server, if you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+    1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+    1. Open the `web.config` file.
+    1. Find the value of the `connectionString` named `CortexRepositories`
+1. In File Explorer, navigate to the Repo Folder.
+1. Copy the Repo folder to another location.
+
+### Backup SQL Server Databases
+
+Ensure that there are recent full backups of both the CortexWeb and CortexWeb.Auth Databases. For information on generating a full backup see Microsoft's guidance [here][Create Full DB Backup].
+
+In the event of a failed installation contact [{{% ctx %}} Service Portal][CORTEX Service Portal] who will be able to assist with resolving the problems or with restoring the platform.
 
 ## Domain Requirements
 
@@ -115,6 +134,39 @@ To get a licence file and feature identifier take the following steps:
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
+
+## Ensure correct owner of {{% ctx %}} Gateway Repo and Website folders
+
+In order for the upgrade to run smoothly, it is necessary to ensure that the owner and permissions of the Repo and Website folders are set correctly:
+
+1. If you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+    1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+    1. Open the `web.config` file.
+    1. Find the value of the `connectionString` named `CortexRepositories`
+1. Navigate to the `Repo` folder, not opening it.
+1. Right-click on the `Repo` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Click `Advanced` at the bottom of the dialog.
+1. Check that the `Owner` is stated as the user that runs the {{% ctx %}} Gateway Application pool. If not change it:
+    1. Next to the name of the current Owner, click `Change`.
+    1. In the dialog enter the username of the user that runs the {{% ctx %}} Gateway Application pool.
+    1. Click `Check Names` and ensure that the user is validated.
+    1. Click `OK` on the Select User dialog.
+    1. Select to `Replace owner on subcontainers and objects`.
+    1. Click `OK` on the Advanced Security Settings dialog.
+1. Check the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+1. If the `Application Pool` user for Gateway is not listed:
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+1. If the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed but does not have permissions:
+   1. Click the `Edit...` button.
+   1. Select the `{{% ctx %}} Gateway Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+1. Repeat these steps for the `Cortex` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex`, e.g. `C:\inetpub\wwwroot\Cortex`)
 
 ## Web Browser Requirements
 
@@ -206,7 +258,7 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 #### Application Servers
 
 {{% alert title="Note" %}}
-For production systems it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+For production platforms it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production platforms, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
 An X.509 SSL wildcard certificate should be used to:

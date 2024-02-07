@@ -19,16 +19,34 @@ The prerequisites required for a single server (as described in [Architecture][]
 
 ## Software Requirements
 
-| Server&nbsp;Role | Windows&nbsp;Server[^1] | SQL&nbsp;Server[^2] | .Net | PowerShell[^3] | IIS[^4] | Other Software |
-|------------------|-------------------------|---------------------|------|------------|---------|----------|
-| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016] | [2019][Microsoft SQL Server 2019]<br />[2016][Microsoft SQL Server 2016]<br />[2016&nbsp;Express][Microsoft SQL Express 2016] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^5]<br>10.0.14393[^6]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Server&nbsp;Role | Windows&nbsp;Server[^1] | .Net | PowerShell[^2] | IIS[^3] | Other Software |
+|------------------|-------------------------|------|------------|---------|----------|
+| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2019&nbsp;(x64)][Microsoft Server 2019]&nbsp;*Recommended*<br>[2016&nbsp;(x64)][Microsoft Server 2016]  [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.17763[^4]<br>10.0.14393[^5]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^2]: SQL Server Express, Standard and Enterprise are supported. Other databases are not supported. Note that [Transparent Data Encryption][] is not supported on SQL Server Express.
-[^3]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
-[^4]: IIS is supported; other web servers, including IIS Express are not supported.
-[^5]: Ships as a windows role within Windows Server 2019.
-[^6]: Ships as a windows role within Windows Server 2016.
+[^2]: PowerShell 5.1 ships with Windows Server 2016 and 2019.
+[^3]: IIS is supported; other web servers, including IIS Express are not supported.
+[^4]: Ships as a windows role within Windows Server 2019.
+[^5]: Ships as a windows role within Windows Server 2016.
+
+## Backup Requirements
+
+It is important to ensure that there are relevant backups in place to be able to restore the platform in the event of a failed installation. The recommended approach would be to snapshot or backup the Virtual Machine if this is possible. If this is not possible then the following steps should be taken:
+
+### Backup Git Repositories
+
+1. On the Web Application Server, if you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+    1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+    1. Open the `web.config` file.
+    1. Find the value of the `connectionString` named `CortexRepositories`
+1. In File Explorer, navigate to the Repo Folder.
+1. Copy the Repo folder to another location.
+
+### Backup SQL Server Databases
+
+Ensure that there are recent full backups of both the CortexWeb and CortexWeb.Auth Databases. For information on generating a full backup see Microsoft's guidance [here][Create Full DB Backup].
+
+In the event of a failed installation contact [{{% ctx %}} Service Portal][CORTEX Service Portal] who will be able to assist with resolving the problems or with restoring the platform.
 
 ## Domain Requirements
 
@@ -84,6 +102,39 @@ To get a licence file and feature identifier take the following steps:
 1. Copy the output (machine identifier and fingerprint) to the `Web Application/Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string.
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
 1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
+
+## Ensure correct owner of {{% ctx %}} Gateway Repo and Website folders
+
+In order for the upgrade to run smoothly, it is necessary to ensure that the owner and permissions of the Repo and Website folders are set correctly:
+
+1. If you do not know the location of the Repo folder you can check where it is located else skip to Step 2:
+    1. Navigate to the `gateway` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex\gateway`, e.g. `C:\inetpub\wwwroot\Cortex\gateway`)
+    1. Open the `web.config` file.
+    1. Find the value of the `connectionString` named `CortexRepositories`
+1. Navigate to the `Repo` folder, not opening it.
+1. Right-click on the `Repo` folder and click `Properties`.
+1. In the dialog, click the `Security` tab.
+1. Click `Advanced` at the bottom of the dialog.
+1. Check that the `Owner` is stated as the user that runs the {{% ctx %}} Gateway Application pool. If not change it:
+    1. Next to the name of the current Owner, click `Change`.
+    1. In the dialog enter the username of the user that runs the {{% ctx %}} Gateway Application pool.
+    1. Click `Check Names` and ensure that the user is validated.
+    1. Click `OK` on the Select User dialog.
+    1. Select to `Replace owner on subcontainers and objects`.
+    1. Click `OK` on the Advanced Security Settings dialog.
+1. Check the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed in the `Group or user names` and has `Modify` permissions.
+1. If the `Application Pool` user for Gateway is not listed:
+   1. Click the `Edit...` button.
+   1. Click the `Add...` button.
+   1. Enter the username of the application pool user and click `OK`.
+   1. In the `Permissions` section at the bottom, check `Modify`.
+   1. Click `OK`.
+1. If the `{{% ctx %}} Gateway Application Pool` user for Gateway is listed but does not have permissions:
+   1. Click the `Edit...` button.
+   1. Select the `{{% ctx %}} Gateway Application Pool` user.
+   1. Check `Modify`.
+   1. Click `OK`.
+1. Repeat these steps for the `Cortex` IIS folder (usually `%SystemDrive%\inetpub\wwwroot\Cortex`, e.g. `C:\inetpub\wwwroot\Cortex`)
 
 ## Web Browser Requirements
 
@@ -153,7 +204,7 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 {{< alert title="Important" color="warning" >}}It is critical to set a reminder to {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.RolloverCertificates" title="update certificates" >}} in good time before they expire. If they expire then the platform will cease to function and {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}} must be contacted for support.{{< /alert >}}
 
 {{% alert title="Note" %}}
-For production systems it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production systems, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+For production platforms it is recommended that an X.509 SSL certificate is obtained from a Certificate Authority and used for installation. For non-production platforms, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
 An X.509 SSL certificate (standard or wildcard) should be used to:
@@ -196,18 +247,15 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 1. [Install Application Server][]
 
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Architecture" >}}
-[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
-[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
-[Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
-[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Create Full DB Backup]: {{< url path="MSDocs.SqlServer.CreateFullDbBackup" >}}
+[IIS URL Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
-[Microsoft SQL Server 2019]: {{< url path="MSEval.SQLServer.2019" >}}
-[Microsoft SQL Server 2016]: {{< url path="MSEval.SQLServer.2016" >}}
-[Microsoft SQL Express 2016]: {{< url path="MSDownload.SqlServerExpress.2016" >}}
-[IIS URL Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
+[Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
+[SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
+[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}
-[C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
-[Transparent Data Encryption]: {{< url path="MSDocs.SqlServer.TransparentDataEncryption" >}}
