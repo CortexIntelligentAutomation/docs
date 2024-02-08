@@ -251,8 +251,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 
 ### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
 
-#### Cortex Blocks Provider Host folder
-
 Check that the {{% ctx %}} Gateway `Application Pool` user has rights to the `Cortex Blocks Provider Host folder` folder using the following steps:
 
 1. Navigate to `C:\ProgramData\Cortex`
