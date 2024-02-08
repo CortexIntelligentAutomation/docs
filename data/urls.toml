@@ -9,17 +9,17 @@
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.1]
-                    MainDoc =  "/blog/2024/01/06/2024.1/"
-                    ExpansionOfTheHAPlatform = "/blog/2024/01/06/2024.1/#expansion-of-the-ha-platform"
-                    ImprovedLogging = "/blog/2024/01/06/2024.1/#improved-logging-within-the-ha-platform"
-                    ConfigurableLogging = "/blog/2024/01/06/2024.1/#configurable-logging-within-the-ha-platform"
-                    ReducedLogging = "/blog/2024/01/06/2024.1/#reduction-of-maximum-number-of-logs-written-by-the-ha-platform"
-                    RemovedSqlServer = "/blog/2024/01/06/2024.1/#remove-dependency-on-sql-server"
-                    3rdParty = "/blog/2024/01/06/2024.1/#upgrade-3rd-party-client-libraries"
-                    ImprovedBlocks = "/blog/2024/01/06/2024.1/#improved-blocks"
-                    ImprovedInstallation = "/blog/2024/01/06/2024.1/#improved-installation"
-                    CORTEXGatewayRebranding = "/blog/2024/01/06/2024.1/#cortex-gateway-rebranding"
-                    ProductPortal = "/blog/2024/01/06/2024.1/#product-portal"
+                    MainDoc =  "/blog/2024/02/08/2024.1/"
+                    ExpansionOfTheHAPlatform = "/blog/2024/02/08/2024.1/#expansion-of-the-ha-platform"
+                    ImprovedLogging = "/blog/2024/02/08/2024.1/#improved-logging-within-the-ha-platform"
+                    ConfigurableLogging = "/blog/2024/02/08/2024.1/#configurable-logging-within-the-ha-platform"
+                    ReducedLogging = "/blog/2024/02/08/2024.1/#reduction-of-maximum-number-of-logs-written-by-the-ha-platform"
+                    RemovedSqlServer = "/blog/2024/02/08/2024.1/#remove-dependency-on-sql-server"
+                    3rdParty = "/blog/2024/02/08/2024.1/#upgrade-3rd-party-client-libraries"
+                    ImprovedBlocks = "/blog/2024/02/08/2024.1/#improved-blocks"
+                    ImprovedInstallation = "/blog/2024/02/08/2024.1/#improved-installation"
+                    CORTEXGatewayRebranding = "/blog/2024/02/08/2024.1/#cortex-gateway-rebranding"
+                    ProductPortal = "/blog/2024/02/08/2024.1/#product-portal"
             [Cortex.Blogs.Releases.2023.X]
                 MainDoc = "/blog/releases/2023.x"
                 [Cortex.Blogs.Releases.2023.3]
