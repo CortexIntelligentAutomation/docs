@@ -21,42 +21,9 @@ We recommend that the single-node Service Fabric instance, used by {{% ctx %}} G
 
 {{< section "/install-web-application-server/add-innovation-only/licensing.md">}}
 
-## Install SQL Server or SQL Express
-
-Use one of the following installation guides to install SQL Server or SQL Server Express:
-
-* <a href="/pdfs/Cortex Innovation - SQL Server 2016 Express Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Express Installation Guide</a>
-* <a href="/pdfs/Cortex Innovation - SQL Server 2016 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2016 Installation Guide</a>
-* <a href="/pdfs/Cortex Innovation - SQL Server 2019 Installation Guide.pdf">{{% ctx %}} Innovation - SQL Server 2019 Installation Guide</a>
-
 ## Get {{% ctx %}} Gateway Application Pool User
 
 A domain user account is required for the {{% ctx %}} Gateway application pool and must be created prior to performing the installation below.
-
-This user account is required to enable {{% ctx %}} Gateway to access the {{% ctx %}} database, with the following roles:
-
-* dbcreator
-* public
-
-To add roles to database users take the following steps:
-
-1. Open SQL Server Management Studio on the Web Application Server and log in.
-1. Expand the server node, then `Security` then `Logins`.
-1. If the user that will run the {{% ctx %}} Gateway application pool is not in the list of logins, take the following steps, otherwise skip to step 4:
-
-    1. Right-click the `Logins` node and click `New Login...`.
-    1. Enter the application pool user in the `Login name` box.
-    1. On the left pane, click `Server Roles`.
-    1. Check `public` and `dbcreator`
-    1. Click `OK`.
-
-1. If the user that will run the {{% ctx %}} Gateway application pool is in the list of logins, take the following steps:
-
-    1. Right-click on the application pool user.
-    1. Click `Properties`.
-    1. On the left pane, click `Server Roles`.
-    1. Check `public` and `dbcreator`.
-    1. Click `OK`.
 
 In line with best practices, this account should not be given administrator rights, nor should it be used for any purposes other than those specified for {{% ctx %}} Gateway.
 

@@ -72,21 +72,13 @@ Log on to Gateway and run through the setup wizard:
     1. Click `Complete Setup` to commit the changes.
     1. To test the permissions, log out as Administrator and then log in as a user with `Studio` permissions.
 
-## Configure the Gateway Databases to use Transparent Data Encryption
-
-{{% alert title="Note" %}}Transparent Data Encryption cannot be applied to SQL Express, only SQL Server instances.{{% /alert %}}
-
-Once Gateway has been configured, if you wish to encrypt the databases using [Transparent Data Encryption][] for improved security, this should now be performed by following the steps in [Configuring TDE][].
-
 ## Next Steps?
 
 1. [Try it out][]
 
-[Configuring TDE]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.ApplyTDE" >}}
-[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOut" >}}
-[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirements" >}}
 [Account Details]: {{< ref "#account-details" >}}
-[LDAP Connection]: {{< ref "#ldap-connection" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
+[LDAP Connection]: {{< ref "#ldap-connection" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
-[Transparent Data Encryption]: {{< url path="MSDocs.SqlServer.TransparentDataEncryption" >}}
+[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirements" >}}
+[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOut" >}}
