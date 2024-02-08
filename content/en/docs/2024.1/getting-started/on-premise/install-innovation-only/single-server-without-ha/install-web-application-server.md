@@ -210,8 +210,6 @@ Once the certificate has been imported, a `Friendly Name` should be assigned whi
 
 ### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
 
-#### Cortex Blocks Provider Host folder
-
 {{< section "/install-web-application-server/add-innovation-only/grant-gateway-user-additional-folder-permissions.md">}}
 
 ## Preserve installation files
