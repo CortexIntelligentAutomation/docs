@@ -58,7 +58,7 @@ For a full list of what has been introduced in this release, please see the [202
 [New Blocks]: {{< url path="Cortex.Blogs.Releases.2023.11.NewBlocks" version="2023.11" >}}
 [Support for Oracle Data Connections]: {{< url path="Cortex.Blogs.Releases.2023.11.OracleSupport" version="2023.11" >}}
 [Encrypted Headers are Supported in the Execute HTTP Request Block]: {{< url path="Cortex.Blogs.Releases.2023.11.EncryptedHeaders" version="2023.11" >}}
-[improved installation]: {{< url path="Cortex.Blogs.Releases.2023.11.EncryptedHeaders" version="2023.11" >}}
+[improved installation]: {{< url path="Cortex.Blogs.Releases.2023.11.ImprovedInstallation" version="2023.11" >}}
 [CORTEX Gateway Rebranding]: {{< url path="Cortex.Blogs.Releases.2023.11.CORTEXGatewayRebranding" version="2023.11" >}}
 [Product Portal]: {{< url path="Cortex.Blogs.Releases.2023.11.ProductPortal" version="2023.11" >}}
 [2023.11 Release Notes]: {{< url path="Cortex.Blogs.Releases.2023.11.MainDoc" version="2023.11" >}}

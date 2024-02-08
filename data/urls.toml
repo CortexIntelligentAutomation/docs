@@ -6,6 +6,20 @@
             MainDoc = "/blog/news"
         [Cortex.Blogs.Releases]
             MainDoc = "/blog/releases"
+            [Cortex.Blogs.Releases.2024.X]
+                MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.1]
+                    MainDoc =  "/blog/2024/01/06/2024.1/"
+                    ExpansionOfTheHAPlatform = "/blog/2024/01/06/2024.1/#expansion-of-the-ha-platform"
+                    ImprovedLogging = "/blog/2024/01/06/2024.1/#improved-logging-within-the-ha-platform"
+                    ConfigurableLogging = "/blog/2024/01/06/2024.1/#configurable-logging-within-the-ha-platform"
+                    ReducedLogging = "/blog/2024/01/06/2024.1/#reduction-of-maximum-number-of-logs-written-by-the-ha-platform"
+                    RemovedSqlServer = "/blog/2024/01/06/2024.1/#remove-dependency-on-sql-server"
+                    3rdParty = "/blog/2024/01/06/2024.1/#upgrade-3rd-party-client-libraries"
+                    ImprovedBlocks = "/blog/2024/01/06/2024.1/#improved-blocks"
+                    ImprovedInstallation = "/blog/2024/01/06/2024.1/#improved-installation"
+                    CORTEXGatewayRebranding = "/blog/2024/01/06/2024.1/#cortex-gateway-rebranding"
+                    ProductPortal = "/blog/2024/01/06/2024.1/#product-portal"
             [Cortex.Blogs.Releases.2023.X]
                 MainDoc = "/blog/releases/2023.x"
                 [Cortex.Blogs.Releases.2023.3]
@@ -376,7 +390,7 @@
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/triggers-service/"
         [Cortex.Guides.CortexInnovation.ExecutionApplication]
-            MainDoc = "/docs/guides/cortex-innovation/core-application/"
+            MainDoc = "/docs/guides/cortex-innovation/execution-application/"
             [Cortex.Guides.CortexInnovation.ExecutionApplication.Services]
                 MainDoc = "/docs/guides/cortex-innovation/execution-application/services/"
                 [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
@@ -982,14 +996,18 @@
                     MainDoc = "/docs/reference/blocks/text/find-and-remove-text/"
                     [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                        KnownLimitations = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block/#known-limitations"
                     [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveAllTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-all-text-block"
+                        KnownLimitations = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-all-text-block/#known-limitations"
                 [Cortex.Reference.Blocks.Text.FindAndReplaceText]
                     MainDoc = "/docs/reference/blocks/text/find-and-replace-text/"
                     [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
+                        KnownLimitations = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block/#known-limitations"
                     [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceAllTextBlock]
                         MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-all-text-block"
+                        KnownLimitations = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-all-text-block/#known-limitations"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
