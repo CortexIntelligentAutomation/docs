@@ -1,40 +1,42 @@
 ---
-title: "BlockTimeoutException"
-linkTitle: "BlockTimeoutException"
-description: "The exception thrown when the execution of a block exceeds the specified block timeout."
+title: "DuplicatedBlockIdException"
+linkTitle: "DuplicatedBlockIdException"
+description: "The exception thrown when trying to add a block with an ID that already exists."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.BlockTimeoutException)</p>
-{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
+
 ## Description
 
-The exception thrown when the execution of a block exceeds the specified block timeout.
+The exception thrown when trying to add a block with an ID that already exists.
 
 ## Reasons
 
-### Block Timeout Reached
+### Block with duplicate Block ID added
 
-Executing the block took longer than the [Block Timeout][].
+TODO
 
 #### Message Format
+
+TODO
 
 The format of the [Message][] is as follows:
 
 ```json
-"The block timed out because its execution time reached the Block Timeout of <block-timeout> milliseconds.
-Please click the HelpLink for more information on how to fix this."
+"Workspace <workspace-id> already contains block with ID '<block-id>': {2}"
 ```
 
-where:
-* `<block-timeout>` is the [block timeout][Block Timeout Property] for the block that threw the exception, in milliseconds.
-
 #### How to fix
+
+TODO
 
 Ensure the action that the block is taking is likely to complete within the given [TimePeriod][].
 
 ## Properties
+
+TODO
 
 ### Exception Type
 
@@ -45,6 +47,8 @@ The type of the exception (i.e. `BlockTimeoutException`).
 | Data Type | [String][] |
 
 ### Message
+
+TODO
 
 The exception message, providing information about the exception that occurred.
 
@@ -59,46 +63,6 @@ The URL for the relevant section of this exception's help page.
 | | |
 |-----------|------------|
 | Data Type | [String][] |
-
-### Block Timeout
-
-The block timeout.
-
-| | |
-|-----------|------------|
-| Data Type | [TimePeriod][] |
-
-### Execution ID
-
-The execution ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
-### Flow ID
-
-The flow ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
-### Workspace ID
-
-The workspace ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
-### Block ID
-
-The block ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
 
 ## Remarks
 
@@ -118,7 +82,6 @@ TODO
 
 * [String][]
 * [TimePeriod][]
-* [Guid][]
 
 ### Related Concepts
 
@@ -155,16 +118,11 @@ TODO
 [Start Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
 [End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
 
-[Block Timeout Property]: {{<ref "#block-timeout">}}
-[InnerException]: {{< ref "#innerexception" >}}
 [Message]: {{< ref "#message" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
-[Block Timeout]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty">}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
-
-[Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
