@@ -6,7 +6,7 @@ description: "The exception thrown when trying to retrieve a block that doesn't 
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.Flows.Blocks.BlockNotFoundException)</p>
+<p class="namespace">(Cortex.Exceptions.Flows.Workspaces.BlockNotFoundException)</p>
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
 
 ## Description
