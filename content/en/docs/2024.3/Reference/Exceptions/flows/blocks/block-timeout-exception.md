@@ -7,7 +7,7 @@ description: "The exception thrown when the execution of a block exceeds the spe
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.BlockTimeoutException)</p>
-{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
+
 ## Description
 
 The exception thrown when the execution of a block exceeds the specified block timeout.
@@ -28,6 +28,7 @@ Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
+
 * `<block-timeout>` is the [block timeout][Block Timeout Property] for the block that threw the exception, in milliseconds.
 
 #### How to fix
@@ -52,6 +53,46 @@ The exception message, providing information about the exception that occurred.
 |-----------|------------|
 | Data Type | [String][] |
 
+### Block Timeout
+
+The period of time in which a block must finish execution before timing out.
+
+| | |
+|-----------|------------|
+| Data Type | [TimePeriod][] |
+
+### ExecutionId
+
+The Id of the [execution][WhatIsAnExecution] running the block that has timed out.
+
+| | |
+|-----------|------------|
+| Data Type | [Guid][] |
+
+### FlowId
+
+The Id of the [flow][WhatIsAFlow] containing the block that has timed out.
+
+| | |
+|-----------|------------|
+| Data Type | [Guid][] |
+
+### WorkspaceId
+
+The Id of the [workspace][WhatIsAWorkspace] containing the block that has timed out.
+
+| | |
+|-----------|------------|
+| Data Type | [Guid][] |
+
+### BlockId
+
+The Id of the [block][WhatIsABlock] that has timed out.
+
+| | |
+|-----------|------------|
+| Data Type | [Guid][] |
+
 ### Help Link
 
 The URL for the relevant section of this exception's help page.
@@ -60,77 +101,33 @@ The URL for the relevant section of this exception's help page.
 |-----------|------------|
 | Data Type | [String][] |
 
-### Block Timeout
-
-The block timeout.
-
-| | |
-|-----------|------------|
-| Data Type | [TimePeriod][] |
-
-### Execution ID
-
-The execution ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
-### Flow ID
-
-The flow ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
-### Workspace ID
-
-The workspace ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
-### Block ID
-
-The block ID.
-
-| | |
-|-----------|------------|
-| Data Type | [Guid][] |
-
 ## Remarks
 
 ### Known Limitations
 
-TODO
-
-If a block is at a point that cannot cancel, then it will cancel at the next available opportunity.
+None
 
 ## See Also
 
-TODO
-
 ### Related Data Types
 
-TODO
-
-* [String][]
-* [TimePeriod][]
-* [Guid][]
+* Date & Time
+  * [TimePeriod][]
+* Text
+  * [String][]
+* Other
+  * [Guid][]
 
 ### Related Concepts
-
-TODO
 
 * [Blocks][]
 * [Block Properties][]
 * [Exceptions][]
+* [Executions][]
+* [Flows][]
+* [Workspaces][]
 
 ### Related Blocks
-
-TODO: Update list
 
 All Blocks except:
 
@@ -145,7 +142,7 @@ All Blocks except:
   
 ### External Documentation
 
-TODO
+None
 
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
@@ -162,9 +159,17 @@ TODO
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Block Timeout]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty">}}
+[Executions]: {{<url path ="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc">}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Flows]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc">}}
+[Workspaces]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
 
 [Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
+
+[WhatIsABlock]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc">}}
+[WhatIsAnExecution]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc">}}
+[WhatIsAFlow]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc">}}
+[WhatIsAWorkspace]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc">}}
