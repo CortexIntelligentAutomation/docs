@@ -15,23 +15,69 @@ The exception thrown when trying to get a specified occurrence of an item from a
 
 ## Reasons
 
-### Key not present in Dictionary
+### Occurrence provided is zero
 
-The key does not exist in the [Dictionary][] being searched.
+The occurrence provided is equal to `0`.
 
 #### Message Format
 
 The format of the [Message][] is as follows:
 
 ```json
-"The <nth> occurrence of the key <key-value> is not present in '<collection-object>' \r\nPlease click the HelpLink for more information on how to fix this."
+"<property-name> 0 cannot be used as it will perform no operations. 
+Please use a value greater or less than 0.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<property-name>` is the name of the property which is not present.
+
+#### How to fix
+
+Provide an [Occurrence][] which is non-zero.
+
+### Non-negative Occurrence Not Present
+
+The specified occurrence of the provided property is not present.
+
+#### Message Format
+
+The format of the [Message][] is as follows:
+
+```json
+"The <nth> occurrence of the key <key-value> is not present in '<collection-object>'
+Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
 * `<nth>` is the specific occurrence that could not be found
 * `<key-value>` is the value of the key that was searched for in the collection
-* `<collection-object>` is the collection in which the search for the key took place. In this case, this is `'Dictionary'`.
+* `<collection-object>` is the name of the collection in which the search for the key took place.
+
+#### How to fix
+
+TODO: How to fix for this reason?
+
+### Negative Occurrence Not Present
+
+The specified occurrence from last of the provided property is not present.
+
+#### Message Format
+
+The format of the [Message][] is as follows:
+
+```json
+"The <nth> from last occurrence of the key <key-value> is not present in '<collection-object>'
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<nth>` is the specific occurrence that could not be found
+* `<key-value>` is the value of the key that was searched for in the collection
+* `<collection-object>` is the name of the collection in which the search for the key took place.
 
 #### How to fix
 
