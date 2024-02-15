@@ -8,7 +8,7 @@ description: "The data type representing configuration for executing powershell 
 
 <p class="namespace">(Cortex.DataTypes.PowerShell.PowerShellWinRmSessionDetails)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
 ## Summary
 

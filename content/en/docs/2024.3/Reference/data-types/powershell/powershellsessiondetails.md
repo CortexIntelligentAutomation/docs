@@ -8,7 +8,7 @@ description: "Any data type representing configuration for executing powershell 
 
 <p class="namespace">(Cortex.DataTypes.PowerShell.PowerShellSessionDetails)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
 ## Summary
 
@@ -22,7 +22,7 @@ Any data type representing configuration for executing powershell scripts on a s
 | **Alias:**             | N/A |
 | **Description:**       | Any data type representing configuration for executing powershell scripts on a specified host. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `Object`, `dynamic` |
+| **Can be used as:**    | `PowerShellSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
