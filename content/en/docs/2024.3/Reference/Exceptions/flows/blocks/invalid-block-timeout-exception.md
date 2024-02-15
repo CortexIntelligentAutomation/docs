@@ -7,7 +7,6 @@ description: "The exception thrown when a block timeout is invalid."
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Flows.Blocks.InvalidBlockTimeoutException)</p>
-{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
 
 ## Description
 
@@ -15,13 +14,9 @@ The exception thrown when a block timeout is invalid.
 
 ## Reasons
 
-### Negative Block Timeout
-
-The [Block Timeout][Block Timeout Property] provided for the block is negative.
-
 ### Block Timeout Out of Range
 
-The [Block Timeout][Block Timeout Property] provided for the block is greater than the maximum value allowed, which is the [Int32][] maximum of `2,147,483,647`.
+The [Block Timeout][Block Timeout Property] provided for the block is either negative or greater than the maximum value allowed, which is the [Int32][] maximum of `2,147,483,647`.
 
 #### Message Format
 
@@ -58,14 +53,6 @@ The exception message, providing information about the exception that occurred.
 |-----------|------------|
 | Data Type | [String][] |
 
-### Help Link
-
-The URL for the relevant section of this exception's help page.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
 ### Block ID
 
 The ID of the block with an invalid timeout.
@@ -82,6 +69,14 @@ The duration in milliseconds that the block timeout provided to the block evalua
 |-----------|------------|
 | Data Type | [Double][] |
 
+### Help Link
+
+The URL for the relevant section of this exception's help page.
+
+| | |
+|-----------|------------|
+| Data Type | [String][] |
+
 ## Remarks
 
 ### Known Limitations
@@ -90,15 +85,16 @@ None
 
 ## See Also
 
-TODO
-
 ### Related Data Types
 
-TODO
-* [Double][]
-* [Guid][]
-* [String][]
-* [TimePeriod][]
+* Date & Time
+  * [TimePeriod][]
+* Numbers
+  * [Double][]
+* Text
+  * [String][]
+* Other
+  * [Guid][]
 
 ### Related Concepts
 
@@ -107,8 +103,6 @@ TODO
 * [Exceptions][]
 
 ### Related Blocks
-
-TODO: Update list
 
 All Blocks except:
 
@@ -123,7 +117,7 @@ All Blocks except:
   
 ### External Documentation
 
-TODO
+None
 
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
@@ -143,5 +137,6 @@ TODO
 
 [Double]: {{<url path="Cortex.Reference.DataTypes.Numbers.Double.MainDoc">}}
 [Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
+[Int32]: {{<url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc">}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
