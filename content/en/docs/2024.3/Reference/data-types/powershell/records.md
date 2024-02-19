@@ -1,18 +1,20 @@
 ---
 title: "Records"
 linkTitle: "Records"
-description: "TODO."
+description: "Used to represent messages that are returned during a PowerShell execution."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.PowerShell.Records)</p>
 
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
+
 ## Summary
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
-The `Records` data type is used to represent TODO.
+The `Records` data type is used to represent messages that are returned during a PowerShell execution. Messages are split into categories according to the severity of their log level [Error][ErrorRecords], [Warning][WarningRecords], [Debug][DebugRecords], [Progress][ProgressRecords], [Verbose][VerboseRecords], [Information][InformationRecords],
 
 | | |
 |-|-|
@@ -143,6 +145,13 @@ TODO
 ### External Documentation
 
 None
+
+[ErrorRecords]: : {{< ref "#errorrecords" >}}
+[WarningRecords]: : {{< ref "#warningrecords" >}}
+[DebugRecords]: : {{< ref "#debugrecords" >}}
+[ProgressRecords]: : {{< ref "#progressrecords" >}}
+[VerboseRecords]: : {{< ref "#verboserecords" >}}
+[InformationRecords]: : {{< ref "#informationrecords" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
