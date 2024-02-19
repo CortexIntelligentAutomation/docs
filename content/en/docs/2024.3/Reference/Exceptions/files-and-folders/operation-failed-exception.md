@@ -18,7 +18,7 @@ A Path exception was thrown, such as [InvalidFolderNameException][], [InvalidPat
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "Failed to <action> the path. Please see the 'PathExceptions' property for details on why the operation failed.
@@ -35,7 +35,7 @@ Multiple path exceptions were thrown by file operations being performed on multi
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "Failed to <action> <fail-count> of <path-count> paths. Please see the 'PathExceptions' property for details on why each operation failed.
