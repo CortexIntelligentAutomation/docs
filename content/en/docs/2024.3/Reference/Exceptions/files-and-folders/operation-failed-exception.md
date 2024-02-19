@@ -29,10 +29,6 @@ where:
 
 * `<action>` is the action taking place when the operation failed.
 
-#### How to fix
-
-TODO
-
 ### Multiple path exceptions were thrown
 
 Multiple path exceptions were thrown by file operations being performed on multiple file paths, such as [InvalidFolderNameException][], [InvalidPathException][], etc.
@@ -52,64 +48,17 @@ where:
 * `<fail-count>` is the number of paths that were attempted to be operated on where the operation failed.
 * `<path-count>` is the total number of paths that were attempted to be operated on.
 
-#### How to fix
-
-TODO
-
-## Properties
-
-TODO: Update with actual properties
-
-### Exception Type
-
-The type of the exception (i.e. `OperationFailedException`).
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Message
-
-The exception message, providing information about the exception that occurred.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Help Link
-
-The URL for the relevant section of this exception's help page.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
 ## Remarks
 
 ### Known Limitations
-TODO: The below was in here already before first pass editing, does it still need to be there or should it be removed?
 
-If any path in the specified filePaths is duplicated and no exception is thrown for that path, the block will only process the first occurrence of the path, skipping any other occurrences.
-If any path in the specified filePaths is null or empty, an <see cref="OperationFailedException">OperationFailedException</see> will be thrown, and the path added to the "IndexesOfNullOrEmptyPaths" list in <see cref="OperationFailedException">OperationFailedException</see>.
-If any path in the specified filePaths is null or empty, an <see cref="OperationFailedException">OperationFailedException</see> will be thrown, and the path added to the "IndexesOfNullOrEmptyPaths" list in <see cref="OperationFailedException">OperationFailedException</see>.
+None
 
 ## See Also
 
-### Related Data Types
+### External Documentation
 
-TODO: Include actual related data types.
-
-* [String][]
-
-### Related Concepts
-
-TODO: Include actual related concepts
-
-* [Blocks][]
-* [Block Properties][]
-* [Exceptions][]
-
-### Related Blocks
+None
 
 [Message]: {{< ref "#message" >}}
 

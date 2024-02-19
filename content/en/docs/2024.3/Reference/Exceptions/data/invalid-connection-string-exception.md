@@ -70,34 +70,6 @@ where:
 
 Ensure that a valid connection string is provided.
 
-## Properties
-
-TODO: Update with actual properties
-
-### Exception Type
-
-The type of the exception (i.e. `InvalidConnectionStringException`).
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Message
-
-The exception message, providing information about the exception that occurred.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Help Link
-
-The URL for the relevant section of this exception's help page.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
 ## Remarks
 
 ### Known Limitations
@@ -106,28 +78,8 @@ None
 
 ## See Also
 
-### Related Data Types
-
-TODO: Include actual related data types.
-
-* [String][]
-* [TimePeriod][]
-
-### Related Concepts
-
-TODO: Include actual related concepts
-
-* [Blocks][]
-* [Block Properties][]
-* [Exceptions][]
-
-### Related Blocks
-
-TODO: Get list of actually related blocks.
-
 ### External Documentation
 
-TODO: Include external documentation if any, otherwise None.
 None
 
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
