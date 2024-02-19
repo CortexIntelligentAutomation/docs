@@ -23,8 +23,6 @@ The data type provided for the property is one that does not allow null values, 
 
 The format of the message is as follows:
 
-[//]: <> (This is also a comment.)
-
 ```json
 "'<property-name>' cannot accept data types that do not allow null values (e.g. Int32, Boolean, Char, etc.); it must be provided a data type which allows null values.
 Please click the HelpLink for more information on how to fix this."
