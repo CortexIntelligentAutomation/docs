@@ -21,7 +21,7 @@ The connection string provided is `null`.
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "The connection string is null; it must be provided with a non-null value.
@@ -38,7 +38,7 @@ The connection string provided is empty (i.e.`""`).
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "The connection string is empty; it must be provided a value.
@@ -55,7 +55,7 @@ The connection string provided was invalid and failed
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "The connection string was invalid and failed with error message: <inner-exception-message>.

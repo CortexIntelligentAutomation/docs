@@ -43,7 +43,7 @@ The specified occurrence of the provided property is not present.
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "The <nth> occurrence of the key <key-value> is not present in '<collection-object>'
@@ -62,7 +62,7 @@ The specified occurrence from last of the provided property is not present.
 
 #### Message Format
 
-The format of the [Message][] is as follows:
+The format of the message is as follows:
 
 ```json
 "The <nth> from last occurrence of the key <key-value> is not present in '<collection-object>'
