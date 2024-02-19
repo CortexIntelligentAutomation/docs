@@ -37,7 +37,7 @@ where:
 
 Provide an [Occurrence][] which is non-zero.
 
-### Non-negative Occurrence Not Present
+### Non-negative Occurrence not present
 
 The specified occurrence of the provided property is not present.
 
@@ -56,11 +56,7 @@ where:
 * `<key-value>` is the value of the key that was searched for in the collection
 * `<collection-object>` is the name of the collection in which the search for the key took place.
 
-#### How to fix
-
-TODO: How to fix for this reason?
-
-### Negative Occurrence Not Present
+### Negative Occurrence not present
 
 The specified occurrence from last of the provided property is not present.
 
@@ -79,38 +75,6 @@ where:
 * `<key-value>` is the value of the key that was searched for in the collection
 * `<collection-object>` is the name of the collection in which the search for the key took place.
 
-#### How to fix
-
-TODO: How to fix for this reason?
-
-## Properties
-
-TODO: Update with actual properties
-
-### Exception Type
-
-The type of the exception (i.e. `OccurrenceNotPresentException`).
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Message
-
-The exception message, providing information about the exception that occurred.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
-### Help Link
-
-The URL for the relevant section of this exception's help page.
-
-| | |
-|-----------|------------|
-| Data Type | [String][] |
-
 ## Remarks
 
 ### Known Limitations
@@ -119,28 +83,8 @@ None
 
 ## See Also
 
-### Related Data Types
-
-TODO: Include actual related data types.
-
-* [String][]
-* [TimePeriod][]
-
-### Related Concepts
-
-TODO: Include actual related concepts
-
-* [Blocks][]
-* [Block Properties][]
-* [Exceptions][]
-
-### Related Blocks
-
-TODO: Get list of actually related blocks.
-
 ### External Documentation
 
-TODO: Include external documentation if any, otherwise None.
 None
 
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
