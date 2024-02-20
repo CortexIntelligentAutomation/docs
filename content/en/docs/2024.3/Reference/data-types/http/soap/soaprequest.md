@@ -9,16 +9,57 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Http.Soap.SoapRequest)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
 ## Summary
 
-## Properties
+The `SoapRequest` data type is used to represent a SOAP request.
 
-### SoapMessage
+| | |
+|-|-|
+| **Category:**          | Http                                                      |
+| **Name:**              | `SoapRequest`                                         |
+| **Full Name:**         | `Cortex.DataTypes.Http.Soap.SoapRequest`     |
+| **Alias:**             | N/A                                                      |
+| **Description:**       | Used to represent a SOAP request. |
+| **Default Value:**     | null                                                     |
+| **Can be used as:**    | `SoapRequest`, `Request`, `Object`, `dynamic`              |
+| **Can be cast to:**    | N/A                                                      |
 
-### Uri
+## Remarks
 
-### Headers
+### Property Editor Support
 
-### HttpVersion
+- The Expression Editor is available for [Input][] properties where the data type is `SoapRequest`.
+- The Literal Editor is available for [Input][] properties where the data type is `SoapRequest`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `SoapRequest`.
+
+### Known Limitations
+
+None
+
+## See Also
+
+### Related Data Types
+
+- [Soap11Message][]
+- [Soap12Message][]
+- [SoapMessage][]
+- [Request][]
+
+### Related Concepts
+
+None
+
+### External Documentation
+
+None
+
+[Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+
+[Soap11Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap11Message.MainDoc" >}}
+[Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
+[SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
+[Request]: {{< url path = "Cortex.Reference.DataTypes.Http.Request.MainDoc" >}}

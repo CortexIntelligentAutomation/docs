@@ -26,15 +26,7 @@ The `Microsoft365Credentials` data type is base class used to represent details 
 | **Can be used as:**    | `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
-## Properties
-
-### ObjectId
-
 ## Remarks
-
-### Create an Microsoft365Credentials
-
-### Convert Microsoft365Credentials to Text
 
 ### Property Editor Support
 

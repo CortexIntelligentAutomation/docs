@@ -31,25 +31,7 @@ The `EventSeverity` data type is used to represent the severity of an event when
 |                        | `Single` (e.g. `(Single)EventSeverity.Verbose` or `(System.Single)EventSeverity.Verbose` or `(float)EventSeverity.Verbose`)  |
 |                        | `Double` (e.g. `(Double)EventSeverity.Verbose` or `(System.Double)EventSeverity.Verbose` or `(double)EventSeverity.Verbose`)  |
 
-## Values
-
-### Verbose
-
-### Debug
-
-### Information
-
-### Warning
-
-### Error
-
-### Fatal
-
 ## Remarks
-
-### Create an EventSeverity
-
-### Convert EventSeverity to Text
 
 ### Property Editor Support
 

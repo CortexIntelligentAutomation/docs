@@ -31,15 +31,7 @@ The `PSRemotingErrorCode` data type is used to represent an error code explainin
 |                        | `Single` (e.g. `(Single)PSRemotingErrorCode.AccessDenied` or `(System.Single)PSRemotingErrorCode.AccessDenied` or `(float)PSRemotingErrorCode.AccessDenied`)  |
 |                        | `Double` (e.g. `(Double)PSRemotingErrorCode.AccessDenied` or `(System.Double)PSRemotingErrorCode.AccessDenied` or `(double)PSRemotingErrorCode.AccessDenied`)  |
 
-## Values
-
 ## Remarks
-
-### Creating a PSRemotingErrorCode
-
-### Convert PSRemotingErrorCode to Text
-
-### Convert PSRemotingErrorCode to a Number
 
 ### Property Editor Support
 

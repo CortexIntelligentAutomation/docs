@@ -17,7 +17,7 @@ The `SshUserCredentials` data type is used to represent password authentication 
 
 | | |
 |-|-|
-| **Category:**          | SSH                                                          |
+| **Category:**          | Ssh                                                          |
 | **Name:**              | `SshUserCredentials`                                         |
 | **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SshUserCredentials`     |
 | **Alias:**             | N/A                                                          |
@@ -26,19 +26,7 @@ The `SshUserCredentials` data type is used to represent password authentication 
 | **Can be used as:**    | `SshUserCredentials`, `SshCredentials`, `ISshCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                          |
 
-## Properties
-
-### Domain
-
-### Username
-
-### Password
-
 ## Remarks
-
-### Create an SshUserCredentials
-
-### Convert SshUserCredentials to Text
 
 ### Property Editor Support
 

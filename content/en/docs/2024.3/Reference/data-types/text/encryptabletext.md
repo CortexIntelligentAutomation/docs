@@ -11,6 +11,7 @@ description: "Used to represent text that can be, but does not need to be encryp
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
 
 ## Summary
+
 The `EncryptableText` datatype is used to represent text that can be, but does not need to be encrypted.
 
 | | |
@@ -26,33 +27,34 @@ The `EncryptableText` datatype is used to represent text that can be, but does n
 
 ## Remarks
 
-### Create an EncryptableText
-
-### Convert EncryptableText to Text
-
 ### Property Editor Support
+
 - The Expression Editor is available for [Input][] properties where the data type is `EncryptableText`.
 - The Literal Editor is available for [Input][] properties where the data type is `EncryptableText`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `EncryptableText`.
+
 ### Known Limitations
-none
+
+None
 
 ## See Also
 
 ### Related Data Types
- - [EncryptedText]
- - [String]
+
+- [EncryptedText]
+- [String]
 
 ### Related Concepts
- - [Encryptable And Encrypted Text]
- - [Working with Text]
+
+- [Working with Text]
+
 ### External Documentation
+
 None
 
 [EncryptedText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Encryptable And Encrypted Text]: {{< url path="Cortex.Blogs.Releases.2022.9.EncryptableAndEncryptedText" >}}
 [Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}

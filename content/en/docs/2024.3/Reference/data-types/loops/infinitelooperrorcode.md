@@ -31,19 +31,7 @@ The `InfiniteLoopErrorCode` data type is used to represent an error code explain
 |                        | `Single` (e.g. `(Single)InfiniteLoopErrorCode.IncrementIsZero` or `(System.Single)InfiniteLoopErrorCode.IncrementIsZero` or `(float)InfiniteLoopErrorCode.IncrementIsZero`)  |
 |                        | `Double` (e.g. `(Double)InfiniteLoopErrorCode.IncrementIsZero` or `(System.Double)InfiniteLoopErrorCode.IncrementIsZero` or `(double)InfiniteLoopErrorCode.IncrementIsZero`)  |
 
-## Values
-
-### IncrementIsZero
-
-### IncrementIsNegative
-
-### IncrementIsPositive
-
 ## Remarks
-
-### Create an InfiniteLoopErrorCode
-
-### Convert InfiniteLoopErrorCode to Text
 
 ### Property Editor Support
 

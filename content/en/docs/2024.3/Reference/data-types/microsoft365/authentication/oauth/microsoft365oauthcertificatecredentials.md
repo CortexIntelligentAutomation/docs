@@ -26,24 +26,7 @@ The `Microsoft365OAuthCertificateCredentials` data type is used to represent det
 | **Can be used as:**    | `Microsoft365OAuthCertificateCredentials`, `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
-
-## Properties
-
-### CertificatePath
-
-### CertificatePassword
-
-### ClientId
-
-### TenantId
-
-### ObjectId
-
 ## Remarks
-
-### Create a Microsoft365OAuthCertificateCredentials
-
-### Convert Microsoft365OAuthCertificateCredentials to Text
 
 ### Property Editor Support
 

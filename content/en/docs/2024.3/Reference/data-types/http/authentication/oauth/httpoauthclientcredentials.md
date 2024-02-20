@@ -1,6 +1,6 @@
 ---
-title: "HttpOAuthCientCredentials"
-linkTitle: "HttpOAuthCientCredentials"
+title: "HttpOAuthClientCredentials"
+linkTitle: "HttpOAuthClientCredentials"
 description: "Used to represent details required for OAuth authentication using client credentials."
 weight: 1
 ---
@@ -12,10 +12,6 @@ weight: 1
 {{< workinprogress >}}
 
 ## Summary
-
-## Properties
-
-### AccessTokenUri
 
 ### ClientAuthentication
 

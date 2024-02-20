@@ -9,16 +9,51 @@ weight: 1
 
 <p class="namespace">(Cortex.DataTypes.Http.Rest.HttpResponse)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
 ## Summary
 
-## Properties
+The `HttpResponse` data type is used to represent an HTTP request.
 
-### ResponseBody
+| | |
+|-|-|
+| **Category:**          | Http                                                         |
+| **Name:**              | `HttpResponse`                                         |
+| **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpResponse`                   |
+| **Alias:**             | N/A                                                          |
+| **Description:**       | Used to represent an HTTP response.             |
+| **Default Value:**     | null                                                         |
+| **Can be used as:**    | `HttpResponse`, `Object`, `dynamic`                    |
+| **Can be cast to:**    | N/A                                                          |
 
-### ErrorMessage
+## Remarks
 
-### Headers
+### Property Editor Support
 
-### StatusCode
+- The Expression Editor is available for [Input][] properties where the data type is `HttpResponse`.
+- The Literal Editor is available for [Input][] properties where the data type is `HttpResponse`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `HttpResponse`.
+
+### Known Limitations
+
+None
+
+## See Also
+
+### Related Data Types
+
+- [HttpResponse][]
+
+### Related Concepts
+
+None
+
+### External Documentation
+
+None
+
+[Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+
+[HttpResponse]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpResponse.MainDoc" >}}

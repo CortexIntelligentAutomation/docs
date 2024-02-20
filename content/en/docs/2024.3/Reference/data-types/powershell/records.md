@@ -12,8 +12,6 @@ description: "Used to represent messages that are returned during a PowerShell e
 
 ## Summary
 
-{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
-
 The `Records` data type is used to represent messages that are returned during a PowerShell execution. Messages are split into categories according to the severity of their log level [Error][ErrorRecords], [Warning][WarningRecords], [Debug][DebugRecords], [Progress][ProgressRecords], [Verbose][VerboseRecords], [Information][InformationRecords],
 
 | | |
@@ -95,32 +93,7 @@ Represents informational context destined for the host or user that occurs durin
 | Default Editor | [Expression][] |
 | Default Value | [IList][]&lt;[String][]&gt; with no value |
 
-## Exceptions
-
-TODO
-
 ## Remarks
-
-### Create a Records
-
-The following table shows some of the ways that `Records` can be created.
-
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use a `Records` constructor |  |  | Expression |  |
-
-A `Records` can also be created using the Literal Editor by filling in the necessary values for the following properties:
-
-TODO:
-
-| Property | Data Type | Example | Notes |
-|-|-|-|-|
-
-### Convert Records to Text
-
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of  |  | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -136,11 +109,12 @@ None
 
 ### Related Data Types
 
-None
+- [String][]
+- [IList][]
 
 ### Related Concepts
 
-TODO
+None
 
 ### External Documentation
 

@@ -1533,6 +1533,8 @@
                     DELETE = "/docs/reference/data-types/http/requestverb/#delete"
                     PATCH = "/docs/reference/data-types/http/requestverb/#patch"
                     HEAD = "/docs/reference/data-types/http/requestverb/#head"
+                [Cortex.Reference.DataTypes.Http.Request]
+                    MainDoc = "/docs/reference/data-types/http/request"
                 [Cortex.Reference.DataTypes.Http.HttpRequestVersion]
                     MainDoc = "/docs/reference/data-types/http/httprequestversion"
                     HTTP10 = "/docs/reference/data-types/http/httprequestversion/#http10"
