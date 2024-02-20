@@ -17,7 +17,7 @@ The exception thrown when trying to get an item from a [dictionary][IDictionary]
 
 ### Dictionary is empty
 
-The dictionary being accessed is empty.
+The [dictionary][IDictionary] being accessed is empty, i.e. it contains no items.
 
 #### Message Format
 
@@ -31,7 +31,7 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<key>` is the key that is not present.
-* `<dictionary>` is the dictionary that is being accessed. This is an empty dictionary.
+* `<dictionary>` is the empty [dictionary][IDictionary] that is being accessed.
 
 #### How to fix
 
@@ -39,7 +39,7 @@ Ensure that the dictionary is not empty, and has the key that is being used.
 
 ### Key not present in dictionary
 
-The key being used does not exist as a key in the dictionary being accessed.
+The key being used does not exist as a key in the [dictionary][IDictionary] being accessed.
 
 #### Message Format
 
@@ -53,11 +53,11 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<key>` is the key that is not present.
-* `<dictionary>` is the dictionary that is being accessed.
+* `<dictionary>` is the [dictionary][IDictionary] that is being accessed.
 
 #### How to fix
 
-Ensure that the key is correct and is present in the dictionary.
+Ensure that the key is correct and is present in the [dictionary][IDictionary].
 
 ## Remarks
 
@@ -71,4 +71,5 @@ None
 
 None
 
+[Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [IDictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc">}}
