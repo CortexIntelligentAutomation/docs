@@ -17,7 +17,7 @@ The `SshCredentials` data type is a base class used to represent details require
 
 | | |
 |-|-|
-| **Category:**          | SSH                                                      |
+| **Category:**          | Ssh                                                      |
 | **Name:**              | `SshCredentials`                                         |
 | **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SshCredentials`     |
 | **Alias:**             | N/A                                                      |
@@ -26,17 +26,7 @@ The `SshCredentials` data type is a base class used to represent details require
 | **Can be used as:**    | `SshCredentials`, `ISshCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 
-## Properties
-
-### Domain
-
-### Username
-
 ## Remarks
-
-### Create an SshCredentials
-
-### Convert SshCredentials to Text
 
 ### Property Editor Support
 

@@ -17,7 +17,7 @@ Any data type used to represent details required for authentication when working
 
 | | |
 |-|-|
-| **Category:**          | SSH                                            |
+| **Category:**          | Ssh                                            |
 | **Name:**              | `ISshCredentials`                                      |
 | **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.ISshCredentials`         |
 | **Alias:**             | N/A                                                    |
@@ -26,13 +26,7 @@ Any data type used to represent details required for authentication when working
 | **Can be used as:**    | `ISshCredentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
-## Properties
-
 ## Remarks
-
-### Create an ISshCredentials
-
-### Convert ISshCredentials to Text
 
 ### Property Editor Support
 
@@ -48,15 +42,6 @@ None
 
 ### Related Data Types
 
-- [BasicEmailSessionDetails][]
-- [EmailCredentials][]
-- [EmailUserCredentials][]
-- [EncryptableText][]
-- [EncryptedText][]
-- [HttpCredentials][]
-- [HttpUserCredentials][]
-- [IEmailCredentials][]
-- [IHttpCredentials][]
 - [ISshCredentials][]
 - [SshCertificateCredentials][]
 - [SshCredentials][]
@@ -65,22 +50,17 @@ None
 - [UserCredentials][]
 
 ### Related Concepts
+
 None
 
 ### External Documentation
+
 None
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[BasicEmailSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Email.BasicEmailSessionDetails.MainDoc" >}}
-[IEmailCredentials]: {{< url path="Cortex.Reference.DataTypes.Email.Authentication.IEmailCredentials.MainDoc" >}}
-[EmailCredentials]: {{< url path="Cortex.Reference.DataTypes.Email.Authentication.EmailCredentials.MainDoc" >}}
-[EmailUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Email.Authentication.EmailUserCredentials.MainDoc" >}}
-[IHttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.IHttpCredentials.MainDoc" >}}
-[HttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpCredentials.MainDoc" >}}
-[HttpUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpUserCredentials.MainDoc" >}}
 [ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
 [SshUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials.MainDoc" >}}
 
@@ -88,6 +68,3 @@ None
 [SshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCredentials.MainDoc" >}}
 [SshCertificateCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCertificateCredentials.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
-
-[EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
-[EncryptedText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}

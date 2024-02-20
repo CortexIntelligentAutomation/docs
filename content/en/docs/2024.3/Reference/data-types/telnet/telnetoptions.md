@@ -8,6 +8,8 @@ description: "Used to represent the set of telnet options used in the connection
 
 <p class="namespace">(Cortex.DataTypes.Telnet.TelnetOptions)</p>
 
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
+
 ## Summary
 
 The `TelnetOptions` data type is used to represent the set of telnet options used in the connection handshake between a telnet server and client.
@@ -20,7 +22,7 @@ The `TelnetOptions` data type is used to represent the set of telnet options use
 | **Name:**              | `TelnetOptions`                                |
 | **Full Name:**         | `Cortex.DataTypes.Telnet.TelnetOptions`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Error code explaining the reason a [TelnetServerException][] occurred. |
+| **Description:**       | Used to represent the set of telnet options used in the connection handshake between a telnet server and client. |
 | **Default Value:**     | `(TelnetOptions)0`                             |
 | **Can be used as:**    | `TelnetOptions`, `Object`, `dynamic`           |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)TelnetOptions.TerminalType` or `(System.Int16)TelnetOptions.TerminalType` or `(short)TelnetOptions.TerminalType`)  |
@@ -29,24 +31,12 @@ The `TelnetOptions` data type is used to represent the set of telnet options use
 |                        | `Single` (e.g. `(Single)TelnetOptions.TerminalType` or `(System.Single)TelnetOptions.TerminalType` or `(float)TelnetOptions.TerminalType`)  |
 |                        | `Double` (e.g. `(Double)TelnetOptions.TerminalType` or `(System.Double)TelnetOptions.TerminalType` or `(double)TelnetOptions.TerminalType`)  |
 
-## Values
-
-### TerminalType
-
-### TerminalWindowSize
-
 ## Remarks
-
-### Create a TelnetOptions
-
-### Convert TelnetOptions to Text
-
-### Convert TelnetOptions to a Number
-
 
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `TelnetOptions`.
+- The Literal Editor is available for [Input][] properties where the data type is `TelnetOptions`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `TelnetOptions`.
 
 ### Known Limitations
@@ -68,7 +58,6 @@ None
 ### External Documentation
 
 - [System.Enum][]
-
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 

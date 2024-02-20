@@ -19,24 +19,14 @@ The `SqlConnectionDetails` data type is used to represent details required to au
 |-|-|
 | **Category:**          | Sql                                                      |
 | **Name:**              | `SqlConnectionDetails`                                         |
-| **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SqlConnectionDetails`     |
+| **Full Name:**         | `Cortex.DataTypes.Sql.Authentication.SqlConnectionDetails`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent details required to authenticate with a server. |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `SqlConnectionDetails`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 
-## Properties
-
-### SqlConnection
-
-### SqlCredentials
-
 ## Remarks
-
-### Create an SqlConnectionDetails
-
-### Convert SshCredentials to Text
 
 ### Property Editor Support
 

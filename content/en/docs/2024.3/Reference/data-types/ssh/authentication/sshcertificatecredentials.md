@@ -17,7 +17,7 @@ The `SshCertificateCredentials` data type is used to represent public key creden
 
 | | |
 |-|-|
-| **Category:**          | SSH                                            |
+| **Category:**          | Ssh                                            |
 | **Name:**              | `SshCertificateCredentials`                                      |
 | **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SshCertificateCredentials`         |
 | **Alias:**             | N/A                                                    |
@@ -26,21 +26,7 @@ The `SshCertificateCredentials` data type is used to represent public key creden
 | **Can be used as:**    | `SshCertificateCredentials`, `SshCredentials`, `ISshCredentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
-## Properties
-
-### CertificatePath
-
-### CertificatePassword
-
-### Domain
-
-### Username
-
 ## Remarks
-
-### Create an SshCertificateCredentials
-
-### Convert SshCertificateCredentials to Text
 
 ### Property Editor Support
 

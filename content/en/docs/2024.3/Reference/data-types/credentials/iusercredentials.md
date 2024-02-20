@@ -25,13 +25,7 @@ Any data type representing password authentication credentials required to authe
 | **Can be used as:**    | `IUserCredentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
-## Properties
-
 ## Remarks
-
-### Create an object using UserCredentials
-
-### Convert UserCredentials to Text
 
 ### Property Editor Support
 
@@ -67,7 +61,7 @@ None
 
 ### External Documentation
 
-- [NetworkCredential][]
+None
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -84,9 +78,6 @@ None
 [ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
 [SshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCredentials.MainDoc" >}}
 [SshUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials.MainDoc" >}}
-
-[NetworkCredential]: {{< url path="MSDocs.DotNet.Api.System.Net.NetworkCredential" >}}
-
 
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [EncryptedText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}

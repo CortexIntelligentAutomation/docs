@@ -78,14 +78,6 @@ The PsConfiguration controls the PowerShell configuration that will be used by t
 
 ## Remarks
 
-### Create a PowerShellSessionDetails
-
-TODO
-
-### Convert PowerShellSessionDetails to Text
-
-TODO
-
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `PowerShellSessionDetails`.
