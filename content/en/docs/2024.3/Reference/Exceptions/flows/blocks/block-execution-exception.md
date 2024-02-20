@@ -19,7 +19,7 @@ This exception wraps the [InnerException][] that occurred when the block was exe
 
 ### Block Exception Occurred
 
-Executing the block threw an exception.
+Executing the block with the specified [Block ID][BlockID Property] threw an exception.
 
 #### Message Format
 
