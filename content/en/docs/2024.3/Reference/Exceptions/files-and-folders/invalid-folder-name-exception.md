@@ -17,7 +17,7 @@ The exception thrown when specifying an invalid folder name.
 
 ### Invalid folder name provided
 
-The folder name provided is invalid, e.g. containing invalid characters, being too long, etc.
+The folder name provided is invalid.
 
 #### Message Format
 
