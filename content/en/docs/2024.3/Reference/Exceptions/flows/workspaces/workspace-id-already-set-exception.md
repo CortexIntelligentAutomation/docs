@@ -1,45 +1,27 @@
 ---
-title: "BlockNotFoundException"
-linkTitle: "BlockNotFoundException"
-description: "The exception thrown when trying to retrieve a block that doesn't exist."
+title: "WorkspaceIdAlreadySetException"
+linkTitle: "WorkspaceIdAlreadySetException"
+description: "The exception thrown when trying to set the workspace ID when it has already been set."
 ---
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.Exceptions.Flows.Blocks.BlockNotFoundException)</p>
+<p class="namespace">(Cortex.Exceptions.Flows.Blocks.WorkspaceIdAlreadySetException)</p>
 {{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
 
 ## Description
 
-The exception thrown when trying to retrieve a block that doesn't exist.
+The exception thrown when trying to set the workspace ID when it has already been set.
 
 ## Reasons
 
-### Block ID of not added block passed
+### The workspace block ID is set twice
 
-TODO: The block ID of a block that was not added to a workspace was passed to the engine.
-
-### Entry point block not added to workspace
-
-TODO: The entry point for a workspace has been set, but the entry point block for that workspace does not exist.
-
-### Exception handler block has been set but exception handler block not added to workspace
-
-TODO: The exception handler for the workspace has been set, but the exception handler block for that workspace does not exist.
+This occurs when a workspace block that already exists has its ID set again.
 
 #### Message Format
 
-The format of the [Message][] is as follows:
-
-```json
-"No block with ID <block-id> exists on the workspace with ID <workspace-id>.
-Please click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-* `<block-id>` is the ID of the [block][Block] that cannot be found.
-* `<workspace-id>` is the ID of the [workspace][Workspace].
+TODO
 
 #### How to fix
 
@@ -49,7 +31,7 @@ TODO
 
 ### Exception Type
 
-The type of the exception (i.e. `BlockNotFoundException`).
+The type of the exception (i.e. `WorkspaceIdAlreadySetException`).
 
 | | |
 |-----------|------------|
@@ -62,11 +44,6 @@ The exception message, providing information about the exception that occurred.
 | | |
 |-----------|------------|
 | Data Type | [String][] |
-
-For this exception:
-
-* `<block-id>` will be replaced with the ID of the [block][block] that could not be found.
-* `<workspace-id>` will be replaced with the ID of the [workspace][Workspace].
 
 ### Help Link
 
