@@ -1,7 +1,7 @@
 ---
 title: "InvalidConnectionStringException"
 linkTitle: "InvalidConnectionStringException"
-description: "Exception thrown when an invalid connection string is used."
+description: "The exception thrown when an invalid connection string is used."
 ---
 
 # {{% param title %}}
@@ -15,43 +15,9 @@ Exception thrown when an invalid connection string is used.
 
 ## Reasons
 
-### Null connection string has been supplied
-
-The connection string provided is `null`.
-
-#### Message Format
-
-The format of the message is as follows:
-
-```json
-"The connection string is null; it must be provided with a non-null value.
-Please click the HelpLink for more information on how to fix this."
-```
-
-#### How to fix
-
-Ensure that the connection string provided is not `null`.
-
-### Empty connection string has been supplied
-
-The connection string provided is empty (i.e.`""`).
-
-#### Message Format
-
-The format of the message is as follows:
-
-```json
-"The connection string is empty; it must be provided a value.
-Please click the HelpLink for more information on how to fix this."
-```
-
-#### How to fix
-
-Ensure that a non-empty connection string is provided.
-
 ### Invalid connection string has been supplied
 
-The connection string provided was invalid and failed
+The connection string provided was invalid.
 
 #### Message Format
 
