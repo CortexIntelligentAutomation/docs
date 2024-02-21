@@ -31,6 +31,10 @@ where:
 
 * `<message>` is the user-defined message from the [Throw New Flow Exception block][ThrowNewFlowException Block] properties.
 
+#### How to fix
+
+Ensure that the issue that occurred that caused the execution to progress through to the [Throw New Flow Exception block][ThrowNewFlowException Block] does not occur.
+
 ## Remarks
 
 ### Known Limitations
