@@ -33,6 +33,10 @@ where:
 * `<property-name>` is the name of the property containing the folder name which threw this exception.
 * `<property-value>` is the value of the property, i.e. the folder name, which was invalid.
 
+#### How to fix
+
+Ensure that the folder name provided is a valid folder.
+
 ## Remarks
 
 ### Known Limitations

@@ -17,7 +17,7 @@ The exception thrown when an issue occurs with a HTTP response.
 
 ### Response envelope in SOAP response is not valid XML
 
-The response envelope returned from a SOAP response is not valid XML.
+The [response envelope][ResponseEnvelope] returned from a SOAP response is not valid XML.
 
 #### Message Format
 
@@ -27,6 +27,10 @@ The format of the exception message is as follows:
 "Invalid 'Response Envelope' returned. The 'Response Envelope' is not valid XML.
 Please click the HelpLink for more information on how to fix this."
 ```
+
+#### How to fix
+
+Ensure that the [response envelope][ResponseEnvelope] in the [SoapResponse][] is valid XML.
 
 ## Remarks
 
@@ -41,3 +45,5 @@ None
 None
 
 [ExecuteSOAPRequestBlock]: {{<url path="Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest.MainDoc">}}
+[SoapResponse]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapResponse.MainDoc">}}
+[ResponseEnvelope]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapResponse.ResponseEnvelope">}}
