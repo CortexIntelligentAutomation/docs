@@ -35,11 +35,11 @@ where:
 
 #### How to fix
 
-Provide an [Occurrence][] which is non-zero.
+Provide an occurrence which is non-zero.
 
-### Non-negative Occurrence not present
+### Positive occurrence not present
 
-The specified occurrence of the provided property is not present.
+The nth occurrence is not present.
 
 #### Message Format
 
@@ -52,13 +52,17 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<nth>` is the specific occurrence that could not be found
+* `<nth>` is the specific occurrence that could not be found (e.g. 1st, 2nd, 3rd)
 * `<key-value>` is the value of the key that was searched for in the collection
 * `<collection-object>` is the name of the collection in which the search for the key took place.
 
-### Negative Occurrence not present
+#### How to fix
 
-The specified occurrence from last of the provided property is not present.
+Provide an occurrence which is present (e.g. if there are 3 occurrences, you must specify a value between 1 and 3).
+
+### Negative occurrence not present
+
+The nth from last occurrence is not present.
 
 #### Message Format
 
@@ -71,9 +75,13 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<nth>` is the specific occurrence that could not be found
+* `<nth>` is the specific occurrence that could not be found (e.g. 1st, 2nd, 3rd)
 * `<key-value>` is the value of the key that was searched for in the collection
 * `<collection-object>` is the name of the collection in which the search for the key took place.
+
+#### How to fix
+
+Provide an occurrence from last which is present (e.g. if there are 3 occurrences, you must specify a value between -1 and -3).
 
 ## Remarks
 

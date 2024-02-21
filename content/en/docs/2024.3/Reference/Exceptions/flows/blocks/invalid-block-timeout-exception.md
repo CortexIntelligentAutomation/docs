@@ -91,6 +91,7 @@ None
   * [TimePeriod][]
 * Numbers
   * [Double][]
+  * [Int32][]
 * Text
   * [String][]
 * Other
@@ -100,6 +101,7 @@ None
 
 * [Blocks][]
 * [Block Properties][]
+* [Block Timeout Property][Block Timeout]
 * [Exceptions][]
 
 ### Related Blocks
@@ -128,6 +130,7 @@ None
 [End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[Block Timeout]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty">}}
 [Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Block Timeout Property]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty">}}
 
