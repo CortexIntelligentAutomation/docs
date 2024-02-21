@@ -1,7 +1,7 @@
 ---
 title: "SshCertificateCredentials"
 linkTitle: "SshCertificateCredentials"
-description: "Used to represent public key credentials required to authenticate with a server."
+description: "Used to represent public key credentials required to authenticate with an SSH server."
 weight: 1
 ---
 
@@ -13,15 +13,15 @@ weight: 1
 
 ## Summary
 
-The `SshCertificateCredentials` data type is used to represent public key credentials required to authenticate with a server when working with SSH.
+The `SshCertificateCredentials` data type is used to represent public key credentials required to authenticate with an SSH server.
 
 | | |
 |-|-|
 | **Category:**          | Ssh                                            |
 | **Name:**              | `SshCertificateCredentials`                                      |
-| **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SshCertificateCredentials`         |
+| **Full Name:**         | `Cortex.DataTypes.Ssh.Authentication.SshCertificateCredentials`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent details required to authenticate with a server, using public key credentials. |
+| **Description:**       | Used to represent public key credentials required to authenticate with an SSH server. |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `SshCertificateCredentials`, `SshCredentials`, `ISshCredentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |

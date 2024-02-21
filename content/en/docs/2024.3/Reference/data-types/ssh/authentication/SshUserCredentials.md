@@ -1,7 +1,7 @@
 ---
 title: "SshUserCredentials"
 linkTitle: "SshUserCredentials"
-description: "Used to represent password authentication credentials required to authenticate with a server."
+description: "Used to represent password authentication credentials required to authenticate with an SSH server."
 weight: 1
 ---
 
@@ -13,15 +13,15 @@ weight: 1
 
 ## Summary
 
-The `SshUserCredentials` data type is used to represent password authentication credentials required to authenticate with a server when working with SSH.
+The `SshUserCredentials` data type is used to represent password authentication credentials required to authenticate with an SSH server.
 
 | | |
 |-|-|
 | **Category:**          | Ssh                                                          |
 | **Name:**              | `SshUserCredentials`                                         |
-| **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SshUserCredentials`     |
+| **Full Name:**         | `Cortex.DataTypes.Ssh.Authentication.SshUserCredentials`     |
 | **Alias:**             | N/A                                                          |
-| **Description:**       | Used to represent password authentication credentials required to authenticate with a server. |
+| **Description:**       | Used to represent password authentication credentials required to authenticate with an SSH server. |
 | **Default Value:**     | null                                                         |
 | **Can be used as:**    | `SshUserCredentials`, `SshCredentials`, `ISshCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                          |

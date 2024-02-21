@@ -36,7 +36,7 @@ The `InfiniteLoopErrorCode` data type is used to represent an error code explain
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `InfiniteLoopErrorCode`.
-- The Literal Editor is available for [Input][] properties where the data type is `InfiniteLoopErrorCode`.
+- The Literal Editor is not available for [Input][] properties where the data type is `InfiniteLoopErrorCode`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `InfiniteLoopErrorCode`.
 
 ### Known Limitations

@@ -1,7 +1,7 @@
 ---
 title: "Records"
 linkTitle: "Records"
-description: "Used to represent messages that are returned during a PowerShell execution."
+description: "Used to represent messages that are returned while executing a PowerShell command or script."
 ---
 
 # {{% param title %}}
@@ -12,7 +12,16 @@ description: "Used to represent messages that are returned during a PowerShell e
 
 ## Summary
 
-The `Records` data type is used to represent messages that are returned during a PowerShell execution. Messages are split into categories according to the severity of their log level [Error][ErrorRecords], [Warning][WarningRecords], [Debug][DebugRecords], [Progress][ProgressRecords], [Verbose][VerboseRecords], [Information][InformationRecords],
+The `Records` data type is used to represent messages that are returned while executing a PowerShell command or script.
+
+Messages are categorised as:
+
+- [ErrorRecords][ErrorRecords]
+- [WarningRecords][WarningRecords]
+- [DebugRecords][DebugRecords]
+- [ProgressRecords][ProgressRecords]
+- [VerboseRecords][VerboseRecords]
+- [InformationRecords][InformationRecords]
 
 | | |
 |-|-|
@@ -20,17 +29,16 @@ The `Records` data type is used to represent messages that are returned during a
 | **Name:**              | `Records`                                      |
 | **Full Name:**         | `Cortex.DataTypes.PowerShell.Records`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | TODO. |
+| **Description:**       | Used to represent messages that are returned while executing a PowerShell command or script. |
 | **Default Value:**     | null                                                   |
-| **Can be used as:**    | `TODO`, `Object`, `dynamic`                 |
+| **Can be used as:**    | `Records`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
 ## Properties
 
 ### ErrorRecords
 
-Represents the non-terminating errors that occur from running commands or scripts during PowerShell's execution.
-
+Represents the non-terminating errors that occurred when running a PowerShell command or script.
 | | |
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[String][]&gt; |
@@ -40,7 +48,7 @@ Represents the non-terminating errors that occur from running commands or script
 
 ### WarningRecords
 
-Represents the warning messages that occur from running commands or scripts during PowerShell's execution.
+Represents warning messages output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +59,7 @@ Represents the warning messages that occur from running commands or scripts duri
 
 ### DebugRecords
 
-Represents the debug messages that occur from running commands or scripts during PowerShell's execution.
+Represents debug messages output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -62,7 +70,7 @@ Represents the debug messages that occur from running commands or scripts during
 
 ### ProgressRecords
 
-Represents the status of a running command or script that occurs during PowerShell's execution.
+Represents the status of a PowerShell command or script at a point in time.
 
 | | |
 |--------------------|---------------------------|
@@ -73,7 +81,7 @@ Represents the status of a running command or script that occurs during PowerShe
 
 ### VerboseRecords
 
-Represents more in depth information about the running of commands or scripts that occurs during PowerShell's execution.
+Represents detailed or diagnostic information, output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -84,7 +92,7 @@ Represents more in depth information about the running of commands or scripts th
 
 ### InformationRecords
 
-Represents informational context destined for the host or user that occurs during PowerShell's execution.
+Represents general information output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -120,12 +128,12 @@ None
 
 None
 
-[ErrorRecords]: : {{< ref "#errorrecords" >}}
-[WarningRecords]: : {{< ref "#warningrecords" >}}
-[DebugRecords]: : {{< ref "#debugrecords" >}}
-[ProgressRecords]: : {{< ref "#progressrecords" >}}
-[VerboseRecords]: : {{< ref "#verboserecords" >}}
-[InformationRecords]: : {{< ref "#informationrecords" >}}
+[ErrorRecords]: {{< ref "#errorrecords" >}}
+[WarningRecords]: {{< ref "#warningrecords" >}}
+[DebugRecords]: {{< ref "#debugrecords" >}}
+[ProgressRecords]: {{< ref "#progressrecords" >}}
+[VerboseRecords]: {{< ref "#verboserecords" >}}
+[InformationRecords]: {{< ref "#informationrecords" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -135,5 +143,3 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [IList]: {{< url path="Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
-
-[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}

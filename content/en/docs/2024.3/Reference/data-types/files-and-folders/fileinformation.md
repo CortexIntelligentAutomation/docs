@@ -8,59 +8,30 @@ description: "Used to represent information about a file."
 
 <p class="namespace">(Cortex.DataTypes.FilesAndFolders.FileInformation)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
 ## Summary
 
-## Properties
+The `FileInformation` datatype is used to represent information about a file.
 
-### Extension
-
-### Path
-
-### Name
-
-### ParentRoot
-
-### ParentPath
-
-### SizeInBytes
-
-### IsArchive
-
-### IsCompressed
-
-### IsEncrypted
-
-### IsHidden
-
-### IsNormal
-
-### IsTemporary
-
-### IsReadOnly
-
-### IsSystem
-
-### CreationTimeLocal
-
-### CreationTimeUtc
-
-### LastAccessTimeLocal
-
-### LastAccessTimeUtc
-
-### LastWriteTimeLocal
-
-### LastWriteTimeUtc
+| | |
+|-|-|
+| **Category:**          | Files & Folders                                                      |
+| **Name:**              | `FileInformation`                                                        |
+| **Full Name:**         | `Cortex.DataTypes.FilesAndFolders.FileInformation`                                                 |
+| **Alias:**             | N/A |
+| **Description:**       | Used to represent information about a file. |
+| **Default Value:**     | `null` |
+| **Can be used as:**    | `FileInformation`, `FileSystemInformation`, `object`, `dynamic` |
+| **Can be cast to:**    | N/A |
 
 ## Remarks
 
-### Create a FileInformation
-
-### Convert FileInformation to Text
-
 ### Property Editor Support
+
+- The Expression Editor is available for [Input][] properties where the data type is `FileInformation`.
+- The Literal Editor is not available for [Input][] properties where the data type is `FileInformation`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `FileInformation`.
 
 ### Known Limitations
 
@@ -68,6 +39,20 @@ description: "Used to represent information about a file."
 
 ### Related Data Types
 
+- [FileSystemInformation][]
+
 ### Related Concepts
 
+- [Working With Files & Folders][]
+
 ### External Documentation
+
+None
+
+[Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+[Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+[InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+
+[FileSystemInformation]: {{< url path="Cortex.Reference.DataTypes.FilesAndFolders.FileSystemInformation.MainDoc" >}}
+
+[Working With Files & Folders]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.MainDoc" >}}

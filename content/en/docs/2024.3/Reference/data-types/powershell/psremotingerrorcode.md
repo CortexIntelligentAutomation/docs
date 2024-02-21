@@ -1,7 +1,7 @@
 ---
 title: "PSRemotingErrorCode"
 linkTitle: "PSRemotingErrorCode"
-description: "Used to represent formats available for encoding and decoding text."
+description: "Used to represent an error code explaining the reason a PSRemotingException occurred."
 ---
 
 # {{% param title %}}
@@ -55,7 +55,6 @@ None
 
 - [Explicit Casting][]
 - [Working with Enums][]
-- [Working with Text][]
 
 ### External Documentation
 
@@ -68,7 +67,6 @@ None
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
-[working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 [Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

@@ -1495,6 +1495,8 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/contentoptions"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileSystemInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/filesysteminformation"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileMatch]
                     MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]

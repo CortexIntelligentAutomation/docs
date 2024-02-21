@@ -1,26 +1,24 @@
 ---
 title: "PowerShellSessionDetails"
 linkTitle: "PowerShellSessionDetails"
-description: "Any data type representing configuration for executing powershell scripts on a specified host."
+description: "Any data type representing configuration for executing PowerShell commands or scripts on a specified host."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.PowerShell.PowerShellSessionDetails)</p>
 
-{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
-
 ## Summary
 
-Any data type representing configuration for executing powershell scripts on a specified host.
+Any data type representing configuration for executing PowerShell commands or scripts on a specified host.
 
 | | |
 |-|-|
-| **Category:**          | Data |
+| **Category:**          | PowerShell |
 | **Name:**              | `PowerShellSessionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.PowerShell.PowerShellSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | Any data type representing configuration for executing powershell scripts on a specified host. |
+| **Description:**       | Any data type representing configuration for executing PowerShell commands or scripts on a specified host. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `PowerShellSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
@@ -78,6 +76,24 @@ The PsConfiguration controls the PowerShell configuration that will be used by t
 
 ## Remarks
 
+### Most Common PowerShellSessionDetails Data Types
+
+Any of the following data types can be used where a `PowerShellSessionDetails` is required:
+
+* [PowerShellWinRmSessionDetails][]
+
+### Create a PowerShellSessionDetails
+
+For some of the ways that a `PowerShellSessionDetails` can be created, please see each of the `PowerShellSessionDetails` data types:
+
+* [PowerShellWinRmSessionDetails][]
+
+### Convert PowerShellSessionDetails to Text
+
+For some of the ways that a `PowerShellSessionDetails` can be converted to text, please see each of the `PowerShellSessionDetails` data types:
+
+* [PowerShellWinRmSessionDetails][]
+
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `PowerShellSessionDetails`.
@@ -92,9 +108,10 @@ None
 
 ### Related Data Types
 
-* [ServerDetails][]
-* [UserCredentials][]
 * [PowerShellWinRMSessionDetails][]
+* [ServerDetails][]
+* [String][]
+* [UserCredentials][]
 
 ### Related Concepts
 
