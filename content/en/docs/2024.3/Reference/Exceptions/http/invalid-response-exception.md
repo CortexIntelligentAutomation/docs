@@ -17,7 +17,7 @@ The exception thrown when an issue occurs with a HTTP response.
 
 ### Response envelope in SOAP response is not valid XML
 
-The response envelope returned from a SOAP response is not valid XML; see [Execute SOAP Request block][ExecuteSOAPRequestBlock] for more information.
+The response envelope returned from a SOAP response is not valid XML.
 
 #### Message Format
 
