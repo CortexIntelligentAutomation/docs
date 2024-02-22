@@ -1,18 +1,27 @@
 ---
 title: "Records"
 linkTitle: "Records"
-description: "TODO."
+description: "Used to represent messages that are returned while executing a PowerShell command or script."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.PowerShell.Records)</p>
 
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
+
 ## Summary
 
-{{< workinprogress >}}
+The `Records` data type is used to represent messages that are returned while executing a PowerShell command or script.
 
-The `Records` data type is used to represent TODO.
+Messages are categorised as:
+
+- [ErrorRecords][ErrorRecords]
+- [WarningRecords][WarningRecords]
+- [DebugRecords][DebugRecords]
+- [ProgressRecords][ProgressRecords]
+- [VerboseRecords][VerboseRecords]
+- [InformationRecords][InformationRecords]
 
 | | |
 |-|-|
@@ -20,17 +29,16 @@ The `Records` data type is used to represent TODO.
 | **Name:**              | `Records`                                      |
 | **Full Name:**         | `Cortex.DataTypes.PowerShell.Records`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | TODO. |
+| **Description:**       | Used to represent messages that are returned while executing a PowerShell command or script. |
 | **Default Value:**     | null                                                   |
-| **Can be used as:**    | `TODO`, `Object`, `dynamic`                 |
+| **Can be used as:**    | `Records`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
 ## Properties
 
 ### ErrorRecords
 
-Represents the non-terminating errors that occur from running commands or scripts during PowerShell's execution.
-
+Represents the non-terminating errors that occurred when running a PowerShell command or script.
 | | |
 |--------------------|---------------------------|
 | Data Type | [IList][]&lt;[String][]&gt; |
@@ -40,7 +48,7 @@ Represents the non-terminating errors that occur from running commands or script
 
 ### WarningRecords
 
-Represents the warning messages that occur from running commands or scripts during PowerShell's execution.
+Represents warning messages output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +59,7 @@ Represents the warning messages that occur from running commands or scripts duri
 
 ### DebugRecords
 
-Represents the debug messages that occur from running commands or scripts during PowerShell's execution.
+Represents debug messages output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -62,7 +70,7 @@ Represents the debug messages that occur from running commands or scripts during
 
 ### ProgressRecords
 
-Represents the status of a running command or script that occurs during PowerShell's execution.
+Represents the status of a PowerShell command or script at a point in time.
 
 | | |
 |--------------------|---------------------------|
@@ -73,7 +81,7 @@ Represents the status of a running command or script that occurs during PowerShe
 
 ### VerboseRecords
 
-Represents more in depth information about the running of commands or scripts that occurs during PowerShell's execution.
+Represents detailed or diagnostic information, output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -84,7 +92,7 @@ Represents more in depth information about the running of commands or scripts th
 
 ### InformationRecords
 
-Represents informational context destined for the host or user that occurs during PowerShell's execution.
+Represents general information output when running a PowerShell command or script.
 
 | | |
 |--------------------|---------------------------|
@@ -93,32 +101,7 @@ Represents informational context destined for the host or user that occurs durin
 | Default Editor | [Expression][] |
 | Default Value | [IList][]&lt;[String][]&gt; with no value |
 
-## Exceptions
-
-TODO
-
 ## Remarks
-
-### Create a Records
-
-The following table shows some of the ways that `Records` can be created.
-
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use a `Records` constructor |  |  | Expression |  |
-
-A `Records` can also be created using the Literal Editor by filling in the necessary values for the following properties:
-
-TODO:
-
-| Property | Data Type | Example | Notes |
-|-|-|-|-|
-
-### Convert Records to Text
-
-| Method | Example | Result | Editor&nbsp;Support | Notes |
-|-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of  |  | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -134,15 +117,23 @@ None
 
 ### Related Data Types
 
-None
+- [String][]
+- [IList][]
 
 ### Related Concepts
 
-TODO
+None
 
 ### External Documentation
 
 None
+
+[ErrorRecords]: {{< ref "#errorrecords" >}}
+[WarningRecords]: {{< ref "#warningrecords" >}}
+[DebugRecords]: {{< ref "#debugrecords" >}}
+[ProgressRecords]: {{< ref "#progressrecords" >}}
+[VerboseRecords]: {{< ref "#verboserecords" >}}
+[InformationRecords]: {{< ref "#informationrecords" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -152,5 +143,3 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [IList]: {{< url path="Cortex.Reference.DataTypes.Collections.IList.MainDoc" >}}
-
-[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}

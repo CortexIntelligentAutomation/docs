@@ -1,28 +1,28 @@
 ---
 title: "PowerShellWinRmSessionDetails"
 linkTitle: "PowerShellWinRmSessionDetails"
-description: "The data type representing configuration for executing powershell scripts on a specified host, via WinRm."
+description: "Used to represent configuration for executing PowerShell commands or scripts on a specified host, via WinRm."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.DataTypes.PowerShell.PowerShellWinRmSessionDetails)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}} Improvements to this page are planned for the future. {{% /alert %}}
 
 ## Summary
 
-The data type representing configuration for executing powershell scripts on a specified host, via WinRm.
+The `PowerShellWinRmSessionDetails` data type is used to represent configuration for executing PowerShell commands or scripts on a specified host, via WinRm.
 
 | | |
 |-|-|
-| **Category:**          | Data |
+| **Category:**          | PowerShell |
 | **Name:**              | `PowerShellWinRmSessionDetails` |
 | **Full Name:**         | `Cortex.DataTypes.PowerShell.PowerShellWinRmSessionDetails` |
 | **Alias:**             | N/A |
-| **Description:**       | The data type representing configuration for executing powershell scripts on a specified host, via WinRm. |
+| **Description:**       | Used to represent configuration for executing PowerShell commands or scripts on a specified host, via WinRm. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `PowerShellSessionDetails`, `Object`, `dynamic` |
+| **Can be used as:**    | `PowerShellWinRmSessionDetails`, `PowerShellSessionDetails`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
@@ -78,24 +78,6 @@ The PsConfiguration controls the PowerShell configuration that will be used by t
 
 ## Remarks
 
-### Most Common PowerShellWinRmSessionDetails Data Types
-
-Any of the following data types can be used where a `PowerShellWinRmSessionDetails` is required:
-
-* [PowerShellWinRmSessionDetails][]
-
-### Create a PowerShellWinRmSessionDetails
-
-For some of the ways that a `PowerShellWinRmSessionDetails` can be created, please see each of the `PowerShellWinRmSessionDetails` data types:
-
-* [PowerShellWinRmSessionDetails][]
-
-### Convert PowerShellWinRmSessionDetails to Text
-
-For some of the ways that a `PowerShellWinRmSessionDetails` can be converted to text, please see each of the `PowerShellWinRmSessionDetails` data types:
-
-* [PowerShellWinRmSessionDetails][]
-
 ### Property Editor Support
 
 * The Expression Editor is available for [Input][] properties where the data type is `PowerShellWinRmSessionDetails`.
@@ -110,9 +92,10 @@ None
 
 ### Related Data Types
 
-* [ServerDetails][]
-* [UserCredentials][]
 * [PowerShellSessionDetails][]
+* [ServerDetails][]
+* [String][]
+* [UserCredentials][]
 
 ### Related Concepts
 
