@@ -31,11 +31,11 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<key>` is the key being used to add an item.
-* `<dictionary>` is the dictionary to which the item is trying to be added.
+* `<dictionary>` is the [dictionary][IDictionary] to which the item is trying to be added.
 
 #### How to fix
 
-Ensure that the key is not a duplicate of an already existing key.
+Ensure that the key is not a duplicate of an already existing key in the [dictionary][IDictionary].
 
 ## Remarks
 
