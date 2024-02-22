@@ -1,7 +1,7 @@
 ---
 title: "HttpRequest"
 linkTitle: "HttpRequest"
-description: "Used to represent an HTTP request."
+description: "Used to represent an HTTP REST request."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `HttpRequest` data type is used to represent an HTTP request.
+The `HttpRequest` data type is used to represent an HTTP REST request.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `HttpRequest` data type is used to represent an HTTP request.
 | **Name:**              | `HttpRequest`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpRequest`                   |
 | **Alias:**             | N/A                                                          |
-| **Description:**       | Used to represent an HTTP request.             |
+| **Description:**       | Used to represent an HTTP REST request.             |
 | **Default Value:**     | null                                                         |
 | **Can be used as:**    | `HttpRequest`, `Request`, `Object`, `dynamic`                    |
 | **Can be cast to:**    | N/A                                                          |

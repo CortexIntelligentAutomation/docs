@@ -1,7 +1,7 @@
 ---
 title: "Request"
 linkTitle: "Request"
-description: "Used to represent any request."
+description: "Any data type that is used to represent an HTTP request."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `Request` data type is used to represent any request.
+Any data type that is used to represent an HTTP request.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `Request` data type is used to represent any request.
 | **Name:**              | `Request`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Request`     |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent any request. |
+| **Description:**       | Any data type that is used to represent an HTTP request. |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `Request`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
@@ -43,6 +43,8 @@ None
 ### Related Data Types
 
 - [HttpRequestVersion][]
+- [HttpRequest][]
+- [SoapRequest][]
 
 ### Related Concepts
 
@@ -57,3 +59,5 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [HttpRequestVersion]: {{< url path = "Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}
+[HttpRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc" >}}
+[SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}

@@ -44,6 +44,7 @@ None
 
 - [Soap12Message][]
 - [SoapMessage][]
+- [SoapRequest][]
 
 ### Related Concepts
 
@@ -59,3 +60,5 @@ None
 
 [Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
 [SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
+
+[SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}
