@@ -57,8 +57,6 @@ None
 * [Dictionary][MS Dictionary]
 * [IDictionary][MS IDictionary]
 
-[//]: <> (Does this section need keeping as None? Or can it be changed to contain the actual values considering that we reference external types anyways?)
-
 [Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [IDictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc">}}
 [TKey]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
