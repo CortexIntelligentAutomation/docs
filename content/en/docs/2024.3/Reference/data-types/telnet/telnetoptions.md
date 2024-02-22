@@ -36,7 +36,6 @@ The `TelnetOptions` data type is used to represent the set of telnet options use
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `TelnetOptions`.
-- The Literal Editor is available for [Input][] properties where the data type is `TelnetOptions`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `TelnetOptions`.
 
 ### Known Limitations

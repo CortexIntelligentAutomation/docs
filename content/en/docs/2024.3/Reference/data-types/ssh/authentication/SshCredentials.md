@@ -1,7 +1,7 @@
 ---
 title: "SshCredentials"
 linkTitle: "SshCredentials"
-description: "Used to represent details required to authenticate with a server."
+description: "Any data type used to represent details required for authentication when working with SSH."
 weight: 1
 ---
 
@@ -13,15 +13,15 @@ weight: 1
 
 ## Summary
 
-The `SshCredentials` data type is a base class used to represent details required to authenticate with a server when working with SSH.
+Any data type used to represent details required for authentication when working with SSH.
 
 | | |
 |-|-|
 | **Category:**          | Ssh                                                      |
 | **Name:**              | `SshCredentials`                                         |
-| **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.SshCredentials`     |
+| **Full Name:**         | `Cortex.DataTypes.Ssh.Authentication.SshCredentials`     |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent details required to authenticate with a server. |
+| **Description:**       | Any data type used to represent details required for authentication when working with SSH. |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `SshCredentials`, `ISshCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
@@ -31,7 +31,7 @@ The `SshCredentials` data type is a base class used to represent details require
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `SshCredentials`.
-- The Literal Editor is available for [Input][] properties where the data type is `SshCredentials`.
+- The Literal Editor is not available for [Input][] properties where the data type is `SshCredentials`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `SshCredentials`.
 
 ### Known Limitations

@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `Microsoft365Credentials` data type is base class used to represent details required when establishing a connection with a mail server hosted by Outlook.
+The `Microsoft365Credentials` data type is a base class used to represent details required when establishing a connection with a mail server hosted by Outlook.
 
 | | |
 |-|-|

@@ -1,7 +1,7 @@
 ---
 title: "EmailCredentials"
 linkTitle: "EmailCredentials"
-description: "Used to represent details required to authenticate with a mail server."
+description: "Any data type used to represent details required to authenticate with a mail server."
 weight: 1
 ---
 

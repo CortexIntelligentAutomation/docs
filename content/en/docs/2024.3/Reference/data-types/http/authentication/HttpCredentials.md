@@ -26,8 +26,6 @@ The `HttpCredentials` data type is a base class used to represent details requir
 | **Can be used as:**    | `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 
-### Username
-
 ## Remarks
 
 ### Property Editor Support
@@ -44,8 +42,11 @@ None
 
 ### Related Data Types
 
-- [IHttpCredentials][]
+- [HttpOAuthClientCredentials][]
 - [HttpOAuthCredentials][]
+- [HttpOAuthPasswordCredentials][]
+- [HttpUserCredentials][]
+- [IHttpCredentials][]
 
 ### Related Concepts
 
@@ -61,3 +62,6 @@ None
 
 [IHttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.IHttpCredentials.MainDoc" >}}
 [HttpOAuthCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials.MainDoc" >}}
+[HttpOAuthClientCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials.MainDoc" >}}
+[HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}
+[HttpUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpUserCredentials.MainDoc" >}}

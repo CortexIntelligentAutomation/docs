@@ -19,7 +19,7 @@ Any data type used to represent details required for authentication when working
 |-|-|
 | **Category:**          | Ssh                                            |
 | **Name:**              | `ISshCredentials`                                      |
-| **Full Name:**         | `Cortex.DataTypes.SSH.Authentication.ISshCredentials`         |
+| **Full Name:**         | `Cortex.DataTypes.Ssh.Authentication.ISshCredentials`         |
 | **Alias:**             | N/A                                                    |
 | **Description:**       | Any data type used to represent details required for authentication when working with SSH. |
 | **Default Value:**     | null                                                   |
@@ -42,7 +42,6 @@ None
 
 ### Related Data Types
 
-- [ISshCredentials][]
 - [SshCertificateCredentials][]
 - [SshCredentials][]
 - [SshSessionDetails][]
@@ -61,7 +60,6 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
 [SshUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials.MainDoc" >}}
 
 [SshSessionDetails]: {{< url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.MainDoc" >}}
