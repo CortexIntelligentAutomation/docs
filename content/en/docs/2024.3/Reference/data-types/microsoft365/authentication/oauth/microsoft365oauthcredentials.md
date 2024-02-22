@@ -26,6 +26,14 @@ The `Microsoft365OAuthCredentials` data type is used to represent client credent
 | **Can be used as:**    | `Microsoft365OAuthCredentials`, `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
+## Properties
+
+### ClientId
+
+### ClientSecret
+
+### TenantId
+
 ## Remarks
 
 ### Property Editor Support
