@@ -26,13 +26,13 @@ The execution is attempting to perform a non-read operation on a read-only [IDic
 The format of the exception message is as follows:
 
 ```json
-"'<property-display-name>' cannot be because it's read-only.
+"'<dictionary>' cannot be modified because it's read-only.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<property-display-name>` is the display name of the affected read-only dictionary.
+* `<dictionary>` is the name of the property containing the read-only dictionary.
 
 #### How to fix
 
@@ -54,8 +54,8 @@ None
   
 ### External Documentation
 
-* [Dictionary][MS Dictionary]
-* [IDictionary][MS IDictionary]
+* [System.Collections.Generic.Dictionary<TKey,TItem>][MS Dictionary]
+* [System.Collections.Generic.IDictionary<TKey,TItem>][MS IDictionary]
 
 [Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [IDictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc">}}
