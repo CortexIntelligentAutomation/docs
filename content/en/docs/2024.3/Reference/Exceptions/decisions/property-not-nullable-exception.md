@@ -11,7 +11,7 @@ description: "The exception thrown when a property that requires a nullable valu
 
 ## Description
 
-The exception thrown when a property that requires a nullable value is given a non-nullable value.
+The exception thrown when a property that requires a [nullable][Nullable] value is given a non-nullable value.
 
 ## Reasons
 
@@ -30,11 +30,11 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<property-name>` is the name of the property which must have a nullable type.
+* `<property-name>` is the name of the property which must have a [nullable][Nullable] type.
 
 #### How to fix
 
-Ensure that the type of the value provided to the affected property is one that is nullable.
+Ensure that the type of the value provided to the affected property is one that is [nullable][Nullable].
 
 ## Remarks
 
@@ -62,6 +62,7 @@ None
 [Char]: {{<url path="Cortex.Reference.DataTypes.Text.Char.MainDoc">}}
 [Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
 [Int32]: {{<url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc">}}
+[Nullable]: {{<url path="Cortex.Reference.DataTypes.Other.Nullable.MainDoc">}}
 [String]: {{<url path="Cortex.Reference.DataTypes.Text.String.MainDoc">}}
 
 [WhatIsABlock]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc">}}
