@@ -1,7 +1,7 @@
 ---
 title: "Microsoft365Credentials"
 linkTitle: "Microsoft365Credentials"
-description: "Used to represent details required when establishing a connection with a mail server hosted by Outlook."
+description: "Any data type used to represent details required when establishing a connection with a mail server hosted by Outlook."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `Microsoft365Credentials` data type is a base class used to represent details required when establishing a connection with a mail server hosted by Outlook.
+Any data type used to represent details required when establishing a connection with a mail server hosted by Outlook.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `Microsoft365Credentials` data type is a base class used to represent detail
 | **Name:**              | `Microsoft365Credentials`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Microsoft365.Authentication.OAuth.Microsoft365Credentials`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent details required when establishing a connection with a mail server hosted by Outlook. |
+| **Description:**       | Any data type used to represent details required when establishing a connection with a mail server hosted by Outlook. |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |

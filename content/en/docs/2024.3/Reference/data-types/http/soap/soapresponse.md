@@ -42,9 +42,7 @@ None
 
 ### Related Data Types
 
-- [Soap11Message][]
-- [Soap12Message][]
-- [SoapMessage][]
+- [SoapRequest][]
 
 ### Related Concepts
 
@@ -58,6 +56,4 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[Soap11Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap11Message.MainDoc" >}}
-[Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
-[SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
+[SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}

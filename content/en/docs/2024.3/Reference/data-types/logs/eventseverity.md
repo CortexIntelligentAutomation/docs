@@ -54,7 +54,6 @@ None
 
 - [Explicit Casting][]
 - [Working with Enums][]
-- [Working with Text][]
 
 ### External Documentation
 

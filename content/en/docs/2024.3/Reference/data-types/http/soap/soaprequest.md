@@ -42,10 +42,10 @@ None
 
 ### Related Data Types
 
+- [Request][]
 - [Soap11Message][]
 - [Soap12Message][]
-- [SoapMessage][]
-- [Request][]
+- [SoapResponse][]
 
 ### Related Concepts
 
@@ -61,5 +61,5 @@ None
 
 [Soap11Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap11Message.MainDoc" >}}
 [Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
-[SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
 [Request]: {{< url path = "Cortex.Reference.DataTypes.Http.Request.MainDoc" >}}
+[SoapResponse]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapResponse.MainDoc" >}}

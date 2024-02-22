@@ -1,7 +1,7 @@
 ---
 title: "SoapMessage"
 linkTitle: "SoapMessage"
-description: "Used to represent a SOAP message."
+description: "Any data type that is used to represent a SOAP message."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `Soap12Message` data type is used to represent any SOAP message.
+Any data type that is used to represent a SOAP message.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `Soap12Message` data type is used to represent any SOAP message.
 | **Name:**              | `SoapMessage`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Soap.SoapMessage`     |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent any SOAP message. |
+| **Description:**       | Any data type that is used to represent a SOAP message. |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `SoapMessage`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
@@ -42,8 +42,9 @@ None
 
 ### Related Data Types
 
+- [Soap11Message][]
 - [Soap12Message][]
-- [SoapMessage][]
+- [SoapRequest][]
 
 ### Related Concepts
 
@@ -58,4 +59,5 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
-[SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
+[Soap11Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap11Message.MainDoc" >}}
+[SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}

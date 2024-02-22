@@ -1,7 +1,7 @@
 ---
 title: "RequestVerb"
 linkTitle: "RequestVerb"
-description: "Used to represent the type of request."
+description: "Used to represent the type of an HTTP request."
 weight: 1
 ---
 
@@ -51,12 +51,13 @@ None
 - [Int32][]
 - [String][]
 - [Request][]
+- [HttpRequest][]
+- [SoapRequest][]
 
 ### Related Concepts
 
 - [Explicit Casting][]
 - [Working with Enums][]
-- [Working with Text][]
 
 ### External Documentation
 
@@ -69,10 +70,11 @@ None
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
-[working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 [Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [Request]: {{< url path = "Cortex.Reference.DataTypes.Http.Request.MainDoc" >}}
+[HttpRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc" >}}
+[SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}

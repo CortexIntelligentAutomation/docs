@@ -1,7 +1,7 @@
 ---
 title: "Microsoft365OAuthCertificateCredentials"
 linkTitle: "Microsoft365OAuthCertificateCredentials"
-description: "Used to represent details for authentication via OAuth using a certificate when establishing a connection with a mail server hosted by Outlook."
+description: "Used to represent public key credentials required to authenticate with a server hosted by Outlook via OAuth."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `Microsoft365OAuthCertificateCredentials` data type is used to represent details for authentication via OAuth using a certificate when establishing a connection with a mail server hosted by Outlook.
+The `Microsoft365OAuthCertificateCredentials` data type is used to represent public key credentials required to authenticate with a server hosted by Outlook via OAuth.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `Microsoft365OAuthCertificateCredentials` data type is used to represent det
 | **Name:**              | `Microsoft365OAuthCertificateCredentials`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Microsoft365.Authentication.OAuth.Microsoft365OAuthCertificateCredentials`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent public key credentials required to authenticate with Microsoft 365. |
+| **Description:**       | Used to represent public key credentials required to authenticate with a server hosted by Outlook via OAuth. |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `Microsoft365OAuthCertificateCredentials`, `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
