@@ -17,7 +17,7 @@ The exception thrown when a property that requires a [nullable][Nullable] value 
 
 ### Invalid data type for property provided
 
-The data type provided for the property is one that does not allow null values, e.g. [Int32][], [Boolean][], [Char][] etc.
+The data type provided for the property is one that does not allow null values, e.g. [Int32][], [Boolean][], [Char][], etc.
 
 #### Message Format
 
@@ -62,9 +62,9 @@ None
 [Char]: {{<url path="Cortex.Reference.DataTypes.Text.Char.MainDoc">}}
 [Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
 [Int32]: {{<url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc">}}
-[Nullable]: {{<url path="Cortex.Reference.DataTypes.Other.Nullable.MainDoc">}}
 [String]: {{<url path="Cortex.Reference.DataTypes.Text.String.MainDoc">}}
 
+[Nullable]: {{<url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes.MainDoc">}}
 [WhatIsABlock]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc">}}
 [WhatIsAnExecution]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc">}}
 [WhatIsAFlow]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc">}}

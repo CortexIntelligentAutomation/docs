@@ -31,11 +31,11 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<key>` is the key being used to add an item.
-* `<dictionary>` is the [dictionary][IDictionary] to which the item is trying to be added.
+* `<dictionary>` is the name of the property containing the [dictionary][IDictionary] to which the item is trying to be added.
 
 #### How to fix
 
-Ensure that the key is not a duplicate of an already existing key in the [dictionary][IDictionary].
+Ensure that the key is not a duplicate of an already existing key in the [dictionary][IDictionary], for example by using the [Contains Item With Key][Contains Item With Key Block] block.
 
 ## Remarks
 
@@ -47,8 +47,10 @@ None
 
 ### External Documentation
 
-* [Dictionary][MS Dictionary]
-* [IDictionary][MS IDictionary]
+* [System.Collections.Generic.Dictionary<TKey,TItem>][MS Dictionary]
+* [System.Collections.Generic.IDictionary<TKey,TItem>][MS IDictionary]
+
+[Contains Item With Key Block]: {{<url path="Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKey.MainDoc">}}
 
 [Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [IDictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc">}}

@@ -7,18 +7,33 @@ description: "The exception thrown when trying to modify a read-only list."
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Lists.CannotModifyReadOnlyListException)</p>
+{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
+
+## Description
 
 The exception thrown when trying to modify a read-only list.
 
+## Reasons
+
+### Attempting to modify a read-only list
+
 > Lists deriving from [IList][]&lt;[T][]&gt; have the option to be read-only.
+
+There was an attempt to modify a read-only list.
+
+##### Message Format
 
 The format of the exception message is as follows:
 
 ```json
-"The value of '<property-display-name>' cannot be modified.
-This is because the value of '<property-display-name>' is read-only.
+"The value of '<property-name>' cannot be modified.
+This is because the value of '<property-name>' is read-only.
 See the CannotModifyReadOnlyListException help page for more information on how to fix this."
 ```
+
+where:
+
+* `<property-name>` is the name for the property that contains the read-only list.
 
 ## How to fix
 
