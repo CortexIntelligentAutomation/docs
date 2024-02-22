@@ -33,9 +33,13 @@ where:
 * `<property-name>` is the name of the property that was an invalid folder path.
 * `<path>` is the path that was invalid.
 
+#### How to fix
+
+Ensure that the path provided is a valid folder path.
+
 ### Path provided is invalid
 
-The provided path has an incorrect syntax, or has illegal characters.
+The provided path has an incorrect syntax, or has illegal characters, or is too long.
 
 #### Message Format
 
@@ -50,6 +54,10 @@ where:
 
 * `<property-name>` is the name of the property that was an invalid folder path.
 * `<path>` is the path that was invalid.
+
+#### How to fix
+
+Ensure that the path provided has no incorrect syntax or illegal characters, and that it is not too long.
 
 ## Remarks
 
