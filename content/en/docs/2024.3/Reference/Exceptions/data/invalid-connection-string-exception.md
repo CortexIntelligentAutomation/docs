@@ -46,7 +46,7 @@ None
 
 ### External Documentation
 
-None
+* [Connection Strings][ConnectionStrings]
 
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
@@ -64,3 +64,5 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+
+[ConnectionStrings]: {{<url path="ConnectionStrings.MainDoc">}}
