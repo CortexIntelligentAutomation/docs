@@ -2278,6 +2278,8 @@
         Interpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation"
         Verbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals"
         InterpolatedVerbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation"
+        CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception?view=net-6.0"
+        SupportedCultureCodes = "https://learn.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/supported-culture-codes"
     [MSDocs.SqlServer]
         ErrorCodes = "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
@@ -2298,6 +2300,7 @@
         ArgumentNullException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
         ArgumentOutOfRangeException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception"
         Array = "https://learn.microsoft.com/en-us/dotnet/api/system.array"
+        Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding"
         FormatException = "https://learn.microsoft.com/en-us/dotnet/api/system.formatexception"
         OutOfMemoryException = "https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         StringComparer = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparer"

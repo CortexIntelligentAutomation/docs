@@ -8,15 +8,24 @@ description: "Used to represent Unicode character encoding."
 
 <p class="namespace">(System.Text.UnicodeEncoding)</p>
 
-{{< workinprogress >}}
+{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
 
 ## Summary
 
+The `UnicodeEncoding` data type is used to represent Unicode character encoding.
+
+| | |
+|-|-|
+| **Category:**          | Text                                                          |
+| **Name:**              | `UnicodeEncoding`                                                        |
+| **Full Name:**         | `System.Text.UnicodeEncoding`                                                 |
+| **Alias:**             | N/A |
+| **Description:**       | Used to represent Unicode character encoding. |
+| **Default Value:**     | `null`                                           |
+| **Can be used as:**    | `UnicodeEncoding`, `Encoding`, `object`, `dynamic`                                          |
+| **Can be cast to:**    | N/A |
+
 ## Remarks
-
-### Create a UnicodeEncoding
-
-### Convert UnicodeEncoding to Text
 
 ### Property Editor Support
 
