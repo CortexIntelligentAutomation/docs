@@ -24,14 +24,14 @@ The folder name provided is invalid.
 The format of the exception message is as follows:
 
 ```json
-"The '<property-name>' given was '<property-value>'; this is not a valid folder name.
+"The '<folder-property>' given was '<name>'; this is not a valid folder name.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<property-name>` is the name of the property containing the folder name which threw this exception.
-* `<property-value>` is the value of the property, i.e. the folder name, which was invalid.
+* `<folder-property>` is the name of the property containing the folder name which threw this exception.
+* `<name>` is the value of the property, i.e. the folder name, which was invalid.
 
 #### How to fix
 
@@ -48,3 +48,6 @@ None
 ### External Documentation
 
 None
+
+[FolderConcepts]: {{<url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.MainDoc">}}
+[WhatIsAPath]: {{<url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc">}}
