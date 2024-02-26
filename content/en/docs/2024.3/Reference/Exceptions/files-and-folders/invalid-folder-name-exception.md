@@ -35,7 +35,7 @@ where:
 
 #### How to fix
 
-Ensure that the folder name provided is a valid folder.
+Ensure that the folder name provided is a valid folder; please see [FolderConcepts][].
 
 ## Remarks
 
