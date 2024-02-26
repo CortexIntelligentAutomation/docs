@@ -11,7 +11,7 @@ description: "The exception thrown when an invalid connection string is used."
 
 ## Description
 
-Exception thrown when an invalid connection string is used.
+The exception thrown when an invalid connection string is used.
 
 ## Reasons
 
@@ -34,7 +34,7 @@ where:
 
 #### How to fix
 
-Ensure that a valid connection string is provided.
+Ensure that a valid connection string is provided for the data source being connected to; see [connectionstrings.com][ConnectionStrings] for valid examples.
 
 ## Remarks
 
@@ -46,7 +46,7 @@ None
 
 ### External Documentation
 
-* [Connection Strings][ConnectionStrings]
+* [connectionstrings.com][ConnectionStrings]
 
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}

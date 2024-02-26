@@ -31,7 +31,7 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<dictionary>` is the dictionary being accessed.
+* `<dictionary>` is the name of the property containing [dictionary][IDictionary] being accessed.
 * `<keys>` is the list of keys that were not present in the [dictionary][IDictionary]. In this case it should be all keys provided.
 
 #### How to fix
@@ -54,12 +54,12 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<dictionary>` is the [dictionary][IDictionary] being accessed.
+* `<dictionary>` is the name of the property containing [dictionary][IDictionary] being accessed.
 * `<keys>` is the list of keys that were not present in the [dictionary][IDictionary].
 
 #### How to fix
 
-Ensure that the keys provided are valid and correct, and ensure that the [dictionary][IDictionary] contains these keys.
+Ensure that the [dictionary][IDictionary] contains the key, for example by using the [Contains Item With Key][Contains Item With Key Block] block.
 
 ## Remarks
 
@@ -71,8 +71,10 @@ None
 
 ### External Documentation
 
-* [Dictionary][MS Dictionary]
-* [IDictionary][MS IDictionary]
+* [System.Collections.Generic.Dictionary<TKey,TItem>][MS Dictionary]
+* [System.Collections.Generic.IDictionary<TKey,TItem>][MS IDictionary]
+
+[Contains Item With Key Block]: {{<url path="Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKey.MainDoc">}}
 
 [Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [IDictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc">}}

@@ -166,11 +166,7 @@ None
 [Workspaces]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
 
 [Guid]: {{<url path="Cortex.Reference.DataTypes.Other.Guid.MainDoc">}}
-
-[WhatIsABlock]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc">}}
-[WhatIsAnExecution]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc">}}
-[WhatIsAFlow]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc">}}
-[WhatIsAWorkspace]: {{<url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc">}}

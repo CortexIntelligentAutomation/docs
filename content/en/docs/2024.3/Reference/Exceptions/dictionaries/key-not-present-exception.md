@@ -31,7 +31,7 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<key>` is the key that is not present.
-* `<dictionary>` is the empty [dictionary][IDictionary] that is being accessed.
+* `<dictionary>` is the name of the property containing the empty [dictionary][IDictionary] that is being accessed.
 
 #### How to fix
 
@@ -53,11 +53,11 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<key>` is the key that is not present.
-* `<dictionary>` is the [dictionary][IDictionary] that is being accessed.
+* `<dictionary>` is the name of the property containing the [dictionary][IDictionary] that is being accessed.
 
 #### How to fix
 
-Ensure that the key is correct and is present in the [dictionary][IDictionary].
+Ensure that the key is correct and is present in the [dictionary][IDictionary], for example by using the [Contains Item With Key][Contains Item With Key Block] block.
 
 ## Remarks
 
@@ -69,8 +69,10 @@ None
 
 ### External Documentation
 
-* [Dictionary][MS Dictionary]
-* [IDictionary][MS IDictionary]
+* [System.Collection.Generics.Dictionary<TKey,TItem>][MS Dictionary]
+* [System.Collection.Generics.IDictionary<TKey,TItem>][MS IDictionary]
+
+[Contains Item With Key Block]: {{<url path="Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKey.MainDoc">}}
 
 [Dictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc">}}
 [IDictionary]: {{<url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc">}}
