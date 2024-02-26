@@ -32,7 +32,7 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<property-name>` is the name for the property containing the read-only list.
+* `<list>` is the name for the property containing the read-only list.
 
 #### How to fix
 
