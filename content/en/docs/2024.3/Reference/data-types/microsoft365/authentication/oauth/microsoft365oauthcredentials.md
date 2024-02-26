@@ -28,6 +28,8 @@ The `Microsoft365OAuthCredentials` data type is used to represent client credent
 
 ## Properties
 
+### ObjectId
+
 ### ClientId
 
 ### ClientSecret
