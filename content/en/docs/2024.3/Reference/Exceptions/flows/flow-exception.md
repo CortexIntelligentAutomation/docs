@@ -29,7 +29,7 @@ The format of the exception message is as follows:
 
 where:
 
-* `<message>` is the user-defined message from the [Throw New Flow Exception block][ThrowNewFlowException Block] properties.
+* `<message>` is the user-defined message specified by the [Throw New Flow Exception block][ThrowNewFlowException Block] properties.
 
 #### How to fix
 
