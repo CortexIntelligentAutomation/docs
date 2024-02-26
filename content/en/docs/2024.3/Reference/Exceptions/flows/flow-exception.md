@@ -11,13 +11,13 @@ description: "The exception thrown by the Throw New Flow Exception block."
 
 ## Description
 
-The exception thrown by the [Throw New Flow Exception block][ThrowNewFlowException Block].
+The exception thrown by the [Throw New Flow Exception][ThrowNewFlowException Block] block.
 
 ## Reasons
 
 ### Thrown by block
 
-An instance of the [Throw New Flow Exception block][ThrowNewFlowException Block] has been executed in a flow.
+An instance of the [Throw New Flow Exception][ThrowNewFlowException Block] block has been executed in a flow.
 
 #### Message Format
 
@@ -29,11 +29,11 @@ The format of the exception message is as follows:
 
 where:
 
-* `<message>` is the user-defined message specified by the [Throw New Flow Exception block][ThrowNewFlowException Block] properties.
+* `<message>` is the user-defined message specified by the [Throw New Flow Exception][ThrowNewFlowException Block] block properties.
 
 #### How to fix
 
-Ensure that the issue that occurred that caused the execution to progress through to the [Throw New Flow Exception block][ThrowNewFlowException Block] does not occur.
+Ensure that the issue that occurred that caused the execution to progress through to the [Throw New Flow Exception][ThrowNewFlowException Block] block does not occur.
 
 ## Remarks
 

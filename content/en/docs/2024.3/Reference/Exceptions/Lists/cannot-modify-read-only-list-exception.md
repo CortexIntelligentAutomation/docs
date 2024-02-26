@@ -54,8 +54,8 @@ None
 
 #### External Documentation
 
-* [System.Collections.Generic.IList<T>][MS IList]
-* [System.Collections.Generic.List<T>][MS List]
+* [System.Collections.Generic.IList&lt;T&gt;][MS IList]
+* [System.Collections.Generic.List&lt;T&gt;][MS List]
 
 [TItem]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
 [expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
