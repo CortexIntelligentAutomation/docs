@@ -32,6 +32,20 @@ The `RequestVerb` data type is used to represent the the type of an HTTP request
 |                        | `Single` (e.g. `(Single)RequestVerb.GET` or `(System.Single)RequestVerb.GET` or `(float)RequestVerb.GET`)  |
 |                        | `Double` (e.g. `(Double)RequestVerb.GET` or `(System.Double)RequestVerb.GET` or `(double)RequestVerb.GET`)  |
 
+## Values
+
+### GET
+
+### POST
+
+### PUT
+
+### DELETE
+
+### PATCH
+
+### HEAD
+
 ## Remarks
 
 ### Property Editor Support
