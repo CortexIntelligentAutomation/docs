@@ -23,7 +23,7 @@ The `ContentOptions` data type is used to represent the set of options for the [
 | **Name:**              | `ContentOptions`                                |
 | **Full Name:**         | `Cortex.DataTypes.FilesAndFolders.ContentOptions`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent the set of options for the Get Folder Content block. |
+| **Description:**       | Used to represent the set of options for the [Get Folder Content][] block. |
 | **Default Value:**     | `(ContentOptions)0`                             |
 | **Can be used as:**    | `ContentOptions`, `Object`, `dynamic`           |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)ContentOptions.Files` or `(System.Int16)ContentOptions.Files` or `(short)ContentOptions.Files`)  |
