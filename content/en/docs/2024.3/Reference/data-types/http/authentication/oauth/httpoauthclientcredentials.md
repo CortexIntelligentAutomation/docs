@@ -26,6 +26,14 @@ The `HttpOAuthClientCredentials` data type is used to represent details required
 | **Can be used as:**    | `HttpOAuthClientCredentials`, `HttpOAuthCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### AccessTokenUri
+
+### ClientAuthentication
+
+### Scope
+
 ## Remarks
 
 ### Property Editor Support

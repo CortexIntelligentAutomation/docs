@@ -26,6 +26,16 @@ The `HttpResponse` data type is used to represent an HTTP REST response.
 | **Can be used as:**    | `HttpResponse`, `Object`, `dynamic`                    |
 | **Can be cast to:**    | N/A                                                          |
 
+## Properties
+
+### ResponseBody
+
+### ErrorMessage
+
+### Headers
+
+### StatusCode
+
 ## Remarks
 
 ### Property Editor Support

@@ -26,6 +26,12 @@ Any data type that is used to represent a SOAP message.
 | **Can be used as:**    | `SoapMessage`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### Envelope
+
+### Version
+
 ## Remarks
 
 ### Property Editor Support

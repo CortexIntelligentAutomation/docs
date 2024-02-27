@@ -26,6 +26,14 @@ The `ClientAuthentication` data type is used to represent the `ClientId` and `Cl
 | **Can be used as:**    | `ClientAuthentication`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### ClientId
+
+### ClientSecret
+
+### SendAs
+
 ## Remarks
 
 ### Property Editor Support

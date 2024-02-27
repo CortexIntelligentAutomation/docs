@@ -26,6 +26,18 @@ The `HttpOAuthPasswordCredentials` data type is used to represent details requir
 | **Can be used as:**    | `HttpOAuthPasswordCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### ResourceOwnerUsername
+
+### ResourceOwnerPassword
+
+### AccessTokenUri
+
+### ClientAuthentication
+
+### Scope
+
 ## Remarks
 
 ### Property Editor Support

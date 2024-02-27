@@ -26,6 +26,22 @@ The `HttpRequest` data type is used to represent an HTTP REST request.
 | **Can be used as:**    | `HttpRequest`, `Request`, `Object`, `dynamic`                    |
 | **Can be cast to:**    | N/A                                                          |
 
+## Properties
+
+### Uri
+
+### QueryParameters
+
+### Verb
+
+### ContentType
+
+### Headers
+
+### Body
+
+### HttpVersion
+
 ## Remarks
 
 ### Property Editor Support

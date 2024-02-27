@@ -26,6 +26,16 @@ The `SoapRequest` data type is used to represent a SOAP request.
 | **Can be used as:**    | `SoapRequest`, `Request`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### SoapMessage
+
+### Uri
+
+### Headers
+
+### HttpVersion
+
 ## Remarks
 
 ### Property Editor Support

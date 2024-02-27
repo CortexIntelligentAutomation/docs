@@ -26,6 +26,16 @@ The `SoapResponse` data type is used to represent a SOAP response.
 | **Can be used as:**    | `SoapResponse`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### ResponseEnvelope
+
+### ErrorMessage
+
+### Headers
+
+### StatusCode
+
 ## Remarks
 
 ### Property Editor Support

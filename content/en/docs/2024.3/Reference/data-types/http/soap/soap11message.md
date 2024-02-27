@@ -26,6 +26,10 @@ The `Soap11Message` data type is used to represent a SOAP 1.1 message.
 | **Can be used as:**    | `Soap11Message`, `SoapMessage`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 
+## Properties
+
+### Action
+
 ## Remarks
 
 ### Property Editor Support
