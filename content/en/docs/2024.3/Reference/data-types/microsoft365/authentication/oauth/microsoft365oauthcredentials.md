@@ -28,13 +28,48 @@ The `Microsoft365OAuthCredentials` data type is used to represent client credent
 
 ## Properties
 
-### ObjectId
-
 ### ClientId
+
+The ClientId is used to define the public identification value for the client application. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptableText][] with value `""` |
 
 ### ClientSecret
 
+The ClientSecret is used to define the secret used to authenticate with the client application, this value should be kept secret. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptedText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptedText][] with value `""` |
+
 ### TenantId
+
+The TenantId is used to refer to a specific Microsoft365 tenant. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptableText][] with value `""` |
+
+### ObjectId
+
+The ObjectId of the sender who is sending the email. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptableText][] with value `""` |
 
 ## Remarks
 
@@ -68,6 +103,8 @@ None
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
 [Working with Email]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.MainDoc" >}}
 
