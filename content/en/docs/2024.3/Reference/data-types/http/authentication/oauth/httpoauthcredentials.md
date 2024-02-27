@@ -1,7 +1,7 @@
 ---
 title: "HttpOAuthCredentials"
 linkTitle: "HttpOAuthCredentials"
-description: "Used to represent details required for OAuth authentication."
+description: "Any data type used to represent details required for OAuth authentication."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `HttpOAuthCredentials` data type is a base class used to represent details required for OAuth authentication when working with HTTP.
+Any data type used to represent details required for OAuth authentication.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `HttpOAuthCredentials` data type is a base class used to represent details r
 | **Name:**              | `HttpOAuthCredentials`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials`     |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent details required for OAuth authentication when working with HTTP.  |
+| **Description:**       | Any data type used to represent details required for OAuth authentication.  |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `HttpOAuthCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
@@ -42,7 +42,7 @@ None
 
 ### Related Data Types
 
-- [ClientAuthType][]
+- [HttpCredentials][]
 - [HttpOAuthClientCredentials][]
 - [HttpOAuthPasswordCredentials][]
 - [IHttpCredentials][]
@@ -60,6 +60,6 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [IHttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.IHttpCredentials.MainDoc" >}}
-[ClientAuthType]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthType.MainDoc" >}}
+[HttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpCredentials.MainDoc" >}}
 [HttpOAuthClientCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials.MainDoc" >}}
 [HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}

@@ -1,7 +1,7 @@
 ---
 title: "HttpCredentials"
 linkTitle: "HttpCredentials"
-description: "Used to represent details required for authentication when working with HTTP."
+description: "Any data type used to represent details required for authentication when working with HTTP."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `HttpCredentials` data type is a base class used to represent details required to authenticate with a server when working with HTTP.
+Any data type used to represent details required for authentication when working with HTTP.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `HttpCredentials` data type is a base class used to represent details requir
 | **Name:**              | `HttpCredentials`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.HttpCredentials`     |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent details required to authenticate with a server. |
+| **Description:**       | Any data type used to represent details required for authentication when working with HTTP. |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |

@@ -20,7 +20,7 @@ Any data type used to represent information about a file or folder.
 | **Name:**              | `FileSystemInformation`                                                        |
 | **Full Name:**         | `Cortex.DataTypes.FilesAndFolders.FileSystemInformation`                                                 |
 | **Alias:**             | N/A |
-| **Description:**       | UAny data type used to represent information about a file or folder. |
+| **Description:**       | Any data type used to represent information about a file or folder. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `FileSystemInformation`, `object`, `dynamic` |
 | **Can be cast to:**    | N/A |
@@ -35,12 +35,14 @@ Any data type used to represent information about a file or folder.
 
 ### Known Limitations
 
+None
+
 ## See Also
 
 ### Related Data Types
 
-- [FolderInformation][]
 - [FileInformation][]
+- [FolderInformation][]
 
 ### Related Concepts
 

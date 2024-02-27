@@ -42,8 +42,8 @@ None
 
 ### Related Data Types
 
-- [Request][]
 - [HttpResponse][]
+- [Request][]
 
 ### Related Concepts
 

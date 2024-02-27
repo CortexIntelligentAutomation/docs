@@ -1,7 +1,7 @@
 ---
 title: "ClientAuthentication"
 linkTitle: "ClientAuthentication"
-description: "Used to represent client credentials for OAuth."
+description: "Used to represent the `ClientId` and `ClientSecret` required for OAuth authentication mechanisms that use Client Secrets."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `ClientAuthentication` data type is used to represent client credentials for OAuth.
+The `ClientAuthentication` data type is used to represent the `ClientId` and `ClientSecret` required for OAuth authentication mechanisms that use Client Secrets.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `ClientAuthentication` data type is used to represent client credentials for
 | **Name:**              | `ClientAuthentication`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthentication`     |
 | **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent client credentials for OAuth. |
+| **Description:**       | Used to represent the `ClientId` and `ClientSecret` required for OAuth authentication mechanisms that use Client Secrets. |
 | **Default Value:**     | null                                                     |
 | **Can be used as:**    | `ClientAuthentication`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
@@ -42,7 +42,6 @@ None
 
 ### Related Data Types
 
-- [HttpOAuthCredentials][]
 - [HttpOAuthClientCredentials][]
 - [HttpOAuthPasswordCredentials][]
 
@@ -60,4 +59,3 @@ None
 
 [HttpOAuthClientCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials.MainDoc" >}}
 [HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}
-[HttpOAuthCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials.MainDoc" >}}

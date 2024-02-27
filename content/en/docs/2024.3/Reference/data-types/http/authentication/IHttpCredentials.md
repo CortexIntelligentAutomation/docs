@@ -43,12 +43,17 @@ None
 ### Related Data Types
 
 - [HttpCredentials][]
+- [HttpOAuthClientCredentials][]
+- [HttpOAuthCredentials][]
+- [HttpOAuthPasswordCredentials][]
 - [HttpUserCredentials][]
 
 ### Related Concepts
+
 None
 
 ### External Documentation
+
 None
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
@@ -57,3 +62,6 @@ None
 
 [HttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpCredentials.MainDoc" >}}
 [HttpUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpUserCredentials.MainDoc" >}}
+[HttpOAuthCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials.MainDoc" >}}
+[HttpOAuthClientCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials.MainDoc" >}}
+[HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}

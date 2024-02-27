@@ -12,7 +12,7 @@ description: "Used to represent information about a folder."
 
 ## Summary
 
-The `FolderInformation` datatype is used to represent information about a folder.
+The `FolderInformation` data type is used to represent information about a folder.
 
 | | |
 |-|-|
@@ -35,11 +35,13 @@ The `FolderInformation` datatype is used to represent information about a folder
 
 ### Known Limitations
 
+None
+
 ## See Also
 
 ### Related Data Types
 
-- [FileSystemInformation][]
+- [FileInformation][]
 
 ### Related Concepts
 
@@ -53,6 +55,6 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[FileSystemInformation]: {{< url path="Cortex.Reference.DataTypes.FilesAndFolders.FileSystemInformation.MainDoc" >}}
+[FileInformation]: {{< url path="Cortex.Reference.DataTypes.FilesAndFolders.FileInformation.MainDoc" >}}
 
 [Working With Files & Folders]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.MainDoc" >}}
