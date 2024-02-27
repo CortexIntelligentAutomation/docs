@@ -2317,6 +2317,7 @@
             IEnumerable_TItem = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
+            IReadOnlyList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1"
         [MSDocs.DotNet.Api.System.Convert]
             MainDoc ="https://learn.microsoft.com/en-us/dotnet/api/system.convert" 
             ToBoolean = "https://learn.microsoft.com/en-us/dotnet/api/system.convert.toboolean"

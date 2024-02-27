@@ -42,8 +42,8 @@ None
 ### Related Data Types
 
 - [Encoding][]
-- [UTF32Encoding][]
 - [UTF8Encoding][]
+- [UTF32Encoding][]
 
 ### Related Concepts
 
