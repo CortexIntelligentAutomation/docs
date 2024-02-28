@@ -16,7 +16,7 @@ Any data type used to represent an exception.
 
 | | |
 |-|-|
-| **Category:**          | Date & Time                                                         |
+| **Category:**          | Exception                                                         |
 | **Name:**              | `Exception`                                                        |
 | **Full Name:**         | `System.Exception`                                                 |
 | **Alias:**             | N/A |
@@ -45,12 +45,16 @@ None
 
 ### Related Concepts
 
-- [Exception Fundamentals][]
+- [Exceptions][]
 
 ### External Documentation
 
-[Exception Fundamentals]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+- [System.Exception]
+
+[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+
+[System.Exception]: {{< url path="MSDocs.DotNet.Api.System.Exception" >}}

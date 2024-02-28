@@ -2307,6 +2307,7 @@
         StringComparison = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison"
         StringSplitOptions = "https://learn.microsoft.com/en-us/dotnet/api/system.stringsplitoptions"
         UnauthorizedAccessException = "https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception"
+        Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.exception?view=net-6.0"
         [MSDocs.DotNet.Api.System.Char]
             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.char"
         [MSDocs.DotNet.Api.System.Collections]
@@ -2318,6 +2319,7 @@
             IList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
             IReadOnlyList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1"
+            IReadOnlyCollection = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1"
         [MSDocs.DotNet.Api.System.Convert]
             MainDoc ="https://learn.microsoft.com/en-us/dotnet/api/system.convert" 
             ToBoolean = "https://learn.microsoft.com/en-us/dotnet/api/system.convert.toboolean"

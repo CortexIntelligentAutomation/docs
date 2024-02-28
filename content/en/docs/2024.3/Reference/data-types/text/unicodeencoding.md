@@ -2,6 +2,7 @@
 title: "UnicodeEncoding"
 linkTitle: "UnicodeEncoding"
 description: "Used to represent Unicode character encoding."
+weight: 1
 ---
 
 # {{% param title %}}

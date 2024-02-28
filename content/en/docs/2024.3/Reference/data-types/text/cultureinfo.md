@@ -2,6 +2,7 @@
 title: "CultureInfo"
 linkTitle: "CultureInfo"
 description: "Used to represent information about a specific culture, including the names for the culture, the writing system, the calendar used, the sort order of strings, and formatting for dates and numbers."
+weight: 1
 ---
 
 # {{% param title %}}
@@ -12,7 +13,7 @@ description: "Used to represent information about a specific culture, including 
 
 ## Summary
 
-The `CultureInfo` datatype is used to represent information about a specific culture, including the names for the culture, the writing system, the calendar used, the sort order of strings, and formatting for dates and numbers.
+The `CultureInfo` data type is used to represent information about a specific culture, including the names for the culture, the writing system, the calendar used, the sort order of strings, and formatting for dates and numbers.
 
 | | |
 |-|-|
@@ -33,29 +34,39 @@ The `CultureInfo` datatype is used to represent information about a specific cul
 - The Literal Editor is available for [Input][] properties where the data type is `CultureInfo`.
 - The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `CultureInfo`.
 
-### Using CultureInfo
+### Types of CultureInfo
 
-When a method is able to use CultureInfo, there are 3 types of culture to use.
+There are 3 types of CultureInfo:
 
-- InvarianyCulture
-- CurrentCulture
-- SpecificCulture
+- [InvariantCulture][]
+- [CurrentCulture][]
+- [NeutralCulture][]
+- [SpecificCulture][]
 
-### Empty CultureInfo
-
-If the culture identifier is empty e.g.(new CultureInfo("")), CultureInfo is set to InvariantCulture.
-
-### Invariant Culture
+#### Invariant Culture
 
 The invariant culture is culture-insensitive. It is associated with the English language but not with any country/region, as such the casing conventions, the sort order of strings, and formatting for dates and numbers will remain consistent across systems. This can be useful when persisting data in a culture-independent format.
 
-### Current Culture
+There are two ways to create an invariant culture:
 
-The current culture is culture-sensitive. It is used to represent the current culture of the server and as such the casing conventions, the sort order of strings, and formatting for dates and numbers may change across systems. This can be useful for providing date time in the correct format for a user.
+- `CultureInfo.InvariantCulture`
+- `new CultureInfo("")`
 
-### Specific Culture
+#### Current Culture
 
-The culture can be explicitly specified to use a particular format. E.g.(CultureInfo("en-GB")) for the standard UK english culture.
+The current culture is culture-sensitive. It is used to represent the current culture of the server running {{% ctx %}}, and as such the casing conventions, the sort order of strings, and formatting for dates and numbers may change across systems. This can be useful for providing date time in the correct format for a user.
+
+There is one way to get the current culture:
+
+- `CultureInfo.CurrentCulture`
+
+#### Neutral Culture
+
+The neutral culture is culture-sensitive. It is associated with a language, but not with any country/region
+
+#### Specific Culture
+
+The culture can be explicitly specified to use a particular format, e.g. CultureInfo("en-GB") for the standard UK english culture.
 
 For a comprehensive list of cultures please see [Supported Culture Codes][]
 
@@ -79,7 +90,7 @@ None
 
 - [CultureInfoNotFoundException][]
 - [Supported Culture Codes][]
-- [CultureInfo][]
+- [System.Globalisation.CultureInfo][]
 
 TODO:
 
@@ -93,10 +104,14 @@ TODO:
 [CultureInfoNotFoundException]: {{< url path = "MSDocs.CSharp.CultureInfoNotFoundException">}}
 [Supported Culture Codes]: {{< url path = "MSDocs.CSharp.SupportedCultureCodes">}}
 
+[InvariantCulture]: {{< ref "#invariantculture" >}}
+[CurrentCulture]: {{< ref "#currentculture" >}}
+[SpecificCulture]: {{< ref "#specificculture" >}}
+
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
-[CultureInfo]: {{< url path="MSDocs.DotNet.Api.System.Globalization.CultureInfo" >}}
+[System.Globalisation.CultureInfo]: {{< url path="MSDocs.DotNet.Api.System.Globalization.CultureInfo" >}}

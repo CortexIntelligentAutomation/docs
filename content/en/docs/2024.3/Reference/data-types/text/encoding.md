@@ -2,6 +2,7 @@
 title: "Encoding"
 linkTitle: "Encoding"
 description: "Any data type used to represent a specific character encoding (e.g. ASCII, UTF8, Unicode)."
+weight: 1
 ---
 
 # {{% param title %}}

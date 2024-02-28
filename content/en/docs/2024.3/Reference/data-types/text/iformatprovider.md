@@ -2,6 +2,7 @@
 title: "IFormatProvider"
 linkTitle: "IFormatProvider"
 description: "Any data type used to control formatting."
+weight: 1
 ---
 
 # {{% param title %}}
