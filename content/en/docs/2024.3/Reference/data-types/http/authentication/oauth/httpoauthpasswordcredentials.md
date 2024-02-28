@@ -22,9 +22,21 @@ The `HttpOAuthPasswordCredentials` data type is used to represent details requir
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent details required for the OAuth Resource Owner Password Credentials authentication mechanism.  |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `HttpOAuthPasswordCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
+
+## Properties
+
+### ResourceOwnerUsername
+
+### ResourceOwnerPassword
+
+### AccessTokenUri
+
+### ClientAuthentication
+
+### Scope
 
 ## Remarks
 
