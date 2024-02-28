@@ -15,32 +15,84 @@ weight: 1
 
 The `HttpRequest` data type is used to represent an HTTP REST request.
 
-| | |
-|-|-|
-| **Category:**          | Http                                                         |
-| **Name:**              | `HttpRequest`                                         |
-| **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpRequest`                   |
-| **Alias:**             | N/A                                                          |
-| **Description:**       | Used to represent an HTTP REST request.             |
-| **Default Value:**     | `null`                                                         |
-| **Can be used as:**    | `HttpRequest`, `Request`, `Object`, `dynamic`                    |
-| **Can be cast to:**    | N/A                                                          |
+|                     |                                               |
+|---------------------|-----------------------------------------------|
+| **Category:**       | Http                                          |
+| **Name:**           | `HttpRequest`                                 |
+| **Full Name:**      | `Cortex.DataTypes.Http.Rest.HttpRequest`      |
+| **Alias:**          | N/A                                           |
+| **Description:**    | Used to represent an HTTP REST request.       |
+| **Default Value:**  | `null`                                        |
+| **Can be used as:** | `HttpRequest`, `Request`, `Object`, `dynamic` |
+| **Can be cast to:** | N/A                                           |
 
 ## Properties
 
 ### Uri
 
+The URI endpoint to use for this request.
+
+|                 |             |
+|-----------------|-------------|
+| Data Type       | [string][]  |
+| Is [Advanced][] | `false`     |
+| Default Editor  | [Literal][] |
+| Default Value   | `@$""`      |
+
 ### QueryParameters
+
+The URI endpoint to use for this request.
+
+|                 |                                 |
+|-----------------|---------------------------------|
+| Data Type       | [Dictionary<String, Dynamic>][] |
+| Is [Advanced][] | `true`                          |
+| Default Editor  | [Literal][]                     |
+| Default Value   | `@$""`                          |
 
 ### Verb
 
+The RequestVerb to use for this request.
+
+|                 |                 |
+|-----------------|-----------------|
+| Data Type       | [RequestVerb][] |
+| Is [Advanced][] | `false`         |
+| Default Editor  | [Literal][]     |
+| Default Value   | `@$""`          |
+
 ### ContentType
+
+The ContentType to use for this request.
+
+|                 |                 |
+|-----------------|-----------------|
+| Data Type       | [RequestVerb][] |
+| Is [Advanced][] | `false`         |
+| Default Editor  | [Literal][]     |
+| Default Value   | `@$""`          |
 
 ### Headers
 
+The Headers to include with this request.
+
+|                 |                 |
+|-----------------|-----------------|
+| Data Type       | [RequestVerb][] |
+| Is [Advanced][] | `false`         |
+| Default Editor  | [Literal][]     |
+| Default Value   | `@$""`          |
+
 ### Body
 
-### HttpVersion
+The data to include in the body to be used in non GET and HEAD requests.
+
+|                 |                 |
+|-----------------|-----------------|
+| Data Type       | [RequestVerb][] |
+| Is [Advanced][] | `false`         |
+| Default Editor  | [Literal][]     |
+| Default Value   | `@$""`          |
 
 ## Remarks
 

@@ -15,26 +15,62 @@ weight: 1
 
 The `HttpResponse` data type is used to represent an HTTP REST response.
 
-| | |
-|-|-|
-| **Category:**          | Http                                                         |
-| **Name:**              | `HttpResponse`                                         |
-| **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpResponse`                   |
-| **Alias:**             | N/A                                                          |
-| **Description:**       | Used to represent an HTTP REST response.             |
-| **Default Value:**     | `null`                                                         |
-| **Can be used as:**    | `HttpResponse`, `Object`, `dynamic`                    |
-| **Can be cast to:**    | N/A                                                          |
+|                     |                                           |
+|---------------------|-------------------------------------------|
+| **Category:**       | Http                                      |
+| **Name:**           | `HttpResponse`                            |
+| **Full Name:**      | `Cortex.DataTypes.Http.Rest.HttpResponse` |
+| **Alias:**          | N/A                                       |
+| **Description:**    | Used to represent an HTTP REST response.  |
+| **Default Value:**  | `null`                                    |
+| **Can be used as:** | `HttpResponse`, `Object`, `dynamic`       |
+| **Can be cast to:** | N/A                                       |
 
 ## Properties
 
 ### ResponseBody
 
+The ResponseBody returned as part of the message.
+
+|                 |             |
+|-----------------|-------------|
+| Data Type       | [dynamic][] |
+| Is [Advanced][] | `false`     |
+| Default Editor  | [Literal][] |
+| Default Value   | `@$""`      |
+
 ### ErrorMessage
+
+The ErrorMessage returned as part of the message.
+
+|                 |             |
+|-----------------|-------------|
+| Data Type       | [string][]  |
+| Is [Advanced][] | `false`     |
+| Default Editor  | [Literal][] |
+| Default Value   | `@$""`      |
 
 ### Headers
 
+The Headers returned as part of the message.
+
+|                 |                                 |
+|-----------------|---------------------------------|
+| Data Type       | [Dictionary<String, Dynamic>][] |
+| Is [Advanced][] | `false`                         |
+| Default Editor  | [Literal][]                     |
+| Default Value   | `@$""`                          |
+
 ### StatusCode
+
+The StatusCode returned as part of the message.
+
+|                 |                    |
+|-----------------|--------------------|
+| Data Type       | [HttpStatusCode][] |
+| Is [Advanced][] | `false`            |
+| Default Editor  | [Literal][]        |
+| Default Value   | `OK`               |
 
 ## Remarks
 

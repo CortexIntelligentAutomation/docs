@@ -36,15 +36,51 @@ The `RequestVerb` data type is used to represent the the type of an HTTP request
 
 ### GET
 
+| | |
+|-|-|
+| **Name:**    | GET                                                |
+| **Value:**   | [Int32][] with value `1`                           |
+| **Notes:**   | GET request. |
+
 ### POST
+
+| | |
+|-|-|
+| **Name:**    | POST                                                |
+| **Value:**   | [Int32][] with value `1`                           |
+| **Notes:**   | POST request. |
 
 ### PUT
 
+| | |
+|-|-|
+| **Name:**    | PUT                                                |
+| **Value:**   | [Int32][] with value `1`                           |
+| **Notes:**   | PUT request. |
+
 ### DELETE
+
+| | |
+|-|-|
+| **Name:**    | DELETE                                                |
+| **Value:**   | [Int32][] with value `1`                           |
+| **Notes:**   | DELETE request. |
 
 ### PATCH
 
+| | |
+|-|-|
+| **Name:**    | PATCH                                                |
+| **Value:**   | [Int32][] with value `1`                           |
+| **Notes:**   | PATCH request. |
+
 ### HEAD
+
+| | |
+|-|-|
+| **Name:**    | HEAD                                                |
+| **Value:**   | [Int32][] with value `1`                           |
+| **Notes:**   | HEAD request. |
 
 ## Remarks
 

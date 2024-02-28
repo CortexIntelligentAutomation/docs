@@ -30,11 +30,47 @@ The `SoapRequest` data type is used to represent a SOAP request.
 
 ### SoapMessage
 
+The SoapMessage properties to use in the request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [SoapMessage][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | N/A |
+
 ### Uri
+
+The Uri endpoint to use for this request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [Dictionary<String, Object>][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `` |
 
 ### Headers
 
+The Headers to add to this request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [Dictionary<String, Object>][] |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | `` |
+
 ### HttpVersion
+
+The HttpVersion to use in this request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [HttpRequestVersion][] |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `HTTP10` |
 
 ## Remarks
 

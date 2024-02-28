@@ -15,28 +15,73 @@ weight: 1
 
 The `HttpOAuthPasswordCredentials` data type is used to represent details required for the OAuth Resource Owner Password Credentials authentication mechanism.
 
-| | |
-|-|-|
-| **Category:**          | Http                                                      |
-| **Name:**              | `HttpOAuthPasswordCredentials`                                         |
-| **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials`     |
-| **Alias:**             | N/A                                                      |
-| **Description:**       | Used to represent details required for the OAuth Resource Owner Password Credentials authentication mechanism.  |
-| **Default Value:**     | `null`                                                     |
-| **Can be used as:**    | `HttpOAuthPasswordCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
-| **Can be cast to:**    | N/A                                                      |
+|                     |                                                                                                                |
+|---------------------|----------------------------------------------------------------------------------------------------------------|
+| **Category:**       | Http                                                                                                           |
+| **Name:**           | `HttpOAuthPasswordCredentials`                                                                                 |
+| **Full Name:**      | `Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials`                                      |
+| **Alias:**          | N/A                                                                                                            |
+| **Description:**    | Used to represent details required for the OAuth Resource Owner Password Credentials authentication mechanism. |
+| **Default Value:**  | `null`                                                                                                         |
+| **Can be used as:** | `HttpOAuthPasswordCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic`                     |
+| **Can be cast to:** | N/A                                                                                                            |
 
 ## Properties
 
-### ResourceOwnerUsername
-
-### ResourceOwnerPassword
-
 ### AccessTokenUri
+
+The AccessTokenUri provides the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
+|                 |                     |
+|-----------------|---------------------|
+| Data Type       | [EncryptableText][] |
+| Is [Advanced][] | `false`             |
+| Default Editor  | [Expression][]      |
+| Default Value   | `@$""`              |
 
 ### ClientAuthentication
 
+The ClientAuthentication that holds the clientId, ClientSecret and SendAs.
+
+|                 |                          |
+|-----------------|--------------------------|
+| Data Type       | [ClientAuthentication][] |
+| Is [Advanced][] | `true`                   |
+| Default Editor  | [Expression][]           |
+| Default Value   | ``                       |
+
 ### Scope
+
+The scope of what permissions the access token can reach.
+
+|                 |             |
+|-----------------|-------------|
+| Data Type       | [String][]  |
+| Is [Advanced][] | `false`     |
+| Default Editor  | [Literal][] |
+| Default Value   | `""`        |
+
+### ResourceOwnerUsername
+
+The ResourceOwnerUsername is the username used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
+|                 |                     |
+|-----------------|---------------------|
+| Data Type       | [EncryptableText][] |
+| Is [Advanced][] | `false`             |
+| Default Editor  | [Expression][]      |
+| Default Value   | `""`                |
+
+### ResourceOwnerPassword
+
+The ResourceOwnerPassword is the password associated with the [ResourceOwnerUsername][]. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
+
+|                 |                   |
+|-----------------|-------------------|
+| Data Type       | [EncryptedText][] |
+| Is [Advanced][] | `false`           |
+| Default Editor  | [Expression][]    |
+| Default Value   | `""`              |
 
 ## Remarks
 

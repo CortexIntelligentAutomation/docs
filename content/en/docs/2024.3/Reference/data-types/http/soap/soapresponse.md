@@ -30,9 +30,36 @@ The `SoapResponse` data type is used to represent a SOAP response.
 
 ### ResponseEnvelope
 
+The ResponseEnvelope is used to encapsulate all data in the [Headers][].
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [Dynamic][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `@$""` |
+
 ### ErrorMessage
 
+The ErrorMessage is used represent any errors.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [string][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `@$""` |
+
 ### Headers
+
+The Headers are a dictionary of the response headers being returned.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [Dictionary<String, Object>][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `` |
 
 ### StatusCode
 
