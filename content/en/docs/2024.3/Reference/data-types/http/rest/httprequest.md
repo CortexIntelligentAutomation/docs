@@ -22,7 +22,7 @@ The `HttpRequest` data type is used to represent an HTTP REST request.
 | **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpRequest`                   |
 | **Alias:**             | N/A                                                          |
 | **Description:**       | Used to represent an HTTP REST request.             |
-| **Default Value:**     | null                                                         |
+| **Default Value:**     | `null`                                                         |
 | **Can be used as:**    | `HttpRequest`, `Request`, `Object`, `dynamic`                    |
 | **Can be cast to:**    | N/A                                                          |
 

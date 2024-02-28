@@ -21,7 +21,7 @@ Any data type representing password authentication credentials required to authe
 | **Full Name:**         | `Cortex.DataTypes.Credentials.IUserCredentials`         |
 | **Alias:**             | N/A                                                    |
 | **Description:**       | Any data type representing password authentication credentials required to authenticate with a domain or server. |
-| **Default Value:**     | null                                                   |
+| **Default Value:**     | `null`                                                  |
 | **Can be used as:**    | `IUserCredentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 

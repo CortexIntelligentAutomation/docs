@@ -22,7 +22,7 @@ The `HttpResponse` data type is used to represent an HTTP REST response.
 | **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpResponse`                   |
 | **Alias:**             | N/A                                                          |
 | **Description:**       | Used to represent an HTTP REST response.             |
-| **Default Value:**     | null                                                         |
+| **Default Value:**     | `null`                                                         |
 | **Can be used as:**    | `HttpResponse`, `Object`, `dynamic`                    |
 | **Can be cast to:**    | N/A                                                          |
 

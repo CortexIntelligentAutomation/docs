@@ -22,7 +22,7 @@ The `ClientAuthentication` data type is used to represent the `ClientId` and `Cl
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthentication`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent the `ClientId` and `ClientSecret` required for OAuth authentication mechanisms that use Client Secrets. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `ClientAuthentication`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 

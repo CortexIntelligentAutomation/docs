@@ -22,7 +22,7 @@ The `Soap12Message` data type is used to represent a SOAP 1.2 message.
 | **Full Name:**         | `Cortex.DataTypes.Http.Soap.Soap12Message`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent a SOAP 1.2 message. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `Soap12Message`, `SoapMessage`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 

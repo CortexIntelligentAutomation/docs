@@ -22,7 +22,7 @@ Any data type used to represent details required for authentication when working
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.HttpCredentials`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Any data type used to represent details required for authentication when working with HTTP. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 

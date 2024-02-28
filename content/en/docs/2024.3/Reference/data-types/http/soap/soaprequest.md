@@ -22,7 +22,7 @@ The `SoapRequest` data type is used to represent a SOAP request.
 | **Full Name:**         | `Cortex.DataTypes.Http.Soap.SoapRequest`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent a SOAP request. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `SoapRequest`, `Request`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 

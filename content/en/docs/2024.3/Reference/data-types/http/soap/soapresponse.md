@@ -22,7 +22,7 @@ The `SoapResponse` data type is used to represent a SOAP response.
 | **Full Name:**         | `Cortex.DataTypes.Http.Soap.SoapResponse`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent a SOAP response. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `SoapResponse`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 

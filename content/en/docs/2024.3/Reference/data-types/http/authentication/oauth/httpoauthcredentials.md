@@ -22,7 +22,7 @@ Any data type used to represent details required for OAuth authentication.
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Any data type used to represent details required for OAuth authentication.  |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `HttpOAuthCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 

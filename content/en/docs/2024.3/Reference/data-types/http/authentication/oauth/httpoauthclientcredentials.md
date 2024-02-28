@@ -22,7 +22,7 @@ The `HttpOAuthClientCredentials` data type is used to represent details required
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Used to represent details required for the OAuth Client Credentials authentication mechanism. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `HttpOAuthClientCredentials`, `HttpOAuthCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic` |
 | **Can be cast to:**    | N/A                                                      |
 
