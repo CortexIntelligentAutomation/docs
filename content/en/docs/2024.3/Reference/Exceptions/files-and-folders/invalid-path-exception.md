@@ -15,27 +15,6 @@ The exception thrown when specifying an invalid file or folder [path][WhatIsAPat
 
 ## Reasons
 
-### Path must be a folder and that path does not already point to a file
-
-The provided [path][WhatIsAPath] needs to be a folder, and is not a valid folder path.
-
-#### Message Format
-
-The format of the exception message is as follows:
-
-```json
-"The '<path-property>' given was '<path>'; this is not a valid folder path.
-Please click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-* `<path-property>` is the name of the property that was an invalid folder path.
-* `<path>` is the [path][WhatIsAPath] that was invalid.
-
-#### How to fix
-
-Ensure that the [path][WhatIsAPath] provided is a valid folder path.
 
 ### Path provided is invalid
 
@@ -46,18 +25,40 @@ The provided [path][WhatIsAPath] has an incorrect syntax, or has illegal charact
 The format of the exception message is as follows:
 
 ```json
-"The '<path-property>' given was '<path>'; this is not a valid folder path. Please see the 'InnerException' property for more details.
+"The '<path-property>' given was '<path-value>'; this is not a valid folder path. Please see the 'InnerException' property for more details.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<path-property>` is the name of the property that was an invalid folder path.
-* `<path>` is the [path][WhatIsAPath] that was invalid.
+* `<path-property>` is the name of the property containing the path which threw this exception.
+* `<path-value>` is the value of the property, i.e. the path, which was invalid.
 
 #### How to fix
 
-Ensure that the [path][WhatIsAPath] provided has no incorrect syntax or illegal characters, and that it is not too long.
+Ensure that the [path][WhatIsAPath] provided has no incorrect syntax or illegal characters, and that it is not too long; see [Paths][] for more information.
+
+### Path provided must represent a folder and that path must not point to an existing file
+
+The provided [path][WhatIsAPath] needs to be a folder, and must not point to an existing file.
+
+#### Message Format
+
+The format of the exception message is as follows:
+
+```json
+"The '<path-property>' given was '<path-value>'; this is not a valid folder path.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<path-property>` is the name of the property containing the path which threw this exception.
+* `<path-value>` is the value of the property, i.e. the path, which was invalid.
+
+#### How to fix
+
+Ensure that the [path][WhatIsAPath] provided is a valid folder path and does not point to an existing file; see [Paths][] for more information.
 
 ## Remarks
 
@@ -69,7 +70,9 @@ None
 
 ### External Documentation
 
-None
+* [Naming Files, Paths, and Namespaces][NamingFilesPathsAndNamespaces]
 
 [FolderConcepts]: {{<url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.MainDoc">}}
 [WhatIsAPath]: {{<url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc">}}
+[NamingFilesPathsAndNamespaces]: {{<url path="MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces.MainDoc">}}
+[Paths]: {{<url path="MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces.Paths">}}
