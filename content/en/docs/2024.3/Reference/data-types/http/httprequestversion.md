@@ -32,6 +32,14 @@ The `HttpRequestVersion` data type is used to represent the version of HTTP to b
 |                        | `Single` (e.g. `(Single)HttpRequestVersion.HTTP10` or `(System.Single)HttpRequestVersion.HTTP10` or `(float)HttpRequestVersion.HTTP10`)  |
 |                        | `Double` (e.g. `(Double)HttpRequestVersion.HTTP10` or `(System.Double)HttpRequestVersion.HTTP10` or `(double)HttpRequestVersion.HTTP10`)  |
 
+## Values
+
+`HttpRequestVersion` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
+
+### HTTP10
+
+### HTTP11
+
 ### Property Editor Support
 
 - The Expression Editor is available for [Input][] properties where the data type is `HttpRequestVersion`.
