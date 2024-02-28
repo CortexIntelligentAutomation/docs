@@ -62,11 +62,14 @@ There is one way to get the current culture:
 
 #### Neutral Culture
 
-The neutral culture is culture-sensitive. It is associated with a language, but not with any country/region
+The neutral culture is culture-sensitive. It is associated with a language, but not with any country/region.
+
+Neutral Culture can be created by specifying the language but not the country, e.g. new CultureInfo("en") for english with no associated country.
 
 #### Specific Culture
 
 The culture can be explicitly specified to use a particular format, e.g. CultureInfo("en-GB") for the standard UK english culture.
+If the resources for a specific culture are not available in the operating system, the resources for the associated neutral culture are used.
 
 For a comprehensive list of cultures please see [Supported Culture Codes][]
 
@@ -90,7 +93,7 @@ None
 
 - [CultureInfoNotFoundException][]
 - [Supported Culture Codes][]
-- [System.Globalisation.CultureInfo][]
+- [System.Globalization.CultureInfo][]
 
 TODO:
 
@@ -114,4 +117,4 @@ TODO:
 
 [Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
-[System.Globalisation.CultureInfo]: {{< url path="MSDocs.DotNet.Api.System.Globalization.CultureInfo" >}}
+[System.Globalization.CultureInfo]: {{< url path="MSDocs.DotNet.Api.System.Globalization.CultureInfo" >}}
