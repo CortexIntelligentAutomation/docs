@@ -7,4 +7,5 @@ description: "The exception thrown when an issue occurs during the authorisation
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Http.HttpAuthorisationException)</p>
+
 {{< workinprogress >}}
