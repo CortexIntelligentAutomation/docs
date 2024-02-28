@@ -26,6 +26,18 @@ The `Microsoft365OAuthCertificateCredentials` data type is used to represent pub
 | **Can be used as:**    | `Microsoft365OAuthCertificateCredentials`, `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
+## Properties
+
+### ObjectId
+
+### CertificatePath
+
+### CertificatePassword
+
+### ClientId
+
+### TenantId
+
 ## Remarks
 
 ### Property Editor Support
