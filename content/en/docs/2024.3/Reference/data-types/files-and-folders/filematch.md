@@ -1,7 +1,7 @@
 ---
 title: "FileMatch"
 linkTitle: "FileMatch"
-description: "Used to represent a regex match of a line within the file. It contains all of the groups found in the regex pattern."
+description: "Used to represent a regex match of a line within a file. It contains all of the groups found in the regex pattern."
 ---
 
 # {{% param title %}}
@@ -12,7 +12,7 @@ description: "Used to represent a regex match of a line within the file. It cont
 
 ## Summary
 
-The `FileMatch` datatype is used to represent a regex match of a line within the file. It contains all of the [Groups][Group] found in the regex pattern.
+The `FileMatch` data type is used to represent a regex match of a line within a file. It contains all of the [Groups][Group] found in the regex pattern.
 
 | | |
 |-|-|
@@ -20,7 +20,7 @@ The `FileMatch` datatype is used to represent a regex match of a line within the
 | **Name:**              | `FileMatch`                                                        |
 | **Full Name:**         | `Cortex.DataTypes.FilesAndFolders.FileMatch`                                                 |
 | **Alias:**             | N/A |
-| **Description:**       | Used to represent a regex match of a line within the file. It contains all of the [Groups][Group] found in the regex pattern. |
+| **Description:**       | Used to represent a regex match of a line within a file. It contains all of the [Groups][Group] found in the regex pattern. |
 | **Default Value:**     | `null` |
 | **Can be used as:**    | `FileMatch`, `Match`, `object`, `dynamic` |
 | **Can be cast to:**    | N/A |
@@ -29,18 +29,21 @@ The `FileMatch` datatype is used to represent a regex match of a line within the
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `FileInformation`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `FileInformation`.
+- The Expression Editor is available for [Input][] properties where the data type is `FileMatch`.
+- The Literal Editor is not available for [Input][] properties where the data type is `FileMatch`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `FileMatch`.
 
 ### Known Limitations
+
+None
 
 ## See Also
 
 ### Related Data Types
 
 - [Group][]
-- [Match][]
 - [Int32][]
+- [Match][]
 - [String][]
 
 ### Related Concepts

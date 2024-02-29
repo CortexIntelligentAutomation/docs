@@ -1,7 +1,7 @@
 ---
 title: "ClientAuthType"
 linkTitle: "ClientAuthType"
-description: "Used to represent the client authentication type for OAuth."
+description: "Used to represent whether the `ClientId` and `ClientSecret` specified in ClientAuthentication are sent as part of the HTTP headers or HTTP body."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `ClientAuthType` data type is used to represent the client authentication type for OAuth.
+The `ClientAuthType` data type is used to represent whether the `ClientId` and `ClientSecret` specified in [ClientAuthentication][] are sent as part of the HTTP headers or HTTP body.
 
 `ClientAuthType` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -23,14 +23,14 @@ The `ClientAuthType` data type is used to represent the client authentication ty
 | **Name:**              | `ClientAuthType`                                |
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.OAuth.ClientAuthType`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent the type of an HTTP request. |
+| **Description:**       | Used to represent whether the `ClientId` and `ClientSecret` specified in [ClientAuthentication][] are sent as part of the HTTP headers or HTTP body. |
 | **Default Value:**     | `(ClientAuthType)0`                             |
 | **Can be used as:**    | `ClientAuthType`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)ClientAuthType.GET` or `(System.Int16)ClientAuthType.GET` or `(short)ClientAuthType.GET`)  |
-|                        | `Int32` (e.g. `(Int32)ClientAuthType.GET` or `(System.Int32)ClientAuthType.GET` or `(int)ClientAuthType.GET`)  |
-|                        | `Int64` (e.g. `(Int64)ClientAuthType.GET` or `(System.Int64)ClientAuthType.GET` or `(long)ClientAuthType.GET`)  |
-|                        | `Single` (e.g. `(Single)ClientAuthType.GET` or `(System.Single)ClientAuthType.GET` or `(float)ClientAuthType.GET`)  |
-|                        | `Double` (e.g. `(Double)ClientAuthType.GET` or `(System.Double)ClientAuthType.GET` or `(double)ClientAuthType.GET`)  |
+| **Can be cast to:**    | `Int16` (e.g. `(Int16)ClientAuthType.Header` or `(System.Int16)ClientAuthType.Header` or `(short)ClientAuthType.Header`)  |
+|                        | `Int32` (e.g. `(Int32)ClientAuthType.Header` or `(System.Int32)ClientAuthType.Header` or `(int)ClientAuthType.Header`)  |
+|                        | `Int64` (e.g. `(Int64)ClientAuthType.Header` or `(System.Int64)ClientAuthType.Header` or `(long)ClientAuthType.Header`)  |
+|                        | `Single` (e.g. `(Single)ClientAuthType.Header` or `(System.Single)ClientAuthType.Header` or `(float)ClientAuthType.Header`)  |
+|                        | `Double` (e.g. `(Double)ClientAuthType.Header` or `(System.Double)ClientAuthType.Header` or `(double)ClientAuthType.Header`)  |
 
 ## Remarks
 
@@ -48,17 +48,15 @@ None
 
 ### Related Data Types
 
+- [ClientAuthentication][]
+- [HttpOAuthClientCredentials][]
 - [Int32][]
 - [String][]
-- [HttpOAuthCredentials][]
-- [HttpOAuthClientCredentials][]
-- [HttpOAuthPasswordCredentials][]
 
 ### Related Concepts
 
 - [Explicit Casting][]
 - [Working with Enums][]
-- [Working with Text][]
 
 ### External Documentation
 
@@ -71,12 +69,10 @@ None
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
-[working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 [Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
 [HttpOAuthClientCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials.MainDoc" >}}
-[HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}
-[HttpOAuthCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials.MainDoc" >}}
+[ClientAuthentication]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.MainDoc" >}}

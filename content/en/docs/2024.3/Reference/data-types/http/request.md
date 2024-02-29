@@ -22,7 +22,7 @@ Any data type that is used to represent an HTTP request.
 | **Full Name:**         | `Cortex.DataTypes.Http.Request`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Any data type that is used to represent an HTTP request. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `Request`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
 

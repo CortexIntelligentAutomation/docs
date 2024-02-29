@@ -2,6 +2,7 @@
 title: "EncryptableText"
 linkTitle: "EncryptableText"
 description: "Used to represent text that can be, but does not need to be encrypted."
+weight: 1
 ---
 
 # {{% param title %}}

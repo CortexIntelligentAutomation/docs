@@ -22,9 +22,15 @@ Any data type that is used to represent a SOAP message.
 | **Full Name:**         | `Cortex.DataTypes.Http.Soap.SoapMessage`     |
 | **Alias:**             | N/A                                                      |
 | **Description:**       | Any data type that is used to represent a SOAP message. |
-| **Default Value:**     | null                                                     |
+| **Default Value:**     | `null`                                                     |
 | **Can be used as:**    | `SoapMessage`, `Object`, `dynamic`              |
 | **Can be cast to:**    | N/A                                                      |
+
+## Properties
+
+### Envelope
+
+### Version
 
 ## Remarks
 

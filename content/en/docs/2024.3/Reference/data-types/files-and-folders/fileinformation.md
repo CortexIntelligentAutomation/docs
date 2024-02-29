@@ -12,7 +12,7 @@ description: "Used to represent information about a file."
 
 ## Summary
 
-The `FileInformation` datatype is used to represent information about a file.
+The `FileInformation` data type is used to represent information about a file.
 
 | | |
 |-|-|
@@ -35,11 +35,13 @@ The `FileInformation` datatype is used to represent information about a file.
 
 ### Known Limitations
 
+None
+
 ## See Also
 
 ### Related Data Types
 
-- [FileSystemInformation][]
+- [FolderInformation][]
 
 ### Related Concepts
 
@@ -53,6 +55,6 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[FileSystemInformation]: {{< url path="Cortex.Reference.DataTypes.FilesAndFolders.FileSystemInformation.MainDoc" >}}
+[FolderInformation]: {{< url path="Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation.MainDoc" >}}
 
 [Working With Files & Folders]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.MainDoc" >}}

@@ -1,7 +1,7 @@
 ---
 title: "HttpResponse"
 linkTitle: "HttpResponse"
-description: "Used to represent an HTTP response."
+description: "Used to represent an HTTP REST response."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `HttpResponse` data type is used to represent an HTTP request.
+The `HttpResponse` data type is used to represent an HTTP REST response.
 
 | | |
 |-|-|
@@ -21,10 +21,16 @@ The `HttpResponse` data type is used to represent an HTTP request.
 | **Name:**              | `HttpResponse`                                         |
 | **Full Name:**         | `Cortex.DataTypes.Http.Rest.HttpResponse`                   |
 | **Alias:**             | N/A                                                          |
-| **Description:**       | Used to represent an HTTP response.             |
-| **Default Value:**     | null                                                         |
+| **Description:**       | Used to represent an HTTP REST response.             |
+| **Default Value:**     | `null`                                                         |
 | **Can be used as:**    | `HttpResponse`, `Object`, `dynamic`                    |
 | **Can be cast to:**    | N/A                                                          |
+
+## Properties
+
+### Property Editor Support
+
+### StatusCode
 
 ## Remarks
 
@@ -42,7 +48,7 @@ None
 
 ### Related Data Types
 
-- [HttpResponse][]
+- [HttpRequest][]
 
 ### Related Concepts
 
@@ -56,4 +62,4 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
-[HttpResponse]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpResponse.MainDoc" >}}
+[HttpRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc" >}}

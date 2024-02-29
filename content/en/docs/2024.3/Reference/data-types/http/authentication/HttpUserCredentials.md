@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-Any data type used to represent details required for authentication when working with HTTP.
+The `HttpUserCredentials` data type is used to represent details required for basic authentication when working with HTTP.
 
 | | |
 |-|-|
@@ -21,8 +21,8 @@ Any data type used to represent details required for authentication when working
 | **Name:**              | `HttpUserCredentials`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Http.Authentication.HttpUserCredentials`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Any data type used to represent details required for authentication when working with HTTP. |
-| **Default Value:**     | null                                                   |
+| **Description:**       | Used to represent details required for basic authentication when working with HTTP. |
+| **Default Value:**     | `null`                                                   |
 | **Can be used as:**    | `HttpUserCredentials`, `HttpCredentials`, `IHttpCredentials`, `Object`, `dynamic`                |
 | **Can be cast to:**    | N/A                                                    |
 
