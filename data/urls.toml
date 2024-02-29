@@ -1495,6 +1495,8 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/contentoptions"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileSystemInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/filesysteminformation"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileMatch]
                     MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
@@ -1533,6 +1535,8 @@
                     DELETE = "/docs/reference/data-types/http/requestverb/#delete"
                     PATCH = "/docs/reference/data-types/http/requestverb/#patch"
                     HEAD = "/docs/reference/data-types/http/requestverb/#head"
+                [Cortex.Reference.DataTypes.Http.Request]
+                    MainDoc = "/docs/reference/data-types/http/request"
                 [Cortex.Reference.DataTypes.Http.HttpRequestVersion]
                     MainDoc = "/docs/reference/data-types/http/httprequestversion"
                     HTTP10 = "/docs/reference/data-types/http/httprequestversion/#http10"
@@ -2456,6 +2460,10 @@
         MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
         Explorer = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
         ReverseProxy = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
+    [MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces]
+        MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
+        NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
+        Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
 [MSDotNet]
     [MSDotNet.Framework471]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
