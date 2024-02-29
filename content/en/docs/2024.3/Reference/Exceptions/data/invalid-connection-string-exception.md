@@ -1,70 +1,68 @@
 ---
 title: "InvalidConnectionStringException"
 linkTitle: "InvalidConnectionStringException"
-description: "Exception thrown when an invalid connection string is used."
+description: "The exception thrown when an invalid connection string is used."
 ---
 
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.Data.InvalidConnectionStringException)</p>
+{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
 
-Exception thrown when an invalid connection string is used.
+## Description
 
-The format of the exception message is as follows:
+The exception thrown when an invalid connection string is used.
+
+## Reasons
+
+### Invalid connection string has been supplied
+
+The connection string provided was invalid.
+
+#### Message Format
+
+The format of the message is as follows:
 
 ```json
-"TODO.
+"The connection string was invalid and failed with error message: <inner-exception-message>.
 Please click the HelpLink for more information on how to fix this."
 ```
 
-TODO: This is an example of how we can do exceptions with categories and error codes 
+where:
 
-| Category           | Error Code   | Notes                                    |
-|--------------------|--------------|------------------------------------------|
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-| BasicCredentials   | 300          | Some notes |
-|                    | 301          | Some notes |
-|                    | 302          | Some notes |
-
-## BasicCredentials.AccessTokenUri
-
-### 300
+* `<inner-exception-message>` is the message of the inner exception caused by the invalid connection string being used.
 
 #### How to fix
 
-TODO:
+Ensure that a valid connection string is provided for the data source being connected to; see [connectionstrings.com][ConnectionStrings] for valid examples.
 
-### 301
+## Remarks
 
-#### How to fix
+### Known Limitations
 
-TODO:
+None
 
-### 302
+## See Also
 
-#### How to fix
+### External Documentation
 
-TODO:
+* [connectionstrings.com][ConnectionStrings]
+
+[Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
+[End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
+
+[Wait For Duration]: {{< url path="Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration.MainDoc" >}}
+
+[Start Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
+[End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+
+[Message]: {{< ref "#message" >}}
+
+[Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
+
+[ConnectionStrings]: {{<url path="ConnectionStrings.MainDoc">}}
