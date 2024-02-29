@@ -34,7 +34,7 @@ The ResponseEnvelope is used to encapsulate all data in the [Headers][].
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dynamic][] |
+| Data Type | [dynamic][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `@$""` |
@@ -56,7 +56,7 @@ The Headers are a dictionary of the response headers being returned.
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dictionary<String, Object>][] |
+| Data Type | [IDictionary<String, Object>][IDictionary] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
 | Default Value | `` |
@@ -94,3 +94,11 @@ None
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}
+
+[Headers]: {{< ref "#headers">}}
+[dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}

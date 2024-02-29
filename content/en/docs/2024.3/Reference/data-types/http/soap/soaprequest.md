@@ -28,9 +28,20 @@ The `SoapRequest` data type is used to represent a SOAP request.
 
 ## Properties
 
+### Uri
+
+The Uri endpoint to use for this request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [IDictionary<String, Object>][IDictionary] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | `$@""` |
+
 ### SoapMessage
 
-The SoapMessage properties to use in the request.
+The SoapMessage to use in the request.
   
 | | |
 |--------------------|---------------------------|
@@ -39,24 +50,13 @@ The SoapMessage properties to use in the request.
 | Default Editor | [Literal][] |
 | Default Value | N/A |
 
-### Uri
-
-The Uri endpoint to use for this request.
-  
-| | |
-|--------------------|---------------------------|
-| Data Type | [Dictionary<String, Object>][] |
-| Is [Advanced][] | `false` |
-| Default Editor | [Expression][] |
-| Default Value | `` |
-
 ### Headers
 
 The Headers to add to this request.
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [Dictionary<String, Object>][] |
+| Data Type | [IDictionary<String, Object>][IDictionary] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
 | Default Value | `` |
@@ -88,9 +88,11 @@ None
 
 ### Related Data Types
 
+- [IDictionary<String, Object>][IDictionary]
 - [Request][]
 - [Soap11Message][]
 - [Soap12Message][]
+- [SoapMessage][]
 - [SoapResponse][]
 
 ### Related Concepts
@@ -109,3 +111,12 @@ None
 [Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
 [Request]: {{< url path = "Cortex.Reference.DataTypes.Http.Request.MainDoc" >}}
 [SoapResponse]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapResponse.MainDoc" >}}
+
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}

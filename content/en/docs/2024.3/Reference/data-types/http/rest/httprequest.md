@@ -45,9 +45,9 @@ The URI endpoint to use for this request.
 
 |                 |                                 |
 |-----------------|---------------------------------|
-| Data Type       | [Dictionary<String, Dynamic>][] |
+| Data Type       | [IDictionary<String, Dynamic>][] |
 | Is [Advanced][] | `true`                          |
-| Default Editor  | [Literal][]                     |
+| Default Editor  | [Expression][]                     |
 | Default Value   | `@$""`                          |
 
 ### Verb
@@ -67,10 +67,10 @@ The ContentType to use for this request.
 
 |                 |                 |
 |-----------------|-----------------|
-| Data Type       | [RequestVerb][] |
+| Data Type       | [string][] |
 | Is [Advanced][] | `false`         |
 | Default Editor  | [Literal][]     |
-| Default Value   | `@$""`          |
+| Default Value   | `application/json`          |
 
 ### Headers
 
@@ -78,18 +78,19 @@ The Headers to include with this request.
 
 |                 |                 |
 |-----------------|-----------------|
-| Data Type       | [RequestVerb][] |
+| Data Type       | [IDictionary<String, Dynamic>][] |
 | Is [Advanced][] | `false`         |
 | Default Editor  | [Literal][]     |
-| Default Value   | `@$""`          |
+| Default Value   | N/A          |
 
 ### Body
 
-The data to include in the body to be used in non GET and HEAD requests.
+The data to include in the body to be used in non GET and HEAD requests. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
 
 |                 |                 |
 |-----------------|-----------------|
-| Data Type       | [RequestVerb][] |
+| Data Type       | [EncryptableText][] |
 | Is [Advanced][] | `false`         |
 | Default Editor  | [Literal][]     |
 | Default Value   | `@$""`          |
@@ -98,9 +99,9 @@ The data to include in the body to be used in non GET and HEAD requests.
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `Request`.
-- The Literal Editor is available for [Input][] properties where the data type is `Request`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Request`.
+- The Expression Editor is available for [Input][] properties where the data type is `HttpRequest`.
+- The Literal Editor is available for [Input][] properties where the data type is `HttpRequest`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `HttpRequest`.
 
 ### Known Limitations
 

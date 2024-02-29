@@ -17,70 +17,70 @@ The `RequestVerb` data type is used to represent the the type of an HTTP request
 
 `RequestVerb` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
-| | |
-|-|-|
-| **Category:**          | Http                                                  |
-| **Name:**              | `RequestVerb`                                |
-| **Full Name:**         | `Cortex.DataTypes.Http.RequestVerb`         |
-| **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent the type of an HTTP request. |
-| **Default Value:**     | `(RequestVerb)0`                             |
-| **Can be used as:**    | `RequestVerb`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)RequestVerb.GET` or `(System.Int16)RequestVerb.GET` or `(short)RequestVerb.GET`)  |
-|                        | `Int32` (e.g. `(Int32)RequestVerb.GET` or `(System.Int32)RequestVerb.GET` or `(int)RequestVerb.GET`)  |
-|                        | `Int64` (e.g. `(Int64)RequestVerb.GET` or `(System.Int64)RequestVerb.GET` or `(long)RequestVerb.GET`)  |
-|                        | `Single` (e.g. `(Single)RequestVerb.GET` or `(System.Single)RequestVerb.GET` or `(float)RequestVerb.GET`)  |
-|                        | `Double` (e.g. `(Double)RequestVerb.GET` or `(System.Double)RequestVerb.GET` or `(double)RequestVerb.GET`)  |
+|                     |                                                                                                            |
+|---------------------|------------------------------------------------------------------------------------------------------------|
+| **Category:**       | Http                                                                                                       |
+| **Name:**           | `RequestVerb`                                                                                              |
+| **Full Name:**      | `Cortex.DataTypes.Http.RequestVerb`                                                                        |
+| **Alias:**          | N/A                                                                                                        |
+| **Description:**    | Used to represent the type of an HTTP request.                                                             |
+| **Default Value:**  | `(RequestVerb)0`                                                                                           |
+| **Can be used as:** | `RequestVerb`, `Object`, `dynamic`                                                                         |
+| **Can be cast to:** | `Int16` (e.g. `(Int16)RequestVerb.GET` or `(System.Int16)RequestVerb.GET` or `(short)RequestVerb.GET`)     |
+|                     | `Int32` (e.g. `(Int32)RequestVerb.GET` or `(System.Int32)RequestVerb.GET` or `(int)RequestVerb.GET`)       |
+|                     | `Int64` (e.g. `(Int64)RequestVerb.GET` or `(System.Int64)RequestVerb.GET` or `(long)RequestVerb.GET`)      |
+|                     | `Single` (e.g. `(Single)RequestVerb.GET` or `(System.Single)RequestVerb.GET` or `(float)RequestVerb.GET`)  |
+|                     | `Double` (e.g. `(Double)RequestVerb.GET` or `(System.Double)RequestVerb.GET` or `(double)RequestVerb.GET`) |
 
 ## Values
 
 ### GET
 
-| | |
-|-|-|
-| **Name:**    | GET                                                |
-| **Value:**   | [Int32][] with value `1`                           |
-| **Notes:**   | GET request. |
+|            |                          |
+|------------|--------------------------|
+| **Name:**  | GET                      |
+| **Value:** | [Int32][] with value `0` |
+| **Notes:** | GET request.             |
 
 ### POST
 
-| | |
-|-|-|
-| **Name:**    | POST                                                |
-| **Value:**   | [Int32][] with value `1`                           |
-| **Notes:**   | POST request. |
+|            |                          |
+|------------|--------------------------|
+| **Name:**  | POST                     |
+| **Value:** | [Int32][] with value `1` |
+| **Notes:** | POST request.            |
 
 ### PUT
 
-| | |
-|-|-|
-| **Name:**    | PUT                                                |
-| **Value:**   | [Int32][] with value `1`                           |
-| **Notes:**   | PUT request. |
+|            |                          |
+|------------|--------------------------|
+| **Name:**  | PUT                      |
+| **Value:** | [Int32][] with value `2` |
+| **Notes:** | PUT request.             |
 
 ### DELETE
 
-| | |
-|-|-|
-| **Name:**    | DELETE                                                |
-| **Value:**   | [Int32][] with value `1`                           |
-| **Notes:**   | DELETE request. |
+|            |                          |
+|------------|--------------------------|
+| **Name:**  | DELETE                   |
+| **Value:** | [Int32][] with value `3` |
+| **Notes:** | DELETE request.          |
 
 ### PATCH
 
-| | |
-|-|-|
-| **Name:**    | PATCH                                                |
-| **Value:**   | [Int32][] with value `1`                           |
-| **Notes:**   | PATCH request. |
+|            |                          |
+|------------|--------------------------|
+| **Name:**  | PATCH                    |
+| **Value:** | [Int32][] with value `4` |
+| **Notes:** | PATCH request.           |
 
 ### HEAD
 
-| | |
-|-|-|
-| **Name:**    | HEAD                                                |
-| **Value:**   | [Int32][] with value `1`                           |
-| **Notes:**   | HEAD request. |
+|            |                          |
+|------------|--------------------------|
+| **Name:**  | HEAD                     |
+| **Value:** | [Int32][] with value `5` |
+| **Notes:** | HEAD request.            |
 
 ## Remarks
 

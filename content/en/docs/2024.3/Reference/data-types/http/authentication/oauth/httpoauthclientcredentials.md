@@ -30,9 +30,36 @@ The `HttpOAuthClientCredentials` data type is used to represent details required
 
 ### AccessTokenUri
 
+The AccessTokenUri provides the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
+|                 |                     |
+|-----------------|---------------------|
+| Data Type       | [EncryptableText][] |
+| Is [Advanced][] | `false`             |
+| Default Editor  | [Expression][]      |
+| Default Value   | `@$""`              |
+
 ### ClientAuthentication
 
+The ClientAuthentication that holds the ClientId, ClientSecret and SendAs.
+
+|                 |                          |
+|-----------------|--------------------------|
+| Data Type       | [ClientAuthentication][] |
+| Is [Advanced][] | `true`                   |
+| Default Editor  | [Expression][]           |
+| Default Value   | ``                       |
+
 ### Scope
+
+The scope of permissions the access token can reach.
+
+|                 |             |
+|-----------------|-------------|
+| Data Type       | [String][]  |
+| Is [Advanced][] | `true`     |
+| Default Editor  | [Literal][] |
+| Default Value   | `""`        |
 
 ## Remarks
 

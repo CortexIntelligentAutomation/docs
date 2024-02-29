@@ -30,9 +30,35 @@ The `ClientAuthentication` data type is used to represent the `ClientId` and `Cl
 
 ### ClientId
 
+The ClientId is used to define the public identification value for the client application. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptableText][] with value `""` |
+
 ### ClientSecret
 
+The ClientSecret represents the secret used to authenticate with the client application, this value should be kept secret. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptedText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptedText][] with value `""` |
+
 ### SendAs
+
+The SendAs defines whether the credentials are included in the body or the header.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [ClientAuthType][] |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | [EncryptedText][] with value `""` |
 
 ## Remarks
 
