@@ -60,8 +60,8 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [OperationFailedException][] | Any file path in [File Paths][FilePaths Property] is `null` or empty (i.e. `""`). For more information, see [Null or Empty File Paths][]. |
-|                              | Any file path in [File Paths][FilePaths Property] is duplicated. For more information, see [Duplicate File Paths][]. |
+| [OperationFailedException][] | Any file path in [File Paths][FilePaths Property] is `null` or empty (i.e. `""`). |
+|                              | Any file path in [File Paths][FilePaths Property] is duplicated. |
 |                              | Any file path in [File Paths][FilePaths Property] points to a folder. |
 |                              | Any file path in [File Paths][FilePaths Property] contains leading spaces. |
 |                              | Any file path in [File Paths][FilePaths Property] contains only whitespace, or the NUL character (i.e. `\0`), or contains one or more invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`) in any file or folder names. |
