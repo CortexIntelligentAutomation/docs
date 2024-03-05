@@ -28,20 +28,14 @@ The `CultureInfo` data type is used to represent information about a specific cu
 
 ## Remarks
 
-### Property Editor Support
-
-- The Expression Editor is available for [Input][] properties where the data type is `CultureInfo`.
-- The Literal Editor is available for [Input][] properties where the data type is `CultureInfo`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `CultureInfo`.
-
 ### Types of CultureInfo
 
-There are 3 types of CultureInfo:
+There are four types of CultureInfo:
 
-- [InvariantCulture][]
-- [CurrentCulture][]
-- [NeutralCulture][]
-- [SpecificCulture][]
+- [Invariant Culture][]
+- [Current Culture][]
+- [Neutral Culture][]
+- [Specific Culture][]
 
 #### Invariant Culture
 
@@ -64,26 +58,34 @@ There is one way to get the current culture:
 
 The neutral culture is culture-sensitive. It is associated with a language, but not with any country/region.
 
-Neutral Culture can be created by specifying the language but not the country, e.g. new CultureInfo("en") for english with no associated country.
+Neutral Culture can be created by specifying the language but not the country (e.g. `new CultureInfo("en")` for english with no associated country).
 
 #### Specific Culture
 
-The culture can be explicitly specified to use a particular format, e.g. CultureInfo("en-GB") for the standard UK english culture.
+The culture can be explicitly specified to use a particular format (e.g. `CultureInfo("en-GB")` for the standard UK english culture).
 If the resources for a specific culture are not available in the operating system, the resources for the associated neutral culture are used.
 
-For a comprehensive list of cultures please see [Supported Culture Codes][]
+For a comprehensive list of cultures please see [Supported Culture Codes][].
+
+### Invalid CultureInfo
+
+If an invalid CultureInfo (e.g. `new CultureInfo(“enaa”)`), is provided to a block property that requires an [IFormatProvider][] data type, (i.e. [Format Text With Values][FormatTextWithValues] block) a [CultureInfoNotFoundException][] will be thrown.
+
+### Property Editor Support
+
+- The Expression Editor is available for [Input][] properties where the data type is `CultureInfo`.
+- The Literal Editor is available for [Input][] properties where the data type is `CultureInfo`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `CultureInfo`.
 
 ### Known Limitations
 
-#### Invalid CultureInfo provided
-
-If an invalid CultureInfo is provided, a [CultureInfoNotFoundException][] will be thrown
+None
 
 ## See Also
 
 ### Related Data Types
 
-None
+- [IFormatProvider][]
 
 ### Related Concepts
 
@@ -91,25 +93,17 @@ None
 
 ### External Documentation
 
-- [CultureInfoNotFoundException][]
 - [Supported Culture Codes][]
 - [System.Globalization.CultureInfo][]
-
-TODO:
-
-- If the culture identifier is empty e.g (new CultureInfo("")), cultureInfo is set to InvariantCulture.
-- If the culture does not exist, the operating system will create a custom culture using the culture identifier.
-- As well as the default InvariantCulture you can also use the culture of the system (CultureInfo.CurrentCulture) or provide a new culture info (new CultureInfo("en-GB")).
-- Note about formatProvider and CultureInfo: If an invalid CultureInfo is provided (e.g. new CultureInfo("enaa")), a CultureNotFoundException will be thrown.
-- Talk about CultureInfo.InvariantCulture
-- Talk about CultureInfo.CurrentCulture
+- [System.Globalization.CultureInfoNotFoundException][CultureInfoNotFoundException]
 
 [CultureInfoNotFoundException]: {{< url path = "MSDocs.CSharp.CultureInfoNotFoundException">}}
 [Supported Culture Codes]: {{< url path = "MSDocs.CSharp.SupportedCultureCodes">}}
 
-[InvariantCulture]: {{< ref "#invariantculture" >}}
-[CurrentCulture]: {{< ref "#currentculture" >}}
-[SpecificCulture]: {{< ref "#specificculture" >}}
+[Invariant Culture]: {{< ref "#invariant-culture" >}}
+[Current Culture]: {{< ref "#current-culture" >}}
+[Specific Culture]: {{< ref "#specific-culture" >}}
+[Neutral Culture]: {{< ref "#neutral-culture" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
@@ -118,3 +112,5 @@ TODO:
 [Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
 [System.Globalization.CultureInfo]: {{< url path="MSDocs.DotNet.Api.System.Globalization.CultureInfo" >}}
+[FormatTextWithValues]: {{< url path="Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues.MainDoc" >}}
+[IFormatProvider]: {{< url path="Cortex.Reference.DataTypes.Text.IFormatProvider.MainDoc" >}}

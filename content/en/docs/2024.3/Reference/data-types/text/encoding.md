@@ -43,8 +43,8 @@ None
 ### Related Data Types
 
 - [UnicodeEncoding][]
-- [UTF8Encoding][]
 - [UTF32Encoding][]
+- [UTF8Encoding][]
 
 ### Related Concepts
 
@@ -52,7 +52,7 @@ None
 
 ### External Documentation
 
-- [Encoding][]
+- [System.Text.Encoding][Encoding]
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}

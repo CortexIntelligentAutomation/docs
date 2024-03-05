@@ -42,7 +42,7 @@ None
 
 ### Related Data Types
 
-None
+- [CultureInfo][]
 
 ### Related Concepts
 
@@ -50,8 +50,14 @@ None
 
 ### External Documentation
 
+- [System.IFormatProvider][IFormatProvider]
+
 [Working with Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
+
+[IFormatProvider]: {{< url path="MSDocs.DotNet.Api.System.IFormatProvider" >}}
+
+[CultureInfo]: {{< url path="Cortex.Reference.DataTypes.Text.CultureInfo.MainDoc" >}}

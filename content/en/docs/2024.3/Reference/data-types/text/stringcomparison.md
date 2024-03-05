@@ -56,7 +56,7 @@ None
 
 ### External Documentation
 
-- [StringComparison][]
+- [System.StringComparison][StringComparison]
 - [System.Enum][]
 
 [Working With Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
