@@ -1,7 +1,7 @@
 ---
 title: "StringComparison"
 linkTitle: "StringComparison"
-description: "Used to indicate how 2 pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not)."
+description: "Used to indicate how two pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not)."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `StringComparison` data type is used to indicate how 2 pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not).
+The `StringComparison` data type is used to indicate how two pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not).
 
 `StringComparison` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -23,7 +23,7 @@ The `StringComparison` data type is used to indicate how 2 pieces of text are co
 | **Name:**              | `StringComparison`                                                        |
 | **Full Name:**         | `System.StringComparison`                                                 |
 | **Alias:**             | N/A |
-| **Description:**       | Used to indicate how 2 pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not). |
+| **Description:**       | Used to indicate how two pieces of text are compared against each other (i.e. which culture to use and whether to consider case or not). |
 | **Default Value:**     | `(StringComparison)0`                                           |
 | **Can be used as:**    | `StringComparison`, `object`, `dynamic`                                          |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)StringComparison.CurrentCulture` or `(System.Int16)StringComparison.CurrentCulture` or `(short)StringComparison.CurrentCulture`)  |
