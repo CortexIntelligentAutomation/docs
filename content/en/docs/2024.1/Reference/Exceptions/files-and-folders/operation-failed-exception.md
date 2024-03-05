@@ -7,56 +7,77 @@ description: "The exception thrown when a file or folder operation failed for on
 # {{% param title %}}
 
 <p class="namespace">(Cortex.Exceptions.FilesAndFolders.OperationFailedException)</p>
+{{% alert type="information" title="Information" %}}Improvements to this page are planned for the future.{{% /alert %}}
+
+## Description
 
 The exception thrown when a file or folder operation failed for one or more paths.
 
-## Path Exceptions
+## Reasons
 
-### PathDoesNotExist
+### A single exception was thrown
 
-The format of the exception message is as follows:
+An exception was thrown, such as [InvalidFolderNameException][] or [InvalidPathException][], while performing an operation on the path provided.
+
+#### Message Format
+
+The format of the message is as follows:
 
 ```json
-"TODO.
+"Failed to <action> the path. Please see the 'PathExceptions' property for details on why the operation failed.
 Please click the HelpLink for more information on how to fix this."
 ```
 
+where:
+
+* `<action>` is the action taking place when the operation failed (i.e. `copy`, `create`, `delete`, `duplicate`, `get`, `move`, `read`, `rename`, `search`, `write`).
+
 #### How to fix
 
-TODO:
+The exception that caused the operation to fail can be seen in the `PathExceptions` property; for how to fix, please refer to the exception's HelpLink.
 
-#### Blocks that can throw this exception
+### Multiple exceptions were thrown
 
-TODO:
+Multiple exceptions were thrown, such as [InvalidFolderNameException][] or [InvalidPathException][], while performing operations on the paths provided.
 
-### PathTooLong
+#### Message Format
 
-The format of the exception message is as follows:
+The format of the message is as follows:
 
 ```json
-"TODO.
+"Failed to <action> <failed-paths-count> of <total-paths-count> paths. Please see the 'PathExceptions' property for details on why each operation failed.
 Please click the HelpLink for more information on how to fix this."
 ```
 
+where:
+
+* `<action>` is the action taking place when the operation failed (i.e. `copy`, `create`, `delete`, `duplicate`, `get`, `move`, `read`, `rename`, `search`, `write`).
+* `<failed-paths-count>` is the number of paths that were attempted to be operated on where the operation failed (e.g. `2`).
+* `<total-paths-count>` is the total number of paths that were attempted to be operated on (e.g. `5`).
+
 #### How to fix
 
-TODO:
+The exceptions that caused the operations to fail can be seen in the `PathExceptions` property; for how to fix, please refer to each exception's HelpLink.
 
-#### Blocks that can throw this exception
+## Remarks
 
-TODO:
+### Known Limitations
 
-## Indexes Of Duplicate Paths
+None
 
-/// If any path in the specified filePaths is duplicated and no exception is thrown for that path, the block will only process the first occurrence of the path, skipping any other occurrences.
-            
-            /// If any path in the specified filePaths is duplicated and an exception occurs for that path an <see cref="OperationFailedException">OperationFailedException</see> will be thrown, and the path added to the "IndexesOfDuplicatePaths" dictionary in <see cref="OperationFailedException">OperationFailedException</see>.
-            
-## Indexes Of Null Or Empty Paths
+## See Also
 
-/// If any path in the specified filePaths is null or empty, an <see cref="OperationFailedException">OperationFailedException</see> will be thrown, and the path added to the "IndexesOfNullOrEmptyPaths" list in <see cref="OperationFailedException">OperationFailedException</see>.
-            
-            
-## How to fix
+### External Documentation
 
-TODO:
+None
+
+[Message]: {{< ref "#message" >}}
+
+[Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
+[Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[InvalidFolderNameException]: {{<url path="Cortex.Reference.Exceptions.FilesAndFolders.InvalidFolderNameException.MainDoc">}}
+[InvalidPathException]: {{<url path="Cortex.Reference.Exceptions.FilesAndFolders.InvalidPathException.MainDoc">}}
