@@ -23,6 +23,10 @@ The execution is attempting to perform a non-read operation on a read-only [ILis
 
 ##### Message Format
 
+There was an attempt to modify a read-only list.
+
+##### Message Format
+
 The format of the exception message is as follows:
 
 ```json

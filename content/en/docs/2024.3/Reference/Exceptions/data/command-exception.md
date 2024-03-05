@@ -1,7 +1,7 @@
 ---
 title: "CommandException"
 linkTitle: "CommandException"
-description: "Exception thrown when any command execution has resulted in an exception being thrown."
+description: "The exception thrown when any command execution has resulted in an exception being thrown."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Exception thrown when any command execution has resulted in an exc
 
 ## Description
 
-Exception thrown when any command execution has resulted in an exception being thrown.
+The exception thrown when any command execution has resulted in an exception being thrown.
 
 ## Reasons
 
