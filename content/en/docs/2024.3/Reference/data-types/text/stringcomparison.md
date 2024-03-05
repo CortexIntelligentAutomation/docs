@@ -53,6 +53,7 @@ None
 ### Related Concepts
 
 - [Working With Text][]
+- [Working With Enums][]
 
 ### External Documentation
 
