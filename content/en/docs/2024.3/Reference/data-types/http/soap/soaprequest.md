@@ -30,18 +30,18 @@ The `SoapRequest` data type is used to represent a SOAP request.
 
 ### Uri
 
-The Uri endpoint to use for this request.
+The Uri represents the endpoint to send the SOAP message to. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [IDictionary<String, Object>][IDictionary] |
+| Data Type | [EncryptableText][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `$@""` |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### SoapMessage
 
-The SoapMessage to use in the request.
+The SoapMessage represents the SOAP message sent to the endpoint.
   
 | | |
 |--------------------|---------------------------|
@@ -52,18 +52,18 @@ The SoapMessage to use in the request.
 
 ### Headers
 
-The Headers to add to this request.
+The Headers are used to represent the HTTP headers to add to the request.
   
 | | |
 |--------------------|---------------------------|
 | Data Type | [IDictionary<String, Object>][IDictionary] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
-| Default Value | `` |
+| Default Value |  |
 
 ### HttpVersion
 
-The HttpVersion to use in this request.
+The HttpVersion represents the version of HTTP to use in the request.
   
 | | |
 |--------------------|---------------------------|
@@ -88,6 +88,7 @@ None
 
 ### Related Data Types
 
+- [HttpRequestVersion][]
 - [IDictionary<String, Object>][IDictionary]
 - [Request][]
 - [Soap11Message][]
@@ -119,4 +120,5 @@ None
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 
+[EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}

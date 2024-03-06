@@ -37,7 +37,7 @@ The ResponseEnvelope is used to represent the content of the SOAP response.
 | Data Type | [dynamic][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `@$""` |
+| Default Value | [string] with value `@$""` |
 
 ### ErrorMessage
 
@@ -48,7 +48,7 @@ The ErrorMessage is used represent any errors that occurred when executing the S
 | Data Type | [string][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `@$""` |
+| Default Value | [string] with value `@$""` |
 
 ### Headers
 

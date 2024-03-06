@@ -30,7 +30,7 @@ The `ClientAuthentication` data type is used to represent the `ClientId` and `Cl
 
 ### ClientId
 
-The ClientId is used to define the public identification value for the client application. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ClientId is used to define the client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
@@ -40,7 +40,7 @@ The ClientId is used to define the public identification value for the client ap
 
 ### ClientSecret
 
-The ClientSecret represents the secret used to authenticate with the client application, this value should be kept secret. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
+The ClientSecret is used to define the secret used to authenticate with the client application, this value should be kept secret. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
 
 | | |
 |--------------------|---------------------------|
@@ -51,7 +51,7 @@ The ClientSecret represents the secret used to authenticate with the client appl
 
 ### SendAs
 
-The SendAs defines whether the credentials are included in the body or the header.
+The SendAs is used to specify whether the credentials are included as part of the body or the header.
 
 | | |
 |--------------------|---------------------------|
@@ -76,6 +76,9 @@ None
 
 ### Related Data Types
 
+- [ClientAuthType][]
+- [EncryptedText][]
+- [EncryptableText][]
 - [HttpOAuthClientCredentials][]
 - [HttpOAuthPasswordCredentials][]
 
@@ -93,3 +96,11 @@ None
 
 [HttpOAuthClientCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthClientCredentials.MainDoc" >}}
 [HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+[EncryptedText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}
+[ClientAuthType]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthType.MainDoc" >}}

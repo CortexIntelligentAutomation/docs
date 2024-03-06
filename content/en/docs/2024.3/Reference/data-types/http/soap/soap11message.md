@@ -30,35 +30,24 @@ The `Soap11Message` data type is used to represent a SOAP 1.1 message.
 
 ### Action
 
-The SOAP action to use for this request.
+The Action represents the SOAP action to use in the SOAP request.
 | | |
 |--------------------|---------------------------|
 | Data Type | [String][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | N/A |
+| Default Value | [String][] with value `""` |
 
 ### Envelope
 
-The SOAP envelope to use for this request. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The Envelope represents the content of the message. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | N/A |
-
-### Version
-
-The SOAP Version to use for this request.
-
-| | |
-|--------------------|---------------------------|
-| Data Type | [int32][] |
-| Is [Advanced][] | `false` |
-| Default Editor | [Literal][] |
-| Default Value | N/A |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ## Remarks
 
@@ -76,9 +65,12 @@ None
 
 ### Related Data Types
 
+- [EncryptableText][]
+- [int32]
 - [Soap12Message][]
 - [SoapMessage][]
 - [SoapRequest][]
+- [String][]
 
 ### Related Concepts
 
@@ -101,3 +93,4 @@ None
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

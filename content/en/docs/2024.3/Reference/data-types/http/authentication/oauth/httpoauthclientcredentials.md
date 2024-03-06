@@ -41,7 +41,7 @@ The AccessTokenUri provides the URI used to get the access token. The value of t
 
 ### ClientAuthentication
 
-The ClientAuthentication that holds the ClientId, ClientSecret and SendAs.
+The ClientAuthentication represents the ClientId, ClientSecret and SendAs.
 
 |                 |                          |
 |-----------------|--------------------------|
@@ -52,7 +52,7 @@ The ClientAuthentication that holds the ClientId, ClientSecret and SendAs.
 
 ### Scope
 
-The scope of permissions the access token can reach.
+The scope represents the permissions the access token can reach.
 
 |                 |             |
 |-----------------|-------------|
@@ -98,3 +98,11 @@ None
 [HttpCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.HttpCredentials.MainDoc" >}}
 [HttpOAuthCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials.MainDoc" >}}
 [HttpOAuthPasswordCredentials]: {{< url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthPasswordCredentials.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+[ClientAuthentication]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

@@ -30,18 +30,18 @@ Any data type that is used to represent a SOAP message.
 
 ### Envelope
 
-The SOAP envelope to use for this request. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The Envelope represents the content of the message. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | N/A |
+| Default Value | [EncryptableText][] with value `$@""` |
 
 ### Version
 
-The SOAP Version to use for this request.
+The Version represents the SOAP version of the message.
 
 | | |
 |--------------------|---------------------------|
@@ -66,6 +66,8 @@ None
 
 ### Related Data Types
 
+- [EncryptableText][]
+- [int32][]
 - [Soap11Message][]
 - [Soap12Message][]
 - [SoapRequest][]

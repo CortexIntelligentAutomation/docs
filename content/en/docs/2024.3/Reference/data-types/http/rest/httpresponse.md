@@ -30,7 +30,7 @@ The `HttpResponse` data type is used to represent an HTTP REST response.
 
 ### ResponseBody
 
-The ResponseBody returned as part of the message.
+The ResponseBody represents the body of the Rest response.
 
 |                 |             |
 |-----------------|-------------|
@@ -41,7 +41,7 @@ The ResponseBody returned as part of the message.
 
 ### ErrorMessage
 
-The ErrorMessage returned as part of the message.
+The ErrorMessage is used represent any errors that occurred when executing the SOAP request.
 
 |                 |             |
 |-----------------|-------------|
@@ -52,18 +52,18 @@ The ErrorMessage returned as part of the message.
 
 ### Headers
 
-The Headers returned as part of the message.
+The Headers are used to represent the HTTP headers returned in the Rest response.
 
-|                 |                                 |
-|-----------------|---------------------------------|
-| Data Type       | [Dictionary<String, Dynamic>][] |
-| Is [Advanced][] | `false`                         |
-| Default Editor  | [Literal][]                     |
-| Default Value   | `@$""`                          |
+|                 |                                             |
+|-----------------|---------------------------------------------|
+| Data Type       | [Dictionary<String, Dynamic>][Dictionary] |
+| Is [Advanced][] | `false`                                     |
+| Default Editor  | [Literal][]                                 |
+| Default Value   |                                             |
 
 ### StatusCode
 
-The StatusCode returned as part of the message.
+The StatusCode is the status returned in the Rest response.
 
 |                 |                    |
 |-----------------|--------------------|
@@ -88,7 +88,11 @@ None
 
 ### Related Data Types
 
+- [dynamic][]
 - [HttpRequest][]
+- [HttpRequestVersion][]
+- [Dictionary][]
+- [string][]
 
 ### Related Concepts
 
@@ -96,10 +100,22 @@ None
 
 ### External Documentation
 
-None
+- [System.Net.HttpStatusCode][]
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
 [HttpRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc" >}}
+
+[HttpStatusCode]: {{< url path = "Cortex.Reference.DataTypes.Http.HttpStatusCode.MainDoc" >}}
+
+[dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[System.Net.HttpStatusCode]: {{< url path="MSDocs.DotNet.Api.System.Net.HttpStatusCode" >}}
+[HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}

@@ -30,29 +30,29 @@ The `HttpRequest` data type is used to represent an HTTP REST request.
 
 ### Uri
 
-The URI endpoint to use for this request.
+The Uri represents the endpoint to send the request to. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
-|                 |             |
-|-----------------|-------------|
-| Data Type       | [string][]  |
-| Is [Advanced][] | `false`     |
-| Default Editor  | [Literal][] |
-| Default Value   | `@$""`      |
+|                 |                                       |
+|-----------------|---------------------------------------|
+| Data Type       | [EncryptableText][]                   |
+| Is [Advanced][] | `false`                               |
+| Default Editor  | [EncryptableText][]                   |
+| Default Value   | [EncryptableText][] with value `@$""` |
 
 ### QueryParameters
 
-The URI endpoint to use for this request.
+The QueryParameters represents the parameters to use in the request.
 
-|                 |                                 |
-|-----------------|---------------------------------|
-| Data Type       | [IDictionary<String, Dynamic>][] |
-| Is [Advanced][] | `true`                          |
-| Default Editor  | [Expression][]                     |
-| Default Value   | `@$""`                          |
+|                 |                                             |
+|-----------------|---------------------------------------------|
+| Data Type       | [IDictionary<String, Dynamic>][IDictionary] |
+| Is [Advanced][] | `true`                                      |
+| Default Editor  | [Expression][]                              |
+| Default Value   | `@$""`                                      |
 
 ### Verb
 
-The RequestVerb to use for this request.
+The RequestVerb represents the type of HTTP operation to use in the request.
 
 |                 |                 |
 |-----------------|-----------------|
@@ -63,37 +63,47 @@ The RequestVerb to use for this request.
 
 ### ContentType
 
-The ContentType to use for this request.
+The ContentType represents the type of the content used in the request.
 
-|                 |                 |
-|-----------------|-----------------|
-| Data Type       | [string][] |
-| Is [Advanced][] | `false`         |
-| Default Editor  | [Literal][]     |
-| Default Value   | `application/json`          |
+|                 |                    |
+|-----------------|--------------------|
+| Data Type       | [string][]         |
+| Is [Advanced][] | `false`            |
+| Default Editor  | [Literal][]        |
+| Default Value   | `application/json` |
 
 ### Headers
 
-The Headers to include with this request.
+The Headers represents the HTTP headers to include with the request.
 
-|                 |                 |
-|-----------------|-----------------|
-| Data Type       | [IDictionary<String, Dynamic>][] |
-| Is [Advanced][] | `false`         |
-| Default Editor  | [Literal][]     |
-| Default Value   | N/A          |
+|                 |                                             |
+|-----------------|---------------------------------------------|
+| Data Type       | [IDictionary<String, Dynamic>][IDictionary] |
+| Is [Advanced][] | `false`                                     |
+| Default Editor  | [Literal][]                                 |
+| Default Value   | N/A                                         |
 
 ### Body
 
-The data to include in the body to be used in non GET and HEAD requests. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The data to include in the body to be used (not relevant in GET and HEAD requests). The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
-
-|                 |                 |
-|-----------------|-----------------|
+|                 |                     |
+|-----------------|---------------------|
 | Data Type       | [EncryptableText][] |
-| Is [Advanced][] | `false`         |
-| Default Editor  | [Literal][]     |
-| Default Value   | `@$""`          |
+| Is [Advanced][] | `false`             |
+| Default Editor  | [Literal][]         |
+| Default Value   | `@$""`              |
+
+### HttpVersion
+
+The HttpVersion represents the version of HTTP to use in the request.
+  
+|                 |                        |
+|-----------------|------------------------|
+| Data Type       | [HttpRequestVersion][] |
+| Is [Advanced][] | `true`                 |
+| Default Editor  | [Literal][]            |
+| Default Value   | `HTTP10`               |
 
 ## Remarks
 
@@ -128,3 +138,14 @@ None
 
 [Request]: {{< url path = "Cortex.Reference.DataTypes.Http.Request.MainDoc" >}}
 [HttpResponse]: {{< url path = "Cortex.Reference.DataTypes.Http.Rest.HttpResponse.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+
+[RequestVerb]: {{< url path = "Cortex.Reference.DataTypes.Http.RequestVerb.MainDoc" >}}
+[HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}
