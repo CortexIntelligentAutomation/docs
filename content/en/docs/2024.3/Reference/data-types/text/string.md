@@ -2,6 +2,7 @@
 title: "String"
 linkTitle: "String"
 description: "Used to represent text."
+weight: 1
 ---
 
 # {{% param title %}}
