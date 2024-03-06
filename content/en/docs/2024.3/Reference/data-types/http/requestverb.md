@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `RequestVerb` data type is used to represent the the type of an HTTP request.
+The `RequestVerb` data type is used to represent the type of an HTTP request.
 
 `RequestVerb` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 

@@ -1539,6 +1539,8 @@
                     MainDoc = "/docs/reference/data-types/http/httprequestversion"
                     HTTP10 = "/docs/reference/data-types/http/httprequestversion/#http10"
                     HTTP11 = "/docs/reference/data-types/http/httprequestversion/#http11"
+                [Cortex.Reference.DataTypes.Http.HttpStatusCode]
+                    MainDoc = "/docs/reference/data-types/http/httpstatuscode"
                 [Cortex.Reference.DataTypes.Http.Authentication]
                     MainDoc = "/docs/reference/data-types/http/authentication/"
                     [Cortex.Reference.DataTypes.Http.Authentication.IHttpCredentials]
@@ -2451,6 +2453,7 @@
             RegexMatchTimeoutException = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception"
         [MSDocs.DotNet.Api.System.Net]
             NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
+            HttpStatusCode = "https://learn.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode"
     [MSDocs.PowerShell]
         WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
         InstallModule = "https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"

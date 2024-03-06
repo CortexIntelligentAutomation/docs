@@ -30,7 +30,7 @@ The `SoapResponse` data type is used to represent a SOAP response.
 
 ### ResponseEnvelope
 
-The ResponseEnvelope is used to encapsulate all data in the [Headers][].
+The ResponseEnvelope is used to represent the content of the SOAP response.
   
 | | |
 |--------------------|---------------------------|
@@ -41,7 +41,7 @@ The ResponseEnvelope is used to encapsulate all data in the [Headers][].
 
 ### ErrorMessage
 
-The ErrorMessage is used represent any errors.
+The ErrorMessage is used represent any errors that occurred when executing the SOAP request.
   
 | | |
 |--------------------|---------------------------|
@@ -52,16 +52,25 @@ The ErrorMessage is used represent any errors.
 
 ### Headers
 
-The Headers are a dictionary of the response headers being returned.
-  
+The Headers are used to represent the HTTP headers returned in the SOAP response.
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [IDictionary<String, Object>][IDictionary] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | `` |
+| Default Value |  |
 
 ### StatusCode
+
+The StatusCode is the status returned in the SOAP response.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [HttpStatusCode][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | `OK` |
 
 ## Remarks
 
@@ -79,6 +88,10 @@ None
 
 ### Related Data Types
 
+- [dynamic][]
+- [IDictionary<String, Object>][IDictionary]
+- [HttpStatusCode][]
+- [string][]
 - [SoapRequest][]
 
 ### Related Concepts
@@ -87,7 +100,7 @@ None
 
 ### External Documentation
 
-None
+- [System.Net.HttpStatusCode][]
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -95,10 +108,13 @@ None
 
 [SoapRequest]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc" >}}
 
-[Headers]: {{< ref "#headers">}}
 [dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 [Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[System.Net.HttpStatusCode]: {{< url path="MSDocs.DotNet.Api.System.Net.HttpStatusCode" >}}
+[HttpStatusCode]: {{< url path = "Cortex.Reference.DataTypes.Http.HttpStatusCode.MainDoc" >}}
