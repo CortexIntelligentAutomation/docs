@@ -19,7 +19,7 @@ The `UserCredentials` data type is used to represent details required to authent
 | **Full Name:**         | `Cortex.DataTypes.Credentials.UserCredentials`         |
 | **Alias:**             | N/A                                                    |
 | **Description:**       | Details required to authenticate with a domain or server. |
-| **Default Value:**     | `null`                                                   |
+| **Default Value:**     | `null`             
 | **Can be used as:**    | `EmailUserCredentials`, `EmailCredentials`, `IEmailCredentials`, `HttpUserCredentials`, `HttpCredentials`, `IHttpCredentials`, `SshUserCredentials`, `SshCredentials`, `ISshCredentials`, `UserCredentials`, `IUserCredentials`, `NetworkCredential`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
 
