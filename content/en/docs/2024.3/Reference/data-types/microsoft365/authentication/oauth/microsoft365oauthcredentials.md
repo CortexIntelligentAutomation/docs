@@ -30,7 +30,7 @@ The `Microsoft365OAuthCredentials` data type is used to represent client credent
 
 ### ClientId
 
-The ClientId is used to define the public identification value for the client application. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ClientId is used to define the client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
@@ -51,7 +51,7 @@ The ClientSecret is used to define the secret used to authenticate with the clie
 
 ### TenantId
 
-The TenantId is used to refer to a specific Microsoft365 tenant. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The TenantId is used to define the Microsoft365 tenant in which the client application is registered. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
@@ -62,7 +62,7 @@ The TenantId is used to refer to a specific Microsoft365 tenant. The value of th
 
 ### ObjectId
 
-The ObjectId of the sender who is sending the email. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ObjectId of the user who is sending the email. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|

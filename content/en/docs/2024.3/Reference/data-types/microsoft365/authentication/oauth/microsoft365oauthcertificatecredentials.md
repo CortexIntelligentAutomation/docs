@@ -30,7 +30,8 @@ The `Microsoft365OAuthCertificateCredentials` data type is used to represent pub
 
 ### CertificatePath
 
-The CertificatePath is used to define the location of the Certificate on the machine. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The CertificatePath is used to define the path pointing to the X.509 certificate file to be used for authentication via OAuth, the certificate file must be accessible from the server executing the flow. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
@@ -40,17 +41,19 @@ The CertificatePath is used to define the location of the Certificate on the mac
 
 ### CertificatePassword
 
-The CertificatePassword is used to define the password of the certificate located at [CertificatePath][]. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The CertificatePassword is used to define the password associated with the certificate file at the [CertificatePath][]. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
+
 | | |
 |--------------------|---------------------------|
-| Data Type | [EncryptableText][] |
+| Data Type | [EncryptedText][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [EncryptableText][] with value `""` |
+| Default Value | [EncryptedText][] with value `""` |
 
 ### ClientId
 
-The ClientId is used to define the public identification value for the client application. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ClientId is used to define the client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
@@ -60,7 +63,7 @@ The ClientId is used to define the public identification value for the client ap
 
 ### TenantId
 
-The TenantId is used to refer to a specific Microsoft365 tenant. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The TenantId is used to define the Microsoft365 tenant in which the client application is registered. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
@@ -71,7 +74,7 @@ The TenantId is used to refer to a specific Microsoft365 tenant. The value of th
 
 ### ObjectId
 
-The ObjectId of the sender who is sending the email. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ObjectId of the user who is sending the email. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
