@@ -1,7 +1,7 @@
 ---
 title: "Microsoft365OAuthCredentials"
 linkTitle: "Microsoft365OAuthCredentials"
-description: "Used to represent client credentials required to authenticate with a server hosted by Outlook via OAuth."
+description: "Used to represent client credentials required to authenticate, via OAuth, with a server hosted by Outlook."
 weight: 1
 ---
 
@@ -13,7 +13,7 @@ weight: 1
 
 ## Summary
 
-The `Microsoft365OAuthCredentials` data type is used to represent client credentials required to authenticate with a server hosted by Outlook via OAuth.
+The `Microsoft365OAuthCredentials` data type is used to represent client credentials required to authenticate, via OAuth, with a server hosted by Outlook.
 
 | | |
 |-|-|
@@ -21,7 +21,7 @@ The `Microsoft365OAuthCredentials` data type is used to represent client credent
 | **Name:**              | `Microsoft365OAuthCredentials`                                      |
 | **Full Name:**         | `Cortex.DataTypes.Microsoft365.Authentication.OAuth.Microsoft365OAuthCredentials`         |
 | **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent client credentials required to authenticate with a server hosted by Outlook via OAuth. |
+| **Description:**       | Used to represent client credentials required to authenticate, via OAuth, with a server hosted by Outlook. |
 | **Default Value:**     | null                                                   |
 | **Can be used as:**    | `Microsoft365OAuthCredentials`, `Microsoft365Credentials`, `Object`, `dynamic`                 |
 | **Can be cast to:**    | N/A                                                    |
@@ -62,7 +62,7 @@ The TenantId is used to define the Microsoft365 tenant in which the client appli
 
 ### ObjectId
 
-The ObjectId of the user who is sending the email. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ObjectId of the user who is authenticating. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
