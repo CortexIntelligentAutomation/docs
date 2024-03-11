@@ -13,9 +13,22 @@ description: "The exception thrown when an issue occurs with a HTTP request."
 
 The exception thrown when an issue occurs with a [HTTP request][HttpRequest].
 
+There are multiple reasons that this exception can be thrown:
+
+* [Invalid Request Body][]
+* [Invalid Request Content Type][]
+* [Invalid Request Enum Provided][]
+* [Invalid Request Envelope][]
+* [Empty Header Key][]
+* [Forbidden Header Key][]
+* [Restricted Header Key Provided With No Matching Property][]
+* [Invalid Request Header Property][]
+* [Invalid Header Type][]
+* [Invalid Uri][]
+
 ## Reasons
 
-### Invalid Request Body
+### Invalid Request Body (HttpRequest Only)
 
 A request body for the [request][HttpRequest] was provided when one should not have been provided.
 
@@ -36,7 +49,7 @@ where:
 
 Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
 
-### Invalid Request Content Type
+### Invalid Request Content Type (HttpRequest Only) {#HttpRequest.Body}
 
 The [request][HttpRequest] body provided does not match the content type.
 
@@ -57,7 +70,7 @@ where:
 
 Ensure that the content type of the body provided matches that which is required for the [request][HttpRequest].
 
-### Invalid Request Enum Provided
+### Invalid Request Enum (HttpRequest Only)
 
 An [Enum][] value provided for the [request][HttpRequest] is invalid, e.g. the [request verb][RequestVerb] or the [request Version][HttpRequestVersion].
 
@@ -80,7 +93,7 @@ where:
 
 Ensure that the value of the enum property provided is a valid value.
 
-### Invalid Request Envelope
+### Invalid Request Envelope (SoapRequest Only) {#SoapRequestSoapMessageEnvelope}
 
 The envelope provided is not valid XML.
 
@@ -97,7 +110,7 @@ Please click the HelpLink for more information on how to fix this."
 
 Ensure that the response envelope provided is valid XML; see [Execute Soap Request][] block.
 
-### Empty Header Key
+### Empty Header Key (HttpRequest and SoapRequest)
 
 A header key has been provided which is empty.
 
@@ -137,7 +150,7 @@ where:
 
 Ensure that no forbidden header key is provided in the request.
 
-### Restricted Header Key Provided With No Matching Property
+### Restricted Header Key Provided With No Matching Property (HttpRequest and SoapRequest)
 
 A restricted header key has been provided which does not match any of the restricted properties.
 
@@ -158,7 +171,7 @@ where:
 
 Ensure that the name of the header key provided is valid.
 
-### Invalid Request Header Property
+### Invalid Request Header Property (HttpRequest and SoapRequest)
 
 A request header has been provided a header value that cannot be assigned to its property.
 
@@ -182,6 +195,8 @@ Ensure that the value provided is a valid one for the request header.
 
 ### Invalid Header Type
 
+[//]: # (Invalid route, never actually thrown \(as per tests\), wrote this out as a note in case it changes in future. Under Invalid Header)
+
 A restricted header key has been provided a header value that cannot be converted to its property type.
 
 #### Message Format 
@@ -203,7 +218,7 @@ where:
 
 Ensure that the value provided is of the correct type for the request header.
 
-### Invalid Uri
+### Invalid Uri (HttpRequest and SoapRequest)
 
 A Uri has been provided that cannot be parsed.
 
