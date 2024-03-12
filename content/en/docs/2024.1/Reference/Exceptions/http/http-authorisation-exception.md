@@ -20,46 +20,46 @@ There are multiple reasons that this exception can be thrown:
 
 ## Reasons
 
-### Invalid access token uri provided
+### Invalid access token uri
 
-A category of `HttpOAuthCredentials.AccessTokenUri` indicates that an invalid access token uri was provided.
+An invalid access token uri was provided.
 
 #### Message Format
 
 The format of the message is as follows:
 
 ```json
-"Invalid 'Access Token Uri' (\"<access-token-uri>\") provided. A token could not be retrieved from the provided 'Access Token Uri'.
+"Invalid 'Access Token Uri' (\"<access-token-uri-property>\") provided. A token could not be retrieved from the provided 'Access Token Uri'.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<access-token-uri>` is the name of the property containing the Uri from which to attempt to retrieve an access token for the web request.
+* `<access-token-uri-value>` is the uri provided from which the block is attempting to retrieve an access token for the web request.
 
 #### How to fix
 
 Ensure that the Uri provided is valid.
 
-### Invalid credentials provided
+### Invalid credentials
 
-The username or password in the [IHttpCredentials][] provided are invalid.
+The username or password in the [HttpOAuthCredentials][] provided are invalid.
 
 #### Message Format
 
 The format of the message is as follows:
 
 ```json
-"Invalid '<invalid-username-credentials>' (\"<invalid-username-credentials-value>\") or '<password>' provided. A token could not be retrieved from the provided 'Access Token Uri' (\"<access-token-uri>\") using these credentials.
+"Invalid '<invalid-username-property>' (\"<invalid-username-value>\") or '<password-property>' provided. A token could not be retrieved from the provided 'Access Token Uri' (\"<access-token-uri-property>\") using these credentials.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<invalid-username-credentials>` is the name of the property containing the possibly invalid username for the credentials provided.
-* `<invalid-username-credentials-value>` is the value of the possibly invalid username for the credentials provided.
-* `<password>` is the name of property containing the possibly invalid password for the credentials provided.
-* `<access-token-uri>` is the name of the property containing the Uri from which to attempt to retrieve an access token for the web request.
+* `<invalid-username-property>` is the name of the property containing the possibly invalid username for the credentials provided.
+* `<invalid-username-value>` is the value of the possibly invalid username for the credentials provided.
+* `<password-property>` is the name of property containing the possibly invalid password for the credentials provided.
+* `<access-token-uri-value>` is the uri provided from which the block is attempting to retrieve an access token for the web request.
 
 #### How to fix
 
@@ -77,7 +77,7 @@ None
 
 None
 
-[Invalid Access Token Uri]: {{<ref "#invalid-access-token-uri-provided">}}
-[Invalid Credentials]: {{<ref "#invalid-credentials-provided">}}
+[Invalid Access Token Uri]: {{<ref "#invalid-access-token-uri">}}
+[Invalid Credentials]: {{<ref "#invalid-credentials">}}
 
-[IHttpCredentials]: {{<url path="Cortex.Reference.DataTypes.Http.Authentication.IHttpCredentials.MainDoc">}}
+[HttpOAuthCredentials]: {{<url path="Cortex.Reference.DataTypes.Http.Authentication.OAuth.HttpOAuthCredentials.MainDoc">}}

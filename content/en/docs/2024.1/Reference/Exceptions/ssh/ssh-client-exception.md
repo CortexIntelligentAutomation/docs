@@ -21,7 +21,7 @@ There are multiple reasons that this exception can be thrown:
 
 ## Reasons
 
-### SshSessionDetails
+### Invalid Connection {#sshsessiondetails}
 
 The `SessionDetails` provided is invalid (e.g. an invalid hostname was provided, an invalid port was provided, the connection timed out, etc).
 
@@ -42,7 +42,7 @@ where:
 
 Ensure that the `SessionDetails` provided is valid; see [SshSessionDetails][SshSessionDetails DataType] for more information.
 
-### SshSessionDetails.Host
+### Host Disconnected {#sshsessiondetailshost}
 
 The connection to the host server has been lost, so the session has closed.
 
@@ -63,7 +63,7 @@ where:
 
 Ensure that the connection to the host server is functional, and that no commands to close the old session have been executed (e.g. `exit`, which closes the session).
 
-### ConfigurationSettings
+### Invalid Configuration Settings {#configurationsettings}
 
 #### Message Format
 

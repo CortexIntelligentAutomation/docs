@@ -49,7 +49,7 @@ where:
 
 Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
 
-### Invalid Request Content Type (HttpRequest Only) {#HttpRequest.Body}
+### Invalid Request Content Type (HttpRequest Only)
 
 The [request][HttpRequest] body provided does not match the content type.
 
@@ -93,7 +93,7 @@ where:
 
 Ensure that the value of the enum property provided is a valid value.
 
-### Invalid Request Envelope (SoapRequest Only) {#SoapRequestSoapMessageEnvelope}
+### Invalid Request Envelope (SoapRequest Only)
 
 The envelope provided is not valid XML.
 
@@ -251,6 +251,17 @@ None
 ### External Documentation
 
 None
+
+[Invalid Request Body]: {{<ref "#invalid-request-body-httprequest-only">}}
+[Invalid Request Content Type]: {{<ref "#invalid-request-content-type-httprequest-only">}}
+[Invalid Request Enum Provided]: {{<ref "#invalid-request-content-type-httprequest-only">}}
+[Invalid Request Envelope]: {{<ref "#invalid-request-envelope-soaprequest-only">}}
+[Empty Header Key]: {{<ref "#empty-header-key-httprequest-and-soaprequest">}}
+[Forbidden Header Key]: {{<ref "#forbidden-header-key">}}
+[Restricted Header Key Provided With No Matching Property]: {{<ref "#restricted-header-key-provided-with-no-matching-property-httprequest-and-soaprequest">}}
+[Invalid Request Header Property]: {{<ref "#invalid-request-header-property-httprequest-and-soaprequest">}}
+[Invalid Header Type]: {{<ref "#invalid-header-type">}}
+[Invalid Uri]: {{<ref "#invalid-uri-httprequest-and-soaprequest">}}
 
 [Enum]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc">}}
 [HttpRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc">}}
