@@ -1,7 +1,7 @@
 ---
 title: "InvalidResponseException"
 linkTitle: "InvalidResponseException"
-description: "The exception thrown when an issue occurs with a HTTP response."
+description: "The exception thrown when an issue occurs with an HTTP response."
 ---
 
 # {{% param title %}}
@@ -11,7 +11,7 @@ description: "The exception thrown when an issue occurs with a HTTP response."
 
 ## Description
 
-The exception thrown when an issue occurs with a HTTP response.
+The exception thrown when an issue occurs with an HTTP response.
 
 ## Reasons
 
@@ -30,7 +30,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to fix
 
-Ensure that the [response envelope][ResponseEnvelope] in the [SoapResponse][] is valid XML.
+The SOAP Web Service returning the [SoapResponse][] must be fixed to return valid XML in the [response envelope][ResponseEnvelope].
 
 ## Remarks
 

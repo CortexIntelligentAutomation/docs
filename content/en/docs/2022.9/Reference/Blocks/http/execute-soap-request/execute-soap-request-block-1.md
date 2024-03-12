@@ -190,7 +190,7 @@ Note that as the [Headers][Headers Response] contains a key of `Content-Type` wi
 This example will send a [Soap Request][Soap Request Property] to `https://test-converter.com/xml` using SOAP 1.1 with OAuth authentication using password credentials which requires:
 
 - [SoapMessage][SoapMessage Property] to be a [Soap11Message][]
-- [Http Credentials][Http Credentials Property] to be a [HttpOAuthPasswordCredentials][]
+- [Http Credentials][Http Credentials Property] to be an [HttpOAuthPasswordCredentials][]
 
 Note that the result of executing a [Soap Request][Soap Request Property] is dependent on the SOAP service that the request is being made to.
 
@@ -242,7 +242,7 @@ Note that as the [Headers][Headers Response] contains a key of `Content-Type` wi
 This example will send a [Soap Request][Soap Request Property] to `https://test-converter.com/xml` using SOAP 1.1 with OAuth authentication using client credentials which requires:
 
 - [SoapMessage][SoapMessage Property] to be a [Soap11Message][]
-- [Http Credentials][Http Credentials Property] to be a [HttpOAuthClientCredentials][]
+- [Http Credentials][Http Credentials Property] to be an [HttpOAuthClientCredentials][]
 
 Note that the result of executing a [Soap Request][Soap Request Property] is dependent on the SOAP service that the request is being made to.
 

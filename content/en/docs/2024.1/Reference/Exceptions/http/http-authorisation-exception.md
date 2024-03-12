@@ -20,7 +20,7 @@ There are multiple reasons that this exception can be thrown:
 
 ## Reasons
 
-### Invalid access token uri
+### Invalid Access Token Uri {#httpoauthcredentialsaccesstokenuri}
 
 An invalid access token uri was provided.
 
@@ -41,7 +41,31 @@ where:
 
 Ensure that the Uri provided is valid.
 
-### Invalid credentials
+### Invalid ResourceOwner Username or Password {#httpoauthcredentialsresourceowner}
+
+The username or password in the [HttpOAuthCredentials][] provided are invalid.
+
+#### Message Format
+
+The format of the message is as follows:
+
+```json
+"Invalid '<invalid-username-property>' (\"<invalid-username-value>\") or '<password-property>' provided. A token could not be retrieved from the provided 'Access Token Uri' (\"<access-token-uri-property>\") using these credentials.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<invalid-username-property>` is the name of the property containing the possibly invalid username for the credentials provided.
+* `<invalid-username-value>` is the value of the possibly invalid username for the credentials provided.
+* `<password-property>` is the name of property containing the possibly invalid password for the credentials provided.
+* `<access-token-uri-value>` is the uri provided from which the block is attempting to retrieve an access token for the web request.
+
+#### How to fix
+
+Ensure that the credentials provided contain a valid username and password.
+
+### Invalid Client ID or Client Secret {#httpoauthclientcredentials}
 
 The username or password in the [HttpOAuthCredentials][] provided are invalid.
 
