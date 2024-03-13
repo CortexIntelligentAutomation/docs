@@ -30,18 +30,18 @@ The `HttpOAuthPasswordCredentials` data type is used to represent details requir
 
 ### AccessTokenUri
 
-The AccessTokenUri provides the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The AccessTokenUri represents the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 |                 |                                     |
 |-----------------|-------------------------------------|
 | Data Type       | [EncryptableText][]                 |
 | Is [Advanced][] | `false`                             |
 | Default Editor  | [Expression][]                      |
-| Default Value   | [EncryptableText] with value `@$""` |
+| Default Value   | [EncryptableText] with value `$@""` |
 
 ### ClientAuthentication
 
-The ClientAuthentication that represents the ClientId, ClientSecret and SendAs.
+The ClientAuthentication represents the [ClientId][], [ClientSecret][] and [SendAs][].
 
 |                 |                                      |
 |-----------------|--------------------------------------|
@@ -52,36 +52,36 @@ The ClientAuthentication that represents the ClientId, ClientSecret and SendAs.
 
 ### Scope
 
-The scope of permissions the access token can reach.
+The scope of permissions being requested for the access token. For multiple scopes, each scope should be separated by a space (e.g. `"Scope1 Scope2"`).
 
-|                 |             |
-|-----------------|-------------|
-| Data Type       | [String][]  |
-| Is [Advanced][] | `false`     |
-| Default Editor  | [Literal][] |
-| Default Value   | [String][] with value `""`        |
+|                 |                            |
+|-----------------|----------------------------|
+| Data Type       | [String][]                 |
+| Is [Advanced][] | `false`                    |
+| Default Editor  | [Literal][]                |
+| Default Value   | [String][] with value `""` |
 
 ### ResourceOwnerUsername
 
 The ResourceOwnerUsername is the username used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
-|                 |                     |
-|-----------------|---------------------|
-| Data Type       | [EncryptableText][] |
-| Is [Advanced][] | `false`             |
-| Default Editor  | [Expression][]      |
-| Default Value   | [EncryptableText][] with value `""`                |
+|                 |                                     |
+|-----------------|-------------------------------------|
+| Data Type       | [EncryptableText][]                 |
+| Is [Advanced][] | `false`                             |
+| Default Editor  | [Expression][]                      |
+| Default Value   | [EncryptableText][] with value `""` |
 
 ### ResourceOwnerPassword
 
 The ResourceOwnerPassword is the password associated with the [ResourceOwnerUsername][]. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
 
-|                 |                   |
-|-----------------|-------------------|
-| Data Type       | [EncryptedText][] |
-| Is [Advanced][] | `false`           |
-| Default Editor  | [Expression][]    |
-| Default Value   | [EncryptableText][] with value `""`              |
+|                 |                                   |
+|-----------------|-----------------------------------|
+| Data Type       | [EncryptedText][]                 |
+| Is [Advanced][] | `false`                           |
+| Default Editor  | [Expression][]                    |
+| Default Value   | [EncryptedText][] with value `""` |
 
 ## Remarks
 
@@ -134,4 +134,7 @@ None
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [EncryptedText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptedText.MainDoc" >}}
 [ClientAuthentication]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.MainDoc" >}}
+[ClientId]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.ClientId" >}}
+[ClientSecret]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.ClientSecret" >}}
+[SendAs]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.SendAs" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

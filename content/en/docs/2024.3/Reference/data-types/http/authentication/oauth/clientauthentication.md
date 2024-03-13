@@ -30,7 +30,7 @@ The `ClientAuthentication` data type is used to represent the `ClientId` and `Cl
 
 ### ClientId
 
-The ClientId is used to define the client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ClientId is used to define the client ID assigned to {{% ctx %}} by the OAuth provider, to allow it to authenticate. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
@@ -40,7 +40,7 @@ The ClientId is used to define the client ID of the client application created t
 
 ### ClientSecret
 
-The ClientSecret is used to define the secret used to authenticate with the client application, this value should be kept secret. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
+The ClientSecret is used to define the client secret assigned to {{% ctx %}} by the OAuth provider, to allow it to authenticate; this value should be kept secret. This property is an [EncryptedText][] and so it must be encrypted; for more information on how to encrypt the password, see [EncryptedText][].
 
 | | |
 |--------------------|---------------------------|
@@ -51,14 +51,14 @@ The ClientSecret is used to define the secret used to authenticate with the clie
 
 ### SendAs
 
-The SendAs is used to specify whether the credentials are included as part of the body or the header.
+The SendAs is used to specify whether the [ClientId][] and [ClientSecret][] are included as part of the HTTP request body or headers.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [ClientAuthType][] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Literal][] |
-| Default Value | [EncryptedText][] with value `""` |
+| Default Value | `Header` |
 
 ## Remarks
 
@@ -77,8 +77,8 @@ None
 ### Related Data Types
 
 - [ClientAuthType][]
-- [EncryptedText][]
 - [EncryptableText][]
+- [EncryptedText][]
 - [HttpOAuthClientCredentials][]
 - [HttpOAuthPasswordCredentials][]
 
@@ -89,6 +89,9 @@ None
 ### External Documentation
 
 None
+
+[ClientId]: {{< ref "#clientid">}}
+[Clientsecret]: {{< ref "#clientsecret">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}

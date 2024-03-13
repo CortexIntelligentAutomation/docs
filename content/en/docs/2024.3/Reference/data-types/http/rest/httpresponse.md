@@ -37,7 +37,7 @@ The ResponseBody represents the body of the REST response.
 | Data Type       | [dynamic][]                |
 | Is [Advanced][] | `false`                    |
 | Default Editor  | [Expression][]             |
-| Default Value   | [String] with value `@$""` |
+| Default Value   | [String] with value `$@""` |
 
 ### ErrorMessage
 
@@ -48,7 +48,7 @@ The ErrorMessage is used represent any errors that occurred when executing the R
 | Data Type       | [String][]                 |
 | Is [Advanced][] | `false`                    |
 | Default Editor  | [Expression][]             |
-| Default Value   | [String] with value `@$""` |
+| Default Value   | [String] with value `$@""` |
 
 ### Headers
 

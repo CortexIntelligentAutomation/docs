@@ -30,29 +30,29 @@ The `HttpOAuthClientCredentials` data type is used to represent details required
 
 ### AccessTokenUri
 
-The AccessTokenUri provides the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The AccessTokenUri represents the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 |                 |                     |
 |-----------------|---------------------|
 | Data Type       | [EncryptableText][] |
 | Is [Advanced][] | `false`             |
 | Default Editor  | [Expression][]      |
-| Default Value   | [EncryptableText][] with value `@$""`              |
+| Default Value   | [EncryptableText][] with value `$@""`              |
 
 ### ClientAuthentication
 
-The ClientAuthentication represents the ClientId, ClientSecret and SendAs.
+The ClientAuthentication represents the [ClientId][], [ClientSecret][] and [SendAs][].
 
 |                 |                          |
 |-----------------|--------------------------|
 | Data Type       | [ClientAuthentication][] |
-| Is [Advanced][] | `true`                   |
+| Is [Advanced][] | `false`                   |
 | Default Editor  | [Expression][]           |
 | Default Value   | [ClientAuthentication][] with no value                      |
 
 ### Scope
 
-The scope represents the permissions the access token can reach.
+The scope of permissions being requested for the access token. For multiple scopes, each scope should be separated by a space (e.g. `"Scope1 Scope2"`).
 
 |                 |             |
 |-----------------|-------------|
@@ -109,3 +109,7 @@ None
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
 [ClientAuthentication]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+
+[ClientId]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.ClientId" >}}
+[ClientSecret]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.ClientSecret" >}}
+[SendAs]: {{< url path = "Cortex.Reference.DataTypes.Http.Authentication.OAuth.ClientAuthentication.SendAs" >}}

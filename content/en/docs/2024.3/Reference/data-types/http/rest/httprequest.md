@@ -37,7 +37,7 @@ The Uri represents the endpoint to send the REST request to. The value of this p
 | Data Type       | [EncryptableText][]                   |
 | Is [Advanced][] | `false`                               |
 | Default Editor  | [Expression][]                   |
-| Default Value   | [EncryptableText][] with value `@$""` |
+| Default Value   | [EncryptableText][] with value `$@""` |
 
 ### QueryParameters
 
@@ -92,7 +92,7 @@ The data to include in the body to be used (not relevant in GET and HEAD request
 | Data Type       | [EncryptableText][] |
 | Is [Advanced][] | `false`             |
 | Default Editor  | [Expression][]         |
-| Default Value   | [EncryptableText][] with value `@$""`              |
+| Default Value   | [EncryptableText][] with value `$@""`              |
 
 ### HttpVersion
 
