@@ -32,34 +32,34 @@ The `HttpOAuthPasswordCredentials` data type is used to represent details requir
 
 The AccessTokenUri provides the URI used to get the access token. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
-|                 |                     |
-|-----------------|---------------------|
-| Data Type       | [EncryptableText][] |
-| Is [Advanced][] | `false`             |
-| Default Editor  | [Expression][]      |
-| Default Value   | `@$""`              |
+|                 |                                     |
+|-----------------|-------------------------------------|
+| Data Type       | [EncryptableText][]                 |
+| Is [Advanced][] | `false`                             |
+| Default Editor  | [Expression][]                      |
+| Default Value   | [EncryptableText] with value `@$""` |
 
 ### ClientAuthentication
 
-The ClientAuthentication that represents the clientId, ClientSecret and SendAs.
+The ClientAuthentication that represents the ClientId, ClientSecret and SendAs.
 
-|                 |                          |
-|-----------------|--------------------------|
-| Data Type       | [ClientAuthentication][] |
-| Is [Advanced][] | `true`                   |
-| Default Editor  | [Expression][]           |
-| Default Value   | ``                       |
+|                 |                                      |
+|-----------------|--------------------------------------|
+| Data Type       | [ClientAuthentication][]             |
+| Is [Advanced][] | `true`                               |
+| Default Editor  | [Expression][]                       |
+| Default Value   | [ClientAuthentication] with no value |
 
 ### Scope
 
-The scope of what permissions the access token can reach.
+The scope of permissions the access token can reach.
 
 |                 |             |
 |-----------------|-------------|
 | Data Type       | [String][]  |
 | Is [Advanced][] | `false`     |
 | Default Editor  | [Literal][] |
-| Default Value   | `""`        |
+| Default Value   | [String][] with value `""`        |
 
 ### ResourceOwnerUsername
 
@@ -70,7 +70,7 @@ The ResourceOwnerUsername is the username used to get the access token. The valu
 | Data Type       | [EncryptableText][] |
 | Is [Advanced][] | `false`             |
 | Default Editor  | [Expression][]      |
-| Default Value   | `""`                |
+| Default Value   | [EncryptableText][] with value `""`                |
 
 ### ResourceOwnerPassword
 
@@ -81,7 +81,7 @@ The ResourceOwnerPassword is the password associated with the [ResourceOwnerUser
 | Data Type       | [EncryptedText][] |
 | Is [Advanced][] | `false`           |
 | Default Editor  | [Expression][]    |
-| Default Value   | `""`              |
+| Default Value   | [EncryptableText][] with value `""`              |
 
 ## Remarks
 
@@ -99,10 +99,14 @@ None
 
 ### Related Data Types
 
+- [ClientAuthentication][]
+- [EncryptableText][]
+- [EncryptedText][]
 - [HttpCredentials][]
 - [HttpOAuthClientCredentials][]
 - [HttpOAuthCredentials][]
 - [IHttpCredentials][]
+- [String][]
 
 ### Related Concepts
 

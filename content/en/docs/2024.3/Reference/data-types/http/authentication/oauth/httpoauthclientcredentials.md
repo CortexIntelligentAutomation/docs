@@ -37,7 +37,7 @@ The AccessTokenUri provides the URI used to get the access token. The value of t
 | Data Type       | [EncryptableText][] |
 | Is [Advanced][] | `false`             |
 | Default Editor  | [Expression][]      |
-| Default Value   | `@$""`              |
+| Default Value   | [EncryptableText][] with value `@$""`              |
 
 ### ClientAuthentication
 
@@ -48,7 +48,7 @@ The ClientAuthentication represents the ClientId, ClientSecret and SendAs.
 | Data Type       | [ClientAuthentication][] |
 | Is [Advanced][] | `true`                   |
 | Default Editor  | [Expression][]           |
-| Default Value   | ``                       |
+| Default Value   | [ClientAuthentication][] with no value                      |
 
 ### Scope
 
@@ -59,7 +59,7 @@ The scope represents the permissions the access token can reach.
 | Data Type       | [String][]  |
 | Is [Advanced][] | `true`     |
 | Default Editor  | [Literal][] |
-| Default Value   | `""`        |
+| Default Value   | [String][] with value `""`        |
 
 ## Remarks
 
@@ -77,10 +77,13 @@ None
 
 ### Related Data Types
 
+- [ClientAuthentication][]
+- [EncryptableText][]
 - [HttpCredentials][]
 - [HttpOAuthCredentials][]
 - [HttpOAuthPasswordCredentials][]
 - [IHttpCredentials][]
+- [String][]
 
 ### Related Concepts
 
