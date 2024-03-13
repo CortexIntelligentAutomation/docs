@@ -11,51 +11,194 @@ description: "The exception thrown when an issue occurs with an HTTP request."
 
 ## Description
 
-The exception thrown when an issue occurs with an [HTTP request][HttpRequest].
+The exception thrown when an issue occurs with an [HTTP request][HttpRequest] or a [SOAP Request][SoapRequest].
 
 There are multiple reasons that this exception can be thrown:
 
+* [Invalid Headers in HTTP Request][]
+* [Invalid Headers in SOAP Request][]
+* [Invalid HTTP Version in HTTP Request][]
+* [Invalid HTTP Version in SOAP Request][]
 * [Invalid Request Body][]
-* [Invalid Request Content Type][]
-* [Invalid Request Enum Provided][]
 * [Invalid Request Envelope][]
-* [Empty Header Key][]
-* [Forbidden Header Key][]
-* [Restricted Header Key Provided With No Matching Property][]
-* [Invalid Request Header Property][]
-* [Invalid Header Type][]
-* [Invalid Uri][]
+* [Invalid Request Verb][]
+* [Invalid Uri in HTTP Request][]
+* [Invalid Uri in SOAP Request][]
 
 ## Reasons
 
-### Invalid Request Body (HttpRequest Only)
+### Invalid Headers in HTTP Request {#httprequestheaders}
 
-A request body for the [request][HttpRequest] was provided when one should not have been provided.
+The headers provided in the [HTTP request][HttpRequest] are invalid (e.g. a header key in the headers is empty).
+
+#### Message Format
+
+The format of the message can be one of the following:
+
+```json
+"Invalid 'Headers' provided. A header key has been provided which is empty.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which does not match any of the restricted header properties.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+[//]: # (forbidden header key route, implemented and technically valid though no header keys are currently set as forbidden so will never be thrown)
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which is forbidden.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<header-key>` is the specific restricted header key in the request headers which may either contain an invalid value or be invalid.
+* `<header-value>` is the value assigned to the header with the given key, which may be invalid.
+* `<header-type>` is the expected data type for the header
+
+#### How to fix
+
+Ensure that the header key is not empty.
+Ensure that the value provided for the header is of the correct type.
+Ensure that no forbidden header keys are provided in the request.
+Ensure that the header key provided is valid.
+Ensure that the value provided for the header is valid.
+
+### Invalid Headers in SOAP Request {#soaprequestheaders}
+
+The headers provided in the [SOAP request][SoapRequest] are invalid (e.g. a header key in the headers is empty).
+
+#### Message Format
+
+The format of the message can be one of the following:
+
+```json
+"Invalid 'Headers' provided. A header key has been provided which is empty.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which does not match any of the restricted header properties.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
+
+[//]: # (forbidden header key route, implemented and technically valid though no header keys are currently set as forbidden so will never be thrown)
+
+```json
+"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which is forbidden.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<header-key>` is the specific restricted header key in the request headers which may either contain an invalid value or be invalid.
+* `<header-value>` is the value assigned to the header with the given key, which may be invalid.
+* `<header-type>` is the expected data type for the header
+
+#### How to fix
+
+Ensure that the header key is not empty.
+Ensure that the value provided for the header is of the correct type.
+Ensure that no forbidden header keys are provided in the request.
+Ensure that the header key provided is valid.
+Ensure that the value provided for the header is valid.
+
+### Invalid HTTP Version in HTTP Request {#httprequesthttpversion}
+
+The [HTTP version][HttpRequestVersion] provided in the [request][HttpRequest] is invalid.
 
 #### Message Format
 
 The format of the message is as follows:
 
 ```json
-"Invalid 'Body' provided. The 'Verb' \"<verb>\" should not be provided a 'Body'.
+"Invalid '<http-version-property>' provided. The '<http-version-property>' \"<http-version-value>\" is not a valid Http Request Version.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<verb>` is the request verb of the errored request.
+* `<http-version-property>` is the property containing the invalid HTTP version value
+* `<http-version-value>` is the invalid value for the HTTP version
 
 #### How to fix
 
-Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
+Ensure that the [HTTP version][HttpRequestVersion] provided for the [request][SoapRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
 
-### Invalid Request Content Type (HttpRequest Only)
+### Invalid HTTP Version in SOAP Request {#soaprequesthttpversion}
 
-The [request][HttpRequest] body provided does not match the content type.
+The [HTTP version][HttpRequestVersion] provided in the [request][SoapRequest] is invalid.
 
 #### Message Format
 
 The format of the message is as follows:
+
+```json
+"Invalid '<http-version-property>' provided. The '<http-version-property>' \"<http-version-value>\" is not a valid Http Request Version.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<http-version-property>` is the property containing the invalid HTTP version value
+* `<http-version-value>` is the invalid value for the HTTP version
+
+#### How to fix
+
+Ensure that the [HTTP version][HttpRequestVersion] provided for the [request][SoapRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
+
+### Invalid Request Body {#httprequestbody}
+
+A request body for the [request][HttpRequest] was provided when one should not have been provided.
+
+#### Message Format
+
+The format of the message can be one of the following:
+
+```json
+"Invalid 'Body' provided. The 'Verb' \"<verb>\" should not be provided a 'Body'.
+Please click the HelpLink for more information on how to fix this."
+```
+
+or
 
 ```json
 "Invalid 'Body' provided. The 'Body' does not match the 'Content Type' \"<content-type>\".
@@ -64,36 +207,18 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
+* `<verb>` is the request verb of the errored request.
 * `<content-type>` is the content type of the request, e.g. XML or JSON.
 
 #### How to fix
 
-Ensure that the content type of the body provided matches that which is required for the [request][HttpRequest].
+[//]: # (Unsure on formatting/phrasing, bring this up)
 
-### Invalid Request Enum (HttpRequest Only)
+Ensure that the request body provided is a valid body for a valid [request verb][RequestVerb] (i.e. the request verb should be valid and no body should be provided for `GET` and `HEAD` requests).
 
-An [Enum][] value provided for the [request][HttpRequest] is invalid, e.g. the [request verb][RequestVerb] or the [request Version][HttpRequestVersion].
+Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
 
-#### Message Format 
-
-The format of the message is as follows:
-
-```json
-"Invalid '<property-name>' provided. The '<property-name>' \"<property-value>\" is not a valid <enum-type>.
-Please click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-* `<property-name>` is the name of the property containing the invalid enum value.
-* `<property-value>` is the invalid enum value.
-* `<enum type>` is the type that the enum provided is required to be.
-
-#### How to fix
-
-Ensure that the value of the enum property provided is a valid value.
-
-### Invalid Request Envelope (SoapRequest Only)
+### Invalid Request Envelope {#soaprequestsoapmessageenvelope}
 
 The envelope provided is not valid XML.
 
@@ -110,117 +235,32 @@ Please click the HelpLink for more information on how to fix this."
 
 Ensure that the response envelope provided is valid XML; see [Execute Soap Request][] block.
 
-### Empty Header Key (HttpRequest and SoapRequest)
+### Invalid Request Verb {#httprequestverb}
 
-A header key has been provided which is empty.
-
-#### Message Format 
-
-The format of the message is as follows:
-
-```json
-"Invalid 'Headers' provided. A header key has been provided which is empty.
-Please click the HelpLink for more information on how to fix this."
-```
-
-#### How to fix
-
-Ensure that no header key provided for the request headers is empty.
-
-### Forbidden Header Key
-
-[//]: # (Currently unthrowable path, only exists for if some request headers get set to forbidden in future or some forbidden ones are added. RequestExecutor.cs line 148 has details.)
-
-A restricted header key has been provided which is forbidden.
+The [request verb][RequestVerb] provided for the [request][HttpRequest] is invalid.
 
 #### Message Format 
 
 The format of the message is as follows:
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which is forbidden.
+"Invalid '<property-name>' provided. The '<property-name>' \"<property-value>\" is not a valid <enum-type>.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<header-key-value>` is the value that the forbidden header key was set to.
+* `<verb-property>` is the name of the property containing the invalid verb.
+* `<verb-value>` is the value of the invalid verb.
+* `<enum type>` is the type that the enum provided is required to be (i.e. [RequestVerb][]).
 
 #### How to fix
 
-Ensure that no forbidden header key is provided in the request.
+Ensure that the verb provided is a valid verb (i.e. `GET`, `POST`, `PUT`, `DELETE`, `PATCH` or `HEAD`).
 
-### Restricted Header Key Provided With No Matching Property (HttpRequest and SoapRequest)
+### Invalid Uri in HTTP Request {#httprequesturi}
 
-A restricted header key has been provided which does not match any of the restricted properties.
-
-#### Message Format 
-
-The format of the message is as follows:
-
-```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-name>\") has been provided which does not match any of the restricted header properties.
-Please click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-* `<header-name>` is the name of the header key provided which did not match any of the restricted properties.
-
-#### How to fix
-
-Ensure that the name of the header key provided is valid.
-
-### Invalid Request Header Property (HttpRequest and SoapRequest)
-
-A request header has been provided a header value that cannot be assigned to its property.
-
-#### Message Format 
-
-The format of the message is as follows:
-
-```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<invalid-value>\") that cannot be assigned to its property.
-Please click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-* `<header-key>` is the header key which was provided an invalid value.
-* `<invalid-value>` is the value which could not be assigned to the header key.
-
-#### How to fix
-
-Ensure that the value provided is a valid one for the request header.
-
-### Invalid Header Type
-
-[//]: # (Invalid route, never actually thrown \(as per tests\), wrote this out as a note in case it changes in future. Under Invalid Header)
-
-A restricted header key has been provided a header value that cannot be converted to its property type.
-
-#### Message Format 
-
-The format of the message is as follows:
-
-```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<invalid-value>\") that cannot be converted to its property type (\"<header-type>\").
-Please click the HelpLink for more information on how to fix this."
-```
-
-where:
-
-* `<header-key>` is the header key which was provided an invalid value.
-* `<invalid-value>` is the value which could not be assigned to the header key due to a type conversion issue.
-* `<header-type>` is the property type required for the header.
-
-#### How to fix
-
-Ensure that the value provided is of the correct type for the request header.
-
-### Invalid Uri (HttpRequest and SoapRequest)
-
-A Uri has been provided that cannot be parsed.
+The [request][HttpRequest] has been provided a uri that cannot be parsed.
 
 #### Message Format 
 
@@ -233,12 +273,34 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<uri-property>` is the name of the property that was provided a uri that could not be parsed.
+* `<uri-property>` is the name of the property containing the invalid uri.
 * `<uri-value>` is the value of the uri provided that could not be parsed.
 
 #### How to fix
 
-Ensure that the uri provided is a valid uri.
+Ensure that the uri provided is a valid uri (i.e. it is of the correct format and contains no invalid characters).
+
+### Invalid Uri in SOAP Request {#soaprequesturi}
+
+The [request][SoapRequest] has been provided a uri that cannot be parsed.
+
+#### Message Format 
+
+The format of the message is as follows:
+
+```json
+"Invalid '<uri-property>' (\"<uri-value>\") provided. The '<uri-property>' has been provided a uri that cannot be parsed.
+Please click the HelpLink for more information on how to fix this."
+```
+
+where:
+
+* `<uri-property>` is the name of the property containing the invalid uri.
+* `<uri-value>` is the value of the uri provided that could not be parsed.
+
+#### How to fix
+
+Ensure that the uri provided is a valid uri (i.e. it is of the correct format and contains no invalid characters).
 
 ## Remarks
 
@@ -252,19 +314,20 @@ None
 
 None
 
-[Invalid Request Body]: {{<ref "#invalid-request-body-httprequest-only">}}
-[Invalid Request Content Type]: {{<ref "#invalid-request-content-type-httprequest-only">}}
-[Invalid Request Enum Provided]: {{<ref "#invalid-request-content-type-httprequest-only">}}
-[Invalid Request Envelope]: {{<ref "#invalid-request-envelope-soaprequest-only">}}
-[Empty Header Key]: {{<ref "#empty-header-key-httprequest-and-soaprequest">}}
-[Forbidden Header Key]: {{<ref "#forbidden-header-key">}}
-[Restricted Header Key Provided With No Matching Property]: {{<ref "#restricted-header-key-provided-with-no-matching-property-httprequest-and-soaprequest">}}
-[Invalid Request Header Property]: {{<ref "#invalid-request-header-property-httprequest-and-soaprequest">}}
-[Invalid Header Type]: {{<ref "#invalid-header-type">}}
-[Invalid Uri]: {{<ref "#invalid-uri-httprequest-and-soaprequest">}}
+[Invalid Headers in HTTP Request]: {{<ref "#httprequestheaders">}}
+[Invalid Headers in SOAP Request]: {{<ref "#soaprequestheaders">}}
+[Invalid HTTP Version in HTTP Request]: {{<ref "#httprequesthttpversion">}}
+[Invalid HTTP Version in SOAP Request]: {{<ref "#soaprequesthttpversion">}}
+[Invalid Request Body]: {{<ref "#httprequestbody">}}
+[Invalid Request Envelope]: {{<ref "#soaprequestsoapmessageenvelope">}}
+[Invalid Uri in HTTP Request]: {{<ref "#httprequesturi">}}
+[Invalid Uri in SOAP Request]: {{<ref "#soaprequesturi">}}
+[Invalid Request Verb]: {{<ref "#httprequestverb">}}
 
 [Enum]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc">}}
 [HttpRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc">}}
+[SoapRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc">}}
+[RequestEnvelope]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapMessage.Envelope">}}
 [RequestVerb]: {{<url path="Cortex.Reference.DataTypes.Http.RequestVerb.MainDoc">}}
 [HttpRequestVersion]: {{<url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc">}}
 [Execute Soap Request]: {{<url path="Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest.MainDoc">}}
