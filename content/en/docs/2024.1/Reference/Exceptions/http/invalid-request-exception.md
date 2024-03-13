@@ -19,9 +19,9 @@ There are multiple reasons that this exception can be thrown:
 * [Invalid Headers in SOAP Request][]
 * [Invalid HTTP Version in HTTP Request][]
 * [Invalid HTTP Version in SOAP Request][]
-* [Invalid Request Body][]
-* [Invalid Request Envelope][]
-* [Invalid Request Verb][]
+* [Invalid Request Body in HTTP Request][]
+* [Invalid Request Envelope in SOAP Request][]
+* [Invalid Request Verb in HTTP Request][]
 * [Invalid Uri in HTTP Request][]
 * [Invalid Uri in SOAP Request][]
 
@@ -72,17 +72,17 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<header-key>` is the specific restricted header key in the request headers which may either contain an invalid value or be invalid.
+* `<header-key>` is the specific header key in the request headers which may be invalid or contain an invalid value.
 * `<header-value>` is the value assigned to the header with the given key, which may be invalid.
-* `<header-type>` is the expected data type for the header
+* `<header-type>` is the expected data type for the header value
 
 #### How to fix
 
-Ensure that the header key is not empty.
-Ensure that the value provided for the header is of the correct type.
-Ensure that no forbidden header keys are provided in the request.
-Ensure that the header key provided is valid.
-Ensure that the value provided for the header is valid.
+* Ensure that the header key is not empty.
+* Ensure that the header key provided is a valid key (e.g. `Example` is not a valid key, `Host` however is).
+* Ensure that the value provided for the header is valid (e.g. the `Host` key expects string in a uri format, so `"KH:(dsa)"` would not be a valid value, while `"https://www.example.com"` would).
+* Ensure that the value provided for the header is of the correct type (e.g. the `Date` key expects a value that can convert to [DateTime][DateTime], so `0` is not a valid value, while a string of format `dd-mm-yyyy` such as `13-03-2024` is).
+* Ensure that no forbidden header keys are provided in the request.
 
 ### Invalid Headers in SOAP Request {#soaprequestheaders}
 
@@ -129,17 +129,17 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<header-key>` is the specific restricted header key in the request headers which may either contain an invalid value or be invalid.
+* `<header-key>` is the specific header key in the request headers which may be invalid or contain an invalid value.
 * `<header-value>` is the value assigned to the header with the given key, which may be invalid.
-* `<header-type>` is the expected data type for the header
+* `<header-type>` is the expected data type for the header value
 
 #### How to fix
 
-Ensure that the header key is not empty.
-Ensure that the value provided for the header is of the correct type.
-Ensure that no forbidden header keys are provided in the request.
-Ensure that the header key provided is valid.
-Ensure that the value provided for the header is valid.
+* Ensure that the header key is not empty.
+* Ensure that the header key provided is a valid key (e.g. `Example` is not a valid key, `Host` however is).
+* Ensure that the value provided for the header is valid (e.g. the `Host` key expects string in a uri format, so `"KH:(dsa)"` would not be a valid value, while `"https://www.example.com"` would).
+* Ensure that the value provided for the header is of the correct type (e.g. the `Date` key expects a value that can convert to [DateTime][DateTime], so `0` is not a valid value, while a string of format `dd-mm-yyyy` such as `13-03-2024` is).
+* Ensure that no forbidden header keys are provided in the request.
 
 ### Invalid HTTP Version in HTTP Request {#httprequesthttpversion}
 
@@ -185,7 +185,7 @@ where:
 
 Ensure that the [HTTP version][HttpRequestVersion] provided for the [request][SoapRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
 
-### Invalid Request Body {#httprequestbody}
+### Invalid Request Body in HTTP Request {#httprequestbody}
 
 A request body for the [request][HttpRequest] was provided when one should not have been provided.
 
@@ -218,7 +218,7 @@ Ensure that the request body provided is a valid body for a valid [request verb]
 
 Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
 
-### Invalid Request Envelope {#soaprequestsoapmessageenvelope}
+### Invalid Request Envelope in SOAP Request {#soaprequestsoapmessageenvelope}
 
 The envelope provided is not valid XML.
 
@@ -235,7 +235,7 @@ Please click the HelpLink for more information on how to fix this."
 
 Ensure that the response envelope provided is valid XML; see [Execute Soap Request][] block.
 
-### Invalid Request Verb {#httprequestverb}
+### Invalid Request Verb in HTTP Request {#httprequestverb}
 
 The [request verb][RequestVerb] provided for the [request][HttpRequest] is invalid.
 
@@ -318,12 +318,13 @@ None
 [Invalid Headers in SOAP Request]: {{<ref "#soaprequestheaders">}}
 [Invalid HTTP Version in HTTP Request]: {{<ref "#httprequesthttpversion">}}
 [Invalid HTTP Version in SOAP Request]: {{<ref "#soaprequesthttpversion">}}
-[Invalid Request Body]: {{<ref "#httprequestbody">}}
-[Invalid Request Envelope]: {{<ref "#soaprequestsoapmessageenvelope">}}
+[Invalid Request Body in HTTP Request]: {{<ref "#httprequestbody">}}
+[Invalid Request Envelope in SOAP Request]: {{<ref "#soaprequestsoapmessageenvelope">}}
 [Invalid Uri in HTTP Request]: {{<ref "#httprequesturi">}}
 [Invalid Uri in SOAP Request]: {{<ref "#soaprequesturi">}}
-[Invalid Request Verb]: {{<ref "#httprequestverb">}}
+[Invalid Request Verb in HTTP Request]: {{<ref "#httprequestverb">}}
 
+[DateTime]: {{<url path="Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc">}}
 [Enum]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc">}}
 [HttpRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc">}}
 [SoapRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc">}}
