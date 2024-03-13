@@ -61,7 +61,7 @@ The FromAddress is used to define the address of the account used to set up the 
 
 ### ClientId
 
-The ClientId is used to define client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The ClientId is used to define the client ID of the client application created to allow authentication via OAuth. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|

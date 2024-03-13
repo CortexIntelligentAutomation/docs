@@ -2278,6 +2278,7 @@
         Interpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation"
         Verbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals"
         InterpolatedVerbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation"
+        SupportedCultureCodes = "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c"
     [MSDocs.SqlServer]
         ErrorCodes = "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
@@ -2298,7 +2299,9 @@
         ArgumentNullException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
         ArgumentOutOfRangeException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception"
         Array = "https://learn.microsoft.com/en-us/dotnet/api/system.array"
+        Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.exception"
         FormatException = "https://learn.microsoft.com/en-us/dotnet/api/system.formatexception"
+        IFormatProvider = "https://learn.microsoft.com/en-us/dotnet/api/system.iformatprovider"
         OutOfMemoryException = "https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
         StringComparer = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparer"
         StringComparison = "https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison"
@@ -2314,6 +2317,8 @@
             IEnumerable_TItem = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
             IList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
             List = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
+            IReadOnlyList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1"
+            IReadOnlyCollection = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1"
         [MSDocs.DotNet.Api.System.Convert]
             MainDoc ="https://learn.microsoft.com/en-us/dotnet/api/system.convert" 
             ToBoolean = "https://learn.microsoft.com/en-us/dotnet/api/system.convert.toboolean"
@@ -2446,6 +2451,12 @@
             MinValue = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan.minvalue"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
+            CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception"
+        [MSDocs.DotNet.Api.System.Text]
+            Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding"
+            UnicodeEncoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.unicodeencoding"
+            Utf8Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.utf8encoding"
+            Utf32Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.utf32encoding"
         [MSDocs.DotNet.Api.System.Text.RegularExpressions]
             Capture = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.capture"
             Group = "https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.group"

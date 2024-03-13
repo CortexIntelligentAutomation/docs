@@ -1,6 +1,7 @@
 ---
 title: "ContentOptions"
 linkTitle: "ContentOptions"
+description: "Used to define whether the Get Folder Content block should get file or folder paths."
 description: "Used to represent the set of options for the Get Folder Content block."
 ---
 
