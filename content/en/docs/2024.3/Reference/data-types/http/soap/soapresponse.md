@@ -59,7 +59,7 @@ The Headers are used to represent the HTTP headers returned in the SOAP response
 | Data Type | [IDictionary<String, Object>][IDictionary] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Expression][] |
-| Default Value |  |
+| Default Value | [IDictionary<String, Object>][IDictionary] with no value |
 
 ### StatusCode
 

@@ -30,27 +30,31 @@ Any data type that is used to represent a SOAP message.
 
 ### Envelope
 
-The Envelope represents the content of the message. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The Envelope represents the content of the SOAP message. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [EncryptableText][] |
 | Is [Advanced][] | `false` |
-| Default Editor | [Literal][] |
+| Default Editor | [Expression][] |
 | Default Value | [EncryptableText][] with value `$@""` |
 
 ### Version
 
-The Version represents the SOAP version of the message.
+The Version represents the SOAP version of the SOAP message.
 
 | | |
 |--------------------|---------------------------|
-| Data Type | [int32][] |
-| Is [Advanced][] | `false` |
-| Default Editor | [Literal][] |
-| Default Value | N/A |
+| Data Type | [Int32][] |
+| Is [Advanced][] | N/A see [Version is read-only][]|
+| Default Editor | N/A see [Version is read-only][]|
+| Default Value | [Int32] with value `11` or `12` set by [Soap11Message][] or [Soap12Message][] respectively |
 
 ## Remarks
+
+### Version is read-only
+
+[Version][Version Property] is a read-only property set by the derived classes [Soap11Message][] and [Soap12Message][] and as such will not be visible in the property editor.
 
 ### Property Editor Support
 
@@ -67,7 +71,7 @@ None
 ### Related Data Types
 
 - [EncryptableText][]
-- [int32][]
+- [Int32][]
 - [Soap11Message][]
 - [Soap12Message][]
 - [SoapRequest][]
@@ -80,6 +84,9 @@ None
 
 None
 
+[Version Property]: {{< ref "#version" >}}
+[Version is Read-only]: {{< ref "#version-is-read-only" >}}
+
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
@@ -90,5 +97,5 @@ None
 
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
-[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}

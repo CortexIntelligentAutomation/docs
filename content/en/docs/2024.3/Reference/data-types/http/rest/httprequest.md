@@ -30,58 +30,58 @@ The `HttpRequest` data type is used to represent an HTTP REST request.
 
 ### Uri
 
-The Uri represents the endpoint to send the request to. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+The Uri represents the endpoint to send the REST request to. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
 
 |                 |                                       |
 |-----------------|---------------------------------------|
 | Data Type       | [EncryptableText][]                   |
 | Is [Advanced][] | `false`                               |
-| Default Editor  | [EncryptableText][]                   |
+| Default Editor  | [Expression][]                   |
 | Default Value   | [EncryptableText][] with value `@$""` |
 
 ### QueryParameters
 
-The QueryParameters represents the parameters to use in the request.
+The QueryParameters represents the parameters to use in the REST request; these are appended as query string parameters to the Uri.
 
 |                 |                                             |
 |-----------------|---------------------------------------------|
 | Data Type       | [IDictionary<String, Dynamic>][IDictionary] |
 | Is [Advanced][] | `true`                                      |
 | Default Editor  | [Expression][]                              |
-| Default Value   | `@$""`                                      |
+| Default Value   | [IDictionary<String, Dynamic>][IDictionary] with no value                                    |
 
 ### Verb
 
-The RequestVerb represents the type of HTTP operation to use in the request.
+The Verb represents the type of HTTP operation to use in the REST request.
 
 |                 |                 |
 |-----------------|-----------------|
 | Data Type       | [RequestVerb][] |
 | Is [Advanced][] | `false`         |
 | Default Editor  | [Literal][]     |
-| Default Value   | `@$""`          |
+| Default Value   | `GET`          |
 
 ### ContentType
 
-The ContentType represents the type of the content used in the request.
+The ContentType represents the type of the content used in the REST request.
 
 |                 |                    |
 |-----------------|--------------------|
-| Data Type       | [string][]         |
-| Is [Advanced][] | `false`            |
+| Data Type       | [String][]         |
+| Is [Advanced][] | `true`            |
 | Default Editor  | [Literal][]        |
-| Default Value   | `application/json` |
+| Default Value   | [String] with value `"application/json"` |
 
 ### Headers
 
-The Headers represents the HTTP headers to include with the request.
+The Headers represents the HTTP headers to include with the REST request.
 
 |                 |                                             |
 |-----------------|---------------------------------------------|
-| Data Type       | [IDictionary<String, Dynamic>][IDictionary] |
-| Is [Advanced][] | `false`                                     |
-| Default Editor  | [Literal][]                                 |
-| Default Value   | N/A                                         |
+| Data Type       | [IDictionary<String, dynamic>][IDictionary] |
+| Is [Advanced][] | `true`                                     |
+| Default Editor  | [Expression][]                                 |
+| Default Value   | [IDictionary<String, dynamic>][IDictionary] with no value                                        |
 
 ### Body
 
@@ -91,12 +91,12 @@ The data to include in the body to be used (not relevant in GET and HEAD request
 |-----------------|---------------------|
 | Data Type       | [EncryptableText][] |
 | Is [Advanced][] | `false`             |
-| Default Editor  | [Literal][]         |
-| Default Value   | `@$""`              |
+| Default Editor  | [Expression][]         |
+| Default Value   | [EncryptableText][] with value `@$""`              |
 
 ### HttpVersion
 
-The HttpVersion represents the version of HTTP to use in the request.
+The HttpVersion represents the version of HTTP to use in the REST request.
   
 |                 |                        |
 |-----------------|------------------------|
@@ -121,8 +121,13 @@ None
 
 ### Related Data Types
 
+- [EncryptableText][]
+- [HttpRequestVersion][]
 - [HttpResponse][]
+- [IDictionary<String, dynamic>][IDictionary]
 - [Request][]
+- [RequestVerb][]
+- [String][]
 
 ### Related Concepts
 

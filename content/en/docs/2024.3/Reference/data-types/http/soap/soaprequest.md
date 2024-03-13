@@ -41,14 +41,22 @@ The Uri represents the endpoint to send the SOAP message to. The value of this p
 
 ### SoapMessage
 
-The SoapMessage represents the SOAP message sent to the endpoint.
+The SoapMessage represents the SOAP message to send.
   
 | | |
 |--------------------|---------------------------|
 | Data Type | [SoapMessage][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
-| Default Value | N/A |
+| Default Value | [SoapMessage] with value shown below |
+
+```json
+{
+    "Action": "",
+    "Envelope": "",
+    "Version": 11
+}
+```
 
 ### Headers
 
@@ -59,7 +67,7 @@ The Headers are used to represent the HTTP headers to add to the request.
 | Data Type | [IDictionary<String, Object>][IDictionary] |
 | Is [Advanced][] | `true` |
 | Default Editor | [Expression][] |
-| Default Value |  |
+| Default Value | [IDictionary<String, Object>][IDictionary] with no value |
 
 ### HttpVersion
 
@@ -88,6 +96,7 @@ None
 
 ### Related Data Types
 
+- [EncryptableText][]
 - [HttpRequestVersion][]
 - [IDictionary<String, Object>][IDictionary]
 - [Request][]

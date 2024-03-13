@@ -30,40 +30,40 @@ The `HttpResponse` data type is used to represent an HTTP REST response.
 
 ### ResponseBody
 
-The ResponseBody represents the body of the Rest response.
+The ResponseBody represents the body of the REST response.
 
-|                 |             |
-|-----------------|-------------|
-| Data Type       | [dynamic][] |
-| Is [Advanced][] | `false`     |
-| Default Editor  | [Literal][] |
-| Default Value   | `@$""`      |
+|                 |                            |
+|-----------------|----------------------------|
+| Data Type       | [dynamic][]                |
+| Is [Advanced][] | `false`                    |
+| Default Editor  | [Expression][]             |
+| Default Value   | [String] with value `@$""` |
 
 ### ErrorMessage
 
-The ErrorMessage is used represent any errors that occurred when executing the SOAP request.
+The ErrorMessage is used represent any errors that occurred when executing the REST request.
 
-|                 |             |
-|-----------------|-------------|
-| Data Type       | [string][]  |
-| Is [Advanced][] | `false`     |
-| Default Editor  | [Literal][] |
-| Default Value   | `@$""`      |
+|                 |                            |
+|-----------------|----------------------------|
+| Data Type       | [String][]                 |
+| Is [Advanced][] | `false`                    |
+| Default Editor  | [Expression][]             |
+| Default Value   | [String] with value `@$""` |
 
 ### Headers
 
-The Headers are used to represent the HTTP headers returned in the Rest response.
+The Headers are used to represent the HTTP headers returned in the REST response.
 
-|                 |                                             |
-|-----------------|---------------------------------------------|
-| Data Type       | [Dictionary<String, Dynamic>][Dictionary] |
-| Is [Advanced][] | `false`                                     |
-| Default Editor  | [Literal][]                                 |
-| Default Value   |                                             |
+|                 |                                                         |
+|-----------------|---------------------------------------------------------|
+| Data Type       | [Dictionary<String, dynamic>][Dictionary]               |
+| Is [Advanced][] | `false`                                                 |
+| Default Editor  | [Expression][]                                          |
+| Default Value   | [Dictionary<String, dynamic>][Dictionary] with no value |
 
 ### StatusCode
 
-The StatusCode is the status returned in the Rest response.
+The StatusCode is the status returned in the REST response.
 
 |                 |                    |
 |-----------------|--------------------|
@@ -88,11 +88,11 @@ None
 
 ### Related Data Types
 
+- [Dictionary<String, dynamic>][Dictionary]
 - [dynamic][]
 - [HttpRequest][]
-- [HttpRequestVersion][]
-- [Dictionary][]
-- [string][]
+- [HttpStatusCode][]
+- [String][]
 
 ### Related Concepts
 
@@ -116,6 +116,6 @@ None
 
 [Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [System.Net.HttpStatusCode]: {{< url path="MSDocs.DotNet.Api.System.Net.HttpStatusCode" >}}
-[HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}
