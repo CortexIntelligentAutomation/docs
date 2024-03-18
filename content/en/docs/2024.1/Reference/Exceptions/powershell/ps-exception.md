@@ -13,15 +13,16 @@ description: "The exception thrown when a terminating error occurs while executi
 
 The exception thrown when a terminating error occurs while executing scripts over WinRM.
 
+[//]: # (Only 1 category for this exception is currently used - should the wording be changed?)
 There are multiple reasons that this exception can be thrown:
 
 * [Invalid Script][]
 
 ## Reasons
 
-### Invalid Script
+### Invalid Script {#invalidscript}
 
-The PowerShell script provided is invalid.
+The PowerShell script provided is invalid (i.e. it contains unexpected or invalid tokens, or it is missing a necessary token).
 
 #### Message Format
 
@@ -34,7 +35,7 @@ Please click the help link below for more information on how to fix this."
 
 #### How to fix
 
-Ensure that the PowerShell script provided is valid.
+Fix the problems that caused the termination of the script during execution, as shown in the `Data` property under the `"Errors"` key.
 
 ## Remarks
 
@@ -48,6 +49,6 @@ None
 
 None
 
-[Invalid Script]: {{<ref "#invalid-script">}}
+[Invalid Script]: {{<ref "#invalidscript">}}
 
 [MS PowerShell]: {{<url path="MSDocs.PowerShell.WhatIsPowerShell">}}

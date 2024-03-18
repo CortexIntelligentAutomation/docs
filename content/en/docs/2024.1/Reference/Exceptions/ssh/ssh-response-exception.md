@@ -19,7 +19,7 @@ There are multiple reasons that this exception can be thrown:
 
 ## Reasons
 
-### SshSessionDetails.TerminalPrompt
+### Invalid TerminalPrompt or Short Timeout {#sshsessiondetailsterminalprompt}
 
 The `TerminalPrompt` was not found in the response, or the timeout provided was too short to allow for the response to be returned.
 
@@ -34,7 +34,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to fix
 
-Ensure that the `TerminalPrompt` in the [SshSessionDetails][] provided is valid regex and that the `Timeout` in the `ConfigurationSettings` provided is long enough for a response to be returned.
+Ensure that the `TerminalPrompt` in the [SshSessionDetails][] provided matches the terminal prompt on the host and that the `Timeout` in the `ConfigurationSettings` provided is long enough for a response to be returned.
 
 ## Remarks
 
