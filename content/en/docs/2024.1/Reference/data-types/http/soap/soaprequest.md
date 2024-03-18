@@ -28,13 +28,57 @@ The `SoapRequest` data type is used to represent a SOAP request.
 
 ## Properties
 
+### Uri
+
+The Uri represents the endpoint to send the SOAP message to. The value of this property may optionally be encrypted; for more information on how to encrypt this property, see [EncryptableText][].
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [EncryptableText][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [EncryptableText][] with value `$@""` |
+
 ### SoapMessage
 
-### Uri
+The SoapMessage represents the SOAP message to send.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [SoapMessage][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Literal][] |
+| Default Value | [SoapMessage] with value shown below |
+
+```json
+{
+    "Action": "",
+    "Envelope": "",
+    "Version": 11
+}
+```
 
 ### Headers
 
+The Headers are used to represent the HTTP headers to add to the request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [IDictionary<String, Object>][IDictionary] |
+| Is [Advanced][] | `true` |
+| Default Editor | [Expression][] |
+| Default Value | [IDictionary<String, Object>][IDictionary] with no value |
+
 ### HttpVersion
+
+The HttpVersion represents the version of HTTP to use in the request.
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [HttpRequestVersion][] |
+| Is [Advanced][] | `true` |
+| Default Editor | [Literal][] |
+| Default Value | `HTTP10` |
 
 ## Remarks
 
@@ -52,9 +96,13 @@ None
 
 ### Related Data Types
 
+- [EncryptableText][]
+- [HttpRequestVersion][]
+- [IDictionary<String, Object>][IDictionary]
 - [Request][]
 - [Soap11Message][]
 - [Soap12Message][]
+- [SoapMessage][]
 - [SoapResponse][]
 
 ### Related Concepts
@@ -73,3 +121,13 @@ None
 [Soap12Message]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.Soap12Message.MainDoc" >}}
 [Request]: {{< url path = "Cortex.Reference.DataTypes.Http.Request.MainDoc" >}}
 [SoapResponse]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapResponse.MainDoc" >}}
+
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[SoapMessage]: {{< url path = "Cortex.Reference.DataTypes.Http.Soap.SoapMessage.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+
+[EncryptableText]: {{< url path="Cortex.Reference.DataTypes.Text.EncryptableText.MainDoc" >}}
+[HttpRequestVersion]: {{< url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc" >}}
