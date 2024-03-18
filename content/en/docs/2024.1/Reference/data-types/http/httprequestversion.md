@@ -17,26 +17,38 @@ The `HttpRequestVersion` data type is used to represent the version of HTTP to b
 
 `HttpRequestVersion` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
-| | |
-|-|-|
-| **Category:**          | Http                                                  |
-| **Name:**              | `HttpRequestVersion`                                |
-| **Full Name:**         | `Cortex.DataTypes.Http.HttpRequestVersion`         |
-| **Alias:**             | N/A                                                    |
-| **Description:**       | Used to represent the version of HTTP to be used when making an HTTP request. |
-| **Default Value:**     | `(HttpRequestVersion)0`                             |
-| **Can be used as:**    | `HttpRequestVersion`, `Object`, `dynamic`           |
-| **Can be cast to:**    | `Int16` (e.g. `(Int16)HttpRequestVersion.HTTP10` or `(System.Int16)HttpRequestVersion.HTTP10` or `(short)HttpRequestVersion.HTTP10`)  |
-|                        | `Int32` (e.g. `(Int32)HttpRequestVersion.HTTP10` or `(System.Int32)HttpRequestVersion.HTTP10` or `(int)HttpRequestVersion.HTTP10`)  |
-|                        | `Int64` (e.g. `(Int64)HttpRequestVersion.HTTP10` or `(System.Int64)HttpRequestVersion.HTTP10` or `(long)HttpRequestVersion.HTTP10`)  |
-|                        | `Single` (e.g. `(Single)HttpRequestVersion.HTTP10` or `(System.Single)HttpRequestVersion.HTTP10` or `(float)HttpRequestVersion.HTTP10`)  |
-|                        | `Double` (e.g. `(Double)HttpRequestVersion.HTTP10` or `(System.Double)HttpRequestVersion.HTTP10` or `(double)HttpRequestVersion.HTTP10`)  |
+|                     |                                                                                                                                          |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| **Category:**       | Http                                                                                                                                     |
+| **Name:**           | `HttpRequestVersion`                                                                                                                     |
+| **Full Name:**      | `Cortex.DataTypes.Http.HttpRequestVersion`                                                                                               |
+| **Alias:**          | N/A                                                                                                                                      |
+| **Description:**    | Used to represent the version of HTTP to be used when making an HTTP request.                                                            |
+| **Default Value:**  | `(HttpRequestVersion)0`                                                                                                                  |
+| **Can be used as:** | `HttpRequestVersion`, `Object`, `dynamic`                                                                                                |
+| **Can be cast to:** | `Int16` (e.g. `(Int16)HttpRequestVersion.HTTP10` or `(System.Int16)HttpRequestVersion.HTTP10` or `(short)HttpRequestVersion.HTTP10`)     |
+|                     | `Int32` (e.g. `(Int32)HttpRequestVersion.HTTP10` or `(System.Int32)HttpRequestVersion.HTTP10` or `(int)HttpRequestVersion.HTTP10`)       |
+|                     | `Int64` (e.g. `(Int64)HttpRequestVersion.HTTP10` or `(System.Int64)HttpRequestVersion.HTTP10` or `(long)HttpRequestVersion.HTTP10`)      |
+|                     | `Single` (e.g. `(Single)HttpRequestVersion.HTTP10` or `(System.Single)HttpRequestVersion.HTTP10` or `(float)HttpRequestVersion.HTTP10`)  |
+|                     | `Double` (e.g. `(Double)HttpRequestVersion.HTTP10` or `(System.Double)HttpRequestVersion.HTTP10` or `(double)HttpRequestVersion.HTTP10`) |
 
 ## Values
 
 ### HTTP10
 
+|            |                           |
+|------------|---------------------------|
+| **Name:**  | HTTP10                    |
+| **Value:** | [Int32][] with value `0`  |
+| **Notes:** | HTTP 1.0 request version. |
+
 ### HTTP11
+
+|            |                           |
+|------------|---------------------------|
+| **Name:**  | HTTP11                    |
+| **Value:** | [Int32][] with value `1`  |
+| **Notes:** | HTTP 1.1 request version. |
 
 ### Property Editor Support
 
