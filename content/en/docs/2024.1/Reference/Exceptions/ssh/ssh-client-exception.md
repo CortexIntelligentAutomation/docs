@@ -30,13 +30,13 @@ The connection to the host server has been lost, so the session has closed.
 The format of the exception message is as follows:
 
 ```json
-"The 'Host' \"<hostname>\" has closed the session. Any subsequent commands run on the session will result in a new one being created.
+"The 'Host' \"<hostname-value>\" has closed the session. Any subsequent commands run on the session will result in a new one being created.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<hostname>` is the value of the `Host` property provided in the session details; see [SshSessionDetails][SshSessionDetails DataType] for more information
+* `<hostname-value>` is the value of the [Host][SshSessionDetails Host] property provided in the session details; see [SshSessionDetails][SshSessionDetails DataType] for more information
 
 #### How to fix
 
@@ -63,24 +63,24 @@ Fix the errors which caused this exception to be thrown, which are seen in the `
 
 The [Ssh Session Details][SshSessionDetailsSshSessionDetails] provided is invalid (e.g. an invalid hostname was provided, an invalid port was provided, the connection timed out, etc).
 
-[//]: # (Got up to here in signoff)
+[//]: # (Got up to here in signoff 18-03-2024)
 
 #### Message Format
 
 The format of the exception message is as follows:
 
 ```json
-"A connection could not be established between the server where the Cortex Execution Service is running (\"<hostname>\") and the host.
+"A connection could not be established between the server where the Cortex Execution Service is running (\"<hostname-value>\") and the host.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<hostname>` is the value of the `Host` property provided in the session details; see [SshSessionDetails][SshSessionDetails DataType] for more information
+* `<hostname-value>` is the value of the [Host][SshSessionDetails Host] property provided in the session details; see [SshSessionDetails][SshSessionDetails DataType] for more information
 
 #### How to fix
 
-Ensure that the `SessionDetails` provided is valid; see [SshSessionDetails][SshSessionDetails DataType] for more information.
+Ensure that the [Ssh Session Details][SshSessionDetailsSshSessionDetails] provided are valid; see [SshSessionDetails][SshSessionDetails DataType] for more information.
 
 ## Remarks
 
@@ -99,6 +99,7 @@ None
 [ConfigurationSettings]: {{<ref "#configurationsettings">}}
 
 [SshSessionDetails DataType]: {{<url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.MainDoc">}}
+[SshSessionDetails Host]: {{<url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.Host">}}
 
 [IPWorksSSHClientErrors]: {{<url path="IPWorks.SshErrors">}}
 
