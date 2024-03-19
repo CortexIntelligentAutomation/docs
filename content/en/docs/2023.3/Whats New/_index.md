@@ -85,7 +85,7 @@ For a full list of what has been introduced in this release, please see the [202
 [Queues]: {{< url path="Cortex.Reference.Blocks.Queues.MainDoc" version="2023.3" >}}
 [Decode Text]: {{< url path="Cortex.Reference.Blocks.Text.DecodeText.DecodeText.MainDoc" version="2023.3" >}}
 [Encode Text]: {{< url path="Cortex.Reference.Blocks.Text.EncodeText.EncodeText.MainDoc" version="2023.3" >}}
-[Execute Ssh Command]: {{< url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand.MainDoc" version="2023.3" >}}
+[Execute Ssh Command]: {{< url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock.MainDoc" version="2023.3" >}}
 
 [2023.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2023.3.MainDoc" >}}
 [re-architected HA Platform]: {{< url path="Cortex.Blogs.Releases.2023.3.RearchitectedtheHAPlatform" >}}

@@ -1,7 +1,7 @@
 ---
 title: "SshResponseException"
 linkTitle: "SshResponseException"
-description: "The exception thrown when an error occurs from the Ssh response."
+description: "The exception thrown when an error occurs from the SSH response."
 ---
 
 # {{% param title %}}
@@ -11,11 +11,11 @@ description: "The exception thrown when an error occurs from the Ssh response."
 
 ## Description
 
-The exception thrown when an error occurs from the Ssh response.
+The exception thrown when an error occurs from the SSH response.
 
 There are multiple reasons that this exception can be thrown:
 
-* [SshSessionDetails.TerminalPrompt][]
+* [Invalid TerminalPrompt or Short Timeout][SshSessionDetails.TerminalPrompt]
 
 ## Reasons
 

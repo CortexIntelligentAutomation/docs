@@ -1,7 +1,7 @@
 ---
 title: "SshClientException"
 linkTitle: "SshClientException"
-description: "The exception thrown when an error occurs from the Sshclient object."
+description: "The exception thrown when an SSH Client (e.g. Execute Ssh Command Block) is incorrectly configured."
 ---
 
 # {{% param title %}}
@@ -11,7 +11,7 @@ description: "The exception thrown when an error occurs from the Sshclient objec
 
 ## Description
 
-Exception thrown when an error occurs from the Sshclient object.
+The exception thrown when an SSH Client (e.g. [Execute Ssh Command Block][]) is incorrectly configured.
 
 There are multiple reasons that this exception can be thrown:
 
@@ -36,7 +36,7 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<hostname>` is the value of the `Host` property provided in the server details; see [SshSessionDetails][SshSessionDetails DataType] for more information
+* `<hostname>` is the value of the `Host` property provided in the session details; see [SshSessionDetails][SshSessionDetails DataType] for more information
 
 #### How to fix
 
@@ -44,7 +44,7 @@ Ensure that the connection to the host server is functional, and that no command
 
 ### Invalid Configuration Settings {#configurationsettings}
 
-The `Configuration Settings` provided were invalid (e.g. an invalid setting key was provided, a setting was provided an invalid value, etc).
+The [Configuration Settings][SshSessionDetailsConfigurationSettings] provided were invalid (e.g. an invalid setting key was provided, a setting was provided an invalid value, etc).
 
 #### Message Format
 
@@ -61,7 +61,9 @@ Fix the errors which caused this exception to be thrown, which are seen in the `
 
 ### Invalid Connection {#sshsessiondetails}
 
-The `SessionDetails` provided is invalid (e.g. an invalid hostname was provided, an invalid port was provided, the connection timed out, etc).
+The [Ssh Session Details][SshSessionDetailsSshSessionDetails] provided is invalid (e.g. an invalid hostname was provided, an invalid port was provided, the connection timed out, etc).
+
+[//]: # (Got up to here in signoff)
 
 #### Message Format
 
@@ -74,7 +76,7 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<hostname>` is the value of the `Host` property provided in the server details; see [SshSessionDetails][SshSessionDetails DataType] for more information
+* `<hostname>` is the value of the `Host` property provided in the session details; see [SshSessionDetails][SshSessionDetails DataType] for more information
 
 #### How to fix
 
@@ -99,3 +101,7 @@ None
 [SshSessionDetails DataType]: {{<url path="Cortex.Reference.DataTypes.Ssh.SshSessionDetails.MainDoc">}}
 
 [IPWorksSSHClientErrors]: {{<url path="IPWorks.SshErrors">}}
+
+[Execute Ssh Command Block]: {{<url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock.MainDoc">}}
+[SshSessionDetailsConfigurationSettings]: {{<url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock.ConfigurationSettings">}}
+[SshSessionDetailsSshSessionDetails]: {{<url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock.SshSessionDetails">}}

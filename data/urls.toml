@@ -913,9 +913,10 @@
                 MainDoc = "/docs/reference/blocks/ssh/"
                 [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]
                     MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
-                    [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
+                    [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
+                        SshSessionDetails = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-session-details"
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
