@@ -63,8 +63,6 @@ Fix the errors which caused this exception to be thrown, which are seen in the `
 
 The [Ssh Session Details][SshSessionDetailsSshSessionDetails] provided is invalid (e.g. an invalid hostname was provided, an invalid port was provided, the connection timed out, etc).
 
-[//]: # (Got up to here in signoff 18-03-2024)
-
 #### Message Format
 
 The format of the exception message is as follows:

@@ -13,8 +13,7 @@ description: "The exception thrown when a terminating error occurs while executi
 
 The exception thrown when a terminating error occurs while executing scripts over WinRM.
 
-[//]: # (Only 1 category for this exception is currently used - should the wording be changed?)
-There are multiple reasons that this exception can be thrown:
+There is a single reason that this exception can be thrown:
 
 * [Invalid Script][]
 

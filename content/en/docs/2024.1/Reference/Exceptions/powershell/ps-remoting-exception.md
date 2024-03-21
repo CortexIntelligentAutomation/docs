@@ -50,7 +50,7 @@ or
 Please click the help link below for more information on how to fix this."
 ```
 
-[//]: # (can't demo this message? relies on machine restart just before? investigate)
+[//]: # (can't demo this message. relies on machine restart just before)
 
 where:
 
@@ -109,7 +109,7 @@ Ensure that the host name does not contain invalid characters (e.g. `domain  .ex
 
 ### Invalid Credentials {#invalidcredentials}
 
-[//]: # (Not tested - can't get this to throw. Raise and ask for help)
+[//]: # (never tested or thrown, added docs since we technically can throw this)
 
 The credentials provided for accessing the host are invalid.
 
