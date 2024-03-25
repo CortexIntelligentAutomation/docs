@@ -208,15 +208,12 @@ Please click the HelpLink for more information on how to fix this."
 where:
 
 * `<verb>` is the request verb of the errored request.
-* `<content-type>` is the content type of the request, e.g. XML or JSON.
+* `<content-type>` is the content type of the request (e.g. XML, JSON, etc).
 
 #### How to fix
 
-[//]: # (Unsure on formatting/phrasing, bring this up)
-
-Ensure that the request body provided is a valid body for a valid [request verb][RequestVerb] (i.e. the request verb should be valid and no body should be provided for `GET` and `HEAD` requests).
-
-Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
+* Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
+* Ensure that the content of the `Body` is valid for the `Content Type` specified (e.g. the `Body` is valid JSON if the `Content Type` is `application/json`).
 
 ### Invalid Request Envelope in SOAP Request {#soaprequestsoapmessageenvelope}
 
