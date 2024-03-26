@@ -2457,6 +2457,9 @@
         MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
         Explorer = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
         ReverseProxy = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
+    [MSDocs.Windows]
+        [MSDocs.Windows.WindowsServer]
+            NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
 [MSDotNet]
     [MSDotNet.Framework471]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"

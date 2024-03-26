@@ -1,7 +1,7 @@
 ---
 title: "PSRemotingException"
 linkTitle: "PSRemotingException"
-description: "The exception thrown when access is denied to a host when attempting to executing scripts over WinRM."
+description: "The exception thrown when access is denied to a host when attempting to execute scripts over WinRM."
 ---
 
 # {{% param title %}}
@@ -11,7 +11,7 @@ description: "The exception thrown when access is denied to a host when attempti
 
 ## Description
 
-The exception thrown when access is denied to a host when attempting to executing scripts over WinRM.
+The exception thrown when access is denied to a host when attempting to execute scripts over WinRM.
 
 There are multiple reasons that this exception can be thrown:
 
@@ -54,19 +54,19 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
-* `<authentication-mechanism>` is the authentication mechanism (i.e. `Kerberos` or `Negotiate`) used for remoting to the host.
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+* `<authentication-mechanism>` is the authentication mechanism (i.e. `Kerberos` or `Negotiate`) used for connecting to the host.
 
 #### How to fix
 
-* Ensure that the credentials provided are valid for an administrator account with the correct host and domain.
+* Ensure that the credentials provided are valid for a user account with permissions to execute PowerShell scripts or cmdlets on the [Host][ServerDetailsHost].
 * Ensure that the authentication mechanism (i.e. `Kerberos` or `Negotiate`) used is not disabled on the host machine's WinRM service.
 
 ### Client Authentication Disabled {#clientauthenticationdisabled}
 
 [//]: # (never tested or thrown? added docs since we technically can throw this. )
 
-Kerberos authentication is disabled on the host machine.
+Kerberos authentication is disabled on the server where the [Execution Service][] is running.
 
 #### Message Format
 
@@ -79,12 +79,12 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
-* `<machine-name-value>` is the NetBIOS name of the machine with the [Execution Service][] running
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+* `<machine-name-value>` is the NetBIOS name of the server where the [Execution Service][] is running.
 
 #### How to fix
 
-If possible, enable Kerberos Authentication on the server where the [Cortex Execution Service][Execution Service] is running.
+If possible, enable Kerberos Authentication on the server where the [Execution Service][Execution Service] is running.
 
 ### Host Contains Invalid Characters {#hostcontainsinvalidcharacters}
 
@@ -101,11 +101,30 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
 
 #### How to fix
 
-Ensure that the host name does not contain invalid characters (e.g. `domain  .example.com` and `example\com` are both invalid, while `domain.example.com` and `example.com` are not).
+Ensure that the hostname does not contain invalid characters; see [Naming Conventions][NamingConventions] for more information.
+
+### Invalid Certificate {#invalidcertificate}
+
+The SSL certificate provided is invalid (e.g. the hostname provided does not match the common name on the certificate).
+
+#### Message Format
+
+The format of the exception message is as follows:
+
+```json
+"Access denied to the 'Host' (\"<hostname-value>\"). See the data property for details on why the a security error has occurred.
+Please click the help link below for more information on how to fix this."
+```
+
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+
+#### How to fix
+
+Ensure that certificate provided is valid.
 
 ### Invalid Credentials {#invalidcredentials}
 
@@ -124,30 +143,11 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
 
 #### How to fix
 
 Ensure that the credentials provided are valid.
-
-### Invalid Certificate {#invalidcertificate}
-
-The SSL certificate provided is invalid (e.g. the hostname provided does not match the common name on the certificate).
-
-#### Message Format
-
-The format of the exception message is as follows:
-
-```json
-"Access denied to the 'Host' (\"<hostname-value>\"). See the data property for details on why the a security error has occurred.
-Please click the help link below for more information on how to fix this."
-```
-
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
-
-#### How to fix
-
-Ensure that certificate provided is valid.
 
 ### Invalid DNS {#invaliddns}
 
@@ -164,7 +164,7 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
 
 #### How to fix
 
@@ -179,14 +179,14 @@ The domain for the authentication credentials provided is invalid.
 The format of the exception message is as follows:
 
 ```json
-"Access denied to the 'Host' (\"<hostname-value>\"). The 'Domain' (\"<domain-name>\") is unavailable on the network.
+"Access denied to the 'Host' (\"<hostname-value>\"). The 'Domain' (\"<domain-name-value>\") is unavailable on the network.
 Please click the help link below for more information on how to fix this."
 ```
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
-* `<domain-name>` is the domain for the authentication credentials provided, which is invalid
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+* `<domain-name-value>` is the domain for the authentication credentials provided, which is invalid.
 
 #### How to fix
 
@@ -194,7 +194,7 @@ Ensure that the domain provided is valid.
 
 ### Invalid Host IP Address {#invalidhostipaddress}
 
-The host provided is in the form of an IP address which is invalid.
+The hostname provided is in the form of an invalid or untrusted IP address.
 
 #### Message Format
 
@@ -207,12 +207,12 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information.
-* `<machine-name-value>` is the NetBIOS name of the machine with the [Execution Service][] running.
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+* `<machine-name-value>` is the NetBIOS name of the server where the [Execution Service][] is running.
 
 #### How to fix
 
-Ensure that the IP address provided for the host server is valid, and that this IP address has been added to the WinRM TrustedHosts List on the server where the [Execution Service][] is running.
+Ensure that the IP address provided for the [Host][ServerDetailsHost] is valid, and that this IP address has been added to the WinRM TrustedHosts List on the server where the [Execution Service][] is running.
 
 ### Invalid Host Name {#invalidhostname}
 
@@ -229,7 +229,7 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
 
 #### How to fix
 
@@ -250,8 +250,8 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
-* `<port>` is the provided port on the host server to connect (e.g. `443`, `5986`, etc.); see [ServerDetails][] for more information
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+* `<port>` is the provided port on the host to connect (e.g. `443`, `5986`, etc.); see [ServerDetails][] for more information.
 
 #### How to fix
 
@@ -259,7 +259,7 @@ Ensure that the port provided is a valid port (e.g. `443`, `5986`, etc.).
 
 ### Invalid Protocol {#invalidprotocol}
 
-The host server requires communication over SSL, while the `UseSSL` property in the [PowerShellSessionDetails][] provided is `false`.
+The [Host][ServerDetailsHost] requires communication over SSL, while the [UseSSL][ServerDetailsUseSSL] property in the [ServerDetails][ServerDetails] provided is `false`.
 
 #### Message Format
 
@@ -272,15 +272,15 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
 
 #### How to fix
 
-Ensure that the `UseSSL` property for the [PowerShellSessionDetails][] is `true` and that valid credentials and a valid certificate are provided for access to the host.
+Ensure that the [UseSSL][ServerDetailsUseSSL] property for the [ServerDetails][ServerDetails] is `true` and that valid credentials and a valid certificate are provided for access to the host.
 
 ### Invalid PSConfiguration {#invalidpsconfiguration}
 
-The value of the `PSConfiguration` property in the [PowerShellSessionDetails][] provided is invalid.
+The value of the [PSConfiguration][] property in the [PowerShellSessionDetails][] provided does not match any of the configured PowerShell session configurations on the [Host][ServerDetailsHost].
 
 #### Message Format
 
@@ -293,12 +293,12 @@ Please click the help link below for more information on how to fix this."
 
 where:
 
-* `<hostname-value>` is the value of the `Host` property provided in the server details; see [ServerDetails][] for more information
-* `<psconfiguration-property-value>` is the value of the `PSConfiguration` property in the [PowerShellSessionDetails][] provided (i.e. the PowerShell configuration that would be used by the host), which is invalid
+* `<hostname-value>` is the value of the [Host][ServerDetailsHost] property provided in the [ServerDetails][ServerDetails].
+* `<psconfiguration-property-value>` is the value of the [PSConfiguration][] property in the [PowerShellSessionDetails][] provided (i.e. the PowerShell session configuration that would be used by the host), which is invalid.
 
 #### How to fix
 
-Ensure that a valid PowerShell configuration is provided for the `PSConfiguration` property.
+Ensure that the [PSConfiguration][] provided matches a configured PowerShell session configuration on the [Host][ServerDetailsHost].
 
 ## Remarks
 
@@ -310,9 +310,11 @@ None
 
 ### External Documentation
 
-None
+* [Naming conventions in Active Directory for computers, domains, sites, and OUs][NamingConventions]
 
 [AccessDenied]: {{<ref "#accessdenied">}}
+[ClientAuthenticationDisabled]: {{<ref "#clientauthenticationdisabled">}}
+[HostContainsInvalidCharacters]: {{<ref "#hostcontainsinvalidcharacters">}}
 [InvalidHostName]: {{<ref "#invalidhostname">}}
 [InvalidDomain]: {{<ref "#invaliddomain">}}
 [InvalidCredentials]: {{<ref "#invalidcredentials">}}
@@ -325,5 +327,11 @@ None
 
 [PowerShellSessionDetails]: {{<url path="Cortex.Reference.DataTypes.PowerShell.PowerShellSessionDetails.MainDoc">}}
 [ServerDetails]: {{<url path="Cortex.Reference.DataTypes.SessionDetails.ServerDetails.MainDoc">}}
+[ServerDetailsHost]: {{<url path="Cortex.Reference.DataTypes.SessionDetails.ServerDetails.Host">}}
+[ServerDetailsUseSSL]: {{<url path="Cortex.Reference.DataTypes.SessionDetails.ServerDetails.UseSsl">}}
+
+[PSConfiguration]: {{<url path="Cortex.Reference.DataTypes.PowerShell.PowerShellSessionDetails.PsConfiguration">}}
 
 [Execution Service]: {{<url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc">}}
+
+[NamingConventions]: {{<url path = "MSDocs.Windows.WindowsServer.NamingConventions">}}
