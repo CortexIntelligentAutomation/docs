@@ -1,7 +1,7 @@
 ---
 title: "InvalidRequestException"
 linkTitle: "InvalidRequestException"
-description: "The exception thrown when an issue occurs with a HTTP request."
+description: "The exception thrown when an issue occurs with an HTTP request."
 ---
 
 # {{% param title %}}

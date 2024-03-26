@@ -120,7 +120,7 @@ None
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 [Handle Exception blocks]: {{< url path="Cortex.Reference.Blocks.Exceptions.MainDoc" >}}
-[Execute SSH Command]: {{< url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand.MainDoc" >}}
+[Execute SSH Command]: {{< url path="Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock.MainDoc" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
