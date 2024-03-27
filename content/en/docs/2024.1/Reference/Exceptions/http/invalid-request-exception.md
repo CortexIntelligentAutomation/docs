@@ -43,21 +43,21 @@ Please click the HelpLink for more information on how to fix this."
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which does not match any of the restricted header properties.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which does not match any of the restricted header properties.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
 Please click the HelpLink for more information on how to fix this."
 ```
 
@@ -66,13 +66,13 @@ or
 [//]: # (forbidden header key route, implemented and technically valid though no header keys are currently set as forbidden so will never be thrown)
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which is forbidden.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which is forbidden.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<header-key>` is the specific header key in the request headers which may be invalid or contain an invalid value.
+* `<header-key-value>` is the specific header key in the request headers which may be invalid or contain an invalid value.
 * `<header-value>` is the value assigned to the header with the given key, which may be invalid.
 * `<header-type>` is the expected data type for the header value
 
@@ -100,21 +100,21 @@ Please click the HelpLink for more information on how to fix this."
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which does not match any of the restricted header properties.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which does not match any of the restricted header properties.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
 Please click the HelpLink for more information on how to fix this."
 ```
 
@@ -123,13 +123,13 @@ or
 [//]: # (forbidden header key route, implemented and technically valid though no header keys are currently set as forbidden so will never be thrown)
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which is forbidden.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which is forbidden.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<header-key>` is the specific header key in the request headers which may be invalid or contain an invalid value.
+* `<header-key-value>` is the specific header key in the request headers which may be invalid or contain an invalid value.
 * `<header-value>` is the value assigned to the header with the given key, which may be invalid.
 * `<header-type>` is the expected data type for the header value
 
