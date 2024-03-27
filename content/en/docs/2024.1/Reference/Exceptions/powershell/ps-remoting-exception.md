@@ -318,7 +318,7 @@ None
 [InvalidHostName]: {{<ref "#invalidhostname">}}
 [InvalidDomain]: {{<ref "#invaliddomain">}}
 [InvalidCredentials]: {{<ref "#invalidcredentials">}}
-[InvalidCertificate]: {{<ref "#invalidcertificates">}}
+[InvalidCertificate]: {{<ref "#invalidcertificate">}}
 [InvalidHostIPAddress]: {{<ref "#invalidhostipaddress">}}
 [InvalidDNS]: {{<ref "#invaliddns">}}
 [InvalidPort]: {{<ref "#invalidport">}}
