@@ -1,7 +1,7 @@
 ---
 title: "InvalidRequestException"
 linkTitle: "InvalidRequestException"
-description: "The exception thrown when an issue occurs with an HTTP request."
+description: "The exception thrown when an issue occurs with an HTTP request or a SOAP request."
 ---
 
 # {{% param title %}}
@@ -11,7 +11,7 @@ description: "The exception thrown when an issue occurs with an HTTP request."
 
 ## Description
 
-The exception thrown when an issue occurs with an [HTTP request][HttpRequest] or a [SOAP Request][SoapRequest].
+The exception thrown when an issue occurs with an [HTTP request][HttpRequest] or a [SOAP request][SoapRequest].
 
 There are multiple reasons that this exception can be thrown:
 
@@ -29,7 +29,7 @@ There are multiple reasons that this exception can be thrown:
 
 ### Invalid Headers in HTTP Request {#httprequestheaders}
 
-The headers provided in the [HTTP request][HttpRequest] are invalid (e.g. a header key in the headers is empty).
+The [Headers][HttpRequestHeaders] provided in the [HttpRequest][HttpRequest] are invalid (e.g. a header key in the headers is empty).
 
 #### Message Format
 
@@ -43,21 +43,14 @@ Please click the HelpLink for more information on how to fix this."
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which does not match any of the restricted header properties.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
-Please click the HelpLink for more information on how to fix this."
-```
-
-or
-
-```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
 Please click the HelpLink for more information on how to fix this."
 ```
 
@@ -66,27 +59,28 @@ or
 [//]: # (forbidden header key route, implemented and technically valid though no header keys are currently set as forbidden so will never be thrown)
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which is forbidden.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which is forbidden.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<header-key>` is the specific header key in the request headers which may be invalid or contain an invalid value.
+* `<header-key-value>` is the specific header key in the request headers which may be invalid or contain an invalid value.
 * `<header-value>` is the value assigned to the header with the given key, which may be invalid.
-* `<header-type>` is the expected data type for the header value
+* `<header-type>` is the expected data type for the header value.
 
 #### How to fix
 
 * Ensure that the header key is not empty.
-* Ensure that the header key provided is a valid key (e.g. `Example` is not a valid key, `Host` however is).
-* Ensure that the value provided for the header is valid (e.g. the `Host` key expects string in a uri format, so `"KH:(dsa)"` would not be a valid value, while `"https://www.example.com"` would).
-* Ensure that the value provided for the header is of the correct type (e.g. the `Date` key expects a value that can convert to [DateTime][DateTime], so `0` is not a valid value, while a string of format `dd-mm-yyyy` such as `13-03-2024` is).
+* Ensure that the value provided for the header is valid (e.g. the `"Host"` key expects string in a uri format, so `"27/03/2024"` would not be a valid value, while `"https://www.example.com"` would).
+* Ensure that the value provided for the header is of the correct type (e.g. the `"Date"` key expects a value that can convert to [DateTime][DateTime], so `0` is not a valid value, while a string of format `"dd-mm-yyyy"` such as `"13-03-2024"` is).
 * Ensure that no forbidden header keys are provided in the request.
+
+[//]: # (TODO add a list of forbidden header keys, and explain what forbidden header keys are - i.e. they can't be set)
 
 ### Invalid Headers in SOAP Request {#soaprequestheaders}
 
-The headers provided in the [SOAP request][SoapRequest] are invalid (e.g. a header key in the headers is empty).
+The [Headers][SoapRequestHeaders] provided in the [SoapRequest][SoapRequest] are invalid (e.g. a header key in the headers is empty).
 
 #### Message Format
 
@@ -100,21 +94,14 @@ Please click the HelpLink for more information on how to fix this."
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which does not match any of the restricted header properties.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 or
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key\") has been provided a header value (\"<header-value>\") that cannot be assigned to its property.
-Please click the HelpLink for more information on how to fix this."
-```
-
-or
-
-```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided a header value (\"<header-value>\") that cannot be converted to its property type (\"<header-type>\").
 Please click the HelpLink for more information on how to fix this."
 ```
 
@@ -123,27 +110,28 @@ or
 [//]: # (forbidden header key route, implemented and technically valid though no header keys are currently set as forbidden so will never be thrown)
 
 ```json
-"Invalid 'Headers' provided. A restricted header key (\"<header-key>\") has been provided which is forbidden.
+"Invalid 'Headers' provided. A restricted header key (\"<header-key-value>\") has been provided which is forbidden.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<header-key>` is the specific header key in the request headers which may be invalid or contain an invalid value.
+* `<header-key-value>` is the specific header key in the request headers which may be invalid or contain an invalid value.
 * `<header-value>` is the value assigned to the header with the given key, which may be invalid.
-* `<header-type>` is the expected data type for the header value
+* `<header-type>` is the expected data type for the header value.
 
 #### How to fix
 
 * Ensure that the header key is not empty.
-* Ensure that the header key provided is a valid key (e.g. `Example` is not a valid key, `Host` however is).
-* Ensure that the value provided for the header is valid (e.g. the `Host` key expects string in a uri format, so `"KH:(dsa)"` would not be a valid value, while `"https://www.example.com"` would).
-* Ensure that the value provided for the header is of the correct type (e.g. the `Date` key expects a value that can convert to [DateTime][DateTime], so `0` is not a valid value, while a string of format `dd-mm-yyyy` such as `13-03-2024` is).
+* Ensure that the value provided for the header is valid (e.g. the `"Host"` key expects string in a uri format, so `"27/03/2024"` would not be a valid value, while `"https://www.example.com"` would).
+* Ensure that the value provided for the header is of the correct type (e.g. the `"Date"` key expects a value that can convert to [DateTime][DateTime], so `0` is not a valid value, while a string of format `"dd-mm-yyyy"` such as `"13-03-2024"` is).
 * Ensure that no forbidden header keys are provided in the request.
+
+[//]: # (TODO add a list of forbidden header keys, and explain what forbidden header keys are - i.e. they can't be set)
 
 ### Invalid HTTP Version in HTTP Request {#httprequesthttpversion}
 
-The [HTTP version][HttpRequestVersion] provided in the [request][HttpRequest] is invalid.
+The [HttpVersion][HttpRequestHttpVersion] provided in the [HttpRequest][HttpRequest] is invalid.
 
 #### Message Format
 
@@ -156,16 +144,16 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<http-version-property>` is the property containing the invalid HTTP version value
-* `<http-version-value>` is the invalid value for the HTTP version
+* `<http-version-property>` is the property containing the invalid HTTP version value.
+* `<http-version-value>` is the invalid value for the HTTP version.
 
 #### How to fix
 
-Ensure that the [HTTP version][HttpRequestVersion] provided for the [request][SoapRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
+Ensure that the [HttpVersion][HttpRequestHttpVersion] provided for the [HttpRequest][HttpRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
 
 ### Invalid HTTP Version in SOAP Request {#soaprequesthttpversion}
 
-The [HTTP version][HttpRequestVersion] provided in the [request][SoapRequest] is invalid.
+The [HttpVersion][SoapRequestHttpVersion] provided in the [SoapRequest][SoapRequest] is invalid.
 
 #### Message Format
 
@@ -178,16 +166,16 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<http-version-property>` is the property containing the invalid HTTP version value
-* `<http-version-value>` is the invalid value for the HTTP version
+* `<http-version-property>` is the property containing the invalid HTTP version value.
+* `<http-version-value>` is the invalid value for the HTTP version.
 
 #### How to fix
 
-Ensure that the [HTTP version][HttpRequestVersion] provided for the [request][SoapRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
+Ensure that the [HttpVersion][SoapRequestHttpVersion] provided for the [SoapRequest][SoapRequest] is a valid version (i.e. `HTTP10` or `HTTP11`).
 
 ### Invalid Request Body in HTTP Request {#httprequestbody}
 
-A request body for the [request][HttpRequest] was provided when one should not have been provided.
+The [Body][HttpRequestBody] provided for the [HttpRequest][HttpRequest] was invalid (i.e. a body was provided for a [Verb][HttpRequestVerb] which does not accept a body, or the body was invalid for the [ContentType][HttpRequestContentType]).
 
 #### Message Format
 
@@ -212,12 +200,12 @@ where:
 
 #### How to fix
 
-* Ensure that the correct [request verb][RequestVerb] has been provided and that there is no body provided for this verb if it should not be provided one (i.e. `GET` and `HEAD` requests).
-* Ensure that the content of the `Body` is valid for the `Content Type` specified (e.g. the `Body` is valid JSON if the `Content Type` is `application/json`).
+* Ensure that no [Body][HttpRequestBody] is provided for `GET` and `HEAD` requests.
+* Ensure that the content of the [Body][HttpRequestBody] is valid for the [ContentType][HttpRequestContentType] specified (e.g. the [Body][HttpRequestBody] is valid JSON if the [ContentType][HttpRequestContentType] is `application/json`).
 
 ### Invalid Request Envelope in SOAP Request {#soaprequestsoapmessageenvelope}
 
-The envelope provided is not valid XML.
+The [Envelope][RequestEnvelope] provided in the [SoapMessage][SoapRequestSoapMessage] for the [SoapRequest][SoapRequest] is not valid XML.
 
 #### Message Format
 
@@ -230,18 +218,18 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to fix
 
-Ensure that the response envelope provided is valid XML; see [Execute Soap Request][] block.
+Ensure that the [Envelope][RequestEnvelope] provided is valid XML.
 
 ### Invalid Request Verb in HTTP Request {#httprequestverb}
 
-The [request verb][RequestVerb] provided for the [request][HttpRequest] is invalid.
+The [Verb][HttpRequestVerb] provided for the [HttpRequest][HttpRequest] is invalid.
 
 #### Message Format 
 
 The format of the message is as follows:
 
 ```json
-"Invalid '<property-name>' provided. The '<property-name>' \"<property-value>\" is not a valid <enum-type>.
+"Invalid '<verb-property>' provided. The '<verb-property>' \"<verb-value>\" is not a valid Request Verb.
 Please click the HelpLink for more information on how to fix this."
 ```
 
@@ -249,15 +237,14 @@ where:
 
 * `<verb-property>` is the name of the property containing the invalid verb.
 * `<verb-value>` is the value of the invalid verb.
-* `<enum type>` is the type that the enum provided is required to be (i.e. [RequestVerb][]).
 
 #### How to fix
 
-Ensure that the verb provided is a valid verb (i.e. `GET`, `POST`, `PUT`, `DELETE`, `PATCH` or `HEAD`).
+Ensure that the [Verb][HttpRequestVerb] provided is a valid [RequestVerb][RequestVerb] (i.e. `GET`, `POST`, `PUT`, `DELETE`, `PATCH` or `HEAD`).
 
 ### Invalid Uri in HTTP Request {#httprequesturi}
 
-The [request][HttpRequest] has been provided a uri that cannot be parsed.
+The [Uri][HttpRequestUri] provided for the [HttpRequest][HttpRequest] cannot be parsed.
 
 #### Message Format 
 
@@ -275,11 +262,11 @@ where:
 
 #### How to fix
 
-Ensure that the uri provided is a valid uri (i.e. it is of the correct format and contains no invalid characters).
+Ensure that the [Uri][HttpRequestUri] provided is a valid uri (i.e. it is of the [correct format][UriSyntax] and contains no [invalid characters][UriInvalidCharacters]).
 
 ### Invalid Uri in SOAP Request {#soaprequesturi}
 
-The [request][SoapRequest] has been provided a uri that cannot be parsed.
+The [Uri][SoapRequestUri] provided for the [SoapRequest][SoapRequest] cannot be parsed.
 
 #### Message Format 
 
@@ -297,7 +284,7 @@ where:
 
 #### How to fix
 
-Ensure that the uri provided is a valid uri (i.e. it is of the correct format and contains no invalid characters).
+Ensure that the [Uri][SoapRequestUri] provided is a valid uri (i.e. it is of the [correct format][UriSyntax] and contains no [invalid characters][UriInvalidCharacters]).
 
 ## Remarks
 
@@ -309,7 +296,8 @@ None
 
 ### External Documentation
 
-None
+* [RFC 3986 Section 2: Characters][UriInvalidCharacters]
+* [Syntax of Uniform Resource Identifiers (URIs)][UriSyntax]
 
 [Invalid Headers in HTTP Request]: {{<ref "#httprequestheaders">}}
 [Invalid Headers in SOAP Request]: {{<ref "#soaprequestheaders">}}
@@ -323,9 +311,25 @@ None
 
 [DateTime]: {{<url path="Cortex.Reference.DataTypes.DateAndTime.DateTime.MainDoc">}}
 [Enum]: {{<url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc">}}
+
 [HttpRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.MainDoc">}}
+[HttpRequestBody]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.Body">}}
+[HttpRequestContentType]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.ContentType">}}
+[HttpRequestHeaders]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.Headers">}}
+[HttpRequestUri]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.Uri">}}
+[HttpRequestVerb]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.Verb">}}
+[HttpRequestHttpVersion]: {{<url path="Cortex.Reference.DataTypes.Http.Rest.HttpRequest.HttpVersion">}}
+
 [SoapRequest]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.MainDoc">}}
+[SoapRequestHeaders]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.Headers">}}
+[SoapRequestHttpVersion]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.HttpVersion">}}
+[SoapRequestSoapMessage]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.SoapMessage">}}
+[SoapRequestUri]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapRequest.Uri">}}
+
 [RequestEnvelope]: {{<url path="Cortex.Reference.DataTypes.Http.Soap.SoapMessage.Envelope">}}
 [RequestVerb]: {{<url path="Cortex.Reference.DataTypes.Http.RequestVerb.MainDoc">}}
 [HttpRequestVersion]: {{<url path="Cortex.Reference.DataTypes.Http.HttpRequestVersion.MainDoc">}}
 [Execute Soap Request]: {{<url path="Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest.MainDoc">}}
+
+[UriSyntax]: {{<url path="Mozilla.UriSyntax">}}
+[UriInvalidCharacters]: {{<url path="RFC.UriInvalidCharacters">}}
