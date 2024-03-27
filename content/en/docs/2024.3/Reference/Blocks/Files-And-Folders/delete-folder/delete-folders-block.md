@@ -118,7 +118,7 @@ The exceptions thrown by the block can be found below:
 
 | Name     | Description |
 |----------|----------|
-| [OperationFailedException][] | Any folder path in [Folder Paths][FolderPaths Property] is `null` or empty (i.e. `""`). For more information, see [Null or Empty Folder Paths][]. |
+| [OperationFailedException][] | Any folder path in [Folder Paths][FolderPaths Property] is `null` or empty (i.e. `""`). |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] is duplicated. For more information, see [Duplicate Folder Paths][]. |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] points to a file. |
 |                              | Any folder path in [Folder Paths][FolderPaths Property] contains leading spaces. |
@@ -160,8 +160,6 @@ If an exception occurs when trying to delete a folder in [Folder Paths][FolderPa
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 
 [OperationFailedException]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.MainDoc" >}}
-[Duplicate Folder Paths]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.IndexesOfDuplicatePaths" >}}
-[Null Or Empty Folder Paths]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.IndexesOfNullOrEmptyPaths" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 
