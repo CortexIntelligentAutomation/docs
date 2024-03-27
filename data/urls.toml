@@ -2519,6 +2519,7 @@
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
 [RFC]
+    UriInvalidCharacters = "https://www.rfc-editor.org/rfc/rfc3986#section-2"
     [RFC.Docs.Telnet.Options]
     MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
     Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
@@ -2546,3 +2547,5 @@
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"
+[Mozilla]
+    UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#syntax_of_uniform_resource_identifiers_uris"
