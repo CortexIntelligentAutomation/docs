@@ -90,6 +90,37 @@ Please click the HelpLink for more information on how to fix this."
 
 Use a [Commands][] data type.
 
+### Incompatible Paramater Type {#2003}
+
+An incompatible parameter type has been passed into the [Parameters property][ParametersProperty] when using a type of [ConnectionDetails][].
+
+#### Message Format
+
+The format of the [Message][] is as follows:
+
+```json
+"'Parameters' contains parameter(s) of a type that is not compatible with the ConnectionDetails used; it must be provided with compatible parameter(s).\r\nPlease click the HelpLink for more information on how to fix this."
+```
+
+#### How to fix
+
+Use a compatible parameter data type depending on the [ConnectionDetails][] used.
+
+[SqlServerConnectionDetails][] compatible types:
+
+- [Structure][]
+
+[OdbcConnectionDetails][] compatible types:
+
+- [Structure][]
+
+[OracleConnectionDetails][] compatible types:
+
+- [Structure][]
+- [OracleParameter][]
+- [OracleParameter][]
+- List<[OracleParameter][]>
+
 ### Runtime {#3000}
 
 An error has occurred during either parsing or execution of the statement(s).
@@ -106,6 +137,25 @@ Please click the HelpLink for more information on how to fix this."
 #### How to fix
 
 Try to make sure that the statement(s) are valid.
+
+More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [StatementExceptions][].
+
+### Invalid Parameter Binding {#3001}
+
+At least one parameter is not bound correctly, during either parsing or execution of the statement(s).
+
+#### Message Format
+
+The format of the [Message][] is as follows:
+
+```json
+"An error occurred whilst trying to execute the command provided. Please see the 'StatementExceptions' property for more details.
+Please click the HelpLink for more information on how to fix this."
+```
+
+#### How to fix
+
+Make sure that all parameters that are declared in the statement, is also defined in the [Parameters property][ParametersProperty].
 
 More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [StatementExceptions][].
 
@@ -151,7 +201,9 @@ For `CommandException` there are the following error codes:
 - [2000][Statement] - indicates that a [Statement][] error has occurred during the parsing process (Oracle Category Only)
 - [2001][IncompatibleStatementType] - indicates that a [IncompatibleStatementType][] error has occured due to an [OracleBlockStatement][] being used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type (Oracle Category Only)
 - [2002][MultipleStatements] - indicates that a [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype (All Categories)
+- [2003][IncompatibleParameterType] - An incompatible parameter type has been passed into the [Parameters property][ParametersProperty] when using a type of [ConnectionDetails][] (All Categories)
 - [3000][Runtime] - indicates that a [Runtime][] error has occurred during the runtime process (All Categories)
+- [3001][InvalidParameterBinding] - indicates that At least one parameter is not bound correctly, during either parsing or execution of the statement(s) (All Categories)
 
 | | |
 |-----------|---------------------------|
@@ -259,6 +311,9 @@ None
 [ConnectionDetailsProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ConnectionDetailsProperty" >}}
 [DataCommand]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [DataCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.CommandText" >}}
+[ParametersProperty]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.Parameters" >}}
+[OracleParameters] : {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}
+[OracleParameter] : {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
 
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Command.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.Command.CommandText" >}}
