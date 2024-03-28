@@ -913,12 +913,13 @@
                 MainDoc = "/docs/reference/blocks/ssh/"
                 [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand]
                     MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
-                    [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommand]
+                    [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
+                        SshSessionDetails = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-session-details"
             [Cortex.Reference.Blocks.Tasks]
                 MainDoc = "/docs/reference/blocks/tasks/"
                 [Cortex.Reference.Blocks.Tasks.CancelTask]
@@ -2474,10 +2475,13 @@
         MainDoc = "https://azure.microsoft.com/en-us/services/service-fabric/"
         Explorer = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
         ReverseProxy = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
-    [MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces]
-        MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
-        NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
-        Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
+    [MSDocs.Windows]
+        [MSDocs.Windows.WindowsServer]
+            NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
+        [MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces]
+            MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
+            NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
+            Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
 [MSDotNet]
     [MSDotNet.Framework471]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
@@ -2515,6 +2519,7 @@
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
 [RFC]
+    UriInvalidCharacters = "https://www.rfc-editor.org/rfc/rfc3986#section-2"
     [RFC.Docs.Telnet.Options]
     MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
     Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
@@ -2542,3 +2547,5 @@
     XmlNodes = "https://www.w3schools.com/XML/dom_nodes.asp"
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"
+[Mozilla]
+    UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#syntax_of_uniform_resource_identifiers_uris"

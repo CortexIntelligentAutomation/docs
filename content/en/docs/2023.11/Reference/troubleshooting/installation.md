@@ -220,7 +220,7 @@ Perform the following steps:
 1. Run the following command: `iisreset`.
 1. Wait for the action to complete.
 
-### Flow not starting in {{< ctx >}} Gateway {#ts-flow-not-starting}
+### Flow not starting in {{% ctx %}} Gateway {#ts-flow-not-starting}
 
 #### Application Pool user does not have rights to the Repo folder
 
