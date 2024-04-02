@@ -2030,6 +2030,8 @@
                 TroubleshootingNoBlocks = "/docs/reference/troubleshooting/installation#ts-no-blocks"
                 TroubleshootingNoPublish = "/docs/reference/troubleshooting/installation#ts-no-publish"
                 TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/installation#ts-no-root-certificate"
+            [Cortex.Reference.Troubleshooting.Upgrade]
+                TroubleshootingDuringUpgrade= "/docs/reference/troubleshooting/upgrade#ts-during-upgrade"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
