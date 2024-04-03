@@ -1429,6 +1429,8 @@
                 [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
                     KnownLimitations = "/docs/reference/data-types/data/oracleconnectiondetails/#known-limitations"
+                [Cortex.Reference.DataTypes.Data.OracleMappingType]
+                    MainDoc = "/docs/reference/data-types/data/oraclemappingtype"
                 [Cortex.Reference.DataTypes.Data.OracleParameter]
                     MainDoc = "/docs/reference/data-types/data/oracleparameter"
                 [Cortex.Reference.DataTypes.Data.OracleParameters]
@@ -2512,8 +2514,7 @@
     [Oracle.PL-SQL]
         BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
     [OracleParameter]
-        OracleMappingType = "https://docs.oracle.com/en/database/oracle/oracle-database/23/odpnt/ParameterOracleDbType.html#GUID-3643C815-6FDC-4B1E-AD71-75CF2B844437"
-        ParameterDirection = "https://docs.oracle.com/en/database/oracle/oracle-database/23/odpnt/ParameterDirection.html#GUID-3689F98E-C6EB-4871-B49D-AF0A8449C8E1"
+        ParameterDirection = "https://learn.microsoft.com/en-us/dotnet/api/system.data.parameterdirection?view=net-8.0"
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"

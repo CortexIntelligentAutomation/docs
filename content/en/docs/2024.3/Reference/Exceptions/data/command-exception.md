@@ -16,7 +16,7 @@ The exception thrown when any command execution has resulted in an exception bei
 
 ### Connection Failed {#1000}
 
-The connection to the data source failed.
+An [Error Code][] of `1000` indicates the connection to the data source failed.
 
 #### Message Format
 
@@ -39,7 +39,7 @@ More information on why the value is invalid, or instruction on how to provide a
 
 ### Statement {#2000}
 
-The statement(s) used could not be parsed.
+An [Error Code][] of `2000` indicates the statement(s) used could not be parsed.
 
 #### Message Format
 
@@ -58,7 +58,7 @@ More information on why the value is invalid, or instruction on how to provide a
 
 ### Incompatible Statement Type (Oracle Only) {#2001}
 
-An [OracleBlockStatement][] has been used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type.
+An [Error Code][] of `2001` indicates an [OracleBlockStatement][] has been used in the [Command Property][CommandProperty] when using a [Command][] or [Commands][] data type.
 
 #### Message Format
 
@@ -75,7 +75,7 @@ Use a [QueryCommand][] or [NonQueryCommand][] data type.
 
 ### Multiple Statements {#2002}
 
-Multiple statements have been passed into the [Command Property][CommandProperty] when using a [Command][] data type.
+An [Error Code][] of `2002` indicates multiple statements have been passed into the [Command Property][CommandProperty] when using a [Command][] data type.
 
 #### Message Format
 
@@ -90,9 +90,9 @@ Please click the HelpLink for more information on how to fix this."
 
 Use a [Commands][] data type.
 
-### Incompatible Paramater Type {#2003}
+### Incompatible Parameter Type {#2003}
 
-An incompatible parameter type has been passed into the [Parameters property][ParametersProperty] when using a type of [ConnectionDetails][].
+An [Error Code][] of `2003` indicates an incompatible parameter type has been passed into the [Parameters Property][ParametersProperty] when using a type of [ConnectionDetails][].
 
 #### Message Format
 
@@ -104,26 +104,26 @@ The format of the [Message][] is as follows:
 
 #### How to fix
 
-Use a compatible parameter data type depending on the [ConnectionDetails][] used.
+Use a compatible parameter data type for the type of [ConnectionDetails][] used.
 
-[SqlServerConnectionDetails][] compatible types:
+- [SqlServerConnectionDetails][] compatible types:
 
-- [Structure][]
+  * [Structure][]
 
-[OdbcConnectionDetails][] compatible types:
+- [OdbcConnectionDetails][] compatible types:
 
-- [Structure][]
+  * [Structure][]
 
-[OracleConnectionDetails][] compatible types:
+- [OracleConnectionDetails][] compatible types:
 
-- [Structure][]
-- [OracleParameter][]
-- [OracleParameter][]
-- List<[OracleParameter][]>
+  * [Structure][]
+  * [OracleParameters][]
+  * [OracleParameter][]
+  * [IEnumberable][]&lt;[OracleParameter][]&gt;
 
 ### Runtime {#3000}
 
-An error has occurred during either parsing or execution of the statement(s).
+An [Error Code][] of `3000` indicates an error has occurred during either parsing or execution of the statement(s).
 
 #### Message Format
 
@@ -142,7 +142,7 @@ More information on why the value is invalid, or instruction on how to provide a
 
 ### Invalid Parameter Binding {#3001}
 
-At least one parameter is not bound correctly, during either parsing or execution of the statement(s).
+An [Error Code][] of `3001` indicates at least one parameter is not bound correctly, during either parsing or execution of the statement(s).
 
 #### Message Format
 
@@ -155,9 +155,9 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to fix
 
-Make sure that all parameters that are declared in the statement, is also defined in the [Parameters property][ParametersProperty].
+Make sure that all parameters that are declared in the statement, are also defined in the [Parameters Property][ParametersProperty].
 
-More information on why the value is invalid, or instruction on how to provide a valid value, may be present in the [StatementExceptions][].
+More information may be present in the [StatementExceptions][].
 
 ## Properties
 
@@ -203,7 +203,7 @@ For `CommandException` there are the following error codes:
 - [2002][MultipleStatements] - indicates that a [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype (All Categories)
 - [2003][IncompatibleParameterType] - An incompatible parameter type has been passed into the [Parameters property][ParametersProperty] when using a type of [ConnectionDetails][] (All Categories)
 - [3000][Runtime] - indicates that a [Runtime][] error has occurred during the runtime process (All Categories)
-- [3001][InvalidParameterBinding] - indicates that At least one parameter is not bound correctly, during either parsing or execution of the statement(s) (All Categories)
+- [3001][InvalidParameterBinding] - indicates that at least one parameter is not bound correctly, during either parsing or execution of the statement(s) (All Categories)
 
 | | |
 |-----------|---------------------------|
@@ -251,6 +251,8 @@ None
 - [NonQueryCommand][]
 - [OdbcConnectionDetails][]
 - [OracleConnectionDetails][]
+- [OracleParameter][]
+- [OracleParameters][]
 - [QueryCommand][]
 - [SqlServerConnectionDetails][]
 - [String][]
@@ -273,10 +275,13 @@ None
 [Statement]: {{< ref "#2000">}}
 [IncompatibleStatementType]: {{< ref "#2001">}}
 [MultipleStatements]: {{< ref "#2002">}}
+[IncompatibleParameterType]: {{< ref "#2003">}}
 [Runtime]: {{< ref "#3000">}}
+[InvalidParameterBinding]: {{< ref "#3001">}}
 [Message]: {{< ref "#message" >}}
 [InnerException]: {{< ref "#innerexception" >}}
 [StatementExceptions]: {{< ref "#statementexceptions" >}}
+[Error Code]: {{< ref "#error-code" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -312,8 +317,6 @@ None
 [DataCommand]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.MainDoc" >}}
 [DataCommand.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.CommandText" >}}
 [ParametersProperty]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.Parameters" >}}
-[OracleParameters] : {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}
-[OracleParameter] : {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
 
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
 [Command.CommandText]: {{< url path="Cortex.Reference.DataTypes.Data.Command.CommandText" >}}
@@ -337,3 +340,8 @@ None
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
+
+[IEnumberable]: {{< url path="Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[ParametersProperty]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.Parameters" >}}
+[OracleParameters]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}
+[OracleParameter]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}

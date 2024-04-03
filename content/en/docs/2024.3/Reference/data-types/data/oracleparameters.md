@@ -10,7 +10,7 @@ description: "Defines a type of parameter that can be run as part of a Command."
 
 ## Summary
 
-An `OracleParameters` data type is used for the [Parameters property][ParametersProperty] on the [DataCommand][] data type.
+An `OracleParameters` data type is used for the [Parameters property][ParametersProperty] on the [DataCommand][] data types.
 
 | | |
 |-|-|
@@ -86,6 +86,8 @@ In future this limitation may be removed.
 * [Commands][]
 * [QueryCommand][]
 * [NonQueryCommand][]
+* [OracleParameter][]
+* [OracleConnectionDetails][]
 
 ### Related Concepts
 
@@ -125,5 +127,6 @@ In future this limitation may be removed.
 [ConnectionDetailsProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.ConnectionDetailsProperty" >}}
 [CommandProperty]: {{< url path="Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand.CommandProperty" >}}
 [Command]: {{< url path="Cortex.Reference.DataTypes.Data.Command.MainDoc" >}}
-[IEnumerable]: {{< url path="Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[IEnumberable]: {{< url path="Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [ParametersProperty]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.Parameters" >}}
+[OracleParameter]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
