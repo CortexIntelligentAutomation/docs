@@ -6,8 +6,6 @@
 {{ $path := .Get 0 }}
 {{ $version := .Get 1 }}
 {{- $currentVer := "" }}
-{{ errorf "paqe = " (printf "%s" .Page.RelPermalink) }}
-{{ errorf "path passed in = " (printf "%s" $path) }}
 
 {{- /* Get the current version. */}}
 {{- if (not $version) }}

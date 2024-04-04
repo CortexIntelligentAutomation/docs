@@ -11,6 +11,8 @@ Please ensure that [Upgrade Application Servers and Load Balancer][] has been co
 
 ## Make Installation Artefacts Available
 
+{{< section "/install-web-application-server/make-installation-artefacts-available.md" "2024.3" >}}
+
 ## Next Steps?
 
 1. [Upgrade Flow Debugger][]

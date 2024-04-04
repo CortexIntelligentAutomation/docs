@@ -100,13 +100,9 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 {{< alert type="note" title="Note" >}} It is recommended to choose to restart later after the final step of this section has completed to ensure that no issues occur.{{< /alert >}}
 1. In a browser, navigate to the {{% ctx %}} Gateway website, available at `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://localhost/gateway` and wait for the login page to load. This may take a few minutes.
 
-### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
+## Preserve installation files
 
-{{< section path="/install-web-application-server/add-innovation-to-7.2/grant-gateway-user-additional-folder-permissions.md" version="2024.3">}}
-
-# Preserve installation files
-
-{{< section path="/preserve-installation-files.md" version="2024.3">}}
+{{< section "/preserve-installation-files.md" "2024.3">}}
 
 ## Next Steps?
 
