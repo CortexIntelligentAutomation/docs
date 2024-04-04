@@ -3,13 +3,22 @@
   This only works in /docs/ and is per version.
 */}}
 {{ $filePath := .Get 0 }}
-{{- /* Get the current version. */}}
-{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
-{{- if (not $currentVer) }}
-	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
-	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+{{ $isBlog := .Get 1 }}
+{{ $sharedPath := "" }}
+{{ $currentVer := "" }}
+{{ $currentPage := .Page }}
+{{- if $isBlog }}
+  {{- $sharedPath = (printf "%s" $filePath) }}
+{{ else }}
+  {{- /* Get the current version. */}}
+  {{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` $currentPage.RelPermalink 1) 0 }}
+  {{- if (not $currentVer) }}
+    {{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` $currentPage.RelPermalink 1) 0 }}
+    {{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+  {{- end }}
+  {{ $sharedPath := (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{- end }}
-{{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $filePath) }}
+{{ $page := .Site.GetPage $sharedPath }}
 {{ with $page }}
   {{ with .Content }}
     {{ . }}
