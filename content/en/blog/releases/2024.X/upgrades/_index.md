@@ -1,6 +1,6 @@
 ---
 title: "Upgrades"
 linkTitle: "Upgrades"
-description: "Information about upgrading a {{% ctx %}} Innovation platform."
+date: 2024-04-01
 weight: 10
 ---

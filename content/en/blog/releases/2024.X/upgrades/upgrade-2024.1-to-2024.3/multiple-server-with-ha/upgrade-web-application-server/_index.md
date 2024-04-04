@@ -2,6 +2,7 @@
 title: "Upgrade the Web Application Server"
 linkTitle: "Upgrade Web Application Server"
 description: "Information about upgrading the Web Application Server."
+date: 2024-04-01
 weight: 40
 ---
 
