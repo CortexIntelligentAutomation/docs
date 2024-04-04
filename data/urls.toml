@@ -150,6 +150,10 @@
                     SetupGateway = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/setup-gateway"
                     TryItOut= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out"
                     TryItOutPublishedFlow= "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/try-it-out/#test-publishing-production-flows"
+                [Cortex.GettingStarted.OnPremise.UpgradeInnovationOnly.MultipleServerWithHA]
+                    MainDoc = "/blog/releases/2024.X/upgrades/"       
+                    UpgradeDebugger = "//blog/releases/2024.X/upgrades/upgrade-2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeApplicationAndLoadBalancerServers = "/blog/releases/2024.X/upgrades/upgrade-2024.1-to-2024.3/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/"       
                     Architecture = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture"
