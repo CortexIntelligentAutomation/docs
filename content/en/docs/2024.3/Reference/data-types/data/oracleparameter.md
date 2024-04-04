@@ -119,7 +119,7 @@ In future this limitation may be removed.
 * [Commands][]
 * [QueryCommand][]
 * [NonQueryCommand][]
-* [OracleParameter][]
+* [OracleParameters][]
 * [OracleConnectionDetails][]
 
 ### Related Concepts
@@ -166,4 +166,4 @@ In future this limitation may be removed.
 [OracleMappingType]: {{< url path="Cortex.Reference.DataTypes.Data.OracleMappingType.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
-[OracleParameter]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
+[OracleParameters]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}

@@ -1,8 +1,7 @@
 ---
 title: "OracleMappingType"
 linkTitle: "OracleMappingType"
-description: "Used to represent the type of the parameter."
-weight: 1
+description: "Used to represent the Oracle type used for the Parameter."
 ---
 
 # {{% param title %}}
@@ -11,7 +10,7 @@ weight: 1
 
 ## Summary
 
-The `OracleMappingType` data type is used to represent the type of the parameter.
+The `OracleMappingType` data type is used to represent the Oracle type used for the Parameter.
 
 `OracleMappingType` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -264,90 +263,62 @@ The following table shows some of the ways that `OracleMappingType` can be creat
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Declare a `OracleMappingType` literal | `BFile` | `OracleMappingType.BFile` | Literal | Empty entries are not removed. |
-| | `Blob` | `OracleMappingType.Blob` | Literal | Empty entries are removed. |
-| | `Byte` | `OracleMappingType.Byte` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Char` | `OracleMappingType.Char` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Clob` | `OracleMappingType.Clob` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Date` | `OracleMappingType.Date` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Decimal` | `OracleMappingType.Decimal` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Double` | `OracleMappingType.Double` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Long` | `OracleMappingType.Long` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `LongRaw` | `OracleMappingType.LongRaw` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Int16` | `OracleMappingType.Int16` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Int32` | `OracleMappingType.Int32` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Int64` | `OracleMappingType.Int64` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `IntervalDS` | `OracleMappingType.IntervalDS` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `IntervalYM` | `OracleMappingType.IntervalYM` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `NClob` | `OracleMappingType.NClob` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `NChar` | `OracleMappingType.NChar` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `NVarchar2` | `OracleMappingType.NVarchar2` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Raw` | `OracleMappingType.Raw` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `RefCursor` | `OracleMappingType.RefCursor` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Single` | `OracleMappingType.Single` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `TimeStamp` | `OracleMappingType.TimeStamp` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `TimeStampLTZ` | `OracleMappingType.TimeStampLTZ` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `TimeStampLZ` | `OracleMappingType.TimeStampLZ` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `Varchar2` | `OracleMappingType.Varchar2` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `XmlType` | `OracleMappingType.XmlType` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `BinaryDouble` | `OracleMappingType.BinaryDouble` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `BinaryFloat` | `OracleMappingType.BinaryFloat` | Literal | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| Use a `OracleMappingType` expression | `OracleMappingType.BFile` | `OracleMappingType.BFile`| Expression | Empty entries are not removed.|
-| | `OracleMappingType.Blob` | `OracleMappingType.Blob`| Expression | Empty entries are removed. |
-| | `OracleMappingType.Byte` | `OracleMappingType.Byte`| Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Char` | `OracleMappingType.Char`| Expression | Empty entries are removed and trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Clob` | `OracleMappingType.Clob` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Date` | `OracleMappingType.Date` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Decimal` | `OracleMappingType.Decimal` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Double` | `OracleMappingType.Double` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Long` | `OracleMappingType.Long` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.LongRaw` | `OracleMappingType.LongRaw` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Int16` | `OracleMappingType.Int16` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Int32` | `OracleMappingType.Int32` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Int64` | `OracleMappingType.Int64` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.IntervalDS` | `OracleMappingType.IntervalDS` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.IntervalYM` | `OracleMappingType.IntervalYM` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.NClob` | `OracleMappingType.NClob` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.NChar` | `OracleMappingType.NChar` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.NVarchar2` | `OracleMappingType.NVarchar2` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Raw` | `OracleMappingType.Raw` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.RefCursor` | `OracleMappingType.RefCursor` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Single` | `OracleMappingType.Single` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.TimeStamp` | `OracleMappingType.TimeStamp` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.TimeStampLTZ` | `OracleMappingType.TimeStampLTZ` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.TimeStampLZ` | `OracleMappingType.TimeStampLZ` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.Varchar2` | `OracleMappingType.Varchar2` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.XmlType` | `OracleMappingType.XmlType` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.BinaryDouble` | `OracleMappingType.BinaryDouble` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `OracleMappingType.BinaryFloat` | `OracleMappingType.BinaryFloat` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| Use [Explicit Casting][] | `(OracleMappingType)101` | `OracleMappingType.BFile`| Expression | Empty entries are not removed. |
-| | `(OracleMappingType)102` | `OracleMappingType.Blob`| Expression | Empty entries are removed. |
-| | `(OracleMappingType)103` | `OracleMappingType.Byte`| Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)104` | `OracleMappingType.Char`| Expression | Empty entries are removed and trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)105` | `OracleMappingType.Clob` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)106` | `OracleMappingType.Date` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)107` | `OracleMappingType.Decimal` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)108` | `OracleMappingType.Double` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)109` | `OracleMappingType.Long` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)110` | `OracleMappingType.LongRaw` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)111` | `OracleMappingType.Int16` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)112` | `OracleMappingType.Int32` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)113` | `OracleMappingType.Int64` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)114` | `OracleMappingType.IntervalDS` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)115` | `OracleMappingType.IntervalYM` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)116` | `OracleMappingType.NClob` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)117` | `OracleMappingType.NChar` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)119` | `OracleMappingType.NVarchar2` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)120` | `OracleMappingType.Raw` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)121` | `OracleMappingType.RefCursor` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)122` | `OracleMappingType.Single` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)123` | `OracleMappingType.TimeStamp` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)124` | `OracleMappingType.TimeStampLTZ` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)125` | `OracleMappingType.TimeStampLZ` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)126` | `OracleMappingType.Varchar2` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)127` | `OracleMappingType.XmlType` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)132` | `OracleMappingType.BinaryDouble` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
-| | `(OracleMappingType)133` | `OracleMappingType.BinaryFloat` | Expression | Empty entries are not removed but trailing and leading whitespaces are removed. |
+| Use a `OracleMappingType` expression | `OracleMappingType.BFile` | `OracleMappingType.BFile`| Expression | |
+| | `OracleMappingType.Blob` | `OracleMappingType.Blob`| Expression |  |
+| | `OracleMappingType.Byte` | `OracleMappingType.Byte`| Expression |  |
+| | `OracleMappingType.Char` | `OracleMappingType.Char`| Expression |  |
+| | `OracleMappingType.Clob` | `OracleMappingType.Clob` | Expression |  |
+| | `OracleMappingType.Date` | `OracleMappingType.Date` | Expression |  |
+| | `OracleMappingType.Decimal` | `OracleMappingType.Decimal` | Expression |  |
+| | `OracleMappingType.Double` | `OracleMappingType.Double` | Expression |  |
+| | `OracleMappingType.Long` | `OracleMappingType.Long` | Expression |  |
+| | `OracleMappingType.LongRaw` | `OracleMappingType.LongRaw` | Expression |  |
+| | `OracleMappingType.Int16` | `OracleMappingType.Int16` | Expression |  |
+| | `OracleMappingType.Int32` | `OracleMappingType.Int32` | Expression |  |
+| | `OracleMappingType.Int64` | `OracleMappingType.Int64` | Expression |  |
+| | `OracleMappingType.IntervalDS` | `OracleMappingType.IntervalDS` | Expression |  |
+| | `OracleMappingType.IntervalYM` | `OracleMappingType.IntervalYM` | Expression |  |
+| | `OracleMappingType.NClob` | `OracleMappingType.NClob` | Expression |  |
+| | `OracleMappingType.NChar` | `OracleMappingType.NChar` | Expression |  |
+| | `OracleMappingType.NVarchar2` | `OracleMappingType.NVarchar2` | Expression |  |
+| | `OracleMappingType.Raw` | `OracleMappingType.Raw` | Expression |  |
+| | `OracleMappingType.RefCursor` | `OracleMappingType.RefCursor` | Expression |  |
+| | `OracleMappingType.Single` | `OracleMappingType.Single` | Expression |  |
+| | `OracleMappingType.TimeStamp` | `OracleMappingType.TimeStamp` | Expression |  |
+| | `OracleMappingType.TimeStampLTZ` | `OracleMappingType.TimeStampLTZ` | Expression |  |
+| | `OracleMappingType.TimeStampLZ` | `OracleMappingType.TimeStampLZ` | Expression |  |
+| | `OracleMappingType.Varchar2` | `OracleMappingType.Varchar2` | Expression |  |
+| | `OracleMappingType.XmlType` | `OracleMappingType.XmlType` | Expression |  |
+| | `OracleMappingType.BinaryDouble` | `OracleMappingType.BinaryDouble` | Expression |  |
+| | `OracleMappingType.BinaryFloat` | `OracleMappingType.BinaryFloat` | Expression |  |
+| Use [Explicit Casting][] | `(OracleMappingType)101` | `OracleMappingType.BFile`| Expression |  |
+| | `(OracleMappingType)102` | `OracleMappingType.Blob`| Expression |  |
+| | `(OracleMappingType)103` | `OracleMappingType.Byte`| Expression |  |
+| | `(OracleMappingType)104` | `OracleMappingType.Char`| Expression |  |
+| | `(OracleMappingType)105` | `OracleMappingType.Clob` | Expression |  |
+| | `(OracleMappingType)106` | `OracleMappingType.Date` | Expression |  |
+| | `(OracleMappingType)107` | `OracleMappingType.Decimal` | Expression |  |
+| | `(OracleMappingType)108` | `OracleMappingType.Double` | Expression |  |
+| | `(OracleMappingType)109` | `OracleMappingType.Long` | Expression |  |
+| | `(OracleMappingType)110` | `OracleMappingType.LongRaw` | Expression |  |
+| | `(OracleMappingType)111` | `OracleMappingType.Int16` | Expression |  |
+| | `(OracleMappingType)112` | `OracleMappingType.Int32` | Expression |  |
+| | `(OracleMappingType)113` | `OracleMappingType.Int64` | Expression |  |
+| | `(OracleMappingType)114` | `OracleMappingType.IntervalDS` | Expression |  |
+| | `(OracleMappingType)115` | `OracleMappingType.IntervalYM` | Expression |  |
+| | `(OracleMappingType)116` | `OracleMappingType.NClob` | Expression |  |
+| | `(OracleMappingType)117` | `OracleMappingType.NChar` | Expression |  |
+| | `(OracleMappingType)119` | `OracleMappingType.NVarchar2` | Expression |  |
+| | `(OracleMappingType)120` | `OracleMappingType.Raw` | Expression |  |
+| | `(OracleMappingType)121` | `OracleMappingType.RefCursor` | Expression |  |
+| | `(OracleMappingType)122` | `OracleMappingType.Single` | Expression |  |
+| | `(OracleMappingType)123` | `OracleMappingType.TimeStamp` | Expression |  |
+| | `(OracleMappingType)124` | `OracleMappingType.TimeStampLTZ` | Expression |  |
+| | `(OracleMappingType)125` | `OracleMappingType.TimeStampLZ` | Expression |  |
+| | `(OracleMappingType)126` | `OracleMappingType.Varchar2` | Expression |  |
+| | `(OracleMappingType)127` | `OracleMappingType.XmlType` | Expression |  |
+| | `(OracleMappingType)132` | `OracleMappingType.BinaryDouble` | Expression |  |
+| | `(OracleMappingType)133` | `OracleMappingType.BinaryFloat` | Expression |  |
 | Use `Enum.Parse` | `(OracleMappingType)Enum.Parse(typeof(OracleMappingType), "BFile")` | `OracleMappingType.BFile`| Expression | Parses `"BFile"` and converts it to `OracleMappingType.BFile`. See [Enum.Parse][] |
 | | `(OracleMappingType)Enum.Parse(typeof(OracleMappingType), "Blob")` | `OracleMappingType.Blob`| Expression | Parses `"Blob"` and converts it to `OracleMappingType.Blob`. See [Enum.Parse][] |
 | | `(OracleMappingType)Enum.Parse(typeof(OracleMappingType), "Byte")` | `OracleMappingType.Byte`| Expression | Parses `"Byte"` and converts it to `OracleMappingType.Byte`. See [Enum.Parse][] |
@@ -472,7 +443,6 @@ The following table shows some of the ways that a `OracleMappingType` can be con
 | | where `Object` property has a value of `OracleMappingType.Byte` | `"Byte"` | N/A  | Converts `OracleMappingType.Byte` to `"Byte"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `OracleMappingType.Char` | `"Char"` | N/A  | Converts `OracleMappingType.Char` to `"Char"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `OracleMappingType.Clob` | `"Clob"` | N/A  | Converts `OracleMappingType.Clob` to `"Clob"`. See [Convert Object To Text][] |
-| | where `Object` property has a value of `OracleMappingType.Char` | `"Char"` | N/A  | Converts `OracleMappingType.Char` to `"Char"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `OracleMappingType.Date` | `"Date"` | N/A  | Converts `OracleMappingType.Date` to `"Date"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `OracleMappingType.Decimal` | `"Decimal"` | N/A  | Converts `OracleMappingType.Decimal` to `"Decimal"`. See [Convert Object To Text][] |
 | | where `Object` property has a value of `OracleMappingType.Double` | `"Double"` | N/A  | Converts `OracleMappingType.Double` to `"Double"`. See [Convert Object To Text][] |
@@ -500,7 +470,30 @@ The following table shows some of the ways that a `OracleMappingType` can be con
 | | where `Object` property has a value of `OracleMappingType.Blob` | `"102"` | N/A  | Converts `OracleMappingType.Blob` to `"102"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `OracleMappingType.Byte` | `"103"` | N/A  | Converts `OracleMappingType.Byte` to `"103"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `OracleMappingType.Char` | `"104"` | N/A  | Converts `OracleMappingType.Char` to `"104"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Clob` | `"104"` | N/A  | Converts `OracleMappingType.Clob` to `"105"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Clob` | `"105"` | N/A  | Converts `OracleMappingType.Clob` to `"105"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Date` | `"106"` | N/A  | Converts `OracleMappingType.Char` to `"106"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Decimal` | `"107"` | N/A  | Converts `OracleMappingType.Clob` to `"107"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Double` | `"108"` | N/A  | Converts `OracleMappingType.Char` to `"108"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Long` | `"109"` | N/A  | Converts `OracleMappingType.Clob` to `"109"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.LongRaw` | `"110"` | N/A  | Converts `OracleMappingType.Char` to `"110"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Int16` | `"111"` | N/A  | Converts `OracleMappingType.Clob` to `"111"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Int32` | `"112"` | N/A  | Converts `OracleMappingType.Char` to `"112"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Int64` | `"113"` | N/A  | Converts `OracleMappingType.Clob` to `"113"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.IntervalDS` | `"114"` | N/A  | Converts `OracleMappingType.Char` to `"114"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.IntervalYM` | `"115"` | N/A  | Converts `OracleMappingType.Clob` to `"115"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.NClob` | `"116"` | N/A  | Converts `OracleMappingType.Char` to `"116"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.NChar` | `"117"` | N/A  | Converts `OracleMappingType.Clob` to `"117"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.NVarchar2` | `"119"` | N/A  | Converts `OracleMappingType.Char` to `"119"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Raw` | `"120"` | N/A  | Converts `OracleMappingType.Clob` to `"120"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.RefCursor` | `"121"` | N/A  | Converts `OracleMappingType.Char` to `"121"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Single` | `"122"` | N/A  | Converts `OracleMappingType.Clob` to `"122"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.TimeStamp` | `"123"` | N/A  | Converts `OracleMappingType.Char` to `"123"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.TimeStampLTZ` | `"124"` | N/A  | Converts `OracleMappingType.Clob` to `"124"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.TimeStampLZ` | `"125"` | N/A  | Converts `OracleMappingType.Char` to `"125"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Varchar2` | `"126"` | N/A  | Converts `OracleMappingType.Clob` to `"126"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.XmlType` | `"127"` | N/A  | Converts `OracleMappingType.Char` to `"127"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.BinaryDouble` | `"132"` | N/A  | Converts `OracleMappingType.Clob` to `"132"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.BinaryFloat` | `"133"` | N/A  | Converts `OracleMappingType.Clob` to `"133"`. See [Convert Object To Json][] |
 
 Please see [Formatting enumeration values][] for further information.
 
@@ -510,14 +503,62 @@ The following table shows some of the ways that a `OracleMappingType` can be con
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use [Explicit Casting][]              | `(Int32)OracleMappingType.None`   | `0` | Expression | [Casts][Explicit Casting] `OracleMappingType.None` to `0` |
-|                                       | `(Int32)OracleMappingType.RemoveEmptyEntries`   | `1` | Expression | [Casts][Explicit Casting] `OracleMappingType.RemoveEmptyEntries` to `1` |
-|                                       | `(Int32)OracleMappingType.TrimEntries`   | `2` | Expression | [Casts][Explicit Casting] `OracleMappingType.TrimEntries` to `2` |
-|                                       | `(Int32)(OracleMappingType.RemoveEmptyEntries \| OracleMappingType.TrimEntries)`   | `3` | Expression | [Casts][Explicit Casting] `OracleMappingType.RemoveEmptyEntries \| OracleMappingType.TrimEntries` to `3` |
-| Use `Convert.ToInt32`                 | `Convert.ToInt32(OracleMappingType.None)`   | `0` | Expression | Converts `OracleMappingType.None` to `0`. See [Convert.ToInt32][] |
-|                                       | `Convert.ToInt32(OracleMappingType.RemoveEmptyEntries)`   | `1` | Expression | Converts `OracleMappingType.RemoveEmptyEntries` to `1`. See [Convert.ToInt32][] |
-|                                       | `Convert.ToInt32(OracleMappingType.TrimEntries)`   | `2` | Expression | Converts `OracleMappingType.TrimEntries` to `2`. See [Convert.ToInt32][] |
-|                                       | `Convert.ToInt32(OracleMappingType.RemoveEmptyEntries \| OracleMappingType.TrimEntries)`   | `3` | Expression | Converts `OracleMappingType.RemoveEmptyEntries \| OracleMappingType.TrimEntries` to `3`. See [Convert.ToInt32][] |
+| Use [Explicit Casting][]              | `(Int32)OracleMappingType.BFile`   | `101` | Expression | [Casts][Explicit Casting] `OracleMappingType.BFile` to `101` |
+|                                       | `(Int32)OracleMappingType.Blob`   | `102` | Expression | [Casts][Explicit Casting] `OracleMappingType.Blob` to `102` |
+|                                       | `(Int32)OracleMappingType.Byte`   | `103` | Expression | [Casts][Explicit Casting] `OracleMappingType.Byte` to `103` |
+|                                       | `(Int32)(OracleMappingType.Char`   | `104` | Expression | [Casts][Explicit Casting] `OracleMappingType.Char` to `104` |
+|                                       | `(Int32)(OracleMappingType.Clob`   | `105` | Expression | [Casts][Explicit Casting] `OracleMappingType.Clob` to `105` |
+|                                       | `(Int32)(OracleMappingType.Date`   | `106` | Expression | [Casts][Explicit Casting] `OracleMappingType.Date` to `106` |
+|                                       | `(Int32)(OracleMappingType.Decimal`   | `107` | Expression | [Casts][Explicit Casting] `OracleMappingType.Decimal` to `107` |
+|                                       | `(Int32)(OracleMappingType.Double`   | `108` | Expression | [Casts][Explicit Casting] `OracleMappingType.Double` to `108` |
+|                                       | `(Int32)(OracleMappingType.Long`   | `109` | Expression | [Casts][Explicit Casting] `OracleMappingType.Long` to `109` |
+|                                       | `(Int32)(OracleMappingType.LongRaw`   | `110` | Expression | [Casts][Explicit Casting] `OracleMappingType.LongRaw` to `110` |
+|                                       | `(Int32)(OracleMappingType.Int16`   | `111` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int16` to `111` |
+|                                       | `(Int32)(OracleMappingType.Int32`   | `112` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int32` to `112` |
+|                                       | `(Int32)(OracleMappingType.Int64`   | `113` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int64` to `113` |
+|                                       | `(Int32)(OracleMappingType.IntervalDS`   | `114` | Expression | [Casts][Explicit Casting] `OracleMappingType.IntervalDS` to `114` |
+|                                       | `(Int32)(OracleMappingType.IntervalYM`   | `115` | Expression | [Casts][Explicit Casting] `OracleMappingType.IntervalYM` to `115` |
+|                                       | `(Int32)(OracleMappingType.NClob`   | `116` | Expression | [Casts][Explicit Casting] `OracleMappingType.NClob` to `116` |
+|                                       | `(Int32)(OracleMappingType.NChar`   | `117` | Expression | [Casts][Explicit Casting] `OracleMappingType.NChar` to `117` |
+|                                       | `(Int32)(OracleMappingType.NVarchar2`   | `119` | Expression | [Casts][Explicit Casting] `OracleMappingType.NVarchar2` to `119` |
+|                                       | `(Int32)(OracleMappingType.Raw`   | `120` | Expression | [Casts][Explicit Casting] `OracleMappingType.Raw` to `120` |
+|                                       | `(Int32)(OracleMappingType.RefCursor`   | `121` | Expression | [Casts][Explicit Casting] `OracleMappingType.RefCursor` to `121` |
+|                                       | `(Int32)(OracleMappingType.Single`   | `122` | Expression | [Casts][Explicit Casting] `OracleMappingType.Single` to `122` |
+|                                       | `(Int32)(OracleMappingType.TimeStamp`   | `123` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStamp` to `123` |
+|                                       | `(Int32)(OracleMappingType.TimeStampLTZ`   | `124` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStampLTZ` to `124` |
+|                                       | `(Int32)(OracleMappingType.TimeStampLZ`   | `125` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStampLZ` to `125` |
+|                                       | `(Int32)(OracleMappingType.Varchar2`   | `126` | Expression | [Casts][Explicit Casting] `OracleMappingType.Varchar2` to `126` |
+|                                       | `(Int32)(OracleMappingType.XmlType`   | `127` | Expression | [Casts][Explicit Casting] `OracleMappingType.XmlType` to `127` |
+|                                       | `(Int32)(OracleMappingType.BinaryDouble`   | `132` | Expression | [Casts][Explicit Casting] `OracleMappingType.BinaryDouble` to `132` |
+|                                       | `(Int32)(OracleMappingType.BinaryFloat`   | `133` | Expression | [Casts][Explicit Casting] `OracleMappingType.BinaryFloat` to `133` |
+| Use `Convert.ToInt32`                 | `Convert.ToInt32(OracleMappingType.BFile)`   | `101` | Expression | Converts `OracleMappingType.BFile` to `101`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Blob)`   | `102` | Expression | Converts `OracleMappingType.Blob` to `102`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Byte)`   | `103` | Expression | Converts `OracleMappingType.Byte` to `103`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Char)`   | `104` | Expression | Converts `OracleMappingType.Char` to `104`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Clob)`   | `105` | Expression | Converts `OracleMappingType.Clob` to `105`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Date)`   | `106` | Expression | Converts `OracleMappingType.Date` to `106`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Decimal)`   | `107` | Expression | Converts `OracleMappingType.Decimal` to `107`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Double)`   | `108` | Expression | Converts `OracleMappingType.Double` to `108`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Long)`   | `109` | Expression | Converts `OracleMappingType.Long` to `109`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.LongRaw)`   | `110` | Expression | Converts `OracleMappingType.LongRaw` to `110`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Int16)`   | `111` | Expression | Converts `OracleMappingType.Int16` to `111`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Int32)`   | `112` | Expression | Converts `OracleMappingType.Int32` to `112`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Int64)`   | `113` | Expression | Converts `OracleMappingType.Int64` to `113`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.IntervalDS)`   | `114` | Expression | Converts `OracleMappingType.IntervalDS` to `114`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.IntervalYM)`   | `115` | Expression | Converts `OracleMappingType.IntervalYM` to `115`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.NClob)`   | `116` | Expression | Converts `OracleMappingType.NClob` to `116`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.NChar)`   | `117` | Expression | Converts `OracleMappingType.NChar` to `117`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.NVarchar2)`   | `119` | Expression | Converts `OracleMappingType.NVarchar2` to `119`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Raw)`   | `120` | Expression | Converts `OracleMappingType.Raw` to `120`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.RefCursor)`   | `121` | Expression | Converts `OracleMappingType.RefCursor` to `121`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Single)`   | `122` | Expression | Converts `OracleMappingType.Single` to `122`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.TimeStamp)`   | `123` | Expression | Converts `OracleMappingType.TimeStamp` to `123`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.TimeStampLTZ)`   | `124` | Expression | Converts `OracleMappingType.TimeStampLTZ` to `124`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.TimeStampLZ)`   | `125` | Expression | Converts `OracleMappingType.TimeStampLZ` to `125`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.Varchar2)`   | `126` | Expression | Converts `OracleMappingType.Varchar2` to `126`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.XmlType)`   | `127` | Expression | Converts `OracleMappingType.XmlType` to `127`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.BinaryDouble)`   | `132` | Expression | Converts `OracleMappingType.BinaryDouble` to `132`. See [Convert.ToInt32][] |
+|                                       | `Convert.ToInt32(OracleMappingType.BinaryFloat)`   | `133` | Expression | Converts `OracleMappingType.BinaryFloat` to `133`. See [Convert.ToInt32][] |
 
 ### Property Editor Support
 
@@ -535,6 +576,8 @@ None
 
 - [Int32][]
 - [String][]
+- [OracleParameter][]
+- [OracleParameters][]
 
 ### Related Concepts
 
@@ -556,3 +599,19 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+[Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
+[Convert Object To Text]: {{< url path="Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText.MainDoc" >}}
+[Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
+[Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
+[Explicit Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ExplicitCast" >}}
+[Enum.Parse]: {{< url path="MSDocs.DotNet.Api.System.Enum.Parse" >}}
+[Enum.ToObject]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToObject" >}}
+[Enum.ToString]: {{< url path="MSDocs.DotNet.Api.System.Enum.ToString" >}}
+[Convert.ToInt32]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToInt32" >}}
+[Convert.ToString]: {{< url path="MSDocs.DotNet.Api.System.Convert.ToString" >}}
+
+[OracleParameter]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
+[OracleParameters]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}
+
+[Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
+[Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}
