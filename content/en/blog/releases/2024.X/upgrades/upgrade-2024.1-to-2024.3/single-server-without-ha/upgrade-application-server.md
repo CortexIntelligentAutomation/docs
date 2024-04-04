@@ -11,7 +11,7 @@ This guide describes how to upgrade the Application Server components on the ser
 
 ## Make Installation Artefacts Available
 
-{{< section "../docs/2024.3/_shared/install-application-server/make-installation-artefacts-available.md">}}
+{{< section path="/install-application-server/make-installation-artefacts-available.md" version="2024.3" >}}
 
 ## Configure Upgrade Script
 
@@ -41,11 +41,11 @@ This guide describes how to upgrade the Application Server components on the ser
 
 ## Run Upgrade Script
 
-{{< section "../docs/2024.3/_shared/upgrade-application-server/run-upgrade-script.md">}}
+{{< section path="/upgrade-application-server/run-upgrade-script.md" version="2024.3" >}}
 
 ## Check Application Services
 
-{{< section "../docs/2024.3/_shared/install-application-server/single-server/check-application-services.md">}}
+{{< section path="/install-application-server/single-server/check-application-services.md" version="2024.3" >}}
 
 ## Next Steps?
 

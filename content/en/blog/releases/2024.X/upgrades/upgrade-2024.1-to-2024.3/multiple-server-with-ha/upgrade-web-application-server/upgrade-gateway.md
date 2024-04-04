@@ -102,11 +102,11 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 
 ### Grant additional folder permissions to the {{% ctx %}} Gateway Application Pool User
 
-{{< section "../docs/2024.3/_shared/install-web-application-server/add-innovation-to-7.2/grant-gateway-user-additional-folder-permissions.md">}}
+{{< section path="/install-web-application-server/add-innovation-to-7.2/grant-gateway-user-additional-folder-permissions.md" version="2024.3">}}
 
 # Preserve installation files
 
-{{< section "../docs/2024.3/_shared/preserve-installation-files.md">}}
+{{< section path="/preserve-installation-files.md" version="2024.3">}}
 
 ## Next Steps?
 

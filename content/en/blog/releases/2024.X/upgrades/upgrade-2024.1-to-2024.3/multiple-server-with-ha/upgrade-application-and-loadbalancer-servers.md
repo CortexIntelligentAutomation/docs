@@ -48,11 +48,11 @@ This guide describes how to install the Application Servers and Load Balancer Se
 
 ## Run Upgrade Script
 
-{{< section "../docs/2024.3/_shared/upgrade-application-server/run-upgrade-script.md">}}
+{{< section path="/upgrade-application-server/run-upgrade-script.md" version="2024.3" >}}
 
 ## Check Application Services
 
-{{< section "../docs/2024.3/_shared/install-application-server/single-server/check-application-services.md">}}
+{{< section path="/install-application-server/multi-server/check-application-services.md" version="2024.3" >}}
 
 ## Next Steps?
 

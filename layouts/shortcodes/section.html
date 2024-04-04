@@ -1,30 +1,31 @@
 {{- /*
   Used to reference shared sections.
-  This only works in /docs/ and is per version.
+  For files in /docs/, version cannot be used.
+  For files in /blogs/, version must be used.
 */}}
-{{ $filePath := .Get 0 }}
-{{ $isBlog := .Get 1 }}
-{{ $sharedPath := "" }}
-{{ $currentVer := "" }}
-{{ $currentPage := .Page }}
-{{- if $isBlog }}
-  {{- $sharedPath = (printf "%s" $filePath) }}
-{{ else }}
-  {{- /* Get the current version. */}}
-  {{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` $currentPage.RelPermalink 1) 0 }}
+{{ $path := .Get 0 }}
+{{ $version := .Get 1 }}
+{{- $currentVer := "" }}
+{{ errorf "paqe = " (printf "%s" .Page.RelPermalink) }}
+{{ errorf "path passed in = " (printf "%s" $path) }}
+
+{{- /* Get the current version. */}}
+{{- if (not $version) }}
+  {{- $currentVer = index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
   {{- if (not $currentVer) }}
-    {{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` $currentPage.RelPermalink 1) 0 }}
+    {{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
     {{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
   {{- end }}
-  {{ $sharedPath := (printf "%s%s%s" $currentVer "_shared" $filePath) }}
-{{- end }}
-{{ $page := .Site.GetPage $sharedPath }}
+{{- else }}
+  {{- $currentVer = (printf "%s%s%s" "/docs/" $version "/") }}
+{{- end}}
+{{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $path) }}
 {{ with $page }}
   {{ with .Content }}
     {{ . }}
   {{ else }}
-    {{ errorf "section.html: File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
+    {{ errorf "section.html: File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $path) }}
   {{ end }}
 {{ else }}
-  {{ errorf "section.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
+  {{ errorf "section.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $path) }}
 {{ end }}
