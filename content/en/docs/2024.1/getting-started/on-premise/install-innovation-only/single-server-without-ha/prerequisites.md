@@ -225,6 +225,8 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 [IIS URL Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
 [Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallApplicationServer" >}}
 [Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
+[Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
+[Microsoft Server 2022]: {{< url path="MSEval.WindowsServer.2022" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
