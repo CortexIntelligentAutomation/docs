@@ -11,15 +11,15 @@ This guide describes how to upgrade the Application Server components on the ser
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
+{{< section "/upgrade/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade-application-server/single-server/run-upgrade-script.md">}}
+{{< section "/upgrade/upgrade-application-server/single-server/run-upgrade-script.md">}}
 
 ## Check Application Services
 
-{{< section "/install-application-server/single-server/check-application-services.md">}}
+{{< section "/upgrade/upgrade-application-server/single-server/check-application-services.md">}}
 
 ## Preserve installation files
 
@@ -28,3 +28,5 @@ This guide describes how to upgrade the Application Server components on the ser
 ## Next Steps?
 
 1. [Upgrade Gateway][]
+
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeGateway" >}}

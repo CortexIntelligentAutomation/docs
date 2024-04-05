@@ -409,14 +409,22 @@
             MainDoc = "/docs/guides/upgrade-cortex/"      
             [Cortex.Guides.UpgradeCortex.2024.1to2024.3]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.Advanced]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/advanced"
+                    SSLBestPractices = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/advanced/ssl-best-practices"
                 [Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA]
                     MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/try-it-out"
                     UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
                     UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server"
-
-
-    [Cortex.Reference]
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-web-application-server"
+[Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"

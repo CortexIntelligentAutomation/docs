@@ -48,11 +48,11 @@ This guide describes how to upgrade the Application Servers and Load Balancer Se
 
 ## Run Upgrade Script
 
-{{< section "/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 
-{{< section "/install-application-server/multi-server/check-application-services.md" >}}
+{{< section "/upgrade/upgrade-application-server/multi-server/check-application-services.md" >}}
 
 ## Preserve installation files
 

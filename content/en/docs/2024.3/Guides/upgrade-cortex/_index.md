@@ -1,6 +1,6 @@
 ---
-title: "Upgrade {{% ctx %}}"
-linkTitle: "Upgrade {{% ctx %}}"
+title: "Upgrade CORTEX"
+linkTitle: "Upgrade CORTEX"
 description: "Guides to upgrade {{% ctx %}}"
-weight: 10
+weight: 1000
 ---
