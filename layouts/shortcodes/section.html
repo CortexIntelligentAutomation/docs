@@ -1,29 +1,21 @@
 {{- /*
   Used to reference shared sections.
-  For files in /docs/, version cannot be used.
-  For files in /blogs/, version must be used.
+  This only works in /docs/ and is per version.
 */}}
-{{ $path := .Get 0 }}
-{{ $version := .Get 1 }}
-{{- $currentVer := "" }}
-
+{{ $filePath := .Get 0 }}
 {{- /* Get the current version. */}}
-{{- if (not $version) }}
-  {{- $currentVer = index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
-  {{- if (not $currentVer) }}
-    {{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
-    {{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
-  {{- end }}
-{{- else }}
-  {{- $currentVer = (printf "%s%s%s" "/docs/" $version "/") }}
-{{- end}}
-{{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $path) }}
+{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+{{- end }}
+{{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ with $page }}
   {{ with .Content }}
     {{ . }}
   {{ else }}
-    {{ errorf "section.html: File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $path) }}
+    {{ errorf "section.html: File is empty %q, add some content." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
   {{ end }}
 {{ else }}
-  {{ errorf "section.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $path) }}
+  {{ errorf "section.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the file at the provided path." (printf "%s%s%s" $currentVer "_shared" $filePath) }}
 {{ end }}
