@@ -7,60 +7,99 @@ weight: 1
 
 ## Summary
 
-2024.1 is the first [Release][] of the next generation of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
+2024.3 is the next [Fast Track][] release of {{% ctx %}} and continues our journey to improve on the previous 7.X generation in the following areas:
 
+* [Performance][]
 * [Capability][]
 * [Security][]
 * [Observability][]
 * [Documentation][]
 
-## Removed Dependency on SQL Server
+## Platform Upgrades
 
-* Dependency on SQL Server has been [removed][] from {{% ctx %}} Gateway
+* Platform Upgrades have been added for both Single Server and Multi Server deployments, including new documentation being created for upgrading a 2024.1 {{% ctx %}} Platform to 2024.3. Other upgrade improvements include:
+  * [A new Flow Upgrader tool has been created to upgrade flows][A New Flow Upgrader Tool has been Created to Upgrade Flows] which allows for flows to be upgraded from 2024.1 to 2024.3 to mitigate potentially breaking changes
+  * [A new single server upgrade script has been added to the installation artefacts][A New Single Server Upgrade Script has been Added to the Installation Artefacts]
+  * [Upgrading a multi server platform now also upgrades Gobetween on the Load Balancer][]
+
+## Block Icon Redesign
+
+* [Block icons][Block Icon Redesign] within the {{% ctx %}} platform have been redesigned and overhauled. The refresh includes new icons for every block updating the consistency of design and accessability of colours used within flows.
+
+## Improved Performance
+
+* This release shows [performance improvements][Platform Performance Improvements] in a number of areas:
+  * [Caching has been added to Provisioning service][Caching Added to the Provisioning Service] in order to reduce the number of messages sent throughout the HA Platform
+  * [HealthCheck enabled for the Triggers service after provisioning][HealthCheck Enabled for the Triggers Service after Provisioning]
+  * General [LoadBalancer healthcheck improvements][LoadBalancer HealthCheck Improvements]
 
 ## Improved Capability
 
-* A number of [blocks have been improved][Improved Blocks] in the following areas:
-  * [Text][] - Allowing for searching for values within text, using a number of methods e.g. Literal Text, Pattern Matching, and Regex, and then either replacing or removing the found text
+* The [ExecuteDataCommand][Improved Blocks] block have been improved as part of this release of the platform, adding a new Parameter type has been added for requests made to Oracle data sources. This new parameter allows for control of the OracleMappingType and ParameterDirection, which allows for processes like passing of larger data sets (CLOB) to an Oracle stored procedure.
 
 ## Improved Security
 
-* The [installation process has been improved][improved installation] in a number of ways:
-  * Making the load balancer more secure
-  * Including SANs in auto-generated self-signed certificates
-  * Replacing hard coded drive paths with environment variables
-* Various 3rd party client libraries within {{% ctx %}} Gateway have been [upgraded][]
+* Platform Security has been improved by [removing plaintext password from the GetLDAPConnection response message][Remove Plaintext Password from GetLDAPConnection Response Message]
 
 ## Improved Observability
 
-* Logging has been expanded within the HA Platform, all services have had [improved logging introduced][] for messages and events they receive
-* Logging has been added to the Execution Service to [log all flows and any called flows][], including input variables, output variables, and whether the flow had finished successfully or threw an unhandled exception
-* Logging within all services can now be [configured][] at the platform level
-* The maximum number and size of log files produced within the {{% ctx %}} Platform has been [reduced][]
+* Platform Visibility within the HA Platform has been improved in a number of ways:
+  * [A new Platform property has been updated to provide more information in logs][A New Platform Property has been Added to Provide more Information in Logs]
+  * [Request duration is now logged in seconds instead of milliseconds][Request Duration is now Logged in Seconds Instead of Milliseconds]
+  * [Type and Method properties have been added to all Platform logs][Type and Method Added to Platform Logs]
+  * [Custom Tags can be passed through logs via headers][Custom Tags can be Passed Through Logs via Headers] in order to add custom tags to any log related to the API request made
+  * [Exception Tags added to logs related to Exceptions or Problem Details][Exception Tags Added to Logs Related to Exceptions or Problem Details] which provides more information within a log when an issue occurs
+  * [Flow Logging Control][] has been added, this allows for logging to be turned on and off for all flows executing within the platform
+  * [Block Logging Control][] has been added, this allows for logging to be turned on and off for all blocks executing within the platform
+  * [Running executions can be viewed in real-time][Running Executions can be Viewed in Real-Time] which allows users to track executions within the platform
+  * [Grafana and Promtail updated to use the new and updated properties added to Platform logs][Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs] to prevent issues with potentially breaking changes
 
 ## Improved Documentation
 
+
 * [Product Portal][] changes, including:
   * Reference documentation has been updated for the [improved blocks][Improved Blocks]
-  * Getting Started documentation has been updated to reflect the [improved installation][] and the [removal of SQL Server][removed]
+  * Improvements have been made to all reference documentation for [Exceptions][] and [Data Types][]
+  * Getting Started documentation has been updated to reflect the [improved installation][]
+  * Documentation has been added for the new [platform upgrade][TODO] process
 
-For a full list of what has been introduced in this release, please see the [2024.1 Release Notes][]
+For a full list of what has been introduced in this release, please see the [2024.3 Release Notes][]
 
+[Performance]: {{< ref "#improved-performance" >}}
 [Capability]: {{< ref "#improved-capability" >}}
 [Security]: {{< ref "#improved-security" >}}
 [Observability]: {{< ref "#improved-observability" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[improved logging introduced]: {{< url path="Cortex.Blogs.Releases.2024.1.ImprovedLogging" version="2024.1" >}}
-[log all flows and any called flows]: {{< url path="Cortex.Blogs.Releases.2024.1.ImprovedLogging" version="2024.1" >}}
-[configured]: {{< url path="Cortex.Blogs.Releases.2024.1.ConfigurableLogging" version="2024.1" >}}
-[reduced]: {{< url path="Cortex.Blogs.Releases.2024.1.ReducedLogging" version="2024.1" >}}
-[removed]: {{< url path="Cortex.Blogs.Releases.2024.1.RemovedSqlServer" version="2024.1" >}}
-[Improved Blocks]: {{< url path="Cortex.Blogs.Releases.2024.1.ImprovedBlocks" version="2024.1" >}}
-[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.1.ImprovedInstallation" version="2024.1" >}}
-[upgraded]: {{< url path="Cortex.Blogs.Releases.2024.1.3rdParty" version="2024.1" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.1.ProductPortal" version="2024.1" >}}
-[2024.1 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.1.MainDoc" version="2024.1" >}}
+[Platform Performance Improvements]: {{< url path="Cortex.Blogs.Releases.2024.3.PlatformPerformanceImprovements" version="2024.3" >}}
+[Caching Added to the Provisioning Service]: {{< url path="Cortex.Blogs.Releases.2024.3.CachingAddedProvisioningService" version="2024.3" >}}
+[HealthCheck Enabled for the Triggers Service after Provisioning]: {{< url path="Cortex.Blogs.Releases.2024.3.HealthCheckEnabledTriggersService" version="2024.3" >}}
+[LoadBalancer HealthCheck Improvements]: {{< url path="Cortex.Blogs.Releases.2024.3.LoadBalancerHealthCheckImprovements" version="2024.3" >}}
 
-[Text]: {{< url path="Cortex.Reference.Blocks.Text.MainDoc" version="2024.1" >}}
-[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2024.1" >}}
+[A New Platform Property has been Added to Provide more Information in Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.NewPlatformProperty" version="2024.3" >}}
+[Request Duration is now Logged in Seconds Instead of Milliseconds]: {{< url path="Cortex.Blogs.Releases.2024.3.RequestDurationLoggedInSeconds" version="2024.3" >}}
+[Type and Method Added to Platform Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.TypeandMethodAddedToLogs" version="2024.3" >}}
+[Custom Tags can be Passed Through Logs via Headers]: {{< url path="Cortex.Blogs.Releases.2024.3.CustomTags" version="2024.3" >}}
+[Exception Tags Added to Logs Related to Exceptions or Problem Details]: {{< url path="Cortex.Blogs.Releases.2024.3.ExceptionTags" version="2024.3" >}}
+[Flow Logging Control]: {{< url path="Cortex.Blogs.Releases.2024.3.FlowLoggingControl" version="2024.3" >}}
+[Block Logging Control]: {{< url path="Cortex.Blogs.Releases.2024.3.BlockLoggingControl" version="2024.3" >}}
+[Running Executions can be Viewed in Real-Time]: {{< url path="Cortex.Blogs.Releases.2024.3.RunningExecutionsRealTime" version="2024.3" >}}
+[Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.GrafanaAndPromtailUpdated" version="2024.3" >}}
+
+[Remove Plaintext Password from GetLDAPConnection Response Message]: {{< url path="Cortex.Blogs.Releases.2024.3.RemovePlaintextPassword" version="2024.3" >}}
+
+[A New Flow Upgrader Tool has been Created to Upgrade Flows]: {{< url path="Cortex.Blogs.Releases.2024.3.FlowUpgraderTool" version="2024.3" >}}
+[A New Single Server Upgrade Script has been Added to the Installation Artefacts]: {{< url path="Cortex.Blogs.Releases.2024.3.SingleServerUpgradeScript" version="2024.3" >}}
+[Upgrading a multi server platform now also upgrades Gobetween on the Load Balancer]: {{< url path="Cortex.Blogs.Releases.2024.3.UpgradeGobetweenOnTheLoadBalancer" version="2024.3" >}}
+
+[Block Icon Redesign]: {{< url path="Cortex.Blogs.Releases.2024.3.BlockIconRedesign" version="2024.3" >}}
+
+[Improved Blocks]: {{< url path="Cortex.Blogs.Releases.2024.3.ImprovedBlocks" version="2024.3" >}}
+[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.3.ImprovedInstallation" version="2024.3" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.3.ProductPortal" version="2024.3" >}}
+[2024.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
+
+[Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" version="2024.3" >}}
+[Exceptions]: {{< url path="Cortex.Reference.Exceptions.MainDoc" version="2024.3" >}}
+
+[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
