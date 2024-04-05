@@ -2,6 +2,7 @@
 title: "StringComparer"
 linkTitle: "StringComparer"
 description: "Used to compare two pieces of text against each other."
+weight: 1
 ---
 
 # {{% param title %}}

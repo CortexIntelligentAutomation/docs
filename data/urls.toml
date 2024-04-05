@@ -939,6 +939,7 @@
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
+                        SshSessionDetails = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-session-details"
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
@@ -2325,7 +2326,7 @@
         ArgumentNullException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
         ArgumentOutOfRangeException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception"
         Array = "https://learn.microsoft.com/en-us/dotnet/api/system.array"
-        Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.exception?view=net-6.0"
+        Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.exception"
         FormatException = "https://learn.microsoft.com/en-us/dotnet/api/system.formatexception"
         IFormatProvider = "https://learn.microsoft.com/en-us/dotnet/api/system.iformatprovider"
         OutOfMemoryException = "https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
@@ -2477,7 +2478,7 @@
             MinValue = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan.minvalue"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
-            CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception?view=net-6.0"
+            CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception"
         [MSDocs.DotNet.Api.System.Text]
             Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding"
             UnicodeEncoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.unicodeencoding"
@@ -2499,12 +2500,12 @@
         Explorer = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
         ReverseProxy = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
     [MSDocs.Windows]
-        [MSDocs.Windows.WindowsServer]
-            NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
         [MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces]
             MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
             NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
             Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
+        [MSDocs.Windows.WindowsServer]
+            NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
 [MSDotNet]
     [MSDotNet.Framework471]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
