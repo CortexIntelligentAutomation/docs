@@ -2,6 +2,7 @@
 title: "Char"
 linkTitle: "Char"
 description: "Used to represent unicode characters."
+weight: 1
 ---
 
 # {{% param title %}}

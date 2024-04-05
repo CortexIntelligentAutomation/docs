@@ -1,6 +1,6 @@
 ---
 title: "Regex"
 linkTitle: "Regex"
-description: "Used to represent Regex data types"
+description: "Data types used when working with Regex."
 weight: 1
 ---

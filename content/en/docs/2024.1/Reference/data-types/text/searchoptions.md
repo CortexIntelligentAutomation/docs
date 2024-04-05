@@ -2,6 +2,7 @@
 title: "SearchOptions"
 linkTitle: "SearchOptions"
 description: "Used to specify how text is matched when performing a search (i.e. text matches the specified literal text, regex or pattern)."
+weight: 1
 ---
 
 # {{% param title %}}

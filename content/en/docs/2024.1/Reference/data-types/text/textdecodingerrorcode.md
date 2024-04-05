@@ -2,6 +2,7 @@
 title: "TextDecodingErrorCode"
 linkTitle: "TextDecodingErrorCode"
 description: "Used to represent an error code explaining the reason an `TextDecodingException` occurred."
+weight: 1
 ---
 
 # {{% param title %}}

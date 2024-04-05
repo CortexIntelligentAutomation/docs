@@ -2,6 +2,7 @@
 title: "TextToFind"
 linkTitle: "TextToFind"
 description: "Used to represent a search query for finding text."
+weight: 1
 ---
 
 # {{% param title %}}
