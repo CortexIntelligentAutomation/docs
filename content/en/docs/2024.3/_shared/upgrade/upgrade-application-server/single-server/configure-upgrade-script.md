@@ -16,7 +16,7 @@
     |`AppServicesPath`                             | Configure this value with the location of the Application Services zip file on the Application Server being used for the upgrade. |
     |`BlockPackagesPath`                           | Configure this value with the location of the Block Packages zip file on the Application Server being used for the upgrade. |
     |`ApplicationServerIPv4Addresses`              | The IPv4 address of the server.|
-    |`Credential`                                  | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on all servers.<br><br>This does not need to be changed, a prompt will appear to enter this information when the script is run. |
+    |`Credential`                                  | The credentials of the user which will be used to perform remote operations on the server. It must be a domain user that is a member of the local Administrators group on the server.<br><br>This does not need to be changed, a prompt will appear to enter this information when the script is run. |
     |`AcceptEULA`                                  | This does not need to be changed, the EULA will be accepted at a later stage. |
     |`FilePath`                                    | The filename that upgrade logs are written to.  If this should be written to a different location than where the installation files are then a full path should be specified. |
 
