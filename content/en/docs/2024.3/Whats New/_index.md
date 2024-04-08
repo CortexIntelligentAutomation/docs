@@ -11,20 +11,16 @@ weight: 1
 
 * [Performance][]
 * [Capability][]
-* [Security][]
 * [Observability][]
 * [Documentation][]
 
 ## Platform Upgrades
 
-* Platform Upgrades have been added for both Single Server and Multi Server deployments, including new documentation being created for upgrading a 2024.1 {{% ctx %}} Platform to 2024.3. Other upgrade improvements include:
-  * [A new Flow Upgrader tool has been created to upgrade flows][A New Flow Upgrader Tool has been Created to Upgrade Flows] which allows for flows to be upgraded from 2024.1 to 2024.3 to mitigate potentially breaking changes
-  * [A new single server upgrade script has been added to the installation artefacts][A New Single Server Upgrade Script has been Added to the Installation Artefacts]
-  * [Upgrading a multi server platform now also upgrades Gobetween on the Load Balancer][]
+* Upgrades have been added for both [Single Server][A New Single Server Upgrade Script has been Added to the Installation Artefacts] and [Multi Server][A New Multi Server Upgrade Script has been Added to the Installation Artefacts] deployments, including new documentation being created for upgrading a 2024.1 {{% ctx %}} Platform to 2024.3. Additionally, [A new Flow Upgrader tool has been created to upgrade flows][A New Flow Upgrader Tool has been Created to Upgrade Flows] which allows for flows to be upgraded between versions to mitigate potentially breaking as a result of changes related to blocks. This is not required for upgrading the platform from 2024.1 to 2024.3
 
 ## Block Icon Redesign
 
-* [Block icons][Block Icon Redesign] within the {{% ctx %}} platform have been redesigned and overhauled. The refresh includes new icons for every block updating the consistency of design and accessability of colours used within flows.
+* [Block icons][Block Icon Redesign] within the {{% ctx %}} platform have been redesigned. The refresh includes new icons for every block updating the consistency of design and accessability of colours used within flows.
 
 ## Improved Performance
 
@@ -35,27 +31,22 @@ weight: 1
 
 ## Improved Capability
 
-* The [ExecuteDataCommand][Improved Blocks] block have been improved as part of this release of the platform, adding a new Parameter type has been added for requests made to Oracle data sources. This new parameter allows for control of the OracleMappingType and ParameterDirection, which allows for processes like passing of larger data sets (CLOB) to an Oracle stored procedure.
-
-## Improved Security
-
-* Platform Security has been improved by [removing plaintext password from the GetLDAPConnection response message][Remove Plaintext Password from GetLDAPConnection Response Message]
+* The [ExecuteDataCommand][Improved Blocks] block have been improved as part of this release of the platform, a new Parameter type for requests made to Oracle data sources. This allows for specifying the type and direction of the parameter, and provides the capability for processes like passing large data sets (CLOB) to an Oracle stored procedure.
 
 ## Improved Observability
 
 * Platform Visibility within the HA Platform has been improved in a number of ways:
-  * [A new Platform property has been updated to provide more information in logs][A New Platform Property has been Added to Provide more Information in Logs]
+  * [A new Platform property has been added to provide more information in logs][A New Platform Property has been Added to Provide more Information in Logs]
+  * [Type and Method properties have been added to all logs][Type and Method Added to Platform Logs]
   * [Request duration is now logged in seconds instead of milliseconds][Request Duration is now Logged in Seconds Instead of Milliseconds]
-  * [Type and Method properties have been added to all Platform logs][Type and Method Added to Platform Logs]
+  * [Grafana and Promtail updated to use the new and updated log properties][Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs] to prevent issues with potentially breaking changes
   * [Custom Tags can be passed through logs via headers][Custom Tags can be Passed Through Logs via Headers] in order to add custom tags to any log related to the API request made
   * [Exception Tags added to logs related to Exceptions or Problem Details][Exception Tags Added to Logs Related to Exceptions or Problem Details] which provides more information within a log when an issue occurs
   * [Flow Logging Control][] has been added, this allows for logging to be turned on and off for all flows executing within the platform
   * [Block Logging Control][] has been added, this allows for logging to be turned on and off for all blocks executing within the platform
   * [Running executions can be viewed in real-time][Running Executions can be Viewed in Real-Time] which allows users to track executions within the platform
-  * [Grafana and Promtail updated to use the new and updated properties added to Platform logs][Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs] to prevent issues with potentially breaking changes
 
 ## Improved Documentation
-
 
 * [Product Portal][] changes, including:
   * Reference documentation has been updated for the [improved blocks][Improved Blocks]
@@ -67,7 +58,6 @@ For a full list of what has been introduced in this release, please see the [202
 
 [Performance]: {{< ref "#improved-performance" >}}
 [Capability]: {{< ref "#improved-capability" >}}
-[Security]: {{< ref "#improved-security" >}}
 [Observability]: {{< ref "#improved-observability" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
@@ -86,11 +76,9 @@ For a full list of what has been introduced in this release, please see the [202
 [Running Executions can be Viewed in Real-Time]: {{< url path="Cortex.Blogs.Releases.2024.3.RunningExecutionsRealTime" version="2024.3" >}}
 [Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.GrafanaAndPromtailUpdated" version="2024.3" >}}
 
-[Remove Plaintext Password from GetLDAPConnection Response Message]: {{< url path="Cortex.Blogs.Releases.2024.3.RemovePlaintextPassword" version="2024.3" >}}
-
 [A New Flow Upgrader Tool has been Created to Upgrade Flows]: {{< url path="Cortex.Blogs.Releases.2024.3.FlowUpgraderTool" version="2024.3" >}}
 [A New Single Server Upgrade Script has been Added to the Installation Artefacts]: {{< url path="Cortex.Blogs.Releases.2024.3.SingleServerUpgradeScript" version="2024.3" >}}
-[Upgrading a multi server platform now also upgrades Gobetween on the Load Balancer]: {{< url path="Cortex.Blogs.Releases.2024.3.UpgradeGobetweenOnTheLoadBalancer" version="2024.3" >}}
+[A New Multi Server Upgrade Script has been Added to the Installation Artefacts]: {{< url path="Cortex.Blogs.Releases.2024.3.MultiServerUpgradeScript" version="2024.3" >}}
 
 [Block Icon Redesign]: {{< url path="Cortex.Blogs.Releases.2024.3.BlockIconRedesign" version="2024.3" >}}
 
