@@ -1,3 +1,10 @@
+1. Open a Windows PowerShell (x64) window as administrator.
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts\Upgrade Application Server` folder using the following command, modifying the path as necessary:
+
+    ```powershell
+    cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts\Upgrade Application Server"
+    ```
+
 1. Type the following command into PowerShell:
 
     ```powershell

@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Server components on the server from 2024.1 to 2024.3.
+This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2024.1 to 2024.3.
 
 ## Configure Upgrade Script
 

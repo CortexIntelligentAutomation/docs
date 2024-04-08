@@ -20,7 +20,7 @@
 1. Run the PowerShell command to install {{% ctx %}} Gateway.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
-    If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the installation.
+    If there are any errors, then please follow any instructions given within them to rectify the situation, and retry the upgrade.
 
     If the errors do not give any instructions on how to rectify, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for further assistance.
 
