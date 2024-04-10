@@ -8,6 +8,30 @@
             MainDoc = "/blog/releases"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.3]
+                    MainDoc =  "/blog/2024/04/08/2024.3/"
+                    PlatformPerformanceImprovements = "/blog/2024/04/08/2024.3/#platform-performance-improvements"
+                    CachingAddedProvisioningService = "/blog/2024/04/08/2024.3/#caching-added-to-the-provisioning-service"
+                    HealthCheckEnabledTriggersService = "/blog/2024/04/08/2024.3/#healthcheck-enabled-for-the-triggers-service-after-provisioning"
+                    LoadBalancerHealthCheckImprovements = "/blog/2024/04/08/2024.3/#load-balancer-healthcheck-improvements"
+                    NewPlatformProperty = "/blog/2024/04/08/2024.3/#a-new-platform-property-has-been-added-to-provide-more-information-in-logs"
+                    RequestDurationLoggedInSeconds = "/blog/2024/04/08/2024.3/#request-duration-is-now-logged-in-seconds-instead-of-milliseconds"
+                    TypeandMethodAddedToLogs = "/blog/2024/04/08/2024.3/#type-and-method-added-to-logs"
+                    CustomTags = "/blog/2024/04/08/2024.3/#custom-tags-can-be-passed-through-logs-via-http-request-headers"
+                    ExceptionTags = "/blog/2024/04/08/2024.3/#exception-tags-added-to-logs-related-to-exceptions"
+                    ProblemDetails = "/blog/2024/04/08/2024.3/#result-tag-updated-for-api-gateway-service-logs"
+                    FlowLoggingControl = "/blog/2024/04/08/2024.3/#flow-logging-control"
+                    BlockLoggingControl = "/blog/2024/04/08/2024.3/#block-logging-control"
+                    RunningExecutionsRealTime = "/blog/2024/04/08/2024.3/#running-executions-can-be-viewed-in-real-time"
+                    GrafanaAndPromtailUpdated = "/blog/2024/04/08/2024.3/#grafana-and-promtail-updated-to-use-the-new-and-updated-log-properties"
+                    FlowUpgraderTool = "/blog/2024/04/08/2024.3/#a-new-flow-upgrader-tool-has-been-created-to-upgrade-flows"
+                    SingleServerUpgradeScript = "/blog/2024/04/08/2024.3/#a-new-single-server-upgrade-script-has-been-added-to-the-installation-artefacts"
+                    MultiServerUpgradeScript = "/blog/2024/04/08/2024.3/#a-new-multi-server-upgrade-script-has-been-added-to-the-installation-artefacts"
+                    UpgradeGobetweenOnTheLoadBalancer = "/blog/2024/04/08/2024.3/#upgrading-a-multi-server-platform-now-also-upgrades-gobetween-on-the-load-balancer"
+                    BlockIconRedesign = "/blog/2024/04/08/2024.3/#block-icon-redesign"
+                    ImprovedBlocks = "/blog/2024/04/08/2024.3/#improved-blocks"
+                    ImprovedInstallation = "/blog/2024/04/08/2024.3/#improved-installation"
+                    ProductPortal = "/blog/2024/04/08/2024.3/#product-portal"
                 [Cortex.Blogs.Releases.2024.1]
                     MainDoc =  "/blog/2024/02/08/2024.1/"
                     ExpansionOfTheHAPlatform = "/blog/2024/02/08/2024.1/#expansion-of-the-ha-platform"
@@ -405,7 +429,26 @@
                     MainDoc = "/docs/guides/cortex-gateway/settings/packages"
             [Cortex.Guides.Gateway.WelcomePage]
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
-    [Cortex.Reference]
+        [Cortex.Guides.UpgradeCortex]
+            MainDoc = "/docs/guides/upgrade-cortex/"      
+            [Cortex.Guides.UpgradeCortex.2024.1to2024.3]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.Advanced]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/advanced"
+                    SSLBestPractices = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/advanced/ssl-best-practices"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/try-it-out"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-web-application-server"
+[Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"
@@ -2034,6 +2077,8 @@
                 TroubleshootingNoBlocks = "/docs/reference/troubleshooting/installation#ts-no-blocks"
                 TroubleshootingNoPublish = "/docs/reference/troubleshooting/installation#ts-no-publish"
                 TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/installation#ts-no-root-certificate"
+            [Cortex.Reference.Troubleshooting.Upgrade]
+                TroubleshootingDuringUpgrade= "/docs/reference/troubleshooting/upgrade#ts-during-upgrade"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
@@ -2205,6 +2250,10 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.2.0]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -2306,7 +2355,7 @@
         ArgumentNullException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
         ArgumentOutOfRangeException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception"
         Array = "https://learn.microsoft.com/en-us/dotnet/api/system.array"
-        Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.exception?view=net-6.0"
+        Exception = "https://learn.microsoft.com/en-us/dotnet/api/system.exception"
         FormatException = "https://learn.microsoft.com/en-us/dotnet/api/system.formatexception"
         IFormatProvider = "https://learn.microsoft.com/en-us/dotnet/api/system.iformatprovider"
         OutOfMemoryException = "https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception"
@@ -2458,7 +2507,7 @@
             MinValue = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan.minvalue"
         [MSDocs.DotNet.Api.System.Globalization]
             CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
-            CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception?view=net-6.0"
+            CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception"
         [MSDocs.DotNet.Api.System.Text]
             Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding"
             UnicodeEncoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.unicodeencoding"
@@ -2480,12 +2529,12 @@
         Explorer = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster"
         ReverseProxy = "https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy"
     [MSDocs.Windows]
-        [MSDocs.Windows.WindowsServer]
-            NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
         [MSDocs.Windows.Apps.Win32.DesktopTechnologies.DataAccessAndStorage.LocalFileSystems.NamingFilesPathsAndNamespaces]
             MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
             NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
             Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
+        [MSDocs.Windows.WindowsServer]
+            NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
 [MSDotNet]
     [MSDotNet.Framework471]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471"
@@ -2524,11 +2573,12 @@
     MainDoc = "https://www.rabbitmq.com/"
 [RFC]
     UriInvalidCharacters = "https://www.rfc-editor.org/rfc/rfc3986#section-2"
-    [RFC.Docs.Telnet.Options]
-    MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
-    Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
-    BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
     ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
+    [RFC.Docs.Telnet.Options]
+        MainDoc = "https://www.iana.org/assignments/telnet-options/telnet-options.xhtml"
+        Echo = "https://www.rfc-editor.org/rfc/rfc857.html"
+        BinaryTransmission = "https://www.rfc-editor.org/rfc/rfc856.html"
+        ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
 [NSSM]
     MainDoc = "https://nssm.cc/"
 [Splunk]

@@ -2,6 +2,7 @@
 title: "TextEncodingFormat"
 linkTitle: "TextEncodingFormat"
 description: "Used to represent formats available for encoding and decoding text."
+weight: 1
 ---
 
 # {{% param title %}}
