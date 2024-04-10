@@ -405,7 +405,26 @@
                     MainDoc = "/docs/guides/cortex-gateway/settings/packages"
             [Cortex.Guides.Gateway.WelcomePage]
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
-    [Cortex.Reference]
+        [Cortex.Guides.UpgradeCortex]
+            MainDoc = "/docs/guides/upgrade-cortex/"      
+            [Cortex.Guides.UpgradeCortex.2024.1to2024.3]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.Advanced]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/advanced"
+                    SSLBestPractices = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/advanced/ssl-best-practices"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/try-it-out"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-web-application-server"
+[Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"
@@ -2030,6 +2049,8 @@
                 TroubleshootingNoBlocks = "/docs/reference/troubleshooting/installation#ts-no-blocks"
                 TroubleshootingNoPublish = "/docs/reference/troubleshooting/installation#ts-no-publish"
                 TroubleshootingNoRootCertificate= "/docs/reference/troubleshooting/installation#ts-no-root-certificate"
+            [Cortex.Reference.Troubleshooting.Upgrade]
+                TroubleshootingDuringUpgrade= "/docs/reference/troubleshooting/upgrade#ts-during-upgrade"
         [Cortex.Reference.Glossary]
             MainDoc = "/docs/reference/glossary/"
             [Cortex.Reference.Glossary.A-E]
@@ -2201,6 +2222,10 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.2.2.0]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
