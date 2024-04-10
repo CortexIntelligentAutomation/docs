@@ -205,10 +205,15 @@ enable = true
 
 # Releases menu
 [[params.versions]]
+	version = "2024.5"
+	url = "/docs/2024.5/"
+	dotNetVersion = "net-6.0"
+	latest = true
+
+[[params.versions]]
 	version = "2024.3"
 	url = "/docs/2024.3/"
 	dotNetVersion = "net-6.0"
-	latest = true
 
 [[params.versions]]
 	version = "2024.1"
