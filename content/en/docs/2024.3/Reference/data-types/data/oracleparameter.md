@@ -10,7 +10,7 @@ description: "Defines a type of parameter that can be run as part of a Command."
 
 ## Summary
 
-An `OracleParameter` data type is used for the [Parameters property][ParametersProperty] on the [DataCommand][] data types.
+The `OracleParameter` data type is used to define a parameter for the [OracleConnectionDetails][] within the [Parameters property][ParametersProperty] on the [DataCommand][] data types.
 
 | | |
 |-|-|
@@ -20,7 +20,7 @@ An `OracleParameter` data type is used for the [Parameters property][ParametersP
 | **Alias:**             | N/A |
 | **Description:**       | Defines a type of parameter that can be run as part of a Command. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `OracleParameter`, `Object`, `dynamic` |
+| **Can be used as:**    | `OracleParameter`, `IParameter`, `Object`, `dynamic`  |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
@@ -43,7 +43,7 @@ The value of the parameter that is being defined.
 | | |
 |--------------------|---------------------------|
 | Data Type | [dynamic][] |
-| Is Advanced | `true` |
+| Is Advanced | `false` |
 | Default Editor | [Expression][] |
 | Default Value | [dynamic][] with no value |
 
@@ -56,7 +56,7 @@ The type of the parameter that is being defined.
 | Data Type | [OracleMappingType][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [OracleMappingType][] with value `0` |
+| Default Value | [OracleMappingType][] with value `OracleMappingType.BFile` |
 
 ### ParameterDirection
 
@@ -67,7 +67,7 @@ The direction of the parameter that is being defined.
 | Data Type | [ParameterDirection][] |
 | Is Advanced | `false` |
 | Default Editor | [Expression][] |
-| Default Value | [ParameterDirection][] with value `0` |
+| Default Value | [ParameterDirection][] with value `ParameterDirection.Input` |
 
 ### Size
 
@@ -88,7 +88,7 @@ The following table shows some of the ways that an `OracleParameter` can be crea
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use an `OracleParameter` constructor | `new OracleParameter("name", $@"", OracleMappingType.Clob, ParameterDirection.Input, 0)` | `{name: "name", value: $@"value", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0}` | Expression | |
+| Use an `OracleParameter` constructor | `new OracleParameter("name", $@"", OracleMappingType.Clob, ParameterDirection.Input, 0)` | `{Name: "name", Value: $@"value", Type: OracleMappingType.Clob, Direction: ParameterDirection.Input, Size: 0}` | Expression | |
 
 ### Convert OracleParameter to Text
 
@@ -96,7 +96,7 @@ The following table shows some of the ways that an `OracleParameter` can be crea
 |-|-|-|-|-|
 | Use `ToString` | `($)OracleParameter.ToString()` | `"Cortex.DataTypes.Data.OracleParameter"` | Expression | ToString will return the Full Name of the OracleParameter Data Type |
 | Use `Convert Object To Text` block | where `Object` property has a value of `{name: "name", value: $@"value", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0}` | `"Cortex.DataTypes.Data.OracleParameter"` | N/A  | See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `{name: "name", value: $@"value", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0}` | `"{\r\n  \"name\": \"name\",\r\n  \"value\": \"value\",\r\n  \"type\": 105,\r\n  \"direction\": 1,\r\n  \"size\": 0}"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `{name: "name", value: $@"value", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0}` | `"{\r\n  \"Name\": \"name\",\r\n  \"Value\": \"value\",\r\n  \"Type\": 105,\r\n  \"Direction\": 1,\r\n  \"Size\": 0}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -121,6 +121,7 @@ In future this limitation may be removed.
 * [NonQueryCommand][]
 * [OracleParameters][]
 * [OracleConnectionDetails][]
+* [OracleMappingType][]
 
 ### Related Concepts
 

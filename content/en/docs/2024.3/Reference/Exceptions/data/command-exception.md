@@ -142,7 +142,7 @@ More information on why the value is invalid, or instruction on how to provide a
 
 ### Invalid Parameter Binding {#3001}
 
-An [Error Code][] of `3001` indicates at least one parameter is not bound correctly, during either parsing or execution of the statement(s).
+An [Error Code][] of `3001` indicates at least one parameter has not been defined in the [Parameters Property][ParametersProperty] but has in the [Command Property][CommandProperty], or is not bound correctly; this means that the parameter type and value are not compatible, e.g. declaring a parameter with the type as `OracleMappingType.Blob`, but providing a `OracleMappingType.Int32` value of `1`.
 
 #### Message Format
 
@@ -155,7 +155,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to fix
 
-Make sure that all parameters that are declared in the statement, are also defined in the [Parameters Property][ParametersProperty] with the correct type and compatible value.
+Make sure that all parameters used in the [Command Property][CommandProperty] are defined in the [Parameters Property][ParametersProperty] and have a value that is compatible with the parameter type, e.g. declaring a parameter with the type as `OracleMappingType.Int32`, requires an `OracleMappingType.Int32` value to be provided, for example `1`.
 
 More information may be present in the [StatementExceptions][].
 
@@ -203,7 +203,7 @@ For `CommandException` there are the following error codes:
 - [2002][MultipleStatements] - indicates that a [MultipleStatements][] error has occured because multiple statements have been inputted into the [Command Property][CommandProperty] when using the [Command][] datatype (All Categories)
 - [2003][IncompatibleParameterType] - An incompatible parameter type has been passed into the [Parameters property][ParametersProperty] when using a type of [ConnectionDetails][] (All Categories)
 - [3000][Runtime] - indicates that a [Runtime][] error has occurred during the runtime process (All Categories)
-- [3001][InvalidParameterBinding] - indicates that at least one parameter has an incorrect binding, during either parsing or execution of the statement(s) (All Categories)
+- [3001][InvalidParameterBinding] - indicates at least one parameter has not been defined in the [Parameters Property][ParametersProperty] but has in the [Command Property][CommandProperty], or is not bound correctly (All Categories)
 
 | | |
 |-----------|---------------------------|

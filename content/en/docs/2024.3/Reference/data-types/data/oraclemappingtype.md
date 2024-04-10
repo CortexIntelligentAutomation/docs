@@ -10,7 +10,7 @@ description: "Used to represent the Oracle type used for the Parameter."
 
 ## Summary
 
-The `OracleMappingType` data type is used to represent the Oracle type used for the Parameter.
+The `OracleMappingType` data type is used to represent the Oracle type of the [OracleParameter][].
 
 `OracleMappingType` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -20,240 +20,240 @@ The `OracleMappingType` data type is used to represent the Oracle type used for 
 | **Name:**           | `OracleMappingType`                                                                                                                   |
 | **Full Name:**      | `Dapper.Oracle.OracleMappingType`                                                                                                        |
 | **Alias:**          | N/A                                                                                                                                |
-| **Description:**    | Used to represent the status code returned by an HTTP request.                                                                     |
-| **Default Value:**  | `(OracleMappingType)0`                                                                                                                |
+| **Description:**    | Used to represent the Oracle type of the [OracleParameter][].                                                                     |
+| **Default Value:**  | `OracleMappingType.BFile`                                                                                                                |
 | **Can be used as:** | `OracleMappingType`, `Object`, `dynamic`                                                                                              |
-| **Can be cast to:** | `Int16` (e.g. `(Int16)OracleMappingType.Clob` or `(System.Int16)OracleMappingType.Clob` or `(short)OracleMappingType.Clob`)     |
-|                     | `Int32` (e.g. `(Int32)OracleMappingType.Clob` or `(System.Int32)OracleMappingType.Clob` or `(int)OracleMappingType.Clob`)       |
-|                     | `Int64` (e.g. `(Int64)OracleMappingType.Clob` or `(System.Int64)OracleMappingType.Clob` or `(long)OracleMappingType.Clob`)      |
-|                     | `Single` (e.g. `(Single)OracleMappingType.Clob` or `(System.Single)OracleMappingType.Clob` or `(float)OracleMappingType.Clob`)  |
-|                     | `Double` (e.g. `(Double)OracleMappingType.Clob` or `(System.Double)OracleMappingType.Clob` or `(double)OracleMappingType.Clob`) |
+| **Can be cast to:** | `Int16` (e.g. `(Int16)OracleMappingType.BFile` or `(System.Int16)OracleMappingType.BFile` or `(short)OracleMappingType.BFile`)     |
+|                     | `Int32` (e.g. `(Int32)OracleMappingType.BFile` or `(System.Int32)OracleMappingType.BFile` or `(int)OracleMappingType.BFile`)       |
+|                     | `Int64` (e.g. `(Int64)OracleMappingType.BFile` or `(System.Int64)OracleMappingType.BFile` or `(long)OracleMappingType.BFile`)      |
+|                     | `Single` (e.g. `(Single)OracleMappingType.BFile` or `(System.Single)OracleMappingType.BFile` or `(float)OracleMappingType.BFile`)  |
+|                     | `Double` (e.g. `(Double)OracleMappingType.BFile` or `(System.Double)OracleMappingType.BFile` or `(double)OracleMappingType.BFile`) |
 
 ## Values
 
 ### BFile
 
-| | |
-|-|-|
-| **Name:**    | BFile                                           |
-| **Value:**   | [Int32][] with value `101`                       |
-| **Notes:**   | Empty entries and trailing or leading whitespaces (at the start or end of text) are not removed.                 |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | BFile                      |
+| **Value:** | [Int32][] with value `101` |
+| **Notes:** |                            |
 
 ### Blob
 
-| | |
-|-|-|
-| **Name:**    | Blob                                         |
-| **Value:**   | [Int32][] with value `102`                                   |
-| **Notes:**   | Empty entries are removed but trailing or leading whitespaces (at the start or end of text) are not removed.                                 |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Blob                       |
+| **Value:** | [Int32][] with value `102` |
+| **Notes:** |                            |
 
 ### Byte
 
-| | |
-|-|-|
-| **Name:**    | Byte                                                                                |
-| **Value:**   | [Int32][] with value `103`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Byte                       |
+| **Value:** | [Int32][] with value `103` |
+| **Notes:** |                            |
 
 ### Char
 
-| | |
-|-|-|
-| **Name:**    | Char                                                                                |
-| **Value:**   | [Int32][] with value `104`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Char                       |
+| **Value:** | [Int32][] with value `104` |
+| **Notes:** |                            |
 
 ### Clob
 
-| | |
-|-|-|
-| **Name:**    | Clob                                                                                |
-| **Value:**   | [Int32][] with value `105`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Clob                       |
+| **Value:** | [Int32][] with value `105` |
+| **Notes:** |                            |
 
 ### Date
 
-| | |
-|-|-|
-| **Name:**    | Date                                                                                |
-| **Value:**   | [Int32][] with value `106`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Date                       |
+| **Value:** | [Int32][] with value `106` |
+| **Notes:** |                            |
 
 ### Decimal
 
-| | |
-|-|-|
-| **Name:**    | Decimal                                                                                |
-| **Value:**   | [Int32][] with value `107`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Decimal                    |
+| **Value:** | [Int32][] with value `107` |
+| **Notes:** |                            |
 
 ### Double
 
-| | |
-|-|-|
-| **Name:**    | Double                                                                                |
-| **Value:**   | [Int32][] with value `108`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Double                     |
+| **Value:** | [Int32][] with value `108` |
+| **Notes:** |                            |
 
 ### Long
 
-| | |
-|-|-|
-| **Name:**    | Long                                                                                |
-| **Value:**   | [Int32][] with value `109`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Long                       |
+| **Value:** | [Int32][] with value `109` |
+| **Notes:** |                            |
 
 ### LongRaw
 
-| | |
-|-|-|
-| **Name:**    | LongRaw                                                                                |
-| **Value:**   | [Int32][] with value `110`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | LongRaw                    |
+| **Value:** | [Int32][] with value `110` |
+| **Notes:** |                            |
 
 ### Int16
 
-| | |
-|-|-|
-| **Name:**    | Int16                                                                                |
-| **Value:**   | [Int32][] with value `111`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Int16                      |
+| **Value:** | [Int32][] with value `111` |
+| **Notes:** |                            |
 
 ### Int32
 
-| | |
-|-|-|
-| **Name:**    | Int32                                                                                |
-| **Value:**   | [Int32][] with value `112`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Int32                      |
+| **Value:** | [Int32][] with value `112` |
+| **Notes:** |                            |
 
 ### Int64
 
-| | |
-|-|-|
-| **Name:**    | Int64                                                                                |
-| **Value:**   | [Int32][] with value `113`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Int64                      |
+| **Value:** | [Int32][] with value `113` |
+| **Notes:** |                            |
 
 ### IntervalDS
 
-| | |
-|-|-|
-| **Name:**    | IntervalDS                                                                                |
-| **Value:**   | [Int32][] with value `114`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | IntervalDS                 |
+| **Value:** | [Int32][] with value `114` |
+| **Notes:** |                            |
 
 ### IntervalYM
 
-| | |
-|-|-|
-| **Name:**    | IntervalYM                                                                                |
-| **Value:**   | [Int32][] with value `115`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | IntervalYM                 |
+| **Value:** | [Int32][] with value `115` |
+| **Notes:** |                            |
 
 ### NClob
 
-| | |
-|-|-|
-| **Name:**    | NClob                                                                                |
-| **Value:**   | [Int32][] with value `116`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | NClob                      |
+| **Value:** | [Int32][] with value `116` |
+| **Notes:** |                            |
 
 ### NChar
 
-| | |
-|-|-|
-| **Name:**    | NChar                                                                                |
-| **Value:**   | [Int32][] with value `117`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | NChar                      |
+| **Value:** | [Int32][] with value `117` |
+| **Notes:** |                            |
 
 ### NVarchar2
 
-| | |
-|-|-|
-| **Name:**    | NVarchar2                                                                                |
-| **Value:**   | [Int32][] with value `119`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | NVarchar2                  |
+| **Value:** | [Int32][] with value `119` |
+| **Notes:** |                            |
 
 ### Raw
 
-| | |
-|-|-|
-| **Name:**    | Raw                                                                                |
-| **Value:**   | [Int32][] with value `120`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Raw                        |
+| **Value:** | [Int32][] with value `120` |
+| **Notes:** |                            |
 
 ### RefCursor
 
-| | |
-|-|-|
-| **Name:**    | RefCursor                                                                                |
-| **Value:**   | [Int32][] with value `121`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | RefCursor                  |
+| **Value:** | [Int32][] with value `121` |
+| **Notes:** |                            |
 
 ### Single
 
-| | |
-|-|-|
-| **Name:**    | Single                                                                                |
-| **Value:**   | [Int32][] with value `122`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Single                     |
+| **Value:** | [Int32][] with value `122` |
+| **Notes:** |                            |
 
 ### TimeStamp
 
-| | |
-|-|-|
-| **Name:**    | TimeStamp                                                                                |
-| **Value:**   | [Int32][] with value `123`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | TimeStamp                  |
+| **Value:** | [Int32][] with value `123` |
+| **Notes:** |                            |
 
 ### TimeStampLTZ
 
-| | |
-|-|-|
-| **Name:**    | TimeStampLTZ                                                                                |
-| **Value:**   | [Int32][] with value `124`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | TimeStampLTZ               |
+| **Value:** | [Int32][] with value `124` |
+| **Notes:** |                            |
 
 ### TimeStampTZ
 
-| | |
-|-|-|
-| **Name:**    | TimeStampLZ                                                                                |
-| **Value:**   | [Int32][] with value `125`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | TimeStampLZ                |
+| **Value:** | [Int32][] with value `125` |
+| **Notes:** |                            |
 
 ### Varchar2
 
-| | |
-|-|-|
-| **Name:**    | Varchar2                                                                                |
-| **Value:**   | [Int32][] with value `126`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | Varchar2                   |
+| **Value:** | [Int32][] with value `126` |
+| **Notes:** |                            |
 
 ### XmlType
 
-| | |
-|-|-|
-| **Name:**    | XmlType                                                                                |
-| **Value:**   | [Int32][] with value `127`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | XmlType                    |
+| **Value:** | [Int32][] with value `127` |
+| **Notes:** |                            |
 
 ### BinaryDouble
 
-| | |
-|-|-|
-| **Name:**    | BinaryDouble                                                                                |
-| **Value:**   | [Int32][] with value `132`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | BinaryDouble               |
+| **Value:** | [Int32][] with value `132` |
+| **Notes:** |                            |
 
 ### BinaryFloat
 
-| | |
-|-|-|
-| **Name:**    | BinaryFloat                                                                                |
-| **Value:**   | [Int32][] with value `133`                                                                   |
-| **Notes:**   | Empty entries are not removed but trailing or leading whitespaces (at the start or end of text) are removed.  |
+|            |                            |
+|------------|----------------------------|
+| **Name:**  | BinaryFloat                |
+| **Value:** | [Int32][] with value `133` |
+| **Notes:** |                            |
 
 ## Remarks
 
@@ -471,29 +471,29 @@ The following table shows some of the ways that a `OracleMappingType` can be con
 | | where `Object` property has a value of `OracleMappingType.Byte` | `"103"` | N/A  | Converts `OracleMappingType.Byte` to `"103"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `OracleMappingType.Char` | `"104"` | N/A  | Converts `OracleMappingType.Char` to `"104"`. See [Convert Object To Json][] |
 | | where `Object` property has a value of `OracleMappingType.Clob` | `"105"` | N/A  | Converts `OracleMappingType.Clob` to `"105"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Date` | `"106"` | N/A  | Converts `OracleMappingType.Char` to `"106"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Decimal` | `"107"` | N/A  | Converts `OracleMappingType.Clob` to `"107"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Double` | `"108"` | N/A  | Converts `OracleMappingType.Char` to `"108"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Long` | `"109"` | N/A  | Converts `OracleMappingType.Clob` to `"109"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.LongRaw` | `"110"` | N/A  | Converts `OracleMappingType.Char` to `"110"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Int16` | `"111"` | N/A  | Converts `OracleMappingType.Clob` to `"111"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Int32` | `"112"` | N/A  | Converts `OracleMappingType.Char` to `"112"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Int64` | `"113"` | N/A  | Converts `OracleMappingType.Clob` to `"113"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.IntervalDS` | `"114"` | N/A  | Converts `OracleMappingType.Char` to `"114"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.IntervalYM` | `"115"` | N/A  | Converts `OracleMappingType.Clob` to `"115"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.NClob` | `"116"` | N/A  | Converts `OracleMappingType.Char` to `"116"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.NChar` | `"117"` | N/A  | Converts `OracleMappingType.Clob` to `"117"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.NVarchar2` | `"119"` | N/A  | Converts `OracleMappingType.Char` to `"119"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Raw` | `"120"` | N/A  | Converts `OracleMappingType.Clob` to `"120"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.RefCursor` | `"121"` | N/A  | Converts `OracleMappingType.Char` to `"121"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Single` | `"122"` | N/A  | Converts `OracleMappingType.Clob` to `"122"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.TimeStamp` | `"123"` | N/A  | Converts `OracleMappingType.Char` to `"123"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.TimeStampLTZ` | `"124"` | N/A  | Converts `OracleMappingType.Clob` to `"124"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.TimeStampLZ` | `"125"` | N/A  | Converts `OracleMappingType.Char` to `"125"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.Varchar2` | `"126"` | N/A  | Converts `OracleMappingType.Clob` to `"126"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.XmlType` | `"127"` | N/A  | Converts `OracleMappingType.Char` to `"127"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.BinaryDouble` | `"132"` | N/A  | Converts `OracleMappingType.Clob` to `"132"`. See [Convert Object To Json][] |
-| | where `Object` property has a value of `OracleMappingType.BinaryFloat` | `"133"` | N/A  | Converts `OracleMappingType.Clob` to `"133"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Date` | `"106"` | N/A  | Converts `OracleMappingType.Date` to `"106"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Decimal` | `"107"` | N/A  | Converts `OracleMappingType.Decimal` to `"107"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Double` | `"108"` | N/A  | Converts `OracleMappingType.Double` to `"108"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Long` | `"109"` | N/A  | Converts `OracleMappingType.Long` to `"109"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.LongRaw` | `"110"` | N/A  | Converts `OracleMappingType.LongRaw` to `"110"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Int16` | `"111"` | N/A  | Converts `OracleMappingType.Int16` to `"111"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Int32` | `"112"` | N/A  | Converts `OracleMappingType.Int32` to `"112"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Int64` | `"113"` | N/A  | Converts `OracleMappingType.Int64` to `"113"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.IntervalDS` | `"114"` | N/A  | Converts `OracleMappingType.IntervalDS` to `"114"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.IntervalYM` | `"115"` | N/A  | Converts `OracleMappingType.IntervalYM` to `"115"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.NClob` | `"116"` | N/A  | Converts `OracleMappingType.NClob` to `"116"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.NChar` | `"117"` | N/A  | Converts `OracleMappingType.NChar` to `"117"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.NVarchar2` | `"119"` | N/A  | Converts `OracleMappingType.NVarchar2` to `"119"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Raw` | `"120"` | N/A  | Converts `OracleMappingType.Raw` to `"120"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.RefCursor` | `"121"` | N/A  | Converts `OracleMappingType.RefCursor` to `"121"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Single` | `"122"` | N/A  | Converts `OracleMappingType.Single` to `"122"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.TimeStamp` | `"123"` | N/A  | Converts `OracleMappingType.TimeStamp` to `"123"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.TimeStampLTZ` | `"124"` | N/A  | Converts `OracleMappingType.TimeStampLTZ` to `"124"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.TimeStampLZ` | `"125"` | N/A  | Converts `OracleMappingType.TimeStampLZ` to `"125"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.Varchar2` | `"126"` | N/A  | Converts `OracleMappingType.Varchar2` to `"126"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.XmlType` | `"127"` | N/A  | Converts `OracleMappingType.XmlType` to `"127"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.BinaryDouble` | `"132"` | N/A  | Converts `OracleMappingType.BinaryDouble` to `"132"`. See [Convert Object To Json][] |
+| | where `Object` property has a value of `OracleMappingType.BinaryFloat` | `"133"` | N/A  | Converts `OracleMappingType.BinaryFloat` to `"133"`. See [Convert Object To Json][] |
 
 Please see [Formatting enumeration values][] for further information.
 
@@ -506,31 +506,31 @@ The following table shows some of the ways that a `OracleMappingType` can be con
 | Use [Explicit Casting][]              | `(Int32)OracleMappingType.BFile`   | `101` | Expression | [Casts][Explicit Casting] `OracleMappingType.BFile` to `101` |
 |                                       | `(Int32)OracleMappingType.Blob`   | `102` | Expression | [Casts][Explicit Casting] `OracleMappingType.Blob` to `102` |
 |                                       | `(Int32)OracleMappingType.Byte`   | `103` | Expression | [Casts][Explicit Casting] `OracleMappingType.Byte` to `103` |
-|                                       | `(Int32)(OracleMappingType.Char`   | `104` | Expression | [Casts][Explicit Casting] `OracleMappingType.Char` to `104` |
-|                                       | `(Int32)(OracleMappingType.Clob`   | `105` | Expression | [Casts][Explicit Casting] `OracleMappingType.Clob` to `105` |
-|                                       | `(Int32)(OracleMappingType.Date`   | `106` | Expression | [Casts][Explicit Casting] `OracleMappingType.Date` to `106` |
-|                                       | `(Int32)(OracleMappingType.Decimal`   | `107` | Expression | [Casts][Explicit Casting] `OracleMappingType.Decimal` to `107` |
-|                                       | `(Int32)(OracleMappingType.Double`   | `108` | Expression | [Casts][Explicit Casting] `OracleMappingType.Double` to `108` |
-|                                       | `(Int32)(OracleMappingType.Long`   | `109` | Expression | [Casts][Explicit Casting] `OracleMappingType.Long` to `109` |
-|                                       | `(Int32)(OracleMappingType.LongRaw`   | `110` | Expression | [Casts][Explicit Casting] `OracleMappingType.LongRaw` to `110` |
-|                                       | `(Int32)(OracleMappingType.Int16`   | `111` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int16` to `111` |
-|                                       | `(Int32)(OracleMappingType.Int32`   | `112` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int32` to `112` |
-|                                       | `(Int32)(OracleMappingType.Int64`   | `113` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int64` to `113` |
-|                                       | `(Int32)(OracleMappingType.IntervalDS`   | `114` | Expression | [Casts][Explicit Casting] `OracleMappingType.IntervalDS` to `114` |
-|                                       | `(Int32)(OracleMappingType.IntervalYM`   | `115` | Expression | [Casts][Explicit Casting] `OracleMappingType.IntervalYM` to `115` |
-|                                       | `(Int32)(OracleMappingType.NClob`   | `116` | Expression | [Casts][Explicit Casting] `OracleMappingType.NClob` to `116` |
-|                                       | `(Int32)(OracleMappingType.NChar`   | `117` | Expression | [Casts][Explicit Casting] `OracleMappingType.NChar` to `117` |
-|                                       | `(Int32)(OracleMappingType.NVarchar2`   | `119` | Expression | [Casts][Explicit Casting] `OracleMappingType.NVarchar2` to `119` |
-|                                       | `(Int32)(OracleMappingType.Raw`   | `120` | Expression | [Casts][Explicit Casting] `OracleMappingType.Raw` to `120` |
-|                                       | `(Int32)(OracleMappingType.RefCursor`   | `121` | Expression | [Casts][Explicit Casting] `OracleMappingType.RefCursor` to `121` |
-|                                       | `(Int32)(OracleMappingType.Single`   | `122` | Expression | [Casts][Explicit Casting] `OracleMappingType.Single` to `122` |
-|                                       | `(Int32)(OracleMappingType.TimeStamp`   | `123` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStamp` to `123` |
-|                                       | `(Int32)(OracleMappingType.TimeStampLTZ`   | `124` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStampLTZ` to `124` |
-|                                       | `(Int32)(OracleMappingType.TimeStampLZ`   | `125` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStampLZ` to `125` |
-|                                       | `(Int32)(OracleMappingType.Varchar2`   | `126` | Expression | [Casts][Explicit Casting] `OracleMappingType.Varchar2` to `126` |
-|                                       | `(Int32)(OracleMappingType.XmlType`   | `127` | Expression | [Casts][Explicit Casting] `OracleMappingType.XmlType` to `127` |
-|                                       | `(Int32)(OracleMappingType.BinaryDouble`   | `132` | Expression | [Casts][Explicit Casting] `OracleMappingType.BinaryDouble` to `132` |
-|                                       | `(Int32)(OracleMappingType.BinaryFloat`   | `133` | Expression | [Casts][Explicit Casting] `OracleMappingType.BinaryFloat` to `133` |
+|                                       | `(Int32)OracleMappingType.Char`   | `104` | Expression | [Casts][Explicit Casting] `OracleMappingType.Char` to `104` |
+|                                       | `(Int32)OracleMappingType.Clob`   | `105` | Expression | [Casts][Explicit Casting] `OracleMappingType.Clob` to `105` |
+|                                       | `(Int32)OracleMappingType.Date`   | `106` | Expression | [Casts][Explicit Casting] `OracleMappingType.Date` to `106` |
+|                                       | `(Int32)OracleMappingType.Decimal`   | `107` | Expression | [Casts][Explicit Casting] `OracleMappingType.Decimal` to `107` |
+|                                       | `(Int32)OracleMappingType.Double`   | `108` | Expression | [Casts][Explicit Casting] `OracleMappingType.Double` to `108` |
+|                                       | `(Int32)OracleMappingType.Long`   | `109` | Expression | [Casts][Explicit Casting] `OracleMappingType.Long` to `109` |
+|                                       | `(Int32)OracleMappingType.LongRaw`   | `110` | Expression | [Casts][Explicit Casting] `OracleMappingType.LongRaw` to `110` |
+|                                       | `(Int32)OracleMappingType.Int16`   | `111` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int16` to `111` |
+|                                       | `(Int32)OracleMappingType.Int32`   | `112` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int32` to `112` |
+|                                       | `(Int32)OracleMappingType.Int64`   | `113` | Expression | [Casts][Explicit Casting] `OracleMappingType.Int64` to `113` |
+|                                       | `(Int32)OracleMappingType.IntervalDS`   | `114` | Expression | [Casts][Explicit Casting] `OracleMappingType.IntervalDS` to `114` |
+|                                       | `(Int32)OracleMappingType.IntervalYM`   | `115` | Expression | [Casts][Explicit Casting] `OracleMappingType.IntervalYM` to `115` |
+|                                       | `(Int32)OracleMappingType.NClob`   | `116` | Expression | [Casts][Explicit Casting] `OracleMappingType.NClob` to `116` |
+|                                       | `(Int32)OracleMappingType.NChar`   | `117` | Expression | [Casts][Explicit Casting] `OracleMappingType.NChar` to `117` |
+|                                       | `(Int32)OracleMappingType.NVarchar2`   | `119` | Expression | [Casts][Explicit Casting] `OracleMappingType.NVarchar2` to `119` |
+|                                       | `(Int32)OracleMappingType.Raw`   | `120` | Expression | [Casts][Explicit Casting] `OracleMappingType.Raw` to `120` |
+|                                       | `(Int32)OracleMappingType.RefCursor`   | `121` | Expression | [Casts][Explicit Casting] `OracleMappingType.RefCursor` to `121` |
+|                                       | `(Int32)OracleMappingType.Single`   | `122` | Expression | [Casts][Explicit Casting] `OracleMappingType.Single` to `122` |
+|                                       | `(Int32)OracleMappingType.TimeStamp`   | `123` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStamp` to `123` |
+|                                       | `(Int32)OracleMappingType.TimeStampLTZ`   | `124` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStampLTZ` to `124` |
+|                                       | `(Int32)OracleMappingType.TimeStampLZ`   | `125` | Expression | [Casts][Explicit Casting] `OracleMappingType.TimeStampLZ` to `125` |
+|                                       | `(Int32)OracleMappingType.Varchar2`   | `126` | Expression | [Casts][Explicit Casting] `OracleMappingType.Varchar2` to `126` |
+|                                       | `(Int32)OracleMappingType.XmlType`   | `127` | Expression | [Casts][Explicit Casting] `OracleMappingType.XmlType` to `127` |
+|                                       | `(Int32)OracleMappingType.BinaryDouble`   | `132` | Expression | [Casts][Explicit Casting] `OracleMappingType.BinaryDouble` to `132` |
+|                                       | `(Int32)OracleMappingType.BinaryFloat`   | `133` | Expression | [Casts][Explicit Casting] `OracleMappingType.BinaryFloat` to `133` |
 | Use `Convert.ToInt32`                 | `Convert.ToInt32(OracleMappingType.BFile)`   | `101` | Expression | Converts `OracleMappingType.BFile` to `101`. See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(OracleMappingType.Blob)`   | `102` | Expression | Converts `OracleMappingType.Blob` to `102`. See [Convert.ToInt32][] |
 |                                       | `Convert.ToInt32(OracleMappingType.Byte)`   | `103` | Expression | Converts `OracleMappingType.Byte` to `103`. See [Convert.ToInt32][] |
@@ -578,6 +578,7 @@ None
 - [String][]
 - [OracleParameter][]
 - [OracleParameters][]
+- [OracleConnectionDetails][]
 
 ### Related Concepts
 
@@ -612,6 +613,7 @@ None
 
 [OracleParameter]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
 [OracleParameters]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}
+[OracleConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.MainDoc" >}}
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}
 [Formatting enumeration values]: {{< url path="MSDocs.DotNet.Api.System.Enum.FormattingEnumerationValues" >}}

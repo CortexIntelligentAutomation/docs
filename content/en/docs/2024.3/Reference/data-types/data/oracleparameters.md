@@ -10,7 +10,7 @@ description: "Defines a type of parameter that can be run as part of a Command."
 
 ## Summary
 
-An `OracleParameters` data type is used for the [Parameters property][ParametersProperty] on the [DataCommand][] data types.
+The `OracleParameters` data type is used to define multiple parameters for the [OracleConnectionDetails][] within the [Parameters property][ParametersProperty] on the [DataCommand][] data types.
 
 | | |
 |-|-|
@@ -20,14 +20,14 @@ An `OracleParameters` data type is used for the [Parameters property][Parameters
 | **Alias:**             | N/A |
 | **Description:**       | Defines a type of parameter that can be run as part of a Command. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `OracleParameters`, `Object`, `dynamic` |
+| **Can be used as:**    | `OracleParameters`, `IParameters`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
 
 ### Basic
 
-The name of the parameter that is being defined.
+Parameters that will be processed with only a name and value.
 
 | | |
 |--------------------|---------------------------|
@@ -38,12 +38,12 @@ The name of the parameter that is being defined.
 
 ### Advanced
 
-The value of the parameter that is being defined.
+Parameters that will be processed with a name, value, type, direction and size.
 
 | | |
 |--------------------|---------------------------|
 | Data Type | [IEnumberable][]&lt;[OracleParameter][]&gt; |
-| Is Advanced | `true` |
+| Is Advanced | `false` |
 | Default Editor | [Expression][] |
 | Default Value | [IEnumberable][]&lt;[OracleParameter][]&gt; with no value |
 
@@ -55,26 +55,26 @@ The following table shows some of the ways that a `OracleParameters` can be crea
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `OracleParameters` constructor | `new OracleParameters(new {parameterName = "parameterValue",}, new List<OracleParameter>(){ new OracleParameter("name", $@"", OracleMappingType.Clob, ParameterDirection.Input, 0), })` | `{ new OracleParameters(basic: new {parameterName = "parameterValue",}, advanced: new List<OracleParameter>(){ new OracleParameter(name: "name", value: $@"", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0), })}` | Expression | |
+| Use a `OracleParameters` constructor | `new OracleParameters(new {parameterName = "parameterValue",}, new List<OracleParameter>(){ new OracleParameter("name", $@"", OracleMappingType.Clob, ParameterDirection.Input, 0), })` | `{"Basic": {"parameterName": "parameterValue"},"Advanced": [{"Name": "name","Value": "","Type": "OracleMappingType.Clob","Direction": "ParameterDirection.Input","Size": 0}]}` | Expression | |
 
 ### Convert OracleParameters to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
 | Use `ToString` | `($)OracleParameters.ToString()` | `"Cortex.DataTypes.Data.OracleParameters"` | Expression | ToString will return the Full Name of the OracleParameters Data Type |
-| Use `Convert Object To Text` block | where `Object` property has a value of `{name: "name", value: $@"value", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0}` | `"Cortex.DataTypes.Data.OracleParameters"` | N/A  | See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `{name: "name", value: $@"value", type: OracleMappingType.Clob, direction: ParameterDirection.Input, size: 0}` | `"{\r\n  \"name\": \"name\",\r\n  \"value\": \"value\",\r\n  \"type\": 105,\r\n  \"direction\": 1,\r\n  \"size\": 0}"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Text` block | where `Object` property has a value of `{"Basic": {"parameterName": "parameterValue"},"Advanced": [{"Name": "name","Value": "","Type": "OracleMappingType.Clob","Direction": "ParameterDirection.Input","Size": 0}]}` | `"Cortex.DataTypes.Data.OracleParameters"` | N/A  | See [Convert Object To Text][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `{"Basic": {"parameterName": "parameterValue"},"Advanced": [{"Name": "name","Value": "","Type": "OracleMappingType.Clob","Direction": "ParameterDirection.Input","Size": 0}]}` | `"{"Basic": {"parameterName": "parameterValue"},"Advanced": [{"Name": "name","Value": "","Type": 105,"Direction": 1,"Size": 0}]}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
-* The Expression Editor is available for [Input][] properties where the data type is `OracleParameter`.
-* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `OracleParameter`.
+* The Expression Editor is available for [Input][] properties where the data type is `OracleParameters`.
+* The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `OracleParameters`.
 
 ### Known limitations
 
 #### ToString Method always returns the Full Name
 
-Currently, if the `ToString()` method is used on a `OracleParameter`, then its Full Name will be returned; instead of a representation of the data within the `Command`.
+Currently, if the `ToString()` method is used on a `OracleParameters`, then its Full Name will be returned; instead of a representation of the data within the `Command`.
 
 In future this limitation may be removed.
 
