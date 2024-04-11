@@ -24,7 +24,7 @@ The [format template][Format Templates] provided could not be correctly parsed.
 The format of the message can be one of the following:
 
 ```json
-"The largest Format Parameter in '<format-template-property>' is <largest-specifier>, therefore, '<values-property>' must contain at least <expected-number-of-values> items, but only contains <number-of-values>.
+"The largest Format Parameter in '<format-template-property>' is <largest-format-parameter>, therefore, '<values-property>' must contain at least <expected-number-of-values> items, but only contains <number-of-values>.
 Text:
 <format-template-value>
 Values:
@@ -54,7 +54,7 @@ where:
 
 * `<format-template-property>` is the name of the property containing the format template provided for the block which threw this exception; see [Format Text With Value][Format Text With Value Format Template] or [Format Text With Values][Format Text With Values Format Template] for more information.
 * `<format-template-value>` is the value of the format template provided; see [Format Text With Value][Format Text With Value Format Template] or [Format Text With Values][Format Text With Values Format Template] for more information.
-* `<largest-specifier>` is the value of the largest unique format specifier provided (i.e. if the format template is `"{0} {2} {1} {3}`, this will be `3`).
+* `<largest-format-parameter>` is the value of the largest unique format specifier provided (i.e. if the format template is `"{0} {2} {1} {3}`, this will be `3`).
 * `<expected-number-of-values>` is the number of values expected to be provided (i.e. if the format template is `"{0} {2} {1} {3}`, this will be `4`).
 * `<values-property>` is the property containing the values provided to insert into the format template.
 * `<values-value>` is the list of values provided to insert into the format template.
