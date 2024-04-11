@@ -2293,6 +2293,8 @@
     JsonReaderException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonReaderException.htm"
     JsonSerializationException = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm"
     JsonSerializerSettings = "https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializerSettings.htm"
+[JsonFormatter]
+    XmlValidator = "https://jsonformatter.org/xml-validator"
 [Kodify]
     WhatIsALoop = "https://kodify.net/csharp/loop/overview-loops/"
 [LetsEncrypt]

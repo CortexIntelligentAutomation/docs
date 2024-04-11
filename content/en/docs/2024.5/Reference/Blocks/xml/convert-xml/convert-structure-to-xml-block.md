@@ -200,7 +200,7 @@ The exceptions thrown by the block can be found below:
 | [PropertyNullException][] | Thrown when [Structure][Structure Property] is `null`. |
 | [PropertyEmptyException][] | Thrown when [Structure][Structure Property] does not contain any items. |
 | [XmlSerializationException][] | Thrown when [Structure][Structure Property] has a key that is an empty string. |
-|| Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"` can only accept the following attributes: `"@version"`, `"@encoding"` and `"@standalone"`.) or a document type definition key (e.g. `"!DOCTYPE"` can only accept the following attributes: `"@name"`, `"@public"`, `"@system"` and `"@internalSubset"`). |
+|| Thrown when the [Structure][Structure Property] includes an invalid xml declaration key (e.g. `"?xml"` can only accept the following attributes: `"@version"`, `"@encoding"` and `"@standalone"`.) or an invalid document type definition key (e.g. `"!DOCTYPE"` can only accept the following attributes: `"@name"`, `"@public"`, `"@system"` and `"@internalSubset"`). |
 || Thrown when the [Structure][Structure Property] includes an xml declaration key (e.g. `"?xml"`) with an attribute that has an invalid [Basic Data Type][Basic Data Types]. (e.g. `Key: "@version", Value: false`, where `"@version"` must be a numeric value). |
 || Thrown when the [Structure][Structure Property] includes a document type definition key (e.g. `"!DOCTYPE"`) that has an attribute with an invalid [Basic Data Type][Basic Data Types]. (e.g. `Key: "@name", Value: 22`, where `"@name"` must be a text value). |
 || Thrown when the [Structure][Structure Property] includes an attribute key with a [Complex Data Type][Complex Data Types] as a value. (e.g. `Key: "@name", Value: new UserCredentials{...}`). |
@@ -220,7 +220,7 @@ If a [Node][Xml Nodes] requires an attribute, the attribute is defined by a [Key
 }
 ```
 
-The [Xml][Xml Property] example above would be converted to the following [Structure][Structure Property]
+The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
 
 ``` xml
 @"<node attribute="Attribute Value">
@@ -327,7 +327,7 @@ It should be possible to pass the [Xml][Xml Property]  created by this block to 
 }
 ```
 
-The [Xml][Xml Property] example above would be converted to the following [Structure][Structure Property].
+The [Structure][Structure Property] example above would be converted to the following [Xml][Xml Property].
 
 ``` xml
 @"<Cortex_DataTypes_Dictionaries_Structure>
