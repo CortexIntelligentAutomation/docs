@@ -1,7 +1,7 @@
 ---
 title: "FormatException"
 linkTitle: "FormatException"
-description: "The exception thrown when a format string fails to be formatted."
+description: "The exception thrown when a format template string fails to be formatted."
 ---
 
 # {{% param title %}}
@@ -11,13 +11,13 @@ description: "The exception thrown when a format string fails to be formatted."
 
 ## Description
 
-The exception thrown when a format string fails to be formatted.
+The exception thrown when a format template string fails to be formatted.
 
 ## Reasons
 
-### Invalid format string
+### Invalid format template
 
-The format string provided could not be correctly parsed.
+The [format template][Format Templates] provided could not be correctly parsed.
 
 #### Message Format
 
@@ -52,16 +52,16 @@ Please click the HelpLink for more information on how to fix this."
 
 where:
 
-* `<format-template-property>` is the name of the property containing the format template provided for the block which threw this exception; see [Format Text With Value][] or [Format Text With Values][] for more information.
-* `<format-template-value>` is the value of the format template provided; see [Format Text With Value][] or [Format Text With Values][].
+* `<format-template-property>` is the name of the property containing the format template provided for the block which threw this exception; see [Format Text With Value][Format Text With Value Format Template] or [Format Text With Values][Format Text With Values Format Template] for more information.
+* `<format-template-value>` is the value of the format template provided; see [Format Text With Value][Format Text With Value Format Template] or [Format Text With Values][Format Text With Values Format Template] for more information.
 * `<largest-specifier>` is the value of the largest unique format specifier provided (i.e. if the format template is `"{0} {2} {1} {3}`, this will be `3`).
-* `<expected-number-of-values>` is the expected number of values to be provided (i.e. if the format template is `"{0} {2} {1} {3}`, this will be `4`).
+* `<expected-number-of-values>` is the number of values expected to be provided (i.e. if the format template is `"{0} {2} {1} {3}`, this will be `4`).
 * `<values-property>` is the property containing the values provided to insert into the format template.
 * `<values-value>` is the list of values provided to insert into the format template.
 
 #### How to fix
 
-* Ensure that the list of values provided contains at least `<expected-number-of-values>` values.
+* Ensure that the list of values provided contains at least `<expected-number-of-values>` values (e.g. for a format template of `"{0} {1} {2} {3} {4}"`, there should be at least `5` values provided).
 * Ensure that the format template provided does not have more than 1 format parameter when using the [Format Text With Value][] block.
 * Ensure that the format template provided does not contain any negative format specifiers (e.g. `{-1}`, `{-5}`, `{-1000}`, etc).
 
@@ -78,4 +78,10 @@ None
 None
 
 [Format Text With Value]: {{<url path = "Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValue.MainDoc">}}
+[Format Text With Value Format Template]: {{<url path="Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValue.FormatTemplate">}}
 [Format Text With Values]: {{<url path = "Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues.MainDoc">}}
+[Format Text With Values Format Template]: {{<url path = "Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues.FormatTemplate">}}
+
+[Working With Text Formatting]: {{<url path = "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.MainDoc">}}
+[Format Specifiers]: {{<url path = "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatSpecifiers">}}
+[Format Templates]: {{<url path = "Cortex.Reference.Concepts.WorkingWith.Text.Formatting.FormatTemplates">}}

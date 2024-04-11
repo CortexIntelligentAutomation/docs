@@ -66,7 +66,7 @@ Please click the HelpLink for more information on how to fix this."
 
 ### Invalid XML {#xml}
 
-The XML provided is invalid.
+The [XML][ConvertXmlToStructure XML Property] provided is invalid.
 
 #### Message Format
 
@@ -79,7 +79,7 @@ Please click the HelpLink for more information on how to fix this."
 
 #### How to fix
 
-Ensure that the XML provided for the [Xml property][ConvertXmlToStructure XML Property] is valid XML.
+Ensure that the [XML][ConvertXmlToStructure XML Property] provided is valid XML.
 
 ## Remarks
 
@@ -98,3 +98,5 @@ None
 [ConvertStructureToXml Structure Property]: {{<url path = "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml.Structure">}}
 
 [ConvertXmlToStructure XML Property]: {{<url path = "Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure.Xml">}}
+
+[XmlNodes]: {{<url path = "W3.XmlNodes">}}

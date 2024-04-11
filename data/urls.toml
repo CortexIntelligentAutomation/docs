@@ -1056,8 +1056,10 @@
                     MainDoc = "/docs/reference/blocks/text/format-text/"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValue]
                         MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-value-block-1/"
+                        FormatTemplate = "/docs/reference/blocks/text/format-text/format-text-with-value-block-1/#format-template"
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
                         MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-values-block-1/"
+                        FormatTemplate = "/docs/reference/blocks/text/format-text/format-text-with-values-block-1/#format-template"
                 [Cortex.Reference.Blocks.Text.GetText]
                     MainDoc = "/docs/reference/blocks/text/get-text/"
                     [Cortex.Reference.Blocks.Text.GetText.GetTextAtBeginning]
@@ -1122,7 +1124,7 @@
                     MainDoc = "/docs/reference/blocks/xml/convert-xml/"
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertXmlToStructure]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/"
-                        Xml = "/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/#xml"
+                        Xml = "/docs/reference/blocks/xml/convert-xml/convert-xml-to-structure-block/#xml"
                     [Cortex.Reference.Blocks.Xml.ConvertXml.ConvertStructureToXml]
                         MainDoc = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/"
                         Structure = "/docs/reference/blocks/xml/convert-xml/convert-structure-to-xml-block/#structure"
