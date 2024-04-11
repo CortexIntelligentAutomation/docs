@@ -2261,10 +2261,16 @@
             MainDoc = "https://grafana.com/docs/loki/latest/clients/promtail/"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp]
         Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
+    [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
+        Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaLoki]
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0]
+        GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail]
         PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.Promtail.3.0.0]
+        PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/promtail-windows-amd64.exe.zip"
 [IETF]
     MainDoc = "https://www.ietf.org/"
     [IETF.Email]

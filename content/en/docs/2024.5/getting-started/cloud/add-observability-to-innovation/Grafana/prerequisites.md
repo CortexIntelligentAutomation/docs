@@ -21,7 +21,7 @@ The application servers must have internet access in order to communicate with t
 
 | Server Role        | Windows Server[^1]                             | Other Software     |
 |--------------------|------------------------------------------------|--------------------|
-| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | [Promtail 2.5.0][] |
+| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | [Promtail 3.0.0][] |
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 
@@ -55,5 +55,5 @@ A domain user which is a member of the Local Administrators group on all Applica
 [2019 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2019" >}}
 [2022 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2022" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Architecture.MainDoc" >}}
+[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
 [Set up Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
-[Promtail 2.5.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.PromtailInstallZip" >}}
