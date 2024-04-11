@@ -146,8 +146,8 @@ The exceptions thrown by the block can be found below:
 |                              | The [Destination Path][DestinationPath Property] contains leading spaces. |
 |                              | The [Destination Path][DestinationPath Property] contains only whitespace, or the NUL character (i.e. `\0`), or contains one or more invalid characters (i.e. `"`, `*`, `?`, `\|`, `<`, `>`, `:`, `\`, `/`) in any file or folder names. |
 |                              | The [Destination Path][DestinationPath Property] (if it points to a file), or the [Destination Path][DestinationPath Property] (if it points to a folder) plus the file name, exceeds the system-defined maximum length (typically 32,767 characters). |
-| [OperationFailedException][] | Any file path in [File Paths][FilePaths Property] is `null` or empty (i.e. `""`). For more information, see [Null or Empty File Paths][]|
-|                              | Any file path in [File Paths][FilePaths Property] is duplicated. For more information, see [Duplicate File Paths][] |
+| [OperationFailedException][] | Any file path in [File Paths][FilePaths Property] is `null` or empty (i.e. `""`). |
+|                              | Any file path in [File Paths][FilePaths Property] is duplicated. |
 |                              | Any file path in [File Paths][FilePaths Property] does not exist. |
 |                              | Any file path in [File Paths][FilePaths Property] points to a folder. |
 |                              | Any file path in [File Paths][FilePaths Property] contains leading spaces. |
@@ -197,8 +197,6 @@ If an exception occurs when trying to move a file in the [File Paths][FilePaths 
 
 [InvalidPathException]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.InvalidPathException.MainDoc" >}}
 [OperationFailedException]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.MainDoc" >}}
-[Duplicate File Paths]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.IndexesOfDuplicatePaths" >}}
-[Null Or Empty File Paths]: {{< url path="Cortex.Reference.Exceptions.FilesAndFolders.OperationFailedException.IndexesOfNullOrEmptyPaths" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 

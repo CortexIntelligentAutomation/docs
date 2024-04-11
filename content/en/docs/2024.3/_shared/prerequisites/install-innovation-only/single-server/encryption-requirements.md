@@ -15,7 +15,7 @@ Copy the `Cortex Innovation {{< version >}} - Encryption Key Generator.zip` arte
 1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Server and Web Application Server:
 
     ```powershell
-    .\Cortex.Encryption.KeyGeneration.exe "app-server, webapp-server"
+    .\Cortex.Encryption.KeyGeneration.exe "app-server1"
     ```
 
 1. A message similar to the following will indicate that the application has completed successfully:
