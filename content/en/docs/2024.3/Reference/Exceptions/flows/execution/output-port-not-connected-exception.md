@@ -17,7 +17,7 @@ The exception thrown when an execution tries to go through an [output port][Bloc
 
 ### Output port not connected
 
-The [output port][Block Connections] of a block in a flow is not connected.
+The [output port][Block Connections] of a block in a flow is not connected to another block.
 
 #### Message Format
 

@@ -1,7 +1,7 @@
 ---
 title: "FormatException"
 linkTitle: "FormatException"
-description: "The exception thrown when a format template string fails to be formatted."
+description: "The exception thrown when a format template string is invalid."
 ---
 
 # {{% param title %}}
@@ -11,13 +11,13 @@ description: "The exception thrown when a format template string fails to be for
 
 ## Description
 
-The exception thrown when a format template string fails to be formatted.
+The exception thrown when a format template string is invalid.
 
 ## Reasons
 
 ### Invalid format template
 
-The [format template][Format Templates] provided could not be correctly parsed.
+The [format template][Format Templates] provided could not be parsed.
 
 #### Message Format
 
