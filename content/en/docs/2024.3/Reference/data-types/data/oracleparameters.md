@@ -20,7 +20,7 @@ The `OracleParameters` data type is used to define multiple parameters for the [
 | **Alias:**             | N/A |
 | **Description:**       | Defines a type of parameter that can be run as part of a Command. |
 | **Default Value:**     | `null` |
-| **Can be used as:**    | `OracleParameters`, `IParameters`, `Object`, `dynamic` |
+| **Can be used as:**    | `OracleParameters`, `IParameters<OracleParameter>`, `Object`, `dynamic` |
 | **Can be cast to:**    |  N/A |
 
 ## Properties
@@ -49,13 +49,13 @@ Parameters that will be processed with a name, value, type, direction and size.
 
 ## Remarks
 
-### Create a OracleParameters
+### Create an OracleParameters
 
-The following table shows some of the ways that a `OracleParameters` can be created.
+The following table shows some of the ways that an `OracleParameters` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use a `OracleParameters` constructor | `new OracleParameters(new {parameterName = "parameterValue",}, new List<OracleParameter>(){ new OracleParameter("name", $@"", OracleMappingType.Clob, ParameterDirection.Input, 0), })` | `{"Basic": {"parameterName": "parameterValue"},"Advanced": [{"Name": "name","Value": "","Type": "OracleMappingType.Clob","Direction": "ParameterDirection.Input","Size": 0}]}` | Expression | |
+| Use an `OracleParameters` constructor | `new OracleParameters(new {parameterName = "parameterValue",}, new List<OracleParameter>(){ new OracleParameter("name", $@"", OracleMappingType.Clob, ParameterDirection.Input, 0), })` | `{"Basic": {"parameterName": "parameterValue"},"Advanced": [{"Name": "name","Value": "","Type": "OracleMappingType.Clob","Direction": "ParameterDirection.Input","Size": 0}]}` | Expression | |
 
 ### Convert OracleParameters to Text
 
@@ -88,6 +88,7 @@ In future this limitation may be removed.
 * [NonQueryCommand][]
 * [OracleParameter][]
 * [OracleConnectionDetails][]
+* [IParameters&lt;T&gt;][IParameters]
 
 ### Related Concepts
 
@@ -130,3 +131,4 @@ In future this limitation may be removed.
 [IEnumberable]: {{< url path="Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
 [ParametersProperty]: {{< url path="Cortex.Reference.DataTypes.Data.DataCommand.Parameters" >}}
 [OracleParameter]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameter.MainDoc" >}}
+[IParameters]: {{< url path="Cortex.Reference.DataTypes.Data.IParameters.MainDoc" >}}

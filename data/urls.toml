@@ -1416,6 +1416,10 @@
                 [Cortex.Reference.DataTypes.Data.Commands]
                     MainDoc = "/docs/reference/data-types/data/commands"
                     CommandText = "/docs/reference/data-types/data/commands/#command-text"
+                [Cortex.Reference.DataTypes.Data.IParameter]
+                    MainDoc = "/docs/reference/data-types/data/iparameter"
+                [Cortex.Reference.DataTypes.Data.IParameters]
+                    MainDoc = "/docs/reference/data-types/data/iparameters-1"
                 [Cortex.Reference.DataTypes.Data.QueryCommand]
                     MainDoc = "/docs/reference/data-types/data/querycommand"
                     CommandText = "/docs/reference/data-types/data/querycommand/#command-text"
@@ -1432,9 +1436,13 @@
                 [Cortex.Reference.DataTypes.Data.OracleMappingType]
                     MainDoc = "/docs/reference/data-types/data/oraclemappingtype"
                 [Cortex.Reference.DataTypes.Data.OracleParameter]
-                    MainDoc = "/docs/reference/data-types/data/oracleparameter"
+                    MainDoc = "/docs/reference/data-types/data/oracleparameter/#"
+                    Create = "/docs/reference/data-types/data/oracleparameter/#create-an-oracleparameter"
+                    Convert = "/docs/reference/data-types/data/oracleparameter/#convert-oracleparameter-to-text"
                 [Cortex.Reference.DataTypes.Data.OracleParameters]
                     MainDoc = "/docs/reference/data-types/data/oracleparameters"
+                    Create = "/docs/reference/data-types/data/oracleparameters/#create-an-oracleparameters"
+                    Convert = "/docs/reference/data-types/data/oracleparameters/#convert-oracleparameters-to-text"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]

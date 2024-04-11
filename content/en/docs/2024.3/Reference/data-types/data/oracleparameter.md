@@ -122,6 +122,7 @@ In future this limitation may be removed.
 * [OracleParameters][]
 * [OracleConnectionDetails][]
 * [OracleMappingType][]
+* [IParameter][]
 
 ### Related Concepts
 
@@ -168,3 +169,4 @@ In future this limitation may be removed.
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 [OracleParameters]: {{< url path="Cortex.Reference.DataTypes.Data.OracleParameters.MainDoc" >}}
+[IParameter]: {{< url path="Cortex.Reference.DataTypes.Data.IParameter.MainDoc" >}}
