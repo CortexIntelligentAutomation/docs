@@ -1457,6 +1457,7 @@
                 [Cortex.Reference.DataTypes.Data.DataCommand]
                     MainDoc = "/docs/reference/data-types/data/datacommand/"
                     CommandText = "/docs/reference/data-types/data/datacommand/#command-text"
+                    Parameters = "/docs/reference/data-types/data/datacommand/#parameters"
                 [Cortex.Reference.DataTypes.Data.DataCommandErrorCode]
                     MainDoc = "/docs/reference/data-types/data/datacommanderrorcode/"
                 [Cortex.Reference.DataTypes.Data.Command]
@@ -1465,6 +1466,10 @@
                 [Cortex.Reference.DataTypes.Data.Commands]
                     MainDoc = "/docs/reference/data-types/data/commands"
                     CommandText = "/docs/reference/data-types/data/commands/#command-text"
+                [Cortex.Reference.DataTypes.Data.IParameter]
+                    MainDoc = "/docs/reference/data-types/data/iparameter"
+                [Cortex.Reference.DataTypes.Data.IParameters]
+                    MainDoc = "/docs/reference/data-types/data/iparameters-1"
                 [Cortex.Reference.DataTypes.Data.QueryCommand]
                     MainDoc = "/docs/reference/data-types/data/querycommand"
                     CommandText = "/docs/reference/data-types/data/querycommand/#command-text"
@@ -1478,6 +1483,16 @@
                 [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
                     KnownLimitations = "/docs/reference/data-types/data/oracleconnectiondetails/#known-limitations"
+                [Cortex.Reference.DataTypes.Data.OracleMappingType]
+                    MainDoc = "/docs/reference/data-types/data/oraclemappingtype"
+                [Cortex.Reference.DataTypes.Data.OracleParameter]
+                    MainDoc = "/docs/reference/data-types/data/oracleparameter/#"
+                    Create = "/docs/reference/data-types/data/oracleparameter/#create-an-oracleparameter"
+                    Convert = "/docs/reference/data-types/data/oracleparameter/#convert-oracleparameter-to-text"
+                [Cortex.Reference.DataTypes.Data.OracleParameters]
+                    MainDoc = "/docs/reference/data-types/data/oracleparameters"
+                    Create = "/docs/reference/data-types/data/oracleparameters/#create-an-oracleparameters"
+                    Convert = "/docs/reference/data-types/data/oracleparameters/#convert-oracleparameters-to-text"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
             [Cortex.Reference.DataTypes.DateAndTime]
@@ -2573,6 +2588,8 @@
 [Oracle]
     [Oracle.PL-SQL]
         BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
+    [OracleParameter]
+        ParameterDirection = "https://learn.microsoft.com/en-us/dotnet/api/system.data.parameterdirection?view=net-8.0"
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"
