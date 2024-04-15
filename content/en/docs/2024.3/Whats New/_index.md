@@ -7,7 +7,7 @@ weight: 1
 
 ## Summary
 
-2024.3 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.1][TODO] release in the following areas:
+2024.3 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.1][] release in the following areas:
 
 * [Performance][]
 * [Observability][]
@@ -100,3 +100,4 @@ For a full list of what has been introduced in this release, please see the [202
 [Exceptions]: {{< url path="Cortex.Reference.Exceptions.MainDoc" version="2024.3" >}}
 
 [Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
+[2024.1]: {{< url path="Cortex.Blogs.Releases.2024.1.MainDoc" version="2024.3" >}}
