@@ -1,5 +1,5 @@
 ---
 title: "Text"
 linkTitle: "Text"
-description: "Exceptions related to Text blocks"
+description: "Exceptions related to Text"
 ---
