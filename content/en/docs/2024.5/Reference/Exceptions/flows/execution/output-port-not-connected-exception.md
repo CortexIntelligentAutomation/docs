@@ -24,7 +24,8 @@ The [output port][Block Connections] of a block in a flow is not connected to an
 The format of the message is as follows:
 
 ```json
-"Block output port isn't connected."
+"Block output port isn't connected.
+Please click the HelpLink for more information on how to fix this."
 ```
 
 #### How to fix
