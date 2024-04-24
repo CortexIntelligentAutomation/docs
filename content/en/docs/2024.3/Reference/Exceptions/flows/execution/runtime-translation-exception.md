@@ -1,7 +1,7 @@
 ---
 title: "RuntimeTranslationException"
 linkTitle: "RuntimeTranslationException"
-description: "The exception thrown when a block is found to have errors during the flow execution."
+description: "The exception thrown when a block is found to have errors within its properties while executing a flow."
 ---
 
 # {{% param title %}}
@@ -11,13 +11,12 @@ description: "The exception thrown when a block is found to have errors during t
 
 ## Description
 
-The exception thrown when a block is found to have errors during the flow execution.
-
+The exception thrown when a block is found to have errors within its properties while executing a flow.
 ## Reasons
 
 ### Block has errors during flow execution
 
-A block was found to have errors within its properties during a flow execution.
+A block was found to have errors within its properties during a flow execution. These errors would normally appear as a [Message][WhatIsAMessage], but were not caught when the flow execution was started. This can occur when debugging a flow and [setting the next block to execute][SetNextBlockToExecute] to a block that has errors within its properties, and has no path from the [Start Flow][Start Flow block] block.
 
 #### Message Format
 
@@ -40,3 +39,7 @@ None
 ### External Documentation
 
 None
+
+[WhatIsAMessage]: {{<url path = "Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage.MainDoc">}}
+[SetNextBlockToExecute]: {{<url path = "Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.SetNextBlockToExecute">}}
+[Start Flow block]: {{<url path = "Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc">}}

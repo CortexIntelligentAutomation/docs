@@ -1,7 +1,7 @@
 ---
 title: "InvalidDefaultValuesException"
 linkTitle: "InvalidDefaultValuesException"
-description: "The exception thrown when the default value for a variable throws an exception during the initialisation process on a workspace."
+description: "The exception thrown if an exception occurs when initialising the default value for a variable."
 ---
 
 # {{% param title %}}
@@ -11,13 +11,13 @@ description: "The exception thrown when the default value for a variable throws 
 
 ## Description
 
-The exception thrown when the default value for a variable throws an exception during the initialisation process on a workspace.
+The exception thrown if an exception occurs when initialising the default value for a variable.
 
 ## Reasons
 
 ### Invalid Default Variable Value
 
-The default value provided for a variable in a workspace is invalid.
+The default value provided for a variable is invalid.
 
 #### Message Format
 
@@ -27,7 +27,7 @@ The default value provided for a variable in a workspace is invalid.
 
 #### How to fix
 
-Ensure that the variable shown in the `Variables` property have valid default values, by fixing the inner exception shown for each variable with an invalid default value.
+Ensure that the variables shown in the `Variables` property have valid default values, by fixing the inner exception for each variable shown.
 
 ## Remarks
 
