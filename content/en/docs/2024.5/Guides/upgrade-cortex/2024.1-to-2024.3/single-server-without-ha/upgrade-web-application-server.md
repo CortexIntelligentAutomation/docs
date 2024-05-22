@@ -11,7 +11,12 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.1 to 2024.3. P
 
 ## Make Installation Artefacts Available
 
-{{< section "/install-web-application-server/make-installation-artefacts-available.md">}}
+1. Copy the following artefacts to a folder on the machine:
+
+   * Cortex Innovation {{< version >}} - Gateway.zip
+   * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
+
+1. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Configure Upgrade Script
 
