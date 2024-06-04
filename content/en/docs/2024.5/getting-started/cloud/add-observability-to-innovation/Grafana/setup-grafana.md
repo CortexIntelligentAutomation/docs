@@ -11,7 +11,6 @@ weight: 30
 
 1. Browse to [Grafana Labs][].
 1. Find and click the link to create free account.
-1. Review the terms and conditions as well as any agreements.
 1. Create your account and follow any account verification steps.
 1. If asked to start a free trial, do so.
 1. On the **Let's create your Grafana Stack** dialog:
@@ -20,7 +19,8 @@ weight: 30
 
    * Enter an appropriate `Team URL` which will be used as a customised link to access the Grafana Cloud.
    * Select the `Deployment region` which is where the service will be deployed to. This should be preferably close to the High Availability nodes.
-   * Click `Finish setup`.
+   * Review the terms and conditions as well as any agreements.
+   * Click `Finish Setup`.
 
 1. Wait for Grafana Cloud to load
 
