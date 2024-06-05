@@ -698,6 +698,12 @@ As a result, any issues with using the [Result][Result Property] (i.e. trying to
 
 If it is desirable to have any issues reported as messages when trying to debug the flow, the user can [cast][Object Casting] the [Result][Result Property] to its correct type.
 
+## RunAs
+
+If no credentials are provided in the [ConnectionDetails][], then the [RunAsProperty][] can be used to authenticate with. Some [ConnectionDetails][], do require the connection string to contain `Trusted_Connection=True;` or `userid=;` to make use of the [UserCredentials][].
+
+If you are using [UserCredentials][] to authenticate in the [RunAsProperty][], then it should be noted that the [LogonType][] is used to identify the method of impersonation. The default is `LogonType.Network`, which should be used for accessing a local database, however if you are trying to access a remote database, then `LogonType.NewCredentials` would be the correct LogonType to use.
+
 ### Known Limitations
 
 When using a [Parameterised Command][Parameterised Commands] to execute a stored procedure, it is not possible to write back to output parameters.

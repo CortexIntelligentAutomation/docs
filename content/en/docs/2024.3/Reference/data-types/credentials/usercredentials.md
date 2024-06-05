@@ -63,6 +63,17 @@ The Password is used to define the password of the user to authenticate as. This
 | Default Editor | [Expression][] |
 | Default Value | [EncryptedText][] with value `""` |
 
+### LogonType
+
+The LogonType is used to define what type of logon method to use. This property is an [LogonType][] which is an enum.
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [LogonType][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | [LogonType][] with value `LogonType.Network` |
+
 ## Remarks
 
 ### Create a UserCredentials
@@ -73,6 +84,8 @@ The following table shows some of the ways that `UserCredentials` can be created
 |-|-|-|-|-|
 | Use a `UserCredentials` constructor | `new UserCredentials(domain: "domain", username: "username", password: "encryptedPassword")` | `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` | Expression | Domain specified |
 | | `new UserCredentials(username: "username", password: "encryptedPassword")` | `{"Domain": null, "Username": "username", "Password": "encryptedPassword"}` | Expression | Domain not specified |
+| | `new UserCredentials(domain: "domain", username: "username", password: "encryptedPassword", logontype: LogonType.Network)` | `{"Domain": null, "Username": "username", "Password": "encryptedPassword"}` | Expression | Domain specified |
+| | `new UserCredentials(username: "username", password: "encryptedPassword")` | `{"Domain": null, "Username": "username", "Password": "encryptedPassword"}` | Expression | Domain not specified |
 
 A `UserCredentials` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
@@ -81,12 +94,13 @@ A `UserCredentials` can also be created using the Literal Editor by filling in t
 | `Domain` | `EncryptableText` | `"domain"` | [Domain][Domain Property] defines the domain or server to authenticate with. |
 | `Username` | `EncryptableText` | `"username"` | [Username][Username Property] defines the user to authenticate as. |
 | `Password` | `EncryptedText` | `"encryptedPassword"` | [Password][Password Property] defines the password of the user to authenticate as. |
+| `LogonType` | `LogonType` | `"logonType"` | [LogonType][LogonType Property] defines the logon type of the user to authenticate as. |
 
 ### Convert UserCredentials to Text
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` | `"{\r\n  \"Domain\": \"domain\",\r\n  \"Username\": \"username\",\r\n  \"Password\": \"encryptedPassword\"\r\n}"` | N/A  | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` | `"{\r\n  \"Domain\": \"domain\",\r\n  \"Username\": \"username\",\r\n  \"Password\": \"encryptedPassword\",\r\n  \"LogonType\": LogonType.Network\r\n}"` | N/A  | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -143,6 +157,7 @@ None
 [ISshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.ISshCredentials.MainDoc" >}}
 [SshCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshCredentials.MainDoc" >}}
 [SshUserCredentials]: {{< url path="Cortex.Reference.DataTypes.Ssh.Authentication.SshUserCredentials.MainDoc" >}}
+[LogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.LogonType.MainDoc" >}}
 
 [NetworkCredential]: {{< url path="MSDocs.DotNet.Api.System.Net.NetworkCredential" >}}
 

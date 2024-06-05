@@ -55,11 +55,13 @@ Once the [block][] has finished executing, the next block to execute will run as
 
 The default value of `null` also results in the [block][] executing as the user the [Execution Service][] is running as.
 
-If [UserCredentials][] has an invalid domain, username or password, a [RunAsException][] will be thrown when the [block][] is executed.
+If [UserCredentials][] has an invalid domain, username, password or [LogonType][], a [RunAsException][] will be thrown when the [block][] is executed.
 
 If [UserCredentials][] has a `null` username or password, a [PropertyNullException][] will be thrown when the [block][] is executed.
 
 {{< figure src="/images/set-variable/set-variable-run-as.svg" >}}
+
+The [LogonType][] is used to identify the method of impersonation. The default is `LogonType.Network`, and does not need to be declared in the constructor, but can be changed. For example, if you are trying to access a remote machine, then `LogonType.NewCredentials` would be the correct LogonType.
 
 ## Block Timeout Property
 
@@ -126,6 +128,7 @@ None
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [WhatIsBlock]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
+[LogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.LogonType.MainDoc" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
