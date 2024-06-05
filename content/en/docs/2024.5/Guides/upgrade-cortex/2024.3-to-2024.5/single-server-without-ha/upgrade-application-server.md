@@ -11,15 +11,15 @@ This guide describes how to upgrade the Application Server components on the ser
 
 ## Make Installation Artefacts Available
 
-{{< section "/install-application-server/make-installation-artefacts-available.md" >}}
+{{< section "/upgrade/2024.5/upgrade-application-server/single-server/make-installation-artefacts-available.md" >}}
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
+{{< section "/upgrade/2024.5/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/upgrade-application-server/single-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/2024.5/upgrade-application-server/single-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 
@@ -33,5 +33,5 @@ This guide describes how to upgrade the Application Server components on the ser
 
 1. [Upgrade Web Application Server][]
 
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024.3to2024.5.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
 

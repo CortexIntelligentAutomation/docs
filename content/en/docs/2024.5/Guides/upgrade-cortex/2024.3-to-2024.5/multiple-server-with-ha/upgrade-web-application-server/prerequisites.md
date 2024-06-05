@@ -11,11 +11,11 @@ Please ensure that [Upgrade Application Servers and Load Balancer][] has been co
 
 ## Make Installation Artefacts Available
 
-{{< section "/install-web-application-server/make-installation-artefacts-available.md">}}
+{{< section "/upgrade/2024.5/upgrade-web-application-server/make-installation-artefacts-available.md">}}
 
 ## Next Steps?
 
 1. [Upgrade Flow Debugger][]
 
-[Upgrade Application Servers and Load Balancer]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
-[Upgrade Flow Debugger]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeDebugger" >}}
+[Upgrade Application Servers and Load Balancer]: {{< url path="Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
+[Upgrade Flow Debugger]: {{< url path="Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA.UpgradeDebugger" >}}

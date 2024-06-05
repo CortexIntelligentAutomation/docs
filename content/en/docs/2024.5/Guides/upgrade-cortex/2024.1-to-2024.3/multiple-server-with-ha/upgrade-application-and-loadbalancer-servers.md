@@ -12,15 +12,15 @@ This guide describes how to upgrade the Application Servers and Load Balancer Se
 ## Make Installation Artefacts Available
 
 1. Choose one of the Application Servers to be used to perform the upgrade from, and copy the following artefacts to a folder on it:
-   * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
-   * Cortex Innovation {{< version >}} - App Services.zip
-   * Cortex Innovation {{< version >}} - Block Packages.zip
+   * Cortex Innovation 2024.3 - App Server Install Scripts.zip
+   * Cortex Innovation 2024.3 - App Services.zip
+   * Cortex Innovation 2024.3 - Block Packages.zip
 
-1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
+1. Extract the `Cortex Innovation 2024.3 - App Server Install Scripts.zip` file to a folder with the same name.
 
 ## Configure Upgrade Script
 
-1. In the `Cortex Innovation {{< version >}} - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2024.3 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
 1. Configure the script, changing the parameters according to the details given below:
 
     ```powershell
@@ -48,7 +48,7 @@ This guide describes how to upgrade the Application Servers and Load Balancer Se
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/2024.3/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 

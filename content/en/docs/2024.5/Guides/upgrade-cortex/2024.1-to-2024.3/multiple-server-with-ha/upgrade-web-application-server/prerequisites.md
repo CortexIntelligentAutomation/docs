@@ -11,7 +11,7 @@ Please ensure that [Upgrade Application Servers and Load Balancer][] has been co
 
 ## Make Installation Artefacts Available
 
-{{< section "/install-web-application-server/make-installation-artefacts-available.md">}}
+{{< section "/upgrade/2024.3/upgrade-web-application-server/make-installation-artefacts-available.md">}}
 
 ## Next Steps?
 

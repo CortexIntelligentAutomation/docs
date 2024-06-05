@@ -1,8 +1,8 @@
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2024.3 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation {{< version >}} - Web App Server Install Scripts"
+    cd "C:\Install\Cortex Innovation 2024.3 - Web App Server Install Scripts"
     ```
 
 1. Type the following command into PowerShell:

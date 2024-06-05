@@ -11,11 +11,11 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.3 to 2024.5. P
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/upgrade-web-application-server/configure-gateway-script.md" >}}
+{{< section "/upgrade/2024.5/upgrade-web-application-server/configure-gateway-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/upgrade-web-application-server/run-gateway-script.md" >}}
+{{< section "/upgrade/2024.5/upgrade-web-application-server/run-gateway-script.md" >}}
 
 ## Preserve installation files
 
@@ -25,5 +25,5 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.3 to 2024.5. P
 
 1. [Try It Out][]
 
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeDebugger" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.TryItOut" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA.UpgradeDebugger" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA.TryItOut" >}}
