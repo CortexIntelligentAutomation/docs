@@ -1118,6 +1118,16 @@
                     MainDoc = "/docs/reference/blocks/workspaces/workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.Workspace]
                         MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
+                [Cortex.Reference.Blocks.Wireless]
+                    MainDoc = "/docs/reference/blocks/wireless/"
+                    [Cortex.Reference.Blocks.Wireless.WirelessReceiver]
+                        MainDoc = "/docs/reference/blocks/wireless/wireless-receiver"
+                        [Cortex.Reference.Blocks.Wireless.WirelessReceiver.WirelessReceiver]
+                            MainDoc = "/docs/reference/blocks/wireless/wireless-receiver/wireless-receiver-block"
+                    [Cortex.Reference.Blocks.Wireless.WirelessSender]
+                        MainDoc = "/docs/reference/blocks/wireless/wireless-sender"
+                        [Cortex.Reference.Blocks.Wireless.WirelessSender.WirelessSender]
+                            MainDoc = "/docs/reference/blocks/wireless/wireless-sender/wireless-sender-block"
                 [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
