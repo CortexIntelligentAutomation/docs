@@ -8,6 +8,8 @@
             MainDoc = "/blog/releases"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.5]
+                    MainDoc =  "/blog/2024/04/08/2024.5/"
                 [Cortex.Blogs.Releases.2024.3]
                     MainDoc =  "/blog/2024/04/08/2024.3/"
                     PlatformPerformanceImprovements = "/blog/2024/04/08/2024.3/#platform-performance-improvements"
