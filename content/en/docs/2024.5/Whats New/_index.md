@@ -41,7 +41,7 @@ weight: 1
 
 ## Cost of Ownership
 
-* Services within the {% ctx %} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
+* Services within the {{% ctx %}} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
 * The installation now deploys the {{% ctx %}} Licence Fingerprint Generator to all required nodes.
 
 ## Improved Documentation
