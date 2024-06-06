@@ -12,37 +12,31 @@ weight: 1
 * [Usability][]
 * [Capability][]
 * [Observability][]
-* [Cost of ownership][]
 * [Documentation][]
 
 ## Improved Usability
 
 * [Improvements have been made to {{% ctx %}} Gateway][Improved {{% ctx %}} Gateway], including:
-  * [Helplinks Update When Upgrading the {{% ctx %}} Platform][]
-  * [Update Styling of the Setup Wizard to be Consistent with Improved Design][]
+  * [Helplinks update when upgrading the {{% ctx %}} platform][]
+  * [Update styling of the setup wizard to be consistent with new themes][]
 * [Improvements have been made to exceptions raised by the engine][Improved Engine Exceptions] for improved clarity and helpfulness
-* [Scope has been extended][Extended Scope Support] to support further levels of segregation, the levels within scope are hierarchical, affecting several blocks and services within the {{% ctx %}} platform
-* The [installation process of the {{% ctx %}} Platform has been improved][improved installation] and has been updated preserve information required for future upgrades of the installed platform
-* The [upgrade process of the {{% ctx %}} Platform has been improved][improved upgrade] and now provides more useful feedback when running
+* The [installation process has been improved][improved installation] to preserve information required for future upgrades of the installed platform
+* The [upgrade process has been improved][improved upgrade] and now provides more useful feedback when running
 
 ## Improved Capability
 
 * This release shows improvements to [package management][Package Management] in a number of areas:
   * The `Running Executions` tab now allows for [running executions to be stopped in real-time][Running Executions can be Stopped in Real-Time]
   * Users can now [unselect 'Use Latest Version' for all flows except for a selected one][Unselect All 'Use Latest Version' for a flow] when creating a new version of an existing package
+* [Scope has been extended][Extended Scope Support] to support further levels of segregation (package and flow), the levels within scope are hierarchical, affecting several blocks and services within the {{% ctx %}} platform
 * Two [new Wireless blocks have been added][new Blocks] within the {{% ctx %}} Block Packages, allowing for better organisation of the layout of a flow
 
 ## Improved Observability
 
-* The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major version:
+* The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major versions:
   * Grafana - 10.4.1
   * Loki - 3.0.0
   * Promtail - 3.0.0
-
-## Cost of Ownership
-
-* Services within the {{% ctx %}} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
-* The installation now deploys the {{% ctx %}} Licence Fingerprint Generator to all required nodes.
 
 ## Improved Documentation
 
@@ -52,7 +46,12 @@ This [Product Portal][] includes updates related to:
 * The [improved installation][]
 * The [improved upgrade][]
 
-For a full list of what has been introduced in this release, please see the [2024.3 Release Notes][]
+## Other
+
+* Services within the {{% ctx %}} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
+* The installation now deploys the {{% ctx %}} Licence Fingerprint Generator to all required nodes.
+
+For a full list of what has been introduced in this release, please see the [2024.5 Release Notes][]
 
 [Usability]: {{< ref "#improved-usability" >}}
 [Capability]: {{< ref "#improved-capability" >}}
@@ -68,13 +67,13 @@ For a full list of what has been introduced in this release, please see the [202
 [Reduced Usage of Shared Fingerprint Generator Code]: {{< url path="Cortex.Blogs.Releases.2024.5.FingerprintGeneratorCode" version="2024.5" >}}
 [Improved {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedCortexGateway" version="2024.5" >}}
 [Helplinks Update When Upgrading the {{% ctx %}} Platform]: {{< url path="Cortex.Blogs.Releases.2024.5.HelplinksUpdate" version="2024.5" >}}
-[Update Styling of the Setup Wizard to be Consistent with Improved Design]: {{< url path="Cortex.Blogs.Releases.2024.5.UpdateStyling" version="2024.5" >}}
+[Update styling of the setup wizard to be consistent with new themes]: {{< url path="Cortex.Blogs.Releases.2024.5.UpdateStyling" version="2024.5" >}}
 [Improved Engine Exceptions]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedEngineExceptions" version="2024.5" >}}
 [Unselect All 'Use Latest Version' for a flow]: {{< url path="Cortex.Blogs.Releases.2024.5.UnselectAll" version="2024.5" >}}
 [improved upgrade]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedUpgrade" version="2024.5" >}}
 [improved installation]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedInstallation" version="2024.5" >}}
 [Observability Upgrades]: {{< url path="Cortex.Blogs.Releases.2024.5.ObservabilityUpgrades" version="2024.5" >}}
-[2024.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.5" >}}
+[2024.5 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.5" >}}
 
 [Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
 [2024.3]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
