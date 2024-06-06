@@ -2048,6 +2048,8 @@
                         InvalidBase64URL = "/docs/reference/exceptions/text/decode/text-decoding-exception/#600"
             [Cortex.Reference.Exceptions.Text.Encoding]
                 MainDoc = "/docs/reference/exceptions/text/encoding/"
+                    [Cortex.Reference.Exceptions.Text.Encoding.FormatException]
+                        MainDoc = "/docs/reference/exceptions/text/encoding/format-exception/"
                     [Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException]
                         MainDoc = "/docs/reference/exceptions/text/encoding/text-decoding-exception/"
                         InvalidBase64 = "/docs/reference/exceptions/text/encoding/text-decoding-exception/#100"
