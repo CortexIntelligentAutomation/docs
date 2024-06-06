@@ -27,29 +27,28 @@ weight: 1
 
 ## Improved Capability
 
-* This release shows improvements to [platform visibility][Platform Visibility] in a number of areas:
-  * Enhancements to the Package Management page now allow for [real-time stopping of running executions][Running Executions can be Stopped in Real-Time]
-  * allows users to quickly [unselect all flows except for a selected one][Unselect All 'Use Latest Version' for a flow] when creating a new version of an existing package.
-* Two [new blocks have been added][new Blocks] within the [{{% ctx %}} Block Packages][Blocks], improving functionality to work with:
-  * [Wireless][] - Allowing for the control and movement of tokens within a flow
+* This release shows improvements to [package management][Package Management] in a number of areas:
+  * The `Running Executions` tab now allows for [running executions to be stopped in real-time][Running Executions can be Stopped in Real-Time]
+  * Users can now [unselect 'Use Latest Version' for all flows except for a selected one][Unselect All 'Use Latest Version' for a flow] when creating a new version of an existing package
+* Two [new Wireless blocks have been added][new Blocks] within the {{% ctx %}} Block Packages, allowing for better organisation of the layout of a flow
 
 ## Improved Observability
 
 * The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major version:
-  * Grafana
-  * Loki
-  * Promtail
+  * Grafana - 10.4.1
+  * Loki - 3.0.0
+  * Promtail - 3.0.0
 
 ## Cost of Ownership
 
-* The [{{% ctx %}} Licence Fingerprint Generator has been updated][Improved Fingerprint Generator] to reduce its usage within the {{% ctx %}} platform and improve the installation process
+* Services within the {% ctx %} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
+* The installation now deploys the {{% ctx %}} Licence Fingerprint Generator to all required nodes.
 
 ## Improved Documentation
 
 This [Product Portal][] includes updates related to:
 
 * The [new blocks][New Blocks] and data types
-* [Exceptions][] and [Data Types][] that were marked as Work In Progress
 * The [improved installation][]
 * The [improved upgrade][]
 
@@ -61,12 +60,21 @@ For a full list of what has been introduced in this release, please see the [202
 [Cost of Ownership]: {{< ref "#cost-of-ownership" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.3.ImprovedInstallation" version="2024.3" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.3.ProductPortal" version="2024.3" >}}
-[2024.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
-
-[Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" version="2024.3" >}}
-[Exceptions]: {{< url path="Cortex.Reference.Exceptions.MainDoc" version="2024.3" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.5.ProductPortal" version="2024.5" >}}
+[Package Management]: {{< url path="Cortex.Blogs.Releases.2024.5.PackageManagement" version="2024.5" >}}
+[Running Executions can be Stopped in Real-Time]: {{< url path="Cortex.Blogs.Releases.2024.5.RunningExecutions" version="2024.5" >}}
+[Extended Scope Support]: {{< url path="Cortex.Blogs.Releases.2024.5.ExtendedScopeSupport" version="2024.5" >}}
+[new Blocks]: {{< url path="Cortex.Blogs.Releases.2024.5.NewBlocks" version="2024.5" >}}
+[Reduced Usage of Shared Fingerprint Generator Code]: {{< url path="Cortex.Blogs.Releases.2024.5.FingerprintGeneratorCode" version="2024.5" >}}
+[Improved {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedCortexGateway" version="2024.5" >}}
+[Helplinks Update When Upgrading the {{% ctx %}} Platform]: {{< url path="Cortex.Blogs.Releases.2024.5.HelplinksUpdate" version="2024.5" >}}
+[Update Styling of the Setup Wizard to be Consistent with Improved Design]: {{< url path="Cortex.Blogs.Releases.2024.5.UpdateStyling" version="2024.5" >}}
+[Improved Engine Exceptions]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedEngineExceptions" version="2024.5" >}}
+[Unselect All 'Use Latest Version' for a flow]: {{< url path="Cortex.Blogs.Releases.2024.5.UnselectAll" version="2024.5" >}}
+[improved upgrade]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedUpgrade" version="2024.5" >}}
+[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedInstallation" version="2024.5" >}}
+[Observability Upgrades]: {{< url path="Cortex.Blogs.Releases.2024.5.ObservabilityUpgrades" version="2024.5" >}}
+[2024.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.5" >}}
 
 [Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
-[2024.1]: {{< url path="Cortex.Blogs.Releases.2024.1.MainDoc" version="2024.3" >}}
+[2024.3]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
