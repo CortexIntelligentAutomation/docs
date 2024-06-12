@@ -1455,6 +1455,7 @@
                     Domain = "/docs/reference/data-types/credentials/usercredentials/#domain"
                     Username = "/docs/reference/data-types/credentials/usercredentials/#username"
                     Password = "/docs/reference/data-types/credentials/usercredentials/#password"
+                    LogonType = "/docs/reference/data-types/credentials/usercredentials/#logontype"
                 [Cortex.Reference.DataTypes.Credentials.LogonType]
                     MainDoc = "/docs/reference/data-types/credentials/logontype"
             [Cortex.Reference.DataTypes.Data]
@@ -2558,6 +2559,7 @@
             NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
             Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
         [MSDocs.Windows.WindowsServer]
+            LogonTypes = "https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types"
             NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
 [MSDotNet]
     [MSDotNet.Framework471]

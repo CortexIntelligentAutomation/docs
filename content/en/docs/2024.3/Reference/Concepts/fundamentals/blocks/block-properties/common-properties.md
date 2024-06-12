@@ -61,7 +61,10 @@ If [UserCredentials][] has a `null` username or password, a [PropertyNullExcepti
 
 {{< figure src="/images/set-variable/set-variable-run-as.svg" >}}
 
-The [LogonType][] is used to identify the method of impersonation. The default is `LogonType.Network`, and does not need to be declared in the constructor, but can be changed. For example, if you are trying to access a remote machine, then `LogonType.NewCredentials` would be the correct LogonType.
+The [LogonType][] is used to identify the method of impersonation. The default is `LogonType.Network`, and does not need to be declared in the constructor, but can be changed.
+
+For example, if you are trying to access a remote machine, then `LogonType.Network` would be the correct [LogonType][].
+Whereas if you are trying to access a database on a remote machine, then `LogonType.NewCredentails` would be the correct [LogonType][].
 
 ## Block Timeout Property
 

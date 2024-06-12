@@ -6,7 +6,7 @@ description: "Used to represent the Logon type used for the UserCredentials."
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTypes.Credentials)</p>
+<p class="namespace">(Cortex.DataTypes.Credentials.LogonType)</p>
 
 ## Summary
 
@@ -18,7 +18,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | **Category:**       | Credentials                                                                                                                               |
 | **Name:**           | `LogonType`                                                                                                                   |
-| **Full Name:**      | `Cortex.DataTypes.Credentials`                                                                                                        |
+| **Full Name:**      | `Cortex.DataTypes.Credentials.LogonType`                                                                                                        |
 | **Alias:**          | N/A                                                                                                                                |
 | **Description:**    | Used to represent the Logon type of the [UserCredentials][].                                                                     |
 | **Default Value:**  | `LogonType.Network`                                                                                                                |
@@ -37,7 +37,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |------------|----------------------------|
 | **Name:**  | Network                       |
 | **Value:** | [Int32][] with value `3` |
-| **Notes:** |                            |
+| **Notes:** | The security principal is logging on using a network. This allows for NET USE, RPC calls, Remote Registry, IIS integrated Windows auth, and local SQL Windows auth.  |
 
 ### NetworkCleartext
 
@@ -45,7 +45,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |------------|----------------------------|
 | **Name:**  | NetworkCleartext                       |
 | **Value:** | [Int32][] with value `8` |
-| **Notes:** |                            |
+| **Notes:** | The logon is a Network logon with plaintext credentials.  |
 
 ### NewCredentials
 
@@ -53,7 +53,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |------------|----------------------------|
 | **Name:**  | NewCredentials                       |
 | **Value:** | [Int32][] with value `9` |
-| **Notes:** |                            |
+| **Notes:** | Allows the caller to clone its current logon token and specify new credentials for outbound connections. The new logon session has the same local identity but uses different credentials for other network connections. This logon type should be used when authenticating against a remote database.   |
 
 ## Remarks
 
@@ -120,7 +120,7 @@ The following table shows some of the ways that a `LogonType` can be converted t
 
 ### Known Limitations
 
-- When [LogonType][] is set to `LogonType.NewCredentials` and trying to connect to localhost, it will not recognise the UserCredentials. To fix this use `LogonType.Network` as the [LogonType][].
+- When [LogonType][] is set to `LogonType.NewCredentials` and trying to connect to a localhost database, it will not recognise the UserCredentials. To fix this use `LogonType.Network` as the [LogonType][].
 
 ## See Also
 
@@ -137,12 +137,14 @@ The following table shows some of the ways that a `LogonType` can be converted t
 
 ### External Documentation
 
+- [LogonTypes][]
 - [System.Enum][]
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
 
+[LogonTypes]: {{< url path="MSDocs.Windows.WindowsServer.LogonTypes" >}}
 [System.Enum]: {{< url path="MSDocs.DotNet.Api.System.Enum.MainDoc" >}}
 
 [Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
