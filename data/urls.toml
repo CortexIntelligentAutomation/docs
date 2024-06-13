@@ -1249,6 +1249,9 @@
                         InteractingWithAnExecution = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#interacting-with-an-execution"
                         SetNextBlockToExecute = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#set-next-block-to-execute"
                         ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow"
+                        EditAndContinueAnExecution = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#edit-and-continue-an-execution"
+                        InteractingWithAnExecution = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#interacting-with-an-execution"
+                        SetNextBlockToExecute = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#set-next-block-to-execute"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInProduction]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-production"
                         ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-production/#validating-a-flow"
