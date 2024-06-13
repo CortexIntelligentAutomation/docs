@@ -7,97 +7,73 @@ weight: 1
 
 ## Summary
 
-2024.3 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.1][] release in the following areas:
+2024.5 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.3][] release in the following areas:
 
-* [Performance][]
-* [Observability][]
+* [Usability][]
 * [Capability][]
+* [Observability][]
 * [Documentation][]
 
-## Improved Performance
+## Improved Usability
 
-* This release shows [performance improvements][Platform Performance Improvements] in a number of areas:
-  * [Caching has been added to Provisioning service][Caching Added to the Provisioning Service] in order to reduce the number of messages sent throughout the HA Platform
-  * [HealthCheck enabled for the Triggers service after provisioning][HealthCheck Enabled for the Triggers Service after Provisioning]
-  * General [Load Balancer healthcheck improvements][Load Balancer HealthCheck Improvements]
-
-## Improved Observability
-
-* Platform Observability within the HA Platform has been improved in a number of ways:
-  * [A new Platform property has been added to provide more information in logs][A New Platform Property has been Added to Provide more Information in Logs]
-  * [Type and Method properties have been added to all logs][Type and Method Added to Platform Logs]
-  * [Request duration is now logged in seconds instead of milliseconds][Request Duration is now Logged in Seconds Instead of Milliseconds]
-  * [Grafana and Promtail updated to use the new and updated log properties][Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs] to prevent issues with potentially breaking changes
-  * [Custom Tags can be passed through logs via HTTP request headers][Custom Tags can be Passed Through Logs via Headers] to add custom tags to any log related to the API request made
-  * [Exception Tags added to logs related to Exceptions][Exception Tags Added to Logs Related to Exceptions or Problem Details] to provide more information within a log when an issue occurs
-  * [Result Tag updated for API Gateway Service logs][Result Tag Updated for API Gateway Service Logs] to provide more information within a log when an issue occurs
-  * [Flow Logging Control][] has been added, this allows for logging to be turned on and off for all flows executing within the platform
-  * [Block Logging Control][] has been added, this allows for logging to be turned on and off for all blocks executing within the platform
-  * [Running executions can be viewed in real-time][Running Executions can be Viewed in Real-Time] which allows users to track executions within the platform
+* [Improvements have been made to {{% ctx %}} Gateway][Improved {{% ctx %}} Gateway], including:
+  * [Helplinks update when upgrading the {{% ctx %}} platform][]
+  * [Update styling of the setup wizard to be consistent with new themes][]
+* [Improvements have been made to exceptions raised by the engine][Improved Engine Exceptions] for improved clarity and helpfulness
+* The [installation process has been improved][improved installation] to preserve information required for future upgrades of the installed platform
+* The [upgrade process has been improved][improved upgrade] and now provides more useful feedback when running
 
 ## Improved Capability
 
-* The [Execute Data Command][Improved Blocks] block has been improved; two new parameter types have been added for requests made to Oracle data sources: OracleParameter and OracleParameters. These allow for specifying the type and direction of the parameter, and provides the capability for processes like passing large data sets (CLOB) to an Oracle stored procedure
-* The [Log Event][Improved Blocks] block has been improved to use the new log format used throughout the platform
+* This release shows improvements to [package management][Package Management] in a number of areas:
+  * The `Running Executions` tab now allows for [running executions to be stopped in real-time][Running Executions can be Stopped in Real-Time]
+  * Users can now [unselect 'Use Latest Version' for all flows except for a selected one][Unselect All 'Use Latest Version' for a flow] when creating a new version of an existing package
+* [Scope has been extended][Extended Scope Support] to support further levels of segregation (package and flow), the levels within scope are hierarchical, affecting several blocks and services within the {{% ctx %}} platform
+* Two [new Wireless blocks have been added][new Blocks] within the {{% ctx %}} Block Packages, allowing for better organisation of the layout of a flow
+
+## Improved Observability
+
+* The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major versions:
+  * Grafana - 10.4.1
+  * Loki - 3.0.0
+  * Promtail - 3.0.0
 
 ## Improved Documentation
 
 This [Product Portal][] includes updates related to:
 
-* The [improved blocks][Improved Blocks] and data types
-* [Exceptions][] and [Data Types][] that were marked as Work In Progess
+* The [new blocks][New Blocks] and data types
 * The [improved installation][]
-
-Also, new documentation has been added to reflect the new [platform upgrade process][].
+* The [improved upgrade][]
 
 ## Other
 
-### Block Icon Redesign
+* Services within the {{% ctx %}} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
+* The installation now deploys the {{% ctx %}} Licence Fingerprint Generator to all required nodes.
 
-* [Block icons][Block Icon Redesign] within the {{% ctx %}} platform have been redesigned. The refresh includes new icons for every block updating the consistency of design and accessibility of colours used within flows
+For a full list of what has been introduced in this release, please see the [2024.5 Release Notes][]
 
-### Platform Upgrades
-
-* Upgrades have been added for both [Single Server][A New Single Server Upgrade Script has been Added to the Installation Artefacts] and [Multi Server][A New Multi Server Upgrade Script has been Added to the Installation Artefacts] deployments, including new documentation being created for upgrading a 2024.1 {{% ctx %}} Platform to 2024.3.
-* [A new Flow Upgrader tool has been created to upgrade flows][A New Flow Upgrader Tool has been Created to Upgrade Flows] so that they are compatible when upgrading the {{% ctx %}} platform.
-
-For a full list of what has been introduced in this release, please see the [2024.3 Release Notes][]
-
-[Performance]: {{< ref "#improved-performance" >}}
+[Usability]: {{< ref "#improved-usability" >}}
 [Capability]: {{< ref "#improved-capability" >}}
 [Observability]: {{< ref "#improved-observability" >}}
+[Cost of Ownership]: {{< ref "#cost-of-ownership" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
-[platform upgrade process]: {{< ref "#platform-upgrades" >}}
 
-[Platform Performance Improvements]: {{< url path="Cortex.Blogs.Releases.2024.3.PlatformPerformanceImprovements" version="2024.3" >}}
-[Caching Added to the Provisioning Service]: {{< url path="Cortex.Blogs.Releases.2024.3.CachingAddedProvisioningService" version="2024.3" >}}
-[HealthCheck Enabled for the Triggers Service after Provisioning]: {{< url path="Cortex.Blogs.Releases.2024.3.HealthCheckEnabledTriggersService" version="2024.3" >}}
-[Load Balancer HealthCheck Improvements]: {{< url path="Cortex.Blogs.Releases.2024.3.LoadBalancerHealthCheckImprovements" version="2024.3" >}}
-
-[A New Platform Property has been Added to Provide more Information in Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.NewPlatformProperty" version="2024.3" >}}
-[Request Duration is now Logged in Seconds Instead of Milliseconds]: {{< url path="Cortex.Blogs.Releases.2024.3.RequestDurationLoggedInSeconds" version="2024.3" >}}
-[Type and Method Added to Platform Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.TypeandMethodAddedToLogs" version="2024.3" >}}
-[Custom Tags can be Passed Through Logs via Headers]: {{< url path="Cortex.Blogs.Releases.2024.3.CustomTags" version="2024.3" >}}
-[Exception Tags Added to Logs Related to Exceptions or Problem Details]: {{< url path="Cortex.Blogs.Releases.2024.3.ExceptionTags" version="2024.3" >}}
-[Result Tag Updated for API Gateway Service Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.ProblemDetails" version="2024.3" >}}
-[Flow Logging Control]: {{< url path="Cortex.Blogs.Releases.2024.3.FlowLoggingControl" version="2024.3" >}}
-[Block Logging Control]: {{< url path="Cortex.Blogs.Releases.2024.3.BlockLoggingControl" version="2024.3" >}}
-[Running Executions can be Viewed in Real-Time]: {{< url path="Cortex.Blogs.Releases.2024.3.RunningExecutionsRealTime" version="2024.3" >}}
-[Grafana and Promtail Updated to use the New and Updated Properties Added to Platform Logs]: {{< url path="Cortex.Blogs.Releases.2024.3.GrafanaAndPromtailUpdated" version="2024.3" >}}
-
-[A New Flow Upgrader Tool has been Created to Upgrade Flows]: {{< url path="Cortex.Blogs.Releases.2024.3.FlowUpgraderTool" version="2024.3" >}}
-[A New Single Server Upgrade Script has been Added to the Installation Artefacts]: {{< url path="Cortex.Blogs.Releases.2024.3.SingleServerUpgradeScript" version="2024.3" >}}
-[A New Multi Server Upgrade Script has been Added to the Installation Artefacts]: {{< url path="Cortex.Blogs.Releases.2024.3.MultiServerUpgradeScript" version="2024.3" >}}
-
-[Block Icon Redesign]: {{< url path="Cortex.Blogs.Releases.2024.3.BlockIconRedesign" version="2024.3" >}}
-
-[Improved Blocks]: {{< url path="Cortex.Blogs.Releases.2024.3.ImprovedBlocks" version="2024.3" >}}
-[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.3.ImprovedInstallation" version="2024.3" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.3.ProductPortal" version="2024.3" >}}
-[2024.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
-
-[Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" version="2024.3" >}}
-[Exceptions]: {{< url path="Cortex.Reference.Exceptions.MainDoc" version="2024.3" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.5.ProductPortal" version="2024.5" >}}
+[Package Management]: {{< url path="Cortex.Blogs.Releases.2024.5.PackageManagement" version="2024.5" >}}
+[Running Executions can be Stopped in Real-Time]: {{< url path="Cortex.Blogs.Releases.2024.5.RunningExecutions" version="2024.5" >}}
+[Extended Scope Support]: {{< url path="Cortex.Blogs.Releases.2024.5.ExtendedScopeSupport" version="2024.5" >}}
+[new Blocks]: {{< url path="Cortex.Blogs.Releases.2024.5.NewBlocks" version="2024.5" >}}
+[Reduced Usage of Shared Fingerprint Generator Code]: {{< url path="Cortex.Blogs.Releases.2024.5.FingerprintGeneratorCode" version="2024.5" >}}
+[Improved {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedCortexGateway" version="2024.5" >}}
+[Helplinks Update When Upgrading the {{% ctx %}} Platform]: {{< url path="Cortex.Blogs.Releases.2024.5.HelplinksUpdate" version="2024.5" >}}
+[Update styling of the setup wizard to be consistent with new themes]: {{< url path="Cortex.Blogs.Releases.2024.5.UpdateStyling" version="2024.5" >}}
+[Improved Engine Exceptions]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedEngineExceptions" version="2024.5" >}}
+[Unselect All 'Use Latest Version' for a flow]: {{< url path="Cortex.Blogs.Releases.2024.5.UnselectAll" version="2024.5" >}}
+[improved upgrade]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedUpgrade" version="2024.5" >}}
+[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedInstallation" version="2024.5" >}}
+[Observability Upgrades]: {{< url path="Cortex.Blogs.Releases.2024.5.ObservabilityUpgrades" version="2024.5" >}}
+[2024.5 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.5" >}}
 
 [Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
-[2024.1]: {{< url path="Cortex.Blogs.Releases.2024.1.MainDoc" version="2024.3" >}}
+[2024.3]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
