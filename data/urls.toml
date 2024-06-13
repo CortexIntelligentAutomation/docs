@@ -8,6 +8,22 @@
             MainDoc = "/blog/releases"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.5]
+                    MainDoc =  "/blog/2024/06/13/2024.5/"
+                    PackageManagement =  "/blog/2024/06/13/2024.5/#package-management"
+                    RunningExecutions =  "/blog/2024/06/13/2024.5/#running-executions-can-be-stopped-in-real-time"
+                    UnselectAll =  "/blog/2024/06/13/2024.5/#unselect-use-latest-version-for-all-flows-except-for-a-selected-one"
+                    ExtendedScopeSupport =  "/blog/2024/06/13/2024.5/#extended-scope-support"
+                    NewBlocks =  "/blog/2024/06/13/2024.5/#new-blocks"
+                    FingerprintGeneratorCode =  "/blog/2024/06/13/2024.5/#reduced-usage-of-shared-fingerprint-generator-code"
+                    ImprovedCortexGateway =  "/blog/2024/06/13/2024.5/#improved-cortex-gateway"
+                    HelplinksUpdate =  "/blog/2024/06/13/2024.5/#helplinks-update-when-upgrading-the-cortex-platform"
+                    UpdateStyling =  "/blog/2024/06/13/2024.5/#update-styling-of-the-setup-wizard-to-be-consistent-with-new-themes"
+                    ImprovedEngineExceptions =  "/blog/2024/06/13/2024.5/#improved-engine-exceptions"
+                    ImprovedUpgrade = "/blog/2024/06/13/2024.5/#improved-upgrade"
+                    ImprovedInstallation = "/blog/2024/06/13/2024.5/#improved-installation"
+                    ObservabilityUpgrades = "/blog/2024/06/13/2024.5/#observability-upgrades"
+                    ProductPortal = "/blog/2024/06/13/2024.5/#product-portal"
                 [Cortex.Blogs.Releases.2024.3]
                     MainDoc =  "/blog/2024/04/08/2024.3/"
                     PlatformPerformanceImprovements = "/blog/2024/04/08/2024.3/#platform-performance-improvements"
@@ -431,6 +447,8 @@
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
         [Cortex.Guides.UpgradeCortex]
             MainDoc = "/docs/guides/upgrade-cortex/"      
+            [Cortex.Guides.UpgradeCortex.Advanced]
+                SSLBestPractices = "/docs/guides/upgrade-cortex/advanced/ssl-best-practices"
             [Cortex.Guides.UpgradeCortex.2024.1to2024.3]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/"
                 [Cortex.Guides.UpgradeCortex.2024.1to2024.3.Advanced]
@@ -448,6 +466,20 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-web-application-server"
+            [Cortex.Guides.UpgradeCortex.2024.3to2024.5]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/"
+                [Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/try-it-out"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeCortex.2024.3to2024.5.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
@@ -1118,6 +1150,16 @@
                     MainDoc = "/docs/reference/blocks/workspaces/workspace"
                     [Cortex.Reference.Blocks.Workspaces.Workspace.Workspace]
                         MainDoc = "/docs/reference/blocks/workspaces/workspace/workspace-block"
+                [Cortex.Reference.Blocks.Wireless]
+                    MainDoc = "/docs/reference/blocks/wireless/"
+                    [Cortex.Reference.Blocks.Wireless.WirelessReceiver]
+                        MainDoc = "/docs/reference/blocks/wireless/wireless-receiver"
+                        [Cortex.Reference.Blocks.Wireless.WirelessReceiver.WirelessReceiver]
+                            MainDoc = "/docs/reference/blocks/wireless/wireless-receiver/wireless-receiver-block"
+                    [Cortex.Reference.Blocks.Wireless.WirelessSender]
+                        MainDoc = "/docs/reference/blocks/wireless/wireless-sender"
+                        [Cortex.Reference.Blocks.Wireless.WirelessSender.WirelessSender]
+                            MainDoc = "/docs/reference/blocks/wireless/wireless-sender/wireless-sender-block"
                 [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
@@ -1219,10 +1261,10 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-development"
-                        ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow"
                         EditAndContinueAnExecution = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#edit-and-continue-an-execution"
                         InteractingWithAnExecution = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#interacting-with-an-execution"
                         SetNextBlockToExecute = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#set-next-block-to-execute"
+                        ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#validating-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInProduction]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-production"
                         ValidatingAFlow = "/docs/reference/concepts/fundamentals/executions/executions-in-production/#validating-a-flow"
@@ -2036,6 +2078,8 @@
                         InvalidBase64URL = "/docs/reference/exceptions/text/decode/text-decoding-exception/#600"
             [Cortex.Reference.Exceptions.Text.Encoding]
                 MainDoc = "/docs/reference/exceptions/text/encoding/"
+                    [Cortex.Reference.Exceptions.Text.Encoding.FormatException]
+                        MainDoc = "/docs/reference/exceptions/text/encoding/format-exception/"
                     [Cortex.Reference.Exceptions.Text.Encoding.TextDecodingException]
                         MainDoc = "/docs/reference/exceptions/text/encoding/text-decoding-exception/"
                         InvalidBase64 = "/docs/reference/exceptions/text/encoding/text-decoding-exception/#100"
@@ -2274,6 +2318,10 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.3.0.0]
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Loki.Install.zip"
+            PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Promtail.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -2285,10 +2333,16 @@
             MainDoc = "https://grafana.com/docs/loki/latest/clients/promtail/"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp]
         Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
+    [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
+        Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaLoki]
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0]
+        GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail]
         PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.Promtail.3.0.0]
+        PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/promtail-windows-amd64.exe.zip"
 [IETF]
     MainDoc = "https://www.ietf.org/"
     [IETF.Email]
