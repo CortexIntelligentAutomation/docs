@@ -22,6 +22,7 @@ IgnoreURLs:
 - "http://www.mimekit.net/docs/.*"
 - "https://nssm.cc/"
 - "https://code.visualstudio.com/"
+- "https://blogs.oracle.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
@@ -29,3 +30,5 @@ IgnoreDirs:
 - "docs/2023.3/?.*/"
 - "docs/2023.5/?.*/"
 - "docs/2023.7/?.*/"
+- "docs/2023.9/?.*/"
+- "docs/2023.11/?.*/"
