@@ -7,15 +7,15 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2024.1 to 2024.3.
+This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2024.3 to 2024.5.
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/2024.3/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
+{{< section "/upgrade/2024.5/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2024.3/upgrade-application-server/single-server/run-upgrade-script.md">}}
+{{< section "/upgrade/2024.5/upgrade-application-server/single-server/run-upgrade-script.md">}}
 
 ## Check Application Services
 
@@ -29,4 +29,4 @@ This guide describes how to upgrade the Flow Debugger on the Web Application Ser
 
 1. [Upgrade Gateway][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeGateway" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA.UpgradeGateway" >}}

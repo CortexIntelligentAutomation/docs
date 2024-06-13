@@ -13,7 +13,6 @@ This guide describes how to install the Web Application Server components on the
 
 1. Copy the following artefacts to a folder on the machine:
 
-   * Cortex Innovation {{< version >}} - Block Packages.zip
    * Cortex Innovation {{< version >}} - Gateway.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
 

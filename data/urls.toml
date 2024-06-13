@@ -431,6 +431,8 @@
                 MainDoc = "/docs/guides/cortex-gateway/welcome-page/"
         [Cortex.Guides.UpgradeCortex]
             MainDoc = "/docs/guides/upgrade-cortex/"      
+            [Cortex.Guides.UpgradeCortex.Advanced]
+                SSLBestPractices = "/docs/guides/upgrade-cortex/advanced/ssl-best-practices"
             [Cortex.Guides.UpgradeCortex.2024.1to2024.3]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/"
                 [Cortex.Guides.UpgradeCortex.2024.1to2024.3.Advanced]
@@ -448,6 +450,20 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-web-application-server"
+            [Cortex.Guides.UpgradeCortex.2024.3to2024.5]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/"
+                [Cortex.Guides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/try-it-out"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeCortex.2024.3to2024.5.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
