@@ -10,7 +10,7 @@ description: "Used to represent the Logon type used for the UserCredentials."
 
 ## Summary
 
-The `LogonType` data type is used to represent the Logon type for the [UserCredentials][].
+The `LogonType` data type is used to represent the type of logon method to use to authenticate a user.
 
 `LogonType` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -20,7 +20,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 | **Name:**           | `LogonType`                                                                                                                   |
 | **Full Name:**      | `Cortex.DataTypes.Credentials.LogonType`                                                                                                        |
 | **Alias:**          | N/A                                                                                                                                |
-| **Description:**    | Used to represent the Logon type of the [UserCredentials][].                                                                     |
+| **Description:**    | Used to represent the type of logon method to use to authenticate a user.                                                                     |
 | **Default Value:**  | `LogonType.Network`                                                                                                                |
 | **Can be used as:** | `LogonType`, `Object`, `dynamic`                                                                                              |
 | **Can be cast to:** | `Int16` (e.g. `(Int16)LogonType.Network` or `(System.Int16)LogonType.Network` or `(short)LogonType.Network`)     |
@@ -37,7 +37,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |------------|----------------------------|
 | **Name:**  | Network                       |
 | **Value:** | [Int32][] with value `3` |
-| **Notes:** | The security principal is logging on using a network. This allows for NET USE, RPC calls, Remote Registry, IIS integrated Windows auth, and local SQL Windows auth.  |
+| **Notes:** | Represents a network logon. This should be used in most cases, including when connecting to a local database as a Windows user. If connecting to a remote database as a Windows user, [NewCredentials][] should be used. |
 
 ### NetworkCleartext
 
@@ -45,7 +45,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |------------|----------------------------|
 | **Name:**  | NetworkCleartext                       |
 | **Value:** | [Int32][] with value `8` |
-| **Notes:** | The logon is a Network logon with plaintext credentials.  |
+| **Notes:** | Represents a network logon. This differs from [Network][] as the user's password will be passed as cleartext. This should be used when authenticating with IIS using Basic Auth, and Windows PowerShell with CredSSP. |
 
 ### NewCredentials
 
@@ -53,7 +53,7 @@ The `LogonType` data type is used to represent the Logon type for the [UserCrede
 |------------|----------------------------|
 | **Name:**  | NewCredentials                       |
 | **Value:** | [Int32][] with value `9` |
-| **Notes:** | Allows the caller to clone its current logon token and specify new credentials for outbound connections. The new logon session has the same local identity but uses different credentials for other network connections. This logon type should be used when authenticating against a remote database.   |
+| **Notes:** | Represents a clone of the user's current logon. For local operations, it uses the same local identity. For network operations, it uses the identity of the credentials supplied. This should be used when authenticating against a remote database as a Windows User. Allows the caller to clone its current logon token and specify new credentials for outbound connections. The new logon session has the same local identity but uses different credentials for other network connections. This logon type should be used when authenticating against a remote database.   |
 
 ## Remarks
 
@@ -139,6 +139,9 @@ The following table shows some of the ways that a `LogonType` can be converted t
 
 - [LogonTypes][]
 - [System.Enum][]
+
+[Network]: {{< ref "#network" >}}
+[NewCredentials]: {{< ref "#newcredentials" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
