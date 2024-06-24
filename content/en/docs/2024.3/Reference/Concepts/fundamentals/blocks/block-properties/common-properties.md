@@ -59,12 +59,9 @@ If [UserCredentials][] has an invalid domain, username, password or [LogonType][
 
 If [UserCredentials][] has a `null` username or password, a [PropertyNullException][] will be thrown when the [block][] is executed.
 
+By default, the type of logon method used to authenticate the Run As user is `LogonType.Network`; this works for most scenarios. For scenarios that require a different type of logon method (e.g. connecting to a remote database), the correct [LogonType][] (e.g. `LogonType.NewCredentials`) can be specified as part of the [UserCredentials][].
+
 {{< figure src="/images/set-variable/set-variable-run-as.svg" >}}
-
-The [LogonType][] is used to identify the method of impersonation. The default is `LogonType.Network`, and does not need to be declared in the constructor, but can be changed.
-
-For example, if you are trying to access a remote machine, then `LogonType.Network` would be the correct [LogonType][].
-Whereas if you are trying to access a database on a remote machine, then `LogonType.NewCredentails` would be the correct [LogonType][].
 
 ## Block Timeout Property
 

@@ -53,7 +53,7 @@ The `LogonType` data type is used to represent the type of logon method to use t
 |------------|----------------------------|
 | **Name:**  | NewCredentials                       |
 | **Value:** | [Int32][] with value `9` |
-| **Notes:** | Represents a clone of the user's current logon. For local operations, it uses the same local identity. For network operations, it uses the identity of the credentials supplied. This should be used when authenticating against a remote database as a Windows User. Allows the caller to clone its current logon token and specify new credentials for outbound connections. The new logon session has the same local identity but uses different credentials for other network connections. This logon type should be used when authenticating against a remote database.   |
+| **Notes:** | Represents a clone of the user's current logon. For local operations, it uses the same local identity. For network operations, it uses the identity of the credentials supplied. This should be used when authenticating against a remote database as a Windows User. If connecting to a local database as a Windows user, [Network][] should be used. |
 
 ## Remarks
 
@@ -121,6 +121,7 @@ The following table shows some of the ways that a `LogonType` can be converted t
 ### Known Limitations
 
 - When [LogonType][] is set to `LogonType.NewCredentials` and trying to connect to a localhost database, it will not recognise the UserCredentials. To fix this use `LogonType.Network` as the [LogonType][].
+- When [LogonType][] is set to `LogonType.Network` and trying to connect to a remote database, it will not recognise the UserCredentials. To fix this use `LogonType.NewCredentials` as the [LogonType][].
 
 ## See Also
 
