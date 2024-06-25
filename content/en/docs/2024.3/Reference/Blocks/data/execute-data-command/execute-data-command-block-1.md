@@ -700,9 +700,13 @@ If it is desirable to have any issues reported as messages when trying to debug 
 
 ### RunAs
 
-If no credentials are provided in the [ConnectionDetails][], then the [RunAsProperty][] can be used to authenticate with. Some [ConnectionDetails][], do require the connection string to contain `Trusted_Connection=True;` or `userid=;` to make use of the [UserCredentials][].
+RunAs can be used to connect to a database as a Windows user, rather than a SQL user.
 
-If you are using [UserCredentials][] to authenticate in the [RunAsProperty][], then it should be noted that the [LogonType][] is used to identify the method of impersonation. The default is `LogonType.Network`, which should be used for accessing a local database, however if you are trying to access a remote database, then `LogonType.NewCredentials` would be the correct [LogonType][] to use.
+To connect as a Windows user:
+- An appropriate connection string (e.g. [Oracle][], [SQL Server][]) must be specified in the [Connection Details][Connection Details Property].
+- [UserCredentials][] for the Windows user must be specified in the [Run As property][RunAsProperty].
+
+If connecting to a local database, the [UserCredentials][] must specify the [LogonType][] to be `LogonType.Network`; if connecting to a remote database, the [LogonType][] must be `LogonType.NewCredentials`.
 
 ### Known Limitations
 
@@ -789,8 +793,8 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Object Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
-[RunAsProperty]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.LogonType" >}}
-[LogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.LogonType.MainDoc" >}}
+[LogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.LogonType" >}}
+[RunAsProperty]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.RunAsProperty" >}}
 
 [Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
 
