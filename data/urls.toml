@@ -2211,6 +2211,7 @@
 [ConnectionStrings]
     MainDoc = "https://www.connectionstrings.com/"
     SqlConnection = "https://www.connectionstrings.com/sqlconnection/"
+    SqlConnectionTrustedConnection = "https://www.connectionstrings.com/microsoft-data-sqlclient/trusted-connection/"
     OracleConnection = "https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/"
     OracleConnectionIntegratedSecurity = "https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/using-integrated-security/"
 [ElasticSearch]
