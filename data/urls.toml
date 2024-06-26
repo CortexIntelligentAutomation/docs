@@ -1153,14 +1153,15 @@
                 [Cortex.Reference.Blocks.Wireless]
                     MainDoc = "/docs/reference/blocks/wireless/"
                     [Cortex.Reference.Blocks.Wireless.WirelessReceiver]
-                        MainDoc = "/docs/reference/blocks/wireless/wireless-receiver"
+                        MainDoc = "/docs/reference/blocks/wireless/wireless-receiver/"
                         [Cortex.Reference.Blocks.Wireless.WirelessReceiver.WirelessReceiver]
-                            MainDoc = "/docs/reference/blocks/wireless/wireless-receiver/wireless-receiver-block"
+                            MainDoc = "/docs/reference/blocks/wireless/wireless-receiver/wireless-receiver-block/"
                     [Cortex.Reference.Blocks.Wireless.WirelessSender]
-                        MainDoc = "/docs/reference/blocks/wireless/wireless-sender"
+                        MainDoc = "/docs/reference/blocks/wireless/wireless-sender/"
                         [Cortex.Reference.Blocks.Wireless.WirelessSender.WirelessSender]
-                            MainDoc = "/docs/reference/blocks/wireless/wireless-sender/wireless-sender-block"
-                [Cortex.Reference.Blocks.Xml]
+                            MainDoc = "/docs/reference/blocks/wireless/wireless-sender/wireless-sender-block/"
+                            WirelessReceiverProperty = "/docs/reference/blocks/wireless/wireless-sender/wireless-sender-block/#wireless-receiver-block"
+            [Cortex.Reference.Blocks.Xml]
                 MainDoc = "/docs/reference/blocks/xml/"
                 [Cortex.Reference.Blocks.Xml.ConvertXml]
                     MainDoc = "/docs/reference/blocks/xml/convert-xml/"
@@ -1917,6 +1918,12 @@
                     MainDoc = "/docs/reference/data-types/text/utf32encoding"
                 [Cortex.Reference.DataTypes.Text.UTF8Encoding]
                     MainDoc = "/docs/reference/data-types/text/utf8encoding"
+            [Cortex.Reference.Datatypes.Wireless]
+                MainDoc = "/docs/reference/data-types/wireless"
+                [Cortex.Reference.DataTypes.Wireless.WirelessReceiverBlockReference]
+                    MainDoc = "/docs/reference/data-types/wireless/wirelessreceiverblockreference"
+                [Cortex.Reference.DataTypes.Wireless.WirelessReceiverBlockNotFoundErrorCode]
+                    MainDoc = "/docs/reference/data-types/wireless/wirelessreceivernotfounderrorcode"
         [Cortex.Reference.Exceptions]
             MainDoc = "/docs/reference/exceptions/"
             [Cortex.Reference.Exceptions.Collections]
@@ -2105,6 +2112,12 @@
                 [Cortex.Reference.Exceptions.Telnet.TelnetServerException]
                     MainDoc = "/docs/reference/exceptions/telnet/telnet-server-exception/"
                     HostDisconnected = "/docs/reference/exceptions/telnet/telnet-server-exception/#100"
+            [Cortex.Reference.Exceptions.Wireless]
+                MainDoc = "/docs/reference/exceptions/wireless"
+                [Cortex.Reference.Exceptions.Wireless.WirelessReceiverBlockNotFoundException]
+                    MainDoc = "/docs/reference/exceptions/wireless/wireless-receiver-block-not-found-exception/"
+                    BlockNotFound = "/docs/reference/exceptions/wireless/wireless-receiver-block-not-found-exception/#100"
+                    PropertyEmpty = "/docs/reference/exceptions/wireless/wireless-receiver-block-not-found-exception/#101"
             [Cortex.Reference.Exceptions.Xml]
                 MainDoc = "/docs/reference/exceptions/xml/"
                 XmlSerializationException = "/docs/reference/exceptions/xml/xml-serialization-exception/"
