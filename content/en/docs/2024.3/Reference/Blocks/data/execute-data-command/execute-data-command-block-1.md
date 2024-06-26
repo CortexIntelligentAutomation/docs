@@ -703,7 +703,7 @@ If it is desirable to have any issues reported as messages when trying to debug 
 RunAs can be used to connect to a database as a Windows user, rather than a SQL user.
 
 To connect as a Windows user:
-- An appropriate connection string (e.g. [Oracle][], [SQL Server][]) must be specified in the [Connection Details][Connection Details Property].
+- An appropriate connection string (e.g. [Oracle][OracleConnectionStringIntegratedSecurity], [SQL Server][SqlConnectionStringTrustedConnection]) must be specified in the [Connection Details][Connection Details Property].
 - [UserCredentials][] for the Windows user must be specified in the [Run As property][RunAsProperty].
 
 If connecting to a local database, the [UserCredentials][] must specify the [LogonType][] to be `LogonType.Network`; if connecting to a remote database, the [LogonType][] must be `LogonType.NewCredentials`.
@@ -800,3 +800,5 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}
+[SqlConnectionStringTrustedConnection]: {{< url path="ConnectionStrings.SqlConnectionTrustedConnection" >}}
+[OracleConnectionStringIntegratedSecurity]: {{< url path="ConnectionStrings.OracleConnectionIntegratedSecurity" >}}
