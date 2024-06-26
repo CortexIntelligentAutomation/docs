@@ -55,7 +55,7 @@ Once the [block][] has finished executing, the next block to execute will run as
 
 The default value of `null` also results in the [block][] executing as the user the [Execution Service][] is running as.
 
-If [UserCredentials][] has an invalid domain, username, password or [LogonType][], a [RunAsException][] will be thrown when the [block][] is executed.
+If [UserCredentials][] has an invalid domain, username, password or [LogonType][UserCredentialsLogonType], a [RunAsException][] will be thrown when the [block][] is executed.
 
 If [UserCredentials][] has a `null` username or password, a [PropertyNullException][] will be thrown when the [block][] is executed.
 
@@ -140,6 +140,8 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
+
+[UserCredentialsLogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.LogonType" >}}
 
 [BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}
 [InvalidBlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}
