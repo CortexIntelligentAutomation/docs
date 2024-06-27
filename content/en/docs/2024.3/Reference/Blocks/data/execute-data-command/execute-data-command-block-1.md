@@ -792,6 +792,7 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 [SqlException]: {{< url path="MSDocs.SqlServer.SqlException" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Object Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
+
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
 [LogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.LogonType" >}}
 [RunAsProperty]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.RunAsProperty" >}}
@@ -800,5 +801,6 @@ When using a [Parameterised Command][Parameterised Commands] to execute a stored
 
 [OracleBlockStatement]: {{< url path="Oracle.PL-SQL.BlockStatement" >}}
 [SQL Injection]: {{< url path="W3.SqlInjection" >}}
+
 [SqlConnectionStringTrustedConnection]: {{< url path="ConnectionStrings.SqlConnectionTrustedConnection" >}}
 [OracleConnectionStringIntegratedSecurity]: {{< url path="ConnectionStrings.OracleConnectionIntegratedSecurity" >}}
