@@ -84,7 +84,6 @@ The following table shows some of the ways that `UserCredentials` can be created
 |-|-|-|-|-|
 | Use a `UserCredentials` constructor | `new UserCredentials(domain: "domain", username: "username", password: "encryptedPassword")` | `{"Domain": "domain", "Username": "username", "Password": "encryptedPassword"}` | Expression | Domain specified |
 | | `new UserCredentials(username: "username", password: "encryptedPassword")` | `{"Domain": null, "Username": "username", "Password": "encryptedPassword"}` | Expression | Domain not specified |
-
 | | `new UserCredentials(domain: "domain", username: "username", password: "encryptedPassword", logonType: LogonType.Network)` | `{"Domain": "domain", "Username": "username", "encryptedPassword", "LogonType": "LogonType.Network"}` | Expression | Domain and LogonType specified |
 | | `new UserCredentials(username: "username", password: "encryptedPassword", logonType: LogonType.Network)` | `{"Domain": null, "Username": "username", "Password": "encryptedPassword", "LogonType": "LogonType.Network"}` | Expression | Domain and LogonType not specified |
 
