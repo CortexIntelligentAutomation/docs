@@ -39,6 +39,14 @@ The `ScopeOption` data type is used to represent how each level of [Scope] is de
 | **Value:**   | [Int32][] with value `0`             |
 | **Notes:**   | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
 
+### All
+
+| | |
+|-|-|
+| **Name:**    | All                              |
+| **Value:**   | [Int32][] with value `1`             |
+| **Notes:**   | Restricts a level within [Scope] to a unique "All" value. |
+
 ## Remarks
 
 ### Create a ScopeOption
@@ -85,9 +93,7 @@ The following table shows some of the ways that a `ScopeOption` can be converted
 
 ### Known Limitations
 
-#### ScopeOption only has ScopeOption.Current
-
-Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` will be added in a future release.
+None
 
 ## See Also
 
@@ -125,7 +131,7 @@ Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `Sco
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[Scope]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeDefinition]: {{< url path = "Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}

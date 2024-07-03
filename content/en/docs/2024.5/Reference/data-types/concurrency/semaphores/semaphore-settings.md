@@ -31,10 +31,10 @@ The [Scope][Scope Property] is used to define the area in which the [Semaphore][
   
 |                 |                                |
 |-----------------|--------------------------------|
-| Data Type       | [Scope][]                      |
+| Data Type       | [ScopeDefinition][]                      |
 | Is [Advanced][] | `true`                         |
 | Default Editor  | [Literal][]                    |
-| Default Value   | [Scope][] with value shown below |
+| Default Value   | [ScopeDefinition][] with value shown below |
 
 ```json
 {
@@ -124,7 +124,7 @@ None
 
 - [Int32][]
 - [QueueSettings][]
-- [Scope][]
+- [ScopeDefinition][]
 - [String][]
 
 ### Related Concepts
@@ -159,4 +159,4 @@ None
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 
-[Scope]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeDefinition]: {{< url path = "Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}

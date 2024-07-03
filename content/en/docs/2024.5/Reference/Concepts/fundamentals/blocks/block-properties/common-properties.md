@@ -35,6 +35,8 @@ The Semaphore property has the following sub-properties:
 - [Scope][SemaphoreScope], which defaults to:
   - [Tenant][]: `ScopeOption.Current`.
   - [System][]: `ScopeOption.Current`.
+  - [Package][]: `ScopeOption.Current`.
+  - [Flow][]: `ScopeOption.All`.
 - [Name][SemaphoreName], which defaults to an empty string (i.e. `""`).
 - [ConcurrencyLimit][SemaphoreConcurrencyLimit], which defaults to 0.
 - [Queue][SemaphoreQueue], which defaults to `null`.
@@ -120,8 +122,10 @@ None
 [SemaphoreQueue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
 [QueuePriority]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.Priority" >}}
 [QueueTimeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
-[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.Tenant" >}}
-[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.System" >}}
+[Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant" >}}
+[System]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System" >}}
+[Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package" >}}
+[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Flow" >}}
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MainDoc" >}}
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [WhatIsBlock]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}

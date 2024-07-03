@@ -1,34 +1,34 @@
 ---
-title: "Scope"
-linkTitle: "Scope"
+title: "ScopeDefinition"
+linkTitle: "ScopeDefinition"
 description: "Used to define the area in which an action takes place."
 ---
 
 # {{% param title %}}
 
-<p class="namespace">(Cortex.DataTypes.Scopes.Scope)</p>
+<p class="namespace">(Cortex.DataTypes.Scopes.ScopeDefinition)</p>
 
 ## Summary
 
-The `Scope` data type is used to define the area in which an action takes place.
+The `ScopeDefinition` data type is used to define the area in which an action takes place.
 
-The `Scope` is restricted by a number of levels:
+The `ScopeDefinition` is restricted by a number of levels:
 
 - [Tenant][Tenant Property]
 - [System][System Property]
+- [Package][Package Property]
+- [Flow][Flow Property]
 
 Additional levels will be added in future releases, including:
 
 - Environment
-- PackageName
 - PackageVersion
-- Flow
 
 |                     |                                                         |
 |---------------------|---------------------------------------------------------|
 | **Category:**       | Scopes                                                  |
-| **Name:**           | `Scope`                                                 |
-| **Full Name:**      | `Cortex.DataTypes.Scopes.Scope`                         |
+| **Name:**           | `ScopeDefinition`                                                 |
+| **Full Name:**      | `Cortex.DataTypes.Scopes.ScopeDefinition`                         |
 | **Alias:**          | N/A                                                     |
 | **Description:**    | Used to define the area in which an action takes place. |
 | **Default Value:**  | `null`                                                  |
@@ -59,42 +59,66 @@ The [System][System Property] is used to define the scope of the action at the s
 | Default Editor  | [Literal][]           |
 | Default Value   | `ScopeOption.Current` |
 
+### Package
+
+The [Package][Package Property] is used to define the scope of the action at the package level.
+
+|                 |                       |
+|-----------------|-----------------------|
+| Data Type       | [ScopeOption][]       |
+| Is [Advanced][] | `false`               |
+| Default Editor  | [Literal][]           |
+| Default Value   | `ScopeOption.Current` |
+
+### Flow
+
+The [Flow][Flow Property] is used to define the scope of the action at the flow level.
+
+|                 |                       |
+|-----------------|-----------------------|
+| Data Type       | [ScopeOption][]       |
+| Is [Advanced][] | `false`               |
+| Default Editor  | [Literal][]           |
+| Default Value   | `ScopeOption.All` |
+
 ## Remarks
 
 ### Create a Scope
 
-The following table shows some of the ways that `Scope` can be created.
+The following table shows some of the ways that `ScopeDefinition` can be created.
 
 | Method                    | Example                                                               | Result                                                               | Editor&nbsp;Support | Notes                                                                                          |
 |---------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------------|
-| Use a `Scope` constructor | `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)` | `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}` | Expression          | Creates a new `Scope` that can be used to restrict an action to the current Tenant and System. |
+| Use a `ScopeDefinition` constructor | `new ScopeDefinition(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.Current, flow: ScopeOption.All)` | `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.Current", "Flow": "ScopeOption.All"}` | Expression          | Creates a new `ScopeDefinition` that can be used to restrict an action to the current Tenant, System and Package, and any Flow. |
 
-A `Scope` can also be created using the Literal Editor by filling in the necessary values for the following properties:
+A `ScopeDefinition` can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
-| Property | Data Type     | Example               | Notes                                                                          |
-|----------|---------------|-----------------------|--------------------------------------------------------------------------------|
-| `Tenant` | `ScopeOption` | `ScopeOption.Current` | [Tenant][Tenant Property] defines the scope of the action at the tenant level. |
-| `System` | `ScopeOption` | `ScopeOption.Current` | [System][System Property] defines the scope of the action at the system level. |
+| Property  | Data Type     | Example               | Notes                                                                             |
+|-----------|---------------|-----------------------|-----------------------------------------------------------------------------------|
+| `Tenant`  | `ScopeOption` | `ScopeOption.Current` | [Tenant][Tenant Property] defines the scope of the action at the tenant level.    |
+| `System`  | `ScopeOption` | `ScopeOption.Current` | [System][System Property] defines the scope of the action at the system level.    |
+| `Package` | `ScopeOption` | `ScopeOption.Current` | [Package][Package Property] defines the scope of the action at the package level. |
+| `Flow`    | `ScopeOption` | `ScopeOption.All`     | [Flow][Flow Property] defines the scope of the action at the flow level.          |
 
 ### Convert Scope to Text
 
-The following table shows some of the ways that a `Scope` can be converted to text.
+The following table shows some of the ways that a `ScopeDefinition` can be converted to text.
 
 | Method                             | Example                                                                                                       | Result                                                                                      | Editor&nbsp;Support | Notes                          |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|---------------------|--------------------------------|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current" }` | `"{\r\n \"Tenant\": \"ScopeOption.Current\",\r\n \"System\": \"ScopeOption.Current\"\r\n}"` | N/A                 | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.Current", "Flow": "ScopeOption.All" }` | `"{\r\n \"Tenant\": \"ScopeOption.Current\",\r\n \"System\": \"ScopeOption.Current\",\r\n \"Package\": \"ScopeOption.Current\",\r\n \"Flow\": \"ScopeOption.All\"\r\n}"` | N/A                 | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
-- The Expression Editor is available for [Input][] properties where the data type is `Scope`.
-- The Literal Editor is available for [Input][] properties where the data type is `Scope`.
-- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Scope`.
+- The Expression Editor is available for [Input][] properties where the data type is `ScopeDefinition`.
+- The Literal Editor is available for [Input][] properties where the data type is `ScopeDefinition`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `ScopeDefinition`.
 
 ### Known Limitations
 
 #### ScopeOption only has ScopeOption.Current
 
-Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` will be added in a future release.
+None
 
 ## See Also
 
@@ -112,6 +136,8 @@ None
 
 [Tenant Property]: {{< ref "#tenant">}}
 [System Property]: {{< ref "#system">}}
+[Package Property]: {{< ref "#package">}}
+[Flow Property]: {{< ref "#flow">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
