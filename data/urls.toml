@@ -1796,7 +1796,7 @@
             [Cortex.Reference.DataTypes.Scopes]
                 MainDoc = "/docs/reference/data-types/scopes/"
                 [Cortex.Reference.DataTypes.Scopes.Scope]
-                    MainDoc = "/docs/reference/data-types/scopes/scope-definition"
+                    MainDoc = "/docs/reference/data-types/scopes/scope"
                     Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
                     System = "/docs/reference/data-types/scopes/scope/#system"
                     Package = "/docs/reference/data-types/scopes/scope/#package"

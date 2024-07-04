@@ -27,12 +27,12 @@ Additional levels will be added in future releases, including:
 |                     |                                                         |
 |---------------------|---------------------------------------------------------|
 | **Category:**       | Scopes                                                  |
-| **Name:**           | `ScopeDefinition`                                                 |
-| **Full Name:**      | `Cortex.DataTypes.Scopes.ScopeDefinition`                         |
+| **Name:**           | `ScopeDefinition`                                       |
+| **Full Name:**      | `Cortex.DataTypes.Scopes.ScopeDefinition`               |
 | **Alias:**          | N/A                                                     |
 | **Description:**    | Used to define the area in which an action takes place. |
 | **Default Value:**  | `null`                                                  |
-| **Can be used as:** | `Scope`, `Object`, `dynamic`                            |
+| **Can be used as:** | `ScopeDefinition`, `Object`, `dynamic`                  |
 | **Can be cast to:** | N/A                                                     |
 
 ## Properties
