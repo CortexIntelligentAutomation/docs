@@ -33,7 +33,7 @@ In this example a separate flow with access to `"users"` has a [Write Data With 
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user1"` | `($)Key` is a variable of type [String][] |
 | [Old Value][Old Value Property] | `($)OldValue`, with no value | `($)OldValue` is a variable of type [dynamic][] |
@@ -64,7 +64,7 @@ In this example a separate flow with access to `"users"` has a [Write Data With 
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user3"` | `($)Key` is a variable of type [String][] |
 | [Old Value][Old Value Property] | `($)OldValue`, with no value | `($)OldValue` is a variable of type [dynamic][] |
@@ -95,7 +95,9 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
 ```json
 {
     "Tenant": "ScopeOption.Current",
-    "System": "ScopeOption.Current"
+    "System": "ScopeOption.Current",
+    "Package": "ScopeOption.Current",
+    "Flow": "ScopeOption.Flow"
 }
 
 ```
@@ -157,6 +159,8 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [Package][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [Flow][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
@@ -194,6 +198,8 @@ Waiting for a key to be set, in a collection that doesn't exist, it is treated t
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System">}}
+[Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
+[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Flow">}}
 [Block Timeout]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty" >}}
 
 [BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}

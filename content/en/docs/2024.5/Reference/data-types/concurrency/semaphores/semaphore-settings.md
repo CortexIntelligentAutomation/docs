@@ -39,7 +39,9 @@ The [Scope][Scope Property] is used to define the area in which the [Semaphore][
 ```json
 {
     "Tenant": "ScopeOption.Current",
-    "System": "ScopeOption.Current"
+    "System": "ScopeOption.Current",
+    "Package": "ScopeOption.Current",
+    "Flow": "ScopeOption.All"
 }
 ```
 
@@ -89,13 +91,13 @@ The following table shows some of the ways that `SemaphoreSettings` can be creat
 
 | Method                                | Example                                                                                             | Result                                                                                                                                         | Editor&nbsp;Support | Notes                                                                                           |
 |---------------------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------------------------------------------------------------------------------|
-| Use a `SemaphoreSettings` constructor | `new SemaphoreSettings(new Scope(ScopeOption.Current, ScopeOption.Current), "SemaphoreA", 1, null)` | `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | Expression          | Creates a new [SemaphoreSettings][] that can be used to configure the functions of a [Semaphore][]. |
+| Use a `SemaphoreSettings` constructor | `new SemaphoreSettings(new ScopeDefinition(ScopeOption.Current, ScopeOption.Current, ScopeOption.Current, ScopeOption.All), "SemaphoreA", 1, null)` | `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.Current", "Flow": "ScopeOption.All" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | Expression          | Creates a new [SemaphoreSettings][] that can be used to configure the functions of a [Semaphore][]. |
 
 A [SemaphoreSettings][] can also be created using the Literal Editor by filling in the necessary values for the following properties:
 
 | Property           | Data Type       | Example                                               | Notes                                                                                                                                  |
 |--------------------|-----------------|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| `Scope`            | `Scope`         | `new Scope(ScopeOption.Current, ScopeOption.Current)` | [Scope][Scope Property] defines the scope that the [Semaphore][] will operate in.                                                        |
+| `Scope`            | `ScopeDefinition`         | `new ScopeDefinition(ScopeOption.Current, ScopeOption.Current, ScopeOption.Current, ScopeOption.All)` | [Scope][Scope Property] defines the scope that the [Semaphore][] will operate in.                                                        |
 | `Name`             | `String`        | `"SemaphoreA"`                                        | [Name][Name Property] defines the name of the [Semaphore][].                                                                             |
 | `ConcurrencyLimit` | `Int32`         | `1`                                                   | [ConcurrencyLimit][ConcurrencyLimit Property] defines the maximum number of executions that can be inside the [Semaphore][] at one time. |
 | `Queue`            | `QueueSettings` | `null`                                                | [Queue][Queue Property] defines the behaviour of the [Semaphore's][Semaphore] queue.                                                   |
@@ -106,7 +108,7 @@ The following table shows some of the ways that a `SemaphoreSettings` can be con
 
 | Method                             | Example                                                                                                                                                                               | Result                                                                                                                                                            | Editor&nbsp;Support | Notes                        |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|------------------------------|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | `"{\r\n  \"Scope\": {\r\n    \"Tenant\": 0,\r\n    \"System\": 0\r\n  },\r\n  \"Name\": \"SemaphoreA\",\r\n  \"ConcurrencyLimit\": 1,\r\n  \"Queue\": null\r\n}"` | N/A                 | See [Convert Object To Json] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Scope": { "Tenant": ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.Current", "Flow": "ScopeOption.All" }, "Name": "SemaphoreA", "ConcurrencyLimit": 1, "Queue": null }` | `"{\r\n  \"Scope\": {\r\n    \"Tenant\": 0,\r\n    \"System\": 0,\r\n    \"Package\": 0,\r\n    \"Flow\": 1\r\n  },\r\n  \"Name\": \"SemaphoreA\",\r\n  \"ConcurrencyLimit\": 1,\r\n  \"Queue\": null\r\n}"` | N/A                 | See [Convert Object To Json] |
 
 ### Property Editor Support
 

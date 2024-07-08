@@ -29,7 +29,7 @@ The example will write the [Data][Data Property] `{"Domain": "domain", "Username
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
@@ -60,7 +60,7 @@ The example will write the [Data][Data Property] `{"Domain": "domain", "Username
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "new user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "new user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
@@ -93,7 +93,9 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
 ```json
 {
     "Tenant": "ScopeOption.Current",
-    "System": "ScopeOption.Current"
+    "System": "ScopeOption.Current",
+    "Package": "ScopeOption.Current",
+    "Flow": "ScopeOption.Flow"
 }
 
 ```
@@ -146,6 +148,8 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [Package][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [Flow][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | [DataStorageCollectionNotFoundException][] | Thrown when the [Collection Name][Collection Name Property] can not be found within the specified [Collection Scope][Collection Scope property].
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
@@ -179,6 +183,8 @@ When trying to write to a key that already exists in the [Data Storage Collectio
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System">}}
+[Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
+[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Flow">}}
 
 [PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
 [PropertyEmptyException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyEmptyException.MainDoc" >}}

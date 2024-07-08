@@ -28,7 +28,7 @@ This example will wait for a [Data Storage Collection][] named `"users"` that is
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`. <br><br>In this example `($)Scope` has been set up using the following [Expression][]: <br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`. <br><br>In this example `($)Scope` has been set up using the following [Expression][]: <br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
@@ -45,7 +45,7 @@ This example will wait for a [Data Storage Collection][] named `"users"` that is
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]:<br><br>`new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 
 #### Result
@@ -71,7 +71,9 @@ The [Collection Scope][Collection Scope Property] to wait for the [Data Storage 
 ```json
 {
     "Tenant": "ScopeOption.Current",
-    "System": "ScopeOption.Current"
+    "System": "ScopeOption.Current",
+    "Package": "ScopeOption.Current",
+    "Flow": "ScopeOption.All"
 }
 ```
 
@@ -95,6 +97,8 @@ The exceptions thrown by the block can be found below:
 |----------|----------|
 | [ArgumentException][] | Thrown when [Tenant][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | | Thrown when [System][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [Package][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
+| | Thrown when [Flow][] is not one of the specified [ScopeOption][] types (e.g. `(ScopeOption)100`). |
 | [PropertyEmptyException][] | Thrown when the [Collection Name][Collection Name Property] is empty (i.e. `""`).|
 | [PropertyNullException][] | Thrown when the [Collection Scope][Collection Scope Property] is `null`. |
 | | Thrown when the [Collection Name][Collection Name Property] is `null`. |
@@ -125,6 +129,8 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System">}}
+[Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
+[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
 
 [Deleted]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock.MainDoc">}}
 

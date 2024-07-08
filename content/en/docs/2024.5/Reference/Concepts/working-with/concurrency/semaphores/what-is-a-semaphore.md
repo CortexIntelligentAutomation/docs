@@ -56,7 +56,7 @@ None
 ### Related Data Types
 
 - [QueueSettings][]
-- [Scope][ScopeDatatype]
+- [ScopeDefinition][ScopeDatatype]
 - [SemaphoreSettings][]
 
 ### Related Blocks

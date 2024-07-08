@@ -54,7 +54,7 @@ For this exception:
 
 ### Tenant
 
-The tenant specified on the service.
+The tenant specified on the [Scope][] provided.
 
 | | |
 |-----------|---------------------------|
@@ -62,7 +62,7 @@ The tenant specified on the service.
 
 ### System
 
-The system specified on the service.
+The system specified on the [Scope][] provided.
 
 | | |
 |-----------|---------------------------|
@@ -94,6 +94,7 @@ None
 
 ### Related Data Types
 
+* [Scope][]
 * [String][]
 
 ### Related Concepts
@@ -120,6 +121,7 @@ None
 [Write Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.WriteData.WriteDataWithKeyBlock.MainDoc">}}
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
