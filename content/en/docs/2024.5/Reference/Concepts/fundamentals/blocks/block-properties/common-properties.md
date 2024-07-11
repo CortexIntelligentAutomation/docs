@@ -57,9 +57,11 @@ Once the [block][] has finished executing, the next block to execute will run as
 
 The default value of `null` also results in the [block][] executing as the user the [Execution Service][] is running as.
 
-If [UserCredentials][] has an invalid domain, username or password, a [RunAsException][] will be thrown when the [block][] is executed.
+If [UserCredentials][] has an invalid domain, username, password or [LogonType][UserCredentialsLogonType], a [RunAsException][] will be thrown when the [block][] is executed.
 
 If [UserCredentials][] has a `null` username or password, a [PropertyNullException][] will be thrown when the [block][] is executed.
+
+By default, the type of logon method used to authenticate the Run As user is `LogonType.Network`; this works for most scenarios. For scenarios that require a different type of logon method (e.g. connecting to a remote database), the correct [LogonType][] (e.g. `LogonType.NewCredentials`) can be specified as part of the [UserCredentials][].
 
 {{< figure src="/images/set-variable/set-variable-run-as.svg" >}}
 
@@ -130,6 +132,7 @@ None
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [WhatIsBlock]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
+[LogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.LogonType.MainDoc" >}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
@@ -141,6 +144,8 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
 [UserCredentials]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.MainDoc" >}}
+
+[UserCredentialsLogonType]: {{< url path="Cortex.Reference.DataTypes.Credentials.UserCredentials.LogonType" >}}
 
 [BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}
 [InvalidBlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.InvalidBlockTimeoutException.MainDoc" >}}

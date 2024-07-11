@@ -1,5 +1,5 @@
 ---
 title: "Wireless"
 linkTitle: "Wireless"
-description: "Blocks related to working with wireless connections."
+description: "Blocks related to moving the execution."
 ---
