@@ -10,13 +10,13 @@ description: "The exception thrown when a data storage collection could not be f
 
 ## Description
 
-The exception thrown when an operation attempts to retrieve a [Data Storage Collection][] from a [ScopeDefinition][] that does not exist in that [ScopeDefinition][].
+The exception thrown when an operation attempts to retrieve a [Data Storage Collection][] that does not exist in the [Scope][] specified by the [ScopeDefinition][].
 
 ## Reasons
 
 ### Data Storage Collection Could Not Be Found
 
-The key could not be found on the provided [Data Storage Collection][] could not be found.
+The [Data Storage Collection][] could not be found in the [Scope][] specified by the [ScopeDefinition][].
 
 #### Message Format
 
@@ -64,7 +64,7 @@ The scope of the collection specified.
 
 ### CollectionName
 
-The name of the collection that could not be found within the [ScopeDefinition][] provided.
+The name of the collection that could not be found within the [Scope][] specified by the [ScopeDefinition][] provided.
 
 | | |
 |-----------|---------------------------|

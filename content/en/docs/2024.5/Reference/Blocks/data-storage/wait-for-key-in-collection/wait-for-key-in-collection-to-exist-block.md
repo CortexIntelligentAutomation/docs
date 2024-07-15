@@ -67,7 +67,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
   
 | | |
 |--------------------|---------------------------|
-| Data Type | [Scope] |
+| Data Type | [ScopeDefinition] |
 | Property Type | [Input][] |
 | Is [Advanced][] | `false` |
 | Default Editor | [Literal][] |
@@ -78,7 +78,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
     "Tenant": "ScopeOption.Current",
     "System": "ScopeOption.Current",
     "Package": "ScopeOption.Current",
-    "Flow": "ScopeOption.Flow"
+    "Flow": "ScopeOption.All"
 }
 
 ```
@@ -154,8 +154,8 @@ When trying to wait for a key to exist, in a collection that doesn't exist, it i
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System">}}
-[Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant">}}
-[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System">}}
+[Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
+[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Flow">}}
 [Block Timeout]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.BlockTimeoutProperty" >}}
 
 [BlockTimeoutException]: {{< url path="Cortex.Reference.Exceptions.Flows.Blocks.BlockTimeoutException.MainDoc" >}}

@@ -31,8 +31,8 @@ where:
 
 * `<tenant>` is the tenant defined in the [Scope][] the semaphore operates in.
 * `<system>` is the system defined in the [Scope][] the semaphore operates in.
-* `<package>` is the tenant defined in the [Scope][] the semaphore operates in.
-* `<flow>` is the system defined in the [Scope][] the semaphore operates in.
+* `<package>` is the package defined in the [Scope][] the semaphore operates in.
+* `<flow>` is the flow defined in the [Scope][] the semaphore operates in.
 * `<semaphore-name>` is the [Name][SemaphoreName] of the semaphore.
 
 #### How to fix

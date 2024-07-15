@@ -1,7 +1,7 @@
 ---
 title: "ScopeDefinition"
 linkTitle: "ScopeDefinition"
-description: "Used to define the area in which an action takes place."
+description: "Used to define the Scope in which an action takes place."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to define the area in which an action takes place."
 
 ## Summary
 
-The `ScopeDefinition` data type is used to define the area in which an action takes place.
+The `ScopeDefinition` data type is used to define the [Scope][] in which an action takes place.
 
 The `ScopeDefinition` is restricted by a number of levels:
 
@@ -30,7 +30,7 @@ Additional levels will be added in future releases, including:
 | **Name:**           | `ScopeDefinition`                                       |
 | **Full Name:**      | `Cortex.DataTypes.Scopes.ScopeDefinition`               |
 | **Alias:**          | N/A                                                     |
-| **Description:**    | Used to define the area in which an action takes place. |
+| **Description:**    | Used to define the [Scope][] in which an action takes place. |
 | **Default Value:**  | `null`                                                  |
 | **Can be used as:** | `ScopeDefinition`, `Object`, `dynamic`                  |
 | **Can be cast to:** | N/A                                                     |
@@ -106,7 +106,7 @@ The following table shows some of the ways that a `ScopeDefinition` can be conve
 
 | Method                             | Example                                                                                                       | Result                                                                                      | Editor&nbsp;Support | Notes                          |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|---------------------|--------------------------------|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.Current", "Flow": "ScopeOption.All" }` | `"{\r\n \"Tenant\": \"ScopeOption.Current\",\r\n \"System\": \"ScopeOption.Current\",\r\n \"Package\": \"ScopeOption.Current\",\r\n \"Flow\": \"ScopeOption.All\"\r\n}"` | N/A                 | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.Current", "Flow": "ScopeOption.All" }` | `"{\r\n \"Tenant\": 1,\r\n \"System\": 1,\r\n \"Package\": 1,\r\n \"Flow\": 0\r\n}"` | N/A                 | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -116,14 +116,13 @@ The following table shows some of the ways that a `ScopeDefinition` can be conve
 
 ### Known Limitations
 
-#### ScopeOption only has ScopeOption.Current
-
 None
 
 ## See Also
 
 ### Related Data Types
 
+- [Scope][]
 - [ScopeOption][]
 
 ### Related Concepts
@@ -146,6 +145,7 @@ None
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 [Working with Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc">}}
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
+[Scope]: {{< url path ="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 

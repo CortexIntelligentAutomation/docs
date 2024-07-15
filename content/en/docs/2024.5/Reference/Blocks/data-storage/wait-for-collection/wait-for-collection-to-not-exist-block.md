@@ -130,7 +130,7 @@ This block has a default [Block Timeout][] of 60 seconds. If the execution waits
 [Tenant]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Tenant">}}
 [System]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.System">}}
 [Package]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
-[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Package">}}
+[Flow]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.Flow">}}
 
 [Deleted]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteCollection.DeleteCollectionBlock.MainDoc">}}
 

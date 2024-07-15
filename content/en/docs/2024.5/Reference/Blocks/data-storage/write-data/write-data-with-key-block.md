@@ -29,7 +29,7 @@ The example will write the [Data][Data Property] `{"Domain": "domain", "Username
 
 | Property           | Value                     | Notes                                    |
 |--------------------|---------------------------|------------------------------------------|
-| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new ScoScopeDefinitionpe(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
+| [Collection Scope][Collection Scope Property] | `($)Scope` with value `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current", "Package": "ScopeOption.All", "Flow": "ScopeOption.All"}`.<br><br>In this example `($)Scope` has been set up using the following [Expression][]: `new ScopeDefinition(tenant: ScopeOption.Current, system: ScopeOption.Current, package: ScopeOption.All, flow: ScopeOption.All)`| `($)Scope` is a variable of type [ScopeDefinition][] |
 | [Collection Name][Collection Name Property] | `($)CollectionName` with value `"users"` | `($)CollectionName` is a variable of type [String][] |
 | [Key][Key Property] | `($)Key` with value `"user2"` | `($)Key` is a variable of type [String][] |
 | [Data][Data Property] | `($)Data` with value `{"Domain": "domain", "Username": "user2", "Password": "encryptedPassword"}`.<br><br>In this example `($)Data` has been set up using the following [Expression][] `new UserCredentials(domain: "domain", username: "user2", password: "encryptedPassword")` | `($)Data` is a variable of type [UserCredentials][] |
@@ -95,7 +95,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
     "Tenant": "ScopeOption.Current",
     "System": "ScopeOption.Current",
     "Package": "ScopeOption.Current",
-    "Flow": "ScopeOption.Flow"
+    "Flow": "ScopeOption.All"
 }
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: "Scope"
 linkTitle: "Scope"
-description: "Used to define the actual values of an area described by a ScopeDefinition."
+description: "Represents the Scope defined by a ScopeDefinition."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "Used to define the actual values of an area described by a ScopeDe
 
 ## Summary
 
-The `Scope` data type is used to define the actual values of an area described by a [ScopeDefinition][].
+The `Scope` data type represents the [Scope][] defined by a [ScopeDefinition][].
 
 The `Scope` is defined by a number of levels:
 
@@ -30,7 +30,7 @@ Additional levels will be added in future releases, including:
 | **Name:**           | `Scope`                                                 |
 | **Full Name:**      | `Cortex.DataTypes.Scopes.Scope`                         |
 | **Alias:**          | N/A                                                     |
-| **Description:**    | Used to define the actual values of an area described by a [ScopeDefinition][]. |
+| **Description:**    | Represents the [Scope][] defined by a [ScopeDefinition][]. |
 | **Default Value:**  | `null`                                                  |
 | **Can be used as:** | `Scope`, `Object`, `dynamic`                            |
 | **Can be cast to:** | N/A                                                     |
@@ -39,7 +39,7 @@ Additional levels will be added in future releases, including:
 
 ### Tenant
 
-The [Tenant][Tenant Property] the action is operating in.
+The [Tenant][Tenant Property] the action is restricted to.
 
 |                 |                       |
 |-----------------|-----------------------|
@@ -47,7 +47,7 @@ The [Tenant][Tenant Property] the action is operating in.
 
 ### System
 
-The [System][System Property] the action is operating in.
+The [System][System Property] the action is restricted to.
 
 |                 |                       |
 |-----------------|-----------------------|
@@ -55,7 +55,7 @@ The [System][System Property] the action is operating in.
 
 ### Package
 
-The [Package][Package Property] the action is operating in.
+The [Package][Package Property] the action is restricted to.
 
 |                 |                       |
 |-----------------|-----------------------|
@@ -63,7 +63,7 @@ The [Package][Package Property] the action is operating in.
 
 ### Flow
 
-The [Flow][Flow Property] the action is operating in.
+The [Flow][Flow Property] the action is restricted to.
 
 |                 |                       |
 |-----------------|-----------------------|
@@ -77,7 +77,7 @@ The following table shows some of the ways that `Scope` can be created.
 
 | Method                    | Example                                                               | Result                                                               | Editor&nbsp;Support | Notes                                                                                          |
 |---------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------------|
-| Use a `Scope` constructor | `new Scope("tenant", "system", "package", "flow")` | `{ "Tenant": "tenant", "System": "system", "Package": "package", "Flow": "flow" }` | N/A          | Creates a new `Scope` that contains the scope values an action could be operating in. |
+| Use a `Scope` constructor | `new Scope("tenant", "system", "package", "flow")` | `{ "Tenant": "tenant", "System": "system", "Package": "package", "Flow": "flow" }` | N/A          | Creates a new `Scope` that contains the scope values an action is restricted to. |
 
 ### Convert Scope to Text
 
@@ -89,7 +89,9 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 ### Property Editor Support
 
-None
+- The Expression Editor is available for [Input][] properties where the data type is `Scope`.
+- The Literal Editor is available for [Input][] properties where the data type is `Scope`.
+- The Variable Editor is available for [Input][], [InputOutput][] and [Output][] properties where the data type is `Scope`.
 
 ### Known Limitations
 
@@ -120,6 +122,7 @@ None
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 [Working with Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc">}}
+[Scope]: {{< url path ="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
 [ScopeDefinition]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 

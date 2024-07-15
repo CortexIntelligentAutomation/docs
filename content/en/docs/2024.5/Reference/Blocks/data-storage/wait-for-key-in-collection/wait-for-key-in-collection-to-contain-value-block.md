@@ -84,7 +84,7 @@ The [Collection Scope][Collection Scope Property] containing the [Data Storage C
     "Tenant": "ScopeOption.Current",
     "System": "ScopeOption.Current",
     "Package": "ScopeOption.Current",
-    "Flow": "ScopeOption.Flow"
+    "Flow": "ScopeOption.All"
 }
 
 ```
