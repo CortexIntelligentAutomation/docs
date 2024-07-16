@@ -23,14 +23,16 @@ The specified semaphore's [Concurrency Limit][SemaphoreConcurrencyLimit] has bee
 The format of the [Message][] is as follows:
 
 ```json
-"Requested semaphore '/<tenant>/<system>/*/*/*/*/<semaphore-name>' could not be acquired.
+"Requested semaphore '/<tenant>/<system>/*/<package>/*/<flow>/<semaphore-name>' could not be acquired.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<tenant>` is the tenant defined in the [Scope][SemaphoreScope] the semaphore operates in.
-* `<system>` is the system defined in the [Scope][SemaphoreScope] the semaphore operates in.
+* `<tenant>` is the tenant defined in the [Scope][] the semaphore operates in.
+* `<system>` is the system defined in the [Scope][] the semaphore operates in.
+* `<package>` is the package defined in the [Scope][] the semaphore operates in.
+* `<flow>` is the flow defined in the [Scope][] the semaphore operates in.
 * `<semaphore-name>` is the [Name][SemaphoreName] of the semaphore.
 
 #### How to fix
@@ -46,14 +48,16 @@ When queueing for the specified semaphore, the [Queue Timeout] is reached before
 The format of the [Message][] is as follows:
 
 ```json
-"Requested semaphore '/<tenant>/<system>/*/*/*/*/<semaphore-name>' could not be acquired.
+"Requested semaphore '/<tenant>/<system>/*/<package>/*/<flow>/<semaphore-name>' could not be acquired.
 Please click the HelpLink for more information on how to fix this."
 ```
 
 where:
 
-* `<tenant>` is the tenant defined in the [Scope][SemaphoreScope] the semaphore operates in.
-* `<system>` is the system defined in the [Scope][SemaphoreScope] the semaphore operates in.
+* `<tenant>` is the tenant defined in the [Scope][] the semaphore operates in.
+* `<system>` is the system defined in the [Scope][] the semaphore operates in.
+* `<package>` is the package defined in the [Scope][] the semaphore operates in.
+* `<flow>` is the flow defined in the [Scope][] the semaphore operates in.
 * `<semaphore-name>` is the [Name][SemaphoreName] of the semaphore.
 
 #### How to fix
@@ -78,21 +82,13 @@ The exception message, providing information about the exception that occurred.
 |-----------|------------|
 | Data Type | [String][] |
 
-### Tenant
+### Scope
 
-The tenant specified on the [Scope][SemaphoreScope] provided.
-
-|           |            |
-|-----------|------------|
-| Data Type | [String][] |
-
-### System
-
-The system specified on the [Scope][SemaphoreScope] provided.
+The [Scope] the semaphore operates in.
 
 |           |            |
 |-----------|------------|
-| Data Type | [String][] |
+| Data Type | [Scope][SemaphoreScope] |
 
 ### Semaphore Name
 
@@ -142,7 +138,7 @@ The URL for the relevant section of this exception's help page.
 
 * [Boolean][]
 * [Int32][]
-* [Scope][]
+* [Scope][SemaphoreScope]
 * [String][]
 * [TimePeriod][]
 
@@ -169,6 +165,7 @@ Except:
 None
 
 [Message]: {{< ref "#message" >}}
+[Scope]: {{< ref "#scope" >}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
@@ -179,14 +176,13 @@ None
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Boolean]: {{< url path="Cortex.Reference.DataTypes.ConditionalLogic.Boolean.MainDoc" >}}
 [TimePeriod]: {{< url path="Cortex.Reference.DataTypes.DateAndTime.TimePeriod.MainDoc" >}}
-[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
 [Semaphore]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.MainDoc" >}}
 [SemaphoreWhatIs]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore.MainDoc" >}}
 
 [SemaphoreConcurrencyLimit]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.ConcurrencyLimit" >}}
 [SemaphoreQueue]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Queue" >}}
 [Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc" >}}
-[SemaphoreScope]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Scope" >}}
+[SemaphoreScope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
 [SemaphoreName]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.SemaphoreSettings.Name" >}}
 [Queue Timeout]: {{< url path="Cortex.Reference.DataTypes.Concurrency.Semaphores.QueueSettings.QueueTimeout" >}}
 

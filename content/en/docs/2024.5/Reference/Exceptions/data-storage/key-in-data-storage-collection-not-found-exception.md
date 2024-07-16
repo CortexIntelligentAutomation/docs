@@ -1,7 +1,7 @@
 ---
 title: "KeyInDataStorageCollectionNotFoundException"
 linkTitle: "KeyInDataStorageCollectionNotFoundException"
-description: "The exception thrown when an operation attempts to retrieve data from a  data storage collection using a key that does not exist in that collection."
+description: "The exception thrown when an operation attempts to retrieve data from a data storage collection using a key that does not exist in that collection."
 ---
 
 # {{% param title %}}
@@ -10,7 +10,7 @@ description: "The exception thrown when an operation attempts to retrieve data f
 
 ## Description
 
-The exception thrown when an operation attempts to retrieve data from a  [Data Storage Collection][] using a key that does not exist in that collection.
+The exception thrown when an operation attempts to retrieve data from a [Data Storage Collection][] using a key that does not exist in that collection.
 
 ## Reasons
 
@@ -57,21 +57,13 @@ For this exception:
 |-----------|------------|
 | Data Type | [String][] |
 
-### Tenant
-
-The tenant specified on the [Scope][] provided.
-
-| | |
-|-----------|---------------------------|
-| Data Type | [String][] |
-
-### System
-
-The system specified on the [Scope][] provided.
+### Scope
+ 
+The scope of the collection specified.
 
 | | |
 |-----------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Scope][] |
 
 ### CollectionName
 
@@ -108,6 +100,7 @@ None
 ### Related Data Types
 
 * [Scope][]
+* [ScopeDefinition][]
 * [String][]
 
 ### Related Concepts
@@ -130,6 +123,7 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}
 [Data Storage Collection]: {{< url path = "Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.DataStorage">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}

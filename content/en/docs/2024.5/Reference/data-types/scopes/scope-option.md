@@ -10,7 +10,7 @@ description: "Used to represent how each level of Scope is defined."
 
 ## Summary
 
-The `ScopeOption` data type is used to represent how each level of [Scope] is defined.
+The `ScopeOption` data type is used to represent how each level of [ScopeDefinition] is defined.
 
 `ScopeOption` is an [enum][Working with Enums] data type, which means it has a defined set of values, where each value has an associated [String][] name and [Int32][] value.
 
@@ -20,7 +20,7 @@ The `ScopeOption` data type is used to represent how each level of [Scope] is de
 | **Name:**              | `ScopeOption`                                |
 | **Full Name:**         | `Cortex.DataTypes.Scopes.ScopeOption`         |
 | **Alias:**             | N/A|
-| **Description:**       | The data type used to represent how each level of [Scope] is defined. |
+| **Description:**       | The data type used to represent how each level of [ScopeDefinition] is defined. |
 | **Default Value:**     | `(ScopeOption)0`                             |
 | **Can be used as:**    | `ScopeOption`, `Object`, `dynamic`           |
 | **Can be cast to:**    | `Int16` (e.g. `(Int16)ScopeOption.Current` or `(System.Int16)ScopeOption.Current` or `(short)ScopeOption.Current`)  |
@@ -31,13 +31,21 @@ The `ScopeOption` data type is used to represent how each level of [Scope] is de
 
 ## Values
 
+### All
+
+| | |
+|-|-|
+| **Name:**    | All                              |
+| **Value:**   | [Int32][] with value `0`             |
+| **Notes:**   | Restricts a level within [ScopeDefinition] to a unique "All" value. |
+
 ### Current
 
 | | |
 |-|-|
 | **Name:**    | Current                              |
-| **Value:**   | [Int32][] with value `0`             |
-| **Notes:**   | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
+| **Value:**   | [Int32][] with value `1`             |
+| **Notes:**   | Restricts a level within [ScopeDefinition] to its current value (e.g. the current Tenant). |
 
 ## Remarks
 
@@ -47,11 +55,11 @@ The following table shows some of the ways that `ScopeOption` can be created.
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Declare a `ScopeOption` literal | `Current` | `ScopeOption.Current`| Literal | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
-| Use a `ScopeOption` expression    | `ScopeOption.Current` | `ScopeOption.Current` | Expression | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
-| Use [Explicit Casting][]  | `(ScopeOption)0` | `ScopeOption.Current` | Expression | Restricts a level within [Scope] to its current value (e.g. the current Tenant). |
+| Declare a `ScopeOption` literal | `Current` | `ScopeOption.Current`| Literal | Restricts a level within [ScopeDefinition] to its current value (e.g. the current Tenant). |
+| Use a `ScopeOption` expression    | `ScopeOption.Current` | `ScopeOption.Current` | Expression | Restricts a level within [ScopeDefinition] to its current value (e.g. the current Tenant). |
+| Use [Explicit Casting][]  | `(ScopeOption)1` | `ScopeOption.Current` | Expression | Restricts a level within [ScopeDefinition] to its current value (e.g. the current Tenant). |
 | Use `Enum.Parse`  | `(ScopeOption)Enum.Parse(typeof(ScopeOption), "Current")` | `ScopeOption.Current` | Expression | Parses `"Current"` and converts it to `ScopeOption.Current`. See [Enum.Parse][] |
-| Use `Enum.ToObject`   | `(ScopeOption)Enum.ToObject(typeof(ScopeOption), 0)` | `ScopeOption.Current`| Expression | Converts `0` to `ScopeOption.Current` value. See [Enum.ToObject][] |
+| Use `Enum.ToObject`   | `(ScopeOption)Enum.ToObject(typeof(ScopeOption), 1)` | `ScopeOption.Current`| Expression | Converts `1` to `ScopeOption.Current` value. See [Enum.ToObject][] |
 
 Please see [Instantiating an enumeration type][] for further information.
 
@@ -64,7 +72,7 @@ The following table shows some of the ways that a `ScopeOption` can be converted
 | Use `ToString`    | `ScopeOption.Current.ToString()` | `"Current"` | Expression | Converts `ScopeOption.Current` to `"Current"`. See [Enum.ToString][] |
 | Use `Convert.ToString`    | `Convert.ToString(ScopeOption.Current)` | `"Current"` | Expression | Converts `ScopeOption.Current` to `"Current"`. See [Convert.ToString][] |
 | Use `Convert Object To Text` block    | where `Object` property has a value of `ScopeOption.Current` | `"Current"` | N/A  | Converts `ScopeOption.Current` to `"Current"`. See [Convert Object To Text][] |
-| Use `Convert Object To Json` block    | where `Object` property has a value of `ScopeOption.Current` | `"0"` | N/A  | Converts `ScopeOption.Current` to `"0"`. See [Convert Object To Json][] |
+| Use `Convert Object To Json` block    | where `Object` property has a value of `ScopeOption.Current` | `"1"` | N/A  | Converts `ScopeOption.Current` to `"1"`. See [Convert Object To Json][] |
 
 Please see [Formatting enumeration values][] for further information.
 
@@ -74,8 +82,8 @@ The following table shows some of the ways that a `ScopeOption` can be converted
 
 | Method | Example | Result | Editor&nbsp;Support | Notes |
 |-|-|-|-|-|
-| Use [Explicit Casting][]  | `(Int32)ScopeOption.Current`   | `0` | Expression | [Casts][Explicit Casting] `ScopeOption.Current` to `0` |
-| Use `Convert.ToInt32`     | `Convert.ToInt32(ScopeOption.Current)`   | `0` | Expression | Converts `ScopeOption.Current` to `0`. See [Convert.ToInt32][] |
+| Use [Explicit Casting][]  | `(Int32)ScopeOption.Current`   | `1` | Expression | [Casts][Explicit Casting] `ScopeOption.Current` to `1` |
+| Use `Convert.ToInt32`     | `Convert.ToInt32(ScopeOption.Current)`   | `1` | Expression | Converts `ScopeOption.Current` to `1`. See [Convert.ToInt32][] |
 
 ### Property Editor Support
 
@@ -85,15 +93,13 @@ The following table shows some of the ways that a `ScopeOption` can be converted
 
 ### Known Limitations
 
-#### ScopeOption only has ScopeOption.Current
-
-Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` will be added in a future release.
+None
 
 ## See Also
 
 ### Related Data Types
 
-- [Scope][]
+- [ScopeDefinition][]
 - [Int32][]
 - [String][]
 
@@ -125,7 +131,7 @@ Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `Sco
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
 
-[Scope]: {{< url path = "Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeDefinition]: {{< url path = "Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}
 [ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
 
 [Instantiating an enumeration type]: {{< url path="MSDocs.DotNet.Api.System.Enum.InstantiatingAnEnum" >}}

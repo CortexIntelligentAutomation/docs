@@ -10,13 +10,13 @@ description: "The exception thrown when a data storage collection could not be f
 
 ## Description
 
-The exception thrown when an operation attempts to retrieve a [Data Storage Collection][] from a [Scope][] that does not exist in that [Scope][].
+The exception thrown when an operation attempts to retrieve a [Data Storage Collection][] that does not exist in the [Scope][] specified by the [ScopeDefinition][].
 
 ## Reasons
 
 ### Data Storage Collection Could Not Be Found
 
-The key could not be found on the provided [Data Storage Collection][] could not be found.
+The [Data Storage Collection][] could not be found in the [Scope][] specified by the [ScopeDefinition][].
 
 #### Message Format
 
@@ -54,25 +54,17 @@ For this exception:
 |-----------|------------|
 | Data Type | [String][] |
 
-### Tenant
+### Scope
 
-The tenant specified on the [Scope][] provided.
-
-| | |
-|-----------|---------------------------|
-| Data Type | [String][] |
-
-### System
-
-The system specified on the [Scope][] provided.
+The scope of the collection specified.
 
 | | |
 |-----------|---------------------------|
-| Data Type | [String][] |
+| Data Type | [Scope][] |
 
 ### CollectionName
 
-The name of the collection that could not be found within the [Tenant][Tenant Property] and [System][System Property] provided.
+The name of the collection that could not be found within the [Scope][] specified by the [ScopeDefinition][] provided.
 
 | | |
 |-----------|---------------------------|
@@ -97,6 +89,7 @@ None
 ### Related Data Types
 
 * [Scope][]
+* [ScopeDefinition][]
 * [String][]
 
 ### Related Concepts
@@ -114,9 +107,6 @@ None
 
 None
 
-[Tenant Property]: {{< ref "#tenant" >}}
-[System Property]: {{< ref "#system" >}}
-
 [Create Collection]: {{< url path = "Cortex.Reference.Blocks.DataStorage.CreateCollection.CreateCollectionBlock.MainDoc">}}
 [Delete Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.DeleteData.DeleteDataWithKeyBlock.MainDoc">}}
 [Read Data With Key]: {{< url path="Cortex.Reference.Blocks.DataStorage.ReadData.ReadDataWithKeyBlock.MainDoc">}}
@@ -124,6 +114,7 @@ None
 
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}
 
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 
