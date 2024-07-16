@@ -1803,6 +1803,14 @@
                     MainDoc = "/docs/reference/data-types/scopes/scope"
                     Tenant = "/docs/reference/data-types/scopes/scope/#tenant"
                     System = "/docs/reference/data-types/scopes/scope/#system"
+                    Package = "/docs/reference/data-types/scopes/scope/#package"
+                    Flow = "/docs/reference/data-types/scopes/scope/#flow"
+                [Cortex.Reference.DataTypes.Scopes.ScopeDefinition]
+                    MainDoc = "/docs/reference/data-types/scopes/scope-definition"
+                    Tenant = "/docs/reference/data-types/scopes/scope-definition/#tenant"
+                    System = "/docs/reference/data-types/scopes/scope-definition/#system"
+                    Package = "/docs/reference/data-types/scopes/scope-definition/#package"
+                    Flow = "/docs/reference/data-types/scopes/scope-definition/#flow"
                 [Cortex.Reference.DataTypes.Scopes.ScopeOption]
                     MainDoc = "/docs/reference/data-types/scopes/scope-option"
             [Cortex.Reference.DataTypes.Ssh]

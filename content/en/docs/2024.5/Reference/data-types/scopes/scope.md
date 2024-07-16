@@ -1,7 +1,7 @@
 ---
 title: "Scope"
 linkTitle: "Scope"
-description: "Used to define the area in which an action takes place."
+description: "Represents the Scope defined by a ScopeDefinition."
 ---
 
 # {{% param title %}}
@@ -10,19 +10,19 @@ description: "Used to define the area in which an action takes place."
 
 ## Summary
 
-The `Scope` data type is used to define the area in which an action takes place.
+The `Scope` data type represents the [Scope][] defined by a [ScopeDefinition][].
 
-The `Scope` is restricted by a number of levels:
+The `Scope` is defined by a number of levels:
 
 - [Tenant][Tenant Property]
 - [System][System Property]
+- [Package][Package Property]
+- [Flow][Flow Property]
 
 Additional levels will be added in future releases, including:
 
 - Environment
-- PackageName
 - PackageVersion
-- Flow
 
 |                     |                                                         |
 |---------------------|---------------------------------------------------------|
@@ -30,7 +30,7 @@ Additional levels will be added in future releases, including:
 | **Name:**           | `Scope`                                                 |
 | **Full Name:**      | `Cortex.DataTypes.Scopes.Scope`                         |
 | **Alias:**          | N/A                                                     |
-| **Description:**    | Used to define the area in which an action takes place. |
+| **Description:**    | Represents the [Scope][] defined by a [ScopeDefinition][]. |
 | **Default Value:**  | `null`                                                  |
 | **Can be used as:** | `Scope`, `Object`, `dynamic`                            |
 | **Can be cast to:** | N/A                                                     |
@@ -39,25 +39,35 @@ Additional levels will be added in future releases, including:
 
 ### Tenant
 
-The [Tenant][Tenant Property] is used to define the scope of the action at the tenant level.
+The [Tenant][Tenant Property] the action is restricted to.
 
 |                 |                       |
 |-----------------|-----------------------|
-| Data Type       | [ScopeOption][]       |
-| Is [Advanced][] | `false`               |
-| Default Editor  | [Literal][]           |
-| Default Value   | `ScopeOption.Current` |
+| Data Type       | [String][]            |
 
 ### System
 
-The [System][System Property] is used to define the scope of the action at the system level.
+The [System][System Property] the action is restricted to.
 
 |                 |                       |
 |-----------------|-----------------------|
-| Data Type       | [ScopeOption][]       |
-| Is [Advanced][] | `false`               |
-| Default Editor  | [Literal][]           |
-| Default Value   | `ScopeOption.Current` |
+| Data Type       | [String][]       |
+
+### Package
+
+The [Package][Package Property] the action is restricted to.
+
+|                 |                       |
+|-----------------|-----------------------|
+| Data Type       | [String][]       |
+
+### Flow
+
+The [Flow][Flow Property] the action is restricted to.
+
+|                 |                       |
+|-----------------|-----------------------|
+| Data Type       | [String][]       |
 
 ## Remarks
 
@@ -67,14 +77,7 @@ The following table shows some of the ways that `Scope` can be created.
 
 | Method                    | Example                                                               | Result                                                               | Editor&nbsp;Support | Notes                                                                                          |
 |---------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------------|
-| Use a `Scope` constructor | `new Scope(tenant: ScopeOption.Current, system: ScopeOption.Current)` | `{"Tenant": "ScopeOption.Current", "System": "ScopeOption.Current"}` | Expression          | Creates a new `Scope` that can be used to restrict an action to the current Tenant and System. |
-
-A `Scope` can also be created using the Literal Editor by filling in the necessary values for the following properties:
-
-| Property | Data Type     | Example               | Notes                                                                          |
-|----------|---------------|-----------------------|--------------------------------------------------------------------------------|
-| `Tenant` | `ScopeOption` | `ScopeOption.Current` | [Tenant][Tenant Property] defines the scope of the action at the tenant level. |
-| `System` | `ScopeOption` | `ScopeOption.Current` | [System][System Property] defines the scope of the action at the system level. |
+| Use a `Scope` constructor | `new Scope("tenant", "system", "package", "flow")` | `{ "Tenant": "tenant", "System": "system", "Package": "package", "Flow": "flow" }` | N/A          | Creates a new `Scope` that contains the scope values an action is restricted to. |
 
 ### Convert Scope to Text
 
@@ -82,7 +85,7 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 | Method                             | Example                                                                                                       | Result                                                                                      | Editor&nbsp;Support | Notes                          |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|---------------------|--------------------------------|
-| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "ScopeOption.Current", "System": "ScopeOption.Current" }` | `"{\r\n \"Tenant\": \"ScopeOption.Current\",\r\n \"System\": \"ScopeOption.Current\"\r\n}"` | N/A                 | See [Convert Object To Json][] |
+| Use `Convert Object To Json` block | where `Object` property has a value of `{ "Tenant": "tenant", "System": "system", "Package": "package", "Flow": "flow" }` | `"{\r\n \"Tenant\": \"tenant\",\r\n \"System\": \"system\",\r\n \"Package\": \"package\",\r\n \"Flow\": \"flow\"\r\n}"` | N/A                 | See [Convert Object To Json][] |
 
 ### Property Editor Support
 
@@ -92,15 +95,13 @@ The following table shows some of the ways that a `Scope` can be converted to te
 
 ### Known Limitations
 
-#### ScopeOption only has ScopeOption.Current
-
-Currently [ScopeOption][] only allows `ScopeOption.Current` to be selected, `ScopeOption.All` will be added in a future release.
+None
 
 ## See Also
 
 ### Related Data Types
 
-- [ScopeOption][]
+- [ScopeDefinition][]
 
 ### Related Concepts
 
@@ -112,6 +113,8 @@ None
 
 [Tenant Property]: {{< ref "#tenant">}}
 [System Property]: {{< ref "#system">}}
+[Package Property]: {{< ref "#package">}}
+[Flow Property]: {{< ref "#flow">}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
@@ -119,7 +122,9 @@ None
 
 [Convert Object To Json]: {{< url path="Cortex.Reference.Blocks.Json.ConvertJson.ConvertObjectToJson.MainDoc" >}}
 [Working with Scopes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Scopes.MainDoc">}}
-[ScopeOption]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeOption.MainDoc">}}
+[Scope]: {{< url path ="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc">}}
+[ScopeDefinition]: {{< url path ="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc">}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
 [Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 
