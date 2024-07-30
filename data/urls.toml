@@ -8,6 +8,22 @@
             MainDoc = "/blog/releases"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.7]
+                    MainDoc =  "/blog/2024/08/12/2024.7/"
+                    PackageManagement =  "/blog/2024/08/12/2024.7/#package-management"
+                    RunningExecutions =  "/blog/2024/08/12/2024.7/#running-executions-can-be-stopped-in-real-time"
+                    UnselectAll =  "/blog/2024/08/12/2024.7/#unselect-use-latest-version-for-all-flows-except-for-a-selected-one"
+                    ExtendedScopeSupport =  "/blog/2024/08/12/2024.7/#extended-scope-support"
+                    NewBlocks =  "/blog/2024/08/12/2024.7/#new-blocks"
+                    FingerprintGeneratorCode =  "/blog/2024/08/12/2024.7/#reduced-usage-of-shared-fingerprint-generator-code"
+                    ImprovedCortexGateway =  "/blog/2024/08/12/2024.7/#improved-cortex-gateway"
+                    HelplinksUpdate =  "/blog/2024/08/12/2024.7/#helplinks-update-when-upgrading-the-cortex-platform"
+                    UpdateStyling =  "/blog/2024/08/12/2024.7/#update-styling-of-the-setup-wizard-to-be-consistent-with-new-themes"
+                    ImprovedEngineExceptions =  "/blog/2024/08/12/2024.7/#improved-engine-exceptions"
+                    ImprovedUpgrade = "/blog/2024/08/12/2024.7/#improved-upgrade"
+                    ImprovedInstallation = "/blog/2024/08/12/2024.7/#improved-installation"
+                    ObservabilityUpgrades = "/blog/2024/08/12/2024.7/#observability-upgrades"
+                    ProductPortal = "/blog/2024/08/12/2024.7/#product-portal"
                 [Cortex.Blogs.Releases.2024.5]
                     MainDoc =  "/blog/2024/06/13/2024.5/"
                     PackageManagement =  "/blog/2024/06/13/2024.5/#package-management"
@@ -480,6 +496,20 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
+            [Cortex.Guides.UpgradeCortex.2024.5to2024.7]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/"
+                [Cortex.Guides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/try-it-out"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeCortex.2024.5to2024.7.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
@@ -2280,8 +2310,6 @@
     [Cortex.Tutorials]
         MainDoc = "/docs/tutorials/"
     [Cortex.Website]
-        [Cortex.Website.Customers]
-            MainDoc = "https://www.wearecortex.com/about/customer-success/"
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
         [Cortex.Website.Eula]

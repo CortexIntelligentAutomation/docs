@@ -23,6 +23,7 @@ IgnoreURLs:
 - "https://nssm.cc/"
 - "https://code.visualstudio.com/"
 - "https://blogs.oracle.com/.*"
+- "https://jsonformatter.org/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
