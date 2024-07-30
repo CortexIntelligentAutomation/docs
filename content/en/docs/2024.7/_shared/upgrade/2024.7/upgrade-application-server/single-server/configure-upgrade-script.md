@@ -1,10 +1,10 @@
-1. In the `Cortex Innovation 2024.5 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2024.7 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
 1. Configure the script, changing the parameters according to the details given below:
 
     ```powershell
     .\Cortex.Upgrade.ps1 `
-        -AppServicesPath "C:\Install\Cortex Innovation 2024.5 - App Services.zip" `
-        -BlockPackagesPath "C:\Install\Cortex Innovation 2024.5 - Block Packages.zip" `
+        -AppServicesPath "C:\Install\Cortex Innovation 2024.7 - App Services.zip" `
+        -BlockPackagesPath "C:\Install\Cortex Innovation 2024.7 - Block Packages.zip" `
         -ApplicationServerIPv4Addresses @("192.168.1.1") `
         -Credential $Credential `
         -AcceptEULA:$AcceptEULA `

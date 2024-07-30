@@ -1,9 +1,9 @@
-1. In the `Cortex Innovation 2024.5 - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2024.7 - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
 
     ```powershell
     .\Cortex.Install.Gateway.ps1 `
-    -GatewayPackagePath "C:\Install\Cortex Innovation 2024.5 - Gateway.zip" `
+    -GatewayPackagePath "C:\Install\Cortex Innovation 2024.7 - Gateway.zip" `
     -GatewayApplicationPoolUsername "Domain\Username" `
     -WebRootFolder "C:\inetpub\wwwroot" `
     -WebsitePort "443" `
@@ -18,7 +18,7 @@
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
-    |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation 2024.5 - Gateway.zip` file on the server. |
+    |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation 2024.7 - Gateway.zip` file on the server. |
     |`GatewayApplicationPoolUsername`                | Replace `Domain\Username` with the user that is used to run the {{% ctx %}} Gateway application pool currently.|
     |`WebRootFolder`                                 | Replace this with the correct path for the Web Root Folder on the server. Typically this will be  `C:\inetpub\wwwroot`.|
     |`WebsitePort`                                   | Replace this with the port that you wish the website to use. Typically this will be `443`.|
