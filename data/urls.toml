@@ -2310,8 +2310,6 @@
     [Cortex.Tutorials]
         MainDoc = "/docs/tutorials/"
     [Cortex.Website]
-        [Cortex.Website.Customers]
-            MainDoc = "https://www.wearecortex.com/about/customer-success/"
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
         [Cortex.Website.Eula]

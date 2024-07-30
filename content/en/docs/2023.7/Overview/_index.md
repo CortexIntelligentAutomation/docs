@@ -27,7 +27,7 @@ With a **[comprehensive set of functionality][Blocks]** and interfaces with **3r
 
 ### Deliver quickly
 
-Using {{% ctx %}}, **[global organisations][Customers]** have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
+Using {{% ctx %}}, global organisations have been able to **increase** their **capacity, velocity, quality, efficiency, agility** and **transform** their business and IT **operations in months**.
 
 ### For diverse sets of use cases
 
@@ -79,8 +79,6 @@ Wherever you are on your automation journey and whatever you are trying to achie
 
 [Reference]: {{< url path="Cortex.Reference.MainDoc" >}}
 [Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
-
-[Customers]: {{< url path="Cortex.Website.Customers.MainDoc" >}}
 
 [Engage With Us]: {{< url path="Cortex.Website.EngageWithUs.MainDoc" >}}
 
