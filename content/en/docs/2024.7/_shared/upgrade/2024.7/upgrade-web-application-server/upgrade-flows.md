@@ -1,3 +1,8 @@
+1. Export the flows to be upgraded from {{% ctx %}} Gateway as a studio package:
+    1. In a browser, navigate to {{% ctx %}} Gateway and log in as a user with administrative privileges.
+    1. Click on the `Settings` charm and select `Studio Export`.
+    1. Select all the flows to be upgraded and click `Export`.
+    1. A message should be displayed confirming that the studio package was exported successfully.
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation 2024.7 - Upgrade Flows` folder using the following command, modifying the path as necessary:
 
@@ -5,11 +10,10 @@
     cd "C:\Install\Cortex Innovation 2024.7 - Upgrade Flows"
     ```
 
-1. Export the flows to be upgraded from Gateway as a studio package.
-1. Run the `Cortex.Upgrade.FlowUpgrader.exe` application using the following command, modifying the argument value to contain the extracted studio package of flows to upgrade:
+1. Run the `Cortex.Upgrade.FlowsUpgrader.exe` application using the following command, modifying the path specified to contain the extracted studio package of flows to upgrade (typically this will have been exported to the local `Downloads` folder):
 
     ```powershell
-    .\Cortex.Upgrade.FlowUpgrader.exe "C:\Install\Export.studiopkg"
+    .\Cortex.Upgrade.FlowsUpgrader.exe "C:\Users\{Username}\Downloads\export.studiopkg"
     ```
 
 1. A message similar to the following will indicate that the application has completed successfully:
@@ -23,6 +27,17 @@
     Upgraded Studio Package Created: export-28UpgradedTo30.StudioPkg
     ```
 
-1. A new studio package will be created in the same file path as the package given as the argument with the format `{PackageName}-{PreviousVersion}UpgradedTo{NewVersion}.studiopkg`.
-
-1. This package should be imported into Gateway.
+  A new studio package will have been created in the same location as the original export package with the name `{PackageName}-{PreviousVersion}UpgradedTo{NewVersion}.studiopkg`.
+1. Import the upgraded flow package into {{% ctx %}} Gateway:
+    1. In a browser, navigate to {{% ctx %}} Gateway and log in as a user with administrative privileges.
+    1. Click on the `Settings` charm and select `Studio Import`.
+    1. Select `Browse` and locate and select the upgraded studio package and click `Open`.
+    1. Verify that there are no flows with a red status and click `Import`.
+    1. A message should be displayed confirming that the studio package was imported successfully.
+1. Re-publish any previously published packages:
+    1. Click on the `Settings` charm and select `Packages`.
+    1. On the table of Package Definitions filter the Is Published column to display `Is Published`.
+    1. For each package listed select it in the table then:
+        1. Scroll down to below the package definition and select `Create New Version`.
+        1. Click `Save`.
+        1. Click `Publish`.
