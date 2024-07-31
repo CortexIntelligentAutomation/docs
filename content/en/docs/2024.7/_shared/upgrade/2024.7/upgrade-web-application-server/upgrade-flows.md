@@ -27,7 +27,7 @@
     Upgraded Studio Package Created: export-28UpgradedTo30.StudioPkg
     ```
 
-  A new studio package will have been created in the same location as the original export package with the name `{PackageName}-{PreviousVersion}UpgradedTo{NewVersion}.studiopkg`.
+    A new studio package will have been created in the same location as the original export package with the name `{PackageName}-{PreviousVersion}UpgradedTo{NewVersion}.studiopkg`.
 1. Import the upgraded flow package into {{% ctx %}} Gateway:
     1. In a browser, navigate to {{% ctx %}} Gateway and log in as a user with administrative privileges.
     1. Click on the `Settings` charm and select `Studio Import`.
