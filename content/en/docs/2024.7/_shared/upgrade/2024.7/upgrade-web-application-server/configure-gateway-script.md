@@ -1,8 +1,20 @@
 1. In the `Cortex Innovation 2024.7 - Web App Server Install Scripts` folder, locate the `Cortex.Innovation.Install.Gateway.ps1` script and open it with a text editor.
-1. Configure the script according to the details given below:
+1. Choose the tab below that matches the configuration for this upgrade, then update the script to match, changing the parameters according to the details given below:
 
-    ```powershell
-    .\Cortex.Install.Gateway.ps1 `
+    {{% alert title="Note" %}}
+To check the previous configuration values open the `Cortex.Upgrade.GatewayConfig.json` file located in `%ProgramData%\Cortex\Upgrade`. If the file does not exist or any of the values should be changed then use the `Use New Configuration Values` tab removing any of the parameters that do need need to change leaving the minimum required parameters as can be seen in the `Use Previous Configuration Values` tab.
+    {{% /alert %}}
+
+    {{< tabpane lang="powershell" >}}
+        {{< tab header="Use Previous Configuration Values" >}}
+.\Cortex.Install.Gateway.ps1 `
+    -GatewayPackagePath "C:\Install\Cortex Innovation 2024.7 - Gateway.zip" `
+    -ApplySecurityMeasures $true `
+    -AcceptEULA:$AcceptEula `
+    *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
+        {{< /tab >}}
+        {{< tab header="Use New Configuration Values">}}
+.\Cortex.Install.Gateway.ps1 `
     -GatewayPackagePath "C:\Install\Cortex Innovation 2024.7 - Gateway.zip" `
     -GatewayApplicationPoolUsername "Domain\Username" `
     -WebRootFolder "C:\inetpub\wwwroot" `
@@ -14,7 +26,8 @@
     -UsingWindowsDefender $false `
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
-    ```
+        {{< /tab >}}
+    {{< /tabpane >}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
