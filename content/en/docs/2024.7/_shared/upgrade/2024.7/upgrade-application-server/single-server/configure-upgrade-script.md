@@ -2,7 +2,7 @@
 1. Choose the tab below that matches the configuration for this upgrade, then update the script to match, changing the parameters according to the details given below:
 
     {{% alert title="Note" %}}
-To check the previous configuration values open the `Cortex.Upgrade.ApplicationConfig.json` file located in `C:\ProgramData\Cortex\Upgrade`. If the file does not exist or the values should be changed then use the `Use New Configuration Values` tab.
+To check the previous configuration values open the `Cortex.Upgrade.ApplicationConfig.json` file located in `%ProgramData%\Cortex\Upgrade`. If the file does not exist or the values should be changed then use the `Use New Configuration Values` tab.
     {{% /alert %}}
 
     {{< tabpane lang="powershell" >}}
