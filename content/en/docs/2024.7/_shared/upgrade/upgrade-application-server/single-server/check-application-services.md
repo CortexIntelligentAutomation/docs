@@ -1,7 +1,13 @@
 1. Log on to the server.
-1. Import the client certificate used for the original installation of the application. Its location is specified in the `ClientCertificatePath` parameter of the `Cortex.Innovation.Install.ps1` file of the original installation. If the .PFX file is available on the server, this can be achieved by double-clicking on the client certificate .PFX file and following the wizard.
+1. Import the client certificate used for the original installation of the application. Its location is specified in the `ClientCertificatePath` parameter of the `Cortex.Innovation.Install.ps1` file of the original installation.
 
-    If the .PFX file is not available, the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the certificate that is used from the `Personal` store as a pfx file and then importing it to the `Current User` store by double-clicking on it and following the wizard.
+    If the .PFX file is available on the server:
+    * Double-click on the client certificate .PFX file and follow the wizard.
+
+    If the .PFX file is not available:
+    * Identify the certificate to export by opening the `Cortex.Upgrade.ApplicationConfig.json` configuration file located in `C:\ProgramData\Cortex\Upgrade` and locate the value of the `applicationServerCertificateSubject` and `applicationServerCertificateThumbprint`.
+    * Find the certificate by using the `Manage Computer Certificates` tool in Windows.  In the `Personal` store, the certificate will have an `Issued To` similar to `applicationServerCertificateSubject` and to confirm it is the right certificate double-click the certificate, select the `Details` tab and locate the `Thumbprint` property to compare the value to that in `applicationServerCertificateThumbprint`.
+    * Export the certificate as a pfx file and then import it to the `Current User` store by double-clicking on it and following the wizard.
 1. Open a web browser.
 1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration of the original installation.
 
