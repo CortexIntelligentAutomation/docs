@@ -90,10 +90,8 @@ To get a licence file and feature identifier take the following steps:
     Please also include a suitable {{% ctx %}} Innovation feature identifier.
     ```
 
-1. Copy the following artefact to a folder on the Web Application Server:
-   * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
-1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
-1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder then open the `Fingerprint Generation` folder
+1. Extract `Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip`.
+1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the Web Application server.
 1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
 
     ```text
