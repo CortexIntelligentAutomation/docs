@@ -4,7 +4,7 @@ linkTitle: "Remove All Items"
 description: "Removes all items from a List."
 ---
 
-{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_RemoveItem_RemoveAllItemsBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

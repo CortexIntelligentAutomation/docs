@@ -4,7 +4,7 @@ linkTitle: "Set Items With Value"
 description: "Sets all items matching a value in a List to a new value."
 ---
 
-{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_SetItem_SetItemsWithValueBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

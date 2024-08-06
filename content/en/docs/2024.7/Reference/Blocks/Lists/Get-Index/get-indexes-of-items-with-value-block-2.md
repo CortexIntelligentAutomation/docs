@@ -4,7 +4,7 @@ linkTitle: "Get Indexes Of Items With Value"
 description: "Gets the indexes of all items in a List matching a value."
 ---
 
-{{< figure src="/blocks/lists-get-index-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_GetIndex_GetIndexesOfItemsWithValueBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Add Items At End"
 description: "Adds Items at the end of a List."
 ---
 
-{{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_AddItem_AddItemsAtEndBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

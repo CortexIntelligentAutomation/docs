@@ -4,7 +4,7 @@ linkTitle: "Contains Items With Values"
 description: "Checks if a List contains at least one item matching each of the specified values."
 ---
 
-{{< figure src="/blocks/lists-contains-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_ContainsItem_ContainsItemsWithValuesBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

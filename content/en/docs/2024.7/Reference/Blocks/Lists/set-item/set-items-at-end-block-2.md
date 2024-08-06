@@ -4,7 +4,7 @@ linkTitle: "Set Items At End"
 description: "Sets the items at the end of a List to new values."
 ---
 
-{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_SetItem_SetItemsAtEndBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

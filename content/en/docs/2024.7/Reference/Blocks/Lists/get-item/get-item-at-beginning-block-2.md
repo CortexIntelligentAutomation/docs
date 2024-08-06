@@ -4,7 +4,7 @@ linkTitle: "Get Item At Beginning"
 description: "Gets the item at the beginning of a List."
 ---
 
-{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_GetItem_GetItemAtBeginningBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

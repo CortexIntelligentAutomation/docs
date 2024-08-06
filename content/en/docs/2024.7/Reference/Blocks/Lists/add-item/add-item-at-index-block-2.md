@@ -4,7 +4,7 @@ linkTitle: "Add Item At Index"
 description: "Adds an Item at the specified Index of a List."
 ---
 
-{{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_AddItem_AddItemAtIndexBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Set All Items"
 description: "Sets all items in a List to a new value."
 ---
 
-{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_SetItem_SetAllItemsBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

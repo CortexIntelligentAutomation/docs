@@ -4,7 +4,7 @@ linkTitle: "Add Item At Beginning"
 description: "Adds an Item at the beginning of a List."
 ---
 
-{{< figure src="/blocks/lists-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_AddItem_AddItemAtBeginningBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
