@@ -4,7 +4,7 @@ linkTitle: "For Loop"
 description: "Loops a specified number of times based on a given start index, end index and increment."
 ---
 
-{{< figure src="/blocks/loops-for-loop-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Loops_For_ForLoopBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
