@@ -4,7 +4,7 @@ linkTitle: "End Workspace"
 description: "Indicates the end of a workspace."
 ---
 
-{{< figure src="/blocks/workspaces-end-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Workspaces_EndWorkspace_EndWorkspaceBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

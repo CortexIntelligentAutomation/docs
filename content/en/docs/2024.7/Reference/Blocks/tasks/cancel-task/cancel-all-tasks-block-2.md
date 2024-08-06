@@ -4,7 +4,7 @@ linkTitle: "Cancel All Tasks"
 description: "Cancels all Tasks in a list."
 ---
 
-{{< figure src="/blocks/tasks-cancel-task-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Tasks_CancelTask_CancelAllTasksBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Wireless Sender"
 description: "Sends an execution to a specific block."
 ---
 
-{{< figure src="/blocks/wireless-sender-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Wireless_WirelessSender_WirelessSenderBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

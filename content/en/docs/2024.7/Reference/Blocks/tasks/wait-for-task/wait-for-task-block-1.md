@@ -4,7 +4,7 @@ linkTitle: "Wait For Task"
 description: "Waits for a Task to complete and returns the Result."
 ---
 
-{{< figure src="/blocks/tasks-wait-for-task-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Tasks_WaitForTask_WaitForTaskBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

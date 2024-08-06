@@ -4,7 +4,7 @@ linkTitle: "Wireless Receiver"
 description: "Receives executions."
 ---
 
-{{< figure src="/blocks/wireless-receiver-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Wireless_WirelessReceiver_WirelessReceiverBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

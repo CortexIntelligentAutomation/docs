@@ -4,7 +4,7 @@ linkTitle: "Wait For All Tasks"
 description: "Waits for multiple Tasks to complete and returns their Results."
 ---
 
-{{< figure src="/blocks/tasks-wait-for-task-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Tasks_WaitForTask_WaitForAllTasksBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
