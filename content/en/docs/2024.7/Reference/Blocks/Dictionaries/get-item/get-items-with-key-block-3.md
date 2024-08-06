@@ -4,7 +4,7 @@ linkTitle: "Get Items With Key"
 description: "Gets all items with the given key from a Dictionary."
 ---
 
-{{< figure src="/blocks/dictionaries-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_GetItem_GetItemsWithKeyBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

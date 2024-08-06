@@ -4,7 +4,7 @@ linkTitle: "Remove Items With Keys"
 description: "Removes all items with any of the given keys from a Dictionary."
 ---
 
-{{< figure src="/blocks/dictionaries-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_RemoveItem_RemoveItemsWithKeysBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

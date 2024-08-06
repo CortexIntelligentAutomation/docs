@@ -4,7 +4,7 @@ linkTitle: "Set Item With Key"
 description: "Sets the specified occurrence of an item with the given key in a Dictionary to a new value."
 ---
 
-{{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_SetItem_SetItemWithKeyBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Set Items With Values"
 description: "Sets all items matching one of the specified values in a Dictionary to new values."
 ---
 
-{{< figure src="/blocks/dictionaries-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_SetItem_SetItemsWithValuesBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Get Count Of Items With Value"
 description: "Gets the count of items in a Dictionary with the specified value."
 ---
 
-{{< figure src="/blocks/dictionaries-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_GetCount_GetCountOfItemsWithValueBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

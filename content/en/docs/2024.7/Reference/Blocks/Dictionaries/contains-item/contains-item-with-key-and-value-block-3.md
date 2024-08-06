@@ -4,7 +4,7 @@ linkTitle: "Contains Item With Key And Value"
 description: "Checks if a Dictionary contains at least one item with the specified key and matching the specified value."
 ---
 
-{{< figure src="/blocks/dictionaries-contains-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_ContainsItem_ContainsItemWithKeyAndValueBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
