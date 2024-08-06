@@ -4,7 +4,7 @@ linkTitle: "Send Email Using Gmail"
 description: "Sends an email using the SMTP server hosted by Gmail."
 ---
 
-{{< figure src="/blocks/google-workspace-send-email-using-gmail-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_GoogleWorkspace_Gmail_SendEmail_SendEmailUsingGmailBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
