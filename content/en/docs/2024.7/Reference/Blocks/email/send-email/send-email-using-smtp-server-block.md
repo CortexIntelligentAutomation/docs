@@ -4,7 +4,7 @@ linkTitle: "Send Email Using SMTP Server"
 description: "Sends an email using the specified SMTP server."
 ---
 
-{{< figure src="/blocks/email-send-email-using-smtp-server-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Email_SendEmail_SendEmailUsingSmtpServerBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
