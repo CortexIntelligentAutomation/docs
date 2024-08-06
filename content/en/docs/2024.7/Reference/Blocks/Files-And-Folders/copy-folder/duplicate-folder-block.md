@@ -4,7 +4,7 @@ linkTitle: "Duplicate Folder"
 description: "Copies a folder at the specified folder path to the same location but with a new name."
 ---
 
-{{< figure src="/blocks/folders-copy-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_CopyFolder_DuplicateFolderBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

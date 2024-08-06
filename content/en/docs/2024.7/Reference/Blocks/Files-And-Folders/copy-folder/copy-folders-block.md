@@ -4,7 +4,7 @@ linkTitle: "Copy Folders"
 description: "Copies folders at the specified folder paths to the given destination path."
 ---
 
-{{< figure src="/blocks/folders-copy-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_CopyFolder_CopyFoldersBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Read All Lines"
 description: "Reads all lines from a file at the specified file path."
 ---
 
-{{< figure src="/blocks/files-read-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_ReadFile_ReadAllLinesBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

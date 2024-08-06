@@ -4,7 +4,7 @@ linkTitle: "Copy Files"
 description: "Copies files at the specified file paths to the given destination path."
 ---
 
-{{< figure src="/blocks/files-copy-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_CopyFile_CopyFilesBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
