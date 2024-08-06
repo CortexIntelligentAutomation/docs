@@ -4,7 +4,7 @@ linkTitle: "Get Time Period Between Date Times"
 description: "Gets the Time Period between two Date Times."
 ---
 
-{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_GetTimePeriod_GetTimePeriodBetweenDateTimesBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

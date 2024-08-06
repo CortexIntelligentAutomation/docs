@@ -4,7 +4,7 @@ linkTitle: "Is Date Time Between"
 description: "Checks if a Date Time is between two Date Times."
 ---
 
-{{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_IsDateTime_IsDateTimeBetweenBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

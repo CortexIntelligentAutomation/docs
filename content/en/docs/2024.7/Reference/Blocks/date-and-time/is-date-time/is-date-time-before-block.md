@@ -4,7 +4,7 @@ linkTitle: "Is Date Time Before"
 description: "Checks if a Date Time is before another Date Time."
 ---
 
-{{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_IsDateTime_IsDateTimeBeforeBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

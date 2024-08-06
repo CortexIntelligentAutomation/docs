@@ -4,7 +4,7 @@ linkTitle: "Is Date Time Equal"
 description: "Checks if a Date Time is equal to another Date Time."
 ---
 
-{{< figure src="/blocks/date-and-time-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_IsDateTime_IsDateTimeEqualBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
