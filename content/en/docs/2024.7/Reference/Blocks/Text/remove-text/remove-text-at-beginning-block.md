@@ -4,7 +4,7 @@ linkTitle: "Remove Text At Beginning"
 description: "Removes a length of text from the beginning of a given text."
 ---
 
-{{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_RemoveText_RemoveTextAtBeginningBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

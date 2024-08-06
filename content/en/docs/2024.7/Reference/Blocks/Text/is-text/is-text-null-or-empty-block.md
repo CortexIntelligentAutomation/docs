@@ -4,7 +4,7 @@ linkTitle: "Is Text Null Or Empty"
 description: "Checks if text is `null` or empty (i.e. `\"\"`)."
 ---
 
-{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_IsText_IsTextNullOrEmptyBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

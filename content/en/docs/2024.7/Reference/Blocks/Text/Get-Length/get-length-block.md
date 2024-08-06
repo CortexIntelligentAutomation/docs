@@ -4,7 +4,7 @@ linkTitle: "Get Length"
 description: "Gets the length of a given text."
 ---
 
-{{< figure src="/blocks/text-get-length-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_GetLength_GetLengthBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

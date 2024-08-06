@@ -4,7 +4,7 @@ linkTitle: "Is Text Equal"
 description: "Checks if a text is equal to another text."
 ---
 
-{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_IsText_IsTextEqualBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

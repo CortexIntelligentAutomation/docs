@@ -4,7 +4,7 @@ linkTitle: "Get Text At End"
 description: "Gets a length of text from the end of a given text."
 ---
 
-{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_GetText_GetTextAtEndBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

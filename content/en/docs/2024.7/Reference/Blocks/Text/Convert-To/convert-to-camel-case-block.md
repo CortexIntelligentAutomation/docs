@@ -4,7 +4,7 @@ linkTitle: "Convert To Camel Case"
 description: "Converts text to camel case (e.g. `\"camelCase\"`)."
 ---
 
-{{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_ConvertTo_ConvertToCamelCaseBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

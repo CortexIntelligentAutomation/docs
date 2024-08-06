@@ -4,7 +4,7 @@ linkTitle: "Add Text At Beginning"
 description: "Adds text at the beginning of another text."
 ---
 
-{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_AddText_AddTextAtBeginningBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Add Text After Index"
 description: "Adds text to another text after a given index."
 ---
 
-{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_AddText_AddTextAfterIndexBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

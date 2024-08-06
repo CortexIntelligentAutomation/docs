@@ -4,7 +4,7 @@ linkTitle: "Convert To Upper Case"
 description: "Converts text to upper case (e.g. `\"UPPERCASE\"`)."
 ---
 
-{{< figure src="/blocks/text-convert-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_ConvertTo_ConvertToUpperCaseBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

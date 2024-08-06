@@ -3,7 +3,7 @@ title: "Find All Text"
 linkTitle: "Find All Text"
 description: "Finds all occurrences of a text in a given text."
 ---
-{{< figure src="/blocks/text-find-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_FindText_FindAllTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

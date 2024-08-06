@@ -4,7 +4,7 @@ linkTitle: "Get Text Before Index"
 description: "Gets a length of text before the specified index of a given text."
 ---
 
-{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_GetText_GetTextBeforeIndexBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

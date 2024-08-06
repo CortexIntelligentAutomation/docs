@@ -4,7 +4,7 @@ linkTitle: "Find And Remove Text"
 description: "Finds and removes the specified occurrence of text from a given text."
 ---
 
-{{< figure src="/blocks/text-find-and-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_FindAndRemoveText_FindAndRemoveTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

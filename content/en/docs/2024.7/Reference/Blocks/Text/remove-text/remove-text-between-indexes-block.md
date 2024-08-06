@@ -4,7 +4,7 @@ linkTitle: "Remove Text Between Indexes"
 description: "Removes text between the specified start index and end index of a given text."
 ---
 
-{{< figure src="/blocks/text-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_RemoveText_RemoveTextBetweenIndexesBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

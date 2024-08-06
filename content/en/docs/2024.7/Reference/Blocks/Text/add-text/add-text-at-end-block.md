@@ -4,7 +4,7 @@ linkTitle: "Add Text At End"
 description: "Adds text at the end of another text."
 ---
 
-{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_AddText_AddTextAtEndBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Decode Text"
 description: "Decodes text from a specified format (e.g. `\"Base64\"`)."
 ---
 
-{{< figure src="/blocks/text-decode-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_DecodeText_DecodeTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

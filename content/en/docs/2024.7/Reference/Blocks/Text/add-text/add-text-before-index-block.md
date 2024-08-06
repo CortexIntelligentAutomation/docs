@@ -4,7 +4,7 @@ linkTitle: "Add Text Before Index"
 description: "Adds text to another text before the specified index."
 ---
 
-{{< figure src="/blocks/text-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_AddText_AddTextBeforeIndexBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
