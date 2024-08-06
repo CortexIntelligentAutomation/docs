@@ -4,7 +4,7 @@ linkTitle: "Get Count Of All Items"
 description: "Gets the count of all items in a Queue."
 ---
 
-{{< figure src="/blocks/queues-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Queues_GetCount_GetCountOfAllItemsBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

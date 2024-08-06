@@ -4,7 +4,7 @@ linkTitle: "Enqueue Items"
 description: "Adds Items to a Queue at the specified Priority."
 ---
 
-{{< figure src="/blocks/queues-enqueue-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Queues_EnqueueItem_EnqueueItemsBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

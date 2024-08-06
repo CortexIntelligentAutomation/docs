@@ -4,7 +4,7 @@ linkTitle: "Peek Item"
 description: "Gets the item at the beginning of a queue without removing it."
 ---
 
-{{< figure src="/blocks/queues-peek-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Queues_PeekItem_PeekItemBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

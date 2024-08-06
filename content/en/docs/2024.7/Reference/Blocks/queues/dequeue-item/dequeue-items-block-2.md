@@ -4,7 +4,7 @@ linkTitle: "Dequeue Items"
 description: "Removes and returns Items at the beginning of a Queue."
 ---
 
-{{< figure src="/blocks/queues-dequeue-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Queues_DequeueItem_DequeueItemsBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

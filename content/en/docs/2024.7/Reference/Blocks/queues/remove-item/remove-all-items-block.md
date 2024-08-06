@@ -4,7 +4,7 @@ linkTitle: "Remove All Items"
 description: "Removes all items from a queue."
 ---
 
-{{< figure src="/blocks/queues-remove-all-items-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Queues_RemoveItem_RemoveAllItemsBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
