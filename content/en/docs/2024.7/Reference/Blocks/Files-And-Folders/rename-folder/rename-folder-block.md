@@ -4,7 +4,7 @@ linkTitle: "Rename Folder"
 description: "Renames a folder at the specified folder path to a new name."
 ---
 
-{{< figure src="/blocks/folders-rename-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_RenameFolder_RenameFolderBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

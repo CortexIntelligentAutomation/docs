@@ -4,7 +4,7 @@ linkTitle: "Move File"
 description: "Moves a file at the specified file path to the given destination path."
 ---
 
-{{< figure src="/blocks/files-move-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_MoveFile_MoveFileBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Set Items At Index"
 description: "Sets the items at the specified index of a List to new values."
 ---
 
-{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_SetItem_SetItemsAtIndexBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

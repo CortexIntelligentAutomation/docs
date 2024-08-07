@@ -4,7 +4,7 @@ linkTitle: "Get Current Date Time"
 description: "Gets the current Date Time."
 ---
 
-{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_GetDateTime_GetCurrentDateTimeBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

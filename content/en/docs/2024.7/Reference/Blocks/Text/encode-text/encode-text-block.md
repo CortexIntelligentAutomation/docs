@@ -4,7 +4,7 @@ linkTitle: "Encode Text"
 description: "Encodes text to a specified format (e.g. `\"Base64\"`)."
 ---
 
-{{< figure src="/blocks/text-encode-text-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_EncodeText_EncodeTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Get Items At Index"
 description: "Gets a count of items starting at the specified index of a List."
 ---
 
-{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_GetItem_GetItemsAtIndexBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

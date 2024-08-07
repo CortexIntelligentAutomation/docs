@@ -4,7 +4,7 @@ linkTitle: "Get Item At End"
 description: "Gets the item at the end of a List."
 ---
 
-{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_GetItem_GetItemAtEndBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

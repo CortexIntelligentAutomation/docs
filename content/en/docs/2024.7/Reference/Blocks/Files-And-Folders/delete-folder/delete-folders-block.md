@@ -4,7 +4,7 @@ linkTitle: "Delete Folders"
 description: "Deletes folders at the specified folder paths."
 ---
 
-{{< figure src="/blocks/folders-delete-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_DeleteFolder_DeleteFoldersBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

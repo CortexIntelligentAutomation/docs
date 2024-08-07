@@ -4,7 +4,7 @@ linkTitle: "Is Text Empty Or Whitespace"
 description: "Checks if text is empty (i.e. `\"\"`) or whitespace (i.e. `space`, `tab`, `carriage return`, `line feed` characters)."
 ---
 
-{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_IsText_IsTextEmptyOrWhitespaceBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

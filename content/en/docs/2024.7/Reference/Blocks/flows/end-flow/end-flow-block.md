@@ -4,7 +4,7 @@ linkTitle: "End Flow"
 description: "Indicates the end of a flow."
 ---
 
-{{< figure src="/blocks/flows-end-flow-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Flows_EndFlow_EndFlowBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

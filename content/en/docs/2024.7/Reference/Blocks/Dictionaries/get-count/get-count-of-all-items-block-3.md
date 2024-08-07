@@ -4,7 +4,7 @@ linkTitle: "Get Count Of All Items"
 description: "Gets the count of all items in a Dictionary."
 ---
 
-{{< figure src="/blocks/dictionaries-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_GetCount_GetCountOfAllItemsBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

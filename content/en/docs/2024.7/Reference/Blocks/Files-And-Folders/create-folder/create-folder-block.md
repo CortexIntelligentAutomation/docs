@@ -4,7 +4,7 @@ linkTitle: "Create Folder"
 description: "Creates a folder at the specified folder path."
 ---
 
-{{< figure src="/blocks/folders-create-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_CreateFolder_CreateFolderBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

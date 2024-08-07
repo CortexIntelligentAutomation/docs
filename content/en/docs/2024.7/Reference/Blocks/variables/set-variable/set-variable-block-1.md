@@ -4,7 +4,7 @@ linkTitle: "Set Variable"
 description: "Sets a Variable to a given Value."
 ---
 
-{{< figure src="/blocks/variables-set-variable-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Variables_SetVariable_SetVariableBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

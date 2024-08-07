@@ -4,7 +4,7 @@ linkTitle: "Rethrow Exception"
 description: "Rethrows an Exception which has previously been thrown and handled."
 ---
 
-{{< figure src="/blocks/exceptions-rethrow-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Exceptions_RethrowException_RethrowExceptionBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

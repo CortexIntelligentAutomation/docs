@@ -4,7 +4,7 @@ linkTitle: "Subtract Time Period"
 description: "Subtracts a Time Period to from specified Date Time."
 ---
 
-{{< figure src="/blocks/date-and-time-subtract-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_SubtractTimePeriod_SubtractTimePeriodBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

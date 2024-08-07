@@ -4,7 +4,7 @@ linkTitle: "Set Item With Value"
 description: "Sets the specified occurrence of an item matching a value in a List to a new value."
 ---
 
-{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_SetItem_SetItemsWithValueBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

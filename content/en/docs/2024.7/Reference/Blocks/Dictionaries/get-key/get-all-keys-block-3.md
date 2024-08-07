@@ -4,7 +4,7 @@ linkTitle: "Get All Keys"
 description: "Gets all keys from a Dictionary."
 ---
 
-{{< figure src="/blocks/dictionaries-get-all-keys-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_GetKey_GetAllKeysBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

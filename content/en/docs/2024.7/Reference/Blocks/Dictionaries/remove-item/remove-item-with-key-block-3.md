@@ -4,7 +4,7 @@ linkTitle: "Remove Item With Key"
 description: "Removes the specified occurrence of an item with the given key from a Dictionary."
 ---
 
-{{< figure src="/blocks/dictionaries-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_RemoveItem_RemoveItemWithKeyBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

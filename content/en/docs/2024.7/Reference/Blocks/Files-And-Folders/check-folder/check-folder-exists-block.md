@@ -4,7 +4,7 @@ linkTitle: "Check Folder Exists"
 description: "Checks if a folder exists at the specified folder path."
 ---
 
-{{< figure src="/blocks/folders-check-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_CheckFolder_CheckFolderExistsBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

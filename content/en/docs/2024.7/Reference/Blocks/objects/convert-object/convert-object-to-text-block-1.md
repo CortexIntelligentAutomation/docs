@@ -4,7 +4,7 @@ linkTitle: "Convert Object To Text"
 description: "Converts an object to text by replacing all `{Property}` format parameters in a specified format template with the Object's corresponding property value."
 ---
 
-{{< figure src="/blocks/objects-convert-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Objects_ConvertObject_ConvertObjectToTextBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Search Files"
 description: "Searches files at the specified file paths for a matching search pattern."
 ---
 
-{{< figure src="/blocks/files-search-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_SearchFile_SearchFilesBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

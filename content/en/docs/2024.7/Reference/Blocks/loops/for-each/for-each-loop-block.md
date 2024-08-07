@@ -4,7 +4,7 @@ linkTitle: "For Each Loop"
 description: "Loops through all items in the specified collection (i.e. Lists, Dictionaries and Structures)."
 ---
 
-{{< figure src="/blocks/loops-for-each-loop-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Loops_ForEach_ForEachLoopBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

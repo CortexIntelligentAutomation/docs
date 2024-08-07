@@ -4,7 +4,7 @@ linkTitle: "Move Folders"
 description: "Moves folders at the specified folder paths to the given destination path."
 ---
 
-{{< figure src="/blocks/folders-move-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_MoveFolder_MoveFoldersBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

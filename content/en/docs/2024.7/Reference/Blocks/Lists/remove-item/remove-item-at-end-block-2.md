@@ -4,7 +4,7 @@ linkTitle: "Remove Item At End"
 description: "Removes the item at the end of a List."
 ---
 
-{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_RemoveItem_RemoveItemAtEndBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

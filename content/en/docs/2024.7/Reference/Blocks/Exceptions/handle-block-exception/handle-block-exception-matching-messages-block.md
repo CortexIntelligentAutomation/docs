@@ -4,7 +4,7 @@ linkTitle: "Handle Block Exception Matching Messages"
 description: "Handles any exception thrown by the block it is connected to that matches any message in a given set of messages."
 ---
 
-{{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Exceptions_HandleBlockException_HandleBlockExceptionMatchingMessagesBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

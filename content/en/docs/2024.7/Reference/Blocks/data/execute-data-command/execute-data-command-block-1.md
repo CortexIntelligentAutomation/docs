@@ -4,7 +4,7 @@ linkTitle: "Execute Data Command"
 description: "Connects to a specific data source and executes a Command, returning any object from the Command's result."
 ---
 
-{{< figure src="/blocks/data-execute-command-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Data_ExecuteDataCommand_ExecuteDataCommandBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

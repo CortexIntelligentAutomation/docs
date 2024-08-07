@@ -4,7 +4,7 @@ linkTitle: "Execute Http Request"
 description: "Executes an HTTP request and returns a response."
 ---
 
-{{< figure src="/blocks/http-execute-http-request-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Http_ExecuteHttpRequest_ExecuteHttpRequestBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

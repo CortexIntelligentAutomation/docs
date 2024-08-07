@@ -4,7 +4,7 @@ linkTitle: "Find And Replace All Text"
 description: "Finds and replaces all occurrences of a text in a given text."
 ---
 
-{{< figure src="/blocks/text-find-and-replace-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_FindAndReplaceText_FindAndReplaceAllTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -3,7 +3,7 @@ title: "Create Collection"
 linkTitle: "Create Collection"
 description: "Create a data storage collection."
 ---
-{{<figure src="/blocks/data-storage-create-collection-block.png" alt="Icon" class="block-icon">}}
+{{<figure src="/blocks/Cortex_Blocks_DataStorage_CreateCollection_CreateCollectionBlock.png" alt="Icon" class="block-icon">}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Handle Flow Exception"
 description: "Handles any unhandled exception within the Flow."
 ---
 
-{{< figure src="/blocks/exceptions-handle-flow-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Exceptions_HandleFlowException_HandleFlowExceptionWorkspaceBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

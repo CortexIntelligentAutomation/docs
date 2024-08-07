@@ -4,7 +4,7 @@ linkTitle: "Remove Items With Values"
 description: "Removes all items matching one of the specified values from a List."
 ---
 
-{{< figure src="/blocks/lists-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_RemoveItem_RemoveItemsWithValuesBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

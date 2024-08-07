@@ -4,7 +4,7 @@ linkTitle: "Run Flow"
 description: "Runs a chosen Flow, returning any output variables."
 ---
 
-{{< figure src="/blocks/flows-run-flow-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Flows_RunFlow_RunFlowBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

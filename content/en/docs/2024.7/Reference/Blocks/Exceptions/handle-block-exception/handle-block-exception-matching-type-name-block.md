@@ -4,7 +4,7 @@ linkTitle: "Handle Block Exception Matching Type Name"
 description: "Handles any exception thrown by the block it is connected to that matches a specified type name."
 ---
 
-{{< figure src="/blocks/exceptions-handle-block-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Exceptions_HandleBlockException_HandleBlockExceptionMatchingTypeNameBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

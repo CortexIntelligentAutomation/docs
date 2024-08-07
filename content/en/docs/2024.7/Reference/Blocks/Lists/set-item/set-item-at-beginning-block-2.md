@@ -4,7 +4,7 @@ linkTitle: "Set Item At Beginning"
 description: "Sets the item at the beginning of a List to a new value."
 ---
 
-{{< figure src="/blocks/lists-set-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_SetItem_SetItemAtBeginningBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

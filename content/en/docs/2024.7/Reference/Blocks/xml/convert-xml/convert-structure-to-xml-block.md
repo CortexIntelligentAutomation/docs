@@ -4,7 +4,7 @@ linkTitle: "Convert Structure To Xml"
 description: "Converts a Structure To Xml."
 ---
 
-{{< figure src="/blocks/xml-convert-to-xml-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Xml_ConvertXml_ConvertStructureToXmlBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

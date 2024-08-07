@@ -4,7 +4,7 @@ linkTitle: "Delete File"
 description: "Deletes a file at the specified file path."
 ---
 
-{{< figure src="/blocks/files-delete-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_DeleteFile_DeleteFileBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Get Text At Index"
 description: "Gets a length of text at the specified index of a given text."
 ---
 
-{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_GetText_GetTextAtIndexBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

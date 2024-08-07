@@ -4,7 +4,7 @@ linkTitle: "Add Time Period"
 description: "Adds a Time Period to a specified Date Time."
 ---
 
-{{< figure src="/blocks/date-and-time-add-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_AddTimePeriod_AddTimePeriodBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

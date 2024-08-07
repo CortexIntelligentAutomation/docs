@@ -4,7 +4,7 @@ linkTitle: "Join Text"
 description: "Joins a set of values together as text, using the given separator between each value."
 ---
 
-{{< figure src="/blocks/text-join-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_JoinText_JoinTextBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

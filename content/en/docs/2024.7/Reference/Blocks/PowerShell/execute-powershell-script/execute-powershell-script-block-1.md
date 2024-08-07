@@ -4,7 +4,7 @@ linkTitle: "Execute PowerShell Script"
 description: "Executes a PowerShell script on the specified host."
 ---
 
-{{< figure src="/blocks/powershell-execute-powershell-script-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_PowerShell_ExecutePowerShellScript_ExecutePowerShellScriptBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

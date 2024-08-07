@@ -4,7 +4,7 @@ linkTitle: "Get Text At Beginning"
 description: "Gets a length of text from the beginning of a given text."
 ---
 
-{{< figure src="/blocks/text-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_GetText_GetTextAtBeginningBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

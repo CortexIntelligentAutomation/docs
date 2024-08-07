@@ -4,7 +4,7 @@ linkTitle: "Get Item At Index"
 description: "Gets the item at the specified index of a List."
 ---
 
-{{< figure src="/blocks/lists-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_GetItem_GetItemAtIndexBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -4,7 +4,7 @@ linkTitle: "Throw New Flow Exception"
 description: "Throws a new FlowException with the specified message, category, error code, details, inner exception and help link."
 ---
 
-{{< figure src="/blocks/exceptions-throw-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Exceptions_ThrowException_ThrowNewFlowExceptionBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

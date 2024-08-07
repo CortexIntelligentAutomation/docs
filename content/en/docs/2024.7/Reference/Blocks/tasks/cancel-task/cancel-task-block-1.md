@@ -4,7 +4,7 @@ linkTitle: "Cancel Task"
 description: "Cancels a Task."
 ---
 
-{{< figure src="/blocks/tasks-cancel-task-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Tasks_CancelTask_CancelTaskBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

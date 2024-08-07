@@ -4,7 +4,7 @@ linkTitle: "Execute Soap Request"
 description: "Executes a SOAP request and returns a response."
 ---
 
-{{< figure src="/blocks/http-execute-soap-request-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Http_ExecuteSoapRequest_ExecuteSoapRequestBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

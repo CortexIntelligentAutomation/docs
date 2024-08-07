@@ -4,7 +4,7 @@ linkTitle: "Is Text Null"
 description: "Checks if text is `null`."
 ---
 
-{{< figure src="/blocks/text-is-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_IsText_IsTextNullBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

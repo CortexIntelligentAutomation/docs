@@ -3,7 +3,7 @@ title: "Wait For Key In Collection To Contain Value"
 linkTitle: "Wait For Key In Collection To Contain Value"
 description: "Waits for a key in a collection to contain the specified value."
 ---
-{{< figure src="/blocks/data-storage-wait-for-key-in-collection-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DataStorage_WaitForKeyInCollection_WaitForKeyInCollectionToContainValueBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

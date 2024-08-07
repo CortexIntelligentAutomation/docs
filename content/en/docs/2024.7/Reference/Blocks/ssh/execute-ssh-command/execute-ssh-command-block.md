@@ -4,7 +4,7 @@ linkTitle: "Execute Ssh Command"
 description: "Executes an SSH command on the specified host."
 ---
 
-{{< figure src="/blocks/ssh-execute-ssh-command-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Ssh_ExecuteSshCommand_ExecuteSshCommandBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

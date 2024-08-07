@@ -4,7 +4,7 @@ linkTitle: "Get File Information"
 description: "Gets information about a file (e.g. file attributes, created, accessed, modified dates etc.) at the specified file path."
 ---
 
-{{< figure src="/blocks/files-get-information-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_FilesAndFolders_GetFileInformation_GetFileInformationBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

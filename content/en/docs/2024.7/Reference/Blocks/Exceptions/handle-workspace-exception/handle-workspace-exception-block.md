@@ -4,7 +4,7 @@ linkTitle: "Handle Workspace Exception"
 description: "Handles any unhandled exception within its workspace."
 ---
 
-{{< figure src="/blocks/exceptions-handle-workspace-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Exceptions_HandleWorkspaceException_HandleWorkspaceExceptionBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

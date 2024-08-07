@@ -4,7 +4,7 @@ linkTitle: "Split Text"
 description: "Splits text into a list of String values, using the given separator to determine where to split."
 ---
 
-{{< figure src="/blocks/text-split-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_SplitText_SplitTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

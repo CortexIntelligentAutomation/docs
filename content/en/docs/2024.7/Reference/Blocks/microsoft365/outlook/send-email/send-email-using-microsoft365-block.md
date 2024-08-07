@@ -4,7 +4,7 @@ linkTitle: "Send Email Using Microsoft 365"
 description: "Sends an email using the SMTP server hosted by Outlook."
 ---
 
-{{< figure src="/blocks/microsoft365-send-email-using-microsoft365-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Microsoft365_Outlook_SendEmail_SendEmailUsingMicrosoft365Block.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

@@ -3,7 +3,7 @@ title: "Wait For Collection To Not Exist"
 linkTitle: "Wait For Collection To Not Exist"
 description: "Waits for a data storage collection to not exist."
 ---
-{{< figure src="/blocks/data-storage-wait-for-collection-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DataStorage_WaitForCollection_WaitForCollectionToNotExistBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

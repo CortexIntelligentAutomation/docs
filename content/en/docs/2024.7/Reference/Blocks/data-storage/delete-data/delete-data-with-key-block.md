@@ -3,7 +3,7 @@ title: "Delete Data With Key"
 linkTitle: "Delete Data With Key"
 description: "Deletes data from a data storage collection with the specified key."
 ---
-{{< figure src="/blocks/data-storage-delete-data-with-key-block.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DataStorage_DeleteData_DeleteDataWithKeyBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

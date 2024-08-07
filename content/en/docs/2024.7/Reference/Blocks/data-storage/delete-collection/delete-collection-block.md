@@ -4,7 +4,7 @@ linkTitle: "Delete Collection"
 description: "Deletes a data storage collection."
 ---
 
-{{<figure src="/blocks/data-storage-delete-collection-block.png" alt="Icon" class="block-icon">}}
+{{<figure src="/blocks/Cortex_Blocks_DataStorage_DeleteCollection_DeleteCollectionBlock.png" alt="Icon" class="block-icon">}}
 
 # {{% param title %}}
 

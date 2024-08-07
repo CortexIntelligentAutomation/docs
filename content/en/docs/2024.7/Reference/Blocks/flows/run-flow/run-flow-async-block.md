@@ -4,7 +4,7 @@ linkTitle: "Run Flow Async"
 description: "Runs a chosen Flow asynchronously, returning a Task representing its execution."
 ---
 
-{{< figure src="/blocks/flows-run-flow-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Flows_RunFlow_RunFlowAsyncBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

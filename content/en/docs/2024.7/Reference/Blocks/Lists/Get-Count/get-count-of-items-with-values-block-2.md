@@ -4,7 +4,7 @@ linkTitle: "Get Counts Of Items With Values"
 description: "Gets the counts of items in a List matching each of the specified values."
 ---
 
-{{< figure src="/blocks/lists-get-count-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Lists_GetCount_GetCountsOfItemsWithValuesBlock_2.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

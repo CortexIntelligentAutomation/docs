@@ -4,7 +4,7 @@ linkTitle: "Format Text With Value"
 description: "Formats text by replacing all `{0}` format parameters in a specified format template with a given value."
 ---
 
-{{< figure src="/blocks/text-format-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Text_FormatText_FormatTextWithValueBlock_1.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

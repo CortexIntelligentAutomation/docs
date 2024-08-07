@@ -4,7 +4,7 @@ linkTitle: "Get Date Time Component"
 description: "Gets a component (e.g. Year, Month, Day) of a specified Date Time."
 ---
 
-{{< figure src="/blocks/date-and-time-get-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_GetDateTime_GetDateTimeComponentBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

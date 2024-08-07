@@ -4,7 +4,7 @@ linkTitle: "Remove Items With Values"
 description: "Removes all items matching one of the specified values from a Dictionary."
 ---
 
-{{< figure src="/blocks/dictionaries-remove-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_RemoveItem_RemoveItemsWithValuesBlock_3.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

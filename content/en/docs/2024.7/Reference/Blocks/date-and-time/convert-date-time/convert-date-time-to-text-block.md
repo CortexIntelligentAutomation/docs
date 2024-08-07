@@ -4,7 +4,7 @@ linkTitle: "Convert Date Time To Text"
 description: "Converts a Date Time to Text."
 ---
 
-{{< figure src="/blocks/date-and-time-convert-to-text-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_DateAndTime_ConvertDateTime_ConvertDateTimeToTextBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

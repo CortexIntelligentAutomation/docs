@@ -4,7 +4,7 @@ linkTitle: "Convert Json To Object"
 description: "Converts Json to an Object."
 ---
 
-{{< figure src="/blocks/json-convert-to-object-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Json_ConvertJson_ConvertJsonToObjectBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 

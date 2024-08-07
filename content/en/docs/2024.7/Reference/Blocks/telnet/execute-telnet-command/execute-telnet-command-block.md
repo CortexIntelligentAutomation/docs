@@ -4,7 +4,7 @@ linkTitle: "Execute Telnet Command"
 description: "Executes a Telnet command on the specified host."
 ---
 
-{{< figure src="/blocks/execute-telnet-command-block-icon.png" alt="Icon" class="block-icon" >}}
+{{< figure src="/blocks/Cortex_Blocks_Telnet_ExecuteTelnetCommand_ExecuteTelnetCommandBlock.png" alt="Icon" class="block-icon" >}}
 
 # {{% param title %}}
 
