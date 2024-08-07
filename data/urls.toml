@@ -498,6 +498,8 @@
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
             [Cortex.Guides.UpgradeCortex.2024.5to2024.7]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/"
+                [Cortex.Guides.UpgradeCortex.2024.5to2024.7.Advanced]
+                    FlowsUpgrader = "/docs/guides/upgrade-cortex/advanced/flows-upgrader"
                 [Cortex.Guides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA]
                     MainDoc = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/"
                     TryItOut = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/try-it-out"
