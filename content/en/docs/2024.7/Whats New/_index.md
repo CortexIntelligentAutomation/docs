@@ -67,30 +67,30 @@ For a full list of what has been introduced in this release, please see the [202
 [Usability]: {{< ref "#improved-usability" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[Reduce the number of license check calls]: {{< ref "#reduced-the-number-of-license-check-calls" >}}
-[Reduce memory usage of the Package Management Service]: {{< ref "#reduce-memory-usage-of-the-package-management-service" >}}
-[Expression editor in {{% ctx %}} Studio leaks memory]: {{< ref "#expression-editor-in-cortex-studio-leaks-memory" >}}
-[Redact any value in logs that has the format of an encrypted text]: {{< ref "#redact-any-value-in-logs-that-has-the-format-of-an-encrypted-text" >}}
-[Request user has been added to API Gateway HTTPEvent logs]: {{< ref "#request-user-has-been-added-to-api-gateway-httpevent-logs" >}}
-[Password redaction not always occurring]: {{< ref "#password-redaction-not-always-occurring" >}}
-[Custom names supported for default Tenant and System]: {{< ref "#custom-names-supported-for-default-tenant-and-system" >}}
-[support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server]: {{< ref "#support-for-installing-multiple-cortex-gateway-instances-on-the-same-web-app-server" >}}
-[{{% ctx %}} Gateway]: {{< ref "#cortex-gateway" >}}
-[Improved Home page loading placeholder]: {{< ref "#improved-home-page-loading-placeholder" >}}
-[Improved Search bar styling]: {{< ref "#improved-search-bar-styling" >}}
-[Engine]: {{< ref "#engine" >}}
-[Flow with expression sometimes fails to execute with a KeyNotFoundException]: {{< ref "#flow-with-expression-sometimes-fails-to-execute-with-a-keynotfoundexception" >}}
-[Product Portal]: {{< ref "#product-portal" >}}
-[Wireless Blocks section]: {{< ref "#wireless-blocks" >}}
-[Execute Data Commmand Block section]: {{< ref "#execute-data-commmand-block" >}}
-[Scope and ScopeDefinition]: {{< ref "#scope-and-scopedefinition" >}}
-[Block Icons]: {{< ref "#block-icons" >}}
-[upgrade section]: {{< ref "#upgrade" >}}
-[Incorrect link in Multiple Server Install Web Application Prerequisites]: {{< ref "#incorrect-link-in-multiple-server-install-web-application-prerequisites" >}}
+[Reduce the number of license check calls]: {{< url path="Cortex.Blogs.Releases.2024.7.ReduceTheNumberOfLicenseCheckCalls" version="2024.7" >}}
+[Reduce memory usage of the Package Management Service]: {{< url path="Cortex.Blogs.Releases.2024.7.ReduceMemoryUsageOfThePackageManagementService" version="2024.7" >}}
+[Expression editor in {{% ctx %}} Studio leaks memory]: {{< url path="Cortex.Blogs.Releases.2024.7.ExpressionEditorInCortexStudioLeaksMemory" version="2024.7" >}}
+[Redact any value in logs that has the format of an encrypted text]: {{< url path="Cortex.Blogs.Releases.2024.7.RedactAnyValueInLogsThatHasTheFormatOfAnEncryptedText" version="2024.7" >}}
+[Request user has been added to API Gateway HTTPEvent logs]: {{< url path="Cortex.Blogs.Releases.2024.7.RequestUserHasBeenAddedToApiGatewayHttpEventLogs" version="2024.7" >}}
+[Password redaction not always occurring]: {{< url path="Cortex.Blogs.Releases.2024.7.PasswordRedactionNotAlwaysOccurring" version="2024.7" >}}
+[Custom names supported for default Tenant and System]: {{< url path="Cortex.Blogs.Releases.2024.7.CustomNamesSupportedForDefaultTenantAndSystem" version="2024.7" >}}
+[support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server]: {{< url path="Cortex.Blogs.Releases.2024.7.SupportForInstallingMultipleCortexGatewayInstancesOnTheSameWebAppServer" version="2024.7" >}}
+[{{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.7.CortexGateway" version="2024.7" >}}
+[Improved Home page loading placeholder]: {{< url path="Cortex.Blogs.Releases.2024.7.ImprovedHomePageLoadingPlaceholder" version="2024.7" >}}
+[Improved Search bar styling]: {{< url path="Cortex.Blogs.Releases.2024.7.ImprovedSearchBarStyling" version="2024.7" >}}
+[Engine]: {{< url path="Cortex.Blogs.Releases.2024.7.Engine" version="2024.7" >}}
+[Flow with expression sometimes fails to execute with a KeyNotFoundException]: {{< url path="Cortex.Blogs.Releases.2024.7.FlowWithExpressionSometimesFailsToExecuteWithAKeyNotFoundException" version="2024.7" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.7.ProductPortal" version="2024.7" >}}
+[Wireless Blocks section]: {{< url path="Cortex.Blogs.Releases.2024.7.WirelessBlocks" version="2024.7" >}}
+[Execute Data Commmand Block section]: {{< url path="Cortex.Blogs.Releases.2024.7.ExecuteDataCommmandBlock" version="2024.7" >}}
+[Scope and ScopeDefinition]: {{< url path="Cortex.Blogs.Releases.2024.7.ScopeandScopeDefinition" version="2024.7" >}}
+[Block Icons]: {{< url path="Cortex.Blogs.Releases.2024.7.BlockIcons" version="2024.7" >}}
+[upgrade section]: {{< url path="Cortex.Blogs.Releases.2024.7.Upgrade" version="2024.7" >}}
+[Incorrect link in Multiple Server Install Web Application Prerequisites]: {{< url path="Cortex.Blogs.Releases.2024.7.IncorrectLinkInMultipleServerInstallWebApplicationPrerequisites" version="2024.7" >}}
 
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" version="2024.7">}}
 [ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc" version="2024.7">}}
 
 [2024.7 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.7" >}}
 
-[2024.5]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.7" >}}
+[2024.5]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.7" >}}
