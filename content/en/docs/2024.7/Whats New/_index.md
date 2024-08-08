@@ -23,7 +23,7 @@ This release shows performance improvements in a number of areas:
 * [Reduce memory usage of the Package Management Service][] by compressing the Flow JSON
 * Fixed a bug where the [Expression editor in {{% ctx %}} Studio leaks memory][]
 
-## Improve Security
+## Improved Security
 
 We increased the security of the platform by:
 
@@ -31,11 +31,11 @@ We increased the security of the platform by:
 * [Adding the Request user to API Gateway HTTPEvent logs][Request user has been added to API Gateway HTTPEvent logs] to provide more information in logs
 * Fixed a bug where [Password redaction not always occurring][].  
 
-## Improve Scalability
+## Improved Scalability
 
 Scalability has been improved by adding [support of custom names for default Tenant and System][Custom names supported for default Tenant and System] from {{% ctx %}} Gateway, as well as [support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server][].
 
-## Improve Usability
+## Improved Usability
 
 The previous `Scope` data type has been renamed to [ScopeDefinition][] as it more accurately reflects its purpose of defining a scope; allowing for a new [Scope][] data type to represent an instance of a scope.  
 \
