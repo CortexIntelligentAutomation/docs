@@ -51,7 +51,7 @@ A bug has been fixed on the [Engine][] where a [Flow with expression sometimes f
 The [Product Portal][] includes updates related to:
 
 * [Wireless Blocks][Wireless Blocks section] including data type and exception
-* [Execute Data Commmand Block][Execute Data Commmand Block section] and data types
+* [Execute Data Command Block][Execute Data Command Block section] and data types
 * [Scope and ScopeDefinition][] data types
 * [Upgrade steps][Upgrade section] from 2024.5 to 2024.7
 * [Block Icons][]
@@ -82,7 +82,7 @@ For a full list of what has been introduced in this release, please see the [202
 [Flow with expression sometimes fails to execute with a KeyNotFoundException]: {{< url path="Cortex.Blogs.Releases.2024.7.FlowWithExpressionSometimesFailsToExecuteWithAKeyNotFoundException" version="2024.7" >}}
 [Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.7.ProductPortal" version="2024.7" >}}
 [Wireless Blocks section]: {{< url path="Cortex.Blogs.Releases.2024.7.WirelessBlocks" version="2024.7" >}}
-[Execute Data Commmand Block section]: {{< url path="Cortex.Blogs.Releases.2024.7.ExecuteDataCommmandBlock" version="2024.7" >}}
+[Execute Data Command Block section]: {{< url path="Cortex.Blogs.Releases.2024.7.ExecuteDataCommandBlock" version="2024.7" >}}
 [Scope and ScopeDefinition]: {{< url path="Cortex.Blogs.Releases.2024.7.ScopeandScopeDefinition" version="2024.7" >}}
 [Block Icons]: {{< url path="Cortex.Blogs.Releases.2024.7.BlockIcons" version="2024.7" >}}
 [upgrade section]: {{< url path="Cortex.Blogs.Releases.2024.7.Upgrade" version="2024.7" >}}
@@ -93,4 +93,4 @@ For a full list of what has been introduced in this release, please see the [202
 
 [2024.7 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.7" >}}
 
-[2024.5]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.7" >}}
+[2024.5]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.7" >}}
