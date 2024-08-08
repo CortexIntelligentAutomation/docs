@@ -14,9 +14,9 @@ Sometimes, between versions of {{% ctx %}}, breaking or non-breaking changes hav
 
 1. Copy the following artefacts to a folder on a machine:
 
-   * Cortex Innovation 2024.7 - Upgrade Flows.zip
+   * Cortex Innovation 2024.7 - Flows Upgrader.zip
 
-1. Extract the `Cortex Innovation 2024.7 - Upgrade Flows.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation 2024.7 - Flows Upgrader.zip` zip file to a folder with the same name.
 
 ## Upgrade the flows
 
