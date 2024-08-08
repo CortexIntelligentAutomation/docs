@@ -7,73 +7,90 @@ weight: 1
 
 ## Summary
 
-2024.5 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.3][] release in the following areas:
+2024.7 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.5][] release in the following areas:
 
+* [Performance][]
+* [Security][]
+* [Scalability][]
 * [Usability][]
-* [Capability][]
-* [Observability][]
 * [Documentation][]
+
+## Improved Performance
+
+This release shows performance improvements in a number of areas:
+
+* [Reduce the number of license check calls][]
+* [Reduce memory usage of the Package Management Service][] by compressing the Flow JSON
+* Fixed a bug where the [Expression editor in {{% ctx %}} Studio leaks memory][]
+
+## Improved Security
+
+We increased the security of the platform by:
+
+* [Redacting any value in logs that has the format of an encrypted text][Redact any value in logs that has the format of an encrypted text] to ensure that encrypted text is not visible in logs
+* [Adding the Request user to API Gateway HTTPEvent logs][Request user has been added to API Gateway HTTPEvent logs] to provide more information in logs
+* Fixed a bug where [Password redaction not always occurring][].  
+
+## Improved Scalability
+
+Scalability has been improved by adding [support of custom names for default Tenant and System][Custom names supported for default Tenant and System] from {{% ctx %}} Gateway, as well as [support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server][].
 
 ## Improved Usability
 
-* [Improvements have been made to {{% ctx %}} Gateway][Improved {{% ctx %}} Gateway], including:
-  * [Helplinks update when upgrading the {{% ctx %}} platform][]
-  * [Update styling of the setup wizard to be consistent with new themes][]
-* [Improvements have been made to exceptions raised by the engine][Improved Engine Exceptions] for improved clarity and helpfulness
-* The [installation process has been improved][improved installation] to preserve information required for future upgrades of the installed platform
-* The [upgrade process has been improved][improved upgrade] and now provides more useful feedback when running
+The previous `Scope` data type has been renamed to [ScopeDefinition][] as it more accurately reflects its purpose of defining a scope; allowing for a new [Scope][] data type to represent an instance of a scope.  
+\
+The [user experience of {{% ctx %}} Gateway][{{% ctx %}} Gateway] has seen improvements which include:
 
-## Improved Capability
+* [Improving the Home page loading placeholder][Improved Home page loading placeholder]
+* [Improving the Search bar styling][Improved Search bar styling]
 
-* This release shows improvements to [package management][Package Management] in a number of areas:
-  * The `Running Executions` tab now allows for [running executions to be stopped in real-time][Running Executions can be Stopped in Real-Time]
-  * Users can now [unselect 'Use Latest Version' for all flows except for a selected one][Unselect All 'Use Latest Version' for a flow] when creating a new version of an existing package
-* [Scope has been extended][Extended Scope Support] to support further levels of segregation (package and flow), the levels within scope are hierarchical, affecting several blocks and services within the {{% ctx %}} platform
-* Two [new Wireless blocks have been added][new Blocks] within the {{% ctx %}} Block Packages, allowing for better organisation of the layout of a flow
-
-## Improved Observability
-
-* The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major versions:
-  * Grafana - 10.4.1
-  * Loki - 3.0.0
-  * Promtail - 3.0.0
+A bug has been fixed on the [Engine][] where a [Flow with expression sometimes fails to execute with a KeyNotFoundException][].  
 
 ## Improved Documentation
 
-This [Product Portal][] includes updates related to:
+The [Product Portal][] includes updates related to:
 
-* The [new blocks][New Blocks] and data types
-* The [improved installation][]
-* The [improved upgrade][]
+* [Wireless Blocks][Wireless Blocks section] including data type and exception
+* [Execute Data Command Block][Execute Data Command Block section] and data types
+* [Scope and ScopeDefinition][] data types
+* [Upgrade steps][Upgrade section] from 2024.5 to 2024.7
+* [Block Icons][]
+* [Incorrect link in Multiple Server Install Web Application Prerequisites][]
 
-## Other
+For a full list of what has been introduced in this release, please see the [2024.7 Release Notes][]
 
-* Services within the {{% ctx %}} platform no longer [reference code shared with the {{% ctx %}} Licence Fingerprint Generator][Reduced Usage of Shared Fingerprint Generator Code], and now invoke a local instance of the {{% ctx %}} Licence Fingerprint Generator when validating licenses
-* The installation now deploys the {{% ctx %}} Licence Fingerprint Generator to all required nodes.
+[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.7" >}}
 
-For a full list of what has been introduced in this release, please see the [2024.5 Release Notes][]
-
+[Performance]: {{< ref "#improved-performance" >}}
+[Security]: {{< ref "#improved-security" >}}
+[Scalability]: {{< ref "#improved-scalability" >}}
 [Usability]: {{< ref "#improved-usability" >}}
-[Capability]: {{< ref "#improved-capability" >}}
-[Observability]: {{< ref "#improved-observability" >}}
-[Cost of Ownership]: {{< ref "#cost-of-ownership" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.5.ProductPortal" version="2024.5" >}}
-[Package Management]: {{< url path="Cortex.Blogs.Releases.2024.5.PackageManagement" version="2024.5" >}}
-[Running Executions can be Stopped in Real-Time]: {{< url path="Cortex.Blogs.Releases.2024.5.RunningExecutions" version="2024.5" >}}
-[Extended Scope Support]: {{< url path="Cortex.Blogs.Releases.2024.5.ExtendedScopeSupport" version="2024.5" >}}
-[new Blocks]: {{< url path="Cortex.Blogs.Releases.2024.5.NewBlocks" version="2024.5" >}}
-[Reduced Usage of Shared Fingerprint Generator Code]: {{< url path="Cortex.Blogs.Releases.2024.5.FingerprintGeneratorCode" version="2024.5" >}}
-[Improved {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedCortexGateway" version="2024.5" >}}
-[Helplinks Update When Upgrading the {{% ctx %}} Platform]: {{< url path="Cortex.Blogs.Releases.2024.5.HelplinksUpdate" version="2024.5" >}}
-[Update styling of the setup wizard to be consistent with new themes]: {{< url path="Cortex.Blogs.Releases.2024.5.UpdateStyling" version="2024.5" >}}
-[Improved Engine Exceptions]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedEngineExceptions" version="2024.5" >}}
-[Unselect All 'Use Latest Version' for a flow]: {{< url path="Cortex.Blogs.Releases.2024.5.UnselectAll" version="2024.5" >}}
-[improved upgrade]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedUpgrade" version="2024.5" >}}
-[improved installation]: {{< url path="Cortex.Blogs.Releases.2024.5.ImprovedInstallation" version="2024.5" >}}
-[Observability Upgrades]: {{< url path="Cortex.Blogs.Releases.2024.5.ObservabilityUpgrades" version="2024.5" >}}
-[2024.5 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.5" >}}
+[Reduce the number of license check calls]: {{< url path="Cortex.Blogs.Releases.2024.7.ReduceTheNumberOfLicenseCheckCalls" version="2024.7" >}}
+[Reduce memory usage of the Package Management Service]: {{< url path="Cortex.Blogs.Releases.2024.7.ReduceMemoryUsageOfThePackageManagementService" version="2024.7" >}}
+[Expression editor in {{% ctx %}} Studio leaks memory]: {{< url path="Cortex.Blogs.Releases.2024.7.ExpressionEditorInCortexStudioLeaksMemory" version="2024.7" >}}
+[Redact any value in logs that has the format of an encrypted text]: {{< url path="Cortex.Blogs.Releases.2024.7.RedactAnyValueInLogsThatHasTheFormatOfAnEncryptedText" version="2024.7" >}}
+[Request user has been added to API Gateway HTTPEvent logs]: {{< url path="Cortex.Blogs.Releases.2024.7.RequestUserHasBeenAddedToApiGatewayHttpEventLogs" version="2024.7" >}}
+[Password redaction not always occurring]: {{< url path="Cortex.Blogs.Releases.2024.7.PasswordRedactionNotAlwaysOccurring" version="2024.7" >}}
+[Custom names supported for default Tenant and System]: {{< url path="Cortex.Blogs.Releases.2024.7.CustomNamesSupportedForDefaultTenantAndSystem" version="2024.7" >}}
+[support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server]: {{< url path="Cortex.Blogs.Releases.2024.7.SupportForInstallingMultipleCortexGatewayInstancesOnTheSameWebAppServer" version="2024.7" >}}
+[{{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.7.CortexGateway" version="2024.7" >}}
+[Improved Home page loading placeholder]: {{< url path="Cortex.Blogs.Releases.2024.7.ImprovedHomePageLoadingPlaceholder" version="2024.7" >}}
+[Improved Search bar styling]: {{< url path="Cortex.Blogs.Releases.2024.7.ImprovedSearchBarStyling" version="2024.7" >}}
+[Engine]: {{< url path="Cortex.Blogs.Releases.2024.7.Engine" version="2024.7" >}}
+[Flow with expression sometimes fails to execute with a KeyNotFoundException]: {{< url path="Cortex.Blogs.Releases.2024.7.FlowWithExpressionSometimesFailsToExecuteWithAKeyNotFoundException" version="2024.7" >}}
+[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.7.ProductPortal" version="2024.7" >}}
+[Wireless Blocks section]: {{< url path="Cortex.Blogs.Releases.2024.7.WirelessBlocks" version="2024.7" >}}
+[Execute Data Command Block section]: {{< url path="Cortex.Blogs.Releases.2024.7.ExecuteDataCommandBlock" version="2024.7" >}}
+[Scope and ScopeDefinition]: {{< url path="Cortex.Blogs.Releases.2024.7.ScopeandScopeDefinition" version="2024.7" >}}
+[Block Icons]: {{< url path="Cortex.Blogs.Releases.2024.7.BlockIcons" version="2024.7" >}}
+[upgrade section]: {{< url path="Cortex.Blogs.Releases.2024.7.Upgrade" version="2024.7" >}}
+[Incorrect link in Multiple Server Install Web Application Prerequisites]: {{< url path="Cortex.Blogs.Releases.2024.7.IncorrectLinkInMultipleServerInstallWebApplicationPrerequisites" version="2024.7" >}}
 
-[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
-[2024.3]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
+[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" version="2024.7">}}
+[ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc" version="2024.7">}}
+
+[2024.7 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.7" >}}
+
+[2024.5]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.7" >}}

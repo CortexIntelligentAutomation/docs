@@ -1,10 +1,10 @@
-On the Web Application Server, copy the `Cortex Innovation 2024.3 - Upgrade Flows.zip` artefacts to a folder on it:
-1. Extract the `Cortex Innovation 2024.3 - Upgrade Flows.zip` file to a folder with the same name.
+On the Web Application Server, copy the `Cortex Innovation 2024.3 - Flows Upgrader.zip` artefacts to a folder on it:
+1. Extract the `Cortex Innovation 2024.3 - Flows Upgrader.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator. The administrator must be a domain user that is a member of the local Administrators group on the Web Application Server.
-1. Navigate PowerShell to inside the `Cortex Innovation 2024.3 - Upgrade Flows` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2024.3 - Flows Upgrader` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2024.3 - Upgrade Flows"
+    cd "C:\Install\Cortex Innovation 2024.3 - Flows Upgrader"
     ```
 
 1. Export the flows to be upgraded from Gateway as a studio package.
