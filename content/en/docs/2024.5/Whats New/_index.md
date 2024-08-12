@@ -56,7 +56,6 @@ For a full list of what has been introduced in this release, please see the [202
 [Usability]: {{< ref "#improved-usability" >}}
 [Capability]: {{< ref "#improved-capability" >}}
 [Observability]: {{< ref "#improved-observability" >}}
-[Cost of Ownership]: {{< ref "#cost-of-ownership" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
 [Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.5.ProductPortal" version="2024.5" >}}
@@ -75,5 +74,5 @@ For a full list of what has been introduced in this release, please see the [202
 [Observability Upgrades]: {{< url path="Cortex.Blogs.Releases.2024.5.ObservabilityUpgrades" version="2024.5" >}}
 [2024.5 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.5" >}}
 
-[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.3" >}}
+[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.5" >}}
 [2024.3]: {{< url path="Cortex.Blogs.Releases.2024.3.MainDoc" version="2024.3" >}}
