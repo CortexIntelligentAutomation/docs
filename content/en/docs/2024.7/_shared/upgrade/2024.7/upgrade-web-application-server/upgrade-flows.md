@@ -4,10 +4,10 @@
     1. Select all the flows to be upgraded and click `Export`.
     1. A message should be displayed confirming that the studio package was exported successfully.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2024.7 - Upgrade Flows` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation 2024.7 - Flows Upgrader` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2024.7 - Upgrade Flows"
+    cd "C:\Install\Cortex Innovation 2024.7 - Flows Upgrader"
     ```
 
 1. Run the `Cortex.Upgrade.FlowsUpgrader.exe` application using the following command, modifying the path specified to contain the extracted studio package of flows to upgrade (typically this will have been exported to the local `Downloads` folder):

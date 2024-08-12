@@ -14,10 +14,10 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.5 to 2024.7. P
 1. Copy the following artefacts to a folder on the server:
 
    * Cortex Innovation 2024.7 - Gateway.zip
-   * Cortex Innovation 2024.7 - Upgrade Flows.zip
+   * Cortex Innovation 2024.7 - Flows Upgrader.zip
    * Cortex Innovation 2024.7 - Web App Server Install Scripts.zip
 
-1. Extract the `Cortex Innovation 2024.7 - Upgrade Flows.zip` zip file to a folder with the same name.
+1. Extract the `Cortex Innovation 2024.7 - Flows Upgrader.zip` zip file to a folder with the same name.
 1. Extract the `Cortex Innovation 2024.7 - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Configure Upgrade Script
