@@ -41,7 +41,25 @@ If a block tries to use a semaphore that already exists (using the same [Scope][
 
 ### Preventing Deadlocks
 
-TODO
+The main cause of deadlocks in flows with semaphores is setups that cause a circular wait condition. This occurs when multiple executions have acquired different semaphores, and then each execution wants to acquire another semaphore that is being used by another execution, which in turn is waiting for first execution to release its semaphore. E.g.
+
+```
+There exists two semaphores:
+ - Semaphore A with a ConcurrencyLimit of 1 and a queue
+ - Semaphore B with a ConcurrencyLimit of 1 and a queue
+
+There exists two executions:
+ - Execution A acquires Semaphore A
+ - Execution B acquires Semaphore B
+ - Execution A tries to acquire Semaphore B and joins the queue
+ - Execution B tries to acquire Semaphore A and joins the queue
+```
+
+In this example, Execution A can't proceed as it's waiting for the semaphore that Execution B is using, that is in turn, wait for the semaphore that Execution A is using.
+
+The best way to avoid these circular wait conditions is to design your flows to avoid them happening in the first place. In the example above, if both executions will need both semaphores to operate, a change that could be made would be to combine both semaphores into one semaphore.
+
+Another way to mitigate the problem would be to use the [QueueTimeout][] property when defining the [QueueSettings][] for each semaphore. Setting the [QueueTimeout][] to a duration resonably higher than the expected execution time of the operations inside of the semaphore would allow the execution to throw if it has been waiting too long, likely due to a deadlock having occured. The [SemaphoreCouldNotBeAcquiredException][QueueTimeoutReached] thrown could then be caught to allow the execution to release its semaphores and try again. In the example above, if Semaphore A had a [QueueTimeout][], Execution B timeouts out as it waits to acquire Semaphore A and releases Semaphore B. Execution A then acquires Semaphore B as Execution B retries, tries to acquire Semaphore B again and joins the queue. Execution A then finishes its operations, releasing both semaphores and allowing Execution B to completes its operations as well.
 
 ### Known Limitations
 
