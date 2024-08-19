@@ -32,6 +32,10 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.5 to 2024.7. P
 
 {{< section "/upgrade/2024.7/upgrade-web-application-server/upgrade-flows.md" >}}
 
+{{% alert title="Note" %}}
+If the {{% ctx %}} Interaction Portal is used in your environment, you must also upgrade those flows.
+{{% /alert %}}
+
 ## Preserve installation files
 
 {{< section "/preserve-installation-files.md" >}}
