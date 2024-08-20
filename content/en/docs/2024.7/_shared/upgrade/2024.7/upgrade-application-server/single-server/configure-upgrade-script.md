@@ -1,15 +1,29 @@
 1. In the `Cortex Innovation 2024.7 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
-1. Configure the script, changing the parameters according to the details given below:
+1. Choose the tab below that matches the configuration for this upgrade, then update the script to match, changing the parameters according to the details given below:
 
-    ```powershell
-    .\Cortex.Upgrade.ps1 `
-        -AppServicesPath "C:\Install\Cortex Innovation 2024.7 - App Services.zip" `
-        -BlockPackagesPath "C:\Install\Cortex Innovation 2024.7 - Block Packages.zip" `
-        -ApplicationServerIPv4Addresses @("192.168.1.1") `
-        -Credential $Credential `
-        -AcceptEULA:$AcceptEULA `
-        *>&1 | Tee-Object -FilePath "cortex-app-upgrade-log.txt"
-    ```
+    {{% alert title="Note" %}}
+To check the previous configuration values open the `Cortex.Upgrade.ApplicationConfig.json` file located in `%ProgramData%\Cortex\Upgrade`. If the file does not exist or the values should be changed then use the `Use New Configuration Values` tab.
+    {{% /alert %}}
+
+    {{< tabpane lang="powershell" >}}
+        {{< tab header="Use Previous Configuration Values" >}}
+.\Cortex.Upgrade.ps1 `
+    -AppServicesPath "C:\Install\Cortex Innovation 2024.7 - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2024.7 - Block Packages.zip" `
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEULA `
+    *>&1 | Tee-Object -FilePath "cortex-ha-upgrade-log.txt"
+        {{< /tab >}}
+        {{< tab header="Use New Configuration Values">}}
+.\Cortex.Upgrade.ps1 `
+    -AppServicesPath "C:\Install\Cortex Innovation 2024.7 - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2024.7 - Block Packages.zip" `
+    -ApplicationServerIPv4Addresses @("192.168.1.1") `
+    -Credential $Credential `
+    -AcceptEULA:$AcceptEULA `
+    *>&1 | Tee-Object -FilePath "cortex-app-upgrade-log.txt"
+        {{< /tab >}}
+    {{< /tabpane >}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
