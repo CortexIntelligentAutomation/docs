@@ -5,6 +5,10 @@ description: "The steps to upgrade Loki."
 weight: 3
 ---
 
+# {{% param title %}}
+
+## Perform Upgrade
+
 RDP to V-DEMOAUX1
 Open File Explorer and navigate to C:\Loki\
 Backup loki-local-config.yaml to a secure location.
@@ -34,3 +38,9 @@ Open PowerShell as Administrator in the C:\Loki\ directory.
 Run the Install-Loki.ps1 script by executing .\Install-Loki.ps1
 Run the Start-Loki.ps1 script by executing .\Start-Loki.ps1
 Open services.msc and confirm the Loki service exists and has started.
+
+## Next Steps?
+
+1. [Upgrade Promtail][]
+
+[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.UpgradePromtail" >}}

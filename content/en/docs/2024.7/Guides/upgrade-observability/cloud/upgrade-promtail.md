@@ -5,6 +5,10 @@ description: "The steps to upgrade Promtail."
 weight: 2
 ---
 
+# {{% param title %}}
+
+## Perform Upgrade
+
 RDP to V-APPX
 Open File Explorer and navigate to C:\Promtail\
 Backup promtail-local-config.yaml to a secure location.
@@ -33,3 +37,9 @@ Open PowerShell as Administrator in the C:\Promtail\ directory
 Run the Install-Promtail.ps1 script by executing .\Install-Promtail.ps1
 Run the Start-Promtail.ps1 script by executing .\Start-Promtail.ps1
 Open services.msc and confirm the Promtail service exists and has started.
+
+## Next Steps?
+
+1. [Try it out][]
+
+[Try it out]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.TryItOut" >}}

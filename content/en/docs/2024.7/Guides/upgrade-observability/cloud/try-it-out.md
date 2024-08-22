@@ -1,9 +1,13 @@
 ---
 title: "Try it out"
 linkTitle: "Try it out"
-description: "Information about trying out the observability platform after upgrade."
-weight: 5
+description: "Information about trying out the Observability platform after upgrade."
+weight: 3
 ---
+
+# {{% param title %}}
+
+## Test upgraded Observability platform
 
 Navigate to https://v-demoaux1.demo.wearecortex.com:3000 and login with the Grafana Administrator credentials.
 Under Starred Dashboards, click on the Flow Execution Requests dashboard

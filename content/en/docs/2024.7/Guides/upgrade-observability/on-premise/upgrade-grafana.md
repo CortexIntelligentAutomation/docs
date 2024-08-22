@@ -5,6 +5,10 @@ description: "The steps to upgrade Grafana."
 weight: 2
 ---
 
+# {{% param title %}}
+
+## Perform Upgrade
+
 RDP to V-DEMOAUX1
 Navigate to https://v-demoaux1.demo.wearecortex.com:3000 note the version number under the login prompt.
 This will be for comparison after completing the Grafana upgrade.
@@ -23,3 +27,9 @@ These instructions were taken from Grafana's website here: https://grafana.com/d
 Ensure that custom.ini and defaults.ini are unchanged in the C:\Program Files\GrafanaLabs\grafana\conf directory.
 Start the Grafana service.
 To confirm Grafana has updated, navigate to https://v-demoaux1.demo.wearecortex.com:3000 and confirm the version number changed on the login screen.
+
+## Next Steps?
+
+1. [Upgrade Loki][]
+
+[Upgrade Loki]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.UpgradeLoki" >}}

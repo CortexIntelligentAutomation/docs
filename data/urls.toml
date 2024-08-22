@@ -293,8 +293,8 @@
                     TryItOut= "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/try-it-out"
                     AntivirusExclusions = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#antivirus-exclusions"
                     HardwareRequirements = "/docs/getting-started/on-premise/add-innovation-to-72/single-server-without-ha/prerequisites#hardware-requirements"
-                [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation]
-                    MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/"
+            [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation]
+                MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/"
                 [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana]
                     MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/"
                     Architecture = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/architecture"
@@ -518,6 +518,19 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
+        [Cortex.Guides.UpgradeObservability]
+            MainDoc = "/docs/guides/upgrade-observability/"
+            [Cortex.Guides.UpgradeObservability.OnPremise]
+                Prerequisites = "/docs/guides/upgrade-observability/on-premise/prerequisites"
+                UpgradeGrafana = "/docs/guides/upgrade-observability/on-premise/upgrade-grafana"
+                UpgradeLoki = "/docs/guides/upgrade-observability/on-premise/upgrade-loki"
+                UpgradePromtail = "/docs/guides/upgrade-observability/on-premise/upgrade-promtail"
+                TryItOut = "/docs/guides/upgrade-observability/on-premise/try-it-out"
+            [Cortex.Guides.UpgradeObservability.Cloud]
+                Prerequisites = "/docs/guides/upgrade-observability/cloud/prerequisites"
+                UpgradePromtail = "/docs/guides/upgrade-observability/cloud/upgrade-promtail"
+                TryItOut = "/docs/guides/upgrade-observability/cloud/try-it-out"
+
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
