@@ -9,11 +9,6 @@ weight: 2
 
 ## Perform Upgrade
 
-RDP to V-DEMOAUX1
-Navigate to https://v-demoaux1.demo.wearecortex.com:3000 note the version number under the login prompt.
-This will be for comparison after completing the Grafana upgrade.
-Using credentials from password vault, login to Grafana.
-Navigate to the Flow Execution Requests dashboard, set the timeframe to the last 90 days and confirm data is present.
 Open File Explorer and navigate to C:\Program Files\GrafanaLabs\grafana\conf\
 Backup custom.ini and defaults.ino to a secure location.
 Open Services.msc from your Start-menu and stop the Grafana service.
