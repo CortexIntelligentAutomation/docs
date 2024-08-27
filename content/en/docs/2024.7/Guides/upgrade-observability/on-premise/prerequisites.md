@@ -21,12 +21,30 @@ weight: 1
 ## Make Artefacts Available
 
 1. Download the required artefacts to a folder on the machine:
-    1. [Grafana 10.4.1][] Standalone Windows Binaries.
-    1. [Grafana Loki 3.0.0][] archive.
-    1. [Promtail 3.0.0][] archive.
+
+    * [Grafana 10.4.1][] Standalone Windows Binaries.
+    * [Grafana Loki 3.0.0][] archive.
+    * [Grafana Loki Install][] archive.
+    * [Promtail 3.0.0][] archive.
+    * [Promtail Install][] archive.
+
 1. Extract the downloaded Grafana file to a folder with the same name.
-1. Extract the downloaded Loki file to a folder with the same name.
-1. Extract the downloaded Promtail to a folder with the same name.
+1. Extract the downloaded Grafana Loki file to a folder with the same name.
+1. Extract the downloaded Grafana Loki Install file to a folder with the same name.
+1. Extract the downloaded Promtail file to a folder with the same name.
+1. Extract the downloaded Promtail Install file to a folder with the same name.
+
+## Backup Old Files
+
+1. On the server that Grafana and Loki is installed on, create a folder called `Observability Backups` in a known location.
+1. Open File Explorer and navigate to `C:\Program Files\GrafanaLabs\grafana\conf\`.
+1. Copy the `custom.ini` file and save it to the `Observability Backups` folder created at step 1.
+1. Copy the `defaults.ino` file and save it to the `Observability Backups` folder created at step 1.
+1. In File Explorer and navigate to `C:\Loki\`.
+1. Copy the `loki-local-config.yaml` file and save it to the `Observability Backups` folder created at step 1.
+1. On the Application Server(s) that Promtail is installed on, create a folder called `Observability Backups` in a known location.
+1. Open File Explorer and navigate to `C:\Promtail\`.
+1. Copy the `promtail-local-config.yaml` file and save it to the `Observability Backups` folder created at step 7.
 
 ## Next Steps?
 
@@ -34,5 +52,7 @@ weight: 1
 
 [Grafana 10.4.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1.Windows" >}}
 [Grafana Loki 3.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0.GrafanaLokiInstallZip" >}}
+[Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.GrafanaLokiInstallZip" >}}
 [Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
+[Promtail Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.PromtailInstallZip" >}}
 [Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.UpgradeGrafana" >}}

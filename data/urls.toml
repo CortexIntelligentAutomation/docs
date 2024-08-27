@@ -521,15 +521,21 @@
         [Cortex.Guides.UpgradeObservability]
             MainDoc = "/docs/guides/upgrade-observability/"
             [Cortex.Guides.UpgradeObservability.OnPremise]
+                BackupOldFiles = "/docs/guides/upgrade-observability/on-premise/prerequisites/#backup-old-files"
+                MakeArtefactsAvailable = "/docs/guides/upgrade-observability/on-premise/prerequisites/#make-artefacts-available"
                 Prerequisites = "/docs/guides/upgrade-observability/on-premise/prerequisites"
+                TryItOut = "/docs/guides/upgrade-observability/on-premise/try-it-out"
                 UpgradeGrafana = "/docs/guides/upgrade-observability/on-premise/upgrade-grafana"
                 UpgradeLoki = "/docs/guides/upgrade-observability/on-premise/upgrade-loki"
                 UpgradePromtail = "/docs/guides/upgrade-observability/on-premise/upgrade-promtail"
-                TryItOut = "/docs/guides/upgrade-observability/on-premise/try-it-out"
+                VerifyOldVersion = "/docs/guides/upgrade-observability/on-premise/prerequisites/#verify-old-version"
             [Cortex.Guides.UpgradeObservability.Cloud]
+                BackupOldFiles = "/docs/guides/upgrade-observability/cloud/prerequisites/#backup-old-files"
+                MakeArtefactsAvailable = "/docs/guides/upgrade-observability/cloud/prerequisites/#make-artefacts-available"
                 Prerequisites = "/docs/guides/upgrade-observability/cloud/prerequisites"
-                UpgradePromtail = "/docs/guides/upgrade-observability/cloud/upgrade-promtail"
                 TryItOut = "/docs/guides/upgrade-observability/cloud/try-it-out"
+                UpgradePromtail = "/docs/guides/upgrade-observability/cloud/upgrade-promtail"
+                VerifyOldVersion = "/docs/guides/upgrade-observability/cloud/prerequisites/#verify-old-version"
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"

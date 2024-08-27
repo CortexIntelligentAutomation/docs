@@ -20,11 +20,20 @@ weight: 1
 ## Make Artefacts Available
 
 1. Download the required artefacts to a folder on the machine:
-    1. [Promtail 3.0.0][] archive.
+
+    * [Promtail 3.0.0][] archive.
+
 1. Extract the downloaded Promtail to a folder with the same name.
+
+## Backup Old Files
+
+1. On the Application Server(s) that Promtail is installed on, create a folder called `Observability Backups` in a known location.
+1. Open File Explorer and navigate to `C:\Promtail\`.
+1. Copy the `promtail-local-config.yaml` file and save it to the `Observability Backups` folder created at step 7.
 
 ## Next Steps?
 
 1. [Upgrade Promtail][]
 
+[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
 [Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.UpgradePromtail" >}}

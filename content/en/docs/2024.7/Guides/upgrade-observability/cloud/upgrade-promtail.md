@@ -7,39 +7,78 @@ weight: 2
 
 # {{% param title %}}
 
+This guide describes how to upgrade the Promtail installation. Please ensure that the [Prerequisites] for upgrading Observability have been completed before starting this upgrade.
+
 ## Perform Upgrade
 
-RDP to V-APPX
-Open File Explorer and navigate to C:\Promtail\
-Backup promtail-local-config.yaml to a secure location.
-Open PowerShell as Administrator in the C:\Promtail\ directory
-Run the Remove-Promtail.ps1 script by executing .\Remove-Promtail.ps1
-Remove all files from the C:\Promtail\ directory except log files and tmp directory. This includes:
-Install-Promtail.ps1
-nssm.exe
-Promtail-local-config.yaml
-Promtail-windows-amd64.exe
-Remove-Promtail.ps1
-Start-Promtail.ps1
-Stop-Promtail.ps1
-In a browser on V-APPX, navigate to the CORTEX Product Documentation and find the Promtail install instructions for your version of CORTEX.
-Download the Promtail X.X.X Archive from the CORTEX Product Documentation.
-Extract the promtail-windows-amd64.exe zip to your downloads folder
-Open the unzipped promtail-windows-amd64.exe directory and copy to executable to C:\Promtail\
-Download the Promtail Install.zip Archive from the CORTEX Product Documentation.
-Extract the Promtail.Install.zip to your downloads folder.
-Open the unzipped Promtail.Install.zip directory and copy its contents to C:\Promtail
-Open the promtail-local-config.yaml and compare against the backup made in Step 3.
-Update the filename property to the correct location (e.g. c:/Promtail/tmp/positions.yaml)
-Update the clients URL property to the value found in the backup.
-Save your changes
-Open PowerShell as Administrator in the C:\Promtail\ directory
-Run the Install-Promtail.ps1 script by executing .\Install-Promtail.ps1
-Run the Start-Promtail.ps1 script by executing .\Start-Promtail.ps1
-Open services.msc and confirm the Promtail service exists and has started.
+{{% alert title="Note" %}}
+These steps will need to be performed on all application servers that host a Promtail service.
+{{% / alert %}}
+
+1. Log in to the application server.
+1. In file explorer, navigate to the extracted Grafana install folder performed as part of [Make Artefacts Available][].
+1. Open PowerShell as Administrator.
+1. Change the directory to the Promtail folder by executing the following command:
+
+    ``` powershell
+        cd C:\Promtail
+    ```
+
+1. Remove the current Promtail installation by executing the following command:
+
+    ``` powershell
+        .\Remove-Promtail.ps1
+    ```
+
+1. Open a File Explorer and navigate to `C:\Promtail`
+1. Delete the following files from the directory:
+
+    * Install-Promtail.ps1
+    * nssm.exe
+    * Promtail-local-config.yaml
+    * Promtail-windows-amd64.exe
+    * Remove-Promtail.ps1
+    * Start-Promtail.ps1
+    * Stop-Promtail.ps1
+
+1. In File Explorer, navigate to the extracted Promtail folder performed as part of [Make Artefacts Available][].
+1. Copy the contents of `promtail-windows-amd64.exe` into the `C:\Promtail` directory.
+1. In File Explorer, navigate to the extracted Promtail Install folder performed as part of [Make Artefacts Available][].
+1. Copy the contents of this location into the `C:\Promtail` directory.
+1. Open promtail-local-config.yaml in Notepad++ and compare against the [backed up][] version:
+
+    * Update the filename property to the value found in the [backed up][] version.
+    * Update the clients URL property to the value found in the [backed up][] version.
+    * Save the new promtail-local-config.yaml file.
+
+1. Open PowerShell as Administrator.
+1. Change the directory to the Promtail folder by executing the following command:
+
+    ``` powershell
+        cd C:\Promtail
+    ```
+
+1. Install Promtail by executing the following command:
+
+    ``` powershell
+        .\Install-Promtail.ps1
+    ```
+
+1. Start the Promtail service by executing the following command:
+
+    ``` powershell
+        .\Start-Promtail.ps1
+    ```
+
+1. Check that the Promtail service has installed and started correctly:
+    * Open Services.msc from the Start menu.
+    * Locate the Promtail service and confirm that it is `Running`.
 
 ## Next Steps?
 
 1. [Try it out][]
 
+[backed up]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.BackupOldFiles" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.MakeArtefactsAvailable" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Prerequisites" >}}
 [Try it out]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.TryItOut" >}}
