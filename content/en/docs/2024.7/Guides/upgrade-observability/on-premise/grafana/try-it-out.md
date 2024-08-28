@@ -59,4 +59,4 @@ If other requests have been made then there may be more than one request visible
 {{% / alert %}}
 
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.VerifyOldVersion" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.Grafana.VerifyOldVersion" >}}

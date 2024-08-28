@@ -17,7 +17,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. Log in to the application server.
 1. In file explorer, navigate to the extracted Grafana install folder performed as part of [Make Artefacts Available][].
-1. Open PowerShell as Administrator.
+1. Run Windows PowerShell as Administrator.
 1. Change the directory to the Promtail folder by executing the following command:
 
     ``` powershell
@@ -42,7 +42,7 @@ These steps will need to be performed on all application servers that host a Pro
     * Stop-Promtail.ps1
 
 1. In File Explorer, navigate to the extracted Promtail folder performed as part of [Make Artefacts Available][].
-1. Copy the contents of `promtail-windows-amd64.exe` into the `C:\Promtail` directory.
+1. Copy the `promtail-windows-amd64.exe` file into the `C:\Promtail` directory.
 1. In File Explorer, navigate to the extracted Promtail Install folder performed as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the `C:\Promtail` directory.
 1. Open promtail-local-config.yaml in Notepad++ and compare against the [backed up][] version:
@@ -51,7 +51,7 @@ These steps will need to be performed on all application servers that host a Pro
     * Update the clients URL property to the value found in the [backed up][] version.
     * Save the new promtail-local-config.yaml file.
 
-1. Open PowerShell as Administrator.
+1. Run Windows PowerShell as Administrator.
 1. Change the directory to the Promtail folder by executing the following command:
 
     ``` powershell
@@ -78,7 +78,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.BackupOldFiles" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.MakeArtefactsAvailable" >}}
-[Prerequisites]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Prerequisites" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.TryItOut" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Grafana.BackupOldFiles" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Grafana.MakeArtefactsAvailable" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Grafana.Prerequisites" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Grafana.TryItOut" >}}

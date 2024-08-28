@@ -25,7 +25,7 @@ This guide describes how to upgrade the Grafana installation. Please ensure that
 
 1. [Upgrade Loki][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.BackupOldFiles" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.MakeArtefactsAvailable" >}}
-[Prerequisites]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.Prerequisites" >}}
-[Upgrade Loki]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.UpgradeLoki" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.Grafana.BackupOldFiles" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.Grafana.MakeArtefactsAvailable" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.Grafana.Prerequisites" >}}
+[Upgrade Loki]: {{< url path="Cortex.Guides.UpgradeObservability.OnPremise.Grafana.UpgradeLoki" >}}

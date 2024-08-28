@@ -1,7 +1,7 @@
 ---
 title: "Try it out"
 linkTitle: "Try it out"
-description: "Information about trying out the Observability platform after upgrade."
+description: "Information about trying out the observability platform after upgrade."
 weight: 3
 ---
 
@@ -9,7 +9,7 @@ weight: 3
 
 ## Confirm Dashboards load
 
-1. Navigate to your Grafana website e.g. `https://machinename.domain.com:3000`
+1. Navigate to your Grafana website e.g. `https://{Team URL}.grafana.net`
 1. Login to Grafana.
 1. Open the *Dashboards* page via the menu on the left sidebar.
 1. Select the folder that hosts the Cortex Dashboards, e.g. *Cortex*
@@ -53,4 +53,4 @@ If other requests have been made then there may be more than one request visible
 {{% / alert %}}
 
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.VerifyOldVersion" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeObservability.Cloud.Grafana.VerifyOldVersion" >}}

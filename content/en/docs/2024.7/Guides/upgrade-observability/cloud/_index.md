@@ -1,6 +1,6 @@
 ---
-title: "Upgrade Cloud hosted platform"
-linkTitle: "Upgrade Cloud hosted platform"
-description: "Information about upgrading a Cloud hosted observability platform for {{% ctx %}}."
+title: "Cloud"
+linkTitle: "Cloud"
+description: "Information about upgrading a cloud-hosted observability platform for {{% ctx %}}."
 weight: 1000
 ---

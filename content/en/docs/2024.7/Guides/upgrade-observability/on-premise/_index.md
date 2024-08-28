@@ -1,6 +1,6 @@
 ---
-title: "Upgrade On-Premise platform"
-linkTitle: "Upgrade On-Premise platform"
-description: "Information about upgrading an On-Premise observability platform for {{% ctx %}}."
+title: "On-Premise"
+linkTitle: "On-Premise"
+description: "Information about upgrading an on-premise observability platform for {{% ctx %}}."
 weight: 1
 ---
