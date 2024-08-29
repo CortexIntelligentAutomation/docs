@@ -42,9 +42,11 @@ weight: 1
 1. Copy the `defaults.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. In File Explorer, navigate to the location that Loki is running from, e.g. `C:\Loki\`.
 1. Copy the `loki-local-config.yaml` file and save it to the `Observability Backups` folder created at step 1.
-1. On the Application Server(s) that Promtail is installed on, create a folder called `Observability Backups` in a known location.
-1. Open File Explorer and navigate to the location that Promtail is running from, e.g. `C:\Promtail\`.
-1. Copy the `promtail-local-config.yaml` file and save it to the `Observability Backups` folder created at step 7.
+1. On each Application Server that Promtail is installed on:
+
+    1. Create a folder called `Observability Backups` in a known location.
+    1. Open File Explorer and navigate to the location that Promtail is running from, e.g. `C:\Promtail`.
+    1. Copy the `promtail-local-config.yaml` file and save it to the `Observability Backups` folder created at step 7.1.
 
 ## Next Steps?
 

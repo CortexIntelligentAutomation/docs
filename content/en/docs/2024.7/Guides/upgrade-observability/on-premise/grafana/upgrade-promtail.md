@@ -17,7 +17,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. Log in to the application server.
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the folder where Promtail is running from, e.g. `CD C:\Promtail`.
+1. Change the directory to the folder where Promtail is running from, e.g. `cd C:\Promtail`.
 1. Remove the current Promtail installation by executing the following command:
 
     ``` powershell
@@ -35,18 +35,18 @@ These steps will need to be performed on all application servers that host a Pro
     * Start-Promtail.ps1
     * Stop-Promtail.ps1
 
-1. In File Explorer, navigate to the extracted Promtail folder performed as part of [Make Artefacts Available][].
-1. Copy the `promtail-windows-amd64.exe` file into the folder that promtail was previously running from, e.g. `C:\Promtail`.
-1. In File Explorer, navigate to the extracted Promtail Install folder performed as part of [Make Artefacts Available][].
-1. Copy the contents of this location into the folder that promtail was previously running from, e.g. `C:\Promtail`.
-1. Open promtail-local-config.yaml in text editor and compare against the [backed up][] version:
+1. In File Explorer, navigate to the extracted `promtail-windows-amd64.exe` folder performed as part of [Make Artefacts Available][].
+1. Copy the `promtail-windows-amd64.exe` file into the folder that Promtail was previously running from, e.g. `C:\Promtail`.
+1. In File Explorer, navigate to the extracted `Promtail.Install` folder performed as part of [Make Artefacts Available][].
+1. Copy the contents of this location into the folder that Promtail was previously running from, e.g. `C:\Promtail`.
+1. Open `promtail-local-config.yaml` in a text editor and compare against the [backed up][] version:
 
-    * Update the filename property to the value found in the [backed up][] version.
-    * Update the clients URL property to the value found in the [backed up][] version.
-    * Save the new promtail-local-config.yaml file.
+    * Update the *filename* property under *positions* to be the value found in the [backed up][] version.
+    * Update the *url* property under *clients* to be the value found in the [backed up][] version.
+    * Save the new `promtail-local-config.yaml` file.
 
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the folder where the Promtail files have been copied to, e.g. `CD C:\Promtail`.
+1. Change the directory to the folder where the Promtail files have been copied to, e.g. `cd C:\Promtail`.
 1. Install Promtail by executing the following command:
 
     ``` powershell
@@ -61,7 +61,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. Check that the Promtail service has installed and started correctly:
     * Open Services.msc from the Start menu.
-    * Locate the Promtail service and confirm that it is `Running`.
+    * Locate the *Promtail* service and confirm that it is *Running*.
 
 ## Next Steps?
 

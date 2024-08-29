@@ -7,7 +7,7 @@ weight: 3
 
 # {{% param title %}}
 
-## Confirm Dashboards load
+## Confirm Dashboards Load
 
 1. Navigate to your Grafana website e.g. `https://{Team URL}.grafana.net`
 1. Login to Grafana.

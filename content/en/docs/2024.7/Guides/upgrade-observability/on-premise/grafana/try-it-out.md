@@ -13,7 +13,7 @@ weight: 5
 1. Identify the version number under the login prompt.
 1. Confirm the version has updated to be 10.4.1.
 
-## Confirm Dashboards load
+## Confirm Dashboards Load
 
 1. Navigate to your Grafana website e.g. `https://machinename.domain.com:3000`
 1. Login to Grafana.

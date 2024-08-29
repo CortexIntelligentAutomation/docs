@@ -13,14 +13,14 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
 
 1. Log in to the server hosting your Loki service.
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the folder where Loki is running from, e.g. `CD C:\Loki`.
+1. Change the directory to the folder where Loki is running from, e.g. `cd C:\Loki`.
 1. Remove the current Loki installation by executing the following command:
 
     ``` powershell
         .\Remove-Loki.ps1
     ```
 
-1. Open a File Explorer and navigate to the folder where Loki is running from, e.g. `C:\Loki`.
+1. Open a File Explorer and navigate to the folder where Loki was running from, e.g. `C:\Loki`.
 1. Delete the following files from the directory:
 
     * Install-Loki.ps1
@@ -31,19 +31,20 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
     * Start-Loki.ps1
     * Stop-Loki.ps1
 
-1. In File Explorer, navigate to the extracted Grafana Loki folder performed as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the extracted `loki-windows-amd64.exe` folder performed as part of [Make Artefacts Available][].
 1. Copy the `loki-windows-amd64.exe` file into the folder that Loki was previously running from, e.g. `C:\Loki`.
-1. In File Explorer, navigate to the extracted Grafana Loki Install folder performed as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the extracted `Grafana.Loki.Install` folder performed as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the folder that Loki was previously running from, e.g. `C:\Loki`.
-1. Open loki-local-config.yaml in a text editor and compare against the [backed up][] version:
+1. Open `loki-local-config.yaml` in a text editor and compare against the [backed up][] version:
 
-    * The data for Grafana dashboards is defined under schema_config.
-    * If there are differences under schema_config, copy the config from the backup and add it directly under configs in schema_config. Ensure the formatting is identical to that which is already found in the file.
-    * Update the pre-existing schema_config entry in the new loki-local-config.yaml file to start from todays date.
-    * Save the new loki-local-config.yaml file.
+    * The data for Grafana dashboards is defined under *schema_config*.
+    * If there are differences under *schema_config*, copy the config from the backup and add it directly under configs in *schema_config*.
+    * Ensure the formatting is identical, including indentations, to that which is already found in the file.
+    * Update the pre-existing *schema_config* entry in the new `loki-local-config.yaml` file to start from todays date.
+    * Save the new `loki-local-config.yaml` file.
 
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the folder where the Loki files have been copied to, e.g. `CD C:\Loki`.
+1. Change the directory to the folder where the Loki files have been copied to, e.g. `cd C:\Loki`.
 1. Install Loki by executing the following command:
 
     ``` powershell
@@ -58,7 +59,7 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
 
 1. Check that the Loki service has installed and started correctly:
     * Open Services.msc from the Start menu.
-    * Locate the Loki service and confirm that it is `Running`.
+    * Locate the *Loki* service and confirm that it is *Running*.
 
 ## Next Steps?
 
