@@ -2763,4 +2763,4 @@
     CharacterSets = "https://www.w3.org/Style/XSL/TestSuite/results/4/XEP/charsets.pdf"
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"
 [Mozilla]
-    UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#syntax_of_uniform_resource_identifiers_uris"
+    UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/URI#syntax_of_uniform_resource_identifiers_uris"
