@@ -13,19 +13,14 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
 
 1. Log in to the server hosting your Loki service.
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the Loki folder by executing the following command:
-
-    ``` powershell
-        cd C:\Loki
-    ```
-
+1. Change the directory to the folder where Loki is running from, e.g. `CD C:\Loki`.
 1. Remove the current Loki installation by executing the following command:
 
     ``` powershell
         .\Remove-Loki.ps1
     ```
 
-1. Open a File Explorer and navigate to `C:\Loki`
+1. Open a File Explorer and navigate to the folder where Loki is running from, e.g. `C:\Loki`.
 1. Delete the following files from the directory:
 
     * Install-Loki.ps1
@@ -37,9 +32,9 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
     * Stop-Loki.ps1
 
 1. In File Explorer, navigate to the extracted Grafana Loki folder performed as part of [Make Artefacts Available][].
-1. Copy the `loki-windows-amd64.exe` file into the `C:\Loki` directory.
+1. Copy the `loki-windows-amd64.exe` file into the folder that Loki was previously running from, e.g. `C:\Loki`.
 1. In File Explorer, navigate to the extracted Grafana Loki Install folder performed as part of [Make Artefacts Available][].
-1. Copy the contents of this location into the `C:\Loki` directory.
+1. Copy the contents of this location into the folder that Loki was previously running from, e.g. `C:\Loki`.
 1. Open loki-local-config.yaml in a text editor and compare against the [backed up][] version:
 
     * The data for Grafana dashboards is defined under schema_config.
@@ -48,12 +43,7 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
     * Save the new loki-local-config.yaml file.
 
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the Loki folder by executing the following command:
-
-    ``` powershell
-        cd C:\Loki
-    ```
-
+1. Change the directory to the folder where the Loki files have been copied to, e.g. `CD C:\Loki`.
 1. Install Loki by executing the following command:
 
     ``` powershell

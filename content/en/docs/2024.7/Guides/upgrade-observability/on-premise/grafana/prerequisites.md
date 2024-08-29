@@ -37,7 +37,7 @@ weight: 1
 ## Backup Old Files
 
 1. On the server that Grafana and Loki is installed on, create a folder called `Observability Backups` in a known location.
-1. Open File Explorer and navigate to the location that Grafana was installed to, e.g. `C:\Program Files\GrafanaLabs\grafana\conf\`.
+1. Open File Explorer and navigate to the location that Grafana was previously installed to, e.g. `%SystemDrive%\Program Files\GrafanaLabs\grafana\conf`.
 1. Copy the `custom.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. Copy the `defaults.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. In File Explorer, navigate to the location that Loki is running from, e.g. `C:\Loki\`.
