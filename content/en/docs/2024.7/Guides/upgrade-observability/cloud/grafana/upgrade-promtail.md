@@ -45,7 +45,7 @@ These steps will need to be performed on all application servers that host a Pro
 1. Copy the `promtail-windows-amd64.exe` file into the `C:\Promtail` directory.
 1. In File Explorer, navigate to the extracted Promtail Install folder performed as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the `C:\Promtail` directory.
-1. Open promtail-local-config.yaml in Notepad++ and compare against the [backed up][] version:
+1. Open promtail-local-config.yaml in a text editor and compare against the [backed up][] version:
 
     * Update the filename property to the value found in the [backed up][] version.
     * Update the clients URL property to the value found in the [backed up][] version.

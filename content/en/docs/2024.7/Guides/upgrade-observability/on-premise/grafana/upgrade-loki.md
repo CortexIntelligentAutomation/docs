@@ -40,7 +40,7 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
 1. Copy the `loki-windows-amd64.exe` file into the `C:\Loki` directory.
 1. In File Explorer, navigate to the extracted Grafana Loki Install folder performed as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the `C:\Loki` directory.
-1. Open loki-local-config.yaml in Notepad++ and compare against the [backed up][] version:
+1. Open loki-local-config.yaml in a text editor and compare against the [backed up][] version:
 
     * The data for Grafana dashboards is defined under schema_config.
     * If there are differences under schema_config, copy the config from the backup and add it directly under configs in schema_config. Ensure the formatting is identical to that which is already found in the file.
