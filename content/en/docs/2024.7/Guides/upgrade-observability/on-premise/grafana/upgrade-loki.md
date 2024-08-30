@@ -20,6 +20,8 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
         .\Remove-Loki.ps1
     ```
 
+1. Click *Yes* when prompted for confirmation that you wish to remove the service.
+1. Click *OK* when the successful removal of the Loki service is confirmed.
 1. Open a File Explorer and navigate to the folder where Loki was running from, e.g. `C:\Loki`.
 1. Delete the following files from the directory:
 
@@ -31,17 +33,37 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
     * Start-Loki.ps1
     * Stop-Loki.ps1
 
-1. In File Explorer, navigate to the extracted `loki-windows-amd64.exe` folder performed as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the extracted `loki-windows-amd64.exe` folder created as part of [Make Artefacts Available][].
 1. Copy the `loki-windows-amd64.exe` file into the folder that Loki was previously running from, e.g. `C:\Loki`.
-1. In File Explorer, navigate to the extracted `Grafana.Loki.Install` folder performed as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the extracted `Grafana.Loki.Install` folder created as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the folder that Loki was previously running from, e.g. `C:\Loki`.
-1. Open `loki-local-config.yaml` in a text editor and compare against the [backed up][] version:
+1. Open the new `loki-local-config.yaml` file in a text editor and compare against the [backed up][] version.  If there are differences between the two files in the *schema_config* > *configs* section:
 
-    * The data for Grafana dashboards is defined under *schema_config*.
-    * If there are differences under *schema_config*, copy the config from the backup and add it directly under configs in *schema_config*.
-    * Ensure the formatting is identical, including indentations, to that which is already found in the file.
-    * Update the pre-existing *schema_config* entry in the new `loki-local-config.yaml` file to start from todays date.
-    * Save the new `loki-local-config.yaml` file.
+    1. In the new file, change the date next to `- from` to be today's date.
+    1. Copy the old config section from the backup and add it immediately under *configs* and before the existing `- from ` line ensuring that formatting (including indentations) remain identical to that which is used in the new file.
+
+        The new *schema_config* should result in something similar to:
+
+        ```yaml
+        schema_config:
+          configs:
+            - from: 2020-10-24
+              store: boltdb-shipper
+              object_store: filesystem
+              schema: v11
+              index:
+                prefix: index_
+                period: 24h
+            - from: 2024-08-29
+              store: tsdb
+              object_store: filesystem
+              schema: v13
+              index:
+                prefix: index_
+                period: 24h
+        ```
+
+    1. Save the new `loki-local-config.yaml` file.
 
 1. Run Windows PowerShell as Administrator.
 1. Change the directory to the folder where the Loki files have been copied to, e.g. `cd C:\Loki`.

@@ -24,6 +24,8 @@ These steps will need to be performed on all application servers that host a Pro
         .\Remove-Promtail.ps1
     ```
 
+1. Click *Yes* when prompted for confirmation that you wish to remove the service.
+1. Click *OK* when the successful removal of the Promtail service is confirmed.
 1. Open a File Explorer and navigate to the folder where Promtail was running from, e.g. `C:\Promtail`
 1. Delete the following files from the directory:
 
@@ -35,11 +37,11 @@ These steps will need to be performed on all application servers that host a Pro
     * Start-Promtail.ps1
     * Stop-Promtail.ps1
 
-1. In File Explorer, navigate to the extracted `promtail-windows-amd64.exe` folder performed as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the extracted `promtail-windows-amd64.exe` folder created as part of [Make Artefacts Available][].
 1. Copy the `promtail-windows-amd64.exe` file into the folder that Promtail was previously running from, e.g. `C:\Promtail`.
-1. In File Explorer, navigate to the extracted `Promtail.Install` folder performed as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the extracted `Promtail.Install` folder created as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the folder that Promtail was previously running from, e.g. `C:\Promtail`.
-1. Open `promtail-local-config.yaml` in a text editor and compare against the [backed up][] version:
+1. Open `promtail-local-config.yaml` in a text editor:
 
     * Update the *filename* property under *positions* to be the value found in the [backed up][] version.
     * Update the *url* property under *clients* to be the value found in the [backed up][] version.

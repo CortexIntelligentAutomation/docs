@@ -24,8 +24,8 @@ weight: 1
     * [Promtail 3.0.0][] archive.
     * [Promtail Install][] archive.
 
-1. Extract the downloaded Promtail to a folder with the same name.
-1. Extract the downloaded Promtail Install file to a folder with the same name.
+1. Extract the downloaded `promtail-windows-amd64.exe` archive to a folder with the same name.
+1. Extract the downloaded `Promtail.Install` archive to a folder with the same name.
 
 ## Backup Old Files
 

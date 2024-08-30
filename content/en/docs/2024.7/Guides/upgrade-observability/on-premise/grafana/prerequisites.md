@@ -22,22 +22,22 @@ weight: 1
 
 1. Download the required artefacts to a folder on your machine:
 
-    * [Grafana 10.4.1][] Standalone Windows Binaries.
+    * [Grafana 10.4.1][] Standalone Windows Binaries archive.
     * [Grafana Loki 3.0.0][] archive.
     * [Grafana Loki Install][] archive.
     * [Promtail 3.0.0][] archive.
     * [Promtail Install][] archive.
 
-1. Extract the downloaded Grafana file to a folder with the same name.
-1. Extract the downloaded Grafana Loki file to a folder with the same name.
-1. Extract the downloaded Grafana Loki Install file to a folder with the same name.
-1. Extract the downloaded Promtail file to a folder with the same name.
-1. Extract the downloaded Promtail Install file to a folder with the same name.
+1. Extract the downloaded `grafana-enterprise-10.4.1.windows-amd64` archive to a folder with the same name.
+1. Extract the downloaded `loki-windows-amd64.exe` archive to a folder with the same name.
+1. Extract the downloaded `Grafana.Loki.Install` archive to a folder with the same name.
+1. Extract the downloaded `promtail-windows-amd64.exe` archive to a folder with the same name.
+1. Extract the downloaded `Promtail.Install` archive to a folder with the same name.
 
 ## Backup Old Files
 
 1. On the server that Grafana and Loki is installed on, create a folder called `Observability Backups` in a known location.
-1. Open File Explorer and navigate to the location that Grafana was previously installed to, e.g. `%SystemDrive%\Program Files\GrafanaLabs\grafana\conf`.
+1. Open File Explorer and navigate to the location that Grafana was previously installed to, typically `%SystemDrive%\Program Files\GrafanaLabs\grafana\conf`.
 1. Copy the `custom.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. Copy the `defaults.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. In File Explorer, navigate to the location that Loki is running from, e.g. `C:\Loki\`.
