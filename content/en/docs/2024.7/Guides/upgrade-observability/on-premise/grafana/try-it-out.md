@@ -32,7 +32,7 @@ Any flow can be used that exists on the system and can be executed.
 {{% / alert %}}
 
 1. Open a web browser and navigate to your installed {{% ctx %}} Gateway URL, e.g. https://server.domain.com/gateway, and log in when prompted.
-1. Open a flow that you are able to execute on an adhoc basis.
+1. Open a flow that you are able to execute on an ad hoc basis.
 1. Start the flow.
 1. Once the request has completed, in your web browser, navigate to and log in to your configured Grafana.
 1. Open the *Dashboards* page via the menu on the left sidebar.
