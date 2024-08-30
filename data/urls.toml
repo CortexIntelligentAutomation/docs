@@ -538,6 +538,11 @@
                     TryItOut = "/docs/guides/upgrade-observability/cloud/grafana/try-it-out"
                     UpgradePromtail = "/docs/guides/upgrade-observability/cloud/grafana/upgrade-promtail"
                     VerifyOldVersion = "/docs/guides/upgrade-observability/cloud/grafana/prerequisites/#verify-old-version"
+            [Cortex.Guides.UpgradeObservability.Dashboards]
+                [Cortex.Guides.UpgradeObservability.Dashboards.Grafana]
+                    Download = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
+                    UpgradeDashboards = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
+                    TryItOut = "/docs/guides/upgrade-observability/dashboards/grafana/try-it-out"
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
