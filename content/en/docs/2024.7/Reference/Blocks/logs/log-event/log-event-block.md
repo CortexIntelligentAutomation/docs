@@ -90,10 +90,37 @@ Logging the event results in the following log being written:
                 "ParentSpanId":null,
                 "$type":"EventCorrelationDetails"
             },
-            "Service":{
-                "Type":null,
-                "IpAddressOrFqdn":null,
-                "$type":"ServiceDetails"
+            "Platform": {
+                "Node": {
+                    "Name": "_Node_0",
+                    "IpAddressOrFqdn": "machine.address",
+                    "Versions" : {
+                    "OperatingSystem": "Microsoft Windows NT 10.0.19045.0",
+                    "DotNet": "6.0.26",
+                    "ServiceFabric": "10.0.1949.9590",
+                    "NServiceBus": "7.8.4",
+                    "Rabbitmq": "3.10.6",
+                    "Erlang": "25.0.4",
+                    "$type": "VersionDetails"
+                    },
+                    "$type": "NodeDetails"
+                },
+                "Application": {
+                    "Name": "fabric:/Core/Services",
+                    "Type": "Cortex.Innovation.Core",
+                    "Version": "41.3.0.24130",
+                    "$type": "ServiceFabricApplicationDetails"
+                },
+                "Service": {
+                    "Name": "fabric:/Core/Services/ApiGateway",
+                    "Type": "ApiGateway",
+                    "Version": "32.2.0.24130",
+                    "PartitionId": "4cf98b39-3093-42c4-b88a-6ad4711cf389",
+                    "ReplicaOrInstanceId": "133511894962823718",
+                    "$type": "ServiceFabricServiceDetails"
+                },
+                "Version": "2024.3",
+                "$type": "PlatformDetails"
             },
             "$type":"StructuredEventLog"
         }
@@ -304,10 +331,37 @@ An example log can be found below:
             "ParentSpanId":null,
             "$type":"EventCorrelationDetails"
         },
-        "Service":{
-            "Type":null,
-            "IpAddressOrFqdn":null,
-            "$type":"ServiceDetails"
+        "Platform": {
+            "Node": {
+                "Name": "_Node_0",
+                "IpAddressOrFqdn": "machine.address",
+                "Versions" : {
+                    "OperatingSystem": "Microsoft Windows NT 10.0.19045.0",
+                    "DotNet": "6.0.26",
+                    "ServiceFabric": "10.0.1949.9590",
+                    "NServiceBus": "7.8.4",
+                    "Rabbitmq": "3.10.6",
+                    "Erlang": "25.0.4",
+                    "$type": "VersionDetails"
+                },
+                "$type": "NodeDetails"
+            },
+            "Application": {
+                "Name": "fabric:/Core/Services",
+                "Type": "Cortex.Innovation.Core",
+                "Version": "41.3.0.24130",
+                "$type": "ServiceFabricApplicationDetails"
+            },
+            "Service": {
+                "Name": "fabric:/Core/Services/ApiGateway",
+                "Type": "ApiGateway",
+                "Version": "32.2.0.24130",
+                "PartitionId": "4cf98b39-3093-42c4-b88a-6ad4711cf389",
+                "ReplicaOrInstanceId": "133511894962823718",
+                "$type": "ServiceFabricServiceDetails"
+            },
+            "Version": "2024.3",
+            "$type": "PlatformDetails"
         },
         "$type":"StructuredEventLog"
         }
@@ -317,29 +371,47 @@ An example log can be found below:
 
 A list of each of the log's properties and an accompanying description can be found below:
 
-| Log Property                      | Description                                                   |
-|-----------------------------------|---------------------------------------------------------------|
-| `@t`                              | The date and time the log was written. The format is [ISO 8601 Standard][]. |
-| `@mt`                             | The message template for the log. This is set to log the entire Event.  |
-| `@l`                              | The level for the log. The value of [Event Severity][EventSeverity Property] is used here.  |
-| `Event`                           | The event that was logged. |
-| `Event.Type`                      | The type of event that was logged. This can be used for log analysis and reporting. The value of [Event Type][EventType Property] is used here. |
-| `Event.Duration`                  | Contains the date and time the event started at, ended at, and its duration. |
-| `Event.Duration.StartedAt`        | The date and time the event started. The format is [ISO 8601 Standard][]. The value of [Started At][StartedAt Property] is used here. |
-| `Event.Duration.EndedAt`          | The date and time the event ended. The format is [ISO 8601 Standard][]. The value of [Ended At][EndedAt Property] is used here.  |
-| `Event.Duration.InMs`             | The duration of the event in milliseconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
-| `Event.Duration.$type`            | The .Net data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Details`                   | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
-| `Event.Correlation`               | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple {{% ctx %}} Innovation Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Correlation.TraceId`       | ID common to all related logs, so they can be easily correlated together. |
-| `Event.Correlation.SpanId`        | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
-| `Event.Correlation.ParentSpanId`  | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
-| `Event.Correlation.$type`         | The .Net data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Service`                   | Contains details of the {{% ctx %}} Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Service.Type`              | The type of the {{% ctx %}} Service that logged this event. |
-| `Event.Service.IpAddressOrFqdn`   | The IP address or fully qualified domain name of the {{% ctx %}} Service that logged this event. |
-| `Event.Service.$type`             | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.$type`                     | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
+| Log Property                                   | Description                                                   |
+|------------------------------------------------|---------------------------------------------------------------|
+| `@t`                                           | The date and time the log was written. The format is [ISO 8601 Standard][]. |
+| `@mt`                                          | The message template for the log. This is set to log the entire Event.  |
+| `@l`                                           | The level for the log. The value of [Event Severity][EventSeverity Property] is used here.  |
+| `Event`                                        | The event that was logged. |
+| `Event.Type`                                   | The type of event that was logged. This can be used for log analysis and reporting. The value of [Event Type][EventType Property] is used here. |
+| `Event.Duration`                               | Contains the date and time the event started at, ended at, and its duration. |
+| `Event.Duration.StartedAt`                     | The date and time the event started. The format is [ISO 8601 Standard][]. The value of [Started At][StartedAt Property] is used here. |
+| `Event.Duration.EndedAt`                       | The date and time the event ended. The format is [ISO 8601 Standard][]. The value of [Ended At][EndedAt Property] is used here.  |
+| `Event.Duration.InMs`                          | The duration of the event in milliseconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
+| `Event.Duration.$type`                         | The .Net data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Details`                                | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
+| `Event.Correlation`                            | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple {{% ctx %}} Innovation Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Correlation.TraceId`                    | ID common to all related logs, so they can be easily correlated together. |
+| `Event.Correlation.SpanId`                     | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
+| `Event.Correlation.ParentSpanId`               | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
+| `Event.Correlation.$type`                      | The .Net data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Platform`                               | Contains the details about the platform that the event log was written on. |
+| `Event.Platform.Node`                          | Contains the details about the node of the platform that the event log was written on. |
+| `Event.Platform.Node.Name`                     | The name of the node in which the log was written. |
+| `Event.Platform.Node.IpAddressOrFqdn`          | The IP Address or Fully Qualified Domain Name of the machine in which the log was written. |
+| `Event.Platform.Node.Versions`                 | Contains the details about the versions of the platform that the event log was written on. |
+| `Event.Platform.Node.Versions.OperatingSystem` | The name and version of the Operating system on the machine in which the log was written. |
+| `Event.Platform.Node.Versions.DotNet`          | The version of DotNet used by the machine in which the log was written. |
+| `Event.Platform.Node.Versions.ServiceFabric`   | The version of ServiceFabric used by the machine in which the log was written. |
+| `Event.Platform.Node.Versions.NServiceBus`     | The version of NServiceBus used by the machine in which the log was written. |
+| `Event.Platform.Node.Versions.Rabbitmq`        | The version of Rabbitmq used by the machine in which the log was written. |
+| `Event.Platform.Node.Versions.Erlang`          | The version of Erlang used by the machine in which the log was written. |
+| `Event.Platform.Application`                   | Contains the details of the application that the event log was written by. |
+| `Event.Platform.Application.Name`              | The name of the application in which the log was written. |
+| `Event.Platform.Application.Type`              | The type of the application in which the log was written. |
+| `Event.Platform.Application.Version`           | The version of the application type in which the log was written. |
+| `Event.Platform.Service`                       | Contains the details of the service on the platform that the event log was written on. |
+| `Event.Platform.Service.Name`                  | The name of the service in which the log was written. |
+| `Event.Platform.Service.Type`                  | The type of the service in which the log was written. |
+| `Event.Platform.Service.Version`               | The version of the service type in which the log was written. |
+| `Event.Platform.Service.PartitionId`           | The PartitionId of the service in which the log was written. |
+| `Event.Platform.Service.ReplicaOrInstanceId`   | The ReplicaOrInstanceId of the service in which the log was written. |
+| `Event.Platform.Version`                       | The version of {{% ctx %}} that was used to write the log. |
+| `Event.Event.$type`                            | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
 
 ### Null or Empty Event Type
 
