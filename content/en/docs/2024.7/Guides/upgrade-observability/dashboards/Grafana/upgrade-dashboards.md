@@ -16,8 +16,6 @@ This guide describes how to upgrade the default dashboards that are provided for
 
 ## Import New Dashboards
 
-## Import Dashboards
-
 1. Log in to your configured Grafana with a user that has the *Admin* role.
 1. Go to *Dashboards* via the menu on the left sidebar.
 1. Click the *New* button and select *Import* from the drop-down menu.
@@ -31,7 +29,7 @@ You will receive warnings that *A dashboard or folder with the same name already
 1. Select the folder in Grafana you wish the dashboard to be saved in, e.g. *Cortex*.
 1. Select your configured Loki data source from the dropdown menu.
 1. Click *Import (Overwrite)*.
-1. Repeat steps 2 - 8 for the `Platform Health.json` file.
+1. Repeat steps 2 - 9 for the `Platform Health.json` file.
 
 ## Next Steps?
 
