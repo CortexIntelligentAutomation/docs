@@ -49,55 +49,116 @@ This example will log details about all tasks of a multi-stage process that prov
 
 Logging the event results in the following log being written:
 
-{{< highlight go "linenos=table,hl_lines=5 7-8 13-33,linenostart=1" >}}
+{{< highlight go "linenos=table,hl_lines=5 8-9 14-48,linenostart=1" >}}
 {
-    "@t":"2021-11-15T10:06:15.0000000Z",
-    "@mt":"{@Event}",
-    "Event":{
-        "Type":"User Provisioning",
-        "Duration":{
-            "StartedAt":"2021-11-15T10:05:32.0000000Z",
-            "EndedAt":"2021-11-15T10:06:12.0000000Z",
-            "InMs":40000,
-            "$type":"EventDurationDetails"
+  "@t": "2024-09-05T08:06:15.0000000Z",
+  "@mt": "{@Event}",
+  "Event": {
+    "Type": "User Provisioning",
+    "Method": "",
+    "Duration": {
+      "StartedAt": "2024-09-05T08:05:32.0000000+00:00",
+      "EndedAt": "2024-09-05T08:06:12.0000000+00:00",
+      "InSeconds": 40,
+      "$type": "Cortex.Core.Logging.Common.EventDurationDetails, Cortex.Core.Logging"
+    },
+    "Details": {
+      "Process": {
+        "Provision New User": {
+          "Stages": {
+            "$values": [
+              {
+                "Configure Active Directory": {
+                  "Tasks": {
+                    "$values": [
+                      "Add User to Azure Active Directory",
+                      "Add User to On-Premise Active Directory"
+                    ],
+                    "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+                },
+                "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+              },
+              {
+                "Configure Email": {
+                  "$values": [
+                    "Create Outlook Account",
+                    "Create Default Signature"
+                  ],
+                  "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+                },
+                "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+              }
+            ],
+            "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+          },
+          "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
         },
-        "Details":{
-            "Process":{
-                "Provision New User":{
-                    "Stages":[
-                        {
-                            "Configure Active Directory":{
-                                "Tasks":[
-                                    "Add User to Azure Active Directory",
-                                    "Add User to On-Premise Active Directory"
-                                ]
-                            }
-                        },
-                        {
-                            "Configure Email":{
-                                "Tasks":[
-                                    "Create Outlook Account",
-                                    "Create Default Signature"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },  
-            "Correlation":{
-                "TraceId":null,
-                "SpanId":null,
-                "ParentSpanId":null,
-                "$type":"EventCorrelationDetails"
-            },
-            "Service":{
-                "Type":null,
-                "IpAddressOrFqdn":null,
-                "$type":"ServiceDetails"
-            },
-            "$type":"StructuredEventLog"
-        }
-    }
+        "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+      },
+      "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+    },
+    "Tags": {
+      "Cortex": {
+        "Tenant.Name": "default",
+        "System.Name": "default",
+        "Package.Name": "PackageName",
+        "Package.Version": "57b45289-cc81-478c-a176-88d0a6104fb2",
+        "Flow.Id": "c038b421-c7f0-4793-86ad-7bb81801ab9f",
+        "Flow.Name": "FlowName",
+        "Execution.Id": "97a98060-acc2-4d11-bc7b-14989d4cf624",
+        "Workspace.Id": "cf358365-76d8-4100-b58e-4c023563083f",
+        "Block.Id": "422c42a2-4402-430b-8c96-8f0818f2b324",
+        "Block.Name": "LogEventBlock",
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+      },
+      "Custom": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+      },
+      "$type": "Cortex.Core.Logging.Common.EventTags, Cortex.Core.Logging"
+    },
+    "Correlation": {
+      "TraceId": "1fd6e5080a25f26b498816933ed91886",
+      "SpanId": "88f321981aa42963",
+      "ParentSpanId": "90e588941f7e20ba",
+      "$type": "Cortex.Core.Logging.Common.EventCorrelationDetails, Cortex.Core.Logging"
+    },
+    "Platform": {
+      "Node": {
+        "Name": "CustomerName.MachineName",
+        "IpAddressOrFqdn": "192.168.1.1",
+        "Versions": {
+          "OperatingSystem": "Microsoft Windows NT 10.0.20348.0",
+          "DotNet": "6.0",
+          "ServiceFabric": "10.0.1816.9590",
+          "NServiceBus": "8.1.6",
+          "Rabbitmq": "3.10.5",
+          "Erlang": "Erlang OTP 24.0 (12.0)",
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
+        },
+        "$type": "Cortex.Core.Logging.ServiceFabric.NodeDetails, Cortex.Core.Logging"
+      },
+      "Application": {
+        "Name": "fabric:/Execution/Services/Engine/32.2.4.24340",
+        "Type": "Cortex.Innovation.Execution",
+        "Version": "19.1.2.24340",
+        "$type": "Cortex.Core.Logging.ServiceFabric.ServiceFabricApplicationDetails, Cortex.Core.Logging"
+      },
+      "Service": {
+        "Name": "fabric:/Execution/Services/Engine/32.2.4.24340/Blocks/46.0.4.24340",
+        "Type": "Execution",
+        "Version": "19.1.2.24340",
+        "PartitionId": "5bf4dc16-4076-46bf-9d20-31cd6d878736",
+        "ReplicaOrInstanceId": "133697171066478481",
+        "$type": "Cortex.Core.Logging.ServiceFabric.ServiceFabricServiceDetails, Cortex.Core.Logging"
+      },
+      "Version": "2024.7",
+      "$type": "Cortex.Core.Logging.ServiceFabric.PlatformDetails, Cortex.Core.Logging"
+    },
+    "$type": "Cortex.Core.Logging.Common.StructuredEventLog, Cortex.Core.Logging"
+  },
+  "SourceContext": "Cortex.ServiceFabric.Service.Execution.ExecutionService"
 }
 {{< / highlight >}}
 
@@ -263,84 +324,185 @@ An example log can be found below:
 
 ```json
 {
-    "@t":"2021-11-15T10:06:15.0000000Z",
-    "@mt":"{@Event}",
-    "@l":"Debug",
-    "Event":{
-        "Type":"User Provisioning",
-        "Duration":{
-            "StartedAt":"2021-11-15T10:05:32.0000000Z",
-            "EndedAt":"2021-11-15T10:06:12.0000000Z",
-            "InMs":40000,
-            "$type":"EventDurationDetails"
+  "@t": "2024-09-05T08:06:15.0000000Z",
+  "@mt": "{@Event}",
+  "@l": "Debug",
+  "Event": {
+    "Type": "User Provisioning",
+    "Method": "",
+    "Duration": {
+      "StartedAt": "2024-09-05T08:05:32.0000000+00:00",
+      "EndedAt": "2024-09-05T08:06:12.0000000+00:00",
+      "InSeconds": 40,
+      "$type": "Cortex.Core.Logging.Common.EventDurationDetails, Cortex.Core.Logging"
+    },
+    "Details": {
+      "Process": {
+        "Provision New User": {
+          "Stages": {
+            "$values": [
+              {
+                "Configure Active Directory": {
+                  "Tasks": {
+                    "$values": [
+                      "Add User to Azure Active Directory",
+                      "Add User to On-Premise Active Directory"
+                    ],
+                    "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+                },
+                "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+              },
+              {
+                "Configure Email": {
+                  "$values": [
+                    "Create Outlook Account",
+                    "Create Default Signature"
+                  ],
+                  "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+                },
+                "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+              }
+            ],
+            "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+          },
+          "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
         },
-        "Details":{
-            "Process":{
-                "Provision New User":{
-                    "Stages":[
-                        {
-                            "Configure Active Directory":{
-                                "Tasks":[
-                                    "Add User to Azure Active Directory",
-                                    "Add User to On-Premise Active Directory"
-                                ]
-                            }
-                        },
-                        {
-                            "Configure Email":{
-                                "Tasks":[
-                                    "Create Outlook Account",
-                                    "Create Default Signature"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            }
-        },  
-        "Correlation":{
-            "TraceId":null,
-            "SpanId":null,
-            "ParentSpanId":null,
-            "$type":"EventCorrelationDetails"
+        "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+      },
+      "$type": "Cortex.DataTypes.Dictionaries.Structure, Cortex.Core.DataTypes"
+    },
+    "Tags": {
+      "Cortex": {
+        "Tenant.Name": "default",
+        "System.Name": "default",
+        "Package.Name": "PackageName",
+        "Package.Version": "57b45289-cc81-478c-a176-88d0a6104fb2",
+        "Flow.Id": "c038b421-c7f0-4793-86ad-7bb81801ab9f",
+        "Flow.Name": "FlowName",
+        "Execution.Id": "97a98060-acc2-4d11-bc7b-14989d4cf624",
+        "Workspace.Id": "cf358365-76d8-4100-b58e-4c023563083f",
+        "Block.Id": "422c42a2-4402-430b-8c96-8f0818f2b324",
+        "Block.Name": "LogEventBlock",
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+      },
+      "Custom": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"
+      },
+      "$type": "Cortex.Core.Logging.Common.EventTags, Cortex.Core.Logging"
+    },
+    "Correlation": {
+      "TraceId": "1fd6e5080a25f26b498816933ed91886",
+      "SpanId": "88f321981aa42963",
+      "ParentSpanId": "90e588941f7e20ba",
+      "$type": "Cortex.Core.Logging.Common.EventCorrelationDetails, Cortex.Core.Logging"
+    },
+    "Platform": {
+      "Node": {
+        "Name": "CustomerName.MachineName",
+        "IpAddressOrFqdn": "192.168.1.1",
+        "Versions": {
+          "OperatingSystem": "Microsoft Windows NT 10.0.20348.0",
+          "DotNet": "6.0",
+          "ServiceFabric": "10.0.1816.9590",
+          "NServiceBus": "8.1.6",
+          "Rabbitmq": "3.10.5",
+          "Erlang": "Erlang OTP 24.0 (12.0)",
+          "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
         },
-        "Service":{
-            "Type":null,
-            "IpAddressOrFqdn":null,
-            "$type":"ServiceDetails"
-        },
-        "$type":"StructuredEventLog"
-        }
-    }
+        "$type": "Cortex.Core.Logging.ServiceFabric.NodeDetails, Cortex.Core.Logging"
+      },
+      "Application": {
+        "Name": "fabric:/Execution/Services/Engine/32.2.4.24340",
+        "Type": "Cortex.Innovation.Execution",
+        "Version": "19.1.2.24340",
+        "$type": "Cortex.Core.Logging.ServiceFabric.ServiceFabricApplicationDetails, Cortex.Core.Logging"
+      },
+      "Service": {
+        "Name": "fabric:/Execution/Services/Engine/32.2.4.24340/Blocks/46.0.4.24340",
+        "Type": "Execution",
+        "Version": "19.1.2.24340",
+        "PartitionId": "5bf4dc16-4076-46bf-9d20-31cd6d878736",
+        "ReplicaOrInstanceId": "133697171066478481",
+        "$type": "Cortex.Core.Logging.ServiceFabric.ServiceFabricServiceDetails, Cortex.Core.Logging"
+      },
+      "Version": "2024.7",
+      "$type": "Cortex.Core.Logging.ServiceFabric.PlatformDetails, Cortex.Core.Logging"
+    },
+    "$type": "Cortex.Core.Logging.Common.StructuredEventLog, Cortex.Core.Logging"
+  },
+  "SourceContext": "Cortex.ServiceFabric.Service.Execution.ExecutionService"
 }
 ```
 
 A list of each of the log's properties and an accompanying description can be found below:
 
-| Log Property                      | Description                                                   |
-|-----------------------------------|---------------------------------------------------------------|
-| `@t`                              | The date and time the log was written. The format is [ISO 8601 Standard][]. |
-| `@mt`                             | The message template for the log. This is set to log the entire Event.  |
-| `@l`                              | The level for the log. The value of [Event Severity][EventSeverity Property] is used here.  |
-| `Event`                           | The event that was logged. |
-| `Event.Type`                      | The type of event that was logged. This can be used for log analysis and reporting. The value of [Event Type][EventType Property] is used here. |
-| `Event.Duration`                  | Contains the date and time the event started at, ended at, and its duration. |
-| `Event.Duration.StartedAt`        | The date and time the event started. The format is [ISO 8601 Standard][]. The value of [Started At][StartedAt Property] is used here. |
-| `Event.Duration.EndedAt`          | The date and time the event ended. The format is [ISO 8601 Standard][]. The value of [Ended At][EndedAt Property] is used here.  |
-| `Event.Duration.InMs`             | The duration of the event in milliseconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
-| `Event.Duration.$type`            | The .Net data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Details`                   | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
-| `Event.Correlation`               | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple {{% ctx %}} Innovation Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Correlation.TraceId`       | ID common to all related logs, so they can be easily correlated together. |
-| `Event.Correlation.SpanId`        | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
-| `Event.Correlation.ParentSpanId`  | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
-| `Event.Correlation.$type`         | The .Net data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.Service`                   | Contains details of the {{% ctx %}} Service that logged this event, and will allow enhanced log analysis and reporting to gain a full picture of everything that happened. |
-| `Event.Service.Type`              | The type of the {{% ctx %}} Service that logged this event. |
-| `Event.Service.IpAddressOrFqdn`   | The IP address or fully qualified domain name of the {{% ctx %}} Service that logged this event. |
-| `Event.Service.$type`             | The .Net data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
-| `Event.$type`                     | The .Net data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
-
+| Log Property                                   | Description                                                   |
+|------------------------------------------------|---------------------------------------------------------------|
+| `@t`                                           | The date and time the log was written. The format is [ISO 8601 Standard][]. |
+| `@mt`                                          | The message template for the log. This is set to log the entire Event.  |
+| `@l`                                           | The level for the log. The value of [Event Severity][EventSeverity Property] is used here.  |
+| `Event`                                        | The event that was logged. |
+| `Event.Type`                                   | The type of event that was logged. This can be used for log analysis and reporting. The value of [Event Type][EventType Property] is used here. |
+| `Event.Method`                                 | Not currently used for logs generated by the Log Event block. |
+| `Event.Duration`                               | Contains the date and time the event started at, ended at, and its duration. |
+| `Event.Duration.StartedAt`                     | The date and time the event started. The format is [ISO 8601 Standard][]. The value of [Started At][StartedAt Property] is used here. |
+| `Event.Duration.EndedAt`                       | The date and time the event ended. The format is [ISO 8601 Standard][]. The value of [Ended At][EndedAt Property] is used here.  |
+| `Event.Duration.InSeconds`                     | The duration of the event in seconds and is calculated using `Event.Duration.StartedAt` and `Event.Duration.EndedAt` . |
+| `Event.Duration.$type`                         | The .NET data type used to represent the duration data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Details`                                | Contains the details of the event. The value of [Event Details][EventDetails Property] is written as a child property of this (e.g. in this example `Event.Details.Process`). |
+| `Event.Details.$type`                          | The .NET data type used to represent the event details data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Tags`                                   | Contains tags generated by the {{% ctx %}} platform as well as tags generated by the automation solution running on the {{% ctx %}} platform. |
+| `Event.Tags.Cortex`                            | Contains tags generated by the {{% ctx %}} platform. |
+| `Event.Tags.Cortex.Tenant.Name`                | The name of the tenant the flow that generated this log belongs to. |
+| `Event.Tags.Cortex.System.Name`                | The name of the system the flow that generated this log belongs to. |
+| `Event.Tags.Cortex.Package.Name`               | The name of the package containing the flow that generated this log. |
+| `Event.Tags.Cortex.Package.Version`            | The version of the package containing the flow that generated this log. |
+| `Event.Tags.Cortex.Flow.Id`                    | The ID of the flow containing the block that generated this log. |
+| `Event.Tags.Cortex.Flow.Name`                  | The name of the flow containing the block that generated this log. |
+| `Event.Tags.Cortex.Execution.Id`               | The ID of the execution that generated this log. |
+| `Event.Tags.Cortex.Workspace.Id`               | The ID of the workspace containing the block that generated this log. |
+| `Event.Tags.Cortex.Block.Id`                   | The ID of the block that generated this log. |
+| `Event.Tags.Cortex.Block.Name`                 | The name of the block that generated this log. |
+| `Event.Tags.Cortex.$type`                      | The .NET data type used to represent the {{% ctx %}} tags data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Tags.Custom`                            | Contains custom tags generated by the automation solution running on the {{% ctx %}} platform. |
+| `Event.Tags.Custom.$type`                      | The .NET data type used to represent the custom tags data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Tags.$type`                             | The .NET data type used to represent the tags data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Correlation`                            | Contains details that can be used to correlate related events. E.g. The act of starting a new flow execution may result in multiple {{% ctx %}} Innovation Services processing the event. As a result, each service may write its own logs, and additionally the flow developer may also write out multiple logs during the flow execution. The Correlation details allow all of these logs to easily be correlated back together when performing log analysis and reporting to gain a full picture of everything that happened. |
+| `Event.Correlation.TraceId`                    | ID common to all related logs, so they can be easily correlated together. |
+| `Event.Correlation.SpanId`                     | Unique ID for each log, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
+| `Event.Correlation.ParentSpanId`               | The ID of the step that called this step of processing, so tools like [Grafana][] can display a call stack, showing each step that occurred when processing an event. |
+| `Event.Correlation.$type`                      | The .NET data type used to represent the correlation data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Platform`                               | Contains the details about the platform in which the log was written. |
+| `Event.Platform.Node`                          | Contains the details about the node in which the log was written. |
+| `Event.Platform.Node.Name`                     | The name of the node in which the log was written. |
+| `Event.Platform.Node.IpAddressOrFqdn`          | The IP Address or Fully Qualified Domain Name of the node in which the log was written. |
+| `Event.Platform.Node.Versions`                 | Contains the details about the versions of software running on the node in which the log was written. |
+| `Event.Platform.Node.Versions.OperatingSystem` | The name and version of the Operating system on the node in which the log was written. |
+| `Event.Platform.Node.Versions.DotNet`          | The version of .NET used by the node in which the log was written. |
+| `Event.Platform.Node.Versions.ServiceFabric`   | The version of Service Fabric used by the node in which the log was written. |
+| `Event.Platform.Node.Versions.NServiceBus`     | The version of NServiceBus used by the node in which the log was written. |
+| `Event.Platform.Node.Versions.Rabbitmq`        | The version of RabbitMQ used by the node in which the log was written. |
+| `Event.Platform.Node.Versions.Erlang`          | The version of Erlang used by the node in which the log was written. |
+| `Event.Platform.Node.Versions.$type`           | The .NET data type used to represent the platform node version data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Platform.Node.$type`                    | The .NET data type used to represent the platform node data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Platform.Application`                   | Contains the details of the application in which the log was written. |
+| `Event.Platform.Application.Name`              | The name of the application in which the log was written. |
+| `Event.Platform.Application.Type`              | The type of the application in which the log was written. |
+| `Event.Platform.Application.Version`           | The version of the application type in which the log was written. |
+| `Event.Platform.Application.$type`             | The .NET data type used to represent the platform application data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Platform.Service`                       | Contains the details of the service in which the log was written. |
+| `Event.Platform.Service.Name`                  | The name of the service in which the log was written. |
+| `Event.Platform.Service.Type`                  | The type of the service in which the log was written. |
+| `Event.Platform.Service.Version`               | The version of the service type in which the log was written. |
+| `Event.Platform.Service.PartitionId`           | The Partition ID of the service in which the log was written. |
+| `Event.Platform.Service.ReplicaOrInstanceId`   | The Replica or Instance ID of the service in which the log was written. |
+| `Event.Platform.Service.$type`                 | The .NET data type used to represent the service data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.Platform.Version`                       | The version of {{% ctx %}} that was used to write the log. |
+| `Event.Platform.$type`                         | The .NET data type used to represent the platform data. This can be ignored and is an artefact of the underlying implementation. |
+| `Event.$type`                                  | The .NET data type used to represent the event data. This can be ignored and is an artefact of the underlying implementation. |
+| `SourceContext`                                | The .NET data type of the Execution Service. This can be ignored and is an artefact of the underlying implementation. |
 ### Null or Empty Event Type
 
 If [Event Type][EventType Property] is left blank, `null`, or empty (i.e. `""`) it will default to `Cortex.Blocks.Logs.LogEvent.LogEventBlock`.
