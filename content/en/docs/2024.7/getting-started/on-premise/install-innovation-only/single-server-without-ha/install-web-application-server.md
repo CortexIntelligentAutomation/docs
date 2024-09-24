@@ -67,7 +67,8 @@ For each folder, perform the following steps:
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
 {{% alert title="Important" color="warning" %}}
-Standard certificates, wildcard certificates, auto-generated self-signed certificates and {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="manually created self-signed certificates" >}} can be used. However, self-signed certificates are not recommended for production instances.
+Certificates, wildcard certificates, auto-generated self-signed certificates and manually created self-signed certificates can be used. However, self-signed certificates are not recommended for production instances.
+Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
 <br />
 It is possible to reuse the certificate used when {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScript" title="installing the Application Server" >}}; If doing so, you should {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AssignCertificateFriendlyName" title="Assign a Certificate Friendly Name" >}} and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
 {{% /alert %}}

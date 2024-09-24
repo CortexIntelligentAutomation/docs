@@ -31,11 +31,8 @@ In order to ensure that the correct certificate is used during the upgrade of {{
 <br />  
 The Flow Debugger also requires an X.509 SSL certificate to be installed on the Web Application Server.  This can use the same certificate as {{% ctx %}} Gateway, however it must have the following properties:
 
-* Subject field must be in one of the following formats depending on whether a multi-domain or wildcard certificate is used:
-  * Multi-domain certificate - If using the [gobetween][] load balancer this should be specified as the FQDN of the load balancer server (e.g. `CN=load-balancer.domain.com`). If using a different load balancer this must be specified as the FQDN of one of the application servers (e.g. `CN=application-server.domain.com`)
-  * Wildcard certificate - wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
-* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.  Additionally if using a multi-domain certificate:
-  * The FQDN, NetBIOS Name and IP address of the web application server and all application servers must be added.
+* Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
