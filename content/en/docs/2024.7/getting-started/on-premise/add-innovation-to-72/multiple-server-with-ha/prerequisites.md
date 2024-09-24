@@ -258,10 +258,10 @@ The `Cortex.Innovation.Test.PortUsage.ps1` script is provided during installatio
 #### Application Servers
 
 {{% alert title="Note" %}}
-For production platforms it is recommended that X.509 SSL wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production platforms, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
+For production platforms it is recommended that X.509 SSL multi-domain or wildcard certificates are obtained from a Certificate Authority and used for installation. For non-production platforms, certificates can be omitted from installation and it will create and use self-signed certificates. This may prevent 3rd parties that require valid certificate verification to access the API Gateway Service.
 {{% / alert %}}
 
-An X.509 SSL wildcard certificate should be used to:
+An X.509 SSL multi-domain or wildcard certificate should be used to:
 
 * Secure communication between the load balancer and the nodes on the Application Servers.
 * Secure communication between the Application Services.
@@ -271,8 +271,12 @@ An X.509 SSL wildcard certificate should be used to:
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
-* Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
-* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Subject field must be in one of the following formats depending on whether a multi-domain or wildcard certificate is used:
+  * Multi-domain certificate - If using the [gobetween][] load balancer this should be specified as the FQDN of the load balancer server (e.g. `CN=load-balancer.domain.com`). If using a different load balancer this must be specified as the FQDN of one of the application servers (e.g. `CN=application-server.domain.com`)
+  * Wildcard certificate - wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.  Additionally if using a multi-domain certificate:
+  * The FQDN, NetBIOS Name and IP address of all application servers must be added.
+  * Optionally, the FQDN, NetBIOS Name and IP address of the web application server must be added if the same certificate will be used for the [web application server][].
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
@@ -281,11 +285,13 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 
 This file should be placed in a known location on the Application Server where the installation scripts will be run. This location will be required when running the installation script.
 
-If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
+If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject field can also be the FQDN of the load balancer (e.g. `CN=load-balancer.domain.com`).
 
 #### Web Application Server
 
-{{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. The certificate must have the following properties:
+{{% ctx %}} Gateway requires an X.509 SSL certificate to be installed on the Web Application Server. This can be the same certificate as used for the application servers or a different certificate.
+
+The certificate must have the following properties:
 
 * Enhanced Key Usage: `Server Authentication` and `Client Authentication`
 * Subject Alternative Names (SAN): At minimum the FQDN of the Server. It can also include NetBIOS Name, IP address, localhost, 127.0.0.1
@@ -293,8 +299,7 @@ If required, a separate X.509 SSL certificate can be obtained to be used by the 
 If the user tries to navigate to an address not in the SAN list, then they will receive a certificate error.
 
 {{% alert title="Important" color="warning" %}}
-Certificates, wildcard certificates, auto-generated self-signed certificates and manually created self-signed certificates can be used. However, self-signed certificates are not recommended for production instances.
-Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.
+Multi-domain certificates, wildcard certificates, auto-generated self-signed certificates and {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="manually created self-signed certificates" >}} can be used. However, self-signed certificates are not recommended for production instances.
 {{% /alert %}}
 
 More information about importing the certificate is given during installation.
@@ -345,4 +350,5 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [Recommended Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.RecommendedArchitecture" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
+[web application server]: {{< ref "#web-application-server" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}

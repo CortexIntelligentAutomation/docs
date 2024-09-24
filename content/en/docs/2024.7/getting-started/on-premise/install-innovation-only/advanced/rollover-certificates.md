@@ -26,8 +26,12 @@ A new, valid X.509 certificate needs to be obtained to update the certificates.
 
 The certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt](<https://letsencrypt.org/>), and must meet the following requirements:
 
-* Subject parameter must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
-* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Subject field must be in one of the following formats depending on whether a multi-domain or wildcard certificate is used:
+  * Multi-domain certificate - If using the [gobetween][] load balancer this should be specified as the FQDN of the load balancer server (e.g. `CN=load-balancer.domain.com`). If using a different load balancer this must be specified as the FQDN of one of the application servers (e.g. `CN=application-server.domain.com`)
+  * Wildcard certificate - wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.  Additionally if using a multi-domain certificate:
+  * The FQDN, NetBIOS Name and IP address of all application servers must be added.
+  * Optionally, the FQDN, NetBIOS Name and IP address of the web application server must be added if the same certificate is used for the web application server.
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
@@ -36,7 +40,7 @@ The certificate can be obtained from a Certificate Authority, such as [Let’s E
 
 This file should be placed in a known location on the Application Server where the certificate update script will be run. This location will be required when running the update script.
 
-If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject parameter can also be the FQDN of the load balancer (e.g. `CN=machine-name.domain.com`).
+If required, a separate X.509 SSL certificate can be obtained to be used by the load balancer to communicate with the Application Services. It must meet all of the other requirements laid out above, except the subject parameter can also be the FQDN of the load balancer (e.g. `CN=load-balancer.domain.com`).
 
 ### Configure Update Certificates Script
 

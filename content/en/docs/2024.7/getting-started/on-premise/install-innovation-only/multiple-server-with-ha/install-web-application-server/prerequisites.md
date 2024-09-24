@@ -44,8 +44,11 @@ If the user tries to navigate to an address not in the SAN list, then they will 
 <br/>  
 For the Flow Debugger, the certificate must have the following properties:
 
-* Subject field must be in a wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
-* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.
+* Subject field must be in one of the following formats depending on whether a multi-domain or wildcard certificate is used:
+  * Multi-domain certificate - If using the [gobetween][] load balancer this should be specified as the FQDN of the load balancer server (e.g. `CN=load-balancer.domain.com`). If using a different load balancer this must be specified as the FQDN of one of the application servers (e.g. `CN=application-server.domain.com`)
+  * Wildcard certificate - wildcard format, pertaining to the domain of the Application Servers (e.g. `CN=*.domain.com`).
+* Subject alternative names must include any additional host names that should be able to be used to access the API Gateway Service.  Additionally if using a multi-domain certificate:
+  * The FQDN, NetBIOS Name and IP address of the web application server and all application servers must be added.
 * Certificate file must be in a .PFX file format, with a known password.
 * Certificate file must contain the full chain of certificates.
 * Certificate file must include the private key.
@@ -53,8 +56,7 @@ For the Flow Debugger, the certificate must have the following properties:
 * Enhanced Key Usage must include `Server Authentication` and `Client Authentication`.
 
 {{% alert title="Important" color="warning" %}}
-Certificates, wildcard certificates, auto-generated self-signed certificates and manually created self-signed certificates can be used. However, self-signed certificates are not recommended for production instances.
-Details on how to create a self-signed certificate can be found at {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="Create Self-Signed Certificates" >}}.  
+Multi-domain certificates, wildcard certificates, auto-generated self-signed certificates and {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" title="manually created self-signed certificates" >}} can be used. However, self-signed certificates are not recommended for production instances.
 <br />
 It is possible to reuse the Flow Debugger certificate for {{% ctx %}} Gateway; If doing so, you must {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" title="Assign a Certificate Friendly Name" >}} after the debugger has been installed and set the `ImportCertificate` parameter to `$false` in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" title="Configure CORTEX Gateway Installation Script" >}} to ensure use of the correct certificate and to prevent it from being overwritten.
 {{% /alert %}}
