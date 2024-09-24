@@ -333,6 +333,7 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Architecture" >}}
+[Create Full DB Backup]: {{< url path="MSDocs.SqlServer.CreateFullDbBackup" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
