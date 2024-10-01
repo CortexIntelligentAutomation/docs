@@ -12,11 +12,11 @@ This guide describes how to install Grafana Loki on the Web Application Server. 
 ## Install Grafana Loki
 
 1. Download [Grafana Loki 3.0.0][] archive.
-1. Extract content of the downloaded archive to a suitable location, e.g. `C:\Loki`.
+1. Extract content of the downloaded archive to a suitable location, e.g. `C:\Program Data\Cortex\Observability\Loki`.
 1. Download the [Grafana Loki Install.zip][] archive and extract its contents alongside the previously extracted Grafana Loki `loki-windows-amd64.exe`.
 This archive contains the `loki-local-config.yaml` configuration file, [NSSM][] (the Non-Sucking Service Manager program) and PowerShell scripts to help manage Grafana Loki as a Windows service.
 1. Run Windows PowerShell as Administrator.
-1. Change the location to where all the files were extracted to.
+1. Change the location to where all the files were extracted to in step 2, e.g. `cd "C:\Program Data\Cortex\Observability\Loki"`.
 1. Execute the `.\Install-Loki.ps1` command to install the downloaded Grafana Loki `loki-windows-amd64.exe` as a service.
 1. Execute the `.\Start-Loki.ps1` command to start the Grafana Loki service.
 

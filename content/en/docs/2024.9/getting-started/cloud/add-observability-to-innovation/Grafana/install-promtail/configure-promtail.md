@@ -23,7 +23,7 @@ This guide describes how to configure Promtail on the Application Server(s).
 ### Set the positions.yaml File Path
 
 1. Open the `promtail-local-config.yaml` configuration file, which is located in the folder alongside the `promtail-windows-amd64.exe` file.
-1. Set the `filename` in the `positions` section to the location where you want the `positions.yaml` file to be created on Promtail startup.
+1. Set the `filename` in the `positions` section to the location where you want the `positions.yaml` file to be created on Promtail startup, e.g. `C:/Program Data/Cortex/Observability/Promtail/Positions.yaml`.
 1. Create all the folders of the path specified in the previous step.
 1. Save the file.
 
