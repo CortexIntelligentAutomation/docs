@@ -2746,6 +2746,9 @@
         BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
     [OracleParameter]
         ParameterDirection = "https://learn.microsoft.com/en-us/dotnet/api/system.data.parameterdirection?view=net-8.0"
+[Owasp]
+    [Owasp.PathTraversal]
+        MainDoc = "https://owasp.org/www-community/attacks/Path_Traversal"
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"
