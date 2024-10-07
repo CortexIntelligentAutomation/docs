@@ -175,7 +175,7 @@ enable = true
 # Legal info relevant links. These will show up on left side of footer.
 [[params.links.legal]]
 	name = "Privacy Policy"
-	url = "https://www.wearecortex.com/policies/external-data-policy/"
+	url = "https://www.wearecortex.com/external-data-policy/"
 [[params.links.legal]]
 	name = "Terms and Conditions"
 	url = "https://www.wearecortex.com/terms/"
