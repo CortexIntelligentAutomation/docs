@@ -83,7 +83,7 @@ section = ["HTML", "print"]
 
 [params]
 copyright = "We Are CORTEX is registered as CORTEX LTD"
-privacy_policy = "https://www.wearecortex.com/policies/external-data-policy/"
+privacy_policy = "https://www.wearecortex.com/external-data-policy/"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
