@@ -14,10 +14,8 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
 1. Copy the following artefacts to a folder on the server:
 
    * Cortex Innovation 2024.9 - Gateway.zip
-   * Cortex Innovation 2024.9 - Flows Upgrader.zip
    * Cortex Innovation 2024.9 - Web App Server Install Scripts.zip
 
-1. Extract the `Cortex Innovation 2024.9 - Flows Upgrader.zip` zip file to a folder with the same name.
 1. Extract the `Cortex Innovation 2024.9 - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Configure Upgrade Script
@@ -27,14 +25,6 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
 ## Run Upgrade Script
 
 {{< section "/upgrade/2024.9/upgrade-web-application-server/run-gateway-script.md" >}}
-
-## Upgrade Flows
-
-{{< section "/upgrade/2024.9/upgrade-web-application-server/upgrade-flows.md" >}}
-
-{{% alert title="Note" %}}
-If the {{% ctx %}} Interaction Portal is used in your environment, you must also upgrade those flows.
-{{% /alert %}}
 
 ## Preserve installation files
 
