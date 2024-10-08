@@ -17,7 +17,7 @@ A workspace is used to group logic and actions within a [flow][], in order to re
 
 A flow can only contain one Top-Level Workspace, which acts as the entry point for the [flow execution][].
 
-{{< figure src="/images/top-level-workspace.svg" title="Example Top-Level Workspace" >}}
+{{< figure src="/images/top-level-workspace-activity.svg" title="Example Top-Level Workspace" >}}
 
 * Start Flow block
   * Identifies where the [flow execution][] will start

@@ -443,6 +443,8 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/execution-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ListenersService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/listeners-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
@@ -890,11 +892,15 @@
                     MainDoc = "/docs/reference/blocks/http/execute-http-request"
                     [Cortex.Reference.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequest]
                         MainDoc = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1"
+                        HttpRequestProperty = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#http-request"
+                        HttpResponseProperty = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#http-response"
                         CallingAnotherFlow = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#calling-another-flow"
                 [Cortex.Reference.Blocks.Http.ExecuteSoapRequest]
                     MainDoc = "/docs/reference/blocks/http/execute-soap-request"
                     [Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest]
                         MainDoc = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1"
+                        SoapRequestProperty = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1/#soap-request"
+                        SoapResponseProperty = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1/#soap-response"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -1039,6 +1045,10 @@
                     MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/"
                     [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript]
                         MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
+                        ScriptProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#script"
+                        ParametersProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#parameters"
+                        OutputsProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#outputs"
+                        RecordsProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#records"
             [Cortex.Reference.Blocks.Queues]
                 MainDoc = "/docs/reference/blocks/queues/"
                 [Cortex.Reference.Blocks.Queues.DequeueItem]
@@ -1071,11 +1081,13 @@
                     MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
+                        CommandProperty = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#command"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
                         SshSessionDetails = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-session-details"
+                        SshLogsProperty = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-logs"
             [Cortex.Reference.Blocks.Tasks]
                 MainDoc = "/docs/reference/blocks/tasks/"
                 [Cortex.Reference.Blocks.Tasks.CancelTask]
@@ -1358,6 +1370,8 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/flows/handling-exceptions-within-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow]
                         MainDoc = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow"
+                        Process = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow/#process"
+                        Activity = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow/#activity"
                 [Cortex.Reference.Concepts.Fundamentals.Messages]
                     MainDoc = "/docs/reference/concepts/fundamentals/messages/"
                     [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
@@ -1414,6 +1428,7 @@
                             Non-Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#non-queuing-semaphore"
                             Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#queuing-semaphore"
                             MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrency-limits"        
+                            PreventingDeadlocks = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#preventing-deadlocks"        
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]

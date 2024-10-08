@@ -13,43 +13,98 @@ A flow is an object in [{{% ctx %}} Studio][CORTEX Studio] that contains the log
 
 ## Anatomy of a Flow
 
-{{< figure src="/images/top-level-workspace.svg" title="Example Flow" >}}
+There are two types of flows, which are used for different purposes:
 
-* Start Flow block
-  * Identifies where the [flow execution][] will start
-  * Automatically created when the flow is created
-  * Cannot be deleted
-  * See [Start Flow][] block
-* Action blocks
-  * Performs a specific action
-  * Icon on block indicates the nature of the action
-  * See [Blocks][Reference Blocks]
-* Decision block
-  * Causes the [flow execution][] to branch, dependent on a condition
-  * Icon on block indicates type of condition causing branching
-  * See [Decision Blocks][Decision Blocks]
-* Workspace blocks
-  * Contains grouped flow logic
-  * The turndown on the top-right of the icon indicates it contains a [workspace][], which can be opened by double-clicking the icon
-  * See [Workspace][Workspace Block] block
-* End Flow block
-  * Ends the [flow execution][]
-  * Automatically created when the flow is created
-  * See [End Flow][] block
-* Handle Flow Exception block
-  * Handles [flow level exceptions][], thrown during the [flow execution][]
-  * Automatically created when the flow is created
-  * The turndown on the top-right of the icon indicates it contains a [workspace][workspaces], which can be opened by double-clicking the icon
-  * Cannot be deleted
-  * See [Handle Flow Exception][] block
-* Flow Variable Store
-  * This is deprecated in favour of the [Variables Grid][]
-  * The [Variables Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
-  * Cannot be deleted
-* Workspace
-  * The [Top-Level Workspace][] within the flow
-  * Canvas on which blocks are placed and connected to create the flow logic
-  * See [Workspace][workspaces]
+* [Process][]
+* [Activity][]
+
+### Process
+
+Processes are a type of [Flow][] that can contain multiple [Activities][Activity] and are used to model high-level business processes.  
+
+{{< figure src="/images/top-level-workspace-process.svg" title="Example Process" >}}
+
+### Activity
+
+Activities are a type of [Flow][] that can be used to model tasks or actions.
+
+{{< figure src="/images/top-level-workspace-activity.svg" title="Example Activity" >}}
+
+## Composition of a flow
+
+Flows are composed of the following blocks:
+
+* [Start Flow block][]
+* [Action blocks][]
+* [Decision block][]
+* [Workspace blocks][]
+* [End Flow block][]
+* [Handle Flow Exception block][]
+* [Flow Variable Store][Flow Variable Store ref]
+* [Workspace][Workspace ref]
+
+### Start Flow block
+
+Identifies where the [flow execution][] will start.
+
+* Automatically created when the flow is created
+* Cannot be deleted
+* See [Start Flow][] block
+
+### Action blocks
+
+Performs a specific action.
+
+* Icon on block indicates the nature of the action
+* See [Blocks][Reference Blocks]
+
+### Decision block
+
+Causes the [flow execution][] to branch, dependent on a condition.
+
+* Icon on block indicates type of condition causing branching
+* See [Decision Blocks][Decision Blocks]
+
+### Workspace blocks
+
+Contains grouped flow logic.
+
+* The turndown on the top-right of the icon indicates it contains a [workspace][], which can be opened by double-clicking the icon
+* See [Workspace][Workspace Block] block
+
+### End Flow block
+
+Ends the [flow execution][].
+
+* Automatically created when the flow is created
+* See [End Flow][] block
+
+### Handle Flow Exception block
+
+Handles [flow level exceptions][], thrown during the [flow execution][].
+
+* Automatically created when the flow is created
+* The turndown on the top-right of the icon indicates it contains a [workspace][workspaces], which can be opened by double-clicking the icon
+* Cannot be deleted
+* See [Handle Flow Exception][] block
+
+### Flow Variable Store
+
+Stores variables that can be used within the flow.
+
+* The [Variables Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
+* Cannot be deleted
+
+{{% alert title="Note" %}}
+This is deprecated in favour of the {{< ahref path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" title="Variables Grid" >}}
+{{% /alert %}}
+
+### Workspace
+
+The [Top-Level Workspace][] within the flow.
+
+* Canvas on which blocks are placed and connected to create the flow logic
+* See [Workspace][workspaces]
 
 ## Grouping Logic within a Flow
 
@@ -108,6 +163,19 @@ Currently, it is not possible to have a [Handle Workspace Exception][] block on 
 ### External Documentation
 
 None
+
+[Activity]: {{< ref "#activity" >}}
+[Process]: {{< ref "#process" >}}
+[Flow]: {{< ref "#summary" >}}
+
+[Start Flow block]: {{< ref "#start-flow-block" >}}
+[Action blocks]: {{< ref "#action-blocks" >}}
+[Decision block]: {{< ref "#decision-block" >}}
+[Workspace blocks]: {{< ref "#workspace-blocks" >}}
+[End Flow block]: {{< ref "#end-flow-block" >}}
+[Handle Flow Exception block]: {{< ref "#handle-flow-exception-block" >}}
+[Flow Variable Store ref]: {{< ref "#flow-variable-store" >}}
+[Workspace ref]: {{< ref "#workspace" >}}
 
 [blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Handling Exceptions within a Block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
