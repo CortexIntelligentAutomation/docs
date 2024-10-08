@@ -1,4 +1,6 @@
 1. Unpublish existing published packages and create new versions
+{{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues. This step should not be required in future upgrades.{{< /alert >}}
+
     * Log in to Gateway with a user that has the `Admin` role.
     * Click on the `Admin` charm, then `Packages`.
     * In the `Package Definitions` grid, select `Is Published` filter on the `Is Published` column to show all published packages.
