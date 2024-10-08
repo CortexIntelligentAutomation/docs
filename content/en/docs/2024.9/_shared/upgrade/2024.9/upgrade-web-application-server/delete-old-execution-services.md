@@ -10,5 +10,3 @@
                 * Expand each level up to `Code Packages`
                 * Click on the drop down menu for `Code` and select `Restart`.
                 * Give this a few minutes. The application should be deleted and disappear from the list of applications.
-
-Repeat these instructions for the flow debugger.
