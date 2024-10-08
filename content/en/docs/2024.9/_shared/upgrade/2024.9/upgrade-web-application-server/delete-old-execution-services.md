@@ -1,11 +1,10 @@
-1. Unpublish existing published packages and create new versions
-{{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues. This step should not be required in future upgrades.{{< /alert >}}
 
-    * Log in to Gateway with a user that has the `Admin` role.
-    * Click on the `Admin` charm, then `Packages`.
-    * In the `Package Definitions` grid, select `Is Published` filter on the `Is Published` column to show all published packages.
-    * For each published package version
-        * Select the package.
-        * Click  `Unpublish` at the bottom of the `Definition` tab and click `Unpublish` on the confirmation pop-up dialog. A success message should appear. If it doesn’t it means that there is a problem with the configuration in the web.config file for CORTEX Gateway, or the Application Services aren’t healthy. See Troubleshooting for more information.
-        * Click `Create New Version` then click `Save` and wait for the new version to be created.
-        * Click `Publish`. A success message should appear. If it doesn’t it means that there is a problem with the configuration in the web.config file for CORTEX Gateway, or the Application Services aren’t healthy. See Troubleshooting for more information.
+1. Navigate to the service fabric explorer.
+1. Expand `Cluster` then `Applications` then `Cortex.Innovation.Execution`
+1. For all old execution applications
+    * Click on the drop down menu and select `Delete Application`
+    * Give this a few minutes. If the application does not delete
+        * Expand `Nodes` and select the application that matches the engine version number of the application that is being attempted to be deleted
+        * Expand each level up to `Code Packages`
+        * Click on the drop down menu for `Code` and select `Restart`.
+        * Give this a few minutes. The application should be deleted and disappear from the list of applications.
