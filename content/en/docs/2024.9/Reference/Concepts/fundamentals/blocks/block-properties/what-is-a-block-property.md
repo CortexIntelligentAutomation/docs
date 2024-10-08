@@ -59,28 +59,62 @@ To decompose an output value, the output property will need to be set to an expr
 
 ``` json
 {
-    "company": {
-        "name": "Company Name",
-        "department": [
-            {
-                "name": "HR",
-                "employees": [
-                    {
-                        "name": "Joe Blogs",
-                        "id": "101"
-                    },
-                    {
-                        "name": "Jane Doe",
-                        "id": "102"
-                    }
-                ]
-            }
+  "company": {
+    "name": "Company Name",
+    "department": [
+      {
+        "name": "HR",
+        "employees": [
+          {
+            "name": "Joe Blogs",
+            "id": "101"
+          },
+          {
+            "name": "Jane Doe",
+            "id": "102"
+          }
         ]
-    }
+      }
+    ]
+  }
 }
 ```
 
-To decompose this structure and store a part of the value to a variable, e.g. the syntax would be
+To decompose this structure and store a part of the value to a variable, e.g. to get the employees for the first department, the syntax would be:
+
+```text
+{"$.company.department[0].employees": ($)VariableNameToStore}
+```
+
+In this example, this would set the variable to be:
+
+```json
+{
+  {
+    "name": "Joe Blogs",
+    "id": "101"
+  },
+  {
+    "name": "Jane Doe",
+    "id": "102"
+  }
+}
+```
+
+To set the variable to the last value `-1` should be used for the index:
+
+```text
+{"$.company.department[0].employees[-1]": ($)VariableNameToStore}
+```
+
+In this example, this would set the variable to be:
+
+```json
+{
+  "name": "Jane Doe",
+  "id": "102"
+}
+```
 
 #### Discarding Outputs
 
