@@ -17,11 +17,9 @@ Please ensure that [Upgrade Application Servers and Load Balancer][] has been co
    * Cortex Innovation 2024.9 - App Server Install Scripts.zip
    * Cortex Innovation 2024.9 - Block Packages.zip
    * Cortex Innovation 2024.9 - Gateway.zip
-   * Cortex Innovation 2024.9 - Flows Upgrader.zip
    * Cortex Innovation 2024.9 - Web App Server Install Scripts.zip
 
 1. Extract the `Cortex Innovation 2024.9 - App Server Install Scripts.zip` file to a folder with the same name.
-1. Extract the `Cortex Innovation 2024.9 - Flows Upgrader.zip` zip file to a folder with the same name.
 1. Extract the `Cortex Innovation 2024.9 - Web App Server Install Scripts.zip` zip file to a folder with the same name.
 
 ## Next Steps?
