@@ -6,7 +6,9 @@
     * Give this a few minutes. If the application does not delete
         * Expand `Nodes`
             * For each node
-                * select the application that matches the engine version number of the application that is being attempted to be deleted
+                * Select the application that matches the engine version number of the application that is being attempted to be deleted
                 * Expand each level up to `Code Packages`
                 * Click on the drop down menu for `Code` and select `Restart`.
                 * Give this a few minutes. The application should be deleted and disappear from the list of applications.
+
+Repeat these instructions for the flow debugger.
