@@ -30,6 +30,10 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
    {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues. This step should not be required in future upgrades.{{< /alert >}}
 {{< section "/upgrade/2024.9/upgrade-web-application-server/republish-packages.md" >}}
 
+## Delete old execution service
+   {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues. This step should not be required in future upgrades.{{< /alert >}}
+{{< section "/upgrade/2024.9/upgrade-web-application-server/delete-old-execution-services.md" >}}
+
 ## Preserve installation files
 
 {{< section "/preserve-installation-files.md" >}}
