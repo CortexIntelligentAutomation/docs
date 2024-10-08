@@ -26,6 +26,10 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
 
 {{< section "/upgrade/2024.9/upgrade-web-application-server/run-gateway-script.md" >}}
 
+## Republish packages
+
+{{< section "/upgrade/2024.9/upgrade-web-application-server/republish-packages.md" >}}
+
 ## Preserve installation files
 
 {{< section "/preserve-installation-files.md" >}}
