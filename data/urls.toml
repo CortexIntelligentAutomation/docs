@@ -1320,6 +1320,7 @@
                             Output = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties"
                             DiscardingOutputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#discarding-outputs"
                             InputOutput = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties"
+                            DecomposingOutputProperties = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#decomposing-output-properties"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
@@ -1336,6 +1337,7 @@
                                 MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
                                 PropertyExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#property-expressions"
                                 IndexExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#index-expressions"
+                                DecompositionExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#decomposition-expressions"
                                 LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
                                 ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
