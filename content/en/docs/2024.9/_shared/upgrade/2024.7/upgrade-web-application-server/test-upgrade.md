@@ -8,7 +8,7 @@ Test the platform by creating a new flow and executing it using the following st
 1. Inside the group, click the `+` button again and click on `Flow` to open a dialog. If the menu item is not present, it means that the `FeatureFlags` in the `CortexGateway.SetParameters.xml` file was not set properly when installing Gateway. See [Troubleshooting][] for more information.
 1. Enter a name for the flow, configure the `Permission Groups` and click `OK` to create the flow.
 1. The flow should be displayed with a start flow block and end flow block, if those blocks are not displayed see [Troubleshooting][]. A list of block palettes should be displayed down the left hand side:
-    {{< figure src="/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
+    {{< figure src="../../2024.7/images/New Innovation Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
 1. Add a `Set Variable` block and connect it between the start and end blocks.
 1. Click the `Set Variable` block to open the Property Editor.
 1. Set the `Value` property to the expression `DateTimeOffset.Now`.
