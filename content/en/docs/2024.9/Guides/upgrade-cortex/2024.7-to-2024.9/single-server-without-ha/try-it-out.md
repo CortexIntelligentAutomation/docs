@@ -9,7 +9,7 @@ weight: 60
 
 This guide describes how to try out an upgraded {{% ctx %}} to make sure it is working. Please ensure that both the [Application Server Upgrade][] and [Web Application Server Upgrade][] has been completed before taking these steps.
 
-{{< section "/upgrade/try-it-out/test-upgrade.md" >}}
+{{< section "/upgrade/2024.9/upgrade-web-application-server/test-upgrade.md" >}}
 
 ## Test Executing Production Flows
 
