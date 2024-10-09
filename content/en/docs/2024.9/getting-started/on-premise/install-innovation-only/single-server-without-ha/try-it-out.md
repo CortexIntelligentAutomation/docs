@@ -25,7 +25,9 @@ Test the platform by creating a new flow and executing it using the following st
 1. Set the `Value` property to the expression `DateTimeOffset.Now`.
 1. Type `Result` into the `Variable` property and click `Create Result`.
 1. In the Variable Editor, set `Is Output Variable?` to `true` for the new `Result` variable.
-1. Set a breakpoint on the end block and start the flow. An execution token should appear, the `Result` variable should show the current time. If the token does not appear, try refreshing the page. Failing that, see [Troubleshooting][Troubleshooting Flow Not Starting].
+1. Set a breakpoint on the end block and start the flow. An execution token should appear.
+   If the token does not appear, try refreshing the page. Failing that, see [Troubleshooting][Troubleshooting Flow Not Starting].
+1. The `Result` variable should show the current time when selecting the execution in the bottom panel and viewing the `Variables` window on the right.
 1. Continue or stop the execution.
 1. Commit the flow.
 
