@@ -26,9 +26,22 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
 
 {{< section "/upgrade/2024.9/upgrade-web-application-server/run-gateway-script.md" >}}
 
-## Delete old execution service
-   {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues. This step should not be required in future upgrades.{{< /alert >}}
-{{< section "/upgrade/2024.9/upgrade-web-application-server/delete-old-execution-services.md" >}}
+## Delete Old Execution Service
+   {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues.{{< /alert >}}
+
+1. Open a web browser.
+1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration of the original installation.
+1. Expand `Cluster` then `Applications` then `Cortex.Innovation.Execution`.
+1. For all old execution applications:
+    * Click on the drop down menu and select `Delete Application`. Confirm application deletion by following the on-screen instructions.
+    * Give this a few minutes. If the application does not delete:
+        * Expand `Nodes`
+            * For each node:
+                * Expand the node and select the application that matches the engine version number of the application that is being attempted to be deleted.
+                * Expand each level up to and including `Code Packages`.
+                * Click on the drop down menu for `Code` and select `Restart`. Confirm application restart by following the on-screen instructions.
+            * Give this a few minutes. Once all nodes have been restarted the application should be deleted and disappear from the list of applications.
+
 
 ## Preserve installation files
 
