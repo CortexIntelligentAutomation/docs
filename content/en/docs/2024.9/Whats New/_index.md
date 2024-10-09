@@ -120,3 +120,6 @@ For a full list of what has been introduced in this release, please see the [202
 [General improvements to the documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.GeneralImprovementsToTheDocumentation" version="2024.9" >}}
 
 [2024.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.9.MainDoc" version="2024.9" >}}
+
+[Flow]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" version="2024.9" >}}
+[Path Traversal]: {{< url path="Owasp.PathTraversal.MainDoc" version="2024.9" >}}
