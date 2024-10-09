@@ -37,7 +37,7 @@ The icons used for Input properties are dark blue to distinguish them from [Outp
 
 ### Output Properties
 
-Output properties are used to save values from a [block][]. These properties will saved to a variable during the block's execution.
+Output properties are used to save values from a [block][]. These properties can be saved to a variable or decomposed to be saved into multiple variables during the block's execution.
 
 Values from Output properties can be [discarded][Discarding Outputs], this means they will not be saved to any variable.
 
@@ -50,6 +50,71 @@ Output properties can be configured using the following editors:
 {{< figure src="/images/editable/variable-editor.png" >}}
 
 The icon used for Output properties are light blue to distinguish them from [Input Properties][].
+
+#### Decomposing Output Properties
+
+Output values can be decomposed to allow the saving of different parts of the value to different variables.
+
+To decompose an output value, the output property will need to be set to an expression. As an example, an output value value contains a Json object, e.g:
+
+``` json
+{
+  "company": {
+    "name": "Company Name",
+    "department": [
+      {
+        "name": "HR",
+        "employees": [
+          {
+            "name": "Joe Blogs",
+            "id": "101"
+          },
+          {
+            "name": "Jane Doe",
+            "id": "102"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+To decompose this structure and store a part of the value to a variable, e.g. to get the employees for the first department, the syntax would be:
+
+```text
+{"$.company.department[0].employees": ($)VariableNameToStore}
+```
+
+In this example, this would set the variable to be:
+
+```json
+{
+  {
+    "name": "Joe Blogs",
+    "id": "101"
+  },
+  {
+    "name": "Jane Doe",
+    "id": "102"
+  }
+}
+```
+
+To set the variable to the last value `-1` should be used for the index:
+
+```text
+{"$.company.department[0].employees[-1]": ($)VariableNameToStore}
+```
+
+In this example, this would set the variable to be:
+
+```json
+{
+  "name": "Jane Doe",
+  "id": "102"
+}
+```
 
 #### Discarding Outputs
 
