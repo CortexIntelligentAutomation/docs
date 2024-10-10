@@ -26,6 +26,15 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
 
 {{< section "/upgrade/2024.9/upgrade-web-application-server/run-gateway-script.md" >}}
 
+## Publish New Package Versions
+   {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues.{{< /alert >}}
+1. Log in to Gateway with a user that has the `Admin` role.
+1. Click on the `Admin` charm, then `Packages`.
+1. For each previously published package version:
+    * Select the package.
+    * Click `Create New Version` then click `Save` and wait for the new version to be created.
+    * Click `Publish`. A success message should appear. If it doesn't it means that there is a problem with the configuration in the `web.config` file for {{% ctx %}} Gateway, or the Application Services aren't healthy.
+
 ## Delete Old Execution Service
    {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues.{{< /alert >}}
 
