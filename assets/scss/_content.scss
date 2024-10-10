@@ -3,9 +3,19 @@
 //
 
 .td-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-row-gap: 8px;
+    row-gap: 8px;
     order: 1;
 
-    p, li, td {
+    .reading-time {
+        margin: 5px 0px;
+    }
+
+    p,
+    li,
+    td {
         font-weight: $font-weight-body-text;
     }
 
@@ -16,29 +26,50 @@
     }
 
     p {
-        margin-bottom: 0.2rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
-    > h1 {
+    >h1 {
         font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
     }
 
-    > h2 {
-        margin-bottom: 1rem;
+    >h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(50, 50, 50, 0.1);
     }
 
-    > h2:not(:first-child) {
-        margin-top: 3rem;
+    >h2:not(:first-of-type) {
+        margin-top: 24px;
     }
 
-    > h2 + h3 {
-         margin-top: 1rem;
+    >h2+h3 {
+        margin-top: 10px;
     }
 
-    > h3, > h4, > h5, > h6 {
-        margin-bottom: 1rem;
-        margin-top: 2rem;
+    >h3 {
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    h3+h4 {
+        margin-top: 10px;
+    }
+
+    >h4  {
+        margin-top: 14px;
+        margin-bottom: 4px;
+    }
+
+    h4+h5, h5+h6 {
+        margin-top: 5px;
+    }
+
+    >h5, >h6 {
+        margin-top: 10px;
+        margin-bottom: 4px;
     }
 
     img {
@@ -53,7 +84,7 @@
         max-width: 90%;
     }
 
-    > table {
+    >table {
         @extend .table-striped;
 
         @extend .table-responsive;
@@ -61,30 +92,46 @@
         @extend .table;
     }
 
-    > blockquote {
+    >blockquote {
         padding: 0 0 0 1rem;
         margin-bottom: $spacer;
         color: $gray-600;
         border-left: 6px solid $secondary;
     }
 
-    > ul li, > ol li {
+    >ul {
+        margin-bottom: 0px;
+    }
+
+    >ul li,
+    >ol li {
         margin-bottom: .25rem;
 
-        > table {
+        >table {
             @extend .table-striped;
-    
+
             @extend .table-responsive;
-    
+
             @extend .table;
-        }    
+        }
     }
 
     strong {
         font-weight: $font-weight-bold;
     }
 
-    > pre, > .highlight, > .lead, > h1, > h2, > ul, > ol, > p, > blockquote, > dl dd, .footnotes, > .alert {
+    >pre,
+    >.highlight,
+    >.lead,
+    >h1,
+    >h2,
+    >ul,
+    >ol,
+    >p,
+    >blockquote,
+    >dl dd,
+    .footnotes,
+    >.alert {
         @extend .td-max-width-on-larger-screens;
     }
 
@@ -93,8 +140,10 @@
         margin-bottom: 1 * $spacer;
     }
 
-    .lead {
-        margin-bottom: 1.5rem;
+    .lead, .td-byline {
+        width: 100%;
+        max-width: 100%;
+        margin: 5px 0px !important;
     }
 
     span {
@@ -103,23 +152,25 @@
             color: black;
             padding: 0.18rem 0.45rem 0.18rem 0.45rem
         }
+
         &.threshold-warning {
-            background-color:  #FF9830;
+            background-color: #FF9830;
             color: black;
-            padding:  0.18rem 0.45rem 0.18rem 0.45rem
+            padding: 0.18rem 0.45rem 0.18rem 0.45rem
         }
+
         &.threshold-critical {
             background-color: #F2495C;
             color: black;
-            padding:  0.18rem 0.45rem 0.18rem 0.45rem
+            padding: 0.18rem 0.45rem 0.18rem 0.45rem
         }
     }
 
-    > .footnotes {
+    >.footnotes {
         font-style: italic;
     }
 
-    > .youtube-video {
+    >.youtube-video {
         max-width: 640px;
         width: 100%;
         animation: fadeIn 2s;
@@ -129,6 +180,12 @@
             aspect-ratio: 16 / 9;
             border-radius: 5px;
         }
+    }
+
+    br {
+        content: " ";
+        display: block;
+        margin-bottom: 5px;
     }
 }
 
@@ -142,6 +199,11 @@
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

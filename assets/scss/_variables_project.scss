@@ -33,8 +33,13 @@ body {
   text-align: left;
   background-color: $white;
 
+  h1:first-of-type {
+    font-weight: 700 !important;
+  }
+
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $ctx-blue;
+    font-weight: 600 !important;
   }
 
   .slogan {
@@ -155,31 +160,28 @@ body {
 
   h2 {
     font-size: $h2-font-size !important;
-    font-weight: 600 !important;
-    margin: 2rem 0rem 0.5rem 0rem !important;
     max-width: 100% !important;
 
   }
 
   h3 {
     font-size: $h3-font-size !important;
-    font-weight: 600 !important;
-    margin: 1rem 0rem 0rem 0rem !important;
-    padding-bottom: 0.5rem;
+    opacity: .95;
   }
 
   h4 {
     font-size: $h4-font-size !important;
-    font-weight: 400 !important;
-    margin: 1rem 0rem 0.5rem 0rem !important;
+    opacity: .90;
   }
 
   h5 {
     font-size: $h5-font-size !important;
+    opacity: .85;
   }
 
   h6 {
     font-size: $h6-font-size !important;
+    opacity: .80;
   }
 
   p.namespace {

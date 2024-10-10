@@ -48,6 +48,48 @@ When a [flow][] starts the execution of a child flow using the [Run Flow][] bloc
 | Ended     | The execution has ended normally                                                                                                               |
 | Error     | The execution has ended after having thrown an exception that was not handled                                                                  |
 
+## Execution Context
+
+Executions have their own context that contains specific information about the current execution. This can be accessed via the built-in `_executionContext` [variable][] and currently contains the following properties:
+
+- [Initiator][]
+- [Extensions][]
+
+### Initiator
+
+The initiator is a read-only property that contains the following information about the user that initiated the execution:
+
+- `Name`: The name of the user that initiated the execution.
+- `AuthenticationType`: The authentication type of the user that initiated the execution.
+- `IsAuthenticated`: A boolean value indicating if the user that initiated the execution is authenticated. This should always be `true`.
+- `Claims`: A list of claims associated with the user that initiated the execution.
+
+The values can be accessed using [property expression][] or dictionary [index expressions][] syntax, as follows:
+
+```csharp
+($)_executionContext.Initiator.Name
+```
+
+```csharp
+($)_executionContext.Initiator["Name"]
+```
+
+### Extensions
+
+The `Extensions` property can be used to store additional information. This data will be accessible to all blocks within the execution, including child executions.
+
+A value can be added to the `Extensions` property using the [expression editor][], using the dictionary [index expressions][] syntax, for example:
+
+```csharp
+($)_executionContext.Extensions["key"] = "value";
+```
+
+The value can be accessed in the same way, for example:
+
+```csharp
+($)_executionContext.Extensions["key"]
+```
+
 ## Remarks
 
 ### Known Limitations
@@ -75,6 +117,8 @@ None
 None
 
 [Execution Status]: {{< ref "#execution-status" >}}
+[Extensions]: {{< ref "#extensions" >}}
+[Initiator]: {{< ref "#initiator" >}}
 
 [Executions in Development]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.MainDoc" >}}
 [Executions in Production]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInProduction.MainDoc" >}}
@@ -98,3 +142,7 @@ None
 [Execution Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
 
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
+
+[expression editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[index expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.IndexExpressions" >}}
+[Property expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.PropertyExpressions" >}}
