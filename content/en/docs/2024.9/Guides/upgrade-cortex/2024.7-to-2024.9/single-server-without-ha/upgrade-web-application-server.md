@@ -26,7 +26,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
 
 {{< section "/upgrade/2024.9/upgrade-web-application-server/run-gateway-script.md" >}}
 
-## Create New Version
+## Create New Package Versions
    {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the cleanup of the NServiceBus endpoint and RabbitMQ queues.{{< /alert >}}
 1. Log in to Gateway with a user that has the `Admin` role.
 1. Click on the `Admin` charm, then `Packages`.
