@@ -264,7 +264,7 @@ Types of expressions:
 - [Enums][Enum expressions]
 - [Casting][Casting expressions]
 - [Indexes][Index expressions]
-- [Decomposition][Decomposition expressions] ([output property][] only)
+- [Decomposition][Decomposition expressions] ([output property][Output Properties] only)
 
 ### Arithmetic expressions
 
@@ -561,18 +561,13 @@ In the examples below assume:
 
 {{< figure src="/images/set-variable/set-variable-expression-decomposition.PNG" >}}
 
-Decomposition expressions are used to extract the properties of an [Output property][Output properties] and store them in [variables][Variables Concept].
+Decomposition expressions are used to save selected values from an [Output property][Output properties] to multiple [variables][Variables Concept].
 
 {{% alert title="Note" %}}
 This is currently only supported by output properties.
 {{% /alert %}}
 
-[Output properties][] can be decomposed using the decomposition syntax which includes the following syntaxes:
-
-- [Property expression][Property expressions]
-- [Index expression][Index expressions]
-
-The decomposition syntax follows a very similar pattern to a `JSON` object:
+Decomposition syntax follows a similar pattern to a `JSON` object:
 
 - each `key` is the property path expression, where `$` is the root of the output value.
 - each `value` is the variable name, prefixed with `($)`.
@@ -584,13 +579,13 @@ The decomposition syntax follows a very similar pattern to a `JSON` object:
 }
 ```
 
-The examples below assumes that the output value contains the following JSON object:
+The examples below assumes that the output value contains the following data:
 
 ``` json
 {
   "company": {
     "name": "Company Name",
-    "department": [
+    "departments": [
       {
         "name": "HR",
         "employees": [
@@ -622,17 +617,17 @@ The examples below assumes that the output value contains the following JSON obj
 }
 ```
 
-### Decomposing an object property
+#### Decomposing an object property
 
-To decompose this structure and store the departments, the syntax would be:
+To save the `departments` property, the syntax would be:
 
 ```json
 {
-  "$.company.department": ($)ListOfDepartment
+  "$.company.departments": ($)ListOfDepartments
 }
 ```
 
-In this example, the variable `($)ListOfDepartment` will be set to the following value:
+In this example, the variable `($)ListOfDepartments` will be set to the following value:
 
 ```json
 [
@@ -665,13 +660,13 @@ In this example, the variable `($)ListOfDepartment` will be set to the following
 ]
 ```
 
-### Decomposing a list item
+#### Decomposing an item in a list
 
-To decompose this structure and store the first `department`, the syntax would be:
+To save the first department, the syntax would be:
 
 ```json
 {
-  "$.company.department[0]": ($)FirstDepartment
+  "$.company.departments[0]": ($)FirstDepartment
 }
 ```
 
@@ -693,13 +688,13 @@ In this example, the variable `($)FirstDepartment` will be set to the following 
 }
 ```
 
-### Decomposing the last list item
+#### Decomposing the last item in a list
 
-To decompose this structure and store the last `employee` of the first `department`, the syntax would be:
+To save the last `employee` of the first department, the syntax would be:
 
 ```json
 {
-  "$.company.department[0].employees[-1]": ($)LastEmployeeOfFirstDepartment
+  "$.company.departments[0].employees[-1]": ($)LastEmployeeOfFirstDepartment
 }
 ```
 
@@ -712,14 +707,14 @@ In this example, the variable `($)LastEmployeeOfFirstDepartment` will be set to 
 }
 ```
 
-### Decomposing multiple properties at the same time
+#### Decomposing multiple properties at the same time
 
-To decompose this structure and store the `id` and `name` of the first `employee` of the first `department`, the syntax would be:
+To save the `id` and `name` of the first `employee` of the first department, the syntax would be:
 
 ```json
 {
-  "$.company.department[0].employees[0].id": ($)FirstEmployeeId,
-  "$.company.department[0].employees[0].name": ($)FirstEmployeeName
+  "$.company.departments[0].employees[0].id": ($)FirstEmployeeId,
+  "$.company.departments[0].employees[0].name": ($)FirstEmployeeName
 }
 ```
 
@@ -839,7 +834,7 @@ This may change in future to allow developers to specifically select which of th
 [Enum expressions]: {{< ref "#enum-expressions" >}}
 [Casting expressions]: {{< ref "#casting-expressions" >}}
 [Index expressions]: {{< ref "#index-expressions" >}}
-[Decomposition expressions]: {{< ref "#output-property-decomposition-expressions" >}}
+[Decomposition expressions]: {{< ref "#decomposition-expressions" >}}
 
 [Data Type]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 
