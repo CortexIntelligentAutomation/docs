@@ -18,6 +18,11 @@ There are two types of flows, which are used for different purposes:
 * [Process][]
 * [Activity][]
 
+{{% alert title="Note" %}}
+Prior to version 2024.9, there was a single type of flow named `Flow`.  
+As of 2024.9, `Flow` has been renamed to `Activity`.
+{{% /alert %}}
+
 ### Process
 
 Processes are a type of [Flow][] that can contain multiple [Activities][Activity] and are used to model high-level business processes.  
@@ -28,10 +33,11 @@ Processes are a type of [Flow][] that can contain multiple [Activities][Activity
 * Processes can call other processes
 * Processes can call activities
 * Processes only contain a subset of blocks as they are intended to model high-level business processes, not low-level implementation of tasks or actions
+* Processes are optional an automation solution, but are useful for organizing and structuring the logic of a solution
 
 ### Activity
 
-Activities are a type of [Flow][] that can be used to model low-level tasks or actions.
+Activities are a type of [Flow][] that are used to model low-level tasks or actions.
 
 {{< figure src="/images/top-level-workspace-activity.svg" title="Example Activity" >}}
 
@@ -39,6 +45,7 @@ Activities are a type of [Flow][] that can be used to model low-level tasks or a
 * Activities can call other activities
 * Activities cannot call processes
 * Activities contain all blocks as they are intended to model low-level tasks or actions
+* Activities are required in an automation solution, as they are the building blocks of the solution
 
 ## Composition of a Flow
 
