@@ -207,7 +207,7 @@ enable = true
 [[params.versions]]
 	version = "2024.9"
 	url = "/docs/2024.9/"
-	dotNetVersion = "net-6.0"
+	dotNetVersion = "net-8.0"
 	latest = true
 
 [[params.versions]]

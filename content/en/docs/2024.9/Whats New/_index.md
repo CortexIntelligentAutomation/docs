@@ -7,90 +7,119 @@ weight: 1
 
 ## Summary
 
-2024.7 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.5][] release in the following areas:
+2024.9 is the second [Release][] of the next generation of {{% ctx %}} and improves on the [2024.7][] release in the following areas:
 
-* [Performance][]
-* [Security][]
+* [Capability][]
+* [Observability][]
 * [Scalability][]
+* [Security][]
 * [Usability][]
+* [Third-Party Support][]
+* [Installation][]
+* [Upgrade][]
 * [Documentation][]
 
-## Improved Performance
+## Improved Capability
 
-This release shows performance improvements in a number of areas:
+This release introduces multiple new features to the {{% ctx %}} platform:
 
-* [Reduce the number of license check calls][]
-* [Reduce memory usage of the Package Management Service][] by compressing the Flow JSON
-* Fixed a bug where the [Expression editor in {{% ctx %}} Studio leaks memory][]
+* The concept of [Process and Activity][], which are types of [Flow][], has now been introduced to {{% ctx %}} Gateway.
+* [Saving Output Properties to multiple variables][] is now supported.
+* A new built-in [execution context variable][] has been added to the Flow Engine which contains the initiator.
+* A new [Proxy for the {{% ctx %}} 7 Flow API][] has been added to the platform.
+
+## Improved Observability
+
+Observability has been improved by [adding logging to blocks that communicate with external systems][Logging added to blocks that communicate with external systems].
+
+## Improved Scalability
+
+Optimisation to scalability has been made by [reducing the total number of NServiceBus endpoints and RabbitMQ queues][Reduction of total number of NServiceBus endpoints and RabbitMQ queues].  
 
 ## Improved Security
 
 We increased the security of the platform by:
 
-* [Redacting any value in logs that has the format of an encrypted text][Redact any value in logs that has the format of an encrypted text] to ensure that encrypted text is not visible in logs
-* [Adding the Request user to API Gateway HTTPEvent logs][Request user has been added to API Gateway HTTPEvent logs] to provide more information in logs
-* Fixed a bug where [Password redaction not always occurring][].  
-
-## Improved Scalability
-
-Scalability has been improved by adding [support of custom names for default Tenant and System][Custom names supported for default Tenant and System] from {{% ctx %}} Gateway, as well as [support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server][].
+* [Upgrading the OpenSSL version][Upgrade OpenSSL] shipped with the platform.
+* Added [Multi-domain certificates support][].
+* A [CortexManagementUser for RabbitMQ is now created during upgrade][New CortexManagementUser added to manage RabbitMQ queues].
+* [Server-side validation added to {{% ctx %}} Gateway API][] to prevent [Path Traversal][] attacks.
+* Removal of the [refresh token cookie on sign out][remove refresh token cookie on sign out].
 
 ## Improved Usability
 
-The previous `Scope` data type has been renamed to [ScopeDefinition][] as it more accurately reflects its purpose of defining a scope; allowing for a new [Scope][] data type to represent an instance of a scope.  
-\
-The [user experience of {{% ctx %}} Gateway][{{% ctx %}} Gateway] has seen improvements which include:
+The usability of the platform has been improved by:
 
-* [Improving the Home page loading placeholder][Improved Home page loading placeholder]
-* [Improving the Search bar styling][Improved Search bar styling]
+* Renaming the [Flows Charm to Dev and changing the icon][Rename Flows Charm to Dev and change icon].
+* Renaming the [Settings Charm to Admin and changing the icon][Rename Settings Charm to Admin and change icon].
 
-A bug has been fixed on the [Engine][] where a [Flow with expression sometimes fails to execute with a KeyNotFoundException][].  
+## Improved Third-Party Support
+
+Third-party Support has been improved by [upgrading the platform to .NET 8][Upgrade to .NET 8].  
+
+## Improved Installation
+
+Installation when [files are blocked by the operating system][Support installation when files are blocked by the operating system] due to the `Zone.Identifier` is now supported.  
+
+## Improved Upgrade
+
+The upgrade process has been improved by:
+
+* [Supporting upgrade when files are blocked by the operating system][Support upgrade when files are blocked by the operating system].
+* Upgrading the [Execution Service when the engine version is unchanged][Execution Service is upgraded when the engine version is unchanged].
+* [Handling of the Execution Services lifecycle events][].
 
 ## Improved Documentation
 
-The [Product Portal][] includes updates related to:
+The documentation includes updates related to:
 
-* [Wireless Blocks][Wireless Blocks section] including data type and exception
-* [Execute Data Command Block][Execute Data Command Block section] and data types
-* [Scope and ScopeDefinition][] data types
-* [Upgrade steps][Upgrade section] from 2024.5 to 2024.7
-* [Block Icons][]
-* [Incorrect link in Multiple Server Install Web Application Prerequisites][]
+* New concepts such as [Process and Activity][Process and Activity Documentation] as well as [Decomposition of Output properties][].
+* [Preventing deadlocks when using semaphores][Prevent deadlocks when using semaphores].
+* [Updating screenshots][screenshots updated] to reflect the new branding.
+* [Flow compatibility version][Flow compatibility version introduced] being added to the release notes.
+* [General improvements to the documentation][].
 
-For a full list of what has been introduced in this release, please see the [2024.7 Release Notes][]
+For a full list of what has been introduced in this release, please see the [2024.9 Release Notes][]
 
-[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.7" >}}
+[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2024.9" >}}
+[2024.7]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.9" >}}
 
-[Performance]: {{< ref "#improved-performance" >}}
-[Security]: {{< ref "#improved-security" >}}
+[Capability]: {{< ref "#improved-capability" >}}
+[Observability]: {{< ref "#improved-observability" >}}
 [Scalability]: {{< ref "#improved-scalability" >}}
+[Security]: {{< ref "#improved-security" >}}
 [Usability]: {{< ref "#improved-usability" >}}
+[Third-Party Support]: {{< ref "#improved-third-party-support" >}}
+[Installation]: {{< ref "#improved-installation" >}}
+[Upgrade]: {{< ref "#improved-upgrade" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[Reduce the number of license check calls]: {{< url path="Cortex.Blogs.Releases.2024.7.ReduceTheNumberOfLicenseCheckCalls" version="2024.7" >}}
-[Reduce memory usage of the Package Management Service]: {{< url path="Cortex.Blogs.Releases.2024.7.ReduceMemoryUsageOfThePackageManagementService" version="2024.7" >}}
-[Expression editor in {{% ctx %}} Studio leaks memory]: {{< url path="Cortex.Blogs.Releases.2024.7.ExpressionEditorInCortexStudioLeaksMemory" version="2024.7" >}}
-[Redact any value in logs that has the format of an encrypted text]: {{< url path="Cortex.Blogs.Releases.2024.7.RedactAnyValueInLogsThatHasTheFormatOfAnEncryptedText" version="2024.7" >}}
-[Request user has been added to API Gateway HTTPEvent logs]: {{< url path="Cortex.Blogs.Releases.2024.7.RequestUserHasBeenAddedToApiGatewayHttpEventLogs" version="2024.7" >}}
-[Password redaction not always occurring]: {{< url path="Cortex.Blogs.Releases.2024.7.PasswordRedactionNotAlwaysOccurring" version="2024.7" >}}
-[Custom names supported for default Tenant and System]: {{< url path="Cortex.Blogs.Releases.2024.7.CustomNamesSupportedForDefaultTenantAndSystem" version="2024.7" >}}
-[support for installing multiple {{% ctx %}} Gateway instances on the same Web App Server]: {{< url path="Cortex.Blogs.Releases.2024.7.SupportForInstallingMultipleCortexGatewayInstancesOnTheSameWebAppServer" version="2024.7" >}}
-[{{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2024.7.CortexGateway" version="2024.7" >}}
-[Improved Home page loading placeholder]: {{< url path="Cortex.Blogs.Releases.2024.7.ImprovedHomePageLoadingPlaceholder" version="2024.7" >}}
-[Improved Search bar styling]: {{< url path="Cortex.Blogs.Releases.2024.7.ImprovedSearchBarStyling" version="2024.7" >}}
-[Engine]: {{< url path="Cortex.Blogs.Releases.2024.7.Engine" version="2024.7" >}}
-[Flow with expression sometimes fails to execute with a KeyNotFoundException]: {{< url path="Cortex.Blogs.Releases.2024.7.FlowWithExpressionSometimesFailsToExecuteWithAKeyNotFoundException" version="2024.7" >}}
-[Product Portal]: {{< url path="Cortex.Blogs.Releases.2024.7.ProductPortal" version="2024.7" >}}
-[Wireless Blocks section]: {{< url path="Cortex.Blogs.Releases.2024.7.WirelessBlocks" version="2024.7" >}}
-[Execute Data Command Block section]: {{< url path="Cortex.Blogs.Releases.2024.7.ExecuteDataCommandBlock" version="2024.7" >}}
-[Scope and ScopeDefinition]: {{< url path="Cortex.Blogs.Releases.2024.7.ScopeandScopeDefinition" version="2024.7" >}}
-[Block Icons]: {{< url path="Cortex.Blogs.Releases.2024.7.BlockIcons" version="2024.7" >}}
-[upgrade section]: {{< url path="Cortex.Blogs.Releases.2024.7.Upgrade" version="2024.7" >}}
-[Incorrect link in Multiple Server Install Web Application Prerequisites]: {{< url path="Cortex.Blogs.Releases.2024.7.IncorrectLinkInMultipleServerInstallWebApplicationPrerequisites" version="2024.7" >}}
+[Process and Activity]: {{< url path="Cortex.Blogs.Releases.2024.9.ProcessAndActivity" version="2024.9" >}}
+[Saving Output Properties to multiple variables]: {{< url path="Cortex.Blogs.Releases.2024.9.SaveOutputPropertiesToMultipleVariables" version="2024.9" >}}
+[execution context variable]: {{< url path="Cortex.Blogs.Releases.2024.9.ExecutionContextVariable" version="2024.9" >}}
+[Proxy for the {{% ctx %}} 7 Flow API]: {{< url path="Cortex.Blogs.Releases.2024.9.ProxyForTheCortex7FlowApi" version="2024.9" >}}
+[Logging added to blocks that communicate with external systems]: {{< url path="Cortex.Blogs.Releases.2024.9.LoggingAddedToBlocksThatCommunicateWithExternalSystems" version="2024.9" >}}
+[Reduction of total number of NServiceBus endpoints and RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024.9.ReductionOfTotalNumberOfNServiceBusEndpointsAndRabbitMQQueues" version="2024.9" >}}
+[Upgrade OpenSSL]: {{< url path="Cortex.Blogs.Releases.2024.9.UpgradeOpenSSL" version="2024.9" >}}
+[Multi-domain certificates support]: {{< url path="Cortex.Blogs.Releases.2024.9.MultiDomainCertificatesSupport" version="2024.9" >}}
+[New CortexManagementUser added to manage RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024.9.NewCortexManagementUserAddedToManageRabbitMQQueues" version="2024.9" >}}
+[Server-side validation added to {{% ctx %}} Gateway API]: {{< url path="Cortex.Blogs.Releases.2024.9.ServerSideValidationAddedToCortexGatewayAPI" version="2024.9" >}}
+[Remove refresh token cookie on sign out]: {{< url path="Cortex.Blogs.Releases.2024.9.RemoveRefreshTokenCookieOnSign" version="2024.9" >}}
+[Rename Flows Charm to Dev and change icon]: {{< url path="Cortex.Blogs.Releases.2024.9.RenameFlowsCharmToDevAndChangeIcon" version="2024.9" >}}
+[Rename Settings Charm to Admin and change icon]: {{< url path="Cortex.Blogs.Releases.2024.9.RenameSettingsCharmToAdminAndChangeIcon" version="2024.9" >}}
+[Upgrade to .NET 8]: {{< url path="Cortex.Blogs.Releases.2024.9.UpgradeToNet8" version="2024.9" >}}
+[Support installation when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024.9.SupportInstallationWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
+[Support upgrade when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024.9.SupportUpgradeWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
+[Execution Service is upgraded when the engine version is unchanged]: {{< url path="Cortex.Blogs.Releases.2024.9.ExecutionServiceIsUpgradedWhenTheEngineVersionIsUnchanged" version="2024.9" >}}
+[Handling of the Execution Services lifecycle events]: {{< url path="Cortex.Blogs.Releases.2024.9.HandlingOfTheExecutionServicesLifecycleEvents" version="2024.9" >}}
+[Process and Activity Documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.ProcessAndActivityDocumentation" version="2024.9" >}}
+[Decomposition of Output properties]: {{< url path="Cortex.Blogs.Releases.2024.9.DecompositionOfOutputProperties" version="2024.9" >}}
+[Prevent deadlocks when using semaphores]: {{< url path="Cortex.Blogs.Releases.2024.9.PreventDeadlocksWhenUsingSemaphores" version="2024.9" >}}
+[Screenshots updated]: {{< url path="Cortex.Blogs.Releases.2024.9.ScreenshotsUpdated" >}}
+[Flow compatibility version introduced]: {{< url path="Cortex.Blogs.Releases.2024.9.FlowCompatibilityVersionIntroduced" version="2024.9" >}}
+[General improvements to the documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.GeneralImprovementsToTheDocumentation" version="2024.9" >}}
 
-[Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" version="2024.7">}}
-[ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc" version="2024.7">}}
+[2024.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.9.MainDoc" version="2024.9" >}}
 
-[2024.7 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.7" >}}
-
-[2024.5]: {{< url path="Cortex.Blogs.Releases.2024.5.MainDoc" version="2024.7" >}}
+[Flow]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" version="2024.9" >}}
+[Path Traversal]: {{< url path="Owasp.PathTraversal.MainDoc" version="2024.9" >}}

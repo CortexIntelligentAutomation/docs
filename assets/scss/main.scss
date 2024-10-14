@@ -33,23 +33,24 @@
 
 // Adjust anchors vs the fixed menu.
 @include media-breakpoint-up(md) {
-    .td-offset-anchor:target {
-        display: block;
-        position: relative;
-        top: -4rem;
-        visibility: hidden;
-    }
 
-    h1[id]:before,
-    h2[id]:before,
-    h3[id]:before,
-    h4[id]:before,
-    h5[id]:before {
+    h1[id]:target,
+    h2[id]:target,
+    h3[id]:target,
+    h4[id]:target,
+    h5[id]:target {
         content: " ";
-        margin-top: -6rem; 
-        height: 6rem;
-        visibility: hidden;
+        margin-top: -90px;
+        padding-top: 90px;
     }
+}
+
+
+.td-cover-block {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @import "rtl/main";

@@ -264,6 +264,7 @@ Types of expressions:
 - [Enums][Enum expressions]
 - [Casting][Casting expressions]
 - [Indexes][Index expressions]
+- [Decomposition][Decomposition expressions] ([output property][Output Properties] only)
 
 ### Arithmetic expressions
 
@@ -556,6 +557,179 @@ In the examples below assume:
 | `($)Structure["SecondKey"][0]` | `1` |  The first item within the item with key `"SecondKey"` is returned |
 | `($)String[0]` | `'S'` | The first character in the string is returned |
 
+### Decomposition expressions
+
+{{< figure src="/images/set-variable/set-variable-expression-decomposition.PNG" >}}
+
+Decomposition expressions are used to save selected values from an [Output property][Output properties] to multiple [variables][Variables Concept].
+
+{{% alert title="Note" %}}
+This is currently only supported by output properties.
+{{% /alert %}}
+
+Decomposition syntax follows a similar pattern to a `JSON` object:
+
+- each `key` is the property path expression, where `$` is the root of the output value.
+- each `value` is the variable name, prefixed with `($)`.
+
+```json
+{
+  "$.property.firstPath": ($)FirstVariable,
+  "$.property.secondPath": ($)SecondVariable
+}
+```
+
+The examples below assumes that the output value contains the following data:
+
+``` json
+{
+  "company": {
+    "name": "Company Name",
+    "departments": [
+      {
+        "name": "HR",
+        "employees": [
+          {
+            "name": "Joe Blogs",
+            "id": "101"
+          },
+          {
+            "name": "Jane Doe",
+            "id": "102"
+          }
+        ]
+      },
+      {
+        "name": "Admin",
+        "employees": [
+          {
+            "name": "Jane Blogs",
+            "id": "103"
+          },
+          {
+            "name": "Joe Doe",
+            "id": "104"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+#### Decomposing an object property
+
+To save the `departments` property, the syntax would be:
+
+```json
+{
+  "$.company.departments": ($)ListOfDepartments
+}
+```
+
+In this example, the variable `($)ListOfDepartments` will be set to the following value:
+
+```json
+[
+  {
+    "name": "HR",
+    "employees": [
+      {
+        "name": "Joe Blogs",
+        "id": "101"
+      },
+      {
+        "name": "Jane Doe",
+        "id": "102"
+      }
+    ]
+  },
+  {
+    "name": "Admin",
+    "employees": [
+      {
+        "name": "Jane Blogs",
+        "id": "103"
+      },
+      {
+        "name": "Joe Doe",
+        "id": "104"
+      }
+    ]
+  }
+]
+```
+
+#### Decomposing an item in a list
+
+To save the first department, the syntax would be:
+
+```json
+{
+  "$.company.departments[0]": ($)FirstDepartment
+}
+```
+
+In this example, the variable `($)FirstDepartment` will be set to the following value:
+
+```json
+{
+  "name": "HR",
+  "employees": [
+    {
+      "name": "Joe Blogs",
+      "id": "101"
+    },
+    {
+      "name": "Jane Doe",
+      "id": "102"
+    }
+  ]
+}
+```
+
+#### Decomposing the last item in a list
+
+To save the last `employee` of the first department, the syntax would be:
+
+```json
+{
+  "$.company.departments[0].employees[-1]": ($)LastEmployeeOfFirstDepartment
+}
+```
+
+In this example, the variable `($)LastEmployeeOfFirstDepartment` will be set to the following value:
+
+```json
+{
+  "name": "Jane Doe",
+  "id": "102"
+}
+```
+
+#### Decomposing multiple properties at the same time
+
+To save the `id` and `name` of the first `employee` of the first department, the syntax would be:
+
+```json
+{
+  "$.company.departments[0].employees[0].id": ($)FirstEmployeeId,
+  "$.company.departments[0].employees[0].name": ($)FirstEmployeeName
+}
+```
+
+In this example, the variable `($)FirstEmployeeId` will be set to the following value:
+
+```json
+"101"
+```
+
+And the variable `($)FirstEmployeeName` will be set to the following value:
+
+```json
+"Joe Blogs"
+```
+
 ## Remarks
 
 ### Known Limitations
@@ -643,8 +817,6 @@ This may change in future to allow developers to specifically select which of th
 [Dictionary literal]: {{< ref "#dictionary-literal" >}}
 [Structure literal]: {{< ref "#structure-literal" >}}
 [List literal]: {{< ref "#list-literal" >}}
-[Conc]: {{< ref "#list-literal" >}}
-[List literal]: {{< ref "#list-literal" >}}
 [Concatenated Strings]: {{< ref "#concatenated-strings" >}}
 [Interpolated Strings]: {{< ref "#interpolated-strings" >}}
 [Verbatim Strings]: {{< ref "#verbatim-strings" >}}
@@ -662,6 +834,7 @@ This may change in future to allow developers to specifically select which of th
 [Enum expressions]: {{< ref "#enum-expressions" >}}
 [Casting expressions]: {{< ref "#casting-expressions" >}}
 [Index expressions]: {{< ref "#index-expressions" >}}
+[Decomposition expressions]: {{< ref "#decomposition-expressions" >}}
 
 [Data Type]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 
@@ -687,19 +860,16 @@ This may change in future to allow developers to specifically select which of th
 [Double]: {{< url path="Cortex.Reference.DataTypes.Numbers.Double.MainDoc" >}}
 [List]: {{< url path="Cortex.Reference.DataTypes.Collections.List.MainDoc" >}}
 [Create a List]: {{< url path="Cortex.Reference.DataTypes.Collections.List.CreateNew" >}}
-[Object]: {{< url path="Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
 [Single]: {{< url path="Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 [Single.MaxValue]: {{< url path="MSDocs.DotNet.Api.System.Single.MaxValue" >}}
 [Single.MinValue]: {{< url path="MSDocs.DotNet.Api.System.Single.MinValue" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
-[Char]: {{< url path="Cortex.Reference.DataTypes.Text.Char.MainDoc" >}}
 [Collection]: {{< url path="Cortex.Reference.DataTypes.Collections.MainDoc" >}}
 [Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.MainDoc" >}}
 [Create a Structure]: {{< url path="Cortex.Reference.DataTypes.Collections.Structure.CreateNew" >}}
 
 [Workspaces]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
 [workspace]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
-[Workspace Scope]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 
 [Variables Concept]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Variables: What Is a Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
@@ -712,7 +882,6 @@ This may change in future to allow developers to specifically select which of th
 [implicitly cast]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ImplicitCast" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
-[Set Variable]: {{< url path="Cortex.Reference.Blocks.Variables.SetVariable.SetVariable.MainDoc" >}}
 
 [Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 

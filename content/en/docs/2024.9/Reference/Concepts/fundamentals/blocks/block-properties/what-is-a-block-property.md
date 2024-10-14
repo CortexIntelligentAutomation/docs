@@ -33,11 +33,9 @@ Input properties can be configured using the following editors:
 
 {{< figure src="/images/editable/editor-types.png" >}}
 
-The icons used for Input properties are dark blue to distinguish them from [Output Properties][] or [InputOutput Properties][].
-
 ### Output Properties
 
-Output properties are used to save values from a [block][]. These properties will saved to a variable during the block's execution.
+Output properties are used to save values from a [block][]. These properties can be saved to a variable or [decomposed][Decomposing Output Properties] to be saved into multiple variables during the block's execution.
 
 Values from Output properties can be [discarded][Discarding Outputs], this means they will not be saved to any variable.
 
@@ -49,7 +47,15 @@ Output properties can be configured using the following editors:
 
 {{< figure src="/images/editable/variable-editor.png" >}}
 
-The icon used for Output properties are light blue to distinguish them from [Input Properties][].
+- [Expression Editor][] using [decomposition][Decomposing Output Properties]
+
+{{< figure src="/images/editable/expression-editor.png" >}}
+
+#### Decomposing Output Properties
+
+Output values can be [decomposed][Decomposition expressions] to allow the saving of different parts of the value to different variables.  
+
+To [decompose][Decomposition expressions] an output value, the output property will need to be set to an expression.
 
 #### Discarding Outputs
 
@@ -116,6 +122,7 @@ None
 [Input Properties]: {{< ref "#input-properties" >}}
 [Output Properties]: {{< ref "#output-properties" >}}
 [InputOutput Properties]: {{< ref "#inputoutput-properties" >}}
+[Decomposing Output Properties]: {{< ref "#decomposing-output-properties" >}}
 [Discarding Outputs]: {{< ref "#discarding-outputs" >}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
@@ -128,6 +135,7 @@ None
 [Literal Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Variable Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Decomposition expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.DecompositionExpressions" >}}
 
 [Fundamentals Data Types]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 

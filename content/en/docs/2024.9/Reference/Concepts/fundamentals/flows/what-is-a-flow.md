@@ -9,47 +9,104 @@ weight: 1
 
 ## Summary
 
-A flow is an object in [{{% ctx %}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{% ctx %}} Innovation platform.
+A flow is an object in [{{% ctx %}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{% ctx %}} platform.
 
 ## Anatomy of a Flow
 
-{{< figure src="/images/top-level-workspace.svg" title="Example Flow" >}}
+There are two types of flows, which are used for different purposes:
 
-* Start Flow block
-  * Identifies where the [flow execution][] will start
-  * Automatically created when the flow is created
-  * Cannot be deleted
-  * See [Start Flow][] block
-* Action blocks
-  * Performs a specific action
-  * Icon on block indicates the nature of the action
-  * See [Blocks][Reference Blocks]
-* Decision block
-  * Causes the [flow execution][] to branch, dependent on a condition
-  * Icon on block indicates type of condition causing branching
-  * See [Decision Blocks][Decision Blocks]
-* Workspace blocks
-  * Contains grouped flow logic
-  * The turndown on the top-right of the icon indicates it contains a [workspace][], which can be opened by double-clicking the icon
-  * See [Workspace][Workspace Block] block
-* End Flow block
-  * Ends the [flow execution][]
-  * Automatically created when the flow is created
-  * See [End Flow][] block
-* Handle Flow Exception block
-  * Handles [flow level exceptions][], thrown during the [flow execution][]
-  * Automatically created when the flow is created
-  * The turndown on the top-right of the icon indicates it contains a [workspace][workspaces], which can be opened by double-clicking the icon
-  * Cannot be deleted
-  * See [Handle Flow Exception][] block
-* Flow Variable Store
-  * This is deprecated in favour of the [Variables Grid][]
-  * The [Variables Grid][] can be opened by double-clicking the icon, the scope will be set to `Defined (Selected Workspace)`
-  * Cannot be deleted
-* Workspace
-  * The [Top-Level Workspace][] within the flow
-  * Canvas on which blocks are placed and connected to create the flow logic
-  * See [Workspace][workspaces]
+* [Process][]
+* [Activity][]
+
+{{% alert title="Note" %}}
+Prior to version 2024.9, there was a single type of flow named `Flow`.  
+As of 2024.9, `Flow` has been renamed to `Activity`.
+{{% /alert %}}
+
+### Process
+
+Processes are a type of [Flow][] that can contain multiple [Activities][Activity] and are used to model high-level business processes.  
+
+{{< figure src="/images/top-level-workspace-process.svg" title="Example Process" >}}
+
+* Processes flow from left to right
+* Processes can call other processes
+* Processes can call activities
+* Processes only contain a subset of blocks as they are intended to model high-level business processes, not low-level implementation of tasks or actions
+* Processes are optional an automation solution, but are useful for organizing and structuring the logic of a solution
+
+### Activity
+
+Activities are a type of [Flow][] that are used to model low-level tasks or actions.
+
+{{< figure src="/images/top-level-workspace-activity.svg" title="Example Activity" >}}
+
+* Activities flow from top to bottom
+* Activities can call other activities
+* Activities cannot call processes
+* Activities contain all blocks as they are intended to model low-level tasks or actions
+* Activities are required in an automation solution, as they are the building blocks of the solution
+
+## Composition of a Flow
+
+Flows are composed of the following:
+
+* [Workspace][Workspace ref]
+* [Start Flow block][]
+* [Action blocks][]
+* [Decision blocks][Decision blocks ref]
+* [Workspace blocks][]
+* [End Flow block][]
+* [Handle Flow Exception block][]
+
+### Workspace
+
+The [Top-Level Workspace][] within the flow.
+
+* Canvas on which blocks are placed and connected to create the flow logic
+* See [Workspace][workspaces]
+
+### Start Flow block
+
+Identifies where the [flow execution][] will start.
+
+* Automatically created when the flow is created
+* Cannot be deleted
+* See [Start Flow][] block
+
+### Action blocks
+
+Performs a specific action.
+
+* Icon on block indicates the nature of the action
+* See [Blocks][Reference Blocks]
+
+### Decision block
+
+Causes the [flow execution][] to branch, dependent on a condition.
+
+* See [Decision Blocks][Decision Blocks]
+
+### Workspace blocks
+
+Contains grouped flow logic.
+
+* See [Workspace][Workspace Block] block
+
+### End Flow block
+
+Ends the [flow execution][].
+
+* Automatically created when the flow is created
+* See [End Flow][] block
+
+### Handle Flow Exception block
+
+Handles [flow level exceptions][], thrown during the [flow execution][].
+
+* Automatically created when the flow is created
+* Cannot be deleted
+* See [Handle Flow Exception][] block
 
 ## Grouping Logic within a Flow
 
@@ -65,7 +122,7 @@ A [flow execution][flow execution] may be started by:
 
 * [Debugging][] a flow in [{{% ctx %}} Studio][CORTEX Studio]
 * Triggering it by making an HTTP request from an external source (e.g. a web application or web hooks)
-* Triggering it using the [Run Flow][] block
+* Triggering it using the [Run Flow][] and [Run Flow Async][] block
 * Triggering it using predefined events (future) (e.g. on receipt of an email)
 * Scheduling it to execute at predetermined times
 
@@ -101,6 +158,7 @@ Currently, it is not possible to have a [Handle Workspace Exception][] block on 
 * [Start Flow][]
 * [End Flow][]
 * [Run Flow][]
+* [Run Flow Async][]
 * [Handle Flow Exception][]
 * [Handle Workspace Exception][]
 * [Workspace][Workspace Block]
@@ -108,6 +166,18 @@ Currently, it is not possible to have a [Handle Workspace Exception][] block on 
 ### External Documentation
 
 None
+
+[Activity]: {{< ref "#activity" >}}
+[Process]: {{< ref "#process" >}}
+[Flow]: {{< ref "#summary" >}}
+
+[Start Flow block]: {{< ref "#start-flow-block" >}}
+[Action blocks]: {{< ref "#action-blocks" >}}
+[Decision blocks ref]: {{< ref "#decision-block" >}}
+[Workspace blocks]: {{< ref "#workspace-blocks" >}}
+[End Flow block]: {{< ref "#end-flow-block" >}}
+[Handle Flow Exception block]: {{< ref "#handle-flow-exception-block" >}}
+[Workspace ref]: {{< ref "#workspace" >}}
 
 [blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Handling Exceptions within a Block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
@@ -132,6 +202,7 @@ None
 
 [CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
+
+[Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc" >}}

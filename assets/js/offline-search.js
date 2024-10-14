@@ -61,12 +61,14 @@
                         let docToAdd;
                         if (searchPath !== undefined && doc.ref.startsWith(searchPath)) {
                             docToAdd = doc;
-                            
                         } else if (searchPath === undefined) {
                             docToAdd = doc;
                         }
 
-                        if (docToAdd) {
+                        if (docToAdd
+                            && docToAdd.ref !== undefined
+                            && !docToAdd.ref.includes('/_shared/')
+                        ) {
                             this.add(doc);
 
                             resultDetails.set(doc.ref, {
@@ -150,11 +152,10 @@
             );
 
             const $searchResultBody = $('<div>').css({
-                maxHeight: `calc(100vh - ${
-                    $targetSearchInput.offset().top -
+                maxHeight: `calc(100vh - ${$targetSearchInput.offset().top -
                     $(window).scrollTop() +
                     180
-                }px)`,
+                    }px)`,
                 overflowY: 'auto',
             });
             $html.append($searchResultBody);
