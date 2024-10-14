@@ -8,6 +8,32 @@
             MainDoc = "/blog/releases"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.9]
+                    MainDoc =  "/blog/2024/10/07/2024.9/"
+                    ProcessAndActivity = "/blog/2024/10/07/2024.9/#process-and-activity"
+                    SaveOutputPropertiesToMultipleVariables = "/blog/2024/10/07/2024.9/#saving-output-properties-to-multiple-variables"
+                    ExecutionContextVariable = "/blog/2024/10/07/2024.9/#execution-context-variable"
+                    ProxyForTheCortex7FlowApi = "/blog/2024/10/07/2024.9/#proxy-for-the-cortex-7-flow-api"
+                    LoggingAddedToBlocksThatCommunicateWithExternalSystems = "/blog/2024/10/07/2024.9/#logging-added-to-blocks-that-communicate-with-external-systems"
+                    ReductionOfTotalNumberOfNServiceBusEndpointsAndRabbitMQQueues = "/blog/2024/10/07/2024.9/#reduction-of-total-number-of-nservicebus-endpoints-and-rabbitmq-queues"
+                    UpgradeOpenSSL = "/blog/2024/10/07/2024.9/#upgrade-openssl"
+                    MultiDomainCertificatesSupport = "/blog/2024/10/07/2024.9/#multi-domain-certificates-support"
+                    NewCortexManagementUserAddedToManageRabbitMQQueues = "/blog/2024/10/07/2024.9/#new-cortexmanagementuser-added-to-manage-rabbitmq-queues"
+                    ServerSideValidationAddedToCortexGatewayAPI = "/blog/2024/10/07/2024.9/#server-side-validation-added-to-cortex-gateway-api"
+                    RemoveRefreshTokenCookieOnSign = "/blog/2024/10/07/2024.9/#remove-refresh-token-cookie-on-sign-out"
+                    RenameFlowsCharmToDevAndChangeIcon = "/blog/2024/10/07/2024.9/#rename-flows-charm-to-dev-and-change-icon"
+                    RenameSettingsCharmToAdminAndChangeIcon = "/blog/2024/10/07/2024.9/#rename-settings-charm-to-admin-and-change-icon"
+                    UpgradeToNet8 = "/blog/2024/10/07/2024.9/#upgrade-to-net-8"
+                    SupportInstallationWhenFilesAreBlockedByTheOperatingSystem = "/blog/2024/10/07/2024.9/#support-installation-when-files-are-blocked-by-the-operating-system"
+                    SupportUpgradeWhenFilesAreBlockedByTheOperatingSystem = "/blog/2024/10/07/2024.9/#support-upgrade-when-files-are-blocked-by-the-operating-system"
+                    ExecutionServiceIsUpgradedWhenTheEngineVersionIsUnchanged = "/blog/2024/10/07/2024.9/#execution-service-is-upgraded-when-the-engine-version-is-unchanged"
+                    HandlingOfTheExecutionServicesLifecycleEvents = "/blog/2024/10/07/2024.9/#handling-of-the-execution-services-lifecycle-events"
+                    ProcessAndActivityDocumentation = "/blog/2024/10/07/2024.9/#process-and-activity-1"
+                    DecompositionOfOutputProperties = "/blog/2024/10/07/2024.9/#decomposition-of-output-properties"
+                    PreventDeadlocksWhenUsingSemaphores = "/blog/2024/10/07/2024.9/#prevent-deadlocks-when-using-semaphores"
+                    ScreenshotsUpdated = "/blog/2024/10/07/2024.9/#screenshots-updated"
+                    FlowCompatibilityVersionIntroduced = "/blog/2024/10/07/2024.9/#flow-compatibility-version-introduced"
+                    GeneralImprovementsToTheDocumentation = "/blog/2024/10/07/2024.9/#general-improvements-to-the-documentation"
                 [Cortex.Blogs.Releases.2024.7]
                     MainDoc =  "/blog/2024/08/12/2024.7/"
                     ProductPortal = "/blog/2024/08/12/2024.7/#product-portal"
@@ -443,6 +469,8 @@
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/execution-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/licence-management-service/"
+                [Cortex.Guides.CortexInnovation.CoreApplication.Services.ListenersService]
+                    MainDoc = "/docs/guides/cortex-innovation/core-application/services/listeners-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService]
                     MainDoc = "/docs/guides/cortex-innovation/core-application/services/package-management-service/"
                 [Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService]
@@ -518,6 +546,23 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
+            [Cortex.Guides.UpgradeCortex.2024.7to2024.9]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/"
+                [Cortex.Guides.UpgradeCortex.2024.7to2024.9.Advanced]
+                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
+                [Cortex.Guides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/try-it-out"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server"
+                    WebApplicationServerPreqrequisites = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server/prerequisites"
+                [Cortex.Guides.UpgradeCortex.2024.7to2024.9.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/try-it-out"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-web-application-server"
         [Cortex.Guides.UpgradeObservability]
             MainDoc = "/docs/guides/upgrade-observability/"
             [Cortex.Guides.UpgradeObservability.OnPremise]
@@ -873,11 +918,15 @@
                     MainDoc = "/docs/reference/blocks/http/execute-http-request"
                     [Cortex.Reference.Blocks.Http.ExecuteHttpRequest.ExecuteHttpRequest]
                         MainDoc = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1"
+                        HttpRequestProperty = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#http-request"
+                        HttpResponseProperty = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#http-response"
                         CallingAnotherFlow = "/docs/reference/blocks/http/execute-http-request/execute-http-request-block-1/#calling-another-flow"
                 [Cortex.Reference.Blocks.Http.ExecuteSoapRequest]
                     MainDoc = "/docs/reference/blocks/http/execute-soap-request"
                     [Cortex.Reference.Blocks.Http.ExecuteSoapRequest.ExecuteSoapRequest]
                         MainDoc = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1"
+                        SoapRequestProperty = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1/#soap-request"
+                        SoapResponseProperty = "/docs/reference/blocks/http/execute-soap-request/execute-soap-request-block-1/#soap-response"
             [Cortex.Reference.Blocks.Json]
                 MainDoc = "/docs/reference/blocks/json/"
                 [Cortex.Reference.Blocks.Json.ConvertJson]
@@ -1022,6 +1071,10 @@
                     MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/"
                     [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript]
                         MainDoc = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1"
+                        ScriptProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#script"
+                        ParametersProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#parameters"
+                        OutputsProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#outputs"
+                        RecordsProperty = "/docs/reference/blocks/powershell/execute-powershell-script/execute-powershell-script-block-1/#records"
             [Cortex.Reference.Blocks.Queues]
                 MainDoc = "/docs/reference/blocks/queues/"
                 [Cortex.Reference.Blocks.Queues.DequeueItem]
@@ -1054,11 +1107,13 @@
                     MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command"
                     [Cortex.Reference.Blocks.Ssh.ExecuteSshCommand.ExecuteSshCommandBlock]
                         MainDoc = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block"
+                        CommandProperty = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#command"
                         TerminalPromptMatchRemark = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#using-the-terminalpromptmatch-within-sshlogs-to-reach-the-end-of-a-prompt"
                         ConfigurationSettings = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#configuration-settings"
                         CloseSession = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#close-session"
                         Response = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#response"
                         SshSessionDetails = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-session-details"
+                        SshLogsProperty = "/docs/reference/blocks/ssh/execute-ssh-command/execute-ssh-command-block/#ssh-logs"
             [Cortex.Reference.Blocks.Tasks]
                 MainDoc = "/docs/reference/blocks/tasks/"
                 [Cortex.Reference.Blocks.Tasks.CancelTask]
@@ -1265,6 +1320,7 @@
                             Output = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#output-properties"
                             DiscardingOutputs = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#discarding-outputs"
                             InputOutput = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#inputoutput-properties"
+                            DecomposingOutputProperties = "/docs/reference/concepts/fundamentals/blocks/block-properties/what-is-a-block-property/#decomposing-output-properties"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties]
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/advanced-properties/"
                         [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties]
@@ -1281,6 +1337,7 @@
                                 MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
                                 PropertyExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#property-expressions"
                                 IndexExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#index-expressions"
+                                DecompositionExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#decomposition-expressions"
                                 LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#literal-values"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
                                 ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#list-literal"
@@ -1324,6 +1381,7 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/executions/"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution"
+                        ExecutionContext = "/docs/reference/concepts/fundamentals/executions/what-is-an-execution/#execution-context"
                     [Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment]
                         MainDoc = "/docs/reference/concepts/fundamentals/executions/executions-in-development"
                         EditAndContinueAnExecution = "/docs/reference/concepts/fundamentals/executions/executions-in-development/#edit-and-continue-an-execution"
@@ -1341,6 +1399,8 @@
                         MainDoc = "/docs/reference/concepts/fundamentals/flows/handling-exceptions-within-a-flow"
                     [Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow]
                         MainDoc = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow"
+                        Process = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow/#process"
+                        Activity = "/docs/reference/concepts/fundamentals/flows/what-is-a-flow/#activity"
                 [Cortex.Reference.Concepts.Fundamentals.Messages]
                     MainDoc = "/docs/reference/concepts/fundamentals/messages/"
                     [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
@@ -1397,6 +1457,7 @@
                             Non-Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#non-queuing-semaphore"
                             Queuing = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#queuing-semaphore"
                             MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrency-limits"        
+                            PreventingDeadlocks = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#preventing-deadlocks"        
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
@@ -2729,6 +2790,9 @@
         BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
     [OracleParameter]
         ParameterDirection = "https://learn.microsoft.com/en-us/dotnet/api/system.data.parameterdirection?view=net-8.0"
+[Owasp]
+    [Owasp.PathTraversal]
+        MainDoc = "https://owasp.org/www-community/attacks/Path_Traversal"
 [Particular]
     [Particular.NServiceBus]
         MainDoc = "https://particular.net/nservicebus"
