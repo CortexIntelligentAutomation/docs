@@ -134,7 +134,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 ### Upgrade {{% ctx %}} Gateway
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+1. Type and run the following command to temporarily modify the PowerShell Execution Policy:
 
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process

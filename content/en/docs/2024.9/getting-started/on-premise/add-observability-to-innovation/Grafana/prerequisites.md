@@ -121,7 +121,7 @@ Apply the settings by following these instructions:
 
 1. Copy from one of the application servers the `Cortex.Innovation.Install.SSLBestPractices.ps1` file extracted during the [Make Installation Artefacts Available][] step into a suitable location on the Web Application Server.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+1. Type and run the following command to temporarily modify the PowerShell Execution Policy:
 
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process

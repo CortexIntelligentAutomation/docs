@@ -11,7 +11,7 @@ A collection of registry settings need to be applied to guarantee your server is
 The settings can be applied by running a script. Be aware that the server will be restarted when the script is run. Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+1. Type and run the following command to temporarily modify the PowerShell Execution Policy:
 
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process

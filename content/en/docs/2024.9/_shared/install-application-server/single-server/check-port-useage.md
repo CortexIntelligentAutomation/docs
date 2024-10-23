@@ -1,6 +1,6 @@
 To check all necessary ports are free, follow these steps.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+1. Type and run the following command to temporarily modify the PowerShell Execution Policy:
 
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
