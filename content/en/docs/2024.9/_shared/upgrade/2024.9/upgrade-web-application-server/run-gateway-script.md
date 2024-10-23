@@ -1,4 +1,13 @@
 1. Open a Windows PowerShell (x64) window as administrator.
+
+1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+    ```
+
+    {{< alert title="Note">}}This is a temporary change and will only affect the current PowerShell window.{{< /alert >}}
+
 1. Navigate PowerShell to inside the `Cortex Innovation 2024.9 - Web App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell

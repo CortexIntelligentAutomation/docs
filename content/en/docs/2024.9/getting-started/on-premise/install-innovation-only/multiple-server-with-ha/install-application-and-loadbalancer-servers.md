@@ -51,6 +51,14 @@ A collection of registry settings need to be applied to guarantee your server is
 The settings can be applied by running a script. Be aware that each server will be restarted when the script is run. Apply the settings by following these instructions:
 
 1. Open a Windows PowerShell (x64) window as administrator.
+1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+    ```
+
+    {{< alert title="Note">}}This is a temporary change and will only affect the current PowerShell window.{{< /alert >}}
+
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
@@ -80,6 +88,14 @@ To avoid answering all of the prompts `-Override 0` can be added to the end of t
 If Windows Defender is not running on the Application Servers, ensure that the [Antivirus Exclusions][] have been added to the running antivirus software on each of the Application Servers and continue to the next section, otherwise follow these steps:
 
 1. Open a Windows PowerShell (x64) window as administrator.
+1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+    ```
+
+    {{< alert title="Note">}}This is a temporary change and will only affect the current PowerShell window.{{< /alert >}}
+
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
@@ -100,6 +116,14 @@ If Windows Defender is not running on the Application Servers, ensure that the [
 To check all necessary ports are free, follow these steps:
 
 1. Open a Windows PowerShell (x64) window as administrator.
+1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+    ```
+
+    {{< alert title="Note">}}This is a temporary change and will only affect the current PowerShell window.{{< /alert >}}
+
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
@@ -249,6 +273,14 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 ## Test Installation Script
 
 1. Open a Windows PowerShell (x64) window as administrator.
+1. Type and run the following command to temporarily set the PowerShell Execution Policy:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+    ```
+
+    {{< alert title="Note">}}This is a temporary change and will only affect the current PowerShell window.{{< /alert >}}
+
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder using the following command, modifying the path as necessary:
 
     ```powershell
