@@ -12,10 +12,10 @@ Choose one of the Application Servers or the Web Application Server, and copy th
     cd "C:\Install\Cortex Innovation {{< version >}} - Encryption Key Generator"
     ```
 
-1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Servers and Web Application Server:
+1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Servers, Load Balancer Server (if using the included load balancer) and Web Application Server:
 
     ```powershell
-    .\Cortex.Encryption.KeyGeneration.exe "app-server1, app-server2, app-server3, webapp-server"
+    .\Cortex.Encryption.KeyGeneration.exe "app-server1, app-server2, app-server3, lb-server, webapp-server"
     ```
 
 1. A message similar to the following will indicate that the application has completed successfully:
@@ -27,6 +27,8 @@ Choose one of the Application Servers or the Web Application Server, and copy th
     Encryption key set on app-server2
     app-server3: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on app-server3
+    lb-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
+    Encryption key set on lb-server
     webapp-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on webapp-server
     Encryption Key: 284BADF55BDDC93A47D7DE8FC2C4DC9B
