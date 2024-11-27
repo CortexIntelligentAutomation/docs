@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Servers and Load Balancer Server from 2024.9 to 2024.11.
+This guide describes how to upgrade the Application Servers and Load Balancer Server from 2024.9 to 2024.11. Please ensure that the [Prerequisites][] have been completed before starting this upgrade.
 
 ## Make Installation Artefacts Available
 
@@ -76,4 +76,5 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 1. [Upgrade Web Application Server][]
 
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.Prerequisites" >}}
 [Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
