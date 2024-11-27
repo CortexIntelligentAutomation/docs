@@ -571,6 +571,7 @@
                     MainDoc = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/"
                     Prerequisites = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites"
                     TryItOut = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/try-it-out"
+                    RetrieveAppServerEncryptionKey = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites/#retrieve-existing-encryption-key"
                     UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
                     UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
                     UpgradeGateway = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
