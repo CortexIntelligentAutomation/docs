@@ -63,6 +63,7 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 | Execution Management     | {{< section "/port-requirements/description/execution-management.md" >}}       | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
 | Licence Management       | {{< section "/port-requirements/description/licence-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
 | Listeners                | {{< section "/port-requirements/description/listeners.md" >}}                  | 10000, 10001                         | TCP, UDP    | Inbound, Outbound           | Any     |
+| Monitoring               | {{< section "/port-requirements/description/monitoring.md" >}}                 | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
 | Package Management       | {{< section "/port-requirements/description/package-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
 | Provisioning             | {{< section "/port-requirements/description/provisioning.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
 | Scheduling               | {{< section "/port-requirements/description/scheduling.md" >}}                 | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
