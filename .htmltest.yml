@@ -24,6 +24,7 @@ IgnoreURLs:
 - "https://code.visualstudio.com/"
 - "https://blogs.oracle.com/.*"
 - "https://jsonformatter.org/.*"
+- "https://www.newtonsoft.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
