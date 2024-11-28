@@ -11,6 +11,7 @@
 | &nbsp; &nbsp; > [Execution Management Service][Execution Management Service]         | {{< section "/architecture/components/purpose/execution-management-service.md">}}             | -                           | -                                          |
 | &nbsp; &nbsp; > [Licence Management Service][Licence Management Service]             | {{< section "/architecture/components/purpose/licence-management-service.md" >}}              | -                           | -                                          |
 | &nbsp; &nbsp; > [Listeners Service][Listeners Service]                               | {{< section "/architecture/components/purpose/listeners-service.md" >}}                       | -                           | -                                          |
+| &nbsp; &nbsp; > [Monitoring Service][Monitoring Service]                               | {{< section "/architecture/components/purpose/monitoring-service.md" >}}                       | -                           | -                                          |
 | &nbsp; &nbsp; > [Package Management Service][Package Management Service]             | {{< section "/architecture/components/purpose/package-management-service.md" >}}              | -                           | -                                          |
 | &nbsp; &nbsp; > [Provisioning Service][Provisioning Service]                         | {{< section "/architecture/components/purpose/provisioning-service.md" >}}                    | -                           | -                                          |
 | &nbsp; &nbsp; > [Scheduling Service][Scheduling Service]                             | {{< section "/architecture/components/purpose/scheduling-service.md" >}}                      | -                           | -                                          |
@@ -36,6 +37,7 @@
 [Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
 [Licence Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.LicenceManagementService.MainDoc" >}}
 [Listeners Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ListenersService.MainDoc" >}}
+[Monitoring Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MonitoringService.MainDoc" >}}
 [Package Management Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.PackageManagementService.MainDoc" >}}
 [Provisioning Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ProvisioningService.MainDoc" >}}
 [Scheduling Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService.MainDoc" >}}
