@@ -17,6 +17,7 @@ description: "Information about the ports opened when installing {{% ctx %}} Inn
 | Cortex.RabbitMqErlangDistribut ionClientPorts | The ports used by CLI tools (Erlang distribution client ports) for communication with nodes and is allocated from a dynamic range (computed as Erlang dist port + 10000 through dist port + 10010). **This cannot currently be changed.** | 35672-35682 | TCP | Inbound |
 | Cortex.RabbitMqErlangDistribut ionServerPort | The port used for RabbitMQ inter-node and CLI tools communication (Erlang distribution server port) and is allocated from a dynamic range (limited to a single port by default, computed as AMQP port + 20000). **This cannot currently be changed.** | 25672 | TCP | Inbound |
 | Cortex.RabbitMqManagement ApiPort | The port used by the RabbitMQ management plugin. **This cannot currently be changed.** | 15671 | TCP | Inbound |
+| Cortex.RabbitMqStreamPorts | The ports used by the RabbitMQ stream replication. **This cannot currently be changed.** | 6000-6500 | TCP | Inbound |
 | Cortex.WindowsSmbRemote Registry | The ports used by Windows SMB and Remote Registry service. | 135, 137, 138, 139, 445 | TCP | Inbound |
 | Cortex.ServiceFabric.Customer1. ClusterConnectionEndpointPort | The port used by the client to connect to the cluster when client APIs are used. | 8001 | TCP | Inbound |
 | Cortex.ServiceFabric.Customer1. ClientConnectionEndpointPort | The port where the nodes communicate with each other. | 8002 | TCP | Inbound |
@@ -54,16 +55,19 @@ Each service has an endpoint which is used to communicate with Service Fabric an
 
 | Name of Service          | Description                                                                    | Default Port(s)                      | Protocol(s) | Direction         | Program |
 |--------------------------|--------------------------------------------------------------------------------|--------------------------------------|-------------|-------------------|---------|
-| API Gateway              | {{< section "/port-requirements/description/api-gateway.md" >}}                | 8722                                 | TCP, UDP    | Inbound, Outbound | Any     |
-| Authorisation            | {{< section "/port-requirements/description/authorisation.md" >}}              | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Configuration Management | {{< section "/port-requirements/description/configuration-management.md" >}}   | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Data Storage             | {{< section "/port-requirements/description/data-storage.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Execution                | {{< section "/port-requirements/description/execution.md" >}}                  | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Execution Management     | {{< section "/port-requirements/description/execution-management.md" >}}       | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Licence Management       | {{< section "/port-requirements/description/licence-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Package Management       | {{< section "/port-requirements/description/package-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Provisioning             | {{< section "/port-requirements/description/provisioning.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A               | N/A     |
-| Triggers (SNMP)          | {{< section "/port-requirements/description/triggers-snmp.md" >}}              | 10001                                | UDP         | Inbound         | Any     |
+| API Gateway              | {{< section "/port-requirements/description/api-gateway.md" >}}                | 8722                                 | TCP, UDP    | Inbound, Outbound           | Any     |
+| Authorisation            | {{< section "/port-requirements/description/authorisation.md" >}}              | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Configuration Management | {{< section "/port-requirements/description/configuration-management.md" >}}   | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Data Storage             | {{< section "/port-requirements/description/data-storage.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Execution                | {{< section "/port-requirements/description/execution.md" >}}                  | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Execution Management     | {{< section "/port-requirements/description/execution-management.md" >}}       | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Licence Management       | {{< section "/port-requirements/description/licence-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Listeners                | {{< section "/port-requirements/description/listeners.md" >}}                  | 10000, 10001                         | TCP, UDP    | Inbound, Outbound           | Any     |
+| Monitoring               | {{< section "/port-requirements/description/monitoring.md" >}}                 | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Package Management       | {{< section "/port-requirements/description/package-management.md" >}}         | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Provisioning             | {{< section "/port-requirements/description/provisioning.md" >}}               | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Scheduling               | {{< section "/port-requirements/description/scheduling.md" >}}                 | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
+| Triggers                 | {{< section "/port-requirements/description/triggers.md" >}}                   | Dynamic – Uses the application ports | N/A         | N/A                  | N/A     |
 
 ## Load Balancer Rules
 
