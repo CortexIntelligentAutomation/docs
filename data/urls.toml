@@ -2484,12 +2484,12 @@
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Dashboards.zip"
         [GitHub.Cortex.Observability.2.2.0]
-            MainDoc = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v2.2.0"
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v2.2.0"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Dashboards.zip"
         [GitHub.Cortex.Observability.3.0.0]
-            MainDoc = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v3.0.0"
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v3.0.0"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Dashboards.zip"
@@ -2507,10 +2507,10 @@
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
         Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaLoki]
-        MainDoc = "https://github.com/grafana/loki/releases/tag/v2.5.0"
+        Release = "https://github.com/grafana/loki/releases/tag/v2.5.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0]
-        MainDoc = "https://github.com/grafana/loki/releases/tag/v3.0.0"
+        Release = "https://github.com/grafana/loki/releases/tag/v3.0.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail]
         PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
