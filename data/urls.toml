@@ -2507,8 +2507,10 @@
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
         Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaLoki]
+        MainDoc = "https://github.com/grafana/loki/releases/tag/v2.5.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0]
+        MainDoc = "https://github.com/grafana/loki/releases/tag/v3.0.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail]
         PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
