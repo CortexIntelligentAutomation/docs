@@ -7,10 +7,11 @@ weight: 1
 
 ## Summary
 
-2024.9 is the second [Release][] of the next generation of {{% ctx %}} and improves on the [2024.7][] release in the following areas:
+2024.11 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.9][] release in the following areas:
 
 * [Capability][]
 * [Observability][]
+* [Performance][]
 * [Scalability][]
 * [Security][]
 * [Usability][]
@@ -23,69 +24,88 @@ weight: 1
 
 This release introduces multiple new features to the {{% ctx %}} platform:
 
-* The concept of [Process and Activity][], which are types of [Flow][], has now been introduced to {{% ctx %}} Gateway.
-* [Saving Output Properties to multiple variables][] is now supported.
-* A new built-in [execution context variable][] has been added to the Flow Engine which contains the initiator.
-* A new [Proxy for the {{% ctx %}} 7 Flow API][] has been added to the platform.
+* The [Monitoring Service has been introduced][] that provides aggregated historical data about the platform.
+* The [Operations Overview page][] has been added to {{% ctx %}} Gateway to provide a high-level view of the system's operations, which includes:
+  * Current Status
+  * Filters
+  * Flow graphs
+* The [configuration for maximum query string length][] has been added to the {{% ctx %}} Gateway `web.config`.
+* The [Cortex Interaction Portal can now be installed multiple times on the same machine][].
 
 ## Improved Observability
 
-Observability has been improved by [adding logging to blocks that communicate with external systems][Logging added to blocks that communicate with external systems].
+Observability has been improved by [reducing the maximum size of Service Fabric Trace Logs][].
+
+## Improved Performance
+
+The Performance of the {{% ctx %}} has been improved by:
+
+* optimising [handling high volumes of executions more efficiently][]
+* handling [session updates more reliably on slower systems][]
 
 ## Improved Scalability
 
-Optimisation to scalability has been made by [reducing the total number of NServiceBus endpoints and RabbitMQ queues][Reduction of total number of NServiceBus endpoints and RabbitMQ queues].  
+Scalability has been enhanced by [increasing the header size limit for Service Fabric API Gateway][].
 
 ## Improved Security
 
-We increased the security of the platform by:
+Security has been tightened on {{% ctx %}} Gateway by:
 
-* [Upgrading the OpenSSL version][Upgrade OpenSSL] shipped with the platform.
-* Added [Multi-domain certificates support][].
-* A [CortexManagementUser for RabbitMQ is now created during upgrade][New CortexManagementUser added to manage RabbitMQ queues].
-* [Server-side validation added to {{% ctx %}} Gateway API][] to prevent [Path Traversal][] attacks.
-* Removal of the [refresh token cookie on sign out][remove refresh token cookie on sign out].
+* updating the [Content-security-policy directives][]
+* introducing the [Permissions-Policy header][]
+* removing the [X-XSS-PROTECTION header][]
 
 ## Improved Usability
 
-The usability of the platform has been improved by:
-
-* Renaming the [Flows Charm to Dev and changing the icon][Rename Flows Charm to Dev and change icon].
-* Renaming the [Settings Charm to Admin and changing the icon][Rename Settings Charm to Admin and change icon].
+Usability has been improved by [fixing the LiveView datetime picker styling issues][].
 
 ## Improved Third-Party Support
 
-Third-party Support has been improved by [upgrading the platform to .NET 8][Upgrade to .NET 8].  
+Third-party Support has been improved by:
+
+* adding a [Health Check API to Service Fabric API Gateway][]
+* updating the following 3rd party libraries on {{% ctx %}} Gateway:
+  * Fuse
+  * jQuery
+  * jQuery UI
+  * Moment.js
+  * Stacktrace.js
 
 ## Improved Installation
 
-Installation when [files are blocked by the operating system][Support installation when files are blocked by the operating system] due to the `Zone.Identifier` is now supported.  
+Installation has been modified to:
+
+* [check for certificate friendly name][]
+* [use PSDrive to improve compatibility][]
+* [allow log file rotation for RabbitMQ logs][]
+* [open ports for RabbitMQ Stream][]  
 
 ## Improved Upgrade
 
-The upgrade process has been improved by:
+Upgrade has been improved by:
 
-* [Supporting upgrade when files are blocked by the operating system][Support upgrade when files are blocked by the operating system].
-* Upgrading the [Execution Service when the engine version is unchanged][Execution Service is upgraded when the engine version is unchanged].
-* [Handling of the Execution Services lifecycle events][].
+* [restoring files to pre-upgrade if the load balancer upgrade fails][]
+* [aligning the timeout of the Register-ServiceFabricApplicationType command with other commands][]
+* [changing the extension of the studio package created by the upgrade script][]
+* [allow log file rotation for RabbitMQ logs][Upgrade - allow log file rotation for RabbitMQ logs]
+* [opening ports for RabbitMQ Stream][Upgrade - opening ports for RabbitMQ Stream]
 
 ## Improved Documentation
 
 The documentation includes updates related to:
 
-* New concepts such as [Process and Activity][Process and Activity Documentation] as well as [Decomposition of Output properties][].
-* [Preventing deadlocks when using semaphores][Prevent deadlocks when using semaphores].
-* [Updating screenshots][screenshots updated] to reflect the new branding.
-* [Flow compatibility version][Flow compatibility version introduced] being added to the release notes.
-* [General improvements to the documentation][].
+* [adding the encryption key to the built-in Load Balancer server][]
+* [adding the Observability Compatibility table to release notes][]
+* [updating the ports used by the platform][]
 
-For a full list of what has been introduced in this release, please see the [2024.9 Release Notes][]
+For a full list of what has been introduced in this release, please see the [2024.11 Release Notes][]
 
-[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2024.9" >}}
-[2024.7]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.9" >}}
+[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.11" >}}
+[2024.9]: {{< url path="Cortex.Blogs.Releases.2024.9.MainDoc" version="2024.11" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
 [Observability]: {{< ref "#improved-observability" >}}
+[Performance]: {{< ref "#improved-performance" >}}
 [Scalability]: {{< ref "#improved-scalability" >}}
 [Security]: {{< ref "#improved-security" >}}
 [Usability]: {{< ref "#improved-usability" >}}
@@ -94,32 +114,30 @@ For a full list of what has been introduced in this release, please see the [202
 [Upgrade]: {{< ref "#improved-upgrade" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[Process and Activity]: {{< url path="Cortex.Blogs.Releases.2024.9.ProcessAndActivity" version="2024.9" >}}
-[Saving Output Properties to multiple variables]: {{< url path="Cortex.Blogs.Releases.2024.9.SaveOutputPropertiesToMultipleVariables" version="2024.9" >}}
-[execution context variable]: {{< url path="Cortex.Blogs.Releases.2024.9.ExecutionContextVariable" version="2024.9" >}}
-[Proxy for the {{% ctx %}} 7 Flow API]: {{< url path="Cortex.Blogs.Releases.2024.9.ProxyForTheCortex7FlowApi" version="2024.9" >}}
-[Logging added to blocks that communicate with external systems]: {{< url path="Cortex.Blogs.Releases.2024.9.LoggingAddedToBlocksThatCommunicateWithExternalSystems" version="2024.9" >}}
-[Reduction of total number of NServiceBus endpoints and RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024.9.ReductionOfTotalNumberOfNServiceBusEndpointsAndRabbitMQQueues" version="2024.9" >}}
-[Upgrade OpenSSL]: {{< url path="Cortex.Blogs.Releases.2024.9.UpgradeOpenSSL" version="2024.9" >}}
-[Multi-domain certificates support]: {{< url path="Cortex.Blogs.Releases.2024.9.MultiDomainCertificatesSupport" version="2024.9" >}}
-[New CortexManagementUser added to manage RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024.9.NewCortexManagementUserAddedToManageRabbitMQQueues" version="2024.9" >}}
-[Server-side validation added to {{% ctx %}} Gateway API]: {{< url path="Cortex.Blogs.Releases.2024.9.ServerSideValidationAddedToCortexGatewayAPI" version="2024.9" >}}
-[Remove refresh token cookie on sign out]: {{< url path="Cortex.Blogs.Releases.2024.9.RemoveRefreshTokenCookieOnSign" version="2024.9" >}}
-[Rename Flows Charm to Dev and change icon]: {{< url path="Cortex.Blogs.Releases.2024.9.RenameFlowsCharmToDevAndChangeIcon" version="2024.9" >}}
-[Rename Settings Charm to Admin and change icon]: {{< url path="Cortex.Blogs.Releases.2024.9.RenameSettingsCharmToAdminAndChangeIcon" version="2024.9" >}}
-[Upgrade to .NET 8]: {{< url path="Cortex.Blogs.Releases.2024.9.UpgradeToNet8" version="2024.9" >}}
-[Support installation when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024.9.SupportInstallationWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
-[Support upgrade when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024.9.SupportUpgradeWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
-[Execution Service is upgraded when the engine version is unchanged]: {{< url path="Cortex.Blogs.Releases.2024.9.ExecutionServiceIsUpgradedWhenTheEngineVersionIsUnchanged" version="2024.9" >}}
-[Handling of the Execution Services lifecycle events]: {{< url path="Cortex.Blogs.Releases.2024.9.HandlingOfTheExecutionServicesLifecycleEvents" version="2024.9" >}}
-[Process and Activity Documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.ProcessAndActivityDocumentation" version="2024.9" >}}
-[Decomposition of Output properties]: {{< url path="Cortex.Blogs.Releases.2024.9.DecompositionOfOutputProperties" version="2024.9" >}}
-[Prevent deadlocks when using semaphores]: {{< url path="Cortex.Blogs.Releases.2024.9.PreventDeadlocksWhenUsingSemaphores" version="2024.9" >}}
-[Screenshots updated]: {{< url path="Cortex.Blogs.Releases.2024.9.ScreenshotsUpdated" >}}
-[Flow compatibility version introduced]: {{< url path="Cortex.Blogs.Releases.2024.9.FlowCompatibilityVersionIntroduced" version="2024.9" >}}
-[General improvements to the documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.GeneralImprovementsToTheDocumentation" version="2024.9" >}}
+[Monitoring Service has been introduced]: {{< url path="Cortex.Blogs.Releases.2024.11.MonitoringServiceHasBeenIntroduced" version="2024.11" >}}
+[Operations Overview page]: {{< url path="Cortex.Blogs.Releases.2024.11.OperationsOverviewPage" version="2024.11" >}}
+[configuration for maximum query string length]: {{< url path="Cortex.Blogs.Releases.2024.11.ConfigurationForMaximumQueryStringLength" version="2024.11" >}}
+[Cortex Interaction Portal can now be installed multiple times on the same machine]: {{< url path="Cortex.Blogs.Releases.2024.11.CortexInteractionPortalCanNowBeInstalledMultipleTimesOnTheSameMachine" version="2024.11" >}}
+[session updates more reliably on slower systems]: {{< url path="Cortex.Blogs.Releases.2024.11.SessionUpdatesMoreReliablyOnSlowerSystems" version="2024.11" >}}
+[reducing the maximum size of Service Fabric Trace Logs]: {{< url path="Cortex.Blogs.Releases.2024.11.ReducingTheMaximumSizeOfServiceFabricTraceLogs" version="2024.11" >}}
+[handling high volumes of executions more efficiently]: {{< url path="Cortex.Blogs.Releases.2024.11.HandlingHighVolumesOfExecutionsMoreEfficiently" version="2024.11" >}}
+[increasing the header size limit for Service Fabric API Gateway]: {{< url path="Cortex.Blogs.Releases.2024.11.IncreasingTheHeaderSizeLimitForServiceFabricAPIGateway" version="2024.11" >}}
+[Content-security-policy directives]: {{< url path="Cortex.Blogs.Releases.2024.11.ContentSecurityPolicyDirectives" version="2024.11" >}}
+[Permissions-Policy header]: {{< url path="Cortex.Blogs.Releases.2024.11.PermissionsPolicyHeader" version="2024.11" >}}
+[X-XSS-PROTECTION header]: {{< url path="Cortex.Blogs.Releases.2024.11.XXSSPROTECTIONHeader" version="2024.11" >}}
+[fixing the LiveView datetime picker styling issues]: {{< url path="Cortex.Blogs.Releases.2024.11.FixingTheLiveViewDatetimePickerStylingIssues" version="2024.11" >}}
+[Health Check API to Service Fabric API Gateway]: {{< url path="Cortex.Blogs.Releases.2024.11.HealthCheckAPIToServiceFabricAPIGateway" version="2024.11" >}}
+[check for certificate friendly name]: {{< url path="Cortex.Blogs.Releases.2024.11.CheckForCertificateFriendlyName" version="2024.11" >}}
+[use PSDrive to improve compatibility]: {{< url path="Cortex.Blogs.Releases.2024.11.UsePSDriveToImproveCompatibility" version="2024.11" >}}
+[allow log file rotation for RabbitMQ logs]: {{< url path="Cortex.Blogs.Releases.2024.11.AllowLogFileRotationForRabbitMQLogs" version="2024.11" >}}
+[open ports for RabbitMQ Stream]: {{< url path="Cortex.Blogs.Releases.2024.11.OpenPortsForRabbitMQStream" version="2024.11" >}}
+[restoring files to pre-upgrade if the load balancer upgrade fails]: {{< url path="Cortex.Blogs.Releases.2024.11.RestoringFilesToPreUpgradeIfTheLoadBalancerUpgradeFails" version="2024.11" >}}
+[aligning the timeout of the Register-ServiceFabricApplicationType command with other commands]: {{< url path="Cortex.Blogs.Releases.2024.11.AligningTheTimeoutOfTheRegisterServiceFabricApplicationTypeCommandWithOtherCommands" version="2024.11" >}}
+[changing the extension of the studio package created by the upgrade script]: {{< url path="Cortex.Blogs.Releases.2024.11.ChangingTheExtensionOfTheStudioPackageCreatedByTheUpgradeScript" version="2024.11" >}}
+[Upgrade - allow log file rotation for RabbitMQ logs]: {{< url path="Cortex.Blogs.Releases.2024.11.UpgradeAllowLogFileRotationForRabbitMQLogs" version="2024.11" >}}
+[Upgrade - opening ports for RabbitMQ Stream]: {{< url path="Cortex.Blogs.Releases.2024.11.UpgradeOpeningPortsForRabbitMQStream" version="2024.11" >}}
+[adding the encryption key to the built-in Load Balancer server]: {{< url path="Cortex.Blogs.Releases.2024.11.AddingTheEncryptionKeyToTheBuiltInLoadBalancerServer" version="2024.11" >}}
+[adding the Observability Compatibility table to release notes]: {{< url path="Cortex.Blogs.Releases.2024.11.AddingTheObservabilityCompatibilityTableToReleaseNotes" version="2024.11" >}}
+[updating the ports used by the platform]: {{< url path="Cortex.Blogs.Releases.2024.11.UpdatingThePortsUsedByThePlatform" version="2024.11" >}}
 
-[2024.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.9.MainDoc" version="2024.9" >}}
-
-[Flow]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" version="2024.9" >}}
-[Path Traversal]: {{< url path="Owasp.PathTraversal.MainDoc" version="2024.9" >}}
+[2024.11 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.11.MainDoc" version="2024.11" >}}
