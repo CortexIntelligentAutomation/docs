@@ -8,6 +8,33 @@
             MainDoc = "/blog/releases"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
+                [Cortex.Blogs.Releases.2024.11]
+                    MainDoc = "/blog/2024/12/02/2024.11/"
+                    MonitoringServiceHasBeenIntroduced = "/blog/2024/12/02/2024.11/#introduced-the-monitoring-service"
+                    OperationsOverviewPage = "/blog/2024/12/02/2024.11/#introduced-the-operations-overview-page"
+                    ConfigurationForMaximumQueryStringLength = "/blog/2024/12/02/2024.11/#added-configuration-for-maximum-query-string-length"
+                    CortexInteractionPortalCanNowBeInstalledMultipleTimesOnTheSameMachine = "/blog/2024/12/02/2024.11/#added-support-for-multiple-instances-of-the-cortex-interaction-portal-running-on-the-same-machine"
+                    SessionUpdatesMoreReliablyOnSlowerSystems = "/blog/2024/12/02/2024.11/#improved-session-update-reliability-on-slow-systems"
+                    ReducingTheMaximumSizeOfServiceFabricTraceLogs = "/blog/2024/12/02/2024.11/#reduced-the-maximum-size-of-service-fabric-logs"
+                    HandlingHighVolumesOfExecutionsMoreEfficiently = "/blog/2024/12/02/2024.11/#improved-the-performance-of-the-execution-management-service"
+                    IncreasingTheHeaderSizeLimitForServiceFabricAPIGateway = "/blog/2024/12/02/2024.11/#increased-the-header-size-limit-for-service-fabric-api-gateway"
+                    ContentSecurityPolicyDirectives = "/blog/2024/12/02/2024.11/#reviewed-the-content-security-policy-directives-on-cortex-gateway"
+                    PermissionsPolicyHeader = "/blog/2024/12/02/2024.11/#introduced-the-permissions-policy-header-on-cortex-gateway"
+                    XXSSPROTECTIONHeader = "/blog/2024/12/02/2024.11/#removed-the-x-xss-protection-header-on-cortex-gateway"
+                    FixingTheLiveViewDatetimePickerStylingIssues = "/blog/2024/12/02/2024.11/#liveview-datetime-picker-styling-issues"
+                    HealthCheckAPIToServiceFabricAPIGateway = "/blog/2024/12/02/2024.11/#added-health-check-api-to-service-fabric-api-gateway"
+                    CheckForCertificateFriendlyName = "/blog/2024/12/02/2024.11/#added-check-for-certificate-friendly-name"
+                    UsePSDriveToImproveCompatibility = "/blog/2024/12/02/2024.11/#changed-the-installation-script-to-use-psdrive-to-improve-compatibility"
+                    AllowLogFileRotationForRabbitMQLogs = "/blog/2024/12/02/2024.11/#added-support-for-rabbitmq-log-file-rotation"
+                    OpenPortsForRabbitMQStream = "/blog/2024/12/02/2024.11/#opened-ports-for-rabbitmq-stream"
+                    RestoringFilesToPreUpgradeIfTheLoadBalancerUpgradeFails = "/blog/2024/12/02/2024.11/#improved-the-load-balancer-upgrade-process"
+                    AligningTheTimeoutOfTheRegisterServiceFabricApplicationTypeCommandWithOtherCommands = "/blog/2024/12/02/2024.11/#aligned-the-timeout-of-the-register-servicefabricapplicationtype-command-with-other-commands"
+                    ChangingTheExtensionOfTheStudioPackageCreatedByTheUpgradeScript = "/blog/2024/12/02/2024.11/#changed-the-extension-of-the-studio-package-created-by-the-upgrade-script"
+                    UpgradeAllowLogFileRotationForRabbitMQLogs = "/blog/2024/12/02/2024.11/#added-support-for-rabbitmq-log-file-rotation-1"
+                    UpgradeOpeningPortsForRabbitMQStream = "/blog/2024/12/02/2024.11/#opened-ports-for-rabbitmq-stream-1"
+                    AddingTheEncryptionKeyToTheBuiltInLoadBalancerServer = "/blog/2024/12/02/2024.11/#added-how-to-add-the-encryption-key-to-the-built-in-load-balancer-server"
+                    AddingTheObservabilityCompatibilityTableToReleaseNotes = "/blog/2024/12/02/2024.11/#added-observability-compatibility-table-to-release-notes"
+                    UpdatingThePortsUsedByThePlatform = "/blog/2024/12/02/2024.11/#updated-ports-used-by-the-platform"
                 [Cortex.Blogs.Releases.2024.9]
                     MainDoc =  "/blog/2024/10/07/2024.9/"
                     ProcessAndActivity = "/blog/2024/10/07/2024.9/#process-and-activity"
@@ -2484,10 +2511,12 @@
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.1.0/Grafana.Dashboards.zip"
         [GitHub.Cortex.Observability.2.2.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v2.2.0"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v2.2.0/Grafana.Dashboards.zip"
         [GitHub.Cortex.Observability.3.0.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v3.0.0"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Dashboards.zip"
@@ -2505,8 +2534,10 @@
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
         Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaLoki]
+        Release = "https://github.com/grafana/loki/releases/tag/v2.5.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0]
+        Release = "https://github.com/grafana/loki/releases/tag/v3.0.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail]
         PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
