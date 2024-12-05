@@ -21,6 +21,10 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.9 to 2024.11. 
 
 {{< section "/preserve-installation-files.md" >}}
 
+## Upgrade {{% ctx %}} Interaction Portal
+
+{{< section "/upgrade/2024.11/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
+
 ## Next Steps?
 
 1. [Try It Out][]
