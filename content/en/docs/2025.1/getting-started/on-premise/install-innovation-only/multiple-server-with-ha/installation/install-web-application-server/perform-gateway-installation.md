@@ -45,7 +45,7 @@ It is possible for {{% ctx %}} Gateway to reuse the certificate used when [insta
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirementsNew" title="Encryption Requirements" >}} steps.{{% /alert %}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
@@ -118,16 +118,16 @@ It is possible for {{% ctx %}} Gateway to reuse the certificate used when [insta
 
 1. [Setup Gateway][]
 
-[Assign Certificate Friendly Name]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew" >}}
+[Assign Certificate Friendly Name]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AssignCertificateFriendlyNameNew2" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScript" >}}
+[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Flow Debugger installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallation" >}}
-[Get CORTEX Gateway Application Pool User]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GetGatewayAppPoolUser" >}}
-[Import Certificate Manually]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportCertificateManuallyNew" >}}
-[Import Root Certificate]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportRootCertificate" >}}
-[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
-[Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirements" >}}
+[Flow Debugger installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallationNew" >}}
+[Get CORTEX Gateway Application Pool User]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GetGatewayAppPoolUserNew" >}}
+[Import Certificate Manually]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportCertificateManuallyNew2" >}}
+[Import Root Certificate]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ImportRootCertificateNew" >}}
+[Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
+[Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.LicensingRequirementsNew" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGateway" >}}
+[Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGatewayNew" >}}

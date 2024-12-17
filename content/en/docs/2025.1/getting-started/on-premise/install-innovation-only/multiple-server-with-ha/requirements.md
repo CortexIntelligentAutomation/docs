@@ -1,13 +1,13 @@
 ---
-title: "Prerequisites"
-linkTitle: "Prerequisites"
-description: "Information about the prerequisites required on each server type for installation."
+title: "Requirements"
+linkTitle: "Requirements"
+description: "Information about the requirements for each server type for installation."
 weight: 20
 ---
 
 # {{% param title %}}
 
-The prerequisites required for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
+The requirements for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 
 ## Hardware Requirements
 
@@ -66,52 +66,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 A valid {{% ctx %}} licence file and {{% ctx %}} Innovation feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
 
-To get a licence file and feature identifier take the following steps:
-
-1. Copy the following template to a text file:
-
-    ```text
-    Web Application Server
-    MachineID: 
-    Fingerprint: 
-
-    Application Server 1
-    MachineID: 
-    Fingerprint: 
-
-    Application Server 2
-    MachineID: 
-    Fingerprint: 
-
-    Application Server 3
-    MachineID: 
-    Fingerprint: 
-
-    Please also include a suitable {{% ctx %}} Innovation feature identifier.
-    ```
-
-1. Extract `Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip`.
-1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the Web Application server.
-1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
-
-    ```text
-    MachineID: WEBAPP-SERVER
-    Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
-    ```
-
-1. Copy the output (machine identifier and fingerprint) to the `Web Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. For each Application Server take the following steps:
-    1. Copy `Cortex.Licensing.FingerprintGeneration.exe` to the Application server.
-    1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
-
-        ```text
-        MachineID: APP-SERVER1
-        Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
-        ```
-
-    1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
+Details on how to obtain these are specified during the [Pre-Installation][obtain licence file] steps.
 
 ## Web Browser Requirements
 
@@ -268,7 +223,10 @@ A script is provided during installation to apply these security changes:
 
 ### Encryption Requirements
 
-{{< section "/prerequisites/install-innovation-only/multi-server/encryption-requirements.md">}}
+Certain sensitive parameters required during installation (e.g. passwords) must be encrypted; other potentially sensitive parameters (e.g. usernames) can be encrypted using the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module, which uses AES256. Details of whether a parameter must or should be encrypted are specified during the installation steps.
+
+Before encrypting parameters, it is required to generate a private key that will be used by the [{{% ctx %}} Encryptor][CORTEX Encrypted] PowerShell module. Details on how to do this are provided during the [Pre-Installation][generate encryption key] steps.
+
 
 ## Alternative Load Balancer Requirements
 
@@ -282,22 +240,23 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 
 ## Next Steps?
 
-1. [Install Application Servers and Load Balancer][]
+1. [Pre-Installation][]
 
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
-[Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.CreateSelfSignedCertificates" >}}
+[CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[generate encryption key]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GenerateEncryptionKey" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2022]: {{< url path="MSEval.WindowsServer.2022" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[obtain licence file]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ObtainLicence" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
+[Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PreInstallation" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [TriggersService]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [web application server]: {{< ref "#web-application-server" >}}
