@@ -79,6 +79,6 @@ Log on to Gateway and run through the setup wizard:
 [Account Details]: {{< ref "#account-details" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
-[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
-[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirements" >}}
+[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServerNew" >}}
+[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirementsNew" >}}
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOut" >}}

@@ -81,4 +81,4 @@ Log on to Gateway and run through the setup wizard:
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
 [supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebBrowserRequirementsNew" >}}
-[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOutNew" >}}
+[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOut" >}}

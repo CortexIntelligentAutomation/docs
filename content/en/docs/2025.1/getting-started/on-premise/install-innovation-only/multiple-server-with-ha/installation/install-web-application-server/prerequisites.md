@@ -91,6 +91,7 @@ To import the certificate manually follow the below steps:
 1. [Install Flow Debugger][]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
+[gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [Import Certificate Manually]: {{< ref "#import-certificate-manually" >}}
 [Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallApplicationAndLoadBalancerServersNew" >}}
 [Install Flow Debugger]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.DebuggerInstallationNew" >}}
