@@ -17,7 +17,7 @@ weight: 10
 
 ## Possible Architectures
 
-{{% ctx %}} Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation and the only component shared by both Innovation and v7.2 is {{% ctx %}} Gateway.
+{{% ctx %}} and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation and the only component shared by both Innovation and v7.2 is {{% ctx %}} Gateway.
 
 ### Recommended Architecture
 
@@ -34,8 +34,8 @@ The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Ser
 
 ## Next Steps?
 
-1. [Prerequisites][]
+1. [Requirements][]
 
-[Hardware Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.HardwareRequirements" >}}
-[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
+[Hardware Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.HardwareRequirementsNew" >}}
 [Recommended]: {{< ref "#recommended-architecture" >}}
+[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Requirements" >}}

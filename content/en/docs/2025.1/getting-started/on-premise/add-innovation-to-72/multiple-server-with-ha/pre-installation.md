@@ -11,7 +11,7 @@ This guide describes how to perform the steps required before starting the insta
 
 ## Obtain a {{% ctx %}} licence file
 
-A valid {{% ctx %}} licence file and {{% ctx %}} feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+A valid {{% ctx %}} licence file and {{% ctx %}} with v7.2 feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
 
 To get a licence file and feature identifier take the following steps:
 
@@ -34,7 +34,7 @@ To get a licence file and feature identifier take the following steps:
     MachineID: 
     Fingerprint: 
 
-    Please also include a suitable {{% ctx %}} feature identifier.
+    Please also include a suitable {{% ctx %}} with v7.2 feature identifier.
     ```
 
 1. Extract `Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip`.
@@ -58,7 +58,7 @@ To get a licence file and feature identifier take the following steps:
 
     1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
 1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Installing Gateway][].
+1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
 
 ## Make Installation Artefacts Available on Application Servers
 
@@ -77,16 +77,11 @@ We recommend that the single-node Service Fabric instance, used by {{% ctx %}} G
 
 {{< section "/install-web-application-server/make-installation-artefacts-available.md">}}
 
-
-## Generate Encryption Key
-
-{{< section "/prerequisites/install-innovation-only/multi-server/encryption-requirements.md">}}
-
 ## Next Steps?
 
 1. [Installation][]
 
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Installation" >}}
-[Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
-[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Requirements" >}}
+[Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Installation" >}}
+[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
+[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Requirements" >}}

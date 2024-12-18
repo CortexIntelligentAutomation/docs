@@ -7,16 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that [Prerequisites for adding Innovation to v7.2][] have been read before starting this installation.
-
-## Make Installation Artefacts Available
-
-1. Choose one of the Application Servers to be used for installation, and copy the following artefacts to a folder on it:
-   * Cortex Innovation {{< version >}} - App Server Install Scripts.zip
-   * Cortex Innovation {{< version >}} - App Services.zip
-   * Cortex Innovation {{< version >}} - Block Packages.zip
-
-1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for adding {{% ctx %}} to 7.2][] have been completed before starting this installation.
 
 ## Install Microsoft .NET Framework 4.7.2
 
@@ -216,7 +207,7 @@ To check all necessary ports are free, follow these steps:
         {{< /tab >}}
     {{< /tabpane >}}
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirementsNew" title="Encryption Requirements" >}} steps.{{% /alert %}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
@@ -319,17 +310,17 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 1. [Upgrade the Web Application Server][]
 
-[alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AltLoadBalancer" >}}
-[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusions" >}}
-[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirements" >}}
-[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScript" >}}
+[alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AltLoadBalancerNew" >}}
+[Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusionsNew" >}}
+[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.CertificateRequirementsNew" >}}
+[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirements" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirementsNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
-[Prerequisites for adding Innovation to v7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
+[Pre-Installation steps for adding {{% ctx %}} to 7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.PreInstallation" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
-[Upgrade the Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServer" >}}
+[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
+[Upgrade the Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AddInnovationTo72WebApplicationServerNew" >}}

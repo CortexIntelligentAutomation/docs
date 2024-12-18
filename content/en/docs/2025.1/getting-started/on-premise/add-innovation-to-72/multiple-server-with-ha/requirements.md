@@ -1,20 +1,19 @@
 ---
-title: "Prerequisites"
-linkTitle: "Prerequisites"
-description: "Information about the prerequisites required on each server type for installation."
+title: "Requirements"
+linkTitle: "Requirements"
+description: "Information about the requirements for each server type for installation."
 weight: 20
 ---
 
 # {{< param title >}}
 
-The prerequisites required for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
+The requirements for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 
 {{% alert title="Note" %}}
 All server roles (e.g. Load Balancer, Application Server, Web Application Server) referenced in the rest of this guide will refer to Innovation server roles unless otherwise stated.
 {{% / alert %}}
 
 ## Hardware Requirements
-
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
@@ -86,54 +85,9 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid {{% ctx %}} licence file and {{% ctx %}} Innovation with v7.2 feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+A valid {{% ctx %}} licence file and {{% ctx %}} with v7.2 feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
 
-To get a licence file and feature identifier take the following steps:
-
-1. Copy the following template to a text file:
-
-    ```text
-    Web Application Server
-    MachineID: 
-    Fingerprint: 
-
-    Application Server 1
-    MachineID: 
-    Fingerprint: 
-
-    Application Server 2
-    MachineID: 
-    Fingerprint: 
-
-    Application Server 3
-    MachineID: 
-    Fingerprint: 
-
-    Please also include a suitable {{% ctx %}} Innovation with v7.2 feature identifier.
-    ```
-
-1. Extract `Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip`.
-1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the Web Application server.
-1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
-
-    ```text
-    MachineID: WEBAPP-SERVER
-    Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
-    ```
-
-1. Copy the output (machine identifier and fingerprint) to the `Web Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. For each Application Server take the following steps:
-    1. Copy `Cortex.Licensing.FingerprintGeneration.exe` to the Application server.
-    1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
-
-        ```text
-        MachineID: APP-SERVER1
-        Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
-        ```
-
-    1. Copy the output (machine identifier and fingerprint) to one of the `Application Server` sections of the text file created in the initial step. Note that the machine identifier can be changed to any string, provided that it is different for each server.
-1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
+Details on how to obtain these are specified during the [Pre-Installation][obtain licence file] steps.
 
 ## Ensure correct owner of {{% ctx %}} Gateway Repo and Website folders
 
@@ -205,7 +159,7 @@ On the Web Application Server and each Application Server, the following Windows
 
 ### Installation User
 
-On all Application Servers, Web Application Server and Load Balancer Server, a domain user, which is a member of the Local Administrators group, must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
+On all Application Servers, Web Application Server and Load Balancer Server, a domain user, which is a member of the Local Administrators group, must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} is built upon.
 
 ### Antivirus Exclusions
 
@@ -245,7 +199,7 @@ If adding the exclusions manually, the Process Exclusions should be done before 
 
 ### Port Requirements
 
-{{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
+{{% ctx %}} and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
 
 If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
 
@@ -333,22 +287,24 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 
 ## Next Steps?
 
-1. [Install Application Servers and Load Balancer][]
+1. [Pre-Installation][]
 
 [alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
 [Anycast]: {{< url path="Anycast.MainDoc" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Architecture" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
+[Create Full DB Backup]: {{< url path="MSDocs.SqlServer.CreateFullDbBackup" >}}
 [gobetween]: {{< url path="GoBetween.MainDoc" >}}
 [IIS Url Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
+[Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.PreInstallation" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[obtain licence file]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ObtainLicence" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
 [Recommended Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.RecommendedArchitecture" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
+[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
 [web application server]: {{< ref "#web-application-server" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}

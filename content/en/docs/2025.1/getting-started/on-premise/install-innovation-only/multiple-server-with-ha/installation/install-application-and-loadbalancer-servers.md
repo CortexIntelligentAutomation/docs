@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for installing {{% ctx %}}][] have been read before starting this installation.
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for installing {{% ctx %}}][] have been completed before starting this installation.
 
 ## Install Microsoft .NET Framework 4.7.2
 
