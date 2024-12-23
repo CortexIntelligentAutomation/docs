@@ -1,27 +1,13 @@
 ---
 title: "Upgrade v7.2 Gateway to Include Innovation"
 linkTitle: "Upgrade v7.2 Gateway to Include Innovation"
-description: "Information about upgrading v7.2 Gateway with Innovation functionality."
+description: "Information about upgrading a {{% ctx %}} 7.2 Gateway with {{% ctx %}} functionality."
 weight: 40
 ---
 
 # {{< param title >}}
 
-This guide describes how to upgrade Gateway on v7.2 to include Innovation. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
-
-The steps to add Innovation functionality to 7.2 are:
-
-1. Upgrade Gateway
-
-## Make Installation Artefacts Available
-
-1. Copy the following artefacts to a folder on the machine:
-
-   * Cortex Innovation {{< version >}} - Block Packages.zip
-   * Cortex Innovation {{< version >}} - Gateway.zip
-   * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
-
-1. Extract the `Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip` zip file to a folder with the same name.
+This guide describes how to upgrade Gateway on {{% ctx %}} 7.2 to include {{% ctx %}}. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the {{% ctx %}} 7.2 version of Gateway and its prerequisites have already been installed.
 
 ## Install Prerequisites
 
@@ -205,11 +191,11 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [Configure CORTEX Gateway Installation Script]: {{< ref "#configure-cortex-gateway-installation-script" >}}
-[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureInstallationScript" >}}
+[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
-[Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.LicensingRequirements" >}}
-[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionRequirements" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServerNew" >}}
+[Licensing Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.LicensingRequirementsNew" >}}
+[Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionRequirementsNew" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.TryItOut" >}}

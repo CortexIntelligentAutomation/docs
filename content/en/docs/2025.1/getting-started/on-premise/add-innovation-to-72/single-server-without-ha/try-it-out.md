@@ -7,7 +7,7 @@ weight: 60
 
 # {{< param title >}}
 
-This guide describes how to try out a new Innovation installation to make sure it is working. Please ensure that the [Gateway Upgrade][] has been completed before taking these steps.
+This guide describes how to try out a new {{% ctx %}} installation to make sure it is working. Please ensure that the [Gateway Upgrade][] has been completed before taking these steps.
 
 ## Test Debugging Flows
 
@@ -63,4 +63,4 @@ Test the platform by creating a new flow and executing it using the following st
 [Troubleshooting No Innovation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoInnovation" >}}
 [Troubleshooting No Publish]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
-[Gateway Upgrade]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServer" >}}
+[Gateway Upgrade]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServerNew" >}}

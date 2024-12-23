@@ -1,7 +1,7 @@
 ---
-title: "Prerequisites"
-linkTitle: "Prerequisites"
-description: "Information about the prerequisites required on each server type for installation."
+title: "Requirements"
+linkTitle: "Requirements"
+description: "Information about the requirements for each server type for installation."
 weight: 20
 ---
 
@@ -72,36 +72,13 @@ Supported versions of Active Directory are listed below:
 
 ## DNS Requirements
 
-The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured  on the DNS server for the server.
+The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured on the DNS server for the server.
 
 ## Licensing Requirements
 
 A valid {{% ctx %}} licence file and {{% ctx %}} feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
 
-To get a licence file and feature identifier take the following steps:
-
-1. Copy the following template to a text file:
-
-    ```text
-    Web Application/Application Server
-    MachineID: 
-    Fingerprint: 
-
-    Please also include a suitable {{% ctx %}} with v7.2 feature identifier.
-    ```
-
-1. Extract `Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip`.
-1. From that folder, copy `Cortex.Licensing.FingerprintGeneration.exe` to the server.
-1. Double-click `Cortex.Licensing.FingerprintGeneration.exe` to run it. A command line window will appear, containing a machine identifier and fingerprint, e.g:
-
-    ```text
-    MachineID: SERVER
-    Fingerprint: 111118BA104C928319E0CBAE30844CF8B7FD8BC414D1567844D1D0830089F1C9BF5C6
-    ```
-
-1. Copy the output (machine identifier and fingerprint) to the `Web Application/Application Server` section of the text file created in the initial step. Note that the machine identifier can be changed to any string.
-1. Request a licence and feature identifier by raising a case in the [{{% ctx %}} Service Portal][CORTEX Service Portal], including the contents of the text file containing all of the fingerprint and machine information in the body of the case.
-1. When the licence and feature identifier have arrived, copy the file `Cortex.lic` to `%ProgramData%\Cortex\Licences` on the Web Application Server, creating the `Cortex` and `Licences` folders if they don't exist. Save the feature identifier for use when [Upgrading Gateway][].
+Details on how to obtain these are specified during the [Pre-Installation][obtain licence file] steps.
 
 ## Ensure correct owner of {{% ctx %}} Gateway Repo and Website folders
 
@@ -251,11 +228,13 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Create Full DB Backup]: {{< url path="MSDocs.SqlServer.CreateFullDbBackup" >}}
 [IIS URL Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
-[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServer" >}}
+[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServerNew" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
+[obtain licence file]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ObtainLicence" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
+[Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.PreInstallation" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
+[Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [Web Deploy]: {{< url path="MSDownload.WebDeploy" >}}

@@ -45,7 +45,7 @@
         {{< /tab >}}
     {{< /tabpane >}}
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionRequirements" title="Encryption Requirements" >}} steps.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on one of the servers specified in the {{< ahref path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionRequirementsNew" title="Encryption Requirements" >}} steps.{{% /alert %}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
@@ -72,6 +72,6 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 1. Save and close `Cortex.Innovation.Install.ps1`.
 
-[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.CertificateRequirements" >}}
+[Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.CertificateRequirementsNew" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
-[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScript" >}}
+[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCortexGatewayInstallationScriptNew" >}}

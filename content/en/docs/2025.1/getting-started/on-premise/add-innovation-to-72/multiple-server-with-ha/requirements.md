@@ -81,7 +81,7 @@ Supported versions of Active Directory are listed below:
 
 ## DNS Requirements
 
-The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured  on the DNS server for all of your servers (Web, Application and Load Balancer).
+The installation requires IP to hostname resolution to be available. Please ensure that you have the appropriate pointer (PTR) records configured on the DNS server for all of your servers (Web, Application and Load Balancer).
 
 ## Licensing Requirements
 
