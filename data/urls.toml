@@ -271,7 +271,7 @@
                     InstallWebApplicationServerNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server"
                     LicensingRequirements = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#licensing-requirements"
                     MakeInstallationArtefactsAvailable = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers/#make-installation-artefacts-available"
-                    MakeInstallationArtefactsAvailableNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/pre-installation#make-installation-artefacts-available-on-application-servers"
+                    MakeInstallationArtefactsAvailableNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/pre-installation#make-installation-artefacts-available"
                     ObtainLicence = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/pre-installation#obtain-a-cortex-licence-file"
                     PerformDebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-debugger-installation"
                     PerformInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#perform-installation"
