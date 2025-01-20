@@ -221,14 +221,13 @@ See [SSL Best Practices][] for a full list of the security changes which will be
 
 ## Next Steps?
 
-1. [Install Application Server][]
+1. [Pre-Installation][]
 
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Architecture" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Create Full DB Backup]: {{< url path="MSDocs.SqlServer.CreateFullDbBackup" >}}
 [IIS URL Rewrite]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
-[Install Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.InstallApplicationServerNew" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
