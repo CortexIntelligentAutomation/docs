@@ -24,7 +24,7 @@
     Unblock-File -Path .\Cortex.Install.Preinstallation.ps1
     ```
 
-1. Run the `Cortex.Install.PreInstallation.ps1` script using the following command, modifying the `ApplicationServers` and the `WebApplicationServer` values to contain the NETBIOS names or fully qualified domain names of the Server:
+1. Run the `Cortex.Install.PreInstallation.ps1` script using the following command, modifying the `ApplicationServers` and the `WebApplicationServer` values to contain the NETBIOS name or fully qualified domain name of the Server:
 
     ```powershell
     .\Cortex.Install.Preinstallation.ps1 -ApplicationServers @("app-server1") -WebApplicationServer "webapp-server"
