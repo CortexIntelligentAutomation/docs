@@ -8,7 +8,7 @@
    * Cortex Innovation {{< version >}} - Licence Fingerprint Generator.zip
    * Cortex Innovation {{< version >}} - Web App Server Install Scripts.zip
 
-    {{% alert title="Note" %}}Only the files for the version to be installed should be in the containing folder. There should not be any other versions of the files in this folder or a subfolder.{{% /alert %}}
+    {{< alert title="Important" color="warning" >}}Only the files for the version to be installed should be in the containing folder. There should not be any other versions of the files in this folder or a subfolder.{{% /alert %}}
 
 1. Extract the `Cortex Innovation {{< version >}} - App Server Install Scripts.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator.

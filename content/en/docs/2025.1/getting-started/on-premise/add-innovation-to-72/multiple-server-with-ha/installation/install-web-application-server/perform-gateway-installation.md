@@ -41,6 +41,8 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} v7.2 installed.{{% /alert %}}
+
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
