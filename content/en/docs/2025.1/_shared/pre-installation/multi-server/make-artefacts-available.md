@@ -18,16 +18,16 @@
     cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
     ```
 
-1. Ensure that the `Cortex.Install.PreInstallation.ps1` script has not been blocked by the operating system by running the following command:
+1. Ensure that the `Cortex.Innovation.Install.PreInstallation.ps1` script has not been blocked by the operating system by running the following command:
 
     ```powershell
-    Unblock-File -Path .\Cortex.Install.Preinstallation.ps1
+    Unblock-File -Path .\Cortex.Innovation.Install.Preinstallation.ps1
     ```
 
-1. Run the `Cortex.Install.PreInstallation.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers, the `WebApplicationServer` value to contain the NETBIOS names or fully qualified domain name of the Web Application Server and the  `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
+1. Run the `Cortex.Innovation.Install.PreInstallation.ps1` script using the following command, modifying the `ApplicationServers` value to contain the NETBIOS names or fully qualified domain names of the Application Servers, the `WebApplicationServer` value to contain the NETBIOS names or fully qualified domain name of the Web Application Server and the  `LoadBalancerServer` value to contain the NETBIOS names or fully qualified domain name of the Load Balancer Server (remove the `LoadBalancerServer` parameter if using an [alternative load balancer][]):
 
     ```powershell
-    .\Cortex.Install.Preinstallation.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -WebApplicationServer "webapp-server" -LoadBalancerServer "lb-server"
+    .\Cortex.Innovation.Install.Preinstallation.ps1 -ApplicationServers @("app-server1", "app-server2", "app-server3") -WebApplicationServer "webapp-server" -LoadBalancerServer "lb-server"
     ```
 
 [alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancerNew" >}}

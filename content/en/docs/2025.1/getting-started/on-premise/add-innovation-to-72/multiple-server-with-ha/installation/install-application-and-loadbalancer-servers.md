@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for adding {{% ctx %}} to 7.2][] have been completed before starting this installation.
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for adding Innovation to 7.2][] have been completed before starting this installation.
 
 ## Install Microsoft .NET Framework 4.7.2
 
@@ -319,7 +319,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirementsNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
-[Pre-Installation steps for adding {{% ctx %}} to 7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.PreInstallation" >}}
+[Pre-Installation steps for adding Innovation to 7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.PreInstallation" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}

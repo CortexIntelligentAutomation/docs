@@ -1,13 +1,13 @@
 ---
 title: "Upgrade v7.2 Gateway to Include Innovation"
 linkTitle: "Upgrade v7.2 Gateway to Include Innovation"
-description: "Information about upgrading a {{% ctx %}} 7.2 Gateway with {{% ctx %}} functionality."
+description: "Information about upgrading v7.2 Gateway with Innovation functionality."
 weight: 40
 ---
 
 # {{< param title >}}
 
-This guide describes how to upgrade Gateway on {{% ctx %}} 7.2 to include {{% ctx %}}. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the {{% ctx %}} 7.2 version of Gateway and its prerequisites have already been installed.
+This guide describes how to upgrade Gateway on v7.2 to include Innovation. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
 
 ## Install Prerequisites
 

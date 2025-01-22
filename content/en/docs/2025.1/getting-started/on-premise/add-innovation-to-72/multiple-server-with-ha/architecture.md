@@ -17,7 +17,7 @@ weight: 10
 
 ## Possible Architectures
 
-{{% ctx %}} and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation and the only component shared by both Innovation and v7.2 is {{% ctx %}} Gateway.
+{{% ctx %}} Innovation and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. Innovation can be added to a v7.2 installation and the only component shared by both Innovation and v7.2 is {{% ctx %}} Gateway.
 
 ### Recommended Architecture
 

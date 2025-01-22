@@ -18,14 +18,14 @@
     cd "C:\Install\Cortex Innovation {{< version >}} - App Server Install Scripts"
     ```
 
-1. Ensure that the `Cortex.Install.PreInstallation.ps1` script has not been blocked by the operating system by running the following command:
+1. Ensure that the `Cortex.Innovation.Install.PreInstallation.ps1` script has not been blocked by the operating system by running the following command:
 
     ```powershell
-    Unblock-File -Path .\Cortex.Install.Preinstallation.ps1
+    Unblock-File -Path .\Cortex.Innovation.Install.Preinstallation.ps1
     ```
 
-1. Run the `Cortex.Install.PreInstallation.ps1` script using the following command, modifying the `ApplicationServers` and the `WebApplicationServer` values to contain the NETBIOS name or fully qualified domain name of the Server:
+1. Run the `Cortex.Innovation.Install.PreInstallation.ps1` script using the following command, modifying the `ApplicationServers` and the `WebApplicationServer` values to contain the NETBIOS name or fully qualified domain name of the Server:
 
     ```powershell
-    .\Cortex.Install.Preinstallation.ps1 -ApplicationServers @("app-server1") -WebApplicationServer "webapp-server"
+    .\Cortex.Innovation.Install.Preinstallation.ps1 -ApplicationServers @("app-server1") -WebApplicationServer "webapp-server"
     ```

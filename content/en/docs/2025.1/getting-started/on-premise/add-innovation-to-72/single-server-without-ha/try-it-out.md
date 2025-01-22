@@ -1,13 +1,13 @@
 ---
 title: "Try it out"
 linkTitle: "Try it out"
-description: "Information about trying out {{% ctx %}} for the first time."
+description: "Information about trying out {{% ctx %}} Innovation for the first time."
 weight: 60
 ---
 
 # {{< param title >}}
 
-This guide describes how to try out a new {{% ctx %}} installation to make sure it is working. Please ensure that the [Gateway Upgrade][] has been completed before taking these steps.
+This guide describes how to try out a new Innovation installation to make sure it is working. Please ensure that the [Gateway Upgrade][] has been completed before taking these steps.
 
 ## Test Debugging Flows
 
@@ -55,7 +55,7 @@ Test the platform by creating a new flow and executing it using the following st
     {{% alert title="Note" %}} If you used self-signed certificates when installing the server you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
 1. The request should return a JSON object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
-1. {{% ctx %}} has now been verified and is ready to use.
+1. {{% ctx %}} Innovation has now been verified and is ready to use.
 
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
 [Troubleshooting Flow Not Starting]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNotStarting" >}}
