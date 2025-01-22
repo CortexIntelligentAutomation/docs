@@ -23,6 +23,6 @@ The following architecture requires 1 server:
 
 ## Next Steps?
 
-1. [Prerequisites][]
+1. [Requirements][]
 
-[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
+[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Requirements" >}}

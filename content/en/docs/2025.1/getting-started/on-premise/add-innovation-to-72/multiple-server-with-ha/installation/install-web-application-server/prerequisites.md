@@ -9,14 +9,6 @@ weight: 10
 
 Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
 
-## Make Installation Artefacts Available
-
-{{% alert title="Note" %}}
-We recommend that the single-node Service Fabric instance, used by {{% ctx %}} Gateway as a Debugger instance, and {{% ctx %}} Gateway are installed on the same Web Application Server.
-{{% /alert %}}
-
-{{< section "/install-web-application-server/make-installation-artefacts-available.md">}}
-
 ## Licensing
 
 {{< section "/install-web-application-server/add-innovation-to-7.2/licensing.md">}}
@@ -51,6 +43,7 @@ The Flow Debugger also requires an X.509 SSL certificate to be installed on the 
 1. [Install Flow Debugger][]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
-[Configure CORTEX Gateway Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
-[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
-[Install Flow Debugger]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.DebuggerInstallation" >}}
+[Configure CORTEX Gateway Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
+[gobetween]: {{< url path="GoBetween.MainDoc" >}}
+[Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServersNew" >}}
+[Install Flow Debugger]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.DebuggerInstallationNew" >}}

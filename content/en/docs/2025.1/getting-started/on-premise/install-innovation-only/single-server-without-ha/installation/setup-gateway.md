@@ -27,7 +27,7 @@ Log on to Gateway and run through the setup wizard:
     * [LDAP Authorisation]
 1. Follow the steps in the setup wizard to configure the relevant areas:
 
-    ### Account Details
+   ### Account Details
 
     1. Click `Next Step`:
     {{< figure class="centre" src="/images/Gateway Setup1.png" title="Initial Setup Screen" >}}
@@ -36,7 +36,7 @@ Log on to Gateway and run through the setup wizard:
     1. Change the Administrator password to a unique, secret password and click `Next Step`:
     {{< figure class="centre" src="/images/Gateway Setup3.png" title="Change Password Screen" >}}
 
-    ### LDAP Connection
+   ### LDAP Connection
 
     1. Enter the details of your Active Directory server and provide a Username and Password for a user with read access to it:
 
@@ -51,7 +51,7 @@ Log on to Gateway and run through the setup wizard:
 
     {{< figure class="centre" src="/images/Gateway Setup4.png" title="LDAP Connection Screen" >}}
 
-    ### LDAP Authorisation
+   ### LDAP Authorisation
 
     1. If the authorisation grid fails to load first time round, click `Retry`.
     1. Assign access permissions to Active Directory groups:
@@ -79,6 +79,6 @@ Log on to Gateway and run through the setup wizard:
 [Account Details]: {{< ref "#account-details" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
-[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServer" >}}
-[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirements" >}}
+[Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServerNew" >}}
+[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirementsNew" >}}
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOut" >}}

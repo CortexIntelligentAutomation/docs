@@ -25,6 +25,6 @@ The minimum architecture for adding Innovation to a v7.2 Single Site, Single Ser
 
 ## Next Steps?
 
-1. [Prerequisites][]
+1. [Requirements][]
 
-[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Prerequisites" >}}
+[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.Requirements" >}}

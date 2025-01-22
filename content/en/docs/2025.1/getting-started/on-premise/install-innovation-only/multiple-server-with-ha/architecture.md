@@ -25,6 +25,6 @@ The following architecture requires 5 servers:
 
 ## Next Steps?
 
-1. [Prerequisites][]
+1. [Requirements][]
 
-[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Prerequisites" >}}
+[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Requirements" >}}

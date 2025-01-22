@@ -34,8 +34,8 @@ The recommended architecture for adding Innovation to a v7.2 Dual Site, Dual Ser
 
 ## Next Steps?
 
-1. [Prerequisites][]
+1. [Requirements][]
 
-[Hardware Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.HardwareRequirements" >}}
-[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Prerequisites" >}}
+[Hardware Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.HardwareRequirementsNew" >}}
 [Recommended]: {{< ref "#recommended-architecture" >}}
+[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Requirements" >}}
