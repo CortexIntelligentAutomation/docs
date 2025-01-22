@@ -1,7 +1,7 @@
 ---
 title: "Install Innovation Only"
 linkTitle: "Install Innovation Only"
-description: "Information about installing a {{% ctx %}} platform."
+description: "Information about installing a {{% ctx %}} Innovation platform."
 weight: 10
 ---
 
