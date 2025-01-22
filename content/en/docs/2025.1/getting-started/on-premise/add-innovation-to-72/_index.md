@@ -1,6 +1,6 @@
 ---
-title: "Add CORTEX to a 7.2 Installation"
-linkTitle: "Add CORTEX to a 7.2 Installation"
+title: "Add Innovation to a 7.2 Installation"
+linkTitle: "Add Innovation to a 7.2 Installation"
 description: "Information about adding {{% ctx %}} Innovation to an existing {{% ctx %}} 7.2 platform."
 weight: 20
 ---
