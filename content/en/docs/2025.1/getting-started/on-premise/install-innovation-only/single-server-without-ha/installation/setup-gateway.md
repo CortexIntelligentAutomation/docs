@@ -27,7 +27,7 @@ Log on to Gateway and run through the setup wizard:
     * [LDAP Authorisation]
 1. Follow the steps in the setup wizard to configure the relevant areas:
 
-    ### Account Details
+   ### Account Details
 
     1. Click `Next Step`:
     {{< figure class="centre" src="/images/Gateway Setup1.png" title="Initial Setup Screen" >}}
@@ -36,7 +36,7 @@ Log on to Gateway and run through the setup wizard:
     1. Change the Administrator password to a unique, secret password and click `Next Step`:
     {{< figure class="centre" src="/images/Gateway Setup3.png" title="Change Password Screen" >}}
 
-    ### LDAP Connection
+   ### LDAP Connection
 
     1. Enter the details of your Active Directory server and provide a Username and Password for a user with read access to it:
 
@@ -57,7 +57,7 @@ Log on to Gateway and run through the setup wizard:
     1. Assign access permissions to Active Directory groups:
 
         To allow users to access the various roles within Gateway, it is first necessary to assign them the appropriate access rights.
-        Gateway currently supports four roles, but only two are relevant for {{% ctx %}}:
+        Gateway currently supports four roles, but only two are relevant for {{% ctx %}} Innovation:
 
         * Admin
         * Studio

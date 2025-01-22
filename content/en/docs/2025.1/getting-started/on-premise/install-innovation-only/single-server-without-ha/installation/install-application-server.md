@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to install the Application Server components on the server. Please ensure that the [Pre-Installation steps for installing {{% ctx %}}][] have been completed before starting this installation.
+This guide describes how to install the Application Server components on the server. Please ensure that the [Pre-Installation steps for installing {{% ctx %}} Innovation][] have been completed before starting this installation.
 
 ## Install Microsoft .NET Framework 4.7.2
 
@@ -57,5 +57,5 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusionsNew" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServerNew" >}}
-[Pre-Installation steps for installing {{% ctx %}}]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.PreInstallation" >}}
+[Pre-Installation steps for installing {{% ctx %}} Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.PreInstallation" >}}
 [Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Requirements" >}}

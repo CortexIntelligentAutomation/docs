@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to perform the steps required before starting the installation of {{% ctx %}}. Please ensure that the [Requirements][] have been read and met before starting this installation.
+This guide describes how to perform the steps required before starting the installation of {{% ctx %}} Innovation. Please ensure that the [Requirements][] have been read and met before starting this installation.
 
 ## Make Installation Artefacts Available
 
@@ -15,7 +15,7 @@ This guide describes how to perform the steps required before starting the insta
 
 ## Obtain a {{% ctx %}} licence file
 
-A valid {{% ctx %}} licence file and {{% ctx %}} feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
+A valid {{% ctx %}} licence file and {{% ctx %}} Innovation feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the server and it should contain that server's fingerprint.
 
 To get a licence file and feature identifier take the following steps:
 
@@ -26,7 +26,7 @@ To get a licence file and feature identifier take the following steps:
     MachineID: 
     Fingerprint: 
 
-    Please also include a suitable {{% ctx %}} feature identifier.
+    Please also include a suitable {{% ctx %}} Innovation feature identifier.
     ```
 
 1. In a File Explorer, navigate to the Fingerprint generation folder inside the install file location, e.g. `C:\Install\Cortex Innovation {{< version >}} - Licence Fingerprint Generator Extract`.
