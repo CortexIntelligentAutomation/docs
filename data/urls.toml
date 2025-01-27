@@ -668,6 +668,26 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-web-application-server"
+            [Cortex.Guides.UpgradeCortex.2024.11to2025.1]
+                MainDoc = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/"
+                [Cortex.Guides.UpgradeCortex.2024.11to2025.1.Advanced]
+                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
+                [Cortex.Guides.UpgradeCortex.2024.11to2025.1.MultipleServerWithHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/"
+                    PreUpgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/pre-upgrade"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/try-it-out"
+                    Upgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade"
+                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeCortex.2024.11to2025.1.SingleServerWithoutHA]
+                    MainDoc = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/"
+                    PreUpgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/pre-upgrade"
+                    TryItOut = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/try-it-out"
+                    Upgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade"
+                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-application-server"
+                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-web-application-server"
         [Cortex.Guides.UpgradeObservability]
             MainDoc = "/docs/guides/upgrade-observability/"
             [Cortex.Guides.UpgradeObservability.OnPremise]
