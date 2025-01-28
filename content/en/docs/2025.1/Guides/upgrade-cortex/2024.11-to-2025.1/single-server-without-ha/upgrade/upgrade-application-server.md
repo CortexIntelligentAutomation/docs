@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Server components on the server from 2024.11 to 2025.1.
+This guide describes how to upgrade the Application Server components on the server from 2024.11 to 2025.1. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 
@@ -29,5 +29,5 @@ This guide describes how to upgrade the Application Server components on the ser
 
 1. [Upgrade Web Application Server][]
 
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeCortex.2024.11to2025.1.SingleServerWithoutHA.PreUpgrade" >}}
 [Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024.11to2025.1.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
-
