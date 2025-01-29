@@ -1,5 +1,3 @@
-## Test Debugging Flows
-
 Test the platform by creating a new flow and executing it using the following steps:
 
 1. Click on the `Dev` charm, then the `+` button and click `Group` to open a dialog.
@@ -20,12 +18,5 @@ Test the platform by creating a new flow and executing it using the following st
 1. The `Result` variable displayed in the Variables Viewer (right panel) should show the current time.
 1. Continue or stop the execution.
 1. Commit the flow.
-
-## Test Publishing Production Flows
-
-1. Log in to Gateway with a user that has the `Admin` role.
-1. Click on the `Admin` charm, then `Packages`.
-1. Click `Add Package Definition`. Enter a package name and select the new flow to add to the package. Click `Save` to save the new package.
-1. Click `Publish`. A success message should appear. If it doesn't it means that there is a problem with the configuration in the `web.config` file for {{% ctx %}} Gateway, or the Application Services aren't healthy. See [Troubleshooting][] for more information.
 
 [Troubleshooting]: {{< url path="Cortex.Reference.Troubleshooting.Upgrade.TroubleshootingDuringUpgrade" >}}
