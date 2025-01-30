@@ -1,1 +1,0 @@
-Application Service that handles publishing and unpublishing packages. It also stores package configuration.

@@ -1,1 +1,0 @@
-Web portal for monitoring and managing the Service Fabric instance that automation solutions are deployed to.

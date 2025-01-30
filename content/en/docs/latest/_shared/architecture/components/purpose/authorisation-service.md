@@ -1,1 +1,0 @@
-Application Service that authorises users to send API requests.

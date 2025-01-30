@@ -1,1 +1,0 @@
-Erlang run-time required by the RabbitMQ message broker.

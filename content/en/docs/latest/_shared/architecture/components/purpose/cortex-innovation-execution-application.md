@@ -1,1 +1,0 @@
-The Service Fabric application that is hosting the services executing {{% ctx %}} Innovation automation flows.

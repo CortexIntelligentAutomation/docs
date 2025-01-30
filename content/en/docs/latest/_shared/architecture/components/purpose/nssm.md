@@ -1,1 +1,0 @@
-Windows Service Manager that hosts the gobetween load balancer application as a Windows Service.

@@ -1,1 +1,0 @@
-Application Service that stores and manages concurrent access to resources used by executions within the Innovation platform.
