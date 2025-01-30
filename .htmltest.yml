@@ -25,6 +25,7 @@ IgnoreURLs:
 - "https://blogs.oracle.com/.*"
 - "https://jsonformatter.org/.*"
 - "https://www.newtonsoft.com/.*"
+- "https://.*/gov.uk/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
