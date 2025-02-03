@@ -1,0 +1,16 @@
+name: Run HTML Tests
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["test-createLatest"]
+jobs:
+  htmltest:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.110.0
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Update Latest Content
+        run: |
+          ..\..\createLatest.ps1
