@@ -2,9 +2,9 @@
 {{- $versionPath := "" }}
 {{- /* Get the current version, and whether the website is currently nested (has /docs prepended). */}}
 {{- $isNested := false }}
-{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer := index (findRE `^\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
 {{- if (not $currentVer) }}
-	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
 	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
 	{{- if (or $currentVer (index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0)) }}
 		{{- $isNested = true }}
@@ -16,6 +16,8 @@
     {{ range where .Site.Params.versions "url" $version }}
         {{ $versionPath = .version }}
     {{ end }}
+{{- else if eq $currentVer "/docs/latest/" }}
+    {{ $versionPath = "latest" }}
 {{- else if $currentVer }}
     {{ range where .Site.Params.versions "url" $currentVer }}
         {{ $versionPath = .version }}
