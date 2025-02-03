@@ -1,4 +1,4 @@
-name: Run HTML Tests
+name: Update Latest URL content
 on:
   # Runs on pushes targeting the default branch
   push:
