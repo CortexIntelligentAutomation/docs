@@ -20,7 +20,7 @@ jobs:
           submodules: recursive
       - name: Update Latest URL content
         shell: pwsh
-        pwshrun: |
+        run: |
           .\createLatest.ps1        
       - name: npm install
         working-directory: ./
