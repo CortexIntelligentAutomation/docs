@@ -13,7 +13,7 @@ if (Test-Path ".\content\en\docs\$latestName"){
 # Create new latest docs folder
 New-Item -ItemType Directory -Path ".\content\en\docs\$latestName\" -Force
 # Copy contents of latest XXXX.X version into latest folder
-Copy-Item -Path ".\content\en\docs\$Version\*" -Destination ".\content\en\docs\$latestName\" -Recurse -Force
+Copy-Item -Path ".\content\en\docs\$Version\*" -Destination ".\content\en\docs\$latestName\" -Recurse -Force -Verbose
 # Replace the title name for the folder to be latest
 (Get-Content .\content\en\docs\latest\_index.md) -replace $Version, "Latest" | Set-Content .\content\en\docs\latest\_index.md
 
@@ -24,4 +24,4 @@ if (Test-Path ".\content\static\$latestName"){
 # Create new latest static folder
 New-Item -ItemType Directory -Path ".\content\static\$latestName\" -Force
 # Copy contents of latest XXXX.X version into latest folder
-Copy-Item -Path ".\content\static\$Version\*" -Destination ".\content\static\$latestName\" -Recurse -Force
+Copy-Item -Path ".\content\static\$Version\*" -Destination ".\content\static\$latestName\" -Recurse -Force -Verbose
