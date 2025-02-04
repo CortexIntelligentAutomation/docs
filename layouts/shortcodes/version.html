@@ -4,9 +4,9 @@
 */}}
 {{- /* Get the current version, setting to latest if not in a versioned page. */}}
 {{- $isNested := false }}
-{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer := index (findRE `^\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
 {{- if (not $currentVer) }}
-	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
 	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
 	{{- if (not $currentVer) }}
         {{ range where .Site.Params.versions "latest" true }}

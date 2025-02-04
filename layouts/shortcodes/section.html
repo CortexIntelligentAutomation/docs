@@ -4,9 +4,9 @@
 */}}
 {{ $filePath := .Get 0 }}
 {{- /* Get the current version. */}}
-{{- $currentVer := index (findRE `^\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+{{- $currentVer := index (findRE `^\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
 {{- if (not $currentVer) }}
-	{{- $currentVer = index (findRE `^\/docs\/docs\/[0-9\.]*\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
 	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
 {{- end }}
 {{ $page := .Site.GetPage (printf "%s%s%s" $currentVer "_shared" $filePath) }}
