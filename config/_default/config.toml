@@ -208,59 +208,71 @@ enable = true
 	version = "2024.11"
 	url = "/docs/2024.11/"
 	dotNetVersion = "net-8.0"
+	inSupport = true
 	latest = true
 
 [[params.versions]]
 	version = "2024.9"
 	url = "/docs/2024.9/"
 	dotNetVersion = "net-8.0"
+	inSupport = true
 
 [[params.versions]]
 	version = "2024.7"
 	url = "/docs/2024.7/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2024.5"
 	url = "/docs/2024.5/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2024.3"
 	url = "/docs/2024.3/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2024.1"
 	url = "/docs/2024.1/"
 	dotNetVersion = "net-6.0"
+	inSupport = true
 
 [[params.versions]]
 	version = "2023.11"
 	url = "/docs/2023.11/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2023.9"
 	url = "/docs/2023.9/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2023.7"
 	url = "/docs/2023.7/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2023.5"
 	url = "/docs/2023.5/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2023.3"
 	url = "/docs/2023.3/"
 	dotNetVersion = "net-6.0"
+	inSupport = false
 
 [[params.versions]]
 	version = "2022.9"
 	url = "/docs/2022.9/"
 	dotNetVersion = "netcore-3.1"
+	inSupport = false
