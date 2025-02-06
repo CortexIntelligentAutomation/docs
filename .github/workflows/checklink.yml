@@ -32,7 +32,7 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: hugo --environment GitHubPages -d $GITHUB_WORKSPACE/dist
+        run: hugo --environment GitHubPages -d $GITHUB_WORKSPACE/dist --buildFuture
       - name: Test HTML
         uses: wjdp/htmltest-action@master
         with:
