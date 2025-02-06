@@ -20,15 +20,10 @@ On one of the Application Servers or on the Web Application Server:
 1. A message similar to the following will indicate that the application has completed successfully:
 
     ```text
-    app-server1: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on app-server1
-    app-server2: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on app-server2
-    app-server3: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on app-server3
-    lb-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on lb-server
-    webapp-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
     Encryption key set on webapp-server
     Encryption Key: 284BADF55BDDC93A47D7DE8FC2C4DC9B
     ```
