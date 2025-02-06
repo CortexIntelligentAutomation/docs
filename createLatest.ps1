@@ -1,7 +1,7 @@
 $Path = ".\config\_default\config.toml"
 $latestName = "latest"
 
-$LatestVersion = (Select-String -Path $Path -Pattern "latest = true" -Context 3, 0) -split "`"" 
+$LatestVersion = (Select-String -Path $Path -Pattern "latest = true" -Context 4, 0) -split "`"" 
 
 # Use $LatestVersion[1] as we know that the version is the first line returned and splitting on " makes it the 2nd index
 $Version = $LatestVersion[1]
