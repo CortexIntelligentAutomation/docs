@@ -14,11 +14,11 @@
 	{{- end }}
 {{- end }}
 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-proofer-ignore>
-	{{- range where (where .Site.Params.versions "url" $currentVer) ".Site.Params.versions" "inSupport" true -}}
-		{{ $versionName := .version }}
-		{{- if .latest }}
-			{{- $versionName = printf "%s (%s)" .version "Latest" }}
-		{{- end }}
+	{{- range where .Site.Params.versions "url" $currentVer -}}
+        {{ $versionName := .version }}
+        {{- if .latest }}
+        	{{- $versionName = printf "%s (%s)" .version "Latest" }}
+        {{- end }}
 		{{- $versionName }}
 	{{- else -}}
 		{{- $isRoot = true }}
