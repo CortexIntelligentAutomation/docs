@@ -1,4 +1,6 @@
-importScripts('https://unpkg.com/lunr@2.3.8/lunr.min.js');
+if (typeof importScripts === 'function') {
+    importScripts('https://unpkg.com/lunr@2.3.8/lunr.min.js');
+}
 
 let idx;
 const resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
@@ -53,10 +55,10 @@ self.onmessage = async function (event) {
 
             const docs = new Map();
             results.forEach((result) => {
-                if  (resultDetails.get(result.ref) === undefined) {
+                if (resultDetails.get(result.ref) === undefined) {
                     return;
                 }
-                
+
                 docs.set(result.ref, resultDetails.get(result.ref));
             });
 
