@@ -27,6 +27,7 @@ IgnoreURLs:
 - "https://www.newtonsoft.com/.*"
 - "https://.*.gov.uk/.*"
 - "https://www.elastic.co/.*"
+- "https://www.connectionstrings.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
