@@ -4,6 +4,8 @@ public/
 resources/
 node_modules/
 tech-doc-hugo
+content/en/docs/latest/
+content/static/latest/
 content/static/**/*.dtmp
 content/static/**/*.bkp
 content/static/**/*.crswap
