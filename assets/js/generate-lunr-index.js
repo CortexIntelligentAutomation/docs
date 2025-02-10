@@ -1,7 +1,10 @@
 const fs = require('fs');
 const lunr = require('lunr');
 
-const data = JSON.parse(fs.readFileSync('./docs/offline-search-index.json'));
+const args = process.argv.slice(2);
+const destination = args[0] ?? ".";
+
+const data = JSON.parse(fs.readFileSync(`${destination}/docs/offline-search-index.json`));
 
 const idx = lunr(function () {
     this.ref('ref');
@@ -21,4 +24,10 @@ const idx = lunr(function () {
     });
 });
 
-fs.writeFileSync('./assets/json/lunr-index.json', JSON.stringify(idx));
+fs.writeFileSync(`${destination}/assets/json/lunr-index.json`, JSON.stringify(idx));
+
+// check if file got created
+if (!fs.existsSync(`${destination}/assets/json/lunr-index.json`)) {
+    console.error('Failed to create lunr index');
+    process.exit(1);
+}
