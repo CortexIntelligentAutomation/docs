@@ -1,4 +1,3 @@
-{{- $lunrIndex := resources.Get "json/lunr-index.json" }}
 {{ if or .Site.Params.gcs_engine_id .Site.Params.algolia_docsearch }}
   <input type="search" class="form-control td-search-input" placeholder="&#xf002 {{ T "ui_search" }}" aria-label="{{ T "ui_search" }}" autocomplete="off">
 {{ else if .Site.Params.offlineSearch }}
@@ -23,7 +22,6 @@
     */}}
     data-search-path="{{ $path }}"
     data-offline-search-index-json-src="{{ $offlineSearchIndexFingerprint.RelPermalink }}"
-    data-lunr-index-json-src="{{ $lunrIndex.RelPermalink }}"
     data-offline-search-base-href="/"
     data-offline-search-max-results="{{ .Site.Params.offlineSearchMaxResults | default 10 }}"
   >
