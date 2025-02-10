@@ -1,3 +1,5 @@
+docs/
+!docs/CNAME
 public/
 resources/
 node_modules/
