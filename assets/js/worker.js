@@ -1,17 +1,27 @@
 importScripts('https://unpkg.com/lunr@2.3.8/lunr.min.js');
 
 let idx;
+const resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
 let indexReadyPromise;
 
 // Initialize the index
-self.onmessage = async function(event) {
+self.onmessage = async function (event) {
     if (event.data.type === 'init') {
         indexReadyPromise = new Promise(async (resolve, reject) => {
             try {
-                console.log(event.data);
-                const response = await fetch(event.data.url);
-                const data = await response.json();
-                idx = lunr.Index.load(data);
+                const rawIndex = await fetch(event.data.rawIndexUrl);
+                let json = await rawIndex.json();
+                json.forEach((doc) => {
+                    resultDetails.set(doc.ref, {
+                        version: doc.version,
+                        title: doc.title,
+                        excerpt: doc.excerpt,
+                    });
+                });
+
+                const lunrIndex = await fetch(event.data.lunrIndexUrl);
+                json = await lunrIndex.json();
+                idx = lunr.Index.load(json);
                 resolve();
                 self.postMessage({ type: 'init', status: 'success' });
             } catch (error) {
@@ -41,7 +51,16 @@ self.onmessage = async function(event) {
                 })
                 .slice(0, event.data.maxResults);
 
-            self.postMessage({ type: 'search', results: results });
+            const docs = new Map();
+            results.forEach((result) => {
+                if  (resultDetails.get(result.ref) === undefined) {
+                    return;
+                }
+                
+                docs.set(result.ref, resultDetails.get(result.ref));
+            });
+
+            self.postMessage({ type: 'search', status: 'success', docs: docs });
         } catch (error) {
             self.postMessage({ type: 'search', status: 'error', message: 'Index not ready' });
         }

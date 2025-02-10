@@ -30,31 +30,22 @@
             worker = new Worker('/js/worker.js');
             const url = '/json/lunr-index.json';
 
-            worker.postMessage({ type: 'init', url: url });
+            worker.postMessage({ 
+                type: 'init', 
+                lunrIndexUrl: url, 
+                rawIndexUrl: $searchInput.data('offline-search-index-json-src') 
+            });
 
             worker.onerror = function (error) {
                 console.error('Error in worker:', error);
             };
         }
-        
-        $.ajax($searchInput.data('offline-search-index-json-src')).then(
-            (data) => {
-                data.forEach((doc) => {
-                    resultDetails.set(doc.ref, {
-                        version: doc.version,
-                        title: doc.title,
-                        excerpt: doc.excerpt,
-                    });
-                });
-            }
-        );
 
         let currentTarget = null;
 
         worker.onmessage = function (event) {
             if (event.data.type === 'search') {
-                const results = event.data.results
-                console.log('Search results:', results);
+                const docs = event.data.docs;
                 const $html = $('<div>');
 
                 $html.append(
@@ -87,17 +78,19 @@
                 });
                 $html.append($searchResultBody);
 
-                if (results.length === 0) {
+                if (docs.size === 0) {
                     currentTarget.append(
                         $('<p>').text(`No results found for query "${searchQuery}"`)
                     );
                 } else {
-                    results.forEach((r) => {
-                        const doc = resultDetails.get(r.ref);
+                    docs.forEach((doc, key) => {
+                        if (doc === undefined) {
+                            return;
+                        }
 
                         const href =
                             $searchInput.data('offline-search-base-href') +
-                            r.ref.replace(/^\//, '');
+                            key.replace(/^\//, '');
 
                         const $entry = $('<div>').addClass('mt-4').addClass('search-result');
 
@@ -112,7 +105,7 @@
                         );
 
                         $entry.append(
-                            $('<small>').addClass('d-block text-muted').text(r.ref)
+                            $('<small>').addClass('d-block text-muted').text(key)
                         );
 
                         $entry.append($('<p>').text(doc.excerpt));
@@ -150,36 +143,6 @@
             }
 
             worker.postMessage({ type: 'search', query: searchQuery, maxResults: $targetSearchInput.data('offline-search-max-results') });
-
-            // const results = idx
-            //     .query((q) => {
-            //         const tokens = lunr.tokenizer(searchQuery.toLowerCase());
-            //         tokens.forEach((token) => {
-            //             const queryString = token.toString();
-            //             q.term(queryString, {
-            //                 boost: 100,
-            //             });
-            //             q.term(queryString, {
-            //                 wildcard:
-            //                     lunr.Query.wildcard.LEADING |
-            //                     lunr.Query.wildcard.TRAILING,
-            //                 boost: 10,
-            //             });
-            //             q.term(queryString, {
-            //                 editDistance: 2,
-            //             });
-            //         });
-            //     })
-            //     .slice(
-            //         0,
-            //         $targetSearchInput.data('offline-search-max-results')
-            //     );
-
-            //
-            // Make result html
-            //
-
-
         };
 
         //
