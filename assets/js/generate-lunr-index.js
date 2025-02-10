@@ -1,7 +1,7 @@
 const fs = require('fs');
 const lunr = require('lunr');
 
-const data = JSON.parse(fs.readFileSync('docs/offline-search-index.json'));
+const data = JSON.parse(fs.readFileSync('./docs/offline-search-index.json'));
 
 const idx = lunr(function () {
     this.ref('ref');
@@ -21,4 +21,4 @@ const idx = lunr(function () {
     });
 });
 
-fs.writeFileSync('assets/json/lunr-index.json', JSON.stringify(idx));
+fs.writeFileSync('./assets/json/lunr-index.json', JSON.stringify(idx));
