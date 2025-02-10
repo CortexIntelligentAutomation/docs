@@ -65,7 +65,7 @@ jobs:
           hugo --environment GitHubPages
       - name: Generate Search index
         run: |
-          node .\assets\js\generate-lunr-index.js
+          node ./assets/js/generate-lunr-index.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
