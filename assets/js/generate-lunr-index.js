@@ -2,9 +2,11 @@ const fs = require('fs');
 const lunr = require('lunr');
 
 const args = process.argv.slice(2);
-const destination = args[0] ?? ".";
+const destination = args[0] === undefined
+    ? "./docs"
+    : args[0];
 
-const data = JSON.parse(fs.readFileSync(`${destination}/docs/offline-search-index.json`));
+const data = JSON.parse(fs.readFileSync(`${destination}/offline-search-index.json`));
 
 const idx = lunr(function () {
     this.ref('ref');
@@ -14,7 +16,7 @@ const idx = lunr(function () {
     this.field('description', { boost: 2 });
     this.field('body');
 
-    data.forEach((doc) => {let docToAdd;
+    data.forEach((doc) => {
         if (doc
             && doc.ref !== undefined
             && !doc.ref.includes('/_shared/')
@@ -24,10 +26,10 @@ const idx = lunr(function () {
     });
 });
 
-fs.writeFileSync(`${destination}/assets/json/lunr-index.json`, JSON.stringify(idx));
+fs.writeFileSync(`${destination}/lunr-index.json`, JSON.stringify(idx));
 
 // check if file got created
-if (!fs.existsSync(`${destination}/assets/json/lunr-index.json`)) {
+if (!fs.existsSync(`${destination}/lunr-index.json`)) {
     console.error('Failed to create lunr index');
     process.exit(1);
 }

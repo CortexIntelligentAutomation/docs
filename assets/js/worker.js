@@ -3,22 +3,29 @@ if (typeof importScripts === 'function') {
 }
 
 let idx;
+const versionRegex = new RegExp("^\/docs\/([0-9\.]*|latest)\/");
 const resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
 let indexReadyPromise;
 
 // Initialize the index
 self.onmessage = async function (event) {
     if (event.data.type === 'init') {
+        const regexResults = versionRegex.exec(event.data.currentPath);
+        const version = regexResults
+            ? regexResults[1]
+            : undefined;
         indexReadyPromise = new Promise(async (resolve, reject) => {
             try {
                 const rawIndex = await fetch(event.data.rawIndexUrl);
                 let json = await rawIndex.json();
                 json.forEach((doc) => {
-                    resultDetails.set(doc.ref, {
-                        version: doc.version,
-                        title: doc.title,
-                        excerpt: doc.excerpt,
-                    });
+                    if (version === undefined || doc.ref.startsWith(version)) {
+                        resultDetails.set(doc.ref, {
+                            version: doc.version,
+                            title: doc.title,
+                            excerpt: doc.excerpt,
+                        });
+                    }
                 });
 
                 const lunrIndex = await fetch(event.data.lunrIndexUrl);
@@ -51,6 +58,7 @@ self.onmessage = async function (event) {
                         });
                     });
                 })
+                .filter((result) => resultDetails.has(result.ref))
                 .slice(0, event.data.maxResults);
 
             const docs = new Map();

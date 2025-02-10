@@ -28,12 +28,13 @@
 
         if (window.Worker) {
             worker = new Worker('/js/worker.js');
-            const url = '/json/lunr-index.json';
+            const url = '/lunr-index.json';
 
-            worker.postMessage({ 
-                type: 'init', 
-                lunrIndexUrl: url, 
-                rawIndexUrl: $searchInput.data('offline-search-index-json-src') 
+            worker.postMessage({
+                type: 'init',
+                currentPath: window.location.pathname,
+                lunrIndexUrl: url,
+                rawIndexUrl: $searchInput.data('offline-search-index-json-src')
             });
 
             worker.onerror = function (error) {
@@ -142,7 +143,11 @@
                 return;
             }
 
-            worker.postMessage({ type: 'search', query: searchQuery, maxResults: $targetSearchInput.data('offline-search-max-results') });
+            worker.postMessage({
+                type: 'search',
+                query: searchQuery,
+                maxResults: $targetSearchInput.data('offline-search-max-results')
+            });
         };
 
         //
