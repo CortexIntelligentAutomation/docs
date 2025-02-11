@@ -1,6 +1,13 @@
 const fs = require('fs');
 const lunr = require('lunr');
 
+/**
+ * This script is used to generate a lunr index from the offline-search-index.json file.
+ * Hugo must be built before running this script, as jt requires the offline-search-index.json file to have been generated.
+ * 
+ * The script will output a lunr-index.json file in the content/static directory and the docs directory.
+ */
+
 const args = process.argv.slice(2);
 
 // Arguments should only be provided from a pipeline build.

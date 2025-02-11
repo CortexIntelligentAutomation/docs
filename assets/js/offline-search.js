@@ -1,14 +1,16 @@
-// Adapted from code by Matt Walters https://www.mattwalters.net/posts/hugo-and-lunr/
+
+/**
+ * This script is used for the offline search feature.
+ * It calls the worker.js to generate the index and search the index.
+ * 
+ * Adapted from code by Matt Walters https://www.mattwalters.net/posts/hugo-and-lunr/
+ */
 
 (function ($) {
     'use strict';
 
     $(document).ready(function () {
         const $searchInput = $('.td-search-input');
-
-        //
-        // Options for popover
-        //
 
         $searchInput.data('html', true);
         $searchInput.data('placement', 'bottom');
@@ -17,14 +19,7 @@
             '<div class="popover offline-search-result" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         );
 
-        //
-        // Lunr
-        //
-
-        let idx = null; // Lunr index
-        const resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
         let worker = null;
-
 
         if (window.Worker) {
             worker = new Worker('/js/worker.js');
@@ -128,14 +123,8 @@
         }
 
         const render = ($targetSearchInput) => {
-            // Dispose the previous result
             $targetSearchInput.popover('dispose');
             currentTarget = $targetSearchInput;
-
-            //
-            // Search
-            //
-
 
             const searchQuery = $targetSearchInput.val();
             if (searchQuery === '') {
@@ -150,10 +139,7 @@
             });
         };
 
-        //
-        // Register handler
-        //
-
+        // Renders the search results when the input changes.
         $searchInput.on('change', (event) => {
             render($(event.target));
 

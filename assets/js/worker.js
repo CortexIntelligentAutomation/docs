@@ -1,15 +1,24 @@
+/**
+ * This worker is responsible for loading the lunr index, searching the index and returning the results.
+ * 
+ * It has 2 action types, 'init' and 'search'.
+ * 
+ * 'init' action is used to load the lunr index and the raw index data.
+ * 'search' action is used to search the lunr index with the provided query.
+ */
+
 if (typeof importScripts === 'function') {
     importScripts('https://unpkg.com/lunr@2.3.8/lunr.min.js');
 }
 
 let idx;
 const versionRegex = new RegExp("^\/docs\/([0-9\.]*|latest)\/");
-const resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
+const resultDetails = new Map();
 let indexReadyPromise;
 
-// Initialize the index
 self.onmessage = async function (event) {
     if (event.data.type === 'init') {
+        // Initialize the lunr index and the raw index data.
         indexReadyPromise = new Promise(async (resolve, reject) => {
             try {
                 const rawIndex = await fetch(event.data.rawIndexUrl);
@@ -33,6 +42,7 @@ self.onmessage = async function (event) {
             }
         });
     } else if (event.data.type === 'search') {
+        // Search the lunr index with the provided query.
         try {
             await indexReadyPromise;
             const regexResults = versionRegex.exec(event.data.currentPath);
