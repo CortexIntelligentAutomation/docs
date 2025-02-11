@@ -37,6 +37,9 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: hugo --environment GitHubPages -d $GITHUB_WORKSPACE/dist --buildFuture
+      - name: Generate Search index
+        run: |
+          node ./assets/js/generate-lunr-index.js $GITHUB_WORKSPACE/dist
       - name: Test HTML
         uses: wjdp/htmltest-action@master
         with:
