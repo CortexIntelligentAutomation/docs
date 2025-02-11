@@ -10,22 +10,16 @@ let indexReadyPromise;
 // Initialize the index
 self.onmessage = async function (event) {
     if (event.data.type === 'init') {
-        const regexResults = versionRegex.exec(event.data.currentPath);
-        const version = regexResults
-            ? regexResults[1]
-            : undefined;
         indexReadyPromise = new Promise(async (resolve, reject) => {
             try {
                 const rawIndex = await fetch(event.data.rawIndexUrl);
                 let json = await rawIndex.json();
                 json.forEach((doc) => {
-                    if (version === undefined || doc.ref.startsWith(version)) {
-                        resultDetails.set(doc.ref, {
-                            version: doc.version,
-                            title: doc.title,
-                            excerpt: doc.excerpt,
-                        });
-                    }
+                    resultDetails.set(doc.ref, {
+                        version: doc.version,
+                        title: doc.title,
+                        excerpt: doc.excerpt,
+                    });
                 });
 
                 const lunrIndex = await fetch(event.data.lunrIndexUrl);
@@ -41,6 +35,11 @@ self.onmessage = async function (event) {
     } else if (event.data.type === 'search') {
         try {
             await indexReadyPromise;
+            const regexResults = versionRegex.exec(event.data.currentPath);
+            const version = regexResults
+                ? regexResults[0]
+                : undefined;
+
             const results = idx
                 .query((q) => {
                     const tokens = lunr.tokenizer(event.data.query.toLowerCase());
@@ -57,20 +56,32 @@ self.onmessage = async function (event) {
                             editDistance: 2,
                         });
                     });
-                })
-                .filter((result) => resultDetails.has(result.ref))
-                .slice(0, event.data.maxResults);
+                });
 
             const docs = new Map();
-            results.forEach((result) => {
-                if (resultDetails.get(result.ref) === undefined) {
-                    return;
+            let count = 0;
+
+            for (const result of results) {
+                if (count >= event.data.maxResults) {
+                    break;
                 }
 
-                docs.set(result.ref, resultDetails.get(result.ref));
-            });
+                if (resultDetails.get(result.ref) === undefined) {
+                    continue;
+                }
 
-            self.postMessage({ type: 'search', status: 'success', docs: docs });
+                if (version === undefined) {
+                    docs.set(result.ref, resultDetails.get(result.ref));
+                } else if (result.ref.startsWith(version)) {
+                    docs.set(result.ref, resultDetails.get(result.ref));
+                } else {
+                    continue;
+                }
+
+                count++;
+            }
+
+            self.postMessage({ type: 'search', status: 'success', query: event.data.query , docs: docs });
         } catch (error) {
             self.postMessage({ type: 'search', status: 'error', message: 'Index not ready' });
         }

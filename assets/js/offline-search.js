@@ -32,7 +32,6 @@
 
             worker.postMessage({
                 type: 'init',
-                currentPath: window.location.pathname,
                 lunrIndexUrl: url,
                 rawIndexUrl: $searchInput.data('offline-search-index-json-src')
             });
@@ -79,9 +78,9 @@
                 });
                 $html.append($searchResultBody);
 
-                if (docs.size === 0) {
-                    currentTarget.append(
-                        $('<p>').text(`No results found for query "${searchQuery}"`)
+                if (docs === undefined || docs.size === 0) {
+                    $searchResultBody.append(
+                        $('<p>').text(`No results found for query "${event.data.query}"`)
                     );
                 } else {
                     docs.forEach((doc, key) => {
@@ -145,6 +144,7 @@
 
             worker.postMessage({
                 type: 'search',
+                currentPath: window.location.pathname,
                 query: searchQuery,
                 maxResults: $targetSearchInput.data('offline-search-max-results')
             });
