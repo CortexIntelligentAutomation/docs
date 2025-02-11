@@ -9,4 +9,4 @@ content/static/latest/
 content/static/**/*.dtmp
 content/static/**/*.bkp
 content/static/**/*.crswap
-assets/json/lunr-index.json
+content/static/lunr-index.json
