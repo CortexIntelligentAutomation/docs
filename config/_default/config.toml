@@ -208,6 +208,7 @@ enable = true
 	version = "2025.1"
 	url = "/docs/2025.1/"
 	dotNetVersion = "net-8.0"
+	inSupport = true
 	latest = true
 
 [[params.versions]]
@@ -219,6 +220,7 @@ enable = true
 	version = "2024.9"
 	url = "/docs/2024.9/"
 	dotNetVersion = "net-8.0"
+	inSupport = true
 
 [[params.versions]]
 	version = "2024.7"
@@ -239,6 +241,7 @@ enable = true
 	version = "2024.1"
 	url = "/docs/2024.1/"
 	dotNetVersion = "net-6.0"
+	inSupport = true
 
 [[params.versions]]
 	version = "2023.11"

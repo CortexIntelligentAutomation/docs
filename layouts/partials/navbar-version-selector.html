@@ -34,20 +34,22 @@
 		{{- end }}
 	{{- end }}
 	{{- range .Site.Params.versions }}
-        {{- $versionName := .version }}
-        {{- if .latest }}
-            {{- $versionName = printf "%s (%s)" .version "Latest" }}
-        {{- end }}
-		{{- $dropdownLink := "" }}
-		{{- /*  If it is a generic external url. */}}
-		{{- if hasPrefix .url "http" }}
-			{{- $dropdownLink = .url }}
-		{{- else }}
-			{{- $dropdownLink = printf "%s%s" .url $path }}
-			{{- if $isNested }}
-				{{- $dropdownLink = printf "%s%s" "/docs" $dropdownLink }}
+		{{- if .inSupport }}
+			{{- $versionName := .version }}
+			{{- if .latest }}
+				{{- $versionName = printf "%s (%s)" .version "Latest" }}
 			{{- end }}
-        {{- end }}
-		<a class="dropdown-item" href="{{ $dropdownLink }}" data-proofer-ignore>{{ $versionName }}</a>
+			{{- $dropdownLink := "" }}
+			{{- /*  If it is a generic external url. */}}
+			{{- if hasPrefix .url "http" }}
+				{{- $dropdownLink = .url }}
+			{{- else }}
+				{{- $dropdownLink = printf "%s%s" .url $path }}
+				{{- if $isNested }}
+					{{- $dropdownLink = printf "%s%s" "/docs" $dropdownLink }}
+				{{- end }}
+			{{- end }}
+			<a class="dropdown-item" href="{{ $dropdownLink }}" data-proofer-ignore>{{ $versionName }}</a>
+		{{- end }}
 	{{- end }}
 </div>

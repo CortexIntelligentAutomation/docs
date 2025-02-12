@@ -18,13 +18,16 @@
     {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
     <hr class="panel-line">
         {{ range $pages }}
-            {{ if eq .Parent $parent }}
-                <div class="entry">
-                    <h5>
-                        <a href="{{ .RelPermalink }}">{{- .Title -}}</a>
-                    </h5>
-                    <p>{{ .Description | markdownify }}</p>
-                </div>
+            {{ if not .Params.outOfSupport}}
+                {{ if eq .Parent $parent }}
+                    <div class="entry">
+                        <h5>
+                            <a href="{{ .RelPermalink }}">{{- .Title -}}</a>
+                        </h5>
+                        <p>{{ .Description | markdownify }}</p>
+                    </div>
+                {{ end }}
+            
             {{ end }}
         {{ end }}
     {{ end }}
