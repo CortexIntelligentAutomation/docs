@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for installing {{% ctx %}} Innovation][] have been completed before starting this installation.
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for installing {{% ctx %}}][Pre-Installation] have been completed before starting this installation.
 
 ## Install Microsoft .NET Framework 4.7.2
 
@@ -255,7 +255,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\<CortexInnovationInstallScriptName>.ps1 -WhatIf -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -WhatIf -AcceptEULA
     ```
 
 1. Run the PowerShell command to test the installation script.
@@ -320,6 +320,6 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServerNew" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
-[Pre-Installation steps for installing {{% ctx %}} Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PreInstallation" >}}
+[Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PreInstallation" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}

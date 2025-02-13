@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Gateway"
 linkTitle: "Upgrade Gateway"
-description: "Information about upgrading v7.2 {{% ctx %}} Gateway to include Innovation."
+description: "Information about upgrading v7.2 Gateway to include {{% ctx %}}."
 weight: 30
 ---
 
@@ -87,7 +87,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include {{% c
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -AcceptEULA
     ```
 
 1. Run the PowerShell command to install {{% ctx %}} Gateway.

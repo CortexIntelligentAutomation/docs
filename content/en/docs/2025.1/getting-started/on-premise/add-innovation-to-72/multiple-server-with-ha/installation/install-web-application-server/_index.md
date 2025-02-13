@@ -1,7 +1,7 @@
 ---
 title: "Upgrade the Web Application Server"
 linkTitle: "Upgrade Web Application Server"
-description: "Information about upgrading the Web Application Server to include Innovation."
+description: "Information about upgrading the Web Application Server to include {{% ctx %}}."
 weight: 40
 ---
 

@@ -53,8 +53,8 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 ## Next Steps?
 
-1. [Upgrade v7.2 Gateway to Include Innovation][]
+1. [Upgrade v7.2 Gateway to Include {{% ctx %}}][Upgrade Gateway]
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AntivirusExclusionsNew" >}}
 [Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.PreInstallation" >}}
-[Upgrade v7.2 Gateway to Include Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServerNew" >}}
+[Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServerNew" >}}

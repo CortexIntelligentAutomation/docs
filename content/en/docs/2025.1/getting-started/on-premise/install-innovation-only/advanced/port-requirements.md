@@ -1,7 +1,7 @@
 ---
 title: "Port Requirements for Application Servers and Load Balancer"
 linkTitle: "Port Requirements for Application Servers and Load Balancer"
-description: "Information about the ports opened when installing {{% ctx %}} Innovation."
+description: "Information about the ports opened when installing {{% ctx %}}."
 ---
 
 # {{% param title %}}
