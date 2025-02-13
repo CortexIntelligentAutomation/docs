@@ -279,7 +279,7 @@ The flow being run is `ExampleFlow`. This flow sets the value of an [Output][] v
 
 <br>
 
-This example will send this request to `https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions?packageName=ExamplePackage`, where `server.domain.com` is the FQDN of the server hosting an Innovation install.
+This example will send this request to `https://server.domain.com:8722/api/default/default/flows/ExampleFlow/executions?packageName=ExamplePackage`, where `server.domain.com` is the FQDN of the server hosting a {{% ctx %}} install.
 
 #### Properties
 

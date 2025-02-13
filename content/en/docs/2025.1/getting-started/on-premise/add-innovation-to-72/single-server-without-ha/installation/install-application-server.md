@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to install the Application Server components on the server. Please ensure that the [Pre-Installation steps for adding {{% ctx %}} Innovation to {{% ctx %}} 7.2][] have been completed before starting the installation..
+This guide describes how to install the Application Server components on the server. Please ensure that the [Pre-Installation steps for adding {{% ctx %}} to {{% ctx %}} 7.2][Pre-Installation] have been completed before starting the installation..
 
 ## Install Microsoft .NET Framework 4.7.2
 
@@ -56,5 +56,5 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 1. [Upgrade v7.2 Gateway to Include Innovation][]
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AntivirusExclusionsNew" >}}
-[Pre-Installation steps for adding {{% ctx %}} Innovation to {{% ctx %}} 7.2]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.PreInstallation" >}}
+[Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.PreInstallation" >}}
 [Upgrade v7.2 Gateway to Include Innovation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServerNew" >}}

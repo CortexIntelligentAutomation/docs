@@ -33,7 +33,7 @@ The table below specifies additional resources that are recommended to be added 
 | Web&nbsp;Application&nbsp;Server<br>(Shared with {{% ctx %}} Gateway) | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 12+&nbsp;*Recommended*<br>6&nbsp;*Minimum* | 10+&nbsp;*Recommended*<br>5&nbsp;*Minimum*|
 
 {{% alert title="Note" %}}
-The application servers (as described in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" title="Architecture" >}}) to which Promtail will be added have already been installed as part of the Innovation install process and do not require any hardware modifications for the observability platform installation.
+The application servers (as described in {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Architecture" title="Architecture" >}}) to which Promtail will be added have already been installed as part of the {{% ctx %}} install process and do not require any hardware modifications for the observability platform installation.
 {{% /alert %}}
 
 ## Software Requirements
@@ -89,7 +89,7 @@ An X.509 SSL certificate (standard, wildcard or self-signed) should be used to s
 * Promtail on the Application Servers and the reverse proxy configured for Grafana Loki on the Web Application Server.
 * Grafana end users and the Grafana Web Application on the Web Application Server.
 
-The wildcard certificate used for installing Innovation can be used if it is available in the .PEM file format, otherwise a new certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt][], and must meet the following requirements:
+The wildcard certificate used for installing {{% ctx %}} can be used if it is available in the .PEM file format, otherwise a new certificate can be obtained from a Certificate Authority, such as [Let’s Encrypt][], and must meet the following requirements:
 
 * Subject field must be in one of the following formats, depending on the certificate type:
   * Standard certificates must use the standard format (e.g. `CN=host.domain.com`).

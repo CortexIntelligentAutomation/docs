@@ -1,6 +1,6 @@
 ---
-title: "CORTEX Innovation"
-linkTitle: "CORTEX Innovation"
-description: "The {{% ctx %}} Innovation platform."
+title: "CORTEX"
+linkTitle: "CORTEX"
+description: "The {{% ctx %}} platform."
 weight: 300
 ---

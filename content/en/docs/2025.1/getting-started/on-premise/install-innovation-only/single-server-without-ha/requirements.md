@@ -57,7 +57,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid {{% ctx %}} licence file and {{% ctx %}} Innovation feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain the fingerprint for the Server.
+A valid {{% ctx %}} licence file and {{% ctx %}} feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain the fingerprint for the Server.
 
 Details on how to obtain these are specified during the [Pre-Installation][obtain licence file] steps.
 
@@ -85,7 +85,7 @@ The following Windows Services must be running on the server:
 
 ### Installation User
 
-A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that {{% ctx %}} Innovation is built upon.
+A domain user which is a member of the Local Administrators group on the server must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the platform that {{% ctx %}} is built upon.
 
 ### IIS Application Pool User
 
@@ -122,7 +122,7 @@ If adding the exclusions manually, the Process Exclusions should be done before 
 
 ### Port Requirements
 
-{{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
+{{% ctx %}} and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the server and specific services.
 
 If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
 

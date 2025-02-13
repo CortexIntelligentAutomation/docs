@@ -11,7 +11,7 @@ This guide describes how to upgrade the default dashboards that are provided for
 
 ## Download the Default Dashboards
 
-1. Download [Grafana.Dashboards.zip][] archive containing the {{% ctx %}} Innovation default dashboards.
+1. Download [Grafana.Dashboards.zip][] archive containing the {{% ctx %}} default dashboards.
 1. Extract the content of the downloaded archive to a suitable location.
 
 ## Import New Dashboards

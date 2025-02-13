@@ -16,7 +16,7 @@ To check all necessary ports are free, follow these steps.
 
 1. If all ports are free, the script will report the following:
 
-    `All ports required by Cortex Innovation are free`
+    `All ports required by {{% ctx %}} are free`
 
     If this is the case, continue to the next section. Otherwise, consult the messages returned by the script, which will give details about how to modify the `Cortex.Innovation.Install.Config.json` configuration file, in the `Cortex Innovation {{< version >}} - App Server Install Scripts` folder, to use different ports. This will be used later during installation.
 

@@ -10,16 +10,16 @@ weight: 20
 The requirements for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
 
 {{% alert title="Note" %}}
-All server roles (e.g. Load Balancer, Application Server, Web Application Server) referenced in the rest of this guide will refer to Innovation server roles unless otherwise stated.
+All server roles (e.g. Load Balancer, Application Server, Web Application Server) referenced in the rest of this guide will refer to {{% ctx %}} server roles unless otherwise stated.
 {{% / alert %}}
 
 ## Hardware Requirements
 
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
-| New Innovation Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
-| New Innovation Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
-| Existing V7.2 Application Server with Gateway<br>+ Upgrade to Innovation Web Application Server | 1 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 160+&nbsp;*Recommended*<br>135&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive  |
+| New {{% ctx %}} Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
+| New {{% ctx %}} Application&nbsp;Server | 3&nbsp;*Bronze&nbsp;availability*[^2]<br>5&nbsp;*Silver&nbsp;availability*<br>7&nbsp;*Gold&nbsp;availability*<br>9&nbsp;*Platinum&nbsp;availability* | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>8&nbsp;*Minimum* | 75+&nbsp;*Recommended*<br>60&nbsp;*Minimum*<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive |
+| Existing V7.2 Application Server with Gateway<br>+ Upgrade to {{% ctx %}} Web Application Server | 1 | 4+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 16+&nbsp;*Recommended*<br>12&nbsp;*Minimum* | 160+&nbsp;*Recommended*<br>135&nbsp;*Minimum*<br>30+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive<br>40+&nbsp;free&nbsp;on&nbsp;%ProgramData%&nbsp;drive  |
 
 [^1]: A software-based load balancer called [gobetween][] is provided with the platform. This must be installed on its own server as it doesn't support routing traffic to itself. It also doesn't currently support HA, but it may be possible to use multiple gobetween load balancers with Anycast network addressing and routing to provide high availability, as described in [https://en.wikipedia.org/wiki/Anycast][Anycast]; however, this has not been verified yet. It is possible to use an [alternative load balancer][] to the one provided.
 [^2]: Application Servers support HA via clustering. A cluster must consist of a minimum of 3 nodes, and the number of nodes must be an odd number to ensure a quorum. Currently only the Bronze availability (3 nodes) is supported. Silver, Gold and Platinum support will be added in future.
@@ -85,7 +85,7 @@ The installation requires IP to hostname resolution to be available. Please ensu
 
 ## Licensing Requirements
 
-A valid {{% ctx %}} licence file and {{% ctx %}} Innovation feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
+A valid {{% ctx %}} licence file and {{% ctx %}} feature identifier must be procured from {{% ctx %}}. The feature identifier is a GUID which will be used when configuring the Gateway installation. The licence file is needed when installing the Web Application server and it should contain fingerprints for the Web Application Server and each Application Server.
 
 Details on how to obtain these are specified during the [Pre-Installation][obtain licence file] steps.
 
@@ -159,7 +159,7 @@ On the Web Application Server and each Application Server, the following Windows
 
 ### Installation User
 
-On all Application Servers, Web Application Server and Load Balancer Server, a domain user, which is a member of the Local Administrators group, must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} Innovation is built upon.
+On all Application Servers, Web Application Server and Load Balancer Server, a domain user, which is a member of the Local Administrators group, must be available to run the installation scripts. This is a prerequisite of Microsoft Service Fabric, which is the HA platform that {{% ctx %}} is built upon.
 
 ### Antivirus Exclusions
 
@@ -199,7 +199,7 @@ If adding the exclusions manually, the Process Exclusions should be done before 
 
 ### Port Requirements
 
-{{% ctx %}} Innovation and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
+{{% ctx %}} and Microsoft Service Fabric require a range of [firewall ports to be opened][Port Requirements] between the servers and specific services.
 
 If you are using Windows Firewall, some ports are opened during installation and others are opened dynamically as needed. If any other firewall is used, it will be necessary to add the rules described in [Port Requirements][] to open the correct ports.
 
@@ -278,7 +278,7 @@ A script is provided during installation to apply these security changes:
 
 ## Alternative Load Balancer Requirements
 
-Innovation has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
+{{% ctx %}} has a [gobetween][] load balancer included that isn't highly available; It is possible to use an alternative. The requirements for installing an alternative load balancer are as follows:
 
 * Must support a round robin (or similar) method of load balancing to specified ports on 3 nodes.
 * Must be able to health check each node by running a predefined batch script (`ApiGatewayTypeHealthcheck.bat`, which resides in the `gobetween` folder of the `Cortex Innovation {{< version >}} - App Server Install Scripts`) that returns 1 for healthy and 0 for unhealthy.

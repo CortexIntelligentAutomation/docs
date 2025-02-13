@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to perform the steps required before starting the installation of {{% ctx %}} Innovation. Please ensure that the [Requirements][] have been read and met before starting this installation.
+This guide describes how to perform the steps required before starting the installation of {{% ctx %}}. Please ensure that the [Requirements][] have been read and met before starting this installation.
 
 ## Make Installation Artefacts Available on all Servers
 
