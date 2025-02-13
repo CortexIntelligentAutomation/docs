@@ -5,5 +5,5 @@ description: "Information about installing {{% ctx %}} to virtual machines or ph
 ---
 
 {{% pageinfo %}}
-{{% ctx %}} can be deployed on-premise [on its own](install-innovation-only) or added to an [existing](add-innovation-to-72) 7.2 installation.
+{{% ctx %}} can be deployed on-premise [on its own](install-innovation-only) or added to an [existing](add-innovation-to-72) {{% ctx %}} 7 installation.
 {{% /pageinfo %}}

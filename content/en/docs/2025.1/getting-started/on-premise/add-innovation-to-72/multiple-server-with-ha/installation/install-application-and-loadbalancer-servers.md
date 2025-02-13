@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for adding {{% ctx %}} to 7.2][Pre-Installation] have been completed before starting this installation.
+This guide describes how to install the Application Servers and Load Balancer Server. Please ensure that the [Pre-Installation steps for adding {{% ctx %}} to {{% ctx %}} 7][Pre-Installation] have been completed before starting this installation.
 
 ## Install Microsoft .NET Framework 4.7.2
 
@@ -207,7 +207,7 @@ To check all necessary ports are free, follow these steps:
         {{< /tab >}}
     {{< /tabpane >}}
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} v7.2 installed.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} 7 installed.{{% /alert %}}
 
     | Name                                         | Description |
     |----------------------------------------------|-------------|
@@ -279,7 +279,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -AcceptEULA
     ```
 
 1. Run the PowerShell command to install HA Services and the required infrastructure.

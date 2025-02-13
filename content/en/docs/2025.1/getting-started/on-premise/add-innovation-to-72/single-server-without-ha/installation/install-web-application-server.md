@@ -1,13 +1,13 @@
 ---
-title: "Upgrade v7.2 Gateway to Include CORTEX"
-linkTitle: "Upgrade v7.2 Gateway to Include CORTEX"
-description: "Information about upgrading v7.2 Gateway with {{% ctx %}} functionality."
+title: "Upgrade CORTEX 7 Gateway to Include CORTEX"
+linkTitle: "Upgrade CORTEX 7 Gateway to Include CORTEX"
+description: "Information about upgrading {{% ctx %}} Gateway to include {{% ctx %}} functionality."
 weight: 40
 ---
 
 # {{< param title >}}
 
-This guide describes how to upgrade Gateway on v7.2 to include {{% ctx %}}. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
+This guide describes how to upgrade Gateway on {{% ctx %}} 7 to include {{% ctx %}}. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the {{% ctx %}} 7 version of Gateway and its prerequisites have already been installed.
 
 ## Install Prerequisites
 
@@ -91,7 +91,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} v7.2 installed.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} 7 installed.{{% /alert %}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|

@@ -13,11 +13,11 @@ weight: 10
 
 ## Single Server Architecture
 
-{{% ctx %}} and v7.2 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. {{% ctx %}} can be added to a {{% ctx %}} v7.2 installation by using the existing hardware. The only component shared by both {{% ctx %}} and v7.2 is {{% ctx %}} Gateway.
+{{% ctx %}} and {{% ctx %}} 7 can run side-by-side, allowing flows to be built and run for both of them from the same Gateway instance. They each require a different set of back-end components to be installed. {{% ctx %}} can be added to a {{% ctx %}} 7 installation by using the existing hardware. The only component shared by both {{% ctx %}} and {{% ctx %}} 7 is {{% ctx %}} Gateway.
 
-The minimum architecture for adding {{% ctx %}} to a v7.2 Single Site, Single Server system is as follows:
+The minimum architecture for adding {{% ctx %}} to a {{% ctx %}} 7 Single Site, Single Server system is as follows:
 
-{{< figure src="/images/editable/Cortex v7.2 Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
+{{< figure src="/images/editable/Cortex 7 Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
 
 {{< section "/architecture/components/node-details.md" >}}
 

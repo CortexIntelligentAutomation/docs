@@ -1,13 +1,13 @@
 ---
 title: "Upgrade Gateway"
 linkTitle: "Upgrade Gateway"
-description: "Information about upgrading v7.2 Gateway to include {{% ctx %}}."
+description: "Information about upgrading {{% ctx %}} Gateway to include {{% ctx %}}."
 weight: 30
 ---
 
 # {{% param title %}}
 
-This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include {{% ctx %}}. Please ensure that the [Flow Debugger installation][] has been completed before starting this installation.
+This guide describes how to upgrade {{% ctx %}} Gateway on {{% ctx %}} 7 to include {{% ctx %}}. Please ensure that the [Flow Debugger installation][] has been completed before starting this installation.
 
 ## Perform Gateway Installation
 
@@ -41,7 +41,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include {{% c
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} v7.2 installed.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} 7 installed.{{% /alert %}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
