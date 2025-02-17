@@ -1,6 +1,6 @@
 ---
-title: "CORTEX"
-linkTitle: "CORTEX"
-description: "The {{% ctx %}} platform."
+title: "CORTEX Applications"
+linkTitle: "CORTEX Applications"
+description: "The Service Fabric applications hosting the services within the {{% ctx %}} platform."
 weight: 300
 ---
