@@ -5,4 +5,4 @@ description: "Information about installing the {{% ctx %}} Interaction Portal fo
 weight: 50
 ---
 
-* {{< filelink src="/pdf/CORTEX Interaction Portal Deployment Guide.pdf" name="CORTEX Interaction Portal Deployment Guide" >}}
+* {{< filelink src="/pdf/CORTEX Interaction Portal - Deployment Guide.pdf" name="CORTEX Interaction Portal Deployment Guide" >}}
