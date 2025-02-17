@@ -2,7 +2,7 @@
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|--------------------------------------------|
 | [{{% ctx %}} Gateway][Gateway Guide]                                                 | {{< section "/architecture/components/purpose/cortex-gateway.md" >}}                          | Required                    | Web Application Server                     |
 | [{{% ctx %}} Studio][Studio Guide]                                                   | {{< section "/architecture/components/purpose/cortex-studio.md" >}}                           | Required                    | Web Application Server                     |
-| [{{% ctx %}} Innovation Core Application][Innovation Core Application]               | {{< section "/architecture/components/purpose/cortex-innovation-core-application.md" >}}      | Required                    | Application Server                         |
+| [{{% ctx %}} Core Application][Core Application]               | {{< section "/architecture/components/purpose/cortex-innovation-core-application.md" >}}      | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [API Gateway Service][API Gateway Service]                           | {{< section "/architecture/components/purpose/api-gateway-service.md" >}}                     | -                           | -                                          |
 | &nbsp; &nbsp; > [Authorisation Service][Authorisation Service]                       | {{< section "/architecture/components/purpose/authorisation-service.md" >}}                   | -                           | -                                          |
 | &nbsp; &nbsp; > [Concurrency Management Service][Concurrency Management Service]     | {{< section "/architecture/components/purpose/concurrency-management-service.md" >}}          | -                           | -                                          |
@@ -16,7 +16,7 @@
 | &nbsp; &nbsp; > [Provisioning Service][Provisioning Service]                         | {{< section "/architecture/components/purpose/provisioning-service.md" >}}                    | -                           | -                                          |
 | &nbsp; &nbsp; > [Scheduling Service][Scheduling Service]                             | {{< section "/architecture/components/purpose/scheduling-service.md" >}}                      | -                           | -                                          |
 | &nbsp; &nbsp; > [Triggers Service][Triggers Service]                                 | {{< section "/architecture/components/purpose/triggers-service.md" >}}                        | -                           | -                                          |
-| [{{% ctx %}} Innovation Execution Application][Innovation Execution Application]     | {{< section "/architecture/components/purpose/cortex-innovation-execution-application.md" >}} | Required                    | Application Server                         |
+| [{{% ctx %}} Execution Application][Execution Application]     | {{< section "/architecture/components/purpose/cortex-innovation-execution-application.md" >}} | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [Execution Service][Execution Service]                               | {{< section "/architecture/components/purpose/execution-service.md" >}}                       | -                           | -                                          |
 | {{% ctx %}} Block Packages                                                           | {{< section "/architecture/components/purpose/cortex-block-packages.md" >}}                   | Required                    | Web Application Server, Application Server |
 | [Microsoft Service Fabric][]                                                         | {{< section "/architecture/components/purpose/ms-service-fabric.md" >}}                       | Required                    | Application Server                         |
@@ -27,8 +27,8 @@
 | [gobetween][]                                                                        | {{< section "/architecture/components/purpose/gobetween.md" >}}                               | Required                    | Load Balancer                              |
 | [NSSM][]                                                                             | {{< section "/architecture/components/purpose/nssm.md" >}}                                    | Required                    | Load Balancer                              |
 
-[Innovation Core Application]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.MainDoc" >}}
-[Innovation Execution Application]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.MainDoc" >}}
+[Core Application]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.MainDoc" >}}
+[Execution Application]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.MainDoc" >}}
 
 [API Gateway Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
 [Authorisation Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.AuthorisationService.MainDoc" >}}

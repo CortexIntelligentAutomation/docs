@@ -1,6 +1,6 @@
 ---
-title: "Add Observability to Innovation"
-linkTitle: "Add Observability to Innovation"
-description: "Information about setting up an observability platform for Innovation."
+title: "Add Observability to CORTEX"
+linkTitle: "Add Observability to CORTEX"
+description: "Information about setting up an observability platform for {{% ctx %}}."
 weight: 30
 ---

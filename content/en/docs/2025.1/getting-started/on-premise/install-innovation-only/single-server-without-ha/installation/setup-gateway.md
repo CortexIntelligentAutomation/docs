@@ -57,7 +57,7 @@ Log on to Gateway and run through the setup wizard:
     1. Assign access permissions to Active Directory groups:
 
         To allow users to access the various roles within Gateway, it is first necessary to assign them the appropriate access rights.
-        Gateway currently supports four roles, but only two are relevant for {{% ctx %}} Innovation:
+        Gateway currently supports four roles, but only two are relevant for {{% ctx %}}:
 
         * Admin
         * Studio

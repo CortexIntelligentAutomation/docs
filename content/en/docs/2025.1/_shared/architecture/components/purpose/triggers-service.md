@@ -1,1 +1,1 @@
-Application Service that handles automatically triggering executions within the Innovation platform.
+Application Service that handles automatically triggering executions within the {{% ctx %}} platform.

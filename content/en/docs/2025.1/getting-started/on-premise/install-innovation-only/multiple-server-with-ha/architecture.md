@@ -1,7 +1,7 @@
 ---
 title: "Architecture"
 linkTitle: "Architecture"
-description: "Information about the recommended Innovation platform architecture, including component descriptions."
+description: "Information about the recommended {{% ctx %}} platform architecture, including component descriptions."
 weight: 10
 ---
 
@@ -19,7 +19,7 @@ The following architecture requires 5 servers:
 * 1x Load Balancer Server
 * 3x Application Servers
 
-{{< figure src="/images/editable/Cortex Innovation Overview.png" class="centre" title="5 Server Architecture Diagram" >}}
+{{< figure src="/images/editable/Cortex Overview.png" class="centre" title="5 Server Architecture Diagram" >}}
 
 {{< section "/architecture/components/node-details.md" >}}
 

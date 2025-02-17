@@ -1,7 +1,7 @@
 ---
 title: "Multiple Server - With HA (Recommended)"
 linkTitle: "Multiple Server - With HA"
-description: "Information about installing {{% ctx %}} Innovation across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, server requirements, pre-installation steps and installation instructions."
+description: "Information about installing {{% ctx %}} across multiple on-premise servers with high availability (HA), including: information about components, supported architectures, server requirements, pre-installation steps and installation instructions."
 weight: 10
 ---
 

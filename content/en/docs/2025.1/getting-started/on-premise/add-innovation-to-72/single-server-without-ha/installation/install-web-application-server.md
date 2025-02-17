@@ -1,13 +1,13 @@
 ---
-title: "Upgrade v7.2 Gateway to Include Innovation"
-linkTitle: "Upgrade v7.2 Gateway to Include Innovation"
-description: "Information about upgrading v7.2 Gateway with Innovation functionality."
+title: "Upgrade CORTEX 7 Gateway to Include CORTEX"
+linkTitle: "Upgrade CORTEX 7 Gateway to Include CORTEX"
+description: "Information about upgrading {{% ctx %}} Gateway to include {{% ctx %}} functionality."
 weight: 40
 ---
 
 # {{< param title >}}
 
-This guide describes how to upgrade Gateway on v7.2 to include Innovation. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
+This guide describes how to upgrade Gateway on {{% ctx %}} 7 to include {{% ctx %}}. Please ensure that [Install Application Server][] has been completed before starting this installation. These steps assume that the {{% ctx %}} 7 version of Gateway and its prerequisites have already been installed.
 
 ## Install Prerequisites
 
@@ -91,12 +91,12 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} v7.2 installed.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} 7 installed.{{% /alert %}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
-    |`FeatureFlags`                                  | Replace `InnovationId` with the {{% ctx %}} Innovation feature identifier, which should have been provided by {{% ctx %}} when fulfilling the [Obtain a {{% ctx %}} licence file][] step during Pre-Installation, if it wasn't it should be requested using [{{% ctx %}} Service Portal][CORTEX Service Portal].<br /><br />This will overwrite the `FeatureFlags` value in the Gateway web.config.|
+    |`FeatureFlags`                                  | Replace `InnovationId` with the {{% ctx %}} feature identifier, which should have been provided by {{% ctx %}} when fulfilling the [Obtain a {{% ctx %}} licence file][] step during Pre-Installation, if it wasn't it should be requested using [{{% ctx %}} Service Portal][CORTEX Service Portal].<br /><br />This will overwrite the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will overwrite the `ServiceFabricApiGatewayEndpoint` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Server][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will overwrite the `ServiceFabricUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Server][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.{{< alert type="note" title="Note" >}} This parameter should be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
@@ -137,7 +137,7 @@ A Friendly Name should be assigned to the certificate being used for the Cortex 
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -AcceptEULA
     ```
 
 1. Run the PowerShell command to upgrade {{% ctx %}} Gateway.

@@ -14,7 +14,7 @@
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\<CortexInnovationUpgradeScriptName>.ps1 -AcceptEULA
+    .\<CortexUpgradeScriptName>.ps1 -AcceptEULA
     ```
 
 1. Run the PowerShell command to upgrade the HA Services and required infrastructure.

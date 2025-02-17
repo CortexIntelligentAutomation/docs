@@ -1,7 +1,7 @@
 ---
 title: "Development"
 linkTitle: "Development"
-description: "This section includes tutorials about developing automation using the {{% ctx %}} Innovation platform."
+description: "This section includes tutorials about developing automation using the {{% ctx %}} platform."
 weight: 30
 ---
 

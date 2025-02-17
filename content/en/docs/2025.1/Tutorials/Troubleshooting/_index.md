@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 linkTitle: "Troubleshooting"
-description: "This section includes tutorials about troubleshooting the {{% ctx %}} Innovation platform."
+description: "This section includes tutorials about troubleshooting the {{% ctx %}} platform."
 weight: 50
 ---
 

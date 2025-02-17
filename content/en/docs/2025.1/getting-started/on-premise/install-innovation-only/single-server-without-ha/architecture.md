@@ -1,7 +1,7 @@
 ---
 title: "Architecture"
 linkTitle: "Architecture"
-description: "Information about the recommended Innovation platform architecture, including component descriptions."
+description: "Information about the recommended {{% ctx %}} platform architecture, including component descriptions."
 weight: 10
 ---
 
@@ -15,7 +15,7 @@ weight: 10
 
 The following architecture requires 1 server:
 
-{{< figure src="/images/editable/Cortex Innovation Overview-Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
+{{< figure src="/images/editable/Cortex Overview-Single Server.png" class="centre" title="1 Server Architecture Diagram" >}}
 
 {{< section "/architecture/components/node-details.md" >}}
 
