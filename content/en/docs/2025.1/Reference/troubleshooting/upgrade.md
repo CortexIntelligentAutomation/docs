@@ -1,7 +1,7 @@
 ---
 title: "Upgrade"
 linkTitle: "Upgrade"
-description: "Information on troubleshooting {{% ctx %}} Innovation upgrades."
+description: "Information on troubleshooting {{% ctx %}} upgrades."
 ---
 
 # {{% param title %}}

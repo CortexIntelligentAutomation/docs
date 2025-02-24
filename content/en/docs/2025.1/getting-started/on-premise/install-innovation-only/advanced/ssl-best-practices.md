@@ -1,7 +1,7 @@
 ---
 title: "SSL Best Practices"
 linkTitle: "SSL Best Practices"
-description: "Information about the recommended security settings for Innovation servers."
+description: "Information about the recommended security settings for {{% ctx %}} servers."
 ---
 
 # {{% param title %}}

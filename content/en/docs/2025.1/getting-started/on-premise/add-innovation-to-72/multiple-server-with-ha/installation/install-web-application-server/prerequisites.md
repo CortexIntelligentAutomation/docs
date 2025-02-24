@@ -7,7 +7,7 @@ weight: 10
 
 # {{% param title %}}
 
-Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation. These steps assume that the v7.2 version of Gateway and its prerequisites have already been installed.
+Please ensure that [Install Application Servers and Load Balancer][] has been completed before starting this installation. These steps assume that the {{% ctx %}} 7 version of Gateway and its prerequisites have already been installed.
 
 ## Licensing
 

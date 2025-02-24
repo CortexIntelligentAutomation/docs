@@ -1,14 +1,14 @@
 ---
 title: "Port Requirements for Application Servers and Load Balancer"
 linkTitle: "Port Requirements for Application Servers and Load Balancer"
-description: "Information about the ports opened when installing {{% ctx %}} Innovation."
+description: "Information about the ports opened when installing {{% ctx %}}."
 ---
 
 # {{% param title %}}
 
-{{% ctx %}} Innovation and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
+{{% ctx %}} and Microsoft Service Fabric open a range of firewall ports between the servers and specific services. Some of them are opened during installation, others are opened dynamically as needed. These are opened on Windows Firewall. If any other firewall exists between the servers, it will be necessary to configure this selection of rules on it. Most ports may be altered if another program overlaps with them, the description will say if this is not possible.
 
-## {{% ctx %}} Innovation Ports
+## {{% ctx %}} Ports
 
 | Name | Description | Default Port(s) | Protocol | Direction |
 |------|-------------|-----------------|----------|-----------|

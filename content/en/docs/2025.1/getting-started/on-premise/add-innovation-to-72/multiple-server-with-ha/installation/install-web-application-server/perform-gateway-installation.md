@@ -1,13 +1,13 @@
 ---
 title: "Upgrade Gateway"
 linkTitle: "Upgrade Gateway"
-description: "Information about upgrading v7.2 {{% ctx %}} Gateway to include Innovation."
+description: "Information about upgrading {{% ctx %}} Gateway to include {{% ctx %}}."
 weight: 30
 ---
 
 # {{% param title %}}
 
-This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innovation. Please ensure that the [Flow Debugger installation][] has been completed before starting this installation.
+This guide describes how to upgrade {{% ctx %}} Gateway on {{% ctx %}} 7 to include {{% ctx %}}. Please ensure that the [Flow Debugger installation][] has been completed before starting this installation.
 
 ## Perform Gateway Installation
 
@@ -41,12 +41,12 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
     *>&1 | Tee-Object -FilePath "cortex-gateway-install-log.txt"
     ```
 
-    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} v7.2 installed.{{% /alert %}}
+    {{% alert title="Important" color="warning" %}}Parameters required to be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} must be encrypted on the Application Server with {{< ctx >}} 7 installed.{{% /alert %}}
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
     |`GatewayPackagePath`                            | Configure this value with the location of the `Cortex Innovation {{< version >}} - Gateway.zip` file on the installation server. |
-    |`FeatureFlags`                                  | Replace `InnovationId` with the {{% ctx %}} Innovation feature identifier, which should have been provided by {{% ctx %}} when fulfilling the [Obtain a {{% ctx %}} licence file][] step during Pre-Installation, if it wasn't it should be requested using [{{% ctx %}} Service Portal][CORTEX Service Portal].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
+    |`FeatureFlags`                                  | Replace `InnovationId` with the {{% ctx %}} feature identifier, which should have been provided by {{% ctx %}} when fulfilling the [Obtain a {{% ctx %}} licence file][] step during Pre-Installation, if it wasn't it should be requested using [{{% ctx %}} Service Portal][CORTEX Service Portal].<br /><br />This will set the `FeatureFlags` value in the Gateway web.config.|
     |`ServiceFabricApiGatewayEndpoint`               | Replace `server.domain.com` with the fully qualified domain name of the Load Balancer Server. The port should be specified if it is not the default HTTPS port (443), and there must be a trailing slash, e.g. `https://server.domain.com/` or `https://server.domain.com:8722/`.<br /><br />This will set the `ServiceFabricApiGatewayEndpoint` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricUsingSelfSignedCertificates`      | Configure the value as `$false` if you used valid CA certificates when [installing the Application Servers][Configure Installation Script], `$true` if you used self-signed certificates.<br /><br />This will set the `ServiceFabricUsingSelfSignedCertificates` value in the {{% ctx %}} Gateway web.config.|
     |`ServiceFabricApiGatewayBasicAuthUsername`      | This must be changed if you used a non-default `ApiGatewayBasicAuthUsername` when [installing the Application Servers][Configure Installation Script]; if so, this value must be configured to the one used.<br /><br />This will overwrite the `ServiceFabricApiGatewayBasicAuthUsername` value in the {{% ctx %}} Gateway web.config.{{< alert type="note" title="Note" >}} This parameter should be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}|
@@ -87,7 +87,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway on v7.2 to include Innov
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\<CortexInnovationInstallScriptName>.ps1 -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -AcceptEULA
     ```
 
 1. Run the PowerShell command to install {{% ctx %}} Gateway.
