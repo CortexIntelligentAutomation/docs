@@ -1,1 +1,1 @@
-The ports providing an entry to receive Flow API Proxy requests and SNMP traps to trigger executions within the Innovation platform.
+The ports providing an entry to receive Flow API Proxy requests and SNMP traps to trigger executions within the {{% ctx %}} platform.

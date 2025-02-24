@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to perform the steps required before starting the upgrade of {{% ctx %}} Innovation.
+This guide describes how to perform the steps required before starting the upgrade of {{% ctx %}}.
 
 ## Make Installation Artefacts Available
 
